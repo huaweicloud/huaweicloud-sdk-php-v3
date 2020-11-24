@@ -21,21 +21,21 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
 
 - Use composer
 
-    The recommended way to install SDK is with [Composer](https://getcomposer.org/). Composer is a dependency management tool for PHP that allows you to declare the dependencies your project needs and installs them into your project. 
+    The recommended way to install SDK is with [Composer](https://getcomposer.org/). Composer is a dependency management tool for PHP that allows you to declare the dependencies your project needs and installs them into your project.
 
     ``` powershell
     # Install Composer
     curl -sS https://getcomposer.org/installer | php
-     
+
     # Install the PHP SDK
-    composer require huaweicloud/huaweicloud-sdk-php
+    composer require huaweicloud/huaweicloud-sdk-php:3.0.1-beta
     ```
-    After installing, you need to require Composer's autoloader: 
+    After installing, you need to require Composer's autoloader:
 
     ```php
     require 'path/to/vendor/autoload.php';
     ```
-    
+
 
 
 ## Use PHP SDK
@@ -109,7 +109,7 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
     ``` php
     # Region services
     $credentials = new BasicCredentials($ak,$sk,$projectId);
-       
+
     # Global services
     $credentials = new GlobalCredentials($ak,$sk,$domainId);
     ```
@@ -125,7 +125,7 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
     ``` php
     # Regional services
     $credentials = BasicCredentials(ak, sk, projectId).withSecurityToken(securityToken);
-       
+
     # Global services
     $credentials = GlobalCredentials(ak, sk, domainId).withSecurityToken(securityToken);
     ```
@@ -208,11 +208,11 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
         ->withEndpoint($endpoint)
         ->withCredentials($credentials)
         ->build();
-    
+
     # send asynchronous request
     $request = new ShowPermanentAccessKeyRequest(array('accessKey' => "{your access key}"));
     $promise = $iamClient->showPermanentAccessKeyAsync($request);
-    
+
     # get asynchronous response
     $response = $promise->wait();
     ```
@@ -225,9 +225,9 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
 
     ``` php
     <?php
-    
+
     require_once ".\\vendor\autoload.php";
-    
+
     use HuaweiCloud\SDK\Core\Auth\GlobalCredentials;
     use HuaweiCloud\SDK\Core\Http\HttpConfig;
     use HuaweiCloud\SDK\Core\Exceptions\ConnectionException;
@@ -236,16 +236,16 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
     use HuaweiCloud\SDK\Iam\V3\IamClient;
     use HuaweiCloud\SDK\Iam\V3\Model\ListPermanentAccessKeysRequest;
     use Monolog\Logger;
-    
+
     $ak = "{your ak string}";
     $sk = "{your sk string}";
     $endpoint = "{your endpoint}";
     $domainId = "{your domain id}";
-    
+
     $config = HttpConfig::getDefaultConfig();
     $config->setIgnoreSslVerification(true);
     $credentials = new GlobalCredentials($ak,$sk,$domainId);
-    
+
     $iamClient = IamClient::newBuilder(new IamClient)
         ->withHttpConfig($config)
         ->withEndpoint($endpoint)
@@ -253,7 +253,7 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
         ->withStreamLogger($stream = 'php://stdout',$logLevel =Logger::INFO)
         ->withFileLogger($logPath='./test_log.txt', $logLevel = Logger::INFO)
         ->build();
-    
+
     function listPermanentAccessKeys($iamClient)
     {
         $listPermanentAccessKeysRequest = new ListPermanentAccessKeysRequest(array('userId'=>"{your user id}"));
@@ -276,4 +276,4 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
     }
     listPermanentAccessKeys($iamClient);
     ```
-    
+

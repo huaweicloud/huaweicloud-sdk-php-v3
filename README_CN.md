@@ -31,7 +31,7 @@
     # 安装 Composer
     curl -sS https://getcomposer.org/installer | php
     # 安装 PHP SDK
-    composer require huaweicloud/huaweicloud-sdk-php
+    composer require huaweicloud/huaweicloud-sdk-php:3.0.1-beta
     ```
 
     安装完毕后，你需要引入Composer的自动加载文件：
@@ -109,7 +109,7 @@
     ``` php
     # Region级服务
     $credentials = new BasicCredentials($ak,$sk,$projectId);
-       
+
     # Global级服务
     $credentials = new GlobalCredentials($ak,$sk,$domainId);
     ```
@@ -207,11 +207,11 @@
         ->withEndpoint($endpoint)
         ->withCredentials($credentials)
         ->build();
-    
+
     # 发送异步请求
     $request = new ShowPermanentAccessKeyRequest(array('accessKey' => "{your access key}"));
     $promise = $iamClient->showPermanentAccessKeyAsync($request);
-    
+
     # 获取异步请求结果
     $response = $promise->wait();
     ```
@@ -224,9 +224,9 @@
 
     ``` php
     <?php
-    
+
     require_once ".\\vendor\autoload.php";
-    
+
     use HuaweiCloud\SDK\Core\Auth\GlobalCredentials;
     use HuaweiCloud\SDK\Core\Http\HttpConfig;
     use HuaweiCloud\SDK\Core\Exceptions\ConnectionException;
@@ -235,16 +235,16 @@
     use HuaweiCloud\SDK\Iam\V3\IamClient;
     use HuaweiCloud\SDK\Iam\V3\Model\ListPermanentAccessKeysRequest;
     use Monolog\Logger;
-    
+
     $ak = "{your ak string}";
     $sk = "{your sk string}";
     $endpoint = "{your endpoint}";
     $domainId = "{your domain id}";
-    
+
     $config = HttpConfig::getDefaultConfig();
     $config->setIgnoreSslVerification(true);
     $credentials = new GlobalCredentials($ak,$sk,$domainId);
-    
+
     $iamClient = IamClient::newBuilder(new IamClient)
         ->withHttpConfig($config)
         ->withEndpoint($endpoint)
@@ -252,7 +252,7 @@
         ->withStreamLogger($stream = 'php://stdout',$logLevel =Logger::INFO)
         ->withFileLogger($logPath='./test_log.txt', $logLevel = Logger::INFO)
         ->build();
-    
+
     function listPermanentAccessKeys($iamClient)
     {
         $listPermanentAccessKeysRequest = new ListPermanentAccessKeysRequest(array('userId'=>"{your user id}"));
