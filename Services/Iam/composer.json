@@ -18,7 +18,6 @@
       "homepage": "https://sdkcenter.developer.huaweicloud.com/?language=PHP"
     }
   ],
-  "minimum-stability": "dev",
   "require": {
     "huaweicloud/huaweicloud-sdk-core": "3.0.1-beta"
   },
