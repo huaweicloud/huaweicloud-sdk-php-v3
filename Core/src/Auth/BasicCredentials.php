@@ -1,17 +1,34 @@
 <?php
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache LICENSE, Version 2.0 (the
+ * "LICENSE"); you may not use this file except in compliance
+ * with the LICENSE.  You may obtain a copy of the LICENSE at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the LICENSE is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the LICENSE for the
+ * specific language governing permissions and limitations
+ * under the LICENSE.
+ */
+
 namespace HuaweiCloud\SDK\Core\Auth;
 
 use HuaweiCloud\SDK\Core\SdkRequest;
 
 class BasicCredentials extends Credentials
 {
-    private $ak;
-    private $sk;
-    private $securityToken;
     private $projectId;
 
     /**
      * BasicCredentials constructor.
+     *
      * @param $ak
      * @param $sk
      * @param $securityToken
@@ -22,33 +39,42 @@ class BasicCredentials extends Credentials
                                 $projectId = null,
                                 $securityToken = null
     ) {
-        $this->ak = $ak;
-        $this->sk = $sk;
-        $this->projectId = $projectId;
-        $this->securityToken = $securityToken;
+        $this->ak = isset($ak) ? $ak : null;
+        $this->sk = isset($sk) ? $sk : null;
+        $this->projectId = isset($projectId) ? $projectId : null;
+        $this->securityToken = isset($securityToken) ? $securityToken : null;
     }
 
     public function withAk($ak)
     {
-        $this->setSk($ak);
+        $this->setAk($ak);
+
         return $this;
     }
 
     public function withSk($sk)
     {
         $this->setSk($sk);
+
         return $this;
     }
 
     public function withProjectId($projectId)
     {
-        $this->setSk($projectId);
+        $this->setProjectId($projectId);
+
         return $this;
     }
 
+    /**
+     * @param $securityToken
+     *
+     * @return BasicCredentials
+     */
     public function withSecurityToken($securityToken)
     {
-        $this->setSk($securityToken);
+        $this->setSecurityToken($securityToken);
+
         return $this;
     }
 
@@ -56,14 +82,14 @@ class BasicCredentials extends Credentials
         'ak' => 'setAk',
         'sk' => 'setSk',
         'securityToken' => 'setSecurityToken',
-        'projectId' => 'setProjectId'
+        'projectId' => 'setProjectId',
     ];
 
     protected static $getters = [
         'ak' => 'getAk',
         'sk' => 'getSk',
         'securityToken' => 'getSecurityToken',
-        'projectId' => 'getProjectId'
+        'projectId' => 'getProjectId',
     ];
 
     public static function setters()
@@ -145,10 +171,11 @@ class BasicCredentials extends Credentials
      */
     public function getUpdatePathParams()
     {
-        $pathParams = Array();
-        if ($this->projectId){
+        $pathParams = [];
+        if ($this->projectId) {
             $pathParams['project_id'] = $this->projectId;
         }
+
         return $pathParams;
     }
 
@@ -157,19 +184,20 @@ class BasicCredentials extends Credentials
         return $this->signRequest($request);
     }
 
-    public function signRequest(SdkRequest $request)
+    private function signRequest(SdkRequest $request)
     {
-        $request->headerParams["X-Project-Id"] = $this->projectId;
-        if ($this->securityToken != null) {
-            $request->headerParams["X-Security-Token"] = $this->securityToken;
+        $request->headerParams['X-Project-Id'] = $this->projectId;
+        if (null != $this->securityToken) {
+            $request->headerParams['X-Security-Token'] = $this->securityToken;
         }
         if (isset($request->headerParams['Content-Type']) and
-            strpos($request->headerParams['Content-Type'],
-                "application/json")===0) {
-            $request->headerParams["X-Sdk-Content-Sha256"] = "UNSIGNED-PAYLOAD";
+            0 === strpos($request->headerParams['Content-Type'],
+                'application/json')) {
+            $request->headerParams['X-Sdk-Content-Sha256'] = 'UNSIGNED-PAYLOAD';
         }
 
         $signer = new Signer($this);
+
         return $signer->sign($request);
     }
 }

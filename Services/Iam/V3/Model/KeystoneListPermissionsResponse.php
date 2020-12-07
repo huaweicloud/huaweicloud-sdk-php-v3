@@ -26,7 +26,8 @@ class KeystoneListPermissionsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'links' => '\HuaweiCloud\SDK\Iam\V3\Model\Links',
-            'roles' => '\HuaweiCloud\SDK\Iam\V3\Model\RoleResult[]'
+            'roles' => '\HuaweiCloud\SDK\Iam\V3\Model\RoleResult[]',
+            'totalNumber' => 'int'
     ];
 
     /**
@@ -36,7 +37,8 @@ class KeystoneListPermissionsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'links' => null,
-        'roles' => null
+        'roles' => null,
+        'totalNumber' => 'int32'
     ];
 
     /**
@@ -67,7 +69,8 @@ class KeystoneListPermissionsResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'links' => 'links',
-            'roles' => 'roles'
+            'roles' => 'roles',
+            'totalNumber' => 'total_number'
     ];
 
     /**
@@ -77,7 +80,8 @@ class KeystoneListPermissionsResponse implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'links' => 'setLinks',
-            'roles' => 'setRoles'
+            'roles' => 'setRoles',
+            'totalNumber' => 'setTotalNumber'
     ];
 
     /**
@@ -87,7 +91,8 @@ class KeystoneListPermissionsResponse implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'links' => 'getLinks',
-            'roles' => 'getRoles'
+            'roles' => 'getRoles',
+            'totalNumber' => 'getTotalNumber'
     ];
 
     /**
@@ -150,6 +155,7 @@ class KeystoneListPermissionsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
+        $this->container['totalNumber'] = isset($data['totalNumber']) ? $data['totalNumber'] : null;
     }
 
     /**
@@ -217,6 +223,29 @@ class KeystoneListPermissionsResponse implements ModelInterface, ArrayAccess
     public function setRoles($roles)
     {
         $this->container['roles'] = $roles;
+        return $this;
+    }
+
+    /**
+    * Gets totalNumber
+    *
+    * @return int|null
+    */
+    public function getTotalNumber()
+    {
+        return $this->container['totalNumber'];
+    }
+
+    /**
+    * Sets totalNumber
+    *
+    * @param int|null $totalNumber 在查询参数存在domain_id时，返回自定义策略总数
+    *
+    * @return $this
+    */
+    public function setTotalNumber($totalNumber)
+    {
+        $this->container['totalNumber'] = $totalNumber;
         return $this;
     }
 

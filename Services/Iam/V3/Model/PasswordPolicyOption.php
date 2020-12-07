@@ -30,7 +30,8 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
             'minimumPasswordLength' => 'int',
             'numberOfRecentPasswordsDisallowed' => 'int',
             'passwordNotUsernameOrInvert' => 'bool',
-            'passwordValidityPeriod' => 'int'
+            'passwordValidityPeriod' => 'int',
+            'passwordCharCombination' => 'int'
     ];
 
     /**
@@ -44,7 +45,8 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
         'minimumPasswordLength' => 'int32',
         'numberOfRecentPasswordsDisallowed' => 'int32',
         'passwordNotUsernameOrInvert' => null,
-        'passwordValidityPeriod' => 'int32'
+        'passwordValidityPeriod' => 'int32',
+        'passwordCharCombination' => 'int32'
     ];
 
     /**
@@ -79,7 +81,8 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
             'minimumPasswordLength' => 'minimum_password_length',
             'numberOfRecentPasswordsDisallowed' => 'number_of_recent_passwords_disallowed',
             'passwordNotUsernameOrInvert' => 'password_not_username_or_invert',
-            'passwordValidityPeriod' => 'password_validity_period'
+            'passwordValidityPeriod' => 'password_validity_period',
+            'passwordCharCombination' => 'password_char_combination'
     ];
 
     /**
@@ -93,7 +96,8 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
             'minimumPasswordLength' => 'setMinimumPasswordLength',
             'numberOfRecentPasswordsDisallowed' => 'setNumberOfRecentPasswordsDisallowed',
             'passwordNotUsernameOrInvert' => 'setPasswordNotUsernameOrInvert',
-            'passwordValidityPeriod' => 'setPasswordValidityPeriod'
+            'passwordValidityPeriod' => 'setPasswordValidityPeriod',
+            'passwordCharCombination' => 'setPasswordCharCombination'
     ];
 
     /**
@@ -107,7 +111,8 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
             'minimumPasswordLength' => 'getMinimumPasswordLength',
             'numberOfRecentPasswordsDisallowed' => 'getNumberOfRecentPasswordsDisallowed',
             'passwordNotUsernameOrInvert' => 'getPasswordNotUsernameOrInvert',
-            'passwordValidityPeriod' => 'getPasswordValidityPeriod'
+            'passwordValidityPeriod' => 'getPasswordValidityPeriod',
+            'passwordCharCombination' => 'getPasswordCharCombination'
     ];
 
     /**
@@ -174,6 +179,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
         $this->container['numberOfRecentPasswordsDisallowed'] = isset($data['numberOfRecentPasswordsDisallowed']) ? $data['numberOfRecentPasswordsDisallowed'] : null;
         $this->container['passwordNotUsernameOrInvert'] = isset($data['passwordNotUsernameOrInvert']) ? $data['passwordNotUsernameOrInvert'] : null;
         $this->container['passwordValidityPeriod'] = isset($data['passwordValidityPeriod']) ? $data['passwordValidityPeriod'] : null;
+        $this->container['passwordCharCombination'] = isset($data['passwordCharCombination']) ? $data['passwordCharCombination'] : 2;
     }
 
     /**
@@ -202,6 +208,15 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
         if ($this->container['passwordValidityPeriod'] === null) {
             $invalidProperties[] = "'passwordValidityPeriod' can't be null";
         }
+        if ($this->container['passwordCharCombination'] === null) {
+            $invalidProperties[] = "'passwordCharCombination' can't be null";
+        }
+            if (($this->container['passwordCharCombination'] > 4)) {
+                $invalidProperties[] = "invalid value for 'passwordCharCombination', must be smaller than or equal to 4.";
+            }
+            if (($this->container['passwordCharCombination'] < 2)) {
+                $invalidProperties[] = "invalid value for 'passwordCharCombination', must be bigger than or equal to 2.";
+            }
         return $invalidProperties;
     }
 
@@ -351,6 +366,37 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     public function setPasswordValidityPeriod($passwordValidityPeriod)
     {
         $this->container['passwordValidityPeriod'] = $passwordValidityPeriod;
+        return $this;
+    }
+
+    /**
+    * Gets passwordCharCombination
+    *
+    * @return int
+    */
+    public function getPasswordCharCombination()
+    {
+        return $this->container['passwordCharCombination'];
+    }
+
+    /**
+    * Sets passwordCharCombination
+    *
+    * @param int $passwordCharCombination 至少包含字符种类的个数，取值区间[2,4]。
+    *
+    * @return $this
+    */
+    public function setPasswordCharCombination($passwordCharCombination)
+    {
+
+            if (($passwordCharCombination > 4)) {
+                throw new \InvalidArgumentException('invalid value for $passwordCharCombination when calling PasswordPolicyOption., must be smaller than or equal to 4.');
+            }
+            if (($passwordCharCombination < 2)) {
+                throw new \InvalidArgumentException('invalid value for $passwordCharCombination when calling PasswordPolicyOption., must be bigger than or equal to 2.');
+            }
+
+        $this->container['passwordCharCombination'] = $passwordCharCombination;
         return $this;
     }
 

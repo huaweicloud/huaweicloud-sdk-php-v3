@@ -21,21 +21,21 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
 
 - Use composer
 
-    The recommended way to install SDK is with [Composer](https://getcomposer.org/). Composer is a dependency management tool for PHP that allows you to declare the dependencies your project needs and installs them into your project.
+    The recommended way to install SDK is with [Composer](https://getcomposer.org/). Composer is a dependency management tool for PHP that allows you to declare the dependencies your project needs and installs them into your project. 
 
     ``` powershell
     # Install Composer
     curl -sS https://getcomposer.org/installer | php
-
+     
     # Install the PHP SDK
-    composer require huaweicloud/huaweicloud-sdk-php:3.0.1-beta
+    composer require huaweicloud/huaweicloud-sdk-php
     ```
-    After installing, you need to require Composer's autoloader:
+    After installing, you need to require Composer's autoloader: 
 
     ```php
     require 'path/to/vendor/autoload.php';
     ```
-
+    
 
 
 ## Use PHP SDK
@@ -109,7 +109,7 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
     ``` php
     # Region services
     $credentials = new BasicCredentials($ak,$sk,$projectId);
-
+       
     # Global services
     $credentials = new GlobalCredentials($ak,$sk,$domainId);
     ```
@@ -125,7 +125,7 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
     ``` php
     # Regional services
     $credentials = BasicCredentials(ak, sk, projectId).withSecurityToken(securityToken);
-
+       
     # Global services
     $credentials = GlobalCredentials(ak, sk, domainId).withSecurityToken(securityToken);
     ```
@@ -208,14 +208,88 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
         ->withEndpoint($endpoint)
         ->withCredentials($credentials)
         ->build();
-
+    
     # send asynchronous request
     $request = new ShowPermanentAccessKeyRequest(array('accessKey' => "{your access key}"));
     $promise = $iamClient->showPermanentAccessKeyAsync($request);
-
+    
     # get asynchronous response
     $response = $promise->wait();
     ```
+
+8. Troubleshooting
+
+    In some situation, you may need to debug your http requests, original http request and response information will be needed. The SDK provides a listener function to obtain the original encrypted http request and response information.
+
+    **Warning:** The original http log can only be used in troubleshooting scenarios, please do not print the original http header or body in the production environment. The log content is not encrypted and may contain sensitive information such as the password of your ECS or the password of your IAM user account, etc. When the response body is binary content, the body will be printed as "***" without detailed information.
+
+    ```php
+    $requestHandler = function ($argsMap) {
+        if (isset($argsMap['request'])) {
+            $sdkRequest = $argsMap['request'];
+            $requestHeaders = $sdkRequest->headerParams;
+            $requestBase = "> Request " . $sdkRequest->method . ' ' .
+                $sdkRequest->url . "\n";
+            if (count($requestHeaders) > 0) {
+                $requestBase = $requestBase . '> Headers:' . "\n";
+                foreach ($requestHeaders as $key => $value) {
+                    $requestBase = $requestBase . '    ' . $key . ' : ' .
+                        $value . "\n";
+                }
+                $requestBase = $requestBase . '> Body: ' .
+                    $sdkRequest->body . "\n\n";
+            }
+            if (isset($argsMap['logger'])) {
+                $logger = $argsMap['logger'];
+                $logger->addDebug($requestBase);
+            }
+        }
+    };
+    
+    $responseHandler = function ($argsMap) {
+        if (isset($argsMap['response'])) {
+            $response = $argsMap['response'];
+            $responseBase = "> Response HTTP/1.1 " .
+                $response->getStatusCode() . "\n";
+            $responseHeaders = $response->getHeaders();
+            if (count($responseHeaders) > 0) {
+                $responseBase = $responseBase . '> Headers:' . "\n";
+                foreach ($responseHeaders as $key => $value) {
+                    $valueToString = '';
+                    if (is_array($value)) {
+                        $valueToString = ''.join($value);
+                    }
+                    $responseBase = $responseBase . '    ' . $key . ' : '
+                        . $valueToString . "\n";
+                }
+                $responseBody = $response->getBody();
+                $responseBase = $responseBase . '> Body: ' . (string)
+                    $responseBody . "\n\n";
+            }
+            if (isset($argsMap['logger'])) {
+                $logger = $argsMap['logger'];
+                $logger->addDebug($responseBase);
+            }
+        }
+    };
+    
+    $httpHandler = new HttpHandler();
+    $httpHandler->addRequestHandlers($requestHandler);
+    $httpHandler->addResponseHandlers($responseHandler);
+    
+    $iamClient = IamClient::newBuilder(new IamClient)
+        ->withHttpConfig($config)
+        ->withEndpoint($endpoint)
+        ->withCredentials(null)
+        ->withStreamLogger($stream = 'php://stdout',$logLevel =Logger::INFO) // 日志打印至控制台
+        ->withFileLogger($logPath='./test_log.txt', $logLevel = Logger::INFO) // 日志打印至文件
+        ->withHttpHandler($httpHandler)
+        ->build();
+    ```
+
+    **where:**
+
+    HttpHandler supports addRequestHandlers and addResponseHandlers.
 
 
 ## Code example
@@ -225,9 +299,9 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
 
     ``` php
     <?php
-
+    
     require_once ".\\vendor\autoload.php";
-
+    
     use HuaweiCloud\SDK\Core\Auth\GlobalCredentials;
     use HuaweiCloud\SDK\Core\Http\HttpConfig;
     use HuaweiCloud\SDK\Core\Exceptions\ConnectionException;
@@ -236,16 +310,16 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
     use HuaweiCloud\SDK\Iam\V3\IamClient;
     use HuaweiCloud\SDK\Iam\V3\Model\ListPermanentAccessKeysRequest;
     use Monolog\Logger;
-
+    
     $ak = "{your ak string}";
     $sk = "{your sk string}";
     $endpoint = "{your endpoint}";
     $domainId = "{your domain id}";
-
+    
     $config = HttpConfig::getDefaultConfig();
     $config->setIgnoreSslVerification(true);
     $credentials = new GlobalCredentials($ak,$sk,$domainId);
-
+    
     $iamClient = IamClient::newBuilder(new IamClient)
         ->withHttpConfig($config)
         ->withEndpoint($endpoint)
@@ -253,7 +327,7 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
         ->withStreamLogger($stream = 'php://stdout',$logLevel =Logger::INFO)
         ->withFileLogger($logPath='./test_log.txt', $logLevel = Logger::INFO)
         ->build();
-
+    
     function listPermanentAccessKeys($iamClient)
     {
         $listPermanentAccessKeysRequest = new ListPermanentAccessKeysRequest(array('userId'=>"{your user id}"));
@@ -276,4 +350,4 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
     }
     listPermanentAccessKeys($iamClient);
     ```
-
+    

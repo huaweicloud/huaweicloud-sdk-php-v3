@@ -32,7 +32,8 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
             'numberOfRecentPasswordsDisallowed' => 'int',
             'passwordNotUsernameOrInvert' => 'bool',
             'passwordRequirements' => 'string',
-            'passwordValidityPeriod' => 'int'
+            'passwordValidityPeriod' => 'int',
+            'passwordCharCombination' => 'int'
     ];
 
     /**
@@ -48,7 +49,8 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
         'numberOfRecentPasswordsDisallowed' => 'int32',
         'passwordNotUsernameOrInvert' => null,
         'passwordRequirements' => null,
-        'passwordValidityPeriod' => 'int32'
+        'passwordValidityPeriod' => 'int32',
+        'passwordCharCombination' => 'int32'
     ];
 
     /**
@@ -85,7 +87,8 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
             'numberOfRecentPasswordsDisallowed' => 'number_of_recent_passwords_disallowed',
             'passwordNotUsernameOrInvert' => 'password_not_username_or_invert',
             'passwordRequirements' => 'password_requirements',
-            'passwordValidityPeriod' => 'password_validity_period'
+            'passwordValidityPeriod' => 'password_validity_period',
+            'passwordCharCombination' => 'password_char_combination'
     ];
 
     /**
@@ -101,7 +104,8 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
             'numberOfRecentPasswordsDisallowed' => 'setNumberOfRecentPasswordsDisallowed',
             'passwordNotUsernameOrInvert' => 'setPasswordNotUsernameOrInvert',
             'passwordRequirements' => 'setPasswordRequirements',
-            'passwordValidityPeriod' => 'setPasswordValidityPeriod'
+            'passwordValidityPeriod' => 'setPasswordValidityPeriod',
+            'passwordCharCombination' => 'setPasswordCharCombination'
     ];
 
     /**
@@ -117,7 +121,8 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
             'numberOfRecentPasswordsDisallowed' => 'getNumberOfRecentPasswordsDisallowed',
             'passwordNotUsernameOrInvert' => 'getPasswordNotUsernameOrInvert',
             'passwordRequirements' => 'getPasswordRequirements',
-            'passwordValidityPeriod' => 'getPasswordValidityPeriod'
+            'passwordValidityPeriod' => 'getPasswordValidityPeriod',
+            'passwordCharCombination' => 'getPasswordCharCombination'
     ];
 
     /**
@@ -186,6 +191,7 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
         $this->container['passwordNotUsernameOrInvert'] = isset($data['passwordNotUsernameOrInvert']) ? $data['passwordNotUsernameOrInvert'] : null;
         $this->container['passwordRequirements'] = isset($data['passwordRequirements']) ? $data['passwordRequirements'] : null;
         $this->container['passwordValidityPeriod'] = isset($data['passwordValidityPeriod']) ? $data['passwordValidityPeriod'] : null;
+        $this->container['passwordCharCombination'] = isset($data['passwordCharCombination']) ? $data['passwordCharCombination'] : null;
     }
 
     /**
@@ -219,6 +225,9 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
         }
         if ($this->container['passwordValidityPeriod'] === null) {
             $invalidProperties[] = "'passwordValidityPeriod' can't be null";
+        }
+        if ($this->container['passwordCharCombination'] === null) {
+            $invalidProperties[] = "'passwordCharCombination' can't be null";
         }
         return $invalidProperties;
     }
@@ -415,6 +424,29 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
     public function setPasswordValidityPeriod($passwordValidityPeriod)
     {
         $this->container['passwordValidityPeriod'] = $passwordValidityPeriod;
+        return $this;
+    }
+
+    /**
+    * Gets passwordCharCombination
+    *
+    * @return int
+    */
+    public function getPasswordCharCombination()
+    {
+        return $this->container['passwordCharCombination'];
+    }
+
+    /**
+    * Sets passwordCharCombination
+    *
+    * @param int $passwordCharCombination 至少包含字符种类的个数，取值区间[2,4]。
+    *
+    * @return $this
+    */
+    public function setPasswordCharCombination($passwordCharCombination)
+    {
+        $this->container['passwordCharCombination'] = $passwordCharCombination;
         return $this;
     }
 

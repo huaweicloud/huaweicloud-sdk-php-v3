@@ -39,7 +39,9 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'updateTime' => 'string',
             'createTime' => 'string',
             'lastLoginTime' => 'string',
-            'pwdStength' => 'string'
+            'pwdStength' => 'string',
+            'isDomainOwner' => 'bool',
+            'description' => 'string'
     ];
 
     /**
@@ -62,7 +64,9 @@ class ShowUserResult implements ModelInterface, ArrayAccess
         'updateTime' => null,
         'createTime' => null,
         'lastLoginTime' => null,
-        'pwdStength' => null
+        'pwdStength' => null,
+        'isDomainOwner' => null,
+        'description' => null
     ];
 
     /**
@@ -106,7 +110,9 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'updateTime' => 'update_time',
             'createTime' => 'create_time',
             'lastLoginTime' => 'last_login_time',
-            'pwdStength' => 'pwd_stength'
+            'pwdStength' => 'pwd_stength',
+            'isDomainOwner' => 'is_domain_owner',
+            'description' => 'description'
     ];
 
     /**
@@ -129,7 +135,9 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'updateTime' => 'setUpdateTime',
             'createTime' => 'setCreateTime',
             'lastLoginTime' => 'setLastLoginTime',
-            'pwdStength' => 'setPwdStength'
+            'pwdStength' => 'setPwdStength',
+            'isDomainOwner' => 'setIsDomainOwner',
+            'description' => 'setDescription'
     ];
 
     /**
@@ -152,7 +160,9 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'updateTime' => 'getUpdateTime',
             'createTime' => 'getCreateTime',
             'lastLoginTime' => 'getLastLoginTime',
-            'pwdStength' => 'getPwdStength'
+            'pwdStength' => 'getPwdStength',
+            'isDomainOwner' => 'getIsDomainOwner',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -228,6 +238,8 @@ class ShowUserResult implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['lastLoginTime'] = isset($data['lastLoginTime']) ? $data['lastLoginTime'] : null;
         $this->container['pwdStength'] = isset($data['pwdStength']) ? $data['pwdStength'] : null;
+        $this->container['isDomainOwner'] = isset($data['isDomainOwner']) ? $data['isDomainOwner'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -252,6 +264,12 @@ class ShowUserResult implements ModelInterface, ArrayAccess
         }
         if ($this->container['links'] === null) {
             $invalidProperties[] = "'links' can't be null";
+        }
+        if ($this->container['isDomainOwner'] === null) {
+            $invalidProperties[] = "'isDomainOwner' can't be null";
+        }
+        if ($this->container['description'] === null) {
+            $invalidProperties[] = "'description' can't be null";
         }
         return $invalidProperties;
     }
@@ -609,6 +627,52 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     public function setPwdStength($pwdStength)
     {
         $this->container['pwdStength'] = $pwdStength;
+        return $this;
+    }
+
+    /**
+    * Gets isDomainOwner
+    *
+    * @return bool
+    */
+    public function getIsDomainOwner()
+    {
+        return $this->container['isDomainOwner'];
+    }
+
+    /**
+    * Sets isDomainOwner
+    *
+    * @param bool $isDomainOwner IAM用户是否为根用户。
+    *
+    * @return $this
+    */
+    public function setIsDomainOwner($isDomainOwner)
+    {
+        $this->container['isDomainOwner'] = $isDomainOwner;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *
+    * @return string
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string $description IAM用户描述信息
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

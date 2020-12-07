@@ -8,7 +8,7 @@
     "api",
     "iam"
   ],
-  "version": "3.0.1-beta",
+  "version": "3.0.2-beta",
    "type": "library",
   "license": "Apache-2.0",
   "authors": [
@@ -18,8 +18,9 @@
       "homepage": "https://sdkcenter.developer.huaweicloud.com/?language=PHP"
     }
   ],
+  "minimum-stability": "dev",
   "require": {
-    "huaweicloud/huaweicloud-sdk-core": "3.0.1-beta"
+    "huaweicloud/huaweicloud-sdk-core": "3.0.2-beta"
   },
   "autoload": {
     "psr-4": {

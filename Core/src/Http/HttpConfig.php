@@ -1,4 +1,22 @@
 <?php
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache LICENSE, Version 2.0 (the
+ * "LICENSE"); you may not use this file except in compliance
+ * with the LICENSE.  You may obtain a copy of the LICENSE at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the LICENSE is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the LICENSE for the
+ * specific language governing permissions and limitations
+ * under the LICENSE.
+ */
 
 namespace HuaweiCloud\SDK\Core\Http;
 
@@ -9,7 +27,6 @@ class HttpConfig
     public $proxyPort = '';
     public $proxyUser = '';
     public $proxyPassword = '';
-
 
     public $ignoreSslVerification = false;
     public $sslCaCert = '';
@@ -29,17 +46,15 @@ class HttpConfig
         return $this->proxyPort;
     }
 
-    /**
-     * @param string $proxyPort
-     */
-    public function setProxyPort($proxyPort)
+    public function setProxyPort(string $proxyPort)
     {
         $this->proxyPort = $proxyPort;
     }
 
-    public function withProxyPort($proxyPort)
+    public function withProxyPort(string $proxyPort)
     {
         $this->proxyPort = $proxyPort;
+
         return $this;
     }
 
@@ -51,17 +66,15 @@ class HttpConfig
         return $this->proxyUser;
     }
 
-    /**
-     * @param string $proxyUser
-     */
-    public function setProxyUser($proxyUser)
+    public function setProxyUser(string $proxyUser)
     {
         $this->proxyUser = $proxyUser;
     }
 
-    public function withProxyUser($proxyUser)
+    public function withProxyUser(string $proxyUser)
     {
         $this->proxyUser = $proxyUser;
+
         return $this;
     }
 
@@ -73,17 +86,15 @@ class HttpConfig
         return $this->proxyPassword;
     }
 
-    /**
-     * @param string $proxyPassword
-     */
-    public function setProxyPassword($proxyPassword)
+    public function setProxyPassword(string $proxyPassword)
     {
         $this->proxyPassword = $proxyPassword;
     }
 
-    public function withProxyPassword($proxyPassword)
+    public function withProxyPassword(string $proxyPassword)
     {
         $this->proxyPassword = $proxyPassword;
+
         return $this;
     }
 
@@ -95,9 +106,6 @@ class HttpConfig
         return $this->sslCaCert;
     }
 
-    /**
-     * @param string $sslCaCert
-     */
     public function setSslCaCert(string $sslCaCert)
     {
         $this->sslCaCert = $sslCaCert;
@@ -106,6 +114,7 @@ class HttpConfig
     public function withSslCaCert(string $sslCaCert)
     {
         $this->sslCaCert = $sslCaCert;
+
         return $this;
     }
 
@@ -117,9 +126,6 @@ class HttpConfig
         return $this->certFile;
     }
 
-    /**
-     * @param string $certFile
-     */
     public function setCertFile(string $certFile)
     {
         $this->certFile = $certFile;
@@ -128,8 +134,10 @@ class HttpConfig
     public function withCertFile(string $certFile)
     {
         $this->certFile = $certFile;
+
         return $this;
     }
+
     /**
      * @return string
      */
@@ -138,9 +146,6 @@ class HttpConfig
         return $this->keyFile;
     }
 
-    /**
-     * @param string $keyFile
-     */
     public function setKeyFile(string $keyFile)
     {
         $this->keyFile = $keyFile;
@@ -149,6 +154,7 @@ class HttpConfig
     public function withKeyFile(string $keyFile)
     {
         $this->keyFile = $keyFile;
+
         return $this;
     }
 
@@ -171,6 +177,7 @@ class HttpConfig
     public function withTimeout($timeout)
     {
         $this->timeout = $timeout;
+
         return $this;
     }
 
@@ -193,8 +200,10 @@ class HttpConfig
     public function withConnectTimeout($connectTimeout)
     {
         $this->connectTimeout = $connectTimeout;
+
         return $this;
     }
+
     /**
      * @return int
      */
@@ -214,8 +223,10 @@ class HttpConfig
     public function withPoolConnections($poolConnections)
     {
         $this->poolConnections = $poolConnections;
+
         return $this;
     }
+
     /**
      * @return int
      */
@@ -235,6 +246,7 @@ class HttpConfig
     public function withPoolMaxsize($poolMaxsize)
     {
         $this->poolMaxsize = $poolMaxsize;
+
         return $this;
     }
 
@@ -257,6 +269,7 @@ class HttpConfig
     public function withProxyProtocol($proxyProtocol)
     {
         $this->proxyProtocol = $proxyProtocol;
+
         return $this;
     }
 
@@ -279,6 +292,7 @@ class HttpConfig
     public function withProxyHost($proxyHost)
     {
         $this->proxyHost = $proxyHost;
+
         return $this;
     }
 
@@ -301,27 +315,30 @@ class HttpConfig
     public function withIgnoreSslVerification($ignoreSslVerification)
     {
         $this->ignoreSslVerification = $ignoreSslVerification;
+
         return $this;
     }
-    public function getProxy(){
-        if ($this->proxyHost != null and $this->proxyUser != null and
-            $this->proxyPort != null) {
-            return array('https' => $this->proxyProtocol . '://'.
-                $this->proxyUser .':'.
-                $this->proxyPassword .'@'. $this->proxyHost . ':'
-                .$this->proxyPort);
-        } elseif ($this->proxyHost != null and $this->proxyUser != null) {
-            return array('https' => $this->proxyProtocol . '://'.
-                $this->proxyUser . ':'. $this->proxyPassword .'@'.
-                $this->proxyHost);
-        } elseif ($this->proxyHost != null and $this->proxyPort != null) {
-            return array('https' => $this->proxyProtocol . '://'.
-                $this->proxyHost . ':' . $this->proxyPort);
-        } elseif ($this->proxyHost != null) {
-            return array('https' => $this->proxyProtocol . '://'.
-                $this->proxyHost);
+
+    public function getProxy()
+    {
+        if (null != $this->proxyHost and null != $this->proxyUser and
+            null != $this->proxyPort) {
+            return ['https' => $this->proxyProtocol.'://'.
+                $this->proxyUser.':'.
+                $this->proxyPassword.'@'.$this->proxyHost.':'
+                .$this->proxyPort, ];
+        } elseif (null != $this->proxyHost and null != $this->proxyUser) {
+            return ['https' => $this->proxyProtocol.'://'.
+                $this->proxyUser.':'.$this->proxyPassword.'@'.
+                $this->proxyHost, ];
+        } elseif (null != $this->proxyHost and null != $this->proxyPort) {
+            return ['https' => $this->proxyProtocol.'://'.
+                $this->proxyHost.':'.$this->proxyPort, ];
+        } elseif (null != $this->proxyHost) {
+            return ['https' => $this->proxyProtocol.'://'.
+                $this->proxyHost, ];
         } else {
-            return array();
+            return [];
         }
     }
 
@@ -329,5 +346,4 @@ class HttpConfig
     {
         return new HttpConfig();
     }
-
 }

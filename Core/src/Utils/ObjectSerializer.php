@@ -1,23 +1,45 @@
 <?php
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache LICENSE, Version 2.0 (the
+ * "LICENSE"); you may not use this file except in compliance
+ * with the LICENSE.  You may obtain a copy of the LICENSE at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the LICENSE is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the LICENSE for the
+ * specific language governing permissions and limitations
+ * under the LICENSE.
+ * 
+ * Copyright 2018 OpenAPI-Generator Contributors (https://openapi-generator.tech)
+ * Copyright 2018 SmartBear Software
+ * 
+ */
 
 namespace HuaweiCloud\SDK\Core\Utils;
 
 use HuaweiCloud\SDK\Core\Exceptions\SdkException;
-use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 
 class ObjectSerializer
 {
-    private static $primitiveTypes = array('DateTime', 'bool', 'boolean', 'byte',
+    private static $primitiveTypes = ['DateTime', 'bool', 'boolean', 'byte',
         'double', 'float', 'int', 'integer', 'mixed', 'number', 'object',
-        'string', 'void');
+        'string', 'void', ];
+
     public static function sanitizeForSerialization($obj,
                                                     $type = null,
                                                     $format = null
     ) {
-        if ($obj === null || is_scalar($obj)) {
+        if (null === $obj || is_scalar($obj)) {
             return $obj;
         } elseif ($obj instanceof \DateTime) {
-            if ($format === 'date') {
+            if ('date' === $format) {
                 return $obj->format('Y-m-d');
             } else {
                 return $obj->format(\DateTime::ATOM);
@@ -26,6 +48,7 @@ class ObjectSerializer
             foreach ($obj as $key => $value) {
                 $obj[$key] = self::sanitizeForSerialization($value);
             }
+
             return $obj;
         } elseif (is_object($obj)) {
             $returnValues = [];
@@ -34,7 +57,7 @@ class ObjectSerializer
                 foreach ($obj::openAPITypes() as $key => $openAPIType) {
                     $getter = $obj::getters()[$key];
                     $value = $obj->$getter();
-                    if ($value !== null
+                    if (null !== $value
                         && !in_array($openAPIType,
                             ObjectSerializer::$primitiveTypes, true)
                         && method_exists($openAPIType, 'getAllowableEnumValues')
@@ -42,19 +65,20 @@ class ObjectSerializer
                         $imploded = implode("', '", $openAPIType::getAllowableEnumValues());
                         throw new SdkException("InvalidArgumentException : Invalid value for enum '$openAPIType', must be one of: '$imploded'");
                     }
-                    if ($value !== null) {
+                    if (null !== $value) {
                         $returnValues[$obj::attributeMap()[$key]] =
                             self::sanitizeForSerialization($value, $openAPIType, $formats[$key]);
                     }
                 }
             } else {
-                foreach($obj as $key => $value) {
+                foreach ($obj as $key => $value) {
                     $returnValues[$key] = self::sanitizeForSerialization($value);
                 }
             }
-            return (object)$returnValues;
+
+            return (object) $returnValues;
         } else {
-            return (string)$obj;
+            return (string) $obj;
         }
     }
 
@@ -71,32 +95,35 @@ class ObjectSerializer
     {
         if (null === $response) {
             return null;
-        } elseif (substr($responseType, 0, 4) === 'map[') {
+        } elseif ('map[' === substr($responseType, 0, 4)) {
             $response = is_string($response) ? json_decode($response) : $response;
             settype($response, 'array');
 
             $inner = substr($responseType, 4, -1);
             $deserialized = [];
-            if (strrpos($inner, ",") !== false) {
+            if (false !== strrpos($inner, ',')) {
                 $subClassArray = explode(',', $inner, 2);
                 $subClassType = $subClassArray[1];
                 foreach ($response as $key => $value) {
                     $deserialized[$key] = self::deserialize($value, $subClassType, null);
                 }
             }
+
             return $deserialized;
-        } elseif (strcasecmp(substr($responseType, -2), '[]') === 0) {
+        } elseif (0 === strcasecmp(substr($responseType, -2), '[]')) {
             $response = is_string($response) ? json_decode($response) : $response;
             $subClassType = substr($responseType, 0, -2);
             $returnValues = [];
             foreach ($response as $key => $value) {
                 $returnValues[] = self::deserialize($value, $subClassType, null);
             }
+
             return $returnValues;
-        } elseif ($responseType === 'object') {
+        } elseif ('object' === $responseType) {
             settype($response, 'array');
+
             return $response;
-        } elseif ($responseType === '\DateTime') {
+        } elseif ('\DateTime' === $responseType) {
             if (!empty($response)) {
                 return new \DateTime($response);
             } else {
@@ -104,12 +131,14 @@ class ObjectSerializer
             }
         } elseif (in_array($responseType, ObjectSerializer::$primitiveTypes, true)) {
             settype($response, $responseType);
+
             return $response;
         } elseif (method_exists($responseType, 'getAllowableEnumValues')) {
             if (!in_array($response, $responseType::getAllowableEnumValues(), true)) {
                 $imploded = implode("', '", $responseType::getAllowableEnumValues());
                 throw new SdkException("InvalidArgumentException : Invalid value for enum '$responseType', must be one of: '$imploded'");
             }
+
             return $response;
         } else {
             $response = is_string($response) ? json_decode($response) : $response;
@@ -126,6 +155,7 @@ class ObjectSerializer
                     $instance->$propertySetter(self::deserialize($propertyValue, $type, null));
                 }
             }
+
             return $instance;
         }
     }

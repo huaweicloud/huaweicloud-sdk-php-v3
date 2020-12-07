@@ -31,7 +31,7 @@
     # 安装 Composer
     curl -sS https://getcomposer.org/installer | php
     # 安装 PHP SDK
-    composer require huaweicloud/huaweicloud-sdk-php:3.0.1-beta
+    composer require huaweicloud/huaweicloud-sdk-php
     ```
 
     安装完毕后，你需要引入Composer的自动加载文件：
@@ -109,7 +109,7 @@
     ``` php
     # Region级服务
     $credentials = new BasicCredentials($ak,$sk,$projectId);
-
+       
     # Global级服务
     $credentials = new GlobalCredentials($ak,$sk,$domainId);
     ```
@@ -207,15 +207,89 @@
         ->withEndpoint($endpoint)
         ->withCredentials($credentials)
         ->build();
-
+    
     # 发送异步请求
     $request = new ShowPermanentAccessKeyRequest(array('accessKey' => "{your access key}"));
     $promise = $iamClient->showPermanentAccessKeyAsync($request);
-
+    
     # 获取异步请求结果
     $response = $promise->wait();
     ```
 
+8. 问题定位
+
+    在某些场景下可能对业务发出的Http请求进行Debug，需要看到原始的Http请求和返回信息，SDK提供侦听器功能来获取原始的为加密的Http请求和返回信息。
+
+    **注意：** 原始信息打印仅在debug阶段使用，请不要在生产系统中将原始的Http头和Body信息打印到日志，这些信息并未加密且其中包含敏感数据，例如所创建虚拟机的密码，IAM用户的密码等;
+    当Body体为二进制内容,即Content-Type标识为二进制时 body为"***",详细内容不输出。
+
+    ```php
+    $requestHandler = function ($argsMap) {
+        if (isset($argsMap['request'])) {
+            $sdkRequest = $argsMap['request'];
+            $requestHeaders = $sdkRequest->headerParams;
+            $requestBase = "> Request " . $sdkRequest->method . ' ' .
+                $sdkRequest->url . "\n";
+            if (count($requestHeaders) > 0) {
+                $requestBase = $requestBase . '> Headers:' . "\n";
+                foreach ($requestHeaders as $key => $value) {
+                    $requestBase = $requestBase . '    ' . $key . ' : ' .
+                        $value . "\n";
+                }
+                $requestBase = $requestBase . '> Body: ' .
+                    $sdkRequest->body . "\n\n";
+            }
+            if (isset($argsMap['logger'])) {
+                $logger = $argsMap['logger'];
+                $logger->addDebug($requestBase);
+            }
+        }
+    };
+    
+    $responseHandler = function ($argsMap) {
+        if (isset($argsMap['response'])) {
+            $response = $argsMap['response'];
+            $responseBase = "> Response HTTP/1.1 " .
+                $response->getStatusCode() . "\n";
+            $responseHeaders = $response->getHeaders();
+            if (count($responseHeaders) > 0) {
+                $responseBase = $responseBase . '> Headers:' . "\n";
+                foreach ($responseHeaders as $key => $value) {
+                    $valueToString = '';
+                    if (is_array($value)) {
+                        $valueToString = ''.join($value);
+                    }
+                    $responseBase = $responseBase . '    ' . $key . ' : '
+                        . $valueToString . "\n";
+                }
+                $responseBody = $response->getBody();
+                $responseBase = $responseBase . '> Body: ' . (string)
+                    $responseBody . "\n\n";
+            }
+            if (isset($argsMap['logger'])) {
+                $logger = $argsMap['logger'];
+                $logger->addDebug($responseBase);
+            }
+        }
+    };
+    
+    $httpHandler = new HttpHandler();
+    $httpHandler->addRequestHandlers($requestHandler);
+    $httpHandler->addResponseHandlers($responseHandler);
+    
+    $iamClient = IamClient::newBuilder(new IamClient)
+        ->withHttpConfig($config)
+        ->withEndpoint($endpoint)
+        ->withCredentials(null)
+        ->withStreamLogger($stream = 'php://stdout',$logLevel =Logger::INFO) // 日志打印至控制台
+        ->withFileLogger($logPath='./test_log.txt', $logLevel = Logger::INFO) // 日志打印至文件
+        ->withHttpHandler($httpHandler)
+        ->build();
+    ```
+
+       **说明:**
+
+    HttpHandler 支持如下方法 addRequestHandlers 、 addResponseHandlers 。
 
 ## 代码实例
 
@@ -224,9 +298,9 @@
 
     ``` php
     <?php
-
+    
     require_once ".\\vendor\autoload.php";
-
+    
     use HuaweiCloud\SDK\Core\Auth\GlobalCredentials;
     use HuaweiCloud\SDK\Core\Http\HttpConfig;
     use HuaweiCloud\SDK\Core\Exceptions\ConnectionException;
@@ -235,16 +309,16 @@
     use HuaweiCloud\SDK\Iam\V3\IamClient;
     use HuaweiCloud\SDK\Iam\V3\Model\ListPermanentAccessKeysRequest;
     use Monolog\Logger;
-
+    
     $ak = "{your ak string}";
     $sk = "{your sk string}";
     $endpoint = "{your endpoint}";
     $domainId = "{your domain id}";
-
+    
     $config = HttpConfig::getDefaultConfig();
     $config->setIgnoreSslVerification(true);
     $credentials = new GlobalCredentials($ak,$sk,$domainId);
-
+    
     $iamClient = IamClient::newBuilder(new IamClient)
         ->withHttpConfig($config)
         ->withEndpoint($endpoint)
@@ -252,7 +326,7 @@
         ->withStreamLogger($stream = 'php://stdout',$logLevel =Logger::INFO)
         ->withFileLogger($logPath='./test_log.txt', $logLevel = Logger::INFO)
         ->build();
-
+    
     function listPermanentAccessKeys($iamClient)
     {
         $listPermanentAccessKeysRequest = new ListPermanentAccessKeysRequest(array('userId'=>"{your user id}"));

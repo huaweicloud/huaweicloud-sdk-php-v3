@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class KeystoneAssociateGroupWithAllProjectPermissionResponse implements ModelInterface, ArrayAccess
+class CreateMfaDeviceResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,7 +17,7 @@ class KeystoneAssociateGroupWithAllProjectPermissionResponse implements ModelInt
     *
     * @var string
     */
-    protected static $openAPIModelName = 'KeystoneAssociateGroupWithAllProjectPermissionResponse';
+    protected static $openAPIModelName = 'CreateMfaDeviceResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
@@ -25,6 +25,7 @@ class KeystoneAssociateGroupWithAllProjectPermissionResponse implements ModelInt
     * @var string[]
     */
     protected static $openAPITypes = [
+            'virtualMfaDevice' => '\HuaweiCloud\SDK\Iam\V3\Model\CreateMfaDeviceRespon'
     ];
 
     /**
@@ -33,6 +34,7 @@ class KeystoneAssociateGroupWithAllProjectPermissionResponse implements ModelInt
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'virtualMfaDevice' => null
     ];
 
     /**
@@ -62,6 +64,7 @@ class KeystoneAssociateGroupWithAllProjectPermissionResponse implements ModelInt
     * @var string[]
     */
     protected static $attributeMap = [
+            'virtualMfaDevice' => 'virtual_mfa_device'
     ];
 
     /**
@@ -70,6 +73,7 @@ class KeystoneAssociateGroupWithAllProjectPermissionResponse implements ModelInt
     * @var string[]
     */
     protected static $setters = [
+            'virtualMfaDevice' => 'setVirtualMfaDevice'
     ];
 
     /**
@@ -78,6 +82,7 @@ class KeystoneAssociateGroupWithAllProjectPermissionResponse implements ModelInt
     * @var string[]
     */
     protected static $getters = [
+            'virtualMfaDevice' => 'getVirtualMfaDevice'
     ];
 
     /**
@@ -138,6 +143,7 @@ class KeystoneAssociateGroupWithAllProjectPermissionResponse implements ModelInt
     */
     public function __construct(array $data = null)
     {
+        $this->container['virtualMfaDevice'] = isset($data['virtualMfaDevice']) ? $data['virtualMfaDevice'] : null;
     }
 
     /**
@@ -160,6 +166,29 @@ class KeystoneAssociateGroupWithAllProjectPermissionResponse implements ModelInt
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets virtualMfaDevice
+    *
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\CreateMfaDeviceRespon|null
+    */
+    public function getVirtualMfaDevice()
+    {
+        return $this->container['virtualMfaDevice'];
+    }
+
+    /**
+    * Sets virtualMfaDevice
+    *
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\CreateMfaDeviceRespon|null $virtualMfaDevice virtualMfaDevice
+    *
+    * @return $this
+    */
+    public function setVirtualMfaDevice($virtualMfaDevice)
+    {
+        $this->container['virtualMfaDevice'] = $virtualMfaDevice;
+        return $this;
     }
 
     /**

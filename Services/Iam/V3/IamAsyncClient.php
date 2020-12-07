@@ -20,7 +20,7 @@ class IamAsyncClient extends Client
 
     public static function newBuilder($clazz)
     {
-        return new ClientBuilder($clazz);
+        return new ClientBuilder($clazz, "GlobalCredentials");
     }
 
     public function associateAgencyWithAllProjectsPermissionAsync($request){
@@ -44,17 +44,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -106,17 +107,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -168,17 +170,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -230,17 +233,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -292,17 +296,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -354,17 +359,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -415,6 +421,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
+
 
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -470,6 +479,9 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
+
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -523,6 +535,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
+
 
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -578,6 +593,9 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
+
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -632,10 +650,11 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
-
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
@@ -694,9 +713,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-        if ($localVarParams['x_idp_id'] !== null) {
-            $pathParams['x_idp_id'] = $localVarParams['x_idp_id'];
+
+        if ($localVarParams['xIdpId'] !== null) {
+            $headerParams['x_idp_id'] = $localVarParams['xIdpId'];
         }
+
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -748,9 +770,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -802,9 +827,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -835,6 +863,69 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    public function deleteDomainGroupInheritedRoleAsync($request){
+        return $this->deleteDomainGroupInheritedRoleAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteDomainGroupInheritedRoleAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/{role_id}/inherited_to_projects';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+
+
+        if ($localVarParams['domainId'] !== null) {
+            $pathParams['domain_id'] = $localVarParams['domainId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['roleId'] !== null) {
+            $pathParams['role_id'] = $localVarParams['roleId'];
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteDomainGroupInheritedRoleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteDomainGroupInheritedRoleRequest',
+            $asyncRequest = true);
+    }
+
     public function keystoneAddUserToGroupAsync($request){
         return $this->keystoneAddUserToGroupAsyncWithHttpInfo($request);
     }
@@ -856,13 +947,15 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -893,68 +986,6 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneAssociateGroupWithAllProjectPermissionAsync($request){
-        return $this->keystoneAssociateGroupWithAllProjectPermissionAsyncWithHttpInfo($request);
-    }
-    
-    public function keystoneAssociateGroupWithAllProjectPermissionAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/{role_id}/inherited_to_projects';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-
-        if ($localVarParams['domainId'] !== null) {
-            $pathParams['domain_id'] = $localVarParams['domainId'];
-        }
-
-        if ($localVarParams['groupId'] !== null) {
-            $pathParams['group_id'] = $localVarParams['groupId'];
-        }
-
-        if ($localVarParams['roleId'] !== null) {
-            $pathParams['role_id'] = $localVarParams['roleId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneAssociateGroupWithAllProjectPermissionResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneAssociateGroupWithAllProjectPermissionRequest',
-            $asyncRequest = true);
-    }
-
     public function keystoneAssociateGroupWithDomainPermissionAsync($request){
         return $this->keystoneAssociateGroupWithDomainPermissionAsyncWithHttpInfo($request);
     }
@@ -976,17 +1007,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1038,17 +1070,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1100,17 +1133,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1162,17 +1196,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1224,13 +1259,15 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1261,6 +1298,69 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    public function keystoneCheckroleForGroupAsync($request){
+        return $this->keystoneCheckroleForGroupAsyncWithHttpInfo($request);
+    }
+    
+    public function keystoneCheckroleForGroupAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/{role_id}/inherited_to_projects';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+
+
+        if ($localVarParams['domainId'] !== null) {
+            $pathParams['domain_id'] = $localVarParams['domainId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['roleId'] !== null) {
+            $pathParams['role_id'] = $localVarParams['roleId'];
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+        return $this->callApi(
+            $method='HEAD',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCheckroleForGroupResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCheckroleForGroupRequest',
+            $asyncRequest = true);
+    }
+
     public function keystoneCreateGroupAsync($request){
         return $this->keystoneCreateGroupAsyncWithHttpInfo($request);
     }
@@ -1281,6 +1381,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
+
 
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1335,6 +1438,8 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
 
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
@@ -1394,6 +1499,8 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
@@ -1452,6 +1559,9 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
+
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1506,10 +1616,11 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
-
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
@@ -1568,6 +1679,9 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
+
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1622,9 +1736,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1676,9 +1793,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1730,9 +1850,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1784,13 +1907,15 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
-
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1821,6 +1946,66 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    public function keystoneListAllProjectPermissionsForGroupAsync($request){
+        return $this->keystoneListAllProjectPermissionsForGroupAsyncWithHttpInfo($request);
+    }
+    
+    public function keystoneListAllProjectPermissionsForGroupAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/inherited_to_projects';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+
+
+        if ($localVarParams['domainId'] !== null) {
+            $pathParams['domain_id'] = $localVarParams['domainId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListAllProjectPermissionsForGroupResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListAllProjectPermissionsForGroupRequest',
+            $asyncRequest = true);
+    }
+
     public function keystoneListAuthDomainsAsync($request){
         return $this->keystoneListAuthDomainsAsyncWithHttpInfo($request);
     }
@@ -1841,6 +2026,10 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
+
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1892,6 +2081,10 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
+
+
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1942,13 +2135,15 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2003,10 +2198,12 @@ class IamAsyncClient extends Client
         if ($localVarParams['interface'] !== null) {
             $queryParams['interface'] = $localVarParams['interface'];
         }
-
-        if ($localVarParams['service_id'] !== null) {
-            $queryParams['service_id'] = $localVarParams['service_id'];
+        if ($localVarParams['serviceId'] !== null) {
+            $queryParams['service_id'] = $localVarParams['serviceId'];
         }
+
+
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2058,13 +2255,15 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-        if ($localVarParams['domain_id'] !== null) {
-            $queryParams['domain_id'] = $localVarParams['domain_id'];
+        if ($localVarParams['domainId'] !== null) {
+            $queryParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
+
+
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2116,6 +2315,10 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
+
+
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2165,6 +2368,10 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
+
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2219,18 +2426,26 @@ class IamAsyncClient extends Client
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
-
-        if ($localVarParams['domain_id'] !== null) {
-            $queryParams['domain_id'] = $localVarParams['domain_id'];
+        if ($localVarParams['domainId'] !== null) {
+            $queryParams['domain_id'] = $localVarParams['domainId'];
         }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['perPage'] !== null) {
+            $queryParams['per_page'] = $localVarParams['perPage'];
+        }
+
+
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -2274,13 +2489,15 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2332,33 +2549,30 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-        if ($localVarParams['domain_id'] !== null) {
-            $queryParams['domain_id'] = $localVarParams['domain_id'];
+        if ($localVarParams['domainId'] !== null) {
+            $queryParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
-
-        if ($localVarParams['parent_id'] !== null) {
-            $queryParams['parent_id'] = $localVarParams['parent_id'];
+        if ($localVarParams['parentId'] !== null) {
+            $queryParams['parent_id'] = $localVarParams['parentId'];
         }
-
         if ($localVarParams['enabled'] !== null) {
             $queryParams['enabled'] = $localVarParams['enabled'];
         }
-
-        if ($localVarParams['is_domain'] !== null) {
-            $queryParams['is_domain'] = $localVarParams['is_domain'];
+        if ($localVarParams['isDomain'] !== null) {
+            $queryParams['is_domain'] = $localVarParams['isDomain'];
         }
-
         if ($localVarParams['page'] !== null) {
             $queryParams['page'] = $localVarParams['page'];
         }
-
-        if ($localVarParams['per_page'] !== null) {
-            $queryParams['per_page'] = $localVarParams['per_page'];
+        if ($localVarParams['perPage'] !== null) {
+            $queryParams['per_page'] = $localVarParams['perPage'];
         }
+
+
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2410,9 +2624,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2464,9 +2681,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2517,6 +2737,10 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
+
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2572,6 +2796,9 @@ class IamAsyncClient extends Client
             $queryParams['type'] = $localVarParams['type'];
         }
 
+
+
+
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2622,9 +2849,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2676,6 +2906,10 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
+
+
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2726,17 +2960,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2788,17 +3023,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2850,13 +3086,15 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2908,6 +3146,10 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
+
+
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2958,9 +3200,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['endpointId'] !== null) {
             $pathParams['endpoint_id'] = $localVarParams['endpointId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3012,9 +3257,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3066,9 +3314,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3120,9 +3371,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3174,9 +3428,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3228,9 +3485,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3282,13 +3542,15 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
-
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3340,9 +3602,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['regionId'] !== null) {
             $pathParams['region_id'] = $localVarParams['regionId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3394,9 +3659,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3448,13 +3716,15 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['option'] !== null) {
             $pathParams['option'] = $localVarParams['option'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3506,9 +3776,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['serviceId'] !== null) {
             $pathParams['service_id'] = $localVarParams['serviceId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3560,6 +3833,10 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
+
+
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -3609,6 +3886,8 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
 
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
@@ -3668,6 +3947,8 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
@@ -3725,6 +4006,8 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
 
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
@@ -3784,6 +4067,8 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -3842,10 +4127,11 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
-
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
@@ -3904,17 +4190,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-        if ($localVarParams['domain_id'] !== null) {
-            $queryParams['domain_id'] = $localVarParams['domain_id'];
+        if ($localVarParams['domainId'] !== null) {
+            $queryParams['domain_id'] = $localVarParams['domainId'];
         }
-
-        if ($localVarParams['trust_domain_id'] !== null) {
-            $queryParams['trust_domain_id'] = $localVarParams['trust_domain_id'];
+        if ($localVarParams['trustDomainId'] !== null) {
+            $queryParams['trust_domain_id'] = $localVarParams['trustDomainId'];
         }
-
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
+
+
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3966,13 +4253,15 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4024,13 +4313,23 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['perPage'] !== null) {
+            $queryParams['per_page'] = $localVarParams['perPage'];
+        }
+
+
+
+
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -4074,13 +4373,15 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4132,13 +4433,15 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4190,17 +4493,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4252,17 +4556,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4314,17 +4619,18 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4376,9 +4682,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4430,9 +4739,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4484,9 +4796,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4538,9 +4853,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4592,9 +4910,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4646,17 +4967,20 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
 
+
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -4700,9 +5024,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4758,9 +5085,11 @@ class IamAsyncClient extends Client
             $queryParams['type'] = $localVarParams['type'];
         }
 
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4812,13 +5141,15 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
-
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4870,9 +5201,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4924,9 +5258,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4977,6 +5314,8 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
 
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
@@ -5036,6 +5375,8 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
@@ -5093,6 +5434,8 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
 
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
@@ -5152,6 +5495,8 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -5210,6 +5555,8 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -5247,6 +5594,69 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    public function updateDomainGroupInheritRoleAsync($request){
+        return $this->updateDomainGroupInheritRoleAsyncWithHttpInfo($request);
+    }
+    
+    public function updateDomainGroupInheritRoleAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/{role_id}/inherited_to_projects';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+
+
+        if ($localVarParams['domainId'] !== null) {
+            $pathParams['domain_id'] = $localVarParams['domainId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['roleId'] !== null) {
+            $pathParams['role_id'] = $localVarParams['roleId'];
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainGroupInheritRoleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainGroupInheritRoleRequest',
+            $asyncRequest = true);
+    }
+
     public function updateDomainLoginPolicyAsync($request){
         return $this->updateDomainLoginPolicyAsyncWithHttpInfo($request);
     }
@@ -5267,6 +5677,8 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
 
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
@@ -5326,6 +5738,8 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -5383,6 +5797,8 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
 
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
@@ -5442,6 +5858,8 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -5500,6 +5918,9 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
+
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5553,6 +5974,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
+
 
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -5608,6 +6032,9 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
+
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5662,9 +6089,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['accessKey'] !== null) {
             $pathParams['access_key'] = $localVarParams['accessKey'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5716,9 +6146,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-        if ($localVarParams['user_id'] !== null) {
-            $queryParams['user_id'] = $localVarParams['user_id'];
+        if ($localVarParams['userId'] !== null) {
+            $queryParams['user_id'] = $localVarParams['userId'];
         }
+
+
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5770,9 +6203,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['accessKey'] !== null) {
             $pathParams['access_key'] = $localVarParams['accessKey'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5824,6 +6260,8 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['accessKey'] !== null) {
             $pathParams['access_key'] = $localVarParams['accessKey'];
         }
@@ -5861,6 +6299,120 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    public function createBindingDeviceAsync($request){
+        return $this->createBindingDeviceAsyncWithHttpInfo($request);
+    }
+    
+    public function createBindingDeviceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3.0/OS-MFA/mfa-devices/bind';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+
+
+
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateBindingDeviceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateBindingDeviceRequest',
+            $asyncRequest = true);
+    }
+
+    public function createMfaDeviceAsync($request){
+        return $this->createMfaDeviceAsyncWithHttpInfo($request);
+    }
+    
+    public function createMfaDeviceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3.0/OS-MFA/virtual-mfa-devices';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+
+
+
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMfaDeviceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMfaDeviceRequest',
+            $asyncRequest = true);
+    }
+
     public function createUserAsync($request){
         return $this->createUserAsyncWithHttpInfo($request);
     }
@@ -5881,6 +6433,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
+
 
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -5915,6 +6470,123 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    public function deleteBindingDeviceAsync($request){
+        return $this->deleteBindingDeviceAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteBindingDeviceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3.0/OS-MFA/mfa-devices/unbind';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+
+
+
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteBindingDeviceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteBindingDeviceRequest',
+            $asyncRequest = true);
+    }
+
+    public function deleteMfaDeviceAsync($request){
+        return $this->deleteMfaDeviceAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteMfaDeviceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3.0/OS-MFA/virtual-mfa-devices';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($localVarParams['userId'] !== null) {
+            $queryParams['user_id'] = $localVarParams['userId'];
+        }
+        if ($localVarParams['serialNumber'] !== null) {
+            $queryParams['serial_number'] = $localVarParams['serialNumber'];
+        }
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteMfaDeviceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteMfaDeviceRequest',
+            $asyncRequest = true);
+    }
+
     public function keystoneCreateUserAsync($request){
         return $this->keystoneCreateUserAsyncWithHttpInfo($request);
     }
@@ -5935,6 +6607,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
+
 
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -5990,9 +6665,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6044,9 +6722,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6098,21 +6779,21 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-        if ($localVarParams['domain_id'] !== null) {
-            $queryParams['domain_id'] = $localVarParams['domain_id'];
+        if ($localVarParams['domainId'] !== null) {
+            $queryParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['enabled'] !== null) {
             $queryParams['enabled'] = $localVarParams['enabled'];
         }
-
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
-
-        if ($localVarParams['password_expires_at'] !== null) {
-            $queryParams['password_expires_at'] = $localVarParams['password_expires_at'];
+        if ($localVarParams['passwordExpiresAt'] !== null) {
+            $queryParams['password_expires_at'] = $localVarParams['passwordExpiresAt'];
         }
+
+
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6164,9 +6845,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6217,6 +6901,8 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
 
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
@@ -6276,6 +6962,8 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
@@ -6334,6 +7022,10 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
+
+
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -6383,6 +7075,10 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
+
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6434,17 +7130,20 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
 
+
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -6488,9 +7187,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6542,9 +7244,12 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
+
+
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6575,6 +7280,66 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    public function updateLoginProtectAsync($request){
+        return $this->updateLoginProtectAsyncWithHttpInfo($request);
+    }
+    
+    public function updateLoginProtectAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3.0/OS-USER/users/{user_id}/login-protect';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+
+
+        if ($localVarParams['userId'] !== null) {
+            $pathParams['user_id'] = $localVarParams['userId'];
+        }
+
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateLoginProtectResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateLoginProtectRequest',
+            $asyncRequest = true);
+    }
+
     public function updateUserAsync($request){
         return $this->updateUserAsyncWithHttpInfo($request);
     }
@@ -6595,6 +7360,8 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
 
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
@@ -6653,6 +7420,8 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+
+
 
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
@@ -6716,6 +7485,8 @@ class IamAsyncClient extends Client
             $queryParams['nocatalog'] = $localVarParams['nocatalog'];
         }
 
+
+
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6773,6 +7544,8 @@ class IamAsyncClient extends Client
         if ($localVarParams['nocatalog'] !== null) {
             $queryParams['nocatalog'] = $localVarParams['nocatalog'];
         }
+
+
 
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -6832,6 +7605,8 @@ class IamAsyncClient extends Client
             $queryParams['nocatalog'] = $localVarParams['nocatalog'];
         }
 
+
+
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6890,9 +7665,11 @@ class IamAsyncClient extends Client
             $queryParams['nocatalog'] = $localVarParams['nocatalog'];
         }
 
-        if ($localVarParams['x_subject_token'] !== null) {
-            $pathParams['x_subject_token'] = $localVarParams['x_subject_token'];
+        if ($localVarParams['xSubjectToken'] !== null) {
+            $headerParams['x_subject_token'] = $localVarParams['xSubjectToken'];
         }
+
+
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

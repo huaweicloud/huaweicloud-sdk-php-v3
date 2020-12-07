@@ -175,6 +175,9 @@ class KeystoneCreateProjectOption implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
+        if ($this->container['parentId'] === null) {
+            $invalidProperties[] = "'parentId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -215,7 +218,7 @@ class KeystoneCreateProjectOption implements ModelInterface, ArrayAccess
     /**
     * Gets parentId
     *
-    * @return string|null
+    * @return string
     */
     public function getParentId()
     {
@@ -225,7 +228,7 @@ class KeystoneCreateProjectOption implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param string|null $parentId 区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * @param string $parentId 区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */

@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class KeystoneAssociateGroupWithAllProjectPermissionRequest implements ModelInterface, ArrayAccess
+class KeystoneCheckroleForGroupRequest implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,7 +17,7 @@ class KeystoneAssociateGroupWithAllProjectPermissionRequest implements ModelInte
     *
     * @var string
     */
-    protected static $openAPIModelName = 'KeystoneAssociateGroupWithAllProjectPermissionRequest';
+    protected static $openAPIModelName = 'KeystoneCheckroleForGroupRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

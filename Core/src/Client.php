@@ -1,9 +1,28 @@
 <?php
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache LICENSE, Version 2.0 (the
+ * "LICENSE"); you may not use this file except in compliance
+ * with the LICENSE.  You may obtain a copy of the LICENSE at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the LICENSE is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the LICENSE for the
+ * specific language governing permissions and limitations
+ * under the LICENSE.
+ */
 
 namespace HuaweiCloud\SDK\Core;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use HuaweiCloud\SDK\Core\Http\HttpClient;
+use HuaweiCloud\SDK\Core\Http\HttpHandler;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\RotatingFileHandler;
@@ -12,8 +31,8 @@ use Monolog\Logger;
 
 class Client
 {
-    private $defaultHeaders = Array();
-    private $Agent = Array();
+    private $defaultHeaders = [];
+    private $Agent = [];
     private $httpConfig;
     private $credentials;
     private $endpoint;
@@ -25,66 +44,80 @@ class Client
     private $logger = null;
     private $logFormat = null;
 
-
     public function __construct()
     {
-        $this->Agent = Array('User-Agent' => 'huaweicloud-sdk-php/3.0');
+        $this->Agent = ['User-Agent' => 'huaweicloud-usdk-php/3.0'];
     }
 
     /**
      * @param mixed $httpConfig
+     *
      * @return Client
      */
     public function withHttpConfig($httpConfig)
     {
         $this->httpConfig = $httpConfig;
+
         return $this;
     }
 
     /**
      * @param mixed $credentials
+     *
      * @return Client
      */
     public function withCredentials($credentials)
     {
         $this->credentials = $credentials;
+
         return $this;
     }
 
     /**
      * @param mixed $endpoint
+     *
      * @return Client
      */
     public function withEndpoint($endpoint)
     {
         $this->endpoint = $endpoint;
+
         return $this;
     }
 
     /**
      * @param null $httpHandler
+     *
      * @return Client
      */
     public function withHttpHandler($httpHandler)
     {
-        $this->httpHandler = $httpHandler;
+        if (isset($httpHandler)) {
+            $this->httpHandler = $httpHandler;
+        } else {
+            $this->httpHandler = new HttpHandler();
+        }
+
         return $this;
     }
 
     /**
      * @param $logPath
      * @param $logLevel
-     * @param int $logMaxFiles
+     * @param int  $logMaxFiles
      * @param null $formatString
+     *
      * @return Client
      */
     public function withFileLogger($logPath,
-                                          $logLevel = Logger::INFO,
-                                          $logMaxFiles = 10485760,
-                                          $formatString = null
+                                   $logLevel = Logger::INFO,
+                                   $logMaxFiles = 10485760,
+                                   $formatString = null
     ) {
-        $this->fileLoggerHandler = array('path' => $logPath, 'logLevel' =>
-            $logLevel, 'logMaxFiles' => $logMaxFiles, 'formatString' => $formatString);
+        $this->fileLoggerHandler = ['path' => $logPath, 'logLevel' =>
+            $logLevel, 'logMaxFiles' => $logMaxFiles, 'formatString' =>
+            $formatString];
+
         return $this;
     }
 
@@ -92,26 +125,29 @@ class Client
      * @param $stream
      * @param $logLevel
      * @param null $formatString
+     *
      * @return Client
      */
     public function withStreamLogger($stream,
-                                            $logLevel,
-                                            $formatString = null)
+                                     $logLevel,
+                                     $formatString = null)
     {
-        $this->streamLoggerHandler = array('stream' => $stream, 'logLevel' =>
-            $logLevel, 'formatString' => $formatString);
+        $this->streamLoggerHandler = ['stream' => $stream, 'logLevel' =>
+            $logLevel, 'formatString' => $formatString];
+
         return $this;
     }
 
     public function initHttpClient()
     {
-        $this->httpClient = new HttpClient($this->httpConfig,$this->logger);
+        $this->httpClient = new HttpClient($this->httpConfig,
+            $this->httpHandler, $this->logger);
     }
 
     private function initLogger($name, $formatString = null)
     {
-        if ($formatString == null) {
-            $formatString = '[%datetime%][%level_name%]'.'%message%' . "\n";
+        if (null == $formatString) {
+            $formatString = '[%datetime%][%level_name%]'.'%message%'."\n";
         }
         $this->logger = new Logger($name);
         $this->logFormat = new LineFormatter($formatString);
@@ -119,25 +155,32 @@ class Client
 
     public function addStreamLogger($streamLoggerHandler)
     {
-        if (! isset($this->logger)) {
+        if (!isset($this->logger)) {
             $this->initLogger('Logger', $streamLoggerHandler['formatString']);
         }
         $streamHandler = new StreamHandler($streamLoggerHandler['stream'],
             $streamLoggerHandler['logLevel']);
         $streamHandler->setFormatter($this->logFormat);
-//        $this->logger->getHandlers();
         $this->logger->pushHandler($streamHandler);
     }
 
     public function addFileLogger($fileLoggerHandler)
     {
-        if (! isset($this->logger)) {
+        if (!isset($this->logger)) {
             $this->initLogger('Logger', $fileLoggerHandler['formatString']);
         }
         $fileHandler = new RotatingFileHandler($fileLoggerHandler['logPath'],
             $fileLoggerHandler['logMaxFiles'], $fileLoggerHandler['logLevel']);
         $fileHandler->setFormatter($this->logFormat);
         $this->logger->pushHandler($fileHandler);
+    }
+
+    /**
+     * @param null $logger
+     */
+    public function setLogger($logger)
+    {
+        $this->logger = $logger;
     }
 
     /**
@@ -173,6 +216,15 @@ class Client
     }
 
     /**
+     * @param mixed $endpoint
+     */
+    public function setEndpoint($endpoint)
+    {
+        $this->endpoint = $endpoint;
+    }
+
+
+    /**
      * @return mixed
      */
     public function getHttpClient()
@@ -185,49 +237,53 @@ class Client
                                      $resourcePath,
                                      $updatePathParams)
     {
-        $pathParams = $this->postProcessParams($pathParams) ?: array();
+        $pathParams = $this->postProcessParams($pathParams) ?: [];
         if (isset($pathParams)) {
-            foreach ($pathParams as $k=>$v) {
-                $resourcePath = str_replace(sprintf('{%s}',$k),
+            foreach ($pathParams as $k => $v) {
+                $resourcePath = str_replace(sprintf('{%s}', $k),
                     urlencode(strval($v)), $resourcePath);
             }
         }
 
         if (isset($updatePathParams)) {
-            foreach ($updatePathParams as $k=>$v) {
-                $resourcePath = str_replace(sprintf('{%s}',$k),
+            foreach ($updatePathParams as $k => $v) {
+                $resourcePath = str_replace(sprintf('{%s}', $k),
                     urlencode(strval($v)), $resourcePath);
             }
         }
+
         return $resourcePath;
     }
 
-    private function parseHeaderParams($collectionFormats,$headerParams)
+    private function parseHeaderParams($collectionFormats, $headerParams)
     {
-        $headerParams = $this->postProcessParams($headerParams) ?: array();
-        $headerParams = array_merge($headerParams,$this->defaultHeaders);
+        $headerParams = $this->postProcessParams($headerParams) ?: [];
+        $headerParams = array_merge($headerParams, $this->defaultHeaders);
         if (isset($headerParams)) {
             $headerParams = ObjectSerializer::sanitizeForSerialization($headerParams);
         }
-        $headerParams = array_merge($headerParams,$this->Agent);
+        $headerParams = array_merge($headerParams, $this->Agent);
+
         return $headerParams;
     }
 
     private function parseQueryParams($collectionFormats, $queryParams)
     {
-        $queryParams = $this->postProcessParams($queryParams) ?: array();
+        $queryParams = $this->postProcessParams($queryParams) ?: [];
         if (isset($queryParams)) {
             $queryParams = ObjectSerializer::sanitizeForSerialization($queryParams);
         }
+
         return $queryParams;
     }
 
     private function parsePostParams($collectionFormats, $postParams)
     {
-        $postParams = $this->postProcessParams($postParams) ?: array();
+        $postParams = $this->postProcessParams($postParams) ?: [];
         if (isset($postParams)) {
             $postParams = ObjectSerializer::sanitizeForSerialization($postParams);
         }
+
         return $postParams;
     }
 
@@ -236,7 +292,7 @@ class Client
         $httpBody = null;
         if (isset($body)) {
             // $_tempBody is the method argument, if present
-            if ($headerParams['Content-Type'] === 'application/json') {
+            if ('application/json' === $headerParams['Content-Type']) {
                 $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($body));
             } else {
                 $httpBody = $body;
@@ -250,19 +306,20 @@ class Client
                     foreach ($formParamValueItems as $formParamValueItem) {
                         $multipartContents[] = [
                             'name' => $formParamName,
-                            'contents' => $formParamValueItem
+                            'contents' => $formParamValueItem,
                         ];
                     }
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-            } elseif ($headerParams['Content-Type'] === 'application/json') {
+            } elseif ('application/json' === $headerParams['Content-Type']) {
                 $httpBody = \GuzzleHttp\json_encode($formParams);
             } else {
                 // for HTTP post (form)
                 $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
             }
         }
+
         return $httpBody;
     }
 
@@ -273,21 +330,22 @@ class Client
                 unset($headerParams[$headerParamName]);
             }
         }
+
         return $headerParams;
     }
 
     public function doHttpRequest($method,
                                   $resourcePath,
-                                  $pathParams=null,
-                                  $queryParams=null,
-                                  $headerParams=null,
-                                  $body=null,
-                                  $multipart=null,
-                                  $postParams=null,
-                                  $responseType=null,
-                                  $collectionFormats=null,
-                                  $requestType=null,
-                                  $async_request=false
+                                  $pathParams = null,
+                                  $queryParams = null,
+                                  $headerParams = null,
+                                  $body = null,
+                                  $multipart = null,
+                                  $postParams = null,
+                                  $responseType = null,
+                                  $collectionFormats = null,
+                                  $requestType = null,
+                                  $async_request = false
     ) {
         $urlParseResult = parse_url($this->endpoint);
         $scheme = $urlParseResult['scheme'];
@@ -299,24 +357,24 @@ class Client
             $this->credentials->getUpdatePathParams());
         $queryParams = $this->parseQueryParams($collectionFormats, $queryParams);
         $postParams = $this->parsePostParams($collectionFormats, $postParams);
-        $body = $this->parseBody($body, $multipart,$postParams, $headerParams);
-        $sdkRequest = new SdkRequest($method=$method, $scheme=$scheme,
-            $host=$host, $resourcePath=$resourcePath, $uri='',$urL='',
-            $queryParams=$queryParams, $headerParams=$headerParams,
-            $body=$body, $stream=FALSE);
+        $body = $this->parseBody($body, $multipart, $postParams, $headerParams);
+        $sdkRequest = new SdkRequest($method = $method, $scheme = $scheme,
+            $host = $host, $resourcePath = $resourcePath, $uri = '',$urL = '',
+            $queryParams = $queryParams, $headerParams = $headerParams,
+            $body = $body, $stream = false);
         $sdkRequest = $this->credentials->processAuthRequest($sdkRequest);
         if ($async_request) {
             return $this->httpClient->doRequestAsync($sdkRequest)
                 ->then(
-                    function ($response) use ($responseType)
-                    {
-                        $returnData = $this->SyncResponseHandler($response,$responseType);
-                        echo $returnData->getBody();
+                    function ($response) use ($responseType) {
+                        $returnData = $this->SyncResponseHandler($response, $responseType);
+
                         return $returnData;
                     });
         } else {
             $response = $this->httpClient->doRequestSync($sdkRequest);
-            $returnData = $this->SyncResponseHandler($response,$responseType);
+            $returnData = $this->SyncResponseHandler($response, $responseType);
+
             return $returnData;
         }
     }
@@ -326,10 +384,11 @@ class Client
         $statusCode = $response->getStatusCode();
         $responseBody = $response->getBody();
         $responseHeader = $response->getHeaders();
-        $returnData = ObjectSerializer::deserialize((string) $responseBody,$responseType);
+        $returnData = ObjectSerializer::deserialize((string) $responseBody, $responseType);
         $returnData->setStatusCode($statusCode);
         $returnData->setHeaderParams($responseHeader);
         $returnData->setBody((string) $responseBody);
+
         return $returnData;
     }
 }

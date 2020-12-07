@@ -25,6 +25,8 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'page' => 'int',
+            'perPage' => 'int'
     ];
 
     /**
@@ -33,6 +35,8 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'page' => 'int32',
+        'perPage' => 'int32'
     ];
 
     /**
@@ -62,6 +66,8 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'page' => 'page',
+            'perPage' => 'per_page'
     ];
 
     /**
@@ -70,6 +76,8 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'page' => 'setPage',
+            'perPage' => 'setPerPage'
     ];
 
     /**
@@ -78,6 +86,8 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'page' => 'getPage',
+            'perPage' => 'getPerPage'
     ];
 
     /**
@@ -138,6 +148,8 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['perPage'] = isset($data['perPage']) ? $data['perPage'] : null;
     }
 
     /**
@@ -160,6 +172,52 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets page
+    *
+    * @return int|null
+    */
+    public function getPage()
+    {
+        return $this->container['page'];
+    }
+
+    /**
+    * Sets page
+    *
+    * @param int|null $page page
+    *
+    * @return $this
+    */
+    public function setPage($page)
+    {
+        $this->container['page'] = $page;
+        return $this;
+    }
+
+    /**
+    * Gets perPage
+    *
+    * @return int|null
+    */
+    public function getPerPage()
+    {
+        return $this->container['perPage'];
+    }
+
+    /**
+    * Sets perPage
+    *
+    * @param int|null $perPage perPage
+    *
+    * @return $this
+    */
+    public function setPerPage($perPage)
+    {
+        $this->container['perPage'] = $perPage;
+        return $this;
     }
 
     /**

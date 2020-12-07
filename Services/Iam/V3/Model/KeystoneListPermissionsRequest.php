@@ -26,7 +26,9 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'domainId' => 'string'
+            'domainId' => 'string',
+            'page' => 'int',
+            'perPage' => 'int'
     ];
 
     /**
@@ -36,7 +38,9 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'domainId' => null
+        'domainId' => null,
+        'page' => 'int32',
+        'perPage' => 'int32'
     ];
 
     /**
@@ -67,7 +71,9 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'domainId' => 'domain_id'
+            'domainId' => 'domain_id',
+            'page' => 'page',
+            'perPage' => 'per_page'
     ];
 
     /**
@@ -77,7 +83,9 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'name' => 'setName',
-            'domainId' => 'setDomainId'
+            'domainId' => 'setDomainId',
+            'page' => 'setPage',
+            'perPage' => 'setPerPage'
     ];
 
     /**
@@ -87,7 +95,9 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'name' => 'getName',
-            'domainId' => 'getDomainId'
+            'domainId' => 'getDomainId',
+            'page' => 'getPage',
+            'perPage' => 'getPerPage'
     ];
 
     /**
@@ -150,6 +160,8 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['perPage'] = isset($data['perPage']) ? $data['perPage'] : null;
     }
 
     /**
@@ -217,6 +229,52 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
     public function setDomainId($domainId)
     {
         $this->container['domainId'] = $domainId;
+        return $this;
+    }
+
+    /**
+    * Gets page
+    *
+    * @return int|null
+    */
+    public function getPage()
+    {
+        return $this->container['page'];
+    }
+
+    /**
+    * Sets page
+    *
+    * @param int|null $page page
+    *
+    * @return $this
+    */
+    public function setPage($page)
+    {
+        $this->container['page'] = $page;
+        return $this;
+    }
+
+    /**
+    * Gets perPage
+    *
+    * @return int|null
+    */
+    public function getPerPage()
+    {
+        return $this->container['perPage'];
+    }
+
+    /**
+    * Sets perPage
+    *
+    * @param int|null $perPage perPage
+    *
+    * @return $this
+    */
+    public function setPerPage($perPage)
+    {
+        $this->container['perPage'] = $perPage;
         return $this;
     }
 
