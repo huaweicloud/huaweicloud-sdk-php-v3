@@ -211,23 +211,23 @@ class HttpClient
     ) {
         $sdkError = new SdkErrorMessage();
         try {
-            $responseBody = json_decode((string) $responseBody, true);
-            if (isset($responseBody['error_code']) and
-                isset($responseBody['error_msg'])) {
+            $responseBodyArr = json_decode((string) $responseBody, true);
+            if (isset($responseBodyArr['error_code']) and
+                isset($responseBodyArr['error_msg'])) {
                 $sdkError = new SdkErrorMessage($requestId,
-                    $responseBody['error_code'], $responseBody['error_msg']);
-            } elseif (isset($responseBody['code']) and
-                isset($responseBody['message'])) {
+                    $responseBodyArr['error_code'], $responseBodyArr['error_msg']);
+            } elseif (isset($responseBodyArr['code']) and
+                isset($responseBodyArr['message'])) {
                 $sdkError = new SdkErrorMessage($requestId,
-                    $responseBody['code'], $responseBody['message']);
+                    $responseBodyArr['code'], $responseBodyArr['message']);
             } else {
-                foreach ($responseBody as $key => $value) {
-                    if (is_array($responseBody[$key]) and
-                        isset($responseBody[$key]['code']) and
-                        isset($responseBody[$key]['message'])) {
+                foreach ($responseBodyArr as $key => $value) {
+                    if (is_array($responseBodyArr[$key]) and
+                        isset($responseBodyArr[$key]['code']) and
+                        isset($responseBodyArr[$key]['message'])) {
                         $sdkError = new SdkErrorMessage($requestId,
-                            $responseBody[$key]['code'],
-                            $responseBody[$key]['message']);
+                            $responseBodyArr[$key]['code'],
+                            $responseBodyArr[$key]['message']);
                     }
                 }
             }

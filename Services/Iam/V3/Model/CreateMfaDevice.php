@@ -205,13 +205,6 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
     */
     public function setName($name)
     {
-            if ((mb_strlen($name) > 64)) {
-                throw new \InvalidArgumentException('invalid length for $name when calling CreateMfaDevice., must be smaller than or equal to 64.');
-            }
-            if ((mb_strlen($name) < 1)) {
-                throw new \InvalidArgumentException('invalid length for $name when calling CreateMfaDevice., must be bigger than or equal to 1.');
-            }
-
         $this->container['name'] = $name;
         return $this;
     }

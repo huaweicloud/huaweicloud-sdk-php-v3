@@ -28,7 +28,7 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
     curl -sS https://getcomposer.org/installer | php
      
     # Install the PHP SDK
-    composer require huaweicloud/huaweicloud-sdk-php
+    composer require huaweicloud/huaweicloud-sdk-php:3.0.3-beta
     ```
     After installing, you need to require Composer's autoloader: 
 

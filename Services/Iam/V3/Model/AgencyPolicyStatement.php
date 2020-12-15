@@ -244,15 +244,6 @@ class AgencyPolicyStatement implements ModelInterface, ArrayAccess
     */
     public function setAction($action)
     {
-            $allowedValues = $this->getActionAllowableValues();
-                if (array_diff($action, $allowedValues)) {
-                    throw new \InvalidArgumentException(
-                        sprintf(
-                            "Invalid value for 'action', must be one of '%s'",
-                            implode("', '", $allowedValues)
-                        )
-                    );
-                }
         $this->container['action'] = $action;
         return $this;
     }
@@ -276,15 +267,6 @@ class AgencyPolicyStatement implements ModelInterface, ArrayAccess
     */
     public function setEffect($effect)
     {
-            $allowedValues = $this->getEffectAllowableValues();
-                if (!in_array($effect, $allowedValues, true)) {
-                    throw new \InvalidArgumentException(
-                        sprintf(
-                            "Invalid value for 'effect', must be one of '%s'",
-                            implode("', '", $allowedValues)
-                        )
-                    );
-                }
         $this->container['effect'] = $effect;
         return $this;
     }

@@ -1,3 +1,47 @@
+# 3.0.3-beta 2020-12-15
+
+## __HuaweiCloud SDK ECS__
+
+- ### Features
+
+  - Support interfaces of ECS.
+
+- ### Bug Fix
+
+  - None
+
+- ### Change
+
+  - None
+
+## __HuaweiCloud SDK VPC__
+
+- ### Features
+
+  - Support interfaces of version v2.
+
+- ### Bug Fix
+
+  - None
+
+- ### Change
+
+  - None
+
+## Huaweicloud SDK EIP
+
+- ### Features
+
+  - Support Elastic IP service.
+
+- ### Bug Fix
+
+  - None
+
+- ### Change
+
+  - None
+
 # 3.0.2-beta 2020-12-04
 
 ## HuaweiCloud SDK Core

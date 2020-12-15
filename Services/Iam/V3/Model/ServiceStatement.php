@@ -257,15 +257,6 @@ class ServiceStatement implements ModelInterface, ArrayAccess
     */
     public function setEffect($effect)
     {
-            $allowedValues = $this->getEffectAllowableValues();
-                if (!in_array($effect, $allowedValues, true)) {
-                    throw new \InvalidArgumentException(
-                        sprintf(
-                            "Invalid value for 'effect', must be one of '%s'",
-                            implode("', '", $allowedValues)
-                        )
-                    );
-                }
         $this->container['effect'] = $effect;
         return $this;
     }

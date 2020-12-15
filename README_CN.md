@@ -31,7 +31,7 @@
     # 安装 Composer
     curl -sS https://getcomposer.org/installer | php
     # 安装 PHP SDK
-    composer require huaweicloud/huaweicloud-sdk-php
+    composer require huaweicloud/huaweicloud-sdk-php:3.0.3-beta
     ```
 
     安装完毕后，你需要引入Composer的自动加载文件：

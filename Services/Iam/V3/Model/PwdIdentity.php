@@ -212,15 +212,6 @@ class PwdIdentity implements ModelInterface, ArrayAccess
     */
     public function setMethods($methods)
     {
-            $allowedValues = $this->getMethodsAllowableValues();
-                if (array_diff($methods, $allowedValues)) {
-                    throw new \InvalidArgumentException(
-                        sprintf(
-                            "Invalid value for 'methods', must be one of '%s'",
-                            implode("', '", $allowedValues)
-                        )
-                    );
-                }
         $this->container['methods'] = $methods;
         return $this;
     }

@@ -245,15 +245,6 @@ class KeystoneShowSecurityComplianceByOptionRequest implements ModelInterface, A
     */
     public function setOption($option)
     {
-            $allowedValues = $this->getOptionAllowableValues();
-                if (!in_array($option, $allowedValues, true)) {
-                    throw new \InvalidArgumentException(
-                        sprintf(
-                            "Invalid value for 'option', must be one of '%s'",
-                            implode("', '", $allowedValues)
-                        )
-                    );
-                }
         $this->container['option'] = $option;
         return $this;
     }

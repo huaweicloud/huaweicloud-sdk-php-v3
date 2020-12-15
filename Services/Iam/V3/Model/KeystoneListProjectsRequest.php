@@ -347,11 +347,6 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
     */
     public function setPage($page)
     {
-
-            if (!is_null($page) && ($page < 1)) {
-                throw new \InvalidArgumentException('invalid value for $page when calling KeystoneListProjectsRequest., must be bigger than or equal to 1.');
-            }
-
         $this->container['page'] = $page;
         return $this;
     }
@@ -375,14 +370,6 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
     */
     public function setPerPage($perPage)
     {
-
-            if (!is_null($perPage) && ($perPage > 5000)) {
-                throw new \InvalidArgumentException('invalid value for $perPage when calling KeystoneListProjectsRequest., must be smaller than or equal to 5000.');
-            }
-            if (!is_null($perPage) && ($perPage < 1)) {
-                throw new \InvalidArgumentException('invalid value for $perPage when calling KeystoneListProjectsRequest., must be bigger than or equal to 1.');
-            }
-
         $this->container['perPage'] = $perPage;
         return $this;
     }

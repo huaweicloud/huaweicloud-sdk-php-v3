@@ -222,14 +222,6 @@ class IdentityToken implements ModelInterface, ArrayAccess
     */
     public function setDurationSeconds($durationSeconds)
     {
-
-            if (!is_null($durationSeconds) && ($durationSeconds > 86400)) {
-                throw new \InvalidArgumentException('invalid value for $durationSeconds when calling IdentityToken., must be smaller than or equal to 86400.');
-            }
-            if (!is_null($durationSeconds) && ($durationSeconds < 900)) {
-                throw new \InvalidArgumentException('invalid value for $durationSeconds when calling IdentityToken., must be bigger than or equal to 900.');
-            }
-
         $this->container['durationSeconds'] = $durationSeconds;
         return $this;
     }

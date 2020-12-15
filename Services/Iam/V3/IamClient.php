@@ -458,7 +458,7 @@ class IamClient extends Client
 
     public function createAgencyCustomPolicyWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/01 /v3.0/OS-ROLE/roles';
+        $resourcePath = '/v3.0/OS-ROLE/roles';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1638,7 +1638,7 @@ class IamClient extends Client
 
     public function keystoneCreateScopedTokenWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/03 /v3/auth/tokens';
+        $resourcePath = '/v3/auth/tokens';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5271,7 +5271,7 @@ class IamClient extends Client
 
     public function updateAgencyCustomPolicyWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/01 /v3.0/OS-ROLE/roles/{role_id}';
+        $resourcePath = '/v3.0/OS-ROLE/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5861,7 +5861,7 @@ class IamClient extends Client
 
     public function createTemporaryAccessKeyByAgencyWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/01 /v3.0/OS-CREDENTIAL/securitytokens';
+        $resourcePath = '/v3.0/OS-CREDENTIAL/securitytokens';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -7341,7 +7341,7 @@ class IamClient extends Client
 
     public function keystoneCreateAgencyTokenWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/02 /v3/auth/tokens';
+        $resourcePath = '/v3/auth/tokens';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -7459,7 +7459,7 @@ class IamClient extends Client
 
     public function keystoneCreateUserTokenByPasswordAndMfaWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/01 /v3/auth/tokens';
+        $resourcePath = '/v3/auth/tokens';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

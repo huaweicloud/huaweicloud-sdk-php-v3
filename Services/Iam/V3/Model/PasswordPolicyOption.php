@@ -388,14 +388,6 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     */
     public function setPasswordCharCombination($passwordCharCombination)
     {
-
-            if (($passwordCharCombination > 4)) {
-                throw new \InvalidArgumentException('invalid value for $passwordCharCombination when calling PasswordPolicyOption., must be smaller than or equal to 4.');
-            }
-            if (($passwordCharCombination < 2)) {
-                throw new \InvalidArgumentException('invalid value for $passwordCharCombination when calling PasswordPolicyOption., must be bigger than or equal to 2.');
-            }
-
         $this->container['passwordCharCombination'] = $passwordCharCombination;
         return $this;
     }

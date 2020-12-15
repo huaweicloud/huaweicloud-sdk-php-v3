@@ -218,15 +218,6 @@ class KeystoneListEndpointsRequest implements ModelInterface, ArrayAccess
     */
     public function setInterface($interface)
     {
-            $allowedValues = $this->getInterfaceAllowableValues();
-                if (!is_null($interface) && !in_array($interface, $allowedValues, true)) {
-                    throw new \InvalidArgumentException(
-                        sprintf(
-                            "Invalid value for 'interface', must be one of '%s'",
-                            implode("', '", $allowedValues)
-                        )
-                    );
-                }
         $this->container['interface'] = $interface;
         return $this;
     }

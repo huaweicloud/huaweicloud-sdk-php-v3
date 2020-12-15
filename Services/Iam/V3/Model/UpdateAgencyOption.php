@@ -297,15 +297,6 @@ class UpdateAgencyOption implements ModelInterface, ArrayAccess
     */
     public function setDuration($duration)
     {
-            $allowedValues = $this->getDurationAllowableValues();
-                if (!is_null($duration) && !in_array($duration, $allowedValues, true)) {
-                    throw new \InvalidArgumentException(
-                        sprintf(
-                            "Invalid value for 'duration', must be one of '%s'",
-                            implode("', '", $allowedValues)
-                        )
-                    );
-                }
         $this->container['duration'] = $duration;
         return $this;
     }
