@@ -9,7 +9,6 @@ use HuaweiCloud\SDK\Core\SdkResponse;
 
 class PwdPassword implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**

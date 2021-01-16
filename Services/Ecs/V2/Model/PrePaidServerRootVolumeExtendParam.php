@@ -9,7 +9,6 @@ use HuaweiCloud\SDK\Core\SdkResponse;
 
 class PrePaidServerRootVolumeExtendParam implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**

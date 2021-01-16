@@ -9,7 +9,6 @@ use HuaweiCloud\SDK\Core\SdkResponse;
 
 class BatchCreatePublicipTagsRequest implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**

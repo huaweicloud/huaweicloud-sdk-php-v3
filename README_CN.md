@@ -133,7 +133,7 @@
 
     ``` php
     # 初始化指定云服务的客户端 {Service}Client ，以初始化 IamClient 为例
-    $iamClient = IamClient::newBuilder(new IamClient)
+    $iamClient = IamClient::newBuilder()
         ->withHttpConfig($config)
         ->withEndpoint($endpoint)
         ->withCredentials(null)
@@ -277,7 +277,7 @@
     $httpHandler->addRequestHandlers($requestHandler);
     $httpHandler->addResponseHandlers($responseHandler);
     
-    $iamClient = IamClient::newBuilder(new IamClient)
+    $iamClient = IamClient::newBuilder()
         ->withHttpConfig($config)
         ->withEndpoint($endpoint)
         ->withCredentials(null)
@@ -319,7 +319,7 @@
     $config->setIgnoreSslVerification(true);
     $credentials = new GlobalCredentials($ak,$sk,$domainId);
     
-    $iamClient = IamClient::newBuilder(new IamClient)
+    $iamClient = IamClient::newBuilder()
         ->withHttpConfig($config)
         ->withEndpoint($endpoint)
         ->withCredentials($credentials)

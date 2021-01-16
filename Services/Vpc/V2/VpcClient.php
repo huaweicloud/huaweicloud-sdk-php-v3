@@ -11,24 +11,27 @@ class VpcClient extends Client
 {
     protected $headerSelector;
     protected $modelPackage;
-    public function __construct($selector=null)
+
+    public function __construct($selector = null)
     {
         parent::__construct();
         $this->modelPackage = ModelInterface::class;
         $this->headerSelector = $selector ?: new HeaderSelector();
     }
 
-    public static function newBuilder($clazz)
+    public static function newBuilder()
     {
-        return new ClientBuilder($clazz);
+        return new ClientBuilder(new VpcClient());
     }
 
 
-    public function acceptVpcPeering($request){
+    public function acceptVpcPeering($request)
+    {
         return $this->acceptVpcPeeringWithHttpInfo($request);
     }
 
-    public function acceptVpcPeeringWithHttpInfo($request){
+    public function acceptVpcPeeringWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/vpc/peerings/{peering_id}/accept';
         $formParams = [];
@@ -44,13 +47,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['peeringId'] !== null) {
             $pathParams['peering_id'] = $localVarParams['peeringId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -66,6 +65,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -80,11 +80,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\AcceptVpcPeeringRequest');
     }
 
-    public function createPort($request){
+    public function createPort($request)
+    {
         return $this->createPortWithHttpInfo($request);
     }
 
-    public function createPortWithHttpInfo($request){
+    public function createPortWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/ports';
         $formParams = [];
@@ -100,13 +102,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -125,6 +123,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -139,11 +138,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\CreatePortRequest');
     }
 
-    public function createSecurityGroup($request){
+    public function createSecurityGroup($request)
+    {
         return $this->createSecurityGroupWithHttpInfo($request);
     }
 
-    public function createSecurityGroupWithHttpInfo($request){
+    public function createSecurityGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/security-groups';
         $formParams = [];
@@ -159,13 +160,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -184,6 +181,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -198,11 +196,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateSecurityGroupRequest');
     }
 
-    public function createSecurityGroupRule($request){
+    public function createSecurityGroupRule($request)
+    {
         return $this->createSecurityGroupRuleWithHttpInfo($request);
     }
 
-    public function createSecurityGroupRuleWithHttpInfo($request){
+    public function createSecurityGroupRuleWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/security-group-rules';
         $formParams = [];
@@ -218,13 +218,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -243,6 +239,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -257,11 +254,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateSecurityGroupRuleRequest');
     }
 
-    public function createSubnet($request){
+    public function createSubnet($request)
+    {
         return $this->createSubnetWithHttpInfo($request);
     }
 
-    public function createSubnetWithHttpInfo($request){
+    public function createSubnetWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/subnets';
         $formParams = [];
@@ -277,13 +276,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -302,6 +297,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -316,11 +312,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateSubnetRequest');
     }
 
-    public function createVpcPeering($request){
+    public function createVpcPeering($request)
+    {
         return $this->createVpcPeeringWithHttpInfo($request);
     }
 
-    public function createVpcPeeringWithHttpInfo($request){
+    public function createVpcPeeringWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/vpc/peerings';
         $formParams = [];
@@ -336,10 +334,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -358,6 +352,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -372,11 +367,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateVpcPeeringRequest');
     }
 
-    public function deletePort($request){
+    public function deletePort($request)
+    {
         return $this->deletePortWithHttpInfo($request);
     }
 
-    public function deletePortWithHttpInfo($request){
+    public function deletePortWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/ports/{port_id}';
         $formParams = [];
@@ -392,16 +389,12 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['portId'] !== null) {
             $pathParams['port_id'] = $localVarParams['portId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -417,6 +410,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -431,11 +425,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\DeletePortRequest');
     }
 
-    public function deleteSecurityGroup($request){
+    public function deleteSecurityGroup($request)
+    {
         return $this->deleteSecurityGroupWithHttpInfo($request);
     }
 
-    public function deleteSecurityGroupWithHttpInfo($request){
+    public function deleteSecurityGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/security-groups/{security_group_id}';
         $formParams = [];
@@ -451,16 +447,12 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['securityGroupId'] !== null) {
             $pathParams['security_group_id'] = $localVarParams['securityGroupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -476,6 +468,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -490,11 +483,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\DeleteSecurityGroupRequest');
     }
 
-    public function deleteSecurityGroupRule($request){
+    public function deleteSecurityGroupRule($request)
+    {
         return $this->deleteSecurityGroupRuleWithHttpInfo($request);
     }
 
-    public function deleteSecurityGroupRuleWithHttpInfo($request){
+    public function deleteSecurityGroupRuleWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/security-group-rules/{security_group_rule_id}';
         $formParams = [];
@@ -510,16 +505,12 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['securityGroupRuleId'] !== null) {
             $pathParams['security_group_rule_id'] = $localVarParams['securityGroupRuleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -535,6 +526,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -549,11 +541,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\DeleteSecurityGroupRuleRequest');
     }
 
-    public function deleteSubnet($request){
+    public function deleteSubnet($request)
+    {
         return $this->deleteSubnetWithHttpInfo($request);
     }
 
-    public function deleteSubnetWithHttpInfo($request){
+    public function deleteSubnetWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpcs/{vpc_id}/subnets/{subnet_id}';
         $formParams = [];
@@ -569,9 +563,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -581,7 +572,6 @@ class VpcClient extends Client
         if ($localVarParams['subnetId'] !== null) {
             $pathParams['subnet_id'] = $localVarParams['subnetId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -597,6 +587,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -611,11 +602,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\DeleteSubnetRequest');
     }
 
-    public function deleteVpcPeering($request){
+    public function deleteVpcPeering($request)
+    {
         return $this->deleteVpcPeeringWithHttpInfo($request);
     }
 
-    public function deleteVpcPeeringWithHttpInfo($request){
+    public function deleteVpcPeeringWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/vpc/peerings/{peering_id}';
         $formParams = [];
@@ -631,13 +624,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['peeringId'] !== null) {
             $pathParams['peering_id'] = $localVarParams['peeringId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -653,6 +642,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -667,11 +657,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\DeleteVpcPeeringRequest');
     }
 
-    public function listPorts($request){
+    public function listPorts($request)
+    {
         return $this->listPortsWithHttpInfo($request);
     }
 
-    public function listPortsWithHttpInfo($request){
+    public function listPortsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/ports';
         $formParams = [];
@@ -687,7 +679,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
@@ -724,12 +715,12 @@ class VpcClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-
-
+        if ($localVarParams['zoneId'] !== null) {
+            $queryParams['zone_id'] = $localVarParams['zoneId'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -745,6 +736,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -759,11 +751,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListPortsRequest');
     }
 
-    public function listSecurityGroupRules($request){
+    public function listSecurityGroupRules($request)
+    {
         return $this->listSecurityGroupRulesWithHttpInfo($request);
     }
 
-    public function listSecurityGroupRulesWithHttpInfo($request){
+    public function listSecurityGroupRulesWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/security-group-rules';
         $formParams = [];
@@ -779,7 +773,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
@@ -789,12 +782,9 @@ class VpcClient extends Client
         if ($localVarParams['securityGroupId'] !== null) {
             $queryParams['security_group_id'] = $localVarParams['securityGroupId'];
         }
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -810,6 +800,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -824,11 +815,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListSecurityGroupRulesRequest');
     }
 
-    public function listSecurityGroups($request){
+    public function listSecurityGroups($request)
+    {
         return $this->listSecurityGroupsWithHttpInfo($request);
     }
 
-    public function listSecurityGroupsWithHttpInfo($request){
+    public function listSecurityGroupsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/security-groups';
         $formParams = [];
@@ -844,7 +837,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -857,12 +849,9 @@ class VpcClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -878,6 +867,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -892,11 +882,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListSecurityGroupsRequest');
     }
 
-    public function listSubnets($request){
+    public function listSubnets($request)
+    {
         return $this->listSubnetsWithHttpInfo($request);
     }
 
-    public function listSubnetsWithHttpInfo($request){
+    public function listSubnetsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/subnets';
         $formParams = [];
@@ -912,7 +904,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -922,12 +913,12 @@ class VpcClient extends Client
         if ($localVarParams['vpcId'] !== null) {
             $queryParams['vpc_id'] = $localVarParams['vpcId'];
         }
-
-
+        if ($localVarParams['scope'] !== null) {
+            $queryParams['scope'] = $localVarParams['scope'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -943,6 +934,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -957,11 +949,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListSubnetsRequest');
     }
 
-    public function listVpcPeerings($request){
+    public function listVpcPeerings($request)
+    {
         return $this->listVpcPeeringsWithHttpInfo($request);
     }
 
-    public function listVpcPeeringsWithHttpInfo($request){
+    public function listVpcPeeringsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/vpc/peerings';
         $formParams = [];
@@ -977,7 +971,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -1000,9 +993,6 @@ class VpcClient extends Client
             $queryParams['vpc_id'] = $localVarParams['vpcId'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1017,6 +1007,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1031,11 +1022,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListVpcPeeringsRequest');
     }
 
-    public function rejectVpcPeering($request){
+    public function rejectVpcPeering($request)
+    {
         return $this->rejectVpcPeeringWithHttpInfo($request);
     }
 
-    public function rejectVpcPeeringWithHttpInfo($request){
+    public function rejectVpcPeeringWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/vpc/peerings/{peering_id}/reject';
         $formParams = [];
@@ -1051,13 +1044,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['peeringId'] !== null) {
             $pathParams['peering_id'] = $localVarParams['peeringId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1073,6 +1062,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1087,11 +1077,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\RejectVpcPeeringRequest');
     }
 
-    public function showPort($request){
+    public function showPort($request)
+    {
         return $this->showPortWithHttpInfo($request);
     }
 
-    public function showPortWithHttpInfo($request){
+    public function showPortWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/ports/{port_id}';
         $formParams = [];
@@ -1107,16 +1099,12 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['portId'] !== null) {
             $pathParams['port_id'] = $localVarParams['portId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1132,6 +1120,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1146,11 +1135,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowPortRequest');
     }
 
-    public function showQuota($request){
+    public function showQuota($request)
+    {
         return $this->showQuotaWithHttpInfo($request);
     }
 
-    public function showQuotaWithHttpInfo($request){
+    public function showQuotaWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/quotas';
         $formParams = [];
@@ -1166,16 +1157,12 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1191,6 +1178,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1205,11 +1193,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowQuotaRequest');
     }
 
-    public function showSecurityGroup($request){
+    public function showSecurityGroup($request)
+    {
         return $this->showSecurityGroupWithHttpInfo($request);
     }
 
-    public function showSecurityGroupWithHttpInfo($request){
+    public function showSecurityGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/security-groups/{security_group_id}';
         $formParams = [];
@@ -1225,16 +1215,12 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['securityGroupId'] !== null) {
             $pathParams['security_group_id'] = $localVarParams['securityGroupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1250,6 +1236,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1264,11 +1251,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowSecurityGroupRequest');
     }
 
-    public function showSecurityGroupRule($request){
+    public function showSecurityGroupRule($request)
+    {
         return $this->showSecurityGroupRuleWithHttpInfo($request);
     }
 
-    public function showSecurityGroupRuleWithHttpInfo($request){
+    public function showSecurityGroupRuleWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/security-group-rules/{security_group_rule_id}';
         $formParams = [];
@@ -1284,16 +1273,12 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['securityGroupRuleId'] !== null) {
             $pathParams['security_group_rule_id'] = $localVarParams['securityGroupRuleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1309,6 +1294,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1323,11 +1309,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowSecurityGroupRuleRequest');
     }
 
-    public function showSubnet($request){
+    public function showSubnet($request)
+    {
         return $this->showSubnetWithHttpInfo($request);
     }
 
-    public function showSubnetWithHttpInfo($request){
+    public function showSubnetWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/subnets/{subnet_id}';
         $formParams = [];
@@ -1343,16 +1331,12 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['subnetId'] !== null) {
             $pathParams['subnet_id'] = $localVarParams['subnetId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1368,6 +1352,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1382,11 +1367,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowSubnetRequest');
     }
 
-    public function showVpcPeering($request){
+    public function showVpcPeering($request)
+    {
         return $this->showVpcPeeringWithHttpInfo($request);
     }
 
-    public function showVpcPeeringWithHttpInfo($request){
+    public function showVpcPeeringWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/vpc/peerings/{peering_id}';
         $formParams = [];
@@ -1402,13 +1389,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['peeringId'] !== null) {
             $pathParams['peering_id'] = $localVarParams['peeringId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1424,6 +1407,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1438,11 +1422,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowVpcPeeringRequest');
     }
 
-    public function updatePort($request){
+    public function updatePort($request)
+    {
         return $this->updatePortWithHttpInfo($request);
     }
 
-    public function updatePortWithHttpInfo($request){
+    public function updatePortWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/ports/{port_id}';
         $formParams = [];
@@ -1458,16 +1444,12 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['portId'] !== null) {
             $pathParams['port_id'] = $localVarParams['portId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1486,6 +1468,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1500,11 +1483,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\UpdatePortRequest');
     }
 
-    public function updateSubnet($request){
+    public function updateSubnet($request)
+    {
         return $this->updateSubnetWithHttpInfo($request);
     }
 
-    public function updateSubnetWithHttpInfo($request){
+    public function updateSubnetWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpcs/{vpc_id}/subnets/{subnet_id}';
         $formParams = [];
@@ -1520,9 +1505,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -1532,7 +1514,6 @@ class VpcClient extends Client
         if ($localVarParams['subnetId'] !== null) {
             $pathParams['subnet_id'] = $localVarParams['subnetId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1551,6 +1532,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1565,11 +1547,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\UpdateSubnetRequest');
     }
 
-    public function updateVpcPeering($request){
+    public function updateVpcPeering($request)
+    {
         return $this->updateVpcPeeringWithHttpInfo($request);
     }
 
-    public function updateVpcPeeringWithHttpInfo($request){
+    public function updateVpcPeeringWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/vpc/peerings/{peering_id}';
         $formParams = [];
@@ -1585,13 +1569,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['peeringId'] !== null) {
             $pathParams['peering_id'] = $localVarParams['peeringId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1610,6 +1590,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1624,11 +1605,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\UpdateVpcPeeringRequest');
     }
 
-    public function createPrivateip($request){
+    public function createPrivateip($request)
+    {
         return $this->createPrivateipWithHttpInfo($request);
     }
 
-    public function createPrivateipWithHttpInfo($request){
+    public function createPrivateipWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/privateips';
         $formParams = [];
@@ -1644,13 +1627,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1669,6 +1648,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1683,11 +1663,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\CreatePrivateipRequest');
     }
 
-    public function deletePrivateip($request){
+    public function deletePrivateip($request)
+    {
         return $this->deletePrivateipWithHttpInfo($request);
     }
 
-    public function deletePrivateipWithHttpInfo($request){
+    public function deletePrivateipWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/privateips/{privateip_id}';
         $formParams = [];
@@ -1703,16 +1685,12 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['privateipId'] !== null) {
             $pathParams['privateip_id'] = $localVarParams['privateipId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1728,6 +1706,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1742,11 +1721,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\DeletePrivateipRequest');
     }
 
-    public function listPrivateips($request){
+    public function listPrivateips($request)
+    {
         return $this->listPrivateipsWithHttpInfo($request);
     }
 
-    public function listPrivateipsWithHttpInfo($request){
+    public function listPrivateipsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/subnets/{subnet_id}/privateips';
         $formParams = [];
@@ -1762,22 +1743,18 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['subnetId'] !== null) {
             $pathParams['subnet_id'] = $localVarParams['subnetId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1793,6 +1770,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1807,11 +1785,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListPrivateipsRequest');
     }
 
-    public function showNetworkIpAvailabilities($request){
+    public function showNetworkIpAvailabilities($request)
+    {
         return $this->showNetworkIpAvailabilitiesWithHttpInfo($request);
     }
 
-    public function showNetworkIpAvailabilitiesWithHttpInfo($request){
+    public function showNetworkIpAvailabilitiesWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/network-ip-availabilities/{network_id}';
         $formParams = [];
@@ -1827,13 +1807,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['networkId'] !== null) {
             $pathParams['network_id'] = $localVarParams['networkId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1849,6 +1825,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1863,11 +1840,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowNetworkIpAvailabilitiesRequest');
     }
 
-    public function showPrivateip($request){
+    public function showPrivateip($request)
+    {
         return $this->showPrivateipWithHttpInfo($request);
     }
 
-    public function showPrivateipWithHttpInfo($request){
+    public function showPrivateipWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/privateips/{privateip_id}';
         $formParams = [];
@@ -1883,16 +1862,12 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['privateipId'] !== null) {
             $pathParams['privateip_id'] = $localVarParams['privateipId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1908,6 +1883,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1922,11 +1898,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowPrivateipRequest');
     }
 
-    public function neutronAddFirewallRule($request){
+    public function neutronAddFirewallRule($request)
+    {
         return $this->neutronAddFirewallRuleWithHttpInfo($request);
     }
 
-    public function neutronAddFirewallRuleWithHttpInfo($request){
+    public function neutronAddFirewallRuleWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_policies/{firewall_policy_id}/insert_rule';
         $formParams = [];
@@ -1942,13 +1920,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallPolicyId'] !== null) {
             $pathParams['firewall_policy_id'] = $localVarParams['firewallPolicyId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1967,6 +1941,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1981,11 +1956,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronAddFirewallRuleRequest');
     }
 
-    public function neutronCreateFirewallGroup($request){
+    public function neutronCreateFirewallGroup($request)
+    {
         return $this->neutronCreateFirewallGroupWithHttpInfo($request);
     }
 
-    public function neutronCreateFirewallGroupWithHttpInfo($request){
+    public function neutronCreateFirewallGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_groups';
         $formParams = [];
@@ -2001,10 +1978,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2023,6 +1996,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -2037,11 +2011,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreateFirewallGroupRequest');
     }
 
-    public function neutronCreateFirewallPolicy($request){
+    public function neutronCreateFirewallPolicy($request)
+    {
         return $this->neutronCreateFirewallPolicyWithHttpInfo($request);
     }
 
-    public function neutronCreateFirewallPolicyWithHttpInfo($request){
+    public function neutronCreateFirewallPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_policies';
         $formParams = [];
@@ -2057,10 +2033,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2079,6 +2051,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -2093,11 +2066,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreateFirewallPolicyRequest');
     }
 
-    public function neutronCreateFirewallRule($request){
+    public function neutronCreateFirewallRule($request)
+    {
         return $this->neutronCreateFirewallRuleWithHttpInfo($request);
     }
 
-    public function neutronCreateFirewallRuleWithHttpInfo($request){
+    public function neutronCreateFirewallRuleWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_rules';
         $formParams = [];
@@ -2113,10 +2088,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2135,6 +2106,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -2149,11 +2121,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreateFirewallRuleRequest');
     }
 
-    public function neutronDeleteFirewallGroup($request){
+    public function neutronDeleteFirewallGroup($request)
+    {
         return $this->neutronDeleteFirewallGroupWithHttpInfo($request);
     }
 
-    public function neutronDeleteFirewallGroupWithHttpInfo($request){
+    public function neutronDeleteFirewallGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_groups/{firewall_group_id}';
         $formParams = [];
@@ -2169,13 +2143,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallGroupId'] !== null) {
             $pathParams['firewall_group_id'] = $localVarParams['firewallGroupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2191,6 +2161,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -2205,11 +2176,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronDeleteFirewallGroupRequest');
     }
 
-    public function neutronDeleteFirewallPolicy($request){
+    public function neutronDeleteFirewallPolicy($request)
+    {
         return $this->neutronDeleteFirewallPolicyWithHttpInfo($request);
     }
 
-    public function neutronDeleteFirewallPolicyWithHttpInfo($request){
+    public function neutronDeleteFirewallPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_policies/{firewall_policy_id}';
         $formParams = [];
@@ -2225,13 +2198,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallPolicyId'] !== null) {
             $pathParams['firewall_policy_id'] = $localVarParams['firewallPolicyId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2247,6 +2216,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -2261,11 +2231,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronDeleteFirewallPolicyRequest');
     }
 
-    public function neutronDeleteFirewallRule($request){
+    public function neutronDeleteFirewallRule($request)
+    {
         return $this->neutronDeleteFirewallRuleWithHttpInfo($request);
     }
 
-    public function neutronDeleteFirewallRuleWithHttpInfo($request){
+    public function neutronDeleteFirewallRuleWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_rules/{firewall_rule_id}';
         $formParams = [];
@@ -2281,13 +2253,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallRuleId'] !== null) {
             $pathParams['firewall_rule_id'] = $localVarParams['firewallRuleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2303,6 +2271,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -2317,11 +2286,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronDeleteFirewallRuleRequest');
     }
 
-    public function neutronListFirewallGroups($request){
+    public function neutronListFirewallGroups($request)
+    {
         return $this->neutronListFirewallGroupsWithHttpInfo($request);
     }
 
-    public function neutronListFirewallGroupsWithHttpInfo($request){
+    public function neutronListFirewallGroupsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_groups';
         $formParams = [];
@@ -2337,7 +2308,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
@@ -2360,9 +2330,6 @@ class VpcClient extends Client
             $queryParams['egress_firewall_policy_id'] = $localVarParams['egressFirewallPolicyId'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2377,6 +2344,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2391,11 +2359,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronListFirewallGroupsRequest');
     }
 
-    public function neutronListFirewallPolicies($request){
+    public function neutronListFirewallPolicies($request)
+    {
         return $this->neutronListFirewallPoliciesWithHttpInfo($request);
     }
 
-    public function neutronListFirewallPoliciesWithHttpInfo($request){
+    public function neutronListFirewallPoliciesWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_policies';
         $formParams = [];
@@ -2411,7 +2381,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -2431,9 +2400,6 @@ class VpcClient extends Client
             $queryParams['tenant_id'] = $localVarParams['tenantId'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2448,6 +2414,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2462,11 +2429,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronListFirewallPoliciesRequest');
     }
 
-    public function neutronListFirewallRules($request){
+    public function neutronListFirewallRules($request)
+    {
         return $this->neutronListFirewallRulesWithHttpInfo($request);
     }
 
-    public function neutronListFirewallRulesWithHttpInfo($request){
+    public function neutronListFirewallRulesWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_rules';
         $formParams = [];
@@ -2482,7 +2451,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
@@ -2505,9 +2473,6 @@ class VpcClient extends Client
             $queryParams['tenant_id'] = $localVarParams['tenantId'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2522,6 +2487,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2536,11 +2502,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronListFirewallRulesRequest');
     }
 
-    public function neutronRemoveFirewallRule($request){
+    public function neutronRemoveFirewallRule($request)
+    {
         return $this->neutronRemoveFirewallRuleWithHttpInfo($request);
     }
 
-    public function neutronRemoveFirewallRuleWithHttpInfo($request){
+    public function neutronRemoveFirewallRuleWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_policies/{firewall_policy_id}/remove_rule';
         $formParams = [];
@@ -2556,13 +2524,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallPolicyId'] !== null) {
             $pathParams['firewall_policy_id'] = $localVarParams['firewallPolicyId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2581,6 +2545,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -2595,11 +2560,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronRemoveFirewallRuleRequest');
     }
 
-    public function neutronShowFirewallGroup($request){
+    public function neutronShowFirewallGroup($request)
+    {
         return $this->neutronShowFirewallGroupWithHttpInfo($request);
     }
 
-    public function neutronShowFirewallGroupWithHttpInfo($request){
+    public function neutronShowFirewallGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_groups/{firewall_group_id}';
         $formParams = [];
@@ -2615,13 +2582,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallGroupId'] !== null) {
             $pathParams['firewall_group_id'] = $localVarParams['firewallGroupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2637,6 +2600,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2651,11 +2615,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronShowFirewallGroupRequest');
     }
 
-    public function neutronShowFirewallPolicy($request){
+    public function neutronShowFirewallPolicy($request)
+    {
         return $this->neutronShowFirewallPolicyWithHttpInfo($request);
     }
 
-    public function neutronShowFirewallPolicyWithHttpInfo($request){
+    public function neutronShowFirewallPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_policies/{firewall_policy_id}';
         $formParams = [];
@@ -2671,13 +2637,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallPolicyId'] !== null) {
             $pathParams['firewall_policy_id'] = $localVarParams['firewallPolicyId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2693,6 +2655,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2707,11 +2670,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronShowFirewallPolicyRequest');
     }
 
-    public function neutronShowFirewallRule($request){
+    public function neutronShowFirewallRule($request)
+    {
         return $this->neutronShowFirewallRuleWithHttpInfo($request);
     }
 
-    public function neutronShowFirewallRuleWithHttpInfo($request){
+    public function neutronShowFirewallRuleWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_rules/{firewall_rule_id}';
         $formParams = [];
@@ -2727,13 +2692,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallRuleId'] !== null) {
             $pathParams['firewall_rule_id'] = $localVarParams['firewallRuleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2749,6 +2710,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2763,11 +2725,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronShowFirewallRuleRequest');
     }
 
-    public function neutronUpdateFirewallGroup($request){
+    public function neutronUpdateFirewallGroup($request)
+    {
         return $this->neutronUpdateFirewallGroupWithHttpInfo($request);
     }
 
-    public function neutronUpdateFirewallGroupWithHttpInfo($request){
+    public function neutronUpdateFirewallGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_groups/{firewall_group_id}';
         $formParams = [];
@@ -2783,13 +2747,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallGroupId'] !== null) {
             $pathParams['firewall_group_id'] = $localVarParams['firewallGroupId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2808,6 +2768,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -2822,11 +2783,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateFirewallGroupRequest');
     }
 
-    public function neutronUpdateFirewallPolicy($request){
+    public function neutronUpdateFirewallPolicy($request)
+    {
         return $this->neutronUpdateFirewallPolicyWithHttpInfo($request);
     }
 
-    public function neutronUpdateFirewallPolicyWithHttpInfo($request){
+    public function neutronUpdateFirewallPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_policies/{firewall_policy_id}';
         $formParams = [];
@@ -2842,13 +2805,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallPolicyId'] !== null) {
             $pathParams['firewall_policy_id'] = $localVarParams['firewallPolicyId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2867,6 +2826,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -2881,11 +2841,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateFirewallPolicyRequest');
     }
 
-    public function neutronUpdateFirewallRule($request){
+    public function neutronUpdateFirewallRule($request)
+    {
         return $this->neutronUpdateFirewallRuleWithHttpInfo($request);
     }
 
-    public function neutronUpdateFirewallRuleWithHttpInfo($request){
+    public function neutronUpdateFirewallRuleWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/fwaas/firewall_rules/{firewall_rule_id}';
         $formParams = [];
@@ -2901,13 +2863,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallRuleId'] !== null) {
             $pathParams['firewall_rule_id'] = $localVarParams['firewallRuleId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2926,6 +2884,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -2940,11 +2899,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateFirewallRuleRequest');
     }
 
-    public function createVpc($request){
+    public function createVpc($request)
+    {
         return $this->createVpcWithHttpInfo($request);
     }
 
-    public function createVpcWithHttpInfo($request){
+    public function createVpcWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpcs';
         $formParams = [];
@@ -2960,13 +2921,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2985,6 +2942,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -2999,11 +2957,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateVpcRequest');
     }
 
-    public function createVpcRoute($request){
+    public function createVpcRoute($request)
+    {
         return $this->createVpcRouteWithHttpInfo($request);
     }
 
-    public function createVpcRouteWithHttpInfo($request){
+    public function createVpcRouteWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/vpc/routes';
         $formParams = [];
@@ -3019,10 +2979,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -3041,6 +2997,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -3055,11 +3012,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateVpcRouteRequest');
     }
 
-    public function deleteVpc($request){
+    public function deleteVpc($request)
+    {
         return $this->deleteVpcWithHttpInfo($request);
     }
 
-    public function deleteVpcWithHttpInfo($request){
+    public function deleteVpcWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpcs/{vpc_id}';
         $formParams = [];
@@ -3075,16 +3034,12 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['vpcId'] !== null) {
             $pathParams['vpc_id'] = $localVarParams['vpcId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3100,6 +3055,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -3114,11 +3070,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\DeleteVpcRequest');
     }
 
-    public function deleteVpcRoute($request){
+    public function deleteVpcRoute($request)
+    {
         return $this->deleteVpcRouteWithHttpInfo($request);
     }
 
-    public function deleteVpcRouteWithHttpInfo($request){
+    public function deleteVpcRouteWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/vpc/routes/{route_id}';
         $formParams = [];
@@ -3134,13 +3092,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['routeId'] !== null) {
             $pathParams['route_id'] = $localVarParams['routeId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3156,6 +3110,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -3170,11 +3125,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\DeleteVpcRouteRequest');
     }
 
-    public function listVpcRoutes($request){
+    public function listVpcRoutes($request)
+    {
         return $this->listVpcRoutesWithHttpInfo($request);
     }
 
-    public function listVpcRoutesWithHttpInfo($request){
+    public function listVpcRoutesWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/vpc/routes';
         $formParams = [];
@@ -3190,7 +3147,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -3213,9 +3169,6 @@ class VpcClient extends Client
             $queryParams['tenant_id'] = $localVarParams['tenantId'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -3230,6 +3183,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3244,11 +3198,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListVpcRoutesRequest');
     }
 
-    public function listVpcs($request){
+    public function listVpcs($request)
+    {
         return $this->listVpcsWithHttpInfo($request);
     }
 
-    public function listVpcsWithHttpInfo($request){
+    public function listVpcsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpcs';
         $formParams = [];
@@ -3264,7 +3220,6 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -3277,12 +3232,9 @@ class VpcClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3298,6 +3250,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3312,11 +3265,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListVpcsRequest');
     }
 
-    public function showVpc($request){
+    public function showVpc($request)
+    {
         return $this->showVpcWithHttpInfo($request);
     }
 
-    public function showVpcWithHttpInfo($request){
+    public function showVpcWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpcs/{vpc_id}';
         $formParams = [];
@@ -3332,16 +3287,12 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['vpcId'] !== null) {
             $pathParams['vpc_id'] = $localVarParams['vpcId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3357,6 +3308,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3371,11 +3323,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowVpcRequest');
     }
 
-    public function showVpcRoute($request){
+    public function showVpcRoute($request)
+    {
         return $this->showVpcRouteWithHttpInfo($request);
     }
 
-    public function showVpcRouteWithHttpInfo($request){
+    public function showVpcRouteWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/vpc/routes/{route_id}';
         $formParams = [];
@@ -3391,13 +3345,9 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['routeId'] !== null) {
             $pathParams['route_id'] = $localVarParams['routeId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3413,6 +3363,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3427,11 +3378,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowVpcRouteRequest');
     }
 
-    public function updateVpc($request){
+    public function updateVpc($request)
+    {
         return $this->updateVpcWithHttpInfo($request);
     }
 
-    public function updateVpcWithHttpInfo($request){
+    public function updateVpcWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpcs/{vpc_id}';
         $formParams = [];
@@ -3447,16 +3400,12 @@ class VpcClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['vpcId'] !== null) {
             $pathParams['vpc_id'] = $localVarParams['vpcId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -3475,6 +3424,7 @@ class VpcClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,

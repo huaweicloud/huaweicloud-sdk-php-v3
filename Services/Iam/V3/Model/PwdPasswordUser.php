@@ -9,7 +9,6 @@ use HuaweiCloud\SDK\Core\SdkResponse;
 
 class PwdPasswordUser implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -38,7 +37,7 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'domain' => null,
         'name' => null,
-        'password' => null
+        'password' => 'password'
     ];
 
     /**

@@ -9,7 +9,6 @@ use HuaweiCloud\SDK\Core\SdkResponse;
 
 class CreateSubnetOption implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -420,7 +419,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     /**
     * Sets primaryDns
     *
-    * @param string|null $primaryDns 功能说明：子网dns服务器地址1 约束：ip格式，不支持IPv6地址
+    * @param string|null $primaryDns 功能说明：子网dns服务器地址1 约束：ip格式，不支持IPv6地址 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
     *
     * @return $this
     */
@@ -443,7 +442,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     /**
     * Sets secondaryDns
     *
-    * @param string|null $secondaryDns 功能说明：子网dns服务器地址2 约束：ip格式，不支持IPv6地址
+    * @param string|null $secondaryDns 功能说明：子网dns服务器地址2 约束：ip格式，不支持IPv6地址 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
     *
     * @return $this
     */
@@ -466,7 +465,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     /**
     * Sets dnsList
     *
-    * @param string[]|null $dnsList 功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集，不支持IPv6地址。
+    * @param string[]|null $dnsList 功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集，不支持IPv6地址。 默认值：不填时为空，无法使用云内网DNS功能 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
     *
     * @return $this
     */

@@ -11,24 +11,27 @@ class EipClient extends Client
 {
     protected $headerSelector;
     protected $modelPackage;
-    public function __construct($selector=null)
+
+    public function __construct($selector = null)
     {
         parent::__construct();
         $this->modelPackage = ModelInterface::class;
         $this->headerSelector = $selector ?: new HeaderSelector();
     }
 
-    public static function newBuilder($clazz)
+    public static function newBuilder()
     {
-        return new ClientBuilder($clazz);
+        return new ClientBuilder(new EipClient());
     }
 
 
-    public function addPublicipsIntoSharedBandwidth($request){
+    public function addPublicipsIntoSharedBandwidth($request)
+    {
         return $this->addPublicipsIntoSharedBandwidthWithHttpInfo($request);
     }
 
-    public function addPublicipsIntoSharedBandwidthWithHttpInfo($request){
+    public function addPublicipsIntoSharedBandwidthWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/bandwidths/{bandwidth_id}/insert';
         $formParams = [];
@@ -44,13 +47,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['bandwidthId'] !== null) {
             $pathParams['bandwidth_id'] = $localVarParams['bandwidthId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -69,6 +68,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -83,11 +83,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\AddPublicipsIntoSharedBandwidthRequest');
     }
 
-    public function batchCreateSharedBandwidths($request){
+    public function batchCreateSharedBandwidths($request)
+    {
         return $this->batchCreateSharedBandwidthsWithHttpInfo($request);
     }
 
-    public function batchCreateSharedBandwidthsWithHttpInfo($request){
+    public function batchCreateSharedBandwidthsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/batch-bandwidths';
         $formParams = [];
@@ -103,10 +105,6 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -125,6 +123,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -139,11 +138,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\BatchCreateSharedBandwidthsRequest');
     }
 
-    public function createSharedBandwidth($request){
+    public function createSharedBandwidth($request)
+    {
         return $this->createSharedBandwidthWithHttpInfo($request);
     }
 
-    public function createSharedBandwidthWithHttpInfo($request){
+    public function createSharedBandwidthWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/bandwidths';
         $formParams = [];
@@ -159,10 +160,6 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -181,6 +178,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -195,11 +193,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\CreateSharedBandwidthRequest');
     }
 
-    public function deleteSharedBandwidth($request){
+    public function deleteSharedBandwidth($request)
+    {
         return $this->deleteSharedBandwidthWithHttpInfo($request);
     }
 
-    public function deleteSharedBandwidthWithHttpInfo($request){
+    public function deleteSharedBandwidthWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/bandwidths/{bandwidth_id}';
         $formParams = [];
@@ -215,13 +215,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['bandwidthId'] !== null) {
             $pathParams['bandwidth_id'] = $localVarParams['bandwidthId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -237,6 +233,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -251,11 +248,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\DeleteSharedBandwidthRequest');
     }
 
-    public function listBandwidths($request){
+    public function listBandwidths($request)
+    {
         return $this->listBandwidthsWithHttpInfo($request);
     }
 
-    public function listBandwidthsWithHttpInfo($request){
+    public function listBandwidthsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/bandwidths';
         $formParams = [];
@@ -271,7 +270,6 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
@@ -284,9 +282,6 @@ class EipClient extends Client
         if ($localVarParams['shareType'] !== null) {
             $queryParams['share_type'] = $localVarParams['shareType'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -302,6 +297,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -316,11 +312,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ListBandwidthsRequest');
     }
 
-    public function listQuotas($request){
+    public function listQuotas($request)
+    {
         return $this->listQuotasWithHttpInfo($request);
     }
 
-    public function listQuotasWithHttpInfo($request){
+    public function listQuotasWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/quotas';
         $formParams = [];
@@ -336,13 +334,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -358,6 +352,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -372,11 +367,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ListQuotasRequest');
     }
 
-    public function removePublicipsFromSharedBandwidth($request){
+    public function removePublicipsFromSharedBandwidth($request)
+    {
         return $this->removePublicipsFromSharedBandwidthWithHttpInfo($request);
     }
 
-    public function removePublicipsFromSharedBandwidthWithHttpInfo($request){
+    public function removePublicipsFromSharedBandwidthWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/bandwidths/{bandwidth_id}/remove';
         $formParams = [];
@@ -392,13 +389,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['bandwidthId'] !== null) {
             $pathParams['bandwidth_id'] = $localVarParams['bandwidthId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -417,6 +410,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -431,11 +425,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\RemovePublicipsFromSharedBandwidthRequest');
     }
 
-    public function showBandwidth($request){
+    public function showBandwidth($request)
+    {
         return $this->showBandwidthWithHttpInfo($request);
     }
 
-    public function showBandwidthWithHttpInfo($request){
+    public function showBandwidthWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/bandwidths/{bandwidth_id}';
         $formParams = [];
@@ -451,13 +447,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['bandwidthId'] !== null) {
             $pathParams['bandwidth_id'] = $localVarParams['bandwidthId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -473,6 +465,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -487,11 +480,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ShowBandwidthRequest');
     }
 
-    public function updateBandwidth($request){
+    public function updateBandwidth($request)
+    {
         return $this->updateBandwidthWithHttpInfo($request);
     }
 
-    public function updateBandwidthWithHttpInfo($request){
+    public function updateBandwidthWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/bandwidths/{bandwidth_id}';
         $formParams = [];
@@ -507,13 +502,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['bandwidthId'] !== null) {
             $pathParams['bandwidth_id'] = $localVarParams['bandwidthId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -532,6 +523,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -546,11 +538,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\UpdateBandwidthRequest');
     }
 
-    public function updatePrePaidBandwidth($request){
+    public function updatePrePaidBandwidth($request)
+    {
         return $this->updatePrePaidBandwidthWithHttpInfo($request);
     }
 
-    public function updatePrePaidBandwidthWithHttpInfo($request){
+    public function updatePrePaidBandwidthWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/bandwidths/{bandwidth_id}';
         $formParams = [];
@@ -566,13 +560,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['bandwidthId'] !== null) {
             $pathParams['bandwidth_id'] = $localVarParams['bandwidthId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -591,6 +581,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -605,11 +596,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\UpdatePrePaidBandwidthRequest');
     }
 
-    public function batchCreatePublicipTags($request){
+    public function batchCreatePublicipTags($request)
+    {
         return $this->batchCreatePublicipTagsWithHttpInfo($request);
     }
 
-    public function batchCreatePublicipTagsWithHttpInfo($request){
+    public function batchCreatePublicipTagsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/publicips/{publicip_id}/tags/action';
         $formParams = [];
@@ -625,13 +618,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -650,6 +639,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -664,11 +654,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\BatchCreatePublicipTagsRequest');
     }
 
-    public function batchDeletePublicipTags($request){
+    public function batchDeletePublicipTags($request)
+    {
         return $this->batchDeletePublicipTagsWithHttpInfo($request);
     }
 
-    public function batchDeletePublicipTagsWithHttpInfo($request){
+    public function batchDeletePublicipTagsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/publicips/{publicip_id}/tags/action';
         $formParams = [];
@@ -684,13 +676,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -709,6 +697,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -723,11 +712,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\BatchDeletePublicipTagsRequest');
     }
 
-    public function createPrePaidPublicip($request){
+    public function createPrePaidPublicip($request)
+    {
         return $this->createPrePaidPublicipWithHttpInfo($request);
     }
 
-    public function createPrePaidPublicipWithHttpInfo($request){
+    public function createPrePaidPublicipWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/publicips';
         $formParams = [];
@@ -743,10 +734,6 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -765,6 +752,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -779,11 +767,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\CreatePrePaidPublicipRequest');
     }
 
-    public function createPublicip($request){
+    public function createPublicip($request)
+    {
         return $this->createPublicipWithHttpInfo($request);
     }
 
-    public function createPublicipWithHttpInfo($request){
+    public function createPublicipWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/publicips';
         $formParams = [];
@@ -799,10 +789,6 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -821,6 +807,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -835,11 +822,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\CreatePublicipRequest');
     }
 
-    public function createPublicipTag($request){
+    public function createPublicipTag($request)
+    {
         return $this->createPublicipTagWithHttpInfo($request);
     }
 
-    public function createPublicipTagWithHttpInfo($request){
+    public function createPublicipTagWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/publicips/{publicip_id}/tags';
         $formParams = [];
@@ -855,13 +844,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -880,6 +865,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -894,11 +880,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\CreatePublicipTagRequest');
     }
 
-    public function deletePublicip($request){
+    public function deletePublicip($request)
+    {
         return $this->deletePublicipWithHttpInfo($request);
     }
 
-    public function deletePublicipWithHttpInfo($request){
+    public function deletePublicipWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/publicips/{publicip_id}';
         $formParams = [];
@@ -914,13 +902,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -936,6 +920,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -950,11 +935,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\DeletePublicipRequest');
     }
 
-    public function deletePublicipTag($request){
+    public function deletePublicipTag($request)
+    {
         return $this->deletePublicipTagWithHttpInfo($request);
     }
 
-    public function deletePublicipTagWithHttpInfo($request){
+    public function deletePublicipTagWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/publicips/{publicip_id}/tags/{key}';
         $formParams = [];
@@ -970,16 +957,12 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
         if ($localVarParams['key'] !== null) {
             $pathParams['key'] = $localVarParams['key'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -995,6 +978,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1009,11 +993,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\DeletePublicipTagRequest');
     }
 
-    public function listPublicipTags($request){
+    public function listPublicipTags($request)
+    {
         return $this->listPublicipTagsWithHttpInfo($request);
     }
 
-    public function listPublicipTagsWithHttpInfo($request){
+    public function listPublicipTagsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/publicips/tags';
         $formParams = [];
@@ -1030,10 +1016,6 @@ class EipClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1048,6 +1030,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1062,11 +1045,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ListPublicipTagsRequest');
     }
 
-    public function listPublicips($request){
+    public function listPublicips($request)
+    {
         return $this->listPublicipsWithHttpInfo($request);
     }
 
-    public function listPublicipsWithHttpInfo($request){
+    public function listPublicipsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/publicips';
         $formParams = [];
@@ -1082,7 +1067,6 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
@@ -1108,9 +1092,6 @@ class EipClient extends Client
             $queryParams['id'] = $localVarParams['id'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1125,6 +1106,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1139,11 +1121,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ListPublicipsRequest');
     }
 
-    public function listPublicipsByTags($request){
+    public function listPublicipsByTags($request)
+    {
         return $this->listPublicipsByTagsWithHttpInfo($request);
     }
 
-    public function listPublicipsByTagsWithHttpInfo($request){
+    public function listPublicipsByTagsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/publicips/resource_instances/action';
         $formParams = [];
@@ -1159,10 +1143,6 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1181,6 +1161,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1195,11 +1176,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ListPublicipsByTagsRequest');
     }
 
-    public function showPublicip($request){
+    public function showPublicip($request)
+    {
         return $this->showPublicipWithHttpInfo($request);
     }
 
-    public function showPublicipWithHttpInfo($request){
+    public function showPublicipWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/publicips/{publicip_id}';
         $formParams = [];
@@ -1215,13 +1198,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1237,6 +1216,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1251,11 +1231,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ShowPublicipRequest');
     }
 
-    public function showPublicipTags($request){
+    public function showPublicipTags($request)
+    {
         return $this->showPublicipTagsWithHttpInfo($request);
     }
 
-    public function showPublicipTagsWithHttpInfo($request){
+    public function showPublicipTagsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/publicips/{publicip_id}/tags';
         $formParams = [];
@@ -1271,13 +1253,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1293,6 +1271,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1307,11 +1286,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ShowPublicipTagsRequest');
     }
 
-    public function updatePublicip($request){
+    public function updatePublicip($request)
+    {
         return $this->updatePublicipWithHttpInfo($request);
     }
 
-    public function updatePublicipWithHttpInfo($request){
+    public function updatePublicipWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v1/{project_id}/publicips/{publicip_id}';
         $formParams = [];
@@ -1327,13 +1308,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1352,6 +1329,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1366,11 +1344,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\UpdatePublicipRequest');
     }
 
-    public function neutronCreateFloatingIp($request){
+    public function neutronCreateFloatingIp($request)
+    {
         return $this->neutronCreateFloatingIpWithHttpInfo($request);
     }
 
-    public function neutronCreateFloatingIpWithHttpInfo($request){
+    public function neutronCreateFloatingIpWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/floatingips';
         $formParams = [];
@@ -1386,10 +1366,6 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1408,6 +1384,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1422,11 +1399,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\NeutronCreateFloatingIpRequest');
     }
 
-    public function neutronDeleteFloatingIp($request){
+    public function neutronDeleteFloatingIp($request)
+    {
         return $this->neutronDeleteFloatingIpWithHttpInfo($request);
     }
 
-    public function neutronDeleteFloatingIpWithHttpInfo($request){
+    public function neutronDeleteFloatingIpWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/floatingips/{floatingip_id}';
         $formParams = [];
@@ -1442,13 +1421,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['floatingipId'] !== null) {
             $pathParams['floatingip_id'] = $localVarParams['floatingipId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1464,6 +1439,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1478,11 +1454,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\NeutronDeleteFloatingIpRequest');
     }
 
-    public function neutronListFloatingIps($request){
+    public function neutronListFloatingIps($request)
+    {
         return $this->neutronListFloatingIpsWithHttpInfo($request);
     }
 
-    public function neutronListFloatingIpsWithHttpInfo($request){
+    public function neutronListFloatingIpsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/floatingips';
         $formParams = [];
@@ -1498,7 +1476,6 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -1530,9 +1507,6 @@ class EipClient extends Client
             $queryParams['floating_network_id'] = $localVarParams['floatingNetworkId'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1547,6 +1521,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1561,11 +1536,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\NeutronListFloatingIpsRequest');
     }
 
-    public function neutronShowFloatingIp($request){
+    public function neutronShowFloatingIp($request)
+    {
         return $this->neutronShowFloatingIpWithHttpInfo($request);
     }
 
-    public function neutronShowFloatingIpWithHttpInfo($request){
+    public function neutronShowFloatingIpWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/floatingips/{floatingip_id}';
         $formParams = [];
@@ -1581,13 +1558,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['floatingipId'] !== null) {
             $pathParams['floatingip_id'] = $localVarParams['floatingipId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1603,6 +1576,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1617,11 +1591,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\NeutronShowFloatingIpRequest');
     }
 
-    public function neutronUpdateFloatingIp($request){
+    public function neutronUpdateFloatingIp($request)
+    {
         return $this->neutronUpdateFloatingIpWithHttpInfo($request);
     }
 
-    public function neutronUpdateFloatingIpWithHttpInfo($request){
+    public function neutronUpdateFloatingIpWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v2.0/floatingips/{floatingip_id}';
         $formParams = [];
@@ -1637,13 +1613,9 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['floatingipId'] !== null) {
             $pathParams['floatingip_id'] = $localVarParams['floatingipId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1662,6 +1634,7 @@ class EipClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,

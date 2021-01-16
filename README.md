@@ -134,7 +134,7 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
 
     ``` php
     # Initialize specified service client instance, take IamClient for example
-    $iamClient = IamClient::newBuilder(new IamClient)
+    $iamClient = IamClient::newBuilder()
         ->withHttpConfig($config)
         ->withEndpoint($endpoint)
         ->withCredentials(null)
@@ -277,7 +277,7 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
     $httpHandler->addRequestHandlers($requestHandler);
     $httpHandler->addResponseHandlers($responseHandler);
     
-    $iamClient = IamClient::newBuilder(new IamClient)
+    $iamClient = IamClient::newBuilder()
         ->withHttpConfig($config)
         ->withEndpoint($endpoint)
         ->withCredentials(null)
@@ -320,7 +320,7 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
     $config->setIgnoreSslVerification(true);
     $credentials = new GlobalCredentials($ak,$sk,$domainId);
     
-    $iamClient = IamClient::newBuilder(new IamClient)
+    $iamClient = IamClient::newBuilder()
         ->withHttpConfig($config)
         ->withEndpoint($endpoint)
         ->withCredentials($credentials)

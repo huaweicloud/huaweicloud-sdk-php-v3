@@ -9,7 +9,6 @@ use HuaweiCloud\SDK\Core\SdkResponse;
 
 class UpdateUserOption implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -44,7 +43,7 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'password' => null,
+        'password' => 'password',
         'email' => null,
         'areacode' => null,
         'phone' => null,

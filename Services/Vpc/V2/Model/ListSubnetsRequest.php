@@ -9,7 +9,6 @@ use HuaweiCloud\SDK\Core\SdkResponse;
 
 class ListSubnetsRequest implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -28,7 +27,8 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'limit' => 'int',
             'marker' => 'string',
-            'vpcId' => 'string'
+            'vpcId' => 'string',
+            'scope' => 'string'
     ];
 
     /**
@@ -40,7 +40,8 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
         'projectId' => null,
         'limit' => 'int32',
         'marker' => null,
-        'vpcId' => null
+        'vpcId' => null,
+        'scope' => null
     ];
 
     /**
@@ -73,7 +74,8 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'limit' => 'limit',
             'marker' => 'marker',
-            'vpcId' => 'vpc_id'
+            'vpcId' => 'vpc_id',
+            'scope' => 'scope'
     ];
 
     /**
@@ -85,7 +87,8 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'limit' => 'setLimit',
             'marker' => 'setMarker',
-            'vpcId' => 'setVpcId'
+            'vpcId' => 'setVpcId',
+            'scope' => 'setScope'
     ];
 
     /**
@@ -97,7 +100,8 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'limit' => 'getLimit',
             'marker' => 'getMarker',
-            'vpcId' => 'getVpcId'
+            'vpcId' => 'getVpcId',
+            'scope' => 'getScope'
     ];
 
     /**
@@ -162,6 +166,7 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 2000;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
+        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
     }
 
     /**
@@ -287,6 +292,29 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
     public function setVpcId($vpcId)
     {
         $this->container['vpcId'] = $vpcId;
+        return $this;
+    }
+
+    /**
+    * Gets scope
+    *
+    * @return string|null
+    */
+    public function getScope()
+    {
+        return $this->container['scope'];
+    }
+
+    /**
+    * Sets scope
+    *
+    * @param string|null $scope scope
+    *
+    * @return $this
+    */
+    public function setScope($scope)
+    {
+        $this->container['scope'] = $scope;
         return $this;
     }
 

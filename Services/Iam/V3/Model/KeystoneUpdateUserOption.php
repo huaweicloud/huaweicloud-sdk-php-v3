@@ -9,7 +9,6 @@ use HuaweiCloud\SDK\Core\SdkResponse;
 
 class KeystoneUpdateUserOption implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -41,7 +40,7 @@ class KeystoneUpdateUserOption implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'domainId' => null,
         'name' => null,
-        'password' => null,
+        'password' => 'password',
         'enabled' => null,
         'description' => null,
         'pwdStatus' => null

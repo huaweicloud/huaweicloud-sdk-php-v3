@@ -11,6 +11,7 @@ class VpcAsyncClient extends Client
 {
     protected $headerSelector;
     protected $modelPackage;
+
     public function __construct($selector=null)
     {
         parent::__construct();
@@ -18,12 +19,13 @@ class VpcAsyncClient extends Client
         $this->headerSelector = $selector ?: new HeaderSelector();
     }
 
-    public static function newBuilder($clazz)
+    public static function newBuilder()
     {
-        return new ClientBuilder($clazz);
+        return new ClientBuilder(new VpcAsyncClient());
     }
 
-    public function acceptVpcPeeringAsync($request){
+    public function acceptVpcPeeringAsync($request)
+    {
         return $this->acceptVpcPeeringAsyncWithHttpInfo($request);
     }
     
@@ -43,13 +45,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['peeringId'] !== null) {
             $pathParams['peering_id'] = $localVarParams['peeringId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -65,6 +63,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -80,7 +79,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createPortAsync($request){
+    public function createPortAsync($request)
+    {
         return $this->createPortAsyncWithHttpInfo($request);
     }
     
@@ -100,13 +100,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -125,6 +121,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -140,7 +137,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createSecurityGroupAsync($request){
+    public function createSecurityGroupAsync($request)
+    {
         return $this->createSecurityGroupAsyncWithHttpInfo($request);
     }
     
@@ -160,13 +158,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -185,6 +179,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -200,7 +195,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createSecurityGroupRuleAsync($request){
+    public function createSecurityGroupRuleAsync($request)
+    {
         return $this->createSecurityGroupRuleAsyncWithHttpInfo($request);
     }
     
@@ -220,13 +216,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -245,6 +237,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -260,7 +253,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createSubnetAsync($request){
+    public function createSubnetAsync($request)
+    {
         return $this->createSubnetAsyncWithHttpInfo($request);
     }
     
@@ -280,13 +274,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -305,6 +295,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -320,7 +311,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createVpcPeeringAsync($request){
+    public function createVpcPeeringAsync($request)
+    {
         return $this->createVpcPeeringAsyncWithHttpInfo($request);
     }
     
@@ -340,10 +332,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -362,6 +350,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -377,7 +366,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deletePortAsync($request){
+    public function deletePortAsync($request)
+    {
         return $this->deletePortAsyncWithHttpInfo($request);
     }
     
@@ -397,16 +387,12 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['portId'] !== null) {
             $pathParams['port_id'] = $localVarParams['portId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -422,6 +408,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -437,7 +424,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteSecurityGroupAsync($request){
+    public function deleteSecurityGroupAsync($request)
+    {
         return $this->deleteSecurityGroupAsyncWithHttpInfo($request);
     }
     
@@ -457,16 +445,12 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['securityGroupId'] !== null) {
             $pathParams['security_group_id'] = $localVarParams['securityGroupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -482,6 +466,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -497,7 +482,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteSecurityGroupRuleAsync($request){
+    public function deleteSecurityGroupRuleAsync($request)
+    {
         return $this->deleteSecurityGroupRuleAsyncWithHttpInfo($request);
     }
     
@@ -517,16 +503,12 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['securityGroupRuleId'] !== null) {
             $pathParams['security_group_rule_id'] = $localVarParams['securityGroupRuleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -542,6 +524,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -557,7 +540,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteSubnetAsync($request){
+    public function deleteSubnetAsync($request)
+    {
         return $this->deleteSubnetAsyncWithHttpInfo($request);
     }
     
@@ -577,9 +561,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -589,7 +570,6 @@ class VpcAsyncClient extends Client
         if ($localVarParams['subnetId'] !== null) {
             $pathParams['subnet_id'] = $localVarParams['subnetId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -605,6 +585,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -620,7 +601,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteVpcPeeringAsync($request){
+    public function deleteVpcPeeringAsync($request)
+    {
         return $this->deleteVpcPeeringAsyncWithHttpInfo($request);
     }
     
@@ -640,13 +622,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['peeringId'] !== null) {
             $pathParams['peering_id'] = $localVarParams['peeringId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -662,6 +640,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -677,7 +656,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listPortsAsync($request){
+    public function listPortsAsync($request)
+    {
         return $this->listPortsAsyncWithHttpInfo($request);
     }
     
@@ -697,7 +677,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
@@ -734,12 +713,12 @@ class VpcAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-
-
+        if ($localVarParams['zoneId'] !== null) {
+            $queryParams['zone_id'] = $localVarParams['zoneId'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -755,6 +734,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -770,7 +750,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listSecurityGroupRulesAsync($request){
+    public function listSecurityGroupRulesAsync($request)
+    {
         return $this->listSecurityGroupRulesAsyncWithHttpInfo($request);
     }
     
@@ -790,7 +771,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
@@ -800,12 +780,9 @@ class VpcAsyncClient extends Client
         if ($localVarParams['securityGroupId'] !== null) {
             $queryParams['security_group_id'] = $localVarParams['securityGroupId'];
         }
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -821,6 +798,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -836,7 +814,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listSecurityGroupsAsync($request){
+    public function listSecurityGroupsAsync($request)
+    {
         return $this->listSecurityGroupsAsyncWithHttpInfo($request);
     }
     
@@ -856,7 +835,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -869,12 +847,9 @@ class VpcAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -890,6 +865,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -905,7 +881,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listSubnetsAsync($request){
+    public function listSubnetsAsync($request)
+    {
         return $this->listSubnetsAsyncWithHttpInfo($request);
     }
     
@@ -925,7 +902,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -935,12 +911,12 @@ class VpcAsyncClient extends Client
         if ($localVarParams['vpcId'] !== null) {
             $queryParams['vpc_id'] = $localVarParams['vpcId'];
         }
-
-
+        if ($localVarParams['scope'] !== null) {
+            $queryParams['scope'] = $localVarParams['scope'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -956,6 +932,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -971,7 +948,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listVpcPeeringsAsync($request){
+    public function listVpcPeeringsAsync($request)
+    {
         return $this->listVpcPeeringsAsyncWithHttpInfo($request);
     }
     
@@ -991,7 +969,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -1014,9 +991,6 @@ class VpcAsyncClient extends Client
             $queryParams['vpc_id'] = $localVarParams['vpcId'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1031,6 +1005,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1046,7 +1021,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function rejectVpcPeeringAsync($request){
+    public function rejectVpcPeeringAsync($request)
+    {
         return $this->rejectVpcPeeringAsyncWithHttpInfo($request);
     }
     
@@ -1066,13 +1042,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['peeringId'] !== null) {
             $pathParams['peering_id'] = $localVarParams['peeringId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1088,6 +1060,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1103,7 +1076,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showPortAsync($request){
+    public function showPortAsync($request)
+    {
         return $this->showPortAsyncWithHttpInfo($request);
     }
     
@@ -1123,16 +1097,12 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['portId'] !== null) {
             $pathParams['port_id'] = $localVarParams['portId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1148,6 +1118,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1163,7 +1134,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showQuotaAsync($request){
+    public function showQuotaAsync($request)
+    {
         return $this->showQuotaAsyncWithHttpInfo($request);
     }
     
@@ -1183,16 +1155,12 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1208,6 +1176,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1223,7 +1192,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showSecurityGroupAsync($request){
+    public function showSecurityGroupAsync($request)
+    {
         return $this->showSecurityGroupAsyncWithHttpInfo($request);
     }
     
@@ -1243,16 +1213,12 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['securityGroupId'] !== null) {
             $pathParams['security_group_id'] = $localVarParams['securityGroupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1268,6 +1234,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1283,7 +1250,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showSecurityGroupRuleAsync($request){
+    public function showSecurityGroupRuleAsync($request)
+    {
         return $this->showSecurityGroupRuleAsyncWithHttpInfo($request);
     }
     
@@ -1303,16 +1271,12 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['securityGroupRuleId'] !== null) {
             $pathParams['security_group_rule_id'] = $localVarParams['securityGroupRuleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1328,6 +1292,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1343,7 +1308,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showSubnetAsync($request){
+    public function showSubnetAsync($request)
+    {
         return $this->showSubnetAsyncWithHttpInfo($request);
     }
     
@@ -1363,16 +1329,12 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['subnetId'] !== null) {
             $pathParams['subnet_id'] = $localVarParams['subnetId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1388,6 +1350,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1403,7 +1366,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showVpcPeeringAsync($request){
+    public function showVpcPeeringAsync($request)
+    {
         return $this->showVpcPeeringAsyncWithHttpInfo($request);
     }
     
@@ -1423,13 +1387,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['peeringId'] !== null) {
             $pathParams['peering_id'] = $localVarParams['peeringId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1445,6 +1405,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1460,7 +1421,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updatePortAsync($request){
+    public function updatePortAsync($request)
+    {
         return $this->updatePortAsyncWithHttpInfo($request);
     }
     
@@ -1480,16 +1442,12 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['portId'] !== null) {
             $pathParams['port_id'] = $localVarParams['portId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1508,6 +1466,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1523,7 +1482,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateSubnetAsync($request){
+    public function updateSubnetAsync($request)
+    {
         return $this->updateSubnetAsyncWithHttpInfo($request);
     }
     
@@ -1543,9 +1503,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -1555,7 +1512,6 @@ class VpcAsyncClient extends Client
         if ($localVarParams['subnetId'] !== null) {
             $pathParams['subnet_id'] = $localVarParams['subnetId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1574,6 +1530,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1589,7 +1546,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateVpcPeeringAsync($request){
+    public function updateVpcPeeringAsync($request)
+    {
         return $this->updateVpcPeeringAsyncWithHttpInfo($request);
     }
     
@@ -1609,13 +1567,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['peeringId'] !== null) {
             $pathParams['peering_id'] = $localVarParams['peeringId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1634,6 +1588,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1649,7 +1604,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createPrivateipAsync($request){
+    public function createPrivateipAsync($request)
+    {
         return $this->createPrivateipAsyncWithHttpInfo($request);
     }
     
@@ -1669,13 +1625,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1694,6 +1646,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1709,7 +1662,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deletePrivateipAsync($request){
+    public function deletePrivateipAsync($request)
+    {
         return $this->deletePrivateipAsyncWithHttpInfo($request);
     }
     
@@ -1729,16 +1683,12 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['privateipId'] !== null) {
             $pathParams['privateip_id'] = $localVarParams['privateipId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1754,6 +1704,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1769,7 +1720,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listPrivateipsAsync($request){
+    public function listPrivateipsAsync($request)
+    {
         return $this->listPrivateipsAsyncWithHttpInfo($request);
     }
     
@@ -1789,22 +1741,18 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['subnetId'] !== null) {
             $pathParams['subnet_id'] = $localVarParams['subnetId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1820,6 +1768,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1835,7 +1784,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showNetworkIpAvailabilitiesAsync($request){
+    public function showNetworkIpAvailabilitiesAsync($request)
+    {
         return $this->showNetworkIpAvailabilitiesAsyncWithHttpInfo($request);
     }
     
@@ -1855,13 +1805,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['networkId'] !== null) {
             $pathParams['network_id'] = $localVarParams['networkId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1877,6 +1823,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1892,7 +1839,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showPrivateipAsync($request){
+    public function showPrivateipAsync($request)
+    {
         return $this->showPrivateipAsyncWithHttpInfo($request);
     }
     
@@ -1912,16 +1860,12 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['privateipId'] !== null) {
             $pathParams['privateip_id'] = $localVarParams['privateipId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1937,6 +1881,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1952,7 +1897,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronAddFirewallRuleAsync($request){
+    public function neutronAddFirewallRuleAsync($request)
+    {
         return $this->neutronAddFirewallRuleAsyncWithHttpInfo($request);
     }
     
@@ -1972,13 +1918,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallPolicyId'] !== null) {
             $pathParams['firewall_policy_id'] = $localVarParams['firewallPolicyId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1997,6 +1939,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -2012,7 +1955,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronCreateFirewallGroupAsync($request){
+    public function neutronCreateFirewallGroupAsync($request)
+    {
         return $this->neutronCreateFirewallGroupAsyncWithHttpInfo($request);
     }
     
@@ -2032,10 +1976,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2054,6 +1994,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -2069,7 +2010,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronCreateFirewallPolicyAsync($request){
+    public function neutronCreateFirewallPolicyAsync($request)
+    {
         return $this->neutronCreateFirewallPolicyAsyncWithHttpInfo($request);
     }
     
@@ -2089,10 +2031,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2111,6 +2049,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -2126,7 +2065,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronCreateFirewallRuleAsync($request){
+    public function neutronCreateFirewallRuleAsync($request)
+    {
         return $this->neutronCreateFirewallRuleAsyncWithHttpInfo($request);
     }
     
@@ -2146,10 +2086,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2168,6 +2104,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -2183,7 +2120,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronDeleteFirewallGroupAsync($request){
+    public function neutronDeleteFirewallGroupAsync($request)
+    {
         return $this->neutronDeleteFirewallGroupAsyncWithHttpInfo($request);
     }
     
@@ -2203,13 +2141,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallGroupId'] !== null) {
             $pathParams['firewall_group_id'] = $localVarParams['firewallGroupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2225,6 +2159,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -2240,7 +2175,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronDeleteFirewallPolicyAsync($request){
+    public function neutronDeleteFirewallPolicyAsync($request)
+    {
         return $this->neutronDeleteFirewallPolicyAsyncWithHttpInfo($request);
     }
     
@@ -2260,13 +2196,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallPolicyId'] !== null) {
             $pathParams['firewall_policy_id'] = $localVarParams['firewallPolicyId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2282,6 +2214,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -2297,7 +2230,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronDeleteFirewallRuleAsync($request){
+    public function neutronDeleteFirewallRuleAsync($request)
+    {
         return $this->neutronDeleteFirewallRuleAsyncWithHttpInfo($request);
     }
     
@@ -2317,13 +2251,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallRuleId'] !== null) {
             $pathParams['firewall_rule_id'] = $localVarParams['firewallRuleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2339,6 +2269,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -2354,7 +2285,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronListFirewallGroupsAsync($request){
+    public function neutronListFirewallGroupsAsync($request)
+    {
         return $this->neutronListFirewallGroupsAsyncWithHttpInfo($request);
     }
     
@@ -2374,7 +2306,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
@@ -2397,9 +2328,6 @@ class VpcAsyncClient extends Client
             $queryParams['egress_firewall_policy_id'] = $localVarParams['egressFirewallPolicyId'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2414,6 +2342,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2429,7 +2358,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronListFirewallPoliciesAsync($request){
+    public function neutronListFirewallPoliciesAsync($request)
+    {
         return $this->neutronListFirewallPoliciesAsyncWithHttpInfo($request);
     }
     
@@ -2449,7 +2379,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -2469,9 +2398,6 @@ class VpcAsyncClient extends Client
             $queryParams['tenant_id'] = $localVarParams['tenantId'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2486,6 +2412,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2501,7 +2428,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronListFirewallRulesAsync($request){
+    public function neutronListFirewallRulesAsync($request)
+    {
         return $this->neutronListFirewallRulesAsyncWithHttpInfo($request);
     }
     
@@ -2521,7 +2449,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
@@ -2544,9 +2471,6 @@ class VpcAsyncClient extends Client
             $queryParams['tenant_id'] = $localVarParams['tenantId'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2561,6 +2485,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2576,7 +2501,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronRemoveFirewallRuleAsync($request){
+    public function neutronRemoveFirewallRuleAsync($request)
+    {
         return $this->neutronRemoveFirewallRuleAsyncWithHttpInfo($request);
     }
     
@@ -2596,13 +2522,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallPolicyId'] !== null) {
             $pathParams['firewall_policy_id'] = $localVarParams['firewallPolicyId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2621,6 +2543,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -2636,7 +2559,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronShowFirewallGroupAsync($request){
+    public function neutronShowFirewallGroupAsync($request)
+    {
         return $this->neutronShowFirewallGroupAsyncWithHttpInfo($request);
     }
     
@@ -2656,13 +2580,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallGroupId'] !== null) {
             $pathParams['firewall_group_id'] = $localVarParams['firewallGroupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2678,6 +2598,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2693,7 +2614,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronShowFirewallPolicyAsync($request){
+    public function neutronShowFirewallPolicyAsync($request)
+    {
         return $this->neutronShowFirewallPolicyAsyncWithHttpInfo($request);
     }
     
@@ -2713,13 +2635,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallPolicyId'] !== null) {
             $pathParams['firewall_policy_id'] = $localVarParams['firewallPolicyId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2735,6 +2653,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2750,7 +2669,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronShowFirewallRuleAsync($request){
+    public function neutronShowFirewallRuleAsync($request)
+    {
         return $this->neutronShowFirewallRuleAsyncWithHttpInfo($request);
     }
     
@@ -2770,13 +2690,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallRuleId'] !== null) {
             $pathParams['firewall_rule_id'] = $localVarParams['firewallRuleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2792,6 +2708,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2807,7 +2724,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronUpdateFirewallGroupAsync($request){
+    public function neutronUpdateFirewallGroupAsync($request)
+    {
         return $this->neutronUpdateFirewallGroupAsyncWithHttpInfo($request);
     }
     
@@ -2827,13 +2745,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallGroupId'] !== null) {
             $pathParams['firewall_group_id'] = $localVarParams['firewallGroupId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2852,6 +2766,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -2867,7 +2782,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronUpdateFirewallPolicyAsync($request){
+    public function neutronUpdateFirewallPolicyAsync($request)
+    {
         return $this->neutronUpdateFirewallPolicyAsyncWithHttpInfo($request);
     }
     
@@ -2887,13 +2803,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallPolicyId'] !== null) {
             $pathParams['firewall_policy_id'] = $localVarParams['firewallPolicyId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2912,6 +2824,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -2927,7 +2840,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronUpdateFirewallRuleAsync($request){
+    public function neutronUpdateFirewallRuleAsync($request)
+    {
         return $this->neutronUpdateFirewallRuleAsyncWithHttpInfo($request);
     }
     
@@ -2947,13 +2861,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['firewallRuleId'] !== null) {
             $pathParams['firewall_rule_id'] = $localVarParams['firewallRuleId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2972,6 +2882,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -2987,7 +2898,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createVpcAsync($request){
+    public function createVpcAsync($request)
+    {
         return $this->createVpcAsyncWithHttpInfo($request);
     }
     
@@ -3007,13 +2919,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -3032,6 +2940,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -3047,7 +2956,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createVpcRouteAsync($request){
+    public function createVpcRouteAsync($request)
+    {
         return $this->createVpcRouteAsyncWithHttpInfo($request);
     }
     
@@ -3067,10 +2977,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -3089,6 +2995,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -3104,7 +3011,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteVpcAsync($request){
+    public function deleteVpcAsync($request)
+    {
         return $this->deleteVpcAsyncWithHttpInfo($request);
     }
     
@@ -3124,16 +3032,12 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['vpcId'] !== null) {
             $pathParams['vpc_id'] = $localVarParams['vpcId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3149,6 +3053,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -3164,7 +3069,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteVpcRouteAsync($request){
+    public function deleteVpcRouteAsync($request)
+    {
         return $this->deleteVpcRouteAsyncWithHttpInfo($request);
     }
     
@@ -3184,13 +3090,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['routeId'] !== null) {
             $pathParams['route_id'] = $localVarParams['routeId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3206,6 +3108,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -3221,7 +3124,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listVpcRoutesAsync($request){
+    public function listVpcRoutesAsync($request)
+    {
         return $this->listVpcRoutesAsyncWithHttpInfo($request);
     }
     
@@ -3241,7 +3145,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -3264,9 +3167,6 @@ class VpcAsyncClient extends Client
             $queryParams['tenant_id'] = $localVarParams['tenantId'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -3281,6 +3181,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3296,7 +3197,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listVpcsAsync($request){
+    public function listVpcsAsync($request)
+    {
         return $this->listVpcsAsyncWithHttpInfo($request);
     }
     
@@ -3316,7 +3218,6 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -3329,12 +3230,9 @@ class VpcAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3350,6 +3248,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3365,7 +3264,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showVpcAsync($request){
+    public function showVpcAsync($request)
+    {
         return $this->showVpcAsyncWithHttpInfo($request);
     }
     
@@ -3385,16 +3285,12 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['vpcId'] !== null) {
             $pathParams['vpc_id'] = $localVarParams['vpcId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3410,6 +3306,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3425,7 +3322,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showVpcRouteAsync($request){
+    public function showVpcRouteAsync($request)
+    {
         return $this->showVpcRouteAsyncWithHttpInfo($request);
     }
     
@@ -3445,13 +3343,9 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['routeId'] !== null) {
             $pathParams['route_id'] = $localVarParams['routeId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3467,6 +3361,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3482,7 +3377,8 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateVpcAsync($request){
+    public function updateVpcAsync($request)
+    {
         return $this->updateVpcAsyncWithHttpInfo($request);
     }
     
@@ -3502,16 +3398,12 @@ class VpcAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['vpcId'] !== null) {
             $pathParams['vpc_id'] = $localVarParams['vpcId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -3530,6 +3422,7 @@ class VpcAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,

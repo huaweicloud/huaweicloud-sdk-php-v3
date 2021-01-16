@@ -9,7 +9,6 @@ use HuaweiCloud\SDK\Core\SdkResponse;
 
 class CreateUserResult implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -32,7 +31,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
             'description' => 'string',
             'name' => 'string',
             'phone' => 'string',
-            'isDomainOwner' => 'string',
+            'isDomainOwner' => 'bool',
             'domainId' => 'string',
             'enabled' => 'bool',
             'areacode' => 'string',
@@ -440,7 +439,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
     /**
     * Gets isDomainOwner
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getIsDomainOwner()
     {
@@ -450,7 +449,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
     /**
     * Sets isDomainOwner
     *
-    * @param string|null $isDomainOwner IAM用户是否为账号管理员。
+    * @param bool|null $isDomainOwner IAM用户是否为账号管理员。
     *
     * @return $this
     */

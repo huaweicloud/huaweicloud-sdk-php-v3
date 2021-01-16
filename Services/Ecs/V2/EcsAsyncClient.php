@@ -11,6 +11,7 @@ class EcsAsyncClient extends Client
 {
     protected $headerSelector;
     protected $modelPackage;
+
     public function __construct($selector=null)
     {
         parent::__construct();
@@ -18,12 +19,13 @@ class EcsAsyncClient extends Client
         $this->headerSelector = $selector ?: new HeaderSelector();
     }
 
-    public static function newBuilder($clazz)
+    public static function newBuilder()
     {
-        return new ClientBuilder($clazz);
+        return new ClientBuilder(new EcsAsyncClient());
     }
 
-    public function addServerGroupMemberAsync($request){
+    public function addServerGroupMemberAsync($request)
+    {
         return $this->addServerGroupMemberAsyncWithHttpInfo($request);
     }
     
@@ -43,13 +45,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverGroupId'] !== null) {
             $pathParams['server_group_id'] = $localVarParams['serverGroupId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -68,6 +66,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -83,7 +82,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function attachServerVolumeAsync($request){
+    public function attachServerVolumeAsync($request)
+    {
         return $this->attachServerVolumeAsyncWithHttpInfo($request);
     }
     
@@ -103,13 +103,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -128,6 +124,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -143,7 +140,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function batchAddServerNicsAsync($request){
+    public function batchAddServerNicsAsync($request)
+    {
         return $this->batchAddServerNicsAsyncWithHttpInfo($request);
     }
     
@@ -163,13 +161,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -188,6 +182,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -203,7 +198,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function batchCreateServerTagsAsync($request){
+    public function batchCreateServerTagsAsync($request)
+    {
         return $this->batchCreateServerTagsAsyncWithHttpInfo($request);
     }
     
@@ -223,13 +219,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -248,6 +240,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -263,7 +256,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function batchDeleteServerNicsAsync($request){
+    public function batchDeleteServerNicsAsync($request)
+    {
         return $this->batchDeleteServerNicsAsyncWithHttpInfo($request);
     }
     
@@ -283,13 +277,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -308,6 +298,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -323,7 +314,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function batchDeleteServerTagsAsync($request){
+    public function batchDeleteServerTagsAsync($request)
+    {
         return $this->batchDeleteServerTagsAsyncWithHttpInfo($request);
     }
     
@@ -343,13 +335,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -368,6 +356,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -383,7 +372,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function batchRebootServersAsync($request){
+    public function batchRebootServersAsync($request)
+    {
         return $this->batchRebootServersAsyncWithHttpInfo($request);
     }
     
@@ -403,10 +393,6 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -425,6 +411,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -440,7 +427,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function batchStartServersAsync($request){
+    public function batchStartServersAsync($request)
+    {
         return $this->batchStartServersAsyncWithHttpInfo($request);
     }
     
@@ -460,10 +448,6 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -482,6 +466,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -497,7 +482,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function batchStopServersAsync($request){
+    public function batchStopServersAsync($request)
+    {
         return $this->batchStopServersAsyncWithHttpInfo($request);
     }
     
@@ -517,10 +503,6 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -539,6 +521,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -554,7 +537,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function changeServerOsWithCloudInitAsync($request){
+    public function changeServerOsWithCloudInitAsync($request)
+    {
         return $this->changeServerOsWithCloudInitAsyncWithHttpInfo($request);
     }
     
@@ -574,13 +558,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -599,6 +579,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -614,7 +595,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createPostPaidServersAsync($request){
+    public function createPostPaidServersAsync($request)
+    {
         return $this->createPostPaidServersAsyncWithHttpInfo($request);
     }
     
@@ -634,10 +616,6 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -656,6 +634,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -671,7 +650,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createServerGroupAsync($request){
+    public function createServerGroupAsync($request)
+    {
         return $this->createServerGroupAsyncWithHttpInfo($request);
     }
     
@@ -691,10 +671,6 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -713,6 +689,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -728,7 +705,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createServersAsync($request){
+    public function createServersAsync($request)
+    {
         return $this->createServersAsyncWithHttpInfo($request);
     }
     
@@ -748,10 +726,6 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -770,6 +744,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -785,7 +760,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteServerGroupAsync($request){
+    public function deleteServerGroupAsync($request)
+    {
         return $this->deleteServerGroupAsyncWithHttpInfo($request);
     }
     
@@ -805,13 +781,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverGroupId'] !== null) {
             $pathParams['server_group_id'] = $localVarParams['serverGroupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -827,6 +799,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -842,7 +815,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteServerGroupMemberAsync($request){
+    public function deleteServerGroupMemberAsync($request)
+    {
         return $this->deleteServerGroupMemberAsyncWithHttpInfo($request);
     }
     
@@ -862,13 +836,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverGroupId'] !== null) {
             $pathParams['server_group_id'] = $localVarParams['serverGroupId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -887,6 +857,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -902,7 +873,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteServerMetadataAsync($request){
+    public function deleteServerMetadataAsync($request)
+    {
         return $this->deleteServerMetadataAsyncWithHttpInfo($request);
     }
     
@@ -922,16 +894,12 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['key'] !== null) {
             $pathParams['key'] = $localVarParams['key'];
         }
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -947,6 +915,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -962,7 +931,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteServersAsync($request){
+    public function deleteServersAsync($request)
+    {
         return $this->deleteServersAsyncWithHttpInfo($request);
     }
     
@@ -982,10 +952,6 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1004,6 +970,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1019,7 +986,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function detachServerVolumeAsync($request){
+    public function detachServerVolumeAsync($request)
+    {
         return $this->detachServerVolumeAsyncWithHttpInfo($request);
     }
     
@@ -1039,19 +1007,15 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['deleteFlag'] !== null) {
             $queryParams['delete_flag'] = $localVarParams['deleteFlag'];
         }
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
         if ($localVarParams['volumeId'] !== null) {
             $pathParams['volume_id'] = $localVarParams['volumeId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1067,6 +1031,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1082,7 +1047,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listFlavorsAsync($request){
+    public function listFlavorsAsync($request)
+    {
         return $this->listFlavorsAsyncWithHttpInfo($request);
     }
     
@@ -1102,13 +1068,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['availabilityZone'] !== null) {
             $queryParams['availability_zone'] = $localVarParams['availabilityZone'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1124,6 +1086,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1139,7 +1102,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listResizeFlavorsAsync($request){
+    public function listResizeFlavorsAsync($request)
+    {
         return $this->listResizeFlavorsAsyncWithHttpInfo($request);
     }
     
@@ -1159,7 +1123,6 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['instanceUuid'] !== null) {
             $queryParams['instance_uuid'] = $localVarParams['instanceUuid'];
         }
@@ -1182,9 +1145,6 @@ class EcsAsyncClient extends Client
             $queryParams['source_flavor_name'] = $localVarParams['sourceFlavorName'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1199,6 +1159,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1214,7 +1175,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listServerBlockDevicesAsync($request){
+    public function listServerBlockDevicesAsync($request)
+    {
         return $this->listServerBlockDevicesAsyncWithHttpInfo($request);
     }
     
@@ -1234,13 +1196,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1256,6 +1214,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1271,7 +1230,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listServerInterfacesAsync($request){
+    public function listServerInterfacesAsync($request)
+    {
         return $this->listServerInterfacesAsyncWithHttpInfo($request);
     }
     
@@ -1291,13 +1251,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1313,6 +1269,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1328,7 +1285,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listServersDetailsAsync($request){
+    public function listServersDetailsAsync($request)
+    {
         return $this->listServersDetailsAsyncWithHttpInfo($request);
     }
     
@@ -1348,7 +1306,6 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
@@ -1380,9 +1337,6 @@ class EcsAsyncClient extends Client
             $queryParams['tags'] = $localVarParams['tags'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1397,6 +1351,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1412,7 +1367,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function novaAssociateSecurityGroupAsync($request){
+    public function novaAssociateSecurityGroupAsync($request)
+    {
         return $this->novaAssociateSecurityGroupAsyncWithHttpInfo($request);
     }
     
@@ -1432,13 +1388,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1457,6 +1409,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1472,7 +1425,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function novaCreateKeypairAsync($request){
+    public function novaCreateKeypairAsync($request)
+    {
         return $this->novaCreateKeypairAsyncWithHttpInfo($request);
     }
     
@@ -1492,13 +1446,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
         if ($localVarParams['openStackApiVersion'] !== null) {
             $headerParams['open_stack_api_version'] = $localVarParams['openStackApiVersion'];
         }
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1517,6 +1467,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1532,7 +1483,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function novaCreateServersAsync($request){
+    public function novaCreateServersAsync($request)
+    {
         return $this->novaCreateServersAsyncWithHttpInfo($request);
     }
     
@@ -1552,13 +1504,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
         if ($localVarParams['openStackApiVersion'] !== null) {
             $headerParams['open_stack_api_version'] = $localVarParams['openStackApiVersion'];
         }
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1577,6 +1525,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1592,7 +1541,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function novaDeleteKeypairAsync($request){
+    public function novaDeleteKeypairAsync($request)
+    {
         return $this->novaDeleteKeypairAsyncWithHttpInfo($request);
     }
     
@@ -1612,13 +1562,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['keypairName'] !== null) {
             $pathParams['keypair_name'] = $localVarParams['keypairName'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1634,6 +1580,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1649,7 +1596,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function novaDeleteServerAsync($request){
+    public function novaDeleteServerAsync($request)
+    {
         return $this->novaDeleteServerAsyncWithHttpInfo($request);
     }
     
@@ -1669,13 +1617,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1691,6 +1635,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1706,7 +1651,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function novaDisassociateSecurityGroupAsync($request){
+    public function novaDisassociateSecurityGroupAsync($request)
+    {
         return $this->novaDisassociateSecurityGroupAsyncWithHttpInfo($request);
     }
     
@@ -1726,13 +1672,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1751,6 +1693,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1766,7 +1709,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function novaListAvailabilityZonesAsync($request){
+    public function novaListAvailabilityZonesAsync($request)
+    {
         return $this->novaListAvailabilityZonesAsyncWithHttpInfo($request);
     }
     
@@ -1787,10 +1731,6 @@ class EcsAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1805,6 +1745,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1820,7 +1761,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function novaListKeypairsAsync($request){
+    public function novaListKeypairsAsync($request)
+    {
         return $this->novaListKeypairsAsyncWithHttpInfo($request);
     }
     
@@ -1840,19 +1782,15 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
-
         if ($localVarParams['openStackApiVersion'] !== null) {
             $headerParams['open_stack_api_version'] = $localVarParams['openStackApiVersion'];
         }
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1868,6 +1806,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1883,7 +1822,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function novaListServerSecurityGroupsAsync($request){
+    public function novaListServerSecurityGroupsAsync($request)
+    {
         return $this->novaListServerSecurityGroupsAsyncWithHttpInfo($request);
     }
     
@@ -1903,13 +1843,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1925,6 +1861,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1940,7 +1877,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function novaListServersDetailsAsync($request){
+    public function novaListServersDetailsAsync($request)
+    {
         return $this->novaListServersDetailsAsyncWithHttpInfo($request);
     }
     
@@ -1960,7 +1898,6 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['changesSince'] !== null) {
             $queryParams['changes_since'] = $localVarParams['changesSince'];
         }
@@ -1997,12 +1934,9 @@ class EcsAsyncClient extends Client
         if ($localVarParams['tags'] !== null) {
             $queryParams['tags'] = $localVarParams['tags'];
         }
-
         if ($localVarParams['openStackApiVersion'] !== null) {
             $headerParams['open_stack_api_version'] = $localVarParams['openStackApiVersion'];
         }
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2018,6 +1952,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2033,7 +1968,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function novaShowKeypairAsync($request){
+    public function novaShowKeypairAsync($request)
+    {
         return $this->novaShowKeypairAsyncWithHttpInfo($request);
     }
     
@@ -2053,16 +1989,12 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
         if ($localVarParams['openStackApiVersion'] !== null) {
             $headerParams['open_stack_api_version'] = $localVarParams['openStackApiVersion'];
         }
-
         if ($localVarParams['keypairName'] !== null) {
             $pathParams['keypair_name'] = $localVarParams['keypairName'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2078,6 +2010,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2093,7 +2026,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function novaShowServerAsync($request){
+    public function novaShowServerAsync($request)
+    {
         return $this->novaShowServerAsyncWithHttpInfo($request);
     }
     
@@ -2113,16 +2047,12 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
         if ($localVarParams['openStackApiVersion'] !== null) {
             $headerParams['open_stack_api_version'] = $localVarParams['openStackApiVersion'];
         }
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2138,6 +2068,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2153,7 +2084,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function reinstallServerWithCloudInitAsync($request){
+    public function reinstallServerWithCloudInitAsync($request)
+    {
         return $this->reinstallServerWithCloudInitAsyncWithHttpInfo($request);
     }
     
@@ -2173,13 +2105,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2198,6 +2126,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -2213,7 +2142,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function resetServerPasswordAsync($request){
+    public function resetServerPasswordAsync($request)
+    {
         return $this->resetServerPasswordAsyncWithHttpInfo($request);
     }
     
@@ -2233,13 +2163,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2258,6 +2184,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -2273,7 +2200,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function resizePostPaidServerAsync($request){
+    public function resizePostPaidServerAsync($request)
+    {
         return $this->resizePostPaidServerAsyncWithHttpInfo($request);
     }
     
@@ -2293,13 +2221,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2318,6 +2242,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -2333,7 +2258,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function resizeServerAsync($request){
+    public function resizeServerAsync($request)
+    {
         return $this->resizeServerAsyncWithHttpInfo($request);
     }
     
@@ -2353,13 +2279,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2378,6 +2300,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -2393,7 +2316,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showResetPasswordFlagAsync($request){
+    public function showResetPasswordFlagAsync($request)
+    {
         return $this->showResetPasswordFlagAsyncWithHttpInfo($request);
     }
     
@@ -2413,13 +2337,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2435,6 +2355,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2450,7 +2371,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showServerAsync($request){
+    public function showServerAsync($request)
+    {
         return $this->showServerAsyncWithHttpInfo($request);
     }
     
@@ -2470,13 +2392,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2492,6 +2410,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2507,7 +2426,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showServerLimitsAsync($request){
+    public function showServerLimitsAsync($request)
+    {
         return $this->showServerLimitsAsyncWithHttpInfo($request);
     }
     
@@ -2528,10 +2448,6 @@ class EcsAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2546,6 +2462,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2561,7 +2478,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showServerRemoteConsoleAsync($request){
+    public function showServerRemoteConsoleAsync($request)
+    {
         return $this->showServerRemoteConsoleAsyncWithHttpInfo($request);
     }
     
@@ -2581,13 +2499,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2606,6 +2520,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -2621,7 +2536,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showServerTagsAsync($request){
+    public function showServerTagsAsync($request)
+    {
         return $this->showServerTagsAsyncWithHttpInfo($request);
     }
     
@@ -2641,13 +2557,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2663,6 +2575,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2678,7 +2591,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateServerAsync($request){
+    public function updateServerAsync($request)
+    {
         return $this->updateServerAsyncWithHttpInfo($request);
     }
     
@@ -2698,13 +2612,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2723,6 +2633,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -2738,7 +2649,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateServerMetadataAsync($request){
+    public function updateServerMetadataAsync($request)
+    {
         return $this->updateServerMetadataAsyncWithHttpInfo($request);
     }
     
@@ -2758,13 +2670,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2783,6 +2691,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -2798,7 +2707,8 @@ class EcsAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showJobAsync($request){
+    public function showJobAsync($request)
+    {
         return $this->showJobAsyncWithHttpInfo($request);
     }
     
@@ -2818,13 +2728,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['jobId'] !== null) {
             $pathParams['job_id'] = $localVarParams['jobId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2840,6 +2746,7 @@ class EcsAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,

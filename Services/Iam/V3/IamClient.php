@@ -11,24 +11,27 @@ class IamClient extends Client
 {
     protected $headerSelector;
     protected $modelPackage;
-    public function __construct($selector=null)
+
+    public function __construct($selector = null)
     {
         parent::__construct();
         $this->modelPackage = ModelInterface::class;
         $this->headerSelector = $selector ?: new HeaderSelector();
     }
 
-    public static function newBuilder($clazz)
+    public static function newBuilder()
     {
-        return new ClientBuilder($clazz, "GlobalCredentials");
+        return new ClientBuilder(new IamClient(), "GlobalCredentials");
     }
 
 
-    public function associateAgencyWithAllProjectsPermission($request){
+    public function associateAgencyWithAllProjectsPermission($request)
+    {
         return $this->associateAgencyWithAllProjectsPermissionWithHttpInfo($request);
     }
 
-    public function associateAgencyWithAllProjectsPermissionWithHttpInfo($request){
+    public function associateAgencyWithAllProjectsPermissionWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}/inherited_to_projects';
         $formParams = [];
@@ -44,9 +47,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
@@ -56,7 +56,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -72,6 +71,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -86,11 +86,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateAgencyWithAllProjectsPermissionRequest');
     }
 
-    public function associateAgencyWithDomainPermission($request){
+    public function associateAgencyWithDomainPermission($request)
+    {
         return $this->associateAgencyWithDomainPermissionWithHttpInfo($request);
     }
 
-    public function associateAgencyWithDomainPermissionWithHttpInfo($request){
+    public function associateAgencyWithDomainPermissionWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}';
         $formParams = [];
@@ -106,9 +108,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -118,7 +117,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -134,6 +132,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -148,11 +147,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateAgencyWithDomainPermissionRequest');
     }
 
-    public function associateAgencyWithProjectPermission($request){
+    public function associateAgencyWithProjectPermission($request)
+    {
         return $this->associateAgencyWithProjectPermissionWithHttpInfo($request);
     }
 
-    public function associateAgencyWithProjectPermissionWithHttpInfo($request){
+    public function associateAgencyWithProjectPermissionWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/projects/{project_id}/agencies/{agency_id}/roles/{role_id}';
         $formParams = [];
@@ -168,9 +169,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -180,7 +178,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -196,6 +193,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -210,11 +208,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateAgencyWithProjectPermissionRequest');
     }
 
-    public function checkAllProjectsPermissionForAgency($request){
+    public function checkAllProjectsPermissionForAgency($request)
+    {
         return $this->checkAllProjectsPermissionForAgencyWithHttpInfo($request);
     }
 
-    public function checkAllProjectsPermissionForAgencyWithHttpInfo($request){
+    public function checkAllProjectsPermissionForAgencyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}/inherited_to_projects';
         $formParams = [];
@@ -230,9 +230,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
@@ -242,7 +239,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -258,6 +254,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='HEAD',
             $resourcePath,
@@ -272,11 +269,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CheckAllProjectsPermissionForAgencyRequest');
     }
 
-    public function checkDomainPermissionForAgency($request){
+    public function checkDomainPermissionForAgency($request)
+    {
         return $this->checkDomainPermissionForAgencyWithHttpInfo($request);
     }
 
-    public function checkDomainPermissionForAgencyWithHttpInfo($request){
+    public function checkDomainPermissionForAgencyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}';
         $formParams = [];
@@ -292,9 +291,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -304,7 +300,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -320,6 +315,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='HEAD',
             $resourcePath,
@@ -334,11 +330,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CheckDomainPermissionForAgencyRequest');
     }
 
-    public function checkProjectPermissionForAgency($request){
+    public function checkProjectPermissionForAgency($request)
+    {
         return $this->checkProjectPermissionForAgencyWithHttpInfo($request);
     }
 
-    public function checkProjectPermissionForAgencyWithHttpInfo($request){
+    public function checkProjectPermissionForAgencyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/projects/{project_id}/agencies/{agency_id}/roles/{role_id}';
         $formParams = [];
@@ -354,9 +352,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -366,7 +361,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -382,6 +376,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='HEAD',
             $resourcePath,
@@ -396,11 +391,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CheckProjectPermissionForAgencyRequest');
     }
 
-    public function createAgency($request){
+    public function createAgency($request)
+    {
         return $this->createAgencyWithHttpInfo($request);
     }
 
-    public function createAgencyWithHttpInfo($request){
+    public function createAgencyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/agencies';
         $formParams = [];
@@ -416,10 +413,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -438,6 +431,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -452,11 +446,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateAgencyRequest');
     }
 
-    public function createAgencyCustomPolicy($request){
+    public function createAgencyCustomPolicy($request)
+    {
         return $this->createAgencyCustomPolicyWithHttpInfo($request);
     }
 
-    public function createAgencyCustomPolicyWithHttpInfo($request){
+    public function createAgencyCustomPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-ROLE/roles';
         $formParams = [];
@@ -472,10 +468,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -494,6 +486,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -508,11 +501,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateAgencyCustomPolicyRequest');
     }
 
-    public function createCloudServiceCustomPolicy($request){
+    public function createCloudServiceCustomPolicy($request)
+    {
         return $this->createCloudServiceCustomPolicyWithHttpInfo($request);
     }
 
-    public function createCloudServiceCustomPolicyWithHttpInfo($request){
+    public function createCloudServiceCustomPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-ROLE/roles';
         $formParams = [];
@@ -528,10 +523,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -550,6 +541,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -564,11 +556,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateCloudServiceCustomPolicyRequest');
     }
 
-    public function createLoginToken($request){
+    public function createLoginToken($request)
+    {
         return $this->createLoginTokenWithHttpInfo($request);
     }
 
-    public function createLoginTokenWithHttpInfo($request){
+    public function createLoginTokenWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-AUTH/securitytoken/logintokens';
         $formParams = [];
@@ -584,10 +578,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -606,6 +596,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -620,11 +611,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateLoginTokenRequest');
     }
 
-    public function createMetadata($request){
+    public function createMetadata($request)
+    {
         return $this->createMetadataWithHttpInfo($request);
     }
 
-    public function createMetadataWithHttpInfo($request){
+    public function createMetadataWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3-ext/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}/metadata';
         $formParams = [];
@@ -640,16 +633,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -668,6 +657,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -682,11 +672,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMetadataRequest');
     }
 
-    public function createUnscopeTokenByIdpInitiated($request){
+    public function createUnscopeTokenByIdpInitiated($request)
+    {
         return $this->createUnscopeTokenByIdpInitiatedWithHttpInfo($request);
     }
 
-    public function createUnscopeTokenByIdpInitiatedWithHttpInfo($request){
+    public function createUnscopeTokenByIdpInitiatedWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-FEDERATION/tokens';
         $formParams = [];
@@ -702,13 +694,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
         if ($localVarParams['xIdpId'] !== null) {
             $headerParams['x_idp_id'] = $localVarParams['xIdpId'];
         }
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -724,6 +712,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -738,11 +727,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateUnscopeTokenByIdpInitiatedRequest');
     }
 
-    public function deleteAgency($request){
+    public function deleteAgency($request)
+    {
         return $this->deleteAgencyWithHttpInfo($request);
     }
 
-    public function deleteAgencyWithHttpInfo($request){
+    public function deleteAgencyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/agencies/{agency_id}';
         $formParams = [];
@@ -758,13 +749,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -780,6 +767,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -794,11 +782,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteAgencyRequest');
     }
 
-    public function deleteCustomPolicy($request){
+    public function deleteCustomPolicy($request)
+    {
         return $this->deleteCustomPolicyWithHttpInfo($request);
     }
 
-    public function deleteCustomPolicyWithHttpInfo($request){
+    public function deleteCustomPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-ROLE/roles/{role_id}';
         $formParams = [];
@@ -814,13 +804,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -836,6 +822,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -850,11 +837,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteCustomPolicyRequest');
     }
 
-    public function deleteDomainGroupInheritedRole($request){
+    public function deleteDomainGroupInheritedRole($request)
+    {
         return $this->deleteDomainGroupInheritedRoleWithHttpInfo($request);
     }
 
-    public function deleteDomainGroupInheritedRoleWithHttpInfo($request){
+    public function deleteDomainGroupInheritedRoleWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/{role_id}/inherited_to_projects';
         $formParams = [];
@@ -870,9 +859,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -882,7 +868,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -898,6 +883,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -912,11 +898,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteDomainGroupInheritedRoleRequest');
     }
 
-    public function keystoneAddUserToGroup($request){
+    public function keystoneAddUserToGroup($request)
+    {
         return $this->keystoneAddUserToGroupWithHttpInfo($request);
     }
 
-    public function keystoneAddUserToGroupWithHttpInfo($request){
+    public function keystoneAddUserToGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/groups/{group_id}/users/{user_id}';
         $formParams = [];
@@ -932,16 +920,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -957,6 +941,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -971,11 +956,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneAddUserToGroupRequest');
     }
 
-    public function keystoneAssociateGroupWithDomainPermission($request){
+    public function keystoneAssociateGroupWithDomainPermission($request)
+    {
         return $this->keystoneAssociateGroupWithDomainPermissionWithHttpInfo($request);
     }
 
-    public function keystoneAssociateGroupWithDomainPermissionWithHttpInfo($request){
+    public function keystoneAssociateGroupWithDomainPermissionWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/domains/{domain_id}/groups/{group_id}/roles/{role_id}';
         $formParams = [];
@@ -991,9 +978,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -1003,7 +987,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1019,6 +1002,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1033,11 +1017,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneAssociateGroupWithDomainPermissionRequest');
     }
 
-    public function keystoneAssociateGroupWithProjectPermission($request){
+    public function keystoneAssociateGroupWithProjectPermission($request)
+    {
         return $this->keystoneAssociateGroupWithProjectPermissionWithHttpInfo($request);
     }
 
-    public function keystoneAssociateGroupWithProjectPermissionWithHttpInfo($request){
+    public function keystoneAssociateGroupWithProjectPermissionWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/projects/{project_id}/groups/{group_id}/roles/{role_id}';
         $formParams = [];
@@ -1053,9 +1039,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -1065,7 +1048,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1081,6 +1063,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1095,11 +1078,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneAssociateGroupWithProjectPermissionRequest');
     }
 
-    public function keystoneCheckDomainPermissionForGroup($request){
+    public function keystoneCheckDomainPermissionForGroup($request)
+    {
         return $this->keystoneCheckDomainPermissionForGroupWithHttpInfo($request);
     }
 
-    public function keystoneCheckDomainPermissionForGroupWithHttpInfo($request){
+    public function keystoneCheckDomainPermissionForGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/domains/{domain_id}/groups/{group_id}/roles/{role_id}';
         $formParams = [];
@@ -1115,9 +1100,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -1127,7 +1109,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1143,6 +1124,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='HEAD',
             $resourcePath,
@@ -1157,11 +1139,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCheckDomainPermissionForGroupRequest');
     }
 
-    public function keystoneCheckProjectPermissionForGroup($request){
+    public function keystoneCheckProjectPermissionForGroup($request)
+    {
         return $this->keystoneCheckProjectPermissionForGroupWithHttpInfo($request);
     }
 
-    public function keystoneCheckProjectPermissionForGroupWithHttpInfo($request){
+    public function keystoneCheckProjectPermissionForGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/projects/{project_id}/groups/{group_id}/roles/{role_id}';
         $formParams = [];
@@ -1177,9 +1161,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -1189,7 +1170,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1205,6 +1185,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='HEAD',
             $resourcePath,
@@ -1219,11 +1200,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCheckProjectPermissionForGroupRequest');
     }
 
-    public function keystoneCheckUserInGroup($request){
+    public function keystoneCheckUserInGroup($request)
+    {
         return $this->keystoneCheckUserInGroupWithHttpInfo($request);
     }
 
-    public function keystoneCheckUserInGroupWithHttpInfo($request){
+    public function keystoneCheckUserInGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/groups/{group_id}/users/{user_id}';
         $formParams = [];
@@ -1239,16 +1222,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1264,6 +1243,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='HEAD',
             $resourcePath,
@@ -1278,11 +1258,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCheckUserInGroupRequest');
     }
 
-    public function keystoneCheckroleForGroup($request){
+    public function keystoneCheckroleForGroup($request)
+    {
         return $this->keystoneCheckroleForGroupWithHttpInfo($request);
     }
 
-    public function keystoneCheckroleForGroupWithHttpInfo($request){
+    public function keystoneCheckroleForGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/{role_id}/inherited_to_projects';
         $formParams = [];
@@ -1298,9 +1280,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -1310,7 +1289,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1326,6 +1304,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='HEAD',
             $resourcePath,
@@ -1340,11 +1319,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCheckroleForGroupRequest');
     }
 
-    public function keystoneCreateGroup($request){
+    public function keystoneCreateGroup($request)
+    {
         return $this->keystoneCreateGroupWithHttpInfo($request);
     }
 
-    public function keystoneCreateGroupWithHttpInfo($request){
+    public function keystoneCreateGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/groups';
         $formParams = [];
@@ -1360,10 +1341,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1382,6 +1359,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1396,11 +1374,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateGroupRequest');
     }
 
-    public function keystoneCreateIdentityProvider($request){
+    public function keystoneCreateIdentityProvider($request)
+    {
         return $this->keystoneCreateIdentityProviderWithHttpInfo($request);
     }
 
-    public function keystoneCreateIdentityProviderWithHttpInfo($request){
+    public function keystoneCreateIdentityProviderWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{id}';
         $formParams = [];
@@ -1416,13 +1396,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1441,6 +1417,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1455,11 +1432,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateIdentityProviderRequest');
     }
 
-    public function keystoneCreateMapping($request){
+    public function keystoneCreateMapping($request)
+    {
         return $this->keystoneCreateMappingWithHttpInfo($request);
     }
 
-    public function keystoneCreateMappingWithHttpInfo($request){
+    public function keystoneCreateMappingWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/mappings/{id}';
         $formParams = [];
@@ -1475,13 +1454,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1500,6 +1475,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1514,11 +1490,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateMappingRequest');
     }
 
-    public function keystoneCreateProject($request){
+    public function keystoneCreateProject($request)
+    {
         return $this->keystoneCreateProjectWithHttpInfo($request);
     }
 
-    public function keystoneCreateProjectWithHttpInfo($request){
+    public function keystoneCreateProjectWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/projects';
         $formParams = [];
@@ -1534,10 +1512,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1556,6 +1530,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1570,11 +1545,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateProjectRequest');
     }
 
-    public function keystoneCreateProtocol($request){
+    public function keystoneCreateProtocol($request)
+    {
         return $this->keystoneCreateProtocolWithHttpInfo($request);
     }
 
-    public function keystoneCreateProtocolWithHttpInfo($request){
+    public function keystoneCreateProtocolWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}';
         $formParams = [];
@@ -1590,16 +1567,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1618,6 +1591,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1632,11 +1606,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateProtocolRequest');
     }
 
-    public function keystoneCreateScopedToken($request){
+    public function keystoneCreateScopedToken($request)
+    {
         return $this->keystoneCreateScopedTokenWithHttpInfo($request);
     }
 
-    public function keystoneCreateScopedTokenWithHttpInfo($request){
+    public function keystoneCreateScopedTokenWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/auth/tokens';
         $formParams = [];
@@ -1652,10 +1628,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1674,6 +1646,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1688,11 +1661,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateScopedTokenRequest');
     }
 
-    public function keystoneDeleteGroup($request){
+    public function keystoneDeleteGroup($request)
+    {
         return $this->keystoneDeleteGroupWithHttpInfo($request);
     }
 
-    public function keystoneDeleteGroupWithHttpInfo($request){
+    public function keystoneDeleteGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/groups/{group_id}';
         $formParams = [];
@@ -1708,13 +1683,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1730,6 +1701,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1744,11 +1716,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteGroupRequest');
     }
 
-    public function keystoneDeleteIdentityProvider($request){
+    public function keystoneDeleteIdentityProvider($request)
+    {
         return $this->keystoneDeleteIdentityProviderWithHttpInfo($request);
     }
 
-    public function keystoneDeleteIdentityProviderWithHttpInfo($request){
+    public function keystoneDeleteIdentityProviderWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{id}';
         $formParams = [];
@@ -1764,13 +1738,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1786,6 +1756,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1800,11 +1771,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteIdentityProviderRequest');
     }
 
-    public function keystoneDeleteMapping($request){
+    public function keystoneDeleteMapping($request)
+    {
         return $this->keystoneDeleteMappingWithHttpInfo($request);
     }
 
-    public function keystoneDeleteMappingWithHttpInfo($request){
+    public function keystoneDeleteMappingWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/mappings/{id}';
         $formParams = [];
@@ -1820,13 +1793,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1842,6 +1811,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1856,11 +1826,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteMappingRequest');
     }
 
-    public function keystoneDeleteProtocol($request){
+    public function keystoneDeleteProtocol($request)
+    {
         return $this->keystoneDeleteProtocolWithHttpInfo($request);
     }
 
-    public function keystoneDeleteProtocolWithHttpInfo($request){
+    public function keystoneDeleteProtocolWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}';
         $formParams = [];
@@ -1876,16 +1848,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1901,6 +1869,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1915,11 +1884,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteProtocolRequest');
     }
 
-    public function keystoneListAllProjectPermissionsForGroup($request){
+    public function keystoneListAllProjectPermissionsForGroup($request)
+    {
         return $this->keystoneListAllProjectPermissionsForGroupWithHttpInfo($request);
     }
 
-    public function keystoneListAllProjectPermissionsForGroupWithHttpInfo($request){
+    public function keystoneListAllProjectPermissionsForGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/inherited_to_projects';
         $formParams = [];
@@ -1935,16 +1906,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1960,6 +1927,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1974,11 +1942,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListAllProjectPermissionsForGroupRequest');
     }
 
-    public function keystoneListAuthDomains($request){
+    public function keystoneListAuthDomains($request)
+    {
         return $this->keystoneListAuthDomainsWithHttpInfo($request);
     }
 
-    public function keystoneListAuthDomainsWithHttpInfo($request){
+    public function keystoneListAuthDomainsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/auth/domains';
         $formParams = [];
@@ -1995,10 +1965,6 @@ class IamClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2013,6 +1979,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2027,11 +1994,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListAuthDomainsRequest');
     }
 
-    public function keystoneListAuthProjects($request){
+    public function keystoneListAuthProjects($request)
+    {
         return $this->keystoneListAuthProjectsWithHttpInfo($request);
     }
 
-    public function keystoneListAuthProjectsWithHttpInfo($request){
+    public function keystoneListAuthProjectsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/auth/projects';
         $formParams = [];
@@ -2048,10 +2017,6 @@ class IamClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2066,6 +2031,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2080,11 +2046,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListAuthProjectsRequest');
     }
 
-    public function keystoneListDomainPermissionsForGroup($request){
+    public function keystoneListDomainPermissionsForGroup($request)
+    {
         return $this->keystoneListDomainPermissionsForGroupWithHttpInfo($request);
     }
 
-    public function keystoneListDomainPermissionsForGroupWithHttpInfo($request){
+    public function keystoneListDomainPermissionsForGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/domains/{domain_id}/groups/{group_id}/roles';
         $formParams = [];
@@ -2100,16 +2068,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2125,6 +2089,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2139,11 +2104,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListDomainPermissionsForGroupRequest');
     }
 
-    public function keystoneListEndpoints($request){
+    public function keystoneListEndpoints($request)
+    {
         return $this->keystoneListEndpointsWithHttpInfo($request);
     }
 
-    public function keystoneListEndpointsWithHttpInfo($request){
+    public function keystoneListEndpointsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/endpoints';
         $formParams = [];
@@ -2159,16 +2126,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['interface'] !== null) {
             $queryParams['interface'] = $localVarParams['interface'];
         }
         if ($localVarParams['serviceId'] !== null) {
             $queryParams['service_id'] = $localVarParams['serviceId'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2184,6 +2147,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2198,11 +2162,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListEndpointsRequest');
     }
 
-    public function keystoneListGroups($request){
+    public function keystoneListGroups($request)
+    {
         return $this->keystoneListGroupsWithHttpInfo($request);
     }
 
-    public function keystoneListGroupsWithHttpInfo($request){
+    public function keystoneListGroupsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/groups';
         $formParams = [];
@@ -2218,16 +2184,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['domainId'] !== null) {
             $queryParams['domain_id'] = $localVarParams['domainId'];
         }
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2243,6 +2205,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2257,11 +2220,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListGroupsRequest');
     }
 
-    public function keystoneListIdentityProviders($request){
+    public function keystoneListIdentityProviders($request)
+    {
         return $this->keystoneListIdentityProvidersWithHttpInfo($request);
     }
 
-    public function keystoneListIdentityProvidersWithHttpInfo($request){
+    public function keystoneListIdentityProvidersWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers';
         $formParams = [];
@@ -2278,10 +2243,6 @@ class IamClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2296,6 +2257,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2310,11 +2272,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListIdentityProvidersRequest');
     }
 
-    public function keystoneListMappings($request){
+    public function keystoneListMappings($request)
+    {
         return $this->keystoneListMappingsWithHttpInfo($request);
     }
 
-    public function keystoneListMappingsWithHttpInfo($request){
+    public function keystoneListMappingsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/mappings';
         $formParams = [];
@@ -2331,10 +2295,6 @@ class IamClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2349,6 +2309,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2363,11 +2324,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListMappingsRequest');
     }
 
-    public function keystoneListPermissions($request){
+    public function keystoneListPermissions($request)
+    {
         return $this->keystoneListPermissionsWithHttpInfo($request);
     }
 
-    public function keystoneListPermissionsWithHttpInfo($request){
+    public function keystoneListPermissionsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/roles';
         $formParams = [];
@@ -2383,7 +2346,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
@@ -2396,9 +2358,6 @@ class IamClient extends Client
         if ($localVarParams['perPage'] !== null) {
             $queryParams['per_page'] = $localVarParams['perPage'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2414,6 +2373,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2428,11 +2388,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListPermissionsRequest');
     }
 
-    public function keystoneListProjectPermissionsForGroup($request){
+    public function keystoneListProjectPermissionsForGroup($request)
+    {
         return $this->keystoneListProjectPermissionsForGroupWithHttpInfo($request);
     }
 
-    public function keystoneListProjectPermissionsForGroupWithHttpInfo($request){
+    public function keystoneListProjectPermissionsForGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/projects/{project_id}/groups/{group_id}/roles';
         $formParams = [];
@@ -2448,16 +2410,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2473,6 +2431,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2487,11 +2446,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListProjectPermissionsForGroupRequest');
     }
 
-    public function keystoneListProjects($request){
+    public function keystoneListProjects($request)
+    {
         return $this->keystoneListProjectsWithHttpInfo($request);
     }
 
-    public function keystoneListProjectsWithHttpInfo($request){
+    public function keystoneListProjectsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/projects';
         $formParams = [];
@@ -2507,7 +2468,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['domainId'] !== null) {
             $queryParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -2530,9 +2490,6 @@ class IamClient extends Client
             $queryParams['per_page'] = $localVarParams['perPage'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2547,6 +2504,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2561,11 +2519,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListProjectsRequest');
     }
 
-    public function keystoneListProjectsForUser($request){
+    public function keystoneListProjectsForUser($request)
+    {
         return $this->keystoneListProjectsForUserWithHttpInfo($request);
     }
 
-    public function keystoneListProjectsForUserWithHttpInfo($request){
+    public function keystoneListProjectsForUserWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/users/{user_id}/projects';
         $formParams = [];
@@ -2581,13 +2541,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2603,6 +2559,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2617,11 +2574,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListProjectsForUserRequest');
     }
 
-    public function keystoneListProtocols($request){
+    public function keystoneListProtocols($request)
+    {
         return $this->keystoneListProtocolsWithHttpInfo($request);
     }
 
-    public function keystoneListProtocolsWithHttpInfo($request){
+    public function keystoneListProtocolsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{idp_id}/protocols';
         $formParams = [];
@@ -2637,13 +2596,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2659,6 +2614,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2673,11 +2629,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListProtocolsRequest');
     }
 
-    public function keystoneListRegions($request){
+    public function keystoneListRegions($request)
+    {
         return $this->keystoneListRegionsWithHttpInfo($request);
     }
 
-    public function keystoneListRegionsWithHttpInfo($request){
+    public function keystoneListRegionsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/regions';
         $formParams = [];
@@ -2694,10 +2652,6 @@ class IamClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2712,6 +2666,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2726,11 +2681,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListRegionsRequest');
     }
 
-    public function keystoneListServices($request){
+    public function keystoneListServices($request)
+    {
         return $this->keystoneListServicesWithHttpInfo($request);
     }
 
-    public function keystoneListServicesWithHttpInfo($request){
+    public function keystoneListServicesWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/services';
         $formParams = [];
@@ -2746,13 +2703,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2768,6 +2721,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2782,11 +2736,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListServicesRequest');
     }
 
-    public function keystoneListUsersForGroupByAdmin($request){
+    public function keystoneListUsersForGroupByAdmin($request)
+    {
         return $this->keystoneListUsersForGroupByAdminWithHttpInfo($request);
     }
 
-    public function keystoneListUsersForGroupByAdminWithHttpInfo($request){
+    public function keystoneListUsersForGroupByAdminWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/groups/{group_id}/users';
         $formParams = [];
@@ -2802,13 +2758,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2824,6 +2776,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2838,11 +2791,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListUsersForGroupByAdminRequest');
     }
 
-    public function keystoneListVersions($request){
+    public function keystoneListVersions($request)
+    {
         return $this->keystoneListVersionsWithHttpInfo($request);
     }
 
-    public function keystoneListVersionsWithHttpInfo($request){
+    public function keystoneListVersionsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/';
         $formParams = [];
@@ -2859,10 +2814,6 @@ class IamClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2877,6 +2828,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2891,11 +2843,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListVersionsRequest');
     }
 
-    public function keystoneRemoveDomainPermissionFromGroup($request){
+    public function keystoneRemoveDomainPermissionFromGroup($request)
+    {
         return $this->keystoneRemoveDomainPermissionFromGroupWithHttpInfo($request);
     }
 
-    public function keystoneRemoveDomainPermissionFromGroupWithHttpInfo($request){
+    public function keystoneRemoveDomainPermissionFromGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/domains/{domain_id}/groups/{group_id}/roles/{role_id}';
         $formParams = [];
@@ -2911,9 +2865,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -2923,7 +2874,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2939,6 +2889,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -2953,11 +2904,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneRemoveDomainPermissionFromGroupRequest');
     }
 
-    public function keystoneRemoveProjectPermissionFromGroup($request){
+    public function keystoneRemoveProjectPermissionFromGroup($request)
+    {
         return $this->keystoneRemoveProjectPermissionFromGroupWithHttpInfo($request);
     }
 
-    public function keystoneRemoveProjectPermissionFromGroupWithHttpInfo($request){
+    public function keystoneRemoveProjectPermissionFromGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/projects/{project_id}/groups/{group_id}/roles/{role_id}';
         $formParams = [];
@@ -2973,9 +2926,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -2985,7 +2935,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3001,6 +2950,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -3015,11 +2965,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneRemoveProjectPermissionFromGroupRequest');
     }
 
-    public function keystoneRemoveUserFromGroup($request){
+    public function keystoneRemoveUserFromGroup($request)
+    {
         return $this->keystoneRemoveUserFromGroupWithHttpInfo($request);
     }
 
-    public function keystoneRemoveUserFromGroupWithHttpInfo($request){
+    public function keystoneRemoveUserFromGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/groups/{group_id}/users/{user_id}';
         $formParams = [];
@@ -3035,16 +2987,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3060,6 +3008,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -3074,11 +3023,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneRemoveUserFromGroupRequest');
     }
 
-    public function keystoneShowCatalog($request){
+    public function keystoneShowCatalog($request)
+    {
         return $this->keystoneShowCatalogWithHttpInfo($request);
     }
 
-    public function keystoneShowCatalogWithHttpInfo($request){
+    public function keystoneShowCatalogWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/auth/catalog';
         $formParams = [];
@@ -3095,10 +3046,6 @@ class IamClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -3113,6 +3060,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3127,11 +3075,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowCatalogRequest');
     }
 
-    public function keystoneShowEndpoint($request){
+    public function keystoneShowEndpoint($request)
+    {
         return $this->keystoneShowEndpointWithHttpInfo($request);
     }
 
-    public function keystoneShowEndpointWithHttpInfo($request){
+    public function keystoneShowEndpointWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/endpoints/{endpoint_id}';
         $formParams = [];
@@ -3147,13 +3097,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['endpointId'] !== null) {
             $pathParams['endpoint_id'] = $localVarParams['endpointId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3169,6 +3115,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3183,11 +3130,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowEndpointRequest');
     }
 
-    public function keystoneShowGroup($request){
+    public function keystoneShowGroup($request)
+    {
         return $this->keystoneShowGroupWithHttpInfo($request);
     }
 
-    public function keystoneShowGroupWithHttpInfo($request){
+    public function keystoneShowGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/groups/{group_id}';
         $formParams = [];
@@ -3203,13 +3152,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3225,6 +3170,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3239,11 +3185,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowGroupRequest');
     }
 
-    public function keystoneShowIdentityProvider($request){
+    public function keystoneShowIdentityProvider($request)
+    {
         return $this->keystoneShowIdentityProviderWithHttpInfo($request);
     }
 
-    public function keystoneShowIdentityProviderWithHttpInfo($request){
+    public function keystoneShowIdentityProviderWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{id}';
         $formParams = [];
@@ -3259,13 +3207,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3281,6 +3225,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3295,11 +3240,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowIdentityProviderRequest');
     }
 
-    public function keystoneShowMapping($request){
+    public function keystoneShowMapping($request)
+    {
         return $this->keystoneShowMappingWithHttpInfo($request);
     }
 
-    public function keystoneShowMappingWithHttpInfo($request){
+    public function keystoneShowMappingWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/mappings/{id}';
         $formParams = [];
@@ -3315,13 +3262,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3337,6 +3280,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3351,11 +3295,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowMappingRequest');
     }
 
-    public function keystoneShowPermission($request){
+    public function keystoneShowPermission($request)
+    {
         return $this->keystoneShowPermissionWithHttpInfo($request);
     }
 
-    public function keystoneShowPermissionWithHttpInfo($request){
+    public function keystoneShowPermissionWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/roles/{role_id}';
         $formParams = [];
@@ -3371,13 +3317,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3393,6 +3335,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3407,11 +3350,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowPermissionRequest');
     }
 
-    public function keystoneShowProject($request){
+    public function keystoneShowProject($request)
+    {
         return $this->keystoneShowProjectWithHttpInfo($request);
     }
 
-    public function keystoneShowProjectWithHttpInfo($request){
+    public function keystoneShowProjectWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/projects/{project_id}';
         $formParams = [];
@@ -3427,13 +3372,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3449,6 +3390,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3463,11 +3405,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowProjectRequest');
     }
 
-    public function keystoneShowProtocol($request){
+    public function keystoneShowProtocol($request)
+    {
         return $this->keystoneShowProtocolWithHttpInfo($request);
     }
 
-    public function keystoneShowProtocolWithHttpInfo($request){
+    public function keystoneShowProtocolWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}';
         $formParams = [];
@@ -3483,16 +3427,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3508,6 +3448,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3522,11 +3463,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowProtocolRequest');
     }
 
-    public function keystoneShowRegion($request){
+    public function keystoneShowRegion($request)
+    {
         return $this->keystoneShowRegionWithHttpInfo($request);
     }
 
-    public function keystoneShowRegionWithHttpInfo($request){
+    public function keystoneShowRegionWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/regions/{region_id}';
         $formParams = [];
@@ -3542,13 +3485,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['regionId'] !== null) {
             $pathParams['region_id'] = $localVarParams['regionId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3564,6 +3503,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3578,11 +3518,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowRegionRequest');
     }
 
-    public function keystoneShowSecurityCompliance($request){
+    public function keystoneShowSecurityCompliance($request)
+    {
         return $this->keystoneShowSecurityComplianceWithHttpInfo($request);
     }
 
-    public function keystoneShowSecurityComplianceWithHttpInfo($request){
+    public function keystoneShowSecurityComplianceWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/domains/{domain_id}/config/security_compliance';
         $formParams = [];
@@ -3598,13 +3540,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3620,6 +3558,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3634,11 +3573,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowSecurityComplianceRequest');
     }
 
-    public function keystoneShowSecurityComplianceByOption($request){
+    public function keystoneShowSecurityComplianceByOption($request)
+    {
         return $this->keystoneShowSecurityComplianceByOptionWithHttpInfo($request);
     }
 
-    public function keystoneShowSecurityComplianceByOptionWithHttpInfo($request){
+    public function keystoneShowSecurityComplianceByOptionWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/domains/{domain_id}/config/security_compliance/{option}';
         $formParams = [];
@@ -3654,16 +3595,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
         if ($localVarParams['option'] !== null) {
             $pathParams['option'] = $localVarParams['option'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3679,6 +3616,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3693,11 +3631,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowSecurityComplianceByOptionRequest');
     }
 
-    public function keystoneShowService($request){
+    public function keystoneShowService($request)
+    {
         return $this->keystoneShowServiceWithHttpInfo($request);
     }
 
-    public function keystoneShowServiceWithHttpInfo($request){
+    public function keystoneShowServiceWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/services/{service_id}';
         $formParams = [];
@@ -3713,13 +3653,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serviceId'] !== null) {
             $pathParams['service_id'] = $localVarParams['serviceId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3735,6 +3671,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3749,11 +3686,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowServiceRequest');
     }
 
-    public function keystoneShowVersion($request){
+    public function keystoneShowVersion($request)
+    {
         return $this->keystoneShowVersionWithHttpInfo($request);
     }
 
-    public function keystoneShowVersionWithHttpInfo($request){
+    public function keystoneShowVersionWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3';
         $formParams = [];
@@ -3770,10 +3709,6 @@ class IamClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -3788,6 +3723,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3802,11 +3738,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowVersionRequest');
     }
 
-    public function keystoneUpdateGroup($request){
+    public function keystoneUpdateGroup($request)
+    {
         return $this->keystoneUpdateGroupWithHttpInfo($request);
     }
 
-    public function keystoneUpdateGroupWithHttpInfo($request){
+    public function keystoneUpdateGroupWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/groups/{group_id}';
         $formParams = [];
@@ -3822,13 +3760,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -3847,6 +3781,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -3861,11 +3796,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateGroupRequest');
     }
 
-    public function keystoneUpdateIdentityProvider($request){
+    public function keystoneUpdateIdentityProvider($request)
+    {
         return $this->keystoneUpdateIdentityProviderWithHttpInfo($request);
     }
 
-    public function keystoneUpdateIdentityProviderWithHttpInfo($request){
+    public function keystoneUpdateIdentityProviderWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{id}';
         $formParams = [];
@@ -3881,13 +3818,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -3906,6 +3839,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -3920,11 +3854,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateIdentityProviderRequest');
     }
 
-    public function keystoneUpdateMapping($request){
+    public function keystoneUpdateMapping($request)
+    {
         return $this->keystoneUpdateMappingWithHttpInfo($request);
     }
 
-    public function keystoneUpdateMappingWithHttpInfo($request){
+    public function keystoneUpdateMappingWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/mappings/{id}';
         $formParams = [];
@@ -3940,13 +3876,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -3965,6 +3897,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -3979,11 +3912,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateMappingRequest');
     }
 
-    public function keystoneUpdateProject($request){
+    public function keystoneUpdateProject($request)
+    {
         return $this->keystoneUpdateProjectWithHttpInfo($request);
     }
 
-    public function keystoneUpdateProjectWithHttpInfo($request){
+    public function keystoneUpdateProjectWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/projects/{project_id}';
         $formParams = [];
@@ -3999,13 +3934,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -4024,6 +3955,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -4038,11 +3970,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateProjectRequest');
     }
 
-    public function keystoneUpdateProtocol($request){
+    public function keystoneUpdateProtocol($request)
+    {
         return $this->keystoneUpdateProtocolWithHttpInfo($request);
     }
 
-    public function keystoneUpdateProtocolWithHttpInfo($request){
+    public function keystoneUpdateProtocolWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}';
         $formParams = [];
@@ -4058,16 +3992,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -4086,6 +4016,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -4100,11 +4031,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateProtocolRequest');
     }
 
-    public function listAgencies($request){
+    public function listAgencies($request)
+    {
         return $this->listAgenciesWithHttpInfo($request);
     }
 
-    public function listAgenciesWithHttpInfo($request){
+    public function listAgenciesWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/agencies';
         $formParams = [];
@@ -4120,7 +4053,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['domainId'] !== null) {
             $queryParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -4130,9 +4062,6 @@ class IamClient extends Client
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4148,6 +4077,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4162,11 +4092,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListAgenciesRequest');
     }
 
-    public function listAllProjectsPermissionsForAgency($request){
+    public function listAllProjectsPermissionsForAgency($request)
+    {
         return $this->listAllProjectsPermissionsForAgencyWithHttpInfo($request);
     }
 
-    public function listAllProjectsPermissionsForAgencyWithHttpInfo($request){
+    public function listAllProjectsPermissionsForAgencyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/inherited_to_projects';
         $formParams = [];
@@ -4182,16 +4114,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4207,6 +4135,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4221,11 +4150,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListAllProjectsPermissionsForAgencyRequest');
     }
 
-    public function listCustomPolicies($request){
+    public function listCustomPolicies($request)
+    {
         return $this->listCustomPoliciesWithHttpInfo($request);
     }
 
-    public function listCustomPoliciesWithHttpInfo($request){
+    public function listCustomPoliciesWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-ROLE/roles';
         $formParams = [];
@@ -4241,16 +4172,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['page'] !== null) {
             $queryParams['page'] = $localVarParams['page'];
         }
         if ($localVarParams['perPage'] !== null) {
             $queryParams['per_page'] = $localVarParams['perPage'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4266,6 +4193,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4280,11 +4208,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListCustomPoliciesRequest');
     }
 
-    public function listDomainPermissionsForAgency($request){
+    public function listDomainPermissionsForAgency($request)
+    {
         return $this->listDomainPermissionsForAgencyWithHttpInfo($request);
     }
 
-    public function listDomainPermissionsForAgencyWithHttpInfo($request){
+    public function listDomainPermissionsForAgencyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles';
         $formParams = [];
@@ -4300,16 +4230,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4325,6 +4251,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4339,11 +4266,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListDomainPermissionsForAgencyRequest');
     }
 
-    public function listProjectPermissionsForAgency($request){
+    public function listProjectPermissionsForAgency($request)
+    {
         return $this->listProjectPermissionsForAgencyWithHttpInfo($request);
     }
 
-    public function listProjectPermissionsForAgencyWithHttpInfo($request){
+    public function listProjectPermissionsForAgencyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/projects/{project_id}/agencies/{agency_id}/roles';
         $formParams = [];
@@ -4359,16 +4288,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4384,6 +4309,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4398,11 +4324,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListProjectPermissionsForAgencyRequest');
     }
 
-    public function removeAllProjectsPermissionFromAgency($request){
+    public function removeAllProjectsPermissionFromAgency($request)
+    {
         return $this->removeAllProjectsPermissionFromAgencyWithHttpInfo($request);
     }
 
-    public function removeAllProjectsPermissionFromAgencyWithHttpInfo($request){
+    public function removeAllProjectsPermissionFromAgencyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}/inherited_to_projects';
         $formParams = [];
@@ -4418,9 +4346,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
@@ -4430,7 +4355,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4446,6 +4370,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -4460,11 +4385,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\RemoveAllProjectsPermissionFromAgencyRequest');
     }
 
-    public function removeDomainPermissionFromAgency($request){
+    public function removeDomainPermissionFromAgency($request)
+    {
         return $this->removeDomainPermissionFromAgencyWithHttpInfo($request);
     }
 
-    public function removeDomainPermissionFromAgencyWithHttpInfo($request){
+    public function removeDomainPermissionFromAgencyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}';
         $formParams = [];
@@ -4480,9 +4407,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -4492,7 +4416,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4508,6 +4431,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -4522,11 +4446,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\RemoveDomainPermissionFromAgencyRequest');
     }
 
-    public function removeProjectPermissionFromAgency($request){
+    public function removeProjectPermissionFromAgency($request)
+    {
         return $this->removeProjectPermissionFromAgencyWithHttpInfo($request);
     }
 
-    public function removeProjectPermissionFromAgencyWithHttpInfo($request){
+    public function removeProjectPermissionFromAgencyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/projects/{project_id}/agencies/{agency_id}/roles/{role_id}';
         $formParams = [];
@@ -4542,9 +4468,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -4554,7 +4477,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4570,6 +4492,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -4584,11 +4507,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\RemoveProjectPermissionFromAgencyRequest');
     }
 
-    public function showAgency($request){
+    public function showAgency($request)
+    {
         return $this->showAgencyWithHttpInfo($request);
     }
 
-    public function showAgencyWithHttpInfo($request){
+    public function showAgencyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/agencies/{agency_id}';
         $formParams = [];
@@ -4604,13 +4529,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4626,6 +4547,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4640,11 +4562,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowAgencyRequest');
     }
 
-    public function showCustomPolicy($request){
+    public function showCustomPolicy($request)
+    {
         return $this->showCustomPolicyWithHttpInfo($request);
     }
 
-    public function showCustomPolicyWithHttpInfo($request){
+    public function showCustomPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-ROLE/roles/{role_id}';
         $formParams = [];
@@ -4660,13 +4584,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4682,6 +4602,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4696,11 +4617,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowCustomPolicyRequest');
     }
 
-    public function showDomainApiAclPolicy($request){
+    public function showDomainApiAclPolicy($request)
+    {
         return $this->showDomainApiAclPolicyWithHttpInfo($request);
     }
 
-    public function showDomainApiAclPolicyWithHttpInfo($request){
+    public function showDomainApiAclPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/api-acl-policy';
         $formParams = [];
@@ -4716,13 +4639,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4738,6 +4657,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4752,11 +4672,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainApiAclPolicyRequest');
     }
 
-    public function showDomainConsoleAclPolicy($request){
+    public function showDomainConsoleAclPolicy($request)
+    {
         return $this->showDomainConsoleAclPolicyWithHttpInfo($request);
     }
 
-    public function showDomainConsoleAclPolicyWithHttpInfo($request){
+    public function showDomainConsoleAclPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/console-acl-policy';
         $formParams = [];
@@ -4772,13 +4694,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4794,6 +4712,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4808,11 +4727,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainConsoleAclPolicyRequest');
     }
 
-    public function showDomainLoginPolicy($request){
+    public function showDomainLoginPolicy($request)
+    {
         return $this->showDomainLoginPolicyWithHttpInfo($request);
     }
 
-    public function showDomainLoginPolicyWithHttpInfo($request){
+    public function showDomainLoginPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/login-policy';
         $formParams = [];
@@ -4828,13 +4749,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4850,6 +4767,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4864,11 +4782,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainLoginPolicyRequest');
     }
 
-    public function showDomainPasswordPolicy($request){
+    public function showDomainPasswordPolicy($request)
+    {
         return $this->showDomainPasswordPolicyWithHttpInfo($request);
     }
 
-    public function showDomainPasswordPolicyWithHttpInfo($request){
+    public function showDomainPasswordPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/password-policy';
         $formParams = [];
@@ -4884,13 +4804,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4906,6 +4822,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4920,11 +4837,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainPasswordPolicyRequest');
     }
 
-    public function showDomainProtectPolicy($request){
+    public function showDomainProtectPolicy($request)
+    {
         return $this->showDomainProtectPolicyWithHttpInfo($request);
     }
 
-    public function showDomainProtectPolicyWithHttpInfo($request){
+    public function showDomainProtectPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/protect-policy';
         $formParams = [];
@@ -4940,13 +4859,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4962,6 +4877,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4976,11 +4892,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainProtectPolicyRequest');
     }
 
-    public function showDomainQuota($request){
+    public function showDomainQuota($request)
+    {
         return $this->showDomainQuotaWithHttpInfo($request);
     }
 
-    public function showDomainQuotaWithHttpInfo($request){
+    public function showDomainQuotaWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-QUOTA/domains/{domain_id}';
         $formParams = [];
@@ -4996,16 +4914,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5021,6 +4935,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -5035,11 +4950,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainQuotaRequest');
     }
 
-    public function showMetadata($request){
+    public function showMetadata($request)
+    {
         return $this->showMetadataWithHttpInfo($request);
     }
 
-    public function showMetadataWithHttpInfo($request){
+    public function showMetadataWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3-ext/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}/metadata';
         $formParams = [];
@@ -5055,16 +4972,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5080,6 +4993,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -5094,11 +5008,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowMetadataRequest');
     }
 
-    public function showProjectDetailsAndStatus($request){
+    public function showProjectDetailsAndStatus($request)
+    {
         return $this->showProjectDetailsAndStatusWithHttpInfo($request);
     }
 
-    public function showProjectDetailsAndStatusWithHttpInfo($request){
+    public function showProjectDetailsAndStatusWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3-ext/projects/{project_id}';
         $formParams = [];
@@ -5114,13 +5030,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5136,6 +5048,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -5150,11 +5063,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowProjectDetailsAndStatusRequest');
     }
 
-    public function showProjectQuota($request){
+    public function showProjectQuota($request)
+    {
         return $this->showProjectQuotaWithHttpInfo($request);
     }
 
-    public function showProjectQuotaWithHttpInfo($request){
+    public function showProjectQuotaWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-QUOTA/projects/{project_id}';
         $formParams = [];
@@ -5170,13 +5085,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5192,6 +5103,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -5206,11 +5118,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowProjectQuotaRequest');
     }
 
-    public function updateAgency($request){
+    public function updateAgency($request)
+    {
         return $this->updateAgencyWithHttpInfo($request);
     }
 
-    public function updateAgencyWithHttpInfo($request){
+    public function updateAgencyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/agencies/{agency_id}';
         $formParams = [];
@@ -5226,13 +5140,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5251,6 +5161,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5265,11 +5176,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateAgencyRequest');
     }
 
-    public function updateAgencyCustomPolicy($request){
+    public function updateAgencyCustomPolicy($request)
+    {
         return $this->updateAgencyCustomPolicyWithHttpInfo($request);
     }
 
-    public function updateAgencyCustomPolicyWithHttpInfo($request){
+    public function updateAgencyCustomPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-ROLE/roles/{role_id}';
         $formParams = [];
@@ -5285,13 +5198,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5310,6 +5219,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -5324,11 +5234,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateAgencyCustomPolicyRequest');
     }
 
-    public function updateCloudServiceCustomPolicy($request){
+    public function updateCloudServiceCustomPolicy($request)
+    {
         return $this->updateCloudServiceCustomPolicyWithHttpInfo($request);
     }
 
-    public function updateCloudServiceCustomPolicyWithHttpInfo($request){
+    public function updateCloudServiceCustomPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-ROLE/roles/{role_id}';
         $formParams = [];
@@ -5344,13 +5256,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5369,6 +5277,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -5383,11 +5292,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateCloudServiceCustomPolicyRequest');
     }
 
-    public function updateDomainApiAclPolicy($request){
+    public function updateDomainApiAclPolicy($request)
+    {
         return $this->updateDomainApiAclPolicyWithHttpInfo($request);
     }
 
-    public function updateDomainApiAclPolicyWithHttpInfo($request){
+    public function updateDomainApiAclPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/api-acl-policy';
         $formParams = [];
@@ -5403,13 +5314,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5428,6 +5335,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5442,11 +5350,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainApiAclPolicyRequest');
     }
 
-    public function updateDomainConsoleAclPolicy($request){
+    public function updateDomainConsoleAclPolicy($request)
+    {
         return $this->updateDomainConsoleAclPolicyWithHttpInfo($request);
     }
 
-    public function updateDomainConsoleAclPolicyWithHttpInfo($request){
+    public function updateDomainConsoleAclPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/console-acl-policy';
         $formParams = [];
@@ -5462,13 +5372,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5487,6 +5393,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5501,11 +5408,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainConsoleAclPolicyRequest');
     }
 
-    public function updateDomainGroupInheritRole($request){
+    public function updateDomainGroupInheritRole($request)
+    {
         return $this->updateDomainGroupInheritRoleWithHttpInfo($request);
     }
 
-    public function updateDomainGroupInheritRoleWithHttpInfo($request){
+    public function updateDomainGroupInheritRoleWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/{role_id}/inherited_to_projects';
         $formParams = [];
@@ -5521,9 +5430,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -5533,7 +5439,6 @@ class IamClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5549,6 +5454,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5563,11 +5469,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainGroupInheritRoleRequest');
     }
 
-    public function updateDomainLoginPolicy($request){
+    public function updateDomainLoginPolicy($request)
+    {
         return $this->updateDomainLoginPolicyWithHttpInfo($request);
     }
 
-    public function updateDomainLoginPolicyWithHttpInfo($request){
+    public function updateDomainLoginPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/login-policy';
         $formParams = [];
@@ -5583,13 +5491,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5608,6 +5512,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5622,11 +5527,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainLoginPolicyRequest');
     }
 
-    public function updateDomainPasswordPolicy($request){
+    public function updateDomainPasswordPolicy($request)
+    {
         return $this->updateDomainPasswordPolicyWithHttpInfo($request);
     }
 
-    public function updateDomainPasswordPolicyWithHttpInfo($request){
+    public function updateDomainPasswordPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/password-policy';
         $formParams = [];
@@ -5642,13 +5549,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5667,6 +5570,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5681,11 +5585,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainPasswordPolicyRequest');
     }
 
-    public function updateDomainProtectPolicy($request){
+    public function updateDomainProtectPolicy($request)
+    {
         return $this->updateDomainProtectPolicyWithHttpInfo($request);
     }
 
-    public function updateDomainProtectPolicyWithHttpInfo($request){
+    public function updateDomainProtectPolicyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/protect-policy';
         $formParams = [];
@@ -5701,13 +5607,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5726,6 +5628,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5740,11 +5643,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainProtectPolicyRequest');
     }
 
-    public function updateProjectStatus($request){
+    public function updateProjectStatus($request)
+    {
         return $this->updateProjectStatusWithHttpInfo($request);
     }
 
-    public function updateProjectStatusWithHttpInfo($request){
+    public function updateProjectStatusWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3-ext/projects/{project_id}';
         $formParams = [];
@@ -5760,13 +5665,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5785,6 +5686,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5799,11 +5701,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateProjectStatusRequest');
     }
 
-    public function createPermanentAccessKey($request){
+    public function createPermanentAccessKey($request)
+    {
         return $this->createPermanentAccessKeyWithHttpInfo($request);
     }
 
-    public function createPermanentAccessKeyWithHttpInfo($request){
+    public function createPermanentAccessKeyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-CREDENTIAL/credentials';
         $formParams = [];
@@ -5819,10 +5723,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5841,6 +5741,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -5855,11 +5756,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreatePermanentAccessKeyRequest');
     }
 
-    public function createTemporaryAccessKeyByAgency($request){
+    public function createTemporaryAccessKeyByAgency($request)
+    {
         return $this->createTemporaryAccessKeyByAgencyWithHttpInfo($request);
     }
 
-    public function createTemporaryAccessKeyByAgencyWithHttpInfo($request){
+    public function createTemporaryAccessKeyByAgencyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-CREDENTIAL/securitytokens';
         $formParams = [];
@@ -5875,10 +5778,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5897,6 +5796,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -5911,11 +5811,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateTemporaryAccessKeyByAgencyRequest');
     }
 
-    public function createTemporaryAccessKeyByToken($request){
+    public function createTemporaryAccessKeyByToken($request)
+    {
         return $this->createTemporaryAccessKeyByTokenWithHttpInfo($request);
     }
 
-    public function createTemporaryAccessKeyByTokenWithHttpInfo($request){
+    public function createTemporaryAccessKeyByTokenWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-CREDENTIAL/securitytokens';
         $formParams = [];
@@ -5931,10 +5833,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5953,6 +5851,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -5967,11 +5866,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateTemporaryAccessKeyByTokenRequest');
     }
 
-    public function deletePermanentAccessKey($request){
+    public function deletePermanentAccessKey($request)
+    {
         return $this->deletePermanentAccessKeyWithHttpInfo($request);
     }
 
-    public function deletePermanentAccessKeyWithHttpInfo($request){
+    public function deletePermanentAccessKeyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-CREDENTIAL/credentials/{access_key}';
         $formParams = [];
@@ -5987,13 +5888,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['accessKey'] !== null) {
             $pathParams['access_key'] = $localVarParams['accessKey'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6009,6 +5906,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -6023,11 +5921,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeletePermanentAccessKeyRequest');
     }
 
-    public function listPermanentAccessKeys($request){
+    public function listPermanentAccessKeys($request)
+    {
         return $this->listPermanentAccessKeysWithHttpInfo($request);
     }
 
-    public function listPermanentAccessKeysWithHttpInfo($request){
+    public function listPermanentAccessKeysWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-CREDENTIAL/credentials';
         $formParams = [];
@@ -6043,13 +5943,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['userId'] !== null) {
             $queryParams['user_id'] = $localVarParams['userId'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6065,6 +5961,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -6079,11 +5976,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListPermanentAccessKeysRequest');
     }
 
-    public function showPermanentAccessKey($request){
+    public function showPermanentAccessKey($request)
+    {
         return $this->showPermanentAccessKeyWithHttpInfo($request);
     }
 
-    public function showPermanentAccessKeyWithHttpInfo($request){
+    public function showPermanentAccessKeyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-CREDENTIAL/credentials/{access_key}';
         $formParams = [];
@@ -6099,13 +5998,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['accessKey'] !== null) {
             $pathParams['access_key'] = $localVarParams['accessKey'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6121,6 +6016,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -6135,11 +6031,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowPermanentAccessKeyRequest');
     }
 
-    public function updatePermanentAccessKey($request){
+    public function updatePermanentAccessKey($request)
+    {
         return $this->updatePermanentAccessKeyWithHttpInfo($request);
     }
 
-    public function updatePermanentAccessKeyWithHttpInfo($request){
+    public function updatePermanentAccessKeyWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-CREDENTIAL/credentials/{access_key}';
         $formParams = [];
@@ -6155,13 +6053,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['accessKey'] !== null) {
             $pathParams['access_key'] = $localVarParams['accessKey'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6180,6 +6074,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -6194,11 +6089,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdatePermanentAccessKeyRequest');
     }
 
-    public function createBindingDevice($request){
+    public function createBindingDevice($request)
+    {
         return $this->createBindingDeviceWithHttpInfo($request);
     }
 
-    public function createBindingDeviceWithHttpInfo($request){
+    public function createBindingDeviceWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-MFA/mfa-devices/bind';
         $formParams = [];
@@ -6214,10 +6111,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6236,6 +6129,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -6250,11 +6144,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateBindingDeviceRequest');
     }
 
-    public function createMfaDevice($request){
+    public function createMfaDevice($request)
+    {
         return $this->createMfaDeviceWithHttpInfo($request);
     }
 
-    public function createMfaDeviceWithHttpInfo($request){
+    public function createMfaDeviceWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-MFA/virtual-mfa-devices';
         $formParams = [];
@@ -6270,10 +6166,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6292,6 +6184,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -6306,11 +6199,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMfaDeviceRequest');
     }
 
-    public function createUser($request){
+    public function createUser($request)
+    {
         return $this->createUserWithHttpInfo($request);
     }
 
-    public function createUserWithHttpInfo($request){
+    public function createUserWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-USER/users';
         $formParams = [];
@@ -6326,10 +6221,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6348,6 +6239,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -6362,11 +6254,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateUserRequest');
     }
 
-    public function deleteBindingDevice($request){
+    public function deleteBindingDevice($request)
+    {
         return $this->deleteBindingDeviceWithHttpInfo($request);
     }
 
-    public function deleteBindingDeviceWithHttpInfo($request){
+    public function deleteBindingDeviceWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-MFA/mfa-devices/unbind';
         $formParams = [];
@@ -6382,10 +6276,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6404,6 +6294,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -6418,11 +6309,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteBindingDeviceRequest');
     }
 
-    public function deleteMfaDevice($request){
+    public function deleteMfaDevice($request)
+    {
         return $this->deleteMfaDeviceWithHttpInfo($request);
     }
 
-    public function deleteMfaDeviceWithHttpInfo($request){
+    public function deleteMfaDeviceWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-MFA/virtual-mfa-devices';
         $formParams = [];
@@ -6438,16 +6331,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['userId'] !== null) {
             $queryParams['user_id'] = $localVarParams['userId'];
         }
         if ($localVarParams['serialNumber'] !== null) {
             $queryParams['serial_number'] = $localVarParams['serialNumber'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6463,6 +6352,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -6477,11 +6367,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteMfaDeviceRequest');
     }
 
-    public function keystoneCreateUser($request){
+    public function keystoneCreateUser($request)
+    {
         return $this->keystoneCreateUserWithHttpInfo($request);
     }
 
-    public function keystoneCreateUserWithHttpInfo($request){
+    public function keystoneCreateUserWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/users';
         $formParams = [];
@@ -6497,10 +6389,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6519,6 +6407,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -6533,11 +6422,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateUserRequest');
     }
 
-    public function keystoneDeleteUser($request){
+    public function keystoneDeleteUser($request)
+    {
         return $this->keystoneDeleteUserWithHttpInfo($request);
     }
 
-    public function keystoneDeleteUserWithHttpInfo($request){
+    public function keystoneDeleteUserWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/users/{user_id}';
         $formParams = [];
@@ -6553,13 +6444,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6575,6 +6462,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -6589,11 +6477,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteUserRequest');
     }
 
-    public function keystoneListGroupsForUser($request){
+    public function keystoneListGroupsForUser($request)
+    {
         return $this->keystoneListGroupsForUserWithHttpInfo($request);
     }
 
-    public function keystoneListGroupsForUserWithHttpInfo($request){
+    public function keystoneListGroupsForUserWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/users/{user_id}/groups';
         $formParams = [];
@@ -6609,13 +6499,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6631,6 +6517,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -6645,11 +6532,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListGroupsForUserRequest');
     }
 
-    public function keystoneListUsers($request){
+    public function keystoneListUsers($request)
+    {
         return $this->keystoneListUsersWithHttpInfo($request);
     }
 
-    public function keystoneListUsersWithHttpInfo($request){
+    public function keystoneListUsersWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/users';
         $formParams = [];
@@ -6665,7 +6554,6 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['domainId'] !== null) {
             $queryParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -6678,9 +6566,6 @@ class IamClient extends Client
         if ($localVarParams['passwordExpiresAt'] !== null) {
             $queryParams['password_expires_at'] = $localVarParams['passwordExpiresAt'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6696,6 +6581,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -6710,11 +6596,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListUsersRequest');
     }
 
-    public function keystoneShowUser($request){
+    public function keystoneShowUser($request)
+    {
         return $this->keystoneShowUserWithHttpInfo($request);
     }
 
-    public function keystoneShowUserWithHttpInfo($request){
+    public function keystoneShowUserWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/users/{user_id}';
         $formParams = [];
@@ -6730,13 +6618,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6752,6 +6636,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -6766,11 +6651,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowUserRequest');
     }
 
-    public function keystoneUpdateUserByAdmin($request){
+    public function keystoneUpdateUserByAdmin($request)
+    {
         return $this->keystoneUpdateUserByAdminWithHttpInfo($request);
     }
 
-    public function keystoneUpdateUserByAdminWithHttpInfo($request){
+    public function keystoneUpdateUserByAdminWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/users/{user_id}';
         $formParams = [];
@@ -6786,13 +6673,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6811,6 +6694,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -6825,11 +6709,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateUserByAdminRequest');
     }
 
-    public function keystoneUpdateUserPassword($request){
+    public function keystoneUpdateUserPassword($request)
+    {
         return $this->keystoneUpdateUserPasswordWithHttpInfo($request);
     }
 
-    public function keystoneUpdateUserPasswordWithHttpInfo($request){
+    public function keystoneUpdateUserPasswordWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/users/{user_id}/password';
         $formParams = [];
@@ -6845,13 +6731,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6870,6 +6752,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -6884,11 +6767,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateUserPasswordRequest');
     }
 
-    public function listUserLoginProtects($request){
+    public function listUserLoginProtects($request)
+    {
         return $this->listUserLoginProtectsWithHttpInfo($request);
     }
 
-    public function listUserLoginProtectsWithHttpInfo($request){
+    public function listUserLoginProtectsWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-USER/login-protects';
         $formParams = [];
@@ -6905,10 +6790,6 @@ class IamClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -6923,6 +6804,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -6937,11 +6819,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListUserLoginProtectsRequest');
     }
 
-    public function listUserMfaDevices($request){
+    public function listUserMfaDevices($request)
+    {
         return $this->listUserMfaDevicesWithHttpInfo($request);
     }
 
-    public function listUserMfaDevicesWithHttpInfo($request){
+    public function listUserMfaDevicesWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-MFA/virtual-mfa-devices';
         $formParams = [];
@@ -6958,10 +6842,6 @@ class IamClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -6976,6 +6856,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -6990,11 +6871,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListUserMfaDevicesRequest');
     }
 
-    public function showUser($request){
+    public function showUser($request)
+    {
         return $this->showUserWithHttpInfo($request);
     }
 
-    public function showUserWithHttpInfo($request){
+    public function showUserWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-USER/users/{user_id}';
         $formParams = [];
@@ -7010,13 +6893,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -7032,6 +6911,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -7046,11 +6926,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowUserRequest');
     }
 
-    public function showUserLoginProtect($request){
+    public function showUserLoginProtect($request)
+    {
         return $this->showUserLoginProtectWithHttpInfo($request);
     }
 
-    public function showUserLoginProtectWithHttpInfo($request){
+    public function showUserLoginProtectWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-USER/users/{user_id}/login-protect';
         $formParams = [];
@@ -7066,13 +6948,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -7088,6 +6966,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -7102,11 +6981,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowUserLoginProtectRequest');
     }
 
-    public function showUserMfaDevice($request){
+    public function showUserMfaDevice($request)
+    {
         return $this->showUserMfaDeviceWithHttpInfo($request);
     }
 
-    public function showUserMfaDeviceWithHttpInfo($request){
+    public function showUserMfaDeviceWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-MFA/users/{user_id}/virtual-mfa-device';
         $formParams = [];
@@ -7122,13 +7003,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -7144,6 +7021,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -7158,11 +7036,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowUserMfaDeviceRequest');
     }
 
-    public function updateLoginProtect($request){
+    public function updateLoginProtect($request)
+    {
         return $this->updateLoginProtectWithHttpInfo($request);
     }
 
-    public function updateLoginProtectWithHttpInfo($request){
+    public function updateLoginProtectWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-USER/users/{user_id}/login-protect';
         $formParams = [];
@@ -7178,13 +7058,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -7203,6 +7079,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -7217,11 +7094,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateLoginProtectRequest');
     }
 
-    public function updateUser($request){
+    public function updateUser($request)
+    {
         return $this->updateUserWithHttpInfo($request);
     }
 
-    public function updateUserWithHttpInfo($request){
+    public function updateUserWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-USER/users/{user_id}';
         $formParams = [];
@@ -7237,13 +7116,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -7262,6 +7137,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -7276,11 +7152,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateUserRequest');
     }
 
-    public function updateUserInformation($request){
+    public function updateUserInformation($request)
+    {
         return $this->updateUserInformationWithHttpInfo($request);
     }
 
-    public function updateUserInformationWithHttpInfo($request){
+    public function updateUserInformationWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3.0/OS-USER/users/{user_id}/info';
         $formParams = [];
@@ -7296,13 +7174,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -7321,6 +7195,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -7335,11 +7210,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateUserInformationRequest');
     }
 
-    public function keystoneCreateAgencyToken($request){
+    public function keystoneCreateAgencyToken($request)
+    {
         return $this->keystoneCreateAgencyTokenWithHttpInfo($request);
     }
 
-    public function keystoneCreateAgencyTokenWithHttpInfo($request){
+    public function keystoneCreateAgencyTokenWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/auth/tokens';
         $formParams = [];
@@ -7355,13 +7232,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['nocatalog'] !== null) {
             $queryParams['nocatalog'] = $localVarParams['nocatalog'];
         }
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -7380,6 +7253,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -7394,11 +7268,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateAgencyTokenRequest');
     }
 
-    public function keystoneCreateUserTokenByPassword($request){
+    public function keystoneCreateUserTokenByPassword($request)
+    {
         return $this->keystoneCreateUserTokenByPasswordWithHttpInfo($request);
     }
 
-    public function keystoneCreateUserTokenByPasswordWithHttpInfo($request){
+    public function keystoneCreateUserTokenByPasswordWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/auth/tokens';
         $formParams = [];
@@ -7414,13 +7290,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['nocatalog'] !== null) {
             $queryParams['nocatalog'] = $localVarParams['nocatalog'];
         }
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -7439,6 +7311,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -7453,11 +7326,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateUserTokenByPasswordRequest');
     }
 
-    public function keystoneCreateUserTokenByPasswordAndMfa($request){
+    public function keystoneCreateUserTokenByPasswordAndMfa($request)
+    {
         return $this->keystoneCreateUserTokenByPasswordAndMfaWithHttpInfo($request);
     }
 
-    public function keystoneCreateUserTokenByPasswordAndMfaWithHttpInfo($request){
+    public function keystoneCreateUserTokenByPasswordAndMfaWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/auth/tokens';
         $formParams = [];
@@ -7473,13 +7348,9 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['nocatalog'] !== null) {
             $queryParams['nocatalog'] = $localVarParams['nocatalog'];
         }
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -7498,6 +7369,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -7512,11 +7384,13 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateUserTokenByPasswordAndMfaRequest');
     }
 
-    public function keystoneValidateToken($request){
+    public function keystoneValidateToken($request)
+    {
         return $this->keystoneValidateTokenWithHttpInfo($request);
     }
 
-    public function keystoneValidateTokenWithHttpInfo($request){
+    public function keystoneValidateTokenWithHttpInfo($request)
+    {
         $collection_formats = [];
         $resourcePath = '/v3/auth/tokens';
         $formParams = [];
@@ -7532,16 +7406,12 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['nocatalog'] !== null) {
             $queryParams['nocatalog'] = $localVarParams['nocatalog'];
         }
-
         if ($localVarParams['xSubjectToken'] !== null) {
             $headerParams['x_subject_token'] = $localVarParams['xSubjectToken'];
         }
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -7557,6 +7427,7 @@ class IamClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,

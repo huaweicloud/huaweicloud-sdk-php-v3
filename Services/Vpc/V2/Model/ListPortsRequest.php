@@ -9,7 +9,6 @@ use HuaweiCloud\SDK\Core\SdkResponse;
 
 class ListPortsRequest implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -37,7 +36,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'status' => 'string',
             'marker' => 'string',
             'fixedIps' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'zoneId' => 'string'
     ];
 
     /**
@@ -58,7 +58,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
         'status' => null,
         'marker' => null,
         'fixedIps' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'zoneId' => null
     ];
 
     /**
@@ -100,7 +101,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'status' => 'status',
             'marker' => 'marker',
             'fixedIps' => 'fixed_ips',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'zoneId' => 'zone_id'
     ];
 
     /**
@@ -121,7 +123,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'marker' => 'setMarker',
             'fixedIps' => 'setFixedIps',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'zoneId' => 'setZoneId'
     ];
 
     /**
@@ -142,7 +145,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'marker' => 'getMarker',
             'fixedIps' => 'getFixedIps',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'zoneId' => 'getZoneId'
     ];
 
     /**
@@ -252,6 +256,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['fixedIps'] = isset($data['fixedIps']) ? $data['fixedIps'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['zoneId'] = isset($data['zoneId']) ? $data['zoneId'] : null;
     }
 
     /**
@@ -612,6 +617,29 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets zoneId
+    *
+    * @return string|null
+    */
+    public function getZoneId()
+    {
+        return $this->container['zoneId'];
+    }
+
+    /**
+    * Sets zoneId
+    *
+    * @param string|null $zoneId zoneId
+    *
+    * @return $this
+    */
+    public function setZoneId($zoneId)
+    {
+        $this->container['zoneId'] = $zoneId;
         return $this;
     }
 

@@ -11,6 +11,7 @@ class EipAsyncClient extends Client
 {
     protected $headerSelector;
     protected $modelPackage;
+
     public function __construct($selector=null)
     {
         parent::__construct();
@@ -18,12 +19,13 @@ class EipAsyncClient extends Client
         $this->headerSelector = $selector ?: new HeaderSelector();
     }
 
-    public static function newBuilder($clazz)
+    public static function newBuilder()
     {
-        return new ClientBuilder($clazz);
+        return new ClientBuilder(new EipAsyncClient());
     }
 
-    public function addPublicipsIntoSharedBandwidthAsync($request){
+    public function addPublicipsIntoSharedBandwidthAsync($request)
+    {
         return $this->addPublicipsIntoSharedBandwidthAsyncWithHttpInfo($request);
     }
     
@@ -43,13 +45,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['bandwidthId'] !== null) {
             $pathParams['bandwidth_id'] = $localVarParams['bandwidthId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -68,6 +66,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -83,7 +82,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function batchCreateSharedBandwidthsAsync($request){
+    public function batchCreateSharedBandwidthsAsync($request)
+    {
         return $this->batchCreateSharedBandwidthsAsyncWithHttpInfo($request);
     }
     
@@ -103,10 +103,6 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -125,6 +121,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -140,7 +137,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createSharedBandwidthAsync($request){
+    public function createSharedBandwidthAsync($request)
+    {
         return $this->createSharedBandwidthAsyncWithHttpInfo($request);
     }
     
@@ -160,10 +158,6 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -182,6 +176,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -197,7 +192,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteSharedBandwidthAsync($request){
+    public function deleteSharedBandwidthAsync($request)
+    {
         return $this->deleteSharedBandwidthAsyncWithHttpInfo($request);
     }
     
@@ -217,13 +213,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['bandwidthId'] !== null) {
             $pathParams['bandwidth_id'] = $localVarParams['bandwidthId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -239,6 +231,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -254,7 +247,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listBandwidthsAsync($request){
+    public function listBandwidthsAsync($request)
+    {
         return $this->listBandwidthsAsyncWithHttpInfo($request);
     }
     
@@ -274,7 +268,6 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
@@ -287,9 +280,6 @@ class EipAsyncClient extends Client
         if ($localVarParams['shareType'] !== null) {
             $queryParams['share_type'] = $localVarParams['shareType'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -305,6 +295,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -320,7 +311,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listQuotasAsync($request){
+    public function listQuotasAsync($request)
+    {
         return $this->listQuotasAsyncWithHttpInfo($request);
     }
     
@@ -340,13 +332,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -362,6 +350,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -377,7 +366,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function removePublicipsFromSharedBandwidthAsync($request){
+    public function removePublicipsFromSharedBandwidthAsync($request)
+    {
         return $this->removePublicipsFromSharedBandwidthAsyncWithHttpInfo($request);
     }
     
@@ -397,13 +387,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['bandwidthId'] !== null) {
             $pathParams['bandwidth_id'] = $localVarParams['bandwidthId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -422,6 +408,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -437,7 +424,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showBandwidthAsync($request){
+    public function showBandwidthAsync($request)
+    {
         return $this->showBandwidthAsyncWithHttpInfo($request);
     }
     
@@ -457,13 +445,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['bandwidthId'] !== null) {
             $pathParams['bandwidth_id'] = $localVarParams['bandwidthId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -479,6 +463,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -494,7 +479,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateBandwidthAsync($request){
+    public function updateBandwidthAsync($request)
+    {
         return $this->updateBandwidthAsyncWithHttpInfo($request);
     }
     
@@ -514,13 +500,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['bandwidthId'] !== null) {
             $pathParams['bandwidth_id'] = $localVarParams['bandwidthId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -539,6 +521,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -554,7 +537,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updatePrePaidBandwidthAsync($request){
+    public function updatePrePaidBandwidthAsync($request)
+    {
         return $this->updatePrePaidBandwidthAsyncWithHttpInfo($request);
     }
     
@@ -574,13 +558,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['bandwidthId'] !== null) {
             $pathParams['bandwidth_id'] = $localVarParams['bandwidthId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -599,6 +579,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -614,7 +595,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function batchCreatePublicipTagsAsync($request){
+    public function batchCreatePublicipTagsAsync($request)
+    {
         return $this->batchCreatePublicipTagsAsyncWithHttpInfo($request);
     }
     
@@ -634,13 +616,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -659,6 +637,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -674,7 +653,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function batchDeletePublicipTagsAsync($request){
+    public function batchDeletePublicipTagsAsync($request)
+    {
         return $this->batchDeletePublicipTagsAsyncWithHttpInfo($request);
     }
     
@@ -694,13 +674,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -719,6 +695,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -734,7 +711,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createPrePaidPublicipAsync($request){
+    public function createPrePaidPublicipAsync($request)
+    {
         return $this->createPrePaidPublicipAsyncWithHttpInfo($request);
     }
     
@@ -754,10 +732,6 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -776,6 +750,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -791,7 +766,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createPublicipAsync($request){
+    public function createPublicipAsync($request)
+    {
         return $this->createPublicipAsyncWithHttpInfo($request);
     }
     
@@ -811,10 +787,6 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -833,6 +805,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -848,7 +821,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createPublicipTagAsync($request){
+    public function createPublicipTagAsync($request)
+    {
         return $this->createPublicipTagAsyncWithHttpInfo($request);
     }
     
@@ -868,13 +842,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -893,6 +863,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -908,7 +879,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deletePublicipAsync($request){
+    public function deletePublicipAsync($request)
+    {
         return $this->deletePublicipAsyncWithHttpInfo($request);
     }
     
@@ -928,13 +900,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -950,6 +918,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -965,7 +934,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deletePublicipTagAsync($request){
+    public function deletePublicipTagAsync($request)
+    {
         return $this->deletePublicipTagAsyncWithHttpInfo($request);
     }
     
@@ -985,16 +955,12 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
         if ($localVarParams['key'] !== null) {
             $pathParams['key'] = $localVarParams['key'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1010,6 +976,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1025,7 +992,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listPublicipTagsAsync($request){
+    public function listPublicipTagsAsync($request)
+    {
         return $this->listPublicipTagsAsyncWithHttpInfo($request);
     }
     
@@ -1046,10 +1014,6 @@ class EipAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1064,6 +1028,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1079,7 +1044,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listPublicipsAsync($request){
+    public function listPublicipsAsync($request)
+    {
         return $this->listPublicipsAsyncWithHttpInfo($request);
     }
     
@@ -1099,7 +1065,6 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
@@ -1125,9 +1090,6 @@ class EipAsyncClient extends Client
             $queryParams['id'] = $localVarParams['id'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1142,6 +1104,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1157,7 +1120,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listPublicipsByTagsAsync($request){
+    public function listPublicipsByTagsAsync($request)
+    {
         return $this->listPublicipsByTagsAsyncWithHttpInfo($request);
     }
     
@@ -1177,10 +1141,6 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1199,6 +1159,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1214,7 +1175,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showPublicipAsync($request){
+    public function showPublicipAsync($request)
+    {
         return $this->showPublicipAsyncWithHttpInfo($request);
     }
     
@@ -1234,13 +1196,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1256,6 +1214,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1271,7 +1230,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showPublicipTagsAsync($request){
+    public function showPublicipTagsAsync($request)
+    {
         return $this->showPublicipTagsAsyncWithHttpInfo($request);
     }
     
@@ -1291,13 +1251,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1313,6 +1269,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1328,7 +1285,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updatePublicipAsync($request){
+    public function updatePublicipAsync($request)
+    {
         return $this->updatePublicipAsyncWithHttpInfo($request);
     }
     
@@ -1348,13 +1306,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1373,6 +1327,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1388,7 +1343,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronCreateFloatingIpAsync($request){
+    public function neutronCreateFloatingIpAsync($request)
+    {
         return $this->neutronCreateFloatingIpAsyncWithHttpInfo($request);
     }
     
@@ -1408,10 +1364,6 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1430,6 +1382,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1445,7 +1398,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronDeleteFloatingIpAsync($request){
+    public function neutronDeleteFloatingIpAsync($request)
+    {
         return $this->neutronDeleteFloatingIpAsyncWithHttpInfo($request);
     }
     
@@ -1465,13 +1419,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['floatingipId'] !== null) {
             $pathParams['floatingip_id'] = $localVarParams['floatingipId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1487,6 +1437,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1502,7 +1453,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronListFloatingIpsAsync($request){
+    public function neutronListFloatingIpsAsync($request)
+    {
         return $this->neutronListFloatingIpsAsyncWithHttpInfo($request);
     }
     
@@ -1522,7 +1474,6 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -1554,9 +1505,6 @@ class EipAsyncClient extends Client
             $queryParams['floating_network_id'] = $localVarParams['floatingNetworkId'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1571,6 +1519,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1586,7 +1535,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronShowFloatingIpAsync($request){
+    public function neutronShowFloatingIpAsync($request)
+    {
         return $this->neutronShowFloatingIpAsyncWithHttpInfo($request);
     }
     
@@ -1606,13 +1556,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['floatingipId'] !== null) {
             $pathParams['floatingip_id'] = $localVarParams['floatingipId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1628,6 +1574,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -1643,7 +1590,8 @@ class EipAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function neutronUpdateFloatingIpAsync($request){
+    public function neutronUpdateFloatingIpAsync($request)
+    {
         return $this->neutronUpdateFloatingIpAsyncWithHttpInfo($request);
     }
     
@@ -1663,13 +1611,9 @@ class EipAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['floatingipId'] !== null) {
             $pathParams['floatingip_id'] = $localVarParams['floatingipId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1688,6 +1632,7 @@ class EipAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,

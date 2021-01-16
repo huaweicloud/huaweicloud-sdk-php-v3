@@ -1,3 +1,13 @@
+# 3.0.4-beta 2021-01-15
+## HuaweiCloud SDK Core
+ - ### Features
+    - None
+ - ### Bug Fix
+    - None
+ - ### Change
+    - 修改 `newBuilder` 函数
+
+
 # 3.0.3-beta 2020-12-15
 
 ## __HuaweiCloud SDK ECS__

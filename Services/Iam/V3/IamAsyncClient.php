@@ -11,6 +11,7 @@ class IamAsyncClient extends Client
 {
     protected $headerSelector;
     protected $modelPackage;
+
     public function __construct($selector=null)
     {
         parent::__construct();
@@ -18,12 +19,13 @@ class IamAsyncClient extends Client
         $this->headerSelector = $selector ?: new HeaderSelector();
     }
 
-    public static function newBuilder($clazz)
+    public static function newBuilder()
     {
-        return new ClientBuilder($clazz, "GlobalCredentials");
+        return new ClientBuilder(new IamAsyncClient(), "GlobalCredentials");
     }
 
-    public function associateAgencyWithAllProjectsPermissionAsync($request){
+    public function associateAgencyWithAllProjectsPermissionAsync($request)
+    {
         return $this->associateAgencyWithAllProjectsPermissionAsyncWithHttpInfo($request);
     }
     
@@ -43,9 +45,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
@@ -55,7 +54,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -71,6 +69,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -86,7 +85,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function associateAgencyWithDomainPermissionAsync($request){
+    public function associateAgencyWithDomainPermissionAsync($request)
+    {
         return $this->associateAgencyWithDomainPermissionAsyncWithHttpInfo($request);
     }
     
@@ -106,9 +106,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -118,7 +115,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -134,6 +130,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -149,7 +146,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function associateAgencyWithProjectPermissionAsync($request){
+    public function associateAgencyWithProjectPermissionAsync($request)
+    {
         return $this->associateAgencyWithProjectPermissionAsyncWithHttpInfo($request);
     }
     
@@ -169,9 +167,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -181,7 +176,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -197,6 +191,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -212,7 +207,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function checkAllProjectsPermissionForAgencyAsync($request){
+    public function checkAllProjectsPermissionForAgencyAsync($request)
+    {
         return $this->checkAllProjectsPermissionForAgencyAsyncWithHttpInfo($request);
     }
     
@@ -232,9 +228,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
@@ -244,7 +237,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -260,6 +252,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='HEAD',
             $resourcePath,
@@ -275,7 +268,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function checkDomainPermissionForAgencyAsync($request){
+    public function checkDomainPermissionForAgencyAsync($request)
+    {
         return $this->checkDomainPermissionForAgencyAsyncWithHttpInfo($request);
     }
     
@@ -295,9 +289,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -307,7 +298,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -323,6 +313,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='HEAD',
             $resourcePath,
@@ -338,7 +329,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function checkProjectPermissionForAgencyAsync($request){
+    public function checkProjectPermissionForAgencyAsync($request)
+    {
         return $this->checkProjectPermissionForAgencyAsyncWithHttpInfo($request);
     }
     
@@ -358,9 +350,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -370,7 +359,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -386,6 +374,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='HEAD',
             $resourcePath,
@@ -401,7 +390,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createAgencyAsync($request){
+    public function createAgencyAsync($request)
+    {
         return $this->createAgencyAsyncWithHttpInfo($request);
     }
     
@@ -421,10 +411,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -443,6 +429,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -458,7 +445,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createAgencyCustomPolicyAsync($request){
+    public function createAgencyCustomPolicyAsync($request)
+    {
         return $this->createAgencyCustomPolicyAsyncWithHttpInfo($request);
     }
     
@@ -478,10 +466,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -500,6 +484,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -515,7 +500,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createCloudServiceCustomPolicyAsync($request){
+    public function createCloudServiceCustomPolicyAsync($request)
+    {
         return $this->createCloudServiceCustomPolicyAsyncWithHttpInfo($request);
     }
     
@@ -535,10 +521,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -557,6 +539,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -572,7 +555,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createLoginTokenAsync($request){
+    public function createLoginTokenAsync($request)
+    {
         return $this->createLoginTokenAsyncWithHttpInfo($request);
     }
     
@@ -592,10 +576,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -614,6 +594,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -629,7 +610,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createMetadataAsync($request){
+    public function createMetadataAsync($request)
+    {
         return $this->createMetadataAsyncWithHttpInfo($request);
     }
     
@@ -649,16 +631,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -677,6 +655,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -692,7 +671,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createUnscopeTokenByIdpInitiatedAsync($request){
+    public function createUnscopeTokenByIdpInitiatedAsync($request)
+    {
         return $this->createUnscopeTokenByIdpInitiatedAsyncWithHttpInfo($request);
     }
     
@@ -712,13 +692,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
         if ($localVarParams['xIdpId'] !== null) {
             $headerParams['x_idp_id'] = $localVarParams['xIdpId'];
         }
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -734,6 +710,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -749,7 +726,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteAgencyAsync($request){
+    public function deleteAgencyAsync($request)
+    {
         return $this->deleteAgencyAsyncWithHttpInfo($request);
     }
     
@@ -769,13 +747,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -791,6 +765,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -806,7 +781,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteCustomPolicyAsync($request){
+    public function deleteCustomPolicyAsync($request)
+    {
         return $this->deleteCustomPolicyAsyncWithHttpInfo($request);
     }
     
@@ -826,13 +802,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -848,6 +820,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -863,7 +836,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteDomainGroupInheritedRoleAsync($request){
+    public function deleteDomainGroupInheritedRoleAsync($request)
+    {
         return $this->deleteDomainGroupInheritedRoleAsyncWithHttpInfo($request);
     }
     
@@ -883,9 +857,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -895,7 +866,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -911,6 +881,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -926,7 +897,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneAddUserToGroupAsync($request){
+    public function keystoneAddUserToGroupAsync($request)
+    {
         return $this->keystoneAddUserToGroupAsyncWithHttpInfo($request);
     }
     
@@ -946,16 +918,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -971,6 +939,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -986,7 +955,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneAssociateGroupWithDomainPermissionAsync($request){
+    public function keystoneAssociateGroupWithDomainPermissionAsync($request)
+    {
         return $this->keystoneAssociateGroupWithDomainPermissionAsyncWithHttpInfo($request);
     }
     
@@ -1006,9 +976,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -1018,7 +985,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1034,6 +1000,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1049,7 +1016,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneAssociateGroupWithProjectPermissionAsync($request){
+    public function keystoneAssociateGroupWithProjectPermissionAsync($request)
+    {
         return $this->keystoneAssociateGroupWithProjectPermissionAsyncWithHttpInfo($request);
     }
     
@@ -1069,9 +1037,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -1081,7 +1046,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1097,6 +1061,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1112,7 +1077,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneCheckDomainPermissionForGroupAsync($request){
+    public function keystoneCheckDomainPermissionForGroupAsync($request)
+    {
         return $this->keystoneCheckDomainPermissionForGroupAsyncWithHttpInfo($request);
     }
     
@@ -1132,9 +1098,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -1144,7 +1107,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1160,6 +1122,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='HEAD',
             $resourcePath,
@@ -1175,7 +1138,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneCheckProjectPermissionForGroupAsync($request){
+    public function keystoneCheckProjectPermissionForGroupAsync($request)
+    {
         return $this->keystoneCheckProjectPermissionForGroupAsyncWithHttpInfo($request);
     }
     
@@ -1195,9 +1159,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -1207,7 +1168,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1223,6 +1183,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='HEAD',
             $resourcePath,
@@ -1238,7 +1199,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneCheckUserInGroupAsync($request){
+    public function keystoneCheckUserInGroupAsync($request)
+    {
         return $this->keystoneCheckUserInGroupAsyncWithHttpInfo($request);
     }
     
@@ -1258,16 +1220,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1283,6 +1241,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='HEAD',
             $resourcePath,
@@ -1298,7 +1257,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneCheckroleForGroupAsync($request){
+    public function keystoneCheckroleForGroupAsync($request)
+    {
         return $this->keystoneCheckroleForGroupAsyncWithHttpInfo($request);
     }
     
@@ -1318,9 +1278,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -1330,7 +1287,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1346,6 +1302,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='HEAD',
             $resourcePath,
@@ -1361,7 +1318,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneCreateGroupAsync($request){
+    public function keystoneCreateGroupAsync($request)
+    {
         return $this->keystoneCreateGroupAsyncWithHttpInfo($request);
     }
     
@@ -1381,10 +1339,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1403,6 +1357,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1418,7 +1373,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneCreateIdentityProviderAsync($request){
+    public function keystoneCreateIdentityProviderAsync($request)
+    {
         return $this->keystoneCreateIdentityProviderAsyncWithHttpInfo($request);
     }
     
@@ -1438,13 +1394,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1463,6 +1415,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1478,7 +1431,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneCreateMappingAsync($request){
+    public function keystoneCreateMappingAsync($request)
+    {
         return $this->keystoneCreateMappingAsyncWithHttpInfo($request);
     }
     
@@ -1498,13 +1452,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1523,6 +1473,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1538,7 +1489,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneCreateProjectAsync($request){
+    public function keystoneCreateProjectAsync($request)
+    {
         return $this->keystoneCreateProjectAsyncWithHttpInfo($request);
     }
     
@@ -1558,10 +1510,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1580,6 +1528,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1595,7 +1544,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneCreateProtocolAsync($request){
+    public function keystoneCreateProtocolAsync($request)
+    {
         return $this->keystoneCreateProtocolAsyncWithHttpInfo($request);
     }
     
@@ -1615,16 +1565,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1643,6 +1589,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -1658,7 +1605,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneCreateScopedTokenAsync($request){
+    public function keystoneCreateScopedTokenAsync($request)
+    {
         return $this->keystoneCreateScopedTokenAsyncWithHttpInfo($request);
     }
     
@@ -1678,10 +1626,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1700,6 +1644,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -1715,7 +1660,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneDeleteGroupAsync($request){
+    public function keystoneDeleteGroupAsync($request)
+    {
         return $this->keystoneDeleteGroupAsyncWithHttpInfo($request);
     }
     
@@ -1735,13 +1681,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1757,6 +1699,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1772,7 +1715,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneDeleteIdentityProviderAsync($request){
+    public function keystoneDeleteIdentityProviderAsync($request)
+    {
         return $this->keystoneDeleteIdentityProviderAsyncWithHttpInfo($request);
     }
     
@@ -1792,13 +1736,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1814,6 +1754,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1829,7 +1770,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneDeleteMappingAsync($request){
+    public function keystoneDeleteMappingAsync($request)
+    {
         return $this->keystoneDeleteMappingAsyncWithHttpInfo($request);
     }
     
@@ -1849,13 +1791,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1871,6 +1809,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1886,7 +1825,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneDeleteProtocolAsync($request){
+    public function keystoneDeleteProtocolAsync($request)
+    {
         return $this->keystoneDeleteProtocolAsyncWithHttpInfo($request);
     }
     
@@ -1906,16 +1846,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1931,6 +1867,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -1946,7 +1883,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListAllProjectPermissionsForGroupAsync($request){
+    public function keystoneListAllProjectPermissionsForGroupAsync($request)
+    {
         return $this->keystoneListAllProjectPermissionsForGroupAsyncWithHttpInfo($request);
     }
     
@@ -1966,16 +1904,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1991,6 +1925,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2006,7 +1941,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListAuthDomainsAsync($request){
+    public function keystoneListAuthDomainsAsync($request)
+    {
         return $this->keystoneListAuthDomainsAsyncWithHttpInfo($request);
     }
     
@@ -2027,10 +1963,6 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2045,6 +1977,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2060,7 +1993,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListAuthProjectsAsync($request){
+    public function keystoneListAuthProjectsAsync($request)
+    {
         return $this->keystoneListAuthProjectsAsyncWithHttpInfo($request);
     }
     
@@ -2081,10 +2015,6 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2099,6 +2029,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2114,7 +2045,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListDomainPermissionsForGroupAsync($request){
+    public function keystoneListDomainPermissionsForGroupAsync($request)
+    {
         return $this->keystoneListDomainPermissionsForGroupAsyncWithHttpInfo($request);
     }
     
@@ -2134,16 +2066,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2159,6 +2087,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2174,7 +2103,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListEndpointsAsync($request){
+    public function keystoneListEndpointsAsync($request)
+    {
         return $this->keystoneListEndpointsAsyncWithHttpInfo($request);
     }
     
@@ -2194,16 +2124,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['interface'] !== null) {
             $queryParams['interface'] = $localVarParams['interface'];
         }
         if ($localVarParams['serviceId'] !== null) {
             $queryParams['service_id'] = $localVarParams['serviceId'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2219,6 +2145,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2234,7 +2161,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListGroupsAsync($request){
+    public function keystoneListGroupsAsync($request)
+    {
         return $this->keystoneListGroupsAsyncWithHttpInfo($request);
     }
     
@@ -2254,16 +2182,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['domainId'] !== null) {
             $queryParams['domain_id'] = $localVarParams['domainId'];
         }
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2279,6 +2203,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2294,7 +2219,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListIdentityProvidersAsync($request){
+    public function keystoneListIdentityProvidersAsync($request)
+    {
         return $this->keystoneListIdentityProvidersAsyncWithHttpInfo($request);
     }
     
@@ -2315,10 +2241,6 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2333,6 +2255,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2348,7 +2271,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListMappingsAsync($request){
+    public function keystoneListMappingsAsync($request)
+    {
         return $this->keystoneListMappingsAsyncWithHttpInfo($request);
     }
     
@@ -2369,10 +2293,6 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2387,6 +2307,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2402,7 +2323,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListPermissionsAsync($request){
+    public function keystoneListPermissionsAsync($request)
+    {
         return $this->keystoneListPermissionsAsyncWithHttpInfo($request);
     }
     
@@ -2422,7 +2344,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
@@ -2435,9 +2356,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['perPage'] !== null) {
             $queryParams['per_page'] = $localVarParams['perPage'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2453,6 +2371,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2468,7 +2387,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListProjectPermissionsForGroupAsync($request){
+    public function keystoneListProjectPermissionsForGroupAsync($request)
+    {
         return $this->keystoneListProjectPermissionsForGroupAsyncWithHttpInfo($request);
     }
     
@@ -2488,16 +2408,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2513,6 +2429,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2528,7 +2445,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListProjectsAsync($request){
+    public function keystoneListProjectsAsync($request)
+    {
         return $this->keystoneListProjectsAsyncWithHttpInfo($request);
     }
     
@@ -2548,7 +2466,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['domainId'] !== null) {
             $queryParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -2571,9 +2488,6 @@ class IamAsyncClient extends Client
             $queryParams['per_page'] = $localVarParams['perPage'];
         }
 
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2588,6 +2502,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2603,7 +2518,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListProjectsForUserAsync($request){
+    public function keystoneListProjectsForUserAsync($request)
+    {
         return $this->keystoneListProjectsForUserAsyncWithHttpInfo($request);
     }
     
@@ -2623,13 +2539,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2645,6 +2557,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2660,7 +2573,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListProtocolsAsync($request){
+    public function keystoneListProtocolsAsync($request)
+    {
         return $this->keystoneListProtocolsAsyncWithHttpInfo($request);
     }
     
@@ -2680,13 +2594,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2702,6 +2612,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2717,7 +2628,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListRegionsAsync($request){
+    public function keystoneListRegionsAsync($request)
+    {
         return $this->keystoneListRegionsAsyncWithHttpInfo($request);
     }
     
@@ -2738,10 +2650,6 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2756,6 +2664,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2771,7 +2680,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListServicesAsync($request){
+    public function keystoneListServicesAsync($request)
+    {
         return $this->keystoneListServicesAsyncWithHttpInfo($request);
     }
     
@@ -2791,13 +2701,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2813,6 +2719,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2828,7 +2735,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListUsersForGroupByAdminAsync($request){
+    public function keystoneListUsersForGroupByAdminAsync($request)
+    {
         return $this->keystoneListUsersForGroupByAdminAsyncWithHttpInfo($request);
     }
     
@@ -2848,13 +2756,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2870,6 +2774,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2885,7 +2790,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListVersionsAsync($request){
+    public function keystoneListVersionsAsync($request)
+    {
         return $this->keystoneListVersionsAsyncWithHttpInfo($request);
     }
     
@@ -2906,10 +2812,6 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2924,6 +2826,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -2939,7 +2842,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneRemoveDomainPermissionFromGroupAsync($request){
+    public function keystoneRemoveDomainPermissionFromGroupAsync($request)
+    {
         return $this->keystoneRemoveDomainPermissionFromGroupAsyncWithHttpInfo($request);
     }
     
@@ -2959,9 +2863,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -2971,7 +2872,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2987,6 +2887,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -3002,7 +2903,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneRemoveProjectPermissionFromGroupAsync($request){
+    public function keystoneRemoveProjectPermissionFromGroupAsync($request)
+    {
         return $this->keystoneRemoveProjectPermissionFromGroupAsyncWithHttpInfo($request);
     }
     
@@ -3022,9 +2924,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -3034,7 +2933,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3050,6 +2948,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -3065,7 +2964,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneRemoveUserFromGroupAsync($request){
+    public function keystoneRemoveUserFromGroupAsync($request)
+    {
         return $this->keystoneRemoveUserFromGroupAsyncWithHttpInfo($request);
     }
     
@@ -3085,16 +2985,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3110,6 +3006,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -3125,7 +3022,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneShowCatalogAsync($request){
+    public function keystoneShowCatalogAsync($request)
+    {
         return $this->keystoneShowCatalogAsyncWithHttpInfo($request);
     }
     
@@ -3146,10 +3044,6 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -3164,6 +3058,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3179,7 +3074,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneShowEndpointAsync($request){
+    public function keystoneShowEndpointAsync($request)
+    {
         return $this->keystoneShowEndpointAsyncWithHttpInfo($request);
     }
     
@@ -3199,13 +3095,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['endpointId'] !== null) {
             $pathParams['endpoint_id'] = $localVarParams['endpointId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3221,6 +3113,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3236,7 +3129,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneShowGroupAsync($request){
+    public function keystoneShowGroupAsync($request)
+    {
         return $this->keystoneShowGroupAsyncWithHttpInfo($request);
     }
     
@@ -3256,13 +3150,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3278,6 +3168,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3293,7 +3184,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneShowIdentityProviderAsync($request){
+    public function keystoneShowIdentityProviderAsync($request)
+    {
         return $this->keystoneShowIdentityProviderAsyncWithHttpInfo($request);
     }
     
@@ -3313,13 +3205,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3335,6 +3223,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3350,7 +3239,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneShowMappingAsync($request){
+    public function keystoneShowMappingAsync($request)
+    {
         return $this->keystoneShowMappingAsyncWithHttpInfo($request);
     }
     
@@ -3370,13 +3260,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3392,6 +3278,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3407,7 +3294,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneShowPermissionAsync($request){
+    public function keystoneShowPermissionAsync($request)
+    {
         return $this->keystoneShowPermissionAsyncWithHttpInfo($request);
     }
     
@@ -3427,13 +3315,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3449,6 +3333,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3464,7 +3349,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneShowProjectAsync($request){
+    public function keystoneShowProjectAsync($request)
+    {
         return $this->keystoneShowProjectAsyncWithHttpInfo($request);
     }
     
@@ -3484,13 +3370,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3506,6 +3388,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3521,7 +3404,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneShowProtocolAsync($request){
+    public function keystoneShowProtocolAsync($request)
+    {
         return $this->keystoneShowProtocolAsyncWithHttpInfo($request);
     }
     
@@ -3541,16 +3425,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3566,6 +3446,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3581,7 +3462,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneShowRegionAsync($request){
+    public function keystoneShowRegionAsync($request)
+    {
         return $this->keystoneShowRegionAsyncWithHttpInfo($request);
     }
     
@@ -3601,13 +3483,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['regionId'] !== null) {
             $pathParams['region_id'] = $localVarParams['regionId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3623,6 +3501,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3638,7 +3517,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneShowSecurityComplianceAsync($request){
+    public function keystoneShowSecurityComplianceAsync($request)
+    {
         return $this->keystoneShowSecurityComplianceAsyncWithHttpInfo($request);
     }
     
@@ -3658,13 +3538,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3680,6 +3556,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3695,7 +3572,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneShowSecurityComplianceByOptionAsync($request){
+    public function keystoneShowSecurityComplianceByOptionAsync($request)
+    {
         return $this->keystoneShowSecurityComplianceByOptionAsyncWithHttpInfo($request);
     }
     
@@ -3715,16 +3593,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
         if ($localVarParams['option'] !== null) {
             $pathParams['option'] = $localVarParams['option'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3740,6 +3614,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3755,7 +3630,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneShowServiceAsync($request){
+    public function keystoneShowServiceAsync($request)
+    {
         return $this->keystoneShowServiceAsyncWithHttpInfo($request);
     }
     
@@ -3775,13 +3651,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['serviceId'] !== null) {
             $pathParams['service_id'] = $localVarParams['serviceId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3797,6 +3669,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3812,7 +3685,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneShowVersionAsync($request){
+    public function keystoneShowVersionAsync($request)
+    {
         return $this->keystoneShowVersionAsyncWithHttpInfo($request);
     }
     
@@ -3833,10 +3707,6 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -3851,6 +3721,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -3866,7 +3737,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneUpdateGroupAsync($request){
+    public function keystoneUpdateGroupAsync($request)
+    {
         return $this->keystoneUpdateGroupAsyncWithHttpInfo($request);
     }
     
@@ -3886,13 +3758,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -3911,6 +3779,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -3926,7 +3795,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneUpdateIdentityProviderAsync($request){
+    public function keystoneUpdateIdentityProviderAsync($request)
+    {
         return $this->keystoneUpdateIdentityProviderAsyncWithHttpInfo($request);
     }
     
@@ -3946,13 +3816,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -3971,6 +3837,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -3986,7 +3853,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneUpdateMappingAsync($request){
+    public function keystoneUpdateMappingAsync($request)
+    {
         return $this->keystoneUpdateMappingAsyncWithHttpInfo($request);
     }
     
@@ -4006,13 +3874,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -4031,6 +3895,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -4046,7 +3911,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneUpdateProjectAsync($request){
+    public function keystoneUpdateProjectAsync($request)
+    {
         return $this->keystoneUpdateProjectAsyncWithHttpInfo($request);
     }
     
@@ -4066,13 +3932,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -4091,6 +3953,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -4106,7 +3969,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneUpdateProtocolAsync($request){
+    public function keystoneUpdateProtocolAsync($request)
+    {
         return $this->keystoneUpdateProtocolAsyncWithHttpInfo($request);
     }
     
@@ -4126,16 +3990,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -4154,6 +4014,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -4169,7 +4030,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listAgenciesAsync($request){
+    public function listAgenciesAsync($request)
+    {
         return $this->listAgenciesAsyncWithHttpInfo($request);
     }
     
@@ -4189,7 +4051,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['domainId'] !== null) {
             $queryParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -4199,9 +4060,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4217,6 +4075,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4232,7 +4091,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listAllProjectsPermissionsForAgencyAsync($request){
+    public function listAllProjectsPermissionsForAgencyAsync($request)
+    {
         return $this->listAllProjectsPermissionsForAgencyAsyncWithHttpInfo($request);
     }
     
@@ -4252,16 +4112,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4277,6 +4133,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4292,7 +4149,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listCustomPoliciesAsync($request){
+    public function listCustomPoliciesAsync($request)
+    {
         return $this->listCustomPoliciesAsyncWithHttpInfo($request);
     }
     
@@ -4312,16 +4170,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['page'] !== null) {
             $queryParams['page'] = $localVarParams['page'];
         }
         if ($localVarParams['perPage'] !== null) {
             $queryParams['per_page'] = $localVarParams['perPage'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4337,6 +4191,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4352,7 +4207,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listDomainPermissionsForAgencyAsync($request){
+    public function listDomainPermissionsForAgencyAsync($request)
+    {
         return $this->listDomainPermissionsForAgencyAsyncWithHttpInfo($request);
     }
     
@@ -4372,16 +4228,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4397,6 +4249,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4412,7 +4265,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listProjectPermissionsForAgencyAsync($request){
+    public function listProjectPermissionsForAgencyAsync($request)
+    {
         return $this->listProjectPermissionsForAgencyAsyncWithHttpInfo($request);
     }
     
@@ -4432,16 +4286,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4457,6 +4307,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4472,7 +4323,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function removeAllProjectsPermissionFromAgencyAsync($request){
+    public function removeAllProjectsPermissionFromAgencyAsync($request)
+    {
         return $this->removeAllProjectsPermissionFromAgencyAsyncWithHttpInfo($request);
     }
     
@@ -4492,9 +4344,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
@@ -4504,7 +4353,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4520,6 +4368,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -4535,7 +4384,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function removeDomainPermissionFromAgencyAsync($request){
+    public function removeDomainPermissionFromAgencyAsync($request)
+    {
         return $this->removeDomainPermissionFromAgencyAsyncWithHttpInfo($request);
     }
     
@@ -4555,9 +4405,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -4567,7 +4414,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4583,6 +4429,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -4598,7 +4445,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function removeProjectPermissionFromAgencyAsync($request){
+    public function removeProjectPermissionFromAgencyAsync($request)
+    {
         return $this->removeProjectPermissionFromAgencyAsyncWithHttpInfo($request);
     }
     
@@ -4618,9 +4466,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -4630,7 +4475,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4646,6 +4490,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -4661,7 +4506,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showAgencyAsync($request){
+    public function showAgencyAsync($request)
+    {
         return $this->showAgencyAsyncWithHttpInfo($request);
     }
     
@@ -4681,13 +4527,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4703,6 +4545,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4718,7 +4561,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showCustomPolicyAsync($request){
+    public function showCustomPolicyAsync($request)
+    {
         return $this->showCustomPolicyAsyncWithHttpInfo($request);
     }
     
@@ -4738,13 +4582,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4760,6 +4600,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4775,7 +4616,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showDomainApiAclPolicyAsync($request){
+    public function showDomainApiAclPolicyAsync($request)
+    {
         return $this->showDomainApiAclPolicyAsyncWithHttpInfo($request);
     }
     
@@ -4795,13 +4637,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4817,6 +4655,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4832,7 +4671,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showDomainConsoleAclPolicyAsync($request){
+    public function showDomainConsoleAclPolicyAsync($request)
+    {
         return $this->showDomainConsoleAclPolicyAsyncWithHttpInfo($request);
     }
     
@@ -4852,13 +4692,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4874,6 +4710,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4889,7 +4726,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showDomainLoginPolicyAsync($request){
+    public function showDomainLoginPolicyAsync($request)
+    {
         return $this->showDomainLoginPolicyAsyncWithHttpInfo($request);
     }
     
@@ -4909,13 +4747,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4931,6 +4765,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -4946,7 +4781,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showDomainPasswordPolicyAsync($request){
+    public function showDomainPasswordPolicyAsync($request)
+    {
         return $this->showDomainPasswordPolicyAsyncWithHttpInfo($request);
     }
     
@@ -4966,13 +4802,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4988,6 +4820,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -5003,7 +4836,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showDomainProtectPolicyAsync($request){
+    public function showDomainProtectPolicyAsync($request)
+    {
         return $this->showDomainProtectPolicyAsyncWithHttpInfo($request);
     }
     
@@ -5023,13 +4857,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5045,6 +4875,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -5060,7 +4891,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showDomainQuotaAsync($request){
+    public function showDomainQuotaAsync($request)
+    {
         return $this->showDomainQuotaAsyncWithHttpInfo($request);
     }
     
@@ -5080,16 +4912,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5105,6 +4933,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -5120,7 +4949,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showMetadataAsync($request){
+    public function showMetadataAsync($request)
+    {
         return $this->showMetadataAsyncWithHttpInfo($request);
     }
     
@@ -5140,16 +4970,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
         }
         if ($localVarParams['protocolId'] !== null) {
             $pathParams['protocol_id'] = $localVarParams['protocolId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5165,6 +4991,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -5180,7 +5007,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showProjectDetailsAndStatusAsync($request){
+    public function showProjectDetailsAndStatusAsync($request)
+    {
         return $this->showProjectDetailsAndStatusAsyncWithHttpInfo($request);
     }
     
@@ -5200,13 +5028,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5222,6 +5046,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -5237,7 +5062,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showProjectQuotaAsync($request){
+    public function showProjectQuotaAsync($request)
+    {
         return $this->showProjectQuotaAsyncWithHttpInfo($request);
     }
     
@@ -5257,13 +5083,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5279,6 +5101,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -5294,7 +5117,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateAgencyAsync($request){
+    public function updateAgencyAsync($request)
+    {
         return $this->updateAgencyAsyncWithHttpInfo($request);
     }
     
@@ -5314,13 +5138,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['agencyId'] !== null) {
             $pathParams['agency_id'] = $localVarParams['agencyId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5339,6 +5159,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5354,7 +5175,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateAgencyCustomPolicyAsync($request){
+    public function updateAgencyCustomPolicyAsync($request)
+    {
         return $this->updateAgencyCustomPolicyAsyncWithHttpInfo($request);
     }
     
@@ -5374,13 +5196,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5399,6 +5217,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -5414,7 +5233,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateCloudServiceCustomPolicyAsync($request){
+    public function updateCloudServiceCustomPolicyAsync($request)
+    {
         return $this->updateCloudServiceCustomPolicyAsyncWithHttpInfo($request);
     }
     
@@ -5434,13 +5254,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5459,6 +5275,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -5474,7 +5291,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateDomainApiAclPolicyAsync($request){
+    public function updateDomainApiAclPolicyAsync($request)
+    {
         return $this->updateDomainApiAclPolicyAsyncWithHttpInfo($request);
     }
     
@@ -5494,13 +5312,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5519,6 +5333,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5534,7 +5349,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateDomainConsoleAclPolicyAsync($request){
+    public function updateDomainConsoleAclPolicyAsync($request)
+    {
         return $this->updateDomainConsoleAclPolicyAsyncWithHttpInfo($request);
     }
     
@@ -5554,13 +5370,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5579,6 +5391,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5594,7 +5407,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateDomainGroupInheritRoleAsync($request){
+    public function updateDomainGroupInheritRoleAsync($request)
+    {
         return $this->updateDomainGroupInheritRoleAsyncWithHttpInfo($request);
     }
     
@@ -5614,9 +5428,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -5626,7 +5437,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['roleId'] !== null) {
             $pathParams['role_id'] = $localVarParams['roleId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5642,6 +5452,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5657,7 +5468,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateDomainLoginPolicyAsync($request){
+    public function updateDomainLoginPolicyAsync($request)
+    {
         return $this->updateDomainLoginPolicyAsyncWithHttpInfo($request);
     }
     
@@ -5677,13 +5489,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5702,6 +5510,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5717,7 +5526,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateDomainPasswordPolicyAsync($request){
+    public function updateDomainPasswordPolicyAsync($request)
+    {
         return $this->updateDomainPasswordPolicyAsyncWithHttpInfo($request);
     }
     
@@ -5737,13 +5547,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5762,6 +5568,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5777,7 +5584,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateDomainProtectPolicyAsync($request){
+    public function updateDomainProtectPolicyAsync($request)
+    {
         return $this->updateDomainProtectPolicyAsyncWithHttpInfo($request);
     }
     
@@ -5797,13 +5605,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5822,6 +5626,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5837,7 +5642,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateProjectStatusAsync($request){
+    public function updateProjectStatusAsync($request)
+    {
         return $this->updateProjectStatusAsyncWithHttpInfo($request);
     }
     
@@ -5857,13 +5663,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5882,6 +5684,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -5897,7 +5700,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createPermanentAccessKeyAsync($request){
+    public function createPermanentAccessKeyAsync($request)
+    {
         return $this->createPermanentAccessKeyAsyncWithHttpInfo($request);
     }
     
@@ -5917,10 +5721,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5939,6 +5739,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -5954,7 +5755,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createTemporaryAccessKeyByAgencyAsync($request){
+    public function createTemporaryAccessKeyByAgencyAsync($request)
+    {
         return $this->createTemporaryAccessKeyByAgencyAsyncWithHttpInfo($request);
     }
     
@@ -5974,10 +5776,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5996,6 +5794,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -6011,7 +5810,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createTemporaryAccessKeyByTokenAsync($request){
+    public function createTemporaryAccessKeyByTokenAsync($request)
+    {
         return $this->createTemporaryAccessKeyByTokenAsyncWithHttpInfo($request);
     }
     
@@ -6031,10 +5831,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6053,6 +5849,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -6068,7 +5865,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deletePermanentAccessKeyAsync($request){
+    public function deletePermanentAccessKeyAsync($request)
+    {
         return $this->deletePermanentAccessKeyAsyncWithHttpInfo($request);
     }
     
@@ -6088,13 +5886,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['accessKey'] !== null) {
             $pathParams['access_key'] = $localVarParams['accessKey'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6110,6 +5904,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -6125,7 +5920,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listPermanentAccessKeysAsync($request){
+    public function listPermanentAccessKeysAsync($request)
+    {
         return $this->listPermanentAccessKeysAsyncWithHttpInfo($request);
     }
     
@@ -6145,13 +5941,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['userId'] !== null) {
             $queryParams['user_id'] = $localVarParams['userId'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6167,6 +5959,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -6182,7 +5975,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showPermanentAccessKeyAsync($request){
+    public function showPermanentAccessKeyAsync($request)
+    {
         return $this->showPermanentAccessKeyAsyncWithHttpInfo($request);
     }
     
@@ -6202,13 +5996,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['accessKey'] !== null) {
             $pathParams['access_key'] = $localVarParams['accessKey'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6224,6 +6014,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -6239,7 +6030,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updatePermanentAccessKeyAsync($request){
+    public function updatePermanentAccessKeyAsync($request)
+    {
         return $this->updatePermanentAccessKeyAsyncWithHttpInfo($request);
     }
     
@@ -6259,13 +6051,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['accessKey'] !== null) {
             $pathParams['access_key'] = $localVarParams['accessKey'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6284,6 +6072,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -6299,7 +6088,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createBindingDeviceAsync($request){
+    public function createBindingDeviceAsync($request)
+    {
         return $this->createBindingDeviceAsyncWithHttpInfo($request);
     }
     
@@ -6319,10 +6109,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6341,6 +6127,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -6356,7 +6143,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createMfaDeviceAsync($request){
+    public function createMfaDeviceAsync($request)
+    {
         return $this->createMfaDeviceAsyncWithHttpInfo($request);
     }
     
@@ -6376,10 +6164,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6398,6 +6182,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -6413,7 +6198,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createUserAsync($request){
+    public function createUserAsync($request)
+    {
         return $this->createUserAsyncWithHttpInfo($request);
     }
     
@@ -6433,10 +6219,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6455,6 +6237,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -6470,7 +6253,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteBindingDeviceAsync($request){
+    public function deleteBindingDeviceAsync($request)
+    {
         return $this->deleteBindingDeviceAsyncWithHttpInfo($request);
     }
     
@@ -6490,10 +6274,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6512,6 +6292,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -6527,7 +6308,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function deleteMfaDeviceAsync($request){
+    public function deleteMfaDeviceAsync($request)
+    {
         return $this->deleteMfaDeviceAsyncWithHttpInfo($request);
     }
     
@@ -6547,16 +6329,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['userId'] !== null) {
             $queryParams['user_id'] = $localVarParams['userId'];
         }
         if ($localVarParams['serialNumber'] !== null) {
             $queryParams['serial_number'] = $localVarParams['serialNumber'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6572,6 +6350,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -6587,7 +6366,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneCreateUserAsync($request){
+    public function keystoneCreateUserAsync($request)
+    {
         return $this->keystoneCreateUserAsyncWithHttpInfo($request);
     }
     
@@ -6607,10 +6387,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6629,6 +6405,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -6644,7 +6421,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneDeleteUserAsync($request){
+    public function keystoneDeleteUserAsync($request)
+    {
         return $this->keystoneDeleteUserAsyncWithHttpInfo($request);
     }
     
@@ -6664,13 +6442,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6686,6 +6460,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='DELETE',
             $resourcePath,
@@ -6701,7 +6476,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListGroupsForUserAsync($request){
+    public function keystoneListGroupsForUserAsync($request)
+    {
         return $this->keystoneListGroupsForUserAsyncWithHttpInfo($request);
     }
     
@@ -6721,13 +6497,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6743,6 +6515,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -6758,7 +6531,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneListUsersAsync($request){
+    public function keystoneListUsersAsync($request)
+    {
         return $this->keystoneListUsersAsyncWithHttpInfo($request);
     }
     
@@ -6778,7 +6552,6 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['domainId'] !== null) {
             $queryParams['domain_id'] = $localVarParams['domainId'];
         }
@@ -6791,9 +6564,6 @@ class IamAsyncClient extends Client
         if ($localVarParams['passwordExpiresAt'] !== null) {
             $queryParams['password_expires_at'] = $localVarParams['passwordExpiresAt'];
         }
-
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6809,6 +6579,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -6824,7 +6595,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneShowUserAsync($request){
+    public function keystoneShowUserAsync($request)
+    {
         return $this->keystoneShowUserAsyncWithHttpInfo($request);
     }
     
@@ -6844,13 +6616,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6866,6 +6634,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -6881,7 +6650,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneUpdateUserByAdminAsync($request){
+    public function keystoneUpdateUserByAdminAsync($request)
+    {
         return $this->keystoneUpdateUserByAdminAsyncWithHttpInfo($request);
     }
     
@@ -6901,13 +6671,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6926,6 +6692,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PATCH',
             $resourcePath,
@@ -6941,7 +6708,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneUpdateUserPasswordAsync($request){
+    public function keystoneUpdateUserPasswordAsync($request)
+    {
         return $this->keystoneUpdateUserPasswordAsyncWithHttpInfo($request);
     }
     
@@ -6961,13 +6729,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6986,6 +6750,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -7001,7 +6766,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listUserLoginProtectsAsync($request){
+    public function listUserLoginProtectsAsync($request)
+    {
         return $this->listUserLoginProtectsAsyncWithHttpInfo($request);
     }
     
@@ -7022,10 +6788,6 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -7040,6 +6802,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -7055,7 +6818,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function listUserMfaDevicesAsync($request){
+    public function listUserMfaDevicesAsync($request)
+    {
         return $this->listUserMfaDevicesAsyncWithHttpInfo($request);
     }
     
@@ -7076,10 +6840,6 @@ class IamAsyncClient extends Client
             $localVarParams[$k] = $value;
         }
 
-
-
-
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -7094,6 +6854,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -7109,7 +6870,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showUserAsync($request){
+    public function showUserAsync($request)
+    {
         return $this->showUserAsyncWithHttpInfo($request);
     }
     
@@ -7129,13 +6891,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -7151,6 +6909,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -7166,7 +6925,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showUserLoginProtectAsync($request){
+    public function showUserLoginProtectAsync($request)
+    {
         return $this->showUserLoginProtectAsyncWithHttpInfo($request);
     }
     
@@ -7186,13 +6946,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -7208,6 +6964,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -7223,7 +6980,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function showUserMfaDeviceAsync($request){
+    public function showUserMfaDeviceAsync($request)
+    {
         return $this->showUserMfaDeviceAsyncWithHttpInfo($request);
     }
     
@@ -7243,13 +7001,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -7265,6 +7019,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,
@@ -7280,7 +7035,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateLoginProtectAsync($request){
+    public function updateLoginProtectAsync($request)
+    {
         return $this->updateLoginProtectAsyncWithHttpInfo($request);
     }
     
@@ -7300,13 +7056,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -7325,6 +7077,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -7340,7 +7093,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateUserAsync($request){
+    public function updateUserAsync($request)
+    {
         return $this->updateUserAsyncWithHttpInfo($request);
     }
     
@@ -7360,13 +7114,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -7385,6 +7135,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -7400,7 +7151,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function updateUserInformationAsync($request){
+    public function updateUserInformationAsync($request)
+    {
         return $this->updateUserInformationAsyncWithHttpInfo($request);
     }
     
@@ -7420,13 +7172,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
-
-
         if ($localVarParams['userId'] !== null) {
             $pathParams['user_id'] = $localVarParams['userId'];
         }
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -7445,6 +7193,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='PUT',
             $resourcePath,
@@ -7460,7 +7209,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneCreateAgencyTokenAsync($request){
+    public function keystoneCreateAgencyTokenAsync($request)
+    {
         return $this->keystoneCreateAgencyTokenAsyncWithHttpInfo($request);
     }
     
@@ -7480,13 +7230,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['nocatalog'] !== null) {
             $queryParams['nocatalog'] = $localVarParams['nocatalog'];
         }
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -7505,6 +7251,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -7520,7 +7267,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneCreateUserTokenByPasswordAsync($request){
+    public function keystoneCreateUserTokenByPasswordAsync($request)
+    {
         return $this->keystoneCreateUserTokenByPasswordAsyncWithHttpInfo($request);
     }
     
@@ -7540,13 +7288,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['nocatalog'] !== null) {
             $queryParams['nocatalog'] = $localVarParams['nocatalog'];
         }
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -7565,6 +7309,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -7580,7 +7325,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneCreateUserTokenByPasswordAndMfaAsync($request){
+    public function keystoneCreateUserTokenByPasswordAndMfaAsync($request)
+    {
         return $this->keystoneCreateUserTokenByPasswordAndMfaAsyncWithHttpInfo($request);
     }
     
@@ -7600,13 +7346,9 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['nocatalog'] !== null) {
             $queryParams['nocatalog'] = $localVarParams['nocatalog'];
         }
-
-
-
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -7625,6 +7367,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='POST',
             $resourcePath,
@@ -7640,7 +7383,8 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function keystoneValidateTokenAsync($request){
+    public function keystoneValidateTokenAsync($request)
+    {
         return $this->keystoneValidateTokenAsyncWithHttpInfo($request);
     }
     
@@ -7660,16 +7404,12 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($localVarParams['nocatalog'] !== null) {
             $queryParams['nocatalog'] = $localVarParams['nocatalog'];
         }
-
         if ($localVarParams['xSubjectToken'] !== null) {
             $headerParams['x_subject_token'] = $localVarParams['xSubjectToken'];
         }
-
-
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -7685,6 +7425,7 @@ class IamAsyncClient extends Client
             $headerParams,
             $headers
         );
+
         return $this->callApi(
             $method='GET',
             $resourcePath,

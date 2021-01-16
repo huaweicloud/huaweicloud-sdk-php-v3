@@ -1,0 +1,30 @@
+{
+  "name": "huaweicloud/huaweicloud-sdk-evs",
+  "description": "HUAWEICLOUD SDK EVS",
+  "keywords": [
+    "php",
+    "sdk",
+    "rest",
+    "api",
+    "evs"
+  ],
+  "version": "3.0.4-beta",
+   "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "HuaweiCloud_SDK",
+      "email": "hwcloudsdk@huawei.com",
+      "homepage": "https://sdkcenter.developer.huaweicloud.com/?language=PHP"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "huaweicloud/huaweicloud-sdk-core": "3.0.4-beta"
+  },
+  "autoload": {
+    "psr-4": {
+      "HuaweiCloud\\SDK\\Evs\\V3\\": "V3/"
+    }
+  }
+}

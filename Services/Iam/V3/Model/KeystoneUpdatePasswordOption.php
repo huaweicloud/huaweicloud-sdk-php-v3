@@ -9,7 +9,6 @@ use HuaweiCloud\SDK\Core\SdkResponse;
 
 class KeystoneUpdatePasswordOption implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -35,8 +34,8 @@ class KeystoneUpdatePasswordOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'password' => null,
-        'originalPassword' => null
+        'password' => 'password',
+        'originalPassword' => 'password'
     ];
 
     /**
