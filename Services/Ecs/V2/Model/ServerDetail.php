@@ -26,6 +26,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'status' => 'string',
             'updated' => 'string',
+            'autoTerminateTime' => 'string',
             'hostId' => 'string',
             'osExtSrvAttRhost' => 'string',
             'addresses' => 'map[string,\HuaweiCloud\SDK\Ecs\V2\Model\ServerAddress[]]',
@@ -78,6 +79,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'status' => null,
         'updated' => null,
+        'autoTerminateTime' => null,
         'hostId' => null,
         'osExtSrvAttRhost' => null,
         'addresses' => null,
@@ -151,6 +153,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'status' => 'status',
             'updated' => 'updated',
+            'autoTerminateTime' => 'auto_terminate_time',
             'hostId' => 'hostId',
             'osExtSrvAttRhost' => 'OS-EXT-SRV-ATTR:host',
             'addresses' => 'addresses',
@@ -203,6 +206,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     protected static $setters = [
             'status' => 'setStatus',
             'updated' => 'setUpdated',
+            'autoTerminateTime' => 'setAutoTerminateTime',
             'hostId' => 'setHostId',
             'osExtSrvAttRhost' => 'setOsExtSrvAttRhost',
             'addresses' => 'setAddresses',
@@ -255,6 +259,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     protected static $getters = [
             'status' => 'getStatus',
             'updated' => 'getUpdated',
+            'autoTerminateTime' => 'getAutoTerminateTime',
             'hostId' => 'getHostId',
             'osExtSrvAttRhost' => 'getOsExtSrvAttRhost',
             'addresses' => 'getAddresses',
@@ -359,6 +364,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
+        $this->container['autoTerminateTime'] = isset($data['autoTerminateTime']) ? $data['autoTerminateTime'] : null;
         $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
         $this->container['osExtSrvAttRhost'] = isset($data['osExtSrvAttRhost']) ? $data['osExtSrvAttRhost'] : null;
         $this->container['addresses'] = isset($data['addresses']) ? $data['addresses'] : null;
@@ -416,6 +422,9 @@ class ServerDetail implements ModelInterface, ArrayAccess
         }
         if ($this->container['updated'] === null) {
             $invalidProperties[] = "'updated' can't be null";
+        }
+        if ($this->container['autoTerminateTime'] === null) {
+            $invalidProperties[] = "'autoTerminateTime' can't be null";
         }
         if ($this->container['hostId'] === null) {
             $invalidProperties[] = "'hostId' can't be null";
@@ -570,6 +579,29 @@ class ServerDetail implements ModelInterface, ArrayAccess
     public function setUpdated($updated)
     {
         $this->container['updated'] = $updated;
+        return $this;
+    }
+
+    /**
+    * Gets autoTerminateTime
+    *
+    * @return string
+    */
+    public function getAutoTerminateTime()
+    {
+        return $this->container['autoTerminateTime'];
+    }
+
+    /**
+    * Sets autoTerminateTime
+    *
+    * @param string $autoTerminateTime 弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    *
+    * @return $this
+    */
+    public function setAutoTerminateTime($autoTerminateTime)
+    {
+        $this->container['autoTerminateTime'] = $autoTerminateTime;
         return $this;
     }
 

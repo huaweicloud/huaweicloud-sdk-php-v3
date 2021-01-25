@@ -24,6 +24,7 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'autoTerminateTime' => 'string',
             'imageRef' => 'string',
             'flavorRef' => 'string',
             'name' => 'string',
@@ -49,6 +50,7 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'autoTerminateTime' => null,
         'imageRef' => null,
         'flavorRef' => null,
         'name' => null,
@@ -95,6 +97,7 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'autoTerminateTime' => 'auto_terminate_time',
             'imageRef' => 'imageRef',
             'flavorRef' => 'flavorRef',
             'name' => 'name',
@@ -120,6 +123,7 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'autoTerminateTime' => 'setAutoTerminateTime',
             'imageRef' => 'setImageRef',
             'flavorRef' => 'setFlavorRef',
             'name' => 'setName',
@@ -145,6 +149,7 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'autoTerminateTime' => 'getAutoTerminateTime',
             'imageRef' => 'getImageRef',
             'flavorRef' => 'getFlavorRef',
             'name' => 'getName',
@@ -237,6 +242,7 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['autoTerminateTime'] = isset($data['autoTerminateTime']) ? $data['autoTerminateTime'] : null;
         $this->container['imageRef'] = isset($data['imageRef']) ? $data['imageRef'] : null;
         $this->container['flavorRef'] = isset($data['flavorRef']) ? $data['flavorRef'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -311,6 +317,29 @@ class NovaCreateServersOption implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets autoTerminateTime
+    *
+    * @return string|null
+    */
+    public function getAutoTerminateTime()
+    {
+        return $this->container['autoTerminateTime'];
+    }
+
+    /**
+    * Sets autoTerminateTime
+    *
+    * @param string|null $autoTerminateTime 弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
+    *
+    * @return $this
+    */
+    public function setAutoTerminateTime($autoTerminateTime)
+    {
+        $this->container['autoTerminateTime'] = $autoTerminateTime;
+        return $this;
     }
 
     /**

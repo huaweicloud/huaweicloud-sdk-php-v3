@@ -33,8 +33,8 @@ class HttpConfig
     public $certFile = '';
 
     public $keyFile = '';
-    public $timeout = 10;
-    public $connectTimeout = 10;
+    public $timeout = 120;
+    public $connectTimeout = 60;
     public $poolConnections = 1;
     public $poolMaxsize = 1;
 
