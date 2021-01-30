@@ -1,3 +1,30 @@
+# 3.0.6-beta 2021-01-30
+## HuaweiCloud SDK ECS
+- ### Features
+    - None
+- ### Bug Fix
+    - None
+- ### Change
+    - Change interface name from `UpdateAutoTerminateTimeServer` to `UpdateServerAutoTerminateTime`.
+
+## HuaweiCloud SDK EVS
+- ### Features
+    - None
+- ### Bug Fix
+    - None
+- ### Change
+    - Interface `CinderCreateVolume` is supported to specify the id of dedicated storage pool using property `OS-SCH-HNT:scheduler_hints`.
+    - Modify property type of `allocated` of class `QuotaDetails` from `String` to `Integer`.
+
+## HuaweiCloud SDK IAM
+- ### Features
+    - None
+- ### Bug Fix
+    - None
+- ### Change
+    - Increases the property `access_mode` of response class of interface `ShowUser`.
+
+
 # 3.0.5-beta 2021-01-25
 ## HuaweiCloud SDK Core
 - ### Features

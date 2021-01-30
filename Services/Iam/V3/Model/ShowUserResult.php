@@ -40,6 +40,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'lastLoginTime' => 'string',
             'pwdStength' => 'string',
             'isDomainOwner' => 'bool',
+            'accessMode' => 'string',
             'description' => 'string'
     ];
 
@@ -65,6 +66,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
         'lastLoginTime' => null,
         'pwdStength' => null,
         'isDomainOwner' => null,
+        'accessMode' => null,
         'description' => null
     ];
 
@@ -111,6 +113,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'lastLoginTime' => 'last_login_time',
             'pwdStength' => 'pwd_stength',
             'isDomainOwner' => 'is_domain_owner',
+            'accessMode' => 'access_mode',
             'description' => 'description'
     ];
 
@@ -136,6 +139,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'lastLoginTime' => 'setLastLoginTime',
             'pwdStength' => 'setPwdStength',
             'isDomainOwner' => 'setIsDomainOwner',
+            'accessMode' => 'setAccessMode',
             'description' => 'setDescription'
     ];
 
@@ -161,6 +165,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'lastLoginTime' => 'getLastLoginTime',
             'pwdStength' => 'getPwdStength',
             'isDomainOwner' => 'getIsDomainOwner',
+            'accessMode' => 'getAccessMode',
             'description' => 'getDescription'
     ];
 
@@ -238,6 +243,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
         $this->container['lastLoginTime'] = isset($data['lastLoginTime']) ? $data['lastLoginTime'] : null;
         $this->container['pwdStength'] = isset($data['pwdStength']) ? $data['pwdStength'] : null;
         $this->container['isDomainOwner'] = isset($data['isDomainOwner']) ? $data['isDomainOwner'] : null;
+        $this->container['accessMode'] = isset($data['accessMode']) ? $data['accessMode'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
@@ -266,6 +272,9 @@ class ShowUserResult implements ModelInterface, ArrayAccess
         }
         if ($this->container['isDomainOwner'] === null) {
             $invalidProperties[] = "'isDomainOwner' can't be null";
+        }
+        if ($this->container['accessMode'] === null) {
+            $invalidProperties[] = "'accessMode' can't be null";
         }
         if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
@@ -649,6 +658,29 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     public function setIsDomainOwner($isDomainOwner)
     {
         $this->container['isDomainOwner'] = $isDomainOwner;
+        return $this;
+    }
+
+    /**
+    * Gets accessMode
+    *
+    * @return string
+    */
+    public function getAccessMode()
+    {
+        return $this->container['accessMode'];
+    }
+
+    /**
+    * Sets accessMode
+    *
+    * @param string $accessMode IAM用户访问模式。
+    *
+    * @return $this
+    */
+    public function setAccessMode($accessMode)
+    {
+        $this->container['accessMode'] = $accessMode;
         return $this;
     }
 

@@ -27,7 +27,7 @@ class QuotaDetailSnapshotsSAS implements ModelInterface, ArrayAccess
             'inUse' => 'int',
             'limit' => 'int',
             'reserved' => 'int',
-            'allocated' => 'string'
+            'allocated' => 'int'
     ];
 
     /**
@@ -39,7 +39,7 @@ class QuotaDetailSnapshotsSAS implements ModelInterface, ArrayAccess
         'inUse' => 'int32',
         'limit' => 'int32',
         'reserved' => 'int32',
-        'allocated' => null
+        'allocated' => 'int32'
     ];
 
     /**
@@ -269,7 +269,7 @@ class QuotaDetailSnapshotsSAS implements ModelInterface, ArrayAccess
     /**
     * Gets allocated
     *
-    * @return string
+    * @return int
     */
     public function getAllocated()
     {
@@ -279,7 +279,7 @@ class QuotaDetailSnapshotsSAS implements ModelInterface, ArrayAccess
     /**
     * Sets allocated
     *
-    * @param string $allocated 预留属性。
+    * @param int $allocated 预留属性。
     *
     * @return $this
     */

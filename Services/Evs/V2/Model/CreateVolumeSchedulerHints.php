@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ecs\V2\Model;
+namespace HuaweiCloud\SDK\Evs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpdateAutoTerminateTimeServerRequestBody implements ModelInterface, ArrayAccess
+class CreateVolumeSchedulerHints implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class UpdateAutoTerminateTimeServerRequestBody implements ModelInterface, ArrayA
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpdateAutoTerminateTimeServerRequestBody';
+    protected static $openAPIModelName = 'CreateVolumeSchedulerHints';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
@@ -24,7 +24,7 @@ class UpdateAutoTerminateTimeServerRequestBody implements ModelInterface, ArrayA
     * @var string[]
     */
     protected static $openAPITypes = [
-            'autoTerminateTime' => 'string'
+            'dedicatedStorageId' => 'string'
     ];
 
     /**
@@ -33,7 +33,7 @@ class UpdateAutoTerminateTimeServerRequestBody implements ModelInterface, ArrayA
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'autoTerminateTime' => null
+        'dedicatedStorageId' => null
     ];
 
     /**
@@ -63,7 +63,7 @@ class UpdateAutoTerminateTimeServerRequestBody implements ModelInterface, ArrayA
     * @var string[]
     */
     protected static $attributeMap = [
-            'autoTerminateTime' => 'auto_terminate_time'
+            'dedicatedStorageId' => 'dedicated_storage_id'
     ];
 
     /**
@@ -72,7 +72,7 @@ class UpdateAutoTerminateTimeServerRequestBody implements ModelInterface, ArrayA
     * @var string[]
     */
     protected static $setters = [
-            'autoTerminateTime' => 'setAutoTerminateTime'
+            'dedicatedStorageId' => 'setDedicatedStorageId'
     ];
 
     /**
@@ -81,7 +81,7 @@ class UpdateAutoTerminateTimeServerRequestBody implements ModelInterface, ArrayA
     * @var string[]
     */
     protected static $getters = [
-            'autoTerminateTime' => 'getAutoTerminateTime'
+            'dedicatedStorageId' => 'getDedicatedStorageId'
     ];
 
     /**
@@ -142,7 +142,7 @@ class UpdateAutoTerminateTimeServerRequestBody implements ModelInterface, ArrayA
     */
     public function __construct(array $data = null)
     {
-        $this->container['autoTerminateTime'] = isset($data['autoTerminateTime']) ? $data['autoTerminateTime'] : null;
+        $this->container['dedicatedStorageId'] = isset($data['dedicatedStorageId']) ? $data['dedicatedStorageId'] : null;
     }
 
     /**
@@ -153,9 +153,6 @@ class UpdateAutoTerminateTimeServerRequestBody implements ModelInterface, ArrayA
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['autoTerminateTime'] === null) {
-            $invalidProperties[] = "'autoTerminateTime' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -171,25 +168,25 @@ class UpdateAutoTerminateTimeServerRequestBody implements ModelInterface, ArrayA
     }
 
     /**
-    * Gets autoTerminateTime
+    * Gets dedicatedStorageId
     *
-    * @return string
+    * @return string|null
     */
-    public function getAutoTerminateTime()
+    public function getDedicatedStorageId()
     {
-        return $this->container['autoTerminateTime'];
+        return $this->container['dedicatedStorageId'];
     }
 
     /**
-    * Sets autoTerminateTime
+    * Sets dedicatedStorageId
     *
-    * @param string $autoTerminateTime 销毁时间
+    * @param string|null $dedicatedStorageId 指定专属存储池ID，表示将云硬盘创建在该ID对应的存储池中。
     *
     * @return $this
     */
-    public function setAutoTerminateTime($autoTerminateTime)
+    public function setDedicatedStorageId($dedicatedStorageId)
     {
-        $this->container['autoTerminateTime'] = $autoTerminateTime;
+        $this->container['dedicatedStorageId'] = $dedicatedStorageId;
         return $this;
     }
 

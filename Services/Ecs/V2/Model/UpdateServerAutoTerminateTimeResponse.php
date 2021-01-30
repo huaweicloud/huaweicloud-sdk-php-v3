@@ -7,8 +7,9 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpdateAutoTerminateTimeServerRequest implements ModelInterface, ArrayAccess
+class UpdateServerAutoTerminateTimeResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,7 +17,7 @@ class UpdateAutoTerminateTimeServerRequest implements ModelInterface, ArrayAcces
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpdateAutoTerminateTimeServerRequest';
+    protected static $openAPIModelName = 'UpdateServerAutoTerminateTimeResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
@@ -24,8 +25,6 @@ class UpdateAutoTerminateTimeServerRequest implements ModelInterface, ArrayAcces
     * @var string[]
     */
     protected static $openAPITypes = [
-            'serverId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Ecs\V2\Model\UpdateAutoTerminateTimeServerRequestBody'
     ];
 
     /**
@@ -34,8 +33,6 @@ class UpdateAutoTerminateTimeServerRequest implements ModelInterface, ArrayAcces
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'serverId' => null,
-        'body' => null
     ];
 
     /**
@@ -65,8 +62,6 @@ class UpdateAutoTerminateTimeServerRequest implements ModelInterface, ArrayAcces
     * @var string[]
     */
     protected static $attributeMap = [
-            'serverId' => 'server_id',
-            'body' => 'body'
     ];
 
     /**
@@ -75,8 +70,6 @@ class UpdateAutoTerminateTimeServerRequest implements ModelInterface, ArrayAcces
     * @var string[]
     */
     protected static $setters = [
-            'serverId' => 'setServerId',
-            'body' => 'setBody'
     ];
 
     /**
@@ -85,8 +78,6 @@ class UpdateAutoTerminateTimeServerRequest implements ModelInterface, ArrayAcces
     * @var string[]
     */
     protected static $getters = [
-            'serverId' => 'getServerId',
-            'body' => 'getBody'
     ];
 
     /**
@@ -147,8 +138,6 @@ class UpdateAutoTerminateTimeServerRequest implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
-        $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -159,9 +148,6 @@ class UpdateAutoTerminateTimeServerRequest implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['serverId'] === null) {
-            $invalidProperties[] = "'serverId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -174,52 +160,6 @@ class UpdateAutoTerminateTimeServerRequest implements ModelInterface, ArrayAcces
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets serverId
-    *
-    * @return string
-    */
-    public function getServerId()
-    {
-        return $this->container['serverId'];
-    }
-
-    /**
-    * Sets serverId
-    *
-    * @param string $serverId serverId
-    *
-    * @return $this
-    */
-    public function setServerId($serverId)
-    {
-        $this->container['serverId'] = $serverId;
-        return $this;
-    }
-
-    /**
-    * Gets body
-    *
-    * @return \HuaweiCloud\SDK\Ecs\V2\Model\UpdateAutoTerminateTimeServerRequestBody|null
-    */
-    public function getBody()
-    {
-        return $this->container['body'];
-    }
-
-    /**
-    * Sets body
-    *
-    * @param \HuaweiCloud\SDK\Ecs\V2\Model\UpdateAutoTerminateTimeServerRequestBody|null $body body
-    *
-    * @return $this
-    */
-    public function setBody($body)
-    {
-        $this->container['body'] = $body;
-        return $this;
     }
 
     /**

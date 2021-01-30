@@ -26,7 +26,8 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'bssParam' => '\HuaweiCloud\SDK\Evs\V2\Model\BssParamForCreateVolume',
             'volume' => '\HuaweiCloud\SDK\Evs\V2\Model\CreateVolumeOption',
-            'serverId' => 'string'
+            'serverId' => 'string',
+            'osSchHnTschedulerHints' => '\HuaweiCloud\SDK\Evs\V2\Model\CreateVolumeSchedulerHints'
     ];
 
     /**
@@ -37,7 +38,8 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'bssParam' => null,
         'volume' => null,
-        'serverId' => null
+        'serverId' => null,
+        'osSchHnTschedulerHints' => null
     ];
 
     /**
@@ -69,7 +71,8 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'bssParam' => 'bssParam',
             'volume' => 'volume',
-            'serverId' => 'server_id'
+            'serverId' => 'server_id',
+            'osSchHnTschedulerHints' => 'OS-SCH-HNT:scheduler_hints'
     ];
 
     /**
@@ -80,7 +83,8 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
     protected static $setters = [
             'bssParam' => 'setBssParam',
             'volume' => 'setVolume',
-            'serverId' => 'setServerId'
+            'serverId' => 'setServerId',
+            'osSchHnTschedulerHints' => 'setOsSchHnTschedulerHints'
     ];
 
     /**
@@ -91,7 +95,8 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
     protected static $getters = [
             'bssParam' => 'getBssParam',
             'volume' => 'getVolume',
-            'serverId' => 'getServerId'
+            'serverId' => 'getServerId',
+            'osSchHnTschedulerHints' => 'getOsSchHnTschedulerHints'
     ];
 
     /**
@@ -155,6 +160,7 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
         $this->container['bssParam'] = isset($data['bssParam']) ? $data['bssParam'] : null;
         $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
         $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
+        $this->container['osSchHnTschedulerHints'] = isset($data['osSchHnTschedulerHints']) ? $data['osSchHnTschedulerHints'] : null;
     }
 
     /**
@@ -248,6 +254,29 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
     public function setServerId($serverId)
     {
         $this->container['serverId'] = $serverId;
+        return $this;
+    }
+
+    /**
+    * Gets osSchHnTschedulerHints
+    *
+    * @return \HuaweiCloud\SDK\Evs\V2\Model\CreateVolumeSchedulerHints|null
+    */
+    public function getOsSchHnTschedulerHints()
+    {
+        return $this->container['osSchHnTschedulerHints'];
+    }
+
+    /**
+    * Sets osSchHnTschedulerHints
+    *
+    * @param \HuaweiCloud\SDK\Evs\V2\Model\CreateVolumeSchedulerHints|null $osSchHnTschedulerHints osSchHnTschedulerHints
+    *
+    * @return $this
+    */
+    public function setOsSchHnTschedulerHints($osSchHnTschedulerHints)
+    {
+        $this->container['osSchHnTschedulerHints'] = $osSchHnTschedulerHints;
         return $this;
     }
 

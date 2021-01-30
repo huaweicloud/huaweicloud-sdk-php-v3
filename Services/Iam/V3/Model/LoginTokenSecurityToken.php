@@ -26,7 +26,8 @@ class LoginTokenSecurityToken implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'access' => 'string',
             'secret' => 'string',
-            'id' => 'string'
+            'id' => 'string',
+            'durationSeconds' => 'int'
     ];
 
     /**
@@ -37,7 +38,8 @@ class LoginTokenSecurityToken implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'access' => null,
         'secret' => null,
-        'id' => null
+        'id' => null,
+        'durationSeconds' => 'int32'
     ];
 
     /**
@@ -69,7 +71,8 @@ class LoginTokenSecurityToken implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'access' => 'access',
             'secret' => 'secret',
-            'id' => 'id'
+            'id' => 'id',
+            'durationSeconds' => 'duration_seconds'
     ];
 
     /**
@@ -80,7 +83,8 @@ class LoginTokenSecurityToken implements ModelInterface, ArrayAccess
     protected static $setters = [
             'access' => 'setAccess',
             'secret' => 'setSecret',
-            'id' => 'setId'
+            'id' => 'setId',
+            'durationSeconds' => 'setDurationSeconds'
     ];
 
     /**
@@ -91,7 +95,8 @@ class LoginTokenSecurityToken implements ModelInterface, ArrayAccess
     protected static $getters = [
             'access' => 'getAccess',
             'secret' => 'getSecret',
-            'id' => 'getId'
+            'id' => 'getId',
+            'durationSeconds' => 'getDurationSeconds'
     ];
 
     /**
@@ -155,6 +160,7 @@ class LoginTokenSecurityToken implements ModelInterface, ArrayAccess
         $this->container['access'] = isset($data['access']) ? $data['access'] : null;
         $this->container['secret'] = isset($data['secret']) ? $data['secret'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['durationSeconds'] = isset($data['durationSeconds']) ? $data['durationSeconds'] : 600;
     }
 
     /**
@@ -174,6 +180,12 @@ class LoginTokenSecurityToken implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
+            if (!is_null($this->container['durationSeconds']) && ($this->container['durationSeconds'] > 43200)) {
+                $invalidProperties[] = "invalid value for 'durationSeconds', must be smaller than or equal to 43200.";
+            }
+            if (!is_null($this->container['durationSeconds']) && ($this->container['durationSeconds'] < 600)) {
+                $invalidProperties[] = "invalid value for 'durationSeconds', must be bigger than or equal to 600.";
+            }
         return $invalidProperties;
     }
 
@@ -254,6 +266,29 @@ class LoginTokenSecurityToken implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets durationSeconds
+    *
+    * @return int|null
+    */
+    public function getDurationSeconds()
+    {
+        return $this->container['durationSeconds'];
+    }
+
+    /**
+    * Sets durationSeconds
+    *
+    * @param int|null $durationSeconds 自定义代理登录票据logintoken的有效时间，时间单位为秒。默认10分钟，取值范围10min~12h，且取值不能大于临时安全凭证securitytoken的过期时间。
+    *
+    * @return $this
+    */
+    public function setDurationSeconds($durationSeconds)
+    {
+        $this->container['durationSeconds'] = $durationSeconds;
         return $this;
     }
 

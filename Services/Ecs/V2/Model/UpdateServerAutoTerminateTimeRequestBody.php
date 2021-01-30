@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Evs\V2\Model;
+namespace HuaweiCloud\SDK\Ecs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class QuotaDetailGigabytesSATA implements ModelInterface, ArrayAccess
+class UpdateServerAutoTerminateTimeRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class QuotaDetailGigabytesSATA implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'QuotaDetailGigabytesSATA';
+    protected static $openAPIModelName = 'UpdateServerAutoTerminateTimeRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
@@ -24,10 +24,7 @@ class QuotaDetailGigabytesSATA implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'inUse' => 'int',
-            'limit' => 'int',
-            'reserved' => 'int',
-            'allocated' => 'int'
+            'autoTerminateTime' => 'string'
     ];
 
     /**
@@ -36,10 +33,7 @@ class QuotaDetailGigabytesSATA implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'inUse' => 'int32',
-        'limit' => 'int32',
-        'reserved' => 'int32',
-        'allocated' => 'int32'
+        'autoTerminateTime' => null
     ];
 
     /**
@@ -69,10 +63,7 @@ class QuotaDetailGigabytesSATA implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'inUse' => 'in_use',
-            'limit' => 'limit',
-            'reserved' => 'reserved',
-            'allocated' => 'allocated'
+            'autoTerminateTime' => 'auto_terminate_time'
     ];
 
     /**
@@ -81,10 +72,7 @@ class QuotaDetailGigabytesSATA implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'inUse' => 'setInUse',
-            'limit' => 'setLimit',
-            'reserved' => 'setReserved',
-            'allocated' => 'setAllocated'
+            'autoTerminateTime' => 'setAutoTerminateTime'
     ];
 
     /**
@@ -93,10 +81,7 @@ class QuotaDetailGigabytesSATA implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'inUse' => 'getInUse',
-            'limit' => 'getLimit',
-            'reserved' => 'getReserved',
-            'allocated' => 'getAllocated'
+            'autoTerminateTime' => 'getAutoTerminateTime'
     ];
 
     /**
@@ -157,10 +142,7 @@ class QuotaDetailGigabytesSATA implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['inUse'] = isset($data['inUse']) ? $data['inUse'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['reserved'] = isset($data['reserved']) ? $data['reserved'] : null;
-        $this->container['allocated'] = isset($data['allocated']) ? $data['allocated'] : null;
+        $this->container['autoTerminateTime'] = isset($data['autoTerminateTime']) ? $data['autoTerminateTime'] : null;
     }
 
     /**
@@ -171,17 +153,8 @@ class QuotaDetailGigabytesSATA implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['inUse'] === null) {
-            $invalidProperties[] = "'inUse' can't be null";
-        }
-        if ($this->container['limit'] === null) {
-            $invalidProperties[] = "'limit' can't be null";
-        }
-        if ($this->container['reserved'] === null) {
-            $invalidProperties[] = "'reserved' can't be null";
-        }
-        if ($this->container['allocated'] === null) {
-            $invalidProperties[] = "'allocated' can't be null";
+        if ($this->container['autoTerminateTime'] === null) {
+            $invalidProperties[] = "'autoTerminateTime' can't be null";
         }
         return $invalidProperties;
     }
@@ -198,94 +171,25 @@ class QuotaDetailGigabytesSATA implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets inUse
+    * Gets autoTerminateTime
     *
-    * @return int
+    * @return string
     */
-    public function getInUse()
+    public function getAutoTerminateTime()
     {
-        return $this->container['inUse'];
+        return $this->container['autoTerminateTime'];
     }
 
     /**
-    * Sets inUse
+    * Sets autoTerminateTime
     *
-    * @param int $inUse 已使用的数量。
+    * @param string $autoTerminateTime 销毁时间
     *
     * @return $this
     */
-    public function setInUse($inUse)
+    public function setAutoTerminateTime($autoTerminateTime)
     {
-        $this->container['inUse'] = $inUse;
-        return $this;
-    }
-
-    /**
-    * Gets limit
-    *
-    * @return int
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int $limit 最大的数量。
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
-    * Gets reserved
-    *
-    * @return int
-    */
-    public function getReserved()
-    {
-        return $this->container['reserved'];
-    }
-
-    /**
-    * Sets reserved
-    *
-    * @param int $reserved 预留属性。
-    *
-    * @return $this
-    */
-    public function setReserved($reserved)
-    {
-        $this->container['reserved'] = $reserved;
-        return $this;
-    }
-
-    /**
-    * Gets allocated
-    *
-    * @return int
-    */
-    public function getAllocated()
-    {
-        return $this->container['allocated'];
-    }
-
-    /**
-    * Sets allocated
-    *
-    * @param int $allocated 预留属性。
-    *
-    * @return $this
-    */
-    public function setAllocated($allocated)
-    {
-        $this->container['allocated'] = $allocated;
+        $this->container['autoTerminateTime'] = $autoTerminateTime;
         return $this;
     }
 
