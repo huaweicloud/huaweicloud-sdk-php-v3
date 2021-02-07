@@ -202,7 +202,7 @@
 
     ``` php
     # 初始化异步客户端，以初始化 IamAsyncClient 为例
-    $iamClient = IamAsyncClient::newBuilder(new IamAsyncClient)
+    $iamClient = IamAsyncClient::newBuilder()
         ->withHttpConfig($config)
         ->withEndpoint($endpoint)
         ->withCredentials($credentials)

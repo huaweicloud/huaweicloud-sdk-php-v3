@@ -203,7 +203,7 @@ HuaweiCloud PHP SDK supports PHP 5.6 or later. Run ``PHP --version`` to check th
 
     ``` php
     # Initialize asynchronous client, take IAMAsyncClient for example
-    $iamClient = IamAsyncClient::newBuilder(new IamAsyncClient)
+    $iamClient = IamAsyncClient::newBuilder()
         ->withHttpConfig($config)
         ->withEndpoint($endpoint)
         ->withCredentials($credentials)

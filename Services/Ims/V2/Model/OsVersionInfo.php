@@ -27,7 +27,7 @@ class OsVersionInfo implements ModelInterface, ArrayAccess
             'platform' => 'string',
             'osVersionKey' => 'string',
             'osVersion' => 'string',
-            'osBit' => 'string',
+            'osBit' => 'int',
             'osType' => 'string'
     ];
 
@@ -40,7 +40,7 @@ class OsVersionInfo implements ModelInterface, ArrayAccess
         'platform' => null,
         'osVersionKey' => null,
         'osVersion' => null,
-        'osBit' => null,
+        'osBit' => 'int32',
         'osType' => null
     ];
 
@@ -278,7 +278,7 @@ class OsVersionInfo implements ModelInterface, ArrayAccess
     /**
     * Gets osBit
     *
-    * @return string
+    * @return int
     */
     public function getOsBit()
     {
@@ -288,7 +288,7 @@ class OsVersionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osBit
     *
-    * @param string $osBit 操作系统的位数
+    * @param int $osBit 操作系统的位数
     *
     * @return $this
     */
