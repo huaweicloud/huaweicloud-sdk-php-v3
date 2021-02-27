@@ -582,7 +582,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
         $this->container['supportXenGpuType'] = isset($data['supportXenGpuType']) ? $data['supportXenGpuType'] : null;
         $this->container['supportXenHana'] = isset($data['supportXenHana']) ? $data['supportXenHana'] : null;
         $this->container['containerFormat'] = isset($data['containerFormat']) ? $data['containerFormat'] : null;
-        $this->container['diskFormat'] = isset($data['diskFormat']) ? $data['diskFormat'] : 'vhd';
+        $this->container['diskFormat'] = isset($data['diskFormat']) ? $data['diskFormat'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 500;

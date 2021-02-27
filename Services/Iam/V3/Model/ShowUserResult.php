@@ -38,7 +38,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'updateTime' => 'string',
             'createTime' => 'string',
             'lastLoginTime' => 'string',
-            'pwdStength' => 'string',
+            'pwdStrength' => 'string',
             'isDomainOwner' => 'bool',
             'accessMode' => 'string',
             'description' => 'string'
@@ -64,7 +64,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
         'updateTime' => null,
         'createTime' => null,
         'lastLoginTime' => null,
-        'pwdStength' => null,
+        'pwdStrength' => null,
         'isDomainOwner' => null,
         'accessMode' => null,
         'description' => null
@@ -111,7 +111,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'updateTime' => 'update_time',
             'createTime' => 'create_time',
             'lastLoginTime' => 'last_login_time',
-            'pwdStength' => 'pwd_stength',
+            'pwdStrength' => 'pwd_strength',
             'isDomainOwner' => 'is_domain_owner',
             'accessMode' => 'access_mode',
             'description' => 'description'
@@ -137,7 +137,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'updateTime' => 'setUpdateTime',
             'createTime' => 'setCreateTime',
             'lastLoginTime' => 'setLastLoginTime',
-            'pwdStength' => 'setPwdStength',
+            'pwdStrength' => 'setPwdStrength',
             'isDomainOwner' => 'setIsDomainOwner',
             'accessMode' => 'setAccessMode',
             'description' => 'setDescription'
@@ -163,7 +163,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
             'updateTime' => 'getUpdateTime',
             'createTime' => 'getCreateTime',
             'lastLoginTime' => 'getLastLoginTime',
-            'pwdStength' => 'getPwdStength',
+            'pwdStrength' => 'getPwdStrength',
             'isDomainOwner' => 'getIsDomainOwner',
             'accessMode' => 'getAccessMode',
             'description' => 'getDescription'
@@ -241,7 +241,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['lastLoginTime'] = isset($data['lastLoginTime']) ? $data['lastLoginTime'] : null;
-        $this->container['pwdStength'] = isset($data['pwdStength']) ? $data['pwdStength'] : null;
+        $this->container['pwdStrength'] = isset($data['pwdStrength']) ? $data['pwdStrength'] : null;
         $this->container['isDomainOwner'] = isset($data['isDomainOwner']) ? $data['isDomainOwner'] : null;
         $this->container['accessMode'] = isset($data['accessMode']) ? $data['accessMode'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -616,25 +616,25 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets pwdStength
+    * Gets pwdStrength
     *
     * @return string|null
     */
-    public function getPwdStength()
+    public function getPwdStrength()
     {
-        return $this->container['pwdStength'];
+        return $this->container['pwdStrength'];
     }
 
     /**
-    * Sets pwdStength
+    * Sets pwdStrength
     *
-    * @param string|null $pwdStength IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+    * @param string|null $pwdStrength IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
     *
     * @return $this
     */
-    public function setPwdStength($pwdStength)
+    public function setPwdStrength($pwdStrength)
     {
-        $this->container['pwdStength'] = $pwdStength;
+        $this->container['pwdStrength'] = $pwdStrength;
         return $this;
     }
 

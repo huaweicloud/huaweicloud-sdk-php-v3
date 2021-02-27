@@ -62,7 +62,7 @@
                 "productshort": "IMS",
                 "link": "https://www.huaweicloud.com/product/ims.html",
                 "has_data": true,
-                "api_count": 37,
+                "api_count": 34,
                 "is_global": false,
                 "is_recommend": false
             },
@@ -287,7 +287,7 @@
                 "productshort": "DDS",
                 "link": "https://www.huaweicloud.com/product/dds.html",
                 "has_data": true,
-                "api_count": 66,
+                "api_count": 50,
                 "is_global": false,
                 "is_recommend": false
             },
@@ -296,7 +296,7 @@
                 "productshort": "DDM",
                 "link": "https://www.huaweicloud.com/product/ddm.html",
                 "has_data": true,
-                "api_count": 21,
+                "api_count": 16,
                 "is_global": false,
                 "is_recommend": false
             },
@@ -305,7 +305,7 @@
                 "productshort": "DRS",
                 "link": "https://www.huaweicloud.com/product/drs.html",
                 "has_data": true,
-                "api_count": 11,
+                "api_count": 29,
                 "is_global": false,
                 "is_recommend": false
             },
@@ -1163,7 +1163,7 @@
                 "productshort": "CloudBuild",
                 "link": "https://www.huaweicloud.com/product/cloudbuild.html",
                 "has_data": true,
-                "api_count": 5,
+                "api_count": 6,
                 "is_global": false,
                 "is_recommend": false
             },
@@ -1250,7 +1250,7 @@
                 "productshort": "Meeting",
                 "link": "https://www.huaweicloud.com/product/cloudvc.html",
                 "has_data": true,
-                "api_count": 125,
+                "api_count": 127,
                 "is_global": false,
                 "is_recommend": false
             }
@@ -1292,7 +1292,7 @@
                 "productshort": "DRS",
                 "link": "https://www.huaweicloud.com/product/drs.html",
                 "has_data": true,
-                "api_count": 11,
+                "api_count": 29,
                 "is_global": false,
                 "is_recommend": false
             },
@@ -1334,7 +1334,7 @@
                 "productshort": "Live",
                 "link": "https://www.huaweicloud.com/product/live.html",
                 "has_data": true,
-                "api_count": 30,
+                "api_count": 37,
                 "is_global": false,
                 "is_recommend": false
             },
@@ -1463,7 +1463,7 @@
                 "productshort": "IoTDA",
                 "link": "https://www.huaweicloud.com/product/iothub.html",
                 "has_data": true,
-                "api_count": 73,
+                "api_count": 80,
                 "is_global": false,
                 "is_recommend": true
             },
@@ -1498,8 +1498,8 @@
                 "name": "IoT\u8fb9\u7f18",
                 "productshort": "IoTEdge",
                 "link": "https://www.huaweicloud.com/product/iotedge.html",
-                "has_data": false,
-                "api_count": 0,
+                "has_data": true,
+                "api_count": 18,
                 "is_global": false,
                 "is_recommend": false
             }
@@ -1589,7 +1589,7 @@
                 "productshort": "ROMA",
                 "link": "https://www.huaweicloud.com/product/roma.html",
                 "has_data": true,
-                "api_count": 262,
+                "api_count": 263,
                 "is_global": false,
                 "is_recommend": false
             }

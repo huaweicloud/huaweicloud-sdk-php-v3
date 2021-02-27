@@ -453,7 +453,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
         $this->container['supportXenGpuType'] = isset($data['supportXenGpuType']) ? $data['supportXenGpuType'] : null;
         $this->container['supportXenHana'] = isset($data['supportXenHana']) ? $data['supportXenHana'] : null;
         $this->container['containerFormat'] = isset($data['containerFormat']) ? $data['containerFormat'] : 'bare';
-        $this->container['diskFormat'] = isset($data['diskFormat']) ? $data['diskFormat'] : 'vhd';
+        $this->container['diskFormat'] = isset($data['diskFormat']) ? $data['diskFormat'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 25;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
