@@ -25,9 +25,15 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'ecsperformancetype' => 'string',
+            'hwnumaNodes' => 'string',
             'resourceType' => 'string',
+            'hpetSupport' => 'string',
+            'instanceVnictype' => 'string',
+            'instanceVnicinstanceBandwidth' => 'int',
+            'instanceVnicmaxCount' => 'int',
             'quotalocalDisk' => 'string',
             'quotanvmeSsd' => 'string',
+            'extraSpeciopersistentGrant' => 'bool',
             'ecsgeneration' => 'string',
             'ecsvirtualizationEnvTypes' => 'string',
             'pciPassthroughenableGpu' => 'string',
@@ -38,7 +44,18 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'quotamaxRate' => 'string',
             'quotaminRate' => 'string',
             'quotamaxPps' => 'string',
-            'condoperationcharge' => 'string'
+            'condoperationcharge' => 'string',
+            'condoperationchargestop' => 'string',
+            'condspotoperationaz' => 'string',
+            'condoperationroles' => 'string',
+            'condspotoperationstatus' => 'string',
+            'condnetwork' => 'string',
+            'condstorage' => 'string',
+            'condcomputeliveResizable' => 'string',
+            'condcompute' => 'string',
+            'infogpuname' => 'string',
+            'infocpuname' => 'string',
+            'quotagpu' => 'string'
     ];
 
     /**
@@ -48,9 +65,15 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'ecsperformancetype' => null,
+        'hwnumaNodes' => null,
         'resourceType' => null,
+        'hpetSupport' => null,
+        'instanceVnictype' => null,
+        'instanceVnicinstanceBandwidth' => 'int32',
+        'instanceVnicmaxCount' => 'int32',
         'quotalocalDisk' => null,
         'quotanvmeSsd' => null,
+        'extraSpeciopersistentGrant' => null,
         'ecsgeneration' => null,
         'ecsvirtualizationEnvTypes' => null,
         'pciPassthroughenableGpu' => null,
@@ -61,7 +84,18 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         'quotamaxRate' => null,
         'quotaminRate' => null,
         'quotamaxPps' => null,
-        'condoperationcharge' => null
+        'condoperationcharge' => null,
+        'condoperationchargestop' => null,
+        'condspotoperationaz' => null,
+        'condoperationroles' => null,
+        'condspotoperationstatus' => null,
+        'condnetwork' => null,
+        'condstorage' => null,
+        'condcomputeliveResizable' => null,
+        'condcompute' => null,
+        'infogpuname' => null,
+        'infocpuname' => null,
+        'quotagpu' => null
     ];
 
     /**
@@ -92,9 +126,15 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'ecsperformancetype' => 'ecs:performancetype',
+            'hwnumaNodes' => 'hw:numa_nodes',
             'resourceType' => 'resource_type',
+            'hpetSupport' => 'hpet_support',
+            'instanceVnictype' => 'instance_vnic:type',
+            'instanceVnicinstanceBandwidth' => 'instance_vnic:instance_bandwidth',
+            'instanceVnicmaxCount' => 'instance_vnic:max_count',
             'quotalocalDisk' => 'quota:local_disk',
             'quotanvmeSsd' => 'quota:nvme_ssd',
+            'extraSpeciopersistentGrant' => 'extra_spec:io:persistent_grant',
             'ecsgeneration' => 'ecs:generation',
             'ecsvirtualizationEnvTypes' => 'ecs:virtualization_env_types',
             'pciPassthroughenableGpu' => 'pci_passthrough:enable_gpu',
@@ -105,7 +145,18 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'quotamaxRate' => 'quota:max_rate',
             'quotaminRate' => 'quota:min_rate',
             'quotamaxPps' => 'quota:max_pps',
-            'condoperationcharge' => 'cond:operation:charge'
+            'condoperationcharge' => 'cond:operation:charge',
+            'condoperationchargestop' => 'cond:operation:charge:stop',
+            'condspotoperationaz' => 'cond:spot:operation:az',
+            'condoperationroles' => 'cond:operation:roles',
+            'condspotoperationstatus' => 'cond:spot:operation:status',
+            'condnetwork' => 'cond:network',
+            'condstorage' => 'cond:storage',
+            'condcomputeliveResizable' => 'cond:compute:live_resizable',
+            'condcompute' => 'cond:compute',
+            'infogpuname' => 'info:gpu:name',
+            'infocpuname' => 'info:cpu:name',
+            'quotagpu' => 'quota:gpu'
     ];
 
     /**
@@ -115,9 +166,15 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'ecsperformancetype' => 'setEcsperformancetype',
+            'hwnumaNodes' => 'setHwnumaNodes',
             'resourceType' => 'setResourceType',
+            'hpetSupport' => 'setHpetSupport',
+            'instanceVnictype' => 'setInstanceVnictype',
+            'instanceVnicinstanceBandwidth' => 'setInstanceVnicinstanceBandwidth',
+            'instanceVnicmaxCount' => 'setInstanceVnicmaxCount',
             'quotalocalDisk' => 'setQuotalocalDisk',
             'quotanvmeSsd' => 'setQuotanvmeSsd',
+            'extraSpeciopersistentGrant' => 'setExtraSpeciopersistentGrant',
             'ecsgeneration' => 'setEcsgeneration',
             'ecsvirtualizationEnvTypes' => 'setEcsvirtualizationEnvTypes',
             'pciPassthroughenableGpu' => 'setPciPassthroughenableGpu',
@@ -128,7 +185,18 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'quotamaxRate' => 'setQuotamaxRate',
             'quotaminRate' => 'setQuotaminRate',
             'quotamaxPps' => 'setQuotamaxPps',
-            'condoperationcharge' => 'setCondoperationcharge'
+            'condoperationcharge' => 'setCondoperationcharge',
+            'condoperationchargestop' => 'setCondoperationchargestop',
+            'condspotoperationaz' => 'setCondspotoperationaz',
+            'condoperationroles' => 'setCondoperationroles',
+            'condspotoperationstatus' => 'setCondspotoperationstatus',
+            'condnetwork' => 'setCondnetwork',
+            'condstorage' => 'setCondstorage',
+            'condcomputeliveResizable' => 'setCondcomputeliveResizable',
+            'condcompute' => 'setCondcompute',
+            'infogpuname' => 'setInfogpuname',
+            'infocpuname' => 'setInfocpuname',
+            'quotagpu' => 'setQuotagpu'
     ];
 
     /**
@@ -138,9 +206,15 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'ecsperformancetype' => 'getEcsperformancetype',
+            'hwnumaNodes' => 'getHwnumaNodes',
             'resourceType' => 'getResourceType',
+            'hpetSupport' => 'getHpetSupport',
+            'instanceVnictype' => 'getInstanceVnictype',
+            'instanceVnicinstanceBandwidth' => 'getInstanceVnicinstanceBandwidth',
+            'instanceVnicmaxCount' => 'getInstanceVnicmaxCount',
             'quotalocalDisk' => 'getQuotalocalDisk',
             'quotanvmeSsd' => 'getQuotanvmeSsd',
+            'extraSpeciopersistentGrant' => 'getExtraSpeciopersistentGrant',
             'ecsgeneration' => 'getEcsgeneration',
             'ecsvirtualizationEnvTypes' => 'getEcsvirtualizationEnvTypes',
             'pciPassthroughenableGpu' => 'getPciPassthroughenableGpu',
@@ -151,7 +225,18 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'quotamaxRate' => 'getQuotamaxRate',
             'quotaminRate' => 'getQuotaminRate',
             'quotamaxPps' => 'getQuotamaxPps',
-            'condoperationcharge' => 'getCondoperationcharge'
+            'condoperationcharge' => 'getCondoperationcharge',
+            'condoperationchargestop' => 'getCondoperationchargestop',
+            'condspotoperationaz' => 'getCondspotoperationaz',
+            'condoperationroles' => 'getCondoperationroles',
+            'condspotoperationstatus' => 'getCondspotoperationstatus',
+            'condnetwork' => 'getCondnetwork',
+            'condstorage' => 'getCondstorage',
+            'condcomputeliveResizable' => 'getCondcomputeliveResizable',
+            'condcompute' => 'getCondcompute',
+            'infogpuname' => 'getInfogpuname',
+            'infocpuname' => 'getInfocpuname',
+            'quotagpu' => 'getQuotagpu'
     ];
 
     /**
@@ -213,9 +298,15 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['ecsperformancetype'] = isset($data['ecsperformancetype']) ? $data['ecsperformancetype'] : null;
+        $this->container['hwnumaNodes'] = isset($data['hwnumaNodes']) ? $data['hwnumaNodes'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
+        $this->container['hpetSupport'] = isset($data['hpetSupport']) ? $data['hpetSupport'] : null;
+        $this->container['instanceVnictype'] = isset($data['instanceVnictype']) ? $data['instanceVnictype'] : null;
+        $this->container['instanceVnicinstanceBandwidth'] = isset($data['instanceVnicinstanceBandwidth']) ? $data['instanceVnicinstanceBandwidth'] : null;
+        $this->container['instanceVnicmaxCount'] = isset($data['instanceVnicmaxCount']) ? $data['instanceVnicmaxCount'] : null;
         $this->container['quotalocalDisk'] = isset($data['quotalocalDisk']) ? $data['quotalocalDisk'] : null;
         $this->container['quotanvmeSsd'] = isset($data['quotanvmeSsd']) ? $data['quotanvmeSsd'] : null;
+        $this->container['extraSpeciopersistentGrant'] = isset($data['extraSpeciopersistentGrant']) ? $data['extraSpeciopersistentGrant'] : null;
         $this->container['ecsgeneration'] = isset($data['ecsgeneration']) ? $data['ecsgeneration'] : null;
         $this->container['ecsvirtualizationEnvTypes'] = isset($data['ecsvirtualizationEnvTypes']) ? $data['ecsvirtualizationEnvTypes'] : null;
         $this->container['pciPassthroughenableGpu'] = isset($data['pciPassthroughenableGpu']) ? $data['pciPassthroughenableGpu'] : null;
@@ -227,6 +318,17 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         $this->container['quotaminRate'] = isset($data['quotaminRate']) ? $data['quotaminRate'] : null;
         $this->container['quotamaxPps'] = isset($data['quotamaxPps']) ? $data['quotamaxPps'] : null;
         $this->container['condoperationcharge'] = isset($data['condoperationcharge']) ? $data['condoperationcharge'] : null;
+        $this->container['condoperationchargestop'] = isset($data['condoperationchargestop']) ? $data['condoperationchargestop'] : 'free';
+        $this->container['condspotoperationaz'] = isset($data['condspotoperationaz']) ? $data['condspotoperationaz'] : null;
+        $this->container['condoperationroles'] = isset($data['condoperationroles']) ? $data['condoperationroles'] : null;
+        $this->container['condspotoperationstatus'] = isset($data['condspotoperationstatus']) ? $data['condspotoperationstatus'] : null;
+        $this->container['condnetwork'] = isset($data['condnetwork']) ? $data['condnetwork'] : null;
+        $this->container['condstorage'] = isset($data['condstorage']) ? $data['condstorage'] : null;
+        $this->container['condcomputeliveResizable'] = isset($data['condcomputeliveResizable']) ? $data['condcomputeliveResizable'] : null;
+        $this->container['condcompute'] = isset($data['condcompute']) ? $data['condcompute'] : null;
+        $this->container['infogpuname'] = isset($data['infogpuname']) ? $data['infogpuname'] : null;
+        $this->container['infocpuname'] = isset($data['infocpuname']) ? $data['infocpuname'] : null;
+        $this->container['quotagpu'] = isset($data['quotagpu']) ? $data['quotagpu'] : null;
     }
 
     /**
@@ -240,8 +342,23 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         if ($this->container['ecsperformancetype'] === null) {
             $invalidProperties[] = "'ecsperformancetype' can't be null";
         }
+        if ($this->container['hwnumaNodes'] === null) {
+            $invalidProperties[] = "'hwnumaNodes' can't be null";
+        }
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
+        }
+        if ($this->container['hpetSupport'] === null) {
+            $invalidProperties[] = "'hpetSupport' can't be null";
+        }
+        if ($this->container['instanceVnictype'] === null) {
+            $invalidProperties[] = "'instanceVnictype' can't be null";
+        }
+        if ($this->container['instanceVnicinstanceBandwidth'] === null) {
+            $invalidProperties[] = "'instanceVnicinstanceBandwidth' can't be null";
+        }
+        if ($this->container['instanceVnicmaxCount'] === null) {
+            $invalidProperties[] = "'instanceVnicmaxCount' can't be null";
         }
         if ($this->container['pciPassthroughenableGpu'] === null) {
             $invalidProperties[] = "'pciPassthroughenableGpu' can't be null";
@@ -290,6 +407,29 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets hwnumaNodes
+    *
+    * @return string
+    */
+    public function getHwnumaNodes()
+    {
+        return $this->container['hwnumaNodes'];
+    }
+
+    /**
+    * Sets hwnumaNodes
+    *
+    * @param string $hwnumaNodes 主机的物理cpu数量。
+    *
+    * @return $this
+    */
+    public function setHwnumaNodes($hwnumaNodes)
+    {
+        $this->container['hwnumaNodes'] = $hwnumaNodes;
+        return $this;
+    }
+
+    /**
     * Gets resourceType
     *
     * @return string
@@ -309,6 +449,98 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     public function setResourceType($resourceType)
     {
         $this->container['resourceType'] = $resourceType;
+        return $this;
+    }
+
+    /**
+    * Gets hpetSupport
+    *
+    * @return string
+    */
+    public function getHpetSupport()
+    {
+        return $this->container['hpetSupport'];
+    }
+
+    /**
+    * Sets hpetSupport
+    *
+    * @param string $hpetSupport 弹性运服务器高精度时钟是否开启，开启为true，否则为false。（该字段是否返回根据云服务器规格而定）
+    *
+    * @return $this
+    */
+    public function setHpetSupport($hpetSupport)
+    {
+        $this->container['hpetSupport'] = $hpetSupport;
+        return $this;
+    }
+
+    /**
+    * Gets instanceVnictype
+    *
+    * @return string
+    */
+    public function getInstanceVnictype()
+    {
+        return $this->container['instanceVnictype'];
+    }
+
+    /**
+    * Sets instanceVnictype
+    *
+    * @param string $instanceVnictype 网卡类型，值固定为“enhanced”，表示使用增强型网络的资源创建云服务器。
+    *
+    * @return $this
+    */
+    public function setInstanceVnictype($instanceVnictype)
+    {
+        $this->container['instanceVnictype'] = $instanceVnictype;
+        return $this;
+    }
+
+    /**
+    * Gets instanceVnicinstanceBandwidth
+    *
+    * @return int
+    */
+    public function getInstanceVnicinstanceBandwidth()
+    {
+        return $this->container['instanceVnicinstanceBandwidth'];
+    }
+
+    /**
+    * Sets instanceVnicinstanceBandwidth
+    *
+    * @param int $instanceVnicinstanceBandwidth 最大带宽，单位Mbps，最大值为10000。
+    *
+    * @return $this
+    */
+    public function setInstanceVnicinstanceBandwidth($instanceVnicinstanceBandwidth)
+    {
+        $this->container['instanceVnicinstanceBandwidth'] = $instanceVnicinstanceBandwidth;
+        return $this;
+    }
+
+    /**
+    * Gets instanceVnicmaxCount
+    *
+    * @return int
+    */
+    public function getInstanceVnicmaxCount()
+    {
+        return $this->container['instanceVnicmaxCount'];
+    }
+
+    /**
+    * Sets instanceVnicmaxCount
+    *
+    * @param int $instanceVnicmaxCount 最大网卡个数，最大为4。
+    *
+    * @return $this
+    */
+    public function setInstanceVnicmaxCount($instanceVnicmaxCount)
+    {
+        $this->container['instanceVnicmaxCount'] = $instanceVnicmaxCount;
         return $this;
     }
 
@@ -355,6 +587,29 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     public function setQuotanvmeSsd($quotanvmeSsd)
     {
         $this->container['quotanvmeSsd'] = $quotanvmeSsd;
+        return $this;
+    }
+
+    /**
+    * Gets extraSpeciopersistentGrant
+    *
+    * @return bool|null
+    */
+    public function getExtraSpeciopersistentGrant()
+    {
+        return $this->container['extraSpeciopersistentGrant'];
+    }
+
+    /**
+    * Sets extraSpeciopersistentGrant
+    *
+    * @param bool|null $extraSpeciopersistentGrant 是否支持持久化，值为true。  代表云服务器访问存储的方式为持久化授权。   > 说明：  - 密集存储D1型特有字段。
+    *
+    * @return $this
+    */
+    public function setExtraSpeciopersistentGrant($extraSpeciopersistentGrant)
+    {
+        $this->container['extraSpeciopersistentGrant'] = $extraSpeciopersistentGrant;
         return $this;
     }
 
@@ -608,6 +863,259 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     public function setCondoperationcharge($condoperationcharge)
     {
         $this->container['condoperationcharge'] = $condoperationcharge;
+        return $this;
+    }
+
+    /**
+    * Gets condoperationchargestop
+    *
+    * @return string|null
+    */
+    public function getCondoperationchargestop()
+    {
+        return $this->container['condoperationchargestop'];
+    }
+
+    /**
+    * Sets condoperationchargestop
+    *
+    * @param string|null $condoperationchargestop 关机是否收费  - 关机是否计费，默认免费： - charge - free
+    *
+    * @return $this
+    */
+    public function setCondoperationchargestop($condoperationchargestop)
+    {
+        $this->container['condoperationchargestop'] = $condoperationchargestop;
+        return $this;
+    }
+
+    /**
+    * Gets condspotoperationaz
+    *
+    * @return string|null
+    */
+    public function getCondspotoperationaz()
+    {
+        return $this->container['condspotoperationaz'];
+    }
+
+    /**
+    * Sets condspotoperationaz
+    *
+    * @param string|null $condspotoperationaz 计费类型  - 计费场景，不配置时都支持 - period，包周期 - demand，按需
+    *
+    * @return $this
+    */
+    public function setCondspotoperationaz($condspotoperationaz)
+    {
+        $this->container['condspotoperationaz'] = $condspotoperationaz;
+        return $this;
+    }
+
+    /**
+    * Gets condoperationroles
+    *
+    * @return string|null
+    */
+    public function getCondoperationroles()
+    {
+        return $this->container['condoperationroles'];
+    }
+
+    /**
+    * Sets condoperationroles
+    *
+    * @param string|null $condoperationroles 允许的角色 匹配的用户标签（roles的op_gatexxx标签）。不设置时所有用户可见
+    *
+    * @return $this
+    */
+    public function setCondoperationroles($condoperationroles)
+    {
+        $this->container['condoperationroles'] = $condoperationroles;
+        return $this;
+    }
+
+    /**
+    * Gets condspotoperationstatus
+    *
+    * @return string|null
+    */
+    public function getCondspotoperationstatus()
+    {
+        return $this->container['condspotoperationstatus'];
+    }
+
+    /**
+    * Sets condspotoperationstatus
+    *
+    * @param string|null $condspotoperationstatus Flavor在竞价销售模式下的状态  - 不配置时等同abandon - normal，正常商用 - abandon，下线 - sellout，售罄 - obt，公测，未申请时提示申请（暂不支持） - private，私有，只给特定用户显示（暂不支持） - test，试用/免费（暂不支持） - promotion，推荐
+    *
+    * @return $this
+    */
+    public function setCondspotoperationstatus($condspotoperationstatus)
+    {
+        $this->container['condspotoperationstatus'] = $condspotoperationstatus;
+        return $this;
+    }
+
+    /**
+    * Gets condnetwork
+    *
+    * @return string|null
+    */
+    public function getCondnetwork()
+    {
+        return $this->container['condnetwork'];
+    }
+
+    /**
+    * Sets condnetwork
+    *
+    * @param string|null $condnetwork 网络约束 支持网络特性，不配置时以UI配置为准。
+    *
+    * @return $this
+    */
+    public function setCondnetwork($condnetwork)
+    {
+        $this->container['condnetwork'] = $condnetwork;
+        return $this;
+    }
+
+    /**
+    * Gets condstorage
+    *
+    * @return string|null
+    */
+    public function getCondstorage()
+    {
+        return $this->container['condstorage'];
+    }
+
+    /**
+    * Sets condstorage
+    *
+    * @param string|null $condstorage 存储约束  - 支持磁盘特性，不配置时以UI配置为准。 - scsi，支持scsi - localdisk，支持本地盘 - ib，支持ib
+    *
+    * @return $this
+    */
+    public function setCondstorage($condstorage)
+    {
+        $this->container['condstorage'] = $condstorage;
+        return $this;
+    }
+
+    /**
+    * Gets condcomputeliveResizable
+    *
+    * @return string|null
+    */
+    public function getCondcomputeliveResizable()
+    {
+        return $this->container['condcomputeliveResizable'];
+    }
+
+    /**
+    * Sets condcomputeliveResizable
+    *
+    * @param string|null $condcomputeliveResizable 计算约束  - true，支持在线扩容。 - false或不存在该字段，不支持在线扩容。
+    *
+    * @return $this
+    */
+    public function setCondcomputeliveResizable($condcomputeliveResizable)
+    {
+        $this->container['condcomputeliveResizable'] = $condcomputeliveResizable;
+        return $this;
+    }
+
+    /**
+    * Gets condcompute
+    *
+    * @return string|null
+    */
+    public function getCondcompute()
+    {
+        return $this->container['condcompute'];
+    }
+
+    /**
+    * Sets condcompute
+    *
+    * @param string|null $condcompute 计算约束  - autorecovery，自动恢复特性。 - 不存在该字段，不支持自动恢复。
+    *
+    * @return $this
+    */
+    public function setCondcompute($condcompute)
+    {
+        $this->container['condcompute'] = $condcompute;
+        return $this;
+    }
+
+    /**
+    * Gets infogpuname
+    *
+    * @return string|null
+    */
+    public function getInfogpuname()
+    {
+        return $this->container['infogpuname'];
+    }
+
+    /**
+    * Sets infogpuname
+    *
+    * @param string|null $infogpuname 
+    *
+    * @return $this
+    */
+    public function setInfogpuname($infogpuname)
+    {
+        $this->container['infogpuname'] = $infogpuname;
+        return $this;
+    }
+
+    /**
+    * Gets infocpuname
+    *
+    * @return string|null
+    */
+    public function getInfocpuname()
+    {
+        return $this->container['infocpuname'];
+    }
+
+    /**
+    * Sets infocpuname
+    *
+    * @param string|null $infocpuname 
+    *
+    * @return $this
+    */
+    public function setInfocpuname($infocpuname)
+    {
+        $this->container['infocpuname'] = $infocpuname;
+        return $this;
+    }
+
+    /**
+    * Gets quotagpu
+    *
+    * @return string|null
+    */
+    public function getQuotagpu()
+    {
+        return $this->container['quotagpu'];
+    }
+
+    /**
+    * Sets quotagpu
+    *
+    * @param string|null $quotagpu 
+    *
+    * @return $this
+    */
+    public function setQuotagpu($quotagpu)
+    {
+        $this->container['quotagpu'] = $quotagpu;
         return $this;
     }
 

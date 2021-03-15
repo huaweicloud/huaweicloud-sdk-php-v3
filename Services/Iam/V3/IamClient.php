@@ -672,15 +672,15 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMetadataRequest');
     }
 
-    public function createUnscopeTokenByIdpInitiated($request)
+    public function createOpenIdConnectConfig($request)
     {
-        return $this->createUnscopeTokenByIdpInitiatedWithHttpInfo($request);
+        return $this->createOpenIdConnectConfigWithHttpInfo($request);
     }
 
-    public function createUnscopeTokenByIdpInitiatedWithHttpInfo($request)
+    public function createOpenIdConnectConfigWithHttpInfo($request)
     {
         $collection_formats = [];
-        $resourcePath = '/v3.0/OS-FEDERATION/tokens';
+        $resourcePath = '/v3.0/OS-FEDERATION/identity-providers/{idp_id}/openid-connect-config';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -694,18 +694,21 @@ class IamClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['xIdpId'] !== null) {
-            $headerParams['x_idp_id'] = $localVarParams['xIdpId'];
+        if ($localVarParams['idpId'] !== null) {
+            $pathParams['idp_id'] = $localVarParams['idpId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json', 'application/json-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                ['application/x-www-form-urlencoded']
+                ['application/json;charset=UTF-8', 'application/json', 'application/json-1'],
+                ['application/json;charset=UTF-8']
             );
         }
         $headers = array_merge(
@@ -722,9 +725,67 @@ class IamClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateUnscopeTokenByIdpInitiatedResponse',
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateOpenIdConnectConfigResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateUnscopeTokenByIdpInitiatedRequest');
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateOpenIdConnectConfigRequest');
+    }
+
+    public function createTokenWithIdToken($request)
+    {
+        return $this->createTokenWithIdTokenWithHttpInfo($request);
+    }
+
+    public function createTokenWithIdTokenWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v3.0/OS-AUTH/id-token/tokens';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xIdpId'] !== null) {
+            $headerParams['x_idp_id'] = $localVarParams['xIdpId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateTokenWithIdTokenResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateTokenWithIdTokenRequest');
     }
 
     public function deleteAgency($request)
@@ -5008,6 +5069,61 @@ class IamClient extends Client
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowMetadataRequest');
     }
 
+    public function showOpenIdConnectConfig($request)
+    {
+        return $this->showOpenIdConnectConfigWithHttpInfo($request);
+    }
+
+    public function showOpenIdConnectConfigWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v3.0/OS-FEDERATION/identity-providers/{idp_id}/openid-connect-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['idpId'] !== null) {
+            $pathParams['idp_id'] = $localVarParams['idpId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowOpenIdConnectConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowOpenIdConnectConfigRequest');
+    }
+
     public function showProjectDetailsAndStatus($request)
     {
         return $this->showProjectDetailsAndStatusWithHttpInfo($request);
@@ -5641,6 +5757,64 @@ class IamClient extends Client
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainProtectPolicyResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainProtectPolicyRequest');
+    }
+
+    public function updateOpenIdConnectConfig($request)
+    {
+        return $this->updateOpenIdConnectConfigWithHttpInfo($request);
+    }
+
+    public function updateOpenIdConnectConfigWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v3.0/OS-FEDERATION/identity-providers/{idp_id}/openid-connect-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['idpId'] !== null) {
+            $pathParams['idp_id'] = $localVarParams['idpId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateOpenIdConnectConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateOpenIdConnectConfigRequest');
     }
 
     public function updateProjectStatus($request)

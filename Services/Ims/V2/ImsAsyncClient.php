@@ -24,6 +24,64 @@ class ImsAsyncClient extends Client
         return new ClientBuilder(new ImsAsyncClient());
     }
 
+    public function addImageTagAsync($request)
+    {
+        return $this->addImageTagAsyncWithHttpInfo($request);
+    }
+    
+    public function addImageTagAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/images/{image_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\AddImageTagResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\AddImageTagRequest',
+            $asyncRequest = true);
+    }
+
     public function batchAddMembersAsync($request)
     {
         return $this->batchAddMembersAsyncWithHttpInfo($request);
@@ -76,6 +134,64 @@ class ImsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\BatchAddMembersResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\BatchAddMembersRequest',
+            $asyncRequest = true);
+    }
+
+    public function batchAddOrDeleteTagsAsync($request)
+    {
+        return $this->batchAddOrDeleteTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function batchAddOrDeleteTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/images/{image_id}/tags/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\BatchAddOrDeleteTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\BatchAddOrDeleteTagsRequest',
             $asyncRequest = true);
     }
 
@@ -525,6 +641,64 @@ class ImsAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    public function deleteImageTagAsync($request)
+    {
+        return $this->deleteImageTagAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteImageTagAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/images/{image_id}/tags/{key}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['key'] !== null) {
+            $pathParams['key'] = $localVarParams['key'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\DeleteImageTagResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\DeleteImageTagRequest',
+            $asyncRequest = true);
+    }
+
     public function exportImageAsync($request)
     {
         return $this->exportImageAsyncWithHttpInfo($request);
@@ -635,6 +809,116 @@ class ImsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ImportImageQuickResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ImportImageQuickRequest',
+            $asyncRequest = true);
+    }
+
+    public function listImageByTagsAsync($request)
+    {
+        return $this->listImageByTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function listImageByTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/images/resource_instances/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json', 'application/json-1']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json', 'application/json-1'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ListImageByTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ListImageByTagsRequest',
+            $asyncRequest = true);
+    }
+
+    public function listImageTagsAsync($request)
+    {
+        return $this->listImageTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function listImageTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/images/{image_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $pathParams['image_id'] = $localVarParams['imageId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ListImageTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ListImageTagsRequest',
             $asyncRequest = true);
     }
 
@@ -798,6 +1082,58 @@ class ImsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ListImagesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ListImagesRequest',
+            $asyncRequest = true);
+    }
+
+    public function listImagesTagsAsync($request)
+    {
+        return $this->listImagesTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function listImagesTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/images/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ListImagesTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ListImagesTagsRequest',
             $asyncRequest = true);
     }
 

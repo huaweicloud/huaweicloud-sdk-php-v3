@@ -671,14 +671,14 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createUnscopeTokenByIdpInitiatedAsync($request)
+    public function createOpenIdConnectConfigAsync($request)
     {
-        return $this->createUnscopeTokenByIdpInitiatedAsyncWithHttpInfo($request);
+        return $this->createOpenIdConnectConfigAsyncWithHttpInfo($request);
     }
     
-    public function createUnscopeTokenByIdpInitiatedAsyncWithHttpInfo($request){
+    public function createOpenIdConnectConfigAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v3.0/OS-FEDERATION/tokens';
+        $resourcePath = '/v3.0/OS-FEDERATION/identity-providers/{idp_id}/openid-connect-config';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -692,18 +692,21 @@ class IamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['xIdpId'] !== null) {
-            $headerParams['x_idp_id'] = $localVarParams['xIdpId'];
+        if ($localVarParams['idpId'] !== null) {
+            $pathParams['idp_id'] = $localVarParams['idpId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json', 'application/json-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                ['application/x-www-form-urlencoded']
+                ['application/json;charset=UTF-8', 'application/json', 'application/json-1'],
+                ['application/json;charset=UTF-8']
             );
         }
         $headers = array_merge(
@@ -720,9 +723,67 @@ class IamAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateUnscopeTokenByIdpInitiatedResponse',
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateOpenIdConnectConfigResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateUnscopeTokenByIdpInitiatedRequest',
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateOpenIdConnectConfigRequest',
+            $asyncRequest = true);
+    }
+
+    public function createTokenWithIdTokenAsync($request)
+    {
+        return $this->createTokenWithIdTokenAsyncWithHttpInfo($request);
+    }
+    
+    public function createTokenWithIdTokenAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3.0/OS-AUTH/id-token/tokens';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xIdpId'] !== null) {
+            $headerParams['x_idp_id'] = $localVarParams['xIdpId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateTokenWithIdTokenResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateTokenWithIdTokenRequest',
             $asyncRequest = true);
     }
 
@@ -5007,6 +5068,61 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    public function showOpenIdConnectConfigAsync($request)
+    {
+        return $this->showOpenIdConnectConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function showOpenIdConnectConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3.0/OS-FEDERATION/identity-providers/{idp_id}/openid-connect-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['idpId'] !== null) {
+            $pathParams['idp_id'] = $localVarParams['idpId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowOpenIdConnectConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowOpenIdConnectConfigRequest',
+            $asyncRequest = true);
+    }
+
     public function showProjectDetailsAndStatusAsync($request)
     {
         return $this->showProjectDetailsAndStatusAsyncWithHttpInfo($request);
@@ -5639,6 +5755,64 @@ class IamAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainProtectPolicyResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainProtectPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    public function updateOpenIdConnectConfigAsync($request)
+    {
+        return $this->updateOpenIdConnectConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function updateOpenIdConnectConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3.0/OS-FEDERATION/identity-providers/{idp_id}/openid-connect-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['idpId'] !== null) {
+            $pathParams['idp_id'] = $localVarParams['idpId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateOpenIdConnectConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateOpenIdConnectConfigRequest',
             $asyncRequest = true);
     }
 

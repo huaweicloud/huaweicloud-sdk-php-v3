@@ -1237,7 +1237,7 @@ class EcsAsyncClient extends Client
     
     public function listServerGroupsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/01 /v1/{project_id}/cloudservers/os-server-groups';
+        $resourcePath = '/v1/{project_id}/cloudservers/os-server-groups';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2491,7 +2491,7 @@ class EcsAsyncClient extends Client
     
     public function showServerGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/01 /v1/{project_id}/cloudservers/os-server-groups/{server_group_id}';
+        $resourcePath = '/v1/{project_id}/cloudservers/os-server-groups/{server_group_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

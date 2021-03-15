@@ -1,3 +1,52 @@
+# 3.0.9-beta 2021-03-15
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+    - Support more interface: `ShowServerGroup`.
+- _Bug Fix_
+    - None
+- _Change_
+    - Change the interface name from `ShowWindowsServerPassword` to `ShowServerPassword`.
+    - Change the interface name from `DeleteWindowsServerPassword` to `DeleteServerPassword`.
+
+### HuaweiCloud SDK IAM
+
+- _Features_
+    - Support more interfaces:
+        - `KeystoneShowIdentityProvider`
+        - `KeystoneCreateIdentityProvider`
+        - `KeystoneUpdateIdentityProvider`
+        - `KeystoneDeleteIdentityProvider`
+        - `CreateTokenWithIdToken`
+- _Bug Fix_
+    - None
+- _Change_
+    - Do not support interface `CreateUnscopeTokenByIdpInitiated` anymore.
+
+### HuaweiCloud SDK IMS
+
+- _Features_
+    - Support more interfaces:
+        - `ListImageByTags` which mead list images queried by tags.
+        - `ListImagesTags` which means list all tags of all images in current account.
+        - `ListImageTags` which means list all tags of specified image.
+        - `AddImageTag`
+        - `DeleteImageTag`
+- _Bug Fix_
+    - None
+- _Change_
+    - None
+
+### HuaweiCloud SDK IoTDA
+
+- _Features_
+    - Support `IoT Device Access` service.
+- _Bug Fix_
+    - None
+- _Change_
+    - None
+
 # 3.0.8-beta 2021-02-27
 
 ### HuaweiCloud SDK Core
@@ -25,8 +74,8 @@
 - _Bug Fix_
     - None
 - _Change_
-    - Delete the default value `vhd` of property `diskFormat` in the class `ListImagesRequest`. 
-    - Delete the default value `vhd` of property `diskFormat` in the class `GlanceListImagesRequest`. 
+    - Delete the default value `vhd` of property `diskFormat` in the class `ListImagesRequest`.
+    - Delete the default value `vhd` of property `diskFormat` in the class `GlanceListImagesRequest`.
 
 # 3.0.7-beta 2021-02-07
 
