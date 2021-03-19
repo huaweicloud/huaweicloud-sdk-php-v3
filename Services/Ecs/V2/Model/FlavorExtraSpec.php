@@ -29,11 +29,11 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'resourceType' => 'string',
             'hpetSupport' => 'string',
             'instanceVnictype' => 'string',
-            'instanceVnicinstanceBandwidth' => 'int',
-            'instanceVnicmaxCount' => 'int',
+            'instanceVnicinstanceBandwidth' => 'string',
+            'instanceVnicmaxCount' => 'string',
             'quotalocalDisk' => 'string',
             'quotanvmeSsd' => 'string',
-            'extraSpeciopersistentGrant' => 'bool',
+            'extraSpeciopersistentGrant' => 'string',
             'ecsgeneration' => 'string',
             'ecsvirtualizationEnvTypes' => 'string',
             'pciPassthroughenableGpu' => 'string',
@@ -69,8 +69,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         'resourceType' => null,
         'hpetSupport' => null,
         'instanceVnictype' => null,
-        'instanceVnicinstanceBandwidth' => 'int32',
-        'instanceVnicmaxCount' => 'int32',
+        'instanceVnicinstanceBandwidth' => null,
+        'instanceVnicmaxCount' => null,
         'quotalocalDisk' => null,
         'quotanvmeSsd' => null,
         'extraSpeciopersistentGrant' => null,
@@ -501,7 +501,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Gets instanceVnicinstanceBandwidth
     *
-    * @return int
+    * @return string
     */
     public function getInstanceVnicinstanceBandwidth()
     {
@@ -511,7 +511,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Sets instanceVnicinstanceBandwidth
     *
-    * @param int $instanceVnicinstanceBandwidth 最大带宽，单位Mbps，最大值为10000。
+    * @param string $instanceVnicinstanceBandwidth 最大带宽，单位Mbps，最大值为10000。
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Gets instanceVnicmaxCount
     *
-    * @return int
+    * @return string
     */
     public function getInstanceVnicmaxCount()
     {
@@ -534,7 +534,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Sets instanceVnicmaxCount
     *
-    * @param int $instanceVnicmaxCount 最大网卡个数，最大为4。
+    * @param string $instanceVnicmaxCount 最大网卡个数，最大为4。
     *
     * @return $this
     */
@@ -593,7 +593,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Gets extraSpeciopersistentGrant
     *
-    * @return bool|null
+    * @return string|null
     */
     public function getExtraSpeciopersistentGrant()
     {
@@ -603,7 +603,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Sets extraSpeciopersistentGrant
     *
-    * @param bool|null $extraSpeciopersistentGrant 是否支持持久化，值为true。  代表云服务器访问存储的方式为持久化授权。   > 说明：  - 密集存储D1型特有字段。
+    * @param string|null $extraSpeciopersistentGrant 是否支持持久化，值为true。  代表云服务器访问存储的方式为持久化授权。   > 说明：  - 密集存储D1型特有字段。
     *
     * @return $this
     */

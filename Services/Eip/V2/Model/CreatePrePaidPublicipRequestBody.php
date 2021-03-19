@@ -26,7 +26,8 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'publicip' => '\HuaweiCloud\SDK\Eip\V2\Model\CreatePrePaidPublicipOption',
             'bandwidth' => '\HuaweiCloud\SDK\Eip\V2\Model\CreatePublicipBandwidthOption',
-            'extendParam' => '\HuaweiCloud\SDK\Eip\V2\Model\CreatePrePaidPublicipExtendParamOption'
+            'extendParam' => '\HuaweiCloud\SDK\Eip\V2\Model\CreatePrePaidPublicipExtendParamOption',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -37,7 +38,8 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'publicip' => null,
         'bandwidth' => null,
-        'extendParam' => null
+        'extendParam' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -69,7 +71,8 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'publicip' => 'publicip',
             'bandwidth' => 'bandwidth',
-            'extendParam' => 'extendParam'
+            'extendParam' => 'extendParam',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -80,7 +83,8 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
     protected static $setters = [
             'publicip' => 'setPublicip',
             'bandwidth' => 'setBandwidth',
-            'extendParam' => 'setExtendParam'
+            'extendParam' => 'setExtendParam',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -91,7 +95,8 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
     protected static $getters = [
             'publicip' => 'getPublicip',
             'bandwidth' => 'getBandwidth',
-            'extendParam' => 'getExtendParam'
+            'extendParam' => 'getExtendParam',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -155,6 +160,7 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
         $this->container['publicip'] = isset($data['publicip']) ? $data['publicip'] : null;
         $this->container['bandwidth'] = isset($data['bandwidth']) ? $data['bandwidth'] : null;
         $this->container['extendParam'] = isset($data['extendParam']) ? $data['extendParam'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
     }
 
     /**
@@ -171,6 +177,9 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['bandwidth'] === null) {
             $invalidProperties[] = "'bandwidth' can't be null";
         }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
+            }
         return $invalidProperties;
     }
 
@@ -251,6 +260,29 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
     public function setExtendParam($extendParam)
     {
         $this->container['extendParam'] = $extendParam;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。  不指定该参数时，默认值是 0
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 
