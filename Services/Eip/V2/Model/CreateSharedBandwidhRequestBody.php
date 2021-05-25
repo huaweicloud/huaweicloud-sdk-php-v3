@@ -20,6 +20,7 @@ class CreateSharedBandwidhRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * bandwidth  bandwidth
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class CreateSharedBandwidhRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * bandwidth  bandwidth
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class CreateSharedBandwidhRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * bandwidth  bandwidth
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class CreateSharedBandwidhRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * bandwidth  bandwidth
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class CreateSharedBandwidhRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * bandwidth  bandwidth
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class CreateSharedBandwidhRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidth
+    *  bandwidth
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\CreateSharedBandwidthOption
     */

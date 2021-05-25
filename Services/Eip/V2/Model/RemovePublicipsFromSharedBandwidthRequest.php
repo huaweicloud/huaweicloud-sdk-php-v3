@@ -20,6 +20,8 @@ class RemovePublicipsFromSharedBandwidthRequest implements ModelInterface, Array
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * bandwidthId  带宽唯一标识
+    * body  body
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class RemovePublicipsFromSharedBandwidthRequest implements ModelInterface, Array
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * bandwidthId  带宽唯一标识
+    * body  body
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class RemovePublicipsFromSharedBandwidthRequest implements ModelInterface, Array
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * bandwidthId  带宽唯一标识
+    * body  body
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class RemovePublicipsFromSharedBandwidthRequest implements ModelInterface, Array
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * bandwidthId  带宽唯一标识
+    * body  body
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class RemovePublicipsFromSharedBandwidthRequest implements ModelInterface, Array
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * bandwidthId  带宽唯一标识
+    * body  body
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class RemovePublicipsFromSharedBandwidthRequest implements ModelInterface, Array
 
     /**
     * Gets bandwidthId
+    *  带宽唯一标识
     *
     * @return string
     */
@@ -189,7 +200,7 @@ class RemovePublicipsFromSharedBandwidthRequest implements ModelInterface, Array
     /**
     * Sets bandwidthId
     *
-    * @param string $bandwidthId bandwidthId
+    * @param string $bandwidthId 带宽唯一标识
     *
     * @return $this
     */
@@ -201,6 +212,7 @@ class RemovePublicipsFromSharedBandwidthRequest implements ModelInterface, Array
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\RemovePublicipsFromSharedBandwidthRequestBody|null
     */

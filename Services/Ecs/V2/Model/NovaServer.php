@@ -20,6 +20,48 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  云服务器名称。
+    * id  云服务器唯一标识。
+    * status  云服务器当前状态信息。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE
+    * created  云服务器创建时间。 时间格式例如：2019-05-22T07:48:53Z
+    * updated  云服务器上一次更新时间。时间格式例如：2019-05-22T07:48:53Z
+    * flavor  flavor
+    * image  image
+    * tenantId  云服务器所属租户ID。即项目id，与project_id表示相同的概念。
+    * keyName  SSH密钥名称。
+    * userId  云服务器所属用户ID。
+    * metadata  云服务器元数据。
+    * hostId  云服务器对应的主机ID。
+    * addresses  云服务器对应的网络地址信息。
+    * securityGroups  云服务器所属安全组列表。
+    * links  云服务器相关标记快捷链接信息。
+    * osDcFdiskConfig  扩展属性，磁盘配置方式。对镜像启动云服务器生效。  取值范围：  - AUTO: API使用单个分区构建目标磁盘大小的云服务器。 API会自动调整文件系统以适应整个分区。 - MANUAL：API使用源映像中的分区方案和文件系统构建服务器。如果目标磁盘较大，则API不分区剩余的磁盘空间。
+    * osExtAZavailabilityZone  扩展属性，可用分区编码。
+    * osExtSrvAttRhost  扩展属性，与主机宿主名称。
+    * osExtSrvAttRhypervisorHostname  扩展属性，hypervisor主机名。
+    * osExtSrvAttRinstanceName  扩展属性，云服务器实例ID。
+    * osExtStSpowerState  扩展属性，云服务器电源状态。  取值范围：0，1，2，3，4  - 0 : pending - 1 : running - 2 : paused - 3 : shutdown - 4 : crashed
+    * osExtStStaskState  扩展属性，云服务器任务状态。   取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：   ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osSrvUsGlaunchedAt  扩展属性，云服务器启动时间。时间格式例如：2019-05-22T07:48:19.000000
+    * osSrvUsGterminatedAt  扩展属性，云服务器关闭时间。  时间格式例如：2019-05-22T07:48:19.000000
+    * osExtendedVolumesvolumesAttached  云服务器挂载的云磁盘信息。
+    * fault  fault
+    * description  弹性云服务器的描述信息。  微版本2.19后支持
+    * hostStatus  nova-compute状态。  - UP：服务正常 - UNKNOWN：状态未知 - DOWN：服务异常 - MAINTENANCE：维护状态 - 空字符串：弹性云服务器无主机信息
+    * osExtSrvAttRhostname  弹性云服务器的主机名。  微版本2.3后支持
+    * osExtSrvAttRreservationId  批量创建场景，弹性云服务器的预留ID。  微版本2.3后支持
+    * osExtSrvAttRlaunchIndex  批量创建场景，弹性云服务器的启动顺序。  微版本2.3后支持
+    * osExtSrvAttRkernelId  若使用AMI格式的镜像，则表示kernel image的UUID；否则，留空。  微版本2.3后支持
+    * osExtSrvAttRramdiskId  若使用AMI格式镜像，则表示ramdisk image的UUID；否则，留空。  微版本2.3后支持
+    * osExtSrvAttRrootDeviceName  弹性云服务器系统盘的设备名称。  微版本2.3后支持
+    * osExtSrvAttRuserData  创建弹性云服务器时指定的user_data。  微版本2.3后支持
+    * tags  云服务器的标签列表。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
+    * locked  当云服务器被锁时为True，否则为False。  微版本2.9后支持
+    * accessIPv4  预留属性。
+    * accessIPv6  预留属性。
+    * configDrive  预留属性。
+    * progress  预留属性
     *
     * @var string[]
     */
@@ -70,6 +112,48 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  云服务器名称。
+    * id  云服务器唯一标识。
+    * status  云服务器当前状态信息。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE
+    * created  云服务器创建时间。 时间格式例如：2019-05-22T07:48:53Z
+    * updated  云服务器上一次更新时间。时间格式例如：2019-05-22T07:48:53Z
+    * flavor  flavor
+    * image  image
+    * tenantId  云服务器所属租户ID。即项目id，与project_id表示相同的概念。
+    * keyName  SSH密钥名称。
+    * userId  云服务器所属用户ID。
+    * metadata  云服务器元数据。
+    * hostId  云服务器对应的主机ID。
+    * addresses  云服务器对应的网络地址信息。
+    * securityGroups  云服务器所属安全组列表。
+    * links  云服务器相关标记快捷链接信息。
+    * osDcFdiskConfig  扩展属性，磁盘配置方式。对镜像启动云服务器生效。  取值范围：  - AUTO: API使用单个分区构建目标磁盘大小的云服务器。 API会自动调整文件系统以适应整个分区。 - MANUAL：API使用源映像中的分区方案和文件系统构建服务器。如果目标磁盘较大，则API不分区剩余的磁盘空间。
+    * osExtAZavailabilityZone  扩展属性，可用分区编码。
+    * osExtSrvAttRhost  扩展属性，与主机宿主名称。
+    * osExtSrvAttRhypervisorHostname  扩展属性，hypervisor主机名。
+    * osExtSrvAttRinstanceName  扩展属性，云服务器实例ID。
+    * osExtStSpowerState  扩展属性，云服务器电源状态。  取值范围：0，1，2，3，4  - 0 : pending - 1 : running - 2 : paused - 3 : shutdown - 4 : crashed
+    * osExtStStaskState  扩展属性，云服务器任务状态。   取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：   ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osSrvUsGlaunchedAt  扩展属性，云服务器启动时间。时间格式例如：2019-05-22T07:48:19.000000
+    * osSrvUsGterminatedAt  扩展属性，云服务器关闭时间。  时间格式例如：2019-05-22T07:48:19.000000
+    * osExtendedVolumesvolumesAttached  云服务器挂载的云磁盘信息。
+    * fault  fault
+    * description  弹性云服务器的描述信息。  微版本2.19后支持
+    * hostStatus  nova-compute状态。  - UP：服务正常 - UNKNOWN：状态未知 - DOWN：服务异常 - MAINTENANCE：维护状态 - 空字符串：弹性云服务器无主机信息
+    * osExtSrvAttRhostname  弹性云服务器的主机名。  微版本2.3后支持
+    * osExtSrvAttRreservationId  批量创建场景，弹性云服务器的预留ID。  微版本2.3后支持
+    * osExtSrvAttRlaunchIndex  批量创建场景，弹性云服务器的启动顺序。  微版本2.3后支持
+    * osExtSrvAttRkernelId  若使用AMI格式的镜像，则表示kernel image的UUID；否则，留空。  微版本2.3后支持
+    * osExtSrvAttRramdiskId  若使用AMI格式镜像，则表示ramdisk image的UUID；否则，留空。  微版本2.3后支持
+    * osExtSrvAttRrootDeviceName  弹性云服务器系统盘的设备名称。  微版本2.3后支持
+    * osExtSrvAttRuserData  创建弹性云服务器时指定的user_data。  微版本2.3后支持
+    * tags  云服务器的标签列表。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
+    * locked  当云服务器被锁时为True，否则为False。  微版本2.9后支持
+    * accessIPv4  预留属性。
+    * accessIPv6  预留属性。
+    * configDrive  预留属性。
+    * progress  预留属性
     *
     * @var string[]
     */
@@ -141,6 +225,48 @@ class NovaServer implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  云服务器名称。
+    * id  云服务器唯一标识。
+    * status  云服务器当前状态信息。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE
+    * created  云服务器创建时间。 时间格式例如：2019-05-22T07:48:53Z
+    * updated  云服务器上一次更新时间。时间格式例如：2019-05-22T07:48:53Z
+    * flavor  flavor
+    * image  image
+    * tenantId  云服务器所属租户ID。即项目id，与project_id表示相同的概念。
+    * keyName  SSH密钥名称。
+    * userId  云服务器所属用户ID。
+    * metadata  云服务器元数据。
+    * hostId  云服务器对应的主机ID。
+    * addresses  云服务器对应的网络地址信息。
+    * securityGroups  云服务器所属安全组列表。
+    * links  云服务器相关标记快捷链接信息。
+    * osDcFdiskConfig  扩展属性，磁盘配置方式。对镜像启动云服务器生效。  取值范围：  - AUTO: API使用单个分区构建目标磁盘大小的云服务器。 API会自动调整文件系统以适应整个分区。 - MANUAL：API使用源映像中的分区方案和文件系统构建服务器。如果目标磁盘较大，则API不分区剩余的磁盘空间。
+    * osExtAZavailabilityZone  扩展属性，可用分区编码。
+    * osExtSrvAttRhost  扩展属性，与主机宿主名称。
+    * osExtSrvAttRhypervisorHostname  扩展属性，hypervisor主机名。
+    * osExtSrvAttRinstanceName  扩展属性，云服务器实例ID。
+    * osExtStSpowerState  扩展属性，云服务器电源状态。  取值范围：0，1，2，3，4  - 0 : pending - 1 : running - 2 : paused - 3 : shutdown - 4 : crashed
+    * osExtStStaskState  扩展属性，云服务器任务状态。   取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：   ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osSrvUsGlaunchedAt  扩展属性，云服务器启动时间。时间格式例如：2019-05-22T07:48:19.000000
+    * osSrvUsGterminatedAt  扩展属性，云服务器关闭时间。  时间格式例如：2019-05-22T07:48:19.000000
+    * osExtendedVolumesvolumesAttached  云服务器挂载的云磁盘信息。
+    * fault  fault
+    * description  弹性云服务器的描述信息。  微版本2.19后支持
+    * hostStatus  nova-compute状态。  - UP：服务正常 - UNKNOWN：状态未知 - DOWN：服务异常 - MAINTENANCE：维护状态 - 空字符串：弹性云服务器无主机信息
+    * osExtSrvAttRhostname  弹性云服务器的主机名。  微版本2.3后支持
+    * osExtSrvAttRreservationId  批量创建场景，弹性云服务器的预留ID。  微版本2.3后支持
+    * osExtSrvAttRlaunchIndex  批量创建场景，弹性云服务器的启动顺序。  微版本2.3后支持
+    * osExtSrvAttRkernelId  若使用AMI格式的镜像，则表示kernel image的UUID；否则，留空。  微版本2.3后支持
+    * osExtSrvAttRramdiskId  若使用AMI格式镜像，则表示ramdisk image的UUID；否则，留空。  微版本2.3后支持
+    * osExtSrvAttRrootDeviceName  弹性云服务器系统盘的设备名称。  微版本2.3后支持
+    * osExtSrvAttRuserData  创建弹性云服务器时指定的user_data。  微版本2.3后支持
+    * tags  云服务器的标签列表。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
+    * locked  当云服务器被锁时为True，否则为False。  微版本2.9后支持
+    * accessIPv4  预留属性。
+    * accessIPv6  预留属性。
+    * configDrive  预留属性。
+    * progress  预留属性
     *
     * @var string[]
     */
@@ -191,6 +317,48 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  云服务器名称。
+    * id  云服务器唯一标识。
+    * status  云服务器当前状态信息。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE
+    * created  云服务器创建时间。 时间格式例如：2019-05-22T07:48:53Z
+    * updated  云服务器上一次更新时间。时间格式例如：2019-05-22T07:48:53Z
+    * flavor  flavor
+    * image  image
+    * tenantId  云服务器所属租户ID。即项目id，与project_id表示相同的概念。
+    * keyName  SSH密钥名称。
+    * userId  云服务器所属用户ID。
+    * metadata  云服务器元数据。
+    * hostId  云服务器对应的主机ID。
+    * addresses  云服务器对应的网络地址信息。
+    * securityGroups  云服务器所属安全组列表。
+    * links  云服务器相关标记快捷链接信息。
+    * osDcFdiskConfig  扩展属性，磁盘配置方式。对镜像启动云服务器生效。  取值范围：  - AUTO: API使用单个分区构建目标磁盘大小的云服务器。 API会自动调整文件系统以适应整个分区。 - MANUAL：API使用源映像中的分区方案和文件系统构建服务器。如果目标磁盘较大，则API不分区剩余的磁盘空间。
+    * osExtAZavailabilityZone  扩展属性，可用分区编码。
+    * osExtSrvAttRhost  扩展属性，与主机宿主名称。
+    * osExtSrvAttRhypervisorHostname  扩展属性，hypervisor主机名。
+    * osExtSrvAttRinstanceName  扩展属性，云服务器实例ID。
+    * osExtStSpowerState  扩展属性，云服务器电源状态。  取值范围：0，1，2，3，4  - 0 : pending - 1 : running - 2 : paused - 3 : shutdown - 4 : crashed
+    * osExtStStaskState  扩展属性，云服务器任务状态。   取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：   ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osSrvUsGlaunchedAt  扩展属性，云服务器启动时间。时间格式例如：2019-05-22T07:48:19.000000
+    * osSrvUsGterminatedAt  扩展属性，云服务器关闭时间。  时间格式例如：2019-05-22T07:48:19.000000
+    * osExtendedVolumesvolumesAttached  云服务器挂载的云磁盘信息。
+    * fault  fault
+    * description  弹性云服务器的描述信息。  微版本2.19后支持
+    * hostStatus  nova-compute状态。  - UP：服务正常 - UNKNOWN：状态未知 - DOWN：服务异常 - MAINTENANCE：维护状态 - 空字符串：弹性云服务器无主机信息
+    * osExtSrvAttRhostname  弹性云服务器的主机名。  微版本2.3后支持
+    * osExtSrvAttRreservationId  批量创建场景，弹性云服务器的预留ID。  微版本2.3后支持
+    * osExtSrvAttRlaunchIndex  批量创建场景，弹性云服务器的启动顺序。  微版本2.3后支持
+    * osExtSrvAttRkernelId  若使用AMI格式的镜像，则表示kernel image的UUID；否则，留空。  微版本2.3后支持
+    * osExtSrvAttRramdiskId  若使用AMI格式镜像，则表示ramdisk image的UUID；否则，留空。  微版本2.3后支持
+    * osExtSrvAttRrootDeviceName  弹性云服务器系统盘的设备名称。  微版本2.3后支持
+    * osExtSrvAttRuserData  创建弹性云服务器时指定的user_data。  微版本2.3后支持
+    * tags  云服务器的标签列表。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
+    * locked  当云服务器被锁时为True，否则为False。  微版本2.9后支持
+    * accessIPv4  预留属性。
+    * accessIPv6  预留属性。
+    * configDrive  预留属性。
+    * progress  预留属性
     *
     * @var string[]
     */
@@ -241,6 +409,48 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  云服务器名称。
+    * id  云服务器唯一标识。
+    * status  云服务器当前状态信息。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE
+    * created  云服务器创建时间。 时间格式例如：2019-05-22T07:48:53Z
+    * updated  云服务器上一次更新时间。时间格式例如：2019-05-22T07:48:53Z
+    * flavor  flavor
+    * image  image
+    * tenantId  云服务器所属租户ID。即项目id，与project_id表示相同的概念。
+    * keyName  SSH密钥名称。
+    * userId  云服务器所属用户ID。
+    * metadata  云服务器元数据。
+    * hostId  云服务器对应的主机ID。
+    * addresses  云服务器对应的网络地址信息。
+    * securityGroups  云服务器所属安全组列表。
+    * links  云服务器相关标记快捷链接信息。
+    * osDcFdiskConfig  扩展属性，磁盘配置方式。对镜像启动云服务器生效。  取值范围：  - AUTO: API使用单个分区构建目标磁盘大小的云服务器。 API会自动调整文件系统以适应整个分区。 - MANUAL：API使用源映像中的分区方案和文件系统构建服务器。如果目标磁盘较大，则API不分区剩余的磁盘空间。
+    * osExtAZavailabilityZone  扩展属性，可用分区编码。
+    * osExtSrvAttRhost  扩展属性，与主机宿主名称。
+    * osExtSrvAttRhypervisorHostname  扩展属性，hypervisor主机名。
+    * osExtSrvAttRinstanceName  扩展属性，云服务器实例ID。
+    * osExtStSpowerState  扩展属性，云服务器电源状态。  取值范围：0，1，2，3，4  - 0 : pending - 1 : running - 2 : paused - 3 : shutdown - 4 : crashed
+    * osExtStStaskState  扩展属性，云服务器任务状态。   取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：   ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osSrvUsGlaunchedAt  扩展属性，云服务器启动时间。时间格式例如：2019-05-22T07:48:19.000000
+    * osSrvUsGterminatedAt  扩展属性，云服务器关闭时间。  时间格式例如：2019-05-22T07:48:19.000000
+    * osExtendedVolumesvolumesAttached  云服务器挂载的云磁盘信息。
+    * fault  fault
+    * description  弹性云服务器的描述信息。  微版本2.19后支持
+    * hostStatus  nova-compute状态。  - UP：服务正常 - UNKNOWN：状态未知 - DOWN：服务异常 - MAINTENANCE：维护状态 - 空字符串：弹性云服务器无主机信息
+    * osExtSrvAttRhostname  弹性云服务器的主机名。  微版本2.3后支持
+    * osExtSrvAttRreservationId  批量创建场景，弹性云服务器的预留ID。  微版本2.3后支持
+    * osExtSrvAttRlaunchIndex  批量创建场景，弹性云服务器的启动顺序。  微版本2.3后支持
+    * osExtSrvAttRkernelId  若使用AMI格式的镜像，则表示kernel image的UUID；否则，留空。  微版本2.3后支持
+    * osExtSrvAttRramdiskId  若使用AMI格式镜像，则表示ramdisk image的UUID；否则，留空。  微版本2.3后支持
+    * osExtSrvAttRrootDeviceName  弹性云服务器系统盘的设备名称。  微版本2.3后支持
+    * osExtSrvAttRuserData  创建弹性云服务器时指定的user_data。  微版本2.3后支持
+    * tags  云服务器的标签列表。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
+    * locked  当云服务器被锁时为True，否则为False。  微版本2.9后支持
+    * accessIPv4  预留属性。
+    * accessIPv6  预留属性。
+    * configDrive  预留属性。
+    * progress  预留属性
     *
     * @var string[]
     */
@@ -704,6 +914,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云服务器名称。
     *
     * @return string
     */
@@ -727,6 +938,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  云服务器唯一标识。
     *
     * @return string
     */
@@ -750,6 +962,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  云服务器当前状态信息。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE
     *
     * @return string
     */
@@ -773,6 +986,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets created
+    *  云服务器创建时间。 时间格式例如：2019-05-22T07:48:53Z
     *
     * @return string
     */
@@ -796,6 +1010,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
+    *  云服务器上一次更新时间。时间格式例如：2019-05-22T07:48:53Z
     *
     * @return string
     */
@@ -819,6 +1034,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavor
+    *  flavor
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaServerFlavor
     */
@@ -842,6 +1058,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets image
+    *  image
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaServerImage
     */
@@ -865,6 +1082,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  云服务器所属租户ID。即项目id，与project_id表示相同的概念。
     *
     * @return string
     */
@@ -888,6 +1106,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets keyName
+    *  SSH密钥名称。
     *
     * @return string
     */
@@ -911,6 +1130,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  云服务器所属用户ID。
     *
     * @return string
     */
@@ -934,6 +1154,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets metadata
+    *  云服务器元数据。
     *
     * @return map[string,string]
     */
@@ -957,6 +1178,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
+    *  云服务器对应的主机ID。
     *
     * @return string
     */
@@ -980,6 +1202,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets addresses
+    *  云服务器对应的网络地址信息。
     *
     * @return map[string,\HuaweiCloud\SDK\Ecs\V2\Model\NovaNetwork[]]
     */
@@ -1003,6 +1226,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroups
+    *  云服务器所属安全组列表。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaServerSecurityGroup[]
     */
@@ -1026,6 +1250,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  云服务器相关标记快捷链接信息。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaLink[]
     */
@@ -1049,6 +1274,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osDcFdiskConfig
+    *  扩展属性，磁盘配置方式。对镜像启动云服务器生效。  取值范围：  - AUTO: API使用单个分区构建目标磁盘大小的云服务器。 API会自动调整文件系统以适应整个分区。 - MANUAL：API使用源映像中的分区方案和文件系统构建服务器。如果目标磁盘较大，则API不分区剩余的磁盘空间。
     *
     * @return string
     */
@@ -1072,6 +1298,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtAZavailabilityZone
+    *  扩展属性，可用分区编码。
     *
     * @return string
     */
@@ -1095,6 +1322,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtSrvAttRhost
+    *  扩展属性，与主机宿主名称。
     *
     * @return string
     */
@@ -1118,6 +1346,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtSrvAttRhypervisorHostname
+    *  扩展属性，hypervisor主机名。
     *
     * @return string
     */
@@ -1141,6 +1370,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtSrvAttRinstanceName
+    *  扩展属性，云服务器实例ID。
     *
     * @return string
     */
@@ -1164,6 +1394,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtStSpowerState
+    *  扩展属性，云服务器电源状态。  取值范围：0，1，2，3，4  - 0 : pending - 1 : running - 2 : paused - 3 : shutdown - 4 : crashed
     *
     * @return int
     */
@@ -1187,6 +1418,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtStStaskState
+    *  扩展属性，云服务器任务状态。   取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
     *
     * @return string
     */
@@ -1210,6 +1442,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtStSvmState
+    *  扩展属性，云服务器状态。  取值范围：   ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
     *
     * @return string
     */
@@ -1233,6 +1466,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osSrvUsGlaunchedAt
+    *  扩展属性，云服务器启动时间。时间格式例如：2019-05-22T07:48:19.000000
     *
     * @return string
     */
@@ -1256,6 +1490,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osSrvUsGterminatedAt
+    *  扩展属性，云服务器关闭时间。  时间格式例如：2019-05-22T07:48:19.000000
     *
     * @return string
     */
@@ -1279,6 +1514,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtendedVolumesvolumesAttached
+    *  云服务器挂载的云磁盘信息。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaServerVolume[]
     */
@@ -1302,6 +1538,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets fault
+    *  fault
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaServerFault|null
     */
@@ -1325,6 +1562,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  弹性云服务器的描述信息。  微版本2.19后支持
     *
     * @return string|null
     */
@@ -1348,6 +1586,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostStatus
+    *  nova-compute状态。  - UP：服务正常 - UNKNOWN：状态未知 - DOWN：服务异常 - MAINTENANCE：维护状态 - 空字符串：弹性云服务器无主机信息
     *
     * @return string
     */
@@ -1371,6 +1610,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtSrvAttRhostname
+    *  弹性云服务器的主机名。  微版本2.3后支持
     *
     * @return string|null
     */
@@ -1394,6 +1634,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtSrvAttRreservationId
+    *  批量创建场景，弹性云服务器的预留ID。  微版本2.3后支持
     *
     * @return string|null
     */
@@ -1417,6 +1658,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtSrvAttRlaunchIndex
+    *  批量创建场景，弹性云服务器的启动顺序。  微版本2.3后支持
     *
     * @return int|null
     */
@@ -1440,6 +1682,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtSrvAttRkernelId
+    *  若使用AMI格式的镜像，则表示kernel image的UUID；否则，留空。  微版本2.3后支持
     *
     * @return string|null
     */
@@ -1463,6 +1706,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtSrvAttRramdiskId
+    *  若使用AMI格式镜像，则表示ramdisk image的UUID；否则，留空。  微版本2.3后支持
     *
     * @return string|null
     */
@@ -1486,6 +1730,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtSrvAttRrootDeviceName
+    *  弹性云服务器系统盘的设备名称。  微版本2.3后支持
     *
     * @return string|null
     */
@@ -1509,6 +1754,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtSrvAttRuserData
+    *  创建弹性云服务器时指定的user_data。  微版本2.3后支持
     *
     * @return string|null
     */
@@ -1532,6 +1778,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  云服务器的标签列表。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
     *
     * @return string[]
     */
@@ -1555,6 +1802,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets locked
+    *  当云服务器被锁时为True，否则为False。  微版本2.9后支持
     *
     * @return bool|null
     */
@@ -1578,6 +1826,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessIPv4
+    *  预留属性。
     *
     * @return string
     */
@@ -1601,6 +1850,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessIPv6
+    *  预留属性。
     *
     * @return string
     */
@@ -1624,6 +1874,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets configDrive
+    *  预留属性。
     *
     * @return string
     */
@@ -1647,6 +1898,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets progress
+    *  预留属性
     *
     * @return int
     */

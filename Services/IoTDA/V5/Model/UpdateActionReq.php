@@ -20,6 +20,9 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * channelDetail  channelDetail
+    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * channelDetail  channelDetail
+    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * channelDetail  channelDetail
+    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * channelDetail  channelDetail
+    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * channelDetail  channelDetail
+    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
@@ -184,6 +199,7 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets channel
+    *  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     *
     * @return string|null
     */
@@ -207,6 +223,7 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets channelDetail
+    *  channelDetail
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ChannelDetail|null
     */
@@ -230,6 +247,7 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets batch
+    *  是否支持批量接收推送消息。
     *
     * @return bool|null
     */

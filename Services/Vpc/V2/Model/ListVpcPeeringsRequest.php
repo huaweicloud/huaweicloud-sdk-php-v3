@@ -20,6 +20,13 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  按照peering_id过滤查询
+    * name  功能说明：按照peering_name过查询  取值范围：最大长度不超过64
+    * status  根据status进行过滤  - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
+    * tenantId  按照项目ID过滤查询
+    * vpcId  根据vpc ID过滤查询
     *
     * @var string[]
     */
@@ -35,6 +42,13 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  按照peering_id过滤查询
+    * name  功能说明：按照peering_name过查询  取值范围：最大长度不超过64
+    * status  根据status进行过滤  - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
+    * tenantId  按照项目ID过滤查询
+    * vpcId  根据vpc ID过滤查询
     *
     * @var string[]
     */
@@ -71,6 +85,13 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  按照peering_id过滤查询
+    * name  功能说明：按照peering_name过查询  取值范围：最大长度不超过64
+    * status  根据status进行过滤  - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
+    * tenantId  按照项目ID过滤查询
+    * vpcId  根据vpc ID过滤查询
     *
     * @var string[]
     */
@@ -86,6 +107,13 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  按照peering_id过滤查询
+    * name  功能说明：按照peering_name过查询  取值范围：最大长度不超过64
+    * status  根据status进行过滤  - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
+    * tenantId  按照项目ID过滤查询
+    * vpcId  根据vpc ID过滤查询
     *
     * @var string[]
     */
@@ -101,6 +129,13 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  按照peering_id过滤查询
+    * name  功能说明：按照peering_name过查询  取值范围：最大长度不超过64
+    * status  根据status进行过滤  - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
+    * tenantId  按照项目ID过滤查询
+    * vpcId  根据vpc ID过滤查询
     *
     * @var string[]
     */
@@ -249,6 +284,7 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  每页返回的个数
     *
     * @return int|null
     */
@@ -260,7 +296,7 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 每页返回的个数
     *
     * @return $this
     */
@@ -272,6 +308,7 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  分页查询起始的资源ID，为空时查询第一页
     *
     * @return string|null
     */
@@ -283,7 +320,7 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 分页查询起始的资源ID，为空时查询第一页
     *
     * @return $this
     */
@@ -295,6 +332,7 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  按照peering_id过滤查询
     *
     * @return string|null
     */
@@ -306,7 +344,7 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id 按照peering_id过滤查询
     *
     * @return $this
     */
@@ -318,6 +356,7 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：按照peering_name过查询  取值范围：最大长度不超过64
     *
     * @return string|null
     */
@@ -329,7 +368,7 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name 功能说明：按照peering_name过查询  取值范围：最大长度不超过64
     *
     * @return $this
     */
@@ -341,6 +380,7 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  根据status进行过滤  - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
     *
     * @return string|null
     */
@@ -352,7 +392,7 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status 根据status进行过滤  - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
     *
     * @return $this
     */
@@ -364,6 +404,7 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  按照项目ID过滤查询
     *
     * @return string|null
     */
@@ -375,7 +416,7 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId tenantId
+    * @param string|null $tenantId 按照项目ID过滤查询
     *
     * @return $this
     */
@@ -387,6 +428,7 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
+    *  根据vpc ID过滤查询
     *
     * @return string|null
     */
@@ -398,7 +440,7 @@ class ListVpcPeeringsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId vpcId
+    * @param string|null $vpcId 根据vpc ID过滤查询
     *
     * @return $this
     */

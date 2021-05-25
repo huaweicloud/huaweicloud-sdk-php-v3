@@ -20,6 +20,8 @@ class Tags implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * key  标签的键。最大长度127个unicode字符，key不能为空。
+    * values  标签的值列表。每个值最大长度255个unicode字符，如果values为空列表，则标签的值可以是任意值。值列表中的值之间为或的关系。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class Tags implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * key  标签的键。最大长度127个unicode字符，key不能为空。
+    * values  标签的值列表。每个值最大长度255个unicode字符，如果values为空列表，则标签的值可以是任意值。值列表中的值之间为或的关系。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class Tags implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * key  标签的键。最大长度127个unicode字符，key不能为空。
+    * values  标签的值列表。每个值最大长度255个unicode字符，如果values为空列表，则标签的值可以是任意值。值列表中的值之间为或的关系。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class Tags implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * key  标签的键。最大长度127个unicode字符，key不能为空。
+    * values  标签的值列表。每个值最大长度255个unicode字符，如果values为空列表，则标签的值可以是任意值。值列表中的值之间为或的关系。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class Tags implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * key  标签的键。最大长度127个unicode字符，key不能为空。
+    * values  标签的值列表。每个值最大长度255个unicode字符，如果values为空列表，则标签的值可以是任意值。值列表中的值之间为或的关系。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class Tags implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
+    *  标签的键。最大长度127个unicode字符，key不能为空。
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class Tags implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
+    *  标签的值列表。每个值最大长度255个unicode字符，如果values为空列表，则标签的值可以是任意值。值列表中的值之间为或的关系。
     *
     * @return string[]
     */

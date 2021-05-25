@@ -20,6 +20,12 @@ class NeutronCreateFirewallGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  功能说明：网络ACL组名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL防火墙组描述 取值范围：最长255个字符
+    * ingressFirewallPolicyId  功能说明：入方向网络ACL策略
+    * egressFirewallPolicyId  功能说明：出方向网络ACL策略
+    * ports  功能说明：网络ACL防火墙组绑定的端口列表 约束：必须为分布式router的端口id
+    * adminStateUp  功能说明：网络ACL是否受管理员控制
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class NeutronCreateFirewallGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  功能说明：网络ACL组名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL防火墙组描述 取值范围：最长255个字符
+    * ingressFirewallPolicyId  功能说明：入方向网络ACL策略
+    * egressFirewallPolicyId  功能说明：出方向网络ACL策略
+    * ports  功能说明：网络ACL防火墙组绑定的端口列表 约束：必须为分布式router的端口id
+    * adminStateUp  功能说明：网络ACL是否受管理员控制
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class NeutronCreateFirewallGroupOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  功能说明：网络ACL组名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL防火墙组描述 取值范围：最长255个字符
+    * ingressFirewallPolicyId  功能说明：入方向网络ACL策略
+    * egressFirewallPolicyId  功能说明：出方向网络ACL策略
+    * ports  功能说明：网络ACL防火墙组绑定的端口列表 约束：必须为分布式router的端口id
+    * adminStateUp  功能说明：网络ACL是否受管理员控制
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class NeutronCreateFirewallGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  功能说明：网络ACL组名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL防火墙组描述 取值范围：最长255个字符
+    * ingressFirewallPolicyId  功能说明：入方向网络ACL策略
+    * egressFirewallPolicyId  功能说明：出方向网络ACL策略
+    * ports  功能说明：网络ACL防火墙组绑定的端口列表 约束：必须为分布式router的端口id
+    * adminStateUp  功能说明：网络ACL是否受管理员控制
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class NeutronCreateFirewallGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  功能说明：网络ACL组名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL防火墙组描述 取值范围：最长255个字符
+    * ingressFirewallPolicyId  功能说明：入方向网络ACL策略
+    * egressFirewallPolicyId  功能说明：出方向网络ACL策略
+    * ports  功能说明：网络ACL防火墙组绑定的端口列表 约束：必须为分布式router的端口id
+    * adminStateUp  功能说明：网络ACL是否受管理员控制
     *
     * @var string[]
     */
@@ -217,6 +247,7 @@ class NeutronCreateFirewallGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：网络ACL组名称 取值范围：0-255个字符
     *
     * @return string|null
     */
@@ -240,6 +271,7 @@ class NeutronCreateFirewallGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：网络ACL防火墙组描述 取值范围：最长255个字符
     *
     * @return string|null
     */
@@ -263,6 +295,7 @@ class NeutronCreateFirewallGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ingressFirewallPolicyId
+    *  功能说明：入方向网络ACL策略
     *
     * @return string|null
     */
@@ -286,6 +319,7 @@ class NeutronCreateFirewallGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets egressFirewallPolicyId
+    *  功能说明：出方向网络ACL策略
     *
     * @return string|null
     */
@@ -309,6 +343,7 @@ class NeutronCreateFirewallGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ports
+    *  功能说明：网络ACL防火墙组绑定的端口列表 约束：必须为分布式router的端口id
     *
     * @return string[]|null
     */
@@ -332,6 +367,7 @@ class NeutronCreateFirewallGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
+    *  功能说明：网络ACL是否受管理员控制
     *
     * @return bool|null
     */

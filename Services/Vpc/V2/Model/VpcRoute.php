@@ -20,6 +20,12 @@ class VpcRoute implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  路由ID
+    * destination  路由目的地址CIDR，如192.168.200.0/24。
+    * nexthop  功能说明：路由下一跳 取值范围：如果type为peering类型，则nexthop为peering的ID
+    * type  功能说明：路由类型 取值范围：peering
+    * vpcId  请求添加路由的VPC ID
+    * tenantId  项目ID
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class VpcRoute implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  路由ID
+    * destination  路由目的地址CIDR，如192.168.200.0/24。
+    * nexthop  功能说明：路由下一跳 取值范围：如果type为peering类型，则nexthop为peering的ID
+    * type  功能说明：路由类型 取值范围：peering
+    * vpcId  请求添加路由的VPC ID
+    * tenantId  项目ID
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class VpcRoute implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  路由ID
+    * destination  路由目的地址CIDR，如192.168.200.0/24。
+    * nexthop  功能说明：路由下一跳 取值范围：如果type为peering类型，则nexthop为peering的ID
+    * type  功能说明：路由类型 取值范围：peering
+    * vpcId  请求添加路由的VPC ID
+    * tenantId  项目ID
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class VpcRoute implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  路由ID
+    * destination  路由目的地址CIDR，如192.168.200.0/24。
+    * nexthop  功能说明：路由下一跳 取值范围：如果type为peering类型，则nexthop为peering的ID
+    * type  功能说明：路由类型 取值范围：peering
+    * vpcId  请求添加路由的VPC ID
+    * tenantId  项目ID
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class VpcRoute implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  路由ID
+    * destination  路由目的地址CIDR，如192.168.200.0/24。
+    * nexthop  功能说明：路由下一跳 取值范围：如果type为peering类型，则nexthop为peering的ID
+    * type  功能说明：路由类型 取值范围：peering
+    * vpcId  请求添加路由的VPC ID
+    * tenantId  项目ID
     *
     * @var string[]
     */
@@ -247,6 +277,7 @@ class VpcRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  路由ID
     *
     * @return string
     */
@@ -270,6 +301,7 @@ class VpcRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets destination
+    *  路由目的地址CIDR，如192.168.200.0/24。
     *
     * @return string
     */
@@ -293,6 +325,7 @@ class VpcRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets nexthop
+    *  功能说明：路由下一跳 取值范围：如果type为peering类型，则nexthop为peering的ID
     *
     * @return string
     */
@@ -316,6 +349,7 @@ class VpcRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  功能说明：路由类型 取值范围：peering
     *
     * @return string
     */
@@ -339,6 +373,7 @@ class VpcRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
+    *  请求添加路由的VPC ID
     *
     * @return string
     */
@@ -362,6 +397,7 @@ class VpcRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  项目ID
     *
     * @return string
     */

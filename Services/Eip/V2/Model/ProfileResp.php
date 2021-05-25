@@ -20,6 +20,10 @@ class ProfileResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * orderId  订单的id
+    * productId  产品的id
+    * regionId  region的id
+    * userId  用户的id
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class ProfileResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * orderId  订单的id
+    * productId  产品的id
+    * regionId  region的id
+    * userId  用户的id
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class ProfileResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * orderId  订单的id
+    * productId  产品的id
+    * regionId  region的id
+    * userId  用户的id
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class ProfileResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * orderId  订单的id
+    * productId  产品的id
+    * regionId  region的id
+    * userId  用户的id
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class ProfileResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * orderId  订单的id
+    * productId  产品的id
+    * regionId  region的id
+    * userId  用户的id
     *
     * @var string[]
     */
@@ -199,6 +219,7 @@ class ProfileResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
+    *  订单的id
     *
     * @return string|null
     */
@@ -222,6 +243,7 @@ class ProfileResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
+    *  产品的id
     *
     * @return string|null
     */
@@ -245,6 +267,7 @@ class ProfileResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
+    *  region的id
     *
     * @return string|null
     */
@@ -268,6 +291,7 @@ class ProfileResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  用户的id
     *
     * @return string|null
     */

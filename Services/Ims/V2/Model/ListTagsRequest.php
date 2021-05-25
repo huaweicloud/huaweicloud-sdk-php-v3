@@ -20,6 +20,21 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * limit  用于分页，表示查询几条记录，取值为整数，默认为所有。
+    * page  页码，表示需要查询第几页的数据。默认值为1。
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * id  镜像ID。
+    * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
+    * name  镜像名称。
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。
+    * platform  镜像平台分类。
+    * osType  镜像系统类型，取值如下：Linux,Windows,Other
+    * memberStatus  成员状态。目前取值有accepted、rejected、pending。
+    * virtualEnvType  镜像使用环境类型：FusionCompute、Ironic、DataImage。
+    * enterpriseProjectId  表示查询某个企业项目下的镜像。
+    * architecture  镜像架构类型。取值包括：x86，arm
+    * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
+    * updatedAt  镜像修改时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
     *
     * @var string[]
     */
@@ -43,6 +58,21 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * limit  用于分页，表示查询几条记录，取值为整数，默认为所有。
+    * page  页码，表示需要查询第几页的数据。默认值为1。
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * id  镜像ID。
+    * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
+    * name  镜像名称。
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。
+    * platform  镜像平台分类。
+    * osType  镜像系统类型，取值如下：Linux,Windows,Other
+    * memberStatus  成员状态。目前取值有accepted、rejected、pending。
+    * virtualEnvType  镜像使用环境类型：FusionCompute、Ironic、DataImage。
+    * enterpriseProjectId  表示查询某个企业项目下的镜像。
+    * architecture  镜像架构类型。取值包括：x86，arm
+    * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
+    * updatedAt  镜像修改时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
     *
     * @var string[]
     */
@@ -87,6 +117,21 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * limit  用于分页，表示查询几条记录，取值为整数，默认为所有。
+    * page  页码，表示需要查询第几页的数据。默认值为1。
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * id  镜像ID。
+    * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
+    * name  镜像名称。
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。
+    * platform  镜像平台分类。
+    * osType  镜像系统类型，取值如下：Linux,Windows,Other
+    * memberStatus  成员状态。目前取值有accepted、rejected、pending。
+    * virtualEnvType  镜像使用环境类型：FusionCompute、Ironic、DataImage。
+    * enterpriseProjectId  表示查询某个企业项目下的镜像。
+    * architecture  镜像架构类型。取值包括：x86，arm
+    * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
+    * updatedAt  镜像修改时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
     *
     * @var string[]
     */
@@ -110,6 +155,21 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * limit  用于分页，表示查询几条记录，取值为整数，默认为所有。
+    * page  页码，表示需要查询第几页的数据。默认值为1。
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * id  镜像ID。
+    * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
+    * name  镜像名称。
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。
+    * platform  镜像平台分类。
+    * osType  镜像系统类型，取值如下：Linux,Windows,Other
+    * memberStatus  成员状态。目前取值有accepted、rejected、pending。
+    * virtualEnvType  镜像使用环境类型：FusionCompute、Ironic、DataImage。
+    * enterpriseProjectId  表示查询某个企业项目下的镜像。
+    * architecture  镜像架构类型。取值包括：x86，arm
+    * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
+    * updatedAt  镜像修改时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
     *
     * @var string[]
     */
@@ -133,6 +193,21 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * limit  用于分页，表示查询几条记录，取值为整数，默认为所有。
+    * page  页码，表示需要查询第几页的数据。默认值为1。
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * id  镜像ID。
+    * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
+    * name  镜像名称。
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。
+    * platform  镜像平台分类。
+    * osType  镜像系统类型，取值如下：Linux,Windows,Other
+    * memberStatus  成员状态。目前取值有accepted、rejected、pending。
+    * virtualEnvType  镜像使用环境类型：FusionCompute、Ironic、DataImage。
+    * enterpriseProjectId  表示查询某个企业项目下的镜像。
+    * architecture  镜像架构类型。取值包括：x86，arm
+    * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
+    * updatedAt  镜像修改时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
     *
     * @var string[]
     */
@@ -405,6 +480,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  用于分页，表示查询几条记录，取值为整数，默认为所有。
     *
     * @return int|null
     */
@@ -416,7 +492,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 用于分页，表示查询几条记录，取值为整数，默认为所有。
     *
     * @return $this
     */
@@ -428,6 +504,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets page
+    *  页码，表示需要查询第几页的数据。默认值为1。
     *
     * @return int|null
     */
@@ -439,7 +516,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets page
     *
-    * @param int|null $page page
+    * @param int|null $page 页码，表示需要查询第几页的数据。默认值为1。
     *
     * @return $this
     */
@@ -451,6 +528,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imagetype
+    *  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
     *
     * @return string|null
     */
@@ -462,7 +540,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imagetype
     *
-    * @param string|null $imagetype imagetype
+    * @param string|null $imagetype 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
     *
     * @return $this
     */
@@ -474,6 +552,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  镜像ID。
     *
     * @return string|null
     */
@@ -485,7 +564,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id 镜像ID。
     *
     * @return $this
     */
@@ -497,6 +576,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
     *
     * @return string|null
     */
@@ -508,7 +588,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status 镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
     *
     * @return $this
     */
@@ -520,6 +600,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  镜像名称。
     *
     * @return string|null
     */
@@ -531,7 +612,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name 镜像名称。
     *
     * @return $this
     */
@@ -543,6 +624,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets minDisk
+    *  镜像运行需要的最小磁盘，单位为GB 。
     *
     * @return int|null
     */
@@ -554,7 +636,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets minDisk
     *
-    * @param int|null $minDisk minDisk
+    * @param int|null $minDisk 镜像运行需要的最小磁盘，单位为GB 。
     *
     * @return $this
     */
@@ -566,6 +648,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets platform
+    *  镜像平台分类。
     *
     * @return string|null
     */
@@ -577,7 +660,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets platform
     *
-    * @param string|null $platform platform
+    * @param string|null $platform 镜像平台分类。
     *
     * @return $this
     */
@@ -589,6 +672,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
+    *  镜像系统类型，取值如下：Linux,Windows,Other
     *
     * @return string|null
     */
@@ -600,7 +684,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType osType
+    * @param string|null $osType 镜像系统类型，取值如下：Linux,Windows,Other
     *
     * @return $this
     */
@@ -612,6 +696,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets memberStatus
+    *  成员状态。目前取值有accepted、rejected、pending。
     *
     * @return string|null
     */
@@ -623,7 +708,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets memberStatus
     *
-    * @param string|null $memberStatus memberStatus
+    * @param string|null $memberStatus 成员状态。目前取值有accepted、rejected、pending。
     *
     * @return $this
     */
@@ -635,6 +720,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets virtualEnvType
+    *  镜像使用环境类型：FusionCompute、Ironic、DataImage。
     *
     * @return string|null
     */
@@ -646,7 +732,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets virtualEnvType
     *
-    * @param string|null $virtualEnvType virtualEnvType
+    * @param string|null $virtualEnvType 镜像使用环境类型：FusionCompute、Ironic、DataImage。
     *
     * @return $this
     */
@@ -658,6 +744,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  表示查询某个企业项目下的镜像。
     *
     * @return string|null
     */
@@ -669,7 +756,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId enterpriseProjectId
+    * @param string|null $enterpriseProjectId 表示查询某个企业项目下的镜像。
     *
     * @return $this
     */
@@ -681,6 +768,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets architecture
+    *  镜像架构类型。取值包括：x86，arm
     *
     * @return string|null
     */
@@ -692,7 +780,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets architecture
     *
-    * @param string|null $architecture architecture
+    * @param string|null $architecture 镜像架构类型。取值包括：x86，arm
     *
     * @return $this
     */
@@ -704,6 +792,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  镜像创建时间。支持按照时间点过滤查询，取值格式为“操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
     *
     * @return string|null
     */
@@ -715,7 +804,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt createdAt
+    * @param string|null $createdAt 镜像创建时间。支持按照时间点过滤查询，取值格式为“操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
     *
     * @return $this
     */
@@ -727,6 +816,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
+    *  镜像修改时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
     *
     * @return string|null
     */
@@ -738,7 +828,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt updatedAt
+    * @param string|null $updatedAt 镜像修改时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
     *
     * @return $this
     */

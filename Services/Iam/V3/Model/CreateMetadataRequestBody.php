@@ -20,6 +20,9 @@ class CreateMetadataRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domainId  用户所属账号ID。
+    * xaccountType  该字段为标识租户来源字段，默认为空。
+    * metadata  该字段为用户IdP服务器的Metadata文件的内容。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class CreateMetadataRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domainId  用户所属账号ID。
+    * xaccountType  该字段为标识租户来源字段，默认为空。
+    * metadata  该字段为用户IdP服务器的Metadata文件的内容。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class CreateMetadataRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domainId  用户所属账号ID。
+    * xaccountType  该字段为标识租户来源字段，默认为空。
+    * metadata  该字段为用户IdP服务器的Metadata文件的内容。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class CreateMetadataRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domainId  用户所属账号ID。
+    * xaccountType  该字段为标识租户来源字段，默认为空。
+    * metadata  该字段为用户IdP服务器的Metadata文件的内容。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class CreateMetadataRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domainId  用户所属账号ID。
+    * xaccountType  该字段为标识租户来源字段，默认为空。
+    * metadata  该字段为用户IdP服务器的Metadata文件的内容。
     *
     * @var string[]
     */
@@ -190,6 +205,7 @@ class CreateMetadataRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  用户所属账号ID。
     *
     * @return string
     */
@@ -213,6 +229,7 @@ class CreateMetadataRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets xaccountType
+    *  该字段为标识租户来源字段，默认为空。
     *
     * @return string
     */
@@ -236,6 +253,7 @@ class CreateMetadataRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets metadata
+    *  该字段为用户IdP服务器的Metadata文件的内容。
     *
     * @return string
     */

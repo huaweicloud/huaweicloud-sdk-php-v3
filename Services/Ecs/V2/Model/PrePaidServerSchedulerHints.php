@@ -20,6 +20,9 @@ class PrePaidServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * group  云服务器组ID，UUID格式。
+    * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器。参数值为shared或者dedicated。
+    * dedicatedHostId  专属主机的ID。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class PrePaidServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * group  云服务器组ID，UUID格式。
+    * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器。参数值为shared或者dedicated。
+    * dedicatedHostId  专属主机的ID。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class PrePaidServerSchedulerHints implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * group  云服务器组ID，UUID格式。
+    * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器。参数值为shared或者dedicated。
+    * dedicatedHostId  专属主机的ID。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class PrePaidServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * group  云服务器组ID，UUID格式。
+    * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器。参数值为shared或者dedicated。
+    * dedicatedHostId  专属主机的ID。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class PrePaidServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * group  云服务器组ID，UUID格式。
+    * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器。参数值为shared或者dedicated。
+    * dedicatedHostId  专属主机的ID。
     *
     * @var string[]
     */
@@ -204,6 +219,7 @@ class PrePaidServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
+    *  云服务器组ID，UUID格式。
     *
     * @return string|null
     */
@@ -227,6 +243,7 @@ class PrePaidServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenancy
+    *  在指定的专属主机或者共享主机上创建弹性云服务器。参数值为shared或者dedicated。
     *
     * @return string|null
     */
@@ -250,6 +267,7 @@ class PrePaidServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Gets dedicatedHostId
+    *  专属主机的ID。
     *
     * @return string|null
     */

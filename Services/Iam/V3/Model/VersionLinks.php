@@ -20,6 +20,8 @@ class VersionLinks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * rel  链接类型。self：自助链接包含了版本链接的资源。bookmark：书签链接提供了一个永久资源的永久链接。alternate：备用链接包含了资源的替换表示形式。
+    * href  资源链接地址。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class VersionLinks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * rel  链接类型。self：自助链接包含了版本链接的资源。bookmark：书签链接提供了一个永久资源的永久链接。alternate：备用链接包含了资源的替换表示形式。
+    * href  资源链接地址。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class VersionLinks implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * rel  链接类型。self：自助链接包含了版本链接的资源。bookmark：书签链接提供了一个永久资源的永久链接。alternate：备用链接包含了资源的替换表示形式。
+    * href  资源链接地址。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class VersionLinks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * rel  链接类型。self：自助链接包含了版本链接的资源。bookmark：书签链接提供了一个永久资源的永久链接。alternate：备用链接包含了资源的替换表示形式。
+    * href  资源链接地址。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class VersionLinks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * rel  链接类型。self：自助链接包含了版本链接的资源。bookmark：书签链接提供了一个永久资源的永久链接。alternate：备用链接包含了资源的替换表示形式。
+    * href  资源链接地址。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class VersionLinks implements ModelInterface, ArrayAccess
 
     /**
     * Gets rel
+    *  链接类型。self：自助链接包含了版本链接的资源。bookmark：书签链接提供了一个永久资源的永久链接。alternate：备用链接包含了资源的替换表示形式。
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class VersionLinks implements ModelInterface, ArrayAccess
 
     /**
     * Gets href
+    *  资源链接地址。
     *
     * @return string
     */

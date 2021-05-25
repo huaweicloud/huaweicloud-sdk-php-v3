@@ -20,6 +20,13 @@ class TaskProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * total  子任务总个数。
+    * processing  正在执行的子任务个数。
+    * success  执行成功的子任务个数。
+    * fail  执行失败的的子任务个数。
+    * waitting  等待执行的子任务个数。
+    * failWaitRetry  失败等待重试的子任务个数。
+    * stopped  停止的子任务个数。
     *
     * @var string[]
     */
@@ -35,6 +42,13 @@ class TaskProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * total  子任务总个数。
+    * processing  正在执行的子任务个数。
+    * success  执行成功的子任务个数。
+    * fail  执行失败的的子任务个数。
+    * waitting  等待执行的子任务个数。
+    * failWaitRetry  失败等待重试的子任务个数。
+    * stopped  停止的子任务个数。
     *
     * @var string[]
     */
@@ -71,6 +85,13 @@ class TaskProgress implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * total  子任务总个数。
+    * processing  正在执行的子任务个数。
+    * success  执行成功的子任务个数。
+    * fail  执行失败的的子任务个数。
+    * waitting  等待执行的子任务个数。
+    * failWaitRetry  失败等待重试的子任务个数。
+    * stopped  停止的子任务个数。
     *
     * @var string[]
     */
@@ -86,6 +107,13 @@ class TaskProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * total  子任务总个数。
+    * processing  正在执行的子任务个数。
+    * success  执行成功的子任务个数。
+    * fail  执行失败的的子任务个数。
+    * waitting  等待执行的子任务个数。
+    * failWaitRetry  失败等待重试的子任务个数。
+    * stopped  停止的子任务个数。
     *
     * @var string[]
     */
@@ -101,6 +129,13 @@ class TaskProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * total  子任务总个数。
+    * processing  正在执行的子任务个数。
+    * success  执行成功的子任务个数。
+    * fail  执行失败的的子任务个数。
+    * waitting  等待执行的子任务个数。
+    * failWaitRetry  失败等待重试的子任务个数。
+    * stopped  停止的子任务个数。
     *
     * @var string[]
     */
@@ -205,6 +240,7 @@ class TaskProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
+    *  子任务总个数。
     *
     * @return int|null
     */
@@ -228,6 +264,7 @@ class TaskProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets processing
+    *  正在执行的子任务个数。
     *
     * @return int|null
     */
@@ -251,6 +288,7 @@ class TaskProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets success
+    *  执行成功的子任务个数。
     *
     * @return int|null
     */
@@ -274,6 +312,7 @@ class TaskProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets fail
+    *  执行失败的的子任务个数。
     *
     * @return int|null
     */
@@ -297,6 +336,7 @@ class TaskProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets waitting
+    *  等待执行的子任务个数。
     *
     * @return int|null
     */
@@ -320,6 +360,7 @@ class TaskProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets failWaitRetry
+    *  失败等待重试的子任务个数。
     *
     * @return int|null
     */
@@ -343,6 +384,7 @@ class TaskProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets stopped
+    *  停止的子任务个数。
     *
     * @return int|null
     */

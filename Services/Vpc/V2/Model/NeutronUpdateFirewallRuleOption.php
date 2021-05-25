@@ -20,6 +20,16 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * action  对通过网络ACL防火墙的流量执行的操作。
+    * description  网络ACL防火墙规则描述。
+    * destinationIpAddress  目的地址或者CIDR。
+    * destinationPort  目的端口号或者一段端口范围。
+    * enabled  是否使能网络ACL防火墙规则。
+    * ipVersion  IP协议版本。
+    * name  网络ACL防火墙规则名称。
+    * protocol  IP协议，支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
+    * sourceIpAddress  源地址或者CIDR。
+    * sourcePort  源端口号或者一段端口范围。
     *
     * @var string[]
     */
@@ -38,6 +48,16 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * action  对通过网络ACL防火墙的流量执行的操作。
+    * description  网络ACL防火墙规则描述。
+    * destinationIpAddress  目的地址或者CIDR。
+    * destinationPort  目的端口号或者一段端口范围。
+    * enabled  是否使能网络ACL防火墙规则。
+    * ipVersion  IP协议版本。
+    * name  网络ACL防火墙规则名称。
+    * protocol  IP协议，支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
+    * sourceIpAddress  源地址或者CIDR。
+    * sourcePort  源端口号或者一段端口范围。
     *
     * @var string[]
     */
@@ -77,6 +97,16 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * action  对通过网络ACL防火墙的流量执行的操作。
+    * description  网络ACL防火墙规则描述。
+    * destinationIpAddress  目的地址或者CIDR。
+    * destinationPort  目的端口号或者一段端口范围。
+    * enabled  是否使能网络ACL防火墙规则。
+    * ipVersion  IP协议版本。
+    * name  网络ACL防火墙规则名称。
+    * protocol  IP协议，支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
+    * sourceIpAddress  源地址或者CIDR。
+    * sourcePort  源端口号或者一段端口范围。
     *
     * @var string[]
     */
@@ -95,6 +125,16 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * action  对通过网络ACL防火墙的流量执行的操作。
+    * description  网络ACL防火墙规则描述。
+    * destinationIpAddress  目的地址或者CIDR。
+    * destinationPort  目的端口号或者一段端口范围。
+    * enabled  是否使能网络ACL防火墙规则。
+    * ipVersion  IP协议版本。
+    * name  网络ACL防火墙规则名称。
+    * protocol  IP协议，支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
+    * sourceIpAddress  源地址或者CIDR。
+    * sourcePort  源端口号或者一段端口范围。
     *
     * @var string[]
     */
@@ -113,6 +153,16 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * action  对通过网络ACL防火墙的流量执行的操作。
+    * description  网络ACL防火墙规则描述。
+    * destinationIpAddress  目的地址或者CIDR。
+    * destinationPort  目的端口号或者一段端口范围。
+    * enabled  是否使能网络ACL防火墙规则。
+    * ipVersion  IP协议版本。
+    * name  网络ACL防火墙规则名称。
+    * protocol  IP协议，支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
+    * sourceIpAddress  源地址或者CIDR。
+    * sourcePort  源端口号或者一段端口范围。
     *
     * @var string[]
     */
@@ -264,6 +314,7 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
+    *  对通过网络ACL防火墙的流量执行的操作。
     *
     * @return string|null
     */
@@ -287,6 +338,7 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  网络ACL防火墙规则描述。
     *
     * @return string|null
     */
@@ -310,6 +362,7 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationIpAddress
+    *  目的地址或者CIDR。
     *
     * @return string|null
     */
@@ -333,6 +386,7 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationPort
+    *  目的端口号或者一段端口范围。
     *
     * @return string|null
     */
@@ -356,6 +410,7 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  是否使能网络ACL防火墙规则。
     *
     * @return bool|null
     */
@@ -379,6 +434,7 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
+    *  IP协议版本。
     *
     * @return int|null
     */
@@ -402,6 +458,7 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  网络ACL防火墙规则名称。
     *
     * @return string|null
     */
@@ -425,6 +482,7 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
+    *  IP协议，支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
     *
     * @return string|null
     */
@@ -448,6 +506,7 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceIpAddress
+    *  源地址或者CIDR。
     *
     * @return string|null
     */
@@ -471,6 +530,7 @@ class NeutronUpdateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourcePort
+    *  源端口号或者一段端口范围。
     *
     * @return string|null
     */

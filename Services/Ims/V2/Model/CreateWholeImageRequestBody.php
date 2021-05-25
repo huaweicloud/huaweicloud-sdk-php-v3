@@ -20,6 +20,17 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目。取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * imageTags  新规范的镜像标签列表。默认为空。tags和image_tags只能使用一个。
+    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
+    * name  镜像名称。 名称的首尾字母不能为空格。 名称的长度至为1～128位。 名称包含以下4种字符： 大写字母 小写字母 数字 特殊字符包含-、.、_、空格和中文。
+    * tags  镜像标签列表。tags和image_tags只能使用一个。
+    * backupId  使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
+    * wholeImageType  使用备份创建整机镜像时，该字段区分是CBR服务的备份还是CSBS服务的备份，取值为：CBR/CSBS。 使用ECS创建整机镜像时，该字段不填
+    * maxRam  表示镜像支持的最大内存，单位为MB，默认不设置。
+    * minRam  表示镜像支持的最小内存，单位为MB，默认为0。
+    * vaultId  表示云服务器待加入的或已加入的存储库的ID。 使用云服务器创建整机镜像的过程为：先创建一个备份，再将备份创建为整机镜像。如果这个备份为CBR，vault_id为必填项；如果备份为CSBS，vault_id参数可不填。
     *
     * @var string[]
     */
@@ -39,6 +50,17 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目。取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * imageTags  新规范的镜像标签列表。默认为空。tags和image_tags只能使用一个。
+    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
+    * name  镜像名称。 名称的首尾字母不能为空格。 名称的长度至为1～128位。 名称包含以下4种字符： 大写字母 小写字母 数字 特殊字符包含-、.、_、空格和中文。
+    * tags  镜像标签列表。tags和image_tags只能使用一个。
+    * backupId  使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
+    * wholeImageType  使用备份创建整机镜像时，该字段区分是CBR服务的备份还是CSBS服务的备份，取值为：CBR/CSBS。 使用ECS创建整机镜像时，该字段不填
+    * maxRam  表示镜像支持的最大内存，单位为MB，默认不设置。
+    * minRam  表示镜像支持的最小内存，单位为MB，默认为0。
+    * vaultId  表示云服务器待加入的或已加入的存储库的ID。 使用云服务器创建整机镜像的过程为：先创建一个备份，再将备份创建为整机镜像。如果这个备份为CBR，vault_id为必填项；如果备份为CSBS，vault_id参数可不填。
     *
     * @var string[]
     */
@@ -79,6 +101,17 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目。取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * imageTags  新规范的镜像标签列表。默认为空。tags和image_tags只能使用一个。
+    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
+    * name  镜像名称。 名称的首尾字母不能为空格。 名称的长度至为1～128位。 名称包含以下4种字符： 大写字母 小写字母 数字 特殊字符包含-、.、_、空格和中文。
+    * tags  镜像标签列表。tags和image_tags只能使用一个。
+    * backupId  使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
+    * wholeImageType  使用备份创建整机镜像时，该字段区分是CBR服务的备份还是CSBS服务的备份，取值为：CBR/CSBS。 使用ECS创建整机镜像时，该字段不填
+    * maxRam  表示镜像支持的最大内存，单位为MB，默认不设置。
+    * minRam  表示镜像支持的最小内存，单位为MB，默认为0。
+    * vaultId  表示云服务器待加入的或已加入的存储库的ID。 使用云服务器创建整机镜像的过程为：先创建一个备份，再将备份创建为整机镜像。如果这个备份为CBR，vault_id为必填项；如果备份为CSBS，vault_id参数可不填。
     *
     * @var string[]
     */
@@ -98,6 +131,17 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目。取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * imageTags  新规范的镜像标签列表。默认为空。tags和image_tags只能使用一个。
+    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
+    * name  镜像名称。 名称的首尾字母不能为空格。 名称的长度至为1～128位。 名称包含以下4种字符： 大写字母 小写字母 数字 特殊字符包含-、.、_、空格和中文。
+    * tags  镜像标签列表。tags和image_tags只能使用一个。
+    * backupId  使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
+    * wholeImageType  使用备份创建整机镜像时，该字段区分是CBR服务的备份还是CSBS服务的备份，取值为：CBR/CSBS。 使用ECS创建整机镜像时，该字段不填
+    * maxRam  表示镜像支持的最大内存，单位为MB，默认不设置。
+    * minRam  表示镜像支持的最小内存，单位为MB，默认为0。
+    * vaultId  表示云服务器待加入的或已加入的存储库的ID。 使用云服务器创建整机镜像的过程为：先创建一个备份，再将备份创建为整机镜像。如果这个备份为CBR，vault_id为必填项；如果备份为CSBS，vault_id参数可不填。
     *
     * @var string[]
     */
@@ -117,6 +161,17 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目。取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * imageTags  新规范的镜像标签列表。默认为空。tags和image_tags只能使用一个。
+    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
+    * name  镜像名称。 名称的首尾字母不能为空格。 名称的长度至为1～128位。 名称包含以下4种字符： 大写字母 小写字母 数字 特殊字符包含-、.、_、空格和中文。
+    * tags  镜像标签列表。tags和image_tags只能使用一个。
+    * backupId  使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
+    * wholeImageType  使用备份创建整机镜像时，该字段区分是CBR服务的备份还是CSBS服务的备份，取值为：CBR/CSBS。 使用ECS创建整机镜像时，该字段不填
+    * maxRam  表示镜像支持的最大内存，单位为MB，默认不设置。
+    * minRam  表示镜像支持的最小内存，单位为MB，默认为0。
+    * vaultId  表示云服务器待加入的或已加入的存储库的ID。 使用云服务器创建整机镜像的过程为：先创建一个备份，再将备份创建为整机镜像。如果这个备份为CBR，vault_id为必填项；如果备份为CSBS，vault_id参数可不填。
     *
     * @var string[]
     */
@@ -244,6 +299,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
     *
     * @return string|null
     */
@@ -267,6 +323,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目。取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     *
     * @return string|null
     */
@@ -290,6 +347,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageTags
+    *  新规范的镜像标签列表。默认为空。tags和image_tags只能使用一个。
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\TagKeyValue[]|null
     */
@@ -313,6 +371,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
+    *  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
     *
     * @return string|null
     */
@@ -336,6 +395,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  镜像名称。 名称的首尾字母不能为空格。 名称的长度至为1～128位。 名称包含以下4种字符： 大写字母 小写字母 数字 特殊字符包含-、.、_、空格和中文。
     *
     * @return string
     */
@@ -359,6 +419,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  镜像标签列表。tags和image_tags只能使用一个。
     *
     * @return string[]|null
     */
@@ -382,6 +443,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupId
+    *  使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
     *
     * @return string|null
     */
@@ -405,6 +467,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets wholeImageType
+    *  使用备份创建整机镜像时，该字段区分是CBR服务的备份还是CSBS服务的备份，取值为：CBR/CSBS。 使用ECS创建整机镜像时，该字段不填
     *
     * @return string|null
     */
@@ -428,6 +491,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxRam
+    *  表示镜像支持的最大内存，单位为MB，默认不设置。
     *
     * @return int|null
     */
@@ -451,6 +515,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets minRam
+    *  表示镜像支持的最小内存，单位为MB，默认为0。
     *
     * @return int|null
     */
@@ -474,6 +539,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultId
+    *  表示云服务器待加入的或已加入的存储库的ID。 使用云服务器创建整机镜像的过程为：先创建一个备份，再将备份创建为整机镜像。如果这个备份为CBR，vault_id为必填项；如果备份为CSBS，vault_id参数可不填。
     *
     * @return string|null
     */

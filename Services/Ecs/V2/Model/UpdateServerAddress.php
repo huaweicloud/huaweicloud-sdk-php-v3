@@ -20,6 +20,8 @@ class UpdateServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * version  IP地址版本。  - 4：代表IPv4。 - 6：代表IPv6。
+    * addr  IP地址。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class UpdateServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * version  IP地址版本。  - 4：代表IPv4。 - 6：代表IPv6。
+    * addr  IP地址。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class UpdateServerAddress implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * version  IP地址版本。  - 4：代表IPv4。 - 6：代表IPv6。
+    * addr  IP地址。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class UpdateServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * version  IP地址版本。  - 4：代表IPv4。 - 6：代表IPv6。
+    * addr  IP地址。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class UpdateServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * version  IP地址版本。  - 4：代表IPv4。 - 6：代表IPv6。
+    * addr  IP地址。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class UpdateServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
+    *  IP地址版本。  - 4：代表IPv4。 - 6：代表IPv6。
     *
     * @return int
     */
@@ -204,6 +215,7 @@ class UpdateServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Gets addr
+    *  IP地址。
     *
     * @return string
     */

@@ -20,6 +20,9 @@ class KeystoneCreateProtocolRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * idpId  身份提供商ID。
+    * protocolId  待注册的协议ID。
+    * body  body
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class KeystoneCreateProtocolRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * idpId  身份提供商ID。
+    * protocolId  待注册的协议ID。
+    * body  body
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class KeystoneCreateProtocolRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * idpId  身份提供商ID。
+    * protocolId  待注册的协议ID。
+    * body  body
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class KeystoneCreateProtocolRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * idpId  身份提供商ID。
+    * protocolId  待注册的协议ID。
+    * body  body
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class KeystoneCreateProtocolRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * idpId  身份提供商ID。
+    * protocolId  待注册的协议ID。
+    * body  body
     *
     * @var string[]
     */
@@ -187,6 +202,7 @@ class KeystoneCreateProtocolRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets idpId
+    *  身份提供商ID。
     *
     * @return string
     */
@@ -198,7 +214,7 @@ class KeystoneCreateProtocolRequest implements ModelInterface, ArrayAccess
     /**
     * Sets idpId
     *
-    * @param string $idpId idpId
+    * @param string $idpId 身份提供商ID。
     *
     * @return $this
     */
@@ -210,6 +226,7 @@ class KeystoneCreateProtocolRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocolId
+    *  待注册的协议ID。
     *
     * @return string
     */
@@ -221,7 +238,7 @@ class KeystoneCreateProtocolRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protocolId
     *
-    * @param string $protocolId protocolId
+    * @param string $protocolId 待注册的协议ID。
     *
     * @return $this
     */
@@ -233,6 +250,7 @@ class KeystoneCreateProtocolRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateProtocolRequestBody|null
     */

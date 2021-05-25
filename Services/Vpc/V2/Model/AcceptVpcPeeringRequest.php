@@ -20,6 +20,7 @@ class AcceptVpcPeeringRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * peeringId  对等连接ID
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class AcceptVpcPeeringRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * peeringId  对等连接ID
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class AcceptVpcPeeringRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * peeringId  对等连接ID
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class AcceptVpcPeeringRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * peeringId  对等连接ID
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class AcceptVpcPeeringRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * peeringId  对等连接ID
     *
     * @var string[]
     */
@@ -175,6 +180,7 @@ class AcceptVpcPeeringRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets peeringId
+    *  对等连接ID
     *
     * @return string
     */
@@ -186,7 +192,7 @@ class AcceptVpcPeeringRequest implements ModelInterface, ArrayAccess
     /**
     * Sets peeringId
     *
-    * @param string $peeringId peeringId
+    * @param string $peeringId 对等连接ID
     *
     * @return $this
     */

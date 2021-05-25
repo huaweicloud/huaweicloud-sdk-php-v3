@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Vpc\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpdateSubscriptionRequest implements ModelInterface, ArrayAccess
+class NeutronUpdateSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,28 +16,26 @@ class UpdateSubscriptionRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpdateSubscriptionRequest';
+    protected static $openAPIModelName = 'NeutronUpdateSecurityGroupRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string',
-            'subscriptionId' => 'string',
-            'body' => '\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateSubReq'
+            'securityGroup' => '\HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateSecurityGroupOption'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null,
-        'subscriptionId' => null,
-        'body' => null
+        'securityGroup' => null
     ];
 
     /**
@@ -63,35 +61,32 @@ class UpdateSubscriptionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'Instance-Id',
-            'subscriptionId' => 'subscription_id',
-            'body' => 'body'
+            'securityGroup' => 'security_group'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId',
-            'subscriptionId' => 'setSubscriptionId',
-            'body' => 'setBody'
+            'securityGroup' => 'setSecurityGroup'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId',
-            'subscriptionId' => 'getSubscriptionId',
-            'body' => 'getBody'
+            'securityGroup' => 'getSecurityGroup'
     ];
 
     /**
@@ -152,9 +147,7 @@ class UpdateSubscriptionRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['subscriptionId'] = isset($data['subscriptionId']) ? $data['subscriptionId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['securityGroup'] = isset($data['securityGroup']) ? $data['securityGroup'] : null;
     }
 
     /**
@@ -165,11 +158,8 @@ class UpdateSubscriptionRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['instanceId']) && !preg_match("/^[a-f0-9-]{36}$/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-f0-9-]{36}$/.";
-            }
-        if ($this->container['subscriptionId'] === null) {
-            $invalidProperties[] = "'subscriptionId' can't be null";
+        if ($this->container['securityGroup'] === null) {
+            $invalidProperties[] = "'securityGroup' can't be null";
         }
         return $invalidProperties;
     }
@@ -186,71 +176,26 @@ class UpdateSubscriptionRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instanceId
+    * Gets securityGroup
+    *  securityGroup
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateSecurityGroupOption
     */
-    public function getInstanceId()
+    public function getSecurityGroup()
     {
-        return $this->container['instanceId'];
+        return $this->container['securityGroup'];
     }
 
     /**
-    * Sets instanceId
+    * Sets securityGroup
     *
-    * @param string|null $instanceId instanceId
+    * @param \HuaweiCloud\SDK\Vpc\V2\Model\NeutronUpdateSecurityGroupOption $securityGroup securityGroup
     *
     * @return $this
     */
-    public function setInstanceId($instanceId)
+    public function setSecurityGroup($securityGroup)
     {
-        $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
-    * Gets subscriptionId
-    *
-    * @return string
-    */
-    public function getSubscriptionId()
-    {
-        return $this->container['subscriptionId'];
-    }
-
-    /**
-    * Sets subscriptionId
-    *
-    * @param string $subscriptionId subscriptionId
-    *
-    * @return $this
-    */
-    public function setSubscriptionId($subscriptionId)
-    {
-        $this->container['subscriptionId'] = $subscriptionId;
-        return $this;
-    }
-
-    /**
-    * Gets body
-    *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\UpdateSubReq|null
-    */
-    public function getBody()
-    {
-        return $this->container['body'];
-    }
-
-    /**
-    * Sets body
-    *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\UpdateSubReq|null $body body
-    *
-    * @return $this
-    */
-    public function setBody($body)
-    {
-        $this->container['body'] = $body;
+        $this->container['securityGroup'] = $securityGroup;
         return $this;
     }
 

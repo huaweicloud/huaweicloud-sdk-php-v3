@@ -20,6 +20,11 @@ class CreateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * volumeId  源云硬盘的ID。
+    * force  强制创快照标示，默认为false。 当force标记为false时，云硬盘处于挂载状态时，不能强制创建快照。 当force标记为true时，即使云硬盘处于挂载状态时，仍可以创建快照。
+    * metadata  云硬盘快照的元数据信息。
+    * description  云硬盘快照描述，最大支持255个字节。
+    * name  云硬盘快照名称。最大支持255个字节。  > > 说明： > 对云硬盘创建备份时，同时会创建以autobk_snapshot_为名称前缀的快照，云硬盘控制台对此类快照会有操作限制。因此建议不要创建以> > autobk_snapshot_为名称前缀的快照，避免影响快照的正常使用
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class CreateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * volumeId  源云硬盘的ID。
+    * force  强制创快照标示，默认为false。 当force标记为false时，云硬盘处于挂载状态时，不能强制创建快照。 当force标记为true时，即使云硬盘处于挂载状态时，仍可以创建快照。
+    * metadata  云硬盘快照的元数据信息。
+    * description  云硬盘快照描述，最大支持255个字节。
+    * name  云硬盘快照名称。最大支持255个字节。  > > 说明： > 对云硬盘创建备份时，同时会创建以autobk_snapshot_为名称前缀的快照，云硬盘控制台对此类快照会有操作限制。因此建议不要创建以> > autobk_snapshot_为名称前缀的快照，避免影响快照的正常使用
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class CreateSnapshotOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * volumeId  源云硬盘的ID。
+    * force  强制创快照标示，默认为false。 当force标记为false时，云硬盘处于挂载状态时，不能强制创建快照。 当force标记为true时，即使云硬盘处于挂载状态时，仍可以创建快照。
+    * metadata  云硬盘快照的元数据信息。
+    * description  云硬盘快照描述，最大支持255个字节。
+    * name  云硬盘快照名称。最大支持255个字节。  > > 说明： > 对云硬盘创建备份时，同时会创建以autobk_snapshot_为名称前缀的快照，云硬盘控制台对此类快照会有操作限制。因此建议不要创建以> > autobk_snapshot_为名称前缀的快照，避免影响快照的正常使用
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class CreateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * volumeId  源云硬盘的ID。
+    * force  强制创快照标示，默认为false。 当force标记为false时，云硬盘处于挂载状态时，不能强制创建快照。 当force标记为true时，即使云硬盘处于挂载状态时，仍可以创建快照。
+    * metadata  云硬盘快照的元数据信息。
+    * description  云硬盘快照描述，最大支持255个字节。
+    * name  云硬盘快照名称。最大支持255个字节。  > > 说明： > 对云硬盘创建备份时，同时会创建以autobk_snapshot_为名称前缀的快照，云硬盘控制台对此类快照会有操作限制。因此建议不要创建以> > autobk_snapshot_为名称前缀的快照，避免影响快照的正常使用
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class CreateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * volumeId  源云硬盘的ID。
+    * force  强制创快照标示，默认为false。 当force标记为false时，云硬盘处于挂载状态时，不能强制创建快照。 当force标记为true时，即使云硬盘处于挂载状态时，仍可以创建快照。
+    * metadata  云硬盘快照的元数据信息。
+    * description  云硬盘快照描述，最大支持255个字节。
+    * name  云硬盘快照名称。最大支持255个字节。  > > 说明： > 对云硬盘创建备份时，同时会创建以autobk_snapshot_为名称前缀的快照，云硬盘控制台对此类快照会有操作限制。因此建议不要创建以> > autobk_snapshot_为名称前缀的快照，避免影响快照的正常使用
     *
     * @var string[]
     */
@@ -208,6 +233,7 @@ class CreateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeId
+    *  源云硬盘的ID。
     *
     * @return string
     */
@@ -231,6 +257,7 @@ class CreateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets force
+    *  强制创快照标示，默认为false。 当force标记为false时，云硬盘处于挂载状态时，不能强制创建快照。 当force标记为true时，即使云硬盘处于挂载状态时，仍可以创建快照。
     *
     * @return bool|null
     */
@@ -254,6 +281,7 @@ class CreateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets metadata
+    *  云硬盘快照的元数据信息。
     *
     * @return map[string,string]|null
     */
@@ -277,6 +305,7 @@ class CreateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  云硬盘快照描述，最大支持255个字节。
     *
     * @return string|null
     */
@@ -300,6 +329,7 @@ class CreateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云硬盘快照名称。最大支持255个字节。  > > 说明： > 对云硬盘创建备份时，同时会创建以autobk_snapshot_为名称前缀的快照，云硬盘控制台对此类快照会有操作限制。因此建议不要创建以> > autobk_snapshot_为名称前缀的快照，避免影响快照的正常使用
     *
     * @return string|null
     */

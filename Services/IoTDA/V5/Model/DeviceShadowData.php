@@ -20,6 +20,10 @@ class DeviceShadowData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
+    * desired  desired
+    * reported  reported
+    * version  设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class DeviceShadowData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
+    * desired  desired
+    * reported  reported
+    * version  设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class DeviceShadowData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
+    * desired  desired
+    * reported  reported
+    * version  设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class DeviceShadowData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
+    * desired  desired
+    * reported  reported
+    * version  设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class DeviceShadowData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
+    * desired  desired
+    * reported  reported
+    * version  设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
     *
     * @var string[]
     */
@@ -196,6 +216,7 @@ class DeviceShadowData implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceId
+    *  设备的服务ID，在设备关联的产品模型中定义。
     *
     * @return string
     */
@@ -219,6 +240,7 @@ class DeviceShadowData implements ModelInterface, ArrayAccess
 
     /**
     * Gets desired
+    *  desired
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceShadowProperties|null
     */
@@ -242,6 +264,7 @@ class DeviceShadowData implements ModelInterface, ArrayAccess
 
     /**
     * Gets reported
+    *  reported
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceShadowProperties|null
     */
@@ -265,6 +288,7 @@ class DeviceShadowData implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
+    *  设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
     *
     * @return int|null
     */

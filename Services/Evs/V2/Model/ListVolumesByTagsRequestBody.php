@@ -20,6 +20,11 @@ class ListVolumesByTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * action  操作标识。  根据标签查询云硬盘实例详情时使用“filter”。
+    * limit  查询记录数。最小值1，最大值1000，默认为1000。返回的结果中记录数不超过limit值
+    * matches  资源本身支持的查询条件。标签列表中的标签key值不允许重复。
+    * offset  索引位置。最小值0，默认为0。返回的结果中第一条记录为符合查询条件的第“offset值+1”条记录
+    * tags  标签的键值对。标签列表中最多包含10个key 。标签列表中的标签key值不允许重复。标签列表中多个key之间是“与”的关系，云硬盘必须满足请求中所有key才会匹配出来。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class ListVolumesByTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * action  操作标识。  根据标签查询云硬盘实例详情时使用“filter”。
+    * limit  查询记录数。最小值1，最大值1000，默认为1000。返回的结果中记录数不超过limit值
+    * matches  资源本身支持的查询条件。标签列表中的标签key值不允许重复。
+    * offset  索引位置。最小值0，默认为0。返回的结果中第一条记录为符合查询条件的第“offset值+1”条记录
+    * tags  标签的键值对。标签列表中最多包含10个key 。标签列表中的标签key值不允许重复。标签列表中多个key之间是“与”的关系，云硬盘必须满足请求中所有key才会匹配出来。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class ListVolumesByTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * action  操作标识。  根据标签查询云硬盘实例详情时使用“filter”。
+    * limit  查询记录数。最小值1，最大值1000，默认为1000。返回的结果中记录数不超过limit值
+    * matches  资源本身支持的查询条件。标签列表中的标签key值不允许重复。
+    * offset  索引位置。最小值0，默认为0。返回的结果中第一条记录为符合查询条件的第“offset值+1”条记录
+    * tags  标签的键值对。标签列表中最多包含10个key 。标签列表中的标签key值不允许重复。标签列表中多个key之间是“与”的关系，云硬盘必须满足请求中所有key才会匹配出来。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class ListVolumesByTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * action  操作标识。  根据标签查询云硬盘实例详情时使用“filter”。
+    * limit  查询记录数。最小值1，最大值1000，默认为1000。返回的结果中记录数不超过limit值
+    * matches  资源本身支持的查询条件。标签列表中的标签key值不允许重复。
+    * offset  索引位置。最小值0，默认为0。返回的结果中第一条记录为符合查询条件的第“offset值+1”条记录
+    * tags  标签的键值对。标签列表中最多包含10个key 。标签列表中的标签key值不允许重复。标签列表中多个key之间是“与”的关系，云硬盘必须满足请求中所有key才会匹配出来。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class ListVolumesByTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * action  操作标识。  根据标签查询云硬盘实例详情时使用“filter”。
+    * limit  查询记录数。最小值1，最大值1000，默认为1000。返回的结果中记录数不超过limit值
+    * matches  资源本身支持的查询条件。标签列表中的标签key值不允许重复。
+    * offset  索引位置。最小值0，默认为0。返回的结果中第一条记录为符合查询条件的第“offset值+1”条记录
+    * tags  标签的键值对。标签列表中最多包含10个key 。标签列表中的标签key值不允许重复。标签列表中多个key之间是“与”的关系，云硬盘必须满足请求中所有key才会匹配出来。
     *
     * @var string[]
     */
@@ -226,6 +251,7 @@ class ListVolumesByTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
+    *  操作标识。  根据标签查询云硬盘实例详情时使用“filter”。
     *
     * @return string
     */
@@ -249,6 +275,7 @@ class ListVolumesByTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  查询记录数。最小值1，最大值1000，默认为1000。返回的结果中记录数不超过limit值
     *
     * @return int|null
     */
@@ -272,6 +299,7 @@ class ListVolumesByTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets matches
+    *  资源本身支持的查询条件。标签列表中的标签key值不允许重复。
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\Match[]|null
     */
@@ -295,6 +323,7 @@ class ListVolumesByTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
+    *  索引位置。最小值0，默认为0。返回的结果中第一条记录为符合查询条件的第“offset值+1”条记录
     *
     * @return int|null
     */
@@ -318,6 +347,7 @@ class ListVolumesByTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  标签的键值对。标签列表中最多包含10个key 。标签列表中的标签key值不允许重复。标签列表中多个key之间是“与”的关系，云硬盘必须满足请求中所有key才会匹配出来。
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\TagsForListVolumes[]
     */

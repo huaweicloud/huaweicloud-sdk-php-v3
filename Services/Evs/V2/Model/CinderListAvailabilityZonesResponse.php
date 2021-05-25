@@ -21,6 +21,7 @@ class CinderListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * availabilityZoneInfo  查询请求返回的可用分区列表，请参见• [availabilityZoneInfo参数说明](https://support.huaweicloud.com/api-evs/evs_04_2081.html#evs_04_2081__li19751007201910)。
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class CinderListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * availabilityZoneInfo  查询请求返回的可用分区列表，请参见• [availabilityZoneInfo参数说明](https://support.huaweicloud.com/api-evs/evs_04_2081.html#evs_04_2081__li19751007201910)。
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class CinderListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * availabilityZoneInfo  查询请求返回的可用分区列表，请参见• [availabilityZoneInfo参数说明](https://support.huaweicloud.com/api-evs/evs_04_2081.html#evs_04_2081__li19751007201910)。
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class CinderListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * availabilityZoneInfo  查询请求返回的可用分区列表，请参见• [availabilityZoneInfo参数说明](https://support.huaweicloud.com/api-evs/evs_04_2081.html#evs_04_2081__li19751007201910)。
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class CinderListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * availabilityZoneInfo  查询请求返回的可用分区列表，请参见• [availabilityZoneInfo参数说明](https://support.huaweicloud.com/api-evs/evs_04_2081.html#evs_04_2081__li19751007201910)。
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class CinderListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZoneInfo
+    *  查询请求返回的可用分区列表，请参见• [availabilityZoneInfo参数说明](https://support.huaweicloud.com/api-evs/evs_04_2081.html#evs_04_2081__li19751007201910)。
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\AzInfo[]|null
     */

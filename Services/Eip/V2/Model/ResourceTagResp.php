@@ -20,6 +20,8 @@ class ResourceTagResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * key  键。同一资源的key值不能重复。
+    * value  值列表。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ResourceTagResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * key  键。同一资源的key值不能重复。
+    * value  值列表。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ResourceTagResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * key  键。同一资源的key值不能重复。
+    * value  值列表。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ResourceTagResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * key  键。同一资源的key值不能重复。
+    * value  值列表。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ResourceTagResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * key  键。同一资源的key值不能重复。
+    * value  值列表。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class ResourceTagResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
+    *  键。同一资源的key值不能重复。
     *
     * @return string|null
     */
@@ -204,6 +215,7 @@ class ResourceTagResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
+    *  值列表。
     *
     * @return string|null
     */

@@ -20,6 +20,8 @@ class GlanceDeleteTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * imageId  镜像id
+    * tag  新增的tag。字符串中不能包含“=”和“.”。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class GlanceDeleteTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * imageId  镜像id
+    * tag  新增的tag。字符串中不能包含“=”和“.”。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class GlanceDeleteTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * imageId  镜像id
+    * tag  新增的tag。字符串中不能包含“=”和“.”。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class GlanceDeleteTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * imageId  镜像id
+    * tag  新增的tag。字符串中不能包含“=”和“.”。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class GlanceDeleteTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * imageId  镜像id
+    * tag  新增的tag。字符串中不能包含“=”和“.”。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class GlanceDeleteTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageId
+    *  镜像id
     *
     * @return string
     */
@@ -192,7 +203,7 @@ class GlanceDeleteTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageId
     *
-    * @param string $imageId imageId
+    * @param string $imageId 镜像id
     *
     * @return $this
     */
@@ -204,6 +215,7 @@ class GlanceDeleteTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tag
+    *  新增的tag。字符串中不能包含“=”和“.”。
     *
     * @return string
     */
@@ -215,7 +227,7 @@ class GlanceDeleteTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tag
     *
-    * @param string $tag tag
+    * @param string $tag 新增的tag。字符串中不能包含“=”和“.”。
     *
     * @return $this
     */

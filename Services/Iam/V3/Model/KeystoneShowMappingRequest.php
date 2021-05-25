@@ -20,6 +20,7 @@ class KeystoneShowMappingRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  待查询的映射ID。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class KeystoneShowMappingRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  待查询的映射ID。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class KeystoneShowMappingRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  待查询的映射ID。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class KeystoneShowMappingRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  待查询的映射ID。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class KeystoneShowMappingRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  待查询的映射ID。
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class KeystoneShowMappingRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  待查询的映射ID。
     *
     * @return string
     */
@@ -183,7 +189,7 @@ class KeystoneShowMappingRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id id
+    * @param string $id 待查询的映射ID。
     *
     * @return $this
     */

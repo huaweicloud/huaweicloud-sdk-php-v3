@@ -20,6 +20,9 @@ class DetachServerVolumeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * serverId  云服务器ID。
+    * volumeId  磁盘ID。
+    * deleteFlag  是否强制卸载数据盘。  - 是，值为“1”。  - 否，值为“0”。  默认值为0。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class DetachServerVolumeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * serverId  云服务器ID。
+    * volumeId  磁盘ID。
+    * deleteFlag  是否强制卸载数据盘。  - 是，值为“1”。  - 否，值为“0”。  默认值为0。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class DetachServerVolumeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * serverId  云服务器ID。
+    * volumeId  磁盘ID。
+    * deleteFlag  是否强制卸载数据盘。  - 是，值为“1”。  - 否，值为“0”。  默认值为0。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class DetachServerVolumeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * serverId  云服务器ID。
+    * volumeId  磁盘ID。
+    * deleteFlag  是否强制卸载数据盘。  - 是，值为“1”。  - 否，值为“0”。  默认值为0。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class DetachServerVolumeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * serverId  云服务器ID。
+    * volumeId  磁盘ID。
+    * deleteFlag  是否强制卸载数据盘。  - 是，值为“1”。  - 否，值为“0”。  默认值为0。
     *
     * @var string[]
     */
@@ -210,6 +225,7 @@ class DetachServerVolumeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverId
+    *  云服务器ID。
     *
     * @return string
     */
@@ -221,7 +237,7 @@ class DetachServerVolumeRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serverId
     *
-    * @param string $serverId serverId
+    * @param string $serverId 云服务器ID。
     *
     * @return $this
     */
@@ -233,6 +249,7 @@ class DetachServerVolumeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeId
+    *  磁盘ID。
     *
     * @return string
     */
@@ -244,7 +261,7 @@ class DetachServerVolumeRequest implements ModelInterface, ArrayAccess
     /**
     * Sets volumeId
     *
-    * @param string $volumeId volumeId
+    * @param string $volumeId 磁盘ID。
     *
     * @return $this
     */
@@ -256,6 +273,7 @@ class DetachServerVolumeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets deleteFlag
+    *  是否强制卸载数据盘。  - 是，值为“1”。  - 否，值为“0”。  默认值为0。
     *
     * @return string|null
     */
@@ -267,7 +285,7 @@ class DetachServerVolumeRequest implements ModelInterface, ArrayAccess
     /**
     * Sets deleteFlag
     *
-    * @param string|null $deleteFlag deleteFlag
+    * @param string|null $deleteFlag 是否强制卸载数据盘。  - 是，值为“1”。  - 否，值为“0”。  默认值为0。
     *
     * @return $this
     */

@@ -20,6 +20,9 @@ class BindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * resourceType  要绑定标签的资源类型。 - device：设备。
+    * resourceId  要绑定标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
+    * tags  要绑定到指定资源的标签列表，标签列表中各项标签键值之间不允许重复，一个资源最多可以绑定10个标签。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class BindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * resourceType  要绑定标签的资源类型。 - device：设备。
+    * resourceId  要绑定标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
+    * tags  要绑定到指定资源的标签列表，标签列表中各项标签键值之间不允许重复，一个资源最多可以绑定10个标签。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class BindTagsDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * resourceType  要绑定标签的资源类型。 - device：设备。
+    * resourceId  要绑定标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
+    * tags  要绑定到指定资源的标签列表，标签列表中各项标签键值之间不允许重复，一个资源最多可以绑定10个标签。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class BindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * resourceType  要绑定标签的资源类型。 - device：设备。
+    * resourceId  要绑定标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
+    * tags  要绑定到指定资源的标签列表，标签列表中各项标签键值之间不允许重复，一个资源最多可以绑定10个标签。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class BindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * resourceType  要绑定标签的资源类型。 - device：设备。
+    * resourceId  要绑定标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
+    * tags  要绑定到指定资源的标签列表，标签列表中各项标签键值之间不允许重复，一个资源最多可以绑定10个标签。
     *
     * @var string[]
     */
@@ -196,6 +211,7 @@ class BindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
+    *  要绑定标签的资源类型。 - device：设备。
     *
     * @return string
     */
@@ -219,6 +235,7 @@ class BindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
+    *  要绑定标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
     *
     * @return string
     */
@@ -242,6 +259,7 @@ class BindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  要绑定到指定资源的标签列表，标签列表中各项标签键值之间不允许重复，一个资源最多可以绑定10个标签。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\TagV5DTO[]
     */

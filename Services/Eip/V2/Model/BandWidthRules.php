@@ -20,6 +20,12 @@ class BandWidthRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  带宽规则ID
+    * name  带宽规则名称
+    * adminStateUp  配置状态，为False时配置不生效。
+    * egressSize  出网带宽最大值，单位M bps。取值范围[0,n]，其中n为所属带宽的带宽大小（size字段）。0表示设置为最大带宽。
+    * egressGuarentedSize  出网保障带宽大小，单位M bps。取值范围[0,x]，其中x为所属带宽剩余的保障额。
+    * publicipInfo  功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class BandWidthRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  带宽规则ID
+    * name  带宽规则名称
+    * adminStateUp  配置状态，为False时配置不生效。
+    * egressSize  出网带宽最大值，单位M bps。取值范围[0,n]，其中n为所属带宽的带宽大小（size字段）。0表示设置为最大带宽。
+    * egressGuarentedSize  出网保障带宽大小，单位M bps。取值范围[0,x]，其中x为所属带宽剩余的保障额。
+    * publicipInfo  功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class BandWidthRules implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  带宽规则ID
+    * name  带宽规则名称
+    * adminStateUp  配置状态，为False时配置不生效。
+    * egressSize  出网带宽最大值，单位M bps。取值范围[0,n]，其中n为所属带宽的带宽大小（size字段）。0表示设置为最大带宽。
+    * egressGuarentedSize  出网保障带宽大小，单位M bps。取值范围[0,x]，其中x为所属带宽剩余的保障额。
+    * publicipInfo  功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class BandWidthRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  带宽规则ID
+    * name  带宽规则名称
+    * adminStateUp  配置状态，为False时配置不生效。
+    * egressSize  出网带宽最大值，单位M bps。取值范围[0,n]，其中n为所属带宽的带宽大小（size字段）。0表示设置为最大带宽。
+    * egressGuarentedSize  出网保障带宽大小，单位M bps。取值范围[0,x]，其中x为所属带宽剩余的保障额。
+    * publicipInfo  功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class BandWidthRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  带宽规则ID
+    * name  带宽规则名称
+    * adminStateUp  配置状态，为False时配置不生效。
+    * egressSize  出网带宽最大值，单位M bps。取值范围[0,n]，其中n为所属带宽的带宽大小（size字段）。0表示设置为最大带宽。
+    * egressGuarentedSize  出网保障带宽大小，单位M bps。取值范围[0,x]，其中x为所属带宽剩余的保障额。
+    * publicipInfo  功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
     *
     * @var string[]
     */
@@ -208,6 +238,7 @@ class BandWidthRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  带宽规则ID
     *
     * @return string|null
     */
@@ -231,6 +262,7 @@ class BandWidthRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  带宽规则名称
     *
     * @return string|null
     */
@@ -254,6 +286,7 @@ class BandWidthRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
+    *  配置状态，为False时配置不生效。
     *
     * @return bool|null
     */
@@ -277,6 +310,7 @@ class BandWidthRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets egressSize
+    *  出网带宽最大值，单位M bps。取值范围[0,n]，其中n为所属带宽的带宽大小（size字段）。0表示设置为最大带宽。
     *
     * @return int|null
     */
@@ -300,6 +334,7 @@ class BandWidthRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets egressGuarentedSize
+    *  出网保障带宽大小，单位M bps。取值范围[0,x]，其中x为所属带宽剩余的保障额。
     *
     * @return int|null
     */
@@ -323,6 +358,7 @@ class BandWidthRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipInfo
+    *  功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\PublicipInfoResp[]|null
     */

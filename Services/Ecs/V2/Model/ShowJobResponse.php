@@ -21,6 +21,16 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * beginTime  开始时间。
+    * code  查询Job的API请求出现错误时，返回的错误码。
+    * endTime  结束时间。
+    * entities  entities
+    * errorCode  Job执行失败时的错误码。  Job执行成功后，该值为null。
+    * failReason  Job执行失败时的错误原因。  Job执行成功后，该值为null。
+    * jobId  异步请求的任务ID。
+    * jobType  异步请求的任务类型。
+    * message  查询Job的API请求出现错误时，返回的错误消息。
+    * status  Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
     *
     * @var string[]
     */
@@ -39,6 +49,16 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * beginTime  开始时间。
+    * code  查询Job的API请求出现错误时，返回的错误码。
+    * endTime  结束时间。
+    * entities  entities
+    * errorCode  Job执行失败时的错误码。  Job执行成功后，该值为null。
+    * failReason  Job执行失败时的错误原因。  Job执行成功后，该值为null。
+    * jobId  异步请求的任务ID。
+    * jobType  异步请求的任务类型。
+    * message  查询Job的API请求出现错误时，返回的错误消息。
+    * status  Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
     *
     * @var string[]
     */
@@ -78,6 +98,16 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * beginTime  开始时间。
+    * code  查询Job的API请求出现错误时，返回的错误码。
+    * endTime  结束时间。
+    * entities  entities
+    * errorCode  Job执行失败时的错误码。  Job执行成功后，该值为null。
+    * failReason  Job执行失败时的错误原因。  Job执行成功后，该值为null。
+    * jobId  异步请求的任务ID。
+    * jobType  异步请求的任务类型。
+    * message  查询Job的API请求出现错误时，返回的错误消息。
+    * status  Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
     *
     * @var string[]
     */
@@ -96,6 +126,16 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * beginTime  开始时间。
+    * code  查询Job的API请求出现错误时，返回的错误码。
+    * endTime  结束时间。
+    * entities  entities
+    * errorCode  Job执行失败时的错误码。  Job执行成功后，该值为null。
+    * failReason  Job执行失败时的错误原因。  Job执行成功后，该值为null。
+    * jobId  异步请求的任务ID。
+    * jobType  异步请求的任务类型。
+    * message  查询Job的API请求出现错误时，返回的错误消息。
+    * status  Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
     *
     * @var string[]
     */
@@ -114,6 +154,16 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * beginTime  开始时间。
+    * code  查询Job的API请求出现错误时，返回的错误码。
+    * endTime  结束时间。
+    * entities  entities
+    * errorCode  Job执行失败时的错误码。  Job执行成功后，该值为null。
+    * failReason  Job执行失败时的错误原因。  Job执行成功后，该值为null。
+    * jobId  异步请求的任务ID。
+    * jobType  异步请求的任务类型。
+    * message  查询Job的API请求出现错误时，返回的错误消息。
+    * status  Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
     *
     * @var string[]
     */
@@ -251,6 +301,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
+    *  开始时间。
     *
     * @return string|null
     */
@@ -274,6 +325,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
+    *  查询Job的API请求出现错误时，返回的错误码。
     *
     * @return string|null
     */
@@ -297,6 +349,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
+    *  结束时间。
     *
     * @return string|null
     */
@@ -320,6 +373,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets entities
+    *  entities
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\JobEntities|null
     */
@@ -343,6 +397,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
+    *  Job执行失败时的错误码。  Job执行成功后，该值为null。
     *
     * @return string|null
     */
@@ -366,6 +421,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets failReason
+    *  Job执行失败时的错误原因。  Job执行成功后，该值为null。
     *
     * @return string|null
     */
@@ -389,6 +445,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
+    *  异步请求的任务ID。
     *
     * @return string|null
     */
@@ -412,6 +469,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobType
+    *  异步请求的任务类型。
     *
     * @return string|null
     */
@@ -435,6 +493,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
+    *  查询Job的API请求出现错误时，返回的错误消息。
     *
     * @return string|null
     */
@@ -458,6 +517,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
     *
     * @return string|null
     */

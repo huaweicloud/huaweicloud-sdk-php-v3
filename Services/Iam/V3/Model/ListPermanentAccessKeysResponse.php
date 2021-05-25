@@ -21,6 +21,7 @@ class ListPermanentAccessKeysResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * credentials  认证结果信息列表。
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class ListPermanentAccessKeysResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * credentials  认证结果信息列表。
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class ListPermanentAccessKeysResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * credentials  认证结果信息列表。
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class ListPermanentAccessKeysResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * credentials  认证结果信息列表。
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class ListPermanentAccessKeysResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * credentials  认证结果信息列表。
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class ListPermanentAccessKeysResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets credentials
+    *  认证结果信息列表。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\Credentials[]|null
     */

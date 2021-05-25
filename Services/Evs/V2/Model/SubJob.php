@@ -20,6 +20,14 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * status  子job的状态。SUCCESS：成功。RUNNING：运行中。FAIL：失败。INIT：正在初始化。
+    * entities  entities
+    * jobId  子job的ID。
+    * jobType  子job的类型。createVolume：创建单个云硬盘。batchCreateVolume：批量创建云硬盘。deleteVolume：删除单个云硬盘。extendVolume：扩容云硬盘。bulkDeleteVolume：批量删除云硬盘。deleteSingleVolume：批量删除时逐个删除单个云硬盘。retypeVolume：对云硬盘做硬盘类型变更。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  子job执行失败时的错误码。
+    * failReason  子job执行失败时的错误原因。
     *
     * @var string[]
     */
@@ -36,6 +44,14 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * status  子job的状态。SUCCESS：成功。RUNNING：运行中。FAIL：失败。INIT：正在初始化。
+    * entities  entities
+    * jobId  子job的ID。
+    * jobType  子job的类型。createVolume：创建单个云硬盘。batchCreateVolume：批量创建云硬盘。deleteVolume：删除单个云硬盘。extendVolume：扩容云硬盘。bulkDeleteVolume：批量删除云硬盘。deleteSingleVolume：批量删除时逐个删除单个云硬盘。retypeVolume：对云硬盘做硬盘类型变更。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  子job执行失败时的错误码。
+    * failReason  子job执行失败时的错误原因。
     *
     * @var string[]
     */
@@ -73,6 +89,14 @@ class SubJob implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * status  子job的状态。SUCCESS：成功。RUNNING：运行中。FAIL：失败。INIT：正在初始化。
+    * entities  entities
+    * jobId  子job的ID。
+    * jobType  子job的类型。createVolume：创建单个云硬盘。batchCreateVolume：批量创建云硬盘。deleteVolume：删除单个云硬盘。extendVolume：扩容云硬盘。bulkDeleteVolume：批量删除云硬盘。deleteSingleVolume：批量删除时逐个删除单个云硬盘。retypeVolume：对云硬盘做硬盘类型变更。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  子job执行失败时的错误码。
+    * failReason  子job执行失败时的错误原因。
     *
     * @var string[]
     */
@@ -89,6 +113,14 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * status  子job的状态。SUCCESS：成功。RUNNING：运行中。FAIL：失败。INIT：正在初始化。
+    * entities  entities
+    * jobId  子job的ID。
+    * jobType  子job的类型。createVolume：创建单个云硬盘。batchCreateVolume：批量创建云硬盘。deleteVolume：删除单个云硬盘。extendVolume：扩容云硬盘。bulkDeleteVolume：批量删除云硬盘。deleteSingleVolume：批量删除时逐个删除单个云硬盘。retypeVolume：对云硬盘做硬盘类型变更。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  子job执行失败时的错误码。
+    * failReason  子job执行失败时的错误原因。
     *
     * @var string[]
     */
@@ -105,6 +137,14 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * status  子job的状态。SUCCESS：成功。RUNNING：运行中。FAIL：失败。INIT：正在初始化。
+    * entities  entities
+    * jobId  子job的ID。
+    * jobType  子job的类型。createVolume：创建单个云硬盘。batchCreateVolume：批量创建云硬盘。deleteVolume：删除单个云硬盘。extendVolume：扩容云硬盘。bulkDeleteVolume：批量删除云硬盘。deleteSingleVolume：批量删除时逐个删除单个云硬盘。retypeVolume：对云硬盘做硬盘类型变更。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  子job执行失败时的错误码。
+    * failReason  子job执行失败时的错误原因。
     *
     * @var string[]
     */
@@ -262,6 +302,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  子job的状态。SUCCESS：成功。RUNNING：运行中。FAIL：失败。INIT：正在初始化。
     *
     * @return string
     */
@@ -285,6 +326,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets entities
+    *  entities
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\SubJobEntities
     */
@@ -308,6 +350,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
+    *  子job的ID。
     *
     * @return string
     */
@@ -331,6 +374,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobType
+    *  子job的类型。createVolume：创建单个云硬盘。batchCreateVolume：批量创建云硬盘。deleteVolume：删除单个云硬盘。extendVolume：扩容云硬盘。bulkDeleteVolume：批量删除云硬盘。deleteSingleVolume：批量删除时逐个删除单个云硬盘。retypeVolume：对云硬盘做硬盘类型变更。
     *
     * @return string
     */
@@ -354,6 +398,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
+    *  开始时间。
     *
     * @return string
     */
@@ -377,6 +422,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
+    *  结束时间。
     *
     * @return string
     */
@@ -400,6 +446,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
+    *  子job执行失败时的错误码。
     *
     * @return string
     */
@@ -423,6 +470,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets failReason
+    *  子job执行失败时的错误原因。
     *
     * @return string
     */

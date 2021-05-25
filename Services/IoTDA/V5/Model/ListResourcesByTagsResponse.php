@@ -21,6 +21,8 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * resources  资源列表。
+    * page  page
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * resources  资源列表。
+    * page  page
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * resources  资源列表。
+    * page  page
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * resources  资源列表。
+    * page  page
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * resources  资源列表。
+    * page  page
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
+    *  资源列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ResourceDTO[]|null
     */
@@ -199,6 +210,7 @@ class ListResourcesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets page
+    *  page
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\Page|null
     */

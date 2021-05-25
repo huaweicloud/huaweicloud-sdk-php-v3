@@ -20,6 +20,8 @@ class Strategy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * trigger  规则条件触发的判断策略，默认为pulse。 - pulse：设备上报的数据满足条件则触发，不判断上一次上报的数据。 - reverse：设备上一次上报的数据不满足条件，本次上报的数据满足条件则触发。
+    * eventValidTime  设备数据的有效时间，单位为秒，设备数据的产生时间以上报数据中的eventTime为基准。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class Strategy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * trigger  规则条件触发的判断策略，默认为pulse。 - pulse：设备上报的数据满足条件则触发，不判断上一次上报的数据。 - reverse：设备上一次上报的数据不满足条件，本次上报的数据满足条件则触发。
+    * eventValidTime  设备数据的有效时间，单位为秒，设备数据的产生时间以上报数据中的eventTime为基准。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class Strategy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * trigger  规则条件触发的判断策略，默认为pulse。 - pulse：设备上报的数据满足条件则触发，不判断上一次上报的数据。 - reverse：设备上一次上报的数据不满足条件，本次上报的数据满足条件则触发。
+    * eventValidTime  设备数据的有效时间，单位为秒，设备数据的产生时间以上报数据中的eventTime为基准。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class Strategy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * trigger  规则条件触发的判断策略，默认为pulse。 - pulse：设备上报的数据满足条件则触发，不判断上一次上报的数据。 - reverse：设备上一次上报的数据不满足条件，本次上报的数据满足条件则触发。
+    * eventValidTime  设备数据的有效时间，单位为秒，设备数据的产生时间以上报数据中的eventTime为基准。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class Strategy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * trigger  规则条件触发的判断策略，默认为pulse。 - pulse：设备上报的数据满足条件则触发，不判断上一次上报的数据。 - reverse：设备上一次上报的数据不满足条件，本次上报的数据满足条件则触发。
+    * eventValidTime  设备数据的有效时间，单位为秒，设备数据的产生时间以上报数据中的eventTime为基准。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class Strategy implements ModelInterface, ArrayAccess
 
     /**
     * Gets trigger
+    *  规则条件触发的判断策略，默认为pulse。 - pulse：设备上报的数据满足条件则触发，不判断上一次上报的数据。 - reverse：设备上一次上报的数据不满足条件，本次上报的数据满足条件则触发。
     *
     * @return string|null
     */
@@ -204,6 +215,7 @@ class Strategy implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventValidTime
+    *  设备数据的有效时间，单位为秒，设备数据的产生时间以上报数据中的eventTime为基准。
     *
     * @return int|null
     */

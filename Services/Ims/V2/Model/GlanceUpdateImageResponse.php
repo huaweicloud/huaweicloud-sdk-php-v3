@@ -21,6 +21,55 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * backupId  备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空。
+    * dataOrigin  镜像来源。公共镜像为空。
+    * description  镜像描述信息。
+    * imageSize  镜像文件的大小，单位为字节。目前取值为大于0的字符串。
+    * imageSourceType  镜像后端存储类型，目前只支持uds
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * isregistered  是否是注册过的镜像，取值为“true”或者“false”。
+    * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
+    * osBit  操作系统位数，一般取值为“32”或者“64”。
+    * osType  操作系统类型，目前取值Linux， Windows，Other。
+    * osVersion  操作系统具体版本。
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS。
+    * productcode  市场镜像的产品ID。
+    * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性。
+    * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性。
+    * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性。
+    * supportKvmGpuType  表示该镜像是支持KVM虚拟化平台下的GPU类型，如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * supportKvmInfiniband  如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
+    * supportLargememory  表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
+    * supportXen  如果镜像支持XEN，取值为true，否则无需增加该属性。
+    * supportXenGpuType  表示该镜像是支持XEN虚拟化平台下的GPU优化类型，取值参考8.10-表 镜像支持的GPU类型说明。镜像操作系统类型请参考8.10-表 镜像类型。如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * supportXenHana  如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * checksum  目前暂时不使用。
+    * containerFormat  容器类型。
+    * createdAt  创建时间。格式为UTC时间。
+    * deleted  是否是删除的镜像，取值为true或者false。
+    * deletedAt  删除时间。格式为UTC时间
+    * diskFormat  镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
+    * file  镜像文件下载和上传链接。
+    * id  镜像ID。
+    * minDisk  镜像运行需要的最小磁盘容量，单位为GB
+    * minRam  镜像运行最小内存，单位为MB。
+    * name  镜像名称。
+    * owner  镜像属于哪个租户。
+    * protected  是否是受保护的，受保护的镜像不允许删除。取值为true或false。
+    * schema  镜像视图。
+    * self  镜像链接信息。
+    * size  目前暂时不使用。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
+    * tags  镜像标签列表，提供用户可以自定义管理私有镜像的能力。用户可以通过镜像标签接口为每个镜像增加不同的标签，在查询接口中可以根据标签进行过滤。
+    * updatedAt  更新时间。格式为UTC时间。
+    * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。
+    * virtualSize  目前暂时不使用。
+    * visibility  是否被其他租户可见，取值如下：private：私有镜像public：公共镜像shared：共享镜像
+    * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
+    * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
+    * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
     *
     * @var string[]
     */
@@ -78,6 +127,55 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * backupId  备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空。
+    * dataOrigin  镜像来源。公共镜像为空。
+    * description  镜像描述信息。
+    * imageSize  镜像文件的大小，单位为字节。目前取值为大于0的字符串。
+    * imageSourceType  镜像后端存储类型，目前只支持uds
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * isregistered  是否是注册过的镜像，取值为“true”或者“false”。
+    * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
+    * osBit  操作系统位数，一般取值为“32”或者“64”。
+    * osType  操作系统类型，目前取值Linux， Windows，Other。
+    * osVersion  操作系统具体版本。
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS。
+    * productcode  市场镜像的产品ID。
+    * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性。
+    * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性。
+    * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性。
+    * supportKvmGpuType  表示该镜像是支持KVM虚拟化平台下的GPU类型，如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * supportKvmInfiniband  如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
+    * supportLargememory  表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
+    * supportXen  如果镜像支持XEN，取值为true，否则无需增加该属性。
+    * supportXenGpuType  表示该镜像是支持XEN虚拟化平台下的GPU优化类型，取值参考8.10-表 镜像支持的GPU类型说明。镜像操作系统类型请参考8.10-表 镜像类型。如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * supportXenHana  如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * checksum  目前暂时不使用。
+    * containerFormat  容器类型。
+    * createdAt  创建时间。格式为UTC时间。
+    * deleted  是否是删除的镜像，取值为true或者false。
+    * deletedAt  删除时间。格式为UTC时间
+    * diskFormat  镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
+    * file  镜像文件下载和上传链接。
+    * id  镜像ID。
+    * minDisk  镜像运行需要的最小磁盘容量，单位为GB
+    * minRam  镜像运行最小内存，单位为MB。
+    * name  镜像名称。
+    * owner  镜像属于哪个租户。
+    * protected  是否是受保护的，受保护的镜像不允许删除。取值为true或false。
+    * schema  镜像视图。
+    * self  镜像链接信息。
+    * size  目前暂时不使用。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
+    * tags  镜像标签列表，提供用户可以自定义管理私有镜像的能力。用户可以通过镜像标签接口为每个镜像增加不同的标签，在查询接口中可以根据标签进行过滤。
+    * updatedAt  更新时间。格式为UTC时间。
+    * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。
+    * virtualSize  目前暂时不使用。
+    * visibility  是否被其他租户可见，取值如下：private：私有镜像public：公共镜像shared：共享镜像
+    * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
+    * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
+    * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
     *
     * @var string[]
     */
@@ -156,6 +254,55 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * backupId  备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空。
+    * dataOrigin  镜像来源。公共镜像为空。
+    * description  镜像描述信息。
+    * imageSize  镜像文件的大小，单位为字节。目前取值为大于0的字符串。
+    * imageSourceType  镜像后端存储类型，目前只支持uds
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * isregistered  是否是注册过的镜像，取值为“true”或者“false”。
+    * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
+    * osBit  操作系统位数，一般取值为“32”或者“64”。
+    * osType  操作系统类型，目前取值Linux， Windows，Other。
+    * osVersion  操作系统具体版本。
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS。
+    * productcode  市场镜像的产品ID。
+    * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性。
+    * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性。
+    * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性。
+    * supportKvmGpuType  表示该镜像是支持KVM虚拟化平台下的GPU类型，如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * supportKvmInfiniband  如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
+    * supportLargememory  表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
+    * supportXen  如果镜像支持XEN，取值为true，否则无需增加该属性。
+    * supportXenGpuType  表示该镜像是支持XEN虚拟化平台下的GPU优化类型，取值参考8.10-表 镜像支持的GPU类型说明。镜像操作系统类型请参考8.10-表 镜像类型。如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * supportXenHana  如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * checksum  目前暂时不使用。
+    * containerFormat  容器类型。
+    * createdAt  创建时间。格式为UTC时间。
+    * deleted  是否是删除的镜像，取值为true或者false。
+    * deletedAt  删除时间。格式为UTC时间
+    * diskFormat  镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
+    * file  镜像文件下载和上传链接。
+    * id  镜像ID。
+    * minDisk  镜像运行需要的最小磁盘容量，单位为GB
+    * minRam  镜像运行最小内存，单位为MB。
+    * name  镜像名称。
+    * owner  镜像属于哪个租户。
+    * protected  是否是受保护的，受保护的镜像不允许删除。取值为true或false。
+    * schema  镜像视图。
+    * self  镜像链接信息。
+    * size  目前暂时不使用。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
+    * tags  镜像标签列表，提供用户可以自定义管理私有镜像的能力。用户可以通过镜像标签接口为每个镜像增加不同的标签，在查询接口中可以根据标签进行过滤。
+    * updatedAt  更新时间。格式为UTC时间。
+    * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。
+    * virtualSize  目前暂时不使用。
+    * visibility  是否被其他租户可见，取值如下：private：私有镜像public：公共镜像shared：共享镜像
+    * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
+    * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
+    * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
     *
     * @var string[]
     */
@@ -213,6 +360,55 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * backupId  备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空。
+    * dataOrigin  镜像来源。公共镜像为空。
+    * description  镜像描述信息。
+    * imageSize  镜像文件的大小，单位为字节。目前取值为大于0的字符串。
+    * imageSourceType  镜像后端存储类型，目前只支持uds
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * isregistered  是否是注册过的镜像，取值为“true”或者“false”。
+    * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
+    * osBit  操作系统位数，一般取值为“32”或者“64”。
+    * osType  操作系统类型，目前取值Linux， Windows，Other。
+    * osVersion  操作系统具体版本。
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS。
+    * productcode  市场镜像的产品ID。
+    * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性。
+    * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性。
+    * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性。
+    * supportKvmGpuType  表示该镜像是支持KVM虚拟化平台下的GPU类型，如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * supportKvmInfiniband  如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
+    * supportLargememory  表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
+    * supportXen  如果镜像支持XEN，取值为true，否则无需增加该属性。
+    * supportXenGpuType  表示该镜像是支持XEN虚拟化平台下的GPU优化类型，取值参考8.10-表 镜像支持的GPU类型说明。镜像操作系统类型请参考8.10-表 镜像类型。如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * supportXenHana  如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * checksum  目前暂时不使用。
+    * containerFormat  容器类型。
+    * createdAt  创建时间。格式为UTC时间。
+    * deleted  是否是删除的镜像，取值为true或者false。
+    * deletedAt  删除时间。格式为UTC时间
+    * diskFormat  镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
+    * file  镜像文件下载和上传链接。
+    * id  镜像ID。
+    * minDisk  镜像运行需要的最小磁盘容量，单位为GB
+    * minRam  镜像运行最小内存，单位为MB。
+    * name  镜像名称。
+    * owner  镜像属于哪个租户。
+    * protected  是否是受保护的，受保护的镜像不允许删除。取值为true或false。
+    * schema  镜像视图。
+    * self  镜像链接信息。
+    * size  目前暂时不使用。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
+    * tags  镜像标签列表，提供用户可以自定义管理私有镜像的能力。用户可以通过镜像标签接口为每个镜像增加不同的标签，在查询接口中可以根据标签进行过滤。
+    * updatedAt  更新时间。格式为UTC时间。
+    * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。
+    * virtualSize  目前暂时不使用。
+    * visibility  是否被其他租户可见，取值如下：private：私有镜像public：公共镜像shared：共享镜像
+    * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
+    * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
+    * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
     *
     * @var string[]
     */
@@ -270,6 +466,55 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * backupId  备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空。
+    * dataOrigin  镜像来源。公共镜像为空。
+    * description  镜像描述信息。
+    * imageSize  镜像文件的大小，单位为字节。目前取值为大于0的字符串。
+    * imageSourceType  镜像后端存储类型，目前只支持uds
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * isregistered  是否是注册过的镜像，取值为“true”或者“false”。
+    * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
+    * osBit  操作系统位数，一般取值为“32”或者“64”。
+    * osType  操作系统类型，目前取值Linux， Windows，Other。
+    * osVersion  操作系统具体版本。
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS。
+    * productcode  市场镜像的产品ID。
+    * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性。
+    * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性。
+    * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性。
+    * supportKvmGpuType  表示该镜像是支持KVM虚拟化平台下的GPU类型，如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * supportKvmInfiniband  如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
+    * supportLargememory  表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
+    * supportXen  如果镜像支持XEN，取值为true，否则无需增加该属性。
+    * supportXenGpuType  表示该镜像是支持XEN虚拟化平台下的GPU优化类型，取值参考8.10-表 镜像支持的GPU类型说明。镜像操作系统类型请参考8.10-表 镜像类型。如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * supportXenHana  如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * checksum  目前暂时不使用。
+    * containerFormat  容器类型。
+    * createdAt  创建时间。格式为UTC时间。
+    * deleted  是否是删除的镜像，取值为true或者false。
+    * deletedAt  删除时间。格式为UTC时间
+    * diskFormat  镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
+    * file  镜像文件下载和上传链接。
+    * id  镜像ID。
+    * minDisk  镜像运行需要的最小磁盘容量，单位为GB
+    * minRam  镜像运行最小内存，单位为MB。
+    * name  镜像名称。
+    * owner  镜像属于哪个租户。
+    * protected  是否是受保护的，受保护的镜像不允许删除。取值为true或false。
+    * schema  镜像视图。
+    * self  镜像链接信息。
+    * size  目前暂时不使用。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
+    * tags  镜像标签列表，提供用户可以自定义管理私有镜像的能力。用户可以通过镜像标签接口为每个镜像增加不同的标签，在查询接口中可以根据标签进行过滤。
+    * updatedAt  更新时间。格式为UTC时间。
+    * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。
+    * virtualSize  目前暂时不使用。
+    * visibility  是否被其他租户可见，取值如下：private：私有镜像public：公共镜像shared：共享镜像
+    * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
+    * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
+    * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
     *
     * @var string[]
     */
@@ -820,6 +1065,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupId
+    *  备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空。
     *
     * @return string|null
     */
@@ -843,6 +1089,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataOrigin
+    *  镜像来源。公共镜像为空。
     *
     * @return string|null
     */
@@ -866,6 +1113,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  镜像描述信息。
     *
     * @return string|null
     */
@@ -889,6 +1137,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageSize
+    *  镜像文件的大小，单位为字节。目前取值为大于0的字符串。
     *
     * @return string|null
     */
@@ -912,6 +1161,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageSourceType
+    *  镜像后端存储类型，目前只支持uds
     *
     * @return string|null
     */
@@ -935,6 +1185,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets imagetype
+    *  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
     *
     * @return string|null
     */
@@ -958,6 +1209,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isregistered
+    *  是否是注册过的镜像，取值为“true”或者“false”。
     *
     * @return string|null
     */
@@ -981,6 +1233,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets originalimagename
+    *  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
     *
     * @return string|null
     */
@@ -1004,6 +1257,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets osBit
+    *  操作系统位数，一般取值为“32”或者“64”。
     *
     * @return string|null
     */
@@ -1027,6 +1281,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
+    *  操作系统类型，目前取值Linux， Windows，Other。
     *
     * @return string|null
     */
@@ -1050,6 +1305,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVersion
+    *  操作系统具体版本。
     *
     * @return string|null
     */
@@ -1073,6 +1329,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets platform
+    *  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS。
     *
     * @return string|null
     */
@@ -1096,6 +1353,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets productcode
+    *  市场镜像的产品ID。
     *
     * @return string|null
     */
@@ -1119,6 +1377,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportDiskintensive
+    *  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性。
     *
     * @return string|null
     */
@@ -1142,6 +1401,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportHighperformance
+    *  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性。
     *
     * @return string|null
     */
@@ -1165,6 +1425,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportKvm
+    *  如果镜像支持KVM，取值为true，否则无需增加该属性。
     *
     * @return string|null
     */
@@ -1188,6 +1449,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportKvmGpuType
+    *  表示该镜像是支持KVM虚拟化平台下的GPU类型，如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
     *
     * @return string|null
     */
@@ -1211,6 +1473,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportKvmInfiniband
+    *  如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
     *
     * @return string|null
     */
@@ -1234,6 +1497,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportLargememory
+    *  表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
     *
     * @return string|null
     */
@@ -1257,6 +1521,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportXen
+    *  如果镜像支持XEN，取值为true，否则无需增加该属性。
     *
     * @return string|null
     */
@@ -1280,6 +1545,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportXenGpuType
+    *  表示该镜像是支持XEN虚拟化平台下的GPU优化类型，取值参考8.10-表 镜像支持的GPU类型说明。镜像操作系统类型请参考8.10-表 镜像类型。如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
     *
     * @return string|null
     */
@@ -1303,6 +1569,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportXenHana
+    *  如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
     *
     * @return string|null
     */
@@ -1326,6 +1593,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets checksum
+    *  目前暂时不使用。
     *
     * @return string|null
     */
@@ -1349,6 +1617,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerFormat
+    *  容器类型。
     *
     * @return string|null
     */
@@ -1372,6 +1641,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  创建时间。格式为UTC时间。
     *
     * @return string|null
     */
@@ -1395,6 +1665,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deleted
+    *  是否是删除的镜像，取值为true或者false。
     *
     * @return bool|null
     */
@@ -1418,6 +1689,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deletedAt
+    *  删除时间。格式为UTC时间
     *
     * @return string|null
     */
@@ -1441,6 +1713,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskFormat
+    *  镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
     *
     * @return string|null
     */
@@ -1464,6 +1737,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets file
+    *  镜像文件下载和上传链接。
     *
     * @return string|null
     */
@@ -1487,6 +1761,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  镜像ID。
     *
     * @return string|null
     */
@@ -1510,6 +1785,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets minDisk
+    *  镜像运行需要的最小磁盘容量，单位为GB
     *
     * @return int|null
     */
@@ -1533,6 +1809,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets minRam
+    *  镜像运行最小内存，单位为MB。
     *
     * @return int|null
     */
@@ -1556,6 +1833,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  镜像名称。
     *
     * @return string|null
     */
@@ -1579,6 +1857,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
+    *  镜像属于哪个租户。
     *
     * @return string|null
     */
@@ -1602,6 +1881,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protected
+    *  是否是受保护的，受保护的镜像不允许删除。取值为true或false。
     *
     * @return bool|null
     */
@@ -1625,6 +1905,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets schema
+    *  镜像视图。
     *
     * @return string|null
     */
@@ -1648,6 +1929,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets self
+    *  镜像链接信息。
     *
     * @return string|null
     */
@@ -1671,6 +1953,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
+    *  目前暂时不使用。
     *
     * @return int|null
     */
@@ -1694,6 +1977,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
     *
     * @return string|null
     */
@@ -1717,6 +2001,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  镜像标签列表，提供用户可以自定义管理私有镜像的能力。用户可以通过镜像标签接口为每个镜像增加不同的标签，在查询接口中可以根据标签进行过滤。
     *
     * @return string[]|null
     */
@@ -1740,6 +2025,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
+    *  更新时间。格式为UTC时间。
     *
     * @return string|null
     */
@@ -1763,6 +2049,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets virtualEnvType
+    *  镜像使用环境类型：FusionCompute，Ironic，DataImage。
     *
     * @return string|null
     */
@@ -1786,6 +2073,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets virtualSize
+    *  目前暂时不使用。
     *
     * @return int|null
     */
@@ -1809,6 +2097,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets visibility
+    *  是否被其他租户可见，取值如下：private：私有镜像public：公共镜像shared：共享镜像
     *
     * @return string|null
     */
@@ -1832,6 +2121,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportFcInject
+    *  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     *
     * @return string|null
     */
@@ -1855,6 +2145,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     *
     * @return string|null
     */
@@ -1878,6 +2169,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets hwFirmwareType
+    *  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     *
     * @return string|null
     */
@@ -1901,6 +2193,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportArm
+    *  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     *
     * @return string|null
     */
@@ -1924,6 +2217,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isOffshelved
+    *  表示当前市场镜像是否下架。 true：已下架 false：未下架
     *
     * @return string|null
     */

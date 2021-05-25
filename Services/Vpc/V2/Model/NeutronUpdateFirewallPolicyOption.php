@@ -20,6 +20,10 @@ class NeutronUpdateFirewallPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  功能说明：网络ACL防火墙策略名称 取值范围：最长255个字符
+    * description  功能说明：网络ACL防火墙策略描述 取值范围：最长255个字符
+    * firewallRules  功能说明：网络ACL策略关联的规则列表
+    * audited  审计标记。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class NeutronUpdateFirewallPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  功能说明：网络ACL防火墙策略名称 取值范围：最长255个字符
+    * description  功能说明：网络ACL防火墙策略描述 取值范围：最长255个字符
+    * firewallRules  功能说明：网络ACL策略关联的规则列表
+    * audited  审计标记。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class NeutronUpdateFirewallPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  功能说明：网络ACL防火墙策略名称 取值范围：最长255个字符
+    * description  功能说明：网络ACL防火墙策略描述 取值范围：最长255个字符
+    * firewallRules  功能说明：网络ACL策略关联的规则列表
+    * audited  审计标记。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class NeutronUpdateFirewallPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  功能说明：网络ACL防火墙策略名称 取值范围：最长255个字符
+    * description  功能说明：网络ACL防火墙策略描述 取值范围：最长255个字符
+    * firewallRules  功能说明：网络ACL策略关联的规则列表
+    * audited  审计标记。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class NeutronUpdateFirewallPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  功能说明：网络ACL防火墙策略名称 取值范围：最长255个字符
+    * description  功能说明：网络ACL防火墙策略描述 取值范围：最长255个字符
+    * firewallRules  功能说明：网络ACL策略关联的规则列表
+    * audited  审计标记。
     *
     * @var string[]
     */
@@ -199,6 +219,7 @@ class NeutronUpdateFirewallPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：网络ACL防火墙策略名称 取值范围：最长255个字符
     *
     * @return string|null
     */
@@ -222,6 +243,7 @@ class NeutronUpdateFirewallPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：网络ACL防火墙策略描述 取值范围：最长255个字符
     *
     * @return string|null
     */
@@ -245,6 +267,7 @@ class NeutronUpdateFirewallPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets firewallRules
+    *  功能说明：网络ACL策略关联的规则列表
     *
     * @return string[]|null
     */
@@ -268,6 +291,7 @@ class NeutronUpdateFirewallPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets audited
+    *  审计标记。
     *
     * @return bool|null
     */

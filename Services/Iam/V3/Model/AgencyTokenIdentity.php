@@ -20,6 +20,8 @@ class AgencyTokenIdentity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * methods  token的获取方式，该字段内容为[\"assume_role\"]。
+    * assumeRole  assumeRole
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class AgencyTokenIdentity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * methods  token的获取方式，该字段内容为[\"assume_role\"]。
+    * assumeRole  assumeRole
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class AgencyTokenIdentity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * methods  token的获取方式，该字段内容为[\"assume_role\"]。
+    * assumeRole  assumeRole
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class AgencyTokenIdentity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * methods  token的获取方式，该字段内容为[\"assume_role\"]。
+    * assumeRole  assumeRole
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class AgencyTokenIdentity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * methods  token的获取方式，该字段内容为[\"assume_role\"]。
+    * assumeRole  assumeRole
     *
     * @var string[]
     */
@@ -194,6 +204,7 @@ class AgencyTokenIdentity implements ModelInterface, ArrayAccess
 
     /**
     * Gets methods
+    *  token的获取方式，该字段内容为[\"assume_role\"]。
     *
     * @return string[]
     */
@@ -217,6 +228,7 @@ class AgencyTokenIdentity implements ModelInterface, ArrayAccess
 
     /**
     * Gets assumeRole
+    *  assumeRole
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\AgencyTokenAssumerole
     */

@@ -20,6 +20,8 @@ class ServerSystemTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * key  系统标签的Key值。
+    * value  系统标签的value值。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ServerSystemTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * key  系统标签的Key值。
+    * value  系统标签的value值。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ServerSystemTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * key  系统标签的Key值。
+    * value  系统标签的value值。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ServerSystemTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * key  系统标签的Key值。
+    * value  系统标签的value值。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ServerSystemTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * key  系统标签的Key值。
+    * value  系统标签的value值。
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class ServerSystemTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
+    *  系统标签的Key值。
     *
     * @return string|null
     */
@@ -198,6 +209,7 @@ class ServerSystemTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
+    *  系统标签的value值。
     *
     * @return string|null
     */

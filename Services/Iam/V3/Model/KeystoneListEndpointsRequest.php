@@ -20,6 +20,8 @@ class KeystoneListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * interface  终端节点平面。可能取值为：public、internal或admin。public： 用户可在公共网络接口上看到。internal：用户可在内部网络接口上看到。admin：管理员可以在安全的网络接口上看到。
+    * serviceId  服务ID。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class KeystoneListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * interface  终端节点平面。可能取值为：public、internal或admin。public： 用户可在公共网络接口上看到。internal：用户可在内部网络接口上看到。admin：管理员可以在安全的网络接口上看到。
+    * serviceId  服务ID。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class KeystoneListEndpointsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * interface  终端节点平面。可能取值为：public、internal或admin。public： 用户可在公共网络接口上看到。internal：用户可在内部网络接口上看到。admin：管理员可以在安全的网络接口上看到。
+    * serviceId  服务ID。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class KeystoneListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * interface  终端节点平面。可能取值为：public、internal或admin。public： 用户可在公共网络接口上看到。internal：用户可在内部网络接口上看到。admin：管理员可以在安全的网络接口上看到。
+    * serviceId  服务ID。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class KeystoneListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * interface  终端节点平面。可能取值为：public、internal或admin。public： 用户可在公共网络接口上看到。internal：用户可在内部网络接口上看到。admin：管理员可以在安全的网络接口上看到。
+    * serviceId  服务ID。
     *
     * @var string[]
     */
@@ -200,6 +210,7 @@ class KeystoneListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets interface
+    *  终端节点平面。可能取值为：public、internal或admin。public： 用户可在公共网络接口上看到。internal：用户可在内部网络接口上看到。admin：管理员可以在安全的网络接口上看到。
     *
     * @return string|null
     */
@@ -211,7 +222,7 @@ class KeystoneListEndpointsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets interface
     *
-    * @param string|null $interface interface
+    * @param string|null $interface 终端节点平面。可能取值为：public、internal或admin。public： 用户可在公共网络接口上看到。internal：用户可在内部网络接口上看到。admin：管理员可以在安全的网络接口上看到。
     *
     * @return $this
     */
@@ -223,6 +234,7 @@ class KeystoneListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceId
+    *  服务ID。
     *
     * @return string|null
     */
@@ -234,7 +246,7 @@ class KeystoneListEndpointsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serviceId
     *
-    * @param string|null $serviceId serviceId
+    * @param string|null $serviceId 服务ID。
     *
     * @return $this
     */

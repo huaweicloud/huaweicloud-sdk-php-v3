@@ -20,6 +20,11 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * select  用户自定义sql select语句，最大长度500，更新sql时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，更新操作时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
+    * active  修改规则条件的状态是否为激活。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * select  用户自定义sql select语句，最大长度500，更新sql时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，更新操作时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
+    * active  修改规则条件的状态是否为激活。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * select  用户自定义sql select语句，最大长度500，更新sql时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，更新操作时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
+    * active  修改规则条件的状态是否为激活。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * select  用户自定义sql select语句，最大长度500，更新sql时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，更新操作时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
+    * active  修改规则条件的状态是否为激活。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * select  用户自定义sql select语句，最大长度500，更新sql时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，更新操作时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
+    * active  修改规则条件的状态是否为激活。
     *
     * @var string[]
     */
@@ -217,6 +242,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleName
+    *  用户自定义的规则名称。
     *
     * @return string|null
     */
@@ -240,6 +266,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  用户自定义的规则描述。
     *
     * @return string|null
     */
@@ -263,6 +290,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets select
+    *  用户自定义sql select语句，最大长度500，更新sql时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
     *
     * @return string|null
     */
@@ -286,6 +314,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets where
+    *  用户自定义sql where语句，最大长度500，更新操作时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
     *
     * @return string|null
     */
@@ -309,6 +338,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets active
+    *  修改规则条件的状态是否为激活。
     *
     * @return bool|null
     */

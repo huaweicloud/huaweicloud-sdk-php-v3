@@ -21,6 +21,7 @@ class UpdateCloudServiceCustomPolicyResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * role  role
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class UpdateCloudServiceCustomPolicyResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * role  role
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class UpdateCloudServiceCustomPolicyResponse implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * role  role
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class UpdateCloudServiceCustomPolicyResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * role  role
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class UpdateCloudServiceCustomPolicyResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * role  role
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class UpdateCloudServiceCustomPolicyResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets role
+    *  role
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\ServicePolicyRoleResult|null
     */

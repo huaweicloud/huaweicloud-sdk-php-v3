@@ -20,6 +20,8 @@ class KeystoneUpdateIdentityProviderRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  待更新的身份提供商ID。
+    * body  body
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class KeystoneUpdateIdentityProviderRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  待更新的身份提供商ID。
+    * body  body
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class KeystoneUpdateIdentityProviderRequest implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  待更新的身份提供商ID。
+    * body  body
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class KeystoneUpdateIdentityProviderRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  待更新的身份提供商ID。
+    * body  body
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class KeystoneUpdateIdentityProviderRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  待更新的身份提供商ID。
+    * body  body
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class KeystoneUpdateIdentityProviderRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets id
+    *  待更新的身份提供商ID。
     *
     * @return string
     */
@@ -189,7 +200,7 @@ class KeystoneUpdateIdentityProviderRequest implements ModelInterface, ArrayAcce
     /**
     * Sets id
     *
-    * @param string $id id
+    * @param string $id 待更新的身份提供商ID。
     *
     * @return $this
     */
@@ -201,6 +212,7 @@ class KeystoneUpdateIdentityProviderRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateIdentityProviderRequestBody|null
     */

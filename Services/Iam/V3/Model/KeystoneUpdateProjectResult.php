@@ -20,6 +20,15 @@ class KeystoneUpdateProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * isDomain  false.
+    * description  项目描述信息。
+    * extra  项目的其他信息。
+    * links  links
+    * enabled  项目是否可用。
+    * id  项目ID。
+    * parentId  区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....。
+    * domainId  项目所属账号ID。
+    * name  项目名称。
     *
     * @var string[]
     */
@@ -37,6 +46,15 @@ class KeystoneUpdateProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * isDomain  false.
+    * description  项目描述信息。
+    * extra  项目的其他信息。
+    * links  links
+    * enabled  项目是否可用。
+    * id  项目ID。
+    * parentId  区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....。
+    * domainId  项目所属账号ID。
+    * name  项目名称。
     *
     * @var string[]
     */
@@ -75,6 +93,15 @@ class KeystoneUpdateProjectResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * isDomain  false.
+    * description  项目描述信息。
+    * extra  项目的其他信息。
+    * links  links
+    * enabled  项目是否可用。
+    * id  项目ID。
+    * parentId  区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....。
+    * domainId  项目所属账号ID。
+    * name  项目名称。
     *
     * @var string[]
     */
@@ -92,6 +119,15 @@ class KeystoneUpdateProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * isDomain  false.
+    * description  项目描述信息。
+    * extra  项目的其他信息。
+    * links  links
+    * enabled  项目是否可用。
+    * id  项目ID。
+    * parentId  区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....。
+    * domainId  项目所属账号ID。
+    * name  项目名称。
     *
     * @var string[]
     */
@@ -109,6 +145,15 @@ class KeystoneUpdateProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * isDomain  false.
+    * description  项目描述信息。
+    * extra  项目的其他信息。
+    * links  links
+    * enabled  项目是否可用。
+    * id  项目ID。
+    * parentId  区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....。
+    * domainId  项目所属账号ID。
+    * name  项目名称。
     *
     * @var string[]
     */
@@ -241,6 +286,7 @@ class KeystoneUpdateProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDomain
+    *  false.
     *
     * @return bool
     */
@@ -264,6 +310,7 @@ class KeystoneUpdateProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  项目描述信息。
     *
     * @return string
     */
@@ -287,6 +334,7 @@ class KeystoneUpdateProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets extra
+    *  项目的其他信息。
     *
     * @return object|null
     */
@@ -310,6 +358,7 @@ class KeystoneUpdateProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\LinksSelf
     */
@@ -333,6 +382,7 @@ class KeystoneUpdateProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  项目是否可用。
     *
     * @return bool
     */
@@ -356,6 +406,7 @@ class KeystoneUpdateProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  项目ID。
     *
     * @return string
     */
@@ -379,6 +430,7 @@ class KeystoneUpdateProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
+    *  区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....。
     *
     * @return string
     */
@@ -402,6 +454,7 @@ class KeystoneUpdateProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  项目所属账号ID。
     *
     * @return string
     */
@@ -425,6 +478,7 @@ class KeystoneUpdateProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  项目名称。
     *
     * @return string
     */

@@ -21,6 +21,23 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * appId  资源空间ID。
+    * appName  资源空间名称。
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * gatewayId  网关ID，用于标识设备所属的父设备，即父设备的设备ID。当设备是直连设备时，gateway_id与设备的device_id一致。当设备是非直连设备时，gateway_id为设备所关联的父设备的device_id。
+    * deviceName  设备名称。
+    * nodeType  设备节点类型。 - ENDPOINT：非直连设备。 - GATEWAY：直连设备或网关。 - UNKNOWN：未知。
+    * description  设备的描述信息。
+    * fwVersion  设备的固件版本。
+    * swVersion  设备的软件版本。
+    * authInfo  authInfo
+    * productId  设备关联的产品ID，用于唯一标识一个产品模型。
+    * productName  设备关联的产品名称。
+    * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
+    * createTime  在物联网平台注册设备的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * tags  设备的标签列表。
+    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
     * @var string[]
     */
@@ -46,6 +63,23 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * appId  资源空间ID。
+    * appName  资源空间名称。
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * gatewayId  网关ID，用于标识设备所属的父设备，即父设备的设备ID。当设备是直连设备时，gateway_id与设备的device_id一致。当设备是非直连设备时，gateway_id为设备所关联的父设备的device_id。
+    * deviceName  设备名称。
+    * nodeType  设备节点类型。 - ENDPOINT：非直连设备。 - GATEWAY：直连设备或网关。 - UNKNOWN：未知。
+    * description  设备的描述信息。
+    * fwVersion  设备的固件版本。
+    * swVersion  设备的软件版本。
+    * authInfo  authInfo
+    * productId  设备关联的产品ID，用于唯一标识一个产品模型。
+    * productName  设备关联的产品名称。
+    * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
+    * createTime  在物联网平台注册设备的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * tags  设备的标签列表。
+    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
     * @var string[]
     */
@@ -92,6 +126,23 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * appId  资源空间ID。
+    * appName  资源空间名称。
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * gatewayId  网关ID，用于标识设备所属的父设备，即父设备的设备ID。当设备是直连设备时，gateway_id与设备的device_id一致。当设备是非直连设备时，gateway_id为设备所关联的父设备的device_id。
+    * deviceName  设备名称。
+    * nodeType  设备节点类型。 - ENDPOINT：非直连设备。 - GATEWAY：直连设备或网关。 - UNKNOWN：未知。
+    * description  设备的描述信息。
+    * fwVersion  设备的固件版本。
+    * swVersion  设备的软件版本。
+    * authInfo  authInfo
+    * productId  设备关联的产品ID，用于唯一标识一个产品模型。
+    * productName  设备关联的产品名称。
+    * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
+    * createTime  在物联网平台注册设备的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * tags  设备的标签列表。
+    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
     * @var string[]
     */
@@ -117,6 +168,23 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * appId  资源空间ID。
+    * appName  资源空间名称。
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * gatewayId  网关ID，用于标识设备所属的父设备，即父设备的设备ID。当设备是直连设备时，gateway_id与设备的device_id一致。当设备是非直连设备时，gateway_id为设备所关联的父设备的device_id。
+    * deviceName  设备名称。
+    * nodeType  设备节点类型。 - ENDPOINT：非直连设备。 - GATEWAY：直连设备或网关。 - UNKNOWN：未知。
+    * description  设备的描述信息。
+    * fwVersion  设备的固件版本。
+    * swVersion  设备的软件版本。
+    * authInfo  authInfo
+    * productId  设备关联的产品ID，用于唯一标识一个产品模型。
+    * productName  设备关联的产品名称。
+    * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
+    * createTime  在物联网平台注册设备的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * tags  设备的标签列表。
+    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
     * @var string[]
     */
@@ -142,6 +210,23 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * appId  资源空间ID。
+    * appName  资源空间名称。
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * gatewayId  网关ID，用于标识设备所属的父设备，即父设备的设备ID。当设备是直连设备时，gateway_id与设备的device_id一致。当设备是非直连设备时，gateway_id为设备所关联的父设备的device_id。
+    * deviceName  设备名称。
+    * nodeType  设备节点类型。 - ENDPOINT：非直连设备。 - GATEWAY：直连设备或网关。 - UNKNOWN：未知。
+    * description  设备的描述信息。
+    * fwVersion  设备的固件版本。
+    * swVersion  设备的软件版本。
+    * authInfo  authInfo
+    * productId  设备关联的产品ID，用于唯一标识一个产品模型。
+    * productName  设备关联的产品名称。
+    * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
+    * createTime  在物联网平台注册设备的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * tags  设备的标签列表。
+    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
     * @var string[]
     */
@@ -302,6 +387,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
+    *  资源空间ID。
     *
     * @return string|null
     */
@@ -325,6 +411,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
+    *  资源空间名称。
     *
     * @return string|null
     */
@@ -348,6 +435,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceId
+    *  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
     *
     * @return string|null
     */
@@ -371,6 +459,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeId
+    *  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
     *
     * @return string|null
     */
@@ -394,6 +483,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets gatewayId
+    *  网关ID，用于标识设备所属的父设备，即父设备的设备ID。当设备是直连设备时，gateway_id与设备的device_id一致。当设备是非直连设备时，gateway_id为设备所关联的父设备的device_id。
     *
     * @return string|null
     */
@@ -417,6 +507,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceName
+    *  设备名称。
     *
     * @return string|null
     */
@@ -440,6 +531,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeType
+    *  设备节点类型。 - ENDPOINT：非直连设备。 - GATEWAY：直连设备或网关。 - UNKNOWN：未知。
     *
     * @return string|null
     */
@@ -463,6 +555,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  设备的描述信息。
     *
     * @return string|null
     */
@@ -486,6 +579,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwVersion
+    *  设备的固件版本。
     *
     * @return string|null
     */
@@ -509,6 +603,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets swVersion
+    *  设备的软件版本。
     *
     * @return string|null
     */
@@ -532,6 +627,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets authInfo
+    *  authInfo
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\AuthInfo|null
     */
@@ -555,6 +651,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
+    *  设备关联的产品ID，用于唯一标识一个产品模型。
     *
     * @return string|null
     */
@@ -578,6 +675,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets productName
+    *  设备关联的产品名称。
     *
     * @return string|null
     */
@@ -601,6 +699,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     *
     * @return string|null
     */
@@ -624,6 +723,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
+    *  在物联网平台注册设备的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @return string|null
     */
@@ -647,6 +747,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  设备的标签列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\TagV5DTO[]|null
     */
@@ -670,6 +771,7 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets extensionInfo
+    *  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
     * @return object|null
     */

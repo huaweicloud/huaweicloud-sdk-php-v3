@@ -20,6 +20,15 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID 约束：必须是实际存在的端口ID
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
+    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址 取值范围：不填则随机分配
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     *
     * @var string[]
     */
@@ -37,6 +46,15 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID 约束：必须是实际存在的端口ID
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
+    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址 取值范围：不填则随机分配
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     *
     * @var string[]
     */
@@ -75,6 +93,15 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID 约束：必须是实际存在的端口ID
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
+    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址 取值范围：不填则随机分配
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     *
     * @var string[]
     */
@@ -92,6 +119,15 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID 约束：必须是实际存在的端口ID
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
+    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址 取值范围：不填则随机分配
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     *
     * @var string[]
     */
@@ -109,6 +145,15 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID 约束：必须是实际存在的端口ID
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
+    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址 取值范围：不填则随机分配
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     *
     * @var string[]
     */
@@ -223,6 +268,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets virsubnetId
+    *  功能说明：虚拟子网ID 取值范围：标准UUID
     *
     * @return string
     */
@@ -246,6 +292,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets vlanId
+    *  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
     *
     * @return string|null
     */
@@ -269,6 +316,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
+    *  功能说明：宿主网络接口的ID 取值范围：标准UUID 约束：必须是实际存在的端口ID
     *
     * @return string
     */
@@ -292,6 +340,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     *
     * @return string|null
     */
@@ -315,6 +364,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Enable
+    *  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
     *
     * @return bool|null
     */
@@ -338,6 +388,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIpAddress
+    *  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
     *
     * @return string|null
     */
@@ -361,6 +412,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6IpAddress
+    *  功能说明：辅助弹性网卡的IPv6地址 取值范围：不填则随机分配
     *
     * @return string|null
     */
@@ -384,6 +436,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroups
+    *  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
     *
     * @return string[]|null
     */
@@ -407,6 +460,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     *
     * @return string|null
     */

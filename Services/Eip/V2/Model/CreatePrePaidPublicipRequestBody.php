@@ -20,6 +20,10 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * publicip  publicip
+    * bandwidth  bandwidth
+    * extendParam  extendParam
+    * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。  不指定该参数时，默认值是 0
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * publicip  publicip
+    * bandwidth  bandwidth
+    * extendParam  extendParam
+    * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。  不指定该参数时，默认值是 0
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * publicip  publicip
+    * bandwidth  bandwidth
+    * extendParam  extendParam
+    * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。  不指定该参数时，默认值是 0
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * publicip  publicip
+    * bandwidth  bandwidth
+    * extendParam  extendParam
+    * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。  不指定该参数时，默认值是 0
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * publicip  publicip
+    * bandwidth  bandwidth
+    * extendParam  extendParam
+    * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。  不指定该参数时，默认值是 0
     *
     * @var string[]
     */
@@ -196,6 +216,7 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicip
+    *  publicip
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\CreatePrePaidPublicipOption
     */
@@ -219,6 +240,7 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidth
+    *  bandwidth
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\CreatePublicipBandwidthOption
     */
@@ -242,6 +264,7 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendParam
+    *  extendParam
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\CreatePrePaidPublicipExtendParamOption|null
     */
@@ -265,6 +288,7 @@ class CreatePrePaidPublicipRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。  不指定该参数时，默认值是 0
     *
     * @return string|null
     */

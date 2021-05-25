@@ -20,6 +20,8 @@ class TokenProjectDomainResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  账号名。
+    * id  账号ID。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class TokenProjectDomainResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  账号名。
+    * id  账号ID。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class TokenProjectDomainResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  账号名。
+    * id  账号ID。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class TokenProjectDomainResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  账号名。
+    * id  账号ID。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class TokenProjectDomainResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  账号名。
+    * id  账号ID。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class TokenProjectDomainResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  账号名。
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class TokenProjectDomainResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  账号ID。
     *
     * @return string
     */

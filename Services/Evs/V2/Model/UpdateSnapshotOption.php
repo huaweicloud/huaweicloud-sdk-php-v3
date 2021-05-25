@@ -20,6 +20,8 @@ class UpdateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * description  云硬盘快照描述。最大支持255个字节。
+    * name  云硬盘快照名称。最大支持255个字节。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class UpdateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * description  云硬盘快照描述。最大支持255个字节。
+    * name  云硬盘快照名称。最大支持255个字节。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class UpdateSnapshotOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * description  云硬盘快照描述。最大支持255个字节。
+    * name  云硬盘快照名称。最大支持255个字节。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class UpdateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * description  云硬盘快照描述。最大支持255个字节。
+    * name  云硬盘快照名称。最大支持255个字节。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class UpdateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * description  云硬盘快照描述。最大支持255个字节。
+    * name  云硬盘快照名称。最大支持255个字节。
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class UpdateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  云硬盘快照描述。最大支持255个字节。
     *
     * @return string|null
     */
@@ -198,6 +209,7 @@ class UpdateSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云硬盘快照名称。最大支持255个字节。
     *
     * @return string|null
     */

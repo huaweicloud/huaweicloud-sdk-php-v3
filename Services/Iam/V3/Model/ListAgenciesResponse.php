@@ -21,6 +21,7 @@ class ListAgenciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * agencies  委托信息列表。
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class ListAgenciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * agencies  委托信息列表。
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class ListAgenciesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * agencies  委托信息列表。
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class ListAgenciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * agencies  委托信息列表。
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class ListAgenciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * agencies  委托信息列表。
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class ListAgenciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets agencies
+    *  委托信息列表。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\AgencyResult[]|null
     */

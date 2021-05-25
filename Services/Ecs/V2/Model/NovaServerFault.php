@@ -20,6 +20,10 @@ class NovaServerFault implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * code  错误码。
+    * created  异常出现的时间。
+    * message  异常描述信息。
+    * details  异常详情信息。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class NovaServerFault implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * code  错误码。
+    * created  异常出现的时间。
+    * message  异常描述信息。
+    * details  异常详情信息。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class NovaServerFault implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * code  错误码。
+    * created  异常出现的时间。
+    * message  异常描述信息。
+    * details  异常详情信息。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class NovaServerFault implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * code  错误码。
+    * created  异常出现的时间。
+    * message  异常描述信息。
+    * details  异常详情信息。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class NovaServerFault implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * code  错误码。
+    * created  异常出现的时间。
+    * message  异常描述信息。
+    * details  异常详情信息。
     *
     * @var string[]
     */
@@ -187,6 +207,7 @@ class NovaServerFault implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
+    *  错误码。
     *
     * @return int|null
     */
@@ -210,6 +231,7 @@ class NovaServerFault implements ModelInterface, ArrayAccess
 
     /**
     * Gets created
+    *  异常出现的时间。
     *
     * @return string|null
     */
@@ -233,6 +255,7 @@ class NovaServerFault implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
+    *  异常描述信息。
     *
     * @return string|null
     */
@@ -256,6 +279,7 @@ class NovaServerFault implements ModelInterface, ArrayAccess
 
     /**
     * Gets details
+    *  异常详情信息。
     *
     * @return string|null
     */

@@ -20,6 +20,16 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * type  规则动作的类型，取值范围： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - ROMA_FORWARDING：转发ROMA Connect服务消息类型。 - IoTA_FORWARDING：转发IoTA服务消息类型。 - KAFKA_FORWARDING：转发kafka消息类型。
+    * addition  附加信息，在默认规则执行结果中附加额外内容，仅设备属性和消息类型数据转发规则支持，取值范围：PRODUCT_ID
+    * smnForwarding  smnForwarding
+    * deviceAlarm  deviceAlarm
+    * deviceCommand  deviceCommand
+    * disForwarding  disForwarding
+    * obsForwarding  obsForwarding
+    * romaForwarding  romaForwarding
+    * iotaForwarding  iotaForwarding
+    * kafkaForwarding  kafkaForwarding
     *
     * @var string[]
     */
@@ -38,6 +48,16 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * type  规则动作的类型，取值范围： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - ROMA_FORWARDING：转发ROMA Connect服务消息类型。 - IoTA_FORWARDING：转发IoTA服务消息类型。 - KAFKA_FORWARDING：转发kafka消息类型。
+    * addition  附加信息，在默认规则执行结果中附加额外内容，仅设备属性和消息类型数据转发规则支持，取值范围：PRODUCT_ID
+    * smnForwarding  smnForwarding
+    * deviceAlarm  deviceAlarm
+    * deviceCommand  deviceCommand
+    * disForwarding  disForwarding
+    * obsForwarding  obsForwarding
+    * romaForwarding  romaForwarding
+    * iotaForwarding  iotaForwarding
+    * kafkaForwarding  kafkaForwarding
     *
     * @var string[]
     */
@@ -77,6 +97,16 @@ class RuleAction implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * type  规则动作的类型，取值范围： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - ROMA_FORWARDING：转发ROMA Connect服务消息类型。 - IoTA_FORWARDING：转发IoTA服务消息类型。 - KAFKA_FORWARDING：转发kafka消息类型。
+    * addition  附加信息，在默认规则执行结果中附加额外内容，仅设备属性和消息类型数据转发规则支持，取值范围：PRODUCT_ID
+    * smnForwarding  smnForwarding
+    * deviceAlarm  deviceAlarm
+    * deviceCommand  deviceCommand
+    * disForwarding  disForwarding
+    * obsForwarding  obsForwarding
+    * romaForwarding  romaForwarding
+    * iotaForwarding  iotaForwarding
+    * kafkaForwarding  kafkaForwarding
     *
     * @var string[]
     */
@@ -95,6 +125,16 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * type  规则动作的类型，取值范围： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - ROMA_FORWARDING：转发ROMA Connect服务消息类型。 - IoTA_FORWARDING：转发IoTA服务消息类型。 - KAFKA_FORWARDING：转发kafka消息类型。
+    * addition  附加信息，在默认规则执行结果中附加额外内容，仅设备属性和消息类型数据转发规则支持，取值范围：PRODUCT_ID
+    * smnForwarding  smnForwarding
+    * deviceAlarm  deviceAlarm
+    * deviceCommand  deviceCommand
+    * disForwarding  disForwarding
+    * obsForwarding  obsForwarding
+    * romaForwarding  romaForwarding
+    * iotaForwarding  iotaForwarding
+    * kafkaForwarding  kafkaForwarding
     *
     * @var string[]
     */
@@ -113,6 +153,16 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * type  规则动作的类型，取值范围： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - ROMA_FORWARDING：转发ROMA Connect服务消息类型。 - IoTA_FORWARDING：转发IoTA服务消息类型。 - KAFKA_FORWARDING：转发kafka消息类型。
+    * addition  附加信息，在默认规则执行结果中附加额外内容，仅设备属性和消息类型数据转发规则支持，取值范围：PRODUCT_ID
+    * smnForwarding  smnForwarding
+    * deviceAlarm  deviceAlarm
+    * deviceCommand  deviceCommand
+    * disForwarding  disForwarding
+    * obsForwarding  obsForwarding
+    * romaForwarding  romaForwarding
+    * iotaForwarding  iotaForwarding
+    * kafkaForwarding  kafkaForwarding
     *
     * @var string[]
     */
@@ -229,6 +279,7 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  规则动作的类型，取值范围： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - ROMA_FORWARDING：转发ROMA Connect服务消息类型。 - IoTA_FORWARDING：转发IoTA服务消息类型。 - KAFKA_FORWARDING：转发kafka消息类型。
     *
     * @return string
     */
@@ -252,6 +303,7 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets addition
+    *  附加信息，在默认规则执行结果中附加额外内容，仅设备属性和消息类型数据转发规则支持，取值范围：PRODUCT_ID
     *
     * @return string[]|null
     */
@@ -275,6 +327,7 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets smnForwarding
+    *  smnForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionSmnForwarding|null
     */
@@ -298,6 +351,7 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceAlarm
+    *  deviceAlarm
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionDeviceAlarm|null
     */
@@ -321,6 +375,7 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceCommand
+    *  deviceCommand
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionDeviceCommand|null
     */
@@ -344,6 +399,7 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets disForwarding
+    *  disForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionDisForwarding|null
     */
@@ -367,6 +423,7 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsForwarding
+    *  obsForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionObsForwarding|null
     */
@@ -390,6 +447,7 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets romaForwarding
+    *  romaForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionRomaForwarding|null
     */
@@ -413,6 +471,7 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets iotaForwarding
+    *  iotaForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionIoTAForwarding|null
     */
@@ -436,6 +495,7 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaForwarding
+    *  kafkaForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionKafkaForwarding|null
     */

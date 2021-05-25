@@ -20,6 +20,7 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationProtection
+    *  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
     *
     * @return bool
     */

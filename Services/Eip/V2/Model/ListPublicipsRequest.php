@@ -20,6 +20,14 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * marker  取值为上一页数据的最后一条记录的id，为空时为查询第一页
+    * limit  功能说明：每页返回的个数  取值范围：0~intmax
+    * ipVersion  IP地址版本信息  4：IPv4  6：IPv6
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的弹性IP弹性公网IP。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的弹性公网IP，请传参all_granted_eps。
+    * portId  绑定弹性公网IP的端口id
+    * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * privateIpAddress  关联端口的私有IP地址
+    * id  弹性公网IP唯一标识
     *
     * @var string[]
     */
@@ -36,6 +44,14 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * marker  取值为上一页数据的最后一条记录的id，为空时为查询第一页
+    * limit  功能说明：每页返回的个数  取值范围：0~intmax
+    * ipVersion  IP地址版本信息  4：IPv4  6：IPv6
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的弹性IP弹性公网IP。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的弹性公网IP，请传参all_granted_eps。
+    * portId  绑定弹性公网IP的端口id
+    * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * privateIpAddress  关联端口的私有IP地址
+    * id  弹性公网IP唯一标识
     *
     * @var string[]
     */
@@ -73,6 +89,14 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * marker  取值为上一页数据的最后一条记录的id，为空时为查询第一页
+    * limit  功能说明：每页返回的个数  取值范围：0~intmax
+    * ipVersion  IP地址版本信息  4：IPv4  6：IPv6
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的弹性IP弹性公网IP。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的弹性公网IP，请传参all_granted_eps。
+    * portId  绑定弹性公网IP的端口id
+    * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * privateIpAddress  关联端口的私有IP地址
+    * id  弹性公网IP唯一标识
     *
     * @var string[]
     */
@@ -89,6 +113,14 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * marker  取值为上一页数据的最后一条记录的id，为空时为查询第一页
+    * limit  功能说明：每页返回的个数  取值范围：0~intmax
+    * ipVersion  IP地址版本信息  4：IPv4  6：IPv6
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的弹性IP弹性公网IP。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的弹性公网IP，请传参all_granted_eps。
+    * portId  绑定弹性公网IP的端口id
+    * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * privateIpAddress  关联端口的私有IP地址
+    * id  弹性公网IP唯一标识
     *
     * @var string[]
     */
@@ -105,6 +137,14 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * marker  取值为上一页数据的最后一条记录的id，为空时为查询第一页
+    * limit  功能说明：每页返回的个数  取值范围：0~intmax
+    * ipVersion  IP地址版本信息  4：IPv4  6：IPv6
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的弹性IP弹性公网IP。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的弹性公网IP，请传参all_granted_eps。
+    * portId  绑定弹性公网IP的端口id
+    * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * privateIpAddress  关联端口的私有IP地址
+    * id  弹性公网IP唯一标识
     *
     * @var string[]
     */
@@ -240,6 +280,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  取值为上一页数据的最后一条记录的id，为空时为查询第一页
     *
     * @return string|null
     */
@@ -251,7 +292,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 取值为上一页数据的最后一条记录的id，为空时为查询第一页
     *
     * @return $this
     */
@@ -263,6 +304,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  功能说明：每页返回的个数  取值范围：0~intmax
     *
     * @return int|null
     */
@@ -274,7 +316,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 功能说明：每页返回的个数  取值范围：0~intmax
     *
     * @return $this
     */
@@ -286,6 +328,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
+    *  IP地址版本信息  4：IPv4  6：IPv6
     *
     * @return int|null
     */
@@ -297,7 +340,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ipVersion
     *
-    * @param int|null $ipVersion ipVersion
+    * @param int|null $ipVersion IP地址版本信息  4：IPv4  6：IPv6
     *
     * @return $this
     */
@@ -309,6 +352,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的弹性IP弹性公网IP。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的弹性公网IP，请传参all_granted_eps。
     *
     * @return string|null
     */
@@ -320,7 +364,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId enterpriseProjectId
+    * @param string|null $enterpriseProjectId 功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的弹性IP弹性公网IP。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的弹性公网IP，请传参all_granted_eps。
     *
     * @return $this
     */
@@ -332,6 +376,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets portId
+    *  绑定弹性公网IP的端口id
     *
     * @return string[]|null
     */
@@ -343,7 +388,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets portId
     *
-    * @param string[]|null $portId portId
+    * @param string[]|null $portId 绑定弹性公网IP的端口id
     *
     * @return $this
     */
@@ -355,6 +400,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIpAddress
+    *  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
     *
     * @return string[]|null
     */
@@ -366,7 +412,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publicIpAddress
     *
-    * @param string[]|null $publicIpAddress publicIpAddress
+    * @param string[]|null $publicIpAddress IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
     *
     * @return $this
     */
@@ -378,6 +424,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIpAddress
+    *  关联端口的私有IP地址
     *
     * @return string[]|null
     */
@@ -389,7 +436,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets privateIpAddress
     *
-    * @param string[]|null $privateIpAddress privateIpAddress
+    * @param string[]|null $privateIpAddress 关联端口的私有IP地址
     *
     * @return $this
     */
@@ -401,6 +448,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  弹性公网IP唯一标识
     *
     * @return string[]|null
     */
@@ -412,7 +460,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id id
+    * @param string[]|null $id 弹性公网IP唯一标识
     *
     * @return $this
     */

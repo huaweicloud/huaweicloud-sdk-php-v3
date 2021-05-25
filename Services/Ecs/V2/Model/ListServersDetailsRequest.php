@@ -20,6 +20,16 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * enterpriseProjectId  查询绑定某个企业项目的弹性云服务器。  若需要查询当前用户所有企业项目绑定的弹性云服务，请传参all_granted_eps。
+    * flavor  云服务器规格ID,已上线的规格请参见《弹性云服务器用户指南》的“实例和应用场景”章节。
+    * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
+    * limit  查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
+    * name  云服务器名称，匹配规则为模糊匹配。
+    * notTags  查询tag字段中不包含该值的云服务器。
+    * offset  页码。 当前页面数，默认为1。  取值大于等于0，取值为0时返回第1页。
+    * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
+    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  只有管理员可以使用“deleted”状态过滤查询已经删除的弹性云服务器。
+    * tags  查询tag字段中包含该值的云服务器。
     *
     * @var string[]
     */
@@ -38,6 +48,16 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * enterpriseProjectId  查询绑定某个企业项目的弹性云服务器。  若需要查询当前用户所有企业项目绑定的弹性云服务，请传参all_granted_eps。
+    * flavor  云服务器规格ID,已上线的规格请参见《弹性云服务器用户指南》的“实例和应用场景”章节。
+    * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
+    * limit  查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
+    * name  云服务器名称，匹配规则为模糊匹配。
+    * notTags  查询tag字段中不包含该值的云服务器。
+    * offset  页码。 当前页面数，默认为1。  取值大于等于0，取值为0时返回第1页。
+    * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
+    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  只有管理员可以使用“deleted”状态过滤查询已经删除的弹性云服务器。
+    * tags  查询tag字段中包含该值的云服务器。
     *
     * @var string[]
     */
@@ -77,6 +97,16 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * enterpriseProjectId  查询绑定某个企业项目的弹性云服务器。  若需要查询当前用户所有企业项目绑定的弹性云服务，请传参all_granted_eps。
+    * flavor  云服务器规格ID,已上线的规格请参见《弹性云服务器用户指南》的“实例和应用场景”章节。
+    * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
+    * limit  查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
+    * name  云服务器名称，匹配规则为模糊匹配。
+    * notTags  查询tag字段中不包含该值的云服务器。
+    * offset  页码。 当前页面数，默认为1。  取值大于等于0，取值为0时返回第1页。
+    * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
+    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  只有管理员可以使用“deleted”状态过滤查询已经删除的弹性云服务器。
+    * tags  查询tag字段中包含该值的云服务器。
     *
     * @var string[]
     */
@@ -95,6 +125,16 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * enterpriseProjectId  查询绑定某个企业项目的弹性云服务器。  若需要查询当前用户所有企业项目绑定的弹性云服务，请传参all_granted_eps。
+    * flavor  云服务器规格ID,已上线的规格请参见《弹性云服务器用户指南》的“实例和应用场景”章节。
+    * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
+    * limit  查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
+    * name  云服务器名称，匹配规则为模糊匹配。
+    * notTags  查询tag字段中不包含该值的云服务器。
+    * offset  页码。 当前页面数，默认为1。  取值大于等于0，取值为0时返回第1页。
+    * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
+    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  只有管理员可以使用“deleted”状态过滤查询已经删除的弹性云服务器。
+    * tags  查询tag字段中包含该值的云服务器。
     *
     * @var string[]
     */
@@ -113,6 +153,16 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * enterpriseProjectId  查询绑定某个企业项目的弹性云服务器。  若需要查询当前用户所有企业项目绑定的弹性云服务，请传参all_granted_eps。
+    * flavor  云服务器规格ID,已上线的规格请参见《弹性云服务器用户指南》的“实例和应用场景”章节。
+    * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
+    * limit  查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
+    * name  云服务器名称，匹配规则为模糊匹配。
+    * notTags  查询tag字段中不包含该值的云服务器。
+    * offset  页码。 当前页面数，默认为1。  取值大于等于0，取值为0时返回第1页。
+    * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
+    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  只有管理员可以使用“deleted”状态过滤查询已经删除的弹性云服务器。
+    * tags  查询tag字段中包含该值的云服务器。
     *
     * @var string[]
     */
@@ -229,6 +279,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  查询绑定某个企业项目的弹性云服务器。  若需要查询当前用户所有企业项目绑定的弹性云服务，请传参all_granted_eps。
     *
     * @return string|null
     */
@@ -240,7 +291,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId enterpriseProjectId
+    * @param string|null $enterpriseProjectId 查询绑定某个企业项目的弹性云服务器。  若需要查询当前用户所有企业项目绑定的弹性云服务，请传参all_granted_eps。
     *
     * @return $this
     */
@@ -252,6 +303,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavor
+    *  云服务器规格ID,已上线的规格请参见《弹性云服务器用户指南》的“实例和应用场景”章节。
     *
     * @return string|null
     */
@@ -263,7 +315,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets flavor
     *
-    * @param string|null $flavor flavor
+    * @param string|null $flavor 云服务器规格ID,已上线的规格请参见《弹性云服务器用户指南》的“实例和应用场景”章节。
     *
     * @return $this
     */
@@ -275,6 +327,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ip
+    *  IPv4地址过滤结果，匹配规则为模糊匹配。
     *
     * @return string|null
     */
@@ -286,7 +339,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ip
     *
-    * @param string|null $ip ip
+    * @param string|null $ip IPv4地址过滤结果，匹配规则为模糊匹配。
     *
     * @return $this
     */
@@ -298,6 +351,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
     *
     * @return int|null
     */
@@ -309,7 +363,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
     *
     * @return $this
     */
@@ -321,6 +375,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云服务器名称，匹配规则为模糊匹配。
     *
     * @return string|null
     */
@@ -332,7 +387,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name 云服务器名称，匹配规则为模糊匹配。
     *
     * @return $this
     */
@@ -344,6 +399,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets notTags
+    *  查询tag字段中不包含该值的云服务器。
     *
     * @return string|null
     */
@@ -355,7 +411,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets notTags
     *
-    * @param string|null $notTags notTags
+    * @param string|null $notTags 查询tag字段中不包含该值的云服务器。
     *
     * @return $this
     */
@@ -367,6 +423,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
+    *  页码。 当前页面数，默认为1。  取值大于等于0，取值为0时返回第1页。
     *
     * @return int|null
     */
@@ -378,7 +435,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset offset
+    * @param int|null $offset 页码。 当前页面数，默认为1。  取值大于等于0，取值为0时返回第1页。
     *
     * @return $this
     */
@@ -390,6 +447,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets reservationId
+    *  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
     *
     * @return string|null
     */
@@ -401,7 +459,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets reservationId
     *
-    * @param string|null $reservationId reservationId
+    * @param string|null $reservationId 批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
     *
     * @return $this
     */
@@ -413,6 +471,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  只有管理员可以使用“deleted”状态过滤查询已经删除的弹性云服务器。
     *
     * @return string|null
     */
@@ -424,7 +483,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status 云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  只有管理员可以使用“deleted”状态过滤查询已经删除的弹性云服务器。
     *
     * @return $this
     */
@@ -436,6 +495,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  查询tag字段中包含该值的云服务器。
     *
     * @return string|null
     */
@@ -447,7 +507,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string|null $tags tags
+    * @param string|null $tags 查询tag字段中包含该值的云服务器。
     *
     * @return $this
     */

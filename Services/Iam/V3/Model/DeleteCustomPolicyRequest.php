@@ -20,6 +20,7 @@ class DeleteCustomPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * roleId  待删除的自定义策略ID，获取方式请参见：[自定义策略ID](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=ListCustomPolicies)。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class DeleteCustomPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * roleId  待删除的自定义策略ID，获取方式请参见：[自定义策略ID](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=ListCustomPolicies)。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class DeleteCustomPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * roleId  待删除的自定义策略ID，获取方式请参见：[自定义策略ID](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=ListCustomPolicies)。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class DeleteCustomPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * roleId  待删除的自定义策略ID，获取方式请参见：[自定义策略ID](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=ListCustomPolicies)。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class DeleteCustomPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * roleId  待删除的自定义策略ID，获取方式请参见：[自定义策略ID](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=ListCustomPolicies)。
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class DeleteCustomPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets roleId
+    *  待删除的自定义策略ID，获取方式请参见：[自定义策略ID](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=ListCustomPolicies)。
     *
     * @return string
     */
@@ -183,7 +189,7 @@ class DeleteCustomPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets roleId
     *
-    * @param string $roleId roleId
+    * @param string $roleId 待删除的自定义策略ID，获取方式请参见：[自定义策略ID](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=ListCustomPolicies)。
     *
     * @return $this
     */

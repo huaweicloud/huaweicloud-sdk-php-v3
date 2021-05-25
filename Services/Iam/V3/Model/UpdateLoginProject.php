@@ -20,6 +20,8 @@ class UpdateLoginProject implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * enabled  IAM用户是否开启登录保护，开启为\"true\"，未开启为\"false\"。
+    * verificationMethod  IAM用户登录验证方式。手机验证为“sms”,邮箱验证为“email”,MFA验证为“vmfa”。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class UpdateLoginProject implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * enabled  IAM用户是否开启登录保护，开启为\"true\"，未开启为\"false\"。
+    * verificationMethod  IAM用户登录验证方式。手机验证为“sms”,邮箱验证为“email”,MFA验证为“vmfa”。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class UpdateLoginProject implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * enabled  IAM用户是否开启登录保护，开启为\"true\"，未开启为\"false\"。
+    * verificationMethod  IAM用户登录验证方式。手机验证为“sms”,邮箱验证为“email”,MFA验证为“vmfa”。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class UpdateLoginProject implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * enabled  IAM用户是否开启登录保护，开启为\"true\"，未开启为\"false\"。
+    * verificationMethod  IAM用户登录验证方式。手机验证为“sms”,邮箱验证为“email”,MFA验证为“vmfa”。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class UpdateLoginProject implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * enabled  IAM用户是否开启登录保护，开启为\"true\"，未开启为\"false\"。
+    * verificationMethod  IAM用户登录验证方式。手机验证为“sms”,邮箱验证为“email”,MFA验证为“vmfa”。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class UpdateLoginProject implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  IAM用户是否开启登录保护，开启为\"true\"，未开启为\"false\"。
     *
     * @return bool
     */
@@ -204,6 +215,7 @@ class UpdateLoginProject implements ModelInterface, ArrayAccess
 
     /**
     * Gets verificationMethod
+    *  IAM用户登录验证方式。手机验证为“sms”,邮箱验证为“email”,MFA验证为“vmfa”。
     *
     * @return string
     */

@@ -21,6 +21,8 @@ class KeystoneListMappingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * links  links
+    * mappings  映射信息列表。
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class KeystoneListMappingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * links  links
+    * mappings  映射信息列表。
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class KeystoneListMappingsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * links  links
+    * mappings  映射信息列表。
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class KeystoneListMappingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * links  links
+    * mappings  映射信息列表。
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class KeystoneListMappingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * links  links
+    * mappings  映射信息列表。
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class KeystoneListMappingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\Links|null
     */
@@ -199,6 +210,7 @@ class KeystoneListMappingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets mappings
+    *  映射信息列表。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\MappingResult[]|null
     */

@@ -20,6 +20,8 @@ class KeystoneDeleteProtocolRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * idpId  身份提供商ID。
+    * protocolId  待删除的协议ID。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class KeystoneDeleteProtocolRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * idpId  身份提供商ID。
+    * protocolId  待删除的协议ID。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class KeystoneDeleteProtocolRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * idpId  身份提供商ID。
+    * protocolId  待删除的协议ID。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class KeystoneDeleteProtocolRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * idpId  身份提供商ID。
+    * protocolId  待删除的协议ID。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class KeystoneDeleteProtocolRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * idpId  身份提供商ID。
+    * protocolId  待删除的协议ID。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class KeystoneDeleteProtocolRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets idpId
+    *  身份提供商ID。
     *
     * @return string
     */
@@ -192,7 +203,7 @@ class KeystoneDeleteProtocolRequest implements ModelInterface, ArrayAccess
     /**
     * Sets idpId
     *
-    * @param string $idpId idpId
+    * @param string $idpId 身份提供商ID。
     *
     * @return $this
     */
@@ -204,6 +215,7 @@ class KeystoneDeleteProtocolRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocolId
+    *  待删除的协议ID。
     *
     * @return string
     */
@@ -215,7 +227,7 @@ class KeystoneDeleteProtocolRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protocolId
     *
-    * @param string $protocolId protocolId
+    * @param string $protocolId 待删除的协议ID。
     *
     * @return $this
     */

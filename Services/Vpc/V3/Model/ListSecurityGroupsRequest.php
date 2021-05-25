@@ -20,6 +20,13 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  功能说明：安全组资源ID。可以使用该字段精确过滤安全组，支持多个ID
+    * name  功能说明：安全组名称。可以使用该字段精确过滤满足条件的安全组，支持传入多个name过滤
+    * description  功能说明：安全组描述新增。可以使用该字段精确过滤安全组，支持传入多个描述进行过滤
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的安全组。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 约束：若需要查询当前用户所有有权限查看企业项目绑定的安全组，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -35,6 +42,13 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  功能说明：安全组资源ID。可以使用该字段精确过滤安全组，支持多个ID
+    * name  功能说明：安全组名称。可以使用该字段精确过滤满足条件的安全组，支持传入多个name过滤
+    * description  功能说明：安全组描述新增。可以使用该字段精确过滤安全组，支持传入多个描述进行过滤
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的安全组。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 约束：若需要查询当前用户所有有权限查看企业项目绑定的安全组，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -71,6 +85,13 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  功能说明：安全组资源ID。可以使用该字段精确过滤安全组，支持多个ID
+    * name  功能说明：安全组名称。可以使用该字段精确过滤满足条件的安全组，支持传入多个name过滤
+    * description  功能说明：安全组描述新增。可以使用该字段精确过滤安全组，支持传入多个描述进行过滤
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的安全组。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 约束：若需要查询当前用户所有有权限查看企业项目绑定的安全组，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -86,6 +107,13 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  功能说明：安全组资源ID。可以使用该字段精确过滤安全组，支持多个ID
+    * name  功能说明：安全组名称。可以使用该字段精确过滤满足条件的安全组，支持传入多个name过滤
+    * description  功能说明：安全组描述新增。可以使用该字段精确过滤安全组，支持传入多个描述进行过滤
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的安全组。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 约束：若需要查询当前用户所有有权限查看企业项目绑定的安全组，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -101,6 +129,13 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  功能说明：安全组资源ID。可以使用该字段精确过滤安全组，支持多个ID
+    * name  功能说明：安全组名称。可以使用该字段精确过滤满足条件的安全组，支持传入多个name过滤
+    * description  功能说明：安全组描述新增。可以使用该字段精确过滤安全组，支持传入多个描述进行过滤
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的安全组。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 约束：若需要查询当前用户所有有权限查看企业项目绑定的安全组，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -211,6 +246,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  项目ID 获取项目ID，请参见获取项目ID
     *
     * @return string
     */
@@ -222,7 +258,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId projectId
+    * @param string $projectId 项目ID 获取项目ID，请参见获取项目ID
     *
     * @return $this
     */
@@ -234,6 +270,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  功能说明：每页返回的个数 取值范围：0-2000
     *
     * @return int|null
     */
@@ -245,7 +282,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 功能说明：每页返回的个数 取值范围：0-2000
     *
     * @return $this
     */
@@ -257,6 +294,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  分页查询起始的资源ID，为空时查询第一页
     *
     * @return string|null
     */
@@ -268,7 +306,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 分页查询起始的资源ID，为空时查询第一页
     *
     * @return $this
     */
@@ -280,6 +318,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  功能说明：安全组资源ID。可以使用该字段精确过滤安全组，支持多个ID
     *
     * @return string[]|null
     */
@@ -291,7 +330,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id id
+    * @param string[]|null $id 功能说明：安全组资源ID。可以使用该字段精确过滤安全组，支持多个ID
     *
     * @return $this
     */
@@ -303,6 +342,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：安全组名称。可以使用该字段精确过滤满足条件的安全组，支持传入多个name过滤
     *
     * @return string[]|null
     */
@@ -314,7 +354,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string[]|null $name name
+    * @param string[]|null $name 功能说明：安全组名称。可以使用该字段精确过滤满足条件的安全组，支持传入多个name过滤
     *
     * @return $this
     */
@@ -326,6 +366,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：安全组描述新增。可以使用该字段精确过滤安全组，支持传入多个描述进行过滤
     *
     * @return string[]|null
     */
@@ -337,7 +378,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string[]|null $description description
+    * @param string[]|null $description 功能说明：安全组描述新增。可以使用该字段精确过滤安全组，支持传入多个描述进行过滤
     *
     * @return $this
     */
@@ -349,6 +390,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的安全组。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 约束：若需要查询当前用户所有有权限查看企业项目绑定的安全组，请传参all_granted_eps。
     *
     * @return string|null
     */
@@ -360,7 +402,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId enterpriseProjectId
+    * @param string|null $enterpriseProjectId 功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的安全组。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 约束：若需要查询当前用户所有有权限查看企业项目绑定的安全组，请传参all_granted_eps。
     *
     * @return $this
     */

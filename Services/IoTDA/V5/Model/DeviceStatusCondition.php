@@ -20,6 +20,7 @@ class DeviceStatusCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * statusList  状态列表，设备状态条件携带该参数。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class DeviceStatusCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * statusList  状态列表，设备状态条件携带该参数。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class DeviceStatusCondition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * statusList  状态列表，设备状态条件携带该参数。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class DeviceStatusCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * statusList  状态列表，设备状态条件携带该参数。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class DeviceStatusCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * statusList  状态列表，设备状态条件携带该参数。
     *
     * @var string[]
     */
@@ -169,6 +174,7 @@ class DeviceStatusCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets statusList
+    *  状态列表，设备状态条件携带该参数。
     *
     * @return string[]|null
     */

@@ -20,6 +20,8 @@ class CreateMfaDeviceRespon implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * serialNumber  MFA设备序列号。
+    * base32StringSeed  密钥信息，用于第三方生成图片验证码。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class CreateMfaDeviceRespon implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * serialNumber  MFA设备序列号。
+    * base32StringSeed  密钥信息，用于第三方生成图片验证码。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class CreateMfaDeviceRespon implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * serialNumber  MFA设备序列号。
+    * base32StringSeed  密钥信息，用于第三方生成图片验证码。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class CreateMfaDeviceRespon implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * serialNumber  MFA设备序列号。
+    * base32StringSeed  密钥信息，用于第三方生成图片验证码。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class CreateMfaDeviceRespon implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * serialNumber  MFA设备序列号。
+    * base32StringSeed  密钥信息，用于第三方生成图片验证码。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class CreateMfaDeviceRespon implements ModelInterface, ArrayAccess
 
     /**
     * Gets serialNumber
+    *  MFA设备序列号。
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class CreateMfaDeviceRespon implements ModelInterface, ArrayAccess
 
     /**
     * Gets base32StringSeed
+    *  密钥信息，用于第三方生成图片验证码。
     *
     * @return string
     */

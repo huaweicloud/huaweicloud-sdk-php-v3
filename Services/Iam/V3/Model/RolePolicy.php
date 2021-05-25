@@ -20,6 +20,9 @@ class RolePolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * depends  该权限所依赖的权限。
+    * statement  授权语句，描述权限的具体内容。
+    * version  权限版本号。   > - 1.0：系统预置的角色。以服务为粒度，提供有限的服务相关角色用于授权。   > - 1.1：策略。IAM最新提供的一种细粒度授权的能力，可以精确到具体服务的操作、资源以及请求条件等。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class RolePolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * depends  该权限所依赖的权限。
+    * statement  授权语句，描述权限的具体内容。
+    * version  权限版本号。   > - 1.0：系统预置的角色。以服务为粒度，提供有限的服务相关角色用于授权。   > - 1.1：策略。IAM最新提供的一种细粒度授权的能力，可以精确到具体服务的操作、资源以及请求条件等。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class RolePolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * depends  该权限所依赖的权限。
+    * statement  授权语句，描述权限的具体内容。
+    * version  权限版本号。   > - 1.0：系统预置的角色。以服务为粒度，提供有限的服务相关角色用于授权。   > - 1.1：策略。IAM最新提供的一种细粒度授权的能力，可以精确到具体服务的操作、资源以及请求条件等。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class RolePolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * depends  该权限所依赖的权限。
+    * statement  授权语句，描述权限的具体内容。
+    * version  权限版本号。   > - 1.0：系统预置的角色。以服务为粒度，提供有限的服务相关角色用于授权。   > - 1.1：策略。IAM最新提供的一种细粒度授权的能力，可以精确到具体服务的操作、资源以及请求条件等。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class RolePolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * depends  该权限所依赖的权限。
+    * statement  授权语句，描述权限的具体内容。
+    * version  权限版本号。   > - 1.0：系统预置的角色。以服务为粒度，提供有限的服务相关角色用于授权。   > - 1.1：策略。IAM最新提供的一种细粒度授权的能力，可以精确到具体服务的操作、资源以及请求条件等。
     *
     * @var string[]
     */
@@ -187,6 +202,7 @@ class RolePolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets depends
+    *  该权限所依赖的权限。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\PolicyDepends[]|null
     */
@@ -210,6 +226,7 @@ class RolePolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets statement
+    *  授权语句，描述权限的具体内容。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\PolicyStatement[]
     */
@@ -233,6 +250,7 @@ class RolePolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
+    *  权限版本号。   > - 1.0：系统预置的角色。以服务为粒度，提供有限的服务相关角色用于授权。   > - 1.1：策略。IAM最新提供的一种细粒度授权的能力，可以精确到具体服务的操作、资源以及请求条件等。
     *
     * @return string
     */

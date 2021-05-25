@@ -20,6 +20,15 @@ class CreatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线），默认为空
+    * networkId  功能说明：端口所属网络的ID 约束：必须是存在的网络ID
+    * fixedIps  功能说明：端口IP 例如：\"fixed_ips\": [{\"subnet_id\": \"4dc70db6-cb7f-4200-9790-a6a910776bba\", \"ip_address\": \"192.169.25.79\"}] 约束：ipv4场景下一个端口只支持一个fixed_ip，且不支持更新
+    * deviceOwner  功能说明：端口设备所属 取值范围：目前只支持指定\"\"和\"neutron:VIP_PORT\"；neutron:VIP_PORT表示创建的是VIP
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * adminStateUp  功能说明：管理状态 取值范围：只支持true，默认为true
+    * allowedAddressPairs  功能说明：IP/Mac对列表 约束：IP地址不允许为 “0.0.0.0/0” 如果配置的地址池较大（CIDR掩码小于24位），建议为该port配置一个单独的安全组。
+    * extraDhcpOpts  功能说明：DHCP的扩展Option(扩展属性)
+    * tenantId  功能说明：端口所属项目ID
     *
     * @var string[]
     */
@@ -37,6 +46,15 @@ class CreatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线），默认为空
+    * networkId  功能说明：端口所属网络的ID 约束：必须是存在的网络ID
+    * fixedIps  功能说明：端口IP 例如：\"fixed_ips\": [{\"subnet_id\": \"4dc70db6-cb7f-4200-9790-a6a910776bba\", \"ip_address\": \"192.169.25.79\"}] 约束：ipv4场景下一个端口只支持一个fixed_ip，且不支持更新
+    * deviceOwner  功能说明：端口设备所属 取值范围：目前只支持指定\"\"和\"neutron:VIP_PORT\"；neutron:VIP_PORT表示创建的是VIP
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * adminStateUp  功能说明：管理状态 取值范围：只支持true，默认为true
+    * allowedAddressPairs  功能说明：IP/Mac对列表 约束：IP地址不允许为 “0.0.0.0/0” 如果配置的地址池较大（CIDR掩码小于24位），建议为该port配置一个单独的安全组。
+    * extraDhcpOpts  功能说明：DHCP的扩展Option(扩展属性)
+    * tenantId  功能说明：端口所属项目ID
     *
     * @var string[]
     */
@@ -75,6 +93,15 @@ class CreatePortOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线），默认为空
+    * networkId  功能说明：端口所属网络的ID 约束：必须是存在的网络ID
+    * fixedIps  功能说明：端口IP 例如：\"fixed_ips\": [{\"subnet_id\": \"4dc70db6-cb7f-4200-9790-a6a910776bba\", \"ip_address\": \"192.169.25.79\"}] 约束：ipv4场景下一个端口只支持一个fixed_ip，且不支持更新
+    * deviceOwner  功能说明：端口设备所属 取值范围：目前只支持指定\"\"和\"neutron:VIP_PORT\"；neutron:VIP_PORT表示创建的是VIP
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * adminStateUp  功能说明：管理状态 取值范围：只支持true，默认为true
+    * allowedAddressPairs  功能说明：IP/Mac对列表 约束：IP地址不允许为 “0.0.0.0/0” 如果配置的地址池较大（CIDR掩码小于24位），建议为该port配置一个单独的安全组。
+    * extraDhcpOpts  功能说明：DHCP的扩展Option(扩展属性)
+    * tenantId  功能说明：端口所属项目ID
     *
     * @var string[]
     */
@@ -92,6 +119,15 @@ class CreatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线），默认为空
+    * networkId  功能说明：端口所属网络的ID 约束：必须是存在的网络ID
+    * fixedIps  功能说明：端口IP 例如：\"fixed_ips\": [{\"subnet_id\": \"4dc70db6-cb7f-4200-9790-a6a910776bba\", \"ip_address\": \"192.169.25.79\"}] 约束：ipv4场景下一个端口只支持一个fixed_ip，且不支持更新
+    * deviceOwner  功能说明：端口设备所属 取值范围：目前只支持指定\"\"和\"neutron:VIP_PORT\"；neutron:VIP_PORT表示创建的是VIP
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * adminStateUp  功能说明：管理状态 取值范围：只支持true，默认为true
+    * allowedAddressPairs  功能说明：IP/Mac对列表 约束：IP地址不允许为 “0.0.0.0/0” 如果配置的地址池较大（CIDR掩码小于24位），建议为该port配置一个单独的安全组。
+    * extraDhcpOpts  功能说明：DHCP的扩展Option(扩展属性)
+    * tenantId  功能说明：端口所属项目ID
     *
     * @var string[]
     */
@@ -109,6 +145,15 @@ class CreatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线），默认为空
+    * networkId  功能说明：端口所属网络的ID 约束：必须是存在的网络ID
+    * fixedIps  功能说明：端口IP 例如：\"fixed_ips\": [{\"subnet_id\": \"4dc70db6-cb7f-4200-9790-a6a910776bba\", \"ip_address\": \"192.169.25.79\"}] 约束：ipv4场景下一个端口只支持一个fixed_ip，且不支持更新
+    * deviceOwner  功能说明：端口设备所属 取值范围：目前只支持指定\"\"和\"neutron:VIP_PORT\"；neutron:VIP_PORT表示创建的是VIP
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * adminStateUp  功能说明：管理状态 取值范围：只支持true，默认为true
+    * allowedAddressPairs  功能说明：IP/Mac对列表 约束：IP地址不允许为 “0.0.0.0/0” 如果配置的地址池较大（CIDR掩码小于24位），建议为该port配置一个单独的安全组。
+    * extraDhcpOpts  功能说明：DHCP的扩展Option(扩展属性)
+    * tenantId  功能说明：端口所属项目ID
     *
     * @var string[]
     */
@@ -220,6 +265,7 @@ class CreatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线），默认为空
     *
     * @return string|null
     */
@@ -243,6 +289,7 @@ class CreatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets networkId
+    *  功能说明：端口所属网络的ID 约束：必须是存在的网络ID
     *
     * @return string
     */
@@ -266,6 +313,7 @@ class CreatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets fixedIps
+    *  功能说明：端口IP 例如：\"fixed_ips\": [{\"subnet_id\": \"4dc70db6-cb7f-4200-9790-a6a910776bba\", \"ip_address\": \"192.169.25.79\"}] 约束：ipv4场景下一个端口只支持一个fixed_ip，且不支持更新
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\FixedIp[]|null
     */
@@ -289,6 +337,7 @@ class CreatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceOwner
+    *  功能说明：端口设备所属 取值范围：目前只支持指定\"\"和\"neutron:VIP_PORT\"；neutron:VIP_PORT表示创建的是VIP
     *
     * @return string|null
     */
@@ -312,6 +361,7 @@ class CreatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroups
+    *  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
     *
     * @return string[]|null
     */
@@ -335,6 +385,7 @@ class CreatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
+    *  功能说明：管理状态 取值范围：只支持true，默认为true
     *
     * @return bool|null
     */
@@ -358,6 +409,7 @@ class CreatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowedAddressPairs
+    *  功能说明：IP/Mac对列表 约束：IP地址不允许为 “0.0.0.0/0” 如果配置的地址池较大（CIDR掩码小于24位），建议为该port配置一个单独的安全组。
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\AllowedAddressPair[]|null
     */
@@ -381,6 +433,7 @@ class CreatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets extraDhcpOpts
+    *  功能说明：DHCP的扩展Option(扩展属性)
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOpt[]|null
     */
@@ -404,6 +457,7 @@ class CreatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  功能说明：端口所属项目ID
     *
     * @return string|null
     */

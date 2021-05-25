@@ -20,6 +20,9 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * userId  待解绑MFA设备的IAM用户ID。
+    * authenticationCode  • 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。 • IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
+    * serialNumber  MFA设备序列号。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * userId  待解绑MFA设备的IAM用户ID。
+    * authenticationCode  • 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。 • IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
+    * serialNumber  MFA设备序列号。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * userId  待解绑MFA设备的IAM用户ID。
+    * authenticationCode  • 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。 • IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
+    * serialNumber  MFA设备序列号。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * userId  待解绑MFA设备的IAM用户ID。
+    * authenticationCode  • 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。 • IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
+    * serialNumber  MFA设备序列号。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * userId  待解绑MFA设备的IAM用户ID。
+    * authenticationCode  • 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。 • IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
+    * serialNumber  MFA设备序列号。
     *
     * @var string[]
     */
@@ -168,6 +183,9 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
         if ($this->container['userId'] === null) {
             $invalidProperties[] = "'userId' can't be null";
         }
+        if ($this->container['authenticationCode'] === null) {
+            $invalidProperties[] = "'authenticationCode' can't be null";
+        }
         if ($this->container['serialNumber'] === null) {
             $invalidProperties[] = "'serialNumber' can't be null";
         }
@@ -187,6 +205,7 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  待解绑MFA设备的IAM用户ID。
     *
     * @return string
     */
@@ -210,8 +229,9 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets authenticationCode
+    *  • 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。 • IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
     *
-    * @return string|null
+    * @return string
     */
     public function getAuthenticationCode()
     {
@@ -221,7 +241,7 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
     /**
     * Sets authenticationCode
     *
-    * @param string|null $authenticationCode 验证码。
+    * @param string $authenticationCode • 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。 • IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
     *
     * @return $this
     */
@@ -233,6 +253,7 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets serialNumber
+    *  MFA设备序列号。
     *
     * @return string
     */

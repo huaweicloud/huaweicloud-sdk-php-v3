@@ -20,6 +20,8 @@ class ServerInterfaceFixedIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * ipAddress  网卡私网IP信息。
+    * subnetId  网卡私网IP对应子网信息。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ServerInterfaceFixedIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * ipAddress  网卡私网IP信息。
+    * subnetId  网卡私网IP对应子网信息。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ServerInterfaceFixedIp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * ipAddress  网卡私网IP信息。
+    * subnetId  网卡私网IP对应子网信息。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ServerInterfaceFixedIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * ipAddress  网卡私网IP信息。
+    * subnetId  网卡私网IP对应子网信息。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ServerInterfaceFixedIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * ipAddress  网卡私网IP信息。
+    * subnetId  网卡私网IP对应子网信息。
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class ServerInterfaceFixedIp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipAddress
+    *  网卡私网IP信息。
     *
     * @return string|null
     */
@@ -198,6 +209,7 @@ class ServerInterfaceFixedIp implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
+    *  网卡私网IP对应子网信息。
     *
     * @return string|null
     */

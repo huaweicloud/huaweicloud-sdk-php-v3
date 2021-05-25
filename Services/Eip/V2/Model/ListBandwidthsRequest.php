@@ -20,6 +20,10 @@ class ListBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * marker  取值为上一页数据的最后一条记录的id，为空时为查询第一页
+    * limit  功能说明：每页返回的个数  取值范围：0~intmax
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的虚拟私有云。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的虚拟私有云，请传参all_granted_eps。
+    * shareType  功能说明：带宽类型，标识是否是共享带宽 取值范围：WHOLE，PER WHOLE表示共享带宽；PER，表示独享带宽
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class ListBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * marker  取值为上一页数据的最后一条记录的id，为空时为查询第一页
+    * limit  功能说明：每页返回的个数  取值范围：0~intmax
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的虚拟私有云。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的虚拟私有云，请传参all_granted_eps。
+    * shareType  功能说明：带宽类型，标识是否是共享带宽 取值范围：WHOLE，PER WHOLE表示共享带宽；PER，表示独享带宽
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class ListBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * marker  取值为上一页数据的最后一条记录的id，为空时为查询第一页
+    * limit  功能说明：每页返回的个数  取值范围：0~intmax
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的虚拟私有云。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的虚拟私有云，请传参all_granted_eps。
+    * shareType  功能说明：带宽类型，标识是否是共享带宽 取值范围：WHOLE，PER WHOLE表示共享带宽；PER，表示独享带宽
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class ListBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * marker  取值为上一页数据的最后一条记录的id，为空时为查询第一页
+    * limit  功能说明：每页返回的个数  取值范围：0~intmax
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的虚拟私有云。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的虚拟私有云，请传参all_granted_eps。
+    * shareType  功能说明：带宽类型，标识是否是共享带宽 取值范围：WHOLE，PER WHOLE表示共享带宽；PER，表示独享带宽
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class ListBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * marker  取值为上一页数据的最后一条记录的id，为空时为查询第一页
+    * limit  功能说明：每页返回的个数  取值范围：0~intmax
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的虚拟私有云。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的虚拟私有云，请传参all_granted_eps。
+    * shareType  功能说明：带宽类型，标识是否是共享带宽 取值范围：WHOLE，PER WHOLE表示共享带宽；PER，表示独享带宽
     *
     * @var string[]
     */
@@ -216,6 +236,7 @@ class ListBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  取值为上一页数据的最后一条记录的id，为空时为查询第一页
     *
     * @return string|null
     */
@@ -227,7 +248,7 @@ class ListBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 取值为上一页数据的最后一条记录的id，为空时为查询第一页
     *
     * @return $this
     */
@@ -239,6 +260,7 @@ class ListBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  功能说明：每页返回的个数  取值范围：0~intmax
     *
     * @return int|null
     */
@@ -250,7 +272,7 @@ class ListBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 功能说明：每页返回的个数  取值范围：0~intmax
     *
     * @return $this
     */
@@ -262,6 +284,7 @@ class ListBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的虚拟私有云。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的虚拟私有云，请传参all_granted_eps。
     *
     * @return string|null
     */
@@ -273,7 +296,7 @@ class ListBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId enterpriseProjectId
+    * @param string|null $enterpriseProjectId 功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的虚拟私有云。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的虚拟私有云，请传参all_granted_eps。
     *
     * @return $this
     */
@@ -285,6 +308,7 @@ class ListBandwidthsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets shareType
+    *  功能说明：带宽类型，标识是否是共享带宽 取值范围：WHOLE，PER WHOLE表示共享带宽；PER，表示独享带宽
     *
     * @return string|null
     */
@@ -296,7 +320,7 @@ class ListBandwidthsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets shareType
     *
-    * @param string|null $shareType shareType
+    * @param string|null $shareType 功能说明：带宽类型，标识是否是共享带宽 取值范围：WHOLE，PER WHOLE表示共享带宽；PER，表示独享带宽
     *
     * @return $this
     */

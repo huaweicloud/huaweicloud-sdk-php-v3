@@ -20,6 +20,19 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domainId  权限所属账号ID。
+    * flag  该参数值为fine_grained时，标识此权限为系统内置的策略。
+    * descriptionCn  权限的中文描述信息。
+    * catalog  权限所在目录。
+    * name  权限名。携带在用户的token中，云服务根据该名称来判断用户是否有权限访问。
+    * description  权限描述信息。
+    * links  links
+    * id  权限ID。
+    * displayName  权限展示名。
+    * type  权限的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - AA表示在domain和project层均显示。   > - XX表示在domain和project层均不显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * policy  policy
+    * updatedTime  权限更新时间。
+    * createdTime  权限创建时间。
     *
     * @var string[]
     */
@@ -41,6 +54,19 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domainId  权限所属账号ID。
+    * flag  该参数值为fine_grained时，标识此权限为系统内置的策略。
+    * descriptionCn  权限的中文描述信息。
+    * catalog  权限所在目录。
+    * name  权限名。携带在用户的token中，云服务根据该名称来判断用户是否有权限访问。
+    * description  权限描述信息。
+    * links  links
+    * id  权限ID。
+    * displayName  权限展示名。
+    * type  权限的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - AA表示在domain和project层均显示。   > - XX表示在domain和project层均不显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * policy  policy
+    * updatedTime  权限更新时间。
+    * createdTime  权限创建时间。
     *
     * @var string[]
     */
@@ -83,6 +109,19 @@ class RoleResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domainId  权限所属账号ID。
+    * flag  该参数值为fine_grained时，标识此权限为系统内置的策略。
+    * descriptionCn  权限的中文描述信息。
+    * catalog  权限所在目录。
+    * name  权限名。携带在用户的token中，云服务根据该名称来判断用户是否有权限访问。
+    * description  权限描述信息。
+    * links  links
+    * id  权限ID。
+    * displayName  权限展示名。
+    * type  权限的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - AA表示在domain和project层均显示。   > - XX表示在domain和project层均不显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * policy  policy
+    * updatedTime  权限更新时间。
+    * createdTime  权限创建时间。
     *
     * @var string[]
     */
@@ -104,6 +143,19 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domainId  权限所属账号ID。
+    * flag  该参数值为fine_grained时，标识此权限为系统内置的策略。
+    * descriptionCn  权限的中文描述信息。
+    * catalog  权限所在目录。
+    * name  权限名。携带在用户的token中，云服务根据该名称来判断用户是否有权限访问。
+    * description  权限描述信息。
+    * links  links
+    * id  权限ID。
+    * displayName  权限展示名。
+    * type  权限的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - AA表示在domain和project层均显示。   > - XX表示在domain和project层均不显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * policy  policy
+    * updatedTime  权限更新时间。
+    * createdTime  权限创建时间。
     *
     * @var string[]
     */
@@ -125,6 +177,19 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domainId  权限所属账号ID。
+    * flag  该参数值为fine_grained时，标识此权限为系统内置的策略。
+    * descriptionCn  权限的中文描述信息。
+    * catalog  权限所在目录。
+    * name  权限名。携带在用户的token中，云服务根据该名称来判断用户是否有权限访问。
+    * description  权限描述信息。
+    * links  links
+    * id  权限ID。
+    * displayName  权限展示名。
+    * type  权限的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - AA表示在domain和project层均显示。   > - XX表示在domain和project层均不显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * policy  policy
+    * updatedTime  权限更新时间。
+    * createdTime  权限创建时间。
     *
     * @var string[]
     */
@@ -253,6 +318,7 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  权限所属账号ID。
     *
     * @return string|null
     */
@@ -276,6 +342,7 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets flag
+    *  该参数值为fine_grained时，标识此权限为系统内置的策略。
     *
     * @return string|null
     */
@@ -299,6 +366,7 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets descriptionCn
+    *  权限的中文描述信息。
     *
     * @return string|null
     */
@@ -322,6 +390,7 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets catalog
+    *  权限所在目录。
     *
     * @return string|null
     */
@@ -345,6 +414,7 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  权限名。携带在用户的token中，云服务根据该名称来判断用户是否有权限访问。
     *
     * @return string
     */
@@ -368,6 +438,7 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  权限描述信息。
     *
     * @return string|null
     */
@@ -391,6 +462,7 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\Links|null
     */
@@ -414,6 +486,7 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  权限ID。
     *
     * @return string
     */
@@ -437,6 +510,7 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
+    *  权限展示名。
     *
     * @return string|null
     */
@@ -460,6 +534,7 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  权限的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - AA表示在domain和project层均显示。   > - XX表示在domain和project层均不显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     *
     * @return string
     */
@@ -483,6 +558,7 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets policy
+    *  policy
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\RolePolicy
     */
@@ -506,6 +582,7 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedTime
+    *  权限更新时间。
     *
     * @return string|null
     */
@@ -529,6 +606,7 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdTime
+    *  权限创建时间。
     *
     * @return string|null
     */

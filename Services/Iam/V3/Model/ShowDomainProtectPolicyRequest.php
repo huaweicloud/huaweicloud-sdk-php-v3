@@ -20,6 +20,7 @@ class ShowDomainProtectPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class ShowDomainProtectPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class ShowDomainProtectPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class ShowDomainProtectPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class ShowDomainProtectPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class ShowDomainProtectPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string
     */
@@ -183,7 +189,7 @@ class ShowDomainProtectPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string $domainId domainId
+    * @param string $domainId 待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */

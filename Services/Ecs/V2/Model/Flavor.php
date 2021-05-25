@@ -20,6 +20,21 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  云服务器规格的ID。
+    * name  云服务器规格的名称。
+    * vcpus  云服务器规格对应的CPU核数。
+    * ram  云服务器规格对应的内存大小，单位为MB。
+    * disk  云服务器规格对应要求的系统盘大小。  当前未使用该参数，缺省值为0。
+    * swap  云服务器规格对应要求的交换分区大小。  当前未使用该参数，缺省值为\"\"。
+    * osFlvExtDatAephemeral  扩展属性，临时盘大小。  当前未使用该参数，缺省值为0
+    * osFlvDisableDdisabled  扩展属性，该云服务器规格是否禁用。  当前未使用该参数，缺省值为false。
+    * rxtxFactor  云服务器可使用网络带宽与网络硬件带宽的比例。  当前未使用该参数，缺省值为1.0。
+    * rxtxQuota  云服务器可使用网络带宽的软限制。  当前未使用该参数，缺省值为null。
+    * rxtxCap  云服务器可使用网络带宽的硬限制。  当前未使用该参数，缺省值为null。
+    * osFlavorAccessisPublic  扩展属性，flavor是否给所有租户使用。  - true：表示给所有租户使用。 - false：表示给指定租户使用。  缺省值为true。
+    * links  规格相关快捷链接地址。
+    * osExtraSpecs  osExtraSpecs
+    * attachableQuantity  attachableQuantity
     *
     * @var string[]
     */
@@ -43,6 +58,21 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  云服务器规格的ID。
+    * name  云服务器规格的名称。
+    * vcpus  云服务器规格对应的CPU核数。
+    * ram  云服务器规格对应的内存大小，单位为MB。
+    * disk  云服务器规格对应要求的系统盘大小。  当前未使用该参数，缺省值为0。
+    * swap  云服务器规格对应要求的交换分区大小。  当前未使用该参数，缺省值为\"\"。
+    * osFlvExtDatAephemeral  扩展属性，临时盘大小。  当前未使用该参数，缺省值为0
+    * osFlvDisableDdisabled  扩展属性，该云服务器规格是否禁用。  当前未使用该参数，缺省值为false。
+    * rxtxFactor  云服务器可使用网络带宽与网络硬件带宽的比例。  当前未使用该参数，缺省值为1.0。
+    * rxtxQuota  云服务器可使用网络带宽的软限制。  当前未使用该参数，缺省值为null。
+    * rxtxCap  云服务器可使用网络带宽的硬限制。  当前未使用该参数，缺省值为null。
+    * osFlavorAccessisPublic  扩展属性，flavor是否给所有租户使用。  - true：表示给所有租户使用。 - false：表示给指定租户使用。  缺省值为true。
+    * links  规格相关快捷链接地址。
+    * osExtraSpecs  osExtraSpecs
+    * attachableQuantity  attachableQuantity
     *
     * @var string[]
     */
@@ -87,6 +117,21 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  云服务器规格的ID。
+    * name  云服务器规格的名称。
+    * vcpus  云服务器规格对应的CPU核数。
+    * ram  云服务器规格对应的内存大小，单位为MB。
+    * disk  云服务器规格对应要求的系统盘大小。  当前未使用该参数，缺省值为0。
+    * swap  云服务器规格对应要求的交换分区大小。  当前未使用该参数，缺省值为\"\"。
+    * osFlvExtDatAephemeral  扩展属性，临时盘大小。  当前未使用该参数，缺省值为0
+    * osFlvDisableDdisabled  扩展属性，该云服务器规格是否禁用。  当前未使用该参数，缺省值为false。
+    * rxtxFactor  云服务器可使用网络带宽与网络硬件带宽的比例。  当前未使用该参数，缺省值为1.0。
+    * rxtxQuota  云服务器可使用网络带宽的软限制。  当前未使用该参数，缺省值为null。
+    * rxtxCap  云服务器可使用网络带宽的硬限制。  当前未使用该参数，缺省值为null。
+    * osFlavorAccessisPublic  扩展属性，flavor是否给所有租户使用。  - true：表示给所有租户使用。 - false：表示给指定租户使用。  缺省值为true。
+    * links  规格相关快捷链接地址。
+    * osExtraSpecs  osExtraSpecs
+    * attachableQuantity  attachableQuantity
     *
     * @var string[]
     */
@@ -110,6 +155,21 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  云服务器规格的ID。
+    * name  云服务器规格的名称。
+    * vcpus  云服务器规格对应的CPU核数。
+    * ram  云服务器规格对应的内存大小，单位为MB。
+    * disk  云服务器规格对应要求的系统盘大小。  当前未使用该参数，缺省值为0。
+    * swap  云服务器规格对应要求的交换分区大小。  当前未使用该参数，缺省值为\"\"。
+    * osFlvExtDatAephemeral  扩展属性，临时盘大小。  当前未使用该参数，缺省值为0
+    * osFlvDisableDdisabled  扩展属性，该云服务器规格是否禁用。  当前未使用该参数，缺省值为false。
+    * rxtxFactor  云服务器可使用网络带宽与网络硬件带宽的比例。  当前未使用该参数，缺省值为1.0。
+    * rxtxQuota  云服务器可使用网络带宽的软限制。  当前未使用该参数，缺省值为null。
+    * rxtxCap  云服务器可使用网络带宽的硬限制。  当前未使用该参数，缺省值为null。
+    * osFlavorAccessisPublic  扩展属性，flavor是否给所有租户使用。  - true：表示给所有租户使用。 - false：表示给指定租户使用。  缺省值为true。
+    * links  规格相关快捷链接地址。
+    * osExtraSpecs  osExtraSpecs
+    * attachableQuantity  attachableQuantity
     *
     * @var string[]
     */
@@ -133,6 +193,21 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  云服务器规格的ID。
+    * name  云服务器规格的名称。
+    * vcpus  云服务器规格对应的CPU核数。
+    * ram  云服务器规格对应的内存大小，单位为MB。
+    * disk  云服务器规格对应要求的系统盘大小。  当前未使用该参数，缺省值为0。
+    * swap  云服务器规格对应要求的交换分区大小。  当前未使用该参数，缺省值为\"\"。
+    * osFlvExtDatAephemeral  扩展属性，临时盘大小。  当前未使用该参数，缺省值为0
+    * osFlvDisableDdisabled  扩展属性，该云服务器规格是否禁用。  当前未使用该参数，缺省值为false。
+    * rxtxFactor  云服务器可使用网络带宽与网络硬件带宽的比例。  当前未使用该参数，缺省值为1.0。
+    * rxtxQuota  云服务器可使用网络带宽的软限制。  当前未使用该参数，缺省值为null。
+    * rxtxCap  云服务器可使用网络带宽的硬限制。  当前未使用该参数，缺省值为null。
+    * osFlavorAccessisPublic  扩展属性，flavor是否给所有租户使用。  - true：表示给所有租户使用。 - false：表示给指定租户使用。  缺省值为true。
+    * links  规格相关快捷链接地址。
+    * osExtraSpecs  osExtraSpecs
+    * attachableQuantity  attachableQuantity
     *
     * @var string[]
     */
@@ -295,6 +370,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  云服务器规格的ID。
     *
     * @return string
     */
@@ -318,6 +394,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云服务器规格的名称。
     *
     * @return string
     */
@@ -341,6 +418,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets vcpus
+    *  云服务器规格对应的CPU核数。
     *
     * @return string
     */
@@ -364,6 +442,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets ram
+    *  云服务器规格对应的内存大小，单位为MB。
     *
     * @return int
     */
@@ -387,6 +466,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets disk
+    *  云服务器规格对应要求的系统盘大小。  当前未使用该参数，缺省值为0。
     *
     * @return string
     */
@@ -410,6 +490,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets swap
+    *  云服务器规格对应要求的交换分区大小。  当前未使用该参数，缺省值为\"\"。
     *
     * @return string
     */
@@ -433,6 +514,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets osFlvExtDatAephemeral
+    *  扩展属性，临时盘大小。  当前未使用该参数，缺省值为0
     *
     * @return int
     */
@@ -456,6 +538,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets osFlvDisableDdisabled
+    *  扩展属性，该云服务器规格是否禁用。  当前未使用该参数，缺省值为false。
     *
     * @return bool
     */
@@ -479,6 +562,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets rxtxFactor
+    *  云服务器可使用网络带宽与网络硬件带宽的比例。  当前未使用该参数，缺省值为1.0。
     *
     * @return float
     */
@@ -502,6 +586,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets rxtxQuota
+    *  云服务器可使用网络带宽的软限制。  当前未使用该参数，缺省值为null。
     *
     * @return string
     */
@@ -525,6 +610,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets rxtxCap
+    *  云服务器可使用网络带宽的硬限制。  当前未使用该参数，缺省值为null。
     *
     * @return string
     */
@@ -548,6 +634,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets osFlavorAccessisPublic
+    *  扩展属性，flavor是否给所有租户使用。  - true：表示给所有租户使用。 - false：表示给指定租户使用。  缺省值为true。
     *
     * @return bool
     */
@@ -571,6 +658,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  规格相关快捷链接地址。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\FlavorLink[]
     */
@@ -594,6 +682,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtraSpecs
+    *  osExtraSpecs
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\FlavorExtraSpec
     */
@@ -617,6 +706,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets attachableQuantity
+    *  attachableQuantity
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\ServerAttachableQuantity|null
     */

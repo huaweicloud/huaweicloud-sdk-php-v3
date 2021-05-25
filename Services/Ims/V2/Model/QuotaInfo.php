@@ -20,6 +20,11 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * type  查询的资源类型。
+    * used  已使用的资源配额。
+    * quota  查询出的资源的总配额。
+    * min  资源的最小配额。
+    * max  资源的最大配额。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * type  查询的资源类型。
+    * used  已使用的资源配额。
+    * quota  查询出的资源的总配额。
+    * min  资源的最小配额。
+    * max  资源的最大配额。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class QuotaInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * type  查询的资源类型。
+    * used  已使用的资源配额。
+    * quota  查询出的资源的总配额。
+    * min  资源的最小配额。
+    * max  资源的最大配额。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * type  查询的资源类型。
+    * used  已使用的资源配额。
+    * quota  查询出的资源的总配额。
+    * min  资源的最小配额。
+    * max  资源的最大配额。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * type  查询的资源类型。
+    * used  已使用的资源配额。
+    * quota  查询出的资源的总配额。
+    * min  资源的最小配额。
+    * max  资源的最大配额。
     *
     * @var string[]
     */
@@ -208,6 +233,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  查询的资源类型。
     *
     * @return string
     */
@@ -231,6 +257,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets used
+    *  已使用的资源配额。
     *
     * @return int
     */
@@ -254,6 +281,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets quota
+    *  查询出的资源的总配额。
     *
     * @return int
     */
@@ -277,6 +305,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets min
+    *  资源的最小配额。
     *
     * @return int
     */
@@ -300,6 +329,7 @@ class QuotaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets max
+    *  资源的最大配额。
     *
     * @return int
     */

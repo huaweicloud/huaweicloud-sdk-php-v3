@@ -20,6 +20,7 @@ class KeystoneListProtocolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * idpId  身份提供商ID。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class KeystoneListProtocolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * idpId  身份提供商ID。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class KeystoneListProtocolsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * idpId  身份提供商ID。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class KeystoneListProtocolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * idpId  身份提供商ID。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class KeystoneListProtocolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * idpId  身份提供商ID。
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class KeystoneListProtocolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets idpId
+    *  身份提供商ID。
     *
     * @return string
     */
@@ -183,7 +189,7 @@ class KeystoneListProtocolsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets idpId
     *
-    * @param string $idpId idpId
+    * @param string $idpId 身份提供商ID。
     *
     * @return $this
     */

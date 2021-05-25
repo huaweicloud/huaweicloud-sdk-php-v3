@@ -20,6 +20,8 @@ class MfaAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * identity  identity
+    * scope  scope
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class MfaAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * identity  identity
+    * scope  scope
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class MfaAuth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * identity  identity
+    * scope  scope
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class MfaAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * identity  identity
+    * scope  scope
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class MfaAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * identity  identity
+    * scope  scope
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class MfaAuth implements ModelInterface, ArrayAccess
 
     /**
     * Gets identity
+    *  identity
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\MfaIdentity
     */
@@ -204,6 +215,7 @@ class MfaAuth implements ModelInterface, ArrayAccess
 
     /**
     * Gets scope
+    *  scope
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\AuthScope
     */

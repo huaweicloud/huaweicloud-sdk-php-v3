@@ -21,6 +21,7 @@ class NovaListServerSecurityGroupsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * securityGroups  security_group列表
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class NovaListServerSecurityGroupsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * securityGroups  security_group列表
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class NovaListServerSecurityGroupsResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * securityGroups  security_group列表
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class NovaListServerSecurityGroupsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * securityGroups  security_group列表
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class NovaListServerSecurityGroupsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * securityGroups  security_group列表
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class NovaListServerSecurityGroupsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets securityGroups
+    *  security_group列表
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaSecurityGroup[]|null
     */

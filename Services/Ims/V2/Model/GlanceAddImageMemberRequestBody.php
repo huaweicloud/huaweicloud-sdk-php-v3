@@ -20,6 +20,7 @@ class GlanceAddImageMemberRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * member  镜像成员。取值为目标用户的项目ID。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class GlanceAddImageMemberRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * member  镜像成员。取值为目标用户的项目ID。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class GlanceAddImageMemberRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * member  镜像成员。取值为目标用户的项目ID。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class GlanceAddImageMemberRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * member  镜像成员。取值为目标用户的项目ID。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class GlanceAddImageMemberRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * member  镜像成员。取值为目标用户的项目ID。
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class GlanceAddImageMemberRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets member
+    *  镜像成员。取值为目标用户的项目ID。
     *
     * @return string
     */

@@ -20,6 +20,9 @@ class RemoveDomainPermissionFromAgencyRequest implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domainId  委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * agencyId  委托ID，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * roleId  权限ID，获取方式请参见：[获取权限名、权限ID](https://support.huaweicloud.com/api-iam/iam_10_0001.html)。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class RemoveDomainPermissionFromAgencyRequest implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domainId  委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * agencyId  委托ID，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * roleId  权限ID，获取方式请参见：[获取权限名、权限ID](https://support.huaweicloud.com/api-iam/iam_10_0001.html)。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class RemoveDomainPermissionFromAgencyRequest implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domainId  委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * agencyId  委托ID，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * roleId  权限ID，获取方式请参见：[获取权限名、权限ID](https://support.huaweicloud.com/api-iam/iam_10_0001.html)。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class RemoveDomainPermissionFromAgencyRequest implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domainId  委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * agencyId  委托ID，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * roleId  权限ID，获取方式请参见：[获取权限名、权限ID](https://support.huaweicloud.com/api-iam/iam_10_0001.html)。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class RemoveDomainPermissionFromAgencyRequest implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domainId  委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * agencyId  委托ID，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * roleId  权限ID，获取方式请参见：[获取权限名、权限ID](https://support.huaweicloud.com/api-iam/iam_10_0001.html)。
     *
     * @var string[]
     */
@@ -190,6 +205,7 @@ class RemoveDomainPermissionFromAgencyRequest implements ModelInterface, ArrayAc
 
     /**
     * Gets domainId
+    *  委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string
     */
@@ -201,7 +217,7 @@ class RemoveDomainPermissionFromAgencyRequest implements ModelInterface, ArrayAc
     /**
     * Sets domainId
     *
-    * @param string $domainId domainId
+    * @param string $domainId 委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */
@@ -213,6 +229,7 @@ class RemoveDomainPermissionFromAgencyRequest implements ModelInterface, ArrayAc
 
     /**
     * Gets agencyId
+    *  委托ID，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string
     */
@@ -224,7 +241,7 @@ class RemoveDomainPermissionFromAgencyRequest implements ModelInterface, ArrayAc
     /**
     * Sets agencyId
     *
-    * @param string $agencyId agencyId
+    * @param string $agencyId 委托ID，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */
@@ -236,6 +253,7 @@ class RemoveDomainPermissionFromAgencyRequest implements ModelInterface, ArrayAc
 
     /**
     * Gets roleId
+    *  权限ID，获取方式请参见：[获取权限名、权限ID](https://support.huaweicloud.com/api-iam/iam_10_0001.html)。
     *
     * @return string
     */
@@ -247,7 +265,7 @@ class RemoveDomainPermissionFromAgencyRequest implements ModelInterface, ArrayAc
     /**
     * Sets roleId
     *
-    * @param string $roleId roleId
+    * @param string $roleId 权限ID，获取方式请参见：[获取权限名、权限ID](https://support.huaweicloud.com/api-iam/iam_10_0001.html)。
     *
     * @return $this
     */

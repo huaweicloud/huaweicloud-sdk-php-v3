@@ -25,6 +25,13 @@ class EipClient extends Client
     }
 
 
+    /**
+     * 共享带宽插入弹性公网IP
+     * 共享带宽插入弹性公网IP。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function addPublicipsIntoSharedBandwidth($request)
     {
         return $this->addPublicipsIntoSharedBandwidthWithHttpInfo($request);
@@ -83,6 +90,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\AddPublicipsIntoSharedBandwidthRequest');
     }
 
+    /**
+     * 批量创建共享带宽
+     * 批量创建共享带宽。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function batchCreateSharedBandwidths($request)
     {
         return $this->batchCreateSharedBandwidthsWithHttpInfo($request);
@@ -138,6 +152,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\BatchCreateSharedBandwidthsRequest');
     }
 
+    /**
+     * 创建共享带宽
+     * 创建共享带宽。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createSharedBandwidth($request)
     {
         return $this->createSharedBandwidthWithHttpInfo($request);
@@ -193,6 +214,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\CreateSharedBandwidthRequest');
     }
 
+    /**
+     * 删除共享带宽
+     * 删除共享带宽。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteSharedBandwidth($request)
     {
         return $this->deleteSharedBandwidthWithHttpInfo($request);
@@ -248,6 +276,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\DeleteSharedBandwidthRequest');
     }
 
+    /**
+     * 查询带宽列表
+     * 查询带宽列表。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listBandwidths($request)
     {
         return $this->listBandwidthsWithHttpInfo($request);
@@ -312,6 +347,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ListBandwidthsRequest');
     }
 
+    /**
+     * 查询配额接口
+     * 查询配额
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listQuotas($request)
     {
         return $this->listQuotasWithHttpInfo($request);
@@ -367,6 +409,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ListQuotasRequest');
     }
 
+    /**
+     * 共享带宽移除弹性公网IP
+     * 共享带宽移除弹性公网IP。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function removePublicipsFromSharedBandwidth($request)
     {
         return $this->removePublicipsFromSharedBandwidthWithHttpInfo($request);
@@ -425,6 +474,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\RemovePublicipsFromSharedBandwidthRequest');
     }
 
+    /**
+     * 查询带宽
+     * 查询带宽
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showBandwidth($request)
     {
         return $this->showBandwidthWithHttpInfo($request);
@@ -480,6 +536,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ShowBandwidthRequest');
     }
 
+    /**
+     * 更新带宽
+     * 更新带宽。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateBandwidth($request)
     {
         return $this->updateBandwidthWithHttpInfo($request);
@@ -538,6 +601,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\UpdateBandwidthRequest');
     }
 
+    /**
+     * 更新包周期带宽
+     * 更新带宽。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updatePrePaidBandwidth($request)
     {
         return $this->updatePrePaidBandwidthWithHttpInfo($request);
@@ -596,6 +666,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\UpdatePrePaidBandwidthRequest');
     }
 
+    /**
+     * 批量创建弹性公网IP资源标签
+     * 为指定的弹性公网IP资源实例批量添加标签。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function batchCreatePublicipTags($request)
     {
         return $this->batchCreatePublicipTagsWithHttpInfo($request);
@@ -654,6 +731,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\BatchCreatePublicipTagsRequest');
     }
 
+    /**
+     * 批量删除弹性公网IP资源标签
+     * 为指定的弹性公网IP资源实例批量删除标签。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function batchDeletePublicipTags($request)
     {
         return $this->batchDeletePublicipTagsWithHttpInfo($request);
@@ -712,6 +796,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\BatchDeletePublicipTagsRequest');
     }
 
+    /**
+     * 申请包周期弹性公网IP
+     * 申请包年包月的弹性公网IP。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createPrePaidPublicip($request)
     {
         return $this->createPrePaidPublicipWithHttpInfo($request);
@@ -767,6 +858,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\CreatePrePaidPublicipRequest');
     }
 
+    /**
+     * 申请弹性公网IP
+     * 申请弹性公网IP，支持IPv4和IPv6。  弹性公网IP（Elastic IP）提供独立的公网IP资源，包括公网IP地址与公网出口带宽服务。可以与弹性云服务器、裸金属服务器、虚拟IP、弹性负载均衡、NAT网关等资源灵活地绑定及解绑。拥有多种灵活的计费方式，可以满足各种业务场景的需要。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createPublicip($request)
     {
         return $this->createPublicipWithHttpInfo($request);
@@ -822,6 +920,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\CreatePublicipRequest');
     }
 
+    /**
+     * 创建弹性公网IP资源标签
+     * 给指定弹性IP资源实例增加标签信息。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createPublicipTag($request)
     {
         return $this->createPublicipTagWithHttpInfo($request);
@@ -880,6 +985,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\CreatePublicipTagRequest');
     }
 
+    /**
+     * 删除弹性公网IP
+     * 删除弹性公网IP,绑定状态eip不允许直接删除。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deletePublicip($request)
     {
         return $this->deletePublicipWithHttpInfo($request);
@@ -935,6 +1047,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\DeletePublicipRequest');
     }
 
+    /**
+     * 删除弹性公网IP的标签
+     * 删除指定弹性公网IP的标签信息。其中project_id是项目ID，publicip_id 是要操作的弹性公网IP的id。key是要删除标签的键。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deletePublicipTag($request)
     {
         return $this->deletePublicipTagWithHttpInfo($request);
@@ -993,6 +1112,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\DeletePublicipTagRequest');
     }
 
+    /**
+     * 查询租户的弹性公网IP标签
+     * 查询租户在指定区域和实例类型的所有标签集合。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listPublicipTags($request)
     {
         return $this->listPublicipTagsWithHttpInfo($request);
@@ -1045,6 +1171,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ListPublicipTagsRequest');
     }
 
+    /**
+     * 查询弹性公网IP列表
+     * 查询弹性公网IP列表
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listPublicips($request)
     {
         return $this->listPublicipsWithHttpInfo($request);
@@ -1121,6 +1254,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ListPublicipsRequest');
     }
 
+    /**
+     * 按标签查询弹性公网IP列表
+     * 使用标签过滤弹性公网IP。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listPublicipsByTags($request)
     {
         return $this->listPublicipsByTagsWithHttpInfo($request);
@@ -1176,6 +1316,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ListPublicipsByTagsRequest');
     }
 
+    /**
+     * 查询弹性公网IP
+     * 查询指定的弹性公网IP。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showPublicip($request)
     {
         return $this->showPublicipWithHttpInfo($request);
@@ -1231,6 +1378,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ShowPublicipRequest');
     }
 
+    /**
+     * 查询弹性公网IP的标签
+     * 查询指定弹性IP实例的标签信息。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showPublicipTags($request)
     {
         return $this->showPublicipTagsWithHttpInfo($request);
@@ -1286,6 +1440,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ShowPublicipTagsRequest');
     }
 
+    /**
+     * 更新弹性公网IP
+     * 更新弹性公网IP，将弹性公网IP跟一个网卡绑定或者解绑定，转换IP地址版本类型。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updatePublicip($request)
     {
         return $this->updatePublicipWithHttpInfo($request);
@@ -1344,6 +1505,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\UpdatePublicipRequest');
     }
 
+    /**
+     * 创建浮动IP
+     * 创建浮动IP的外部网络UUID，请使用GET /v2.0/networks?router:external&#x3D;True或neutron net-external-list方式获取。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function neutronCreateFloatingIp($request)
     {
         return $this->neutronCreateFloatingIpWithHttpInfo($request);
@@ -1399,6 +1567,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\NeutronCreateFloatingIpRequest');
     }
 
+    /**
+     * 删除浮动IP
+     * 删除指定的浮动IP。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function neutronDeleteFloatingIp($request)
     {
         return $this->neutronDeleteFloatingIpWithHttpInfo($request);
@@ -1454,6 +1629,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\NeutronDeleteFloatingIpRequest');
     }
 
+    /**
+     * 查询浮动IP列表
+     * 查询提交请求的租户有权限操作的所有浮动IP地址。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function neutronListFloatingIps($request)
     {
         return $this->neutronListFloatingIpsWithHttpInfo($request);
@@ -1536,6 +1718,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\NeutronListFloatingIpsRequest');
     }
 
+    /**
+     * 查询浮动IP
+     * 查询浮动IP详情，包括浮动IP状态，浮动IP所属路由器ID，浮动IP的外部网络ID等等。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function neutronShowFloatingIp($request)
     {
         return $this->neutronShowFloatingIpWithHttpInfo($request);
@@ -1591,6 +1780,13 @@ class EipClient extends Client
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\NeutronShowFloatingIpRequest');
     }
 
+    /**
+     * 更新浮动IP
+     * 更新浮动IP。  更新时需在URL中给出浮动IP地址的ID。  port_id 为空，则表示浮动IP从端口解绑。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function neutronUpdateFloatingIp($request)
     {
         return $this->neutronUpdateFloatingIpWithHttpInfo($request);

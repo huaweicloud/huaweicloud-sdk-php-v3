@@ -20,6 +20,8 @@ class UpdateUserInformationOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * email  IAM用户的新邮箱，符合邮箱格式，长度小于等于255字符。
+    * mobile  IAM用户的国家码+新手机号，手机号为纯数字，长度小于等于32字符。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class UpdateUserInformationOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * email  IAM用户的新邮箱，符合邮箱格式，长度小于等于255字符。
+    * mobile  IAM用户的国家码+新手机号，手机号为纯数字，长度小于等于32字符。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class UpdateUserInformationOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * email  IAM用户的新邮箱，符合邮箱格式，长度小于等于255字符。
+    * mobile  IAM用户的国家码+新手机号，手机号为纯数字，长度小于等于32字符。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class UpdateUserInformationOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * email  IAM用户的新邮箱，符合邮箱格式，长度小于等于255字符。
+    * mobile  IAM用户的国家码+新手机号，手机号为纯数字，长度小于等于32字符。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class UpdateUserInformationOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * email  IAM用户的新邮箱，符合邮箱格式，长度小于等于255字符。
+    * mobile  IAM用户的国家码+新手机号，手机号为纯数字，长度小于等于32字符。
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class UpdateUserInformationOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
+    *  IAM用户的新邮箱，符合邮箱格式，长度小于等于255字符。
     *
     * @return string|null
     */
@@ -198,6 +209,7 @@ class UpdateUserInformationOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets mobile
+    *  IAM用户的国家码+新手机号，手机号为纯数字，长度小于等于32字符。
     *
     * @return string|null
     */

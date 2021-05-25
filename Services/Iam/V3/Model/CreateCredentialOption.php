@@ -20,6 +20,8 @@ class CreateCredentialOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * userId  待创建访问秘钥（AK/SK）的IAM用户ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * description  访问密钥描述信息。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class CreateCredentialOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * userId  待创建访问秘钥（AK/SK）的IAM用户ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * description  访问密钥描述信息。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class CreateCredentialOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * userId  待创建访问秘钥（AK/SK）的IAM用户ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * description  访问密钥描述信息。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class CreateCredentialOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * userId  待创建访问秘钥（AK/SK）的IAM用户ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * description  访问密钥描述信息。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class CreateCredentialOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * userId  待创建访问秘钥（AK/SK）的IAM用户ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * description  访问密钥描述信息。
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class CreateCredentialOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  待创建访问秘钥（AK/SK）的IAM用户ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string
     */
@@ -201,6 +212,7 @@ class CreateCredentialOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  访问密钥描述信息。
     *
     * @return string|null
     */

@@ -20,6 +20,10 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源id，为空时查询第一页
+    * vpcId  按照vpc_id过滤查询  企业项目细粒度授权场景下，该字段必传
     *
     * @var string[]
     */
@@ -27,12 +31,15 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'limit' => 'int',
             'marker' => 'string',
-            'vpcId' => 'string',
-            'scope' => 'string'
+            'vpcId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源id，为空时查询第一页
+    * vpcId  按照vpc_id过滤查询  企业项目细粒度授权场景下，该字段必传
     *
     * @var string[]
     */
@@ -40,8 +47,7 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
         'projectId' => null,
         'limit' => 'int32',
         'marker' => null,
-        'vpcId' => null,
-        'scope' => null
+        'vpcId' => null
     ];
 
     /**
@@ -67,6 +73,10 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源id，为空时查询第一页
+    * vpcId  按照vpc_id过滤查询  企业项目细粒度授权场景下，该字段必传
     *
     * @var string[]
     */
@@ -74,12 +84,15 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'limit' => 'limit',
             'marker' => 'marker',
-            'vpcId' => 'vpc_id',
-            'scope' => 'scope'
+            'vpcId' => 'vpc_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源id，为空时查询第一页
+    * vpcId  按照vpc_id过滤查询  企业项目细粒度授权场景下，该字段必传
     *
     * @var string[]
     */
@@ -87,12 +100,15 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'limit' => 'setLimit',
             'marker' => 'setMarker',
-            'vpcId' => 'setVpcId',
-            'scope' => 'setScope'
+            'vpcId' => 'setVpcId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源id，为空时查询第一页
+    * vpcId  按照vpc_id过滤查询  企业项目细粒度授权场景下，该字段必传
     *
     * @var string[]
     */
@@ -100,8 +116,7 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'limit' => 'getLimit',
             'marker' => 'getMarker',
-            'vpcId' => 'getVpcId',
-            'scope' => 'getScope'
+            'vpcId' => 'getVpcId'
     ];
 
     /**
@@ -166,7 +181,6 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 2000;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
-        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
     }
 
     /**
@@ -205,6 +219,7 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  项目ID
     *
     * @return string
     */
@@ -216,7 +231,7 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId projectId
+    * @param string $projectId 项目ID
     *
     * @return $this
     */
@@ -228,6 +243,7 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  每页返回的个数
     *
     * @return int|null
     */
@@ -239,7 +255,7 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 每页返回的个数
     *
     * @return $this
     */
@@ -251,6 +267,7 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  分页查询起始的资源id，为空时查询第一页
     *
     * @return string|null
     */
@@ -262,7 +279,7 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 分页查询起始的资源id，为空时查询第一页
     *
     * @return $this
     */
@@ -274,6 +291,7 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
+    *  按照vpc_id过滤查询  企业项目细粒度授权场景下，该字段必传
     *
     * @return string|null
     */
@@ -285,36 +303,13 @@ class ListSubnetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId vpcId
+    * @param string|null $vpcId 按照vpc_id过滤查询  企业项目细粒度授权场景下，该字段必传
     *
     * @return $this
     */
     public function setVpcId($vpcId)
     {
         $this->container['vpcId'] = $vpcId;
-        return $this;
-    }
-
-    /**
-    * Gets scope
-    *
-    * @return string|null
-    */
-    public function getScope()
-    {
-        return $this->container['scope'];
-    }
-
-    /**
-    * Sets scope
-    *
-    * @param string|null $scope scope
-    *
-    * @return $this
-    */
-    public function setScope($scope)
-    {
-        $this->container['scope'] = $scope;
         return $this;
     }
 

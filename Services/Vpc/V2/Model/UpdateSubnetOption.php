@@ -20,6 +20,14 @@ class UpdateSubnetOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  功能说明：子网名称 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * ipv6Enable  功能说明：是否创建ipv6子网 取值范围：true（开启），false（关闭）
+    * dhcpEnable  功能说明：子网是否开启dhcp功能 取值范围：true（开启），false（关闭） 约束：不填时默认为true。当设置为false时，会导致新创建的ECS无法获取IP地址，cloudinit无法注入账号密码，请谨慎操作。
+    * primaryDns  功能说明：子网dns服务器地址1 约束：ip格式 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * secondaryDns  功能说明：子网dns服务器地址2 约束：ip格式 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * dnsList  功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段。 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集 默认值：不填时为空，无法使用云内网DNS功能 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * extraDhcpOpts  子网配置的NTP地址
     *
     * @var string[]
     */
@@ -36,6 +44,14 @@ class UpdateSubnetOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  功能说明：子网名称 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * ipv6Enable  功能说明：是否创建ipv6子网 取值范围：true（开启），false（关闭）
+    * dhcpEnable  功能说明：子网是否开启dhcp功能 取值范围：true（开启），false（关闭） 约束：不填时默认为true。当设置为false时，会导致新创建的ECS无法获取IP地址，cloudinit无法注入账号密码，请谨慎操作。
+    * primaryDns  功能说明：子网dns服务器地址1 约束：ip格式 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * secondaryDns  功能说明：子网dns服务器地址2 约束：ip格式 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * dnsList  功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段。 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集 默认值：不填时为空，无法使用云内网DNS功能 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * extraDhcpOpts  子网配置的NTP地址
     *
     * @var string[]
     */
@@ -73,6 +89,14 @@ class UpdateSubnetOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  功能说明：子网名称 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * ipv6Enable  功能说明：是否创建ipv6子网 取值范围：true（开启），false（关闭）
+    * dhcpEnable  功能说明：子网是否开启dhcp功能 取值范围：true（开启），false（关闭） 约束：不填时默认为true。当设置为false时，会导致新创建的ECS无法获取IP地址，cloudinit无法注入账号密码，请谨慎操作。
+    * primaryDns  功能说明：子网dns服务器地址1 约束：ip格式 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * secondaryDns  功能说明：子网dns服务器地址2 约束：ip格式 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * dnsList  功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段。 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集 默认值：不填时为空，无法使用云内网DNS功能 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * extraDhcpOpts  子网配置的NTP地址
     *
     * @var string[]
     */
@@ -89,6 +113,14 @@ class UpdateSubnetOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  功能说明：子网名称 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * ipv6Enable  功能说明：是否创建ipv6子网 取值范围：true（开启），false（关闭）
+    * dhcpEnable  功能说明：子网是否开启dhcp功能 取值范围：true（开启），false（关闭） 约束：不填时默认为true。当设置为false时，会导致新创建的ECS无法获取IP地址，cloudinit无法注入账号密码，请谨慎操作。
+    * primaryDns  功能说明：子网dns服务器地址1 约束：ip格式 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * secondaryDns  功能说明：子网dns服务器地址2 约束：ip格式 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * dnsList  功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段。 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集 默认值：不填时为空，无法使用云内网DNS功能 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * extraDhcpOpts  子网配置的NTP地址
     *
     * @var string[]
     */
@@ -105,6 +137,14 @@ class UpdateSubnetOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  功能说明：子网名称 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * ipv6Enable  功能说明：是否创建ipv6子网 取值范围：true（开启），false（关闭）
+    * dhcpEnable  功能说明：子网是否开启dhcp功能 取值范围：true（开启），false（关闭） 约束：不填时默认为true。当设置为false时，会导致新创建的ECS无法获取IP地址，cloudinit无法注入账号密码，请谨慎操作。
+    * primaryDns  功能说明：子网dns服务器地址1 约束：ip格式 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * secondaryDns  功能说明：子网dns服务器地址2 约束：ip格式 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * dnsList  功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段。 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集 默认值：不填时为空，无法使用云内网DNS功能 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
+    * extraDhcpOpts  子网配置的NTP地址
     *
     * @var string[]
     */
@@ -214,6 +254,7 @@ class UpdateSubnetOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：子网名称 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string
     */
@@ -237,6 +278,7 @@ class UpdateSubnetOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
     *
     * @return string|null
     */
@@ -260,6 +302,7 @@ class UpdateSubnetOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Enable
+    *  功能说明：是否创建ipv6子网 取值范围：true（开启），false（关闭）
     *
     * @return bool|null
     */
@@ -283,6 +326,7 @@ class UpdateSubnetOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets dhcpEnable
+    *  功能说明：子网是否开启dhcp功能 取值范围：true（开启），false（关闭） 约束：不填时默认为true。当设置为false时，会导致新创建的ECS无法获取IP地址，cloudinit无法注入账号密码，请谨慎操作。
     *
     * @return bool|null
     */
@@ -306,6 +350,7 @@ class UpdateSubnetOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryDns
+    *  功能说明：子网dns服务器地址1 约束：ip格式 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
     *
     * @return string|null
     */
@@ -329,6 +374,7 @@ class UpdateSubnetOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets secondaryDns
+    *  功能说明：子网dns服务器地址2 约束：ip格式 默认值：不填时为空 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
     *
     * @return string|null
     */
@@ -352,6 +398,7 @@ class UpdateSubnetOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets dnsList
+    *  功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段。 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集 默认值：不填时为空，无法使用云内网DNS功能 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
     *
     * @return string[]|null
     */
@@ -375,6 +422,7 @@ class UpdateSubnetOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets extraDhcpOpts
+    *  子网配置的NTP地址
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOption[]|null
     */

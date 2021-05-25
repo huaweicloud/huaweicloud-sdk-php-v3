@@ -21,6 +21,7 @@ class CreateMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * message  导入结果信息。
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class CreateMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * message  导入结果信息。
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class CreateMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * message  导入结果信息。
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class CreateMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * message  导入结果信息。
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class CreateMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * message  导入结果信息。
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class CreateMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
+    *  导入结果信息。
     *
     * @return string|null
     */

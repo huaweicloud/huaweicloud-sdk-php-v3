@@ -20,6 +20,17 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * domainId  IAM用户所属账号ID。
+    * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
+    * name  IAM用户名。
+    * description  IAM用户描述信息。
+    * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
+    * links  links
+    * id  IAM用户ID。
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
+    * extra  extra
     *
     * @var string[]
     */
@@ -39,6 +50,17 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * domainId  IAM用户所属账号ID。
+    * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
+    * name  IAM用户名。
+    * description  IAM用户描述信息。
+    * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
+    * links  links
+    * id  IAM用户ID。
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
+    * extra  extra
     *
     * @var string[]
     */
@@ -79,6 +101,17 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * domainId  IAM用户所属账号ID。
+    * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
+    * name  IAM用户名。
+    * description  IAM用户描述信息。
+    * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
+    * links  links
+    * id  IAM用户ID。
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
+    * extra  extra
     *
     * @var string[]
     */
@@ -98,6 +131,17 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * domainId  IAM用户所属账号ID。
+    * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
+    * name  IAM用户名。
+    * description  IAM用户描述信息。
+    * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
+    * links  links
+    * id  IAM用户ID。
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
+    * extra  extra
     *
     * @var string[]
     */
@@ -117,6 +161,17 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * domainId  IAM用户所属账号ID。
+    * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
+    * name  IAM用户名。
+    * description  IAM用户描述信息。
+    * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
+    * links  links
+    * id  IAM用户ID。
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * pwdStrength  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
+    * extra  extra
     *
     * @var string[]
     */
@@ -247,6 +302,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdStatus
+    *  IAM用户密码状态。true：需要修改密码，false：正常。
     *
     * @return bool|null
     */
@@ -270,6 +326,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  IAM用户所属账号ID。
     *
     * @return string
     */
@@ -293,6 +350,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastProjectId
+    *  IAM用户退出系统前，在控制台最后访问的项目ID。
     *
     * @return string|null
     */
@@ -316,6 +374,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  IAM用户名。
     *
     * @return string
     */
@@ -339,6 +398,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  IAM用户描述信息。
     *
     * @return string|null
     */
@@ -362,6 +422,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets passwordExpiresAt
+    *  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
     *
     * @return string
     */
@@ -385,6 +446,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\Links
     */
@@ -408,6 +470,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  IAM用户ID。
     *
     * @return string
     */
@@ -431,6 +494,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     *
     * @return bool
     */
@@ -454,6 +518,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdStrength
+    *  IAM用户的密码强度。high：密码强度高；mid：密码强度中等；low：密码强度低。
     *
     * @return string|null
     */
@@ -477,6 +542,7 @@ class KeystoneUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets extra
+    *  extra
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\KeystoneUserResultExtra|null
     */

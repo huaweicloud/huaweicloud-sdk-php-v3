@@ -20,6 +20,16 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  功能说明：网络ACL规则名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL规则描述 取值范围：0-255个字符
+    * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者ip协议号（0-255）
+    * action  功能说明：对通过网络ACL的流量执行的操作 取值范围：DENY（拒绝）/ALLOW（允许）
+    * ipVersion  功能说明：IP协议版本
+    * destinationIpAddress  功能说明：目的地址或者CIDR
+    * destinationPort  功能说明：目的端口号或者一段端口范围
+    * sourceIpAddress  功能说明：源地址或者CIDR
+    * sourcePort  功能说明：源端口号或者一段端口范围
+    * enabled  功能说明：是否使能网络ACL防火墙规则。
     *
     * @var string[]
     */
@@ -38,6 +48,16 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  功能说明：网络ACL规则名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL规则描述 取值范围：0-255个字符
+    * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者ip协议号（0-255）
+    * action  功能说明：对通过网络ACL的流量执行的操作 取值范围：DENY（拒绝）/ALLOW（允许）
+    * ipVersion  功能说明：IP协议版本
+    * destinationIpAddress  功能说明：目的地址或者CIDR
+    * destinationPort  功能说明：目的端口号或者一段端口范围
+    * sourceIpAddress  功能说明：源地址或者CIDR
+    * sourcePort  功能说明：源端口号或者一段端口范围
+    * enabled  功能说明：是否使能网络ACL防火墙规则。
     *
     * @var string[]
     */
@@ -77,6 +97,16 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  功能说明：网络ACL规则名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL规则描述 取值范围：0-255个字符
+    * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者ip协议号（0-255）
+    * action  功能说明：对通过网络ACL的流量执行的操作 取值范围：DENY（拒绝）/ALLOW（允许）
+    * ipVersion  功能说明：IP协议版本
+    * destinationIpAddress  功能说明：目的地址或者CIDR
+    * destinationPort  功能说明：目的端口号或者一段端口范围
+    * sourceIpAddress  功能说明：源地址或者CIDR
+    * sourcePort  功能说明：源端口号或者一段端口范围
+    * enabled  功能说明：是否使能网络ACL防火墙规则。
     *
     * @var string[]
     */
@@ -95,6 +125,16 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  功能说明：网络ACL规则名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL规则描述 取值范围：0-255个字符
+    * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者ip协议号（0-255）
+    * action  功能说明：对通过网络ACL的流量执行的操作 取值范围：DENY（拒绝）/ALLOW（允许）
+    * ipVersion  功能说明：IP协议版本
+    * destinationIpAddress  功能说明：目的地址或者CIDR
+    * destinationPort  功能说明：目的端口号或者一段端口范围
+    * sourceIpAddress  功能说明：源地址或者CIDR
+    * sourcePort  功能说明：源端口号或者一段端口范围
+    * enabled  功能说明：是否使能网络ACL防火墙规则。
     *
     * @var string[]
     */
@@ -113,6 +153,16 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  功能说明：网络ACL规则名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL规则描述 取值范围：0-255个字符
+    * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者ip协议号（0-255）
+    * action  功能说明：对通过网络ACL的流量执行的操作 取值范围：DENY（拒绝）/ALLOW（允许）
+    * ipVersion  功能说明：IP协议版本
+    * destinationIpAddress  功能说明：目的地址或者CIDR
+    * destinationPort  功能说明：目的端口号或者一段端口范围
+    * sourceIpAddress  功能说明：源地址或者CIDR
+    * sourcePort  功能说明：源端口号或者一段端口范围
+    * enabled  功能说明：是否使能网络ACL防火墙规则。
     *
     * @var string[]
     */
@@ -258,6 +308,7 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：网络ACL规则名称 取值范围：0-255个字符
     *
     * @return string|null
     */
@@ -281,6 +332,7 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：网络ACL规则描述 取值范围：0-255个字符
     *
     * @return string|null
     */
@@ -304,6 +356,7 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
+    *  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者ip协议号（0-255）
     *
     * @return string|null
     */
@@ -327,6 +380,7 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
+    *  功能说明：对通过网络ACL的流量执行的操作 取值范围：DENY（拒绝）/ALLOW（允许）
     *
     * @return string|null
     */
@@ -350,6 +404,7 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
+    *  功能说明：IP协议版本
     *
     * @return int|null
     */
@@ -373,6 +428,7 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationIpAddress
+    *  功能说明：目的地址或者CIDR
     *
     * @return string|null
     */
@@ -396,6 +452,7 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationPort
+    *  功能说明：目的端口号或者一段端口范围
     *
     * @return string|null
     */
@@ -419,6 +476,7 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceIpAddress
+    *  功能说明：源地址或者CIDR
     *
     * @return string|null
     */
@@ -442,6 +500,7 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourcePort
+    *  功能说明：源端口号或者一段端口范围
     *
     * @return string|null
     */
@@ -465,6 +524,7 @@ class NeutronCreateFirewallRuleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  功能说明：是否使能网络ACL防火墙规则。
     *
     * @return bool|null
     */

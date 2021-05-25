@@ -20,6 +20,7 @@ class NeutronCreateFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * firewallRule  firewallRule
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class NeutronCreateFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * firewallRule  firewallRule
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class NeutronCreateFirewallRuleRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * firewallRule  firewallRule
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class NeutronCreateFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * firewallRule  firewallRule
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class NeutronCreateFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * firewallRule  firewallRule
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class NeutronCreateFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets firewallRule
+    *  firewallRule
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreateFirewallRuleOption
     */

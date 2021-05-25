@@ -20,6 +20,8 @@ class ShowSubNetworkInterfaceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
+    * subNetworkInterfaceId  辅助弹性网卡的唯一标识
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ShowSubNetworkInterfaceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
+    * subNetworkInterfaceId  辅助弹性网卡的唯一标识
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ShowSubNetworkInterfaceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
+    * subNetworkInterfaceId  辅助弹性网卡的唯一标识
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ShowSubNetworkInterfaceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
+    * subNetworkInterfaceId  辅助弹性网卡的唯一标识
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ShowSubNetworkInterfaceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
+    * subNetworkInterfaceId  辅助弹性网卡的唯一标识
     *
     * @var string[]
     */
@@ -184,6 +194,7 @@ class ShowSubNetworkInterfaceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  项目ID
     *
     * @return string
     */
@@ -195,7 +206,7 @@ class ShowSubNetworkInterfaceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId projectId
+    * @param string $projectId 项目ID
     *
     * @return $this
     */
@@ -207,6 +218,7 @@ class ShowSubNetworkInterfaceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets subNetworkInterfaceId
+    *  辅助弹性网卡的唯一标识
     *
     * @return string
     */
@@ -218,7 +230,7 @@ class ShowSubNetworkInterfaceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets subNetworkInterfaceId
     *
-    * @param string $subNetworkInterfaceId subNetworkInterfaceId
+    * @param string $subNetworkInterfaceId 辅助弹性网卡的唯一标识
     *
     * @return $this
     */

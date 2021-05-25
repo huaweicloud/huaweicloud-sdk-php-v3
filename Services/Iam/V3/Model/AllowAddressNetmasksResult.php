@@ -20,6 +20,8 @@ class AllowAddressNetmasksResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * addressNetmask  IP地址或网段，例如：192.168.0.1/24。
+    * description  描述信息。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class AllowAddressNetmasksResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * addressNetmask  IP地址或网段，例如：192.168.0.1/24。
+    * description  描述信息。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class AllowAddressNetmasksResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * addressNetmask  IP地址或网段，例如：192.168.0.1/24。
+    * description  描述信息。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class AllowAddressNetmasksResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * addressNetmask  IP地址或网段，例如：192.168.0.1/24。
+    * description  描述信息。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class AllowAddressNetmasksResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * addressNetmask  IP地址或网段，例如：192.168.0.1/24。
+    * description  描述信息。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class AllowAddressNetmasksResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressNetmask
+    *  IP地址或网段，例如：192.168.0.1/24。
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class AllowAddressNetmasksResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  描述信息。
     *
     * @return string
     */

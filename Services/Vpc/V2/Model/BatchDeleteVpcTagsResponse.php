@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Vpc\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListSubscriptionsResponse implements ModelInterface, ArrayAccess
+class BatchDeleteVpcTagsResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,28 +17,24 @@ class ListSubscriptionsResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListSubscriptionsResponse';
+    protected static $openAPIModelName = 'BatchDeleteVpcTagsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'subscriptions' => '\HuaweiCloud\SDK\IoTDA\V5\Model\SubscriptionItem[]',
-            'count' => 'int',
-            'marker' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'subscriptions' => null,
-        'count' => 'int32',
-        'marker' => null
     ];
 
     /**
@@ -64,35 +60,29 @@ class ListSubscriptionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'subscriptions' => 'subscriptions',
-            'count' => 'count',
-            'marker' => 'marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'subscriptions' => 'setSubscriptions',
-            'count' => 'setCount',
-            'marker' => 'setMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'subscriptions' => 'getSubscriptions',
-            'count' => 'getCount',
-            'marker' => 'getMarker'
     ];
 
     /**
@@ -153,9 +143,6 @@ class ListSubscriptionsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['subscriptions'] = isset($data['subscriptions']) ? $data['subscriptions'] : null;
-        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
-        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -178,75 +165,6 @@ class ListSubscriptionsResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets subscriptions
-    *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\SubscriptionItem[]|null
-    */
-    public function getSubscriptions()
-    {
-        return $this->container['subscriptions'];
-    }
-
-    /**
-    * Sets subscriptions
-    *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\SubscriptionItem[]|null $subscriptions 订阅配置信息列表。
-    *
-    * @return $this
-    */
-    public function setSubscriptions($subscriptions)
-    {
-        $this->container['subscriptions'] = $subscriptions;
-        return $this;
-    }
-
-    /**
-    * Gets count
-    *
-    * @return int|null
-    */
-    public function getCount()
-    {
-        return $this->container['count'];
-    }
-
-    /**
-    * Sets count
-    *
-    * @param int|null $count 满足查询条件的记录总数。
-    *
-    * @return $this
-    */
-    public function setCount($count)
-    {
-        $this->container['count'] = $count;
-        return $this;
-    }
-
-    /**
-    * Gets marker
-    *
-    * @return string|null
-    */
-    public function getMarker()
-    {
-        return $this->container['marker'];
-    }
-
-    /**
-    * Sets marker
-    *
-    * @param string|null $marker 本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
-    *
-    * @return $this
-    */
-    public function setMarker($marker)
-    {
-        $this->container['marker'] = $marker;
-        return $this;
     }
 
     /**

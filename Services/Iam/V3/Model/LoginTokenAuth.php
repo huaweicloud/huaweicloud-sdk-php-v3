@@ -20,6 +20,7 @@ class LoginTokenAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * securitytoken  securitytoken
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class LoginTokenAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * securitytoken  securitytoken
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class LoginTokenAuth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * securitytoken  securitytoken
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class LoginTokenAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * securitytoken  securitytoken
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class LoginTokenAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * securitytoken  securitytoken
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class LoginTokenAuth implements ModelInterface, ArrayAccess
 
     /**
     * Gets securitytoken
+    *  securitytoken
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\LoginTokenSecurityToken
     */

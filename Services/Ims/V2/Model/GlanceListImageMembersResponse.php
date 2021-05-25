@@ -21,6 +21,8 @@ class GlanceListImageMembersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * members  成员信息
+    * schema  视图信息
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class GlanceListImageMembersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * members  成员信息
+    * schema  视图信息
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class GlanceListImageMembersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * members  成员信息
+    * schema  视图信息
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class GlanceListImageMembersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * members  成员信息
+    * schema  视图信息
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class GlanceListImageMembersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * members  成员信息
+    * schema  视图信息
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class GlanceListImageMembersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets members
+    *  成员信息
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\GlanceImageMembers[]|null
     */
@@ -199,6 +210,7 @@ class GlanceListImageMembersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets schema
+    *  视图信息
     *
     * @return string|null
     */

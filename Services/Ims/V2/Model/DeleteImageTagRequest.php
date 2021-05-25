@@ -20,6 +20,8 @@ class DeleteImageTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * imageId  镜像ID。
+    * key  要删除的标签的键。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class DeleteImageTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * imageId  镜像ID。
+    * key  要删除的标签的键。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class DeleteImageTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * imageId  镜像ID。
+    * key  要删除的标签的键。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class DeleteImageTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * imageId  镜像ID。
+    * key  要删除的标签的键。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class DeleteImageTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * imageId  镜像ID。
+    * key  要删除的标签的键。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class DeleteImageTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageId
+    *  镜像ID。
     *
     * @return string
     */
@@ -192,7 +203,7 @@ class DeleteImageTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageId
     *
-    * @param string $imageId imageId
+    * @param string $imageId 镜像ID。
     *
     * @return $this
     */
@@ -204,6 +215,7 @@ class DeleteImageTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
+    *  要删除的标签的键。
     *
     * @return string
     */
@@ -215,7 +227,7 @@ class DeleteImageTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key key
+    * @param string $key 要删除的标签的键。
     *
     * @return $this
     */

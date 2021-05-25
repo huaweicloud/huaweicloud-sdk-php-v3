@@ -21,6 +21,8 @@ class ListServerBlockDevicesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * attachableQuantity  attachableQuantity
+    * volumeAttachments  云服务器挂载信息列表。
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class ListServerBlockDevicesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * attachableQuantity  attachableQuantity
+    * volumeAttachments  云服务器挂载信息列表。
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class ListServerBlockDevicesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * attachableQuantity  attachableQuantity
+    * volumeAttachments  云服务器挂载信息列表。
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class ListServerBlockDevicesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * attachableQuantity  attachableQuantity
+    * volumeAttachments  云服务器挂载信息列表。
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class ListServerBlockDevicesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * attachableQuantity  attachableQuantity
+    * volumeAttachments  云服务器挂载信息列表。
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class ListServerBlockDevicesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets attachableQuantity
+    *  attachableQuantity
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\BlockDeviceAttachableQuantity|null
     */
@@ -199,6 +210,7 @@ class ListServerBlockDevicesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeAttachments
+    *  云服务器挂载信息列表。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\ServerBlockDevice[]|null
     */

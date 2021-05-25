@@ -20,6 +20,38 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
+    * osBit  操作系统位数，一般取值为32或者64
+    * osType  镜像系统类型，取值为Linux，Windows，Other
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
+    * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性
+    * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性
+    * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性
+    * supportKvmGpuType  表示该镜像是支持KVM虚拟化平台下的GPU类型,如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * supportKvmInfiniband  如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
+    * supportLargememory  表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
+    * supportXen  如果镜像支持XEN，取值为true，否则无需增加该属性
+    * supportXenGpuType  表示该镜像是支持XEN虚拟化平台下的GPU优化类型,如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * supportXenHana  如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * containerFormat  容器类型
+    * diskFormat  镜像格式，目前支持vhd，zvhd、raw，qcow2。默认值是vhd
+    * id  镜像ID
+    * limit  用于分页，表示查询几条镜像记录，取值为整数，默认返回25条镜像记录
+    * marker  用于分页，表示从哪个镜像开始查询，取值为镜像ID。
+    * memberStatus  成员状态。目前取值有accepted、rejected、pending。accepted表示已经接受共享的镜像，rejected表示已经拒绝了其他用户共享的镜像，pending表示需要确认的其他用户的共享镜像。需要在查询时，设置“visibility”参数为“shared”
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。取值为40～1024GB。取值为1～1024GB。取值为40～255GB
+    * minRam  镜像运行需要的最小内存，单位为MB。参数取值依据弹性云服务器的规格限制，一般设置为0。
+    * name  镜像名称
+    * owner  镜像属于哪个租户
+    * protected  镜像是否是受保护，查询公共镜像时候取值为True，查询私有镜像可以不指定。
+    * sortDir  用于排序，表示升序还是降序，取值为asc和desc。与sort_key一起组合使用，默认为降序desc
+    * sortKey  用于排序，表示按照哪个字段排序。取值为镜像属性name，container_format，disk_format，status，id，size字段，默认为创建时间。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用
+    * tag  标签，用户为镜像增加自定义标签后可以通过该参数过滤查询
+    * visibility  是否被其他租户可见，取值如下： public：公共镜像 private：私有镜像 shared：共享镜像
+    * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
+    * updatedAt  镜像修改时间。支持按照时间点过滤查询，取值格式为 “ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
     *
     * @var string[]
     */
@@ -60,6 +92,38 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
+    * osBit  操作系统位数，一般取值为32或者64
+    * osType  镜像系统类型，取值为Linux，Windows，Other
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
+    * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性
+    * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性
+    * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性
+    * supportKvmGpuType  表示该镜像是支持KVM虚拟化平台下的GPU类型,如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * supportKvmInfiniband  如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
+    * supportLargememory  表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
+    * supportXen  如果镜像支持XEN，取值为true，否则无需增加该属性
+    * supportXenGpuType  表示该镜像是支持XEN虚拟化平台下的GPU优化类型,如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * supportXenHana  如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * containerFormat  容器类型
+    * diskFormat  镜像格式，目前支持vhd，zvhd、raw，qcow2。默认值是vhd
+    * id  镜像ID
+    * limit  用于分页，表示查询几条镜像记录，取值为整数，默认返回25条镜像记录
+    * marker  用于分页，表示从哪个镜像开始查询，取值为镜像ID。
+    * memberStatus  成员状态。目前取值有accepted、rejected、pending。accepted表示已经接受共享的镜像，rejected表示已经拒绝了其他用户共享的镜像，pending表示需要确认的其他用户的共享镜像。需要在查询时，设置“visibility”参数为“shared”
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。取值为40～1024GB。取值为1～1024GB。取值为40～255GB
+    * minRam  镜像运行需要的最小内存，单位为MB。参数取值依据弹性云服务器的规格限制，一般设置为0。
+    * name  镜像名称
+    * owner  镜像属于哪个租户
+    * protected  镜像是否是受保护，查询公共镜像时候取值为True，查询私有镜像可以不指定。
+    * sortDir  用于排序，表示升序还是降序，取值为asc和desc。与sort_key一起组合使用，默认为降序desc
+    * sortKey  用于排序，表示按照哪个字段排序。取值为镜像属性name，container_format，disk_format，status，id，size字段，默认为创建时间。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用
+    * tag  标签，用户为镜像增加自定义标签后可以通过该参数过滤查询
+    * visibility  是否被其他租户可见，取值如下： public：公共镜像 private：私有镜像 shared：共享镜像
+    * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
+    * updatedAt  镜像修改时间。支持按照时间点过滤查询，取值格式为 “ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
     *
     * @var string[]
     */
@@ -121,6 +185,38 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
+    * osBit  操作系统位数，一般取值为32或者64
+    * osType  镜像系统类型，取值为Linux，Windows，Other
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
+    * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性
+    * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性
+    * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性
+    * supportKvmGpuType  表示该镜像是支持KVM虚拟化平台下的GPU类型,如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * supportKvmInfiniband  如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
+    * supportLargememory  表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
+    * supportXen  如果镜像支持XEN，取值为true，否则无需增加该属性
+    * supportXenGpuType  表示该镜像是支持XEN虚拟化平台下的GPU优化类型,如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * supportXenHana  如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * containerFormat  容器类型
+    * diskFormat  镜像格式，目前支持vhd，zvhd、raw，qcow2。默认值是vhd
+    * id  镜像ID
+    * limit  用于分页，表示查询几条镜像记录，取值为整数，默认返回25条镜像记录
+    * marker  用于分页，表示从哪个镜像开始查询，取值为镜像ID。
+    * memberStatus  成员状态。目前取值有accepted、rejected、pending。accepted表示已经接受共享的镜像，rejected表示已经拒绝了其他用户共享的镜像，pending表示需要确认的其他用户的共享镜像。需要在查询时，设置“visibility”参数为“shared”
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。取值为40～1024GB。取值为1～1024GB。取值为40～255GB
+    * minRam  镜像运行需要的最小内存，单位为MB。参数取值依据弹性云服务器的规格限制，一般设置为0。
+    * name  镜像名称
+    * owner  镜像属于哪个租户
+    * protected  镜像是否是受保护，查询公共镜像时候取值为True，查询私有镜像可以不指定。
+    * sortDir  用于排序，表示升序还是降序，取值为asc和desc。与sort_key一起组合使用，默认为降序desc
+    * sortKey  用于排序，表示按照哪个字段排序。取值为镜像属性name，container_format，disk_format，status，id，size字段，默认为创建时间。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用
+    * tag  标签，用户为镜像增加自定义标签后可以通过该参数过滤查询
+    * visibility  是否被其他租户可见，取值如下： public：公共镜像 private：私有镜像 shared：共享镜像
+    * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
+    * updatedAt  镜像修改时间。支持按照时间点过滤查询，取值格式为 “ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
     *
     * @var string[]
     */
@@ -161,6 +257,38 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
+    * osBit  操作系统位数，一般取值为32或者64
+    * osType  镜像系统类型，取值为Linux，Windows，Other
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
+    * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性
+    * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性
+    * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性
+    * supportKvmGpuType  表示该镜像是支持KVM虚拟化平台下的GPU类型,如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * supportKvmInfiniband  如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
+    * supportLargememory  表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
+    * supportXen  如果镜像支持XEN，取值为true，否则无需增加该属性
+    * supportXenGpuType  表示该镜像是支持XEN虚拟化平台下的GPU优化类型,如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * supportXenHana  如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * containerFormat  容器类型
+    * diskFormat  镜像格式，目前支持vhd，zvhd、raw，qcow2。默认值是vhd
+    * id  镜像ID
+    * limit  用于分页，表示查询几条镜像记录，取值为整数，默认返回25条镜像记录
+    * marker  用于分页，表示从哪个镜像开始查询，取值为镜像ID。
+    * memberStatus  成员状态。目前取值有accepted、rejected、pending。accepted表示已经接受共享的镜像，rejected表示已经拒绝了其他用户共享的镜像，pending表示需要确认的其他用户的共享镜像。需要在查询时，设置“visibility”参数为“shared”
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。取值为40～1024GB。取值为1～1024GB。取值为40～255GB
+    * minRam  镜像运行需要的最小内存，单位为MB。参数取值依据弹性云服务器的规格限制，一般设置为0。
+    * name  镜像名称
+    * owner  镜像属于哪个租户
+    * protected  镜像是否是受保护，查询公共镜像时候取值为True，查询私有镜像可以不指定。
+    * sortDir  用于排序，表示升序还是降序，取值为asc和desc。与sort_key一起组合使用，默认为降序desc
+    * sortKey  用于排序，表示按照哪个字段排序。取值为镜像属性name，container_format，disk_format，status，id，size字段，默认为创建时间。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用
+    * tag  标签，用户为镜像增加自定义标签后可以通过该参数过滤查询
+    * visibility  是否被其他租户可见，取值如下： public：公共镜像 private：私有镜像 shared：共享镜像
+    * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
+    * updatedAt  镜像修改时间。支持按照时间点过滤查询，取值格式为 “ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
     *
     * @var string[]
     */
@@ -201,6 +329,38 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
+    * osBit  操作系统位数，一般取值为32或者64
+    * osType  镜像系统类型，取值为Linux，Windows，Other
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
+    * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性
+    * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性
+    * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性
+    * supportKvmGpuType  表示该镜像是支持KVM虚拟化平台下的GPU类型,如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * supportKvmInfiniband  如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
+    * supportLargememory  表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
+    * supportXen  如果镜像支持XEN，取值为true，否则无需增加该属性
+    * supportXenGpuType  表示该镜像是支持XEN虚拟化平台下的GPU优化类型,如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * supportXenHana  如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
+    * containerFormat  容器类型
+    * diskFormat  镜像格式，目前支持vhd，zvhd、raw，qcow2。默认值是vhd
+    * id  镜像ID
+    * limit  用于分页，表示查询几条镜像记录，取值为整数，默认返回25条镜像记录
+    * marker  用于分页，表示从哪个镜像开始查询，取值为镜像ID。
+    * memberStatus  成员状态。目前取值有accepted、rejected、pending。accepted表示已经接受共享的镜像，rejected表示已经拒绝了其他用户共享的镜像，pending表示需要确认的其他用户的共享镜像。需要在查询时，设置“visibility”参数为“shared”
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。取值为40～1024GB。取值为1～1024GB。取值为40～255GB
+    * minRam  镜像运行需要的最小内存，单位为MB。参数取值依据弹性云服务器的规格限制，一般设置为0。
+    * name  镜像名称
+    * owner  镜像属于哪个租户
+    * protected  镜像是否是受保护，查询公共镜像时候取值为True，查询私有镜像可以不指定。
+    * sortDir  用于排序，表示升序还是降序，取值为asc和desc。与sort_key一起组合使用，默认为降序desc
+    * sortKey  用于排序，表示按照哪个字段排序。取值为镜像属性name，container_format，disk_format，status，id，size字段，默认为创建时间。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用
+    * tag  标签，用户为镜像增加自定义标签后可以通过该参数过滤查询
+    * visibility  是否被其他租户可见，取值如下： public：公共镜像 private：私有镜像 shared：共享镜像
+    * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
+    * updatedAt  镜像修改时间。支持按照时间点过滤查询，取值格式为 “ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
     *
     * @var string[]
     */
@@ -558,6 +718,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imagetype
+    *  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
     *
     * @return string|null
     */
@@ -569,7 +730,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imagetype
     *
-    * @param string|null $imagetype imagetype
+    * @param string|null $imagetype 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
     *
     * @return $this
     */
@@ -581,6 +742,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isregistered
+    *  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
     *
     * @return bool|null
     */
@@ -592,7 +754,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isregistered
     *
-    * @param bool|null $isregistered isregistered
+    * @param bool|null $isregistered 镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
     *
     * @return $this
     */
@@ -604,6 +766,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets osBit
+    *  操作系统位数，一般取值为32或者64
     *
     * @return string|null
     */
@@ -615,7 +778,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets osBit
     *
-    * @param string|null $osBit osBit
+    * @param string|null $osBit 操作系统位数，一般取值为32或者64
     *
     * @return $this
     */
@@ -627,6 +790,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
+    *  镜像系统类型，取值为Linux，Windows，Other
     *
     * @return string|null
     */
@@ -638,7 +802,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType osType
+    * @param string|null $osType 镜像系统类型，取值为Linux，Windows，Other
     *
     * @return $this
     */
@@ -650,6 +814,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets platform
+    *  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
     *
     * @return string|null
     */
@@ -661,7 +826,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets platform
     *
-    * @param string|null $platform platform
+    * @param string|null $platform 镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
     *
     * @return $this
     */
@@ -673,6 +838,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportDiskintensive
+    *  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性
     *
     * @return string|null
     */
@@ -684,7 +850,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets supportDiskintensive
     *
-    * @param string|null $supportDiskintensive supportDiskintensive
+    * @param string|null $supportDiskintensive 表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性
     *
     * @return $this
     */
@@ -696,6 +862,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportHighperformance
+    *  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性
     *
     * @return string|null
     */
@@ -707,7 +874,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets supportHighperformance
     *
-    * @param string|null $supportHighperformance supportHighperformance
+    * @param string|null $supportHighperformance 表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性
     *
     * @return $this
     */
@@ -719,6 +886,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportKvm
+    *  如果镜像支持KVM，取值为true，否则无需增加该属性
     *
     * @return string|null
     */
@@ -730,7 +898,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets supportKvm
     *
-    * @param string|null $supportKvm supportKvm
+    * @param string|null $supportKvm 如果镜像支持KVM，取值为true，否则无需增加该属性
     *
     * @return $this
     */
@@ -742,6 +910,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportKvmGpuType
+    *  表示该镜像是支持KVM虚拟化平台下的GPU类型,如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
     *
     * @return string|null
     */
@@ -753,7 +922,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets supportKvmGpuType
     *
-    * @param string|null $supportKvmGpuType supportKvmGpuType
+    * @param string|null $supportKvmGpuType 表示该镜像是支持KVM虚拟化平台下的GPU类型,如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
     *
     * @return $this
     */
@@ -765,6 +934,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportKvmInfiniband
+    *  如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
     *
     * @return string|null
     */
@@ -776,7 +946,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets supportKvmInfiniband
     *
-    * @param string|null $supportKvmInfiniband supportKvmInfiniband
+    * @param string|null $supportKvmInfiniband 如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
     *
     * @return $this
     */
@@ -788,6 +958,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportLargememory
+    *  表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
     *
     * @return string|null
     */
@@ -799,7 +970,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets supportLargememory
     *
-    * @param string|null $supportLargememory supportLargememory
+    * @param string|null $supportLargememory 表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
     *
     * @return $this
     */
@@ -811,6 +982,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportXen
+    *  如果镜像支持XEN，取值为true，否则无需增加该属性
     *
     * @return string|null
     */
@@ -822,7 +994,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets supportXen
     *
-    * @param string|null $supportXen supportXen
+    * @param string|null $supportXen 如果镜像支持XEN，取值为true，否则无需增加该属性
     *
     * @return $this
     */
@@ -834,6 +1006,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportXenGpuType
+    *  表示该镜像是支持XEN虚拟化平台下的GPU优化类型,如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
     *
     * @return string|null
     */
@@ -845,7 +1018,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets supportXenGpuType
     *
-    * @param string|null $supportXenGpuType supportXenGpuType
+    * @param string|null $supportXenGpuType 表示该镜像是支持XEN虚拟化平台下的GPU优化类型,如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
     *
     * @return $this
     */
@@ -857,6 +1030,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportXenHana
+    *  如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
     *
     * @return string|null
     */
@@ -868,7 +1042,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets supportXenHana
     *
-    * @param string|null $supportXenHana supportXenHana
+    * @param string|null $supportXenHana 如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存
     *
     * @return $this
     */
@@ -880,6 +1054,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerFormat
+    *  容器类型
     *
     * @return string|null
     */
@@ -891,7 +1066,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets containerFormat
     *
-    * @param string|null $containerFormat containerFormat
+    * @param string|null $containerFormat 容器类型
     *
     * @return $this
     */
@@ -903,6 +1078,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskFormat
+    *  镜像格式，目前支持vhd，zvhd、raw，qcow2。默认值是vhd
     *
     * @return string|null
     */
@@ -914,7 +1090,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets diskFormat
     *
-    * @param string|null $diskFormat diskFormat
+    * @param string|null $diskFormat 镜像格式，目前支持vhd，zvhd、raw，qcow2。默认值是vhd
     *
     * @return $this
     */
@@ -926,6 +1102,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  镜像ID
     *
     * @return string|null
     */
@@ -937,7 +1114,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id 镜像ID
     *
     * @return $this
     */
@@ -949,6 +1126,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  用于分页，表示查询几条镜像记录，取值为整数，默认返回25条镜像记录
     *
     * @return int|null
     */
@@ -960,7 +1138,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 用于分页，表示查询几条镜像记录，取值为整数，默认返回25条镜像记录
     *
     * @return $this
     */
@@ -972,6 +1150,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  用于分页，表示从哪个镜像开始查询，取值为镜像ID。
     *
     * @return string|null
     */
@@ -983,7 +1162,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 用于分页，表示从哪个镜像开始查询，取值为镜像ID。
     *
     * @return $this
     */
@@ -995,6 +1174,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets memberStatus
+    *  成员状态。目前取值有accepted、rejected、pending。accepted表示已经接受共享的镜像，rejected表示已经拒绝了其他用户共享的镜像，pending表示需要确认的其他用户的共享镜像。需要在查询时，设置“visibility”参数为“shared”
     *
     * @return string|null
     */
@@ -1006,7 +1186,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets memberStatus
     *
-    * @param string|null $memberStatus memberStatus
+    * @param string|null $memberStatus 成员状态。目前取值有accepted、rejected、pending。accepted表示已经接受共享的镜像，rejected表示已经拒绝了其他用户共享的镜像，pending表示需要确认的其他用户的共享镜像。需要在查询时，设置“visibility”参数为“shared”
     *
     * @return $this
     */
@@ -1018,6 +1198,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets minDisk
+    *  镜像运行需要的最小磁盘，单位为GB 。取值为40～1024GB。取值为1～1024GB。取值为40～255GB
     *
     * @return int|null
     */
@@ -1029,7 +1210,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets minDisk
     *
-    * @param int|null $minDisk minDisk
+    * @param int|null $minDisk 镜像运行需要的最小磁盘，单位为GB 。取值为40～1024GB。取值为1～1024GB。取值为40～255GB
     *
     * @return $this
     */
@@ -1041,6 +1222,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets minRam
+    *  镜像运行需要的最小内存，单位为MB。参数取值依据弹性云服务器的规格限制，一般设置为0。
     *
     * @return int|null
     */
@@ -1052,7 +1234,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets minRam
     *
-    * @param int|null $minRam minRam
+    * @param int|null $minRam 镜像运行需要的最小内存，单位为MB。参数取值依据弹性云服务器的规格限制，一般设置为0。
     *
     * @return $this
     */
@@ -1064,6 +1246,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  镜像名称
     *
     * @return string|null
     */
@@ -1075,7 +1258,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name 镜像名称
     *
     * @return $this
     */
@@ -1087,6 +1270,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
+    *  镜像属于哪个租户
     *
     * @return string|null
     */
@@ -1098,7 +1282,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner owner
+    * @param string|null $owner 镜像属于哪个租户
     *
     * @return $this
     */
@@ -1110,6 +1294,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protected
+    *  镜像是否是受保护，查询公共镜像时候取值为True，查询私有镜像可以不指定。
     *
     * @return bool|null
     */
@@ -1121,7 +1306,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protected
     *
-    * @param bool|null $protected protected
+    * @param bool|null $protected 镜像是否是受保护，查询公共镜像时候取值为True，查询私有镜像可以不指定。
     *
     * @return $this
     */
@@ -1133,6 +1318,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
+    *  用于排序，表示升序还是降序，取值为asc和desc。与sort_key一起组合使用，默认为降序desc
     *
     * @return string|null
     */
@@ -1144,7 +1330,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir sortDir
+    * @param string|null $sortDir 用于排序，表示升序还是降序，取值为asc和desc。与sort_key一起组合使用，默认为降序desc
     *
     * @return $this
     */
@@ -1156,6 +1342,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
+    *  用于排序，表示按照哪个字段排序。取值为镜像属性name，container_format，disk_format，status，id，size字段，默认为创建时间。
     *
     * @return string|null
     */
@@ -1167,7 +1354,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey sortKey
+    * @param string|null $sortKey 用于排序，表示按照哪个字段排序。取值为镜像属性name，container_format，disk_format，status，id，size字段，默认为创建时间。
     *
     * @return $this
     */
@@ -1179,6 +1366,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用
     *
     * @return string|null
     */
@@ -1190,7 +1378,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status 镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用
     *
     * @return $this
     */
@@ -1202,6 +1390,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tag
+    *  标签，用户为镜像增加自定义标签后可以通过该参数过滤查询
     *
     * @return string|null
     */
@@ -1213,7 +1402,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tag
     *
-    * @param string|null $tag tag
+    * @param string|null $tag 标签，用户为镜像增加自定义标签后可以通过该参数过滤查询
     *
     * @return $this
     */
@@ -1225,6 +1414,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets visibility
+    *  是否被其他租户可见，取值如下： public：公共镜像 private：私有镜像 shared：共享镜像
     *
     * @return string|null
     */
@@ -1236,7 +1426,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets visibility
     *
-    * @param string|null $visibility visibility
+    * @param string|null $visibility 是否被其他租户可见，取值如下： public：公共镜像 private：私有镜像 shared：共享镜像
     *
     * @return $this
     */
@@ -1248,6 +1438,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  镜像创建时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
     *
     * @return string|null
     */
@@ -1259,7 +1450,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt createdAt
+    * @param string|null $createdAt 镜像创建时间。支持按照时间点过滤查询，取值格式为“ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
     *
     * @return $this
     */
@@ -1271,6 +1462,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
+    *  镜像修改时间。支持按照时间点过滤查询，取值格式为 “ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
     *
     * @return string|null
     */
@@ -1282,7 +1474,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt updatedAt
+    * @param string|null $updatedAt 镜像修改时间。支持按照时间点过滤查询，取值格式为 “ 操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询修改时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： updated_at=gt:2018-10-28T10:00:00Z
     *
     * @return $this
     */

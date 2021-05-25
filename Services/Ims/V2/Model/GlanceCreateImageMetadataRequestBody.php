@@ -20,6 +20,15 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * osVersion  镜像的操作系统具体版本,如果未指定__os_version，则默认设置为Other Linux(64 bit)，不保证该镜像能成功创建虚拟机以及通过该镜像创建的虚拟机能够正常使用。
+    * containerFormat  容器格式。默认取值为bare。
+    * diskFormat  镜像文件格式。目前支持vhd，zvhd、zvhd2、raw，qcow2。默认取值为vhd
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。
+    * minRam  镜像运行需要的最小内存，单位为MB。参数取值依据云主机云服务器的规格限制。默认取值为0。
+    * name  镜像名称，如果未指定name的取值，则默认为空，但是使用该镜像创建虚拟机会失败。名称的长度为1-255位。
+    * protected  镜像是否被保护，保护后的镜像不可删除。默认取值为false。
+    * tags  镜像标签列表。长度为1-255位。默认为空。
+    * visibility  其他租户是否可见。默认取值为private。创建镜像元数据时，visibility取值只能为private。
     *
     * @var string[]
     */
@@ -37,6 +46,15 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * osVersion  镜像的操作系统具体版本,如果未指定__os_version，则默认设置为Other Linux(64 bit)，不保证该镜像能成功创建虚拟机以及通过该镜像创建的虚拟机能够正常使用。
+    * containerFormat  容器格式。默认取值为bare。
+    * diskFormat  镜像文件格式。目前支持vhd，zvhd、zvhd2、raw，qcow2。默认取值为vhd
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。
+    * minRam  镜像运行需要的最小内存，单位为MB。参数取值依据云主机云服务器的规格限制。默认取值为0。
+    * name  镜像名称，如果未指定name的取值，则默认为空，但是使用该镜像创建虚拟机会失败。名称的长度为1-255位。
+    * protected  镜像是否被保护，保护后的镜像不可删除。默认取值为false。
+    * tags  镜像标签列表。长度为1-255位。默认为空。
+    * visibility  其他租户是否可见。默认取值为private。创建镜像元数据时，visibility取值只能为private。
     *
     * @var string[]
     */
@@ -75,6 +93,15 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * osVersion  镜像的操作系统具体版本,如果未指定__os_version，则默认设置为Other Linux(64 bit)，不保证该镜像能成功创建虚拟机以及通过该镜像创建的虚拟机能够正常使用。
+    * containerFormat  容器格式。默认取值为bare。
+    * diskFormat  镜像文件格式。目前支持vhd，zvhd、zvhd2、raw，qcow2。默认取值为vhd
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。
+    * minRam  镜像运行需要的最小内存，单位为MB。参数取值依据云主机云服务器的规格限制。默认取值为0。
+    * name  镜像名称，如果未指定name的取值，则默认为空，但是使用该镜像创建虚拟机会失败。名称的长度为1-255位。
+    * protected  镜像是否被保护，保护后的镜像不可删除。默认取值为false。
+    * tags  镜像标签列表。长度为1-255位。默认为空。
+    * visibility  其他租户是否可见。默认取值为private。创建镜像元数据时，visibility取值只能为private。
     *
     * @var string[]
     */
@@ -92,6 +119,15 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * osVersion  镜像的操作系统具体版本,如果未指定__os_version，则默认设置为Other Linux(64 bit)，不保证该镜像能成功创建虚拟机以及通过该镜像创建的虚拟机能够正常使用。
+    * containerFormat  容器格式。默认取值为bare。
+    * diskFormat  镜像文件格式。目前支持vhd，zvhd、zvhd2、raw，qcow2。默认取值为vhd
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。
+    * minRam  镜像运行需要的最小内存，单位为MB。参数取值依据云主机云服务器的规格限制。默认取值为0。
+    * name  镜像名称，如果未指定name的取值，则默认为空，但是使用该镜像创建虚拟机会失败。名称的长度为1-255位。
+    * protected  镜像是否被保护，保护后的镜像不可删除。默认取值为false。
+    * tags  镜像标签列表。长度为1-255位。默认为空。
+    * visibility  其他租户是否可见。默认取值为private。创建镜像元数据时，visibility取值只能为private。
     *
     * @var string[]
     */
@@ -109,6 +145,15 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * osVersion  镜像的操作系统具体版本,如果未指定__os_version，则默认设置为Other Linux(64 bit)，不保证该镜像能成功创建虚拟机以及通过该镜像创建的虚拟机能够正常使用。
+    * containerFormat  容器格式。默认取值为bare。
+    * diskFormat  镜像文件格式。目前支持vhd，zvhd、zvhd2、raw，qcow2。默认取值为vhd
+    * minDisk  镜像运行需要的最小磁盘，单位为GB 。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。
+    * minRam  镜像运行需要的最小内存，单位为MB。参数取值依据云主机云服务器的规格限制。默认取值为0。
+    * name  镜像名称，如果未指定name的取值，则默认为空，但是使用该镜像创建虚拟机会失败。名称的长度为1-255位。
+    * protected  镜像是否被保护，保护后的镜像不可删除。默认取值为false。
+    * tags  镜像标签列表。长度为1-255位。默认为空。
+    * visibility  其他租户是否可见。默认取值为private。创建镜像元数据时，visibility取值只能为private。
     *
     * @var string[]
     */
@@ -252,6 +297,7 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets osVersion
+    *  镜像的操作系统具体版本,如果未指定__os_version，则默认设置为Other Linux(64 bit)，不保证该镜像能成功创建虚拟机以及通过该镜像创建的虚拟机能够正常使用。
     *
     * @return string|null
     */
@@ -275,6 +321,7 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets containerFormat
+    *  容器格式。默认取值为bare。
     *
     * @return string|null
     */
@@ -298,6 +345,7 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets diskFormat
+    *  镜像文件格式。目前支持vhd，zvhd、zvhd2、raw，qcow2。默认取值为vhd
     *
     * @return string|null
     */
@@ -321,6 +369,7 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets minDisk
+    *  镜像运行需要的最小磁盘，单位为GB 。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。
     *
     * @return int|null
     */
@@ -344,6 +393,7 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets minRam
+    *  镜像运行需要的最小内存，单位为MB。参数取值依据云主机云服务器的规格限制。默认取值为0。
     *
     * @return int|null
     */
@@ -367,6 +417,7 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets name
+    *  镜像名称，如果未指定name的取值，则默认为空，但是使用该镜像创建虚拟机会失败。名称的长度为1-255位。
     *
     * @return string|null
     */
@@ -390,6 +441,7 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets protected
+    *  镜像是否被保护，保护后的镜像不可删除。默认取值为false。
     *
     * @return bool|null
     */
@@ -413,6 +465,7 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets tags
+    *  镜像标签列表。长度为1-255位。默认为空。
     *
     * @return string[]|null
     */
@@ -436,6 +489,7 @@ class GlanceCreateImageMetadataRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets visibility
+    *  其他租户是否可见。默认取值为private。创建镜像元数据时，visibility取值只能为private。
     *
     * @return string|null
     */

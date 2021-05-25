@@ -20,6 +20,10 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * resourceId  资源ID。
+    * resourceName  资源名称。
+    * resourceDetail  resourceDetail
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * resourceId  资源ID。
+    * resourceName  资源名称。
+    * resourceDetail  resourceDetail
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class Resource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * resourceId  资源ID。
+    * resourceName  资源名称。
+    * resourceDetail  resourceDetail
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * resourceId  资源ID。
+    * resourceName  资源名称。
+    * resourceDetail  resourceDetail
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * resourceId  资源ID。
+    * resourceName  资源名称。
+    * resourceDetail  resourceDetail
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -196,6 +216,7 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
+    *  资源ID。
     *
     * @return string
     */
@@ -219,6 +240,7 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
+    *  资源名称。
     *
     * @return string|null
     */
@@ -242,6 +264,7 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceDetail
+    *  resourceDetail
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\VolumeDetailForTag
     */
@@ -265,6 +288,7 @@ class Resource implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  标签列表。
     *
     * @return map[string,string][]
     */

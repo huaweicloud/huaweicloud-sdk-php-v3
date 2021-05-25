@@ -20,6 +20,8 @@ class KeystoneValidateTokenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * xSubjectToken  待校验的token。
+    * nocatalog  如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class KeystoneValidateTokenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * xSubjectToken  待校验的token。
+    * nocatalog  如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class KeystoneValidateTokenRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * xSubjectToken  待校验的token。
+    * nocatalog  如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class KeystoneValidateTokenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * xSubjectToken  待校验的token。
+    * nocatalog  如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class KeystoneValidateTokenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * xSubjectToken  待校验的token。
+    * nocatalog  如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class KeystoneValidateTokenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xSubjectToken
+    *  待校验的token。
     *
     * @return string
     */
@@ -189,7 +200,7 @@ class KeystoneValidateTokenRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xSubjectToken
     *
-    * @param string $xSubjectToken xSubjectToken
+    * @param string $xSubjectToken 待校验的token。
     *
     * @return $this
     */
@@ -201,6 +212,7 @@ class KeystoneValidateTokenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets nocatalog
+    *  如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
     *
     * @return string|null
     */
@@ -212,7 +224,7 @@ class KeystoneValidateTokenRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nocatalog
     *
-    * @param string|null $nocatalog nocatalog
+    * @param string|null $nocatalog 如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
     *
     * @return $this
     */

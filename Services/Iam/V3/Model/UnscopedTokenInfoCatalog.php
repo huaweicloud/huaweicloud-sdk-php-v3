@@ -20,6 +20,11 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  终端节点ID。
+    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
+    * region  终端节点所属区域。
+    * regionId  终端节点所属区域ID。
+    * url  终端节点的URL。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  终端节点ID。
+    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
+    * region  终端节点所属区域。
+    * regionId  终端节点所属区域ID。
+    * url  终端节点的URL。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  终端节点ID。
+    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
+    * region  终端节点所属区域。
+    * regionId  终端节点所属区域ID。
+    * url  终端节点的URL。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  终端节点ID。
+    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
+    * region  终端节点所属区域。
+    * regionId  终端节点所属区域ID。
+    * url  终端节点的URL。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  终端节点ID。
+    * interface  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
+    * region  终端节点所属区域。
+    * regionId  终端节点所属区域ID。
+    * url  终端节点的URL。
     *
     * @var string[]
     */
@@ -193,6 +218,7 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  终端节点ID。
     *
     * @return string|null
     */
@@ -216,6 +242,7 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Gets interface
+    *  接口类型，描述接口在该终端节点的可见性。值为“public”，表示该接口为公开接口。
     *
     * @return string|null
     */
@@ -239,6 +266,7 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
+    *  终端节点所属区域。
     *
     * @return string|null
     */
@@ -262,6 +290,7 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
+    *  终端节点所属区域ID。
     *
     * @return string|null
     */
@@ -285,6 +314,7 @@ class UnscopedTokenInfoCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
+    *  终端节点的URL。
     *
     * @return string|null
     */

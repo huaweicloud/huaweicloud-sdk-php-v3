@@ -20,6 +20,7 @@ class BatchDeleteServerNicsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * nics  需要删除的网卡列表信息。  说明： 主网卡是弹性云服务器上配置了路由规则的网卡，不可删除。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class BatchDeleteServerNicsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * nics  需要删除的网卡列表信息。  说明： 主网卡是弹性云服务器上配置了路由规则的网卡，不可删除。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class BatchDeleteServerNicsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * nics  需要删除的网卡列表信息。  说明： 主网卡是弹性云服务器上配置了路由规则的网卡，不可删除。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class BatchDeleteServerNicsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * nics  需要删除的网卡列表信息。  说明： 主网卡是弹性云服务器上配置了路由规则的网卡，不可删除。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class BatchDeleteServerNicsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * nics  需要删除的网卡列表信息。  说明： 主网卡是弹性云服务器上配置了路由规则的网卡，不可删除。
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class BatchDeleteServerNicsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets nics
+    *  需要删除的网卡列表信息。  说明： 主网卡是弹性云服务器上配置了路由规则的网卡，不可删除。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\BatchDeleteServerNicOption[]
     */

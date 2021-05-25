@@ -20,6 +20,15 @@ class AgencyTokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * methods  获取token的方式。
+    * expiresAt  token到期时间。
+    * issuedAt  token下发时间。
+    * assumedBy  assumedBy
+    * catalog  服务目录信息。
+    * domain  domain
+    * project  project
+    * roles  委托token的权限信息。
+    * user  user
     *
     * @var string[]
     */
@@ -37,6 +46,15 @@ class AgencyTokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * methods  获取token的方式。
+    * expiresAt  token到期时间。
+    * issuedAt  token下发时间。
+    * assumedBy  assumedBy
+    * catalog  服务目录信息。
+    * domain  domain
+    * project  project
+    * roles  委托token的权限信息。
+    * user  user
     *
     * @var string[]
     */
@@ -75,6 +93,15 @@ class AgencyTokenResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * methods  获取token的方式。
+    * expiresAt  token到期时间。
+    * issuedAt  token下发时间。
+    * assumedBy  assumedBy
+    * catalog  服务目录信息。
+    * domain  domain
+    * project  project
+    * roles  委托token的权限信息。
+    * user  user
     *
     * @var string[]
     */
@@ -92,6 +119,15 @@ class AgencyTokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * methods  获取token的方式。
+    * expiresAt  token到期时间。
+    * issuedAt  token下发时间。
+    * assumedBy  assumedBy
+    * catalog  服务目录信息。
+    * domain  domain
+    * project  project
+    * roles  委托token的权限信息。
+    * user  user
     *
     * @var string[]
     */
@@ -109,6 +145,15 @@ class AgencyTokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * methods  获取token的方式。
+    * expiresAt  token到期时间。
+    * issuedAt  token下发时间。
+    * assumedBy  assumedBy
+    * catalog  服务目录信息。
+    * domain  domain
+    * project  project
+    * roles  委托token的权限信息。
+    * user  user
     *
     * @var string[]
     */
@@ -235,6 +280,7 @@ class AgencyTokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets methods
+    *  获取token的方式。
     *
     * @return string[]
     */
@@ -258,6 +304,7 @@ class AgencyTokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets expiresAt
+    *  token到期时间。
     *
     * @return string
     */
@@ -281,6 +328,7 @@ class AgencyTokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets issuedAt
+    *  token下发时间。
     *
     * @return string
     */
@@ -304,6 +352,7 @@ class AgencyTokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets assumedBy
+    *  assumedBy
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\AgencyAssumedby
     */
@@ -327,6 +376,7 @@ class AgencyTokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets catalog
+    *  服务目录信息。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\TokenCatalog[]|null
     */
@@ -350,6 +400,7 @@ class AgencyTokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
+    *  domain
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\AgencyTokenDomain|null
     */
@@ -373,6 +424,7 @@ class AgencyTokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets project
+    *  project
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\AgencyTokenProject|null
     */
@@ -396,6 +448,7 @@ class AgencyTokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets roles
+    *  委托token的权限信息。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\TokenRole[]
     */
@@ -419,6 +472,7 @@ class AgencyTokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets user
+    *  user
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\AgencyTokenUser
     */

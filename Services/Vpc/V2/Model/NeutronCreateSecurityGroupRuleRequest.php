@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Vpc\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpdateSubReq implements ModelInterface, ArrayAccess
+class NeutronCreateSecurityGroupRuleRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,24 +16,26 @@ class UpdateSubReq implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpdateSubReq';
+    protected static $openAPIModelName = 'NeutronCreateSecurityGroupRuleRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'callbackurl' => 'string'
+            'body' => '\HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreateSecurityGroupRuleRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'callbackurl' => null
+        'body' => null
     ];
 
     /**
@@ -59,29 +61,32 @@ class UpdateSubReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'callbackurl' => 'callbackurl'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'callbackurl' => 'setCallbackurl'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'callbackurl' => 'getCallbackurl'
+            'body' => 'getBody'
     ];
 
     /**
@@ -142,7 +147,7 @@ class UpdateSubReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['callbackurl'] = isset($data['callbackurl']) ? $data['callbackurl'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -168,25 +173,26 @@ class UpdateSubReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets callbackurl
+    * Gets body
+    *  body
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreateSecurityGroupRuleRequestBody|null
     */
-    public function getCallbackurl()
+    public function getBody()
     {
-        return $this->container['callbackurl'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets callbackurl
+    * Sets body
     *
-    * @param string|null $callbackurl 订阅的回调地址，用于接收对应资源事件的通知消息，例如：https://10.10.10.10:443/callbackurltest。
+    * @param \HuaweiCloud\SDK\Vpc\V2\Model\NeutronCreateSecurityGroupRuleRequestBody|null $body body
     *
     * @return $this
     */
-    public function setCallbackurl($callbackurl)
+    public function setBody($body)
     {
-        $this->container['callbackurl'] = $callbackurl;
+        $this->container['body'] = $body;
         return $this;
     }
 

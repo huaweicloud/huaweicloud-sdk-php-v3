@@ -21,6 +21,8 @@ class CreateLoginTokenResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * logintoken  logintoken
+    * xSubjectLoginToken  xSubjectLoginToken
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class CreateLoginTokenResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * logintoken  logintoken
+    * xSubjectLoginToken  xSubjectLoginToken
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class CreateLoginTokenResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * logintoken  logintoken
+    * xSubjectLoginToken  xSubjectLoginToken
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class CreateLoginTokenResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * logintoken  logintoken
+    * xSubjectLoginToken  xSubjectLoginToken
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class CreateLoginTokenResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * logintoken  logintoken
+    * xSubjectLoginToken  xSubjectLoginToken
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class CreateLoginTokenResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets logintoken
+    *  logintoken
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\LoginToken|null
     */
@@ -199,6 +210,7 @@ class CreateLoginTokenResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets xSubjectLoginToken
+    *  xSubjectLoginToken
     *
     * @return string|null
     */

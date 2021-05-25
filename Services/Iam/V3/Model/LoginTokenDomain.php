@@ -20,6 +20,8 @@ class LoginTokenDomain implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  被委托方用户所属账号名称。
+    * id  被委托方用户所属账号ID。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class LoginTokenDomain implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  被委托方用户所属账号名称。
+    * id  被委托方用户所属账号ID。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class LoginTokenDomain implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  被委托方用户所属账号名称。
+    * id  被委托方用户所属账号ID。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class LoginTokenDomain implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  被委托方用户所属账号名称。
+    * id  被委托方用户所属账号ID。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class LoginTokenDomain implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  被委托方用户所属账号名称。
+    * id  被委托方用户所属账号ID。
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class LoginTokenDomain implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  被委托方用户所属账号名称。
     *
     * @return string|null
     */
@@ -198,6 +209,7 @@ class LoginTokenDomain implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  被委托方用户所属账号ID。
     *
     * @return string|null
     */

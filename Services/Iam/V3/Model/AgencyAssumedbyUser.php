@@ -20,6 +20,10 @@ class AgencyAssumedbyUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  被委托方B中IAM用户的用户名。
+    * id  被委托方B中IAM用户的用户ID。
+    * domain  domain
+    * passwordExpiresAt  被委托方B中IAM用户的密码过期时间（UTC时间），“”表示密码不过期。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class AgencyAssumedbyUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  被委托方B中IAM用户的用户名。
+    * id  被委托方B中IAM用户的用户ID。
+    * domain  domain
+    * passwordExpiresAt  被委托方B中IAM用户的密码过期时间（UTC时间），“”表示密码不过期。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class AgencyAssumedbyUser implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  被委托方B中IAM用户的用户名。
+    * id  被委托方B中IAM用户的用户ID。
+    * domain  domain
+    * passwordExpiresAt  被委托方B中IAM用户的密码过期时间（UTC时间），“”表示密码不过期。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class AgencyAssumedbyUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  被委托方B中IAM用户的用户名。
+    * id  被委托方B中IAM用户的用户ID。
+    * domain  domain
+    * passwordExpiresAt  被委托方B中IAM用户的密码过期时间（UTC时间），“”表示密码不过期。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class AgencyAssumedbyUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  被委托方B中IAM用户的用户名。
+    * id  被委托方B中IAM用户的用户ID。
+    * domain  domain
+    * passwordExpiresAt  被委托方B中IAM用户的密码过期时间（UTC时间），“”表示密码不过期。
     *
     * @var string[]
     */
@@ -199,6 +219,7 @@ class AgencyAssumedbyUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  被委托方B中IAM用户的用户名。
     *
     * @return string
     */
@@ -222,6 +243,7 @@ class AgencyAssumedbyUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  被委托方B中IAM用户的用户ID。
     *
     * @return string
     */
@@ -245,6 +267,7 @@ class AgencyAssumedbyUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
+    *  domain
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\AgencyAssumedbyUserDomain
     */
@@ -268,6 +291,7 @@ class AgencyAssumedbyUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets passwordExpiresAt
+    *  被委托方B中IAM用户的密码过期时间（UTC时间），“”表示密码不过期。
     *
     * @return string
     */

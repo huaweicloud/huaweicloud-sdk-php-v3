@@ -20,6 +20,12 @@ class SubnetIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * usedIps  子网中已经使用的IP数目（不包含系统预留地址）
+    * subnetId  子网ID
+    * subnetName  子网名称
+    * ipVersion  子网的IP版本，取值为4或者6
+    * cidr  子网的CIDR
+    * totalIps  子网中IP总数（不包含系统预留地址）
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class SubnetIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * usedIps  子网中已经使用的IP数目（不包含系统预留地址）
+    * subnetId  子网ID
+    * subnetName  子网名称
+    * ipVersion  子网的IP版本，取值为4或者6
+    * cidr  子网的CIDR
+    * totalIps  子网中IP总数（不包含系统预留地址）
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class SubnetIpAvailability implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * usedIps  子网中已经使用的IP数目（不包含系统预留地址）
+    * subnetId  子网ID
+    * subnetName  子网名称
+    * ipVersion  子网的IP版本，取值为4或者6
+    * cidr  子网的CIDR
+    * totalIps  子网中IP总数（不包含系统预留地址）
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class SubnetIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * usedIps  子网中已经使用的IP数目（不包含系统预留地址）
+    * subnetId  子网ID
+    * subnetName  子网名称
+    * ipVersion  子网的IP版本，取值为4或者6
+    * cidr  子网的CIDR
+    * totalIps  子网中IP总数（不包含系统预留地址）
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class SubnetIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * usedIps  子网中已经使用的IP数目（不包含系统预留地址）
+    * subnetId  子网ID
+    * subnetName  子网名称
+    * ipVersion  子网的IP版本，取值为4或者6
+    * cidr  子网的CIDR
+    * totalIps  子网中IP总数（不包含系统预留地址）
     *
     * @var string[]
     */
@@ -226,6 +256,7 @@ class SubnetIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedIps
+    *  子网中已经使用的IP数目（不包含系统预留地址）
     *
     * @return int
     */
@@ -249,6 +280,7 @@ class SubnetIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
+    *  子网ID
     *
     * @return string
     */
@@ -272,6 +304,7 @@ class SubnetIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetName
+    *  子网名称
     *
     * @return string
     */
@@ -295,6 +328,7 @@ class SubnetIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
+    *  子网的IP版本，取值为4或者6
     *
     * @return int
     */
@@ -318,6 +352,7 @@ class SubnetIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Gets cidr
+    *  子网的CIDR
     *
     * @return string
     */
@@ -341,6 +376,7 @@ class SubnetIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalIps
+    *  子网中IP总数（不包含系统预留地址）
     *
     * @return int
     */

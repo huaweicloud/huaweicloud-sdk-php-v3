@@ -20,6 +20,14 @@ class OpenIdConnectConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * accessMode  访问方式: program_console: 支持编程访问和管理控制台访问方式; program: 支持编程访问方式
+    * idpUrl  OpenID Connect身份提供商标识, 对应ID token 中 iss
+    * clientId  在OpenID Connect身份提供商注册的客户端ID
+    * authorizationEndpoint  OpenID Connect身份提供商授权地址; 编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * scope  授权请求信息范围，编程访问和管理控制台访问方式必选，编程访问方式不可选，可选值：openid 、email、profile，IDP自定义scope，字符集a-zA-Z_0-9 ，1-10个可选值组合空格分割，至少包括openid，顺序无关，总长度最长255字符，例如：\"openid\"、\"openid email\"、\"openid profile\" 、\"openid email profile\"
+    * responseType  授权请求返回的类型；id_token ；编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * responseMode  授权请求返回方式， form_post 或 fragment ；编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * signingKey  OpenID Connect身份提供商ID Token签名的公钥
     *
     * @var string[]
     */
@@ -36,6 +44,14 @@ class OpenIdConnectConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * accessMode  访问方式: program_console: 支持编程访问和管理控制台访问方式; program: 支持编程访问方式
+    * idpUrl  OpenID Connect身份提供商标识, 对应ID token 中 iss
+    * clientId  在OpenID Connect身份提供商注册的客户端ID
+    * authorizationEndpoint  OpenID Connect身份提供商授权地址; 编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * scope  授权请求信息范围，编程访问和管理控制台访问方式必选，编程访问方式不可选，可选值：openid 、email、profile，IDP自定义scope，字符集a-zA-Z_0-9 ，1-10个可选值组合空格分割，至少包括openid，顺序无关，总长度最长255字符，例如：\"openid\"、\"openid email\"、\"openid profile\" 、\"openid email profile\"
+    * responseType  授权请求返回的类型；id_token ；编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * responseMode  授权请求返回方式， form_post 或 fragment ；编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * signingKey  OpenID Connect身份提供商ID Token签名的公钥
     *
     * @var string[]
     */
@@ -73,6 +89,14 @@ class OpenIdConnectConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * accessMode  访问方式: program_console: 支持编程访问和管理控制台访问方式; program: 支持编程访问方式
+    * idpUrl  OpenID Connect身份提供商标识, 对应ID token 中 iss
+    * clientId  在OpenID Connect身份提供商注册的客户端ID
+    * authorizationEndpoint  OpenID Connect身份提供商授权地址; 编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * scope  授权请求信息范围，编程访问和管理控制台访问方式必选，编程访问方式不可选，可选值：openid 、email、profile，IDP自定义scope，字符集a-zA-Z_0-9 ，1-10个可选值组合空格分割，至少包括openid，顺序无关，总长度最长255字符，例如：\"openid\"、\"openid email\"、\"openid profile\" 、\"openid email profile\"
+    * responseType  授权请求返回的类型；id_token ；编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * responseMode  授权请求返回方式， form_post 或 fragment ；编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * signingKey  OpenID Connect身份提供商ID Token签名的公钥
     *
     * @var string[]
     */
@@ -89,6 +113,14 @@ class OpenIdConnectConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * accessMode  访问方式: program_console: 支持编程访问和管理控制台访问方式; program: 支持编程访问方式
+    * idpUrl  OpenID Connect身份提供商标识, 对应ID token 中 iss
+    * clientId  在OpenID Connect身份提供商注册的客户端ID
+    * authorizationEndpoint  OpenID Connect身份提供商授权地址; 编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * scope  授权请求信息范围，编程访问和管理控制台访问方式必选，编程访问方式不可选，可选值：openid 、email、profile，IDP自定义scope，字符集a-zA-Z_0-9 ，1-10个可选值组合空格分割，至少包括openid，顺序无关，总长度最长255字符，例如：\"openid\"、\"openid email\"、\"openid profile\" 、\"openid email profile\"
+    * responseType  授权请求返回的类型；id_token ；编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * responseMode  授权请求返回方式， form_post 或 fragment ；编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * signingKey  OpenID Connect身份提供商ID Token签名的公钥
     *
     * @var string[]
     */
@@ -105,6 +137,14 @@ class OpenIdConnectConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * accessMode  访问方式: program_console: 支持编程访问和管理控制台访问方式; program: 支持编程访问方式
+    * idpUrl  OpenID Connect身份提供商标识, 对应ID token 中 iss
+    * clientId  在OpenID Connect身份提供商注册的客户端ID
+    * authorizationEndpoint  OpenID Connect身份提供商授权地址; 编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * scope  授权请求信息范围，编程访问和管理控制台访问方式必选，编程访问方式不可选，可选值：openid 、email、profile，IDP自定义scope，字符集a-zA-Z_0-9 ，1-10个可选值组合空格分割，至少包括openid，顺序无关，总长度最长255字符，例如：\"openid\"、\"openid email\"、\"openid profile\" 、\"openid email profile\"
+    * responseType  授权请求返回的类型；id_token ；编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * responseMode  授权请求返回方式， form_post 或 fragment ；编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
+    * signingKey  OpenID Connect身份提供商ID Token签名的公钥
     *
     * @var string[]
     */
@@ -309,6 +349,7 @@ class OpenIdConnectConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessMode
+    *  访问方式: program_console: 支持编程访问和管理控制台访问方式; program: 支持编程访问方式
     *
     * @return string
     */
@@ -332,6 +373,7 @@ class OpenIdConnectConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets idpUrl
+    *  OpenID Connect身份提供商标识, 对应ID token 中 iss
     *
     * @return string
     */
@@ -355,6 +397,7 @@ class OpenIdConnectConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets clientId
+    *  在OpenID Connect身份提供商注册的客户端ID
     *
     * @return string
     */
@@ -378,6 +421,7 @@ class OpenIdConnectConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets authorizationEndpoint
+    *  OpenID Connect身份提供商授权地址; 编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
     *
     * @return string
     */
@@ -401,6 +445,7 @@ class OpenIdConnectConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets scope
+    *  授权请求信息范围，编程访问和管理控制台访问方式必选，编程访问方式不可选，可选值：openid 、email、profile，IDP自定义scope，字符集a-zA-Z_0-9 ，1-10个可选值组合空格分割，至少包括openid，顺序无关，总长度最长255字符，例如：\"openid\"、\"openid email\"、\"openid profile\" 、\"openid email profile\"
     *
     * @return string
     */
@@ -424,6 +469,7 @@ class OpenIdConnectConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets responseType
+    *  授权请求返回的类型；id_token ；编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
     *
     * @return string
     */
@@ -447,6 +493,7 @@ class OpenIdConnectConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets responseMode
+    *  授权请求返回方式， form_post 或 fragment ；编程访问和管理控制台访问方式值不为空，编程访问方式值可为空
     *
     * @return string
     */
@@ -470,6 +517,7 @@ class OpenIdConnectConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets signingKey
+    *  OpenID Connect身份提供商ID Token签名的公钥
     *
     * @return string
     */

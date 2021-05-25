@@ -20,6 +20,9 @@ class UpdateImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * op  操作类型，目前取值为add，replace和remove。
+    * path  需要更新的属性名称，需要在属性名称前加“/”。
+    * value  需要更新属性的值。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class UpdateImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * op  操作类型，目前取值为add，replace和remove。
+    * path  需要更新的属性名称，需要在属性名称前加“/”。
+    * value  需要更新属性的值。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class UpdateImageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * op  操作类型，目前取值为add，replace和remove。
+    * path  需要更新的属性名称，需要在属性名称前加“/”。
+    * value  需要更新属性的值。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class UpdateImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * op  操作类型，目前取值为add，replace和remove。
+    * path  需要更新的属性名称，需要在属性名称前加“/”。
+    * value  需要更新属性的值。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class UpdateImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * op  操作类型，目前取值为add，replace和remove。
+    * path  需要更新的属性名称，需要在属性名称前加“/”。
+    * value  需要更新属性的值。
     *
     * @var string[]
     */
@@ -212,6 +227,7 @@ class UpdateImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets op
+    *  操作类型，目前取值为add，replace和remove。
     *
     * @return string
     */
@@ -235,6 +251,7 @@ class UpdateImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
+    *  需要更新的属性名称，需要在属性名称前加“/”。
     *
     * @return string
     */
@@ -258,6 +275,7 @@ class UpdateImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
+    *  需要更新属性的值。
     *
     * @return string|null
     */

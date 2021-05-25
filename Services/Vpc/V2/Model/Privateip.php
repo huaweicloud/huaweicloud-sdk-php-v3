@@ -20,6 +20,12 @@ class Privateip implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * status  私有IP的状态  - ACTIVE：活动的  - DOWN：不可用
+    * id  私有IP ID
+    * subnetId  分配IP的子网标识
+    * tenantId  项目ID
+    * deviceOwner  私有IP的使用者，空表示未使用 取值范围：network:dhcp，network:router_interface_distributed，compute:xxx(xxx对应具体的az名称，例如compute:aa-bb-cc表示是被aa-bb-cc上的虚拟机使用) 约束：此处的取值范围只是本服务支持的类型，其他类型未做标注
+    * ipAddress  申请到的私有IP
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class Privateip implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * status  私有IP的状态  - ACTIVE：活动的  - DOWN：不可用
+    * id  私有IP ID
+    * subnetId  分配IP的子网标识
+    * tenantId  项目ID
+    * deviceOwner  私有IP的使用者，空表示未使用 取值范围：network:dhcp，network:router_interface_distributed，compute:xxx(xxx对应具体的az名称，例如compute:aa-bb-cc表示是被aa-bb-cc上的虚拟机使用) 约束：此处的取值范围只是本服务支持的类型，其他类型未做标注
+    * ipAddress  申请到的私有IP
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class Privateip implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * status  私有IP的状态  - ACTIVE：活动的  - DOWN：不可用
+    * id  私有IP ID
+    * subnetId  分配IP的子网标识
+    * tenantId  项目ID
+    * deviceOwner  私有IP的使用者，空表示未使用 取值范围：network:dhcp，network:router_interface_distributed，compute:xxx(xxx对应具体的az名称，例如compute:aa-bb-cc表示是被aa-bb-cc上的虚拟机使用) 约束：此处的取值范围只是本服务支持的类型，其他类型未做标注
+    * ipAddress  申请到的私有IP
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class Privateip implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * status  私有IP的状态  - ACTIVE：活动的  - DOWN：不可用
+    * id  私有IP ID
+    * subnetId  分配IP的子网标识
+    * tenantId  项目ID
+    * deviceOwner  私有IP的使用者，空表示未使用 取值范围：network:dhcp，network:router_interface_distributed，compute:xxx(xxx对应具体的az名称，例如compute:aa-bb-cc表示是被aa-bb-cc上的虚拟机使用) 约束：此处的取值范围只是本服务支持的类型，其他类型未做标注
+    * ipAddress  申请到的私有IP
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class Privateip implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * status  私有IP的状态  - ACTIVE：活动的  - DOWN：不可用
+    * id  私有IP ID
+    * subnetId  分配IP的子网标识
+    * tenantId  项目ID
+    * deviceOwner  私有IP的使用者，空表示未使用 取值范围：network:dhcp，network:router_interface_distributed，compute:xxx(xxx对应具体的az名称，例如compute:aa-bb-cc表示是被aa-bb-cc上的虚拟机使用) 约束：此处的取值范围只是本服务支持的类型，其他类型未做标注
+    * ipAddress  申请到的私有IP
     *
     * @var string[]
     */
@@ -265,6 +295,7 @@ class Privateip implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  私有IP的状态  - ACTIVE：活动的  - DOWN：不可用
     *
     * @return string
     */
@@ -288,6 +319,7 @@ class Privateip implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  私有IP ID
     *
     * @return string
     */
@@ -311,6 +343,7 @@ class Privateip implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
+    *  分配IP的子网标识
     *
     * @return string
     */
@@ -334,6 +367,7 @@ class Privateip implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  项目ID
     *
     * @return string
     */
@@ -357,6 +391,7 @@ class Privateip implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceOwner
+    *  私有IP的使用者，空表示未使用 取值范围：network:dhcp，network:router_interface_distributed，compute:xxx(xxx对应具体的az名称，例如compute:aa-bb-cc表示是被aa-bb-cc上的虚拟机使用) 约束：此处的取值范围只是本服务支持的类型，其他类型未做标注
     *
     * @return string
     */
@@ -380,6 +415,7 @@ class Privateip implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipAddress
+    *  申请到的私有IP
     *
     * @return string
     */

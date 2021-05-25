@@ -20,6 +20,20 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  功能说明：辅助弹性网卡的唯一标识 取值范围：带(-)的标准UUID
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
+    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址
+    * macAddress  功能说明：辅助弹性网卡的mac地址 取值范围：合法的mac地址，系统随机分配
+    * parentDeviceId  功能说明：设备ID 取值范围：标准UUID
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID 取值范围：标准UUID
+    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * tags  功能说明：辅助弹性网卡的标签列表
+    * projectId  功能说明：辅助弹性网卡所属项目ID
+    * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -42,6 +56,20 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  功能说明：辅助弹性网卡的唯一标识 取值范围：带(-)的标准UUID
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
+    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址
+    * macAddress  功能说明：辅助弹性网卡的mac地址 取值范围：合法的mac地址，系统随机分配
+    * parentDeviceId  功能说明：设备ID 取值范围：标准UUID
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID 取值范围：标准UUID
+    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * tags  功能说明：辅助弹性网卡的标签列表
+    * projectId  功能说明：辅助弹性网卡所属项目ID
+    * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -85,6 +113,20 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  功能说明：辅助弹性网卡的唯一标识 取值范围：带(-)的标准UUID
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
+    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址
+    * macAddress  功能说明：辅助弹性网卡的mac地址 取值范围：合法的mac地址，系统随机分配
+    * parentDeviceId  功能说明：设备ID 取值范围：标准UUID
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID 取值范围：标准UUID
+    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * tags  功能说明：辅助弹性网卡的标签列表
+    * projectId  功能说明：辅助弹性网卡所属项目ID
+    * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -107,6 +149,20 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  功能说明：辅助弹性网卡的唯一标识 取值范围：带(-)的标准UUID
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
+    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址
+    * macAddress  功能说明：辅助弹性网卡的mac地址 取值范围：合法的mac地址，系统随机分配
+    * parentDeviceId  功能说明：设备ID 取值范围：标准UUID
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID 取值范围：标准UUID
+    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * tags  功能说明：辅助弹性网卡的标签列表
+    * projectId  功能说明：辅助弹性网卡所属项目ID
+    * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -129,6 +185,20 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  功能说明：辅助弹性网卡的唯一标识 取值范围：带(-)的标准UUID
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
+    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址
+    * macAddress  功能说明：辅助弹性网卡的mac地址 取值范围：合法的mac地址，系统随机分配
+    * parentDeviceId  功能说明：设备ID 取值范围：标准UUID
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID 取值范围：标准UUID
+    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * tags  功能说明：辅助弹性网卡的标签列表
+    * projectId  功能说明：辅助弹性网卡所属项目ID
+    * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -289,6 +359,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  功能说明：辅助弹性网卡的唯一标识 取值范围：带(-)的标准UUID
     *
     * @return string
     */
@@ -312,6 +383,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets virsubnetId
+    *  功能说明：虚拟子网ID 取值范围：标准UUID
     *
     * @return string
     */
@@ -335,6 +407,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIpAddress
+    *  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
     *
     * @return string
     */
@@ -358,6 +431,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6IpAddress
+    *  功能说明：辅助弹性网卡的IPv6地址
     *
     * @return string
     */
@@ -381,6 +455,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets macAddress
+    *  功能说明：辅助弹性网卡的mac地址 取值范围：合法的mac地址，系统随机分配
     *
     * @return string
     */
@@ -404,6 +479,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentDeviceId
+    *  功能说明：设备ID 取值范围：标准UUID
     *
     * @return string
     */
@@ -427,6 +503,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
+    *  功能说明：宿主网络接口的ID 取值范围：标准UUID
     *
     * @return string
     */
@@ -450,6 +527,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     *
     * @return string
     */
@@ -473,6 +551,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
+    *  功能说明：辅助弹性网卡所属的VPC_ID 取值范围：标准UUID
     *
     * @return string
     */
@@ -496,6 +575,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets vlanId
+    *  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
     *
     * @return int
     */
@@ -519,6 +599,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroups
+    *  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
     *
     * @return string[]
     */
@@ -542,6 +623,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  功能说明：辅助弹性网卡的标签列表
     *
     * @return string[]
     */
@@ -565,6 +647,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  功能说明：辅助弹性网卡所属项目ID
     *
     * @return string
     */
@@ -588,6 +671,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     *
     * @return \DateTime
     */

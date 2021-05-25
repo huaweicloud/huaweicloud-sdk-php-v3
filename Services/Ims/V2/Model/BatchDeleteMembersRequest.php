@@ -20,6 +20,7 @@ class BatchDeleteMembersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * body  body
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class BatchDeleteMembersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * body  body
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class BatchDeleteMembersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * body  body
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class BatchDeleteMembersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * body  body
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class BatchDeleteMembersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * body  body
     *
     * @var string[]
     */
@@ -169,6 +174,7 @@ class BatchDeleteMembersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\BatchAddMembersRequestBody|null
     */

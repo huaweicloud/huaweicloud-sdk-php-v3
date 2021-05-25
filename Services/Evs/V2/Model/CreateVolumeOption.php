@@ -20,6 +20,19 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * availabilityZone  指定要创建云硬盘的可用区。
+    * backupId  备份ID，从备份创建云硬盘时为必选。
+    * count  批量创云硬盘的个数。如果无该参数，表明只创建1个云硬盘，目前最多支持批量创建100个。 从备份创建云硬盘时，不支持批量创建，数量只能为“1”。  如果发送请求时，将参数值设置为小数，则默认取小数点前的整数。
+    * description  云硬盘的描述。最大支持255个字节。
+    * enterpriseProjectId  企业项目ID。创建云硬盘时，给云硬盘绑定企业项目ID。
+    * imageRef  镜像ID，指定该参数表示创建云硬盘方式为从镜像创建云硬盘。
+    * metadata  创建云硬盘的metadata信息     可选参数如下:    [\\_\\_system\\_\\_cmkid]   metadata中的加密cmkid字段，与\\_\\_system\\_\\_encrypted配合表示需要加密，cmkid长度固定为36个字节。 > 说明： >  > 请求获取密钥ID的方法请参考：\"[查询密钥列表](https://support.huaweicloud.com/api-dew/dew_02_0017.html)\"。   [\\_\\_system\\_\\_encrypted]   metadata中的表示加密功能的字段,0代表不加密,1代表加密。不指定该字段时,云硬盘的加密属性与数据源保持一致,如果不是从数据源创建的场景,则默认不加密。    [full_clone]   从快照创建云硬盘时，如需使用link克隆方式，请指定该字段的值为0。    [hw:passthrough]    * true表示云硬盘的设备类型为SCSI类型，即允许ECS操作系统直接访问底层存储介质。支持SCSI锁命令。   * false表示云硬盘的设备类型为VBD (虚拟块存储设备 , Virtual Block Device)类型，即为默认类型，VBD只能支持简单的SCSI读写命令。   * 该字段不存在时，云硬盘默认为VBD类型。
+    * multiattach  是否为共享云硬盘。true为共享盘，false为普通云硬盘。
+    * name  云硬盘名称。 如果为创建单个云硬盘，name为云硬盘名称。最大支持255个字节。 创建的云硬盘数量（count字段对应的值）大于1时，为区分不同云硬盘，创建过程中系统会自动在名称后加“-0000”的类似标记。例如：volume-0001、volume-0002。最大支持250个字节。
+    * size  云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
+    * snapshotId  快照ID，指定该参数表示创建云硬盘方式为从快照创建云硬盘
+    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
+    * tags  云硬盘标签信息。
     *
     * @var string[]
     */
@@ -33,7 +46,6 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
             'metadata' => 'map[string,string]',
             'multiattach' => 'bool',
             'name' => 'string',
-            'shareable' => 'string',
             'size' => 'int',
             'snapshotId' => 'string',
             'volumeType' => 'string',
@@ -42,6 +54,19 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * availabilityZone  指定要创建云硬盘的可用区。
+    * backupId  备份ID，从备份创建云硬盘时为必选。
+    * count  批量创云硬盘的个数。如果无该参数，表明只创建1个云硬盘，目前最多支持批量创建100个。 从备份创建云硬盘时，不支持批量创建，数量只能为“1”。  如果发送请求时，将参数值设置为小数，则默认取小数点前的整数。
+    * description  云硬盘的描述。最大支持255个字节。
+    * enterpriseProjectId  企业项目ID。创建云硬盘时，给云硬盘绑定企业项目ID。
+    * imageRef  镜像ID，指定该参数表示创建云硬盘方式为从镜像创建云硬盘。
+    * metadata  创建云硬盘的metadata信息     可选参数如下:    [\\_\\_system\\_\\_cmkid]   metadata中的加密cmkid字段，与\\_\\_system\\_\\_encrypted配合表示需要加密，cmkid长度固定为36个字节。 > 说明： >  > 请求获取密钥ID的方法请参考：\"[查询密钥列表](https://support.huaweicloud.com/api-dew/dew_02_0017.html)\"。   [\\_\\_system\\_\\_encrypted]   metadata中的表示加密功能的字段,0代表不加密,1代表加密。不指定该字段时,云硬盘的加密属性与数据源保持一致,如果不是从数据源创建的场景,则默认不加密。    [full_clone]   从快照创建云硬盘时，如需使用link克隆方式，请指定该字段的值为0。    [hw:passthrough]    * true表示云硬盘的设备类型为SCSI类型，即允许ECS操作系统直接访问底层存储介质。支持SCSI锁命令。   * false表示云硬盘的设备类型为VBD (虚拟块存储设备 , Virtual Block Device)类型，即为默认类型，VBD只能支持简单的SCSI读写命令。   * 该字段不存在时，云硬盘默认为VBD类型。
+    * multiattach  是否为共享云硬盘。true为共享盘，false为普通云硬盘。
+    * name  云硬盘名称。 如果为创建单个云硬盘，name为云硬盘名称。最大支持255个字节。 创建的云硬盘数量（count字段对应的值）大于1时，为区分不同云硬盘，创建过程中系统会自动在名称后加“-0000”的类似标记。例如：volume-0001、volume-0002。最大支持250个字节。
+    * size  云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
+    * snapshotId  快照ID，指定该参数表示创建云硬盘方式为从快照创建云硬盘
+    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
+    * tags  云硬盘标签信息。
     *
     * @var string[]
     */
@@ -55,7 +80,6 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
         'metadata' => null,
         'multiattach' => null,
         'name' => null,
-        'shareable' => null,
         'size' => 'int32',
         'snapshotId' => null,
         'volumeType' => null,
@@ -85,6 +109,19 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * availabilityZone  指定要创建云硬盘的可用区。
+    * backupId  备份ID，从备份创建云硬盘时为必选。
+    * count  批量创云硬盘的个数。如果无该参数，表明只创建1个云硬盘，目前最多支持批量创建100个。 从备份创建云硬盘时，不支持批量创建，数量只能为“1”。  如果发送请求时，将参数值设置为小数，则默认取小数点前的整数。
+    * description  云硬盘的描述。最大支持255个字节。
+    * enterpriseProjectId  企业项目ID。创建云硬盘时，给云硬盘绑定企业项目ID。
+    * imageRef  镜像ID，指定该参数表示创建云硬盘方式为从镜像创建云硬盘。
+    * metadata  创建云硬盘的metadata信息     可选参数如下:    [\\_\\_system\\_\\_cmkid]   metadata中的加密cmkid字段，与\\_\\_system\\_\\_encrypted配合表示需要加密，cmkid长度固定为36个字节。 > 说明： >  > 请求获取密钥ID的方法请参考：\"[查询密钥列表](https://support.huaweicloud.com/api-dew/dew_02_0017.html)\"。   [\\_\\_system\\_\\_encrypted]   metadata中的表示加密功能的字段,0代表不加密,1代表加密。不指定该字段时,云硬盘的加密属性与数据源保持一致,如果不是从数据源创建的场景,则默认不加密。    [full_clone]   从快照创建云硬盘时，如需使用link克隆方式，请指定该字段的值为0。    [hw:passthrough]    * true表示云硬盘的设备类型为SCSI类型，即允许ECS操作系统直接访问底层存储介质。支持SCSI锁命令。   * false表示云硬盘的设备类型为VBD (虚拟块存储设备 , Virtual Block Device)类型，即为默认类型，VBD只能支持简单的SCSI读写命令。   * 该字段不存在时，云硬盘默认为VBD类型。
+    * multiattach  是否为共享云硬盘。true为共享盘，false为普通云硬盘。
+    * name  云硬盘名称。 如果为创建单个云硬盘，name为云硬盘名称。最大支持255个字节。 创建的云硬盘数量（count字段对应的值）大于1时，为区分不同云硬盘，创建过程中系统会自动在名称后加“-0000”的类似标记。例如：volume-0001、volume-0002。最大支持250个字节。
+    * size  云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
+    * snapshotId  快照ID，指定该参数表示创建云硬盘方式为从快照创建云硬盘
+    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
+    * tags  云硬盘标签信息。
     *
     * @var string[]
     */
@@ -98,7 +135,6 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
             'metadata' => 'metadata',
             'multiattach' => 'multiattach',
             'name' => 'name',
-            'shareable' => 'shareable',
             'size' => 'size',
             'snapshotId' => 'snapshot_id',
             'volumeType' => 'volume_type',
@@ -107,6 +143,19 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * availabilityZone  指定要创建云硬盘的可用区。
+    * backupId  备份ID，从备份创建云硬盘时为必选。
+    * count  批量创云硬盘的个数。如果无该参数，表明只创建1个云硬盘，目前最多支持批量创建100个。 从备份创建云硬盘时，不支持批量创建，数量只能为“1”。  如果发送请求时，将参数值设置为小数，则默认取小数点前的整数。
+    * description  云硬盘的描述。最大支持255个字节。
+    * enterpriseProjectId  企业项目ID。创建云硬盘时，给云硬盘绑定企业项目ID。
+    * imageRef  镜像ID，指定该参数表示创建云硬盘方式为从镜像创建云硬盘。
+    * metadata  创建云硬盘的metadata信息     可选参数如下:    [\\_\\_system\\_\\_cmkid]   metadata中的加密cmkid字段，与\\_\\_system\\_\\_encrypted配合表示需要加密，cmkid长度固定为36个字节。 > 说明： >  > 请求获取密钥ID的方法请参考：\"[查询密钥列表](https://support.huaweicloud.com/api-dew/dew_02_0017.html)\"。   [\\_\\_system\\_\\_encrypted]   metadata中的表示加密功能的字段,0代表不加密,1代表加密。不指定该字段时,云硬盘的加密属性与数据源保持一致,如果不是从数据源创建的场景,则默认不加密。    [full_clone]   从快照创建云硬盘时，如需使用link克隆方式，请指定该字段的值为0。    [hw:passthrough]    * true表示云硬盘的设备类型为SCSI类型，即允许ECS操作系统直接访问底层存储介质。支持SCSI锁命令。   * false表示云硬盘的设备类型为VBD (虚拟块存储设备 , Virtual Block Device)类型，即为默认类型，VBD只能支持简单的SCSI读写命令。   * 该字段不存在时，云硬盘默认为VBD类型。
+    * multiattach  是否为共享云硬盘。true为共享盘，false为普通云硬盘。
+    * name  云硬盘名称。 如果为创建单个云硬盘，name为云硬盘名称。最大支持255个字节。 创建的云硬盘数量（count字段对应的值）大于1时，为区分不同云硬盘，创建过程中系统会自动在名称后加“-0000”的类似标记。例如：volume-0001、volume-0002。最大支持250个字节。
+    * size  云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
+    * snapshotId  快照ID，指定该参数表示创建云硬盘方式为从快照创建云硬盘
+    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
+    * tags  云硬盘标签信息。
     *
     * @var string[]
     */
@@ -120,7 +169,6 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
             'metadata' => 'setMetadata',
             'multiattach' => 'setMultiattach',
             'name' => 'setName',
-            'shareable' => 'setShareable',
             'size' => 'setSize',
             'snapshotId' => 'setSnapshotId',
             'volumeType' => 'setVolumeType',
@@ -129,6 +177,19 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * availabilityZone  指定要创建云硬盘的可用区。
+    * backupId  备份ID，从备份创建云硬盘时为必选。
+    * count  批量创云硬盘的个数。如果无该参数，表明只创建1个云硬盘，目前最多支持批量创建100个。 从备份创建云硬盘时，不支持批量创建，数量只能为“1”。  如果发送请求时，将参数值设置为小数，则默认取小数点前的整数。
+    * description  云硬盘的描述。最大支持255个字节。
+    * enterpriseProjectId  企业项目ID。创建云硬盘时，给云硬盘绑定企业项目ID。
+    * imageRef  镜像ID，指定该参数表示创建云硬盘方式为从镜像创建云硬盘。
+    * metadata  创建云硬盘的metadata信息     可选参数如下:    [\\_\\_system\\_\\_cmkid]   metadata中的加密cmkid字段，与\\_\\_system\\_\\_encrypted配合表示需要加密，cmkid长度固定为36个字节。 > 说明： >  > 请求获取密钥ID的方法请参考：\"[查询密钥列表](https://support.huaweicloud.com/api-dew/dew_02_0017.html)\"。   [\\_\\_system\\_\\_encrypted]   metadata中的表示加密功能的字段,0代表不加密,1代表加密。不指定该字段时,云硬盘的加密属性与数据源保持一致,如果不是从数据源创建的场景,则默认不加密。    [full_clone]   从快照创建云硬盘时，如需使用link克隆方式，请指定该字段的值为0。    [hw:passthrough]    * true表示云硬盘的设备类型为SCSI类型，即允许ECS操作系统直接访问底层存储介质。支持SCSI锁命令。   * false表示云硬盘的设备类型为VBD (虚拟块存储设备 , Virtual Block Device)类型，即为默认类型，VBD只能支持简单的SCSI读写命令。   * 该字段不存在时，云硬盘默认为VBD类型。
+    * multiattach  是否为共享云硬盘。true为共享盘，false为普通云硬盘。
+    * name  云硬盘名称。 如果为创建单个云硬盘，name为云硬盘名称。最大支持255个字节。 创建的云硬盘数量（count字段对应的值）大于1时，为区分不同云硬盘，创建过程中系统会自动在名称后加“-0000”的类似标记。例如：volume-0001、volume-0002。最大支持250个字节。
+    * size  云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
+    * snapshotId  快照ID，指定该参数表示创建云硬盘方式为从快照创建云硬盘
+    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
+    * tags  云硬盘标签信息。
     *
     * @var string[]
     */
@@ -142,7 +203,6 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
             'metadata' => 'getMetadata',
             'multiattach' => 'getMultiattach',
             'name' => 'getName',
-            'shareable' => 'getShareable',
             'size' => 'getSize',
             'snapshotId' => 'getSnapshotId',
             'volumeType' => 'getVolumeType',
@@ -189,26 +249,11 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const SHAREABLE_TRUE = 'true';
-    const SHAREABLE_FALSE = 'false';
     const VOLUME_TYPE_SSD = 'SSD';
     const VOLUME_TYPE_GPSSD = 'GPSSD';
     const VOLUME_TYPE_SAS = 'SAS';
     const VOLUME_TYPE_SATA = 'SATA';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getShareableAllowableValues()
-    {
-        return [
-            self::SHAREABLE_TRUE,
-            self::SHAREABLE_FALSE,
-        ];
-    }
 
     /**
     * Gets allowable values of the enum
@@ -250,7 +295,6 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
         $this->container['multiattach'] = isset($data['multiattach']) ? $data['multiattach'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['shareable'] = isset($data['shareable']) ? $data['shareable'] : 'false';
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['snapshotId'] = isset($data['snapshotId']) ? $data['snapshotId'] : null;
         $this->container['volumeType'] = isset($data['volumeType']) ? $data['volumeType'] : null;
@@ -268,14 +312,6 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
         if ($this->container['availabilityZone'] === null) {
             $invalidProperties[] = "'availabilityZone' can't be null";
         }
-            $allowedValues = $this->getShareableAllowableValues();
-                if (!is_null($this->container['shareable']) && !in_array($this->container['shareable'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'shareable', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['volumeType'] === null) {
             $invalidProperties[] = "'volumeType' can't be null";
         }
@@ -303,6 +339,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
+    *  指定要创建云硬盘的可用区。
     *
     * @return string
     */
@@ -326,6 +363,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupId
+    *  备份ID，从备份创建云硬盘时为必选。
     *
     * @return string|null
     */
@@ -349,6 +387,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
+    *  批量创云硬盘的个数。如果无该参数，表明只创建1个云硬盘，目前最多支持批量创建100个。 从备份创建云硬盘时，不支持批量创建，数量只能为“1”。  如果发送请求时，将参数值设置为小数，则默认取小数点前的整数。
     *
     * @return int|null
     */
@@ -372,6 +411,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  云硬盘的描述。最大支持255个字节。
     *
     * @return string|null
     */
@@ -395,6 +435,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  企业项目ID。创建云硬盘时，给云硬盘绑定企业项目ID。
     *
     * @return string|null
     */
@@ -418,6 +459,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageRef
+    *  镜像ID，指定该参数表示创建云硬盘方式为从镜像创建云硬盘。
     *
     * @return string|null
     */
@@ -441,6 +483,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets metadata
+    *  创建云硬盘的metadata信息     可选参数如下:    [\\_\\_system\\_\\_cmkid]   metadata中的加密cmkid字段，与\\_\\_system\\_\\_encrypted配合表示需要加密，cmkid长度固定为36个字节。 > 说明： >  > 请求获取密钥ID的方法请参考：\"[查询密钥列表](https://support.huaweicloud.com/api-dew/dew_02_0017.html)\"。   [\\_\\_system\\_\\_encrypted]   metadata中的表示加密功能的字段,0代表不加密,1代表加密。不指定该字段时,云硬盘的加密属性与数据源保持一致,如果不是从数据源创建的场景,则默认不加密。    [full_clone]   从快照创建云硬盘时，如需使用link克隆方式，请指定该字段的值为0。    [hw:passthrough]    * true表示云硬盘的设备类型为SCSI类型，即允许ECS操作系统直接访问底层存储介质。支持SCSI锁命令。   * false表示云硬盘的设备类型为VBD (虚拟块存储设备 , Virtual Block Device)类型，即为默认类型，VBD只能支持简单的SCSI读写命令。   * 该字段不存在时，云硬盘默认为VBD类型。
     *
     * @return map[string,string]|null
     */
@@ -464,6 +507,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets multiattach
+    *  是否为共享云硬盘。true为共享盘，false为普通云硬盘。
     *
     * @return bool|null
     */
@@ -487,6 +531,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云硬盘名称。 如果为创建单个云硬盘，name为云硬盘名称。最大支持255个字节。 创建的云硬盘数量（count字段对应的值）大于1时，为区分不同云硬盘，创建过程中系统会自动在名称后加“-0000”的类似标记。例如：volume-0001、volume-0002。最大支持250个字节。
     *
     * @return string|null
     */
@@ -509,30 +554,8 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets shareable
-    *
-    * @return string|null
-    */
-    public function getShareable()
-    {
-        return $this->container['shareable'];
-    }
-
-    /**
-    * Sets shareable
-    *
-    * @param string|null $shareable 是否为共享云硬盘。true为共享盘，false为普通云硬盘。 该字段已经废弃，请使用multiattach。
-    *
-    * @return $this
-    */
-    public function setShareable($shareable)
-    {
-        $this->container['shareable'] = $shareable;
-        return $this;
-    }
-
-    /**
     * Gets size
+    *  云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
     *
     * @return int|null
     */
@@ -556,6 +579,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotId
+    *  快照ID，指定该参数表示创建云硬盘方式为从快照创建云硬盘
     *
     * @return string|null
     */
@@ -579,6 +603,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeType
+    *  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
     *
     * @return string
     */
@@ -590,7 +615,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
     /**
     * Sets volumeType
     *
-    * @param string $volumeType 云硬盘类型。  目前支持“SSD”，“SAS”和“SATA”三种。 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
+    * @param string $volumeType 云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
     *
     * @return $this
     */
@@ -602,6 +627,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  云硬盘标签信息。
     *
     * @return map[string,string]|null
     */

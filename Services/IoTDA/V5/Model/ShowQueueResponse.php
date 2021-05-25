@@ -21,6 +21,10 @@ class ShowQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * queueId  队列ID，用于唯一标识一个队列。
+    * queueName  队列名称，同一租户不允许重复。
+    * createTime  在物联网平台创建队列的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * lastModifyTime  在物联网平台最后修改队列的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -33,6 +37,10 @@ class ShowQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * queueId  队列ID，用于唯一标识一个队列。
+    * queueName  队列名称，同一租户不允许重复。
+    * createTime  在物联网平台创建队列的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * lastModifyTime  在物联网平台最后修改队列的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -66,6 +74,10 @@ class ShowQueueResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * queueId  队列ID，用于唯一标识一个队列。
+    * queueName  队列名称，同一租户不允许重复。
+    * createTime  在物联网平台创建队列的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * lastModifyTime  在物联网平台最后修改队列的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -78,6 +90,10 @@ class ShowQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * queueId  队列ID，用于唯一标识一个队列。
+    * queueName  队列名称，同一租户不允许重复。
+    * createTime  在物联网平台创建队列的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * lastModifyTime  在物联网平台最后修改队列的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -90,6 +106,10 @@ class ShowQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * queueId  队列ID，用于唯一标识一个队列。
+    * queueName  队列名称，同一租户不允许重复。
+    * createTime  在物联网平台创建队列的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * lastModifyTime  在物联网平台最后修改队列的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -200,6 +220,7 @@ class ShowQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueId
+    *  队列ID，用于唯一标识一个队列。
     *
     * @return string|null
     */
@@ -223,6 +244,7 @@ class ShowQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueName
+    *  队列名称，同一租户不允许重复。
     *
     * @return string|null
     */
@@ -246,6 +268,7 @@ class ShowQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
+    *  在物联网平台创建队列的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @return string|null
     */
@@ -269,6 +292,7 @@ class ShowQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastModifyTime
+    *  在物联网平台最后修改队列的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @return string|null
     */

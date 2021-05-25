@@ -20,6 +20,8 @@ class UpdateDeviceGroupDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  设备组名称，单个资源空间下不可重复。
+    * description  设备组描述。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class UpdateDeviceGroupDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  设备组名称，单个资源空间下不可重复。
+    * description  设备组描述。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class UpdateDeviceGroupDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  设备组名称，单个资源空间下不可重复。
+    * description  设备组描述。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class UpdateDeviceGroupDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  设备组名称，单个资源空间下不可重复。
+    * description  设备组描述。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class UpdateDeviceGroupDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  设备组名称，单个资源空间下不可重复。
+    * description  设备组描述。
     *
     * @var string[]
     */
@@ -193,6 +203,7 @@ class UpdateDeviceGroupDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  设备组名称，单个资源空间下不可重复。
     *
     * @return string|null
     */
@@ -216,6 +227,7 @@ class UpdateDeviceGroupDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  设备组描述。
     *
     * @return string|null
     */

@@ -20,6 +20,10 @@ class UpdatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线）
+    * securityGroups  安全组的ID列表
+    * allowedAddressPairs  功能说明：IP/Mac对列表 约束： - IP地址不允许为 “0.0.0.0”。 - 如果配置地址池较大（CIDR掩码小于24位），建议为该port配置一个单独的安全组。 - 为虚拟IP配置后端ECS场景，allowed_address_pairs中配置的IP地址，必须为ECS网卡已有的IP地址，否则可能会导致虚拟IP通信异常。
+    * extraDhcpOpts  功能说明：DHCP的扩展Option(扩展属性)
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class UpdatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线）
+    * securityGroups  安全组的ID列表
+    * allowedAddressPairs  功能说明：IP/Mac对列表 约束： - IP地址不允许为 “0.0.0.0”。 - 如果配置地址池较大（CIDR掩码小于24位），建议为该port配置一个单独的安全组。 - 为虚拟IP配置后端ECS场景，allowed_address_pairs中配置的IP地址，必须为ECS网卡已有的IP地址，否则可能会导致虚拟IP通信异常。
+    * extraDhcpOpts  功能说明：DHCP的扩展Option(扩展属性)
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class UpdatePortOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线）
+    * securityGroups  安全组的ID列表
+    * allowedAddressPairs  功能说明：IP/Mac对列表 约束： - IP地址不允许为 “0.0.0.0”。 - 如果配置地址池较大（CIDR掩码小于24位），建议为该port配置一个单独的安全组。 - 为虚拟IP配置后端ECS场景，allowed_address_pairs中配置的IP地址，必须为ECS网卡已有的IP地址，否则可能会导致虚拟IP通信异常。
+    * extraDhcpOpts  功能说明：DHCP的扩展Option(扩展属性)
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class UpdatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线）
+    * securityGroups  安全组的ID列表
+    * allowedAddressPairs  功能说明：IP/Mac对列表 约束： - IP地址不允许为 “0.0.0.0”。 - 如果配置地址池较大（CIDR掩码小于24位），建议为该port配置一个单独的安全组。 - 为虚拟IP配置后端ECS场景，allowed_address_pairs中配置的IP地址，必须为ECS网卡已有的IP地址，否则可能会导致虚拟IP通信异常。
+    * extraDhcpOpts  功能说明：DHCP的扩展Option(扩展属性)
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class UpdatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线）
+    * securityGroups  安全组的ID列表
+    * allowedAddressPairs  功能说明：IP/Mac对列表 约束： - IP地址不允许为 “0.0.0.0”。 - 如果配置地址池较大（CIDR掩码小于24位），建议为该port配置一个单独的安全组。 - 为虚拟IP配置后端ECS场景，allowed_address_pairs中配置的IP地址，必须为ECS网卡已有的IP地址，否则可能会导致虚拟IP通信异常。
+    * extraDhcpOpts  功能说明：DHCP的扩展Option(扩展属性)
     *
     * @var string[]
     */
@@ -187,6 +207,7 @@ class UpdatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：端口名称 取值范围：0~255个字符，支持中文、英文、字母、_(下划线)、-（中划线）
     *
     * @return string|null
     */
@@ -210,6 +231,7 @@ class UpdatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroups
+    *  安全组的ID列表
     *
     * @return string[]|null
     */
@@ -233,6 +255,7 @@ class UpdatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowedAddressPairs
+    *  功能说明：IP/Mac对列表 约束： - IP地址不允许为 “0.0.0.0”。 - 如果配置地址池较大（CIDR掩码小于24位），建议为该port配置一个单独的安全组。 - 为虚拟IP配置后端ECS场景，allowed_address_pairs中配置的IP地址，必须为ECS网卡已有的IP地址，否则可能会导致虚拟IP通信异常。
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\AllowedAddressPair[]|null
     */
@@ -256,6 +279,7 @@ class UpdatePortOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets extraDhcpOpts
+    *  功能说明：DHCP的扩展Option(扩展属性)
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOpt[]|null
     */

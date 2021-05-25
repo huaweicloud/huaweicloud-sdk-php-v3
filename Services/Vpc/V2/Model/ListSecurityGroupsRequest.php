@@ -20,6 +20,11 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * vpcId  按照vpc_id过滤查询
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的安全组。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的安全组，或者企业项目子账号需要进行安全组列表展示，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * vpcId  按照vpc_id过滤查询
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的安全组。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的安全组，或者企业项目子账号需要进行安全组列表展示，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * vpcId  按照vpc_id过滤查询
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的安全组。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的安全组，或者企业项目子账号需要进行安全组列表展示，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * vpcId  按照vpc_id过滤查询
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的安全组。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的安全组，或者企业项目子账号需要进行安全组列表展示，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * vpcId  按照vpc_id过滤查询
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的安全组。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的安全组，或者企业项目子账号需要进行安全组列表展示，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -211,6 +236,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  项目ID
     *
     * @return string
     */
@@ -222,7 +248,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId projectId
+    * @param string $projectId 项目ID
     *
     * @return $this
     */
@@ -234,6 +260,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  每页返回的个数
     *
     * @return int|null
     */
@@ -245,7 +272,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 每页返回的个数
     *
     * @return $this
     */
@@ -257,6 +284,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  分页查询起始的资源ID，为空时查询第一页
     *
     * @return string|null
     */
@@ -268,7 +296,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 分页查询起始的资源ID，为空时查询第一页
     *
     * @return $this
     */
@@ -280,6 +308,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
+    *  按照vpc_id过滤查询
     *
     * @return string|null
     */
@@ -291,7 +320,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId vpcId
+    * @param string|null $vpcId 按照vpc_id过滤查询
     *
     * @return $this
     */
@@ -303,6 +332,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的安全组。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的安全组，或者企业项目子账号需要进行安全组列表展示，请传参all_granted_eps。
     *
     * @return string|null
     */
@@ -314,7 +344,7 @@ class ListSecurityGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId enterpriseProjectId
+    * @param string|null $enterpriseProjectId 功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的安全组。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的安全组，或者企业项目子账号需要进行安全组列表展示，请传参all_granted_eps。
     *
     * @return $this
     */

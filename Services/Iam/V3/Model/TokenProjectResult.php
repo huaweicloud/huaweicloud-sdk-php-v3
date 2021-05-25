@@ -20,6 +20,9 @@ class TokenProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  项目名。
+    * id  项目ID。
+    * domain  domain
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class TokenProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  项目名。
+    * id  项目ID。
+    * domain  domain
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class TokenProjectResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  项目名。
+    * id  项目ID。
+    * domain  domain
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class TokenProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  项目名。
+    * id  项目ID。
+    * domain  domain
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class TokenProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  项目名。
+    * id  项目ID。
+    * domain  domain
     *
     * @var string[]
     */
@@ -190,6 +205,7 @@ class TokenProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  项目名。
     *
     * @return string
     */
@@ -213,6 +229,7 @@ class TokenProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  项目ID。
     *
     * @return string
     */
@@ -236,6 +253,7 @@ class TokenProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
+    *  domain
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\TokenProjectDomainResult
     */

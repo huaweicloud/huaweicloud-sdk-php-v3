@@ -20,6 +20,8 @@ class PolicyDepends implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * catalog  权限所在目录。
+    * displayName  权限展示名。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class PolicyDepends implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * catalog  权限所在目录。
+    * displayName  权限展示名。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class PolicyDepends implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * catalog  权限所在目录。
+    * displayName  权限展示名。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class PolicyDepends implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * catalog  权限所在目录。
+    * displayName  权限展示名。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class PolicyDepends implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * catalog  权限所在目录。
+    * displayName  权限展示名。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class PolicyDepends implements ModelInterface, ArrayAccess
 
     /**
     * Gets catalog
+    *  权限所在目录。
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class PolicyDepends implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
+    *  权限展示名。
     *
     * @return string
     */

@@ -21,6 +21,8 @@ class NeutronListFirewallRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * firewallRules  firewall_rule对象列表
+    * firewallRulesLinks  分页信息
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class NeutronListFirewallRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * firewallRules  firewall_rule对象列表
+    * firewallRulesLinks  分页信息
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class NeutronListFirewallRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * firewallRules  firewall_rule对象列表
+    * firewallRulesLinks  分页信息
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class NeutronListFirewallRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * firewallRules  firewall_rule对象列表
+    * firewallRulesLinks  分页信息
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class NeutronListFirewallRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * firewallRules  firewall_rule对象列表
+    * firewallRulesLinks  分页信息
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class NeutronListFirewallRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets firewallRules
+    *  firewall_rule对象列表
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\NeutronFirewallRule[]|null
     */
@@ -199,6 +210,7 @@ class NeutronListFirewallRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets firewallRulesLinks
+    *  分页信息
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\NeutronPageLink[]|null
     */

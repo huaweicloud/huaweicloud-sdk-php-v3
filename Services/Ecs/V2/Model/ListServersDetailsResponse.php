@@ -21,6 +21,8 @@ class ListServersDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * count  弹性云服务器的列表总数。
+    * servers  弹性云服务器详情列表，具体参照-查询云服务器详情接口。查询级别不同，返回的详情不同。
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class ListServersDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * count  弹性云服务器的列表总数。
+    * servers  弹性云服务器详情列表，具体参照-查询云服务器详情接口。查询级别不同，返回的详情不同。
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class ListServersDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * count  弹性云服务器的列表总数。
+    * servers  弹性云服务器详情列表，具体参照-查询云服务器详情接口。查询级别不同，返回的详情不同。
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class ListServersDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * count  弹性云服务器的列表总数。
+    * servers  弹性云服务器详情列表，具体参照-查询云服务器详情接口。查询级别不同，返回的详情不同。
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class ListServersDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * count  弹性云服务器的列表总数。
+    * servers  弹性云服务器详情列表，具体参照-查询云服务器详情接口。查询级别不同，返回的详情不同。
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class ListServersDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
+    *  弹性云服务器的列表总数。
     *
     * @return int|null
     */
@@ -199,6 +210,7 @@ class ListServersDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets servers
+    *  弹性云服务器详情列表，具体参照-查询云服务器详情接口。查询级别不同，返回的详情不同。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\ServerDetail[]|null
     */

@@ -20,6 +20,11 @@ class Version implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * status  版本状态。
+    * updated  最后更新时间。
+    * links  版本的资源链接信息。
+    * id  版本号，如v3.6。
+    * mediaTypes  支持的消息格式。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class Version implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * status  版本状态。
+    * updated  最后更新时间。
+    * links  版本的资源链接信息。
+    * id  版本号，如v3.6。
+    * mediaTypes  支持的消息格式。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class Version implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * status  版本状态。
+    * updated  最后更新时间。
+    * links  版本的资源链接信息。
+    * id  版本号，如v3.6。
+    * mediaTypes  支持的消息格式。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class Version implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * status  版本状态。
+    * updated  最后更新时间。
+    * links  版本的资源链接信息。
+    * id  版本号，如v3.6。
+    * mediaTypes  支持的消息格式。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class Version implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * status  版本状态。
+    * updated  最后更新时间。
+    * links  版本的资源链接信息。
+    * id  版本号，如v3.6。
+    * mediaTypes  支持的消息格式。
     *
     * @var string[]
     */
@@ -208,6 +233,7 @@ class Version implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  版本状态。
     *
     * @return string
     */
@@ -231,6 +257,7 @@ class Version implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
+    *  最后更新时间。
     *
     * @return string
     */
@@ -254,6 +281,7 @@ class Version implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  版本的资源链接信息。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\VersionLinks[]
     */
@@ -277,6 +305,7 @@ class Version implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  版本号，如v3.6。
     *
     * @return string
     */
@@ -300,6 +329,7 @@ class Version implements ModelInterface, ArrayAccess
 
     /**
     * Gets mediaTypes
+    *  支持的消息格式。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\VersionMediatypes[]
     */

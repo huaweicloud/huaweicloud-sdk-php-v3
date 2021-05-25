@@ -20,6 +20,7 @@ class UpdateDomainProtectPolicyRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * protectPolicy  protectPolicy
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class UpdateDomainProtectPolicyRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * protectPolicy  protectPolicy
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class UpdateDomainProtectPolicyRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * protectPolicy  protectPolicy
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class UpdateDomainProtectPolicyRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * protectPolicy  protectPolicy
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class UpdateDomainProtectPolicyRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * protectPolicy  protectPolicy
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class UpdateDomainProtectPolicyRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets protectPolicy
+    *  protectPolicy
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\ProtectPolicyOption
     */

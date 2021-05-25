@@ -21,6 +21,15 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * messageId  设备消息ID，用于唯一标识一条消息，在下发设备消息时由物联网平台分配获得。
+    * name  消息名称,在下发消息时由用户指定。
+    * message  消息内容。
+    * encoding  消息内容编码格式，取值范围none|base64,默认值none, base64格式仅支持透传。
+    * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
+    * topic  消息topic
+    * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
+    * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
+    * finishedTime  消息结束时间, \"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串，包含消息转换到DELIVERED和TIMEOUT两个状态的时间。
     *
     * @var string[]
     */
@@ -38,6 +47,15 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * messageId  设备消息ID，用于唯一标识一条消息，在下发设备消息时由物联网平台分配获得。
+    * name  消息名称,在下发消息时由用户指定。
+    * message  消息内容。
+    * encoding  消息内容编码格式，取值范围none|base64,默认值none, base64格式仅支持透传。
+    * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
+    * topic  消息topic
+    * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
+    * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
+    * finishedTime  消息结束时间, \"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串，包含消息转换到DELIVERED和TIMEOUT两个状态的时间。
     *
     * @var string[]
     */
@@ -76,6 +94,15 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * messageId  设备消息ID，用于唯一标识一条消息，在下发设备消息时由物联网平台分配获得。
+    * name  消息名称,在下发消息时由用户指定。
+    * message  消息内容。
+    * encoding  消息内容编码格式，取值范围none|base64,默认值none, base64格式仅支持透传。
+    * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
+    * topic  消息topic
+    * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
+    * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
+    * finishedTime  消息结束时间, \"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串，包含消息转换到DELIVERED和TIMEOUT两个状态的时间。
     *
     * @var string[]
     */
@@ -93,6 +120,15 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * messageId  设备消息ID，用于唯一标识一条消息，在下发设备消息时由物联网平台分配获得。
+    * name  消息名称,在下发消息时由用户指定。
+    * message  消息内容。
+    * encoding  消息内容编码格式，取值范围none|base64,默认值none, base64格式仅支持透传。
+    * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
+    * topic  消息topic
+    * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
+    * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
+    * finishedTime  消息结束时间, \"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串，包含消息转换到DELIVERED和TIMEOUT两个状态的时间。
     *
     * @var string[]
     */
@@ -110,6 +146,15 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * messageId  设备消息ID，用于唯一标识一条消息，在下发设备消息时由物联网平台分配获得。
+    * name  消息名称,在下发消息时由用户指定。
+    * message  消息内容。
+    * encoding  消息内容编码格式，取值范围none|base64,默认值none, base64格式仅支持透传。
+    * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
+    * topic  消息topic
+    * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
+    * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
+    * finishedTime  消息结束时间, \"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串，包含消息转换到DELIVERED和TIMEOUT两个状态的时间。
     *
     * @var string[]
     */
@@ -218,6 +263,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageId
+    *  设备消息ID，用于唯一标识一条消息，在下发设备消息时由物联网平台分配获得。
     *
     * @return string|null
     */
@@ -241,6 +287,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  消息名称,在下发消息时由用户指定。
     *
     * @return string|null
     */
@@ -264,6 +311,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
+    *  消息内容。
     *
     * @return object|null
     */
@@ -287,6 +335,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets encoding
+    *  消息内容编码格式，取值范围none|base64,默认值none, base64格式仅支持透传。
     *
     * @return string|null
     */
@@ -310,6 +359,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets payloadFormat
+    *  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
     *
     * @return string|null
     */
@@ -333,6 +383,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
+    *  消息topic
     *
     * @return string|null
     */
@@ -356,6 +407,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
     *
     * @return string|null
     */
@@ -379,6 +431,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdTime
+    *  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     *
     * @return string|null
     */
@@ -402,6 +455,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets finishedTime
+    *  消息结束时间, \"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串，包含消息转换到DELIVERED和TIMEOUT两个状态的时间。
     *
     * @return string|null
     */

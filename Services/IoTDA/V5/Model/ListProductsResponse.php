@@ -21,6 +21,8 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * products  产品信息列表。
+    * page  page
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * products  产品信息列表。
+    * page  page
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * products  产品信息列表。
+    * page  page
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * products  产品信息列表。
+    * page  page
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * products  产品信息列表。
+    * page  page
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets products
+    *  产品信息列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ProductSummary[]|null
     */
@@ -199,6 +210,7 @@ class ListProductsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets page
+    *  page
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\Page|null
     */

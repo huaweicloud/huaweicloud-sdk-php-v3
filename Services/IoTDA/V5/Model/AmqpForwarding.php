@@ -20,6 +20,7 @@ class AmqpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * queueName  用于接收满足规则条件数据的amqp queue。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class AmqpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * queueName  用于接收满足规则条件数据的amqp queue。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class AmqpForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * queueName  用于接收满足规则条件数据的amqp queue。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class AmqpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * queueName  用于接收满足规则条件数据的amqp queue。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class AmqpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * queueName  用于接收满足规则条件数据的amqp queue。
     *
     * @var string[]
     */
@@ -178,6 +183,7 @@ class AmqpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueName
+    *  用于接收满足规则条件数据的amqp queue。
     *
     * @return string
     */

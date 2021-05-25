@@ -20,6 +20,16 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * limit  每页显示的条目数量。
+    * marker  取值为上一页数据的最后一条记录的id，当marker参数为无效id时，response将响应错误码400
+    * pageReverse  False/True，是否设置分页的顺序。
+    * id  浮动IP的id。
+    * floatingIpAddress  浮动IP地址。
+    * routerId  所属路由器id。
+    * portId  端口id。
+    * fixedIpAddress  关联端口的私有IP地址。
+    * tenantId  项目ID。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询
     *
     * @var string[]
     */
@@ -38,6 +48,16 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * limit  每页显示的条目数量。
+    * marker  取值为上一页数据的最后一条记录的id，当marker参数为无效id时，response将响应错误码400
+    * pageReverse  False/True，是否设置分页的顺序。
+    * id  浮动IP的id。
+    * floatingIpAddress  浮动IP地址。
+    * routerId  所属路由器id。
+    * portId  端口id。
+    * fixedIpAddress  关联端口的私有IP地址。
+    * tenantId  项目ID。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询
     *
     * @var string[]
     */
@@ -77,6 +97,16 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * limit  每页显示的条目数量。
+    * marker  取值为上一页数据的最后一条记录的id，当marker参数为无效id时，response将响应错误码400
+    * pageReverse  False/True，是否设置分页的顺序。
+    * id  浮动IP的id。
+    * floatingIpAddress  浮动IP地址。
+    * routerId  所属路由器id。
+    * portId  端口id。
+    * fixedIpAddress  关联端口的私有IP地址。
+    * tenantId  项目ID。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询
     *
     * @var string[]
     */
@@ -95,6 +125,16 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * limit  每页显示的条目数量。
+    * marker  取值为上一页数据的最后一条记录的id，当marker参数为无效id时，response将响应错误码400
+    * pageReverse  False/True，是否设置分页的顺序。
+    * id  浮动IP的id。
+    * floatingIpAddress  浮动IP地址。
+    * routerId  所属路由器id。
+    * portId  端口id。
+    * fixedIpAddress  关联端口的私有IP地址。
+    * tenantId  项目ID。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询
     *
     * @var string[]
     */
@@ -113,6 +153,16 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * limit  每页显示的条目数量。
+    * marker  取值为上一页数据的最后一条记录的id，当marker参数为无效id时，response将响应错误码400
+    * pageReverse  False/True，是否设置分页的顺序。
+    * id  浮动IP的id。
+    * floatingIpAddress  浮动IP地址。
+    * routerId  所属路由器id。
+    * portId  端口id。
+    * fixedIpAddress  关联端口的私有IP地址。
+    * tenantId  项目ID。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询
     *
     * @var string[]
     */
@@ -244,6 +294,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  每页显示的条目数量。
     *
     * @return string|null
     */
@@ -255,7 +306,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit limit
+    * @param string|null $limit 每页显示的条目数量。
     *
     * @return $this
     */
@@ -267,6 +318,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  取值为上一页数据的最后一条记录的id，当marker参数为无效id时，response将响应错误码400
     *
     * @return string|null
     */
@@ -278,7 +330,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 取值为上一页数据的最后一条记录的id，当marker参数为无效id时，response将响应错误码400
     *
     * @return $this
     */
@@ -290,6 +342,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets pageReverse
+    *  False/True，是否设置分页的顺序。
     *
     * @return bool|null
     */
@@ -301,7 +354,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pageReverse
     *
-    * @param bool|null $pageReverse pageReverse
+    * @param bool|null $pageReverse False/True，是否设置分页的顺序。
     *
     * @return $this
     */
@@ -313,6 +366,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  浮动IP的id。
     *
     * @return string|null
     */
@@ -324,7 +378,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id 浮动IP的id。
     *
     * @return $this
     */
@@ -336,6 +390,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingIpAddress
+    *  浮动IP地址。
     *
     * @return string|null
     */
@@ -347,7 +402,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets floatingIpAddress
     *
-    * @param string|null $floatingIpAddress floatingIpAddress
+    * @param string|null $floatingIpAddress 浮动IP地址。
     *
     * @return $this
     */
@@ -359,6 +414,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets routerId
+    *  所属路由器id。
     *
     * @return string|null
     */
@@ -370,7 +426,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets routerId
     *
-    * @param string|null $routerId routerId
+    * @param string|null $routerId 所属路由器id。
     *
     * @return $this
     */
@@ -382,6 +438,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets portId
+    *  端口id。
     *
     * @return string|null
     */
@@ -393,7 +450,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets portId
     *
-    * @param string|null $portId portId
+    * @param string|null $portId 端口id。
     *
     * @return $this
     */
@@ -405,6 +462,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fixedIpAddress
+    *  关联端口的私有IP地址。
     *
     * @return string|null
     */
@@ -416,7 +474,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fixedIpAddress
     *
-    * @param string|null $fixedIpAddress fixedIpAddress
+    * @param string|null $fixedIpAddress 关联端口的私有IP地址。
     *
     * @return $this
     */
@@ -428,6 +486,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  项目ID。
     *
     * @return string|null
     */
@@ -439,7 +498,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId tenantId
+    * @param string|null $tenantId 项目ID。
     *
     * @return $this
     */
@@ -451,6 +510,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingNetworkId
+    *  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询
     *
     * @return string|null
     */
@@ -462,7 +522,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets floatingNetworkId
     *
-    * @param string|null $floatingNetworkId floatingNetworkId
+    * @param string|null $floatingNetworkId 外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询
     *
     * @return $this
     */

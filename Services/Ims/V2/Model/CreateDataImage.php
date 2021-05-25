@@ -20,6 +20,10 @@ class CreateDataImage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  数据盘镜像名称。
+    * volumeId  数据盘ID。
+    * description  数据盘描述。
+    * tags  数据盘镜像标签。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class CreateDataImage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  数据盘镜像名称。
+    * volumeId  数据盘ID。
+    * description  数据盘描述。
+    * tags  数据盘镜像标签。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class CreateDataImage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  数据盘镜像名称。
+    * volumeId  数据盘ID。
+    * description  数据盘描述。
+    * tags  数据盘镜像标签。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class CreateDataImage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  数据盘镜像名称。
+    * volumeId  数据盘ID。
+    * description  数据盘描述。
+    * tags  数据盘镜像标签。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class CreateDataImage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  数据盘镜像名称。
+    * volumeId  数据盘ID。
+    * description  数据盘描述。
+    * tags  数据盘镜像标签。
     *
     * @var string[]
     */
@@ -193,6 +213,7 @@ class CreateDataImage implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  数据盘镜像名称。
     *
     * @return string
     */
@@ -216,6 +237,7 @@ class CreateDataImage implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeId
+    *  数据盘ID。
     *
     * @return string
     */
@@ -239,6 +261,7 @@ class CreateDataImage implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  数据盘描述。
     *
     * @return string|null
     */
@@ -262,6 +285,7 @@ class CreateDataImage implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  数据盘镜像标签。
     *
     * @return string[]|null
     */

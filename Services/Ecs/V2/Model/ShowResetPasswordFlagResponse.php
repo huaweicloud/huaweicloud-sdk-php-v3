@@ -21,6 +21,7 @@ class ShowResetPasswordFlagResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * resetpwdFlag  是否支持重置密码。  - True：支持一键重置密码。  - False：不支持一键重置密码。
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class ShowResetPasswordFlagResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * resetpwdFlag  是否支持重置密码。  - True：支持一键重置密码。  - False：不支持一键重置密码。
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class ShowResetPasswordFlagResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * resetpwdFlag  是否支持重置密码。  - True：支持一键重置密码。  - False：不支持一键重置密码。
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class ShowResetPasswordFlagResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * resetpwdFlag  是否支持重置密码。  - True：支持一键重置密码。  - False：不支持一键重置密码。
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class ShowResetPasswordFlagResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * resetpwdFlag  是否支持重置密码。  - True：支持一键重置密码。  - False：不支持一键重置密码。
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class ShowResetPasswordFlagResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resetpwdFlag
+    *  是否支持重置密码。  - True：支持一键重置密码。  - False：不支持一键重置密码。
     *
     * @return string|null
     */

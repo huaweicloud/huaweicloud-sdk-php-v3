@@ -21,6 +21,9 @@ class CreatePrePaidPublicipResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * publicip  publicip
+    * orderId  订单号（预付费场景返回该字段）
+    * publicipId  弹性公网IP的ID（预付费场景返回该字段）
     *
     * @var string[]
     */
@@ -32,6 +35,9 @@ class CreatePrePaidPublicipResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * publicip  publicip
+    * orderId  订单号（预付费场景返回该字段）
+    * publicipId  弹性公网IP的ID（预付费场景返回该字段）
     *
     * @var string[]
     */
@@ -64,6 +70,9 @@ class CreatePrePaidPublicipResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * publicip  publicip
+    * orderId  订单号（预付费场景返回该字段）
+    * publicipId  弹性公网IP的ID（预付费场景返回该字段）
     *
     * @var string[]
     */
@@ -75,6 +84,9 @@ class CreatePrePaidPublicipResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * publicip  publicip
+    * orderId  订单号（预付费场景返回该字段）
+    * publicipId  弹性公网IP的ID（预付费场景返回该字段）
     *
     * @var string[]
     */
@@ -86,6 +98,9 @@ class CreatePrePaidPublicipResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * publicip  publicip
+    * orderId  订单号（预付费场景返回该字段）
+    * publicipId  弹性公网IP的ID（预付费场景返回该字段）
     *
     * @var string[]
     */
@@ -188,6 +203,7 @@ class CreatePrePaidPublicipResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicip
+    *  publicip
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\PublicipCreateResp|null
     */
@@ -211,6 +227,7 @@ class CreatePrePaidPublicipResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
+    *  订单号（预付费场景返回该字段）
     *
     * @return string|null
     */
@@ -234,6 +251,7 @@ class CreatePrePaidPublicipResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipId
+    *  弹性公网IP的ID（预付费场景返回该字段）
     *
     * @return string|null
     */

@@ -21,6 +21,7 @@ class KeystoneShowSecurityComplianceResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * config  config
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class KeystoneShowSecurityComplianceResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * config  config
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class KeystoneShowSecurityComplianceResponse implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * config  config
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class KeystoneShowSecurityComplianceResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * config  config
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class KeystoneShowSecurityComplianceResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * config  config
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class KeystoneShowSecurityComplianceResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets config
+    *  config
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\Config|null
     */

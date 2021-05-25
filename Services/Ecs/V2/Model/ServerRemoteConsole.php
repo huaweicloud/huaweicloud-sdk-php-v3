@@ -20,6 +20,9 @@ class ServerRemoteConsole implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * protocol  远程登录的协议。
+    * type  远程登录的类型。
+    * url  远程登录的url。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class ServerRemoteConsole implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * protocol  远程登录的协议。
+    * type  远程登录的类型。
+    * url  远程登录的url。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class ServerRemoteConsole implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * protocol  远程登录的协议。
+    * type  远程登录的类型。
+    * url  远程登录的url。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class ServerRemoteConsole implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * protocol  远程登录的协议。
+    * type  远程登录的类型。
+    * url  远程登录的url。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class ServerRemoteConsole implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * protocol  远程登录的协议。
+    * type  远程登录的类型。
+    * url  远程登录的url。
     *
     * @var string[]
     */
@@ -190,6 +205,7 @@ class ServerRemoteConsole implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
+    *  远程登录的协议。
     *
     * @return string
     */
@@ -213,6 +229,7 @@ class ServerRemoteConsole implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  远程登录的类型。
     *
     * @return string
     */
@@ -236,6 +253,7 @@ class ServerRemoteConsole implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
+    *  远程登录的url。
     *
     * @return string
     */

@@ -20,6 +20,8 @@ class GetIdTokenIdScopeBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domain  domain
+    * project  project
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class GetIdTokenIdScopeBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domain  domain
+    * project  project
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class GetIdTokenIdScopeBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domain  domain
+    * project  project
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class GetIdTokenIdScopeBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domain  domain
+    * project  project
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class GetIdTokenIdScopeBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domain  domain
+    * project  project
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class GetIdTokenIdScopeBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
+    *  domain
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\GetIdTokenScopeDomainOrProjectBody|null
     */
@@ -198,6 +209,7 @@ class GetIdTokenIdScopeBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets project
+    *  project
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\GetIdTokenScopeDomainOrProjectBody|null
     */

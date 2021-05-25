@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Vpc\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateSubscriptionRequest implements ModelInterface, ArrayAccess
+class CreateVpcResourceTagResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,26 +17,24 @@ class CreateSubscriptionRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateSubscriptionRequest';
+    protected static $openAPIModelName = 'CreateVpcResourceTagResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\IoTDA\V5\Model\CreateSubReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null,
-        'body' => null
     ];
 
     /**
@@ -61,32 +60,29 @@ class CreateSubscriptionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'Instance-Id',
-            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId',
-            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId',
-            'body' => 'getBody'
     ];
 
     /**
@@ -147,8 +143,6 @@ class CreateSubscriptionRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -159,9 +153,6 @@ class CreateSubscriptionRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['instanceId']) && !preg_match("/^[a-f0-9-]{36}$/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-f0-9-]{36}$/.";
-            }
         return $invalidProperties;
     }
 
@@ -174,52 +165,6 @@ class CreateSubscriptionRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets instanceId
-    *
-    * @return string|null
-    */
-    public function getInstanceId()
-    {
-        return $this->container['instanceId'];
-    }
-
-    /**
-    * Sets instanceId
-    *
-    * @param string|null $instanceId instanceId
-    *
-    * @return $this
-    */
-    public function setInstanceId($instanceId)
-    {
-        $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
-    * Gets body
-    *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\CreateSubReq|null
-    */
-    public function getBody()
-    {
-        return $this->container['body'];
-    }
-
-    /**
-    * Sets body
-    *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\CreateSubReq|null $body body
-    *
-    * @return $this
-    */
-    public function setBody($body)
-    {
-        $this->container['body'] = $body;
-        return $this;
     }
 
     /**

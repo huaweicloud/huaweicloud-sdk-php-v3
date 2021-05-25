@@ -20,6 +20,7 @@ class NovaServerSecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  安全组名称或者uuid。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class NovaServerSecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  安全组名称或者uuid。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class NovaServerSecurityGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  安全组名称或者uuid。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class NovaServerSecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  安全组名称或者uuid。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class NovaServerSecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  安全组名称或者uuid。
     *
     * @var string[]
     */
@@ -169,6 +174,7 @@ class NovaServerSecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  安全组名称或者uuid。
     *
     * @return string|null
     */

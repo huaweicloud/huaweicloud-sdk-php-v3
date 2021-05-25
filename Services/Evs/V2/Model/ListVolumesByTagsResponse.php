@@ -21,6 +21,8 @@ class ListVolumesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * totalCount  符合查询条件的云硬盘资源个数
+    * resources  符合查询条件的资源列表
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class ListVolumesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * totalCount  符合查询条件的云硬盘资源个数
+    * resources  符合查询条件的资源列表
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class ListVolumesByTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * totalCount  符合查询条件的云硬盘资源个数
+    * resources  符合查询条件的资源列表
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class ListVolumesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * totalCount  符合查询条件的云硬盘资源个数
+    * resources  符合查询条件的资源列表
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class ListVolumesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * totalCount  符合查询条件的云硬盘资源个数
+    * resources  符合查询条件的资源列表
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class ListVolumesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
+    *  符合查询条件的云硬盘资源个数
     *
     * @return int|null
     */
@@ -199,6 +210,7 @@ class ListVolumesByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
+    *  符合查询条件的资源列表
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\Resource[]|null
     */

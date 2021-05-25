@@ -20,6 +20,8 @@ class BatchCreateVolumeTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * action  操作标识，当前支持的取值如下：  添加标签：create
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class BatchCreateVolumeTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * action  操作标识，当前支持的取值如下：  添加标签：create
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class BatchCreateVolumeTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * action  操作标识，当前支持的取值如下：  添加标签：create
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class BatchCreateVolumeTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * action  操作标识，当前支持的取值如下：  添加标签：create
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class BatchCreateVolumeTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * action  操作标识，当前支持的取值如下：  添加标签：create
+    * tags  标签列表。
     *
     * @var string[]
     */
@@ -202,6 +212,7 @@ class BatchCreateVolumeTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
+    *  操作标识，当前支持的取值如下：  添加标签：create
     *
     * @return string
     */
@@ -225,6 +236,7 @@ class BatchCreateVolumeTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  标签列表。
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\Tag[]
     */

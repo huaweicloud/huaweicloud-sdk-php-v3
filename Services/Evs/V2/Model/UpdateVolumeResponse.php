@@ -21,6 +21,26 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * attachments  是否挂载信息。
+    * availabilityZone  云硬盘所属AZ。
+    * bootable  是否为可启动云硬盘。
+    * createdAt  创建云硬盘的时间。
+    * id  云硬盘ID。
+    * links  云硬盘uri自描述信息
+    * metadata  metadata
+    * multiattach  是否为可共享云硬盘。
+    * name  云硬盘名称
+    * osVolHostAttrhost  预留属性。
+    * osVolTenantAttrtenantId  云硬盘所属的项目ID。
+    * shareable  是否为共享云硬盘。
+    * size  云硬盘大小。
+    * snapshotId  快照ID。
+    * sourceVolid  预留字段。
+    * status  云硬盘状态。
+    * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
+    * volumeType  云硬盘类型。
+    * description  云硬盘描述。
+    * osVolumeReplicationextendedStatus  预留属性。
     *
     * @var string[]
     */
@@ -49,6 +69,26 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * attachments  是否挂载信息。
+    * availabilityZone  云硬盘所属AZ。
+    * bootable  是否为可启动云硬盘。
+    * createdAt  创建云硬盘的时间。
+    * id  云硬盘ID。
+    * links  云硬盘uri自描述信息
+    * metadata  metadata
+    * multiattach  是否为可共享云硬盘。
+    * name  云硬盘名称
+    * osVolHostAttrhost  预留属性。
+    * osVolTenantAttrtenantId  云硬盘所属的项目ID。
+    * shareable  是否为共享云硬盘。
+    * size  云硬盘大小。
+    * snapshotId  快照ID。
+    * sourceVolid  预留字段。
+    * status  云硬盘状态。
+    * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
+    * volumeType  云硬盘类型。
+    * description  云硬盘描述。
+    * osVolumeReplicationextendedStatus  预留属性。
     *
     * @var string[]
     */
@@ -98,6 +138,26 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * attachments  是否挂载信息。
+    * availabilityZone  云硬盘所属AZ。
+    * bootable  是否为可启动云硬盘。
+    * createdAt  创建云硬盘的时间。
+    * id  云硬盘ID。
+    * links  云硬盘uri自描述信息
+    * metadata  metadata
+    * multiattach  是否为可共享云硬盘。
+    * name  云硬盘名称
+    * osVolHostAttrhost  预留属性。
+    * osVolTenantAttrtenantId  云硬盘所属的项目ID。
+    * shareable  是否为共享云硬盘。
+    * size  云硬盘大小。
+    * snapshotId  快照ID。
+    * sourceVolid  预留字段。
+    * status  云硬盘状态。
+    * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
+    * volumeType  云硬盘类型。
+    * description  云硬盘描述。
+    * osVolumeReplicationextendedStatus  预留属性。
     *
     * @var string[]
     */
@@ -126,6 +186,26 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * attachments  是否挂载信息。
+    * availabilityZone  云硬盘所属AZ。
+    * bootable  是否为可启动云硬盘。
+    * createdAt  创建云硬盘的时间。
+    * id  云硬盘ID。
+    * links  云硬盘uri自描述信息
+    * metadata  metadata
+    * multiattach  是否为可共享云硬盘。
+    * name  云硬盘名称
+    * osVolHostAttrhost  预留属性。
+    * osVolTenantAttrtenantId  云硬盘所属的项目ID。
+    * shareable  是否为共享云硬盘。
+    * size  云硬盘大小。
+    * snapshotId  快照ID。
+    * sourceVolid  预留字段。
+    * status  云硬盘状态。
+    * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
+    * volumeType  云硬盘类型。
+    * description  云硬盘描述。
+    * osVolumeReplicationextendedStatus  预留属性。
     *
     * @var string[]
     */
@@ -154,6 +234,26 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * attachments  是否挂载信息。
+    * availabilityZone  云硬盘所属AZ。
+    * bootable  是否为可启动云硬盘。
+    * createdAt  创建云硬盘的时间。
+    * id  云硬盘ID。
+    * links  云硬盘uri自描述信息
+    * metadata  metadata
+    * multiattach  是否为可共享云硬盘。
+    * name  云硬盘名称
+    * osVolHostAttrhost  预留属性。
+    * osVolTenantAttrtenantId  云硬盘所属的项目ID。
+    * shareable  是否为共享云硬盘。
+    * size  云硬盘大小。
+    * snapshotId  快照ID。
+    * sourceVolid  预留字段。
+    * status  云硬盘状态。
+    * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
+    * volumeType  云硬盘类型。
+    * description  云硬盘描述。
+    * osVolumeReplicationextendedStatus  预留属性。
     *
     * @var string[]
     */
@@ -284,6 +384,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets attachments
+    *  是否挂载信息。
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\Attachment[]|null
     */
@@ -307,6 +408,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
+    *  云硬盘所属AZ。
     *
     * @return string|null
     */
@@ -330,6 +432,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets bootable
+    *  是否为可启动云硬盘。
     *
     * @return string|null
     */
@@ -353,6 +456,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  创建云硬盘的时间。
     *
     * @return string|null
     */
@@ -376,6 +480,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  云硬盘ID。
     *
     * @return string|null
     */
@@ -399,6 +504,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  云硬盘uri自描述信息
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\Link[]|null
     */
@@ -422,6 +528,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets metadata
+    *  metadata
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\VolumeMetadata|null
     */
@@ -445,6 +552,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets multiattach
+    *  是否为可共享云硬盘。
     *
     * @return bool|null
     */
@@ -468,6 +576,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云硬盘名称
     *
     * @return string|null
     */
@@ -491,6 +600,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVolHostAttrhost
+    *  预留属性。
     *
     * @return string|null
     */
@@ -514,6 +624,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVolTenantAttrtenantId
+    *  云硬盘所属的项目ID。
     *
     * @return string|null
     */
@@ -537,6 +648,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets shareable
+    *  是否为共享云硬盘。
     *
     * @return string|null
     */
@@ -560,6 +672,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
+    *  云硬盘大小。
     *
     * @return int|null
     */
@@ -583,6 +696,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotId
+    *  快照ID。
     *
     * @return string|null
     */
@@ -606,6 +720,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceVolid
+    *  预留字段。
     *
     * @return string|null
     */
@@ -629,6 +744,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  云硬盘状态。
     *
     * @return string|null
     */
@@ -652,6 +768,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeImageMetadata
+    *  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
     *
     * @return object|null
     */
@@ -675,6 +792,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeType
+    *  云硬盘类型。
     *
     * @return string|null
     */
@@ -698,6 +816,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  云硬盘描述。
     *
     * @return string|null
     */
@@ -721,6 +840,7 @@ class UpdateVolumeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVolumeReplicationextendedStatus
+    *  预留属性。
     *
     * @return string|null
     */

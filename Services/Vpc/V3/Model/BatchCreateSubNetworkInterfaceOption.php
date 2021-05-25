@@ -20,6 +20,12 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标注UUID 约束：必须是实际存在的端口ID
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
+    * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标注UUID 约束：必须是实际存在的端口ID
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
+    * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标注UUID 约束：必须是实际存在的端口ID
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
+    * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标注UUID 约束：必须是实际存在的端口ID
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
+    * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
+    * parentId  功能说明：宿主网络接口的ID 取值范围：标注UUID 约束：必须是实际存在的端口ID
+    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
+    * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     *
     * @var string[]
     */
@@ -205,6 +235,7 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
 
     /**
     * Gets virsubnetId
+    *  功能说明：虚拟子网ID 取值范围：标准UUID
     *
     * @return string
     */
@@ -228,6 +259,7 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
 
     /**
     * Gets parentId
+    *  功能说明：宿主网络接口的ID 取值范围：标注UUID 约束：必须是实际存在的端口ID
     *
     * @return string
     */
@@ -251,6 +283,7 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
 
     /**
     * Gets securityGroups
+    *  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
     *
     * @return string[]|null
     */
@@ -274,6 +307,7 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
 
     /**
     * Gets description
+    *  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     *
     * @return string|null
     */
@@ -297,6 +331,7 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
 
     /**
     * Gets ipv6Enable
+    *  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
     *
     * @return bool|null
     */
@@ -320,6 +355,7 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
 
     /**
     * Gets projectId
+    *  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     *
     * @return string|null
     */

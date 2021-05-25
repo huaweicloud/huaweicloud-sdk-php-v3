@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Vpc\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DeleteSubscriptionResponse implements ModelInterface, ArrayAccess
+class ListTag implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,24 +16,30 @@ class DeleteSubscriptionResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DeleteSubscriptionResponse';
+    protected static $openAPIModelName = 'ListTag';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * key  功能说明：标签键 约束：key不能为空
+    * values  功能描述：标签值列表。 如果values为空列表，则表示any_value。value之间为或的关系。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'key' => 'string',
+            'values' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * key  功能说明：标签键 约束：key不能为空
+    * values  功能描述：标签值列表。 如果values为空列表，则表示any_value。value之间为或的关系。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'key' => null,
+        'values' => null
     ];
 
     /**
@@ -60,29 +65,38 @@ class DeleteSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * key  功能说明：标签键 约束：key不能为空
+    * values  功能描述：标签值列表。 如果values为空列表，则表示any_value。value之间为或的关系。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'key' => 'key',
+            'values' => 'values'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * key  功能说明：标签键 约束：key不能为空
+    * values  功能描述：标签值列表。 如果values为空列表，则表示any_value。value之间为或的关系。
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'key' => 'setKey',
+            'values' => 'setValues'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * key  功能说明：标签键 约束：key不能为空
+    * values  功能描述：标签值列表。 如果values为空列表，则表示any_value。value之间为或的关系。
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'key' => 'getKey',
+            'values' => 'getValues'
     ];
 
     /**
@@ -143,7 +157,8 @@ class DeleteSubscriptionResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
+        $this->container['values'] = isset($data['values']) ? $data['values'] : null;
     }
 
     /**
@@ -154,6 +169,18 @@ class DeleteSubscriptionResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['key'] === null) {
+            $invalidProperties[] = "'key' can't be null";
+        }
+            if ((mb_strlen($this->container['key']) > 127)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 127.";
+            }
+            if ((mb_strlen($this->container['key']) < 1)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['values'] === null) {
+            $invalidProperties[] = "'values' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -169,25 +196,50 @@ class DeleteSubscriptionResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
+    * Gets key
+    *  功能说明：标签键 约束：key不能为空
     *
-    * @return string|null
+    * @return string
     */
-    public function getBody()
+    public function getKey()
     {
-        return $this->container['body'];
+        return $this->container['key'];
     }
 
     /**
-    * Sets body
+    * Sets key
     *
-    * @param string|null $body body
+    * @param string $key 功能说明：标签键 约束：key不能为空
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setKey($key)
     {
-        $this->container['body'] = $body;
+        $this->container['key'] = $key;
+        return $this;
+    }
+
+    /**
+    * Gets values
+    *  功能描述：标签值列表。 如果values为空列表，则表示any_value。value之间为或的关系。
+    *
+    * @return string[]
+    */
+    public function getValues()
+    {
+        return $this->container['values'];
+    }
+
+    /**
+    * Sets values
+    *
+    * @param string[] $values 功能描述：标签值列表。 如果values为空列表，则表示any_value。value之间为或的关系。
+    *
+    * @return $this
+    */
+    public function setValues($values)
+    {
+        $this->container['values'] = $values;
         return $this;
     }
 

@@ -21,6 +21,14 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * status  任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
+    * jobId  任务ID。
+    * jobType  任务类型。
+    * beginTime  任务开始执行时间。格式为UTC时间。
+    * endTime  任务结束时间。格式为UTC时间。
+    * errorCode  错误码。
+    * failReason  失败原因。
+    * entities  entities
     *
     * @var string[]
     */
@@ -37,6 +45,14 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * status  任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
+    * jobId  任务ID。
+    * jobType  任务类型。
+    * beginTime  任务开始执行时间。格式为UTC时间。
+    * endTime  任务结束时间。格式为UTC时间。
+    * errorCode  错误码。
+    * failReason  失败原因。
+    * entities  entities
     *
     * @var string[]
     */
@@ -74,6 +90,14 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * status  任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
+    * jobId  任务ID。
+    * jobType  任务类型。
+    * beginTime  任务开始执行时间。格式为UTC时间。
+    * endTime  任务结束时间。格式为UTC时间。
+    * errorCode  错误码。
+    * failReason  失败原因。
+    * entities  entities
     *
     * @var string[]
     */
@@ -90,6 +114,14 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * status  任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
+    * jobId  任务ID。
+    * jobType  任务类型。
+    * beginTime  任务开始执行时间。格式为UTC时间。
+    * endTime  任务结束时间。格式为UTC时间。
+    * errorCode  错误码。
+    * failReason  失败原因。
+    * entities  entities
     *
     * @var string[]
     */
@@ -106,6 +138,14 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * status  任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
+    * jobId  任务ID。
+    * jobType  任务类型。
+    * beginTime  任务开始执行时间。格式为UTC时间。
+    * endTime  任务结束时间。格式为UTC时间。
+    * errorCode  错误码。
+    * failReason  失败原因。
+    * entities  entities
     *
     * @var string[]
     */
@@ -239,6 +279,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
     *
     * @return string|null
     */
@@ -262,6 +303,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
+    *  任务ID。
     *
     * @return string|null
     */
@@ -285,6 +327,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobType
+    *  任务类型。
     *
     * @return string|null
     */
@@ -308,6 +351,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
+    *  任务开始执行时间。格式为UTC时间。
     *
     * @return string|null
     */
@@ -331,6 +375,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
+    *  任务结束时间。格式为UTC时间。
     *
     * @return string|null
     */
@@ -354,6 +399,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
+    *  错误码。
     *
     * @return string|null
     */
@@ -377,6 +423,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets failReason
+    *  失败原因。
     *
     * @return string|null
     */
@@ -400,6 +447,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets entities
+    *  entities
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\JobEntities|null
     */

@@ -20,6 +20,7 @@ class BatchAddServerNicsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * nics  需要添加的网卡参数列表。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class BatchAddServerNicsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * nics  需要添加的网卡参数列表。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class BatchAddServerNicsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * nics  需要添加的网卡参数列表。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class BatchAddServerNicsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * nics  需要添加的网卡参数列表。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class BatchAddServerNicsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * nics  需要添加的网卡参数列表。
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class BatchAddServerNicsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets nics
+    *  需要添加的网卡参数列表。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\BatchAddServerNicOption[]
     */

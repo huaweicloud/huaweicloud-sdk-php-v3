@@ -20,6 +20,9 @@ class UpdateServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  修改后的云服务器名称。  只能由中文字符、英文字母、数字及“_”、“-”、“.”组成，且长度为[1-64]个字符。
+    * description  对弹性云服务器的任意描述。  不能包含“<”,“>”，且长度范围为[0-85]个字符。
+    * hostname  修改云服务hostname。  命令规范：长度为 [1-64] 个字符，允许使用点号(.)分隔字符成多段，每段允许使用大小写字母、数字或连字符(-)，但不能连续使用点号(.)或连字符(-),不能以点号(.)或连字符(-)开头或结尾，不能出现（.-）和（-.）。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class UpdateServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  修改后的云服务器名称。  只能由中文字符、英文字母、数字及“_”、“-”、“.”组成，且长度为[1-64]个字符。
+    * description  对弹性云服务器的任意描述。  不能包含“<”,“>”，且长度范围为[0-85]个字符。
+    * hostname  修改云服务hostname。  命令规范：长度为 [1-64] 个字符，允许使用点号(.)分隔字符成多段，每段允许使用大小写字母、数字或连字符(-)，但不能连续使用点号(.)或连字符(-),不能以点号(.)或连字符(-)开头或结尾，不能出现（.-）和（-.）。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class UpdateServerOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  修改后的云服务器名称。  只能由中文字符、英文字母、数字及“_”、“-”、“.”组成，且长度为[1-64]个字符。
+    * description  对弹性云服务器的任意描述。  不能包含“<”,“>”，且长度范围为[0-85]个字符。
+    * hostname  修改云服务hostname。  命令规范：长度为 [1-64] 个字符，允许使用点号(.)分隔字符成多段，每段允许使用大小写字母、数字或连字符(-)，但不能连续使用点号(.)或连字符(-),不能以点号(.)或连字符(-)开头或结尾，不能出现（.-）和（-.）。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class UpdateServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  修改后的云服务器名称。  只能由中文字符、英文字母、数字及“_”、“-”、“.”组成，且长度为[1-64]个字符。
+    * description  对弹性云服务器的任意描述。  不能包含“<”,“>”，且长度范围为[0-85]个字符。
+    * hostname  修改云服务hostname。  命令规范：长度为 [1-64] 个字符，允许使用点号(.)分隔字符成多段，每段允许使用大小写字母、数字或连字符(-)，但不能连续使用点号(.)或连字符(-),不能以点号(.)或连字符(-)开头或结尾，不能出现（.-）和（-.）。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class UpdateServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  修改后的云服务器名称。  只能由中文字符、英文字母、数字及“_”、“-”、“.”组成，且长度为[1-64]个字符。
+    * description  对弹性云服务器的任意描述。  不能包含“<”,“>”，且长度范围为[0-85]个字符。
+    * hostname  修改云服务hostname。  命令规范：长度为 [1-64] 个字符，允许使用点号(.)分隔字符成多段，每段允许使用大小写字母、数字或连字符(-)，但不能连续使用点号(.)或连字符(-),不能以点号(.)或连字符(-)开头或结尾，不能出现（.-）和（-.）。
     *
     * @var string[]
     */
@@ -199,6 +214,7 @@ class UpdateServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  修改后的云服务器名称。  只能由中文字符、英文字母、数字及“_”、“-”、“.”组成，且长度为[1-64]个字符。
     *
     * @return string|null
     */
@@ -222,6 +238,7 @@ class UpdateServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  对弹性云服务器的任意描述。  不能包含“<”,“>”，且长度范围为[0-85]个字符。
     *
     * @return string|null
     */
@@ -245,6 +262,7 @@ class UpdateServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostname
+    *  修改云服务hostname。  命令规范：长度为 [1-64] 个字符，允许使用点号(.)分隔字符成多段，每段允许使用大小写字母、数字或连字符(-)，但不能连续使用点号(.)或连字符(-),不能以点号(.)或连字符(-)开头或结尾，不能出现（.-）和（-.）。
     *
     * @return string|null
     */

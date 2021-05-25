@@ -20,6 +20,15 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * cmkId  创建加密镜像的用户主密钥，具体取值请参考《密钥管理服务用户指南》获取。
+    * description  镜像描述信息。_description参数说明请参考镜像属性。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目；取值为UUID，表示属于该UUID对应的企业项目。
+    * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
+    * imageUrl  OBS桶中外部镜像文件地址。格式为<OBS桶名>:<OBS镜像文件名称>。 此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
+    * minDisk  最小数据盘大小。取值范围40-2048GB。
+    * name  镜像名称。
+    * osType  操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
+    * tags  镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
     */
@@ -37,6 +46,15 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * cmkId  创建加密镜像的用户主密钥，具体取值请参考《密钥管理服务用户指南》获取。
+    * description  镜像描述信息。_description参数说明请参考镜像属性。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目；取值为UUID，表示属于该UUID对应的企业项目。
+    * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
+    * imageUrl  OBS桶中外部镜像文件地址。格式为<OBS桶名>:<OBS镜像文件名称>。 此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
+    * minDisk  最小数据盘大小。取值范围40-2048GB。
+    * name  镜像名称。
+    * osType  操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
+    * tags  镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
     */
@@ -75,6 +93,15 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * cmkId  创建加密镜像的用户主密钥，具体取值请参考《密钥管理服务用户指南》获取。
+    * description  镜像描述信息。_description参数说明请参考镜像属性。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目；取值为UUID，表示属于该UUID对应的企业项目。
+    * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
+    * imageUrl  OBS桶中外部镜像文件地址。格式为<OBS桶名>:<OBS镜像文件名称>。 此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
+    * minDisk  最小数据盘大小。取值范围40-2048GB。
+    * name  镜像名称。
+    * osType  操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
+    * tags  镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
     */
@@ -92,6 +119,15 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * cmkId  创建加密镜像的用户主密钥，具体取值请参考《密钥管理服务用户指南》获取。
+    * description  镜像描述信息。_description参数说明请参考镜像属性。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目；取值为UUID，表示属于该UUID对应的企业项目。
+    * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
+    * imageUrl  OBS桶中外部镜像文件地址。格式为<OBS桶名>:<OBS镜像文件名称>。 此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
+    * minDisk  最小数据盘大小。取值范围40-2048GB。
+    * name  镜像名称。
+    * osType  操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
+    * tags  镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
     */
@@ -109,6 +145,15 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * cmkId  创建加密镜像的用户主密钥，具体取值请参考《密钥管理服务用户指南》获取。
+    * description  镜像描述信息。_description参数说明请参考镜像属性。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目；取值为UUID，表示属于该UUID对应的企业项目。
+    * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
+    * imageUrl  OBS桶中外部镜像文件地址。格式为<OBS桶名>:<OBS镜像文件名称>。 此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
+    * minDisk  最小数据盘大小。取值范围40-2048GB。
+    * name  镜像名称。
+    * osType  操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
+    * tags  镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
     */
@@ -264,6 +309,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets cmkId
+    *  创建加密镜像的用户主密钥，具体取值请参考《密钥管理服务用户指南》获取。
     *
     * @return string|null
     */
@@ -287,6 +333,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  镜像描述信息。_description参数说明请参考镜像属性。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
     *
     * @return string|null
     */
@@ -310,6 +357,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目；取值为UUID，表示属于该UUID对应的企业项目。
     *
     * @return string|null
     */
@@ -333,6 +381,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageTags
+    *  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\ImageTag[]|null
     */
@@ -356,6 +405,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageUrl
+    *  OBS桶中外部镜像文件地址。格式为<OBS桶名>:<OBS镜像文件名称>。 此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
     *
     * @return string
     */
@@ -379,6 +429,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets minDisk
+    *  最小数据盘大小。取值范围40-2048GB。
     *
     * @return int
     */
@@ -402,6 +453,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  镜像名称。
     *
     * @return string
     */
@@ -425,6 +477,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
+    *  操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
     *
     * @return string
     */
@@ -448,6 +501,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @return string[]|null
     */

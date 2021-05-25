@@ -20,6 +20,7 @@ class UpdateDomainPasswordPolicyRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * passwordPolicy  passwordPolicy
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class UpdateDomainPasswordPolicyRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * passwordPolicy  passwordPolicy
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class UpdateDomainPasswordPolicyRequestBody implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * passwordPolicy  passwordPolicy
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class UpdateDomainPasswordPolicyRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * passwordPolicy  passwordPolicy
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class UpdateDomainPasswordPolicyRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * passwordPolicy  passwordPolicy
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class UpdateDomainPasswordPolicyRequestBody implements ModelInterface, ArrayAcce
 
     /**
     * Gets passwordPolicy
+    *  passwordPolicy
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\PasswordPolicyOption
     */

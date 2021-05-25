@@ -21,6 +21,8 @@ class ListAsyncCommandsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * commands  设备命令列表。
+    * page  page
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class ListAsyncCommandsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * commands  设备命令列表。
+    * page  page
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class ListAsyncCommandsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * commands  设备命令列表。
+    * page  page
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class ListAsyncCommandsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * commands  设备命令列表。
+    * page  page
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class ListAsyncCommandsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * commands  设备命令列表。
+    * page  page
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class ListAsyncCommandsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets commands
+    *  设备命令列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\AsyncDeviceCommand[]|null
     */
@@ -199,6 +210,7 @@ class ListAsyncCommandsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets page
+    *  page
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\Page|null
     */

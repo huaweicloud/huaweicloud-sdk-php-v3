@@ -20,6 +20,8 @@ class BatchRebootSeversOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * servers  云服务器ID列表。
+    * type  重启类型：  - SOFT：普通重启。 - HARD：强制重启。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class BatchRebootSeversOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * servers  云服务器ID列表。
+    * type  重启类型：  - SOFT：普通重启。 - HARD：强制重启。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class BatchRebootSeversOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * servers  云服务器ID列表。
+    * type  重启类型：  - SOFT：普通重启。 - HARD：强制重启。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class BatchRebootSeversOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * servers  云服务器ID列表。
+    * type  重启类型：  - SOFT：普通重启。 - HARD：强制重启。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class BatchRebootSeversOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * servers  云服务器ID列表。
+    * type  重启类型：  - SOFT：普通重启。 - HARD：强制重启。
     *
     * @var string[]
     */
@@ -204,6 +214,7 @@ class BatchRebootSeversOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets servers
+    *  云服务器ID列表。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\ServerId[]
     */
@@ -227,6 +238,7 @@ class BatchRebootSeversOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  重启类型：  - SOFT：普通重启。 - HARD：强制重启。
     *
     * @return string
     */

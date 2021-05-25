@@ -20,6 +20,7 @@ class UpdateVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * volume  volume
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class UpdateVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * volume  volume
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class UpdateVolumeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * volume  volume
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class UpdateVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * volume  volume
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class UpdateVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * volume  volume
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class UpdateVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets volume
+    *  volume
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\UpdateVolumeOption
     */

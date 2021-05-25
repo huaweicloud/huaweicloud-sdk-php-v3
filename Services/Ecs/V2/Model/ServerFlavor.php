@@ -20,6 +20,11 @@ class ServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  弹性云服务器规格ID。
+    * name  弹性云服务器规格名称。
+    * disk  该云服务器规格对应要求系统盘大小，0为不限制。此字段在本系统中无效。
+    * vcpus  该云服务器规格对应的CPU核数。
+    * ram  该云服务器规格对应的内存大小，单位为MB。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class ServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  弹性云服务器规格ID。
+    * name  弹性云服务器规格名称。
+    * disk  该云服务器规格对应要求系统盘大小，0为不限制。此字段在本系统中无效。
+    * vcpus  该云服务器规格对应的CPU核数。
+    * ram  该云服务器规格对应的内存大小，单位为MB。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class ServerFlavor implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  弹性云服务器规格ID。
+    * name  弹性云服务器规格名称。
+    * disk  该云服务器规格对应要求系统盘大小，0为不限制。此字段在本系统中无效。
+    * vcpus  该云服务器规格对应的CPU核数。
+    * ram  该云服务器规格对应的内存大小，单位为MB。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class ServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  弹性云服务器规格ID。
+    * name  弹性云服务器规格名称。
+    * disk  该云服务器规格对应要求系统盘大小，0为不限制。此字段在本系统中无效。
+    * vcpus  该云服务器规格对应的CPU核数。
+    * ram  该云服务器规格对应的内存大小，单位为MB。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class ServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  弹性云服务器规格ID。
+    * name  弹性云服务器规格名称。
+    * disk  该云服务器规格对应要求系统盘大小，0为不限制。此字段在本系统中无效。
+    * vcpus  该云服务器规格对应的CPU核数。
+    * ram  该云服务器规格对应的内存大小，单位为MB。
     *
     * @var string[]
     */
@@ -208,6 +233,7 @@ class ServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  弹性云服务器规格ID。
     *
     * @return string
     */
@@ -231,6 +257,7 @@ class ServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  弹性云服务器规格名称。
     *
     * @return string
     */
@@ -254,6 +281,7 @@ class ServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets disk
+    *  该云服务器规格对应要求系统盘大小，0为不限制。此字段在本系统中无效。
     *
     * @return string
     */
@@ -277,6 +305,7 @@ class ServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets vcpus
+    *  该云服务器规格对应的CPU核数。
     *
     * @return string
     */
@@ -300,6 +329,7 @@ class ServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets ram
+    *  该云服务器规格对应的内存大小，单位为MB。
     *
     * @return string
     */

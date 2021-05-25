@@ -20,6 +20,8 @@ class CreatePrivateipOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * subnetId  分配IP的子网标识
+    * ipAddress  功能说明：指定IP地址申请 取值范围：子网段中的可以使用且未分配的IP地址，不指定时由系统自动分配
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class CreatePrivateipOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * subnetId  分配IP的子网标识
+    * ipAddress  功能说明：指定IP地址申请 取值范围：子网段中的可以使用且未分配的IP地址，不指定时由系统自动分配
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class CreatePrivateipOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * subnetId  分配IP的子网标识
+    * ipAddress  功能说明：指定IP地址申请 取值范围：子网段中的可以使用且未分配的IP地址，不指定时由系统自动分配
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class CreatePrivateipOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * subnetId  分配IP的子网标识
+    * ipAddress  功能说明：指定IP地址申请 取值范围：子网段中的可以使用且未分配的IP地址，不指定时由系统自动分配
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class CreatePrivateipOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * subnetId  分配IP的子网标识
+    * ipAddress  功能说明：指定IP地址申请 取值范围：子网段中的可以使用且未分配的IP地址，不指定时由系统自动分配
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class CreatePrivateipOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
+    *  分配IP的子网标识
     *
     * @return string
     */
@@ -201,6 +212,7 @@ class CreatePrivateipOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipAddress
+    *  功能说明：指定IP地址申请 取值范围：子网段中的可以使用且未分配的IP地址，不指定时由系统自动分配
     *
     * @return string|null
     */

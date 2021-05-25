@@ -20,6 +20,8 @@ class MfaDeviceResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * serialNumber  虚拟MFA的设备序列号。
+    * userId  IAM用户ID。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class MfaDeviceResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * serialNumber  虚拟MFA的设备序列号。
+    * userId  IAM用户ID。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class MfaDeviceResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * serialNumber  虚拟MFA的设备序列号。
+    * userId  IAM用户ID。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class MfaDeviceResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * serialNumber  虚拟MFA的设备序列号。
+    * userId  IAM用户ID。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class MfaDeviceResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * serialNumber  虚拟MFA的设备序列号。
+    * userId  IAM用户ID。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class MfaDeviceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets serialNumber
+    *  虚拟MFA的设备序列号。
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class MfaDeviceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  IAM用户ID。
     *
     * @return string
     */

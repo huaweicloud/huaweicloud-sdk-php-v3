@@ -20,6 +20,20 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * httpForwarding  httpForwarding
+    * disForwarding  disForwarding
+    * obsForwarding  obsForwarding
+    * amqpForwarding  amqpForwarding
+    * dmsKafkaForwarding  dmsKafkaForwarding
+    * romaForwarding  romaForwarding
+    * iotaForwarding  iotaForwarding
+    * mqsForwarding  mqsForwarding
+    * mysqlForwarding  mysqlForwarding
+    * mqttForwarding  mqttForwarding
+    * ltsForwarding  ltsForwarding
+    * influxdbForwarding  influxdbForwarding
+    * functiongraphForwarding  functiongraphForwarding
+    * mrsKafkaForwarding  mrsKafkaForwarding
     *
     * @var string[]
     */
@@ -42,6 +56,20 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * httpForwarding  httpForwarding
+    * disForwarding  disForwarding
+    * obsForwarding  obsForwarding
+    * amqpForwarding  amqpForwarding
+    * dmsKafkaForwarding  dmsKafkaForwarding
+    * romaForwarding  romaForwarding
+    * iotaForwarding  iotaForwarding
+    * mqsForwarding  mqsForwarding
+    * mysqlForwarding  mysqlForwarding
+    * mqttForwarding  mqttForwarding
+    * ltsForwarding  ltsForwarding
+    * influxdbForwarding  influxdbForwarding
+    * functiongraphForwarding  functiongraphForwarding
+    * mrsKafkaForwarding  mrsKafkaForwarding
     *
     * @var string[]
     */
@@ -85,6 +113,20 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * httpForwarding  httpForwarding
+    * disForwarding  disForwarding
+    * obsForwarding  obsForwarding
+    * amqpForwarding  amqpForwarding
+    * dmsKafkaForwarding  dmsKafkaForwarding
+    * romaForwarding  romaForwarding
+    * iotaForwarding  iotaForwarding
+    * mqsForwarding  mqsForwarding
+    * mysqlForwarding  mysqlForwarding
+    * mqttForwarding  mqttForwarding
+    * ltsForwarding  ltsForwarding
+    * influxdbForwarding  influxdbForwarding
+    * functiongraphForwarding  functiongraphForwarding
+    * mrsKafkaForwarding  mrsKafkaForwarding
     *
     * @var string[]
     */
@@ -107,6 +149,20 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * httpForwarding  httpForwarding
+    * disForwarding  disForwarding
+    * obsForwarding  obsForwarding
+    * amqpForwarding  amqpForwarding
+    * dmsKafkaForwarding  dmsKafkaForwarding
+    * romaForwarding  romaForwarding
+    * iotaForwarding  iotaForwarding
+    * mqsForwarding  mqsForwarding
+    * mysqlForwarding  mysqlForwarding
+    * mqttForwarding  mqttForwarding
+    * ltsForwarding  ltsForwarding
+    * influxdbForwarding  influxdbForwarding
+    * functiongraphForwarding  functiongraphForwarding
+    * mrsKafkaForwarding  mrsKafkaForwarding
     *
     * @var string[]
     */
@@ -129,6 +185,20 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * httpForwarding  httpForwarding
+    * disForwarding  disForwarding
+    * obsForwarding  obsForwarding
+    * amqpForwarding  amqpForwarding
+    * dmsKafkaForwarding  dmsKafkaForwarding
+    * romaForwarding  romaForwarding
+    * iotaForwarding  iotaForwarding
+    * mqsForwarding  mqsForwarding
+    * mysqlForwarding  mysqlForwarding
+    * mqttForwarding  mqttForwarding
+    * ltsForwarding  ltsForwarding
+    * influxdbForwarding  influxdbForwarding
+    * functiongraphForwarding  functiongraphForwarding
+    * mrsKafkaForwarding  mrsKafkaForwarding
     *
     * @var string[]
     */
@@ -247,6 +317,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpForwarding
+    *  httpForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\HttpForwarding|null
     */
@@ -270,6 +341,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets disForwarding
+    *  disForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DisForwarding|null
     */
@@ -293,6 +365,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsForwarding
+    *  obsForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ObsForwarding|null
     */
@@ -316,6 +389,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets amqpForwarding
+    *  amqpForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\AmqpForwarding|null
     */
@@ -339,6 +413,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets dmsKafkaForwarding
+    *  dmsKafkaForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DmsKafkaForwarding|null
     */
@@ -362,6 +437,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets romaForwarding
+    *  romaForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\RomaForwarding|null
     */
@@ -385,6 +461,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets iotaForwarding
+    *  iotaForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\IoTAForwarding|null
     */
@@ -408,6 +485,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets mqsForwarding
+    *  mqsForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\MqsForwarding|null
     */
@@ -431,6 +509,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets mysqlForwarding
+    *  mysqlForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\MysqlForwarding|null
     */
@@ -454,6 +533,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets mqttForwarding
+    *  mqttForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\MqttForwarding|null
     */
@@ -477,6 +557,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsForwarding
+    *  ltsForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\LtsForwarding|null
     */
@@ -500,6 +581,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets influxdbForwarding
+    *  influxdbForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\InfluxDBForwarding|null
     */
@@ -523,6 +605,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets functiongraphForwarding
+    *  functiongraphForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\FunctionGraphForwarding|null
     */
@@ -546,6 +629,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets mrsKafkaForwarding
+    *  mrsKafkaForwarding
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\MrsKafkaForwarding|null
     */

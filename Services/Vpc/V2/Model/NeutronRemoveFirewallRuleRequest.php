@@ -20,6 +20,8 @@ class NeutronRemoveFirewallRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * firewallPolicyId  网络ACL防火墙策略ID
+    * body  body
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class NeutronRemoveFirewallRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * firewallPolicyId  网络ACL防火墙策略ID
+    * body  body
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class NeutronRemoveFirewallRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * firewallPolicyId  网络ACL防火墙策略ID
+    * body  body
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class NeutronRemoveFirewallRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * firewallPolicyId  网络ACL防火墙策略ID
+    * body  body
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class NeutronRemoveFirewallRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * firewallPolicyId  网络ACL防火墙策略ID
+    * body  body
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class NeutronRemoveFirewallRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets firewallPolicyId
+    *  网络ACL防火墙策略ID
     *
     * @return string
     */
@@ -192,7 +203,7 @@ class NeutronRemoveFirewallRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets firewallPolicyId
     *
-    * @param string $firewallPolicyId firewallPolicyId
+    * @param string $firewallPolicyId 网络ACL防火墙策略ID
     *
     * @return $this
     */
@@ -204,6 +215,7 @@ class NeutronRemoveFirewallRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\NeutronRemoveFirewallRuleRequestBody|null
     */

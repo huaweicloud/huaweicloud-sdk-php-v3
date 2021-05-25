@@ -20,6 +20,11 @@ class IdentityAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * agencyName  委托名。
+    * domainId  委托方的账号ID。“domain_id”与“domain_name”至少填写一个。
+    * domainName  委托方的账号名。“domain_id”与“domain_name”至少填写一个。
+    * durationSeconds  AK/SK和securitytoken的有效期，时间单位为秒。取值范围：15min ~ 24h ，默认为15min。
+    * sessionUser  sessionUser
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class IdentityAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * agencyName  委托名。
+    * domainId  委托方的账号ID。“domain_id”与“domain_name”至少填写一个。
+    * domainName  委托方的账号名。“domain_id”与“domain_name”至少填写一个。
+    * durationSeconds  AK/SK和securitytoken的有效期，时间单位为秒。取值范围：15min ~ 24h ，默认为15min。
+    * sessionUser  sessionUser
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class IdentityAssumerole implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * agencyName  委托名。
+    * domainId  委托方的账号ID。“domain_id”与“domain_name”至少填写一个。
+    * domainName  委托方的账号名。“domain_id”与“domain_name”至少填写一个。
+    * durationSeconds  AK/SK和securitytoken的有效期，时间单位为秒。取值范围：15min ~ 24h ，默认为15min。
+    * sessionUser  sessionUser
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class IdentityAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * agencyName  委托名。
+    * domainId  委托方的账号ID。“domain_id”与“domain_name”至少填写一个。
+    * domainName  委托方的账号名。“domain_id”与“domain_name”至少填写一个。
+    * durationSeconds  AK/SK和securitytoken的有效期，时间单位为秒。取值范围：15min ~ 24h ，默认为15min。
+    * sessionUser  sessionUser
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class IdentityAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * agencyName  委托名。
+    * domainId  委托方的账号ID。“domain_id”与“domain_name”至少填写一个。
+    * domainName  委托方的账号名。“domain_id”与“domain_name”至少填写一个。
+    * durationSeconds  AK/SK和securitytoken的有效期，时间单位为秒。取值范围：15min ~ 24h ，默认为15min。
+    * sessionUser  sessionUser
     *
     * @var string[]
     */
@@ -202,6 +227,7 @@ class IdentityAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Gets agencyName
+    *  委托名。
     *
     * @return string
     */
@@ -225,6 +251,7 @@ class IdentityAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  委托方的账号ID。“domain_id”与“domain_name”至少填写一个。
     *
     * @return string|null
     */
@@ -248,6 +275,7 @@ class IdentityAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
+    *  委托方的账号名。“domain_id”与“domain_name”至少填写一个。
     *
     * @return string|null
     */
@@ -271,6 +299,7 @@ class IdentityAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Gets durationSeconds
+    *  AK/SK和securitytoken的有效期，时间单位为秒。取值范围：15min ~ 24h ，默认为15min。
     *
     * @return int|null
     */
@@ -294,6 +323,7 @@ class IdentityAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Gets sessionUser
+    *  sessionUser
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\AssumeroleSessionuser|null
     */

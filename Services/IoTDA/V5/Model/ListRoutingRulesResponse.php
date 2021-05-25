@@ -21,6 +21,9 @@ class ListRoutingRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * rules  规则条件信息列表。
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
@@ -32,6 +35,9 @@ class ListRoutingRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * rules  规则条件信息列表。
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
@@ -64,6 +70,9 @@ class ListRoutingRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * rules  规则条件信息列表。
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
@@ -75,6 +84,9 @@ class ListRoutingRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * rules  规则条件信息列表。
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
@@ -86,6 +98,9 @@ class ListRoutingRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * rules  规则条件信息列表。
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
@@ -185,6 +200,7 @@ class ListRoutingRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets rules
+    *  规则条件信息列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\RoutingRule[]|null
     */
@@ -208,6 +224,7 @@ class ListRoutingRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
+    *  满足查询条件的记录总数。
     *
     * @return int|null
     */
@@ -231,6 +248,7 @@ class ListRoutingRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @return string|null
     */

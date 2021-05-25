@@ -20,6 +20,9 @@ class GlanceUpdateImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * op  所需进行的更新操作的类型：替换、添加、删除。取值范围：replace、add、remove
+    * path  所要操作的属性名称。 replace和remove操作取值只能是镜像当前已有的属性、add操作取值只能是镜像当前不存在的属性，需要在属性名称前加”/”
+    * value  所需更新/添加属性的值
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class GlanceUpdateImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * op  所需进行的更新操作的类型：替换、添加、删除。取值范围：replace、add、remove
+    * path  所要操作的属性名称。 replace和remove操作取值只能是镜像当前已有的属性、add操作取值只能是镜像当前不存在的属性，需要在属性名称前加”/”
+    * value  所需更新/添加属性的值
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class GlanceUpdateImageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * op  所需进行的更新操作的类型：替换、添加、删除。取值范围：replace、add、remove
+    * path  所要操作的属性名称。 replace和remove操作取值只能是镜像当前已有的属性、add操作取值只能是镜像当前不存在的属性，需要在属性名称前加”/”
+    * value  所需更新/添加属性的值
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class GlanceUpdateImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * op  所需进行的更新操作的类型：替换、添加、删除。取值范围：replace、add、remove
+    * path  所要操作的属性名称。 replace和remove操作取值只能是镜像当前已有的属性、add操作取值只能是镜像当前不存在的属性，需要在属性名称前加”/”
+    * value  所需更新/添加属性的值
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class GlanceUpdateImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * op  所需进行的更新操作的类型：替换、添加、删除。取值范围：replace、add、remove
+    * path  所要操作的属性名称。 replace和remove操作取值只能是镜像当前已有的属性、add操作取值只能是镜像当前不存在的属性，需要在属性名称前加”/”
+    * value  所需更新/添加属性的值
     *
     * @var string[]
     */
@@ -212,6 +227,7 @@ class GlanceUpdateImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets op
+    *  所需进行的更新操作的类型：替换、添加、删除。取值范围：replace、add、remove
     *
     * @return string
     */
@@ -235,6 +251,7 @@ class GlanceUpdateImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
+    *  所要操作的属性名称。 replace和remove操作取值只能是镜像当前已有的属性、add操作取值只能是镜像当前不存在的属性，需要在属性名称前加”/”
     *
     * @return string
     */
@@ -258,6 +275,7 @@ class GlanceUpdateImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
+    *  所需更新/添加属性的值
     *
     * @return string|null
     */

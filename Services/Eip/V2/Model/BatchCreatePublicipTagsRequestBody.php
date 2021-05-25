@@ -20,6 +20,8 @@ class BatchCreatePublicipTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * tags  标签列表
+    * action  操作标识  create：创建  action为create时，tag的value必选
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class BatchCreatePublicipTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * tags  标签列表
+    * action  操作标识  create：创建  action为create时，tag的value必选
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class BatchCreatePublicipTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * tags  标签列表
+    * action  操作标识  create：创建  action为create时，tag的value必选
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class BatchCreatePublicipTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * tags  标签列表
+    * action  操作标识  create：创建  action为create时，tag的value必选
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class BatchCreatePublicipTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * tags  标签列表
+    * action  操作标识  create：创建  action为create时，tag的value必选
     *
     * @var string[]
     */
@@ -202,6 +212,7 @@ class BatchCreatePublicipTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  标签列表
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\ResourceTagOption[]
     */
@@ -225,6 +236,7 @@ class BatchCreatePublicipTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
+    *  操作标识  create：创建  action为create时，tag的value必选
     *
     * @return string
     */

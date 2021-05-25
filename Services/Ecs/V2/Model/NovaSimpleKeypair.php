@@ -20,6 +20,10 @@ class NovaSimpleKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * fingerprint  密钥对应指纹信息。
+    * name  密钥名称。
+    * publicKey  密钥对应publicKey信息。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class NovaSimpleKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * fingerprint  密钥对应指纹信息。
+    * name  密钥名称。
+    * publicKey  密钥对应publicKey信息。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class NovaSimpleKeypair implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * fingerprint  密钥对应指纹信息。
+    * name  密钥名称。
+    * publicKey  密钥对应publicKey信息。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class NovaSimpleKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * fingerprint  密钥对应指纹信息。
+    * name  密钥名称。
+    * publicKey  密钥对应publicKey信息。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class NovaSimpleKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * fingerprint  密钥对应指纹信息。
+    * name  密钥名称。
+    * publicKey  密钥对应publicKey信息。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -196,6 +216,7 @@ class NovaSimpleKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Gets fingerprint
+    *  密钥对应指纹信息。
     *
     * @return string
     */
@@ -219,6 +240,7 @@ class NovaSimpleKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  密钥名称。
     *
     * @return string
     */
@@ -242,6 +264,7 @@ class NovaSimpleKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicKey
+    *  密钥对应publicKey信息。
     *
     * @return string
     */
@@ -265,6 +288,7 @@ class NovaSimpleKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @return string|null
     */

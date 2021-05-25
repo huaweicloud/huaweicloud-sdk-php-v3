@@ -20,6 +20,8 @@ class UpdateSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会更新安全组。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接更新安全组。
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class UpdateSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会更新安全组。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接更新安全组。
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class UpdateSecurityGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会更新安全组。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接更新安全组。
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class UpdateSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会更新安全组。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接更新安全组。
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class UpdateSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * dryRun  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会更新安全组。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接更新安全组。
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class UpdateSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dryRun
+    *  功能说明：是否只预检此次请求 取值范围： -true：发送检查请求，不会更新安全组。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应码202。 -false（默认值）：发送正常请求，并直接更新安全组。
     *
     * @return bool|null
     */
@@ -201,6 +212,7 @@ class UpdateSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroup
+    *  securityGroup
     *
     * @return \HuaweiCloud\SDK\Vpc\V3\Model\UpdateSecurityGroupOption
     */

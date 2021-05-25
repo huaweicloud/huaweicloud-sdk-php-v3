@@ -20,6 +20,12 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * address  address
+    * dbName  连接MYSQL数据库的库名
+    * username  连接MYSQL数据库的用户名
+    * password  连接MYSQL数据库的密码
+    * tableName  MYSQL数据库的表名
+    * columnMappings  MYSQL数据库的列和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * address  address
+    * dbName  连接MYSQL数据库的库名
+    * username  连接MYSQL数据库的用户名
+    * password  连接MYSQL数据库的密码
+    * tableName  MYSQL数据库的表名
+    * columnMappings  MYSQL数据库的列和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * address  address
+    * dbName  连接MYSQL数据库的库名
+    * username  连接MYSQL数据库的用户名
+    * password  连接MYSQL数据库的密码
+    * tableName  MYSQL数据库的表名
+    * columnMappings  MYSQL数据库的列和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * address  address
+    * dbName  连接MYSQL数据库的库名
+    * username  连接MYSQL数据库的用户名
+    * password  连接MYSQL数据库的密码
+    * tableName  MYSQL数据库的表名
+    * columnMappings  MYSQL数据库的列和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * address  address
+    * dbName  连接MYSQL数据库的库名
+    * username  连接MYSQL数据库的用户名
+    * password  连接MYSQL数据库的密码
+    * tableName  MYSQL数据库的表名
+    * columnMappings  MYSQL数据库的列和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -241,6 +271,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
+    *  address
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\NetAddress
     */
@@ -264,6 +295,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbName
+    *  连接MYSQL数据库的库名
     *
     * @return string
     */
@@ -287,6 +319,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets username
+    *  连接MYSQL数据库的用户名
     *
     * @return string
     */
@@ -310,6 +343,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets password
+    *  连接MYSQL数据库的密码
     *
     * @return string
     */
@@ -333,6 +367,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableName
+    *  MYSQL数据库的表名
     *
     * @return string
     */
@@ -356,6 +391,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets columnMappings
+    *  MYSQL数据库的列和流转数据的对应关系列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ColumnMapping[]
     */

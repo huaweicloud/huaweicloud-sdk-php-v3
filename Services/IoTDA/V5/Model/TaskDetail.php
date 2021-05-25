@@ -20,6 +20,10 @@ class TaskDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * target  执行批量任务的目标。
+    * status  子任务的执行状态，结果范围：Processing，Success，Fail，Waitting，FailWaitRetry，Stopped。 - Waitting: 等待执行。 - Processing: 执行中。 - Success: 成功。 - Fail: 失败。 - FailWaitRetry: 失败重试。 - Stopped: 已停止。
+    * output  子任务执行的输出信息。
+    * error  error
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class TaskDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * target  执行批量任务的目标。
+    * status  子任务的执行状态，结果范围：Processing，Success，Fail，Waitting，FailWaitRetry，Stopped。 - Waitting: 等待执行。 - Processing: 执行中。 - Success: 成功。 - Fail: 失败。 - FailWaitRetry: 失败重试。 - Stopped: 已停止。
+    * output  子任务执行的输出信息。
+    * error  error
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class TaskDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * target  执行批量任务的目标。
+    * status  子任务的执行状态，结果范围：Processing，Success，Fail，Waitting，FailWaitRetry，Stopped。 - Waitting: 等待执行。 - Processing: 执行中。 - Success: 成功。 - Fail: 失败。 - FailWaitRetry: 失败重试。 - Stopped: 已停止。
+    * output  子任务执行的输出信息。
+    * error  error
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class TaskDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * target  执行批量任务的目标。
+    * status  子任务的执行状态，结果范围：Processing，Success，Fail，Waitting，FailWaitRetry，Stopped。 - Waitting: 等待执行。 - Processing: 执行中。 - Success: 成功。 - Fail: 失败。 - FailWaitRetry: 失败重试。 - Stopped: 已停止。
+    * output  子任务执行的输出信息。
+    * error  error
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class TaskDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * target  执行批量任务的目标。
+    * status  子任务的执行状态，结果范围：Processing，Success，Fail，Waitting，FailWaitRetry，Stopped。 - Waitting: 等待执行。 - Processing: 执行中。 - Success: 成功。 - Fail: 失败。 - FailWaitRetry: 失败重试。 - Stopped: 已停止。
+    * output  子任务执行的输出信息。
+    * error  error
     *
     * @var string[]
     */
@@ -187,6 +207,7 @@ class TaskDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets target
+    *  执行批量任务的目标。
     *
     * @return string|null
     */
@@ -210,6 +231,7 @@ class TaskDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  子任务的执行状态，结果范围：Processing，Success，Fail，Waitting，FailWaitRetry，Stopped。 - Waitting: 等待执行。 - Processing: 执行中。 - Success: 成功。 - Fail: 失败。 - FailWaitRetry: 失败重试。 - Stopped: 已停止。
     *
     * @return string|null
     */
@@ -233,6 +255,7 @@ class TaskDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets output
+    *  子任务执行的输出信息。
     *
     * @return string|null
     */
@@ -256,6 +279,7 @@ class TaskDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets error
+    *  error
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ErrorInfo|null
     */

@@ -20,6 +20,13 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * instanceUuid  进行规格切换的云服务器ID，UUID格式。
+    * limit  单页面可显示的flavor条数最大值，默认是1000。
+    * marker  以单页最后一条flavor的ID作为分页标记。
+    * sortDir  升序/降序排序，默认值为：asc。  取值范围：  - asc：表示升序。 - desc：表示降序
+    * sortKey  排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
+    * sourceFlavorId  进行规格切换的云服务器源规格ID。
+    * sourceFlavorName  进行规格切换的云服务器源规格名称。
     *
     * @var string[]
     */
@@ -35,6 +42,13 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * instanceUuid  进行规格切换的云服务器ID，UUID格式。
+    * limit  单页面可显示的flavor条数最大值，默认是1000。
+    * marker  以单页最后一条flavor的ID作为分页标记。
+    * sortDir  升序/降序排序，默认值为：asc。  取值范围：  - asc：表示升序。 - desc：表示降序
+    * sortKey  排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
+    * sourceFlavorId  进行规格切换的云服务器源规格ID。
+    * sourceFlavorName  进行规格切换的云服务器源规格名称。
     *
     * @var string[]
     */
@@ -71,6 +85,13 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * instanceUuid  进行规格切换的云服务器ID，UUID格式。
+    * limit  单页面可显示的flavor条数最大值，默认是1000。
+    * marker  以单页最后一条flavor的ID作为分页标记。
+    * sortDir  升序/降序排序，默认值为：asc。  取值范围：  - asc：表示升序。 - desc：表示降序
+    * sortKey  排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
+    * sourceFlavorId  进行规格切换的云服务器源规格ID。
+    * sourceFlavorName  进行规格切换的云服务器源规格名称。
     *
     * @var string[]
     */
@@ -86,6 +107,13 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * instanceUuid  进行规格切换的云服务器ID，UUID格式。
+    * limit  单页面可显示的flavor条数最大值，默认是1000。
+    * marker  以单页最后一条flavor的ID作为分页标记。
+    * sortDir  升序/降序排序，默认值为：asc。  取值范围：  - asc：表示升序。 - desc：表示降序
+    * sortKey  排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
+    * sourceFlavorId  进行规格切换的云服务器源规格ID。
+    * sourceFlavorName  进行规格切换的云服务器源规格名称。
     *
     * @var string[]
     */
@@ -101,6 +129,13 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * instanceUuid  进行规格切换的云服务器ID，UUID格式。
+    * limit  单页面可显示的flavor条数最大值，默认是1000。
+    * marker  以单页最后一条flavor的ID作为分页标记。
+    * sortDir  升序/降序排序，默认值为：asc。  取值范围：  - asc：表示升序。 - desc：表示降序
+    * sortKey  排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
+    * sourceFlavorId  进行规格切换的云服务器源规格ID。
+    * sourceFlavorName  进行规格切换的云服务器源规格名称。
     *
     * @var string[]
     */
@@ -259,6 +294,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceUuid
+    *  进行规格切换的云服务器ID，UUID格式。
     *
     * @return string|null
     */
@@ -270,7 +306,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceUuid
     *
-    * @param string|null $instanceUuid instanceUuid
+    * @param string|null $instanceUuid 进行规格切换的云服务器ID，UUID格式。
     *
     * @return $this
     */
@@ -282,6 +318,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  单页面可显示的flavor条数最大值，默认是1000。
     *
     * @return int|null
     */
@@ -293,7 +330,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 单页面可显示的flavor条数最大值，默认是1000。
     *
     * @return $this
     */
@@ -305,6 +342,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  以单页最后一条flavor的ID作为分页标记。
     *
     * @return string|null
     */
@@ -316,7 +354,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 以单页最后一条flavor的ID作为分页标记。
     *
     * @return $this
     */
@@ -328,6 +366,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
+    *  升序/降序排序，默认值为：asc。  取值范围：  - asc：表示升序。 - desc：表示降序
     *
     * @return string|null
     */
@@ -339,7 +378,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir sortDir
+    * @param string|null $sortDir 升序/降序排序，默认值为：asc。  取值范围：  - asc：表示升序。 - desc：表示降序
     *
     * @return $this
     */
@@ -351,6 +390,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
+    *  排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
     *
     * @return string|null
     */
@@ -362,7 +402,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey sortKey
+    * @param string|null $sortKey 排序字段。  key的取值范围：  - flavorid：表示规格ID。 - sort_key的默认值为“flavorid”。 - name：表示规格名称。 - memory_mb：表示内存大小。 - vcpus：表示CPU大小。 - root_gb：表示系统盘大小。
     *
     * @return $this
     */
@@ -374,6 +414,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceFlavorId
+    *  进行规格切换的云服务器源规格ID。
     *
     * @return string|null
     */
@@ -385,7 +426,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sourceFlavorId
     *
-    * @param string|null $sourceFlavorId sourceFlavorId
+    * @param string|null $sourceFlavorId 进行规格切换的云服务器源规格ID。
     *
     * @return $this
     */
@@ -397,6 +438,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceFlavorName
+    *  进行规格切换的云服务器源规格名称。
     *
     * @return string|null
     */
@@ -408,7 +450,7 @@ class ListResizeFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sourceFlavorName
     *
-    * @param string|null $sourceFlavorName sourceFlavorName
+    * @param string|null $sourceFlavorName 进行规格切换的云服务器源规格名称。
     *
     * @return $this
     */

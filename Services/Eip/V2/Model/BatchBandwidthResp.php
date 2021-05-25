@@ -20,6 +20,16 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * bandwidthType  功能说明：带宽类型，共享带宽默认为share。  取值范围：share，bgp，telcom，sbgp等。  share：共享带宽  bgp：动态bgp  telcom ：联通  sbgp：静态bgp
+    * billingInfo  功能说明：账单信息  如果billing_info不为空，说明是包周期的带宽
+    * chargeMode  功能说明：按流量计费,按带宽计费还是按增强型95计费。  取值范围：bandwidth，traffic，95peak_plus(按增强型95计费)不返回或者为空时表示是bandwidth。  约束：只有共享带宽支持95peak_plus（按增强型95计费），按增强型95计费时需要指定保底百分比，默认是20%。
+    * id  功能说明：带宽唯一标识
+    * name  功能说明：带宽名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * publicipInfo  功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
+    * shareType  功能说明：带宽类型，标识是否是共享带宽  取值范围：WHOLE，PER  WHOLE表示共享带宽；PER，表示独享带宽
+    * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
+    * tenantId  功能说明：用户所属租户ID
+    * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
     *
     * @var string[]
     */
@@ -38,6 +48,16 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * bandwidthType  功能说明：带宽类型，共享带宽默认为share。  取值范围：share，bgp，telcom，sbgp等。  share：共享带宽  bgp：动态bgp  telcom ：联通  sbgp：静态bgp
+    * billingInfo  功能说明：账单信息  如果billing_info不为空，说明是包周期的带宽
+    * chargeMode  功能说明：按流量计费,按带宽计费还是按增强型95计费。  取值范围：bandwidth，traffic，95peak_plus(按增强型95计费)不返回或者为空时表示是bandwidth。  约束：只有共享带宽支持95peak_plus（按增强型95计费），按增强型95计费时需要指定保底百分比，默认是20%。
+    * id  功能说明：带宽唯一标识
+    * name  功能说明：带宽名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * publicipInfo  功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
+    * shareType  功能说明：带宽类型，标识是否是共享带宽  取值范围：WHOLE，PER  WHOLE表示共享带宽；PER，表示独享带宽
+    * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
+    * tenantId  功能说明：用户所属租户ID
+    * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
     *
     * @var string[]
     */
@@ -77,6 +97,16 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * bandwidthType  功能说明：带宽类型，共享带宽默认为share。  取值范围：share，bgp，telcom，sbgp等。  share：共享带宽  bgp：动态bgp  telcom ：联通  sbgp：静态bgp
+    * billingInfo  功能说明：账单信息  如果billing_info不为空，说明是包周期的带宽
+    * chargeMode  功能说明：按流量计费,按带宽计费还是按增强型95计费。  取值范围：bandwidth，traffic，95peak_plus(按增强型95计费)不返回或者为空时表示是bandwidth。  约束：只有共享带宽支持95peak_plus（按增强型95计费），按增强型95计费时需要指定保底百分比，默认是20%。
+    * id  功能说明：带宽唯一标识
+    * name  功能说明：带宽名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * publicipInfo  功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
+    * shareType  功能说明：带宽类型，标识是否是共享带宽  取值范围：WHOLE，PER  WHOLE表示共享带宽；PER，表示独享带宽
+    * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
+    * tenantId  功能说明：用户所属租户ID
+    * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
     *
     * @var string[]
     */
@@ -95,6 +125,16 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * bandwidthType  功能说明：带宽类型，共享带宽默认为share。  取值范围：share，bgp，telcom，sbgp等。  share：共享带宽  bgp：动态bgp  telcom ：联通  sbgp：静态bgp
+    * billingInfo  功能说明：账单信息  如果billing_info不为空，说明是包周期的带宽
+    * chargeMode  功能说明：按流量计费,按带宽计费还是按增强型95计费。  取值范围：bandwidth，traffic，95peak_plus(按增强型95计费)不返回或者为空时表示是bandwidth。  约束：只有共享带宽支持95peak_plus（按增强型95计费），按增强型95计费时需要指定保底百分比，默认是20%。
+    * id  功能说明：带宽唯一标识
+    * name  功能说明：带宽名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * publicipInfo  功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
+    * shareType  功能说明：带宽类型，标识是否是共享带宽  取值范围：WHOLE，PER  WHOLE表示共享带宽；PER，表示独享带宽
+    * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
+    * tenantId  功能说明：用户所属租户ID
+    * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
     *
     * @var string[]
     */
@@ -113,6 +153,16 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * bandwidthType  功能说明：带宽类型，共享带宽默认为share。  取值范围：share，bgp，telcom，sbgp等。  share：共享带宽  bgp：动态bgp  telcom ：联通  sbgp：静态bgp
+    * billingInfo  功能说明：账单信息  如果billing_info不为空，说明是包周期的带宽
+    * chargeMode  功能说明：按流量计费,按带宽计费还是按增强型95计费。  取值范围：bandwidth，traffic，95peak_plus(按增强型95计费)不返回或者为空时表示是bandwidth。  约束：只有共享带宽支持95peak_plus（按增强型95计费），按增强型95计费时需要指定保底百分比，默认是20%。
+    * id  功能说明：带宽唯一标识
+    * name  功能说明：带宽名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * publicipInfo  功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
+    * shareType  功能说明：带宽类型，标识是否是共享带宽  取值范围：WHOLE，PER  WHOLE表示共享带宽；PER，表示独享带宽
+    * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
+    * tenantId  功能说明：用户所属租户ID
+    * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
     *
     * @var string[]
     */
@@ -318,6 +368,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthType
+    *  功能说明：带宽类型，共享带宽默认为share。  取值范围：share，bgp，telcom，sbgp等。  share：共享带宽  bgp：动态bgp  telcom ：联通  sbgp：静态bgp
     *
     * @return string|null
     */
@@ -341,6 +392,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets billingInfo
+    *  功能说明：账单信息  如果billing_info不为空，说明是包周期的带宽
     *
     * @return string|null
     */
@@ -364,6 +416,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
+    *  功能说明：按流量计费,按带宽计费还是按增强型95计费。  取值范围：bandwidth，traffic，95peak_plus(按增强型95计费)不返回或者为空时表示是bandwidth。  约束：只有共享带宽支持95peak_plus（按增强型95计费），按增强型95计费时需要指定保底百分比，默认是20%。
     *
     * @return string|null
     */
@@ -387,6 +440,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  功能说明：带宽唯一标识
     *
     * @return string|null
     */
@@ -410,6 +464,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：带宽名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string|null
     */
@@ -433,6 +488,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipInfo
+    *  功能说明：带宽对应的弹性公网IP信息  约束：WHOLE类型的带宽支持多个弹性公网IP，PER类型的带宽只能对应一个弹性公网IP
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\PublicipInfoResp[]|null
     */
@@ -456,6 +512,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets shareType
+    *  功能说明：带宽类型，标识是否是共享带宽  取值范围：WHOLE，PER  WHOLE表示共享带宽；PER，表示独享带宽
     *
     * @return string|null
     */
@@ -479,6 +536,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
+    *  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
     *
     * @return int|null
     */
@@ -502,6 +560,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  功能说明：用户所属租户ID
     *
     * @return string|null
     */
@@ -525,6 +584,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
     *
     * @return string|null
     */

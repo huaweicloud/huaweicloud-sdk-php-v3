@@ -20,6 +20,27 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * tenantId  项目ID。
+    * image  镜像ID。
+    * accessIPv4  预留属性。
+    * accessIPv6  预留属性。
+    * metadata  云服务器元数据。
+    * addresses  弹性云服务器的网络属性。
+    * created  弹性云服务器创建时间。  时间格式例如：2019-05-22T03:19:19Z
+    * hostId  弹性云服务器所在主机的主机ID。
+    * flavor  flavor
+    * osDcFdiskConfig  扩展属性， diskConfig的类型。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
+    * userId  创建弹性云服务器的用户ID，格式为UUID。
+    * name  弹性云服务器名称。
+    * progress  弹性云服务器进度。
+    * links  云服务器相关标记快捷链接信息。
+    * id  弹性云服务器ID，格式为UUID。
+    * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
+    * locked  弹性云服务器是否为锁定状态。  - true：锁定 - false：未锁定
+    * description  弹性云服务器的描述信息。
+    * tags  云服务器的标签列表。  微版本2.26后支持，如果不使用微版本查询，响应中无tags字段。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。 - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
+    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
+    * osExtSrvAttRhostname  弹性云服务器的主机名。
     *
     * @var string[]
     */
@@ -49,6 +70,27 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * tenantId  项目ID。
+    * image  镜像ID。
+    * accessIPv4  预留属性。
+    * accessIPv6  预留属性。
+    * metadata  云服务器元数据。
+    * addresses  弹性云服务器的网络属性。
+    * created  弹性云服务器创建时间。  时间格式例如：2019-05-22T03:19:19Z
+    * hostId  弹性云服务器所在主机的主机ID。
+    * flavor  flavor
+    * osDcFdiskConfig  扩展属性， diskConfig的类型。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
+    * userId  创建弹性云服务器的用户ID，格式为UUID。
+    * name  弹性云服务器名称。
+    * progress  弹性云服务器进度。
+    * links  云服务器相关标记快捷链接信息。
+    * id  弹性云服务器ID，格式为UUID。
+    * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
+    * locked  弹性云服务器是否为锁定状态。  - true：锁定 - false：未锁定
+    * description  弹性云服务器的描述信息。
+    * tags  云服务器的标签列表。  微版本2.26后支持，如果不使用微版本查询，响应中无tags字段。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。 - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
+    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
+    * osExtSrvAttRhostname  弹性云服务器的主机名。
     *
     * @var string[]
     */
@@ -99,6 +141,27 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * tenantId  项目ID。
+    * image  镜像ID。
+    * accessIPv4  预留属性。
+    * accessIPv6  预留属性。
+    * metadata  云服务器元数据。
+    * addresses  弹性云服务器的网络属性。
+    * created  弹性云服务器创建时间。  时间格式例如：2019-05-22T03:19:19Z
+    * hostId  弹性云服务器所在主机的主机ID。
+    * flavor  flavor
+    * osDcFdiskConfig  扩展属性， diskConfig的类型。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
+    * userId  创建弹性云服务器的用户ID，格式为UUID。
+    * name  弹性云服务器名称。
+    * progress  弹性云服务器进度。
+    * links  云服务器相关标记快捷链接信息。
+    * id  弹性云服务器ID，格式为UUID。
+    * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
+    * locked  弹性云服务器是否为锁定状态。  - true：锁定 - false：未锁定
+    * description  弹性云服务器的描述信息。
+    * tags  云服务器的标签列表。  微版本2.26后支持，如果不使用微版本查询，响应中无tags字段。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。 - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
+    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
+    * osExtSrvAttRhostname  弹性云服务器的主机名。
     *
     * @var string[]
     */
@@ -128,6 +191,27 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * tenantId  项目ID。
+    * image  镜像ID。
+    * accessIPv4  预留属性。
+    * accessIPv6  预留属性。
+    * metadata  云服务器元数据。
+    * addresses  弹性云服务器的网络属性。
+    * created  弹性云服务器创建时间。  时间格式例如：2019-05-22T03:19:19Z
+    * hostId  弹性云服务器所在主机的主机ID。
+    * flavor  flavor
+    * osDcFdiskConfig  扩展属性， diskConfig的类型。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
+    * userId  创建弹性云服务器的用户ID，格式为UUID。
+    * name  弹性云服务器名称。
+    * progress  弹性云服务器进度。
+    * links  云服务器相关标记快捷链接信息。
+    * id  弹性云服务器ID，格式为UUID。
+    * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
+    * locked  弹性云服务器是否为锁定状态。  - true：锁定 - false：未锁定
+    * description  弹性云服务器的描述信息。
+    * tags  云服务器的标签列表。  微版本2.26后支持，如果不使用微版本查询，响应中无tags字段。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。 - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
+    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
+    * osExtSrvAttRhostname  弹性云服务器的主机名。
     *
     * @var string[]
     */
@@ -157,6 +241,27 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * tenantId  项目ID。
+    * image  镜像ID。
+    * accessIPv4  预留属性。
+    * accessIPv6  预留属性。
+    * metadata  云服务器元数据。
+    * addresses  弹性云服务器的网络属性。
+    * created  弹性云服务器创建时间。  时间格式例如：2019-05-22T03:19:19Z
+    * hostId  弹性云服务器所在主机的主机ID。
+    * flavor  flavor
+    * osDcFdiskConfig  扩展属性， diskConfig的类型。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
+    * userId  创建弹性云服务器的用户ID，格式为UUID。
+    * name  弹性云服务器名称。
+    * progress  弹性云服务器进度。
+    * links  云服务器相关标记快捷链接信息。
+    * id  弹性云服务器ID，格式为UUID。
+    * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
+    * locked  弹性云服务器是否为锁定状态。  - true：锁定 - false：未锁定
+    * description  弹性云服务器的描述信息。
+    * tags  云服务器的标签列表。  微版本2.26后支持，如果不使用微版本查询，响应中无tags字段。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。 - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
+    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
+    * osExtSrvAttRhostname  弹性云服务器的主机名。
     *
     * @var string[]
     */
@@ -343,6 +448,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  项目ID。
     *
     * @return string
     */
@@ -366,6 +472,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets image
+    *  镜像ID。
     *
     * @return string
     */
@@ -389,6 +496,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessIPv4
+    *  预留属性。
     *
     * @return string
     */
@@ -412,6 +520,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessIPv6
+    *  预留属性。
     *
     * @return string
     */
@@ -435,6 +544,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets metadata
+    *  云服务器元数据。
     *
     * @return map[string,string]
     */
@@ -458,6 +568,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets addresses
+    *  弹性云服务器的网络属性。
     *
     * @return map[string,\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerAddress[]]
     */
@@ -481,6 +592,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets created
+    *  弹性云服务器创建时间。  时间格式例如：2019-05-22T03:19:19Z
     *
     * @return string
     */
@@ -504,6 +616,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
+    *  弹性云服务器所在主机的主机ID。
     *
     * @return string
     */
@@ -527,6 +640,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavor
+    *  flavor
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\SimpleFlavor
     */
@@ -550,6 +664,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets osDcFdiskConfig
+    *  扩展属性， diskConfig的类型。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
     *
     * @return string|null
     */
@@ -573,6 +688,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  创建弹性云服务器的用户ID，格式为UUID。
     *
     * @return string
     */
@@ -596,6 +712,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  弹性云服务器名称。
     *
     * @return string
     */
@@ -619,6 +736,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets progress
+    *  弹性云服务器进度。
     *
     * @return int
     */
@@ -642,6 +760,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  云服务器相关标记快捷链接信息。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\Link[]
     */
@@ -665,6 +784,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  弹性云服务器ID，格式为UUID。
     *
     * @return string
     */
@@ -688,6 +808,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
+    *  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
     *
     * @return string
     */
@@ -711,6 +832,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets locked
+    *  弹性云服务器是否为锁定状态。  - true：锁定 - false：未锁定
     *
     * @return bool|null
     */
@@ -734,6 +856,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  弹性云服务器的描述信息。
     *
     * @return string|null
     */
@@ -757,6 +880,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  云服务器的标签列表。  微版本2.26后支持，如果不使用微版本查询，响应中无tags字段。  系统近期对标签功能进行了升级，升级后，返回的tag值遵循如下规则：  - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。 - key与value使用“=”连接，如“key=value”。 - 如果value为空字符串，则仅返回key。
     *
     * @return string[]
     */
@@ -780,6 +904,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
     *
     * @return string
     */
@@ -803,6 +928,7 @@ class UpdateServerResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtSrvAttRhostname
+    *  弹性云服务器的主机名。
     *
     * @return string
     */

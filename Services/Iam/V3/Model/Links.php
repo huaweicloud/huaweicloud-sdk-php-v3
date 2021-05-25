@@ -20,6 +20,9 @@ class Links implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * self  资源链接地址。
+    * previous  前一邻接资源链接地址。
+    * next  后一邻接资源链接地址。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class Links implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * self  资源链接地址。
+    * previous  前一邻接资源链接地址。
+    * next  后一邻接资源链接地址。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class Links implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * self  资源链接地址。
+    * previous  前一邻接资源链接地址。
+    * next  后一邻接资源链接地址。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class Links implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * self  资源链接地址。
+    * previous  前一邻接资源链接地址。
+    * next  后一邻接资源链接地址。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class Links implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * self  资源链接地址。
+    * previous  前一邻接资源链接地址。
+    * next  后一邻接资源链接地址。
     *
     * @var string[]
     */
@@ -190,6 +205,7 @@ class Links implements ModelInterface, ArrayAccess
 
     /**
     * Gets self
+    *  资源链接地址。
     *
     * @return string
     */
@@ -213,6 +229,7 @@ class Links implements ModelInterface, ArrayAccess
 
     /**
     * Gets previous
+    *  前一邻接资源链接地址。
     *
     * @return string
     */
@@ -236,6 +253,7 @@ class Links implements ModelInterface, ArrayAccess
 
     /**
     * Gets next
+    *  后一邻接资源链接地址。
     *
     * @return string
     */

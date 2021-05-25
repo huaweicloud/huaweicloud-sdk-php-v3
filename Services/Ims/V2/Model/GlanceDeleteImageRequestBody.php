@@ -20,6 +20,7 @@ class GlanceDeleteImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * deleteBackup  取值为：true和false true：表示删除整机镜像时，同时删除其关联的云服务器备份。 false：表示只删除整机镜像，不删除其关联的云服务器备份。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class GlanceDeleteImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * deleteBackup  取值为：true和false true：表示删除整机镜像时，同时删除其关联的云服务器备份。 false：表示只删除整机镜像，不删除其关联的云服务器备份。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class GlanceDeleteImageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * deleteBackup  取值为：true和false true：表示删除整机镜像时，同时删除其关联的云服务器备份。 false：表示只删除整机镜像，不删除其关联的云服务器备份。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class GlanceDeleteImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * deleteBackup  取值为：true和false true：表示删除整机镜像时，同时删除其关联的云服务器备份。 false：表示只删除整机镜像，不删除其关联的云服务器备份。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class GlanceDeleteImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * deleteBackup  取值为：true和false true：表示删除整机镜像时，同时删除其关联的云服务器备份。 false：表示只删除整机镜像，不删除其关联的云服务器备份。
     *
     * @var string[]
     */
@@ -169,6 +174,7 @@ class GlanceDeleteImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets deleteBackup
+    *  取值为：true和false true：表示删除整机镜像时，同时删除其关联的云服务器备份。 false：表示只删除整机镜像，不删除其关联的云服务器备份。
     *
     * @return bool|null
     */

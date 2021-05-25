@@ -20,6 +20,12 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  安全组名称
+    * description  安全组描述
+    * id  安全组唯一标识
+    * vpcId  安全组所在的vpc的资源标识
+    * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * securityGroupRules  安全组规则
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  安全组名称
+    * description  安全组描述
+    * id  安全组唯一标识
+    * vpcId  安全组所在的vpc的资源标识
+    * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * securityGroupRules  安全组规则
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  安全组名称
+    * description  安全组描述
+    * id  安全组唯一标识
+    * vpcId  安全组所在的vpc的资源标识
+    * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * securityGroupRules  安全组规则
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  安全组名称
+    * description  安全组描述
+    * id  安全组唯一标识
+    * vpcId  安全组所在的vpc的资源标识
+    * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * securityGroupRules  安全组规则
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  安全组名称
+    * description  安全组描述
+    * id  安全组唯一标识
+    * vpcId  安全组所在的vpc的资源标识
+    * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * securityGroupRules  安全组规则
     *
     * @var string[]
     */
@@ -208,6 +238,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  安全组名称
     *
     * @return string
     */
@@ -231,6 +262,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  安全组描述
     *
     * @return string|null
     */
@@ -254,6 +286,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  安全组唯一标识
     *
     * @return string
     */
@@ -277,6 +310,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
+    *  安全组所在的vpc的资源标识
     *
     * @return string|null
     */
@@ -300,6 +334,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @return string|null
     */
@@ -323,6 +358,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupRules
+    *  安全组规则
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\SecurityGroupRule[]
     */

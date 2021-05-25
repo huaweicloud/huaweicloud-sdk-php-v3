@@ -20,6 +20,7 @@ class NeutronShowFirewallGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * firewallGroupId  网络ACL防火墙组ID
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class NeutronShowFirewallGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * firewallGroupId  网络ACL防火墙组ID
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class NeutronShowFirewallGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * firewallGroupId  网络ACL防火墙组ID
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class NeutronShowFirewallGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * firewallGroupId  网络ACL防火墙组ID
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class NeutronShowFirewallGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * firewallGroupId  网络ACL防火墙组ID
     *
     * @var string[]
     */
@@ -175,6 +180,7 @@ class NeutronShowFirewallGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets firewallGroupId
+    *  网络ACL防火墙组ID
     *
     * @return string
     */
@@ -186,7 +192,7 @@ class NeutronShowFirewallGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets firewallGroupId
     *
-    * @param string $firewallGroupId firewallGroupId
+    * @param string $firewallGroupId 网络ACL防火墙组ID
     *
     * @return $this
     */

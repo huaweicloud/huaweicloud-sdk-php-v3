@@ -20,6 +20,8 @@ class Link implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * href  对应快捷链接。
+    * rel  快捷链接标记名称。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class Link implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * href  对应快捷链接。
+    * rel  快捷链接标记名称。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class Link implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * href  对应快捷链接。
+    * rel  快捷链接标记名称。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class Link implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * href  对应快捷链接。
+    * rel  快捷链接标记名称。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class Link implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * href  对应快捷链接。
+    * rel  快捷链接标记名称。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class Link implements ModelInterface, ArrayAccess
 
     /**
     * Gets href
+    *  对应快捷链接。
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class Link implements ModelInterface, ArrayAccess
 
     /**
     * Gets rel
+    *  快捷链接标记名称。
     *
     * @return string
     */

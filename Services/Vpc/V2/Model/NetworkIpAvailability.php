@@ -20,6 +20,12 @@ class NetworkIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * networkId  网络ID
+    * networkName  网络名称
+    * tenantId  项目ID
+    * totalIps  网络中IP总数（不包含系统预留地址）
+    * usedIps  网络中已经使用的IP数目（不包含系统预留地址）
+    * subnetIpAvailability  子网IP使用情况的对象
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class NetworkIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * networkId  网络ID
+    * networkName  网络名称
+    * tenantId  项目ID
+    * totalIps  网络中IP总数（不包含系统预留地址）
+    * usedIps  网络中已经使用的IP数目（不包含系统预留地址）
+    * subnetIpAvailability  子网IP使用情况的对象
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class NetworkIpAvailability implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * networkId  网络ID
+    * networkName  网络名称
+    * tenantId  项目ID
+    * totalIps  网络中IP总数（不包含系统预留地址）
+    * usedIps  网络中已经使用的IP数目（不包含系统预留地址）
+    * subnetIpAvailability  子网IP使用情况的对象
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class NetworkIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * networkId  网络ID
+    * networkName  网络名称
+    * tenantId  项目ID
+    * totalIps  网络中IP总数（不包含系统预留地址）
+    * usedIps  网络中已经使用的IP数目（不包含系统预留地址）
+    * subnetIpAvailability  子网IP使用情况的对象
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class NetworkIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * networkId  网络ID
+    * networkName  网络名称
+    * tenantId  项目ID
+    * totalIps  网络中IP总数（不包含系统预留地址）
+    * usedIps  网络中已经使用的IP数目（不包含系统预留地址）
+    * subnetIpAvailability  子网IP使用情况的对象
     *
     * @var string[]
     */
@@ -220,6 +250,7 @@ class NetworkIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Gets networkId
+    *  网络ID
     *
     * @return string
     */
@@ -243,6 +274,7 @@ class NetworkIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Gets networkName
+    *  网络名称
     *
     * @return string
     */
@@ -266,6 +298,7 @@ class NetworkIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  项目ID
     *
     * @return string
     */
@@ -289,6 +322,7 @@ class NetworkIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalIps
+    *  网络中IP总数（不包含系统预留地址）
     *
     * @return int
     */
@@ -312,6 +346,7 @@ class NetworkIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedIps
+    *  网络中已经使用的IP数目（不包含系统预留地址）
     *
     * @return int
     */
@@ -335,6 +370,7 @@ class NetworkIpAvailability implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetIpAvailability
+    *  子网IP使用情况的对象
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\SubnetIpAvailability[]
     */

@@ -20,6 +20,8 @@ class ActionDeviceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * deviceId  下发命令的设备ID。 - 当创建设备数据规则时，若device_id为空，则命令下发给触发条件的设备。 - 当创建定时规则时，不允许为空。
+    * cmd  cmd
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ActionDeviceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * deviceId  下发命令的设备ID。 - 当创建设备数据规则时，若device_id为空，则命令下发给触发条件的设备。 - 当创建定时规则时，不允许为空。
+    * cmd  cmd
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ActionDeviceCommand implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * deviceId  下发命令的设备ID。 - 当创建设备数据规则时，若device_id为空，则命令下发给触发条件的设备。 - 当创建定时规则时，不允许为空。
+    * cmd  cmd
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ActionDeviceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * deviceId  下发命令的设备ID。 - 当创建设备数据规则时，若device_id为空，则命令下发给触发条件的设备。 - 当创建定时规则时，不允许为空。
+    * cmd  cmd
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ActionDeviceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * deviceId  下发命令的设备ID。 - 当创建设备数据规则时，若device_id为空，则命令下发给触发条件的设备。 - 当创建定时规则时，不允许为空。
+    * cmd  cmd
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class ActionDeviceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceId
+    *  下发命令的设备ID。 - 当创建设备数据规则时，若device_id为空，则命令下发给触发条件的设备。 - 当创建定时规则时，不允许为空。
     *
     * @return string|null
     */
@@ -204,6 +215,7 @@ class ActionDeviceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Gets cmd
+    *  cmd
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\Cmd
     */

@@ -21,6 +21,8 @@ class ListServerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * serverGroups  弹性云服务器组信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class ListServerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * serverGroups  弹性云服务器组信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class ListServerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * serverGroups  弹性云服务器组信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class ListServerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * serverGroups  弹性云服务器组信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class ListServerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * serverGroups  弹性云服务器组信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class ListServerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverGroups
+    *  弹性云服务器组信息
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\ListServerGroupsResult[]|null
     */
@@ -199,6 +210,7 @@ class ListServerGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pageInfo
+    *  pageInfo
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\ListServerGroupsPageInfoResult|null
     */

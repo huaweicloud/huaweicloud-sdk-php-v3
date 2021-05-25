@@ -20,6 +20,16 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * limit  功能说明：每页返回个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * id  功能说明：安全组规则ID，支持多个ID过滤
+    * securityGroupId  功能说明：安全组规则所属安全组ID，支持多个ID过滤
+    * protocol  功能说明：安全组规则协议，支持多条过滤
+    * description  功能说明：安全组规则的描述，支持多个描述同时过滤
+    * remoteGroupId  功能说明：远端安全组ID，支持多ID过滤
+    * direction  功能说明：安全组规则方向
+    * action  功能说明：安全组规则生效策略
     *
     * @var string[]
     */
@@ -38,6 +48,16 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * limit  功能说明：每页返回个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * id  功能说明：安全组规则ID，支持多个ID过滤
+    * securityGroupId  功能说明：安全组规则所属安全组ID，支持多个ID过滤
+    * protocol  功能说明：安全组规则协议，支持多条过滤
+    * description  功能说明：安全组规则的描述，支持多个描述同时过滤
+    * remoteGroupId  功能说明：远端安全组ID，支持多ID过滤
+    * direction  功能说明：安全组规则方向
+    * action  功能说明：安全组规则生效策略
     *
     * @var string[]
     */
@@ -77,6 +97,16 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * limit  功能说明：每页返回个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * id  功能说明：安全组规则ID，支持多个ID过滤
+    * securityGroupId  功能说明：安全组规则所属安全组ID，支持多个ID过滤
+    * protocol  功能说明：安全组规则协议，支持多条过滤
+    * description  功能说明：安全组规则的描述，支持多个描述同时过滤
+    * remoteGroupId  功能说明：远端安全组ID，支持多ID过滤
+    * direction  功能说明：安全组规则方向
+    * action  功能说明：安全组规则生效策略
     *
     * @var string[]
     */
@@ -95,6 +125,16 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * limit  功能说明：每页返回个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * id  功能说明：安全组规则ID，支持多个ID过滤
+    * securityGroupId  功能说明：安全组规则所属安全组ID，支持多个ID过滤
+    * protocol  功能说明：安全组规则协议，支持多条过滤
+    * description  功能说明：安全组规则的描述，支持多个描述同时过滤
+    * remoteGroupId  功能说明：远端安全组ID，支持多ID过滤
+    * direction  功能说明：安全组规则方向
+    * action  功能说明：安全组规则生效策略
     *
     * @var string[]
     */
@@ -113,6 +153,16 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * limit  功能说明：每页返回个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * id  功能说明：安全组规则ID，支持多个ID过滤
+    * securityGroupId  功能说明：安全组规则所属安全组ID，支持多个ID过滤
+    * protocol  功能说明：安全组规则协议，支持多条过滤
+    * description  功能说明：安全组规则的描述，支持多个描述同时过滤
+    * remoteGroupId  功能说明：远端安全组ID，支持多ID过滤
+    * direction  功能说明：安全组规则方向
+    * action  功能说明：安全组规则生效策略
     *
     * @var string[]
     */
@@ -229,6 +279,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  功能说明：每页返回个数 取值范围：0-2000
     *
     * @return int|null
     */
@@ -240,7 +291,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 功能说明：每页返回个数 取值范围：0-2000
     *
     * @return $this
     */
@@ -252,6 +303,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  分页查询起始的资源ID，为空时查询第一页
     *
     * @return string|null
     */
@@ -263,7 +315,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 分页查询起始的资源ID，为空时查询第一页
     *
     * @return $this
     */
@@ -275,6 +327,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  项目ID 获取项目ID，请参见获取项目ID
     *
     * @return string
     */
@@ -286,7 +339,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId projectId
+    * @param string $projectId 项目ID 获取项目ID，请参见获取项目ID
     *
     * @return $this
     */
@@ -298,6 +351,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  功能说明：安全组规则ID，支持多个ID过滤
     *
     * @return string[]|null
     */
@@ -309,7 +363,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id id
+    * @param string[]|null $id 功能说明：安全组规则ID，支持多个ID过滤
     *
     * @return $this
     */
@@ -321,6 +375,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
+    *  功能说明：安全组规则所属安全组ID，支持多个ID过滤
     *
     * @return string[]|null
     */
@@ -332,7 +387,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string[]|null $securityGroupId securityGroupId
+    * @param string[]|null $securityGroupId 功能说明：安全组规则所属安全组ID，支持多个ID过滤
     *
     * @return $this
     */
@@ -344,6 +399,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
+    *  功能说明：安全组规则协议，支持多条过滤
     *
     * @return string[]|null
     */
@@ -355,7 +411,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string[]|null $protocol protocol
+    * @param string[]|null $protocol 功能说明：安全组规则协议，支持多条过滤
     *
     * @return $this
     */
@@ -367,6 +423,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：安全组规则的描述，支持多个描述同时过滤
     *
     * @return string[]|null
     */
@@ -378,7 +435,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string[]|null $description description
+    * @param string[]|null $description 功能说明：安全组规则的描述，支持多个描述同时过滤
     *
     * @return $this
     */
@@ -390,6 +447,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteGroupId
+    *  功能说明：远端安全组ID，支持多ID过滤
     *
     * @return string[]|null
     */
@@ -401,7 +459,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets remoteGroupId
     *
-    * @param string[]|null $remoteGroupId remoteGroupId
+    * @param string[]|null $remoteGroupId 功能说明：远端安全组ID，支持多ID过滤
     *
     * @return $this
     */
@@ -413,6 +471,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets direction
+    *  功能说明：安全组规则方向
     *
     * @return string|null
     */
@@ -424,7 +483,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets direction
     *
-    * @param string|null $direction direction
+    * @param string|null $direction 功能说明：安全组规则方向
     *
     * @return $this
     */
@@ -436,6 +495,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
+    *  功能说明：安全组规则生效策略
     *
     * @return string|null
     */
@@ -447,7 +507,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action action
+    * @param string|null $action 功能说明：安全组规则生效策略
     *
     * @return $this
     */

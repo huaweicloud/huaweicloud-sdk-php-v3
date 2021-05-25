@@ -20,6 +20,8 @@ class ResourceTagOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * key  标签名称。不能为空。长度不超过36个字符。由英文字母、数字、下划线、中划线、中文字符组成。同一资源的key值不能重复。
+    * value  值列表。长度不超过43个字符。由英文字母、数字、下划线、点、中划线、中文字符组成。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ResourceTagOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * key  标签名称。不能为空。长度不超过36个字符。由英文字母、数字、下划线、中划线、中文字符组成。同一资源的key值不能重复。
+    * value  值列表。长度不超过43个字符。由英文字母、数字、下划线、点、中划线、中文字符组成。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ResourceTagOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * key  标签名称。不能为空。长度不超过36个字符。由英文字母、数字、下划线、中划线、中文字符组成。同一资源的key值不能重复。
+    * value  值列表。长度不超过43个字符。由英文字母、数字、下划线、点、中划线、中文字符组成。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ResourceTagOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * key  标签名称。不能为空。长度不超过36个字符。由英文字母、数字、下划线、中划线、中文字符组成。同一资源的key值不能重复。
+    * value  值列表。长度不超过43个字符。由英文字母、数字、下划线、点、中划线、中文字符组成。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ResourceTagOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * key  标签名称。不能为空。长度不超过36个字符。由英文字母、数字、下划线、中划线、中文字符组成。同一资源的key值不能重复。
+    * value  值列表。长度不超过43个字符。由英文字母、数字、下划线、点、中划线、中文字符组成。
     *
     * @var string[]
     */
@@ -187,6 +197,7 @@ class ResourceTagOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
+    *  标签名称。不能为空。长度不超过36个字符。由英文字母、数字、下划线、中划线、中文字符组成。同一资源的key值不能重复。
     *
     * @return string
     */
@@ -210,6 +221,7 @@ class ResourceTagOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
+    *  值列表。长度不超过43个字符。由英文字母、数字、下划线、点、中划线、中文字符组成。
     *
     * @return string
     */

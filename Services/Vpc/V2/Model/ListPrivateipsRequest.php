@@ -20,6 +20,10 @@ class ListPrivateipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
+    * subnetId  私有IP所在子网的唯一标识
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源id，为空时查询第一页
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class ListPrivateipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
+    * subnetId  私有IP所在子网的唯一标识
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源id，为空时查询第一页
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class ListPrivateipsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
+    * subnetId  私有IP所在子网的唯一标识
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源id，为空时查询第一页
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class ListPrivateipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
+    * subnetId  私有IP所在子网的唯一标识
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源id，为空时查询第一页
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class ListPrivateipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
+    * subnetId  私有IP所在子网的唯一标识
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源id，为空时查询第一页
     *
     * @var string[]
     */
@@ -202,6 +222,7 @@ class ListPrivateipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  项目ID
     *
     * @return string
     */
@@ -213,7 +234,7 @@ class ListPrivateipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId projectId
+    * @param string $projectId 项目ID
     *
     * @return $this
     */
@@ -225,6 +246,7 @@ class ListPrivateipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
+    *  私有IP所在子网的唯一标识
     *
     * @return string
     */
@@ -236,7 +258,7 @@ class ListPrivateipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId subnetId
+    * @param string $subnetId 私有IP所在子网的唯一标识
     *
     * @return $this
     */
@@ -248,6 +270,7 @@ class ListPrivateipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  每页返回的个数
     *
     * @return int|null
     */
@@ -259,7 +282,7 @@ class ListPrivateipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 每页返回的个数
     *
     * @return $this
     */
@@ -271,6 +294,7 @@ class ListPrivateipsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  分页查询起始的资源id，为空时查询第一页
     *
     * @return string|null
     */
@@ -282,7 +306,7 @@ class ListPrivateipsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 分页查询起始的资源id，为空时查询第一页
     *
     * @return $this
     */

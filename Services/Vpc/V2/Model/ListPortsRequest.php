@@ -20,6 +20,19 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
+    * name  功能说明：按照name过滤查询  取值范围：最大长度不超过255
+    * id  按照port_id过滤查询
+    * limit  每页返回的个数
+    * adminStateUp  按照admin_state_up进行过滤
+    * networkId  按照network_id过滤查询
+    * macAddress  按照mac_address过滤查询
+    * deviceId  按照device_id过滤查询
+    * deviceOwner  按照device_owner过滤查询
+    * status  功能说明：按照status过滤查询  取值范围：ACTIVE、BUILD、DOWN
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
+    * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -36,12 +49,24 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'status' => 'string',
             'marker' => 'string',
             'fixedIps' => 'string',
-            'enterpriseProjectId' => 'string',
-            'zoneId' => 'string'
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
+    * name  功能说明：按照name过滤查询  取值范围：最大长度不超过255
+    * id  按照port_id过滤查询
+    * limit  每页返回的个数
+    * adminStateUp  按照admin_state_up进行过滤
+    * networkId  按照network_id过滤查询
+    * macAddress  按照mac_address过滤查询
+    * deviceId  按照device_id过滤查询
+    * deviceOwner  按照device_owner过滤查询
+    * status  功能说明：按照status过滤查询  取值范围：ACTIVE、BUILD、DOWN
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
+    * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -58,8 +83,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
         'status' => null,
         'marker' => null,
         'fixedIps' => null,
-        'enterpriseProjectId' => null,
-        'zoneId' => null
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -85,6 +109,19 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
+    * name  功能说明：按照name过滤查询  取值范围：最大长度不超过255
+    * id  按照port_id过滤查询
+    * limit  每页返回的个数
+    * adminStateUp  按照admin_state_up进行过滤
+    * networkId  按照network_id过滤查询
+    * macAddress  按照mac_address过滤查询
+    * deviceId  按照device_id过滤查询
+    * deviceOwner  按照device_owner过滤查询
+    * status  功能说明：按照status过滤查询  取值范围：ACTIVE、BUILD、DOWN
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
+    * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -101,12 +138,24 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'status' => 'status',
             'marker' => 'marker',
             'fixedIps' => 'fixed_ips',
-            'enterpriseProjectId' => 'enterprise_project_id',
-            'zoneId' => 'zone_id'
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
+    * name  功能说明：按照name过滤查询  取值范围：最大长度不超过255
+    * id  按照port_id过滤查询
+    * limit  每页返回的个数
+    * adminStateUp  按照admin_state_up进行过滤
+    * networkId  按照network_id过滤查询
+    * macAddress  按照mac_address过滤查询
+    * deviceId  按照device_id过滤查询
+    * deviceOwner  按照device_owner过滤查询
+    * status  功能说明：按照status过滤查询  取值范围：ACTIVE、BUILD、DOWN
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
+    * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -123,12 +172,24 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'marker' => 'setMarker',
             'fixedIps' => 'setFixedIps',
-            'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'zoneId' => 'setZoneId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
+    * name  功能说明：按照name过滤查询  取值范围：最大长度不超过255
+    * id  按照port_id过滤查询
+    * limit  每页返回的个数
+    * adminStateUp  按照admin_state_up进行过滤
+    * networkId  按照network_id过滤查询
+    * macAddress  按照mac_address过滤查询
+    * deviceId  按照device_id过滤查询
+    * deviceOwner  按照device_owner过滤查询
+    * status  功能说明：按照status过滤查询  取值范围：ACTIVE、BUILD、DOWN
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
+    * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -145,8 +206,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'marker' => 'getMarker',
             'fixedIps' => 'getFixedIps',
-            'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'zoneId' => 'getZoneId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -256,7 +316,6 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['fixedIps'] = isset($data['fixedIps']) ? $data['fixedIps'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['zoneId'] = isset($data['zoneId']) ? $data['zoneId'] : null;
     }
 
     /**
@@ -323,6 +382,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  项目ID
     *
     * @return string
     */
@@ -334,7 +394,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId projectId
+    * @param string $projectId 项目ID
     *
     * @return $this
     */
@@ -346,6 +406,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：按照name过滤查询  取值范围：最大长度不超过255
     *
     * @return string|null
     */
@@ -357,7 +418,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name 功能说明：按照name过滤查询  取值范围：最大长度不超过255
     *
     * @return $this
     */
@@ -369,6 +430,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  按照port_id过滤查询
     *
     * @return string|null
     */
@@ -380,7 +442,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id 按照port_id过滤查询
     *
     * @return $this
     */
@@ -392,6 +454,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  每页返回的个数
     *
     * @return int|null
     */
@@ -403,7 +466,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 每页返回的个数
     *
     * @return $this
     */
@@ -415,6 +478,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
+    *  按照admin_state_up进行过滤
     *
     * @return bool|null
     */
@@ -426,7 +490,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets adminStateUp
     *
-    * @param bool|null $adminStateUp adminStateUp
+    * @param bool|null $adminStateUp 按照admin_state_up进行过滤
     *
     * @return $this
     */
@@ -438,6 +502,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets networkId
+    *  按照network_id过滤查询
     *
     * @return string|null
     */
@@ -449,7 +514,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets networkId
     *
-    * @param string|null $networkId networkId
+    * @param string|null $networkId 按照network_id过滤查询
     *
     * @return $this
     */
@@ -461,6 +526,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets macAddress
+    *  按照mac_address过滤查询
     *
     * @return string|null
     */
@@ -472,7 +538,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets macAddress
     *
-    * @param string|null $macAddress macAddress
+    * @param string|null $macAddress 按照mac_address过滤查询
     *
     * @return $this
     */
@@ -484,6 +550,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceId
+    *  按照device_id过滤查询
     *
     * @return string|null
     */
@@ -495,7 +562,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets deviceId
     *
-    * @param string|null $deviceId deviceId
+    * @param string|null $deviceId 按照device_id过滤查询
     *
     * @return $this
     */
@@ -507,6 +574,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceOwner
+    *  按照device_owner过滤查询
     *
     * @return string|null
     */
@@ -518,7 +586,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets deviceOwner
     *
-    * @param string|null $deviceOwner deviceOwner
+    * @param string|null $deviceOwner 按照device_owner过滤查询
     *
     * @return $this
     */
@@ -530,6 +598,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  功能说明：按照status过滤查询  取值范围：ACTIVE、BUILD、DOWN
     *
     * @return string|null
     */
@@ -541,7 +610,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status 功能说明：按照status过滤查询  取值范围：ACTIVE、BUILD、DOWN
     *
     * @return $this
     */
@@ -553,6 +622,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  分页查询起始的资源ID，为空时查询第一页
     *
     * @return string|null
     */
@@ -564,7 +634,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 分页查询起始的资源ID，为空时查询第一页
     *
     * @return $this
     */
@@ -576,6 +646,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fixedIps
+    *  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     *
     * @return string|null
     */
@@ -587,7 +658,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fixedIps
     *
-    * @param string|null $fixedIps fixedIps
+    * @param string|null $fixedIps 按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     *
     * @return $this
     */
@@ -599,6 +670,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
     *
     * @return string|null
     */
@@ -610,36 +682,13 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId enterpriseProjectId
+    * @param string|null $enterpriseProjectId 功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
     *
     * @return $this
     */
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
-        return $this;
-    }
-
-    /**
-    * Gets zoneId
-    *
-    * @return string|null
-    */
-    public function getZoneId()
-    {
-        return $this->container['zoneId'];
-    }
-
-    /**
-    * Sets zoneId
-    *
-    * @param string|null $zoneId zoneId
-    *
-    * @return $this
-    */
-    public function setZoneId($zoneId)
-    {
-        $this->container['zoneId'] = $zoneId;
         return $this;
     }
 

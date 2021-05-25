@@ -20,6 +20,10 @@ class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * inUse  已使用的数量。
+    * limit  最大的数量。
+    * reserved  预留属性。
+    * allocated  预留属性。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * inUse  已使用的数量。
+    * limit  最大的数量。
+    * reserved  预留属性。
+    * allocated  预留属性。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * inUse  已使用的数量。
+    * limit  最大的数量。
+    * reserved  预留属性。
+    * allocated  预留属性。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * inUse  已使用的数量。
+    * limit  最大的数量。
+    * reserved  预留属性。
+    * allocated  预留属性。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * inUse  已使用的数量。
+    * limit  最大的数量。
+    * reserved  预留属性。
+    * allocated  预留属性。
     *
     * @var string[]
     */
@@ -199,6 +219,7 @@ class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
 
     /**
     * Gets inUse
+    *  已使用的数量。
     *
     * @return int
     */
@@ -222,6 +243,7 @@ class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  最大的数量。
     *
     * @return int
     */
@@ -245,6 +267,7 @@ class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
 
     /**
     * Gets reserved
+    *  预留属性。
     *
     * @return int
     */
@@ -268,6 +291,7 @@ class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
 
     /**
     * Gets allocated
+    *  预留属性。
     *
     * @return int
     */

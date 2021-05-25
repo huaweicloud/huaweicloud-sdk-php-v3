@@ -20,6 +20,7 @@ class ListServerGroupsPageInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * nextMarker  
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class ListServerGroupsPageInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * nextMarker  
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class ListServerGroupsPageInfoResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * nextMarker  
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class ListServerGroupsPageInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * nextMarker  
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class ListServerGroupsPageInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * nextMarker  
     *
     * @var string[]
     */
@@ -169,6 +174,7 @@ class ListServerGroupsPageInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextMarker
+    *  
     *
     * @return string|null
     */

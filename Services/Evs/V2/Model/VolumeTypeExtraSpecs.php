@@ -20,6 +20,11 @@ class VolumeTypeExtraSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * reskeYavailabilityZones  支持当前云硬盘类型的可用区列表。
+    * availabilityZone  预留属性。
+    * osVendorExtendedsoldOutAvailabilityZones  当前云硬盘类型已售罄的可用区列表。
+    * volumeBackendName  预留属性。
+    * hWavailabilityZone  预留属性。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class VolumeTypeExtraSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * reskeYavailabilityZones  支持当前云硬盘类型的可用区列表。
+    * availabilityZone  预留属性。
+    * osVendorExtendedsoldOutAvailabilityZones  当前云硬盘类型已售罄的可用区列表。
+    * volumeBackendName  预留属性。
+    * hWavailabilityZone  预留属性。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class VolumeTypeExtraSpecs implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * reskeYavailabilityZones  支持当前云硬盘类型的可用区列表。
+    * availabilityZone  预留属性。
+    * osVendorExtendedsoldOutAvailabilityZones  当前云硬盘类型已售罄的可用区列表。
+    * volumeBackendName  预留属性。
+    * hWavailabilityZone  预留属性。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class VolumeTypeExtraSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * reskeYavailabilityZones  支持当前云硬盘类型的可用区列表。
+    * availabilityZone  预留属性。
+    * osVendorExtendedsoldOutAvailabilityZones  当前云硬盘类型已售罄的可用区列表。
+    * volumeBackendName  预留属性。
+    * hWavailabilityZone  预留属性。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class VolumeTypeExtraSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * reskeYavailabilityZones  支持当前云硬盘类型的可用区列表。
+    * availabilityZone  预留属性。
+    * osVendorExtendedsoldOutAvailabilityZones  当前云硬盘类型已售罄的可用区列表。
+    * volumeBackendName  预留属性。
+    * hWavailabilityZone  预留属性。
     *
     * @var string[]
     */
@@ -193,6 +218,7 @@ class VolumeTypeExtraSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Gets reskeYavailabilityZones
+    *  支持当前云硬盘类型的可用区列表。
     *
     * @return string|null
     */
@@ -216,6 +242,7 @@ class VolumeTypeExtraSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
+    *  预留属性。
     *
     * @return string|null
     */
@@ -239,6 +266,7 @@ class VolumeTypeExtraSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVendorExtendedsoldOutAvailabilityZones
+    *  当前云硬盘类型已售罄的可用区列表。
     *
     * @return string|null
     */
@@ -262,6 +290,7 @@ class VolumeTypeExtraSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeBackendName
+    *  预留属性。
     *
     * @return string|null
     */
@@ -285,6 +314,7 @@ class VolumeTypeExtraSpecs implements ModelInterface, ArrayAccess
 
     /**
     * Gets hWavailabilityZone
+    *  预留属性。
     *
     * @return string|null
     */

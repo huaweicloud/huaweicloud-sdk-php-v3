@@ -20,6 +20,10 @@ class UpdateSubnetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
+    * vpcId  子网对应的vpc_id
+    * subnetId  子网ID
+    * body  body
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class UpdateSubnetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
+    * vpcId  子网对应的vpc_id
+    * subnetId  子网ID
+    * body  body
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class UpdateSubnetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
+    * vpcId  子网对应的vpc_id
+    * subnetId  子网ID
+    * body  body
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class UpdateSubnetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
+    * vpcId  子网对应的vpc_id
+    * subnetId  子网ID
+    * body  body
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class UpdateSubnetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
+    * vpcId  子网对应的vpc_id
+    * subnetId  子网ID
+    * body  body
     *
     * @var string[]
     */
@@ -205,6 +225,7 @@ class UpdateSubnetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  项目ID
     *
     * @return string
     */
@@ -216,7 +237,7 @@ class UpdateSubnetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId projectId
+    * @param string $projectId 项目ID
     *
     * @return $this
     */
@@ -228,6 +249,7 @@ class UpdateSubnetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
+    *  子网对应的vpc_id
     *
     * @return string
     */
@@ -239,7 +261,7 @@ class UpdateSubnetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId vpcId
+    * @param string $vpcId 子网对应的vpc_id
     *
     * @return $this
     */
@@ -251,6 +273,7 @@ class UpdateSubnetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
+    *  子网ID
     *
     * @return string
     */
@@ -262,7 +285,7 @@ class UpdateSubnetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId subnetId
+    * @param string $subnetId 子网ID
     *
     * @return $this
     */
@@ -274,6 +297,7 @@ class UpdateSubnetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\UpdateSubnetRequestBody|null
     */

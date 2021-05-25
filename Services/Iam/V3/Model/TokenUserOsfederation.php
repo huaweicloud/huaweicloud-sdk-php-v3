@@ -20,6 +20,9 @@ class TokenUserOsfederation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * groups  用户组信息列表。
+    * identityProvider  identityProvider
+    * protocol  protocol
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class TokenUserOsfederation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * groups  用户组信息列表。
+    * identityProvider  identityProvider
+    * protocol  protocol
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class TokenUserOsfederation implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * groups  用户组信息列表。
+    * identityProvider  identityProvider
+    * protocol  protocol
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class TokenUserOsfederation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * groups  用户组信息列表。
+    * identityProvider  identityProvider
+    * protocol  protocol
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class TokenUserOsfederation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * groups  用户组信息列表。
+    * identityProvider  identityProvider
+    * protocol  protocol
     *
     * @var string[]
     */
@@ -190,6 +205,7 @@ class TokenUserOsfederation implements ModelInterface, ArrayAccess
 
     /**
     * Gets groups
+    *  用户组信息列表。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\OsfederationGroups[]
     */
@@ -213,6 +229,7 @@ class TokenUserOsfederation implements ModelInterface, ArrayAccess
 
     /**
     * Gets identityProvider
+    *  identityProvider
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\OsfederationIdentityprovider
     */
@@ -236,6 +253,7 @@ class TokenUserOsfederation implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
+    *  protocol
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\OsfederationProtocol
     */

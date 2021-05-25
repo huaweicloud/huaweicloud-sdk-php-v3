@@ -20,6 +20,8 @@ class MfaTotpUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  已开启虚拟MFA方式的登录保护的IAM用户ID。
+    * passcode  虚拟MFA验证码，在MFA应用程序中获取动态验证码，获取方法请参见：[如何获取虚拟MFA验证码](https://support.huaweicloud.com/iam_faq/iam_01_0001.html)。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class MfaTotpUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  已开启虚拟MFA方式的登录保护的IAM用户ID。
+    * passcode  虚拟MFA验证码，在MFA应用程序中获取动态验证码，获取方法请参见：[如何获取虚拟MFA验证码](https://support.huaweicloud.com/iam_faq/iam_01_0001.html)。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class MfaTotpUser implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  已开启虚拟MFA方式的登录保护的IAM用户ID。
+    * passcode  虚拟MFA验证码，在MFA应用程序中获取动态验证码，获取方法请参见：[如何获取虚拟MFA验证码](https://support.huaweicloud.com/iam_faq/iam_01_0001.html)。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class MfaTotpUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  已开启虚拟MFA方式的登录保护的IAM用户ID。
+    * passcode  虚拟MFA验证码，在MFA应用程序中获取动态验证码，获取方法请参见：[如何获取虚拟MFA验证码](https://support.huaweicloud.com/iam_faq/iam_01_0001.html)。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class MfaTotpUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  已开启虚拟MFA方式的登录保护的IAM用户ID。
+    * passcode  虚拟MFA验证码，在MFA应用程序中获取动态验证码，获取方法请参见：[如何获取虚拟MFA验证码](https://support.huaweicloud.com/iam_faq/iam_01_0001.html)。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class MfaTotpUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  已开启虚拟MFA方式的登录保护的IAM用户ID。
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class MfaTotpUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets passcode
+    *  虚拟MFA验证码，在MFA应用程序中获取动态验证码，获取方法请参见：[如何获取虚拟MFA验证码](https://support.huaweicloud.com/iam_faq/iam_01_0001.html)。
     *
     * @return string
     */

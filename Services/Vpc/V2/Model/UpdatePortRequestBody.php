@@ -20,6 +20,7 @@ class UpdatePortRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * port  port
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class UpdatePortRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * port  port
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class UpdatePortRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * port  port
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class UpdatePortRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * port  port
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class UpdatePortRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * port  port
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class UpdatePortRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
+    *  port
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\UpdatePortOption
     */

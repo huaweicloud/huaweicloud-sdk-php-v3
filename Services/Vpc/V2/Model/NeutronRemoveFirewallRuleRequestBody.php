@@ -20,6 +20,7 @@ class NeutronRemoveFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * firewallRuleId  功能说明：待移除的ACL规则ID
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class NeutronRemoveFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * firewallRuleId  功能说明：待移除的ACL规则ID
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class NeutronRemoveFirewallRuleRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * firewallRuleId  功能说明：待移除的ACL规则ID
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class NeutronRemoveFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * firewallRuleId  功能说明：待移除的ACL规则ID
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class NeutronRemoveFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * firewallRuleId  功能说明：待移除的ACL规则ID
     *
     * @var string[]
     */
@@ -175,6 +180,7 @@ class NeutronRemoveFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets firewallRuleId
+    *  功能说明：待移除的ACL规则ID
     *
     * @return string
     */

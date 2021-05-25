@@ -20,6 +20,9 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * resourceType  要解绑标签的资源类型。 - device：设备。
+    * resourceId  要解绑标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
+    * tagKeys  指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * resourceType  要解绑标签的资源类型。 - device：设备。
+    * resourceId  要解绑标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
+    * tagKeys  指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * resourceType  要解绑标签的资源类型。 - device：设备。
+    * resourceId  要解绑标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
+    * tagKeys  指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * resourceType  要解绑标签的资源类型。 - device：设备。
+    * resourceId  要解绑标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
+    * tagKeys  指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * resourceType  要解绑标签的资源类型。 - device：设备。
+    * resourceId  要解绑标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
+    * tagKeys  指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值。
     *
     * @var string[]
     */
@@ -196,6 +211,7 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
+    *  要解绑标签的资源类型。 - device：设备。
     *
     * @return string
     */
@@ -219,6 +235,7 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
+    *  要解绑标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
     *
     * @return string
     */
@@ -242,6 +259,7 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagKeys
+    *  指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值。
     *
     * @return string[]
     */

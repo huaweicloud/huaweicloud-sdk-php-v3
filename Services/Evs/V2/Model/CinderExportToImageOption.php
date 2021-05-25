@@ -20,6 +20,11 @@ class CinderExportToImageOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * containerFormat  云硬盘导出镜像的容器类型。  目前支持ami、ari、aki、ovf、bare。默认是bare。
+    * diskFormat  云硬盘导出镜像的格式。  目前支持vhd、zvhd、zvhd2、raw、qcow2。默认是vhd。
+    * force  强制导出镜像的标示，默认值是false。  当force标记为false时，云硬盘处于正在使用状态时，不能强制导出镜像。 当force标记为true时，即使云硬盘处于正在使用状态时，仍可以导出镜像。
+    * imageName  云硬盘导出镜像的名称。  名称的长度范围为1～128位。 名称只能包含以下字符：大写字母、小写字母、中文、数字、特殊字符包含“-”、“.”、“_”和空格。
+    * osType  云硬盘导出镜像的系统类型。目前只支持“windows”和“linux”，默认值是“linux”。  说明： 只有云硬盘的volume_image_metadata信息中无“__os_type”字段且云硬盘状态为“available”时，设置的__os_type才会生效。 如果不传递该参数，则使用默认的“linux”值作为镜像的系统类型。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class CinderExportToImageOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * containerFormat  云硬盘导出镜像的容器类型。  目前支持ami、ari、aki、ovf、bare。默认是bare。
+    * diskFormat  云硬盘导出镜像的格式。  目前支持vhd、zvhd、zvhd2、raw、qcow2。默认是vhd。
+    * force  强制导出镜像的标示，默认值是false。  当force标记为false时，云硬盘处于正在使用状态时，不能强制导出镜像。 当force标记为true时，即使云硬盘处于正在使用状态时，仍可以导出镜像。
+    * imageName  云硬盘导出镜像的名称。  名称的长度范围为1～128位。 名称只能包含以下字符：大写字母、小写字母、中文、数字、特殊字符包含“-”、“.”、“_”和空格。
+    * osType  云硬盘导出镜像的系统类型。目前只支持“windows”和“linux”，默认值是“linux”。  说明： 只有云硬盘的volume_image_metadata信息中无“__os_type”字段且云硬盘状态为“available”时，设置的__os_type才会生效。 如果不传递该参数，则使用默认的“linux”值作为镜像的系统类型。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class CinderExportToImageOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * containerFormat  云硬盘导出镜像的容器类型。  目前支持ami、ari、aki、ovf、bare。默认是bare。
+    * diskFormat  云硬盘导出镜像的格式。  目前支持vhd、zvhd、zvhd2、raw、qcow2。默认是vhd。
+    * force  强制导出镜像的标示，默认值是false。  当force标记为false时，云硬盘处于正在使用状态时，不能强制导出镜像。 当force标记为true时，即使云硬盘处于正在使用状态时，仍可以导出镜像。
+    * imageName  云硬盘导出镜像的名称。  名称的长度范围为1～128位。 名称只能包含以下字符：大写字母、小写字母、中文、数字、特殊字符包含“-”、“.”、“_”和空格。
+    * osType  云硬盘导出镜像的系统类型。目前只支持“windows”和“linux”，默认值是“linux”。  说明： 只有云硬盘的volume_image_metadata信息中无“__os_type”字段且云硬盘状态为“available”时，设置的__os_type才会生效。 如果不传递该参数，则使用默认的“linux”值作为镜像的系统类型。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class CinderExportToImageOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * containerFormat  云硬盘导出镜像的容器类型。  目前支持ami、ari、aki、ovf、bare。默认是bare。
+    * diskFormat  云硬盘导出镜像的格式。  目前支持vhd、zvhd、zvhd2、raw、qcow2。默认是vhd。
+    * force  强制导出镜像的标示，默认值是false。  当force标记为false时，云硬盘处于正在使用状态时，不能强制导出镜像。 当force标记为true时，即使云硬盘处于正在使用状态时，仍可以导出镜像。
+    * imageName  云硬盘导出镜像的名称。  名称的长度范围为1～128位。 名称只能包含以下字符：大写字母、小写字母、中文、数字、特殊字符包含“-”、“.”、“_”和空格。
+    * osType  云硬盘导出镜像的系统类型。目前只支持“windows”和“linux”，默认值是“linux”。  说明： 只有云硬盘的volume_image_metadata信息中无“__os_type”字段且云硬盘状态为“available”时，设置的__os_type才会生效。 如果不传递该参数，则使用默认的“linux”值作为镜像的系统类型。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class CinderExportToImageOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * containerFormat  云硬盘导出镜像的容器类型。  目前支持ami、ari、aki、ovf、bare。默认是bare。
+    * diskFormat  云硬盘导出镜像的格式。  目前支持vhd、zvhd、zvhd2、raw、qcow2。默认是vhd。
+    * force  强制导出镜像的标示，默认值是false。  当force标记为false时，云硬盘处于正在使用状态时，不能强制导出镜像。 当force标记为true时，即使云硬盘处于正在使用状态时，仍可以导出镜像。
+    * imageName  云硬盘导出镜像的名称。  名称的长度范围为1～128位。 名称只能包含以下字符：大写字母、小写字母、中文、数字、特殊字符包含“-”、“.”、“_”和空格。
+    * osType  云硬盘导出镜像的系统类型。目前只支持“windows”和“linux”，默认值是“linux”。  说明： 只有云硬盘的volume_image_metadata信息中无“__os_type”字段且云硬盘状态为“available”时，设置的__os_type才会生效。 如果不传递该参数，则使用默认的“linux”值作为镜像的系统类型。
     *
     * @var string[]
     */
@@ -277,6 +302,7 @@ class CinderExportToImageOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerFormat
+    *  云硬盘导出镜像的容器类型。  目前支持ami、ari、aki、ovf、bare。默认是bare。
     *
     * @return string|null
     */
@@ -300,6 +326,7 @@ class CinderExportToImageOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskFormat
+    *  云硬盘导出镜像的格式。  目前支持vhd、zvhd、zvhd2、raw、qcow2。默认是vhd。
     *
     * @return string|null
     */
@@ -323,6 +350,7 @@ class CinderExportToImageOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets force
+    *  强制导出镜像的标示，默认值是false。  当force标记为false时，云硬盘处于正在使用状态时，不能强制导出镜像。 当force标记为true时，即使云硬盘处于正在使用状态时，仍可以导出镜像。
     *
     * @return bool|null
     */
@@ -346,6 +374,7 @@ class CinderExportToImageOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageName
+    *  云硬盘导出镜像的名称。  名称的长度范围为1～128位。 名称只能包含以下字符：大写字母、小写字母、中文、数字、特殊字符包含“-”、“.”、“_”和空格。
     *
     * @return string
     */
@@ -369,6 +398,7 @@ class CinderExportToImageOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
+    *  云硬盘导出镜像的系统类型。目前只支持“windows”和“linux”，默认值是“linux”。  说明： 只有云硬盘的volume_image_metadata信息中无“__os_type”字段且云硬盘状态为“available”时，设置的__os_type才会生效。 如果不传递该参数，则使用默认的“linux”值作为镜像的系统类型。
     *
     * @return string|null
     */

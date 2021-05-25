@@ -20,6 +20,8 @@ class RemovePublicipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * publicipType  功能说明：若publicip_id为弹性公网IP的id，则该字段可自动忽略。若publicip_id为IPv6端口PORT的id，则该字段必填：5_dualStack(目前仅北京4局点支持)
+    * publicipId  功能说明：带宽对应的弹性公网IP或IPv6端口PORT的唯一标识
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class RemovePublicipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * publicipType  功能说明：若publicip_id为弹性公网IP的id，则该字段可自动忽略。若publicip_id为IPv6端口PORT的id，则该字段必填：5_dualStack(目前仅北京4局点支持)
+    * publicipId  功能说明：带宽对应的弹性公网IP或IPv6端口PORT的唯一标识
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class RemovePublicipInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * publicipType  功能说明：若publicip_id为弹性公网IP的id，则该字段可自动忽略。若publicip_id为IPv6端口PORT的id，则该字段必填：5_dualStack(目前仅北京4局点支持)
+    * publicipId  功能说明：带宽对应的弹性公网IP或IPv6端口PORT的唯一标识
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class RemovePublicipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * publicipType  功能说明：若publicip_id为弹性公网IP的id，则该字段可自动忽略。若publicip_id为IPv6端口PORT的id，则该字段必填：5_dualStack(目前仅北京4局点支持)
+    * publicipId  功能说明：带宽对应的弹性公网IP或IPv6端口PORT的唯一标识
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class RemovePublicipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * publicipType  功能说明：若publicip_id为弹性公网IP的id，则该字段可自动忽略。若publicip_id为IPv6端口PORT的id，则该字段必填：5_dualStack(目前仅北京4局点支持)
+    * publicipId  功能说明：带宽对应的弹性公网IP或IPv6端口PORT的唯一标识
     *
     * @var string[]
     */
@@ -184,6 +194,7 @@ class RemovePublicipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipType
+    *  功能说明：若publicip_id为弹性公网IP的id，则该字段可自动忽略。若publicip_id为IPv6端口PORT的id，则该字段必填：5_dualStack(目前仅北京4局点支持)
     *
     * @return string|null
     */
@@ -207,6 +218,7 @@ class RemovePublicipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipId
+    *  功能说明：带宽对应的弹性公网IP或IPv6端口PORT的唯一标识
     *
     * @return string
     */

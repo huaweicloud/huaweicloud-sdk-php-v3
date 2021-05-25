@@ -20,6 +20,11 @@ class CreateServerGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  云服务器组UUID。
+    * members  云服务器组中包含的云服务器列表。
+    * metadata  云服务器组元数据。
+    * name  云服务器组名称。
+    * policies  与服务器组关联的策略名称列表。当前有效的策略名称为:  anti-affinity -此组中的服务器必须安排到不同的主机；  affinity -此组中的服务器必须安排在同一主机上;  soft-anti-affinity –如果可能, 应将此组中的服务器安排到不同的主机, 但如果无法实现, 则仍应安排它们, 而不是导致生成失败;  soft-affinity -如果可能, 应将此组中的服务器安排在同一主机上, 但如果无法实现, 则仍应安排它们, 而不是导致生成失败。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class CreateServerGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  云服务器组UUID。
+    * members  云服务器组中包含的云服务器列表。
+    * metadata  云服务器组元数据。
+    * name  云服务器组名称。
+    * policies  与服务器组关联的策略名称列表。当前有效的策略名称为:  anti-affinity -此组中的服务器必须安排到不同的主机；  affinity -此组中的服务器必须安排在同一主机上;  soft-anti-affinity –如果可能, 应将此组中的服务器安排到不同的主机, 但如果无法实现, 则仍应安排它们, 而不是导致生成失败;  soft-affinity -如果可能, 应将此组中的服务器安排在同一主机上, 但如果无法实现, 则仍应安排它们, 而不是导致生成失败。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class CreateServerGroupResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  云服务器组UUID。
+    * members  云服务器组中包含的云服务器列表。
+    * metadata  云服务器组元数据。
+    * name  云服务器组名称。
+    * policies  与服务器组关联的策略名称列表。当前有效的策略名称为:  anti-affinity -此组中的服务器必须安排到不同的主机；  affinity -此组中的服务器必须安排在同一主机上;  soft-anti-affinity –如果可能, 应将此组中的服务器安排到不同的主机, 但如果无法实现, 则仍应安排它们, 而不是导致生成失败;  soft-affinity -如果可能, 应将此组中的服务器安排在同一主机上, 但如果无法实现, 则仍应安排它们, 而不是导致生成失败。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class CreateServerGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  云服务器组UUID。
+    * members  云服务器组中包含的云服务器列表。
+    * metadata  云服务器组元数据。
+    * name  云服务器组名称。
+    * policies  与服务器组关联的策略名称列表。当前有效的策略名称为:  anti-affinity -此组中的服务器必须安排到不同的主机；  affinity -此组中的服务器必须安排在同一主机上;  soft-anti-affinity –如果可能, 应将此组中的服务器安排到不同的主机, 但如果无法实现, 则仍应安排它们, 而不是导致生成失败;  soft-affinity -如果可能, 应将此组中的服务器安排在同一主机上, 但如果无法实现, 则仍应安排它们, 而不是导致生成失败。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class CreateServerGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  云服务器组UUID。
+    * members  云服务器组中包含的云服务器列表。
+    * metadata  云服务器组元数据。
+    * name  云服务器组名称。
+    * policies  与服务器组关联的策略名称列表。当前有效的策略名称为:  anti-affinity -此组中的服务器必须安排到不同的主机；  affinity -此组中的服务器必须安排在同一主机上;  soft-anti-affinity –如果可能, 应将此组中的服务器安排到不同的主机, 但如果无法实现, 则仍应安排它们, 而不是导致生成失败;  soft-affinity -如果可能, 应将此组中的服务器安排在同一主机上, 但如果无法实现, 则仍应安排它们, 而不是导致生成失败。
     *
     * @var string[]
     */
@@ -208,6 +233,7 @@ class CreateServerGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  云服务器组UUID。
     *
     * @return string
     */
@@ -231,6 +257,7 @@ class CreateServerGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets members
+    *  云服务器组中包含的云服务器列表。
     *
     * @return string[]
     */
@@ -254,6 +281,7 @@ class CreateServerGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets metadata
+    *  云服务器组元数据。
     *
     * @return map[string,string]
     */
@@ -277,6 +305,7 @@ class CreateServerGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云服务器组名称。
     *
     * @return string
     */
@@ -300,6 +329,7 @@ class CreateServerGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets policies
+    *  与服务器组关联的策略名称列表。当前有效的策略名称为:  anti-affinity -此组中的服务器必须安排到不同的主机；  affinity -此组中的服务器必须安排在同一主机上;  soft-anti-affinity –如果可能, 应将此组中的服务器安排到不同的主机, 但如果无法实现, 则仍应安排它们, 而不是导致生成失败;  soft-affinity -如果可能, 应将此组中的服务器安排在同一主机上, 但如果无法实现, 则仍应安排它们, 而不是导致生成失败。
     *
     * @return string[]
     */

@@ -20,6 +20,17 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * appId  资源空间ID，唯一标识一个资源空间，由物联网平台在创建资源空间时分配。资源空间对应的是物联网平台原有的应用，在物联网平台的含义与应用一致，只是变更了名称。
+    * appName  资源空间名称。
+    * createTime  资源空间创建时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * defaultApp  是否为默认资源空间
+    * appType  app的类型，标准版：Junior | 高级版：Normal
+    * username  用户名。
+    * permission  app与用户的授权关系时，响应为：all | bind | edit | query ，其中bind权限类似于ALL权限，属于子用户权限。
+    * lastInstanceId  迁移前实例ID。
+    * currentInstanceId  当前实例ID。
+    * serviceName  对接的服务名
+    * freezed  是否冻结
     *
     * @var string[]
     */
@@ -39,6 +50,17 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * appId  资源空间ID，唯一标识一个资源空间，由物联网平台在创建资源空间时分配。资源空间对应的是物联网平台原有的应用，在物联网平台的含义与应用一致，只是变更了名称。
+    * appName  资源空间名称。
+    * createTime  资源空间创建时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * defaultApp  是否为默认资源空间
+    * appType  app的类型，标准版：Junior | 高级版：Normal
+    * username  用户名。
+    * permission  app与用户的授权关系时，响应为：all | bind | edit | query ，其中bind权限类似于ALL权限，属于子用户权限。
+    * lastInstanceId  迁移前实例ID。
+    * currentInstanceId  当前实例ID。
+    * serviceName  对接的服务名
+    * freezed  是否冻结
     *
     * @var string[]
     */
@@ -79,6 +101,17 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * appId  资源空间ID，唯一标识一个资源空间，由物联网平台在创建资源空间时分配。资源空间对应的是物联网平台原有的应用，在物联网平台的含义与应用一致，只是变更了名称。
+    * appName  资源空间名称。
+    * createTime  资源空间创建时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * defaultApp  是否为默认资源空间
+    * appType  app的类型，标准版：Junior | 高级版：Normal
+    * username  用户名。
+    * permission  app与用户的授权关系时，响应为：all | bind | edit | query ，其中bind权限类似于ALL权限，属于子用户权限。
+    * lastInstanceId  迁移前实例ID。
+    * currentInstanceId  当前实例ID。
+    * serviceName  对接的服务名
+    * freezed  是否冻结
     *
     * @var string[]
     */
@@ -98,6 +131,17 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * appId  资源空间ID，唯一标识一个资源空间，由物联网平台在创建资源空间时分配。资源空间对应的是物联网平台原有的应用，在物联网平台的含义与应用一致，只是变更了名称。
+    * appName  资源空间名称。
+    * createTime  资源空间创建时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * defaultApp  是否为默认资源空间
+    * appType  app的类型，标准版：Junior | 高级版：Normal
+    * username  用户名。
+    * permission  app与用户的授权关系时，响应为：all | bind | edit | query ，其中bind权限类似于ALL权限，属于子用户权限。
+    * lastInstanceId  迁移前实例ID。
+    * currentInstanceId  当前实例ID。
+    * serviceName  对接的服务名
+    * freezed  是否冻结
     *
     * @var string[]
     */
@@ -117,6 +161,17 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * appId  资源空间ID，唯一标识一个资源空间，由物联网平台在创建资源空间时分配。资源空间对应的是物联网平台原有的应用，在物联网平台的含义与应用一致，只是变更了名称。
+    * appName  资源空间名称。
+    * createTime  资源空间创建时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * defaultApp  是否为默认资源空间
+    * appType  app的类型，标准版：Junior | 高级版：Normal
+    * username  用户名。
+    * permission  app与用户的授权关系时，响应为：all | bind | edit | query ，其中bind权限类似于ALL权限，属于子用户权限。
+    * lastInstanceId  迁移前实例ID。
+    * currentInstanceId  当前实例ID。
+    * serviceName  对接的服务名
+    * freezed  是否冻结
     *
     * @var string[]
     */
@@ -283,6 +338,7 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
+    *  资源空间ID，唯一标识一个资源空间，由物联网平台在创建资源空间时分配。资源空间对应的是物联网平台原有的应用，在物联网平台的含义与应用一致，只是变更了名称。
     *
     * @return string|null
     */
@@ -306,6 +362,7 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
+    *  资源空间名称。
     *
     * @return string|null
     */
@@ -329,6 +386,7 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
+    *  资源空间创建时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @return string|null
     */
@@ -352,6 +410,7 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultApp
+    *  是否为默认资源空间
     *
     * @return bool|null
     */
@@ -375,6 +434,7 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets appType
+    *  app的类型，标准版：Junior | 高级版：Normal
     *
     * @return string|null
     */
@@ -398,6 +458,7 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets username
+    *  用户名。
     *
     * @return string|null
     */
@@ -421,6 +482,7 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets permission
+    *  app与用户的授权关系时，响应为：all | bind | edit | query ，其中bind权限类似于ALL权限，属于子用户权限。
     *
     * @return string|null
     */
@@ -444,6 +506,7 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastInstanceId
+    *  迁移前实例ID。
     *
     * @return string|null
     */
@@ -467,6 +530,7 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentInstanceId
+    *  当前实例ID。
     *
     * @return string|null
     */
@@ -490,6 +554,7 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceName
+    *  对接的服务名
     *
     * @return string|null
     */
@@ -513,6 +578,7 @@ class ApplicationDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets freezed
+    *  是否冻结
     *
     * @return bool|null
     */

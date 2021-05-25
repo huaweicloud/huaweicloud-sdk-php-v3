@@ -21,6 +21,8 @@ class ShowSecurityGroupRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * requestId  请求ID
+    * securityGroupRule  securityGroupRule
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class ShowSecurityGroupRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * requestId  请求ID
+    * securityGroupRule  securityGroupRule
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class ShowSecurityGroupRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * requestId  请求ID
+    * securityGroupRule  securityGroupRule
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class ShowSecurityGroupRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * requestId  请求ID
+    * securityGroupRule  securityGroupRule
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class ShowSecurityGroupRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * requestId  请求ID
+    * securityGroupRule  securityGroupRule
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class ShowSecurityGroupRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
+    *  请求ID
     *
     * @return string|null
     */
@@ -199,6 +210,7 @@ class ShowSecurityGroupRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupRule
+    *  securityGroupRule
     *
     * @return \HuaweiCloud\SDK\Vpc\V3\Model\SecurityGroupRule|null
     */

@@ -20,6 +20,22 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * bandwidthId  弹性公网IP对应带宽ID
+    * bandwidthName  带宽名称
+    * bandwidthShareType  表示共享带宽或者独享带宽  取值范围：PER，WHOLE。  WHOLE表示共享带宽  PER表示独享带宽  约束：其中IPv6暂不支持WHOLE类型带宽。
+    * bandwidthSize  带宽大小，单位为Mbit/s。
+    * createTime  弹性公网IP申请时间（UTC）
+    * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。
+    * id  弹性公网IP唯一标识
+    * portId  功能说明：端口id。  约束：只有绑定了的弹性公网IP查询才会返回该参数
+    * privateIpAddress  功能说明：绑定弹性公网IP的私有IP地址  约束：只有绑定了的弹性公网IP查询才会返回该参数
+    * profile  profile
+    * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * status  功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
+    * tenantId  项目ID
+    * type  弹性公网IP的类型
+    * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
+    * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
     *
     * @var string[]
     */
@@ -44,6 +60,22 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * bandwidthId  弹性公网IP对应带宽ID
+    * bandwidthName  带宽名称
+    * bandwidthShareType  表示共享带宽或者独享带宽  取值范围：PER，WHOLE。  WHOLE表示共享带宽  PER表示独享带宽  约束：其中IPv6暂不支持WHOLE类型带宽。
+    * bandwidthSize  带宽大小，单位为Mbit/s。
+    * createTime  弹性公网IP申请时间（UTC）
+    * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。
+    * id  弹性公网IP唯一标识
+    * portId  功能说明：端口id。  约束：只有绑定了的弹性公网IP查询才会返回该参数
+    * privateIpAddress  功能说明：绑定弹性公网IP的私有IP地址  约束：只有绑定了的弹性公网IP查询才会返回该参数
+    * profile  profile
+    * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * status  功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
+    * tenantId  项目ID
+    * type  弹性公网IP的类型
+    * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
+    * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
     *
     * @var string[]
     */
@@ -89,6 +121,22 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * bandwidthId  弹性公网IP对应带宽ID
+    * bandwidthName  带宽名称
+    * bandwidthShareType  表示共享带宽或者独享带宽  取值范围：PER，WHOLE。  WHOLE表示共享带宽  PER表示独享带宽  约束：其中IPv6暂不支持WHOLE类型带宽。
+    * bandwidthSize  带宽大小，单位为Mbit/s。
+    * createTime  弹性公网IP申请时间（UTC）
+    * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。
+    * id  弹性公网IP唯一标识
+    * portId  功能说明：端口id。  约束：只有绑定了的弹性公网IP查询才会返回该参数
+    * privateIpAddress  功能说明：绑定弹性公网IP的私有IP地址  约束：只有绑定了的弹性公网IP查询才会返回该参数
+    * profile  profile
+    * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * status  功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
+    * tenantId  项目ID
+    * type  弹性公网IP的类型
+    * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
+    * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
     *
     * @var string[]
     */
@@ -113,6 +161,22 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * bandwidthId  弹性公网IP对应带宽ID
+    * bandwidthName  带宽名称
+    * bandwidthShareType  表示共享带宽或者独享带宽  取值范围：PER，WHOLE。  WHOLE表示共享带宽  PER表示独享带宽  约束：其中IPv6暂不支持WHOLE类型带宽。
+    * bandwidthSize  带宽大小，单位为Mbit/s。
+    * createTime  弹性公网IP申请时间（UTC）
+    * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。
+    * id  弹性公网IP唯一标识
+    * portId  功能说明：端口id。  约束：只有绑定了的弹性公网IP查询才会返回该参数
+    * privateIpAddress  功能说明：绑定弹性公网IP的私有IP地址  约束：只有绑定了的弹性公网IP查询才会返回该参数
+    * profile  profile
+    * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * status  功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
+    * tenantId  项目ID
+    * type  弹性公网IP的类型
+    * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
+    * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
     *
     * @var string[]
     */
@@ -137,6 +201,22 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * bandwidthId  弹性公网IP对应带宽ID
+    * bandwidthName  带宽名称
+    * bandwidthShareType  表示共享带宽或者独享带宽  取值范围：PER，WHOLE。  WHOLE表示共享带宽  PER表示独享带宽  约束：其中IPv6暂不支持WHOLE类型带宽。
+    * bandwidthSize  带宽大小，单位为Mbit/s。
+    * createTime  弹性公网IP申请时间（UTC）
+    * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。
+    * id  弹性公网IP唯一标识
+    * portId  功能说明：端口id。  约束：只有绑定了的弹性公网IP查询才会返回该参数
+    * privateIpAddress  功能说明：绑定弹性公网IP的私有IP地址  约束：只有绑定了的弹性公网IP查询才会返回该参数
+    * profile  profile
+    * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
+    * status  功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
+    * tenantId  项目ID
+    * type  弹性公网IP的类型
+    * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
+    * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
     *
     * @var string[]
     */
@@ -383,6 +463,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthId
+    *  弹性公网IP对应带宽ID
     *
     * @return string|null
     */
@@ -406,6 +487,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthName
+    *  带宽名称
     *
     * @return string|null
     */
@@ -429,6 +511,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthShareType
+    *  表示共享带宽或者独享带宽  取值范围：PER，WHOLE。  WHOLE表示共享带宽  PER表示独享带宽  约束：其中IPv6暂不支持WHOLE类型带宽。
     *
     * @return string|null
     */
@@ -452,6 +535,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthSize
+    *  带宽大小，单位为Mbit/s。
     *
     * @return int|null
     */
@@ -475,6 +559,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
+    *  弹性公网IP申请时间（UTC）
     *
     * @return \DateTime|null
     */
@@ -498,6 +583,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。
     *
     * @return string|null
     */
@@ -521,6 +607,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  弹性公网IP唯一标识
     *
     * @return string|null
     */
@@ -544,6 +631,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets portId
+    *  功能说明：端口id。  约束：只有绑定了的弹性公网IP查询才会返回该参数
     *
     * @return string|null
     */
@@ -567,6 +655,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIpAddress
+    *  功能说明：绑定弹性公网IP的私有IP地址  约束：只有绑定了的弹性公网IP查询才会返回该参数
     *
     * @return string|null
     */
@@ -590,6 +679,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets profile
+    *  profile
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\ProfileResp|null
     */
@@ -613,6 +703,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIpAddress
+    *  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
     *
     * @return string|null
     */
@@ -636,6 +727,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  功能说明：弹性公网IP的状态  取值范围：冻结FREEZED，绑定失败BIND_ERROR，绑定中BINDING，释放中PENDING_DELETE， 创建中PENDING_CREATE，创建中NOTIFYING，释放中NOTIFY_DELETE，更新中PENDING_UPDATE， 未绑定DOWN ，绑定ACTIVE，绑定ELB，绑定VPN，失败ERROR。
     *
     * @return string|null
     */
@@ -659,6 +751,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  项目ID
     *
     * @return string|null
     */
@@ -682,6 +775,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  弹性公网IP的类型
     *
     * @return string|null
     */
@@ -705,6 +799,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIpv6Address
+    *  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     *
     * @return string|null
     */
@@ -728,6 +823,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
+    *  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
     *
     * @return int|null
     */

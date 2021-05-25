@@ -20,6 +20,21 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  功能描述：安全组规则对应的唯一标识 取值范围：带“-”的标准UUID格式
+    * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * securityGroupId  功能说明：安全组规则所属的安全组ID
+    * direction  功能说明：安全组规则的出入控制方向 取值范围：ingress 表示入方向；egress 表示出方向
+    * protocol  功能说明：协议类型 取值范围：icmp、tcp、udp、icmpv6或IP协议号 约束：为空表示支持所有协议。协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
+    * ethertype  功能说明：IP地址协议类型 取值范围：IPv4，IPv6 约束：不填默认值为IPv4
+    * multiport  功能说明：端口取值范围 取值范围：支持单端口(80)，连续端口(1-30)以及不连续端口(22,3389,80)
+    * action  功能说明：安全组规则生效策略 取值范围：allow 允许，deny 拒绝 约束：默认值为deny
+    * priority  功能说明：优先级 取值范围：1~100，1代表最高优先级
+    * remoteGroupId  功能说明：远端安全组ID，表示该安全组内的流量允许或拒绝 取值范围：租户下存在的安全组ID 约束：与remote_ip_prefix，remote_address_group_id功能互斥
+    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：与remote_group_id、remote_address_group_id互斥
+    * remoteAddressGroupId  功能说明：远端地址组ID 取值范围：租户下存在的地址组ID 约束：与remote_ip_prefix，remote_group_id功能互斥
+    * createdAt  功能说明：安全组规则创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：安全组规则更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * projectId  功能说明：安全组规则所属项目ID
     *
     * @var string[]
     */
@@ -43,6 +58,21 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  功能描述：安全组规则对应的唯一标识 取值范围：带“-”的标准UUID格式
+    * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * securityGroupId  功能说明：安全组规则所属的安全组ID
+    * direction  功能说明：安全组规则的出入控制方向 取值范围：ingress 表示入方向；egress 表示出方向
+    * protocol  功能说明：协议类型 取值范围：icmp、tcp、udp、icmpv6或IP协议号 约束：为空表示支持所有协议。协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
+    * ethertype  功能说明：IP地址协议类型 取值范围：IPv4，IPv6 约束：不填默认值为IPv4
+    * multiport  功能说明：端口取值范围 取值范围：支持单端口(80)，连续端口(1-30)以及不连续端口(22,3389,80)
+    * action  功能说明：安全组规则生效策略 取值范围：allow 允许，deny 拒绝 约束：默认值为deny
+    * priority  功能说明：优先级 取值范围：1~100，1代表最高优先级
+    * remoteGroupId  功能说明：远端安全组ID，表示该安全组内的流量允许或拒绝 取值范围：租户下存在的安全组ID 约束：与remote_ip_prefix，remote_address_group_id功能互斥
+    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：与remote_group_id、remote_address_group_id互斥
+    * remoteAddressGroupId  功能说明：远端地址组ID 取值范围：租户下存在的地址组ID 约束：与remote_ip_prefix，remote_group_id功能互斥
+    * createdAt  功能说明：安全组规则创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：安全组规则更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * projectId  功能说明：安全组规则所属项目ID
     *
     * @var string[]
     */
@@ -87,6 +117,21 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  功能描述：安全组规则对应的唯一标识 取值范围：带“-”的标准UUID格式
+    * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * securityGroupId  功能说明：安全组规则所属的安全组ID
+    * direction  功能说明：安全组规则的出入控制方向 取值范围：ingress 表示入方向；egress 表示出方向
+    * protocol  功能说明：协议类型 取值范围：icmp、tcp、udp、icmpv6或IP协议号 约束：为空表示支持所有协议。协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
+    * ethertype  功能说明：IP地址协议类型 取值范围：IPv4，IPv6 约束：不填默认值为IPv4
+    * multiport  功能说明：端口取值范围 取值范围：支持单端口(80)，连续端口(1-30)以及不连续端口(22,3389,80)
+    * action  功能说明：安全组规则生效策略 取值范围：allow 允许，deny 拒绝 约束：默认值为deny
+    * priority  功能说明：优先级 取值范围：1~100，1代表最高优先级
+    * remoteGroupId  功能说明：远端安全组ID，表示该安全组内的流量允许或拒绝 取值范围：租户下存在的安全组ID 约束：与remote_ip_prefix，remote_address_group_id功能互斥
+    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：与remote_group_id、remote_address_group_id互斥
+    * remoteAddressGroupId  功能说明：远端地址组ID 取值范围：租户下存在的地址组ID 约束：与remote_ip_prefix，remote_group_id功能互斥
+    * createdAt  功能说明：安全组规则创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：安全组规则更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * projectId  功能说明：安全组规则所属项目ID
     *
     * @var string[]
     */
@@ -110,6 +155,21 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  功能描述：安全组规则对应的唯一标识 取值范围：带“-”的标准UUID格式
+    * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * securityGroupId  功能说明：安全组规则所属的安全组ID
+    * direction  功能说明：安全组规则的出入控制方向 取值范围：ingress 表示入方向；egress 表示出方向
+    * protocol  功能说明：协议类型 取值范围：icmp、tcp、udp、icmpv6或IP协议号 约束：为空表示支持所有协议。协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
+    * ethertype  功能说明：IP地址协议类型 取值范围：IPv4，IPv6 约束：不填默认值为IPv4
+    * multiport  功能说明：端口取值范围 取值范围：支持单端口(80)，连续端口(1-30)以及不连续端口(22,3389,80)
+    * action  功能说明：安全组规则生效策略 取值范围：allow 允许，deny 拒绝 约束：默认值为deny
+    * priority  功能说明：优先级 取值范围：1~100，1代表最高优先级
+    * remoteGroupId  功能说明：远端安全组ID，表示该安全组内的流量允许或拒绝 取值范围：租户下存在的安全组ID 约束：与remote_ip_prefix，remote_address_group_id功能互斥
+    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：与remote_group_id、remote_address_group_id互斥
+    * remoteAddressGroupId  功能说明：远端地址组ID 取值范围：租户下存在的地址组ID 约束：与remote_ip_prefix，remote_group_id功能互斥
+    * createdAt  功能说明：安全组规则创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：安全组规则更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * projectId  功能说明：安全组规则所属项目ID
     *
     * @var string[]
     */
@@ -133,6 +193,21 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  功能描述：安全组规则对应的唯一标识 取值范围：带“-”的标准UUID格式
+    * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * securityGroupId  功能说明：安全组规则所属的安全组ID
+    * direction  功能说明：安全组规则的出入控制方向 取值范围：ingress 表示入方向；egress 表示出方向
+    * protocol  功能说明：协议类型 取值范围：icmp、tcp、udp、icmpv6或IP协议号 约束：为空表示支持所有协议。协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
+    * ethertype  功能说明：IP地址协议类型 取值范围：IPv4，IPv6 约束：不填默认值为IPv4
+    * multiport  功能说明：端口取值范围 取值范围：支持单端口(80)，连续端口(1-30)以及不连续端口(22,3389,80)
+    * action  功能说明：安全组规则生效策略 取值范围：allow 允许，deny 拒绝 约束：默认值为deny
+    * priority  功能说明：优先级 取值范围：1~100，1代表最高优先级
+    * remoteGroupId  功能说明：远端安全组ID，表示该安全组内的流量允许或拒绝 取值范围：租户下存在的安全组ID 约束：与remote_ip_prefix，remote_address_group_id功能互斥
+    * remoteIpPrefix  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：与remote_group_id、remote_address_group_id互斥
+    * remoteAddressGroupId  功能说明：远端地址组ID 取值范围：租户下存在的地址组ID 约束：与remote_ip_prefix，remote_group_id功能互斥
+    * createdAt  功能说明：安全组规则创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：安全组规则更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * projectId  功能说明：安全组规则所属项目ID
     *
     * @var string[]
     */
@@ -298,6 +373,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  功能描述：安全组规则对应的唯一标识 取值范围：带“-”的标准UUID格式
     *
     * @return string
     */
@@ -321,6 +397,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     *
     * @return string
     */
@@ -344,6 +421,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
+    *  功能说明：安全组规则所属的安全组ID
     *
     * @return string
     */
@@ -367,6 +445,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets direction
+    *  功能说明：安全组规则的出入控制方向 取值范围：ingress 表示入方向；egress 表示出方向
     *
     * @return string
     */
@@ -390,6 +469,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
+    *  功能说明：协议类型 取值范围：icmp、tcp、udp、icmpv6或IP协议号 约束：为空表示支持所有协议。协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
     *
     * @return string
     */
@@ -413,6 +493,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets ethertype
+    *  功能说明：IP地址协议类型 取值范围：IPv4，IPv6 约束：不填默认值为IPv4
     *
     * @return string
     */
@@ -436,6 +517,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets multiport
+    *  功能说明：端口取值范围 取值范围：支持单端口(80)，连续端口(1-30)以及不连续端口(22,3389,80)
     *
     * @return string
     */
@@ -459,6 +541,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
+    *  功能说明：安全组规则生效策略 取值范围：allow 允许，deny 拒绝 约束：默认值为deny
     *
     * @return string
     */
@@ -482,6 +565,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
+    *  功能说明：优先级 取值范围：1~100，1代表最高优先级
     *
     * @return int
     */
@@ -505,6 +589,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteGroupId
+    *  功能说明：远端安全组ID，表示该安全组内的流量允许或拒绝 取值范围：租户下存在的安全组ID 约束：与remote_ip_prefix，remote_address_group_id功能互斥
     *
     * @return string
     */
@@ -528,6 +613,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteIpPrefix
+    *  功能说明：远端IP地址，当direction是egress时为虚拟机访问端的地址，当direction是ingress时为访问虚拟机的地址 取值范围：IP地址，或者cidr格式 约束：与remote_group_id、remote_address_group_id互斥
     *
     * @return string
     */
@@ -551,6 +637,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteAddressGroupId
+    *  功能说明：远端地址组ID 取值范围：租户下存在的地址组ID 约束：与remote_ip_prefix，remote_group_id功能互斥
     *
     * @return string
     */
@@ -574,6 +661,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  功能说明：安全组规则创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     *
     * @return \DateTime
     */
@@ -597,6 +685,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
+    *  功能说明：安全组规则更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     *
     * @return \DateTime
     */
@@ -620,6 +709,7 @@ class SecurityGroupRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  功能说明：安全组规则所属项目ID
     *
     * @return string
     */

@@ -20,6 +20,8 @@ class ConfigByOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * passwordRegex  密码强度策略的正则表达式。(当option为password_regex时返回)
+    * passwordRegexDescription  密码强度策略的描述。(当option为password_regex_description时返回)
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ConfigByOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * passwordRegex  密码强度策略的正则表达式。(当option为password_regex时返回)
+    * passwordRegexDescription  密码强度策略的描述。(当option为password_regex_description时返回)
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ConfigByOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * passwordRegex  密码强度策略的正则表达式。(当option为password_regex时返回)
+    * passwordRegexDescription  密码强度策略的描述。(当option为password_regex_description时返回)
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ConfigByOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * passwordRegex  密码强度策略的正则表达式。(当option为password_regex时返回)
+    * passwordRegexDescription  密码强度策略的描述。(当option为password_regex_description时返回)
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ConfigByOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * passwordRegex  密码强度策略的正则表达式。(当option为password_regex时返回)
+    * passwordRegexDescription  密码强度策略的描述。(当option为password_regex_description时返回)
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class ConfigByOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets passwordRegex
+    *  密码强度策略的正则表达式。(当option为password_regex时返回)
     *
     * @return string|null
     */
@@ -198,6 +209,7 @@ class ConfigByOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets passwordRegexDescription
+    *  密码强度策略的描述。(当option为password_regex_description时返回)
     *
     * @return string|null
     */

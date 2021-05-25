@@ -20,6 +20,10 @@ class NovaCreateKeypairOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * publicKey  导入的公钥信息。  建议导入的公钥长度不大于1024字节。  说明：  - 长度超过1024字节会导致云服务器注入该密钥失败。
+    * type  密钥类型，值为“ssh”或“x509”。  说明：  - 微版本2.2支持。
+    * name  密钥名称。  新创建的密钥名称不能和已有密钥名称相同。
+    * userId  密钥的用户ID。  说明：  - 微版本2.10支持。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class NovaCreateKeypairOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * publicKey  导入的公钥信息。  建议导入的公钥长度不大于1024字节。  说明：  - 长度超过1024字节会导致云服务器注入该密钥失败。
+    * type  密钥类型，值为“ssh”或“x509”。  说明：  - 微版本2.2支持。
+    * name  密钥名称。  新创建的密钥名称不能和已有密钥名称相同。
+    * userId  密钥的用户ID。  说明：  - 微版本2.10支持。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class NovaCreateKeypairOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * publicKey  导入的公钥信息。  建议导入的公钥长度不大于1024字节。  说明：  - 长度超过1024字节会导致云服务器注入该密钥失败。
+    * type  密钥类型，值为“ssh”或“x509”。  说明：  - 微版本2.2支持。
+    * name  密钥名称。  新创建的密钥名称不能和已有密钥名称相同。
+    * userId  密钥的用户ID。  说明：  - 微版本2.10支持。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class NovaCreateKeypairOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * publicKey  导入的公钥信息。  建议导入的公钥长度不大于1024字节。  说明：  - 长度超过1024字节会导致云服务器注入该密钥失败。
+    * type  密钥类型，值为“ssh”或“x509”。  说明：  - 微版本2.2支持。
+    * name  密钥名称。  新创建的密钥名称不能和已有密钥名称相同。
+    * userId  密钥的用户ID。  说明：  - 微版本2.10支持。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class NovaCreateKeypairOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * publicKey  导入的公钥信息。  建议导入的公钥长度不大于1024字节。  说明：  - 长度超过1024字节会导致云服务器注入该密钥失败。
+    * type  密钥类型，值为“ssh”或“x509”。  说明：  - 微版本2.2支持。
+    * name  密钥名称。  新创建的密钥名称不能和已有密钥名称相同。
+    * userId  密钥的用户ID。  说明：  - 微版本2.10支持。
     *
     * @var string[]
     */
@@ -219,6 +239,7 @@ class NovaCreateKeypairOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicKey
+    *  导入的公钥信息。  建议导入的公钥长度不大于1024字节。  说明：  - 长度超过1024字节会导致云服务器注入该密钥失败。
     *
     * @return string|null
     */
@@ -242,6 +263,7 @@ class NovaCreateKeypairOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  密钥类型，值为“ssh”或“x509”。  说明：  - 微版本2.2支持。
     *
     * @return string|null
     */
@@ -265,6 +287,7 @@ class NovaCreateKeypairOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  密钥名称。  新创建的密钥名称不能和已有密钥名称相同。
     *
     * @return string
     */
@@ -288,6 +311,7 @@ class NovaCreateKeypairOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  密钥的用户ID。  说明：  - 微版本2.10支持。
     *
     * @return string|null
     */

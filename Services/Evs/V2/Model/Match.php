@@ -20,6 +20,8 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * key  键。取值范围如下： resource_name：资源名称。 service_type：服务类型。
+    * value  值。最大长度255个字符。 key为“resource_name”时，value为模糊匹配。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * key  键。取值范围如下： resource_name：资源名称。 service_type：服务类型。
+    * value  值。最大长度255个字符。 key为“resource_name”时，value为模糊匹配。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * key  键。取值范围如下： resource_name：资源名称。 service_type：服务类型。
+    * value  值。最大长度255个字符。 key为“resource_name”时，value为模糊匹配。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * key  键。取值范围如下： resource_name：资源名称。 service_type：服务类型。
+    * value  值。最大长度255个字符。 key为“resource_name”时，value为模糊匹配。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * key  键。取值范围如下： resource_name：资源名称。 service_type：服务类型。
+    * value  值。最大长度255个字符。 key为“resource_name”时，value为模糊匹配。
     *
     * @var string[]
     */
@@ -204,6 +214,7 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
+    *  键。取值范围如下： resource_name：资源名称。 service_type：服务类型。
     *
     * @return string
     */
@@ -227,6 +238,7 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
+    *  值。最大长度255个字符。 key为“resource_name”时，value为模糊匹配。
     *
     * @return string
     */

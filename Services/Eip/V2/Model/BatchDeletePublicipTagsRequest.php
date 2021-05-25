@@ -20,6 +20,8 @@ class BatchDeletePublicipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * publicipId  资源ID
+    * body  body
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class BatchDeletePublicipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * publicipId  资源ID
+    * body  body
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class BatchDeletePublicipTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * publicipId  资源ID
+    * body  body
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class BatchDeletePublicipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * publicipId  资源ID
+    * body  body
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class BatchDeletePublicipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * publicipId  资源ID
+    * body  body
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class BatchDeletePublicipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipId
+    *  资源ID
     *
     * @return string
     */
@@ -189,7 +200,7 @@ class BatchDeletePublicipTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publicipId
     *
-    * @param string $publicipId publicipId
+    * @param string $publicipId 资源ID
     *
     * @return $this
     */
@@ -201,6 +212,7 @@ class BatchDeletePublicipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\BatchDeletePublicipTagsRequestBody|null
     */

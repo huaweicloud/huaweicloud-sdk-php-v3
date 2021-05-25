@@ -20,6 +20,14 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * status  Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
+    * entities  entities
+    * jobId  子任务的ID。
+    * jobType  子任务的类型。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  Job执行失败时的错误码。  Job执行成功后，该值为null。
+    * failReason  Job执行失败时的错误原因。  Job执行成功后，该值为null。
     *
     * @var string[]
     */
@@ -36,6 +44,14 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * status  Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
+    * entities  entities
+    * jobId  子任务的ID。
+    * jobType  子任务的类型。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  Job执行失败时的错误码。  Job执行成功后，该值为null。
+    * failReason  Job执行失败时的错误原因。  Job执行成功后，该值为null。
     *
     * @var string[]
     */
@@ -73,6 +89,14 @@ class SubJob implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * status  Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
+    * entities  entities
+    * jobId  子任务的ID。
+    * jobType  子任务的类型。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  Job执行失败时的错误码。  Job执行成功后，该值为null。
+    * failReason  Job执行失败时的错误原因。  Job执行成功后，该值为null。
     *
     * @var string[]
     */
@@ -89,6 +113,14 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * status  Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
+    * entities  entities
+    * jobId  子任务的ID。
+    * jobType  子任务的类型。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  Job执行失败时的错误码。  Job执行成功后，该值为null。
+    * failReason  Job执行失败时的错误原因。  Job执行成功后，该值为null。
     *
     * @var string[]
     */
@@ -105,6 +137,14 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * status  Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
+    * entities  entities
+    * jobId  子任务的ID。
+    * jobType  子任务的类型。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  Job执行失败时的错误码。  Job执行成功后，该值为null。
+    * failReason  Job执行失败时的错误原因。  Job执行成功后，该值为null。
     *
     * @var string[]
     */
@@ -238,6 +278,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  Job的状态。  - SUCCESS：成功。  - RUNNING：运行中。  - FAIL：失败。  - INIT：正在初始化。
     *
     * @return string|null
     */
@@ -261,6 +302,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets entities
+    *  entities
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\SubJobEntities|null
     */
@@ -284,6 +326,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
+    *  子任务的ID。
     *
     * @return string|null
     */
@@ -307,6 +350,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobType
+    *  子任务的类型。
     *
     * @return string|null
     */
@@ -330,6 +374,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
+    *  开始时间。
     *
     * @return string|null
     */
@@ -353,6 +398,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
+    *  结束时间。
     *
     * @return string|null
     */
@@ -376,6 +422,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
+    *  Job执行失败时的错误码。  Job执行成功后，该值为null。
     *
     * @return string|null
     */
@@ -399,6 +446,7 @@ class SubJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets failReason
+    *  Job执行失败时的错误原因。  Job执行成功后，该值为null。
     *
     * @return string|null
     */

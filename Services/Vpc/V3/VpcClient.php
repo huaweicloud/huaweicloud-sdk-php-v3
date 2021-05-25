@@ -25,6 +25,13 @@ class VpcClient extends Client
     }
 
 
+    /**
+     * 批量创建辅助弹性网卡
+     * 批量创建辅助弹性网卡
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function batchCreateSubNetworkInterface($request)
     {
         return $this->batchCreateSubNetworkInterfaceWithHttpInfo($request);
@@ -83,6 +90,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchCreateSubNetworkInterfaceRequest');
     }
 
+    /**
+     * 创建安全组
+     * 创建安全组
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createSecurityGroup($request)
     {
         return $this->createSecurityGroupWithHttpInfo($request);
@@ -141,6 +155,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateSecurityGroupRequest');
     }
 
+    /**
+     * 创建安全组规则
+     * 创建安全组规则
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createSecurityGroupRule($request)
     {
         return $this->createSecurityGroupRuleWithHttpInfo($request);
@@ -199,6 +220,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateSecurityGroupRuleRequest');
     }
 
+    /**
+     * 创建辅助弹性网卡
+     * 创建辅助弹性网卡
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createSubNetworkInterface($request)
     {
         return $this->createSubNetworkInterfaceWithHttpInfo($request);
@@ -257,6 +285,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateSubNetworkInterfaceRequest');
     }
 
+    /**
+     * 删除安全组
+     * 删除安全组
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteSecurityGroup($request)
     {
         return $this->deleteSecurityGroupWithHttpInfo($request);
@@ -315,6 +350,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteSecurityGroupRequest');
     }
 
+    /**
+     * 删除安全组规则
+     * 删除安全组规则
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteSecurityGroupRule($request)
     {
         return $this->deleteSecurityGroupRuleWithHttpInfo($request);
@@ -373,6 +415,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteSecurityGroupRuleRequest');
     }
 
+    /**
+     * 删除辅助弹性网卡
+     * 删除辅助弹性网卡
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteSubNetworkInterface($request)
     {
         return $this->deleteSubNetworkInterfaceWithHttpInfo($request);
@@ -431,6 +480,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteSubNetworkInterfaceRequest');
     }
 
+    /**
+     * 查询安全组规则列表
+     * 查询安全组规则列表
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listSecurityGroupRules($request)
     {
         return $this->listSecurityGroupRulesWithHttpInfo($request);
@@ -513,6 +569,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSecurityGroupRulesRequest');
     }
 
+    /**
+     * 查询安全组列表
+     * 查询某租户下的安全组列表
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listSecurityGroups($request)
     {
         return $this->listSecurityGroupsWithHttpInfo($request);
@@ -586,6 +649,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSecurityGroupsRequest');
     }
 
+    /**
+     * 查询租户下辅助弹性网卡列表
+     * 查询辅助弹性网卡列表，单次查询最多返回2000条数据
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listSubNetworkInterfaces($request)
     {
         return $this->listSubNetworkInterfacesWithHttpInfo($request);
@@ -668,6 +738,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSubNetworkInterfacesRequest');
     }
 
+    /**
+     * 查询安全组
+     * 查询单个安全组详情
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showSecurityGroup($request)
     {
         return $this->showSecurityGroupWithHttpInfo($request);
@@ -726,6 +803,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSecurityGroupRequest');
     }
 
+    /**
+     * 查询安全组规则
+     * 查询单个安全组规则
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showSecurityGroupRule($request)
     {
         return $this->showSecurityGroupRuleWithHttpInfo($request);
@@ -784,6 +868,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSecurityGroupRuleRequest');
     }
 
+    /**
+     * 查询租户下辅助弹性网卡
+     * 查询辅助弹性网卡详情
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showSubNetworkInterface($request)
     {
         return $this->showSubNetworkInterfaceWithHttpInfo($request);
@@ -842,6 +933,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSubNetworkInterfaceRequest');
     }
 
+    /**
+     * 查询租户下辅助弹性网卡数目
+     * 查询辅助弹性网卡数目
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showSubNetworkInterfacesQuantity($request)
     {
         return $this->showSubNetworkInterfacesQuantityWithHttpInfo($request);
@@ -897,6 +995,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSubNetworkInterfacesQuantityRequest');
     }
 
+    /**
+     * 更新安全组
+     * 更新安全组
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateSecurityGroup($request)
     {
         return $this->updateSecurityGroupWithHttpInfo($request);
@@ -958,6 +1063,13 @@ class VpcClient extends Client
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateSecurityGroupRequest');
     }
 
+    /**
+     * 更新辅助弹性网卡
+     * 更新辅助弹性网卡
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateSubNetworkInterface($request)
     {
         return $this->updateSubNetworkInterfaceWithHttpInfo($request);

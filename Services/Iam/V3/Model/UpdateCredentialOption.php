@@ -20,6 +20,8 @@ class UpdateCredentialOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * status  访问密钥状态。取值为：“active”（启用）或者 “inactive”（停用）。status与description至少填写一个。
+    * description  访问密钥描述信息。status与description至少填写一个。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class UpdateCredentialOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * status  访问密钥状态。取值为：“active”（启用）或者 “inactive”（停用）。status与description至少填写一个。
+    * description  访问密钥描述信息。status与description至少填写一个。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class UpdateCredentialOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * status  访问密钥状态。取值为：“active”（启用）或者 “inactive”（停用）。status与description至少填写一个。
+    * description  访问密钥描述信息。status与description至少填写一个。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class UpdateCredentialOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * status  访问密钥状态。取值为：“active”（启用）或者 “inactive”（停用）。status与description至少填写一个。
+    * description  访问密钥描述信息。status与description至少填写一个。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class UpdateCredentialOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * status  访问密钥状态。取值为：“active”（启用）或者 “inactive”（停用）。status与description至少填写一个。
+    * description  访问密钥描述信息。status与description至少填写一个。
     *
     * @var string[]
     */
@@ -198,6 +208,7 @@ class UpdateCredentialOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  访问密钥状态。取值为：“active”（启用）或者 “inactive”（停用）。status与description至少填写一个。
     *
     * @return string|null
     */
@@ -221,6 +232,7 @@ class UpdateCredentialOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  访问密钥描述信息。status与description至少填写一个。
     *
     * @return string|null
     */

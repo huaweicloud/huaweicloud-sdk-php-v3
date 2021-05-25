@@ -21,6 +21,7 @@ class ListImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * images  镜像列表
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class ListImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * images  镜像列表
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class ListImagesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * images  镜像列表
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class ListImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * images  镜像列表
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class ListImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * images  镜像列表
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class ListImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets images
+    *  镜像列表
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\ImageInfo[]|null
     */

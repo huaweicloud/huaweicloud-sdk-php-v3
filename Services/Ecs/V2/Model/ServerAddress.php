@@ -20,6 +20,11 @@ class ServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * version  IP地址版本。  - “4”：代表IPv4。 - “6”：代表IPv6。
+    * addr  IP地址。
+    * osExtIpStype  IP地址类型。  - fixed：代表私有IP地址。 - floating：代表浮动IP地址。
+    * osExtIpsMaCmacAddr  MAC地址。
+    * osExtIpSportId  IP地址对应的端口ID。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class ServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * version  IP地址版本。  - “4”：代表IPv4。 - “6”：代表IPv6。
+    * addr  IP地址。
+    * osExtIpStype  IP地址类型。  - fixed：代表私有IP地址。 - floating：代表浮动IP地址。
+    * osExtIpsMaCmacAddr  MAC地址。
+    * osExtIpSportId  IP地址对应的端口ID。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class ServerAddress implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * version  IP地址版本。  - “4”：代表IPv4。 - “6”：代表IPv6。
+    * addr  IP地址。
+    * osExtIpStype  IP地址类型。  - fixed：代表私有IP地址。 - floating：代表浮动IP地址。
+    * osExtIpsMaCmacAddr  MAC地址。
+    * osExtIpSportId  IP地址对应的端口ID。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class ServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * version  IP地址版本。  - “4”：代表IPv4。 - “6”：代表IPv6。
+    * addr  IP地址。
+    * osExtIpStype  IP地址类型。  - fixed：代表私有IP地址。 - floating：代表浮动IP地址。
+    * osExtIpsMaCmacAddr  MAC地址。
+    * osExtIpSportId  IP地址对应的端口ID。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class ServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * version  IP地址版本。  - “4”：代表IPv4。 - “6”：代表IPv6。
+    * addr  IP地址。
+    * osExtIpStype  IP地址类型。  - fixed：代表私有IP地址。 - floating：代表浮动IP地址。
+    * osExtIpsMaCmacAddr  MAC地址。
+    * osExtIpSportId  IP地址对应的端口ID。
     *
     * @var string[]
     */
@@ -222,6 +247,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
+    *  IP地址版本。  - “4”：代表IPv4。 - “6”：代表IPv6。
     *
     * @return string
     */
@@ -245,6 +271,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Gets addr
+    *  IP地址。
     *
     * @return string
     */
@@ -268,6 +295,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtIpStype
+    *  IP地址类型。  - fixed：代表私有IP地址。 - floating：代表浮动IP地址。
     *
     * @return string|null
     */
@@ -291,6 +319,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtIpsMaCmacAddr
+    *  MAC地址。
     *
     * @return string|null
     */
@@ -314,6 +343,7 @@ class ServerAddress implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtIpSportId
+    *  IP地址对应的端口ID。
     *
     * @return string|null
     */

@@ -20,6 +20,9 @@ class BlockDeviceAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * freeScsi  云服务器可挂载scsi类型磁盘数量。
+    * freeBlk  云服务器可挂载virtio_blk类型磁盘数量。
+    * freeDisk  云服务器可挂载磁盘总数。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class BlockDeviceAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * freeScsi  云服务器可挂载scsi类型磁盘数量。
+    * freeBlk  云服务器可挂载virtio_blk类型磁盘数量。
+    * freeDisk  云服务器可挂载磁盘总数。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class BlockDeviceAttachableQuantity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * freeScsi  云服务器可挂载scsi类型磁盘数量。
+    * freeBlk  云服务器可挂载virtio_blk类型磁盘数量。
+    * freeDisk  云服务器可挂载磁盘总数。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class BlockDeviceAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * freeScsi  云服务器可挂载scsi类型磁盘数量。
+    * freeBlk  云服务器可挂载virtio_blk类型磁盘数量。
+    * freeDisk  云服务器可挂载磁盘总数。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class BlockDeviceAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * freeScsi  云服务器可挂载scsi类型磁盘数量。
+    * freeBlk  云服务器可挂载virtio_blk类型磁盘数量。
+    * freeDisk  云服务器可挂载磁盘总数。
     *
     * @var string[]
     */
@@ -181,6 +196,7 @@ class BlockDeviceAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeScsi
+    *  云服务器可挂载scsi类型磁盘数量。
     *
     * @return int|null
     */
@@ -204,6 +220,7 @@ class BlockDeviceAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeBlk
+    *  云服务器可挂载virtio_blk类型磁盘数量。
     *
     * @return int|null
     */
@@ -227,6 +244,7 @@ class BlockDeviceAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeDisk
+    *  云服务器可挂载磁盘总数。
     *
     * @return int|null
     */

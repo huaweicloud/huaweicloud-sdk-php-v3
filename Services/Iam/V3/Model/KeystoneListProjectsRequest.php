@@ -20,6 +20,13 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domainId  项目所属账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * name  项目名称，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * parentId  如果查询自己创建的项目，则此处应填为所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处应填为账号ID。    获取项目ID和账号ID，请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * enabled  项目是否启用。
+    * isDomain  该字段无需填写。
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,5000]。需要与page同时存在。
     *
     * @var string[]
     */
@@ -35,6 +42,13 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domainId  项目所属账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * name  项目名称，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * parentId  如果查询自己创建的项目，则此处应填为所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处应填为账号ID。    获取项目ID和账号ID，请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * enabled  项目是否启用。
+    * isDomain  该字段无需填写。
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,5000]。需要与page同时存在。
     *
     * @var string[]
     */
@@ -71,6 +85,13 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domainId  项目所属账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * name  项目名称，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * parentId  如果查询自己创建的项目，则此处应填为所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处应填为账号ID。    获取项目ID和账号ID，请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * enabled  项目是否启用。
+    * isDomain  该字段无需填写。
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,5000]。需要与page同时存在。
     *
     * @var string[]
     */
@@ -86,6 +107,13 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domainId  项目所属账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * name  项目名称，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * parentId  如果查询自己创建的项目，则此处应填为所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处应填为账号ID。    获取项目ID和账号ID，请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * enabled  项目是否启用。
+    * isDomain  该字段无需填写。
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,5000]。需要与page同时存在。
     *
     * @var string[]
     */
@@ -101,6 +129,13 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domainId  项目所属账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * name  项目名称，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * parentId  如果查询自己创建的项目，则此处应填为所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处应填为账号ID。    获取项目ID和账号ID，请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * enabled  项目是否启用。
+    * isDomain  该字段无需填写。
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,5000]。需要与page同时存在。
     *
     * @var string[]
     */
@@ -214,6 +249,7 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  项目所属账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string|null
     */
@@ -225,7 +261,7 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId domainId
+    * @param string|null $domainId 项目所属账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */
@@ -237,6 +273,7 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  项目名称，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string|null
     */
@@ -248,7 +285,7 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name 项目名称，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */
@@ -260,6 +297,7 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
+    *  如果查询自己创建的项目，则此处应填为所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处应填为账号ID。    获取项目ID和账号ID，请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string|null
     */
@@ -271,7 +309,7 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param string|null $parentId parentId
+    * @param string|null $parentId 如果查询自己创建的项目，则此处应填为所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处应填为账号ID。    获取项目ID和账号ID，请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */
@@ -283,6 +321,7 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  项目是否启用。
     *
     * @return bool|null
     */
@@ -294,7 +333,7 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled enabled
+    * @param bool|null $enabled 项目是否启用。
     *
     * @return $this
     */
@@ -306,6 +345,7 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDomain
+    *  该字段无需填写。
     *
     * @return bool|null
     */
@@ -317,7 +357,7 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isDomain
     *
-    * @param bool|null $isDomain isDomain
+    * @param bool|null $isDomain 该字段无需填写。
     *
     * @return $this
     */
@@ -329,6 +369,7 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets page
+    *  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
     *
     * @return int|null
     */
@@ -340,7 +381,7 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets page
     *
-    * @param int|null $page page
+    * @param int|null $page 分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
     *
     * @return $this
     */
@@ -352,6 +393,7 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets perPage
+    *  分页查询时每页的数据个数，取值范围为[1,5000]。需要与page同时存在。
     *
     * @return int|null
     */
@@ -363,7 +405,7 @@ class KeystoneListProjectsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets perPage
     *
-    * @param int|null $perPage perPage
+    * @param int|null $perPage 分页查询时每页的数据个数，取值范围为[1,5000]。需要与page同时存在。
     *
     * @return $this
     */

@@ -20,6 +20,16 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * paraName  参数的名称。
+    * dataType  参数的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  参数是否必选。默认为false。
+    * enumList  参数的枚举值列表。
+    * min  参数的最小值。
+    * max  参数的最大值。
+    * maxLength  参数的最大长度。
+    * step  参数的步长。
+    * unit  参数的单位。
+    * description  参数的描述。
     *
     * @var string[]
     */
@@ -38,6 +48,16 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * paraName  参数的名称。
+    * dataType  参数的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  参数是否必选。默认为false。
+    * enumList  参数的枚举值列表。
+    * min  参数的最小值。
+    * max  参数的最大值。
+    * maxLength  参数的最大长度。
+    * step  参数的步长。
+    * unit  参数的单位。
+    * description  参数的描述。
     *
     * @var string[]
     */
@@ -77,6 +97,16 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * paraName  参数的名称。
+    * dataType  参数的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  参数是否必选。默认为false。
+    * enumList  参数的枚举值列表。
+    * min  参数的最小值。
+    * max  参数的最大值。
+    * maxLength  参数的最大长度。
+    * step  参数的步长。
+    * unit  参数的单位。
+    * description  参数的描述。
     *
     * @var string[]
     */
@@ -95,6 +125,16 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * paraName  参数的名称。
+    * dataType  参数的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  参数是否必选。默认为false。
+    * enumList  参数的枚举值列表。
+    * min  参数的最小值。
+    * max  参数的最大值。
+    * maxLength  参数的最大长度。
+    * step  参数的步长。
+    * unit  参数的单位。
+    * description  参数的描述。
     *
     * @var string[]
     */
@@ -113,6 +153,16 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * paraName  参数的名称。
+    * dataType  参数的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  参数是否必选。默认为false。
+    * enumList  参数的枚举值列表。
+    * min  参数的最小值。
+    * max  参数的最大值。
+    * maxLength  参数的最大长度。
+    * step  参数的步长。
+    * unit  参数的单位。
+    * description  参数的描述。
     *
     * @var string[]
     */
@@ -253,6 +303,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets paraName
+    *  参数的名称。
     *
     * @return string
     */
@@ -276,6 +327,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataType
+    *  参数的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
     *
     * @return string
     */
@@ -299,6 +351,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets required
+    *  参数是否必选。默认为false。
     *
     * @return bool|null
     */
@@ -322,6 +375,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets enumList
+    *  参数的枚举值列表。
     *
     * @return string[]|null
     */
@@ -345,6 +399,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets min
+    *  参数的最小值。
     *
     * @return string|null
     */
@@ -368,6 +423,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets max
+    *  参数的最大值。
     *
     * @return string|null
     */
@@ -391,6 +447,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxLength
+    *  参数的最大长度。
     *
     * @return int|null
     */
@@ -414,6 +471,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets step
+    *  参数的步长。
     *
     * @return double|null
     */
@@ -437,6 +495,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
+    *  参数的单位。
     *
     * @return string|null
     */
@@ -460,6 +519,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  参数的描述。
     *
     * @return string|null
     */

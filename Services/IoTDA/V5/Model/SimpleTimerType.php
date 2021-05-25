@@ -20,6 +20,9 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * startTime  规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * repeatInterval  规则触发的重复时间间隔，单位为秒。
+    * repeatCount  规则触发的重复次数。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * startTime  规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * repeatInterval  规则触发的重复时间间隔，单位为秒。
+    * repeatCount  规则触发的重复次数。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * startTime  规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * repeatInterval  规则触发的重复时间间隔，单位为秒。
+    * repeatCount  规则触发的重复次数。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * startTime  规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * repeatInterval  规则触发的重复时间间隔，单位为秒。
+    * repeatCount  规则触发的重复次数。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * startTime  规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * repeatInterval  规则触发的重复时间间隔，单位为秒。
+    * repeatCount  规则触发的重复次数。
     *
     * @var string[]
     */
@@ -205,6 +220,7 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
+    *  规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
     * @return string
     */
@@ -228,6 +244,7 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Gets repeatInterval
+    *  规则触发的重复时间间隔，单位为秒。
     *
     * @return int
     */
@@ -251,6 +268,7 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Gets repeatCount
+    *  规则触发的重复次数。
     *
     * @return int
     */

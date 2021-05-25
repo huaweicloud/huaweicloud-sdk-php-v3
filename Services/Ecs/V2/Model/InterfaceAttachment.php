@@ -20,6 +20,11 @@ class InterfaceAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * fixedIps  网卡私网IP信息列表。
+    * macAddr  网卡Mac地址信息。
+    * netId  网卡端口所属网络ID。
+    * portId  网卡端口ID。
+    * portState  网卡端口状态。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class InterfaceAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * fixedIps  网卡私网IP信息列表。
+    * macAddr  网卡Mac地址信息。
+    * netId  网卡端口所属网络ID。
+    * portId  网卡端口ID。
+    * portState  网卡端口状态。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class InterfaceAttachment implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * fixedIps  网卡私网IP信息列表。
+    * macAddr  网卡Mac地址信息。
+    * netId  网卡端口所属网络ID。
+    * portId  网卡端口ID。
+    * portState  网卡端口状态。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class InterfaceAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * fixedIps  网卡私网IP信息列表。
+    * macAddr  网卡Mac地址信息。
+    * netId  网卡端口所属网络ID。
+    * portId  网卡端口ID。
+    * portState  网卡端口状态。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class InterfaceAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * fixedIps  网卡私网IP信息列表。
+    * macAddr  网卡Mac地址信息。
+    * netId  网卡端口所属网络ID。
+    * portId  网卡端口ID。
+    * portState  网卡端口状态。
     *
     * @var string[]
     */
@@ -193,6 +218,7 @@ class InterfaceAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets fixedIps
+    *  网卡私网IP信息列表。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\ServerInterfaceFixedIp[]|null
     */
@@ -216,6 +242,7 @@ class InterfaceAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets macAddr
+    *  网卡Mac地址信息。
     *
     * @return string|null
     */
@@ -239,6 +266,7 @@ class InterfaceAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets netId
+    *  网卡端口所属网络ID。
     *
     * @return string|null
     */
@@ -262,6 +290,7 @@ class InterfaceAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets portId
+    *  网卡端口ID。
     *
     * @return string|null
     */
@@ -285,6 +314,7 @@ class InterfaceAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets portState
+    *  网卡端口状态。
     *
     * @return string|null
     */

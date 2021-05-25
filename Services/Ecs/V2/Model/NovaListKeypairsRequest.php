@@ -20,6 +20,9 @@ class NovaListKeypairsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * limit  查询返回秘钥数量限制。  在微版本2.35后支持
+    * marker  从marker指定的keypair的名称的下一条数据开始查询。  在微版本2.35后支持。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class NovaListKeypairsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * limit  查询返回秘钥数量限制。  在微版本2.35后支持
+    * marker  从marker指定的keypair的名称的下一条数据开始查询。  在微版本2.35后支持。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class NovaListKeypairsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * limit  查询返回秘钥数量限制。  在微版本2.35后支持
+    * marker  从marker指定的keypair的名称的下一条数据开始查询。  在微版本2.35后支持。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class NovaListKeypairsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * limit  查询返回秘钥数量限制。  在微版本2.35后支持
+    * marker  从marker指定的keypair的名称的下一条数据开始查询。  在微版本2.35后支持。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class NovaListKeypairsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * limit  查询返回秘钥数量限制。  在微版本2.35后支持
+    * marker  从marker指定的keypair的名称的下一条数据开始查询。  在微版本2.35后支持。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -181,6 +196,7 @@ class NovaListKeypairsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  查询返回秘钥数量限制。  在微版本2.35后支持
     *
     * @return int|null
     */
@@ -192,7 +208,7 @@ class NovaListKeypairsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 查询返回秘钥数量限制。  在微版本2.35后支持
     *
     * @return $this
     */
@@ -204,6 +220,7 @@ class NovaListKeypairsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  从marker指定的keypair的名称的下一条数据开始查询。  在微版本2.35后支持。
     *
     * @return string|null
     */
@@ -215,7 +232,7 @@ class NovaListKeypairsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 从marker指定的keypair的名称的下一条数据开始查询。  在微版本2.35后支持。
     *
     * @return $this
     */
@@ -227,6 +244,7 @@ class NovaListKeypairsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets openStackApiVersion
+    *  微版本头
     *
     * @return string|null
     */
@@ -238,7 +256,7 @@ class NovaListKeypairsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets openStackApiVersion
     *
-    * @param string|null $openStackApiVersion openStackApiVersion
+    * @param string|null $openStackApiVersion 微版本头
     *
     * @return $this
     */

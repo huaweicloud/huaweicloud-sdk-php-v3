@@ -20,6 +20,11 @@ class RegionLocales implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * zhCn  区域的中文名称。
+    * enUs  区域的英文名称。
+    * ptBr  区域的葡萄牙语名称。
+    * esUs  区域的美国西班牙语名称。
+    * esEs  区域的西班牙语名称。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class RegionLocales implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * zhCn  区域的中文名称。
+    * enUs  区域的英文名称。
+    * ptBr  区域的葡萄牙语名称。
+    * esUs  区域的美国西班牙语名称。
+    * esEs  区域的西班牙语名称。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class RegionLocales implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * zhCn  区域的中文名称。
+    * enUs  区域的英文名称。
+    * ptBr  区域的葡萄牙语名称。
+    * esUs  区域的美国西班牙语名称。
+    * esEs  区域的西班牙语名称。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class RegionLocales implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * zhCn  区域的中文名称。
+    * enUs  区域的英文名称。
+    * ptBr  区域的葡萄牙语名称。
+    * esUs  区域的美国西班牙语名称。
+    * esEs  区域的西班牙语名称。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class RegionLocales implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * zhCn  区域的中文名称。
+    * enUs  区域的英文名称。
+    * ptBr  区域的葡萄牙语名称。
+    * esUs  区域的美国西班牙语名称。
+    * esEs  区域的西班牙语名称。
     *
     * @var string[]
     */
@@ -199,6 +224,7 @@ class RegionLocales implements ModelInterface, ArrayAccess
 
     /**
     * Gets zhCn
+    *  区域的中文名称。
     *
     * @return string
     */
@@ -222,6 +248,7 @@ class RegionLocales implements ModelInterface, ArrayAccess
 
     /**
     * Gets enUs
+    *  区域的英文名称。
     *
     * @return string
     */
@@ -245,6 +272,7 @@ class RegionLocales implements ModelInterface, ArrayAccess
 
     /**
     * Gets ptBr
+    *  区域的葡萄牙语名称。
     *
     * @return string|null
     */
@@ -268,6 +296,7 @@ class RegionLocales implements ModelInterface, ArrayAccess
 
     /**
     * Gets esUs
+    *  区域的美国西班牙语名称。
     *
     * @return string|null
     */
@@ -291,6 +320,7 @@ class RegionLocales implements ModelInterface, ArrayAccess
 
     /**
     * Gets esEs
+    *  区域的西班牙语名称。
     *
     * @return string|null
     */

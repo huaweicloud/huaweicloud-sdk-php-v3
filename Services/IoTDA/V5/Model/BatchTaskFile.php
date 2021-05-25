@@ -20,6 +20,9 @@ class BatchTaskFile implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * fileId  上传的批量任务文件ID，由平台自动生成。
+    * fileName  上传的批量任务文件名称。
+    * uploadTime  在物联网平台上传文件的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class BatchTaskFile implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * fileId  上传的批量任务文件ID，由平台自动生成。
+    * fileName  上传的批量任务文件名称。
+    * uploadTime  在物联网平台上传文件的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class BatchTaskFile implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * fileId  上传的批量任务文件ID，由平台自动生成。
+    * fileName  上传的批量任务文件名称。
+    * uploadTime  在物联网平台上传文件的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class BatchTaskFile implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * fileId  上传的批量任务文件ID，由平台自动生成。
+    * fileName  上传的批量任务文件名称。
+    * uploadTime  在物联网平台上传文件的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class BatchTaskFile implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * fileId  上传的批量任务文件ID，由平台自动生成。
+    * fileName  上传的批量任务文件名称。
+    * uploadTime  在物联网平台上传文件的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -193,6 +208,7 @@ class BatchTaskFile implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileId
+    *  上传的批量任务文件ID，由平台自动生成。
     *
     * @return string|null
     */
@@ -216,6 +232,7 @@ class BatchTaskFile implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileName
+    *  上传的批量任务文件名称。
     *
     * @return string|null
     */
@@ -239,6 +256,7 @@ class BatchTaskFile implements ModelInterface, ArrayAccess
 
     /**
     * Gets uploadTime
+    *  在物联网平台上传文件的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @return string|null
     */

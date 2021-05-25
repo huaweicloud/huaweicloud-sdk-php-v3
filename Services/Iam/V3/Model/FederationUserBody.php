@@ -20,6 +20,10 @@ class FederationUserBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * osFederation  osFederation
+    * domain  domain
+    * id  user id
+    * name  user name
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class FederationUserBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * osFederation  osFederation
+    * domain  domain
+    * id  user id
+    * name  user name
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class FederationUserBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * osFederation  osFederation
+    * domain  domain
+    * id  user id
+    * name  user name
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class FederationUserBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * osFederation  osFederation
+    * domain  domain
+    * id  user id
+    * name  user name
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class FederationUserBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * osFederation  osFederation
+    * domain  domain
+    * id  user id
+    * name  user name
     *
     * @var string[]
     */
@@ -193,6 +213,7 @@ class FederationUserBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets osFederation
+    *  osFederation
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\OsFederationInfo
     */
@@ -216,6 +237,7 @@ class FederationUserBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
+    *  domain
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\DomainInfo
     */
@@ -239,6 +261,7 @@ class FederationUserBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  user id
     *
     * @return string|null
     */
@@ -262,6 +285,7 @@ class FederationUserBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  user name
     *
     * @return string|null
     */

@@ -20,6 +20,25 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  子网ID
+    * name  功能说明：子网名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * cidr  功能说明：子网的网段 取值范围：必须在vpc对应cidr范围内 约束：必须是cidr格式。掩码长度不能大于28
+    * gatewayIp  功能说明：子网的网关 取值范围：子网网段中的IP地址 约束：必须是ip格式
+    * ipv6Enable  功能说明：是否创建cidr_v6 取值范围：true（开启），false（关闭）
+    * cidrV6  IPv6子网的网段，如果子网为IPv4子网，则不返回此参数
+    * gatewayIpV6  IPv6子网的网关，如果子网为IPv4子网，则不返回此参数
+    * dhcpEnable  子网是否开启dhcp功能
+    * primaryDns  子网dns服务器地址1
+    * secondaryDns  子网dns服务器地址2
+    * dnsList  子网dns服务器地址列表
+    * availabilityZone  子网所在的可用区标识
+    * vpcId  子网所在VPC标识
+    * status  功能说明：子网的状态 取值范围： - ACTIVE：表示子网已挂载到ROUTER上 - UNKNOWN：表示子网还未挂载到ROUTER上 - ERROR：表示子网状态故障
+    * neutronNetworkId  对应网络（OpenStack Neutron接口）id
+    * neutronSubnetId  对应子网（OpenStack Neutron接口）id
+    * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
+    * extraDhcpOpts  子网配置的NTP地址
     *
     * @var string[]
     */
@@ -42,12 +61,30 @@ class Subnet implements ModelInterface, ArrayAccess
             'neutronNetworkId' => 'string',
             'neutronSubnetId' => 'string',
             'neutronSubnetIdV6' => 'string',
-            'extraDhcpOpts' => '\HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOption[]',
-            'scope' => 'string'
+            'extraDhcpOpts' => '\HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOption[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  子网ID
+    * name  功能说明：子网名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * cidr  功能说明：子网的网段 取值范围：必须在vpc对应cidr范围内 约束：必须是cidr格式。掩码长度不能大于28
+    * gatewayIp  功能说明：子网的网关 取值范围：子网网段中的IP地址 约束：必须是ip格式
+    * ipv6Enable  功能说明：是否创建cidr_v6 取值范围：true（开启），false（关闭）
+    * cidrV6  IPv6子网的网段，如果子网为IPv4子网，则不返回此参数
+    * gatewayIpV6  IPv6子网的网关，如果子网为IPv4子网，则不返回此参数
+    * dhcpEnable  子网是否开启dhcp功能
+    * primaryDns  子网dns服务器地址1
+    * secondaryDns  子网dns服务器地址2
+    * dnsList  子网dns服务器地址列表
+    * availabilityZone  子网所在的可用区标识
+    * vpcId  子网所在VPC标识
+    * status  功能说明：子网的状态 取值范围： - ACTIVE：表示子网已挂载到ROUTER上 - UNKNOWN：表示子网还未挂载到ROUTER上 - ERROR：表示子网状态故障
+    * neutronNetworkId  对应网络（OpenStack Neutron接口）id
+    * neutronSubnetId  对应子网（OpenStack Neutron接口）id
+    * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
+    * extraDhcpOpts  子网配置的NTP地址
     *
     * @var string[]
     */
@@ -70,8 +107,7 @@ class Subnet implements ModelInterface, ArrayAccess
         'neutronNetworkId' => null,
         'neutronSubnetId' => null,
         'neutronSubnetIdV6' => null,
-        'extraDhcpOpts' => null,
-        'scope' => null
+        'extraDhcpOpts' => null
     ];
 
     /**
@@ -97,6 +133,25 @@ class Subnet implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  子网ID
+    * name  功能说明：子网名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * cidr  功能说明：子网的网段 取值范围：必须在vpc对应cidr范围内 约束：必须是cidr格式。掩码长度不能大于28
+    * gatewayIp  功能说明：子网的网关 取值范围：子网网段中的IP地址 约束：必须是ip格式
+    * ipv6Enable  功能说明：是否创建cidr_v6 取值范围：true（开启），false（关闭）
+    * cidrV6  IPv6子网的网段，如果子网为IPv4子网，则不返回此参数
+    * gatewayIpV6  IPv6子网的网关，如果子网为IPv4子网，则不返回此参数
+    * dhcpEnable  子网是否开启dhcp功能
+    * primaryDns  子网dns服务器地址1
+    * secondaryDns  子网dns服务器地址2
+    * dnsList  子网dns服务器地址列表
+    * availabilityZone  子网所在的可用区标识
+    * vpcId  子网所在VPC标识
+    * status  功能说明：子网的状态 取值范围： - ACTIVE：表示子网已挂载到ROUTER上 - UNKNOWN：表示子网还未挂载到ROUTER上 - ERROR：表示子网状态故障
+    * neutronNetworkId  对应网络（OpenStack Neutron接口）id
+    * neutronSubnetId  对应子网（OpenStack Neutron接口）id
+    * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
+    * extraDhcpOpts  子网配置的NTP地址
     *
     * @var string[]
     */
@@ -119,12 +174,30 @@ class Subnet implements ModelInterface, ArrayAccess
             'neutronNetworkId' => 'neutron_network_id',
             'neutronSubnetId' => 'neutron_subnet_id',
             'neutronSubnetIdV6' => 'neutron_subnet_id_v6',
-            'extraDhcpOpts' => 'extra_dhcp_opts',
-            'scope' => 'scope'
+            'extraDhcpOpts' => 'extra_dhcp_opts'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  子网ID
+    * name  功能说明：子网名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * cidr  功能说明：子网的网段 取值范围：必须在vpc对应cidr范围内 约束：必须是cidr格式。掩码长度不能大于28
+    * gatewayIp  功能说明：子网的网关 取值范围：子网网段中的IP地址 约束：必须是ip格式
+    * ipv6Enable  功能说明：是否创建cidr_v6 取值范围：true（开启），false（关闭）
+    * cidrV6  IPv6子网的网段，如果子网为IPv4子网，则不返回此参数
+    * gatewayIpV6  IPv6子网的网关，如果子网为IPv4子网，则不返回此参数
+    * dhcpEnable  子网是否开启dhcp功能
+    * primaryDns  子网dns服务器地址1
+    * secondaryDns  子网dns服务器地址2
+    * dnsList  子网dns服务器地址列表
+    * availabilityZone  子网所在的可用区标识
+    * vpcId  子网所在VPC标识
+    * status  功能说明：子网的状态 取值范围： - ACTIVE：表示子网已挂载到ROUTER上 - UNKNOWN：表示子网还未挂载到ROUTER上 - ERROR：表示子网状态故障
+    * neutronNetworkId  对应网络（OpenStack Neutron接口）id
+    * neutronSubnetId  对应子网（OpenStack Neutron接口）id
+    * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
+    * extraDhcpOpts  子网配置的NTP地址
     *
     * @var string[]
     */
@@ -147,12 +220,30 @@ class Subnet implements ModelInterface, ArrayAccess
             'neutronNetworkId' => 'setNeutronNetworkId',
             'neutronSubnetId' => 'setNeutronSubnetId',
             'neutronSubnetIdV6' => 'setNeutronSubnetIdV6',
-            'extraDhcpOpts' => 'setExtraDhcpOpts',
-            'scope' => 'setScope'
+            'extraDhcpOpts' => 'setExtraDhcpOpts'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  子网ID
+    * name  功能说明：子网名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * cidr  功能说明：子网的网段 取值范围：必须在vpc对应cidr范围内 约束：必须是cidr格式。掩码长度不能大于28
+    * gatewayIp  功能说明：子网的网关 取值范围：子网网段中的IP地址 约束：必须是ip格式
+    * ipv6Enable  功能说明：是否创建cidr_v6 取值范围：true（开启），false（关闭）
+    * cidrV6  IPv6子网的网段，如果子网为IPv4子网，则不返回此参数
+    * gatewayIpV6  IPv6子网的网关，如果子网为IPv4子网，则不返回此参数
+    * dhcpEnable  子网是否开启dhcp功能
+    * primaryDns  子网dns服务器地址1
+    * secondaryDns  子网dns服务器地址2
+    * dnsList  子网dns服务器地址列表
+    * availabilityZone  子网所在的可用区标识
+    * vpcId  子网所在VPC标识
+    * status  功能说明：子网的状态 取值范围： - ACTIVE：表示子网已挂载到ROUTER上 - UNKNOWN：表示子网还未挂载到ROUTER上 - ERROR：表示子网状态故障
+    * neutronNetworkId  对应网络（OpenStack Neutron接口）id
+    * neutronSubnetId  对应子网（OpenStack Neutron接口）id
+    * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
+    * extraDhcpOpts  子网配置的NTP地址
     *
     * @var string[]
     */
@@ -175,8 +266,7 @@ class Subnet implements ModelInterface, ArrayAccess
             'neutronNetworkId' => 'getNeutronNetworkId',
             'neutronSubnetId' => 'getNeutronSubnetId',
             'neutronSubnetIdV6' => 'getNeutronSubnetIdV6',
-            'extraDhcpOpts' => 'getExtraDhcpOpts',
-            'scope' => 'getScope'
+            'extraDhcpOpts' => 'getExtraDhcpOpts'
     ];
 
     /**
@@ -273,7 +363,6 @@ class Subnet implements ModelInterface, ArrayAccess
         $this->container['neutronSubnetId'] = isset($data['neutronSubnetId']) ? $data['neutronSubnetId'] : null;
         $this->container['neutronSubnetIdV6'] = isset($data['neutronSubnetIdV6']) ? $data['neutronSubnetIdV6'] : null;
         $this->container['extraDhcpOpts'] = isset($data['extraDhcpOpts']) ? $data['extraDhcpOpts'] : null;
-        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
     }
 
     /**
@@ -380,6 +469,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  子网ID
     *
     * @return string
     */
@@ -403,6 +493,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：子网名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string
     */
@@ -426,6 +517,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
     *
     * @return string
     */
@@ -449,6 +541,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets cidr
+    *  功能说明：子网的网段 取值范围：必须在vpc对应cidr范围内 约束：必须是cidr格式。掩码长度不能大于28
     *
     * @return string
     */
@@ -472,6 +565,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets gatewayIp
+    *  功能说明：子网的网关 取值范围：子网网段中的IP地址 约束：必须是ip格式
     *
     * @return string
     */
@@ -495,6 +589,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Enable
+    *  功能说明：是否创建cidr_v6 取值范围：true（开启），false（关闭）
     *
     * @return bool
     */
@@ -518,6 +613,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets cidrV6
+    *  IPv6子网的网段，如果子网为IPv4子网，则不返回此参数
     *
     * @return string
     */
@@ -541,6 +637,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets gatewayIpV6
+    *  IPv6子网的网关，如果子网为IPv4子网，则不返回此参数
     *
     * @return string
     */
@@ -564,6 +661,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets dhcpEnable
+    *  子网是否开启dhcp功能
     *
     * @return bool
     */
@@ -587,6 +685,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryDns
+    *  子网dns服务器地址1
     *
     * @return string
     */
@@ -610,6 +709,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets secondaryDns
+    *  子网dns服务器地址2
     *
     * @return string
     */
@@ -633,6 +733,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets dnsList
+    *  子网dns服务器地址列表
     *
     * @return string[]
     */
@@ -656,6 +757,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
+    *  子网所在的可用区标识
     *
     * @return string
     */
@@ -679,6 +781,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
+    *  子网所在VPC标识
     *
     * @return string
     */
@@ -702,6 +805,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  功能说明：子网的状态 取值范围： - ACTIVE：表示子网已挂载到ROUTER上 - UNKNOWN：表示子网还未挂载到ROUTER上 - ERROR：表示子网状态故障
     *
     * @return string
     */
@@ -725,6 +829,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets neutronNetworkId
+    *  对应网络（OpenStack Neutron接口）id
     *
     * @return string
     */
@@ -748,6 +853,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets neutronSubnetId
+    *  对应子网（OpenStack Neutron接口）id
     *
     * @return string
     */
@@ -771,6 +877,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets neutronSubnetIdV6
+    *  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
     *
     * @return string
     */
@@ -794,6 +901,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets extraDhcpOpts
+    *  子网配置的NTP地址
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOption[]
     */
@@ -812,29 +920,6 @@ class Subnet implements ModelInterface, ArrayAccess
     public function setExtraDhcpOpts($extraDhcpOpts)
     {
         $this->container['extraDhcpOpts'] = $extraDhcpOpts;
-        return $this;
-    }
-
-    /**
-    * Gets scope
-    *
-    * @return string|null
-    */
-    public function getScope()
-    {
-        return $this->container['scope'];
-    }
-
-    /**
-    * Sets scope
-    *
-    * @param string|null $scope 功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
-    *
-    * @return $this
-    */
-    public function setScope($scope)
-    {
-        $this->container['scope'] = $scope;
         return $this;
     }
 

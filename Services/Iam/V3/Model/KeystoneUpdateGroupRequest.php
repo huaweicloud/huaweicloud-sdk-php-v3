@@ -20,6 +20,8 @@ class KeystoneUpdateGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * groupId  待更新的用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * body  body
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class KeystoneUpdateGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * groupId  待更新的用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * body  body
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class KeystoneUpdateGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * groupId  待更新的用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * body  body
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class KeystoneUpdateGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * groupId  待更新的用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * body  body
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class KeystoneUpdateGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * groupId  待更新的用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * body  body
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class KeystoneUpdateGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
+    *  待更新的用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string
     */
@@ -189,7 +200,7 @@ class KeystoneUpdateGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string $groupId groupId
+    * @param string $groupId 待更新的用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */
@@ -201,6 +212,7 @@ class KeystoneUpdateGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateGroupRequestBody|null
     */

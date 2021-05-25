@@ -20,6 +20,25 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * backupGigabytes  backupGigabytes
+    * backups  backups
+    * gigabytes  gigabytes
+    * id  项目ID。
+    * snapshots  snapshots
+    * volumes  volumes
+    * gigabytesSata  gigabytesSata
+    * snapshotsSata  snapshotsSata
+    * volumesSata  volumesSata
+    * gigabytesSas  gigabytesSas
+    * snapshotsSas  snapshotsSas
+    * volumesSas  volumesSas
+    * gigabytesSsd  gigabytesSsd
+    * snapshotsSsd  snapshotsSsd
+    * volumesSsd  volumesSsd
+    * gigabytesGpssd  gigabytesGpssd
+    * snapshotsGpssd  snapshotsGpssd
+    * volumesGpssd  volumesGpssd
+    * perVolumeGigabytes  perVolumeGigabytes
     *
     * @var string[]
     */
@@ -47,6 +66,25 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * backupGigabytes  backupGigabytes
+    * backups  backups
+    * gigabytes  gigabytes
+    * id  项目ID。
+    * snapshots  snapshots
+    * volumes  volumes
+    * gigabytesSata  gigabytesSata
+    * snapshotsSata  snapshotsSata
+    * volumesSata  volumesSata
+    * gigabytesSas  gigabytesSas
+    * snapshotsSas  snapshotsSas
+    * volumesSas  volumesSas
+    * gigabytesSsd  gigabytesSsd
+    * snapshotsSsd  snapshotsSsd
+    * volumesSsd  volumesSsd
+    * gigabytesGpssd  gigabytesGpssd
+    * snapshotsGpssd  snapshotsGpssd
+    * volumesGpssd  volumesGpssd
+    * perVolumeGigabytes  perVolumeGigabytes
     *
     * @var string[]
     */
@@ -95,6 +133,25 @@ class QuotaList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * backupGigabytes  backupGigabytes
+    * backups  backups
+    * gigabytes  gigabytes
+    * id  项目ID。
+    * snapshots  snapshots
+    * volumes  volumes
+    * gigabytesSata  gigabytesSata
+    * snapshotsSata  snapshotsSata
+    * volumesSata  volumesSata
+    * gigabytesSas  gigabytesSas
+    * snapshotsSas  snapshotsSas
+    * volumesSas  volumesSas
+    * gigabytesSsd  gigabytesSsd
+    * snapshotsSsd  snapshotsSsd
+    * volumesSsd  volumesSsd
+    * gigabytesGpssd  gigabytesGpssd
+    * snapshotsGpssd  snapshotsGpssd
+    * volumesGpssd  volumesGpssd
+    * perVolumeGigabytes  perVolumeGigabytes
     *
     * @var string[]
     */
@@ -122,6 +179,25 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * backupGigabytes  backupGigabytes
+    * backups  backups
+    * gigabytes  gigabytes
+    * id  项目ID。
+    * snapshots  snapshots
+    * volumes  volumes
+    * gigabytesSata  gigabytesSata
+    * snapshotsSata  snapshotsSata
+    * volumesSata  volumesSata
+    * gigabytesSas  gigabytesSas
+    * snapshotsSas  snapshotsSas
+    * volumesSas  volumesSas
+    * gigabytesSsd  gigabytesSsd
+    * snapshotsSsd  snapshotsSsd
+    * volumesSsd  volumesSsd
+    * gigabytesGpssd  gigabytesGpssd
+    * snapshotsGpssd  snapshotsGpssd
+    * volumesGpssd  volumesGpssd
+    * perVolumeGigabytes  perVolumeGigabytes
     *
     * @var string[]
     */
@@ -149,6 +225,25 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * backupGigabytes  backupGigabytes
+    * backups  backups
+    * gigabytes  gigabytes
+    * id  项目ID。
+    * snapshots  snapshots
+    * volumes  volumes
+    * gigabytesSata  gigabytesSata
+    * snapshotsSata  snapshotsSata
+    * volumesSata  volumesSata
+    * gigabytesSas  gigabytesSas
+    * snapshotsSas  snapshotsSas
+    * volumesSas  volumesSas
+    * gigabytesSsd  gigabytesSsd
+    * snapshotsSsd  snapshotsSsd
+    * volumesSsd  volumesSsd
+    * gigabytesGpssd  gigabytesGpssd
+    * snapshotsGpssd  snapshotsGpssd
+    * volumesGpssd  volumesGpssd
+    * perVolumeGigabytes  perVolumeGigabytes
     *
     * @var string[]
     */
@@ -295,6 +390,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupGigabytes
+    *  backupGigabytes
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailBackupGigabytes
     */
@@ -318,6 +414,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets backups
+    *  backups
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailBackups
     */
@@ -341,6 +438,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets gigabytes
+    *  gigabytes
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailGigabytes
     */
@@ -364,6 +462,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  项目ID。
     *
     * @return string
     */
@@ -387,6 +486,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshots
+    *  snapshots
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailSnapshots
     */
@@ -410,6 +510,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumes
+    *  volumes
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailVolumes
     */
@@ -433,6 +534,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets gigabytesSata
+    *  gigabytesSata
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailGigabytesSATA|null
     */
@@ -456,6 +558,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotsSata
+    *  snapshotsSata
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailSnapshotsSATA|null
     */
@@ -479,6 +582,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumesSata
+    *  volumesSata
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailVolumesSATA|null
     */
@@ -502,6 +606,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets gigabytesSas
+    *  gigabytesSas
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailGigabytesSAS|null
     */
@@ -525,6 +630,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotsSas
+    *  snapshotsSas
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailSnapshotsSAS|null
     */
@@ -548,6 +654,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumesSas
+    *  volumesSas
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailVolumesSAS|null
     */
@@ -571,6 +678,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets gigabytesSsd
+    *  gigabytesSsd
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailGigabytesSSD|null
     */
@@ -594,6 +702,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotsSsd
+    *  snapshotsSsd
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailSnapshotsSSD|null
     */
@@ -617,6 +726,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumesSsd
+    *  volumesSsd
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailVolumesSSD|null
     */
@@ -640,6 +750,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets gigabytesGpssd
+    *  gigabytesGpssd
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailGigabytesGPSSD|null
     */
@@ -663,6 +774,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotsGpssd
+    *  snapshotsGpssd
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailSnapshotsGPSSD|null
     */
@@ -686,6 +798,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumesGpssd
+    *  volumesGpssd
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailVolumesGPSSD|null
     */
@@ -709,6 +822,7 @@ class QuotaList implements ModelInterface, ArrayAccess
 
     /**
     * Gets perVolumeGigabytes
+    *  perVolumeGigabytes
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\QuotaDetailPerVolumeGigabytes|null
     */

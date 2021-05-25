@@ -20,6 +20,11 @@ class Domains implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * enabled  是否启用账号，true为启用，false为停用，默认为true。
+    * id  账号ID。
+    * name  账号名。
+    * links  links
+    * description  账号的描述信息。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class Domains implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * enabled  是否启用账号，true为启用，false为停用，默认为true。
+    * id  账号ID。
+    * name  账号名。
+    * links  links
+    * description  账号的描述信息。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class Domains implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * enabled  是否启用账号，true为启用，false为停用，默认为true。
+    * id  账号ID。
+    * name  账号名。
+    * links  links
+    * description  账号的描述信息。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class Domains implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * enabled  是否启用账号，true为启用，false为停用，默认为true。
+    * id  账号ID。
+    * name  账号名。
+    * links  links
+    * description  账号的描述信息。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class Domains implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * enabled  是否启用账号，true为启用，false为停用，默认为true。
+    * id  账号ID。
+    * name  账号名。
+    * links  links
+    * description  账号的描述信息。
     *
     * @var string[]
     */
@@ -208,6 +233,7 @@ class Domains implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  是否启用账号，true为启用，false为停用，默认为true。
     *
     * @return bool
     */
@@ -231,6 +257,7 @@ class Domains implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  账号ID。
     *
     * @return string
     */
@@ -254,6 +281,7 @@ class Domains implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  账号名。
     *
     * @return string
     */
@@ -277,6 +305,7 @@ class Domains implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\LinksSelf
     */
@@ -300,6 +329,7 @@ class Domains implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  账号的描述信息。
     *
     * @return string
     */

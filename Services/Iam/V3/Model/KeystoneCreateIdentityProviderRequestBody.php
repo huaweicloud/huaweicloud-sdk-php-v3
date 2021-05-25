@@ -20,6 +20,7 @@ class KeystoneCreateIdentityProviderRequestBody implements ModelInterface, Array
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * identityProvider  identityProvider
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class KeystoneCreateIdentityProviderRequestBody implements ModelInterface, Array
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * identityProvider  identityProvider
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class KeystoneCreateIdentityProviderRequestBody implements ModelInterface, Array
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * identityProvider  identityProvider
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class KeystoneCreateIdentityProviderRequestBody implements ModelInterface, Array
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * identityProvider  identityProvider
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class KeystoneCreateIdentityProviderRequestBody implements ModelInterface, Array
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * identityProvider  identityProvider
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class KeystoneCreateIdentityProviderRequestBody implements ModelInterface, Array
 
     /**
     * Gets identityProvider
+    *  identityProvider
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\IdentityproviderOption
     */

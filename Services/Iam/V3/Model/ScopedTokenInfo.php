@@ -20,6 +20,14 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * expiresAt  过期时间
+    * methods  获取token的方式，联邦用户默认为mapped
+    * issuedAt  生成时间
+    * user  user
+    * domain  domain
+    * project  project
+    * roles  roles信息
+    * catalog  catalog信息
     *
     * @var string[]
     */
@@ -36,6 +44,14 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * expiresAt  过期时间
+    * methods  获取token的方式，联邦用户默认为mapped
+    * issuedAt  生成时间
+    * user  user
+    * domain  domain
+    * project  project
+    * roles  roles信息
+    * catalog  catalog信息
     *
     * @var string[]
     */
@@ -73,6 +89,14 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * expiresAt  过期时间
+    * methods  获取token的方式，联邦用户默认为mapped
+    * issuedAt  生成时间
+    * user  user
+    * domain  domain
+    * project  project
+    * roles  roles信息
+    * catalog  catalog信息
     *
     * @var string[]
     */
@@ -89,6 +113,14 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * expiresAt  过期时间
+    * methods  获取token的方式，联邦用户默认为mapped
+    * issuedAt  生成时间
+    * user  user
+    * domain  domain
+    * project  project
+    * roles  roles信息
+    * catalog  catalog信息
     *
     * @var string[]
     */
@@ -105,6 +137,14 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * expiresAt  过期时间
+    * methods  获取token的方式，联邦用户默认为mapped
+    * issuedAt  生成时间
+    * user  user
+    * domain  domain
+    * project  project
+    * roles  roles信息
+    * catalog  catalog信息
     *
     * @var string[]
     */
@@ -229,6 +269,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets expiresAt
+    *  过期时间
     *
     * @return string
     */
@@ -252,6 +293,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets methods
+    *  获取token的方式，联邦用户默认为mapped
     *
     * @return string[]
     */
@@ -275,6 +317,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets issuedAt
+    *  生成时间
     *
     * @return string
     */
@@ -298,6 +341,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets user
+    *  user
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\FederationUserBody
     */
@@ -321,6 +365,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
+    *  domain
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\DomainInfo|null
     */
@@ -344,6 +389,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets project
+    *  project
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\ProjectInfo|null
     */
@@ -367,6 +413,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets roles
+    *  roles信息
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoRoles[]
     */
@@ -390,6 +437,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets catalog
+    *  catalog信息
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalog[]
     */

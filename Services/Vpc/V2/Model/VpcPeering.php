@@ -20,6 +20,14 @@ class VpcPeering implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  对等连接ID
+    * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * status  功能说明：对等连接状态 取值范围： - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
+    * requestVpcInfo  requestVpcInfo
+    * acceptVpcInfo  acceptVpcInfo
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * description  对等连接描述
     *
     * @var string[]
     */
@@ -36,6 +44,14 @@ class VpcPeering implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  对等连接ID
+    * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * status  功能说明：对等连接状态 取值范围： - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
+    * requestVpcInfo  requestVpcInfo
+    * acceptVpcInfo  acceptVpcInfo
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * description  对等连接描述
     *
     * @var string[]
     */
@@ -73,6 +89,14 @@ class VpcPeering implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  对等连接ID
+    * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * status  功能说明：对等连接状态 取值范围： - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
+    * requestVpcInfo  requestVpcInfo
+    * acceptVpcInfo  acceptVpcInfo
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * description  对等连接描述
     *
     * @var string[]
     */
@@ -89,6 +113,14 @@ class VpcPeering implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  对等连接ID
+    * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * status  功能说明：对等连接状态 取值范围： - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
+    * requestVpcInfo  requestVpcInfo
+    * acceptVpcInfo  acceptVpcInfo
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * description  对等连接描述
     *
     * @var string[]
     */
@@ -105,6 +137,14 @@ class VpcPeering implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  对等连接ID
+    * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * status  功能说明：对等连接状态 取值范围： - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
+    * requestVpcInfo  requestVpcInfo
+    * acceptVpcInfo  acceptVpcInfo
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * description  对等连接描述
     *
     * @var string[]
     */
@@ -273,6 +313,7 @@ class VpcPeering implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  对等连接ID
     *
     * @return string
     */
@@ -296,6 +337,7 @@ class VpcPeering implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：对等连接名称 取值范围：支持1~64个字符
     *
     * @return string
     */
@@ -319,6 +361,7 @@ class VpcPeering implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  功能说明：对等连接状态 取值范围： - PENDING_ACCEPTANCE：等待接受 - REJECTED：已拒绝。 - EXPIRED：已过期。 - DELETED：已删除。 - ACTIVE：活动的。
     *
     * @return string
     */
@@ -342,6 +385,7 @@ class VpcPeering implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestVpcInfo
+    *  requestVpcInfo
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\VpcInfo
     */
@@ -365,6 +409,7 @@ class VpcPeering implements ModelInterface, ArrayAccess
 
     /**
     * Gets acceptVpcInfo
+    *  acceptVpcInfo
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\VpcInfo
     */
@@ -388,6 +433,7 @@ class VpcPeering implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @return \DateTime
     */
@@ -411,6 +457,7 @@ class VpcPeering implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
+    *  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @return \DateTime
     */
@@ -434,6 +481,7 @@ class VpcPeering implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  对等连接描述
     *
     * @return string
     */

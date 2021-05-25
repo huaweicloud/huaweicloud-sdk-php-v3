@@ -20,6 +20,19 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  功能说明：网络ACL组的ID
+    * name  功能说明：网络ACL组名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL组描述 取值范围：0-255个字符
+    * adminStateUp  网络ACL防火墙是否受管理员控制。
+    * egressFirewallPolicyId  功能说明：出方向网络ACL策略ID
+    * ingressFirewallPolicyId  功能说明：入方向网络ACL策略ID
+    * ports  取值范围：网络ACL组绑定的端口列表
+    * public  功能说明：是否支持跨租户共享 取值范围：true/false
+    * status  功能说明：网络ACL组状态
+    * tenantId  功能说明：网络ACL组所属项目ID
+    * projectId  功能说明：网络ACL组所属项目ID
+    * createdAt  功能说明：资源创建时间，UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新时间，UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -41,6 +54,19 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  功能说明：网络ACL组的ID
+    * name  功能说明：网络ACL组名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL组描述 取值范围：0-255个字符
+    * adminStateUp  网络ACL防火墙是否受管理员控制。
+    * egressFirewallPolicyId  功能说明：出方向网络ACL策略ID
+    * ingressFirewallPolicyId  功能说明：入方向网络ACL策略ID
+    * ports  取值范围：网络ACL组绑定的端口列表
+    * public  功能说明：是否支持跨租户共享 取值范围：true/false
+    * status  功能说明：网络ACL组状态
+    * tenantId  功能说明：网络ACL组所属项目ID
+    * projectId  功能说明：网络ACL组所属项目ID
+    * createdAt  功能说明：资源创建时间，UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新时间，UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -83,6 +109,19 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  功能说明：网络ACL组的ID
+    * name  功能说明：网络ACL组名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL组描述 取值范围：0-255个字符
+    * adminStateUp  网络ACL防火墙是否受管理员控制。
+    * egressFirewallPolicyId  功能说明：出方向网络ACL策略ID
+    * ingressFirewallPolicyId  功能说明：入方向网络ACL策略ID
+    * ports  取值范围：网络ACL组绑定的端口列表
+    * public  功能说明：是否支持跨租户共享 取值范围：true/false
+    * status  功能说明：网络ACL组状态
+    * tenantId  功能说明：网络ACL组所属项目ID
+    * projectId  功能说明：网络ACL组所属项目ID
+    * createdAt  功能说明：资源创建时间，UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新时间，UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -104,6 +143,19 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  功能说明：网络ACL组的ID
+    * name  功能说明：网络ACL组名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL组描述 取值范围：0-255个字符
+    * adminStateUp  网络ACL防火墙是否受管理员控制。
+    * egressFirewallPolicyId  功能说明：出方向网络ACL策略ID
+    * ingressFirewallPolicyId  功能说明：入方向网络ACL策略ID
+    * ports  取值范围：网络ACL组绑定的端口列表
+    * public  功能说明：是否支持跨租户共享 取值范围：true/false
+    * status  功能说明：网络ACL组状态
+    * tenantId  功能说明：网络ACL组所属项目ID
+    * projectId  功能说明：网络ACL组所属项目ID
+    * createdAt  功能说明：资源创建时间，UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新时间，UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -125,6 +177,19 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  功能说明：网络ACL组的ID
+    * name  功能说明：网络ACL组名称 取值范围：0-255个字符
+    * description  功能说明：网络ACL组描述 取值范围：0-255个字符
+    * adminStateUp  网络ACL防火墙是否受管理员控制。
+    * egressFirewallPolicyId  功能说明：出方向网络ACL策略ID
+    * ingressFirewallPolicyId  功能说明：入方向网络ACL策略ID
+    * ports  取值范围：网络ACL组绑定的端口列表
+    * public  功能说明：是否支持跨租户共享 取值范围：true/false
+    * status  功能说明：网络ACL组状态
+    * tenantId  功能说明：网络ACL组所属项目ID
+    * projectId  功能说明：网络ACL组所属项目ID
+    * createdAt  功能说明：资源创建时间，UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新时间，UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -307,6 +372,7 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  功能说明：网络ACL组的ID
     *
     * @return string
     */
@@ -330,6 +396,7 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：网络ACL组名称 取值范围：0-255个字符
     *
     * @return string
     */
@@ -353,6 +420,7 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：网络ACL组描述 取值范围：0-255个字符
     *
     * @return string
     */
@@ -376,6 +444,7 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
+    *  网络ACL防火墙是否受管理员控制。
     *
     * @return bool
     */
@@ -399,6 +468,7 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets egressFirewallPolicyId
+    *  功能说明：出方向网络ACL策略ID
     *
     * @return string
     */
@@ -422,6 +492,7 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets ingressFirewallPolicyId
+    *  功能说明：入方向网络ACL策略ID
     *
     * @return string
     */
@@ -445,6 +516,7 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets ports
+    *  取值范围：网络ACL组绑定的端口列表
     *
     * @return string[]
     */
@@ -468,6 +540,7 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets public
+    *  功能说明：是否支持跨租户共享 取值范围：true/false
     *
     * @return bool
     */
@@ -491,6 +564,7 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  功能说明：网络ACL组状态
     *
     * @return string
     */
@@ -514,6 +588,7 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  功能说明：网络ACL组所属项目ID
     *
     * @return string
     */
@@ -537,6 +612,7 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  功能说明：网络ACL组所属项目ID
     *
     * @return string
     */
@@ -560,6 +636,7 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  功能说明：资源创建时间，UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @return \DateTime
     */
@@ -583,6 +660,7 @@ class NeutronFirewallGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
+    *  功能说明：资源更新时间，UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @return \DateTime
     */

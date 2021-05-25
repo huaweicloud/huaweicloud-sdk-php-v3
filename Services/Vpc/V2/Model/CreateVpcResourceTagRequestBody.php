@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Vpc\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateSubscriptionResponse implements ModelInterface, ArrayAccess
+class CreateVpcResourceTagRequestBody implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,30 +16,26 @@ class CreateSubscriptionResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateSubscriptionResponse';
+    protected static $openAPIModelName = 'CreateVpcResourceTagRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * tag  tag
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'subscriptionId' => 'string',
-            'subject' => '\HuaweiCloud\SDK\IoTDA\V5\Model\Subject',
-            'callbackurl' => 'string',
-            'channel' => 'string'
+            'tag' => '\HuaweiCloud\SDK\Vpc\V2\Model\ResourceTag'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * tag  tag
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'subscriptionId' => null,
-        'subject' => null,
-        'callbackurl' => null,
-        'channel' => null
+        'tag' => null
     ];
 
     /**
@@ -66,38 +61,32 @@ class CreateSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * tag  tag
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'subscriptionId' => 'subscription_id',
-            'subject' => 'subject',
-            'callbackurl' => 'callbackurl',
-            'channel' => 'channel'
+            'tag' => 'tag'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * tag  tag
     *
     * @var string[]
     */
     protected static $setters = [
-            'subscriptionId' => 'setSubscriptionId',
-            'subject' => 'setSubject',
-            'callbackurl' => 'setCallbackurl',
-            'channel' => 'setChannel'
+            'tag' => 'setTag'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * tag  tag
     *
     * @var string[]
     */
     protected static $getters = [
-            'subscriptionId' => 'getSubscriptionId',
-            'subject' => 'getSubject',
-            'callbackurl' => 'getCallbackurl',
-            'channel' => 'getChannel'
+            'tag' => 'getTag'
     ];
 
     /**
@@ -158,10 +147,7 @@ class CreateSubscriptionResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['subscriptionId'] = isset($data['subscriptionId']) ? $data['subscriptionId'] : null;
-        $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
-        $this->container['callbackurl'] = isset($data['callbackurl']) ? $data['callbackurl'] : null;
-        $this->container['channel'] = isset($data['channel']) ? $data['channel'] : null;
+        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
     }
 
     /**
@@ -172,6 +158,9 @@ class CreateSubscriptionResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['tag'] === null) {
+            $invalidProperties[] = "'tag' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,94 +176,26 @@ class CreateSubscriptionResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets subscriptionId
+    * Gets tag
+    *  tag
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Vpc\V2\Model\ResourceTag
     */
-    public function getSubscriptionId()
+    public function getTag()
     {
-        return $this->container['subscriptionId'];
+        return $this->container['tag'];
     }
 
     /**
-    * Sets subscriptionId
+    * Sets tag
     *
-    * @param string|null $subscriptionId 订阅ID，用于唯一标识一个订阅，在创建订阅时由物联网平台分配获得。
+    * @param \HuaweiCloud\SDK\Vpc\V2\Model\ResourceTag $tag tag
     *
     * @return $this
     */
-    public function setSubscriptionId($subscriptionId)
+    public function setTag($tag)
     {
-        $this->container['subscriptionId'] = $subscriptionId;
-        return $this;
-    }
-
-    /**
-    * Gets subject
-    *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\Subject|null
-    */
-    public function getSubject()
-    {
-        return $this->container['subject'];
-    }
-
-    /**
-    * Sets subject
-    *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\Subject|null $subject subject
-    *
-    * @return $this
-    */
-    public function setSubject($subject)
-    {
-        $this->container['subject'] = $subject;
-        return $this;
-    }
-
-    /**
-    * Gets callbackurl
-    *
-    * @return string|null
-    */
-    public function getCallbackurl()
-    {
-        return $this->container['callbackurl'];
-    }
-
-    /**
-    * Sets callbackurl
-    *
-    * @param string|null $callbackurl 订阅的回调地址，用于接收对应资源事件的通知消息。
-    *
-    * @return $this
-    */
-    public function setCallbackurl($callbackurl)
-    {
-        $this->container['callbackurl'] = $callbackurl;
-        return $this;
-    }
-
-    /**
-    * Gets channel
-    *
-    * @return string|null
-    */
-    public function getChannel()
-    {
-        return $this->container['channel'];
-    }
-
-    /**
-    * Sets channel
-    *
-    * @param string|null $channel 物联网平台推送通知消息时使用的协议通道。使用“http”填充，表示该订阅推送协议通道为http(s)协议。
-    *
-    * @return $this
-    */
-    public function setChannel($channel)
-    {
-        $this->container['channel'] = $channel;
+        $this->container['tag'] = $tag;
         return $this;
     }
 

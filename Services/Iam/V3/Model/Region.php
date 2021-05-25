@@ -20,6 +20,12 @@ class Region implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * description  区域描述信息。
+    * parentRegionId  null.
+    * links  links
+    * locales  locales
+    * id  区域ID。
+    * type  区域类型。
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class Region implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * description  区域描述信息。
+    * parentRegionId  null.
+    * links  links
+    * locales  locales
+    * id  区域ID。
+    * type  区域类型。
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class Region implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * description  区域描述信息。
+    * parentRegionId  null.
+    * links  links
+    * locales  locales
+    * id  区域ID。
+    * type  区域类型。
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class Region implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * description  区域描述信息。
+    * parentRegionId  null.
+    * links  links
+    * locales  locales
+    * id  区域ID。
+    * type  区域类型。
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class Region implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * description  区域描述信息。
+    * parentRegionId  null.
+    * links  links
+    * locales  locales
+    * id  区域ID。
+    * type  区域类型。
     *
     * @var string[]
     */
@@ -217,6 +247,7 @@ class Region implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  区域描述信息。
     *
     * @return string
     */
@@ -240,6 +271,7 @@ class Region implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentRegionId
+    *  null.
     *
     * @return string
     */
@@ -263,6 +295,7 @@ class Region implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\LinksSelf
     */
@@ -286,6 +319,7 @@ class Region implements ModelInterface, ArrayAccess
 
     /**
     * Gets locales
+    *  locales
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\RegionLocales
     */
@@ -309,6 +343,7 @@ class Region implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  区域ID。
     *
     * @return string
     */
@@ -332,6 +367,7 @@ class Region implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  区域类型。
     *
     * @return string
     */

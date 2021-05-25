@@ -20,6 +20,8 @@ class Pager implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * href  页码url
+    * rel  next:下一页  previous:前一页
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class Pager implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * href  页码url
+    * rel  next:下一页  previous:前一页
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class Pager implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * href  页码url
+    * rel  next:下一页  previous:前一页
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class Pager implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * href  页码url
+    * rel  next:下一页  previous:前一页
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class Pager implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * href  页码url
+    * rel  next:下一页  previous:前一页
     *
     * @var string[]
     */
@@ -198,6 +208,7 @@ class Pager implements ModelInterface, ArrayAccess
 
     /**
     * Gets href
+    *  页码url
     *
     * @return string|null
     */
@@ -221,6 +232,7 @@ class Pager implements ModelInterface, ArrayAccess
 
     /**
     * Gets rel
+    *  next:下一页  previous:前一页
     *
     * @return string|null
     */

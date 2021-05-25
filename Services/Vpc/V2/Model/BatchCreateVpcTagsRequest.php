@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Vpc\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DeleteSubscriptionRequest implements ModelInterface, ArrayAccess
+class BatchCreateVpcTagsRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,34 @@ class DeleteSubscriptionRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DeleteSubscriptionRequest';
+    protected static $openAPIModelName = 'BatchCreateVpcTagsRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
+    * vpcId  功能说明：虚拟私有云唯一标识 取值范围：合法UUID 约束：ID对应的VPC必须存在
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string',
-            'subscriptionId' => 'string'
+            'projectId' => 'string',
+            'vpcId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Vpc\V2\Model\BatchCreateVpcTagsRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
+    * vpcId  功能说明：虚拟私有云唯一标识 取值范围：合法UUID 约束：ID对应的VPC必须存在
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null,
-        'subscriptionId' => null
+        'projectId' => null,
+        'vpcId' => null,
+        'body' => null
     ];
 
     /**
@@ -61,32 +69,44 @@ class DeleteSubscriptionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
+    * vpcId  功能说明：虚拟私有云唯一标识 取值范围：合法UUID 约束：ID对应的VPC必须存在
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'Instance-Id',
-            'subscriptionId' => 'subscription_id'
+            'projectId' => 'project_id',
+            'vpcId' => 'vpc_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
+    * vpcId  功能说明：虚拟私有云唯一标识 取值范围：合法UUID 约束：ID对应的VPC必须存在
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId',
-            'subscriptionId' => 'setSubscriptionId'
+            'projectId' => 'setProjectId',
+            'vpcId' => 'setVpcId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
+    * vpcId  功能说明：虚拟私有云唯一标识 取值范围：合法UUID 约束：ID对应的VPC必须存在
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId',
-            'subscriptionId' => 'getSubscriptionId'
+            'projectId' => 'getProjectId',
+            'vpcId' => 'getVpcId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -147,8 +167,9 @@ class DeleteSubscriptionRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['subscriptionId'] = isset($data['subscriptionId']) ? $data['subscriptionId'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -159,12 +180,18 @@ class DeleteSubscriptionRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['instanceId']) && !preg_match("/^[a-f0-9-]{36}$/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-f0-9-]{36}$/.";
-            }
-        if ($this->container['subscriptionId'] === null) {
-            $invalidProperties[] = "'subscriptionId' can't be null";
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
         }
+            if (!preg_match("/[0-9a-fA-F]{32}/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[0-9a-fA-F]{32}/.";
+            }
+        if ($this->container['vpcId'] === null) {
+            $invalidProperties[] = "'vpcId' can't be null";
+        }
+            if (!preg_match("/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/", $this->container['vpcId'])) {
+                $invalidProperties[] = "invalid value for 'vpcId', must be conform to the pattern /[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/.";
+            }
         return $invalidProperties;
     }
 
@@ -180,48 +207,74 @@ class DeleteSubscriptionRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instanceId
+    * Gets projectId
+    *  项目ID
     *
-    * @return string|null
+    * @return string
     */
-    public function getInstanceId()
+    public function getProjectId()
     {
-        return $this->container['instanceId'];
+        return $this->container['projectId'];
     }
 
     /**
-    * Sets instanceId
+    * Sets projectId
     *
-    * @param string|null $instanceId instanceId
+    * @param string $projectId 项目ID
     *
     * @return $this
     */
-    public function setInstanceId($instanceId)
+    public function setProjectId($projectId)
     {
-        $this->container['instanceId'] = $instanceId;
+        $this->container['projectId'] = $projectId;
         return $this;
     }
 
     /**
-    * Gets subscriptionId
+    * Gets vpcId
+    *  功能说明：虚拟私有云唯一标识 取值范围：合法UUID 约束：ID对应的VPC必须存在
     *
     * @return string
     */
-    public function getSubscriptionId()
+    public function getVpcId()
     {
-        return $this->container['subscriptionId'];
+        return $this->container['vpcId'];
     }
 
     /**
-    * Sets subscriptionId
+    * Sets vpcId
     *
-    * @param string $subscriptionId subscriptionId
+    * @param string $vpcId 功能说明：虚拟私有云唯一标识 取值范围：合法UUID 约束：ID对应的VPC必须存在
     *
     * @return $this
     */
-    public function setSubscriptionId($subscriptionId)
+    public function setVpcId($vpcId)
     {
-        $this->container['subscriptionId'] = $subscriptionId;
+        $this->container['vpcId'] = $vpcId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V2\Model\BatchCreateVpcTagsRequestBody|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V2\Model\BatchCreateVpcTagsRequestBody|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

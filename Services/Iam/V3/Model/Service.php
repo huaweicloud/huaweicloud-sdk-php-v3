@@ -20,6 +20,12 @@ class Service implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  服务名。
+    * description  服务描述信息。
+    * links  links
+    * id  服务ID。
+    * type  服务类型。
+    * enabled  服务是否可用。
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class Service implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  服务名。
+    * description  服务描述信息。
+    * links  links
+    * id  服务ID。
+    * type  服务类型。
+    * enabled  服务是否可用。
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class Service implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  服务名。
+    * description  服务描述信息。
+    * links  links
+    * id  服务ID。
+    * type  服务类型。
+    * enabled  服务是否可用。
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class Service implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  服务名。
+    * description  服务描述信息。
+    * links  links
+    * id  服务ID。
+    * type  服务类型。
+    * enabled  服务是否可用。
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class Service implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  服务名。
+    * description  服务描述信息。
+    * links  links
+    * id  服务ID。
+    * type  服务类型。
+    * enabled  服务是否可用。
     *
     * @var string[]
     */
@@ -214,6 +244,7 @@ class Service implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  服务名。
     *
     * @return string
     */
@@ -237,6 +268,7 @@ class Service implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  服务描述信息。
     *
     * @return string|null
     */
@@ -260,6 +292,7 @@ class Service implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\Links
     */
@@ -283,6 +316,7 @@ class Service implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  服务ID。
     *
     * @return string
     */
@@ -306,6 +340,7 @@ class Service implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  服务类型。
     *
     * @return string
     */
@@ -329,6 +364,7 @@ class Service implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  服务是否可用。
     *
     * @return bool
     */

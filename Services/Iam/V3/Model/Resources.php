@@ -20,6 +20,11 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * max  配额最大值。
+    * min  配额最小值。
+    * quota  当前配额。
+    * type  配额类型。
+    * used  已使用的配额。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * max  配额最大值。
+    * min  配额最小值。
+    * quota  当前配额。
+    * type  配额类型。
+    * used  已使用的配额。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * max  配额最大值。
+    * min  配额最小值。
+    * quota  当前配额。
+    * type  配额类型。
+    * used  已使用的配额。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * max  配额最大值。
+    * min  配额最小值。
+    * quota  当前配额。
+    * type  配额类型。
+    * used  已使用的配额。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * max  配额最大值。
+    * min  配额最小值。
+    * quota  当前配额。
+    * type  配额类型。
+    * used  已使用的配额。
     *
     * @var string[]
     */
@@ -193,6 +218,7 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Gets max
+    *  配额最大值。
     *
     * @return int|null
     */
@@ -216,6 +242,7 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Gets min
+    *  配额最小值。
     *
     * @return int|null
     */
@@ -239,6 +266,7 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Gets quota
+    *  当前配额。
     *
     * @return int|null
     */
@@ -262,6 +290,7 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  配额类型。
     *
     * @return string|null
     */
@@ -285,6 +314,7 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Gets used
+    *  已使用的配额。
     *
     * @return int|null
     */

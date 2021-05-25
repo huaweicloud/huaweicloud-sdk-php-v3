@@ -20,6 +20,10 @@ class ServerAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * freeScsi  可挂载scsi卷数。
+    * freeBlk  可挂载vbd卷数。
+    * freeDisk  可挂载卷数。
+    * freeNic  可挂载网卡数。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class ServerAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * freeScsi  可挂载scsi卷数。
+    * freeBlk  可挂载vbd卷数。
+    * freeDisk  可挂载卷数。
+    * freeNic  可挂载网卡数。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class ServerAttachableQuantity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * freeScsi  可挂载scsi卷数。
+    * freeBlk  可挂载vbd卷数。
+    * freeDisk  可挂载卷数。
+    * freeNic  可挂载网卡数。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class ServerAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * freeScsi  可挂载scsi卷数。
+    * freeBlk  可挂载vbd卷数。
+    * freeDisk  可挂载卷数。
+    * freeNic  可挂载网卡数。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class ServerAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * freeScsi  可挂载scsi卷数。
+    * freeBlk  可挂载vbd卷数。
+    * freeDisk  可挂载卷数。
+    * freeNic  可挂载网卡数。
     *
     * @var string[]
     */
@@ -199,6 +219,7 @@ class ServerAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeScsi
+    *  可挂载scsi卷数。
     *
     * @return int
     */
@@ -222,6 +243,7 @@ class ServerAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeBlk
+    *  可挂载vbd卷数。
     *
     * @return int
     */
@@ -245,6 +267,7 @@ class ServerAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeDisk
+    *  可挂载卷数。
     *
     * @return int
     */
@@ -268,6 +291,7 @@ class ServerAttachableQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeNic
+    *  可挂载网卡数。
     *
     * @return int
     */

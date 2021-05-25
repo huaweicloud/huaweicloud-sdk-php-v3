@@ -20,6 +20,10 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  权限名，获取方式请参见：[获取权限名、权限ID](https://support.huaweicloud.com/api-iam/iam_10_0001.html)。
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。    > - 如果填写此参数，则返回账号下所有自定义策略。 > - 如果不填写此参数，则返回所有系统权限（包含系统策略和系统角色）。
+    * page  分页查询时数据的页数，查询值最小为1，默认值为1。需要与per_page同时使用。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,300], 默认值为300。需要与page同时使用。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  权限名，获取方式请参见：[获取权限名、权限ID](https://support.huaweicloud.com/api-iam/iam_10_0001.html)。
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。    > - 如果填写此参数，则返回账号下所有自定义策略。 > - 如果不填写此参数，则返回所有系统权限（包含系统策略和系统角色）。
+    * page  分页查询时数据的页数，查询值最小为1，默认值为1。需要与per_page同时使用。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,300], 默认值为300。需要与page同时使用。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  权限名，获取方式请参见：[获取权限名、权限ID](https://support.huaweicloud.com/api-iam/iam_10_0001.html)。
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。    > - 如果填写此参数，则返回账号下所有自定义策略。 > - 如果不填写此参数，则返回所有系统权限（包含系统策略和系统角色）。
+    * page  分页查询时数据的页数，查询值最小为1，默认值为1。需要与per_page同时使用。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,300], 默认值为300。需要与page同时使用。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  权限名，获取方式请参见：[获取权限名、权限ID](https://support.huaweicloud.com/api-iam/iam_10_0001.html)。
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。    > - 如果填写此参数，则返回账号下所有自定义策略。 > - 如果不填写此参数，则返回所有系统权限（包含系统策略和系统角色）。
+    * page  分页查询时数据的页数，查询值最小为1，默认值为1。需要与per_page同时使用。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,300], 默认值为300。需要与page同时使用。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  权限名，获取方式请参见：[获取权限名、权限ID](https://support.huaweicloud.com/api-iam/iam_10_0001.html)。
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。    > - 如果填写此参数，则返回账号下所有自定义策略。 > - 如果不填写此参数，则返回所有系统权限（包含系统策略和系统角色）。
+    * page  分页查询时数据的页数，查询值最小为1，默认值为1。需要与per_page同时使用。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,300], 默认值为300。需要与page同时使用。
     *
     * @var string[]
     */
@@ -187,6 +207,7 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  权限名，获取方式请参见：[获取权限名、权限ID](https://support.huaweicloud.com/api-iam/iam_10_0001.html)。
     *
     * @return string|null
     */
@@ -198,7 +219,7 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name 权限名，获取方式请参见：[获取权限名、权限ID](https://support.huaweicloud.com/api-iam/iam_10_0001.html)。
     *
     * @return $this
     */
@@ -210,6 +231,7 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。    > - 如果填写此参数，则返回账号下所有自定义策略。 > - 如果不填写此参数，则返回所有系统权限（包含系统策略和系统角色）。
     *
     * @return string|null
     */
@@ -221,7 +243,7 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId domainId
+    * @param string|null $domainId 账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。    > - 如果填写此参数，则返回账号下所有自定义策略。 > - 如果不填写此参数，则返回所有系统权限（包含系统策略和系统角色）。
     *
     * @return $this
     */
@@ -233,6 +255,7 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets page
+    *  分页查询时数据的页数，查询值最小为1，默认值为1。需要与per_page同时使用。
     *
     * @return int|null
     */
@@ -244,7 +267,7 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets page
     *
-    * @param int|null $page page
+    * @param int|null $page 分页查询时数据的页数，查询值最小为1，默认值为1。需要与per_page同时使用。
     *
     * @return $this
     */
@@ -256,6 +279,7 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets perPage
+    *  分页查询时每页的数据个数，取值范围为[1,300], 默认值为300。需要与page同时使用。
     *
     * @return int|null
     */
@@ -267,7 +291,7 @@ class KeystoneListPermissionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets perPage
     *
-    * @param int|null $perPage perPage
+    * @param int|null $perPage 分页查询时每页的数据个数，取值范围为[1,300], 默认值为300。需要与page同时使用。
     *
     * @return $this
     */

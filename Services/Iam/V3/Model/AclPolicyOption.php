@@ -20,6 +20,8 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * allowAddressNetmasks  允许访问的IP地址或网段。
+    * allowIpRanges  允许访问的IP地址区间
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * allowAddressNetmasks  允许访问的IP地址或网段。
+    * allowIpRanges  允许访问的IP地址区间
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * allowAddressNetmasks  允许访问的IP地址或网段。
+    * allowIpRanges  允许访问的IP地址区间
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * allowAddressNetmasks  允许访问的IP地址或网段。
+    * allowIpRanges  允许访问的IP地址区间
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * allowAddressNetmasks  允许访问的IP地址或网段。
+    * allowIpRanges  允许访问的IP地址区间
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowAddressNetmasks
+    *  允许访问的IP地址或网段。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowAddressNetmasksOption[]
     */
@@ -204,6 +215,7 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets allowIpRanges
+    *  允许访问的IP地址区间
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowIpRangesOption[]
     */

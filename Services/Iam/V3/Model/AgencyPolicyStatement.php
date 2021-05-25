@@ -20,6 +20,9 @@ class AgencyPolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * action  授权项，指对资源的具体操作权限。   > - 当自定义策略为委托自定义策略时，该字段值为：``` \"Action\": [\"iam:agencies:assume\"]```。
+    * effect  作用。包含两种：允许（Allow）和拒绝（Deny），既有Allow又有Deny的授权语句时，遵循Deny优先的原则。
+    * resource  resource
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class AgencyPolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * action  授权项，指对资源的具体操作权限。   > - 当自定义策略为委托自定义策略时，该字段值为：``` \"Action\": [\"iam:agencies:assume\"]```。
+    * effect  作用。包含两种：允许（Allow）和拒绝（Deny），既有Allow又有Deny的授权语句时，遵循Deny优先的原则。
+    * resource  resource
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class AgencyPolicyStatement implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * action  授权项，指对资源的具体操作权限。   > - 当自定义策略为委托自定义策略时，该字段值为：``` \"Action\": [\"iam:agencies:assume\"]```。
+    * effect  作用。包含两种：允许（Allow）和拒绝（Deny），既有Allow又有Deny的授权语句时，遵循Deny优先的原则。
+    * resource  resource
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class AgencyPolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * action  授权项，指对资源的具体操作权限。   > - 当自定义策略为委托自定义策略时，该字段值为：``` \"Action\": [\"iam:agencies:assume\"]```。
+    * effect  作用。包含两种：允许（Allow）和拒绝（Deny），既有Allow又有Deny的授权语句时，遵循Deny优先的原则。
+    * resource  resource
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class AgencyPolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * action  授权项，指对资源的具体操作权限。   > - 当自定义策略为委托自定义策略时，该字段值为：``` \"Action\": [\"iam:agencies:assume\"]```。
+    * effect  作用。包含两种：允许（Allow）和拒绝（Deny），既有Allow又有Deny的授权语句时，遵循Deny优先的原则。
+    * resource  resource
     *
     * @var string[]
     */
@@ -226,6 +241,7 @@ class AgencyPolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
+    *  授权项，指对资源的具体操作权限。   > - 当自定义策略为委托自定义策略时，该字段值为：``` \"Action\": [\"iam:agencies:assume\"]```。
     *
     * @return string[]
     */
@@ -249,6 +265,7 @@ class AgencyPolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Gets effect
+    *  作用。包含两种：允许（Allow）和拒绝（Deny），既有Allow又有Deny的授权语句时，遵循Deny优先的原则。
     *
     * @return string
     */
@@ -272,6 +289,7 @@ class AgencyPolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Gets resource
+    *  resource
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\AgencyPolicyResource
     */

@@ -20,6 +20,8 @@ class ListServerGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * limit  查询返回server group数量限制。
+    * marker  从marker指定的server group的下一条数据开始查询。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ListServerGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * limit  查询返回server group数量限制。
+    * marker  从marker指定的server group的下一条数据开始查询。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ListServerGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * limit  查询返回server group数量限制。
+    * marker  从marker指定的server group的下一条数据开始查询。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ListServerGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * limit  查询返回server group数量限制。
+    * marker  从marker指定的server group的下一条数据开始查询。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ListServerGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * limit  查询返回server group数量限制。
+    * marker  从marker指定的server group的下一条数据开始查询。
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class ListServerGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  查询返回server group数量限制。
     *
     * @return int|null
     */
@@ -186,7 +197,7 @@ class ListServerGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 查询返回server group数量限制。
     *
     * @return $this
     */
@@ -198,6 +209,7 @@ class ListServerGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  从marker指定的server group的下一条数据开始查询。
     *
     * @return string|null
     */
@@ -209,7 +221,7 @@ class ListServerGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 从marker指定的server group的下一条数据开始查询。
     *
     * @return $this
     */

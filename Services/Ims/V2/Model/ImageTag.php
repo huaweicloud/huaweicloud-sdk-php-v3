@@ -20,6 +20,8 @@ class ImageTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * key  标签key值
+    * value  标签value值
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ImageTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * key  标签key值
+    * value  标签value值
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ImageTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * key  标签key值
+    * value  标签value值
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ImageTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * key  标签key值
+    * value  标签value值
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ImageTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * key  标签key值
+    * value  标签value值
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class ImageTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
+    *  标签key值
     *
     * @return string|null
     */
@@ -198,6 +209,7 @@ class ImageTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
+    *  标签value值
     *
     * @return string|null
     */

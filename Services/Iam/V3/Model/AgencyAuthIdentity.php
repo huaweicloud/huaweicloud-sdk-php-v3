@@ -20,6 +20,9 @@ class AgencyAuthIdentity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * methods  认证方法，该字段内容为[\"assume_role\"]。
+    * assumeRole  assumeRole
+    * policy  policy
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class AgencyAuthIdentity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * methods  认证方法，该字段内容为[\"assume_role\"]。
+    * assumeRole  assumeRole
+    * policy  policy
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class AgencyAuthIdentity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * methods  认证方法，该字段内容为[\"assume_role\"]。
+    * assumeRole  assumeRole
+    * policy  policy
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class AgencyAuthIdentity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * methods  认证方法，该字段内容为[\"assume_role\"]。
+    * assumeRole  assumeRole
+    * policy  policy
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class AgencyAuthIdentity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * methods  认证方法，该字段内容为[\"assume_role\"]。
+    * assumeRole  assumeRole
+    * policy  policy
     *
     * @var string[]
     */
@@ -200,6 +215,7 @@ class AgencyAuthIdentity implements ModelInterface, ArrayAccess
 
     /**
     * Gets methods
+    *  认证方法，该字段内容为[\"assume_role\"]。
     *
     * @return string[]
     */
@@ -223,6 +239,7 @@ class AgencyAuthIdentity implements ModelInterface, ArrayAccess
 
     /**
     * Gets assumeRole
+    *  assumeRole
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\IdentityAssumerole
     */
@@ -246,6 +263,7 @@ class AgencyAuthIdentity implements ModelInterface, ArrayAccess
 
     /**
     * Gets policy
+    *  policy
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\ServicePolicy|null
     */

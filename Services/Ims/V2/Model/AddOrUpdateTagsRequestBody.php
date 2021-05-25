@@ -20,6 +20,9 @@ class AddOrUpdateTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * imageId  镜像ID。
+    * tag  标签数据。 tag和image_tag只能使用一个。
+    * imageTag  imageTag
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class AddOrUpdateTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * imageId  镜像ID。
+    * tag  标签数据。 tag和image_tag只能使用一个。
+    * imageTag  imageTag
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class AddOrUpdateTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * imageId  镜像ID。
+    * tag  标签数据。 tag和image_tag只能使用一个。
+    * imageTag  imageTag
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class AddOrUpdateTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * imageId  镜像ID。
+    * tag  标签数据。 tag和image_tag只能使用一个。
+    * imageTag  imageTag
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class AddOrUpdateTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * imageId  镜像ID。
+    * tag  标签数据。 tag和image_tag只能使用一个。
+    * imageTag  imageTag
     *
     * @var string[]
     */
@@ -184,6 +199,7 @@ class AddOrUpdateTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageId
+    *  镜像ID。
     *
     * @return string
     */
@@ -207,6 +223,7 @@ class AddOrUpdateTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tag
+    *  标签数据。 tag和image_tag只能使用一个。
     *
     * @return string|null
     */
@@ -230,6 +247,7 @@ class AddOrUpdateTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageTag
+    *  imageTag
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\ResourceTag|null
     */

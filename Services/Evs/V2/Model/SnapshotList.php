@@ -20,6 +20,20 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  云硬盘快照ID。
+    * status  云硬盘快照的状态。
+    * name  云硬盘快照名称。
+    * description  云硬盘快照描述信息。
+    * createdAt  云硬盘快照创建时间。
+    * updatedAt  云硬盘快照更新时间。
+    * metadata  云硬盘快照的元数据信息。
+    * volumeId  快照所属的云硬盘。
+    * size  云硬盘快照大小。
+    * osExtendedSnapshotAttributesprojectId  项目ID。
+    * osExtendedSnapshotAttributesprogress  快照进度。
+    * dedicatedStorageId  专属存储ID。
+    * dedicatedStorageName  专属存储名称。
+    * serviceType  服务类型。
     *
     * @var string[]
     */
@@ -42,6 +56,20 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  云硬盘快照ID。
+    * status  云硬盘快照的状态。
+    * name  云硬盘快照名称。
+    * description  云硬盘快照描述信息。
+    * createdAt  云硬盘快照创建时间。
+    * updatedAt  云硬盘快照更新时间。
+    * metadata  云硬盘快照的元数据信息。
+    * volumeId  快照所属的云硬盘。
+    * size  云硬盘快照大小。
+    * osExtendedSnapshotAttributesprojectId  项目ID。
+    * osExtendedSnapshotAttributesprogress  快照进度。
+    * dedicatedStorageId  专属存储ID。
+    * dedicatedStorageName  专属存储名称。
+    * serviceType  服务类型。
     *
     * @var string[]
     */
@@ -85,6 +113,20 @@ class SnapshotList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  云硬盘快照ID。
+    * status  云硬盘快照的状态。
+    * name  云硬盘快照名称。
+    * description  云硬盘快照描述信息。
+    * createdAt  云硬盘快照创建时间。
+    * updatedAt  云硬盘快照更新时间。
+    * metadata  云硬盘快照的元数据信息。
+    * volumeId  快照所属的云硬盘。
+    * size  云硬盘快照大小。
+    * osExtendedSnapshotAttributesprojectId  项目ID。
+    * osExtendedSnapshotAttributesprogress  快照进度。
+    * dedicatedStorageId  专属存储ID。
+    * dedicatedStorageName  专属存储名称。
+    * serviceType  服务类型。
     *
     * @var string[]
     */
@@ -107,6 +149,20 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  云硬盘快照ID。
+    * status  云硬盘快照的状态。
+    * name  云硬盘快照名称。
+    * description  云硬盘快照描述信息。
+    * createdAt  云硬盘快照创建时间。
+    * updatedAt  云硬盘快照更新时间。
+    * metadata  云硬盘快照的元数据信息。
+    * volumeId  快照所属的云硬盘。
+    * size  云硬盘快照大小。
+    * osExtendedSnapshotAttributesprojectId  项目ID。
+    * osExtendedSnapshotAttributesprogress  快照进度。
+    * dedicatedStorageId  专属存储ID。
+    * dedicatedStorageName  专属存储名称。
+    * serviceType  服务类型。
     *
     * @var string[]
     */
@@ -129,6 +185,20 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  云硬盘快照ID。
+    * status  云硬盘快照的状态。
+    * name  云硬盘快照名称。
+    * description  云硬盘快照描述信息。
+    * createdAt  云硬盘快照创建时间。
+    * updatedAt  云硬盘快照更新时间。
+    * metadata  云硬盘快照的元数据信息。
+    * volumeId  快照所属的云硬盘。
+    * size  云硬盘快照大小。
+    * osExtendedSnapshotAttributesprojectId  项目ID。
+    * osExtendedSnapshotAttributesprogress  快照进度。
+    * dedicatedStorageId  专属存储ID。
+    * dedicatedStorageName  专属存储名称。
+    * serviceType  服务类型。
     *
     * @var string[]
     */
@@ -271,6 +341,7 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  云硬盘快照ID。
     *
     * @return string
     */
@@ -294,6 +365,7 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  云硬盘快照的状态。
     *
     * @return string
     */
@@ -317,6 +389,7 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云硬盘快照名称。
     *
     * @return string|null
     */
@@ -340,6 +413,7 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  云硬盘快照描述信息。
     *
     * @return string|null
     */
@@ -363,6 +437,7 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  云硬盘快照创建时间。
     *
     * @return string
     */
@@ -386,6 +461,7 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
+    *  云硬盘快照更新时间。
     *
     * @return string|null
     */
@@ -409,6 +485,7 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Gets metadata
+    *  云硬盘快照的元数据信息。
     *
     * @return map[string,string]|null
     */
@@ -432,6 +509,7 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeId
+    *  快照所属的云硬盘。
     *
     * @return string
     */
@@ -455,6 +533,7 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
+    *  云硬盘快照大小。
     *
     * @return int
     */
@@ -478,6 +557,7 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtendedSnapshotAttributesprojectId
+    *  项目ID。
     *
     * @return string
     */
@@ -501,6 +581,7 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtendedSnapshotAttributesprogress
+    *  快照进度。
     *
     * @return string
     */
@@ -524,6 +605,7 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Gets dedicatedStorageId
+    *  专属存储ID。
     *
     * @return string|null
     */
@@ -547,6 +629,7 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Gets dedicatedStorageName
+    *  专属存储名称。
     *
     * @return string|null
     */
@@ -570,6 +653,7 @@ class SnapshotList implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
+    *  服务类型。
     *
     * @return string
     */

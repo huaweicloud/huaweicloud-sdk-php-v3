@@ -20,6 +20,7 @@ class ShowPublicipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * publicipId  资源ID
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class ShowPublicipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * publicipId  资源ID
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class ShowPublicipTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * publicipId  资源ID
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class ShowPublicipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * publicipId  资源ID
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class ShowPublicipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * publicipId  资源ID
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class ShowPublicipTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipId
+    *  资源ID
     *
     * @return string
     */
@@ -183,7 +189,7 @@ class ShowPublicipTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publicipId
     *
-    * @param string $publicipId publicipId
+    * @param string $publicipId 资源ID
     *
     * @return $this
     */

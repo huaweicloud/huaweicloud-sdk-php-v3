@@ -20,6 +20,8 @@ class GetIdTokenScopeDomainOrProjectBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  domain id 或者 project id，与name字段至少存在一个。
+    * name  domain name 或者 project name，与id字段至少存在一个。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class GetIdTokenScopeDomainOrProjectBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  domain id 或者 project id，与name字段至少存在一个。
+    * name  domain name 或者 project name，与id字段至少存在一个。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class GetIdTokenScopeDomainOrProjectBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  domain id 或者 project id，与name字段至少存在一个。
+    * name  domain name 或者 project name，与id字段至少存在一个。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class GetIdTokenScopeDomainOrProjectBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  domain id 或者 project id，与name字段至少存在一个。
+    * name  domain name 或者 project name，与id字段至少存在一个。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class GetIdTokenScopeDomainOrProjectBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  domain id 或者 project id，与name字段至少存在一个。
+    * name  domain name 或者 project name，与id字段至少存在一个。
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class GetIdTokenScopeDomainOrProjectBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  domain id 或者 project id，与name字段至少存在一个。
     *
     * @return string|null
     */
@@ -198,6 +209,7 @@ class GetIdTokenScopeDomainOrProjectBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  domain name 或者 project name，与id字段至少存在一个。
     *
     * @return string|null
     */

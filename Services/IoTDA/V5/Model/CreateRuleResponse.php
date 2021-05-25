@@ -21,6 +21,16 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * ruleId  规则id。
+    * name  规则名称。
+    * description  规则的描述信息。
+    * conditionGroup  conditionGroup
+    * actions  规则的动作列表，单个规则最多支持设置10个动作。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
+    * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * edgeNodeIds  归属边缘侧节点设备ID列表。
+    * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
     * @var string[]
     */
@@ -39,6 +49,16 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * ruleId  规则id。
+    * name  规则名称。
+    * description  规则的描述信息。
+    * conditionGroup  conditionGroup
+    * actions  规则的动作列表，单个规则最多支持设置10个动作。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
+    * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * edgeNodeIds  归属边缘侧节点设备ID列表。
+    * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
     * @var string[]
     */
@@ -78,6 +98,16 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * ruleId  规则id。
+    * name  规则名称。
+    * description  规则的描述信息。
+    * conditionGroup  conditionGroup
+    * actions  规则的动作列表，单个规则最多支持设置10个动作。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
+    * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * edgeNodeIds  归属边缘侧节点设备ID列表。
+    * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
     * @var string[]
     */
@@ -96,6 +126,16 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * ruleId  规则id。
+    * name  规则名称。
+    * description  规则的描述信息。
+    * conditionGroup  conditionGroup
+    * actions  规则的动作列表，单个规则最多支持设置10个动作。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
+    * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * edgeNodeIds  归属边缘侧节点设备ID列表。
+    * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
     * @var string[]
     */
@@ -114,6 +154,16 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * ruleId  规则id。
+    * name  规则名称。
+    * description  规则的描述信息。
+    * conditionGroup  conditionGroup
+    * actions  规则的动作列表，单个规则最多支持设置10个动作。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
+    * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * edgeNodeIds  归属边缘侧节点设备ID列表。
+    * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
     * @var string[]
     */
@@ -245,6 +295,7 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleId
+    *  规则id。
     *
     * @return string|null
     */
@@ -268,6 +319,7 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  规则名称。
     *
     * @return string|null
     */
@@ -291,6 +343,7 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  规则的描述信息。
     *
     * @return string|null
     */
@@ -314,6 +367,7 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets conditionGroup
+    *  conditionGroup
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ConditionGroup|null
     */
@@ -337,6 +391,7 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets actions
+    *  规则的动作列表，单个规则最多支持设置10个动作。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\RuleAction[]|null
     */
@@ -360,6 +415,7 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleType
+    *  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
     *
     * @return string|null
     */
@@ -383,6 +439,7 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
     *
     * @return string|null
     */
@@ -406,6 +463,7 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
+    *  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
     *
     * @return string|null
     */
@@ -429,6 +487,7 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets edgeNodeIds
+    *  归属边缘侧节点设备ID列表。
     *
     * @return string[]|null
     */
@@ -452,6 +511,7 @@ class CreateRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastUpdateTime
+    *  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
     * @return string|null
     */

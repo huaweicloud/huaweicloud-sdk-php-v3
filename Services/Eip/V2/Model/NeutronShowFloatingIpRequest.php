@@ -20,6 +20,7 @@ class NeutronShowFloatingIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * floatingipId  floatingip的ID
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class NeutronShowFloatingIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * floatingipId  floatingip的ID
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class NeutronShowFloatingIpRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * floatingipId  floatingip的ID
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class NeutronShowFloatingIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * floatingipId  floatingip的ID
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class NeutronShowFloatingIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * floatingipId  floatingip的ID
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class NeutronShowFloatingIpRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingipId
+    *  floatingip的ID
     *
     * @return string
     */
@@ -183,7 +189,7 @@ class NeutronShowFloatingIpRequest implements ModelInterface, ArrayAccess
     /**
     * Sets floatingipId
     *
-    * @param string $floatingipId floatingipId
+    * @param string $floatingipId floatingip的ID
     *
     * @return $this
     */

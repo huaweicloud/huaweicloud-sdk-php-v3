@@ -20,6 +20,17 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * offset  偏移量。 说明:分页查询快照时使用，与limit配合使用。假如共有30个快照，设置offset为11，limit为10，即为从第12个快照开始查询，一次最多可读取10个快照。
+    * limit  返回结果个数限制，值为大于0的整数。默认值为1000。
+    * name  云硬盘快照名称。最大支持255个字节。
+    * status  云硬盘快照状态，具体请参见A.3 云硬盘快照状态。
+    * volumeId  快照所属云硬盘的ID。
+    * availabilityZone  快照所属云硬盘的可用区。
+    * id  指定快照id进行过滤。
+    * dedicatedStorageName  专属存储的名称。
+    * dedicatedStorageId  专属存储ID。
+    * serviceType  服务类型。仅支持EVS、DSS、DESS。
+    * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -39,6 +50,17 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * offset  偏移量。 说明:分页查询快照时使用，与limit配合使用。假如共有30个快照，设置offset为11，limit为10，即为从第12个快照开始查询，一次最多可读取10个快照。
+    * limit  返回结果个数限制，值为大于0的整数。默认值为1000。
+    * name  云硬盘快照名称。最大支持255个字节。
+    * status  云硬盘快照状态，具体请参见A.3 云硬盘快照状态。
+    * volumeId  快照所属云硬盘的ID。
+    * availabilityZone  快照所属云硬盘的可用区。
+    * id  指定快照id进行过滤。
+    * dedicatedStorageName  专属存储的名称。
+    * dedicatedStorageId  专属存储ID。
+    * serviceType  服务类型。仅支持EVS、DSS、DESS。
+    * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -79,6 +101,17 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * offset  偏移量。 说明:分页查询快照时使用，与limit配合使用。假如共有30个快照，设置offset为11，limit为10，即为从第12个快照开始查询，一次最多可读取10个快照。
+    * limit  返回结果个数限制，值为大于0的整数。默认值为1000。
+    * name  云硬盘快照名称。最大支持255个字节。
+    * status  云硬盘快照状态，具体请参见A.3 云硬盘快照状态。
+    * volumeId  快照所属云硬盘的ID。
+    * availabilityZone  快照所属云硬盘的可用区。
+    * id  指定快照id进行过滤。
+    * dedicatedStorageName  专属存储的名称。
+    * dedicatedStorageId  专属存储ID。
+    * serviceType  服务类型。仅支持EVS、DSS、DESS。
+    * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -98,6 +131,17 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * offset  偏移量。 说明:分页查询快照时使用，与limit配合使用。假如共有30个快照，设置offset为11，limit为10，即为从第12个快照开始查询，一次最多可读取10个快照。
+    * limit  返回结果个数限制，值为大于0的整数。默认值为1000。
+    * name  云硬盘快照名称。最大支持255个字节。
+    * status  云硬盘快照状态，具体请参见A.3 云硬盘快照状态。
+    * volumeId  快照所属云硬盘的ID。
+    * availabilityZone  快照所属云硬盘的可用区。
+    * id  指定快照id进行过滤。
+    * dedicatedStorageName  专属存储的名称。
+    * dedicatedStorageId  专属存储ID。
+    * serviceType  服务类型。仅支持EVS、DSS、DESS。
+    * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -117,6 +161,17 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * offset  偏移量。 说明:分页查询快照时使用，与limit配合使用。假如共有30个快照，设置offset为11，limit为10，即为从第12个快照开始查询，一次最多可读取10个快照。
+    * limit  返回结果个数限制，值为大于0的整数。默认值为1000。
+    * name  云硬盘快照名称。最大支持255个字节。
+    * status  云硬盘快照状态，具体请参见A.3 云硬盘快照状态。
+    * volumeId  快照所属云硬盘的ID。
+    * availabilityZone  快照所属云硬盘的可用区。
+    * id  指定快照id进行过滤。
+    * dedicatedStorageName  专属存储的名称。
+    * dedicatedStorageId  专属存储ID。
+    * serviceType  服务类型。仅支持EVS、DSS、DESS。
+    * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -229,6 +284,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
+    *  偏移量。 说明:分页查询快照时使用，与limit配合使用。假如共有30个快照，设置offset为11，limit为10，即为从第12个快照开始查询，一次最多可读取10个快照。
     *
     * @return int|null
     */
@@ -240,7 +296,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset offset
+    * @param int|null $offset 偏移量。 说明:分页查询快照时使用，与limit配合使用。假如共有30个快照，设置offset为11，limit为10，即为从第12个快照开始查询，一次最多可读取10个快照。
     *
     * @return $this
     */
@@ -252,6 +308,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  返回结果个数限制，值为大于0的整数。默认值为1000。
     *
     * @return int|null
     */
@@ -263,7 +320,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 返回结果个数限制，值为大于0的整数。默认值为1000。
     *
     * @return $this
     */
@@ -275,6 +332,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云硬盘快照名称。最大支持255个字节。
     *
     * @return string|null
     */
@@ -286,7 +344,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name 云硬盘快照名称。最大支持255个字节。
     *
     * @return $this
     */
@@ -298,6 +356,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  云硬盘快照状态，具体请参见A.3 云硬盘快照状态。
     *
     * @return string|null
     */
@@ -309,7 +368,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status 云硬盘快照状态，具体请参见A.3 云硬盘快照状态。
     *
     * @return $this
     */
@@ -321,6 +380,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeId
+    *  快照所属云硬盘的ID。
     *
     * @return string|null
     */
@@ -332,7 +392,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets volumeId
     *
-    * @param string|null $volumeId volumeId
+    * @param string|null $volumeId 快照所属云硬盘的ID。
     *
     * @return $this
     */
@@ -344,6 +404,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
+    *  快照所属云硬盘的可用区。
     *
     * @return string|null
     */
@@ -355,7 +416,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string|null $availabilityZone availabilityZone
+    * @param string|null $availabilityZone 快照所属云硬盘的可用区。
     *
     * @return $this
     */
@@ -367,6 +428,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  指定快照id进行过滤。
     *
     * @return string|null
     */
@@ -378,7 +440,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id 指定快照id进行过滤。
     *
     * @return $this
     */
@@ -390,6 +452,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dedicatedStorageName
+    *  专属存储的名称。
     *
     * @return string|null
     */
@@ -401,7 +464,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dedicatedStorageName
     *
-    * @param string|null $dedicatedStorageName dedicatedStorageName
+    * @param string|null $dedicatedStorageName 专属存储的名称。
     *
     * @return $this
     */
@@ -413,6 +476,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dedicatedStorageId
+    *  专属存储ID。
     *
     * @return string|null
     */
@@ -424,7 +488,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dedicatedStorageId
     *
-    * @param string|null $dedicatedStorageId dedicatedStorageId
+    * @param string|null $dedicatedStorageId 专属存储ID。
     *
     * @return $this
     */
@@ -436,6 +500,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
+    *  服务类型。仅支持EVS、DSS、DESS。
     *
     * @return string|null
     */
@@ -447,7 +512,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string|null $serviceType serviceType
+    * @param string|null $serviceType 服务类型。仅支持EVS、DSS、DESS。
     *
     * @return $this
     */
@@ -459,6 +524,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @return string|null
     */
@@ -470,7 +536,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId enterpriseProjectId
+    * @param string|null $enterpriseProjectId 指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @return $this
     */

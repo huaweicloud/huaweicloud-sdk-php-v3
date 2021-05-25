@@ -20,6 +20,12 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  委托名，长度不大于64位。
+    * domainId  委托方账号ID。
+    * trustDomainId  被委托方账号ID。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
+    * trustDomainName  被委托方账号名。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
+    * description  委托描述信息，长度不大于255位。
+    * duration  委托的期限。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。不填写该参数则默认为\"null\"也表示委托的期限为永久。
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  委托名，长度不大于64位。
+    * domainId  委托方账号ID。
+    * trustDomainId  被委托方账号ID。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
+    * trustDomainName  被委托方账号名。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
+    * description  委托描述信息，长度不大于255位。
+    * duration  委托的期限。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。不填写该参数则默认为\"null\"也表示委托的期限为永久。
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  委托名，长度不大于64位。
+    * domainId  委托方账号ID。
+    * trustDomainId  被委托方账号ID。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
+    * trustDomainName  被委托方账号名。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
+    * description  委托描述信息，长度不大于255位。
+    * duration  委托的期限。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。不填写该参数则默认为\"null\"也表示委托的期限为永久。
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  委托名，长度不大于64位。
+    * domainId  委托方账号ID。
+    * trustDomainId  被委托方账号ID。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
+    * trustDomainName  被委托方账号名。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
+    * description  委托描述信息，长度不大于255位。
+    * duration  委托的期限。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。不填写该参数则默认为\"null\"也表示委托的期限为永久。
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  委托名，长度不大于64位。
+    * domainId  委托方账号ID。
+    * trustDomainId  被委托方账号ID。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
+    * trustDomainName  被委托方账号名。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
+    * description  委托描述信息，长度不大于255位。
+    * duration  委托的期限。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。不填写该参数则默认为\"null\"也表示委托的期限为永久。
     *
     * @var string[]
     */
@@ -228,6 +258,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  委托名，长度不大于64位。
     *
     * @return string
     */
@@ -251,6 +282,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  委托方账号ID。
     *
     * @return string
     */
@@ -274,6 +306,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets trustDomainId
+    *  被委托方账号ID。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
     *
     * @return string|null
     */
@@ -297,6 +330,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets trustDomainName
+    *  被委托方账号名。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
     *
     * @return string|null
     */
@@ -320,6 +354,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  委托描述信息，长度不大于255位。
     *
     * @return string|null
     */
@@ -343,6 +378,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
+    *  委托的期限。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。不填写该参数则默认为\"null\"也表示委托的期限为永久。
     *
     * @return string|null
     */

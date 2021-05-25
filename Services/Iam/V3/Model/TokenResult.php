@@ -20,6 +20,14 @@ class TokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * catalog  服务目录信息。
+    * domain  domain
+    * expiresAt  token过期时间。
+    * issuedAt  token下发时间。
+    * methods  获取token的方式。
+    * project  project
+    * roles  token的权限信息。
+    * user  user
     *
     * @var string[]
     */
@@ -36,6 +44,14 @@ class TokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * catalog  服务目录信息。
+    * domain  domain
+    * expiresAt  token过期时间。
+    * issuedAt  token下发时间。
+    * methods  获取token的方式。
+    * project  project
+    * roles  token的权限信息。
+    * user  user
     *
     * @var string[]
     */
@@ -73,6 +89,14 @@ class TokenResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * catalog  服务目录信息。
+    * domain  domain
+    * expiresAt  token过期时间。
+    * issuedAt  token下发时间。
+    * methods  获取token的方式。
+    * project  project
+    * roles  token的权限信息。
+    * user  user
     *
     * @var string[]
     */
@@ -89,6 +113,14 @@ class TokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * catalog  服务目录信息。
+    * domain  domain
+    * expiresAt  token过期时间。
+    * issuedAt  token下发时间。
+    * methods  获取token的方式。
+    * project  project
+    * roles  token的权限信息。
+    * user  user
     *
     * @var string[]
     */
@@ -105,6 +137,14 @@ class TokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * catalog  服务目录信息。
+    * domain  domain
+    * expiresAt  token过期时间。
+    * issuedAt  token下发时间。
+    * methods  获取token的方式。
+    * project  project
+    * roles  token的权限信息。
+    * user  user
     *
     * @var string[]
     */
@@ -229,6 +269,7 @@ class TokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets catalog
+    *  服务目录信息。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\TokenCatalog[]
     */
@@ -252,6 +293,7 @@ class TokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
+    *  domain
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\TokenDomainResult|null
     */
@@ -275,6 +317,7 @@ class TokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets expiresAt
+    *  token过期时间。
     *
     * @return string
     */
@@ -298,6 +341,7 @@ class TokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets issuedAt
+    *  token下发时间。
     *
     * @return string
     */
@@ -321,6 +365,7 @@ class TokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets methods
+    *  获取token的方式。
     *
     * @return string[]
     */
@@ -344,6 +389,7 @@ class TokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets project
+    *  project
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\TokenProjectResult|null
     */
@@ -367,6 +413,7 @@ class TokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets roles
+    *  token的权限信息。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\TokenRole[]
     */
@@ -390,6 +437,7 @@ class TokenResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets user
+    *  user
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\TokenUserResult
     */

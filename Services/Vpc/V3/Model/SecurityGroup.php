@@ -20,6 +20,13 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  功能描述：安全组对应的唯一标识 取值范围：带“-”的标准UUID格式
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * projectId  功能说明：安全组所属的项目ID
+    * createdAt  功能说明：安全组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：安全组更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * enterpriseProjectId  功能说明：安全组所属的企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -35,6 +42,13 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  功能描述：安全组对应的唯一标识 取值范围：带“-”的标准UUID格式
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * projectId  功能说明：安全组所属的项目ID
+    * createdAt  功能说明：安全组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：安全组更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * enterpriseProjectId  功能说明：安全组所属的企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -71,6 +85,13 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  功能描述：安全组对应的唯一标识 取值范围：带“-”的标准UUID格式
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * projectId  功能说明：安全组所属的项目ID
+    * createdAt  功能说明：安全组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：安全组更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * enterpriseProjectId  功能说明：安全组所属的企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -86,6 +107,13 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  功能描述：安全组对应的唯一标识 取值范围：带“-”的标准UUID格式
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * projectId  功能说明：安全组所属的项目ID
+    * createdAt  功能说明：安全组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：安全组更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * enterpriseProjectId  功能说明：安全组所属的企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -101,6 +129,13 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  功能描述：安全组对应的唯一标识 取值范围：带“-”的标准UUID格式
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * projectId  功能说明：安全组所属的项目ID
+    * createdAt  功能说明：安全组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：安全组更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * enterpriseProjectId  功能说明：安全组所属的企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -250,6 +285,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  功能描述：安全组对应的唯一标识 取值范围：带“-”的标准UUID格式
     *
     * @return string
     */
@@ -273,6 +309,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string
     */
@@ -296,6 +333,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     *
     * @return string
     */
@@ -319,6 +357,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  功能说明：安全组所属的项目ID
     *
     * @return string
     */
@@ -342,6 +381,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  功能说明：安全组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     *
     * @return \DateTime
     */
@@ -365,6 +405,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
+    *  功能说明：安全组更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     *
     * @return \DateTime
     */
@@ -388,6 +429,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  功能说明：安全组所属的企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @return string
     */

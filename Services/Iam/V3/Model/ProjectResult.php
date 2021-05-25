@@ -20,6 +20,14 @@ class ProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * isDomain  false.
+    * description  项目描述信息。
+    * links  links
+    * enabled  项目是否可用。
+    * id  项目ID。
+    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
+    * domainId  项目所属账号ID。
+    * name  项目名称。
     *
     * @var string[]
     */
@@ -36,6 +44,14 @@ class ProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * isDomain  false.
+    * description  项目描述信息。
+    * links  links
+    * enabled  项目是否可用。
+    * id  项目ID。
+    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
+    * domainId  项目所属账号ID。
+    * name  项目名称。
     *
     * @var string[]
     */
@@ -73,6 +89,14 @@ class ProjectResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * isDomain  false.
+    * description  项目描述信息。
+    * links  links
+    * enabled  项目是否可用。
+    * id  项目ID。
+    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
+    * domainId  项目所属账号ID。
+    * name  项目名称。
     *
     * @var string[]
     */
@@ -89,6 +113,14 @@ class ProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * isDomain  false.
+    * description  项目描述信息。
+    * links  links
+    * enabled  项目是否可用。
+    * id  项目ID。
+    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
+    * domainId  项目所属账号ID。
+    * name  项目名称。
     *
     * @var string[]
     */
@@ -105,6 +137,14 @@ class ProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * isDomain  false.
+    * description  项目描述信息。
+    * links  links
+    * enabled  项目是否可用。
+    * id  项目ID。
+    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
+    * domainId  项目所属账号ID。
+    * name  项目名称。
     *
     * @var string[]
     */
@@ -235,6 +275,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDomain
+    *  false.
     *
     * @return bool
     */
@@ -258,6 +299,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  项目描述信息。
     *
     * @return string
     */
@@ -281,6 +323,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\Links
     */
@@ -304,6 +347,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  项目是否可用。
     *
     * @return bool
     */
@@ -327,6 +371,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  项目ID。
     *
     * @return string
     */
@@ -350,6 +395,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
+    *  如果查询自己创建的项目，则此处返回所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
     *
     * @return string
     */
@@ -373,6 +419,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  项目所属账号ID。
     *
     * @return string
     */
@@ -396,6 +443,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  项目名称。
     *
     * @return string
     */

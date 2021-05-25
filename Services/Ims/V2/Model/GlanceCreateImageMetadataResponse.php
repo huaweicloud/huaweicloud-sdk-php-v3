@@ -21,6 +21,33 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * visibility  其他租户是否可见。取值为private。
+    * name  镜像名称，如果未指定name的取值，则默认为空，但是使用该镜像创建虚拟机会失败。名称的长度为1～128位。
+    * protected  镜像是否被保护，保护后的镜像不可删除。取值为false
+    * containerFormat  容器格式。取值为bare。
+    * diskFormat  镜像文件格式。目前支持vhd、zvhd、raw、qcow2。默认值是vhd。
+    * tags  镜像标签列表。长度为1～255位。
+    * minRam  镜像运行最小内存，单位为MB。取值参考ECS规格限制，一般设置为0。云服务器的规格限制，请参见规格清单。
+    * minDisk  镜像运行需要的最小磁盘容量，单位为GB 。取值为40～1024GB。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
+    * createdAt  创建时间。格式为UTC时间。
+    * updatedAt  更新时间。格式为UTC时间。
+    * self  本镜像链接。
+    * id  镜像ID，用户调用创建镜像接口后，需保存该镜像的ID，用来调用上传镜像接口完成镜像上传。
+    * file  上传下载镜像文件的地址链接。
+    * schema  视图链接。
+    * imageSourceType  镜像后端存储类型，目前支持uds。
+    * imageSize  镜像大小。单位为字节。
+    * isregistered  镜像是否注册。只有已注册的镜像才能在Portal界面上查询到。取值为true。
+    * osVersion  镜像的操作系统具体版本。
+    * osType  镜像的操作系统类型，取值由__os_version确定。支持Windows、Linux和other。
+    * platform  表示镜像支持的操作系统平台。取值由__os_version确定
+    * osBit  表示操作系统位数。取值由__os_version确定，取值为32或64。
+    * imagetype  镜像类型。取值为private，表示私有镜像。
+    * virtualEnvType  平台类型。镜像使用环境类型：FusionCompute、Ironic、DataImage。如果是云主机云服务器镜像，则取值为FusionCompute。如果是数据卷镜像则取值是DataImage。如果是物理机裸金属服务器镜像，则取值是Ironic。
+    * owner  镜像所属项目ID。
+    * virtualSize  镜像虚拟大小。单位为字节。
+    * properties  镜像属性的集合，不表示具体的镜像属性
     *
     * @var string[]
     */
@@ -56,6 +83,33 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * visibility  其他租户是否可见。取值为private。
+    * name  镜像名称，如果未指定name的取值，则默认为空，但是使用该镜像创建虚拟机会失败。名称的长度为1～128位。
+    * protected  镜像是否被保护，保护后的镜像不可删除。取值为false
+    * containerFormat  容器格式。取值为bare。
+    * diskFormat  镜像文件格式。目前支持vhd、zvhd、raw、qcow2。默认值是vhd。
+    * tags  镜像标签列表。长度为1～255位。
+    * minRam  镜像运行最小内存，单位为MB。取值参考ECS规格限制，一般设置为0。云服务器的规格限制，请参见规格清单。
+    * minDisk  镜像运行需要的最小磁盘容量，单位为GB 。取值为40～1024GB。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
+    * createdAt  创建时间。格式为UTC时间。
+    * updatedAt  更新时间。格式为UTC时间。
+    * self  本镜像链接。
+    * id  镜像ID，用户调用创建镜像接口后，需保存该镜像的ID，用来调用上传镜像接口完成镜像上传。
+    * file  上传下载镜像文件的地址链接。
+    * schema  视图链接。
+    * imageSourceType  镜像后端存储类型，目前支持uds。
+    * imageSize  镜像大小。单位为字节。
+    * isregistered  镜像是否注册。只有已注册的镜像才能在Portal界面上查询到。取值为true。
+    * osVersion  镜像的操作系统具体版本。
+    * osType  镜像的操作系统类型，取值由__os_version确定。支持Windows、Linux和other。
+    * platform  表示镜像支持的操作系统平台。取值由__os_version确定
+    * osBit  表示操作系统位数。取值由__os_version确定，取值为32或64。
+    * imagetype  镜像类型。取值为private，表示私有镜像。
+    * virtualEnvType  平台类型。镜像使用环境类型：FusionCompute、Ironic、DataImage。如果是云主机云服务器镜像，则取值为FusionCompute。如果是数据卷镜像则取值是DataImage。如果是物理机裸金属服务器镜像，则取值是Ironic。
+    * owner  镜像所属项目ID。
+    * virtualSize  镜像虚拟大小。单位为字节。
+    * properties  镜像属性的集合，不表示具体的镜像属性
     *
     * @var string[]
     */
@@ -112,6 +166,33 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * visibility  其他租户是否可见。取值为private。
+    * name  镜像名称，如果未指定name的取值，则默认为空，但是使用该镜像创建虚拟机会失败。名称的长度为1～128位。
+    * protected  镜像是否被保护，保护后的镜像不可删除。取值为false
+    * containerFormat  容器格式。取值为bare。
+    * diskFormat  镜像文件格式。目前支持vhd、zvhd、raw、qcow2。默认值是vhd。
+    * tags  镜像标签列表。长度为1～255位。
+    * minRam  镜像运行最小内存，单位为MB。取值参考ECS规格限制，一般设置为0。云服务器的规格限制，请参见规格清单。
+    * minDisk  镜像运行需要的最小磁盘容量，单位为GB 。取值为40～1024GB。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
+    * createdAt  创建时间。格式为UTC时间。
+    * updatedAt  更新时间。格式为UTC时间。
+    * self  本镜像链接。
+    * id  镜像ID，用户调用创建镜像接口后，需保存该镜像的ID，用来调用上传镜像接口完成镜像上传。
+    * file  上传下载镜像文件的地址链接。
+    * schema  视图链接。
+    * imageSourceType  镜像后端存储类型，目前支持uds。
+    * imageSize  镜像大小。单位为字节。
+    * isregistered  镜像是否注册。只有已注册的镜像才能在Portal界面上查询到。取值为true。
+    * osVersion  镜像的操作系统具体版本。
+    * osType  镜像的操作系统类型，取值由__os_version确定。支持Windows、Linux和other。
+    * platform  表示镜像支持的操作系统平台。取值由__os_version确定
+    * osBit  表示操作系统位数。取值由__os_version确定，取值为32或64。
+    * imagetype  镜像类型。取值为private，表示私有镜像。
+    * virtualEnvType  平台类型。镜像使用环境类型：FusionCompute、Ironic、DataImage。如果是云主机云服务器镜像，则取值为FusionCompute。如果是数据卷镜像则取值是DataImage。如果是物理机裸金属服务器镜像，则取值是Ironic。
+    * owner  镜像所属项目ID。
+    * virtualSize  镜像虚拟大小。单位为字节。
+    * properties  镜像属性的集合，不表示具体的镜像属性
     *
     * @var string[]
     */
@@ -147,6 +228,33 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * visibility  其他租户是否可见。取值为private。
+    * name  镜像名称，如果未指定name的取值，则默认为空，但是使用该镜像创建虚拟机会失败。名称的长度为1～128位。
+    * protected  镜像是否被保护，保护后的镜像不可删除。取值为false
+    * containerFormat  容器格式。取值为bare。
+    * diskFormat  镜像文件格式。目前支持vhd、zvhd、raw、qcow2。默认值是vhd。
+    * tags  镜像标签列表。长度为1～255位。
+    * minRam  镜像运行最小内存，单位为MB。取值参考ECS规格限制，一般设置为0。云服务器的规格限制，请参见规格清单。
+    * minDisk  镜像运行需要的最小磁盘容量，单位为GB 。取值为40～1024GB。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
+    * createdAt  创建时间。格式为UTC时间。
+    * updatedAt  更新时间。格式为UTC时间。
+    * self  本镜像链接。
+    * id  镜像ID，用户调用创建镜像接口后，需保存该镜像的ID，用来调用上传镜像接口完成镜像上传。
+    * file  上传下载镜像文件的地址链接。
+    * schema  视图链接。
+    * imageSourceType  镜像后端存储类型，目前支持uds。
+    * imageSize  镜像大小。单位为字节。
+    * isregistered  镜像是否注册。只有已注册的镜像才能在Portal界面上查询到。取值为true。
+    * osVersion  镜像的操作系统具体版本。
+    * osType  镜像的操作系统类型，取值由__os_version确定。支持Windows、Linux和other。
+    * platform  表示镜像支持的操作系统平台。取值由__os_version确定
+    * osBit  表示操作系统位数。取值由__os_version确定，取值为32或64。
+    * imagetype  镜像类型。取值为private，表示私有镜像。
+    * virtualEnvType  平台类型。镜像使用环境类型：FusionCompute、Ironic、DataImage。如果是云主机云服务器镜像，则取值为FusionCompute。如果是数据卷镜像则取值是DataImage。如果是物理机裸金属服务器镜像，则取值是Ironic。
+    * owner  镜像所属项目ID。
+    * virtualSize  镜像虚拟大小。单位为字节。
+    * properties  镜像属性的集合，不表示具体的镜像属性
     *
     * @var string[]
     */
@@ -182,6 +290,33 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * visibility  其他租户是否可见。取值为private。
+    * name  镜像名称，如果未指定name的取值，则默认为空，但是使用该镜像创建虚拟机会失败。名称的长度为1～128位。
+    * protected  镜像是否被保护，保护后的镜像不可删除。取值为false
+    * containerFormat  容器格式。取值为bare。
+    * diskFormat  镜像文件格式。目前支持vhd、zvhd、raw、qcow2。默认值是vhd。
+    * tags  镜像标签列表。长度为1～255位。
+    * minRam  镜像运行最小内存，单位为MB。取值参考ECS规格限制，一般设置为0。云服务器的规格限制，请参见规格清单。
+    * minDisk  镜像运行需要的最小磁盘容量，单位为GB 。取值为40～1024GB。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。
+    * status  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
+    * createdAt  创建时间。格式为UTC时间。
+    * updatedAt  更新时间。格式为UTC时间。
+    * self  本镜像链接。
+    * id  镜像ID，用户调用创建镜像接口后，需保存该镜像的ID，用来调用上传镜像接口完成镜像上传。
+    * file  上传下载镜像文件的地址链接。
+    * schema  视图链接。
+    * imageSourceType  镜像后端存储类型，目前支持uds。
+    * imageSize  镜像大小。单位为字节。
+    * isregistered  镜像是否注册。只有已注册的镜像才能在Portal界面上查询到。取值为true。
+    * osVersion  镜像的操作系统具体版本。
+    * osType  镜像的操作系统类型，取值由__os_version确定。支持Windows、Linux和other。
+    * platform  表示镜像支持的操作系统平台。取值由__os_version确定
+    * osBit  表示操作系统位数。取值由__os_version确定，取值为32或64。
+    * imagetype  镜像类型。取值为private，表示私有镜像。
+    * virtualEnvType  平台类型。镜像使用环境类型：FusionCompute、Ironic、DataImage。如果是云主机云服务器镜像，则取值为FusionCompute。如果是数据卷镜像则取值是DataImage。如果是物理机裸金属服务器镜像，则取值是Ironic。
+    * owner  镜像所属项目ID。
+    * virtualSize  镜像虚拟大小。单位为字节。
+    * properties  镜像属性的集合，不表示具体的镜像属性
     *
     * @var string[]
     */
@@ -467,6 +602,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets visibility
+    *  其他租户是否可见。取值为private。
     *
     * @return string|null
     */
@@ -490,6 +626,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  镜像名称，如果未指定name的取值，则默认为空，但是使用该镜像创建虚拟机会失败。名称的长度为1～128位。
     *
     * @return string|null
     */
@@ -513,6 +650,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protected
+    *  镜像是否被保护，保护后的镜像不可删除。取值为false
     *
     * @return bool|null
     */
@@ -536,6 +674,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerFormat
+    *  容器格式。取值为bare。
     *
     * @return string|null
     */
@@ -559,6 +698,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskFormat
+    *  镜像文件格式。目前支持vhd、zvhd、raw、qcow2。默认值是vhd。
     *
     * @return string|null
     */
@@ -582,6 +722,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  镜像标签列表。长度为1～255位。
     *
     * @return string[]|null
     */
@@ -605,6 +746,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets minRam
+    *  镜像运行最小内存，单位为MB。取值参考ECS规格限制，一般设置为0。云服务器的规格限制，请参见规格清单。
     *
     * @return int|null
     */
@@ -628,6 +770,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets minDisk
+    *  镜像运行需要的最小磁盘容量，单位为GB 。取值为40～1024GB。必须大于镜像系统盘容量，否则创建云主机云服务器可能失败。
     *
     * @return int|null
     */
@@ -651,6 +794,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  镜像状态。取值如下：queued：表示镜像元数据已经创建成功，等待上传镜像文件。saving：表示镜像正在上传文件到后端存储。deleted：表示镜像已经删除。killed：表示镜像上传错误。active：表示镜像可以正常使用。
     *
     * @return string|null
     */
@@ -674,6 +818,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  创建时间。格式为UTC时间。
     *
     * @return string|null
     */
@@ -697,6 +842,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
+    *  更新时间。格式为UTC时间。
     *
     * @return string|null
     */
@@ -720,6 +866,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets self
+    *  本镜像链接。
     *
     * @return string|null
     */
@@ -743,6 +890,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  镜像ID，用户调用创建镜像接口后，需保存该镜像的ID，用来调用上传镜像接口完成镜像上传。
     *
     * @return string|null
     */
@@ -766,6 +914,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets file
+    *  上传下载镜像文件的地址链接。
     *
     * @return string|null
     */
@@ -789,6 +938,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets schema
+    *  视图链接。
     *
     * @return string|null
     */
@@ -812,6 +962,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageSourceType
+    *  镜像后端存储类型，目前支持uds。
     *
     * @return string|null
     */
@@ -835,6 +986,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageSize
+    *  镜像大小。单位为字节。
     *
     * @return string|null
     */
@@ -858,6 +1010,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isregistered
+    *  镜像是否注册。只有已注册的镜像才能在Portal界面上查询到。取值为true。
     *
     * @return string|null
     */
@@ -881,6 +1034,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVersion
+    *  镜像的操作系统具体版本。
     *
     * @return string|null
     */
@@ -904,6 +1058,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
+    *  镜像的操作系统类型，取值由__os_version确定。支持Windows、Linux和other。
     *
     * @return string|null
     */
@@ -927,6 +1082,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets platform
+    *  表示镜像支持的操作系统平台。取值由__os_version确定
     *
     * @return string|null
     */
@@ -950,6 +1106,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets osBit
+    *  表示操作系统位数。取值由__os_version确定，取值为32或64。
     *
     * @return string|null
     */
@@ -973,6 +1130,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets imagetype
+    *  镜像类型。取值为private，表示私有镜像。
     *
     * @return string|null
     */
@@ -996,6 +1154,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets virtualEnvType
+    *  平台类型。镜像使用环境类型：FusionCompute、Ironic、DataImage。如果是云主机云服务器镜像，则取值为FusionCompute。如果是数据卷镜像则取值是DataImage。如果是物理机裸金属服务器镜像，则取值是Ironic。
     *
     * @return string|null
     */
@@ -1019,6 +1178,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
+    *  镜像所属项目ID。
     *
     * @return string|null
     */
@@ -1042,6 +1202,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets virtualSize
+    *  镜像虚拟大小。单位为字节。
     *
     * @return int|null
     */
@@ -1065,6 +1226,7 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets properties
+    *  镜像属性的集合，不表示具体的镜像属性
     *
     * @return object|null
     */

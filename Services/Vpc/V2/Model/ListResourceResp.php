@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Vpc\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowSubscriptionResponse implements ModelInterface, ArrayAccess
+class ListResourceResp implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,30 +16,38 @@ class ShowSubscriptionResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowSubscriptionResponse';
+    protected static $openAPIModelName = 'ListResourceResp';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceId  资源ID
+    * resourceName  资源名称，没有默认为空字符串
+    * tags  标签列表，没有标签默认为空数组
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'subscriptionId' => 'string',
-            'subject' => '\HuaweiCloud\SDK\IoTDA\V5\Model\Subject',
-            'callbackurl' => 'string',
-            'channel' => 'string'
+            'resouceDetail' => 'object',
+            'resourceId' => 'string',
+            'resourceName' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Vpc\V2\Model\ResourceTag[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceId  资源ID
+    * resourceName  资源名称，没有默认为空字符串
+    * tags  标签列表，没有标签默认为空数组
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'subscriptionId' => null,
-        'subject' => null,
-        'callbackurl' => null,
-        'channel' => null
+        'resouceDetail' => null,
+        'resourceId' => null,
+        'resourceName' => null,
+        'tags' => null
     ];
 
     /**
@@ -66,38 +73,50 @@ class ShowSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceId  资源ID
+    * resourceName  资源名称，没有默认为空字符串
+    * tags  标签列表，没有标签默认为空数组
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'subscriptionId' => 'subscription_id',
-            'subject' => 'subject',
-            'callbackurl' => 'callbackurl',
-            'channel' => 'channel'
+            'resouceDetail' => 'resouce_detail',
+            'resourceId' => 'resource_id',
+            'resourceName' => 'resource_name',
+            'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceId  资源ID
+    * resourceName  资源名称，没有默认为空字符串
+    * tags  标签列表，没有标签默认为空数组
     *
     * @var string[]
     */
     protected static $setters = [
-            'subscriptionId' => 'setSubscriptionId',
-            'subject' => 'setSubject',
-            'callbackurl' => 'setCallbackurl',
-            'channel' => 'setChannel'
+            'resouceDetail' => 'setResouceDetail',
+            'resourceId' => 'setResourceId',
+            'resourceName' => 'setResourceName',
+            'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceId  资源ID
+    * resourceName  资源名称，没有默认为空字符串
+    * tags  标签列表，没有标签默认为空数组
     *
     * @var string[]
     */
     protected static $getters = [
-            'subscriptionId' => 'getSubscriptionId',
-            'subject' => 'getSubject',
-            'callbackurl' => 'getCallbackurl',
-            'channel' => 'getChannel'
+            'resouceDetail' => 'getResouceDetail',
+            'resourceId' => 'getResourceId',
+            'resourceName' => 'getResourceName',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -158,10 +177,10 @@ class ShowSubscriptionResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['subscriptionId'] = isset($data['subscriptionId']) ? $data['subscriptionId'] : null;
-        $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
-        $this->container['callbackurl'] = isset($data['callbackurl']) ? $data['callbackurl'] : null;
-        $this->container['channel'] = isset($data['channel']) ? $data['channel'] : null;
+        $this->container['resouceDetail'] = isset($data['resouceDetail']) ? $data['resouceDetail'] : null;
+        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
+        $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -172,6 +191,15 @@ class ShowSubscriptionResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['resouceDetail'] === null) {
+            $invalidProperties[] = "'resouceDetail' can't be null";
+        }
+        if ($this->container['resourceId'] === null) {
+            $invalidProperties[] = "'resourceId' can't be null";
+        }
+        if ($this->container['resourceName'] === null) {
+            $invalidProperties[] = "'resourceName' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,94 +215,98 @@ class ShowSubscriptionResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets subscriptionId
+    * Gets resouceDetail
+    *  资源详情。 资源对象，用于扩展。默认为空
     *
-    * @return string|null
+    * @return object
     */
-    public function getSubscriptionId()
+    public function getResouceDetail()
     {
-        return $this->container['subscriptionId'];
+        return $this->container['resouceDetail'];
     }
 
     /**
-    * Sets subscriptionId
+    * Sets resouceDetail
     *
-    * @param string|null $subscriptionId 订阅ID，用于唯一标识一个订阅，在创建订阅时由物联网平台分配获得。
+    * @param object $resouceDetail 资源详情。 资源对象，用于扩展。默认为空
     *
     * @return $this
     */
-    public function setSubscriptionId($subscriptionId)
+    public function setResouceDetail($resouceDetail)
     {
-        $this->container['subscriptionId'] = $subscriptionId;
+        $this->container['resouceDetail'] = $resouceDetail;
         return $this;
     }
 
     /**
-    * Gets subject
+    * Gets resourceId
+    *  资源ID
     *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\Subject|null
+    * @return string
     */
-    public function getSubject()
+    public function getResourceId()
     {
-        return $this->container['subject'];
+        return $this->container['resourceId'];
     }
 
     /**
-    * Sets subject
+    * Sets resourceId
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\Subject|null $subject subject
+    * @param string $resourceId 资源ID
     *
     * @return $this
     */
-    public function setSubject($subject)
+    public function setResourceId($resourceId)
     {
-        $this->container['subject'] = $subject;
+        $this->container['resourceId'] = $resourceId;
         return $this;
     }
 
     /**
-    * Gets callbackurl
+    * Gets resourceName
+    *  资源名称，没有默认为空字符串
     *
-    * @return string|null
+    * @return string
     */
-    public function getCallbackurl()
+    public function getResourceName()
     {
-        return $this->container['callbackurl'];
+        return $this->container['resourceName'];
     }
 
     /**
-    * Sets callbackurl
+    * Sets resourceName
     *
-    * @param string|null $callbackurl 订阅的回调地址，用于接收对应资源事件的通知消息。
+    * @param string $resourceName 资源名称，没有默认为空字符串
     *
     * @return $this
     */
-    public function setCallbackurl($callbackurl)
+    public function setResourceName($resourceName)
     {
-        $this->container['callbackurl'] = $callbackurl;
+        $this->container['resourceName'] = $resourceName;
         return $this;
     }
 
     /**
-    * Gets channel
+    * Gets tags
+    *  标签列表，没有标签默认为空数组
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Vpc\V2\Model\ResourceTag[]|null
     */
-    public function getChannel()
+    public function getTags()
     {
-        return $this->container['channel'];
+        return $this->container['tags'];
     }
 
     /**
-    * Sets channel
+    * Sets tags
     *
-    * @param string|null $channel 物联网平台推送通知消息时使用的协议通道。使用“http”填充，表示该订阅推送协议通道为http(s)协议。
+    * @param \HuaweiCloud\SDK\Vpc\V2\Model\ResourceTag[]|null $tags 标签列表，没有标签默认为空数组
     *
     * @return $this
     */
-    public function setChannel($channel)
+    public function setTags($tags)
     {
-        $this->container['channel'] = $channel;
+        $this->container['tags'] = $tags;
         return $this;
     }
 

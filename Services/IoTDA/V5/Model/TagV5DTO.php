@@ -20,6 +20,8 @@ class TagV5DTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * tagKey  标签键，在同一资源下标签键唯一。
+    * tagValue  标签值。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class TagV5DTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * tagKey  标签键，在同一资源下标签键唯一。
+    * tagValue  标签值。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class TagV5DTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * tagKey  标签键，在同一资源下标签键唯一。
+    * tagValue  标签值。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class TagV5DTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * tagKey  标签键，在同一资源下标签键唯一。
+    * tagValue  标签值。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class TagV5DTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * tagKey  标签键，在同一资源下标签键唯一。
+    * tagValue  标签值。
     *
     * @var string[]
     */
@@ -184,6 +194,7 @@ class TagV5DTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagKey
+    *  标签键，在同一资源下标签键唯一。
     *
     * @return string
     */
@@ -207,6 +218,7 @@ class TagV5DTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagValue
+    *  标签值。
     *
     * @return string|null
     */

@@ -21,6 +21,9 @@ class ListVolumesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * count  查询到的云硬盘总数量，不受分页影响。
+    * volumesLinks  云硬盘列表查询位置标记。如果本次查询只返回部分列表信息时，会返回查询到的当前磁盘mark标记的url，可以继续使用这个url查询剩余列表信息。
+    * volumes  查询请求返回的云硬盘列表。
     *
     * @var string[]
     */
@@ -32,6 +35,9 @@ class ListVolumesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * count  查询到的云硬盘总数量，不受分页影响。
+    * volumesLinks  云硬盘列表查询位置标记。如果本次查询只返回部分列表信息时，会返回查询到的当前磁盘mark标记的url，可以继续使用这个url查询剩余列表信息。
+    * volumes  查询请求返回的云硬盘列表。
     *
     * @var string[]
     */
@@ -64,6 +70,9 @@ class ListVolumesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * count  查询到的云硬盘总数量，不受分页影响。
+    * volumesLinks  云硬盘列表查询位置标记。如果本次查询只返回部分列表信息时，会返回查询到的当前磁盘mark标记的url，可以继续使用这个url查询剩余列表信息。
+    * volumes  查询请求返回的云硬盘列表。
     *
     * @var string[]
     */
@@ -75,6 +84,9 @@ class ListVolumesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * count  查询到的云硬盘总数量，不受分页影响。
+    * volumesLinks  云硬盘列表查询位置标记。如果本次查询只返回部分列表信息时，会返回查询到的当前磁盘mark标记的url，可以继续使用这个url查询剩余列表信息。
+    * volumes  查询请求返回的云硬盘列表。
     *
     * @var string[]
     */
@@ -86,6 +98,9 @@ class ListVolumesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * count  查询到的云硬盘总数量，不受分页影响。
+    * volumesLinks  云硬盘列表查询位置标记。如果本次查询只返回部分列表信息时，会返回查询到的当前磁盘mark标记的url，可以继续使用这个url查询剩余列表信息。
+    * volumes  查询请求返回的云硬盘列表。
     *
     * @var string[]
     */
@@ -182,6 +197,7 @@ class ListVolumesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
+    *  查询到的云硬盘总数量，不受分页影响。
     *
     * @return int|null
     */
@@ -205,6 +221,7 @@ class ListVolumesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumesLinks
+    *  云硬盘列表查询位置标记。如果本次查询只返回部分列表信息时，会返回查询到的当前磁盘mark标记的url，可以继续使用这个url查询剩余列表信息。
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\Link[]|null
     */
@@ -228,6 +245,7 @@ class ListVolumesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumes
+    *  查询请求返回的云硬盘列表。
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\VolumeDetail[]|null
     */

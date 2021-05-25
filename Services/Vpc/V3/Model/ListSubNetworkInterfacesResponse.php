@@ -21,6 +21,9 @@ class ListSubNetworkInterfacesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * requestId  1、功能说明：请求ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * subNetworkInterfaces  1、功能说明：辅助弹性网卡查询对象 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -32,6 +35,9 @@ class ListSubNetworkInterfacesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * requestId  1、功能说明：请求ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * subNetworkInterfaces  1、功能说明：辅助弹性网卡查询对象 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -64,6 +70,9 @@ class ListSubNetworkInterfacesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * requestId  1、功能说明：请求ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * subNetworkInterfaces  1、功能说明：辅助弹性网卡查询对象 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -75,6 +84,9 @@ class ListSubNetworkInterfacesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * requestId  1、功能说明：请求ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * subNetworkInterfaces  1、功能说明：辅助弹性网卡查询对象 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -86,6 +98,9 @@ class ListSubNetworkInterfacesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * requestId  1、功能说明：请求ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * subNetworkInterfaces  1、功能说明：辅助弹性网卡查询对象 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
@@ -182,6 +197,7 @@ class ListSubNetworkInterfacesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
+    *  1、功能说明：请求ID 2、取值范围：标准UUID 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     *
     * @return string|null
     */
@@ -205,6 +221,7 @@ class ListSubNetworkInterfacesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subNetworkInterfaces
+    *  1、功能说明：辅助弹性网卡查询对象 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     *
     * @return \HuaweiCloud\SDK\Vpc\V3\Model\SubNetworkInterface[]|null
     */
@@ -228,6 +245,7 @@ class ListSubNetworkInterfacesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets pageInfo
+    *  pageInfo
     *
     * @return \HuaweiCloud\SDK\Vpc\V3\Model\PageInfo|null
     */

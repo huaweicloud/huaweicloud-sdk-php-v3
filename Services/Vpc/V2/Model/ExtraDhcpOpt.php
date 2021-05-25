@@ -20,6 +20,8 @@ class ExtraDhcpOpt implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * optName  Option名称
+    * optValue  Option值
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ExtraDhcpOpt implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * optName  Option名称
+    * optValue  Option值
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ExtraDhcpOpt implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * optName  Option名称
+    * optValue  Option值
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ExtraDhcpOpt implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * optName  Option名称
+    * optValue  Option值
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ExtraDhcpOpt implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * optName  Option名称
+    * optValue  Option值
     *
     * @var string[]
     */
@@ -187,6 +197,7 @@ class ExtraDhcpOpt implements ModelInterface, ArrayAccess
 
     /**
     * Gets optName
+    *  Option名称
     *
     * @return string|null
     */
@@ -210,6 +221,7 @@ class ExtraDhcpOpt implements ModelInterface, ArrayAccess
 
     /**
     * Gets optValue
+    *  Option值
     *
     * @return string|null
     */

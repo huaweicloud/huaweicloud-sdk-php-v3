@@ -20,6 +20,10 @@ class ListPropertiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * deviceId  下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
+    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class ListPropertiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * deviceId  下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
+    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class ListPropertiesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * deviceId  下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
+    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class ListPropertiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * deviceId  下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
+    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class ListPropertiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * deviceId  下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
+    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
     *
     * @var string[]
     */
@@ -199,6 +219,7 @@ class ListPropertiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceId
+    *  下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
     *
     * @return string
     */
@@ -210,7 +231,7 @@ class ListPropertiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets deviceId
     *
-    * @param string $deviceId deviceId
+    * @param string $deviceId 下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
     *
     * @return $this
     */
@@ -222,6 +243,7 @@ class ListPropertiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets stageAuthToken
+    *  Stage用户的Token, 仅提供给IoStage服务使用
     *
     * @return string|null
     */
@@ -233,7 +255,7 @@ class ListPropertiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets stageAuthToken
     *
-    * @param string|null $stageAuthToken stageAuthToken
+    * @param string|null $stageAuthToken Stage用户的Token, 仅提供给IoStage服务使用
     *
     * @return $this
     */
@@ -245,6 +267,7 @@ class ListPropertiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
+    *  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return string|null
     */
@@ -256,7 +279,7 @@ class ListPropertiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId instanceId
+    * @param string|null $instanceId 实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return $this
     */
@@ -268,6 +291,7 @@ class ListPropertiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceId
+    *  设备的服务ID，在设备关联的产品模型中定义。
     *
     * @return string
     */
@@ -279,7 +303,7 @@ class ListPropertiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serviceId
     *
-    * @param string $serviceId serviceId
+    * @param string $serviceId 设备的服务ID，在设备关联的产品模型中定义。
     *
     * @return $this
     */

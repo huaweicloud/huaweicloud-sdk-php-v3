@@ -20,6 +20,7 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * values  版本的资源链接信息。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * values  版本的资源链接信息。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class Versions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * values  版本的资源链接信息。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * values  版本的资源链接信息。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * values  版本的资源链接信息。
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
+    *  版本的资源链接信息。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\Version[]
     */

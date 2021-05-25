@@ -21,6 +21,9 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * count  快照的总数量，不受limi参数的影响。
+    * snapshots  快照信息。
+    * snapshotsLinks  云硬盘快照列表查询位置标记。当查询时指定limit时会返回该字段，返回该字段表示本次查询只查出了部分云硬盘快照信息。
     *
     * @var string[]
     */
@@ -32,6 +35,9 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * count  快照的总数量，不受limi参数的影响。
+    * snapshots  快照信息。
+    * snapshotsLinks  云硬盘快照列表查询位置标记。当查询时指定limit时会返回该字段，返回该字段表示本次查询只查出了部分云硬盘快照信息。
     *
     * @var string[]
     */
@@ -64,6 +70,9 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * count  快照的总数量，不受limi参数的影响。
+    * snapshots  快照信息。
+    * snapshotsLinks  云硬盘快照列表查询位置标记。当查询时指定limit时会返回该字段，返回该字段表示本次查询只查出了部分云硬盘快照信息。
     *
     * @var string[]
     */
@@ -75,6 +84,9 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * count  快照的总数量，不受limi参数的影响。
+    * snapshots  快照信息。
+    * snapshotsLinks  云硬盘快照列表查询位置标记。当查询时指定limit时会返回该字段，返回该字段表示本次查询只查出了部分云硬盘快照信息。
     *
     * @var string[]
     */
@@ -86,6 +98,9 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * count  快照的总数量，不受limi参数的影响。
+    * snapshots  快照信息。
+    * snapshotsLinks  云硬盘快照列表查询位置标记。当查询时指定limit时会返回该字段，返回该字段表示本次查询只查出了部分云硬盘快照信息。
     *
     * @var string[]
     */
@@ -182,6 +197,7 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
+    *  快照的总数量，不受limi参数的影响。
     *
     * @return int|null
     */
@@ -205,6 +221,7 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshots
+    *  快照信息。
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\SnapshotList[]|null
     */
@@ -228,6 +245,7 @@ class ListSnapshotsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotsLinks
+    *  云硬盘快照列表查询位置标记。当查询时指定limit时会返回该字段，返回该字段表示本次查询只查出了部分云硬盘快照信息。
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\Link[]|null
     */

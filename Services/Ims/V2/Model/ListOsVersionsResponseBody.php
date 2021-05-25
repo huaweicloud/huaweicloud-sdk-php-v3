@@ -20,6 +20,8 @@ class ListOsVersionsResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * platform  操作系统的平台值，如RedHat等
+    * versionList  操作系统的详情值
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ListOsVersionsResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * platform  操作系统的平台值，如RedHat等
+    * versionList  操作系统的详情值
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ListOsVersionsResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * platform  操作系统的平台值，如RedHat等
+    * versionList  操作系统的详情值
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ListOsVersionsResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * platform  操作系统的平台值，如RedHat等
+    * versionList  操作系统的详情值
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ListOsVersionsResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * platform  操作系统的平台值，如RedHat等
+    * versionList  操作系统的详情值
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class ListOsVersionsResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets platform
+    *  操作系统的平台值，如RedHat等
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class ListOsVersionsResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets versionList
+    *  操作系统的详情值
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\OsVersionInfo[]
     */

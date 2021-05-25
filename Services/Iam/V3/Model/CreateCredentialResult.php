@@ -20,6 +20,12 @@ class CreateCredentialResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * createTime  创建访问密钥时间。
+    * access  创建的AK。
+    * secret  创建的SK。
+    * status  访问密钥状态。
+    * userId  IAM用户ID。
+    * description  访问密钥描述信息。
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class CreateCredentialResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * createTime  创建访问密钥时间。
+    * access  创建的AK。
+    * secret  创建的SK。
+    * status  访问密钥状态。
+    * userId  IAM用户ID。
+    * description  访问密钥描述信息。
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class CreateCredentialResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * createTime  创建访问密钥时间。
+    * access  创建的AK。
+    * secret  创建的SK。
+    * status  访问密钥状态。
+    * userId  IAM用户ID。
+    * description  访问密钥描述信息。
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class CreateCredentialResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * createTime  创建访问密钥时间。
+    * access  创建的AK。
+    * secret  创建的SK。
+    * status  访问密钥状态。
+    * userId  IAM用户ID。
+    * description  访问密钥描述信息。
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class CreateCredentialResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * createTime  创建访问密钥时间。
+    * access  创建的AK。
+    * secret  创建的SK。
+    * status  访问密钥状态。
+    * userId  IAM用户ID。
+    * description  访问密钥描述信息。
     *
     * @var string[]
     */
@@ -217,6 +247,7 @@ class CreateCredentialResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
+    *  创建访问密钥时间。
     *
     * @return string
     */
@@ -240,6 +271,7 @@ class CreateCredentialResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets access
+    *  创建的AK。
     *
     * @return string
     */
@@ -263,6 +295,7 @@ class CreateCredentialResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets secret
+    *  创建的SK。
     *
     * @return string
     */
@@ -286,6 +319,7 @@ class CreateCredentialResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  访问密钥状态。
     *
     * @return string
     */
@@ -309,6 +343,7 @@ class CreateCredentialResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  IAM用户ID。
     *
     * @return string
     */
@@ -332,6 +367,7 @@ class CreateCredentialResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  访问密钥描述信息。
     *
     * @return string
     */

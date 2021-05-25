@@ -20,6 +20,8 @@ class ResizeVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * bssParam  bssParam
+    * osExtend  osExtend
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ResizeVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * bssParam  bssParam
+    * osExtend  osExtend
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ResizeVolumeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * bssParam  bssParam
+    * osExtend  osExtend
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ResizeVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * bssParam  bssParam
+    * osExtend  osExtend
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ResizeVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * bssParam  bssParam
+    * osExtend  osExtend
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class ResizeVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets bssParam
+    *  bssParam
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\BssParamForResizeVolume|null
     */
@@ -201,6 +212,7 @@ class ResizeVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtend
+    *  osExtend
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\OsExtend
     */

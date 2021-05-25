@@ -20,10 +20,29 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+    * status  IAM用户状态信息。
+    * pwdStatus  IAM用户首次登录是否重置密码。
+    * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xuserType  用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * description  IAM用户描述信息。
+    * name  IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * phone  IAM用户手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
+    * isDomainOwner  IAM用户是否为账号管理员。
+    * domainId  IAM用户所属账号ID。
+    * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
+    * areacode  国家码。中国大陆为“0086”。
+    * email  IAM用户邮箱。
+    * createTime  IAM用户创建时间。
+    * xdomainId  运营主体的客户编码。
+    * xdomainType  运营主体。
+    * id  IAM用户ID。
+    * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'accessMode' => 'string',
             'status' => 'int',
             'pwdStatus' => 'bool',
             'xuserId' => 'string',
@@ -45,10 +64,29 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+    * status  IAM用户状态信息。
+    * pwdStatus  IAM用户首次登录是否重置密码。
+    * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xuserType  用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * description  IAM用户描述信息。
+    * name  IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * phone  IAM用户手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
+    * isDomainOwner  IAM用户是否为账号管理员。
+    * domainId  IAM用户所属账号ID。
+    * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
+    * areacode  国家码。中国大陆为“0086”。
+    * email  IAM用户邮箱。
+    * createTime  IAM用户创建时间。
+    * xdomainId  运营主体的客户编码。
+    * xdomainType  运营主体。
+    * id  IAM用户ID。
+    * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'accessMode' => null,
         'status' => 'int32',
         'pwdStatus' => null,
         'xuserId' => null,
@@ -91,10 +129,29 @@ class CreateUserResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+    * status  IAM用户状态信息。
+    * pwdStatus  IAM用户首次登录是否重置密码。
+    * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xuserType  用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * description  IAM用户描述信息。
+    * name  IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * phone  IAM用户手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
+    * isDomainOwner  IAM用户是否为账号管理员。
+    * domainId  IAM用户所属账号ID。
+    * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
+    * areacode  国家码。中国大陆为“0086”。
+    * email  IAM用户邮箱。
+    * createTime  IAM用户创建时间。
+    * xdomainId  运营主体的客户编码。
+    * xdomainType  运营主体。
+    * id  IAM用户ID。
+    * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'accessMode' => 'access_mode',
             'status' => 'status',
             'pwdStatus' => 'pwd_status',
             'xuserId' => 'xuser_id',
@@ -116,10 +173,29 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+    * status  IAM用户状态信息。
+    * pwdStatus  IAM用户首次登录是否重置密码。
+    * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xuserType  用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * description  IAM用户描述信息。
+    * name  IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * phone  IAM用户手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
+    * isDomainOwner  IAM用户是否为账号管理员。
+    * domainId  IAM用户所属账号ID。
+    * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
+    * areacode  国家码。中国大陆为“0086”。
+    * email  IAM用户邮箱。
+    * createTime  IAM用户创建时间。
+    * xdomainId  运营主体的客户编码。
+    * xdomainType  运营主体。
+    * id  IAM用户ID。
+    * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
     *
     * @var string[]
     */
     protected static $setters = [
+            'accessMode' => 'setAccessMode',
             'status' => 'setStatus',
             'pwdStatus' => 'setPwdStatus',
             'xuserId' => 'setXuserId',
@@ -141,10 +217,29 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+    * status  IAM用户状态信息。
+    * pwdStatus  IAM用户首次登录是否重置密码。
+    * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * xuserType  用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
+    * description  IAM用户描述信息。
+    * name  IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * phone  IAM用户手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
+    * isDomainOwner  IAM用户是否为账号管理员。
+    * domainId  IAM用户所属账号ID。
+    * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
+    * areacode  国家码。中国大陆为“0086”。
+    * email  IAM用户邮箱。
+    * createTime  IAM用户创建时间。
+    * xdomainId  运营主体的客户编码。
+    * xdomainType  运营主体。
+    * id  IAM用户ID。
+    * passwordExpiresAt  密码过期时间（UTC时间），“null”表示密码不过期。
     *
     * @var string[]
     */
     protected static $getters = [
+            'accessMode' => 'getAccessMode',
             'status' => 'getStatus',
             'pwdStatus' => 'getPwdStatus',
             'xuserId' => 'getXuserId',
@@ -222,6 +317,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['accessMode'] = isset($data['accessMode']) ? $data['accessMode'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['pwdStatus'] = isset($data['pwdStatus']) ? $data['pwdStatus'] : null;
         $this->container['xuserId'] = isset($data['xuserId']) ? $data['xuserId'] : null;
@@ -276,7 +372,32 @@ class CreateUserResult implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets accessMode
+    *  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+    *
+    * @return string|null
+    */
+    public function getAccessMode()
+    {
+        return $this->container['accessMode'];
+    }
+
+    /**
+    * Sets accessMode
+    *
+    * @param string|null $accessMode IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
+    *
+    * @return $this
+    */
+    public function setAccessMode($accessMode)
+    {
+        $this->container['accessMode'] = $accessMode;
+        return $this;
+    }
+
+    /**
     * Gets status
+    *  IAM用户状态信息。
     *
     * @return int|null
     */
@@ -300,6 +421,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdStatus
+    *  IAM用户首次登录是否重置密码。
     *
     * @return bool|null
     */
@@ -323,6 +445,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets xuserId
+    *  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     *
     * @return string|null
     */
@@ -346,6 +469,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets xuserType
+    *  用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     *
     * @return string|null
     */
@@ -369,6 +493,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  IAM用户描述信息。
     *
     * @return string|null
     */
@@ -392,6 +517,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
     *
     * @return string
     */
@@ -415,6 +541,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets phone
+    *  IAM用户手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
     *
     * @return string|null
     */
@@ -438,6 +565,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDomainOwner
+    *  IAM用户是否为账号管理员。
     *
     * @return bool|null
     */
@@ -461,6 +589,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  IAM用户所属账号ID。
     *
     * @return string
     */
@@ -484,6 +613,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  是否启用IAM用户。true为启用，false为停用，默认为true。
     *
     * @return bool
     */
@@ -507,6 +637,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets areacode
+    *  国家码。中国大陆为“0086”。
     *
     * @return string|null
     */
@@ -530,6 +661,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
+    *  IAM用户邮箱。
     *
     * @return string|null
     */
@@ -553,6 +685,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
+    *  IAM用户创建时间。
     *
     * @return string|null
     */
@@ -576,6 +709,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets xdomainId
+    *  运营主体的客户编码。
     *
     * @return string|null
     */
@@ -599,6 +733,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets xdomainType
+    *  运营主体。
     *
     * @return string|null
     */
@@ -622,6 +757,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  IAM用户ID。
     *
     * @return string
     */
@@ -645,6 +781,7 @@ class CreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets passwordExpiresAt
+    *  密码过期时间（UTC时间），“null”表示密码不过期。
     *
     * @return string|null
     */

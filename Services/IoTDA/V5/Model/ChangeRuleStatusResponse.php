@@ -21,6 +21,7 @@ class ChangeRuleStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * status  规则的激活状态。 - active：激活。 - inactive：未激活。
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class ChangeRuleStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * status  规则的激活状态。 - active：激活。 - inactive：未激活。
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class ChangeRuleStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * status  规则的激活状态。 - active：激活。 - inactive：未激活。
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class ChangeRuleStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * status  规则的激活状态。 - active：激活。 - inactive：未激活。
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class ChangeRuleStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * status  规则的激活状态。 - active：激活。 - inactive：未激活。
     *
     * @var string[]
     */
@@ -173,6 +178,7 @@ class ChangeRuleStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  规则的激活状态。 - active：激活。 - inactive：未激活。
     *
     * @return string|null
     */

@@ -20,6 +20,10 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * resourceId  镜像ID
+    * resouceDetail  resouceDetail
+    * tags  镜像的标签列表
+    * resourceName  镜像名称
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * resourceId  镜像ID
+    * resouceDetail  resouceDetail
+    * tags  镜像的标签列表
+    * resourceName  镜像名称
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * resourceId  镜像ID
+    * resouceDetail  resouceDetail
+    * tags  镜像的标签列表
+    * resourceName  镜像名称
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * resourceId  镜像ID
+    * resouceDetail  resouceDetail
+    * tags  镜像的标签列表
+    * resourceName  镜像名称
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * resourceId  镜像ID
+    * resouceDetail  resouceDetail
+    * tags  镜像的标签列表
+    * resourceName  镜像名称
     *
     * @var string[]
     */
@@ -199,6 +219,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
+    *  镜像ID
     *
     * @return string
     */
@@ -222,6 +243,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resouceDetail
+    *  resouceDetail
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\QueryImageByTagsResourceDetail
     */
@@ -245,6 +267,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  镜像的标签列表
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\TagKeyValue[]
     */
@@ -268,6 +291,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
+    *  镜像名称
     *
     * @return string
     */

@@ -20,6 +20,7 @@ class AddPublicipsIntoSharedBandwidthOption implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * publicipInfo  功能说明：要插入共享带宽的弹性公网IP或者IPv6端口信息  约束：WHOLE类型的带宽支持多个弹性公网IP或者IPv6端口，跟租户的配额相关，默认一个共享带宽的配额为20
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class AddPublicipsIntoSharedBandwidthOption implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * publicipInfo  功能说明：要插入共享带宽的弹性公网IP或者IPv6端口信息  约束：WHOLE类型的带宽支持多个弹性公网IP或者IPv6端口，跟租户的配额相关，默认一个共享带宽的配额为20
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class AddPublicipsIntoSharedBandwidthOption implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * publicipInfo  功能说明：要插入共享带宽的弹性公网IP或者IPv6端口信息  约束：WHOLE类型的带宽支持多个弹性公网IP或者IPv6端口，跟租户的配额相关，默认一个共享带宽的配额为20
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class AddPublicipsIntoSharedBandwidthOption implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * publicipInfo  功能说明：要插入共享带宽的弹性公网IP或者IPv6端口信息  约束：WHOLE类型的带宽支持多个弹性公网IP或者IPv6端口，跟租户的配额相关，默认一个共享带宽的配额为20
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class AddPublicipsIntoSharedBandwidthOption implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * publicipInfo  功能说明：要插入共享带宽的弹性公网IP或者IPv6端口信息  约束：WHOLE类型的带宽支持多个弹性公网IP或者IPv6端口，跟租户的配额相关，默认一个共享带宽的配额为20
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class AddPublicipsIntoSharedBandwidthOption implements ModelInterface, ArrayAcce
 
     /**
     * Gets publicipInfo
+    *  功能说明：要插入共享带宽的弹性公网IP或者IPv6端口信息  约束：WHOLE类型的带宽支持多个弹性公网IP或者IPv6端口，跟租户的配额相关，默认一个共享带宽的配额为20
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\InsertPublicipInfo[]
     */

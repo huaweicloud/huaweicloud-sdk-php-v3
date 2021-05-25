@@ -20,6 +20,9 @@ class GlanceUpdateImageMemberRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * imageId  镜像id
+    * memberId  成员id
+    * body  body
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class GlanceUpdateImageMemberRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * imageId  镜像id
+    * memberId  成员id
+    * body  body
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class GlanceUpdateImageMemberRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * imageId  镜像id
+    * memberId  成员id
+    * body  body
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class GlanceUpdateImageMemberRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * imageId  镜像id
+    * memberId  成员id
+    * body  body
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class GlanceUpdateImageMemberRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * imageId  镜像id
+    * memberId  成员id
+    * body  body
     *
     * @var string[]
     */
@@ -187,6 +202,7 @@ class GlanceUpdateImageMemberRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageId
+    *  镜像id
     *
     * @return string
     */
@@ -198,7 +214,7 @@ class GlanceUpdateImageMemberRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageId
     *
-    * @param string $imageId imageId
+    * @param string $imageId 镜像id
     *
     * @return $this
     */
@@ -210,6 +226,7 @@ class GlanceUpdateImageMemberRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets memberId
+    *  成员id
     *
     * @return string
     */
@@ -221,7 +238,7 @@ class GlanceUpdateImageMemberRequest implements ModelInterface, ArrayAccess
     /**
     * Sets memberId
     *
-    * @param string $memberId memberId
+    * @param string $memberId 成员id
     *
     * @return $this
     */
@@ -233,6 +250,7 @@ class GlanceUpdateImageMemberRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\GlanceUpdateImageMemberRequestBody|null
     */

@@ -20,6 +20,10 @@ class CopyImageInRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * cmkId  加密密钥。默认为空。
+    * description  镜像描述信息。_description参数说明请参考镜像属性。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * name  镜像名称
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class CopyImageInRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * cmkId  加密密钥。默认为空。
+    * description  镜像描述信息。_description参数说明请参考镜像属性。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * name  镜像名称
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class CopyImageInRegionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * cmkId  加密密钥。默认为空。
+    * description  镜像描述信息。_description参数说明请参考镜像属性。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * name  镜像名称
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class CopyImageInRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * cmkId  加密密钥。默认为空。
+    * description  镜像描述信息。_description参数说明请参考镜像属性。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * name  镜像名称
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class CopyImageInRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * cmkId  加密密钥。默认为空。
+    * description  镜像描述信息。_description参数说明请参考镜像属性。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * name  镜像名称
     *
     * @var string[]
     */
@@ -196,6 +216,7 @@ class CopyImageInRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets cmkId
+    *  加密密钥。默认为空。
     *
     * @return string|null
     */
@@ -219,6 +240,7 @@ class CopyImageInRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  镜像描述信息。_description参数说明请参考镜像属性。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
     *
     * @return string|null
     */
@@ -242,6 +264,7 @@ class CopyImageInRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     *
     * @return string|null
     */
@@ -265,6 +288,7 @@ class CopyImageInRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  镜像名称
     *
     * @return string
     */

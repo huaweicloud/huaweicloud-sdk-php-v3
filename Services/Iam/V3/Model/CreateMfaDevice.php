@@ -20,6 +20,8 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  设备名称。
+    * userId  创建MFA设备的IAM用户ID。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  设备名称。
+    * userId  创建MFA设备的IAM用户ID。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  设备名称。
+    * userId  创建MFA设备的IAM用户ID。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  设备名称。
+    * userId  创建MFA设备的IAM用户ID。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  设备名称。
+    * userId  创建MFA设备的IAM用户ID。
     *
     * @var string[]
     */
@@ -187,6 +197,7 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  设备名称。
     *
     * @return string
     */
@@ -210,6 +221,7 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  创建MFA设备的IAM用户ID。
     *
     * @return string
     */

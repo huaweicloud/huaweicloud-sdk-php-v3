@@ -20,6 +20,8 @@ class KeystoneUpdateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  项目名称，必须以存在的\"区域ID_\"开头，长度小于等于64字符。项目所属区域不能改变，即原项目名为“cn-north-1_IAMProject”时，新项目名只能以“cn-north-1_”开头。“name”与\"description\"至少填写一个。
+    * description  项目描述，长度小于等于255字符。“name”与\"description\"至少填写一个。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class KeystoneUpdateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  项目名称，必须以存在的\"区域ID_\"开头，长度小于等于64字符。项目所属区域不能改变，即原项目名为“cn-north-1_IAMProject”时，新项目名只能以“cn-north-1_”开头。“name”与\"description\"至少填写一个。
+    * description  项目描述，长度小于等于255字符。“name”与\"description\"至少填写一个。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class KeystoneUpdateProjectOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  项目名称，必须以存在的\"区域ID_\"开头，长度小于等于64字符。项目所属区域不能改变，即原项目名为“cn-north-1_IAMProject”时，新项目名只能以“cn-north-1_”开头。“name”与\"description\"至少填写一个。
+    * description  项目描述，长度小于等于255字符。“name”与\"description\"至少填写一个。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class KeystoneUpdateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  项目名称，必须以存在的\"区域ID_\"开头，长度小于等于64字符。项目所属区域不能改变，即原项目名为“cn-north-1_IAMProject”时，新项目名只能以“cn-north-1_”开头。“name”与\"description\"至少填写一个。
+    * description  项目描述，长度小于等于255字符。“name”与\"description\"至少填写一个。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class KeystoneUpdateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  项目名称，必须以存在的\"区域ID_\"开头，长度小于等于64字符。项目所属区域不能改变，即原项目名为“cn-north-1_IAMProject”时，新项目名只能以“cn-north-1_”开头。“name”与\"description\"至少填写一个。
+    * description  项目描述，长度小于等于255字符。“name”与\"description\"至少填写一个。
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class KeystoneUpdateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  项目名称，必须以存在的\"区域ID_\"开头，长度小于等于64字符。项目所属区域不能改变，即原项目名为“cn-north-1_IAMProject”时，新项目名只能以“cn-north-1_”开头。“name”与\"description\"至少填写一个。
     *
     * @return string|null
     */
@@ -198,6 +209,7 @@ class KeystoneUpdateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  项目描述，长度小于等于255字符。“name”与\"description\"至少填写一个。
     *
     * @return string|null
     */

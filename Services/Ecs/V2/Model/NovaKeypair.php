@@ -20,6 +20,12 @@ class NovaKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * fingerprint  密钥对应指纹信息。
+    * name  密钥名称。
+    * publicKey  密钥对应publicKey信息。
+    * privateKey  密钥对应privateKey信息。  - 创建SSH密钥时，响应中包括private_key的信息。 - 导入SSH密钥时，响应中不包括private_key的信息。
+    * userId  密钥所属用户ID。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class NovaKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * fingerprint  密钥对应指纹信息。
+    * name  密钥名称。
+    * publicKey  密钥对应publicKey信息。
+    * privateKey  密钥对应privateKey信息。  - 创建SSH密钥时，响应中包括private_key的信息。 - 导入SSH密钥时，响应中不包括private_key的信息。
+    * userId  密钥所属用户ID。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class NovaKeypair implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * fingerprint  密钥对应指纹信息。
+    * name  密钥名称。
+    * publicKey  密钥对应publicKey信息。
+    * privateKey  密钥对应privateKey信息。  - 创建SSH密钥时，响应中包括private_key的信息。 - 导入SSH密钥时，响应中不包括private_key的信息。
+    * userId  密钥所属用户ID。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class NovaKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * fingerprint  密钥对应指纹信息。
+    * name  密钥名称。
+    * publicKey  密钥对应publicKey信息。
+    * privateKey  密钥对应privateKey信息。  - 创建SSH密钥时，响应中包括private_key的信息。 - 导入SSH密钥时，响应中不包括private_key的信息。
+    * userId  密钥所属用户ID。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class NovaKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * fingerprint  密钥对应指纹信息。
+    * name  密钥名称。
+    * publicKey  密钥对应publicKey信息。
+    * privateKey  密钥对应privateKey信息。  - 创建SSH密钥时，响应中包括private_key的信息。 - 导入SSH密钥时，响应中不包括private_key的信息。
+    * userId  密钥所属用户ID。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -214,6 +244,7 @@ class NovaKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Gets fingerprint
+    *  密钥对应指纹信息。
     *
     * @return string
     */
@@ -237,6 +268,7 @@ class NovaKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  密钥名称。
     *
     * @return string
     */
@@ -260,6 +292,7 @@ class NovaKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicKey
+    *  密钥对应publicKey信息。
     *
     * @return string
     */
@@ -283,6 +316,7 @@ class NovaKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateKey
+    *  密钥对应privateKey信息。  - 创建SSH密钥时，响应中包括private_key的信息。 - 导入SSH密钥时，响应中不包括private_key的信息。
     *
     * @return string
     */
@@ -306,6 +340,7 @@ class NovaKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  密钥所属用户ID。
     *
     * @return string
     */
@@ -329,6 +364,7 @@ class NovaKeypair implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @return string|null
     */

@@ -20,6 +20,15 @@ class AgencyResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * createTime  委托创建时间。
+    * description  委托描述信息。
+    * domainId  委托方账号ID。
+    * duration  委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。
+    * expireTime  委托过期时间。“null”表示不过期。
+    * id  委托ID。
+    * name  委托名。
+    * trustDomainId  被委托方账号ID。
+    * trustDomainName  被委托方账号名。
     *
     * @var string[]
     */
@@ -37,6 +46,15 @@ class AgencyResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * createTime  委托创建时间。
+    * description  委托描述信息。
+    * domainId  委托方账号ID。
+    * duration  委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。
+    * expireTime  委托过期时间。“null”表示不过期。
+    * id  委托ID。
+    * name  委托名。
+    * trustDomainId  被委托方账号ID。
+    * trustDomainName  被委托方账号名。
     *
     * @var string[]
     */
@@ -75,6 +93,15 @@ class AgencyResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * createTime  委托创建时间。
+    * description  委托描述信息。
+    * domainId  委托方账号ID。
+    * duration  委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。
+    * expireTime  委托过期时间。“null”表示不过期。
+    * id  委托ID。
+    * name  委托名。
+    * trustDomainId  被委托方账号ID。
+    * trustDomainName  被委托方账号名。
     *
     * @var string[]
     */
@@ -92,6 +119,15 @@ class AgencyResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * createTime  委托创建时间。
+    * description  委托描述信息。
+    * domainId  委托方账号ID。
+    * duration  委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。
+    * expireTime  委托过期时间。“null”表示不过期。
+    * id  委托ID。
+    * name  委托名。
+    * trustDomainId  被委托方账号ID。
+    * trustDomainName  被委托方账号名。
     *
     * @var string[]
     */
@@ -109,6 +145,15 @@ class AgencyResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * createTime  委托创建时间。
+    * description  委托描述信息。
+    * domainId  委托方账号ID。
+    * duration  委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。
+    * expireTime  委托过期时间。“null”表示不过期。
+    * id  委托ID。
+    * name  委托名。
+    * trustDomainId  被委托方账号ID。
+    * trustDomainName  被委托方账号名。
     *
     * @var string[]
     */
@@ -235,6 +280,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
+    *  委托创建时间。
     *
     * @return string
     */
@@ -258,6 +304,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  委托描述信息。
     *
     * @return string
     */
@@ -281,6 +328,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  委托方账号ID。
     *
     * @return string|null
     */
@@ -304,6 +352,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
+    *  委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。
     *
     * @return string
     */
@@ -327,6 +376,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTime
+    *  委托过期时间。“null”表示不过期。
     *
     * @return string
     */
@@ -350,6 +400,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  委托ID。
     *
     * @return string
     */
@@ -373,6 +424,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  委托名。
     *
     * @return string
     */
@@ -396,6 +448,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets trustDomainId
+    *  被委托方账号ID。
     *
     * @return string|null
     */
@@ -419,6 +472,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets trustDomainName
+    *  被委托方账号名。
     *
     * @return string|null
     */

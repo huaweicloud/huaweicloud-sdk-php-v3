@@ -20,6 +20,13 @@ class LoginPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * accountValidityPeriod  账号在该值设置的有效期内未使用，则被停用。
+    * customInfoForLogin  登录提示信息。
+    * lockoutDuration  帐号锁定时长（分钟）。
+    * loginFailedTimes  限定时间内登录失败次数。
+    * periodWithLoginFailures  限定时间长度（分钟）。
+    * sessionTimeout  登录会话失效时间。
+    * showRecentLoginInfo  是否显示最近一次的登录信息。
     *
     * @var string[]
     */
@@ -35,6 +42,13 @@ class LoginPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * accountValidityPeriod  账号在该值设置的有效期内未使用，则被停用。
+    * customInfoForLogin  登录提示信息。
+    * lockoutDuration  帐号锁定时长（分钟）。
+    * loginFailedTimes  限定时间内登录失败次数。
+    * periodWithLoginFailures  限定时间长度（分钟）。
+    * sessionTimeout  登录会话失效时间。
+    * showRecentLoginInfo  是否显示最近一次的登录信息。
     *
     * @var string[]
     */
@@ -71,6 +85,13 @@ class LoginPolicyResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * accountValidityPeriod  账号在该值设置的有效期内未使用，则被停用。
+    * customInfoForLogin  登录提示信息。
+    * lockoutDuration  帐号锁定时长（分钟）。
+    * loginFailedTimes  限定时间内登录失败次数。
+    * periodWithLoginFailures  限定时间长度（分钟）。
+    * sessionTimeout  登录会话失效时间。
+    * showRecentLoginInfo  是否显示最近一次的登录信息。
     *
     * @var string[]
     */
@@ -86,6 +107,13 @@ class LoginPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * accountValidityPeriod  账号在该值设置的有效期内未使用，则被停用。
+    * customInfoForLogin  登录提示信息。
+    * lockoutDuration  帐号锁定时长（分钟）。
+    * loginFailedTimes  限定时间内登录失败次数。
+    * periodWithLoginFailures  限定时间长度（分钟）。
+    * sessionTimeout  登录会话失效时间。
+    * showRecentLoginInfo  是否显示最近一次的登录信息。
     *
     * @var string[]
     */
@@ -101,6 +129,13 @@ class LoginPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * accountValidityPeriod  账号在该值设置的有效期内未使用，则被停用。
+    * customInfoForLogin  登录提示信息。
+    * lockoutDuration  帐号锁定时长（分钟）。
+    * loginFailedTimes  限定时间内登录失败次数。
+    * periodWithLoginFailures  限定时间长度（分钟）。
+    * sessionTimeout  登录会话失效时间。
+    * showRecentLoginInfo  是否显示最近一次的登录信息。
     *
     * @var string[]
     */
@@ -226,6 +261,7 @@ class LoginPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountValidityPeriod
+    *  账号在该值设置的有效期内未使用，则被停用。
     *
     * @return int
     */
@@ -249,6 +285,7 @@ class LoginPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets customInfoForLogin
+    *  登录提示信息。
     *
     * @return string
     */
@@ -272,6 +309,7 @@ class LoginPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets lockoutDuration
+    *  帐号锁定时长（分钟）。
     *
     * @return int
     */
@@ -295,6 +333,7 @@ class LoginPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginFailedTimes
+    *  限定时间内登录失败次数。
     *
     * @return int
     */
@@ -318,6 +357,7 @@ class LoginPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodWithLoginFailures
+    *  限定时间长度（分钟）。
     *
     * @return int
     */
@@ -341,6 +381,7 @@ class LoginPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets sessionTimeout
+    *  登录会话失效时间。
     *
     * @return int
     */
@@ -364,6 +405,7 @@ class LoginPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets showRecentLoginInfo
+    *  是否显示最近一次的登录信息。
     *
     * @return bool
     */

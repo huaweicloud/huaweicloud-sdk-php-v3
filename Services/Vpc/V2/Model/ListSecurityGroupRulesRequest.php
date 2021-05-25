@@ -20,6 +20,10 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
+    * marker  功能说明：分页查询起始的资源ID，为空时查询第一页
+    * limit  每页返回的个数
+    * securityGroupId  安全组ID
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
+    * marker  功能说明：分页查询起始的资源ID，为空时查询第一页
+    * limit  每页返回的个数
+    * securityGroupId  安全组ID
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
+    * marker  功能说明：分页查询起始的资源ID，为空时查询第一页
+    * limit  每页返回的个数
+    * securityGroupId  安全组ID
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
+    * marker  功能说明：分页查询起始的资源ID，为空时查询第一页
+    * limit  每页返回的个数
+    * securityGroupId  安全组ID
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
+    * marker  功能说明：分页查询起始的资源ID，为空时查询第一页
+    * limit  每页返回的个数
+    * securityGroupId  安全组ID
     *
     * @var string[]
     */
@@ -199,6 +219,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  项目ID
     *
     * @return string
     */
@@ -210,7 +231,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId projectId
+    * @param string $projectId 项目ID
     *
     * @return $this
     */
@@ -222,6 +243,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  功能说明：分页查询起始的资源ID，为空时查询第一页
     *
     * @return string|null
     */
@@ -233,7 +255,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 功能说明：分页查询起始的资源ID，为空时查询第一页
     *
     * @return $this
     */
@@ -245,6 +267,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  每页返回的个数
     *
     * @return int|null
     */
@@ -256,7 +279,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 每页返回的个数
     *
     * @return $this
     */
@@ -268,6 +291,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
+    *  安全组ID
     *
     * @return string|null
     */
@@ -279,7 +303,7 @@ class ListSecurityGroupRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string|null $securityGroupId securityGroupId
+    * @param string|null $securityGroupId 安全组ID
     *
     * @return $this
     */

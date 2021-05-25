@@ -20,6 +20,12 @@ class RuleCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * type  规则条件的类型，取值范围： - DEVICE_DATA：设备数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。 - DEVICE_STATUS：设备状态类型条件。 - DEVICE_LIFE_CYCLE：设备生命周期类型条件。 - DEVICE_MESSAGE：设备消息条件。 - MESSAGE_RESULTS：下行消息结果条件。
+    * devicePropertyCondition  devicePropertyCondition
+    * simpleTimerCondition  simpleTimerCondition
+    * dailyTimerCondition  dailyTimerCondition
+    * deviceMessageCondition  deviceMessageCondition
+    * deviceStatusCondition  deviceStatusCondition
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class RuleCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * type  规则条件的类型，取值范围： - DEVICE_DATA：设备数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。 - DEVICE_STATUS：设备状态类型条件。 - DEVICE_LIFE_CYCLE：设备生命周期类型条件。 - DEVICE_MESSAGE：设备消息条件。 - MESSAGE_RESULTS：下行消息结果条件。
+    * devicePropertyCondition  devicePropertyCondition
+    * simpleTimerCondition  simpleTimerCondition
+    * dailyTimerCondition  dailyTimerCondition
+    * deviceMessageCondition  deviceMessageCondition
+    * deviceStatusCondition  deviceStatusCondition
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class RuleCondition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * type  规则条件的类型，取值范围： - DEVICE_DATA：设备数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。 - DEVICE_STATUS：设备状态类型条件。 - DEVICE_LIFE_CYCLE：设备生命周期类型条件。 - DEVICE_MESSAGE：设备消息条件。 - MESSAGE_RESULTS：下行消息结果条件。
+    * devicePropertyCondition  devicePropertyCondition
+    * simpleTimerCondition  simpleTimerCondition
+    * dailyTimerCondition  dailyTimerCondition
+    * deviceMessageCondition  deviceMessageCondition
+    * deviceStatusCondition  deviceStatusCondition
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class RuleCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * type  规则条件的类型，取值范围： - DEVICE_DATA：设备数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。 - DEVICE_STATUS：设备状态类型条件。 - DEVICE_LIFE_CYCLE：设备生命周期类型条件。 - DEVICE_MESSAGE：设备消息条件。 - MESSAGE_RESULTS：下行消息结果条件。
+    * devicePropertyCondition  devicePropertyCondition
+    * simpleTimerCondition  simpleTimerCondition
+    * dailyTimerCondition  dailyTimerCondition
+    * deviceMessageCondition  deviceMessageCondition
+    * deviceStatusCondition  deviceStatusCondition
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class RuleCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * type  规则条件的类型，取值范围： - DEVICE_DATA：设备数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。 - DEVICE_STATUS：设备状态类型条件。 - DEVICE_LIFE_CYCLE：设备生命周期类型条件。 - DEVICE_MESSAGE：设备消息条件。 - MESSAGE_RESULTS：下行消息结果条件。
+    * devicePropertyCondition  devicePropertyCondition
+    * simpleTimerCondition  simpleTimerCondition
+    * dailyTimerCondition  dailyTimerCondition
+    * deviceMessageCondition  deviceMessageCondition
+    * deviceStatusCondition  deviceStatusCondition
     *
     * @var string[]
     */
@@ -205,6 +235,7 @@ class RuleCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  规则条件的类型，取值范围： - DEVICE_DATA：设备数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。 - DEVICE_STATUS：设备状态类型条件。 - DEVICE_LIFE_CYCLE：设备生命周期类型条件。 - DEVICE_MESSAGE：设备消息条件。 - MESSAGE_RESULTS：下行消息结果条件。
     *
     * @return string
     */
@@ -228,6 +259,7 @@ class RuleCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets devicePropertyCondition
+    *  devicePropertyCondition
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceDataCondition|null
     */
@@ -251,6 +283,7 @@ class RuleCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets simpleTimerCondition
+    *  simpleTimerCondition
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\SimpleTimerType|null
     */
@@ -274,6 +307,7 @@ class RuleCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets dailyTimerCondition
+    *  dailyTimerCondition
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DailyTimerType|null
     */
@@ -297,6 +331,7 @@ class RuleCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceMessageCondition
+    *  deviceMessageCondition
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceMessageCondition|null
     */
@@ -320,6 +355,7 @@ class RuleCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceStatusCondition
+    *  deviceStatusCondition
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceStatusCondition|null
     */

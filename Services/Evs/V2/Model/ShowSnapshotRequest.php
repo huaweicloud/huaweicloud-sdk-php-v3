@@ -20,6 +20,7 @@ class ShowSnapshotRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * snapshotId  快照ID。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class ShowSnapshotRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * snapshotId  快照ID。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class ShowSnapshotRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * snapshotId  快照ID。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class ShowSnapshotRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * snapshotId  快照ID。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class ShowSnapshotRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * snapshotId  快照ID。
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class ShowSnapshotRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotId
+    *  快照ID。
     *
     * @return string
     */
@@ -183,7 +189,7 @@ class ShowSnapshotRequest implements ModelInterface, ArrayAccess
     /**
     * Sets snapshotId
     *
-    * @param string $snapshotId snapshotId
+    * @param string $snapshotId 快照ID。
     *
     * @return $this
     */

@@ -20,6 +20,9 @@ class NovaAvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * hosts  该字段的值为null。
+    * zoneName  可用域的名称。
+    * zoneState  zoneState
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class NovaAvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * hosts  该字段的值为null。
+    * zoneName  可用域的名称。
+    * zoneState  zoneState
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class NovaAvailabilityZone implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * hosts  该字段的值为null。
+    * zoneName  可用域的名称。
+    * zoneState  zoneState
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class NovaAvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * hosts  该字段的值为null。
+    * zoneName  可用域的名称。
+    * zoneState  zoneState
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class NovaAvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * hosts  该字段的值为null。
+    * zoneName  可用域的名称。
+    * zoneState  zoneState
     *
     * @var string[]
     */
@@ -190,6 +205,7 @@ class NovaAvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets hosts
+    *  该字段的值为null。
     *
     * @return string[]
     */
@@ -213,6 +229,7 @@ class NovaAvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneName
+    *  可用域的名称。
     *
     * @return string
     */
@@ -236,6 +253,7 @@ class NovaAvailabilityZone implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneState
+    *  zoneState
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaAvailabilityZoneState
     */

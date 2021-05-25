@@ -20,6 +20,10 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  磁盘ID，格式为UUID。
+    * deleteOnTermination  删弹性云服务器时是否一并删除该磁盘。  - true：是 - false：否
+    * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。
+    * device  云硬盘挂载盘符，即磁盘挂载点。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  磁盘ID，格式为UUID。
+    * deleteOnTermination  删弹性云服务器时是否一并删除该磁盘。  - true：是 - false：否
+    * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。
+    * device  云硬盘挂载盘符，即磁盘挂载点。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  磁盘ID，格式为UUID。
+    * deleteOnTermination  删弹性云服务器时是否一并删除该磁盘。  - true：是 - false：否
+    * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。
+    * device  云硬盘挂载盘符，即磁盘挂载点。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  磁盘ID，格式为UUID。
+    * deleteOnTermination  删弹性云服务器时是否一并删除该磁盘。  - true：是 - false：否
+    * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。
+    * device  云硬盘挂载盘符，即磁盘挂载点。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  磁盘ID，格式为UUID。
+    * deleteOnTermination  删弹性云服务器时是否一并删除该磁盘。  - true：是 - false：否
+    * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。
+    * device  云硬盘挂载盘符，即磁盘挂载点。
     *
     * @var string[]
     */
@@ -196,6 +216,7 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  磁盘ID，格式为UUID。
     *
     * @return string
     */
@@ -219,6 +240,7 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets deleteOnTermination
+    *  删弹性云服务器时是否一并删除该磁盘。  - true：是 - false：否
     *
     * @return string
     */
@@ -242,6 +264,7 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets bootIndex
+    *  启动标识，“0”代表启动盘，“-1“代表非启动盘。
     *
     * @return string|null
     */
@@ -265,6 +288,7 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets device
+    *  云硬盘挂载盘符，即磁盘挂载点。
     *
     * @return string
     */

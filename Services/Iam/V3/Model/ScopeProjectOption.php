@@ -20,6 +20,9 @@ class ScopeProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  项目ID，id与name二选一即可。
+    * name  项目名，id与name二选一即可。
+    * domain  domain
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class ScopeProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  项目ID，id与name二选一即可。
+    * name  项目名，id与name二选一即可。
+    * domain  domain
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class ScopeProjectOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  项目ID，id与name二选一即可。
+    * name  项目名，id与name二选一即可。
+    * domain  domain
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class ScopeProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  项目ID，id与name二选一即可。
+    * name  项目名，id与name二选一即可。
+    * domain  domain
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class ScopeProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  项目ID，id与name二选一即可。
+    * name  项目名，id与name二选一即可。
+    * domain  domain
     *
     * @var string[]
     */
@@ -181,6 +196,7 @@ class ScopeProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  项目ID，id与name二选一即可。
     *
     * @return string|null
     */
@@ -204,6 +220,7 @@ class ScopeProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  项目名，id与name二选一即可。
     *
     * @return string|null
     */
@@ -227,6 +244,7 @@ class ScopeProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
+    *  domain
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\ScopeDomainOption|null
     */

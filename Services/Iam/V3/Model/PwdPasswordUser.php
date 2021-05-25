@@ -20,6 +20,9 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domain  domain
+    * name  IAM用户名。
+    * password  IAM用户的登录密码。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domain  domain
+    * name  IAM用户名。
+    * password  IAM用户的登录密码。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domain  domain
+    * name  IAM用户名。
+    * password  IAM用户的登录密码。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domain  domain
+    * name  IAM用户名。
+    * password  IAM用户的登录密码。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domain  domain
+    * name  IAM用户名。
+    * password  IAM用户的登录密码。
     *
     * @var string[]
     */
@@ -190,6 +205,7 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
+    *  domain
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\PwdPasswordUserDomain
     */
@@ -213,6 +229,7 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  IAM用户名。
     *
     * @return string
     */
@@ -236,6 +253,7 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets password
+    *  IAM用户的登录密码。
     *
     * @return string
     */

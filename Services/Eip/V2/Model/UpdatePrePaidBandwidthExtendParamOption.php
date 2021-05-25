@@ -20,6 +20,7 @@ class UpdatePrePaidBandwidthExtendParamOption implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * isAutoPay  功能说明：下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付；系统默认是“非自动支付”。  取值范围：  true：是（自动支付）  false：否（默认值，需要客户手动去支付）  约束：自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择不自动支付，然后在用户费用中心，选择代金券支付。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class UpdatePrePaidBandwidthExtendParamOption implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * isAutoPay  功能说明：下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付；系统默认是“非自动支付”。  取值范围：  true：是（自动支付）  false：否（默认值，需要客户手动去支付）  约束：自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择不自动支付，然后在用户费用中心，选择代金券支付。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class UpdatePrePaidBandwidthExtendParamOption implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * isAutoPay  功能说明：下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付；系统默认是“非自动支付”。  取值范围：  true：是（自动支付）  false：否（默认值，需要客户手动去支付）  约束：自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择不自动支付，然后在用户费用中心，选择代金券支付。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class UpdatePrePaidBandwidthExtendParamOption implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * isAutoPay  功能说明：下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付；系统默认是“非自动支付”。  取值范围：  true：是（自动支付）  false：否（默认值，需要客户手动去支付）  约束：自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择不自动支付，然后在用户费用中心，选择代金券支付。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class UpdatePrePaidBandwidthExtendParamOption implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * isAutoPay  功能说明：下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付；系统默认是“非自动支付”。  取值范围：  true：是（自动支付）  false：否（默认值，需要客户手动去支付）  约束：自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择不自动支付，然后在用户费用中心，选择代金券支付。
     *
     * @var string[]
     */
@@ -169,6 +174,7 @@ class UpdatePrePaidBandwidthExtendParamOption implements ModelInterface, ArrayAc
 
     /**
     * Gets isAutoPay
+    *  功能说明：下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付；系统默认是“非自动支付”。  取值范围：  true：是（自动支付）  false：否（默认值，需要客户手动去支付）  约束：自动支付时，只能使用账户的现金支付；如果要使用代金券，请选择不自动支付，然后在用户费用中心，选择代金券支付。
     *
     * @return bool|null
     */

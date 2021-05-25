@@ -20,6 +20,8 @@ class KeystoneCreateUserTokenByPasswordRequest implements ModelInterface, ArrayA
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * nocatalog  如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
+    * body  body
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class KeystoneCreateUserTokenByPasswordRequest implements ModelInterface, ArrayA
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * nocatalog  如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
+    * body  body
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class KeystoneCreateUserTokenByPasswordRequest implements ModelInterface, ArrayA
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * nocatalog  如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
+    * body  body
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class KeystoneCreateUserTokenByPasswordRequest implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * nocatalog  如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
+    * body  body
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class KeystoneCreateUserTokenByPasswordRequest implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * nocatalog  如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
+    * body  body
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class KeystoneCreateUserTokenByPasswordRequest implements ModelInterface, ArrayA
 
     /**
     * Gets nocatalog
+    *  如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
     *
     * @return string|null
     */
@@ -186,7 +197,7 @@ class KeystoneCreateUserTokenByPasswordRequest implements ModelInterface, ArrayA
     /**
     * Sets nocatalog
     *
-    * @param string|null $nocatalog nocatalog
+    * @param string|null $nocatalog 如果设置该参数，返回的响应体中将不显示catalog信息。任何非空字符串都将解释为true，并使该字段生效。
     *
     * @return $this
     */
@@ -198,6 +209,7 @@ class KeystoneCreateUserTokenByPasswordRequest implements ModelInterface, ArrayA
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateUserTokenByPasswordRequestBody|null
     */

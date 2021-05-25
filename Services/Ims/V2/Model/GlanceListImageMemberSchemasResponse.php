@@ -21,6 +21,9 @@ class GlanceListImageMemberSchemasResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * links  视图链接。
+    * name  视图名称。
+    * properties  镜像属性说明，主要是对基础属性的说明，包含每个属性的取值类型，用途。
     *
     * @var string[]
     */
@@ -32,6 +35,9 @@ class GlanceListImageMemberSchemasResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * links  视图链接。
+    * name  视图名称。
+    * properties  镜像属性说明，主要是对基础属性的说明，包含每个属性的取值类型，用途。
     *
     * @var string[]
     */
@@ -64,6 +70,9 @@ class GlanceListImageMemberSchemasResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * links  视图链接。
+    * name  视图名称。
+    * properties  镜像属性说明，主要是对基础属性的说明，包含每个属性的取值类型，用途。
     *
     * @var string[]
     */
@@ -75,6 +84,9 @@ class GlanceListImageMemberSchemasResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * links  视图链接。
+    * name  视图名称。
+    * properties  镜像属性说明，主要是对基础属性的说明，包含每个属性的取值类型，用途。
     *
     * @var string[]
     */
@@ -86,6 +98,9 @@ class GlanceListImageMemberSchemasResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * links  视图链接。
+    * name  视图名称。
+    * properties  镜像属性说明，主要是对基础属性的说明，包含每个属性的取值类型，用途。
     *
     * @var string[]
     */
@@ -182,6 +197,7 @@ class GlanceListImageMemberSchemasResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets links
+    *  视图链接。
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\Links[]|null
     */
@@ -205,6 +221,7 @@ class GlanceListImageMemberSchemasResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets name
+    *  视图名称。
     *
     * @return string|null
     */
@@ -228,6 +245,7 @@ class GlanceListImageMemberSchemasResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets properties
+    *  镜像属性说明，主要是对基础属性的说明，包含每个属性的取值类型，用途。
     *
     * @return object|null
     */

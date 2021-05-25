@@ -20,6 +20,11 @@ class CatalogEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  终端节点ID。
+    * interface  终端节点平面，public表示为公开。
+    * region  终端节点所属区域。
+    * regionId  终端节点所属区域的ID。
+    * url  终端节点的地址。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class CatalogEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  终端节点ID。
+    * interface  终端节点平面，public表示为公开。
+    * region  终端节点所属区域。
+    * regionId  终端节点所属区域的ID。
+    * url  终端节点的地址。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class CatalogEndpoints implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  终端节点ID。
+    * interface  终端节点平面，public表示为公开。
+    * region  终端节点所属区域。
+    * regionId  终端节点所属区域的ID。
+    * url  终端节点的地址。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class CatalogEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  终端节点ID。
+    * interface  终端节点平面，public表示为公开。
+    * region  终端节点所属区域。
+    * regionId  终端节点所属区域的ID。
+    * url  终端节点的地址。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class CatalogEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  终端节点ID。
+    * interface  终端节点平面，public表示为公开。
+    * region  终端节点所属区域。
+    * regionId  终端节点所属区域的ID。
+    * url  终端节点的地址。
     *
     * @var string[]
     */
@@ -208,6 +233,7 @@ class CatalogEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  终端节点ID。
     *
     * @return string
     */
@@ -231,6 +257,7 @@ class CatalogEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Gets interface
+    *  终端节点平面，public表示为公开。
     *
     * @return string
     */
@@ -254,6 +281,7 @@ class CatalogEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
+    *  终端节点所属区域。
     *
     * @return string
     */
@@ -277,6 +305,7 @@ class CatalogEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
+    *  终端节点所属区域的ID。
     *
     * @return string
     */
@@ -300,6 +329,7 @@ class CatalogEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
+    *  终端节点的地址。
     *
     * @return string
     */

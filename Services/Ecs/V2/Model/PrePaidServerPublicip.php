@@ -20,6 +20,8 @@ class PrePaidServerPublicip implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  为待创建云服务器分配已有弹性IP时，分配的弹性IP的ID，UUID格式。  约束：只能分配状态（status）为DOWN的弹性IP。
+    * eip  eip
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class PrePaidServerPublicip implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  为待创建云服务器分配已有弹性IP时，分配的弹性IP的ID，UUID格式。  约束：只能分配状态（status）为DOWN的弹性IP。
+    * eip  eip
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class PrePaidServerPublicip implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  为待创建云服务器分配已有弹性IP时，分配的弹性IP的ID，UUID格式。  约束：只能分配状态（status）为DOWN的弹性IP。
+    * eip  eip
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class PrePaidServerPublicip implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  为待创建云服务器分配已有弹性IP时，分配的弹性IP的ID，UUID格式。  约束：只能分配状态（status）为DOWN的弹性IP。
+    * eip  eip
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class PrePaidServerPublicip implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  为待创建云服务器分配已有弹性IP时，分配的弹性IP的ID，UUID格式。  约束：只能分配状态（status）为DOWN的弹性IP。
+    * eip  eip
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class PrePaidServerPublicip implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  为待创建云服务器分配已有弹性IP时，分配的弹性IP的ID，UUID格式。  约束：只能分配状态（status）为DOWN的弹性IP。
     *
     * @return string|null
     */
@@ -198,6 +209,7 @@ class PrePaidServerPublicip implements ModelInterface, ArrayAccess
 
     /**
     * Gets eip
+    *  eip
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\PrePaidServerEip|null
     */

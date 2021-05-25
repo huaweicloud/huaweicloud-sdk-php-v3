@@ -20,6 +20,8 @@ class DeleteMfaDeviceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * userId  绑定MFA设备的IAM 用户ID。
+    * serialNumber  MFA设备序列号。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class DeleteMfaDeviceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * userId  绑定MFA设备的IAM 用户ID。
+    * serialNumber  MFA设备序列号。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class DeleteMfaDeviceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * userId  绑定MFA设备的IAM 用户ID。
+    * serialNumber  MFA设备序列号。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class DeleteMfaDeviceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * userId  绑定MFA设备的IAM 用户ID。
+    * serialNumber  MFA设备序列号。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class DeleteMfaDeviceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * userId  绑定MFA设备的IAM 用户ID。
+    * serialNumber  MFA设备序列号。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class DeleteMfaDeviceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  绑定MFA设备的IAM 用户ID。
     *
     * @return string
     */
@@ -192,7 +203,7 @@ class DeleteMfaDeviceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string $userId userId
+    * @param string $userId 绑定MFA设备的IAM 用户ID。
     *
     * @return $this
     */
@@ -204,6 +215,7 @@ class DeleteMfaDeviceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serialNumber
+    *  MFA设备序列号。
     *
     * @return string
     */
@@ -215,7 +227,7 @@ class DeleteMfaDeviceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serialNumber
     *
-    * @param string $serialNumber serialNumber
+    * @param string $serialNumber MFA设备序列号。
     *
     * @return $this
     */

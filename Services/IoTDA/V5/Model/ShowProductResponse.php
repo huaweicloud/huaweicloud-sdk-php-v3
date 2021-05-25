@@ -21,6 +21,18 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * appId  资源空间ID。
+    * appName  资源空间名称。
+    * productId  产品ID，用于唯一标识一个产品，在物联网平台创建产品后由平台分配获得。
+    * name  产品名称。
+    * deviceType  设备类型。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
+    * dataFormat  设备上报数据的格式，取值范围：json，binary。
+    * manufacturerName  厂商名称。
+    * industry  设备所属行业。
+    * description  产品的描述信息。
+    * serviceCapabilities  设备的服务能力列表。
+    * createTime  在物联网平台创建产品的时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -41,6 +53,18 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * appId  资源空间ID。
+    * appName  资源空间名称。
+    * productId  产品ID，用于唯一标识一个产品，在物联网平台创建产品后由平台分配获得。
+    * name  产品名称。
+    * deviceType  设备类型。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
+    * dataFormat  设备上报数据的格式，取值范围：json，binary。
+    * manufacturerName  厂商名称。
+    * industry  设备所属行业。
+    * description  产品的描述信息。
+    * serviceCapabilities  设备的服务能力列表。
+    * createTime  在物联网平台创建产品的时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -82,6 +106,18 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * appId  资源空间ID。
+    * appName  资源空间名称。
+    * productId  产品ID，用于唯一标识一个产品，在物联网平台创建产品后由平台分配获得。
+    * name  产品名称。
+    * deviceType  设备类型。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
+    * dataFormat  设备上报数据的格式，取值范围：json，binary。
+    * manufacturerName  厂商名称。
+    * industry  设备所属行业。
+    * description  产品的描述信息。
+    * serviceCapabilities  设备的服务能力列表。
+    * createTime  在物联网平台创建产品的时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -102,6 +138,18 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * appId  资源空间ID。
+    * appName  资源空间名称。
+    * productId  产品ID，用于唯一标识一个产品，在物联网平台创建产品后由平台分配获得。
+    * name  产品名称。
+    * deviceType  设备类型。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
+    * dataFormat  设备上报数据的格式，取值范围：json，binary。
+    * manufacturerName  厂商名称。
+    * industry  设备所属行业。
+    * description  产品的描述信息。
+    * serviceCapabilities  设备的服务能力列表。
+    * createTime  在物联网平台创建产品的时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -122,6 +170,18 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * appId  资源空间ID。
+    * appName  资源空间名称。
+    * productId  产品ID，用于唯一标识一个产品，在物联网平台创建产品后由平台分配获得。
+    * name  产品名称。
+    * deviceType  设备类型。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
+    * dataFormat  设备上报数据的格式，取值范围：json，binary。
+    * manufacturerName  厂商名称。
+    * industry  设备所属行业。
+    * description  产品的描述信息。
+    * serviceCapabilities  设备的服务能力列表。
+    * createTime  在物联网平台创建产品的时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -236,6 +296,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
+    *  资源空间ID。
     *
     * @return string|null
     */
@@ -259,6 +320,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
+    *  资源空间名称。
     *
     * @return string|null
     */
@@ -282,6 +344,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
+    *  产品ID，用于唯一标识一个产品，在物联网平台创建产品后由平台分配获得。
     *
     * @return string|null
     */
@@ -305,6 +368,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  产品名称。
     *
     * @return string|null
     */
@@ -328,6 +392,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceType
+    *  设备类型。
     *
     * @return string|null
     */
@@ -351,6 +416,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocolType
+    *  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
     *
     * @return string|null
     */
@@ -374,6 +440,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataFormat
+    *  设备上报数据的格式，取值范围：json，binary。
     *
     * @return string|null
     */
@@ -397,6 +464,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets manufacturerName
+    *  厂商名称。
     *
     * @return string|null
     */
@@ -420,6 +488,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets industry
+    *  设备所属行业。
     *
     * @return string|null
     */
@@ -443,6 +512,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  产品的描述信息。
     *
     * @return string|null
     */
@@ -466,6 +536,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceCapabilities
+    *  设备的服务能力列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCapability[]|null
     */
@@ -489,6 +560,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
+    *  在物联网平台创建产品的时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @return string|null
     */

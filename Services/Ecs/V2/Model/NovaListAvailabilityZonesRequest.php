@@ -20,6 +20,7 @@ class NovaListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * 
     *
     * @var string[]
     */
@@ -28,6 +29,7 @@ class NovaListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * 
     *
     * @var string[]
     */
@@ -57,6 +59,7 @@ class NovaListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * 
     *
     * @var string[]
     */
@@ -65,6 +68,7 @@ class NovaListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * 
     *
     * @var string[]
     */
@@ -73,6 +77,7 @@ class NovaListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * 
     *
     * @var string[]
     */

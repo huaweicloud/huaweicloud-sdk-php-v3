@@ -20,6 +20,12 @@ class KeystoneGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * description  用户组描述信息。
+    * id  用户组ID。
+    * domainId  用户组所属账号ID。
+    * name  用户组名称。
+    * links  links
+    * createTime  用户组创建时间。
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class KeystoneGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * description  用户组描述信息。
+    * id  用户组ID。
+    * domainId  用户组所属账号ID。
+    * name  用户组名称。
+    * links  links
+    * createTime  用户组创建时间。
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class KeystoneGroupResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * description  用户组描述信息。
+    * id  用户组ID。
+    * domainId  用户组所属账号ID。
+    * name  用户组名称。
+    * links  links
+    * createTime  用户组创建时间。
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class KeystoneGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * description  用户组描述信息。
+    * id  用户组ID。
+    * domainId  用户组所属账号ID。
+    * name  用户组名称。
+    * links  links
+    * createTime  用户组创建时间。
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class KeystoneGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * description  用户组描述信息。
+    * id  用户组ID。
+    * domainId  用户组所属账号ID。
+    * name  用户组名称。
+    * links  links
+    * createTime  用户组创建时间。
     *
     * @var string[]
     */
@@ -217,6 +247,7 @@ class KeystoneGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  用户组描述信息。
     *
     * @return string
     */
@@ -240,6 +271,7 @@ class KeystoneGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  用户组ID。
     *
     * @return string
     */
@@ -263,6 +295,7 @@ class KeystoneGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  用户组所属账号ID。
     *
     * @return string
     */
@@ -286,6 +319,7 @@ class KeystoneGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  用户组名称。
     *
     * @return string
     */
@@ -309,6 +343,7 @@ class KeystoneGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\Links
     */
@@ -332,6 +367,7 @@ class KeystoneGroupResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
+    *  用户组创建时间。
     *
     * @return int
     */

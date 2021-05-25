@@ -20,6 +20,13 @@ class Attachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * attachedAt  挂载的时间信息。  时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * attachmentId  挂载信息对应的ID。
+    * device  挂载点。
+    * hostName  云硬盘挂载到的云服务器对应的物理主机的名称。
+    * id  挂载的资源ID。
+    * serverId  云硬盘挂载到的云服务器的 ID。
+    * volumeId  云硬盘ID。
     *
     * @var string[]
     */
@@ -35,6 +42,13 @@ class Attachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * attachedAt  挂载的时间信息。  时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * attachmentId  挂载信息对应的ID。
+    * device  挂载点。
+    * hostName  云硬盘挂载到的云服务器对应的物理主机的名称。
+    * id  挂载的资源ID。
+    * serverId  云硬盘挂载到的云服务器的 ID。
+    * volumeId  云硬盘ID。
     *
     * @var string[]
     */
@@ -71,6 +85,13 @@ class Attachment implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * attachedAt  挂载的时间信息。  时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * attachmentId  挂载信息对应的ID。
+    * device  挂载点。
+    * hostName  云硬盘挂载到的云服务器对应的物理主机的名称。
+    * id  挂载的资源ID。
+    * serverId  云硬盘挂载到的云服务器的 ID。
+    * volumeId  云硬盘ID。
     *
     * @var string[]
     */
@@ -86,6 +107,13 @@ class Attachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * attachedAt  挂载的时间信息。  时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * attachmentId  挂载信息对应的ID。
+    * device  挂载点。
+    * hostName  云硬盘挂载到的云服务器对应的物理主机的名称。
+    * id  挂载的资源ID。
+    * serverId  云硬盘挂载到的云服务器的 ID。
+    * volumeId  云硬盘ID。
     *
     * @var string[]
     */
@@ -101,6 +129,13 @@ class Attachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * attachedAt  挂载的时间信息。  时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * attachmentId  挂载信息对应的ID。
+    * device  挂载点。
+    * hostName  云硬盘挂载到的云服务器对应的物理主机的名称。
+    * id  挂载的资源ID。
+    * serverId  云硬盘挂载到的云服务器的 ID。
+    * volumeId  云硬盘ID。
     *
     * @var string[]
     */
@@ -226,6 +261,7 @@ class Attachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets attachedAt
+    *  挂载的时间信息。  时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
     *
     * @return string
     */
@@ -249,6 +285,7 @@ class Attachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets attachmentId
+    *  挂载信息对应的ID。
     *
     * @return string
     */
@@ -272,6 +309,7 @@ class Attachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets device
+    *  挂载点。
     *
     * @return string
     */
@@ -295,6 +333,7 @@ class Attachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
+    *  云硬盘挂载到的云服务器对应的物理主机的名称。
     *
     * @return string
     */
@@ -318,6 +357,7 @@ class Attachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  挂载的资源ID。
     *
     * @return string
     */
@@ -341,6 +381,7 @@ class Attachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverId
+    *  云硬盘挂载到的云服务器的 ID。
     *
     * @return string
     */
@@ -364,6 +405,7 @@ class Attachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeId
+    *  云硬盘ID。
     *
     * @return string
     */

@@ -20,6 +20,14 @@ class ServerBlockDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * bootIndex  云硬盘启动顺序。  - 0为系统盘。  - 非0为数据盘
+    * pciAddress  pci地址。
+    * volumeId  云硬盘ID，UUID格式。
+    * device  云硬盘挂载盘符，即磁盘挂载点。
+    * serverId  弹性云服务器ID，UUID格式。
+    * id  挂载ID，与云硬盘ID相同。UUID格式。
+    * size  云硬盘大小，单位GB。
+    * bus  磁盘总线类型 。  取值范围：virtio、scsi
     *
     * @var string[]
     */
@@ -36,6 +44,14 @@ class ServerBlockDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * bootIndex  云硬盘启动顺序。  - 0为系统盘。  - 非0为数据盘
+    * pciAddress  pci地址。
+    * volumeId  云硬盘ID，UUID格式。
+    * device  云硬盘挂载盘符，即磁盘挂载点。
+    * serverId  弹性云服务器ID，UUID格式。
+    * id  挂载ID，与云硬盘ID相同。UUID格式。
+    * size  云硬盘大小，单位GB。
+    * bus  磁盘总线类型 。  取值范围：virtio、scsi
     *
     * @var string[]
     */
@@ -73,6 +89,14 @@ class ServerBlockDevice implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * bootIndex  云硬盘启动顺序。  - 0为系统盘。  - 非0为数据盘
+    * pciAddress  pci地址。
+    * volumeId  云硬盘ID，UUID格式。
+    * device  云硬盘挂载盘符，即磁盘挂载点。
+    * serverId  弹性云服务器ID，UUID格式。
+    * id  挂载ID，与云硬盘ID相同。UUID格式。
+    * size  云硬盘大小，单位GB。
+    * bus  磁盘总线类型 。  取值范围：virtio、scsi
     *
     * @var string[]
     */
@@ -89,6 +113,14 @@ class ServerBlockDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * bootIndex  云硬盘启动顺序。  - 0为系统盘。  - 非0为数据盘
+    * pciAddress  pci地址。
+    * volumeId  云硬盘ID，UUID格式。
+    * device  云硬盘挂载盘符，即磁盘挂载点。
+    * serverId  弹性云服务器ID，UUID格式。
+    * id  挂载ID，与云硬盘ID相同。UUID格式。
+    * size  云硬盘大小，单位GB。
+    * bus  磁盘总线类型 。  取值范围：virtio、scsi
     *
     * @var string[]
     */
@@ -105,6 +137,14 @@ class ServerBlockDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * bootIndex  云硬盘启动顺序。  - 0为系统盘。  - 非0为数据盘
+    * pciAddress  pci地址。
+    * volumeId  云硬盘ID，UUID格式。
+    * device  云硬盘挂载盘符，即磁盘挂载点。
+    * serverId  弹性云服务器ID，UUID格式。
+    * id  挂载ID，与云硬盘ID相同。UUID格式。
+    * size  云硬盘大小，单位GB。
+    * bus  磁盘总线类型 。  取值范围：virtio、scsi
     *
     * @var string[]
     */
@@ -211,6 +251,7 @@ class ServerBlockDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets bootIndex
+    *  云硬盘启动顺序。  - 0为系统盘。  - 非0为数据盘
     *
     * @return int|null
     */
@@ -234,6 +275,7 @@ class ServerBlockDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets pciAddress
+    *  pci地址。
     *
     * @return string|null
     */
@@ -257,6 +299,7 @@ class ServerBlockDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeId
+    *  云硬盘ID，UUID格式。
     *
     * @return string|null
     */
@@ -280,6 +323,7 @@ class ServerBlockDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets device
+    *  云硬盘挂载盘符，即磁盘挂载点。
     *
     * @return string|null
     */
@@ -303,6 +347,7 @@ class ServerBlockDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverId
+    *  弹性云服务器ID，UUID格式。
     *
     * @return string|null
     */
@@ -326,6 +371,7 @@ class ServerBlockDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  挂载ID，与云硬盘ID相同。UUID格式。
     *
     * @return string|null
     */
@@ -349,6 +395,7 @@ class ServerBlockDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
+    *  云硬盘大小，单位GB。
     *
     * @return int|null
     */
@@ -372,6 +419,7 @@ class ServerBlockDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets bus
+    *  磁盘总线类型 。  取值范围：virtio、scsi
     *
     * @return string|null
     */

@@ -20,6 +20,8 @@ class NovaCreateServersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * openStackApiVersion  微版本头
+    * body  body
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class NovaCreateServersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * openStackApiVersion  微版本头
+    * body  body
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class NovaCreateServersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * openStackApiVersion  微版本头
+    * body  body
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class NovaCreateServersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * openStackApiVersion  微版本头
+    * body  body
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class NovaCreateServersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * openStackApiVersion  微版本头
+    * body  body
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class NovaCreateServersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets openStackApiVersion
+    *  微版本头
     *
     * @return string|null
     */
@@ -186,7 +197,7 @@ class NovaCreateServersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets openStackApiVersion
     *
-    * @param string|null $openStackApiVersion openStackApiVersion
+    * @param string|null $openStackApiVersion 微版本头
     *
     * @return $this
     */
@@ -198,6 +209,7 @@ class NovaCreateServersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaCreateServersRequestBody|null
     */

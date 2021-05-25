@@ -20,6 +20,7 @@ class CreateVolumeSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * dedicatedStorageId  指定专属存储池ID，表示将云硬盘创建在该ID对应的存储池中。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class CreateVolumeSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * dedicatedStorageId  指定专属存储池ID，表示将云硬盘创建在该ID对应的存储池中。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class CreateVolumeSchedulerHints implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * dedicatedStorageId  指定专属存储池ID，表示将云硬盘创建在该ID对应的存储池中。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class CreateVolumeSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * dedicatedStorageId  指定专属存储池ID，表示将云硬盘创建在该ID对应的存储池中。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class CreateVolumeSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * dedicatedStorageId  指定专属存储池ID，表示将云硬盘创建在该ID对应的存储池中。
     *
     * @var string[]
     */
@@ -169,6 +174,7 @@ class CreateVolumeSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Gets dedicatedStorageId
+    *  指定专属存储池ID，表示将云硬盘创建在该ID对应的存储池中。
     *
     * @return string|null
     */

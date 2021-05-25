@@ -20,6 +20,13 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  按照routes_id过滤查询
+    * type  功能说明：按照路由类型过滤查询  取值范围：peering
+    * vpcId  按照vpc_id过滤查询
+    * destination  按照路由目的地址CIDR过滤查询
+    * tenantId  按照项目ID过滤查询
     *
     * @var string[]
     */
@@ -35,6 +42,13 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  按照routes_id过滤查询
+    * type  功能说明：按照路由类型过滤查询  取值范围：peering
+    * vpcId  按照vpc_id过滤查询
+    * destination  按照路由目的地址CIDR过滤查询
+    * tenantId  按照项目ID过滤查询
     *
     * @var string[]
     */
@@ -71,6 +85,13 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  按照routes_id过滤查询
+    * type  功能说明：按照路由类型过滤查询  取值范围：peering
+    * vpcId  按照vpc_id过滤查询
+    * destination  按照路由目的地址CIDR过滤查询
+    * tenantId  按照项目ID过滤查询
     *
     * @var string[]
     */
@@ -86,6 +107,13 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  按照routes_id过滤查询
+    * type  功能说明：按照路由类型过滤查询  取值范围：peering
+    * vpcId  按照vpc_id过滤查询
+    * destination  按照路由目的地址CIDR过滤查询
+    * tenantId  按照项目ID过滤查询
     *
     * @var string[]
     */
@@ -101,6 +129,13 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  按照routes_id过滤查询
+    * type  功能说明：按照路由类型过滤查询  取值范围：peering
+    * vpcId  按照vpc_id过滤查询
+    * destination  按照路由目的地址CIDR过滤查询
+    * tenantId  按照项目ID过滤查询
     *
     * @var string[]
     */
@@ -238,6 +273,7 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  每页返回的个数
     *
     * @return int|null
     */
@@ -249,7 +285,7 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 每页返回的个数
     *
     * @return $this
     */
@@ -261,6 +297,7 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  分页查询起始的资源ID，为空时查询第一页
     *
     * @return string|null
     */
@@ -272,7 +309,7 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 分页查询起始的资源ID，为空时查询第一页
     *
     * @return $this
     */
@@ -284,6 +321,7 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  按照routes_id过滤查询
     *
     * @return string|null
     */
@@ -295,7 +333,7 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id 按照routes_id过滤查询
     *
     * @return $this
     */
@@ -307,6 +345,7 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  功能说明：按照路由类型过滤查询  取值范围：peering
     *
     * @return string|null
     */
@@ -318,7 +357,7 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type type
+    * @param string|null $type 功能说明：按照路由类型过滤查询  取值范围：peering
     *
     * @return $this
     */
@@ -330,6 +369,7 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
+    *  按照vpc_id过滤查询
     *
     * @return string|null
     */
@@ -341,7 +381,7 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId vpcId
+    * @param string|null $vpcId 按照vpc_id过滤查询
     *
     * @return $this
     */
@@ -353,6 +393,7 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets destination
+    *  按照路由目的地址CIDR过滤查询
     *
     * @return string|null
     */
@@ -364,7 +405,7 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets destination
     *
-    * @param string|null $destination destination
+    * @param string|null $destination 按照路由目的地址CIDR过滤查询
     *
     * @return $this
     */
@@ -376,6 +417,7 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  按照项目ID过滤查询
     *
     * @return string|null
     */
@@ -387,7 +429,7 @@ class ListVpcRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId tenantId
+    * @param string|null $tenantId 按照项目ID过滤查询
     *
     * @return $this
     */

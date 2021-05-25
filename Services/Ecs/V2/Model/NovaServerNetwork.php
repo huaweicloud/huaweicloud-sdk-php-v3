@@ -20,6 +20,9 @@ class NovaServerNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * port  网络port uuid。  没有指定网络uuid时必须指定。
+    * uuid  网络uuid。  没有指定网络port时必须指定。
+    * fixedIp  指定的IP地址。网络的三个参数（port、uuid和fixed_ip）中，port优先级最高；指定fixed_ip时必须指明uuid。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class NovaServerNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * port  网络port uuid。  没有指定网络uuid时必须指定。
+    * uuid  网络uuid。  没有指定网络port时必须指定。
+    * fixedIp  指定的IP地址。网络的三个参数（port、uuid和fixed_ip）中，port优先级最高；指定fixed_ip时必须指明uuid。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class NovaServerNetwork implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * port  网络port uuid。  没有指定网络uuid时必须指定。
+    * uuid  网络uuid。  没有指定网络port时必须指定。
+    * fixedIp  指定的IP地址。网络的三个参数（port、uuid和fixed_ip）中，port优先级最高；指定fixed_ip时必须指明uuid。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class NovaServerNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * port  网络port uuid。  没有指定网络uuid时必须指定。
+    * uuid  网络uuid。  没有指定网络port时必须指定。
+    * fixedIp  指定的IP地址。网络的三个参数（port、uuid和fixed_ip）中，port优先级最高；指定fixed_ip时必须指明uuid。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class NovaServerNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * port  网络port uuid。  没有指定网络uuid时必须指定。
+    * uuid  网络uuid。  没有指定网络port时必须指定。
+    * fixedIp  指定的IP地址。网络的三个参数（port、uuid和fixed_ip）中，port优先级最高；指定fixed_ip时必须指明uuid。
     *
     * @var string[]
     */
@@ -181,6 +196,7 @@ class NovaServerNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
+    *  网络port uuid。  没有指定网络uuid时必须指定。
     *
     * @return string|null
     */
@@ -204,6 +220,7 @@ class NovaServerNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Gets uuid
+    *  网络uuid。  没有指定网络port时必须指定。
     *
     * @return string|null
     */
@@ -227,6 +244,7 @@ class NovaServerNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Gets fixedIp
+    *  指定的IP地址。网络的三个参数（port、uuid和fixed_ip）中，port优先级最高；指定fixed_ip时必须指明uuid。
     *
     * @return string|null
     */

@@ -20,6 +20,8 @@ class PrePaidServerDataVolumeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
+    * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class PrePaidServerDataVolumeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
+    * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class PrePaidServerDataVolumeMetadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
+    * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class PrePaidServerDataVolumeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
+    * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class PrePaidServerDataVolumeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
+    * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class PrePaidServerDataVolumeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets systemEncrypted
+    *  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
     *
     * @return string|null
     */
@@ -198,6 +209,7 @@ class PrePaidServerDataVolumeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets systemCmkid
+    *  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。
     *
     * @return string|null
     */

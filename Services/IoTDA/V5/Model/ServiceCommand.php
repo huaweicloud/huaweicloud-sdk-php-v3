@@ -20,6 +20,9 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * commandName  设备命令名称。
+    * paras  设备命令的参数列表。
+    * responses  设备命令的响应列表。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * commandName  设备命令名称。
+    * paras  设备命令的参数列表。
+    * responses  设备命令的响应列表。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class ServiceCommand implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * commandName  设备命令名称。
+    * paras  设备命令的参数列表。
+    * responses  设备命令的响应列表。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * commandName  设备命令名称。
+    * paras  设备命令的参数列表。
+    * responses  设备命令的响应列表。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * commandName  设备命令名称。
+    * paras  设备命令的参数列表。
+    * responses  设备命令的响应列表。
     *
     * @var string[]
     */
@@ -187,6 +202,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Gets commandName
+    *  设备命令名称。
     *
     * @return string
     */
@@ -210,6 +226,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Gets paras
+    *  设备命令的参数列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandPara[]|null
     */
@@ -233,6 +250,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Gets responses
+    *  设备命令的响应列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandResponse[]|null
     */

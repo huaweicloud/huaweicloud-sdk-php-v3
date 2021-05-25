@@ -20,6 +20,14 @@ class NeutronFirewallPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * audited  审计标记。
+    * description  网络ACL防火墙策略描述。
+    * firewallRules  策略引用的网络ACL防火墙规则链。
+    * id  网络ACL防火墙策略uuid标识。
+    * name  网络ACL防火墙策略名称。
+    * public  是否支持跨租户共享。
+    * tenantId  项目ID
+    * projectId  项目ID
     *
     * @var string[]
     */
@@ -36,6 +44,14 @@ class NeutronFirewallPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * audited  审计标记。
+    * description  网络ACL防火墙策略描述。
+    * firewallRules  策略引用的网络ACL防火墙规则链。
+    * id  网络ACL防火墙策略uuid标识。
+    * name  网络ACL防火墙策略名称。
+    * public  是否支持跨租户共享。
+    * tenantId  项目ID
+    * projectId  项目ID
     *
     * @var string[]
     */
@@ -73,6 +89,14 @@ class NeutronFirewallPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * audited  审计标记。
+    * description  网络ACL防火墙策略描述。
+    * firewallRules  策略引用的网络ACL防火墙规则链。
+    * id  网络ACL防火墙策略uuid标识。
+    * name  网络ACL防火墙策略名称。
+    * public  是否支持跨租户共享。
+    * tenantId  项目ID
+    * projectId  项目ID
     *
     * @var string[]
     */
@@ -89,6 +113,14 @@ class NeutronFirewallPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * audited  审计标记。
+    * description  网络ACL防火墙策略描述。
+    * firewallRules  策略引用的网络ACL防火墙规则链。
+    * id  网络ACL防火墙策略uuid标识。
+    * name  网络ACL防火墙策略名称。
+    * public  是否支持跨租户共享。
+    * tenantId  项目ID
+    * projectId  项目ID
     *
     * @var string[]
     */
@@ -105,6 +137,14 @@ class NeutronFirewallPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * audited  审计标记。
+    * description  网络ACL防火墙策略描述。
+    * firewallRules  策略引用的网络ACL防火墙规则链。
+    * id  网络ACL防火墙策略uuid标识。
+    * name  网络ACL防火墙策略名称。
+    * public  是否支持跨租户共享。
+    * tenantId  项目ID
+    * projectId  项目ID
     *
     * @var string[]
     */
@@ -256,6 +296,7 @@ class NeutronFirewallPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets audited
+    *  审计标记。
     *
     * @return bool
     */
@@ -279,6 +320,7 @@ class NeutronFirewallPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  网络ACL防火墙策略描述。
     *
     * @return string
     */
@@ -302,6 +344,7 @@ class NeutronFirewallPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets firewallRules
+    *  策略引用的网络ACL防火墙规则链。
     *
     * @return string[]
     */
@@ -325,6 +368,7 @@ class NeutronFirewallPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  网络ACL防火墙策略uuid标识。
     *
     * @return string
     */
@@ -348,6 +392,7 @@ class NeutronFirewallPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  网络ACL防火墙策略名称。
     *
     * @return string
     */
@@ -371,6 +416,7 @@ class NeutronFirewallPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets public
+    *  是否支持跨租户共享。
     *
     * @return bool
     */
@@ -394,6 +440,7 @@ class NeutronFirewallPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  项目ID
     *
     * @return string
     */
@@ -417,6 +464,7 @@ class NeutronFirewallPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  项目ID
     *
     * @return string
     */

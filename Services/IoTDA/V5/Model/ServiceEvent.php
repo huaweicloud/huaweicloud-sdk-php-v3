@@ -20,6 +20,8 @@ class ServiceEvent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * eventType  设备事件类型。
+    * paras  设备事件的参数列表。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ServiceEvent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * eventType  设备事件类型。
+    * paras  设备事件的参数列表。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ServiceEvent implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * eventType  设备事件类型。
+    * paras  设备事件的参数列表。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ServiceEvent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * eventType  设备事件类型。
+    * paras  设备事件的参数列表。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ServiceEvent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * eventType  设备事件类型。
+    * paras  设备事件的参数列表。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class ServiceEvent implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
+    *  设备事件类型。
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class ServiceEvent implements ModelInterface, ArrayAccess
 
     /**
     * Gets paras
+    *  设备事件的参数列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandPara[]|null
     */

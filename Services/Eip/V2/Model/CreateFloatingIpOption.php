@@ -20,6 +20,10 @@ class CreateFloatingIpOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * floatingIpAddress  浮动IP地址。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询。
+    * portId  端口id
+    * fixedIpAddress  关联端口的私有IP地址。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class CreateFloatingIpOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * floatingIpAddress  浮动IP地址。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询。
+    * portId  端口id
+    * fixedIpAddress  关联端口的私有IP地址。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class CreateFloatingIpOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * floatingIpAddress  浮动IP地址。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询。
+    * portId  端口id
+    * fixedIpAddress  关联端口的私有IP地址。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class CreateFloatingIpOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * floatingIpAddress  浮动IP地址。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询。
+    * portId  端口id
+    * fixedIpAddress  关联端口的私有IP地址。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class CreateFloatingIpOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * floatingIpAddress  浮动IP地址。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询。
+    * portId  端口id
+    * fixedIpAddress  关联端口的私有IP地址。
     *
     * @var string[]
     */
@@ -199,6 +219,7 @@ class CreateFloatingIpOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingIpAddress
+    *  浮动IP地址。
     *
     * @return string|null
     */
@@ -222,6 +243,7 @@ class CreateFloatingIpOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingNetworkId
+    *  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询。
     *
     * @return string
     */
@@ -245,6 +267,7 @@ class CreateFloatingIpOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets portId
+    *  端口id
     *
     * @return string|null
     */
@@ -268,6 +291,7 @@ class CreateFloatingIpOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets fixedIpAddress
+    *  关联端口的私有IP地址。
     *
     * @return string|null
     */

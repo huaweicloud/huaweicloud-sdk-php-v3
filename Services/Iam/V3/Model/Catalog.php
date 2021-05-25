@@ -20,6 +20,10 @@ class Catalog implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * endpoints  终端节点信息。
+    * id  服务ID。
+    * name  服务名。
+    * type  服务类型。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class Catalog implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * endpoints  终端节点信息。
+    * id  服务ID。
+    * name  服务名。
+    * type  服务类型。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class Catalog implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * endpoints  终端节点信息。
+    * id  服务ID。
+    * name  服务名。
+    * type  服务类型。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class Catalog implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * endpoints  终端节点信息。
+    * id  服务ID。
+    * name  服务名。
+    * type  服务类型。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class Catalog implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * endpoints  终端节点信息。
+    * id  服务ID。
+    * name  服务名。
+    * type  服务类型。
     *
     * @var string[]
     */
@@ -199,6 +219,7 @@ class Catalog implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpoints
+    *  终端节点信息。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\CatalogEndpoints[]
     */
@@ -222,6 +243,7 @@ class Catalog implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  服务ID。
     *
     * @return string
     */
@@ -245,6 +267,7 @@ class Catalog implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  服务名。
     *
     * @return string
     */
@@ -268,6 +291,7 @@ class Catalog implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  服务类型。
     *
     * @return string
     */

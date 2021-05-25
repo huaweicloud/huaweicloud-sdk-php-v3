@@ -20,6 +20,8 @@ class BatchStopServersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * servers  标记为启动云服务器操作。
+    * type  关机类型，默认为SOFT：  - SOFT：普通关机（默认）。 - HARD：强制关机。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class BatchStopServersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * servers  标记为启动云服务器操作。
+    * type  关机类型，默认为SOFT：  - SOFT：普通关机（默认）。 - HARD：强制关机。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class BatchStopServersOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * servers  标记为启动云服务器操作。
+    * type  关机类型，默认为SOFT：  - SOFT：普通关机（默认）。 - HARD：强制关机。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class BatchStopServersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * servers  标记为启动云服务器操作。
+    * type  关机类型，默认为SOFT：  - SOFT：普通关机（默认）。 - HARD：强制关机。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class BatchStopServersOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * servers  标记为启动云服务器操作。
+    * type  关机类型，默认为SOFT：  - SOFT：普通关机（默认）。 - HARD：强制关机。
     *
     * @var string[]
     */
@@ -201,6 +211,7 @@ class BatchStopServersOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets servers
+    *  标记为启动云服务器操作。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\ServerId[]
     */
@@ -224,6 +235,7 @@ class BatchStopServersOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  关机类型，默认为SOFT：  - SOFT：普通关机（默认）。 - HARD：强制关机。
     *
     * @return string|null
     */

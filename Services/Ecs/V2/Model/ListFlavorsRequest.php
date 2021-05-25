@@ -20,6 +20,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。
     *
     * @var string[]
     */
@@ -169,6 +174,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
+    *  可用区，需要指定可用区（AZ）的名称或者ID或者code。
     *
     * @return string|null
     */
@@ -180,7 +186,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string|null $availabilityZone availabilityZone
+    * @param string|null $availabilityZone 可用区，需要指定可用区（AZ）的名称或者ID或者code。
     *
     * @return $this
     */

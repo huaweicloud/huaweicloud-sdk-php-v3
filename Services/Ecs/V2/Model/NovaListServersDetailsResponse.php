@@ -21,6 +21,8 @@ class NovaListServersDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * servers  查询云服务器信息列表。
+    * serversLinks  分页查询时，查询下一页数据链接。
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class NovaListServersDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * servers  查询云服务器信息列表。
+    * serversLinks  分页查询时，查询下一页数据链接。
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class NovaListServersDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * servers  查询云服务器信息列表。
+    * serversLinks  分页查询时，查询下一页数据链接。
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class NovaListServersDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * servers  查询云服务器信息列表。
+    * serversLinks  分页查询时，查询下一页数据链接。
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class NovaListServersDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * servers  查询云服务器信息列表。
+    * serversLinks  分页查询时，查询下一页数据链接。
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class NovaListServersDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets servers
+    *  查询云服务器信息列表。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaServer[]|null
     */
@@ -199,6 +210,7 @@ class NovaListServersDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serversLinks
+    *  分页查询时，查询下一页数据链接。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\PageLink[]|null
     */

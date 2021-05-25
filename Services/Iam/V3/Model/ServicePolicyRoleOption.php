@@ -20,6 +20,11 @@ class ServicePolicyRoleOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * displayName  自定义策略展示名。
+    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * description  自定义策略的描述信息。
+    * descriptionCn  自定义策略的中文描述信息。
+    * policy  policy
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class ServicePolicyRoleOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * displayName  自定义策略展示名。
+    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * description  自定义策略的描述信息。
+    * descriptionCn  自定义策略的中文描述信息。
+    * policy  policy
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class ServicePolicyRoleOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * displayName  自定义策略展示名。
+    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * description  自定义策略的描述信息。
+    * descriptionCn  自定义策略的中文描述信息。
+    * policy  policy
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class ServicePolicyRoleOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * displayName  自定义策略展示名。
+    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * description  自定义策略的描述信息。
+    * descriptionCn  自定义策略的中文描述信息。
+    * policy  policy
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class ServicePolicyRoleOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * displayName  自定义策略展示名。
+    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * description  自定义策略的描述信息。
+    * descriptionCn  自定义策略的中文描述信息。
+    * policy  policy
     *
     * @var string[]
     */
@@ -205,6 +230,7 @@ class ServicePolicyRoleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
+    *  自定义策略展示名。
     *
     * @return string
     */
@@ -228,6 +254,7 @@ class ServicePolicyRoleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     *
     * @return string
     */
@@ -251,6 +278,7 @@ class ServicePolicyRoleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  自定义策略的描述信息。
     *
     * @return string
     */
@@ -274,6 +302,7 @@ class ServicePolicyRoleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets descriptionCn
+    *  自定义策略的中文描述信息。
     *
     * @return string|null
     */
@@ -297,6 +326,7 @@ class ServicePolicyRoleOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets policy
+    *  policy
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\ServicePolicy
     */

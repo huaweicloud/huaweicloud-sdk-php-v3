@@ -20,6 +20,10 @@ class TokenCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * type  该接口所属服务。
+    * id  服务ID。
+    * name  服务名称。
+    * endpoints  终端节点。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class TokenCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * type  该接口所属服务。
+    * id  服务ID。
+    * name  服务名称。
+    * endpoints  终端节点。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class TokenCatalog implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * type  该接口所属服务。
+    * id  服务ID。
+    * name  服务名称。
+    * endpoints  终端节点。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class TokenCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * type  该接口所属服务。
+    * id  服务ID。
+    * name  服务名称。
+    * endpoints  终端节点。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class TokenCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * type  该接口所属服务。
+    * id  服务ID。
+    * name  服务名称。
+    * endpoints  终端节点。
     *
     * @var string[]
     */
@@ -199,6 +219,7 @@ class TokenCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  该接口所属服务。
     *
     * @return string
     */
@@ -222,6 +243,7 @@ class TokenCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  服务ID。
     *
     * @return string
     */
@@ -245,6 +267,7 @@ class TokenCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  服务名称。
     *
     * @return string
     */
@@ -268,6 +291,7 @@ class TokenCatalog implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpoints
+    *  终端节点。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\TokenCatalogEndpoint[]
     */

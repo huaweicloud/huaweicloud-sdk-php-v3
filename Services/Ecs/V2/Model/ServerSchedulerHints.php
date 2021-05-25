@@ -20,6 +20,9 @@ class ServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * group  反亲和性组信息。  UUID格式。
+    * tenancy  在专属主机或共享池中创建弹性云服务器。默认为在共享池创建。值为： shared或dedicated。  - shared：表示共享池。 - dedicated:表示专属主机。  创建与查询此值均有效。
+    * dedicatedHostId  专属主机ID。  此属性仅在tenancy值为dedicated时有效。  不指定此属性，系统将自动分配租户可自动放置弹性云服务器的专属主机。  创建与查询此值均有效。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class ServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * group  反亲和性组信息。  UUID格式。
+    * tenancy  在专属主机或共享池中创建弹性云服务器。默认为在共享池创建。值为： shared或dedicated。  - shared：表示共享池。 - dedicated:表示专属主机。  创建与查询此值均有效。
+    * dedicatedHostId  专属主机ID。  此属性仅在tenancy值为dedicated时有效。  不指定此属性，系统将自动分配租户可自动放置弹性云服务器的专属主机。  创建与查询此值均有效。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class ServerSchedulerHints implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * group  反亲和性组信息。  UUID格式。
+    * tenancy  在专属主机或共享池中创建弹性云服务器。默认为在共享池创建。值为： shared或dedicated。  - shared：表示共享池。 - dedicated:表示专属主机。  创建与查询此值均有效。
+    * dedicatedHostId  专属主机ID。  此属性仅在tenancy值为dedicated时有效。  不指定此属性，系统将自动分配租户可自动放置弹性云服务器的专属主机。  创建与查询此值均有效。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class ServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * group  反亲和性组信息。  UUID格式。
+    * tenancy  在专属主机或共享池中创建弹性云服务器。默认为在共享池创建。值为： shared或dedicated。  - shared：表示共享池。 - dedicated:表示专属主机。  创建与查询此值均有效。
+    * dedicatedHostId  专属主机ID。  此属性仅在tenancy值为dedicated时有效。  不指定此属性，系统将自动分配租户可自动放置弹性云服务器的专属主机。  创建与查询此值均有效。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class ServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * group  反亲和性组信息。  UUID格式。
+    * tenancy  在专属主机或共享池中创建弹性云服务器。默认为在共享池创建。值为： shared或dedicated。  - shared：表示共享池。 - dedicated:表示专属主机。  创建与查询此值均有效。
+    * dedicatedHostId  专属主机ID。  此属性仅在tenancy值为dedicated时有效。  不指定此属性，系统将自动分配租户可自动放置弹性云服务器的专属主机。  创建与查询此值均有效。
     *
     * @var string[]
     */
@@ -181,6 +196,7 @@ class ServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
+    *  反亲和性组信息。  UUID格式。
     *
     * @return string[]|null
     */
@@ -204,6 +220,7 @@ class ServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenancy
+    *  在专属主机或共享池中创建弹性云服务器。默认为在共享池创建。值为： shared或dedicated。  - shared：表示共享池。 - dedicated:表示专属主机。  创建与查询此值均有效。
     *
     * @return string[]|null
     */
@@ -227,6 +244,7 @@ class ServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Gets dedicatedHostId
+    *  专属主机ID。  此属性仅在tenancy值为dedicated时有效。  不指定此属性，系统将自动分配租户可自动放置弹性云服务器的专属主机。  创建与查询此值均有效。
     *
     * @return string[]|null
     */

@@ -20,6 +20,7 @@ class UpdateLoginProjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * loginProtect  loginProtect
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class UpdateLoginProjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * loginProtect  loginProtect
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class UpdateLoginProjectReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * loginProtect  loginProtect
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class UpdateLoginProjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * loginProtect  loginProtect
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class UpdateLoginProjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * loginProtect  loginProtect
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class UpdateLoginProjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets loginProtect
+    *  loginProtect
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\UpdateLoginProject
     */

@@ -20,6 +20,10 @@ class RomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * addresses  转发roma消息对应的地址列表
+    * topic  转发roma消息关联的topic信息。
+    * username  转发roma关联的用户名信息。
+    * password  转发roma关联的密码信息。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class RomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * addresses  转发roma消息对应的地址列表
+    * topic  转发roma消息关联的topic信息。
+    * username  转发roma关联的用户名信息。
+    * password  转发roma关联的密码信息。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class RomaForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * addresses  转发roma消息对应的地址列表
+    * topic  转发roma消息关联的topic信息。
+    * username  转发roma关联的用户名信息。
+    * password  转发roma关联的密码信息。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class RomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * addresses  转发roma消息对应的地址列表
+    * topic  转发roma消息关联的topic信息。
+    * username  转发roma关联的用户名信息。
+    * password  转发roma关联的密码信息。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class RomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * addresses  转发roma消息对应的地址列表
+    * topic  转发roma消息关联的topic信息。
+    * username  转发roma关联的用户名信息。
+    * password  转发roma关联的密码信息。
     *
     * @var string[]
     */
@@ -214,6 +234,7 @@ class RomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets addresses
+    *  转发roma消息对应的地址列表
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\NetAddress[]
     */
@@ -237,6 +258,7 @@ class RomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
+    *  转发roma消息关联的topic信息。
     *
     * @return string
     */
@@ -260,6 +282,7 @@ class RomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets username
+    *  转发roma关联的用户名信息。
     *
     * @return string
     */
@@ -283,6 +306,7 @@ class RomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets password
+    *  转发roma关联的密码信息。
     *
     * @return string
     */

@@ -20,6 +20,12 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * regionName  SMN服务对应的region区域
+    * projectId  SMN服务对应的projectId信息
+    * themeName  SMN服务对应的主题名称
+    * topicUrn  SMN服务对应的topic的主题URN
+    * messageContent  短信或邮件的内容。
+    * messageTitle  短信或邮件的主题。
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * regionName  SMN服务对应的region区域
+    * projectId  SMN服务对应的projectId信息
+    * themeName  SMN服务对应的主题名称
+    * topicUrn  SMN服务对应的topic的主题URN
+    * messageContent  短信或邮件的内容。
+    * messageTitle  短信或邮件的主题。
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * regionName  SMN服务对应的region区域
+    * projectId  SMN服务对应的projectId信息
+    * themeName  SMN服务对应的主题名称
+    * topicUrn  SMN服务对应的topic的主题URN
+    * messageContent  短信或邮件的内容。
+    * messageTitle  短信或邮件的主题。
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * regionName  SMN服务对应的region区域
+    * projectId  SMN服务对应的projectId信息
+    * themeName  SMN服务对应的主题名称
+    * topicUrn  SMN服务对应的topic的主题URN
+    * messageContent  短信或邮件的内容。
+    * messageTitle  短信或邮件的主题。
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * regionName  SMN服务对应的region区域
+    * projectId  SMN服务对应的projectId信息
+    * themeName  SMN服务对应的主题名称
+    * topicUrn  SMN服务对应的topic的主题URN
+    * messageContent  短信或邮件的内容。
+    * messageTitle  短信或邮件的主题。
     *
     * @var string[]
     */
@@ -232,6 +262,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionName
+    *  SMN服务对应的region区域
     *
     * @return string
     */
@@ -255,6 +286,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  SMN服务对应的projectId信息
     *
     * @return string
     */
@@ -278,6 +310,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets themeName
+    *  SMN服务对应的主题名称
     *
     * @return string
     */
@@ -301,6 +334,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicUrn
+    *  SMN服务对应的topic的主题URN
     *
     * @return string
     */
@@ -324,6 +358,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageContent
+    *  短信或邮件的内容。
     *
     * @return string
     */
@@ -347,6 +382,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageTitle
+    *  短信或邮件的主题。
     *
     * @return string
     */

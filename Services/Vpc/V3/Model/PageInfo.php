@@ -20,6 +20,9 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * previousMarker  当前页第一条记录
+    * currentCount  当前页总数
+    * nextMarker  当前页最后一条记录，最后一页时无next_marker字段
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * previousMarker  当前页第一条记录
+    * currentCount  当前页总数
+    * nextMarker  当前页最后一条记录，最后一页时无next_marker字段
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * previousMarker  当前页第一条记录
+    * currentCount  当前页总数
+    * nextMarker  当前页最后一条记录，最后一页时无next_marker字段
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * previousMarker  当前页第一条记录
+    * currentCount  当前页总数
+    * nextMarker  当前页最后一条记录，最后一页时无next_marker字段
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * previousMarker  当前页第一条记录
+    * currentCount  当前页总数
+    * nextMarker  当前页最后一条记录，最后一页时无next_marker字段
     *
     * @var string[]
     */
@@ -187,6 +202,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets previousMarker
+    *  当前页第一条记录
     *
     * @return string
     */
@@ -210,6 +226,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentCount
+    *  当前页总数
     *
     * @return int
     */
@@ -233,6 +250,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextMarker
+    *  当前页最后一条记录，最后一页时无next_marker字段
     *
     * @return string|null
     */

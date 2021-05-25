@@ -1,3 +1,16 @@
+# 3.0.11-beta 2021-05-25
+
+### HuaweiCloud SDK Core
+
+- _Features_
+    - None
+- _Bug Fix_
+    - None
+- _Change_
+    - Add comments to the request object in the client method.
+    - Add comments to a non-body object of the Request object.
+    - Add comments to the get method of the DTO.
+    
 # 3.0.10-beta 2021-03-19
 
 ### HuaweiCloud SDK ECS

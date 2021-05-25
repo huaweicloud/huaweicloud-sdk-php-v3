@@ -20,6 +20,13 @@ class NovaSecurityGroupCommonRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * fromPort  起始端口，范围1-65535，且不大于to_port。 ip_protocol设置为icmp时，from_port表示type，范围是0-255。
+    * group  group
+    * id  安全组规则ID，UUID格式。
+    * ipProtocol  协议类型或直接指定IP协议号，取值可为icmp，tcp，udp或IP协议号。
+    * ipRange  ipRange
+    * parentGroupId  相关联的安全组ID，UUID格式。
+    * toPort  终止端口，范围1-65535，且不小于from_port。 ip_protocol设置为icmp时，to_port表示code，范围是0-255，且如果from_port为-1，to_port为-1表示任意ICMP报文。
     *
     * @var string[]
     */
@@ -35,6 +42,13 @@ class NovaSecurityGroupCommonRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * fromPort  起始端口，范围1-65535，且不大于to_port。 ip_protocol设置为icmp时，from_port表示type，范围是0-255。
+    * group  group
+    * id  安全组规则ID，UUID格式。
+    * ipProtocol  协议类型或直接指定IP协议号，取值可为icmp，tcp，udp或IP协议号。
+    * ipRange  ipRange
+    * parentGroupId  相关联的安全组ID，UUID格式。
+    * toPort  终止端口，范围1-65535，且不小于from_port。 ip_protocol设置为icmp时，to_port表示code，范围是0-255，且如果from_port为-1，to_port为-1表示任意ICMP报文。
     *
     * @var string[]
     */
@@ -71,6 +85,13 @@ class NovaSecurityGroupCommonRule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * fromPort  起始端口，范围1-65535，且不大于to_port。 ip_protocol设置为icmp时，from_port表示type，范围是0-255。
+    * group  group
+    * id  安全组规则ID，UUID格式。
+    * ipProtocol  协议类型或直接指定IP协议号，取值可为icmp，tcp，udp或IP协议号。
+    * ipRange  ipRange
+    * parentGroupId  相关联的安全组ID，UUID格式。
+    * toPort  终止端口，范围1-65535，且不小于from_port。 ip_protocol设置为icmp时，to_port表示code，范围是0-255，且如果from_port为-1，to_port为-1表示任意ICMP报文。
     *
     * @var string[]
     */
@@ -86,6 +107,13 @@ class NovaSecurityGroupCommonRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * fromPort  起始端口，范围1-65535，且不大于to_port。 ip_protocol设置为icmp时，from_port表示type，范围是0-255。
+    * group  group
+    * id  安全组规则ID，UUID格式。
+    * ipProtocol  协议类型或直接指定IP协议号，取值可为icmp，tcp，udp或IP协议号。
+    * ipRange  ipRange
+    * parentGroupId  相关联的安全组ID，UUID格式。
+    * toPort  终止端口，范围1-65535，且不小于from_port。 ip_protocol设置为icmp时，to_port表示code，范围是0-255，且如果from_port为-1，to_port为-1表示任意ICMP报文。
     *
     * @var string[]
     */
@@ -101,6 +129,13 @@ class NovaSecurityGroupCommonRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * fromPort  起始端口，范围1-65535，且不大于to_port。 ip_protocol设置为icmp时，from_port表示type，范围是0-255。
+    * group  group
+    * id  安全组规则ID，UUID格式。
+    * ipProtocol  协议类型或直接指定IP协议号，取值可为icmp，tcp，udp或IP协议号。
+    * ipRange  ipRange
+    * parentGroupId  相关联的安全组ID，UUID格式。
+    * toPort  终止端口，范围1-65535，且不小于from_port。 ip_protocol设置为icmp时，to_port表示code，范围是0-255，且如果from_port为-1，to_port为-1表示任意ICMP报文。
     *
     * @var string[]
     */
@@ -226,6 +261,7 @@ class NovaSecurityGroupCommonRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets fromPort
+    *  起始端口，范围1-65535，且不大于to_port。 ip_protocol设置为icmp时，from_port表示type，范围是0-255。
     *
     * @return int
     */
@@ -249,6 +285,7 @@ class NovaSecurityGroupCommonRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
+    *  group
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaSecurityGroupCommonGroup
     */
@@ -272,6 +309,7 @@ class NovaSecurityGroupCommonRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  安全组规则ID，UUID格式。
     *
     * @return string
     */
@@ -295,6 +333,7 @@ class NovaSecurityGroupCommonRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipProtocol
+    *  协议类型或直接指定IP协议号，取值可为icmp，tcp，udp或IP协议号。
     *
     * @return string
     */
@@ -318,6 +357,7 @@ class NovaSecurityGroupCommonRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipRange
+    *  ipRange
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaSecurityGroupCommonIpRange
     */
@@ -341,6 +381,7 @@ class NovaSecurityGroupCommonRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentGroupId
+    *  相关联的安全组ID，UUID格式。
     *
     * @return string
     */
@@ -364,6 +405,7 @@ class NovaSecurityGroupCommonRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets toPort
+    *  终止端口，范围1-65535，且不小于from_port。 ip_protocol设置为icmp时，to_port表示code，范围是0-255，且如果from_port为-1，to_port为-1表示任意ICMP报文。
     *
     * @return int
     */

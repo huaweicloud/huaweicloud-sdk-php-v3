@@ -21,6 +21,8 @@ class NeutronListFloatingIpsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * floatingips  floatingip对象列表
+    * floatingipsLinks  marker分页结构
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class NeutronListFloatingIpsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * floatingips  floatingip对象列表
+    * floatingipsLinks  marker分页结构
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class NeutronListFloatingIpsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * floatingips  floatingip对象列表
+    * floatingipsLinks  marker分页结构
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class NeutronListFloatingIpsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * floatingips  floatingip对象列表
+    * floatingipsLinks  marker分页结构
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class NeutronListFloatingIpsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * floatingips  floatingip对象列表
+    * floatingipsLinks  marker分页结构
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class NeutronListFloatingIpsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingips
+    *  floatingip对象列表
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\FloatingIpResp[]|null
     */
@@ -199,6 +210,7 @@ class NeutronListFloatingIpsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingipsLinks
+    *  marker分页结构
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\Pager[]|null
     */

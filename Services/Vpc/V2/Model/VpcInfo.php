@@ -20,6 +20,8 @@ class VpcInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * vpcId  对等连接其中一端vpc ID
+    * tenantId  对等连接其中一端vpc所属的租户ID 约束：跨租户VPC创建对等连接时必选
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class VpcInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * vpcId  对等连接其中一端vpc ID
+    * tenantId  对等连接其中一端vpc所属的租户ID 约束：跨租户VPC创建对等连接时必选
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class VpcInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * vpcId  对等连接其中一端vpc ID
+    * tenantId  对等连接其中一端vpc所属的租户ID 约束：跨租户VPC创建对等连接时必选
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class VpcInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * vpcId  对等连接其中一端vpc ID
+    * tenantId  对等连接其中一端vpc所属的租户ID 约束：跨租户VPC创建对等连接时必选
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class VpcInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * vpcId  对等连接其中一端vpc ID
+    * tenantId  对等连接其中一端vpc所属的租户ID 约束：跨租户VPC创建对等连接时必选
     *
     * @var string[]
     */
@@ -184,6 +194,7 @@ class VpcInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
+    *  对等连接其中一端vpc ID
     *
     * @return string
     */
@@ -207,6 +218,7 @@ class VpcInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  对等连接其中一端vpc所属的租户ID 约束：跨租户VPC创建对等连接时必选
     *
     * @return string|null
     */

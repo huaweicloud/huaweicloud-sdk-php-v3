@@ -20,6 +20,7 @@ class ListPermanentAccessKeysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * userId  待查询的IAM用户ID。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class ListPermanentAccessKeysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * userId  待查询的IAM用户ID。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class ListPermanentAccessKeysRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * userId  待查询的IAM用户ID。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class ListPermanentAccessKeysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * userId  待查询的IAM用户ID。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class ListPermanentAccessKeysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * userId  待查询的IAM用户ID。
     *
     * @var string[]
     */
@@ -169,6 +174,7 @@ class ListPermanentAccessKeysRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  待查询的IAM用户ID。
     *
     * @return string|null
     */
@@ -180,7 +186,7 @@ class ListPermanentAccessKeysRequest implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId userId
+    * @param string|null $userId 待查询的IAM用户ID。
     *
     * @return $this
     */

@@ -20,6 +20,16 @@ class Image implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * containerFormat  云硬盘导出镜像的容器类型。  目前支持ami、ari、aki、ovf、bare。默认是bare。
+    * diskFormat  云硬盘导出镜像的格式。  目前支持vhd、zvhd、zvhd2、raw、qcow2。默认是vhd。
+    * displayDescription  云硬盘描述信息。
+    * id  云硬盘ID。
+    * imageId  云硬盘导出镜像的ID。
+    * imageName  云硬盘导出镜像的名称
+    * size  云硬盘容量。
+    * status  云硬盘导出镜像后的状态，正常值为 “uploading”。
+    * updatedAt  云硬盘更新时间。  时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * volumeType  volumeType
     *
     * @var string[]
     */
@@ -38,6 +48,16 @@ class Image implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * containerFormat  云硬盘导出镜像的容器类型。  目前支持ami、ari、aki、ovf、bare。默认是bare。
+    * diskFormat  云硬盘导出镜像的格式。  目前支持vhd、zvhd、zvhd2、raw、qcow2。默认是vhd。
+    * displayDescription  云硬盘描述信息。
+    * id  云硬盘ID。
+    * imageId  云硬盘导出镜像的ID。
+    * imageName  云硬盘导出镜像的名称
+    * size  云硬盘容量。
+    * status  云硬盘导出镜像后的状态，正常值为 “uploading”。
+    * updatedAt  云硬盘更新时间。  时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * volumeType  volumeType
     *
     * @var string[]
     */
@@ -77,6 +97,16 @@ class Image implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * containerFormat  云硬盘导出镜像的容器类型。  目前支持ami、ari、aki、ovf、bare。默认是bare。
+    * diskFormat  云硬盘导出镜像的格式。  目前支持vhd、zvhd、zvhd2、raw、qcow2。默认是vhd。
+    * displayDescription  云硬盘描述信息。
+    * id  云硬盘ID。
+    * imageId  云硬盘导出镜像的ID。
+    * imageName  云硬盘导出镜像的名称
+    * size  云硬盘容量。
+    * status  云硬盘导出镜像后的状态，正常值为 “uploading”。
+    * updatedAt  云硬盘更新时间。  时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * volumeType  volumeType
     *
     * @var string[]
     */
@@ -95,6 +125,16 @@ class Image implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * containerFormat  云硬盘导出镜像的容器类型。  目前支持ami、ari、aki、ovf、bare。默认是bare。
+    * diskFormat  云硬盘导出镜像的格式。  目前支持vhd、zvhd、zvhd2、raw、qcow2。默认是vhd。
+    * displayDescription  云硬盘描述信息。
+    * id  云硬盘ID。
+    * imageId  云硬盘导出镜像的ID。
+    * imageName  云硬盘导出镜像的名称
+    * size  云硬盘容量。
+    * status  云硬盘导出镜像后的状态，正常值为 “uploading”。
+    * updatedAt  云硬盘更新时间。  时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * volumeType  volumeType
     *
     * @var string[]
     */
@@ -113,6 +153,16 @@ class Image implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * containerFormat  云硬盘导出镜像的容器类型。  目前支持ami、ari、aki、ovf、bare。默认是bare。
+    * diskFormat  云硬盘导出镜像的格式。  目前支持vhd、zvhd、zvhd2、raw、qcow2。默认是vhd。
+    * displayDescription  云硬盘描述信息。
+    * id  云硬盘ID。
+    * imageId  云硬盘导出镜像的ID。
+    * imageName  云硬盘导出镜像的名称
+    * size  云硬盘容量。
+    * status  云硬盘导出镜像后的状态，正常值为 “uploading”。
+    * updatedAt  云硬盘更新时间。  时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * volumeType  volumeType
     *
     * @var string[]
     */
@@ -241,6 +291,7 @@ class Image implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerFormat
+    *  云硬盘导出镜像的容器类型。  目前支持ami、ari、aki、ovf、bare。默认是bare。
     *
     * @return string|null
     */
@@ -264,6 +315,7 @@ class Image implements ModelInterface, ArrayAccess
 
     /**
     * Gets diskFormat
+    *  云硬盘导出镜像的格式。  目前支持vhd、zvhd、zvhd2、raw、qcow2。默认是vhd。
     *
     * @return string|null
     */
@@ -287,6 +339,7 @@ class Image implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayDescription
+    *  云硬盘描述信息。
     *
     * @return string|null
     */
@@ -310,6 +363,7 @@ class Image implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  云硬盘ID。
     *
     * @return string
     */
@@ -333,6 +387,7 @@ class Image implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageId
+    *  云硬盘导出镜像的ID。
     *
     * @return string
     */
@@ -356,6 +411,7 @@ class Image implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageName
+    *  云硬盘导出镜像的名称
     *
     * @return string
     */
@@ -379,6 +435,7 @@ class Image implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
+    *  云硬盘容量。
     *
     * @return int
     */
@@ -402,6 +459,7 @@ class Image implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  云硬盘导出镜像后的状态，正常值为 “uploading”。
     *
     * @return string
     */
@@ -425,6 +483,7 @@ class Image implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
+    *  云硬盘更新时间。  时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
     *
     * @return string
     */
@@ -448,6 +507,7 @@ class Image implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeType
+    *  volumeType
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\VolumeType|null
     */

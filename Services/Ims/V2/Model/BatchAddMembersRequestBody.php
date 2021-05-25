@@ -20,6 +20,8 @@ class BatchAddMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * images  镜像ID列表
+    * projects  项目ID列表
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class BatchAddMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * images  镜像ID列表
+    * projects  项目ID列表
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class BatchAddMembersRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * images  镜像ID列表
+    * projects  项目ID列表
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class BatchAddMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * images  镜像ID列表
+    * projects  项目ID列表
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class BatchAddMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * images  镜像ID列表
+    * projects  项目ID列表
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class BatchAddMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets images
+    *  镜像ID列表
     *
     * @return string[]
     */
@@ -204,6 +215,7 @@ class BatchAddMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets projects
+    *  项目ID列表
     *
     * @return string[]
     */

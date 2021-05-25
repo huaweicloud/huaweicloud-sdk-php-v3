@@ -20,6 +20,14 @@ class Endpoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * serviceId  终端节点所属服务的ID。
+    * regionId  终端节点所属区域的ID。
+    * links  links
+    * id  终端节点ID。
+    * interface  终端节点平面。
+    * region  终端节点所属区域。
+    * url  终端节点的地址。
+    * enabled  终端节点是否可用。
     *
     * @var string[]
     */
@@ -36,6 +44,14 @@ class Endpoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * serviceId  终端节点所属服务的ID。
+    * regionId  终端节点所属区域的ID。
+    * links  links
+    * id  终端节点ID。
+    * interface  终端节点平面。
+    * region  终端节点所属区域。
+    * url  终端节点的地址。
+    * enabled  终端节点是否可用。
     *
     * @var string[]
     */
@@ -73,6 +89,14 @@ class Endpoint implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * serviceId  终端节点所属服务的ID。
+    * regionId  终端节点所属区域的ID。
+    * links  links
+    * id  终端节点ID。
+    * interface  终端节点平面。
+    * region  终端节点所属区域。
+    * url  终端节点的地址。
+    * enabled  终端节点是否可用。
     *
     * @var string[]
     */
@@ -89,6 +113,14 @@ class Endpoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * serviceId  终端节点所属服务的ID。
+    * regionId  终端节点所属区域的ID。
+    * links  links
+    * id  终端节点ID。
+    * interface  终端节点平面。
+    * region  终端节点所属区域。
+    * url  终端节点的地址。
+    * enabled  终端节点是否可用。
     *
     * @var string[]
     */
@@ -105,6 +137,14 @@ class Endpoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * serviceId  终端节点所属服务的ID。
+    * regionId  终端节点所属区域的ID。
+    * links  links
+    * id  终端节点ID。
+    * interface  终端节点平面。
+    * region  终端节点所属区域。
+    * url  终端节点的地址。
+    * enabled  终端节点是否可用。
     *
     * @var string[]
     */
@@ -235,6 +275,7 @@ class Endpoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceId
+    *  终端节点所属服务的ID。
     *
     * @return string
     */
@@ -258,6 +299,7 @@ class Endpoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
+    *  终端节点所属区域的ID。
     *
     * @return string
     */
@@ -281,6 +323,7 @@ class Endpoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\Links
     */
@@ -304,6 +347,7 @@ class Endpoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  终端节点ID。
     *
     * @return string
     */
@@ -327,6 +371,7 @@ class Endpoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets interface
+    *  终端节点平面。
     *
     * @return string
     */
@@ -350,6 +395,7 @@ class Endpoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
+    *  终端节点所属区域。
     *
     * @return string
     */
@@ -373,6 +419,7 @@ class Endpoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
+    *  终端节点的地址。
     *
     * @return string
     */
@@ -396,6 +443,7 @@ class Endpoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  终端节点是否可用。
     *
     * @return bool
     */

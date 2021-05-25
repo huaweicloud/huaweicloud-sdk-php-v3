@@ -20,6 +20,7 @@ class KeystoneShowServiceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * serviceId  待查询的服务ID。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class KeystoneShowServiceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * serviceId  待查询的服务ID。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class KeystoneShowServiceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * serviceId  待查询的服务ID。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class KeystoneShowServiceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * serviceId  待查询的服务ID。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class KeystoneShowServiceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * serviceId  待查询的服务ID。
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class KeystoneShowServiceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceId
+    *  待查询的服务ID。
     *
     * @return string
     */
@@ -183,7 +189,7 @@ class KeystoneShowServiceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serviceId
     *
-    * @param string $serviceId serviceId
+    * @param string $serviceId 待查询的服务ID。
     *
     * @return $this
     */

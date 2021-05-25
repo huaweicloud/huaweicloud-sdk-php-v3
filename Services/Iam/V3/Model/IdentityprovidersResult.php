@@ -20,6 +20,11 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  身份提供商ID。
+    * description  身份提供商描述信息。
+    * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
+    * remoteIds  身份提供商的联邦用户ID列表。
+    * links  links
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  身份提供商ID。
+    * description  身份提供商描述信息。
+    * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
+    * remoteIds  身份提供商的联邦用户ID列表。
+    * links  links
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  身份提供商ID。
+    * description  身份提供商描述信息。
+    * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
+    * remoteIds  身份提供商的联邦用户ID列表。
+    * links  links
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  身份提供商ID。
+    * description  身份提供商描述信息。
+    * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
+    * remoteIds  身份提供商的联邦用户ID列表。
+    * links  links
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  身份提供商ID。
+    * description  身份提供商描述信息。
+    * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
+    * remoteIds  身份提供商的联邦用户ID列表。
+    * links  links
     *
     * @var string[]
     */
@@ -208,6 +233,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  身份提供商ID。
     *
     * @return string
     */
@@ -231,6 +257,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  身份提供商描述信息。
     *
     * @return string
     */
@@ -254,6 +281,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  身份提供商是否启用，true为启用，false为停用，默认为false。
     *
     * @return bool
     */
@@ -277,6 +305,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets remoteIds
+    *  身份提供商的联邦用户ID列表。
     *
     * @return string[]
     */
@@ -300,6 +329,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\IdentityprovidersLinks
     */

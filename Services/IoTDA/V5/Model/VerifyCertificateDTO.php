@@ -20,6 +20,7 @@ class VerifyCertificateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * verifyContent  验证证书的内容信息。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class VerifyCertificateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * verifyContent  验证证书的内容信息。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class VerifyCertificateDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * verifyContent  验证证书的内容信息。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class VerifyCertificateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * verifyContent  验证证书的内容信息。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class VerifyCertificateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * verifyContent  验证证书的内容信息。
     *
     * @var string[]
     */
@@ -178,6 +183,7 @@ class VerifyCertificateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets verifyContent
+    *  验证证书的内容信息。
     *
     * @return string
     */

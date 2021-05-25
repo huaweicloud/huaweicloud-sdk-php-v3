@@ -20,6 +20,23 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * marker  通过云硬盘ID进行分页查询。默认为查询第一页数据。
+    * name  磁盘名称。
+    * limit  返回结果个数限制。默认值为1000。
+    * sortKey  返回结果按该关键字排序，支持id，status，size，created_at等关键字，默认为“created_at”。
+    * offset  偏移量（偏移量为一个大于0小于磁盘总个数的整数，表示查询该偏移量后面的所有的磁盘）。
+    * sortDir  返回结果按照降序或升序排列，默认为“desc”。 降序：desc 升序：asc
+    * status  云硬盘状态，取值可参考：\"[云硬盘状态](https://support.huaweicloud.com/api-evs/evs_04_0040.html)\"。
+    * metadata  云硬盘元数据。
+    * availabilityZone  可用区信息。
+    * multiattach  是否为共享云硬盘。 true：表示为共享云硬盘。 false：表示为非共享云硬盘。
+    * serviceType  服务类型，仅支持EVS、DSS、DESS。
+    * dedicatedStorageId  专属存储池ID，可过滤出该专属存储池下的所有云硬盘，必须精确匹配。
+    * dedicatedStorageName  专属存储池的名字，可过滤出该专属存储池下的所有云硬盘，支持模糊匹配。
+    * volumeTypeId  云硬盘类型id。 通过\"[查询云硬盘类型列表](https://support.huaweicloud.com/api-evs/evs_04_3035.html)\"可以查到，即volume_types参数说明表格中的“id”
+    * id  云硬盘ID。
+    * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
+    * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -45,6 +62,23 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * marker  通过云硬盘ID进行分页查询。默认为查询第一页数据。
+    * name  磁盘名称。
+    * limit  返回结果个数限制。默认值为1000。
+    * sortKey  返回结果按该关键字排序，支持id，status，size，created_at等关键字，默认为“created_at”。
+    * offset  偏移量（偏移量为一个大于0小于磁盘总个数的整数，表示查询该偏移量后面的所有的磁盘）。
+    * sortDir  返回结果按照降序或升序排列，默认为“desc”。 降序：desc 升序：asc
+    * status  云硬盘状态，取值可参考：\"[云硬盘状态](https://support.huaweicloud.com/api-evs/evs_04_0040.html)\"。
+    * metadata  云硬盘元数据。
+    * availabilityZone  可用区信息。
+    * multiattach  是否为共享云硬盘。 true：表示为共享云硬盘。 false：表示为非共享云硬盘。
+    * serviceType  服务类型，仅支持EVS、DSS、DESS。
+    * dedicatedStorageId  专属存储池ID，可过滤出该专属存储池下的所有云硬盘，必须精确匹配。
+    * dedicatedStorageName  专属存储池的名字，可过滤出该专属存储池下的所有云硬盘，支持模糊匹配。
+    * volumeTypeId  云硬盘类型id。 通过\"[查询云硬盘类型列表](https://support.huaweicloud.com/api-evs/evs_04_3035.html)\"可以查到，即volume_types参数说明表格中的“id”
+    * id  云硬盘ID。
+    * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
+    * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -91,6 +125,23 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * marker  通过云硬盘ID进行分页查询。默认为查询第一页数据。
+    * name  磁盘名称。
+    * limit  返回结果个数限制。默认值为1000。
+    * sortKey  返回结果按该关键字排序，支持id，status，size，created_at等关键字，默认为“created_at”。
+    * offset  偏移量（偏移量为一个大于0小于磁盘总个数的整数，表示查询该偏移量后面的所有的磁盘）。
+    * sortDir  返回结果按照降序或升序排列，默认为“desc”。 降序：desc 升序：asc
+    * status  云硬盘状态，取值可参考：\"[云硬盘状态](https://support.huaweicloud.com/api-evs/evs_04_0040.html)\"。
+    * metadata  云硬盘元数据。
+    * availabilityZone  可用区信息。
+    * multiattach  是否为共享云硬盘。 true：表示为共享云硬盘。 false：表示为非共享云硬盘。
+    * serviceType  服务类型，仅支持EVS、DSS、DESS。
+    * dedicatedStorageId  专属存储池ID，可过滤出该专属存储池下的所有云硬盘，必须精确匹配。
+    * dedicatedStorageName  专属存储池的名字，可过滤出该专属存储池下的所有云硬盘，支持模糊匹配。
+    * volumeTypeId  云硬盘类型id。 通过\"[查询云硬盘类型列表](https://support.huaweicloud.com/api-evs/evs_04_3035.html)\"可以查到，即volume_types参数说明表格中的“id”
+    * id  云硬盘ID。
+    * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
+    * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -116,6 +167,23 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * marker  通过云硬盘ID进行分页查询。默认为查询第一页数据。
+    * name  磁盘名称。
+    * limit  返回结果个数限制。默认值为1000。
+    * sortKey  返回结果按该关键字排序，支持id，status，size，created_at等关键字，默认为“created_at”。
+    * offset  偏移量（偏移量为一个大于0小于磁盘总个数的整数，表示查询该偏移量后面的所有的磁盘）。
+    * sortDir  返回结果按照降序或升序排列，默认为“desc”。 降序：desc 升序：asc
+    * status  云硬盘状态，取值可参考：\"[云硬盘状态](https://support.huaweicloud.com/api-evs/evs_04_0040.html)\"。
+    * metadata  云硬盘元数据。
+    * availabilityZone  可用区信息。
+    * multiattach  是否为共享云硬盘。 true：表示为共享云硬盘。 false：表示为非共享云硬盘。
+    * serviceType  服务类型，仅支持EVS、DSS、DESS。
+    * dedicatedStorageId  专属存储池ID，可过滤出该专属存储池下的所有云硬盘，必须精确匹配。
+    * dedicatedStorageName  专属存储池的名字，可过滤出该专属存储池下的所有云硬盘，支持模糊匹配。
+    * volumeTypeId  云硬盘类型id。 通过\"[查询云硬盘类型列表](https://support.huaweicloud.com/api-evs/evs_04_3035.html)\"可以查到，即volume_types参数说明表格中的“id”
+    * id  云硬盘ID。
+    * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
+    * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -141,6 +209,23 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * marker  通过云硬盘ID进行分页查询。默认为查询第一页数据。
+    * name  磁盘名称。
+    * limit  返回结果个数限制。默认值为1000。
+    * sortKey  返回结果按该关键字排序，支持id，status，size，created_at等关键字，默认为“created_at”。
+    * offset  偏移量（偏移量为一个大于0小于磁盘总个数的整数，表示查询该偏移量后面的所有的磁盘）。
+    * sortDir  返回结果按照降序或升序排列，默认为“desc”。 降序：desc 升序：asc
+    * status  云硬盘状态，取值可参考：\"[云硬盘状态](https://support.huaweicloud.com/api-evs/evs_04_0040.html)\"。
+    * metadata  云硬盘元数据。
+    * availabilityZone  可用区信息。
+    * multiattach  是否为共享云硬盘。 true：表示为共享云硬盘。 false：表示为非共享云硬盘。
+    * serviceType  服务类型，仅支持EVS、DSS、DESS。
+    * dedicatedStorageId  专属存储池ID，可过滤出该专属存储池下的所有云硬盘，必须精确匹配。
+    * dedicatedStorageName  专属存储池的名字，可过滤出该专属存储池下的所有云硬盘，支持模糊匹配。
+    * volumeTypeId  云硬盘类型id。 通过\"[查询云硬盘类型列表](https://support.huaweicloud.com/api-evs/evs_04_3035.html)\"可以查到，即volume_types参数说明表格中的“id”
+    * id  云硬盘ID。
+    * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
+    * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -271,6 +356,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  通过云硬盘ID进行分页查询。默认为查询第一页数据。
     *
     * @return string|null
     */
@@ -282,7 +368,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 通过云硬盘ID进行分页查询。默认为查询第一页数据。
     *
     * @return $this
     */
@@ -294,6 +380,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  磁盘名称。
     *
     * @return string|null
     */
@@ -305,7 +392,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name 磁盘名称。
     *
     * @return $this
     */
@@ -317,6 +404,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  返回结果个数限制。默认值为1000。
     *
     * @return int|null
     */
@@ -328,7 +416,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 返回结果个数限制。默认值为1000。
     *
     * @return $this
     */
@@ -340,6 +428,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
+    *  返回结果按该关键字排序，支持id，status，size，created_at等关键字，默认为“created_at”。
     *
     * @return string|null
     */
@@ -351,7 +440,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey sortKey
+    * @param string|null $sortKey 返回结果按该关键字排序，支持id，status，size，created_at等关键字，默认为“created_at”。
     *
     * @return $this
     */
@@ -363,6 +452,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
+    *  偏移量（偏移量为一个大于0小于磁盘总个数的整数，表示查询该偏移量后面的所有的磁盘）。
     *
     * @return int|null
     */
@@ -374,7 +464,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset offset
+    * @param int|null $offset 偏移量（偏移量为一个大于0小于磁盘总个数的整数，表示查询该偏移量后面的所有的磁盘）。
     *
     * @return $this
     */
@@ -386,6 +476,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortDir
+    *  返回结果按照降序或升序排列，默认为“desc”。 降序：desc 升序：asc
     *
     * @return string|null
     */
@@ -397,7 +488,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortDir
     *
-    * @param string|null $sortDir sortDir
+    * @param string|null $sortDir 返回结果按照降序或升序排列，默认为“desc”。 降序：desc 升序：asc
     *
     * @return $this
     */
@@ -409,6 +500,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  云硬盘状态，取值可参考：\"[云硬盘状态](https://support.huaweicloud.com/api-evs/evs_04_0040.html)\"。
     *
     * @return string|null
     */
@@ -420,7 +512,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status 云硬盘状态，取值可参考：\"[云硬盘状态](https://support.huaweicloud.com/api-evs/evs_04_0040.html)\"。
     *
     * @return $this
     */
@@ -432,6 +524,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets metadata
+    *  云硬盘元数据。
     *
     * @return string|null
     */
@@ -443,7 +536,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets metadata
     *
-    * @param string|null $metadata metadata
+    * @param string|null $metadata 云硬盘元数据。
     *
     * @return $this
     */
@@ -455,6 +548,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
+    *  可用区信息。
     *
     * @return string|null
     */
@@ -466,7 +560,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string|null $availabilityZone availabilityZone
+    * @param string|null $availabilityZone 可用区信息。
     *
     * @return $this
     */
@@ -478,6 +572,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets multiattach
+    *  是否为共享云硬盘。 true：表示为共享云硬盘。 false：表示为非共享云硬盘。
     *
     * @return bool|null
     */
@@ -489,7 +584,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets multiattach
     *
-    * @param bool|null $multiattach multiattach
+    * @param bool|null $multiattach 是否为共享云硬盘。 true：表示为共享云硬盘。 false：表示为非共享云硬盘。
     *
     * @return $this
     */
@@ -501,6 +596,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
+    *  服务类型，仅支持EVS、DSS、DESS。
     *
     * @return string|null
     */
@@ -512,7 +608,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string|null $serviceType serviceType
+    * @param string|null $serviceType 服务类型，仅支持EVS、DSS、DESS。
     *
     * @return $this
     */
@@ -524,6 +620,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dedicatedStorageId
+    *  专属存储池ID，可过滤出该专属存储池下的所有云硬盘，必须精确匹配。
     *
     * @return string|null
     */
@@ -535,7 +632,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dedicatedStorageId
     *
-    * @param string|null $dedicatedStorageId dedicatedStorageId
+    * @param string|null $dedicatedStorageId 专属存储池ID，可过滤出该专属存储池下的所有云硬盘，必须精确匹配。
     *
     * @return $this
     */
@@ -547,6 +644,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dedicatedStorageName
+    *  专属存储池的名字，可过滤出该专属存储池下的所有云硬盘，支持模糊匹配。
     *
     * @return string|null
     */
@@ -558,7 +656,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dedicatedStorageName
     *
-    * @param string|null $dedicatedStorageName dedicatedStorageName
+    * @param string|null $dedicatedStorageName 专属存储池的名字，可过滤出该专属存储池下的所有云硬盘，支持模糊匹配。
     *
     * @return $this
     */
@@ -570,6 +668,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeTypeId
+    *  云硬盘类型id。 通过\"[查询云硬盘类型列表](https://support.huaweicloud.com/api-evs/evs_04_3035.html)\"可以查到，即volume_types参数说明表格中的“id”
     *
     * @return string|null
     */
@@ -581,7 +680,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets volumeTypeId
     *
-    * @param string|null $volumeTypeId volumeTypeId
+    * @param string|null $volumeTypeId 云硬盘类型id。 通过\"[查询云硬盘类型列表](https://support.huaweicloud.com/api-evs/evs_04_3035.html)\"可以查到，即volume_types参数说明表格中的“id”
     *
     * @return $this
     */
@@ -593,6 +692,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  云硬盘ID。
     *
     * @return string|null
     */
@@ -604,7 +704,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id 云硬盘ID。
     *
     * @return $this
     */
@@ -616,6 +716,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ids
+    *  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     *
     * @return string|null
     */
@@ -627,7 +728,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ids
     *
-    * @param string|null $ids ids
+    * @param string|null $ids 云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     *
     * @return $this
     */
@@ -639,6 +740,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @return string|null
     */
@@ -650,7 +752,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId enterpriseProjectId
+    * @param string|null $enterpriseProjectId 指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @return $this
     */

@@ -20,6 +20,9 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * requestVpcInfo  requestVpcInfo
+    * acceptVpcInfo  acceptVpcInfo
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * requestVpcInfo  requestVpcInfo
+    * acceptVpcInfo  acceptVpcInfo
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * requestVpcInfo  requestVpcInfo
+    * acceptVpcInfo  acceptVpcInfo
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * requestVpcInfo  requestVpcInfo
+    * acceptVpcInfo  acceptVpcInfo
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * requestVpcInfo  requestVpcInfo
+    * acceptVpcInfo  acceptVpcInfo
     *
     * @var string[]
     */
@@ -196,6 +211,7 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：对等连接名称 取值范围：支持1~64个字符
     *
     * @return string
     */
@@ -219,6 +235,7 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestVpcInfo
+    *  requestVpcInfo
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\VpcInfo
     */
@@ -242,6 +259,7 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets acceptVpcInfo
+    *  acceptVpcInfo
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\VpcInfo
     */

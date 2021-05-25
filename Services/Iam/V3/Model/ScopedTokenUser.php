@@ -20,6 +20,11 @@ class ScopedTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domain  domain
+    * osFederation  osFederation
+    * id  用户ID。
+    * name  用户名。
+    * passwordExpiresAt  密码过期时间（UTC时间），“”表示密码不过期。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class ScopedTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domain  domain
+    * osFederation  osFederation
+    * id  用户ID。
+    * name  用户名。
+    * passwordExpiresAt  密码过期时间（UTC时间），“”表示密码不过期。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class ScopedTokenUser implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domain  domain
+    * osFederation  osFederation
+    * id  用户ID。
+    * name  用户名。
+    * passwordExpiresAt  密码过期时间（UTC时间），“”表示密码不过期。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class ScopedTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domain  domain
+    * osFederation  osFederation
+    * id  用户ID。
+    * name  用户名。
+    * passwordExpiresAt  密码过期时间（UTC时间），“”表示密码不过期。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class ScopedTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domain  domain
+    * osFederation  osFederation
+    * id  用户ID。
+    * name  用户名。
+    * passwordExpiresAt  密码过期时间（UTC时间），“”表示密码不过期。
     *
     * @var string[]
     */
@@ -208,6 +233,7 @@ class ScopedTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
+    *  domain
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\TokenDomainResult
     */
@@ -231,6 +257,7 @@ class ScopedTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets osFederation
+    *  osFederation
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\TokenUserOsfederation
     */
@@ -254,6 +281,7 @@ class ScopedTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  用户ID。
     *
     * @return string
     */
@@ -277,6 +305,7 @@ class ScopedTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  用户名。
     *
     * @return string
     */
@@ -300,6 +329,7 @@ class ScopedTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets passwordExpiresAt
+    *  密码过期时间（UTC时间），“”表示密码不过期。
     *
     * @return string
     */

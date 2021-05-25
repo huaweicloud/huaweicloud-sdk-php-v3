@@ -20,6 +20,19 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * changesSince  云服务器上次更新状态的时间戳信息。时间戳为UTC格式。
+    * flavor  云服务器规格ID。
+    * image  镜像ID  在使用image作为条件过滤时，不能同时支持其他过滤条件和分页条件。如果同时指定image及其他条件，则以image条件为准；当条件不含image时，接口功能不受限制。
+    * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
+    * limit  查询返回云服务器数量限制。
+    * marker  从marker指定的云服务器ID的下一条数据开始查询。
+    * name  云服务器名称。
+    * notTags  查询tag字段中不包含该值的云服务器，值为标签的Key。  > 说明： >  > 系统近期对标签功能进行了升级。如果之前添加的Tag为“Key.Value”的形式，则查询的时候需要使用“Key”来查询。 >  > 例如：之前添加的tag为“a.b”,则升级后，查询时需使用“not-tags=a”。
+    * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
+    * sortKey  查询结果按弹性云服务器属性排序，默认排序顺序为created_at逆序。
+    * status  云服务器状态。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  直到2.37微版本，非上面范围的status字段将返回空列表，2.38之后的微版本，将返回400错误。
+    * tags  查询tag字段中包含该值的云服务器。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -41,6 +54,19 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * changesSince  云服务器上次更新状态的时间戳信息。时间戳为UTC格式。
+    * flavor  云服务器规格ID。
+    * image  镜像ID  在使用image作为条件过滤时，不能同时支持其他过滤条件和分页条件。如果同时指定image及其他条件，则以image条件为准；当条件不含image时，接口功能不受限制。
+    * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
+    * limit  查询返回云服务器数量限制。
+    * marker  从marker指定的云服务器ID的下一条数据开始查询。
+    * name  云服务器名称。
+    * notTags  查询tag字段中不包含该值的云服务器，值为标签的Key。  > 说明： >  > 系统近期对标签功能进行了升级。如果之前添加的Tag为“Key.Value”的形式，则查询的时候需要使用“Key”来查询。 >  > 例如：之前添加的tag为“a.b”,则升级后，查询时需使用“not-tags=a”。
+    * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
+    * sortKey  查询结果按弹性云服务器属性排序，默认排序顺序为created_at逆序。
+    * status  云服务器状态。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  直到2.37微版本，非上面范围的status字段将返回空列表，2.38之后的微版本，将返回400错误。
+    * tags  查询tag字段中包含该值的云服务器。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -83,6 +109,19 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * changesSince  云服务器上次更新状态的时间戳信息。时间戳为UTC格式。
+    * flavor  云服务器规格ID。
+    * image  镜像ID  在使用image作为条件过滤时，不能同时支持其他过滤条件和分页条件。如果同时指定image及其他条件，则以image条件为准；当条件不含image时，接口功能不受限制。
+    * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
+    * limit  查询返回云服务器数量限制。
+    * marker  从marker指定的云服务器ID的下一条数据开始查询。
+    * name  云服务器名称。
+    * notTags  查询tag字段中不包含该值的云服务器，值为标签的Key。  > 说明： >  > 系统近期对标签功能进行了升级。如果之前添加的Tag为“Key.Value”的形式，则查询的时候需要使用“Key”来查询。 >  > 例如：之前添加的tag为“a.b”,则升级后，查询时需使用“not-tags=a”。
+    * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
+    * sortKey  查询结果按弹性云服务器属性排序，默认排序顺序为created_at逆序。
+    * status  云服务器状态。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  直到2.37微版本，非上面范围的status字段将返回空列表，2.38之后的微版本，将返回400错误。
+    * tags  查询tag字段中包含该值的云服务器。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -104,6 +143,19 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * changesSince  云服务器上次更新状态的时间戳信息。时间戳为UTC格式。
+    * flavor  云服务器规格ID。
+    * image  镜像ID  在使用image作为条件过滤时，不能同时支持其他过滤条件和分页条件。如果同时指定image及其他条件，则以image条件为准；当条件不含image时，接口功能不受限制。
+    * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
+    * limit  查询返回云服务器数量限制。
+    * marker  从marker指定的云服务器ID的下一条数据开始查询。
+    * name  云服务器名称。
+    * notTags  查询tag字段中不包含该值的云服务器，值为标签的Key。  > 说明： >  > 系统近期对标签功能进行了升级。如果之前添加的Tag为“Key.Value”的形式，则查询的时候需要使用“Key”来查询。 >  > 例如：之前添加的tag为“a.b”,则升级后，查询时需使用“not-tags=a”。
+    * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
+    * sortKey  查询结果按弹性云服务器属性排序，默认排序顺序为created_at逆序。
+    * status  云服务器状态。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  直到2.37微版本，非上面范围的status字段将返回空列表，2.38之后的微版本，将返回400错误。
+    * tags  查询tag字段中包含该值的云服务器。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -125,6 +177,19 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * changesSince  云服务器上次更新状态的时间戳信息。时间戳为UTC格式。
+    * flavor  云服务器规格ID。
+    * image  镜像ID  在使用image作为条件过滤时，不能同时支持其他过滤条件和分页条件。如果同时指定image及其他条件，则以image条件为准；当条件不含image时，接口功能不受限制。
+    * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
+    * limit  查询返回云服务器数量限制。
+    * marker  从marker指定的云服务器ID的下一条数据开始查询。
+    * name  云服务器名称。
+    * notTags  查询tag字段中不包含该值的云服务器，值为标签的Key。  > 说明： >  > 系统近期对标签功能进行了升级。如果之前添加的Tag为“Key.Value”的形式，则查询的时候需要使用“Key”来查询。 >  > 例如：之前添加的tag为“a.b”,则升级后，查询时需使用“not-tags=a”。
+    * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
+    * sortKey  查询结果按弹性云服务器属性排序，默认排序顺序为created_at逆序。
+    * status  云服务器状态。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  直到2.37微版本，非上面范围的status字段将返回空列表，2.38之后的微版本，将返回400错误。
+    * tags  查询tag字段中包含该值的云服务器。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -335,6 +400,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets changesSince
+    *  云服务器上次更新状态的时间戳信息。时间戳为UTC格式。
     *
     * @return string|null
     */
@@ -346,7 +412,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets changesSince
     *
-    * @param string|null $changesSince changesSince
+    * @param string|null $changesSince 云服务器上次更新状态的时间戳信息。时间戳为UTC格式。
     *
     * @return $this
     */
@@ -358,6 +424,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavor
+    *  云服务器规格ID。
     *
     * @return string|null
     */
@@ -369,7 +436,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets flavor
     *
-    * @param string|null $flavor flavor
+    * @param string|null $flavor 云服务器规格ID。
     *
     * @return $this
     */
@@ -381,6 +448,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets image
+    *  镜像ID  在使用image作为条件过滤时，不能同时支持其他过滤条件和分页条件。如果同时指定image及其他条件，则以image条件为准；当条件不含image时，接口功能不受限制。
     *
     * @return string|null
     */
@@ -392,7 +460,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets image
     *
-    * @param string|null $image image
+    * @param string|null $image 镜像ID  在使用image作为条件过滤时，不能同时支持其他过滤条件和分页条件。如果同时指定image及其他条件，则以image条件为准；当条件不含image时，接口功能不受限制。
     *
     * @return $this
     */
@@ -404,6 +472,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ip
+    *  IPv4地址过滤结果，匹配规则为模糊匹配。
     *
     * @return string|null
     */
@@ -415,7 +484,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ip
     *
-    * @param string|null $ip ip
+    * @param string|null $ip IPv4地址过滤结果，匹配规则为模糊匹配。
     *
     * @return $this
     */
@@ -427,6 +496,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  查询返回云服务器数量限制。
     *
     * @return int|null
     */
@@ -438,7 +508,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 查询返回云服务器数量限制。
     *
     * @return $this
     */
@@ -450,6 +520,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  从marker指定的云服务器ID的下一条数据开始查询。
     *
     * @return string|null
     */
@@ -461,7 +532,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 从marker指定的云服务器ID的下一条数据开始查询。
     *
     * @return $this
     */
@@ -473,6 +544,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云服务器名称。
     *
     * @return string|null
     */
@@ -484,7 +556,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name 云服务器名称。
     *
     * @return $this
     */
@@ -496,6 +568,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets notTags
+    *  查询tag字段中不包含该值的云服务器，值为标签的Key。  > 说明： >  > 系统近期对标签功能进行了升级。如果之前添加的Tag为“Key.Value”的形式，则查询的时候需要使用“Key”来查询。 >  > 例如：之前添加的tag为“a.b”,则升级后，查询时需使用“not-tags=a”。
     *
     * @return string|null
     */
@@ -507,7 +580,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets notTags
     *
-    * @param string|null $notTags notTags
+    * @param string|null $notTags 查询tag字段中不包含该值的云服务器，值为标签的Key。  > 说明： >  > 系统近期对标签功能进行了升级。如果之前添加的Tag为“Key.Value”的形式，则查询的时候需要使用“Key”来查询。 >  > 例如：之前添加的tag为“a.b”,则升级后，查询时需使用“not-tags=a”。
     *
     * @return $this
     */
@@ -519,6 +592,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets reservationId
+    *  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
     *
     * @return string|null
     */
@@ -530,7 +604,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets reservationId
     *
-    * @param string|null $reservationId reservationId
+    * @param string|null $reservationId 批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
     *
     * @return $this
     */
@@ -542,6 +616,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
+    *  查询结果按弹性云服务器属性排序，默认排序顺序为created_at逆序。
     *
     * @return string|null
     */
@@ -553,7 +628,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey sortKey
+    * @param string|null $sortKey 查询结果按弹性云服务器属性排序，默认排序顺序为created_at逆序。
     *
     * @return $this
     */
@@ -565,6 +640,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  云服务器状态。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  直到2.37微版本，非上面范围的status字段将返回空列表，2.38之后的微版本，将返回400错误。
     *
     * @return string|null
     */
@@ -576,7 +652,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status 云服务器状态。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  直到2.37微版本，非上面范围的status字段将返回空列表，2.38之后的微版本，将返回400错误。
     *
     * @return $this
     */
@@ -588,6 +664,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  查询tag字段中包含该值的云服务器。
     *
     * @return string|null
     */
@@ -599,7 +676,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string|null $tags tags
+    * @param string|null $tags 查询tag字段中包含该值的云服务器。
     *
     * @return $this
     */
@@ -611,6 +688,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets openStackApiVersion
+    *  微版本头
     *
     * @return string|null
     */
@@ -622,7 +700,7 @@ class NovaListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets openStackApiVersion
     *
-    * @param string|null $openStackApiVersion openStackApiVersion
+    * @param string|null $openStackApiVersion 微版本头
     *
     * @return $this
     */

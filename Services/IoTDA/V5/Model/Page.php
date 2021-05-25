@@ -20,6 +20,8 @@ class Page implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class Page implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class Page implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class Page implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class Page implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class Page implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
+    *  满足查询条件的记录总数。
     *
     * @return int|null
     */
@@ -198,6 +209,7 @@ class Page implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @return string|null
     */

@@ -21,6 +21,7 @@ class ListPropertiesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class ListPropertiesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class ListPropertiesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class ListPropertiesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class ListPropertiesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * response  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class ListPropertiesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets response
+    *  设备上报的属性执行结果。Json格式，具体格式需要应用和设备约定。
     *
     * @return object|null
     */

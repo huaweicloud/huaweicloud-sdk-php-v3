@@ -20,6 +20,8 @@ class UpdateDomainLoginPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * body  body
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class UpdateDomainLoginPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * body  body
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class UpdateDomainLoginPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * body  body
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class UpdateDomainLoginPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * body  body
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class UpdateDomainLoginPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * body  body
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class UpdateDomainLoginPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string
     */
@@ -189,7 +200,7 @@ class UpdateDomainLoginPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string $domainId domainId
+    * @param string $domainId 账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */
@@ -201,6 +212,7 @@ class UpdateDomainLoginPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainLoginPolicyRequestBody|null
     */

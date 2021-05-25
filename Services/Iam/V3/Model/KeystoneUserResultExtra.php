@@ -20,6 +20,9 @@ class KeystoneUserResultExtra implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * description  IAM用户描述信息。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class KeystoneUserResultExtra implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * description  IAM用户描述信息。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class KeystoneUserResultExtra implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * description  IAM用户描述信息。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class KeystoneUserResultExtra implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * description  IAM用户描述信息。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class KeystoneUserResultExtra implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * description  IAM用户描述信息。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * lastProjectId  IAM用户退出系统前，在控制台最后访问的项目ID。
     *
     * @var string[]
     */
@@ -181,6 +196,7 @@ class KeystoneUserResultExtra implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  IAM用户描述信息。
     *
     * @return string|null
     */
@@ -204,6 +220,7 @@ class KeystoneUserResultExtra implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdStatus
+    *  IAM用户密码状态。true：需要修改密码，false：正常。
     *
     * @return bool|null
     */
@@ -227,6 +244,7 @@ class KeystoneUserResultExtra implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastProjectId
+    *  IAM用户退出系统前，在控制台最后访问的项目ID。
     *
     * @return string|null
     */

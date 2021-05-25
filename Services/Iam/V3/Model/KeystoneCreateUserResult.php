@@ -20,6 +20,13 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domainId  IAM用户所属账号ID。
+    * name  IAM用户名。
+    * description  IAM用户描述信息。
+    * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
+    * links  links
+    * id  IAM用户ID。
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     *
     * @var string[]
     */
@@ -35,6 +42,13 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domainId  IAM用户所属账号ID。
+    * name  IAM用户名。
+    * description  IAM用户描述信息。
+    * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
+    * links  links
+    * id  IAM用户ID。
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     *
     * @var string[]
     */
@@ -71,6 +85,13 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domainId  IAM用户所属账号ID。
+    * name  IAM用户名。
+    * description  IAM用户描述信息。
+    * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
+    * links  links
+    * id  IAM用户ID。
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     *
     * @var string[]
     */
@@ -86,6 +107,13 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domainId  IAM用户所属账号ID。
+    * name  IAM用户名。
+    * description  IAM用户描述信息。
+    * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
+    * links  links
+    * id  IAM用户ID。
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     *
     * @var string[]
     */
@@ -101,6 +129,13 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domainId  IAM用户所属账号ID。
+    * name  IAM用户名。
+    * description  IAM用户描述信息。
+    * passwordExpiresAt  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
+    * links  links
+    * id  IAM用户ID。
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     *
     * @var string[]
     */
@@ -223,6 +258,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  IAM用户所属账号ID。
     *
     * @return string
     */
@@ -246,6 +282,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  IAM用户名。
     *
     * @return string
     */
@@ -269,6 +306,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  IAM用户描述信息。
     *
     * @return string|null
     */
@@ -292,6 +330,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets passwordExpiresAt
+    *  IAM用户密码过期时间（UTC时间），“null”表示密码不过期。
     *
     * @return string
     */
@@ -315,6 +354,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\LinksSelf
     */
@@ -338,6 +378,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  IAM用户ID。
     *
     * @return string
     */
@@ -361,6 +402,7 @@ class KeystoneCreateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     *
     * @return bool
     */

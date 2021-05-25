@@ -21,6 +21,8 @@ class ListDeviceGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * deviceGroups  设备组信息列表。
+    * page  page
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class ListDeviceGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * deviceGroups  设备组信息列表。
+    * page  page
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class ListDeviceGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * deviceGroups  设备组信息列表。
+    * page  page
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class ListDeviceGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * deviceGroups  设备组信息列表。
+    * page  page
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class ListDeviceGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * deviceGroups  设备组信息列表。
+    * page  page
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class ListDeviceGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceGroups
+    *  设备组信息列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceGroupResponseDTO[]|null
     */
@@ -199,6 +210,7 @@ class ListDeviceGroupsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets page
+    *  page
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\Page|null
     */

@@ -20,6 +20,10 @@ class SimplifyDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * deviceName  设备名称。
+    * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class SimplifyDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * deviceName  设备名称。
+    * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class SimplifyDevice implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * deviceName  设备名称。
+    * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class SimplifyDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * deviceName  设备名称。
+    * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class SimplifyDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * deviceName  设备名称。
+    * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     *
     * @var string[]
     */
@@ -187,6 +207,7 @@ class SimplifyDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceId
+    *  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
     *
     * @return string|null
     */
@@ -210,6 +231,7 @@ class SimplifyDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeId
+    *  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
     *
     * @return string|null
     */
@@ -233,6 +255,7 @@ class SimplifyDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceName
+    *  设备名称。
     *
     * @return string|null
     */
@@ -256,6 +279,7 @@ class SimplifyDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
+    *  设备关联的产品ID，用于唯一标识一个产品模型。
     *
     * @return string|null
     */

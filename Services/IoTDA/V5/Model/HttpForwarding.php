@@ -20,6 +20,10 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * url  用于接收满足规则条件数据的http服务器地址。
+    * certId  证书id，通过证书上传接口上传证书获取Id
+    * cnName  当sni_enable为true时，此字段需要填写，当sni_enbale为false时，此字段默认为*
+    * sniEnable  需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * url  用于接收满足规则条件数据的http服务器地址。
+    * certId  证书id，通过证书上传接口上传证书获取Id
+    * cnName  当sni_enable为true时，此字段需要填写，当sni_enbale为false时，此字段默认为*
+    * sniEnable  需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class HttpForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * url  用于接收满足规则条件数据的http服务器地址。
+    * certId  证书id，通过证书上传接口上传证书获取Id
+    * cnName  当sni_enable为true时，此字段需要填写，当sni_enbale为false时，此字段默认为*
+    * sniEnable  需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * url  用于接收满足规则条件数据的http服务器地址。
+    * certId  证书id，通过证书上传接口上传证书获取Id
+    * cnName  当sni_enable为true时，此字段需要填写，当sni_enbale为false时，此字段默认为*
+    * sniEnable  需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * url  用于接收满足规则条件数据的http服务器地址。
+    * certId  证书id，通过证书上传接口上传证书获取Id
+    * cnName  当sni_enable为true时，此字段需要填写，当sni_enbale为false时，此字段默认为*
+    * sniEnable  需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能
     *
     * @var string[]
     */
@@ -208,6 +228,7 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
+    *  用于接收满足规则条件数据的http服务器地址。
     *
     * @return string
     */
@@ -231,6 +252,7 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets certId
+    *  证书id，通过证书上传接口上传证书获取Id
     *
     * @return string|null
     */
@@ -254,6 +276,7 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets cnName
+    *  当sni_enable为true时，此字段需要填写，当sni_enbale为false时，此字段默认为*
     *
     * @return string|null
     */
@@ -277,6 +300,7 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets sniEnable
+    *  需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能
     *
     * @return bool|null
     */

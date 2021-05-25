@@ -21,6 +21,8 @@ class KeystoneCreateUserTokenByPasswordResponse implements ModelInterface, Array
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * token  token
+    * xSubjectToken  xSubjectToken
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class KeystoneCreateUserTokenByPasswordResponse implements ModelInterface, Array
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * token  token
+    * xSubjectToken  xSubjectToken
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class KeystoneCreateUserTokenByPasswordResponse implements ModelInterface, Array
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * token  token
+    * xSubjectToken  xSubjectToken
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class KeystoneCreateUserTokenByPasswordResponse implements ModelInterface, Array
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * token  token
+    * xSubjectToken  xSubjectToken
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class KeystoneCreateUserTokenByPasswordResponse implements ModelInterface, Array
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * token  token
+    * xSubjectToken  xSubjectToken
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class KeystoneCreateUserTokenByPasswordResponse implements ModelInterface, Array
 
     /**
     * Gets token
+    *  token
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\TokenResult|null
     */
@@ -199,6 +210,7 @@ class KeystoneCreateUserTokenByPasswordResponse implements ModelInterface, Array
 
     /**
     * Gets xSubjectToken
+    *  xSubjectToken
     *
     * @return string|null
     */

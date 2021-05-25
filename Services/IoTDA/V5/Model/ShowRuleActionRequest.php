@@ -20,6 +20,8 @@ class ShowRuleActionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * actionId  规则动作ID。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ShowRuleActionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * actionId  规则动作ID。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ShowRuleActionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * actionId  规则动作ID。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ShowRuleActionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * actionId  规则动作ID。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ShowRuleActionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * actionId  规则动作ID。
     *
     * @var string[]
     */
@@ -184,6 +194,7 @@ class ShowRuleActionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
+    *  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return string|null
     */
@@ -195,7 +206,7 @@ class ShowRuleActionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId instanceId
+    * @param string|null $instanceId 实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return $this
     */
@@ -207,6 +218,7 @@ class ShowRuleActionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionId
+    *  规则动作ID。
     *
     * @return string
     */
@@ -218,7 +230,7 @@ class ShowRuleActionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets actionId
     *
-    * @param string $actionId actionId
+    * @param string $actionId 规则动作ID。
     *
     * @return $this
     */

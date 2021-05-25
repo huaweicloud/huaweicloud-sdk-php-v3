@@ -20,6 +20,8 @@ class KeystoneShowSecurityComplianceByOptionRequest implements ModelInterface, A
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * option  查询条件。该字段内容为：password_regex或password_regex_description。    password_regex：密码强度策略的正则表达式；password_regex_description：密码强度策略的描述。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class KeystoneShowSecurityComplianceByOptionRequest implements ModelInterface, A
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * option  查询条件。该字段内容为：password_regex或password_regex_description。    password_regex：密码强度策略的正则表达式；password_regex_description：密码强度策略的描述。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class KeystoneShowSecurityComplianceByOptionRequest implements ModelInterface, A
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * option  查询条件。该字段内容为：password_regex或password_regex_description。    password_regex：密码强度策略的正则表达式；password_regex_description：密码强度策略的描述。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class KeystoneShowSecurityComplianceByOptionRequest implements ModelInterface, A
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * option  查询条件。该字段内容为：password_regex或password_regex_description。    password_regex：密码强度策略的正则表达式；password_regex_description：密码强度策略的描述。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class KeystoneShowSecurityComplianceByOptionRequest implements ModelInterface, A
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * option  查询条件。该字段内容为：password_regex或password_regex_description。    password_regex：密码强度策略的正则表达式；password_regex_description：密码强度策略的描述。
     *
     * @var string[]
     */
@@ -204,6 +214,7 @@ class KeystoneShowSecurityComplianceByOptionRequest implements ModelInterface, A
 
     /**
     * Gets domainId
+    *  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string
     */
@@ -215,7 +226,7 @@ class KeystoneShowSecurityComplianceByOptionRequest implements ModelInterface, A
     /**
     * Sets domainId
     *
-    * @param string $domainId domainId
+    * @param string $domainId 待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */
@@ -227,6 +238,7 @@ class KeystoneShowSecurityComplianceByOptionRequest implements ModelInterface, A
 
     /**
     * Gets option
+    *  查询条件。该字段内容为：password_regex或password_regex_description。    password_regex：密码强度策略的正则表达式；password_regex_description：密码强度策略的描述。
     *
     * @return string
     */
@@ -238,7 +250,7 @@ class KeystoneShowSecurityComplianceByOptionRequest implements ModelInterface, A
     /**
     * Sets option
     *
-    * @param string $option option
+    * @param string $option 查询条件。该字段内容为：password_regex或password_regex_description。    password_regex：密码强度策略的正则表达式；password_regex_description：密码强度策略的描述。
     *
     * @return $this
     */

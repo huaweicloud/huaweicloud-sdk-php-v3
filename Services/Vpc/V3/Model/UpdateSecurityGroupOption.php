@@ -20,6 +20,8 @@ class UpdateSecurityGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：安全组描述 取值范围：0-255个字符，不能包含“<”和“>”
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class UpdateSecurityGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：安全组描述 取值范围：0-255个字符，不能包含“<”和“>”
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class UpdateSecurityGroupOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：安全组描述 取值范围：0-255个字符，不能包含“<”和“>”
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class UpdateSecurityGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：安全组描述 取值范围：0-255个字符，不能包含“<”和“>”
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class UpdateSecurityGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * description  功能说明：安全组描述 取值范围：0-255个字符，不能包含“<”和“>”
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class UpdateSecurityGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string|null
     */
@@ -198,6 +209,7 @@ class UpdateSecurityGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：安全组描述 取值范围：0-255个字符，不能包含“<”和“>”
     *
     * @return string|null
     */

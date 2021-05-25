@@ -20,6 +20,10 @@ class NovaNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * addr  IP地址。
+    * version  IP地址类型，值为4或6。  4：IP地址类型是IPv4 6：IP地址类型是IPv6
+    * osExtIpsMaCmacAddr  扩展属性，MAC地址。
+    * osExtIpStype  扩展属性，分配IP地址方式。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class NovaNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * addr  IP地址。
+    * version  IP地址类型，值为4或6。  4：IP地址类型是IPv4 6：IP地址类型是IPv6
+    * osExtIpsMaCmacAddr  扩展属性，MAC地址。
+    * osExtIpStype  扩展属性，分配IP地址方式。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class NovaNetwork implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * addr  IP地址。
+    * version  IP地址类型，值为4或6。  4：IP地址类型是IPv4 6：IP地址类型是IPv6
+    * osExtIpsMaCmacAddr  扩展属性，MAC地址。
+    * osExtIpStype  扩展属性，分配IP地址方式。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class NovaNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * addr  IP地址。
+    * version  IP地址类型，值为4或6。  4：IP地址类型是IPv4 6：IP地址类型是IPv6
+    * osExtIpsMaCmacAddr  扩展属性，MAC地址。
+    * osExtIpStype  扩展属性，分配IP地址方式。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class NovaNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * addr  IP地址。
+    * version  IP地址类型，值为4或6。  4：IP地址类型是IPv4 6：IP地址类型是IPv6
+    * osExtIpsMaCmacAddr  扩展属性，MAC地址。
+    * osExtIpStype  扩展属性，分配IP地址方式。
     *
     * @var string[]
     */
@@ -199,6 +219,7 @@ class NovaNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Gets addr
+    *  IP地址。
     *
     * @return string
     */
@@ -222,6 +243,7 @@ class NovaNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
+    *  IP地址类型，值为4或6。  4：IP地址类型是IPv4 6：IP地址类型是IPv6
     *
     * @return int
     */
@@ -245,6 +267,7 @@ class NovaNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtIpsMaCmacAddr
+    *  扩展属性，MAC地址。
     *
     * @return string
     */
@@ -268,6 +291,7 @@ class NovaNetwork implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtIpStype
+    *  扩展属性，分配IP地址方式。
     *
     * @return string
     */

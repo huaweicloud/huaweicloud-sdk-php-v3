@@ -20,6 +20,8 @@ class DeviceShadowProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * properties  设备影子的属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构。
+    * eventTime  事件操作时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class DeviceShadowProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * properties  设备影子的属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构。
+    * eventTime  事件操作时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class DeviceShadowProperties implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * properties  设备影子的属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构。
+    * eventTime  事件操作时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class DeviceShadowProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * properties  设备影子的属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构。
+    * eventTime  事件操作时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class DeviceShadowProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * properties  设备影子的属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构。
+    * eventTime  事件操作时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class DeviceShadowProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets properties
+    *  设备影子的属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构。
     *
     * @return object|null
     */
@@ -201,6 +212,7 @@ class DeviceShadowProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventTime
+    *  事件操作时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @return string|null
     */

@@ -20,6 +20,7 @@ class KeystoneShowEndpointRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * endpointId  待查询的终端节点ID。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class KeystoneShowEndpointRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * endpointId  待查询的终端节点ID。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class KeystoneShowEndpointRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * endpointId  待查询的终端节点ID。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class KeystoneShowEndpointRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * endpointId  待查询的终端节点ID。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class KeystoneShowEndpointRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * endpointId  待查询的终端节点ID。
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class KeystoneShowEndpointRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpointId
+    *  待查询的终端节点ID。
     *
     * @return string
     */
@@ -183,7 +189,7 @@ class KeystoneShowEndpointRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endpointId
     *
-    * @param string $endpointId endpointId
+    * @param string $endpointId 待查询的终端节点ID。
     *
     * @return $this
     */

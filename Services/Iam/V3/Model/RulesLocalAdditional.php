@@ -20,6 +20,7 @@ class RulesLocalAdditional implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  user：联邦用户在本系统中的用户名称。   ``` \"user\":{\"name\":\"{0}\"} ```    group：联邦用户在本系统中所属用户组。   ``` \"group\":{\"name\":\"0cd5e9\"} ```
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class RulesLocalAdditional implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  user：联邦用户在本系统中的用户名称。   ``` \"user\":{\"name\":\"{0}\"} ```    group：联邦用户在本系统中所属用户组。   ``` \"group\":{\"name\":\"0cd5e9\"} ```
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class RulesLocalAdditional implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  user：联邦用户在本系统中的用户名称。   ``` \"user\":{\"name\":\"{0}\"} ```    group：联邦用户在本系统中所属用户组。   ``` \"group\":{\"name\":\"0cd5e9\"} ```
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class RulesLocalAdditional implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  user：联邦用户在本系统中的用户名称。   ``` \"user\":{\"name\":\"{0}\"} ```    group：联邦用户在本系统中所属用户组。   ``` \"group\":{\"name\":\"0cd5e9\"} ```
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class RulesLocalAdditional implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  user：联邦用户在本系统中的用户名称。   ``` \"user\":{\"name\":\"{0}\"} ```    group：联邦用户在本系统中所属用户组。   ``` \"group\":{\"name\":\"0cd5e9\"} ```
     *
     * @var string[]
     */
@@ -169,6 +174,7 @@ class RulesLocalAdditional implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  user：联邦用户在本系统中的用户名称。   ``` \"user\":{\"name\":\"{0}\"} ```    group：联邦用户在本系统中所属用户组。   ``` \"group\":{\"name\":\"0cd5e9\"} ```
     *
     * @return string|null
     */

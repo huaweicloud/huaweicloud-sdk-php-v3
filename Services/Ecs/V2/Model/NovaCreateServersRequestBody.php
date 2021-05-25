@@ -20,6 +20,8 @@ class NovaCreateServersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * server  server
+    * osschedulerHints  osschedulerHints
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class NovaCreateServersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * server  server
+    * osschedulerHints  osschedulerHints
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class NovaCreateServersRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * server  server
+    * osschedulerHints  osschedulerHints
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class NovaCreateServersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * server  server
+    * osschedulerHints  osschedulerHints
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class NovaCreateServersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * server  server
+    * osschedulerHints  osschedulerHints
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class NovaCreateServersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets server
+    *  server
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaCreateServersOption
     */
@@ -201,6 +212,7 @@ class NovaCreateServersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets osschedulerHints
+    *  osschedulerHints
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaCreateServersSchedulerHint|null
     */

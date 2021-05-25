@@ -20,6 +20,11 @@ class OsVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * platform  操作系统的平台值
+    * osVersionKey  os_version的key值，和os_version值相同
+    * osVersion  操作系统的版本
+    * osBit  操作系统的位数
+    * osType  操作系统的类型，Linux或Windows
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class OsVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * platform  操作系统的平台值
+    * osVersionKey  os_version的key值，和os_version值相同
+    * osVersion  操作系统的版本
+    * osBit  操作系统的位数
+    * osType  操作系统的类型，Linux或Windows
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class OsVersionInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * platform  操作系统的平台值
+    * osVersionKey  os_version的key值，和os_version值相同
+    * osVersion  操作系统的版本
+    * osBit  操作系统的位数
+    * osType  操作系统的类型，Linux或Windows
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class OsVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * platform  操作系统的平台值
+    * osVersionKey  os_version的key值，和os_version值相同
+    * osVersion  操作系统的版本
+    * osBit  操作系统的位数
+    * osType  操作系统的类型，Linux或Windows
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class OsVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * platform  操作系统的平台值
+    * osVersionKey  os_version的key值，和os_version值相同
+    * osVersion  操作系统的版本
+    * osBit  操作系统的位数
+    * osType  操作系统的类型，Linux或Windows
     *
     * @var string[]
     */
@@ -208,6 +233,7 @@ class OsVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets platform
+    *  操作系统的平台值
     *
     * @return string
     */
@@ -231,6 +257,7 @@ class OsVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVersionKey
+    *  os_version的key值，和os_version值相同
     *
     * @return string
     */
@@ -254,6 +281,7 @@ class OsVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVersion
+    *  操作系统的版本
     *
     * @return string
     */
@@ -277,6 +305,7 @@ class OsVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osBit
+    *  操作系统的位数
     *
     * @return int
     */
@@ -300,6 +329,7 @@ class OsVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
+    *  操作系统的类型，Linux或Windows
     *
     * @return string
     */

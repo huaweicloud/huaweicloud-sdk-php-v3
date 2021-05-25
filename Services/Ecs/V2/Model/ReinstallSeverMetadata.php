@@ -20,6 +20,7 @@ class ReinstallSeverMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class ReinstallSeverMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class ReinstallSeverMetadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class ReinstallSeverMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class ReinstallSeverMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。
     *
     * @var string[]
     */
@@ -169,6 +174,7 @@ class ReinstallSeverMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets userData
+    *  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。
     *
     * @return string|null
     */

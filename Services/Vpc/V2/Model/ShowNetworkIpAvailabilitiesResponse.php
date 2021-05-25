@@ -21,6 +21,7 @@ class ShowNetworkIpAvailabilitiesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * networkIpAvailability  networkIpAvailability
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class ShowNetworkIpAvailabilitiesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * networkIpAvailability  networkIpAvailability
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class ShowNetworkIpAvailabilitiesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * networkIpAvailability  networkIpAvailability
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class ShowNetworkIpAvailabilitiesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * networkIpAvailability  networkIpAvailability
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class ShowNetworkIpAvailabilitiesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * networkIpAvailability  networkIpAvailability
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class ShowNetworkIpAvailabilitiesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets networkIpAvailability
+    *  networkIpAvailability
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\NetworkIpAvailability|null
     */

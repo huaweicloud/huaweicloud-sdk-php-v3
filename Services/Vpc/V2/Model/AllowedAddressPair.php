@@ -20,6 +20,8 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * macAddress  mac地址
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * macAddress  mac地址
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * macAddress  mac地址
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * macAddress  mac地址
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * macAddress  mac地址
     *
     * @var string[]
     */
@@ -187,6 +197,7 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipAddress
+    *  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
     *
     * @return string|null
     */
@@ -210,6 +221,7 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
 
     /**
     * Gets macAddress
+    *  mac地址
     *
     * @return string|null
     */

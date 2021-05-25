@@ -20,6 +20,9 @@ class ProtocolResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  协议ID。
+    * mappingId  映射ID。
+    * links  links
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class ProtocolResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  协议ID。
+    * mappingId  映射ID。
+    * links  links
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class ProtocolResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  协议ID。
+    * mappingId  映射ID。
+    * links  links
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class ProtocolResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  协议ID。
+    * mappingId  映射ID。
+    * links  links
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class ProtocolResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  协议ID。
+    * mappingId  映射ID。
+    * links  links
     *
     * @var string[]
     */
@@ -190,6 +205,7 @@ class ProtocolResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  协议ID。
     *
     * @return string
     */
@@ -213,6 +229,7 @@ class ProtocolResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets mappingId
+    *  映射ID。
     *
     * @return string
     */
@@ -236,6 +253,7 @@ class ProtocolResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\ProtocolLinks
     */

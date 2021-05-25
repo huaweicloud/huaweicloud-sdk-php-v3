@@ -20,6 +20,8 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * subJobs  每个子任务的执行信息。
+    * subJobsTotal  子任务数量。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * subJobs  每个子任务的执行信息。
+    * subJobsTotal  子任务数量。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class JobEntities implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * subJobs  每个子任务的执行信息。
+    * subJobsTotal  子任务数量。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * subJobs  每个子任务的执行信息。
+    * subJobsTotal  子任务数量。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * subJobs  每个子任务的执行信息。
+    * subJobsTotal  子任务数量。
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Gets subJobs
+    *  每个子任务的执行信息。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\SubJob[]|null
     */
@@ -198,6 +209,7 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Gets subJobsTotal
+    *  子任务数量。
     *
     * @return int|null
     */

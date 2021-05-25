@@ -20,6 +20,8 @@ class VersionMediatypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * type  媒体类型。
+    * base  基础类型。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class VersionMediatypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * type  媒体类型。
+    * base  基础类型。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class VersionMediatypes implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * type  媒体类型。
+    * base  基础类型。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class VersionMediatypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * type  媒体类型。
+    * base  基础类型。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class VersionMediatypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * type  媒体类型。
+    * base  基础类型。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class VersionMediatypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  媒体类型。
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class VersionMediatypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets base
+    *  基础类型。
     *
     * @return string
     */

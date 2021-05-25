@@ -21,6 +21,8 @@ class ResizeServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
+    * jobId  任务ID，变更按需的弹性云服务器规格时返回该参数。
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class ResizeServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
+    * jobId  任务ID，变更按需的弹性云服务器规格时返回该参数。
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class ResizeServerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
+    * jobId  任务ID，变更按需的弹性云服务器规格时返回该参数。
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class ResizeServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
+    * jobId  任务ID，变更按需的弹性云服务器规格时返回该参数。
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class ResizeServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
+    * jobId  任务ID，变更按需的弹性云服务器规格时返回该参数。
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class ResizeServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
+    *  订单号，创建包年包月的弹性云服务器时返回该参数。
     *
     * @return string|null
     */
@@ -199,6 +210,7 @@ class ResizeServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
+    *  任务ID，变更按需的弹性云服务器规格时返回该参数。
     *
     * @return string|null
     */

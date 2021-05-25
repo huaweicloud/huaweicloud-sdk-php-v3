@@ -20,6 +20,13 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * serviceId  设备的服务ID。
+    * serviceType  设备的服务类型。
+    * properties  设备服务支持的属性列表。
+    * commands  设备服务支持的命令列表。
+    * events  设备服务支持的事件列表。
+    * description  设备服务的描述信息。
+    * option  指定设备服务是否必选。Master（主服务）, Mandatory（必选服务）, Optional（可选服务），目前本字段为非功能性字段，仅起到标识作用。默认为Optional（可选服务）。
     *
     * @var string[]
     */
@@ -35,6 +42,13 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * serviceId  设备的服务ID。
+    * serviceType  设备的服务类型。
+    * properties  设备服务支持的属性列表。
+    * commands  设备服务支持的命令列表。
+    * events  设备服务支持的事件列表。
+    * description  设备服务的描述信息。
+    * option  指定设备服务是否必选。Master（主服务）, Mandatory（必选服务）, Optional（可选服务），目前本字段为非功能性字段，仅起到标识作用。默认为Optional（可选服务）。
     *
     * @var string[]
     */
@@ -71,6 +85,13 @@ class ServiceCapability implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * serviceId  设备的服务ID。
+    * serviceType  设备的服务类型。
+    * properties  设备服务支持的属性列表。
+    * commands  设备服务支持的命令列表。
+    * events  设备服务支持的事件列表。
+    * description  设备服务的描述信息。
+    * option  指定设备服务是否必选。Master（主服务）, Mandatory（必选服务）, Optional（可选服务），目前本字段为非功能性字段，仅起到标识作用。默认为Optional（可选服务）。
     *
     * @var string[]
     */
@@ -86,6 +107,13 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * serviceId  设备的服务ID。
+    * serviceType  设备的服务类型。
+    * properties  设备服务支持的属性列表。
+    * commands  设备服务支持的命令列表。
+    * events  设备服务支持的事件列表。
+    * description  设备服务的描述信息。
+    * option  指定设备服务是否必选。Master（主服务）, Mandatory（必选服务）, Optional（可选服务），目前本字段为非功能性字段，仅起到标识作用。默认为Optional（可选服务）。
     *
     * @var string[]
     */
@@ -101,6 +129,13 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * serviceId  设备的服务ID。
+    * serviceType  设备的服务类型。
+    * properties  设备服务支持的属性列表。
+    * commands  设备服务支持的命令列表。
+    * events  设备服务支持的事件列表。
+    * description  设备服务的描述信息。
+    * option  指定设备服务是否必选。Master（主服务）, Mandatory（必选服务）, Optional（可选服务），目前本字段为非功能性字段，仅起到标识作用。默认为Optional（可选服务）。
     *
     * @var string[]
     */
@@ -223,6 +258,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceId
+    *  设备的服务ID。
     *
     * @return string
     */
@@ -246,6 +282,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
+    *  设备的服务类型。
     *
     * @return string
     */
@@ -269,6 +306,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets properties
+    *  设备服务支持的属性列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceProperty[]|null
     */
@@ -292,6 +330,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets commands
+    *  设备服务支持的命令列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommand[]|null
     */
@@ -315,6 +354,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets events
+    *  设备服务支持的事件列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceEvent[]|null
     */
@@ -338,6 +378,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  设备服务的描述信息。
     *
     * @return string|null
     */
@@ -361,6 +402,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets option
+    *  指定设备服务是否必选。Master（主服务）, Mandatory（必选服务）, Optional（可选服务），目前本字段为非功能性字段，仅起到标识作用。默认为Optional（可选服务）。
     *
     * @return string|null
     */

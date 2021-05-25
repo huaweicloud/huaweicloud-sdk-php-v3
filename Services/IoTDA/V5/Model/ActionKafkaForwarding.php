@@ -20,6 +20,13 @@ class ActionKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * regionName  转发kafka消息对应的region区域
+    * projectId  转发kafka消息对应的projectId信息
+    * kafkaAddresses  转发kafka消息对应的地址列表
+    * kafkaTopic  转发kafka消息关联的topic信息。
+    * kafkaUsername  转发kafka关联的用户名信息。
+    * kafkaPassword  转发kafka关联的密码信息。
+    * kafkaMechanism  转发kafka关联的鉴权机制。 类型说明： PAAS：非SASL鉴权。 PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
     *
     * @var string[]
     */
@@ -35,6 +42,13 @@ class ActionKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * regionName  转发kafka消息对应的region区域
+    * projectId  转发kafka消息对应的projectId信息
+    * kafkaAddresses  转发kafka消息对应的地址列表
+    * kafkaTopic  转发kafka消息关联的topic信息。
+    * kafkaUsername  转发kafka关联的用户名信息。
+    * kafkaPassword  转发kafka关联的密码信息。
+    * kafkaMechanism  转发kafka关联的鉴权机制。 类型说明： PAAS：非SASL鉴权。 PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
     *
     * @var string[]
     */
@@ -71,6 +85,13 @@ class ActionKafkaForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * regionName  转发kafka消息对应的region区域
+    * projectId  转发kafka消息对应的projectId信息
+    * kafkaAddresses  转发kafka消息对应的地址列表
+    * kafkaTopic  转发kafka消息关联的topic信息。
+    * kafkaUsername  转发kafka关联的用户名信息。
+    * kafkaPassword  转发kafka关联的密码信息。
+    * kafkaMechanism  转发kafka关联的鉴权机制。 类型说明： PAAS：非SASL鉴权。 PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
     *
     * @var string[]
     */
@@ -86,6 +107,13 @@ class ActionKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * regionName  转发kafka消息对应的region区域
+    * projectId  转发kafka消息对应的projectId信息
+    * kafkaAddresses  转发kafka消息对应的地址列表
+    * kafkaTopic  转发kafka消息关联的topic信息。
+    * kafkaUsername  转发kafka关联的用户名信息。
+    * kafkaPassword  转发kafka关联的密码信息。
+    * kafkaMechanism  转发kafka关联的鉴权机制。 类型说明： PAAS：非SASL鉴权。 PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
     *
     * @var string[]
     */
@@ -101,6 +129,13 @@ class ActionKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * regionName  转发kafka消息对应的region区域
+    * projectId  转发kafka消息对应的projectId信息
+    * kafkaAddresses  转发kafka消息对应的地址列表
+    * kafkaTopic  转发kafka消息关联的topic信息。
+    * kafkaUsername  转发kafka关联的用户名信息。
+    * kafkaPassword  转发kafka关联的密码信息。
+    * kafkaMechanism  转发kafka关联的鉴权机制。 类型说明： PAAS：非SASL鉴权。 PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
     *
     * @var string[]
     */
@@ -223,6 +258,7 @@ class ActionKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionName
+    *  转发kafka消息对应的region区域
     *
     * @return string|null
     */
@@ -246,6 +282,7 @@ class ActionKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  转发kafka消息对应的projectId信息
     *
     * @return string|null
     */
@@ -269,6 +306,7 @@ class ActionKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaAddresses
+    *  转发kafka消息对应的地址列表
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\NetAddress[]|null
     */
@@ -292,6 +330,7 @@ class ActionKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaTopic
+    *  转发kafka消息关联的topic信息。
     *
     * @return string|null
     */
@@ -315,6 +354,7 @@ class ActionKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaUsername
+    *  转发kafka关联的用户名信息。
     *
     * @return string|null
     */
@@ -338,6 +378,7 @@ class ActionKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaPassword
+    *  转发kafka关联的密码信息。
     *
     * @return string|null
     */
@@ -361,6 +402,7 @@ class ActionKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets kafkaMechanism
+    *  转发kafka关联的鉴权机制。 类型说明： PAAS：非SASL鉴权。 PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
     *
     * @return string|null
     */

@@ -20,6 +20,10 @@ class BatchUpdateMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * images  镜像ID列表。
+    * projectId  项目ID。
+    * status  镜像成员的状态。 取值如下： accepted：表示接受共享镜像。接受后，该镜像在用户镜像列表中可见，用户可以使用该镜像创建云服务器。 rejected：表示拒绝共享镜像。拒绝后，该镜像在用户镜像列表中不可见，但是，用户仍然可以使用该镜像创建云服务器。
+    * vaultId  存储库ID。 如果是通过CBR创建的整机镜像，则在接受该共享镜像时，为必选参数，需传入该值。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class BatchUpdateMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * images  镜像ID列表。
+    * projectId  项目ID。
+    * status  镜像成员的状态。 取值如下： accepted：表示接受共享镜像。接受后，该镜像在用户镜像列表中可见，用户可以使用该镜像创建云服务器。 rejected：表示拒绝共享镜像。拒绝后，该镜像在用户镜像列表中不可见，但是，用户仍然可以使用该镜像创建云服务器。
+    * vaultId  存储库ID。 如果是通过CBR创建的整机镜像，则在接受该共享镜像时，为必选参数，需传入该值。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class BatchUpdateMembersRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * images  镜像ID列表。
+    * projectId  项目ID。
+    * status  镜像成员的状态。 取值如下： accepted：表示接受共享镜像。接受后，该镜像在用户镜像列表中可见，用户可以使用该镜像创建云服务器。 rejected：表示拒绝共享镜像。拒绝后，该镜像在用户镜像列表中不可见，但是，用户仍然可以使用该镜像创建云服务器。
+    * vaultId  存储库ID。 如果是通过CBR创建的整机镜像，则在接受该共享镜像时，为必选参数，需传入该值。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class BatchUpdateMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * images  镜像ID列表。
+    * projectId  项目ID。
+    * status  镜像成员的状态。 取值如下： accepted：表示接受共享镜像。接受后，该镜像在用户镜像列表中可见，用户可以使用该镜像创建云服务器。 rejected：表示拒绝共享镜像。拒绝后，该镜像在用户镜像列表中不可见，但是，用户仍然可以使用该镜像创建云服务器。
+    * vaultId  存储库ID。 如果是通过CBR创建的整机镜像，则在接受该共享镜像时，为必选参数，需传入该值。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class BatchUpdateMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * images  镜像ID列表。
+    * projectId  项目ID。
+    * status  镜像成员的状态。 取值如下： accepted：表示接受共享镜像。接受后，该镜像在用户镜像列表中可见，用户可以使用该镜像创建云服务器。 rejected：表示拒绝共享镜像。拒绝后，该镜像在用户镜像列表中不可见，但是，用户仍然可以使用该镜像创建云服务器。
+    * vaultId  存储库ID。 如果是通过CBR创建的整机镜像，则在接受该共享镜像时，为必选参数，需传入该值。
     *
     * @var string[]
     */
@@ -219,6 +239,7 @@ class BatchUpdateMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets images
+    *  镜像ID列表。
     *
     * @return string[]
     */
@@ -242,6 +263,7 @@ class BatchUpdateMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  项目ID。
     *
     * @return string
     */
@@ -265,6 +287,7 @@ class BatchUpdateMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  镜像成员的状态。 取值如下： accepted：表示接受共享镜像。接受后，该镜像在用户镜像列表中可见，用户可以使用该镜像创建云服务器。 rejected：表示拒绝共享镜像。拒绝后，该镜像在用户镜像列表中不可见，但是，用户仍然可以使用该镜像创建云服务器。
     *
     * @return string
     */
@@ -288,6 +311,7 @@ class BatchUpdateMembersRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaultId
+    *  存储库ID。 如果是通过CBR创建的整机镜像，则在接受该共享镜像时，为必选参数，需传入该值。
     *
     * @return string|null
     */

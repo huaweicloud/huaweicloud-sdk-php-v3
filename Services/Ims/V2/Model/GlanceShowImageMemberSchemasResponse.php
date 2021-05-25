@@ -21,6 +21,8 @@ class GlanceShowImageMemberSchemasResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  视图名称。
+    * properties  镜像成员属性说明，主要是对基础属性的说明，包含每个属性的取值类型、用途等。
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class GlanceShowImageMemberSchemasResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  视图名称。
+    * properties  镜像成员属性说明，主要是对基础属性的说明，包含每个属性的取值类型、用途等。
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class GlanceShowImageMemberSchemasResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  视图名称。
+    * properties  镜像成员属性说明，主要是对基础属性的说明，包含每个属性的取值类型、用途等。
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class GlanceShowImageMemberSchemasResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  视图名称。
+    * properties  镜像成员属性说明，主要是对基础属性的说明，包含每个属性的取值类型、用途等。
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class GlanceShowImageMemberSchemasResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  视图名称。
+    * properties  镜像成员属性说明，主要是对基础属性的说明，包含每个属性的取值类型、用途等。
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class GlanceShowImageMemberSchemasResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets name
+    *  视图名称。
     *
     * @return string|null
     */
@@ -199,6 +210,7 @@ class GlanceShowImageMemberSchemasResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets properties
+    *  镜像成员属性说明，主要是对基础属性的说明，包含每个属性的取值类型、用途等。
     *
     * @return object|null
     */

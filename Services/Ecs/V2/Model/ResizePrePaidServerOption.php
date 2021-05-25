@@ -20,6 +20,10 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * flavorRef  变更后的云服务器规格ID。
+    * dedicatedHostId  新专属主机ID（仅适用于专属主机上的弹性云服务器）。
+    * extendparam  extendparam
+    * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * flavorRef  变更后的云服务器规格ID。
+    * dedicatedHostId  新专属主机ID（仅适用于专属主机上的弹性云服务器）。
+    * extendparam  extendparam
+    * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * flavorRef  变更后的云服务器规格ID。
+    * dedicatedHostId  新专属主机ID（仅适用于专属主机上的弹性云服务器）。
+    * extendparam  extendparam
+    * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * flavorRef  变更后的云服务器规格ID。
+    * dedicatedHostId  新专属主机ID（仅适用于专属主机上的弹性云服务器）。
+    * extendparam  extendparam
+    * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * flavorRef  变更后的云服务器规格ID。
+    * dedicatedHostId  新专属主机ID（仅适用于专属主机上的弹性云服务器）。
+    * extendparam  extendparam
+    * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
     *
     * @var string[]
     */
@@ -190,6 +210,7 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavorRef
+    *  变更后的云服务器规格ID。
     *
     * @return string
     */
@@ -213,6 +234,7 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets dedicatedHostId
+    *  新专属主机ID（仅适用于专属主机上的弹性云服务器）。
     *
     * @return string|null
     */
@@ -236,6 +258,7 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendparam
+    *  extendparam
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\ResizeServerExtendParam|null
     */
@@ -259,6 +282,7 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
+    *  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
     *
     * @return string|null
     */

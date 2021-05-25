@@ -20,6 +20,7 @@ class QueueInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * queueName  队列名称，同一租户不允许重复。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class QueueInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * queueName  队列名称，同一租户不允许重复。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class QueueInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * queueName  队列名称，同一租户不允许重复。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class QueueInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * queueName  队列名称，同一租户不允许重复。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class QueueInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * queueName  队列名称，同一租户不允许重复。
     *
     * @var string[]
     */
@@ -181,6 +186,7 @@ class QueueInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueName
+    *  队列名称，同一租户不允许重复。
     *
     * @return string
     */

@@ -20,6 +20,8 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,300]。需要与page同时存在。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,300]。需要与page同时存在。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,300]。需要与page同时存在。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,300]。需要与page同时存在。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,300]。需要与page同时存在。
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets page
+    *  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
     *
     * @return int|null
     */
@@ -186,7 +197,7 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets page
     *
-    * @param int|null $page page
+    * @param int|null $page 分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
     *
     * @return $this
     */
@@ -198,6 +209,7 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets perPage
+    *  分页查询时每页的数据个数，取值范围为[1,300]。需要与page同时存在。
     *
     * @return int|null
     */
@@ -209,7 +221,7 @@ class ListCustomPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets perPage
     *
-    * @param int|null $perPage perPage
+    * @param int|null $perPage 分页查询时每页的数据个数，取值范围为[1,300]。需要与page同时存在。
     *
     * @return $this
     */

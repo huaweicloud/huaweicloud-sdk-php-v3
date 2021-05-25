@@ -20,6 +20,10 @@ class KeystoneCreateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  项目名称。必须以存在的\"区域ID_\"开头，长度小于等于64字符。例如区域“华北-北京一”的区域ID为“cn-north-1”，在其下创建项目时，项目名应填“cn-north-1_IAMProject”
+    * parentId  区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * domainId  项目所属账号ID。
+    * description  项目描述信息，长度小于等于255字符。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class KeystoneCreateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  项目名称。必须以存在的\"区域ID_\"开头，长度小于等于64字符。例如区域“华北-北京一”的区域ID为“cn-north-1”，在其下创建项目时，项目名应填“cn-north-1_IAMProject”
+    * parentId  区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * domainId  项目所属账号ID。
+    * description  项目描述信息，长度小于等于255字符。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class KeystoneCreateProjectOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  项目名称。必须以存在的\"区域ID_\"开头，长度小于等于64字符。例如区域“华北-北京一”的区域ID为“cn-north-1”，在其下创建项目时，项目名应填“cn-north-1_IAMProject”
+    * parentId  区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * domainId  项目所属账号ID。
+    * description  项目描述信息，长度小于等于255字符。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class KeystoneCreateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  项目名称。必须以存在的\"区域ID_\"开头，长度小于等于64字符。例如区域“华北-北京一”的区域ID为“cn-north-1”，在其下创建项目时，项目名应填“cn-north-1_IAMProject”
+    * parentId  区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * domainId  项目所属账号ID。
+    * description  项目描述信息，长度小于等于255字符。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class KeystoneCreateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  项目名称。必须以存在的\"区域ID_\"开头，长度小于等于64字符。例如区域“华北-北京一”的区域ID为“cn-north-1”，在其下创建项目时，项目名应填“cn-north-1_IAMProject”
+    * parentId  区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * domainId  项目所属账号ID。
+    * description  项目描述信息，长度小于等于255字符。
     *
     * @var string[]
     */
@@ -193,6 +213,7 @@ class KeystoneCreateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  项目名称。必须以存在的\"区域ID_\"开头，长度小于等于64字符。例如区域“华北-北京一”的区域ID为“cn-north-1”，在其下创建项目时，项目名应填“cn-north-1_IAMProject”
     *
     * @return string
     */
@@ -216,6 +237,7 @@ class KeystoneCreateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
+    *  区域对应的项目ID，例如区域“华北-北京一”区域对应的项目ID为：04dd42abe48026ad2fa3c01ad7fa.....，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string
     */
@@ -239,6 +261,7 @@ class KeystoneCreateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  项目所属账号ID。
     *
     * @return string|null
     */
@@ -262,6 +285,7 @@ class KeystoneCreateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  项目描述信息，长度小于等于255字符。
     *
     * @return string|null
     */

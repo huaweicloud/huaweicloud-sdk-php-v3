@@ -21,6 +21,7 @@ class UpdateAgencyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * agency  agency
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class UpdateAgencyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * agency  agency
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class UpdateAgencyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * agency  agency
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class UpdateAgencyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * agency  agency
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class UpdateAgencyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * agency  agency
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class UpdateAgencyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets agency
+    *  agency
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\AgencyResult|null
     */

@@ -20,6 +20,12 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * status  共享状态。
+    * createdAt  共享时间，格式为UTC时间。
+    * updatedAt  更新时间，格式为UTC时间。
+    * imageId  镜像ID。
+    * memberId  成员ID。
+    * schema  共享视图。
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * status  共享状态。
+    * createdAt  共享时间，格式为UTC时间。
+    * updatedAt  更新时间，格式为UTC时间。
+    * imageId  镜像ID。
+    * memberId  成员ID。
+    * schema  共享视图。
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * status  共享状态。
+    * createdAt  共享时间，格式为UTC时间。
+    * updatedAt  更新时间，格式为UTC时间。
+    * imageId  镜像ID。
+    * memberId  成员ID。
+    * schema  共享视图。
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * status  共享状态。
+    * createdAt  共享时间，格式为UTC时间。
+    * updatedAt  更新时间，格式为UTC时间。
+    * imageId  镜像ID。
+    * memberId  成员ID。
+    * schema  共享视图。
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * status  共享状态。
+    * createdAt  共享时间，格式为UTC时间。
+    * updatedAt  更新时间，格式为UTC时间。
+    * imageId  镜像ID。
+    * memberId  成员ID。
+    * schema  共享视图。
     *
     * @var string[]
     */
@@ -217,6 +247,7 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  共享状态。
     *
     * @return string
     */
@@ -240,6 +271,7 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  共享时间，格式为UTC时间。
     *
     * @return string
     */
@@ -263,6 +295,7 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
+    *  更新时间，格式为UTC时间。
     *
     * @return string
     */
@@ -286,6 +319,7 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageId
+    *  镜像ID。
     *
     * @return string
     */
@@ -309,6 +343,7 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
 
     /**
     * Gets memberId
+    *  成员ID。
     *
     * @return string
     */
@@ -332,6 +367,7 @@ class GlanceImageMembers implements ModelInterface, ArrayAccess
 
     /**
     * Gets schema
+    *  共享视图。
     *
     * @return string
     */

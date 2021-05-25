@@ -20,6 +20,24 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * id  IAM用户ID。
+    * domainId  IAM用户所属账号ID。
+    * name  IAM用户名。
+    * links  links
+    * xuserId  IAM用户在外部系统中的ID。
+    * xuserType  IAM用户在外部系统中的类型。
+    * areacode  IAM用户手机号的国家码。
+    * email  IAM用户邮箱。
+    * phone  IAM用户手机号。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * updateTime  IAM用户更新时间。
+    * createTime  IAM用户创建时间。
+    * lastLoginTime  IAM用户最后登录时间。
+    * pwdStrength  IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+    * isDomainOwner  IAM用户是否为根用户。
+    * accessMode  IAM用户访问模式。
+    * description  IAM用户描述信息
     *
     * @var string[]
     */
@@ -46,6 +64,24 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * id  IAM用户ID。
+    * domainId  IAM用户所属账号ID。
+    * name  IAM用户名。
+    * links  links
+    * xuserId  IAM用户在外部系统中的ID。
+    * xuserType  IAM用户在外部系统中的类型。
+    * areacode  IAM用户手机号的国家码。
+    * email  IAM用户邮箱。
+    * phone  IAM用户手机号。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * updateTime  IAM用户更新时间。
+    * createTime  IAM用户创建时间。
+    * lastLoginTime  IAM用户最后登录时间。
+    * pwdStrength  IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+    * isDomainOwner  IAM用户是否为根用户。
+    * accessMode  IAM用户访问模式。
+    * description  IAM用户描述信息
     *
     * @var string[]
     */
@@ -93,6 +129,24 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * id  IAM用户ID。
+    * domainId  IAM用户所属账号ID。
+    * name  IAM用户名。
+    * links  links
+    * xuserId  IAM用户在外部系统中的ID。
+    * xuserType  IAM用户在外部系统中的类型。
+    * areacode  IAM用户手机号的国家码。
+    * email  IAM用户邮箱。
+    * phone  IAM用户手机号。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * updateTime  IAM用户更新时间。
+    * createTime  IAM用户创建时间。
+    * lastLoginTime  IAM用户最后登录时间。
+    * pwdStrength  IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+    * isDomainOwner  IAM用户是否为根用户。
+    * accessMode  IAM用户访问模式。
+    * description  IAM用户描述信息
     *
     * @var string[]
     */
@@ -119,6 +173,24 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * id  IAM用户ID。
+    * domainId  IAM用户所属账号ID。
+    * name  IAM用户名。
+    * links  links
+    * xuserId  IAM用户在外部系统中的ID。
+    * xuserType  IAM用户在外部系统中的类型。
+    * areacode  IAM用户手机号的国家码。
+    * email  IAM用户邮箱。
+    * phone  IAM用户手机号。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * updateTime  IAM用户更新时间。
+    * createTime  IAM用户创建时间。
+    * lastLoginTime  IAM用户最后登录时间。
+    * pwdStrength  IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+    * isDomainOwner  IAM用户是否为根用户。
+    * accessMode  IAM用户访问模式。
+    * description  IAM用户描述信息
     *
     * @var string[]
     */
@@ -145,6 +217,24 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * enabled  IAM用户是否启用。true表示启用，false表示停用，默认为true。
+    * id  IAM用户ID。
+    * domainId  IAM用户所属账号ID。
+    * name  IAM用户名。
+    * links  links
+    * xuserId  IAM用户在外部系统中的ID。
+    * xuserType  IAM用户在外部系统中的类型。
+    * areacode  IAM用户手机号的国家码。
+    * email  IAM用户邮箱。
+    * phone  IAM用户手机号。
+    * pwdStatus  IAM用户密码状态。true：需要修改密码，false：正常。
+    * updateTime  IAM用户更新时间。
+    * createTime  IAM用户创建时间。
+    * lastLoginTime  IAM用户最后登录时间。
+    * pwdStrength  IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+    * isDomainOwner  IAM用户是否为根用户。
+    * accessMode  IAM用户访问模式。
+    * description  IAM用户描述信息
     *
     * @var string[]
     */
@@ -295,6 +385,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  IAM用户是否启用。true表示启用，false表示停用，默认为true。
     *
     * @return bool
     */
@@ -318,6 +409,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  IAM用户ID。
     *
     * @return string
     */
@@ -341,6 +433,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  IAM用户所属账号ID。
     *
     * @return string
     */
@@ -364,6 +457,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  IAM用户名。
     *
     * @return string
     */
@@ -387,6 +481,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\Links
     */
@@ -410,6 +505,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets xuserId
+    *  IAM用户在外部系统中的ID。
     *
     * @return string|null
     */
@@ -433,6 +529,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets xuserType
+    *  IAM用户在外部系统中的类型。
     *
     * @return string|null
     */
@@ -456,6 +553,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets areacode
+    *  IAM用户手机号的国家码。
     *
     * @return string|null
     */
@@ -479,6 +577,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
+    *  IAM用户邮箱。
     *
     * @return string|null
     */
@@ -502,6 +601,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets phone
+    *  IAM用户手机号。
     *
     * @return string|null
     */
@@ -525,6 +625,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdStatus
+    *  IAM用户密码状态。true：需要修改密码，false：正常。
     *
     * @return bool|null
     */
@@ -548,6 +649,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
+    *  IAM用户更新时间。
     *
     * @return string|null
     */
@@ -571,6 +673,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
+    *  IAM用户创建时间。
     *
     * @return string|null
     */
@@ -594,6 +697,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastLoginTime
+    *  IAM用户最后登录时间。
     *
     * @return string|null
     */
@@ -617,6 +721,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdStrength
+    *  IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
     *
     * @return string|null
     */
@@ -640,6 +745,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDomainOwner
+    *  IAM用户是否为根用户。
     *
     * @return bool
     */
@@ -663,6 +769,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessMode
+    *  IAM用户访问模式。
     *
     * @return string
     */
@@ -686,6 +793,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  IAM用户描述信息
     *
     * @return string
     */

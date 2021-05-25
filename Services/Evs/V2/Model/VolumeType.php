@@ -20,6 +20,12 @@ class VolumeType implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  云硬盘类型的ID。
+    * name  云硬盘类型名称。
+    * extraSpecs  extraSpecs
+    * description  云硬盘类型的描述信息。
+    * qosSpecsId  预留属性。
+    * isPublic  预留属性。
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class VolumeType implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  云硬盘类型的ID。
+    * name  云硬盘类型名称。
+    * extraSpecs  extraSpecs
+    * description  云硬盘类型的描述信息。
+    * qosSpecsId  预留属性。
+    * isPublic  预留属性。
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class VolumeType implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  云硬盘类型的ID。
+    * name  云硬盘类型名称。
+    * extraSpecs  extraSpecs
+    * description  云硬盘类型的描述信息。
+    * qosSpecsId  预留属性。
+    * isPublic  预留属性。
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class VolumeType implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  云硬盘类型的ID。
+    * name  云硬盘类型名称。
+    * extraSpecs  extraSpecs
+    * description  云硬盘类型的描述信息。
+    * qosSpecsId  预留属性。
+    * isPublic  预留属性。
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class VolumeType implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  云硬盘类型的ID。
+    * name  云硬盘类型名称。
+    * extraSpecs  extraSpecs
+    * description  云硬盘类型的描述信息。
+    * qosSpecsId  预留属性。
+    * isPublic  预留属性。
     *
     * @var string[]
     */
@@ -205,6 +235,7 @@ class VolumeType implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  云硬盘类型的ID。
     *
     * @return string
     */
@@ -228,6 +259,7 @@ class VolumeType implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云硬盘类型名称。
     *
     * @return string
     */
@@ -251,6 +283,7 @@ class VolumeType implements ModelInterface, ArrayAccess
 
     /**
     * Gets extraSpecs
+    *  extraSpecs
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\VolumeTypeExtraSpecs|null
     */
@@ -274,6 +307,7 @@ class VolumeType implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  云硬盘类型的描述信息。
     *
     * @return string|null
     */
@@ -297,6 +331,7 @@ class VolumeType implements ModelInterface, ArrayAccess
 
     /**
     * Gets qosSpecsId
+    *  预留属性。
     *
     * @return string|null
     */
@@ -320,6 +355,7 @@ class VolumeType implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPublic
+    *  预留属性。
     *
     * @return bool|null
     */

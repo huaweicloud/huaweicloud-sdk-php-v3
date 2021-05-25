@@ -20,6 +20,16 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  功能说明：辅助弹性网卡ID，支持多ID过滤 使用场景：查询需要的多个辅助弹性网卡信息
+    * virsubnetId  功能说明：辅助弹性网卡所属虚拟子网的ID，支持多个ID过滤 使用场景：过滤需要的单个或者多个虚拟子网下的辅助弹性网卡
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址，支持多个地址同时过滤 使用场景：通过单个或者多个ip地址过滤查询辅助弹性网卡
+    * macAddress  功能说明：辅助弹性网卡的mac地址，支持多个同时过滤 使用场景：使用mac地址精确过滤辅助弹性网卡
+    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID，支持多ID过滤 使用场景：过滤单个或多个VPC下的辅助弹性网卡信息
+    * description  功能说明：辅助弹性网卡的描述信息，支持多个同时过滤 使用场景：通过描述信息过滤辅助弹性网卡
+    * parentId  功能说明：辅助弹性网卡的宿主网卡的ID，支持多ID过滤 使用场景：过滤单个或多个宿主网卡下存在的辅助弹性网卡
     *
     * @var string[]
     */
@@ -38,6 +48,16 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  功能说明：辅助弹性网卡ID，支持多ID过滤 使用场景：查询需要的多个辅助弹性网卡信息
+    * virsubnetId  功能说明：辅助弹性网卡所属虚拟子网的ID，支持多个ID过滤 使用场景：过滤需要的单个或者多个虚拟子网下的辅助弹性网卡
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址，支持多个地址同时过滤 使用场景：通过单个或者多个ip地址过滤查询辅助弹性网卡
+    * macAddress  功能说明：辅助弹性网卡的mac地址，支持多个同时过滤 使用场景：使用mac地址精确过滤辅助弹性网卡
+    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID，支持多ID过滤 使用场景：过滤单个或多个VPC下的辅助弹性网卡信息
+    * description  功能说明：辅助弹性网卡的描述信息，支持多个同时过滤 使用场景：通过描述信息过滤辅助弹性网卡
+    * parentId  功能说明：辅助弹性网卡的宿主网卡的ID，支持多ID过滤 使用场景：过滤单个或多个宿主网卡下存在的辅助弹性网卡
     *
     * @var string[]
     */
@@ -77,6 +97,16 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  功能说明：辅助弹性网卡ID，支持多ID过滤 使用场景：查询需要的多个辅助弹性网卡信息
+    * virsubnetId  功能说明：辅助弹性网卡所属虚拟子网的ID，支持多个ID过滤 使用场景：过滤需要的单个或者多个虚拟子网下的辅助弹性网卡
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址，支持多个地址同时过滤 使用场景：通过单个或者多个ip地址过滤查询辅助弹性网卡
+    * macAddress  功能说明：辅助弹性网卡的mac地址，支持多个同时过滤 使用场景：使用mac地址精确过滤辅助弹性网卡
+    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID，支持多ID过滤 使用场景：过滤单个或多个VPC下的辅助弹性网卡信息
+    * description  功能说明：辅助弹性网卡的描述信息，支持多个同时过滤 使用场景：通过描述信息过滤辅助弹性网卡
+    * parentId  功能说明：辅助弹性网卡的宿主网卡的ID，支持多ID过滤 使用场景：过滤单个或多个宿主网卡下存在的辅助弹性网卡
     *
     * @var string[]
     */
@@ -95,6 +125,16 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  功能说明：辅助弹性网卡ID，支持多ID过滤 使用场景：查询需要的多个辅助弹性网卡信息
+    * virsubnetId  功能说明：辅助弹性网卡所属虚拟子网的ID，支持多个ID过滤 使用场景：过滤需要的单个或者多个虚拟子网下的辅助弹性网卡
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址，支持多个地址同时过滤 使用场景：通过单个或者多个ip地址过滤查询辅助弹性网卡
+    * macAddress  功能说明：辅助弹性网卡的mac地址，支持多个同时过滤 使用场景：使用mac地址精确过滤辅助弹性网卡
+    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID，支持多ID过滤 使用场景：过滤单个或多个VPC下的辅助弹性网卡信息
+    * description  功能说明：辅助弹性网卡的描述信息，支持多个同时过滤 使用场景：通过描述信息过滤辅助弹性网卡
+    * parentId  功能说明：辅助弹性网卡的宿主网卡的ID，支持多ID过滤 使用场景：过滤单个或多个宿主网卡下存在的辅助弹性网卡
     *
     * @var string[]
     */
@@ -113,6 +153,16 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
+    * limit  功能说明：每页返回的个数 取值范围：0-2000
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  功能说明：辅助弹性网卡ID，支持多ID过滤 使用场景：查询需要的多个辅助弹性网卡信息
+    * virsubnetId  功能说明：辅助弹性网卡所属虚拟子网的ID，支持多个ID过滤 使用场景：过滤需要的单个或者多个虚拟子网下的辅助弹性网卡
+    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址，支持多个地址同时过滤 使用场景：通过单个或者多个ip地址过滤查询辅助弹性网卡
+    * macAddress  功能说明：辅助弹性网卡的mac地址，支持多个同时过滤 使用场景：使用mac地址精确过滤辅助弹性网卡
+    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID，支持多ID过滤 使用场景：过滤单个或多个VPC下的辅助弹性网卡信息
+    * description  功能说明：辅助弹性网卡的描述信息，支持多个同时过滤 使用场景：通过描述信息过滤辅助弹性网卡
+    * parentId  功能说明：辅助弹性网卡的宿主网卡的ID，支持多ID过滤 使用场景：过滤单个或多个宿主网卡下存在的辅助弹性网卡
     *
     * @var string[]
     */
@@ -229,6 +279,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  项目ID
     *
     * @return string
     */
@@ -240,7 +291,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId projectId
+    * @param string $projectId 项目ID
     *
     * @return $this
     */
@@ -252,6 +303,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  功能说明：每页返回的个数 取值范围：0-2000
     *
     * @return int|null
     */
@@ -263,7 +315,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 功能说明：每页返回的个数 取值范围：0-2000
     *
     * @return $this
     */
@@ -275,6 +327,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  分页查询起始的资源ID，为空时查询第一页
     *
     * @return string|null
     */
@@ -286,7 +339,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 分页查询起始的资源ID，为空时查询第一页
     *
     * @return $this
     */
@@ -298,6 +351,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  功能说明：辅助弹性网卡ID，支持多ID过滤 使用场景：查询需要的多个辅助弹性网卡信息
     *
     * @return string[]|null
     */
@@ -309,7 +363,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id id
+    * @param string[]|null $id 功能说明：辅助弹性网卡ID，支持多ID过滤 使用场景：查询需要的多个辅助弹性网卡信息
     *
     * @return $this
     */
@@ -321,6 +375,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets virsubnetId
+    *  功能说明：辅助弹性网卡所属虚拟子网的ID，支持多个ID过滤 使用场景：过滤需要的单个或者多个虚拟子网下的辅助弹性网卡
     *
     * @return string[]|null
     */
@@ -332,7 +387,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets virsubnetId
     *
-    * @param string[]|null $virsubnetId virsubnetId
+    * @param string[]|null $virsubnetId 功能说明：辅助弹性网卡所属虚拟子网的ID，支持多个ID过滤 使用场景：过滤需要的单个或者多个虚拟子网下的辅助弹性网卡
     *
     * @return $this
     */
@@ -344,6 +399,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIpAddress
+    *  功能说明：辅助弹性网卡的私有IPv4地址，支持多个地址同时过滤 使用场景：通过单个或者多个ip地址过滤查询辅助弹性网卡
     *
     * @return string[]|null
     */
@@ -355,7 +411,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets privateIpAddress
     *
-    * @param string[]|null $privateIpAddress privateIpAddress
+    * @param string[]|null $privateIpAddress 功能说明：辅助弹性网卡的私有IPv4地址，支持多个地址同时过滤 使用场景：通过单个或者多个ip地址过滤查询辅助弹性网卡
     *
     * @return $this
     */
@@ -367,6 +423,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets macAddress
+    *  功能说明：辅助弹性网卡的mac地址，支持多个同时过滤 使用场景：使用mac地址精确过滤辅助弹性网卡
     *
     * @return string[]|null
     */
@@ -378,7 +435,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets macAddress
     *
-    * @param string[]|null $macAddress macAddress
+    * @param string[]|null $macAddress 功能说明：辅助弹性网卡的mac地址，支持多个同时过滤 使用场景：使用mac地址精确过滤辅助弹性网卡
     *
     * @return $this
     */
@@ -390,6 +447,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
+    *  功能说明：辅助弹性网卡所属的VPC_ID，支持多ID过滤 使用场景：过滤单个或多个VPC下的辅助弹性网卡信息
     *
     * @return string[]|null
     */
@@ -401,7 +459,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string[]|null $vpcId vpcId
+    * @param string[]|null $vpcId 功能说明：辅助弹性网卡所属的VPC_ID，支持多ID过滤 使用场景：过滤单个或多个VPC下的辅助弹性网卡信息
     *
     * @return $this
     */
@@ -413,6 +471,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：辅助弹性网卡的描述信息，支持多个同时过滤 使用场景：通过描述信息过滤辅助弹性网卡
     *
     * @return string[]|null
     */
@@ -424,7 +483,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string[]|null $description description
+    * @param string[]|null $description 功能说明：辅助弹性网卡的描述信息，支持多个同时过滤 使用场景：通过描述信息过滤辅助弹性网卡
     *
     * @return $this
     */
@@ -436,6 +495,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
+    *  功能说明：辅助弹性网卡的宿主网卡的ID，支持多ID过滤 使用场景：过滤单个或多个宿主网卡下存在的辅助弹性网卡
     *
     * @return string[]|null
     */
@@ -447,7 +507,7 @@ class ListSubNetworkInterfacesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param string[]|null $parentId parentId
+    * @param string[]|null $parentId 功能说明：辅助弹性网卡的宿主网卡的ID，支持多ID过滤 使用场景：过滤单个或多个宿主网卡下存在的辅助弹性网卡
     *
     * @return $this
     */

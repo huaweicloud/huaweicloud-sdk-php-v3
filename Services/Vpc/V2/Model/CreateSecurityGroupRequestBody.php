@@ -20,6 +20,7 @@ class CreateSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class CreateSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class CreateSecurityGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class CreateSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class CreateSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * securityGroup  securityGroup
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class CreateSecurityGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroup
+    *  securityGroup
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\CreateSecurityGroupOption
     */

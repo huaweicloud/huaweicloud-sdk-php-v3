@@ -20,6 +20,9 @@ class MappingResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  映射ID。
+    * links  links
+    * rules  将联邦用户映射为本地用户的规则列表。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class MappingResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  映射ID。
+    * links  links
+    * rules  将联邦用户映射为本地用户的规则列表。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class MappingResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  映射ID。
+    * links  links
+    * rules  将联邦用户映射为本地用户的规则列表。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class MappingResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  映射ID。
+    * links  links
+    * rules  将联邦用户映射为本地用户的规则列表。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class MappingResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  映射ID。
+    * links  links
+    * rules  将联邦用户映射为本地用户的规则列表。
     *
     * @var string[]
     */
@@ -190,6 +205,7 @@ class MappingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  映射ID。
     *
     * @return string
     */
@@ -213,6 +229,7 @@ class MappingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\LinksSelf
     */
@@ -236,6 +253,7 @@ class MappingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets rules
+    *  将联邦用户映射为本地用户的规则列表。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\MappingRules[]
     */

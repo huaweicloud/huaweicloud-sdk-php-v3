@@ -24,6 +24,13 @@ class VpcAsyncClient extends Client
         return new ClientBuilder(new VpcAsyncClient());
     }
 
+    /**
+     * 批量创建辅助弹性网卡
+     * 批量创建辅助弹性网卡
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function batchCreateSubNetworkInterfaceAsync($request)
     {
         return $this->batchCreateSubNetworkInterfaceAsyncWithHttpInfo($request);
@@ -82,6 +89,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建安全组
+     * 创建安全组
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createSecurityGroupAsync($request)
     {
         return $this->createSecurityGroupAsyncWithHttpInfo($request);
@@ -140,6 +154,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建安全组规则
+     * 创建安全组规则
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createSecurityGroupRuleAsync($request)
     {
         return $this->createSecurityGroupRuleAsyncWithHttpInfo($request);
@@ -198,6 +219,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建辅助弹性网卡
+     * 创建辅助弹性网卡
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createSubNetworkInterfaceAsync($request)
     {
         return $this->createSubNetworkInterfaceAsyncWithHttpInfo($request);
@@ -256,6 +284,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除安全组
+     * 删除安全组
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteSecurityGroupAsync($request)
     {
         return $this->deleteSecurityGroupAsyncWithHttpInfo($request);
@@ -314,6 +349,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除安全组规则
+     * 删除安全组规则
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteSecurityGroupRuleAsync($request)
     {
         return $this->deleteSecurityGroupRuleAsyncWithHttpInfo($request);
@@ -372,6 +414,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除辅助弹性网卡
+     * 删除辅助弹性网卡
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteSubNetworkInterfaceAsync($request)
     {
         return $this->deleteSubNetworkInterfaceAsyncWithHttpInfo($request);
@@ -430,6 +479,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询安全组规则列表
+     * 查询安全组规则列表
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listSecurityGroupRulesAsync($request)
     {
         return $this->listSecurityGroupRulesAsyncWithHttpInfo($request);
@@ -512,6 +568,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询安全组列表
+     * 查询某租户下的安全组列表
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listSecurityGroupsAsync($request)
     {
         return $this->listSecurityGroupsAsyncWithHttpInfo($request);
@@ -585,6 +648,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询租户下辅助弹性网卡列表
+     * 查询辅助弹性网卡列表，单次查询最多返回2000条数据
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listSubNetworkInterfacesAsync($request)
     {
         return $this->listSubNetworkInterfacesAsyncWithHttpInfo($request);
@@ -667,6 +737,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询安全组
+     * 查询单个安全组详情
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showSecurityGroupAsync($request)
     {
         return $this->showSecurityGroupAsyncWithHttpInfo($request);
@@ -725,6 +802,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询安全组规则
+     * 查询单个安全组规则
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showSecurityGroupRuleAsync($request)
     {
         return $this->showSecurityGroupRuleAsyncWithHttpInfo($request);
@@ -783,6 +867,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询租户下辅助弹性网卡
+     * 查询辅助弹性网卡详情
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showSubNetworkInterfaceAsync($request)
     {
         return $this->showSubNetworkInterfaceAsyncWithHttpInfo($request);
@@ -841,6 +932,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询租户下辅助弹性网卡数目
+     * 查询辅助弹性网卡数目
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showSubNetworkInterfacesQuantityAsync($request)
     {
         return $this->showSubNetworkInterfacesQuantityAsyncWithHttpInfo($request);
@@ -896,6 +994,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 更新安全组
+     * 更新安全组
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateSecurityGroupAsync($request)
     {
         return $this->updateSecurityGroupAsyncWithHttpInfo($request);
@@ -957,6 +1062,13 @@ class VpcAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 更新辅助弹性网卡
+     * 更新辅助弹性网卡
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateSubNetworkInterfaceAsync($request)
     {
         return $this->updateSubNetworkInterfaceAsyncWithHttpInfo($request);

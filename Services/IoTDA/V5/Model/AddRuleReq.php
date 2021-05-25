@@ -20,6 +20,14 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * subject  subject
+    * appType  租户规则的生效范围，默认GLOBAL，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
+    * appId  资源空间ID。
+    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * dataVersion  规则推送消息的消息格式版本，租户无需设置，仅供内部兼容历史推送消息使用，iocsa的历史推送消息版本为V5.0.1
     *
     * @var string[]
     */
@@ -36,6 +44,14 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * subject  subject
+    * appType  租户规则的生效范围，默认GLOBAL，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
+    * appId  资源空间ID。
+    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * dataVersion  规则推送消息的消息格式版本，租户无需设置，仅供内部兼容历史推送消息使用，iocsa的历史推送消息版本为V5.0.1
     *
     * @var string[]
     */
@@ -73,6 +89,14 @@ class AddRuleReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * subject  subject
+    * appType  租户规则的生效范围，默认GLOBAL，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
+    * appId  资源空间ID。
+    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * dataVersion  规则推送消息的消息格式版本，租户无需设置，仅供内部兼容历史推送消息使用，iocsa的历史推送消息版本为V5.0.1
     *
     * @var string[]
     */
@@ -89,6 +113,14 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * subject  subject
+    * appType  租户规则的生效范围，默认GLOBAL，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
+    * appId  资源空间ID。
+    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * dataVersion  规则推送消息的消息格式版本，租户无需设置，仅供内部兼容历史推送消息使用，iocsa的历史推送消息版本为V5.0.1
     *
     * @var string[]
     */
@@ -105,6 +137,14 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * subject  subject
+    * appType  租户规则的生效范围，默认GLOBAL，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
+    * appId  资源空间ID。
+    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * dataVersion  规则推送消息的消息格式版本，租户无需设置，仅供内部兼容历史推送消息使用，iocsa的历史推送消息版本为V5.0.1
     *
     * @var string[]
     */
@@ -250,6 +290,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleName
+    *  用户自定义的规则名称。
     *
     * @return string|null
     */
@@ -273,6 +314,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  用户自定义的规则描述。
     *
     * @return string|null
     */
@@ -296,6 +338,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets subject
+    *  subject
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\RoutingRuleSubject
     */
@@ -319,6 +362,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets appType
+    *  租户规则的生效范围，默认GLOBAL，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
     *
     * @return string|null
     */
@@ -342,6 +386,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
+    *  资源空间ID。
     *
     * @return string|null
     */
@@ -365,6 +410,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets select
+    *  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
     *
     * @return string|null
     */
@@ -388,6 +434,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets where
+    *  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
     *
     * @return string|null
     */
@@ -411,6 +458,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataVersion
+    *  规则推送消息的消息格式版本，租户无需设置，仅供内部兼容历史推送消息使用，iocsa的历史推送消息版本为V5.0.1
     *
     * @return string|null
     */

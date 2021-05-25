@@ -20,6 +20,8 @@ class NeutronPageLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * href  API链接
+    * rel  API链接与该API版本的关系
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class NeutronPageLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * href  API链接
+    * rel  API链接与该API版本的关系
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class NeutronPageLink implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * href  API链接
+    * rel  API链接与该API版本的关系
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class NeutronPageLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * href  API链接
+    * rel  API链接与该API版本的关系
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class NeutronPageLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * href  API链接
+    * rel  API链接与该API版本的关系
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class NeutronPageLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets href
+    *  API链接
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class NeutronPageLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets rel
+    *  API链接与该API版本的关系
     *
     * @return string
     */

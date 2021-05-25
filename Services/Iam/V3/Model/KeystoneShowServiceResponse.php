@@ -21,6 +21,7 @@ class KeystoneShowServiceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * service  service
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class KeystoneShowServiceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * service  service
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class KeystoneShowServiceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * service  service
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class KeystoneShowServiceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * service  service
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class KeystoneShowServiceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * service  service
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class KeystoneShowServiceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets service
+    *  service
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\Service|null
     */

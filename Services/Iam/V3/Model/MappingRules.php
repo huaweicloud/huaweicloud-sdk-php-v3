@@ -20,6 +20,8 @@ class MappingRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * local  表示联邦用户在本系统中的用户信息。 user：联邦用户在本系统中的用户名称。group：联邦用户在本系统中所属用户组。
+    * remote  表示联邦用户在IdP中的用户信息。由断言属性及运算符组成的表达式，取值由断言决定。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class MappingRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * local  表示联邦用户在本系统中的用户信息。 user：联邦用户在本系统中的用户名称。group：联邦用户在本系统中所属用户组。
+    * remote  表示联邦用户在IdP中的用户信息。由断言属性及运算符组成的表达式，取值由断言决定。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class MappingRules implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * local  表示联邦用户在本系统中的用户信息。 user：联邦用户在本系统中的用户名称。group：联邦用户在本系统中所属用户组。
+    * remote  表示联邦用户在IdP中的用户信息。由断言属性及运算符组成的表达式，取值由断言决定。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class MappingRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * local  表示联邦用户在本系统中的用户信息。 user：联邦用户在本系统中的用户名称。group：联邦用户在本系统中所属用户组。
+    * remote  表示联邦用户在IdP中的用户信息。由断言属性及运算符组成的表达式，取值由断言决定。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class MappingRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * local  表示联邦用户在本系统中的用户信息。 user：联邦用户在本系统中的用户名称。group：联邦用户在本系统中所属用户组。
+    * remote  表示联邦用户在IdP中的用户信息。由断言属性及运算符组成的表达式，取值由断言决定。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class MappingRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets local
+    *  表示联邦用户在本系统中的用户信息。 user：联邦用户在本系统中的用户名称。group：联邦用户在本系统中所属用户组。
     *
     * @return map[string,\HuaweiCloud\SDK\Iam\V3\Model\RulesLocalAdditional][]
     */
@@ -204,6 +215,7 @@ class MappingRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets remote
+    *  表示联邦用户在IdP中的用户信息。由断言属性及运算符组成的表达式，取值由断言决定。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\RulesRemote[]
     */

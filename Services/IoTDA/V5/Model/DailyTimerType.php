@@ -20,6 +20,8 @@ class DailyTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * time  规则触发的时间，格式：HH:MM。
+    * daysOfWeek  星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class DailyTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * time  规则触发的时间，格式：HH:MM。
+    * daysOfWeek  星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class DailyTimerType implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * time  规则触发的时间，格式：HH:MM。
+    * daysOfWeek  星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class DailyTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * time  规则触发的时间，格式：HH:MM。
+    * daysOfWeek  星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class DailyTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * time  规则触发的时间，格式：HH:MM。
+    * daysOfWeek  星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。
     *
     * @var string[]
     */
@@ -190,6 +200,7 @@ class DailyTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Gets time
+    *  规则触发的时间，格式：HH:MM。
     *
     * @return string
     */
@@ -213,6 +224,7 @@ class DailyTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Gets daysOfWeek
+    *  星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。
     *
     * @return string|null
     */

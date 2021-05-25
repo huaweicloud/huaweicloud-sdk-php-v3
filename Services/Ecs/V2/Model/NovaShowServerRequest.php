@@ -20,6 +20,8 @@ class NovaShowServerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * serverId  云服务器ID。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class NovaShowServerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * serverId  云服务器ID。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class NovaShowServerRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * serverId  云服务器ID。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class NovaShowServerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * serverId  云服务器ID。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class NovaShowServerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * serverId  云服务器ID。
+    * openStackApiVersion  微版本头
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class NovaShowServerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverId
+    *  云服务器ID。
     *
     * @return string
     */
@@ -189,7 +200,7 @@ class NovaShowServerRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serverId
     *
-    * @param string $serverId serverId
+    * @param string $serverId 云服务器ID。
     *
     * @return $this
     */
@@ -201,6 +212,7 @@ class NovaShowServerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets openStackApiVersion
+    *  微版本头
     *
     * @return string|null
     */
@@ -212,7 +224,7 @@ class NovaShowServerRequest implements ModelInterface, ArrayAccess
     /**
     * Sets openStackApiVersion
     *
-    * @param string|null $openStackApiVersion openStackApiVersion
+    * @param string|null $openStackApiVersion 微版本头
     *
     * @return $this
     */

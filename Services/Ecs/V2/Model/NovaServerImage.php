@@ -20,6 +20,8 @@ class NovaServerImage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  镜像ID。
+    * links  云服务器类型相关标记快捷链接信息。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class NovaServerImage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  镜像ID。
+    * links  云服务器类型相关标记快捷链接信息。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class NovaServerImage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  镜像ID。
+    * links  云服务器类型相关标记快捷链接信息。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class NovaServerImage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  镜像ID。
+    * links  云服务器类型相关标记快捷链接信息。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class NovaServerImage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  镜像ID。
+    * links  云服务器类型相关标记快捷链接信息。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class NovaServerImage implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  镜像ID。
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class NovaServerImage implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  云服务器类型相关标记快捷链接信息。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaLink[]
     */

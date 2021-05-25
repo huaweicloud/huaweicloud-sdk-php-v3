@@ -1,3 +1,15 @@
+# 3.0.11-beta 2021-05-25
+
+### HuaweiCloud SDK Core
+
+- _新增特性_
+    - 无
+- _解决问题_
+    - 无
+- _特性变更_
+    - client的方法中的request对象添加注释
+    - Request对象的非body对象添加注释
+    - DTO的get方法添加注释
 # 3.0.10-beta 2021-03-19
 
 ### HuaweiCloud SDK ECS

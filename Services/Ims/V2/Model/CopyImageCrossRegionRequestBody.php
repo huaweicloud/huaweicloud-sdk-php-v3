@@ -20,6 +20,11 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * agencyName  IMS服务委托名称。
+    * description  镜像描述信息。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * name  镜像名称
+    * projectName  目的区域的项目名称。
+    * region  目的区域的Region ID。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * agencyName  IMS服务委托名称。
+    * description  镜像描述信息。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * name  镜像名称
+    * projectName  目的区域的项目名称。
+    * region  目的区域的Region ID。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * agencyName  IMS服务委托名称。
+    * description  镜像描述信息。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * name  镜像名称
+    * projectName  目的区域的项目名称。
+    * region  目的区域的Region ID。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * agencyName  IMS服务委托名称。
+    * description  镜像描述信息。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * name  镜像名称
+    * projectName  目的区域的项目名称。
+    * region  目的区域的Region ID。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * agencyName  IMS服务委托名称。
+    * description  镜像描述信息。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
+    * name  镜像名称
+    * projectName  目的区域的项目名称。
+    * region  目的区域的Region ID。
     *
     * @var string[]
     */
@@ -211,6 +236,7 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets agencyName
+    *  IMS服务委托名称。
     *
     * @return string
     */
@@ -234,6 +260,7 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  镜像描述信息。支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。默认为空。
     *
     * @return string|null
     */
@@ -257,6 +284,7 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  镜像名称
     *
     * @return string
     */
@@ -280,6 +308,7 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectName
+    *  目的区域的项目名称。
     *
     * @return string
     */
@@ -303,6 +332,7 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
+    *  目的区域的Region ID。
     *
     * @return string
     */

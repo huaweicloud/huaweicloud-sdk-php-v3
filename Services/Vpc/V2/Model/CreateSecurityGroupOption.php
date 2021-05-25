@@ -20,6 +20,9 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * vpcId  功能说明：安全组所在的vpc的资源标识
+    * enterpriseProjectId  功能说明：企业项目ID。创建安全组时，给安全组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：“0”
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * vpcId  功能说明：安全组所在的vpc的资源标识
+    * enterpriseProjectId  功能说明：企业项目ID。创建安全组时，给安全组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：“0”
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * vpcId  功能说明：安全组所在的vpc的资源标识
+    * enterpriseProjectId  功能说明：企业项目ID。创建安全组时，给安全组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：“0”
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * vpcId  功能说明：安全组所在的vpc的资源标识
+    * enterpriseProjectId  功能说明：企业项目ID。创建安全组时，给安全组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：“0”
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * vpcId  功能说明：安全组所在的vpc的资源标识
+    * enterpriseProjectId  功能说明：企业项目ID。创建安全组时，给安全组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：“0”
     *
     * @var string[]
     */
@@ -184,6 +199,7 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string
     */
@@ -207,6 +223,7 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
+    *  功能说明：安全组所在的vpc的资源标识
     *
     * @return string|null
     */
@@ -230,6 +247,7 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  功能说明：企业项目ID。创建安全组时，给安全组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：“0”
     *
     * @return string|null
     */

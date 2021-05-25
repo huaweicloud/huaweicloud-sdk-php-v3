@@ -20,6 +20,8 @@ class TagResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * key  键，key不能为空。长度不超过36个字符。由英文字母、数字、下划线、中划线、中文字符组成。
+    * values  值列表。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class TagResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * key  键，key不能为空。长度不超过36个字符。由英文字母、数字、下划线、中划线、中文字符组成。
+    * values  值列表。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class TagResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * key  键，key不能为空。长度不超过36个字符。由英文字母、数字、下划线、中划线、中文字符组成。
+    * values  值列表。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class TagResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * key  键，key不能为空。长度不超过36个字符。由英文字母、数字、下划线、中划线、中文字符组成。
+    * values  值列表。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class TagResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * key  键，key不能为空。长度不超过36个字符。由英文字母、数字、下划线、中划线、中文字符组成。
+    * values  值列表。
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class TagResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
+    *  键，key不能为空。长度不超过36个字符。由英文字母、数字、下划线、中划线、中文字符组成。
     *
     * @return string|null
     */
@@ -201,6 +212,7 @@ class TagResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
+    *  值列表。
     *
     * @return string[]|null
     */

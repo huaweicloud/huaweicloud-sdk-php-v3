@@ -20,6 +20,8 @@ class CreateTokenWithIdTokenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * xIdpId  身份提供商ID。
+    * body  body
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class CreateTokenWithIdTokenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * xIdpId  身份提供商ID。
+    * body  body
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class CreateTokenWithIdTokenRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * xIdpId  身份提供商ID。
+    * body  body
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class CreateTokenWithIdTokenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * xIdpId  身份提供商ID。
+    * body  body
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class CreateTokenWithIdTokenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * xIdpId  身份提供商ID。
+    * body  body
     *
     * @var string[]
     */
@@ -184,6 +194,7 @@ class CreateTokenWithIdTokenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xIdpId
+    *  身份提供商ID。
     *
     * @return string
     */
@@ -195,7 +206,7 @@ class CreateTokenWithIdTokenRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xIdpId
     *
-    * @param string $xIdpId xIdpId
+    * @param string $xIdpId 身份提供商ID。
     *
     * @return $this
     */
@@ -207,6 +218,7 @@ class CreateTokenWithIdTokenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\GetIdTokenRequestBody|null
     */

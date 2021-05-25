@@ -20,6 +20,15 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * maximumConsecutiveIdenticalChars  同一字符连续出现的最大次数。
+    * maximumPasswordLength  密码最大字符数。
+    * minimumPasswordAge  密码最短使用时间（分钟）。
+    * minimumPasswordLength  密码最小字符数。
+    * numberOfRecentPasswordsDisallowed  密码不能与历史密码重复次数。
+    * passwordNotUsernameOrInvert  密码是否可以是用户名或用户名的反序。
+    * passwordRequirements  设置密码必须包含的字符要求。
+    * passwordValidityPeriod  密码有效期（天）。
+    * passwordCharCombination  至少包含字符种类的个数，取值区间[2,4]。
     *
     * @var string[]
     */
@@ -37,6 +46,15 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * maximumConsecutiveIdenticalChars  同一字符连续出现的最大次数。
+    * maximumPasswordLength  密码最大字符数。
+    * minimumPasswordAge  密码最短使用时间（分钟）。
+    * minimumPasswordLength  密码最小字符数。
+    * numberOfRecentPasswordsDisallowed  密码不能与历史密码重复次数。
+    * passwordNotUsernameOrInvert  密码是否可以是用户名或用户名的反序。
+    * passwordRequirements  设置密码必须包含的字符要求。
+    * passwordValidityPeriod  密码有效期（天）。
+    * passwordCharCombination  至少包含字符种类的个数，取值区间[2,4]。
     *
     * @var string[]
     */
@@ -75,6 +93,15 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * maximumConsecutiveIdenticalChars  同一字符连续出现的最大次数。
+    * maximumPasswordLength  密码最大字符数。
+    * minimumPasswordAge  密码最短使用时间（分钟）。
+    * minimumPasswordLength  密码最小字符数。
+    * numberOfRecentPasswordsDisallowed  密码不能与历史密码重复次数。
+    * passwordNotUsernameOrInvert  密码是否可以是用户名或用户名的反序。
+    * passwordRequirements  设置密码必须包含的字符要求。
+    * passwordValidityPeriod  密码有效期（天）。
+    * passwordCharCombination  至少包含字符种类的个数，取值区间[2,4]。
     *
     * @var string[]
     */
@@ -92,6 +119,15 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * maximumConsecutiveIdenticalChars  同一字符连续出现的最大次数。
+    * maximumPasswordLength  密码最大字符数。
+    * minimumPasswordAge  密码最短使用时间（分钟）。
+    * minimumPasswordLength  密码最小字符数。
+    * numberOfRecentPasswordsDisallowed  密码不能与历史密码重复次数。
+    * passwordNotUsernameOrInvert  密码是否可以是用户名或用户名的反序。
+    * passwordRequirements  设置密码必须包含的字符要求。
+    * passwordValidityPeriod  密码有效期（天）。
+    * passwordCharCombination  至少包含字符种类的个数，取值区间[2,4]。
     *
     * @var string[]
     */
@@ -109,6 +145,15 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * maximumConsecutiveIdenticalChars  同一字符连续出现的最大次数。
+    * maximumPasswordLength  密码最大字符数。
+    * minimumPasswordAge  密码最短使用时间（分钟）。
+    * minimumPasswordLength  密码最小字符数。
+    * numberOfRecentPasswordsDisallowed  密码不能与历史密码重复次数。
+    * passwordNotUsernameOrInvert  密码是否可以是用户名或用户名的反序。
+    * passwordRequirements  设置密码必须包含的字符要求。
+    * passwordValidityPeriod  密码有效期（天）。
+    * passwordCharCombination  至少包含字符种类的个数，取值区间[2,4]。
     *
     * @var string[]
     */
@@ -244,6 +289,7 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets maximumConsecutiveIdenticalChars
+    *  同一字符连续出现的最大次数。
     *
     * @return int
     */
@@ -267,6 +313,7 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets maximumPasswordLength
+    *  密码最大字符数。
     *
     * @return int
     */
@@ -290,6 +337,7 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets minimumPasswordAge
+    *  密码最短使用时间（分钟）。
     *
     * @return int
     */
@@ -313,6 +361,7 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets minimumPasswordLength
+    *  密码最小字符数。
     *
     * @return int
     */
@@ -336,6 +385,7 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets numberOfRecentPasswordsDisallowed
+    *  密码不能与历史密码重复次数。
     *
     * @return int
     */
@@ -359,6 +409,7 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets passwordNotUsernameOrInvert
+    *  密码是否可以是用户名或用户名的反序。
     *
     * @return bool
     */
@@ -382,6 +433,7 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets passwordRequirements
+    *  设置密码必须包含的字符要求。
     *
     * @return string
     */
@@ -405,6 +457,7 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets passwordValidityPeriod
+    *  密码有效期（天）。
     *
     * @return int
     */
@@ -428,6 +481,7 @@ class PasswordPolicyResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets passwordCharCombination
+    *  至少包含字符种类的个数，取值区间[2,4]。
     *
     * @return int
     */

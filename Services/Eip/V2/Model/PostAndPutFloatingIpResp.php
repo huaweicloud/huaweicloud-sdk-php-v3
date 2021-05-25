@@ -20,6 +20,16 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * fixedIpAddress  关联端口的私有IP地址。
+    * floatingIpAddress  浮动IP地址。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询。
+    * id  浮动IP地址的id。
+    * portId  端口id。
+    * routerId  所属路由器id。
+    * status  网络状态，可以为ACTIVE， DOWN或ERROR。  DOWN：未绑定  ACTIVE：绑定  ERROR：异常
+    * tenantId  项目id。
+    * dnsName  DNS名称(目前仅广州局点支持)
+    * dnsDomain  DNS域地址(目前仅广州局点支持)
     *
     * @var string[]
     */
@@ -38,6 +48,16 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * fixedIpAddress  关联端口的私有IP地址。
+    * floatingIpAddress  浮动IP地址。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询。
+    * id  浮动IP地址的id。
+    * portId  端口id。
+    * routerId  所属路由器id。
+    * status  网络状态，可以为ACTIVE， DOWN或ERROR。  DOWN：未绑定  ACTIVE：绑定  ERROR：异常
+    * tenantId  项目id。
+    * dnsName  DNS名称(目前仅广州局点支持)
+    * dnsDomain  DNS域地址(目前仅广州局点支持)
     *
     * @var string[]
     */
@@ -77,6 +97,16 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * fixedIpAddress  关联端口的私有IP地址。
+    * floatingIpAddress  浮动IP地址。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询。
+    * id  浮动IP地址的id。
+    * portId  端口id。
+    * routerId  所属路由器id。
+    * status  网络状态，可以为ACTIVE， DOWN或ERROR。  DOWN：未绑定  ACTIVE：绑定  ERROR：异常
+    * tenantId  项目id。
+    * dnsName  DNS名称(目前仅广州局点支持)
+    * dnsDomain  DNS域地址(目前仅广州局点支持)
     *
     * @var string[]
     */
@@ -95,6 +125,16 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * fixedIpAddress  关联端口的私有IP地址。
+    * floatingIpAddress  浮动IP地址。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询。
+    * id  浮动IP地址的id。
+    * portId  端口id。
+    * routerId  所属路由器id。
+    * status  网络状态，可以为ACTIVE， DOWN或ERROR。  DOWN：未绑定  ACTIVE：绑定  ERROR：异常
+    * tenantId  项目id。
+    * dnsName  DNS名称(目前仅广州局点支持)
+    * dnsDomain  DNS域地址(目前仅广州局点支持)
     *
     * @var string[]
     */
@@ -113,6 +153,16 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * fixedIpAddress  关联端口的私有IP地址。
+    * floatingIpAddress  浮动IP地址。
+    * floatingNetworkId  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询。
+    * id  浮动IP地址的id。
+    * portId  端口id。
+    * routerId  所属路由器id。
+    * status  网络状态，可以为ACTIVE， DOWN或ERROR。  DOWN：未绑定  ACTIVE：绑定  ERROR：异常
+    * tenantId  项目id。
+    * dnsName  DNS名称(目前仅广州局点支持)
+    * dnsDomain  DNS域地址(目前仅广州局点支持)
     *
     * @var string[]
     */
@@ -275,6 +325,7 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets fixedIpAddress
+    *  关联端口的私有IP地址。
     *
     * @return string|null
     */
@@ -298,6 +349,7 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingIpAddress
+    *  浮动IP地址。
     *
     * @return string|null
     */
@@ -321,6 +373,7 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingNetworkId
+    *  外部网络的id。只能使用固定的外网，外部网络的信息请通过GET /v2.0/networks?router:external=True或GET /v2.0/networks?name={floating_network}或neutron net-external-list方式查询。
     *
     * @return string|null
     */
@@ -344,6 +397,7 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  浮动IP地址的id。
     *
     * @return string|null
     */
@@ -367,6 +421,7 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets portId
+    *  端口id。
     *
     * @return string|null
     */
@@ -390,6 +445,7 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets routerId
+    *  所属路由器id。
     *
     * @return string|null
     */
@@ -413,6 +469,7 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  网络状态，可以为ACTIVE， DOWN或ERROR。  DOWN：未绑定  ACTIVE：绑定  ERROR：异常
     *
     * @return string|null
     */
@@ -436,6 +493,7 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  项目id。
     *
     * @return string|null
     */
@@ -459,6 +517,7 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets dnsName
+    *  DNS名称(目前仅广州局点支持)
     *
     * @return string|null
     */
@@ -482,6 +541,7 @@ class PostAndPutFloatingIpResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets dnsDomain
+    *  DNS域地址(目前仅广州局点支持)
     *
     * @return string|null
     */

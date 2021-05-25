@@ -21,6 +21,8 @@ class CreateAccessCodeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * accessKey  接入名，随机生成8位字符串
+    * accessCode  接入凭证。
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class CreateAccessCodeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * accessKey  接入名，随机生成8位字符串
+    * accessCode  接入凭证。
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class CreateAccessCodeResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * accessKey  接入名，随机生成8位字符串
+    * accessCode  接入凭证。
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class CreateAccessCodeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * accessKey  接入名，随机生成8位字符串
+    * accessCode  接入凭证。
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class CreateAccessCodeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * accessKey  接入名，随机生成8位字符串
+    * accessCode  接入凭证。
     *
     * @var string[]
     */
@@ -188,6 +198,7 @@ class CreateAccessCodeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessKey
+    *  接入名，随机生成8位字符串
     *
     * @return string|null
     */
@@ -211,6 +222,7 @@ class CreateAccessCodeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessCode
+    *  接入凭证。
     *
     * @return string|null
     */

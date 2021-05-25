@@ -20,6 +20,39 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  云硬盘的ID。
+    * links  云硬盘URI自描述信息。请参见 [links参数说明](https://support.huaweicloud.com/api-evs/evs_04_2006.html#evs_04_2006__evs_04_2010_li1077125119136)。
+    * name  云硬盘名称。
+    * status  云硬盘状态，请参见[云硬盘状态](https://support.huaweicloud.com/api-evs/evs_04_0040.html)。
+    * attachments  云硬盘的挂载信息，请参见•[attachments参数说明](https://support.huaweicloud.com/api-evs/evs_04_2006.html#evs_04_2006__evs_04_2010_li12430153610291)。
+    * availabilityZone  云硬盘所属的AZ信息。
+    * osVolHostAttrhost  预留属性。
+    * sourceVolid  源云硬盘ID，如果是从源云硬盘创建，则有值。  当前云硬盘服务不支持该字段。
+    * snapshotId  快照ID，如果是从快照创建，则有值。
+    * description  云硬盘描述。
+    * createdAt  云硬盘创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * osVolTenantAttrtenantId  云硬盘所属的租户ID。租户ID就是项目ID。
+    * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
+    * volumeType  云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
+    * size  云硬盘大小，单位为GB。
+    * consistencygroupId  预留属性。
+    * bootable  是否为启动云硬盘。 true：表示为启动云硬盘。 false：表示为非启动云硬盘。
+    * metadata  metadata
+    * updatedAt  云硬盘更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * encrypted  当前云硬盘服务不支持该字段。
+    * replicationStatus  预留属性。
+    * osVolumeReplicationextendedStatus  预留属性。
+    * osVolMigStatusAttrmigstat  预留属性。
+    * osVolMigStatusAttrnameId  预留属性。
+    * shareable  是否为共享云硬盘。true为共享盘，false为普通云硬盘。 该字段已经废弃，请使用multiattach。
+    * userId  预留属性。
+    * serviceType  服务类型，结果为EVS、DSS、DESS。
+    * multiattach  是否为共享云硬盘。
+    * dedicatedStorageId  云硬盘所属的专属存储池ID。
+    * dedicatedStorageName  云硬盘所属的专属存储池的名称。
+    * tags  云硬盘的标签。 如果云硬盘有标签，则会有该字段，否则该字段为空。
+    * wwn  云硬盘挂载时的唯一标识。
+    * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -61,6 +94,39 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  云硬盘的ID。
+    * links  云硬盘URI自描述信息。请参见 [links参数说明](https://support.huaweicloud.com/api-evs/evs_04_2006.html#evs_04_2006__evs_04_2010_li1077125119136)。
+    * name  云硬盘名称。
+    * status  云硬盘状态，请参见[云硬盘状态](https://support.huaweicloud.com/api-evs/evs_04_0040.html)。
+    * attachments  云硬盘的挂载信息，请参见•[attachments参数说明](https://support.huaweicloud.com/api-evs/evs_04_2006.html#evs_04_2006__evs_04_2010_li12430153610291)。
+    * availabilityZone  云硬盘所属的AZ信息。
+    * osVolHostAttrhost  预留属性。
+    * sourceVolid  源云硬盘ID，如果是从源云硬盘创建，则有值。  当前云硬盘服务不支持该字段。
+    * snapshotId  快照ID，如果是从快照创建，则有值。
+    * description  云硬盘描述。
+    * createdAt  云硬盘创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * osVolTenantAttrtenantId  云硬盘所属的租户ID。租户ID就是项目ID。
+    * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
+    * volumeType  云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
+    * size  云硬盘大小，单位为GB。
+    * consistencygroupId  预留属性。
+    * bootable  是否为启动云硬盘。 true：表示为启动云硬盘。 false：表示为非启动云硬盘。
+    * metadata  metadata
+    * updatedAt  云硬盘更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * encrypted  当前云硬盘服务不支持该字段。
+    * replicationStatus  预留属性。
+    * osVolumeReplicationextendedStatus  预留属性。
+    * osVolMigStatusAttrmigstat  预留属性。
+    * osVolMigStatusAttrnameId  预留属性。
+    * shareable  是否为共享云硬盘。true为共享盘，false为普通云硬盘。 该字段已经废弃，请使用multiattach。
+    * userId  预留属性。
+    * serviceType  服务类型，结果为EVS、DSS、DESS。
+    * multiattach  是否为共享云硬盘。
+    * dedicatedStorageId  云硬盘所属的专属存储池ID。
+    * dedicatedStorageName  云硬盘所属的专属存储池的名称。
+    * tags  云硬盘的标签。 如果云硬盘有标签，则会有该字段，否则该字段为空。
+    * wwn  云硬盘挂载时的唯一标识。
+    * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -123,6 +189,39 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  云硬盘的ID。
+    * links  云硬盘URI自描述信息。请参见 [links参数说明](https://support.huaweicloud.com/api-evs/evs_04_2006.html#evs_04_2006__evs_04_2010_li1077125119136)。
+    * name  云硬盘名称。
+    * status  云硬盘状态，请参见[云硬盘状态](https://support.huaweicloud.com/api-evs/evs_04_0040.html)。
+    * attachments  云硬盘的挂载信息，请参见•[attachments参数说明](https://support.huaweicloud.com/api-evs/evs_04_2006.html#evs_04_2006__evs_04_2010_li12430153610291)。
+    * availabilityZone  云硬盘所属的AZ信息。
+    * osVolHostAttrhost  预留属性。
+    * sourceVolid  源云硬盘ID，如果是从源云硬盘创建，则有值。  当前云硬盘服务不支持该字段。
+    * snapshotId  快照ID，如果是从快照创建，则有值。
+    * description  云硬盘描述。
+    * createdAt  云硬盘创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * osVolTenantAttrtenantId  云硬盘所属的租户ID。租户ID就是项目ID。
+    * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
+    * volumeType  云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
+    * size  云硬盘大小，单位为GB。
+    * consistencygroupId  预留属性。
+    * bootable  是否为启动云硬盘。 true：表示为启动云硬盘。 false：表示为非启动云硬盘。
+    * metadata  metadata
+    * updatedAt  云硬盘更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * encrypted  当前云硬盘服务不支持该字段。
+    * replicationStatus  预留属性。
+    * osVolumeReplicationextendedStatus  预留属性。
+    * osVolMigStatusAttrmigstat  预留属性。
+    * osVolMigStatusAttrnameId  预留属性。
+    * shareable  是否为共享云硬盘。true为共享盘，false为普通云硬盘。 该字段已经废弃，请使用multiattach。
+    * userId  预留属性。
+    * serviceType  服务类型，结果为EVS、DSS、DESS。
+    * multiattach  是否为共享云硬盘。
+    * dedicatedStorageId  云硬盘所属的专属存储池ID。
+    * dedicatedStorageName  云硬盘所属的专属存储池的名称。
+    * tags  云硬盘的标签。 如果云硬盘有标签，则会有该字段，否则该字段为空。
+    * wwn  云硬盘挂载时的唯一标识。
+    * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -164,6 +263,39 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  云硬盘的ID。
+    * links  云硬盘URI自描述信息。请参见 [links参数说明](https://support.huaweicloud.com/api-evs/evs_04_2006.html#evs_04_2006__evs_04_2010_li1077125119136)。
+    * name  云硬盘名称。
+    * status  云硬盘状态，请参见[云硬盘状态](https://support.huaweicloud.com/api-evs/evs_04_0040.html)。
+    * attachments  云硬盘的挂载信息，请参见•[attachments参数说明](https://support.huaweicloud.com/api-evs/evs_04_2006.html#evs_04_2006__evs_04_2010_li12430153610291)。
+    * availabilityZone  云硬盘所属的AZ信息。
+    * osVolHostAttrhost  预留属性。
+    * sourceVolid  源云硬盘ID，如果是从源云硬盘创建，则有值。  当前云硬盘服务不支持该字段。
+    * snapshotId  快照ID，如果是从快照创建，则有值。
+    * description  云硬盘描述。
+    * createdAt  云硬盘创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * osVolTenantAttrtenantId  云硬盘所属的租户ID。租户ID就是项目ID。
+    * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
+    * volumeType  云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
+    * size  云硬盘大小，单位为GB。
+    * consistencygroupId  预留属性。
+    * bootable  是否为启动云硬盘。 true：表示为启动云硬盘。 false：表示为非启动云硬盘。
+    * metadata  metadata
+    * updatedAt  云硬盘更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * encrypted  当前云硬盘服务不支持该字段。
+    * replicationStatus  预留属性。
+    * osVolumeReplicationextendedStatus  预留属性。
+    * osVolMigStatusAttrmigstat  预留属性。
+    * osVolMigStatusAttrnameId  预留属性。
+    * shareable  是否为共享云硬盘。true为共享盘，false为普通云硬盘。 该字段已经废弃，请使用multiattach。
+    * userId  预留属性。
+    * serviceType  服务类型，结果为EVS、DSS、DESS。
+    * multiattach  是否为共享云硬盘。
+    * dedicatedStorageId  云硬盘所属的专属存储池ID。
+    * dedicatedStorageName  云硬盘所属的专属存储池的名称。
+    * tags  云硬盘的标签。 如果云硬盘有标签，则会有该字段，否则该字段为空。
+    * wwn  云硬盘挂载时的唯一标识。
+    * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -205,6 +337,39 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  云硬盘的ID。
+    * links  云硬盘URI自描述信息。请参见 [links参数说明](https://support.huaweicloud.com/api-evs/evs_04_2006.html#evs_04_2006__evs_04_2010_li1077125119136)。
+    * name  云硬盘名称。
+    * status  云硬盘状态，请参见[云硬盘状态](https://support.huaweicloud.com/api-evs/evs_04_0040.html)。
+    * attachments  云硬盘的挂载信息，请参见•[attachments参数说明](https://support.huaweicloud.com/api-evs/evs_04_2006.html#evs_04_2006__evs_04_2010_li12430153610291)。
+    * availabilityZone  云硬盘所属的AZ信息。
+    * osVolHostAttrhost  预留属性。
+    * sourceVolid  源云硬盘ID，如果是从源云硬盘创建，则有值。  当前云硬盘服务不支持该字段。
+    * snapshotId  快照ID，如果是从快照创建，则有值。
+    * description  云硬盘描述。
+    * createdAt  云硬盘创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * osVolTenantAttrtenantId  云硬盘所属的租户ID。租户ID就是项目ID。
+    * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
+    * volumeType  云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
+    * size  云硬盘大小，单位为GB。
+    * consistencygroupId  预留属性。
+    * bootable  是否为启动云硬盘。 true：表示为启动云硬盘。 false：表示为非启动云硬盘。
+    * metadata  metadata
+    * updatedAt  云硬盘更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * encrypted  当前云硬盘服务不支持该字段。
+    * replicationStatus  预留属性。
+    * osVolumeReplicationextendedStatus  预留属性。
+    * osVolMigStatusAttrmigstat  预留属性。
+    * osVolMigStatusAttrnameId  预留属性。
+    * shareable  是否为共享云硬盘。true为共享盘，false为普通云硬盘。 该字段已经废弃，请使用multiattach。
+    * userId  预留属性。
+    * serviceType  服务类型，结果为EVS、DSS、DESS。
+    * multiattach  是否为共享云硬盘。
+    * dedicatedStorageId  云硬盘所属的专属存储池ID。
+    * dedicatedStorageName  云硬盘所属的专属存储池的名称。
+    * tags  云硬盘的标签。 如果云硬盘有标签，则会有该字段，否则该字段为空。
+    * wwn  云硬盘挂载时的唯一标识。
+    * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @var string[]
     */
@@ -439,6 +604,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  云硬盘的ID。
     *
     * @return string
     */
@@ -462,6 +628,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  云硬盘URI自描述信息。请参见 [links参数说明](https://support.huaweicloud.com/api-evs/evs_04_2006.html#evs_04_2006__evs_04_2010_li1077125119136)。
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\Link[]
     */
@@ -485,6 +652,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云硬盘名称。
     *
     * @return string
     */
@@ -508,6 +676,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  云硬盘状态，请参见[云硬盘状态](https://support.huaweicloud.com/api-evs/evs_04_0040.html)。
     *
     * @return string
     */
@@ -531,6 +700,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets attachments
+    *  云硬盘的挂载信息，请参见•[attachments参数说明](https://support.huaweicloud.com/api-evs/evs_04_2006.html#evs_04_2006__evs_04_2010_li12430153610291)。
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\Attachment[]
     */
@@ -554,6 +724,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
+    *  云硬盘所属的AZ信息。
     *
     * @return string
     */
@@ -577,6 +748,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVolHostAttrhost
+    *  预留属性。
     *
     * @return string
     */
@@ -600,6 +772,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceVolid
+    *  源云硬盘ID，如果是从源云硬盘创建，则有值。  当前云硬盘服务不支持该字段。
     *
     * @return string|null
     */
@@ -623,6 +796,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets snapshotId
+    *  快照ID，如果是从快照创建，则有值。
     *
     * @return string
     */
@@ -646,6 +820,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  云硬盘描述。
     *
     * @return string
     */
@@ -669,6 +844,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  云硬盘创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
     *
     * @return string
     */
@@ -692,6 +868,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVolTenantAttrtenantId
+    *  云硬盘所属的租户ID。租户ID就是项目ID。
     *
     * @return string
     */
@@ -715,6 +892,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeImageMetadata
+    *  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
     *
     * @return map[string,object]
     */
@@ -738,6 +916,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeType
+    *  云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
     *
     * @return string
     */
@@ -749,7 +928,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
     /**
     * Sets volumeType
     *
-    * @param string $volumeType 云硬盘类型。 目前支持“SSD”，“SAS”和“SATA”三种。 “SSD”为超高IO云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
+    * @param string $volumeType 云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
     *
     * @return $this
     */
@@ -761,6 +940,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
+    *  云硬盘大小，单位为GB。
     *
     * @return int
     */
@@ -784,6 +964,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets consistencygroupId
+    *  预留属性。
     *
     * @return string|null
     */
@@ -807,6 +988,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets bootable
+    *  是否为启动云硬盘。 true：表示为启动云硬盘。 false：表示为非启动云硬盘。
     *
     * @return string
     */
@@ -830,6 +1012,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets metadata
+    *  metadata
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\VolumeMetadata
     */
@@ -853,6 +1036,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
+    *  云硬盘更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
     *
     * @return string
     */
@@ -876,6 +1060,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets encrypted
+    *  当前云硬盘服务不支持该字段。
     *
     * @return bool|null
     */
@@ -899,6 +1084,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets replicationStatus
+    *  预留属性。
     *
     * @return string
     */
@@ -922,6 +1108,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVolumeReplicationextendedStatus
+    *  预留属性。
     *
     * @return string
     */
@@ -945,6 +1132,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVolMigStatusAttrmigstat
+    *  预留属性。
     *
     * @return string
     */
@@ -968,6 +1156,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets osVolMigStatusAttrnameId
+    *  预留属性。
     *
     * @return string
     */
@@ -991,6 +1180,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets shareable
+    *  是否为共享云硬盘。true为共享盘，false为普通云硬盘。 该字段已经废弃，请使用multiattach。
     *
     * @return bool
     */
@@ -1014,6 +1204,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  预留属性。
     *
     * @return string
     */
@@ -1037,6 +1228,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
+    *  服务类型，结果为EVS、DSS、DESS。
     *
     * @return string
     */
@@ -1060,6 +1252,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets multiattach
+    *  是否为共享云硬盘。
     *
     * @return bool
     */
@@ -1083,6 +1276,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets dedicatedStorageId
+    *  云硬盘所属的专属存储池ID。
     *
     * @return string|null
     */
@@ -1106,6 +1300,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets dedicatedStorageName
+    *  云硬盘所属的专属存储池的名称。
     *
     * @return string|null
     */
@@ -1129,6 +1324,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  云硬盘的标签。 如果云硬盘有标签，则会有该字段，否则该字段为空。
     *
     * @return map[string,string]
     */
@@ -1152,6 +1348,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets wwn
+    *  云硬盘挂载时的唯一标识。
     *
     * @return string|null
     */
@@ -1175,6 +1372,7 @@ class VolumeDetailForTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
+    *  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     *
     * @return string|null
     */

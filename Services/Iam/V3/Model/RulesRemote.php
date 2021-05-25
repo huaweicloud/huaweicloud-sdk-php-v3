@@ -20,6 +20,9 @@ class RulesRemote implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * type  表示IdP断言中的属性。
+    * anyOneOf  输入属性值中包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
+    * notAnyOf  输入属性值中不包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class RulesRemote implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * type  表示IdP断言中的属性。
+    * anyOneOf  输入属性值中包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
+    * notAnyOf  输入属性值中不包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class RulesRemote implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * type  表示IdP断言中的属性。
+    * anyOneOf  输入属性值中包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
+    * notAnyOf  输入属性值中不包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class RulesRemote implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * type  表示IdP断言中的属性。
+    * anyOneOf  输入属性值中包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
+    * notAnyOf  输入属性值中不包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class RulesRemote implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * type  表示IdP断言中的属性。
+    * anyOneOf  输入属性值中包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
+    * notAnyOf  输入属性值中不包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
     *
     * @var string[]
     */
@@ -184,6 +199,7 @@ class RulesRemote implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  表示IdP断言中的属性。
     *
     * @return string
     */
@@ -207,6 +223,7 @@ class RulesRemote implements ModelInterface, ArrayAccess
 
     /**
     * Gets anyOneOf
+    *  输入属性值中包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
     *
     * @return string[]|null
     */
@@ -230,6 +247,7 @@ class RulesRemote implements ModelInterface, ArrayAccess
 
     /**
     * Gets notAnyOf
+    *  输入属性值中不包含指定值才生效，并返回布尔值，返回值不能用于local块中的占位符。在同一个remote数组元素中，any_one_of与not_any_of互斥，两者至多填写一个，不能同时填写。
     *
     * @return string[]|null
     */

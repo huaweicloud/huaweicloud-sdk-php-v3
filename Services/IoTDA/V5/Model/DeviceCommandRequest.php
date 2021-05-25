@@ -20,6 +20,9 @@ class DeviceCommandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * serviceId  设备命令所属的设备服务ID，在设备关联的产品模型中定义。
+    * commandName  设备命令名称，在设备关联的产品模型中定义。
+    * paras  设备执行的命令，Json格式，里面是一个个健值对，如果serviceId不为空，每个健都是profile中命令的参数名（paraName）;如果serviceId为空则由用户自定义命令格式。设备命令示例：{\"value\":\"1\"}，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class DeviceCommandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * serviceId  设备命令所属的设备服务ID，在设备关联的产品模型中定义。
+    * commandName  设备命令名称，在设备关联的产品模型中定义。
+    * paras  设备执行的命令，Json格式，里面是一个个健值对，如果serviceId不为空，每个健都是profile中命令的参数名（paraName）;如果serviceId为空则由用户自定义命令格式。设备命令示例：{\"value\":\"1\"}，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class DeviceCommandRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * serviceId  设备命令所属的设备服务ID，在设备关联的产品模型中定义。
+    * commandName  设备命令名称，在设备关联的产品模型中定义。
+    * paras  设备执行的命令，Json格式，里面是一个个健值对，如果serviceId不为空，每个健都是profile中命令的参数名（paraName）;如果serviceId为空则由用户自定义命令格式。设备命令示例：{\"value\":\"1\"}，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class DeviceCommandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * serviceId  设备命令所属的设备服务ID，在设备关联的产品模型中定义。
+    * commandName  设备命令名称，在设备关联的产品模型中定义。
+    * paras  设备执行的命令，Json格式，里面是一个个健值对，如果serviceId不为空，每个健都是profile中命令的参数名（paraName）;如果serviceId为空则由用户自定义命令格式。设备命令示例：{\"value\":\"1\"}，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class DeviceCommandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * serviceId  设备命令所属的设备服务ID，在设备关联的产品模型中定义。
+    * commandName  设备命令名称，在设备关联的产品模型中定义。
+    * paras  设备执行的命令，Json格式，里面是一个个健值对，如果serviceId不为空，每个健都是profile中命令的参数名（paraName）;如果serviceId为空则由用户自定义命令格式。设备命令示例：{\"value\":\"1\"}，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -190,6 +205,7 @@ class DeviceCommandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceId
+    *  设备命令所属的设备服务ID，在设备关联的产品模型中定义。
     *
     * @return string|null
     */
@@ -213,6 +229,7 @@ class DeviceCommandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets commandName
+    *  设备命令名称，在设备关联的产品模型中定义。
     *
     * @return string|null
     */
@@ -236,6 +253,7 @@ class DeviceCommandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets paras
+    *  设备执行的命令，Json格式，里面是一个个健值对，如果serviceId不为空，每个健都是profile中命令的参数名（paraName）;如果serviceId为空则由用户自定义命令格式。设备命令示例：{\"value\":\"1\"}，具体格式需要应用和设备约定。
     *
     * @return object
     */

@@ -20,6 +20,7 @@ class ShowPermanentAccessKeyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * accessKey  待查询的指定AK。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class ShowPermanentAccessKeyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * accessKey  待查询的指定AK。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class ShowPermanentAccessKeyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * accessKey  待查询的指定AK。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class ShowPermanentAccessKeyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * accessKey  待查询的指定AK。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class ShowPermanentAccessKeyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * accessKey  待查询的指定AK。
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class ShowPermanentAccessKeyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessKey
+    *  待查询的指定AK。
     *
     * @return string
     */
@@ -183,7 +189,7 @@ class ShowPermanentAccessKeyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets accessKey
     *
-    * @param string $accessKey accessKey
+    * @param string $accessKey 待查询的指定AK。
     *
     * @return $this
     */

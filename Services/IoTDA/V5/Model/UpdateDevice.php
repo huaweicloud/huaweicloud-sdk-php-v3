@@ -20,6 +20,10 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * deviceName  设备名称。
+    * description  设备的描述信息。
+    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
+    * authInfo  authInfo
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * deviceName  设备名称。
+    * description  设备的描述信息。
+    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
+    * authInfo  authInfo
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class UpdateDevice implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * deviceName  设备名称。
+    * description  设备的描述信息。
+    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
+    * authInfo  authInfo
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * deviceName  设备名称。
+    * description  设备的描述信息。
+    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
+    * authInfo  authInfo
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * deviceName  设备名称。
+    * description  设备的描述信息。
+    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
+    * authInfo  authInfo
     *
     * @var string[]
     */
@@ -205,6 +225,7 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceName
+    *  设备名称。
     *
     * @return string|null
     */
@@ -228,6 +249,7 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  设备的描述信息。
     *
     * @return string|null
     */
@@ -251,6 +273,7 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets extensionInfo
+    *  设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
     *
     * @return object|null
     */
@@ -274,6 +297,7 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets authInfo
+    *  authInfo
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\AuthInfoWithoutSecret|null
     */

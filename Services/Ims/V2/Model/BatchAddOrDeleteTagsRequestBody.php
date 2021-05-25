@@ -20,6 +20,8 @@ class BatchAddOrDeleteTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * action  要进行的标签操作，区分大小写。支持create、delete，分别用于批量地创建/更新、删除标签。
+    * tags  需要增加、修改或者删除的标签键值对集合。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class BatchAddOrDeleteTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * action  要进行的标签操作，区分大小写。支持create、delete，分别用于批量地创建/更新、删除标签。
+    * tags  需要增加、修改或者删除的标签键值对集合。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class BatchAddOrDeleteTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * action  要进行的标签操作，区分大小写。支持create、delete，分别用于批量地创建/更新、删除标签。
+    * tags  需要增加、修改或者删除的标签键值对集合。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class BatchAddOrDeleteTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * action  要进行的标签操作，区分大小写。支持create、delete，分别用于批量地创建/更新、删除标签。
+    * tags  需要增加、修改或者删除的标签键值对集合。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class BatchAddOrDeleteTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * action  要进行的标签操作，区分大小写。支持create、delete，分别用于批量地创建/更新、删除标签。
+    * tags  需要增加、修改或者删除的标签键值对集合。
     *
     * @var string[]
     */
@@ -204,6 +214,7 @@ class BatchAddOrDeleteTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
+    *  要进行的标签操作，区分大小写。支持create、delete，分别用于批量地创建/更新、删除标签。
     *
     * @return string
     */
@@ -227,6 +238,7 @@ class BatchAddOrDeleteTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  需要增加、修改或者删除的标签键值对集合。
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\ResourceTag[]
     */

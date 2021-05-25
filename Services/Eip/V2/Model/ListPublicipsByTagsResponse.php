@@ -21,6 +21,8 @@ class ListPublicipsByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * resources  resource对象列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class ListPublicipsByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * resources  resource对象列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class ListPublicipsByTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * resources  resource对象列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class ListPublicipsByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * resources  resource对象列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class ListPublicipsByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * resources  resource对象列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class ListPublicipsByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
+    *  resource对象列表
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\ListResourceResp[]|null
     */
@@ -199,6 +210,7 @@ class ListPublicipsByTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
+    *  总记录数
     *
     * @return int|null
     */

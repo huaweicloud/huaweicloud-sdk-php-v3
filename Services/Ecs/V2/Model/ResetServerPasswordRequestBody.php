@@ -20,6 +20,7 @@ class ResetServerPasswordRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * resetPassword  resetPassword
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class ResetServerPasswordRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * resetPassword  resetPassword
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class ResetServerPasswordRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * resetPassword  resetPassword
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class ResetServerPasswordRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * resetPassword  resetPassword
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class ResetServerPasswordRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * resetPassword  resetPassword
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class ResetServerPasswordRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resetPassword
+    *  resetPassword
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\ResetServerPasswordOption
     */

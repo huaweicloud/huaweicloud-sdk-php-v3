@@ -20,6 +20,9 @@ class PostPaidServerEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * iptype  弹性IP地址类型。
+    * bandwidth  bandwidth
+    * extendparam  extendparam
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class PostPaidServerEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * iptype  弹性IP地址类型。
+    * bandwidth  bandwidth
+    * extendparam  extendparam
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class PostPaidServerEip implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * iptype  弹性IP地址类型。
+    * bandwidth  bandwidth
+    * extendparam  extendparam
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class PostPaidServerEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * iptype  弹性IP地址类型。
+    * bandwidth  bandwidth
+    * extendparam  extendparam
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class PostPaidServerEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * iptype  弹性IP地址类型。
+    * bandwidth  bandwidth
+    * extendparam  extendparam
     *
     * @var string[]
     */
@@ -187,6 +202,7 @@ class PostPaidServerEip implements ModelInterface, ArrayAccess
 
     /**
     * Gets iptype
+    *  弹性IP地址类型。
     *
     * @return string
     */
@@ -210,6 +226,7 @@ class PostPaidServerEip implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidth
+    *  bandwidth
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\PostPaidServerEipBandwidth
     */
@@ -233,6 +250,7 @@ class PostPaidServerEip implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendparam
+    *  extendparam
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\PostPaidServerEipExtendParam|null
     */

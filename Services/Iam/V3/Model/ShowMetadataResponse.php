@@ -21,6 +21,14 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  Metadata的ID。
+    * idpId  身份提供商ID。
+    * entityId  Metadata文件中的entityID字段。
+    * protocolId  协议ID。
+    * domainId  用户所属账号ID。
+    * xaccountType  账号来源，默认为空。
+    * updateTime  导入或更新Metadata文件的时间。
+    * data  Metadata文件的内容。
     *
     * @var string[]
     */
@@ -37,6 +45,14 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  Metadata的ID。
+    * idpId  身份提供商ID。
+    * entityId  Metadata文件中的entityID字段。
+    * protocolId  协议ID。
+    * domainId  用户所属账号ID。
+    * xaccountType  账号来源，默认为空。
+    * updateTime  导入或更新Metadata文件的时间。
+    * data  Metadata文件的内容。
     *
     * @var string[]
     */
@@ -74,6 +90,14 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  Metadata的ID。
+    * idpId  身份提供商ID。
+    * entityId  Metadata文件中的entityID字段。
+    * protocolId  协议ID。
+    * domainId  用户所属账号ID。
+    * xaccountType  账号来源，默认为空。
+    * updateTime  导入或更新Metadata文件的时间。
+    * data  Metadata文件的内容。
     *
     * @var string[]
     */
@@ -90,6 +114,14 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  Metadata的ID。
+    * idpId  身份提供商ID。
+    * entityId  Metadata文件中的entityID字段。
+    * protocolId  协议ID。
+    * domainId  用户所属账号ID。
+    * xaccountType  账号来源，默认为空。
+    * updateTime  导入或更新Metadata文件的时间。
+    * data  Metadata文件的内容。
     *
     * @var string[]
     */
@@ -106,6 +138,14 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  Metadata的ID。
+    * idpId  身份提供商ID。
+    * entityId  Metadata文件中的entityID字段。
+    * protocolId  协议ID。
+    * domainId  用户所属账号ID。
+    * xaccountType  账号来源，默认为空。
+    * updateTime  导入或更新Metadata文件的时间。
+    * data  Metadata文件的内容。
     *
     * @var string[]
     */
@@ -212,6 +252,7 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  Metadata的ID。
     *
     * @return string|null
     */
@@ -235,6 +276,7 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets idpId
+    *  身份提供商ID。
     *
     * @return string|null
     */
@@ -258,6 +300,7 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets entityId
+    *  Metadata文件中的entityID字段。
     *
     * @return string|null
     */
@@ -281,6 +324,7 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocolId
+    *  协议ID。
     *
     * @return string|null
     */
@@ -304,6 +348,7 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  用户所属账号ID。
     *
     * @return string|null
     */
@@ -327,6 +372,7 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets xaccountType
+    *  账号来源，默认为空。
     *
     * @return string|null
     */
@@ -350,6 +396,7 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
+    *  导入或更新Metadata文件的时间。
     *
     * @return string|null
     */
@@ -373,6 +420,7 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
+    *  Metadata文件的内容。
     *
     * @return string|null
     */

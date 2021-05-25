@@ -20,6 +20,9 @@ class NeutronInsertFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * firewallRuleId  功能说明：网络ACL规则ID
+    * insertAfter  insert_after参数表示已经和某个policy关联的rule，新的rule将会直接被插入到insert_after参数指定的rule后面。如果insert_after和insert_before都被指定了，insert_after参数值将被忽略。
+    * insertBefore  insert_before参数表示已经和某个policy关联的rule，新的firewall rule将会直接被插入到insert_ before参数指定的firewall rule前面。如果insert_after和insert_before都被指定了，insert_after参数值将被忽略。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class NeutronInsertFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * firewallRuleId  功能说明：网络ACL规则ID
+    * insertAfter  insert_after参数表示已经和某个policy关联的rule，新的rule将会直接被插入到insert_after参数指定的rule后面。如果insert_after和insert_before都被指定了，insert_after参数值将被忽略。
+    * insertBefore  insert_before参数表示已经和某个policy关联的rule，新的firewall rule将会直接被插入到insert_ before参数指定的firewall rule前面。如果insert_after和insert_before都被指定了，insert_after参数值将被忽略。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class NeutronInsertFirewallRuleRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * firewallRuleId  功能说明：网络ACL规则ID
+    * insertAfter  insert_after参数表示已经和某个policy关联的rule，新的rule将会直接被插入到insert_after参数指定的rule后面。如果insert_after和insert_before都被指定了，insert_after参数值将被忽略。
+    * insertBefore  insert_before参数表示已经和某个policy关联的rule，新的firewall rule将会直接被插入到insert_ before参数指定的firewall rule前面。如果insert_after和insert_before都被指定了，insert_after参数值将被忽略。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class NeutronInsertFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * firewallRuleId  功能说明：网络ACL规则ID
+    * insertAfter  insert_after参数表示已经和某个policy关联的rule，新的rule将会直接被插入到insert_after参数指定的rule后面。如果insert_after和insert_before都被指定了，insert_after参数值将被忽略。
+    * insertBefore  insert_before参数表示已经和某个policy关联的rule，新的firewall rule将会直接被插入到insert_ before参数指定的firewall rule前面。如果insert_after和insert_before都被指定了，insert_after参数值将被忽略。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class NeutronInsertFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * firewallRuleId  功能说明：网络ACL规则ID
+    * insertAfter  insert_after参数表示已经和某个policy关联的rule，新的rule将会直接被插入到insert_after参数指定的rule后面。如果insert_after和insert_before都被指定了，insert_after参数值将被忽略。
+    * insertBefore  insert_before参数表示已经和某个policy关联的rule，新的firewall rule将会直接被插入到insert_ before参数指定的firewall rule前面。如果insert_after和insert_before都被指定了，insert_after参数值将被忽略。
     *
     * @var string[]
     */
@@ -193,6 +208,7 @@ class NeutronInsertFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets firewallRuleId
+    *  功能说明：网络ACL规则ID
     *
     * @return string
     */
@@ -216,6 +232,7 @@ class NeutronInsertFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets insertAfter
+    *  insert_after参数表示已经和某个policy关联的rule，新的rule将会直接被插入到insert_after参数指定的rule后面。如果insert_after和insert_before都被指定了，insert_after参数值将被忽略。
     *
     * @return string|null
     */
@@ -239,6 +256,7 @@ class NeutronInsertFirewallRuleRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets insertBefore
+    *  insert_before参数表示已经和某个policy关联的rule，新的firewall rule将会直接被插入到insert_ before参数指定的firewall rule前面。如果insert_after和insert_before都被指定了，insert_after参数值将被忽略。
     *
     * @return string|null
     */

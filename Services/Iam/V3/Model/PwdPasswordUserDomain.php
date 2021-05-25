@@ -20,6 +20,7 @@ class PwdPasswordUserDomain implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  IAM用户所属账号名。
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class PwdPasswordUserDomain implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  IAM用户所属账号名。
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class PwdPasswordUserDomain implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  IAM用户所属账号名。
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class PwdPasswordUserDomain implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  IAM用户所属账号名。
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class PwdPasswordUserDomain implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  IAM用户所属账号名。
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class PwdPasswordUserDomain implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  IAM用户所属账号名。
     *
     * @return string
     */

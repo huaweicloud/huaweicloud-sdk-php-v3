@@ -21,6 +21,8 @@ class ListDeviceMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * deviceId  设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
+    * messages  设备消息列表。
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class ListDeviceMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * deviceId  设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
+    * messages  设备消息列表。
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class ListDeviceMessagesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * deviceId  设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
+    * messages  设备消息列表。
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class ListDeviceMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * deviceId  设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
+    * messages  设备消息列表。
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class ListDeviceMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * deviceId  设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
+    * messages  设备消息列表。
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class ListDeviceMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceId
+    *  设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
     *
     * @return string|null
     */
@@ -199,6 +210,7 @@ class ListDeviceMessagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets messages
+    *  设备消息列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceMessage[]|null
     */

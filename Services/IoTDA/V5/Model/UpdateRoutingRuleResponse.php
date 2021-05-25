@@ -21,6 +21,15 @@ class UpdateRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * ruleId  规则触发条件ID，用于唯一标识一个规则触发条件，在创建规则条件时由物联网平台分配获得。
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * subject  subject
+    * appType  租户规则的生效范围，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。
+    * appId  资源空间ID
+    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * active  规则条件的状态是否为激活。
     *
     * @var string[]
     */
@@ -38,6 +47,15 @@ class UpdateRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * ruleId  规则触发条件ID，用于唯一标识一个规则触发条件，在创建规则条件时由物联网平台分配获得。
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * subject  subject
+    * appType  租户规则的生效范围，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。
+    * appId  资源空间ID
+    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * active  规则条件的状态是否为激活。
     *
     * @var string[]
     */
@@ -76,6 +94,15 @@ class UpdateRoutingRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * ruleId  规则触发条件ID，用于唯一标识一个规则触发条件，在创建规则条件时由物联网平台分配获得。
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * subject  subject
+    * appType  租户规则的生效范围，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。
+    * appId  资源空间ID
+    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * active  规则条件的状态是否为激活。
     *
     * @var string[]
     */
@@ -93,6 +120,15 @@ class UpdateRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * ruleId  规则触发条件ID，用于唯一标识一个规则触发条件，在创建规则条件时由物联网平台分配获得。
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * subject  subject
+    * appType  租户规则的生效范围，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。
+    * appId  资源空间ID
+    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * active  规则条件的状态是否为激活。
     *
     * @var string[]
     */
@@ -110,6 +146,15 @@ class UpdateRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * ruleId  规则触发条件ID，用于唯一标识一个规则触发条件，在创建规则条件时由物联网平台分配获得。
+    * ruleName  用户自定义的规则名称。
+    * description  用户自定义的规则描述。
+    * subject  subject
+    * appType  租户规则的生效范围，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。
+    * appId  资源空间ID
+    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * active  规则条件的状态是否为激活。
     *
     * @var string[]
     */
@@ -251,6 +296,7 @@ class UpdateRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleId
+    *  规则触发条件ID，用于唯一标识一个规则触发条件，在创建规则条件时由物联网平台分配获得。
     *
     * @return string|null
     */
@@ -274,6 +320,7 @@ class UpdateRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleName
+    *  用户自定义的规则名称。
     *
     * @return string|null
     */
@@ -297,6 +344,7 @@ class UpdateRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  用户自定义的规则描述。
     *
     * @return string|null
     */
@@ -320,6 +368,7 @@ class UpdateRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subject
+    *  subject
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\RoutingRuleSubject|null
     */
@@ -343,6 +392,7 @@ class UpdateRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appType
+    *  租户规则的生效范围，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。
     *
     * @return string|null
     */
@@ -366,6 +416,7 @@ class UpdateRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
+    *  资源空间ID
     *
     * @return string|null
     */
@@ -389,6 +440,7 @@ class UpdateRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets select
+    *  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
     *
     * @return string|null
     */
@@ -412,6 +464,7 @@ class UpdateRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets where
+    *  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
     *
     * @return string|null
     */
@@ -435,6 +488,7 @@ class UpdateRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets active
+    *  规则条件的状态是否为激活。
     *
     * @return bool|null
     */

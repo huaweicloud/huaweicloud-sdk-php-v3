@@ -21,6 +21,8 @@ class KeystoneListIdentityProvidersResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * identityProviders  身份提供商信息列表。
+    * links  links
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class KeystoneListIdentityProvidersResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * identityProviders  身份提供商信息列表。
+    * links  links
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class KeystoneListIdentityProvidersResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * identityProviders  身份提供商信息列表。
+    * links  links
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class KeystoneListIdentityProvidersResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * identityProviders  身份提供商信息列表。
+    * links  links
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class KeystoneListIdentityProvidersResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * identityProviders  身份提供商信息列表。
+    * links  links
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class KeystoneListIdentityProvidersResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets identityProviders
+    *  身份提供商信息列表。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\IdentityprovidersResult[]|null
     */
@@ -199,6 +210,7 @@ class KeystoneListIdentityProvidersResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\Links|null
     */

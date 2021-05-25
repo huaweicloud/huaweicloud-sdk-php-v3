@@ -21,6 +21,8 @@ class CreateCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * commandId  设备命令ID，用于唯一标识一条命令，在下发设备命令时由物联网平台分配获得。
+    * response  设备上报的命令执行结果。Json格式，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class CreateCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * commandId  设备命令ID，用于唯一标识一条命令，在下发设备命令时由物联网平台分配获得。
+    * response  设备上报的命令执行结果。Json格式，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class CreateCommandResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * commandId  设备命令ID，用于唯一标识一条命令，在下发设备命令时由物联网平台分配获得。
+    * response  设备上报的命令执行结果。Json格式，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class CreateCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * commandId  设备命令ID，用于唯一标识一条命令，在下发设备命令时由物联网平台分配获得。
+    * response  设备上报的命令执行结果。Json格式，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class CreateCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * commandId  设备命令ID，用于唯一标识一条命令，在下发设备命令时由物联网平台分配获得。
+    * response  设备上报的命令执行结果。Json格式，具体格式需要应用和设备约定。
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class CreateCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets commandId
+    *  设备命令ID，用于唯一标识一条命令，在下发设备命令时由物联网平台分配获得。
     *
     * @return string|null
     */
@@ -199,6 +210,7 @@ class CreateCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets response
+    *  设备上报的命令执行结果。Json格式，具体格式需要应用和设备约定。
     *
     * @return object|null
     */

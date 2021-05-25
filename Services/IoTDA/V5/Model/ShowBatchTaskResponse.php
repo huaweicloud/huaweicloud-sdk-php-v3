@@ -21,6 +21,9 @@ class ShowBatchTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * batchtask  batchtask
+    * taskDetails  子任务详情列表。
+    * page  page
     *
     * @var string[]
     */
@@ -32,6 +35,9 @@ class ShowBatchTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * batchtask  batchtask
+    * taskDetails  子任务详情列表。
+    * page  page
     *
     * @var string[]
     */
@@ -64,6 +70,9 @@ class ShowBatchTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * batchtask  batchtask
+    * taskDetails  子任务详情列表。
+    * page  page
     *
     * @var string[]
     */
@@ -75,6 +84,9 @@ class ShowBatchTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * batchtask  batchtask
+    * taskDetails  子任务详情列表。
+    * page  page
     *
     * @var string[]
     */
@@ -86,6 +98,9 @@ class ShowBatchTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * batchtask  batchtask
+    * taskDetails  子任务详情列表。
+    * page  page
     *
     * @var string[]
     */
@@ -182,6 +197,7 @@ class ShowBatchTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets batchtask
+    *  batchtask
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\Task|null
     */
@@ -205,6 +221,7 @@ class ShowBatchTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskDetails
+    *  子任务详情列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\TaskDetail[]|null
     */
@@ -228,6 +245,7 @@ class ShowBatchTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets page
+    *  page
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\Page|null
     */

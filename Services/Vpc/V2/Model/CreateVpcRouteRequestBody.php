@@ -20,6 +20,7 @@ class CreateVpcRouteRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * route  route
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class CreateVpcRouteRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * route  route
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class CreateVpcRouteRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * route  route
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class CreateVpcRouteRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * route  route
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class CreateVpcRouteRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * route  route
     *
     * @var string[]
     */
@@ -172,6 +177,7 @@ class CreateVpcRouteRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets route
+    *  route
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\CreateVpcRouteOption
     */

@@ -20,6 +20,14 @@ class LoginToken implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domainId  账号ID。
+    * expiresAt  logintoken的过期时间，默认10min。
+    * method  认证方法。当认证用户为华为云用户时，该字段内容为“token”，当认证用户为自定义代理用户时，该字段内容为“federation_proxy”。
+    * userId  用户ID。
+    * userName  用户名。
+    * sessionId  会话ID。
+    * sessionName  自定义代理用户名。 > - [通过委托获取临时访问密钥和securitytoken](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=CreateTemporaryAccessKeyByAgency)且请求体中填写session_user.name参数时，会返回该字段。该字段的值即为session_user.name所填写的值。
+    * assumedBy  assumedBy
     *
     * @var string[]
     */
@@ -36,6 +44,14 @@ class LoginToken implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domainId  账号ID。
+    * expiresAt  logintoken的过期时间，默认10min。
+    * method  认证方法。当认证用户为华为云用户时，该字段内容为“token”，当认证用户为自定义代理用户时，该字段内容为“federation_proxy”。
+    * userId  用户ID。
+    * userName  用户名。
+    * sessionId  会话ID。
+    * sessionName  自定义代理用户名。 > - [通过委托获取临时访问密钥和securitytoken](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=CreateTemporaryAccessKeyByAgency)且请求体中填写session_user.name参数时，会返回该字段。该字段的值即为session_user.name所填写的值。
+    * assumedBy  assumedBy
     *
     * @var string[]
     */
@@ -73,6 +89,14 @@ class LoginToken implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domainId  账号ID。
+    * expiresAt  logintoken的过期时间，默认10min。
+    * method  认证方法。当认证用户为华为云用户时，该字段内容为“token”，当认证用户为自定义代理用户时，该字段内容为“federation_proxy”。
+    * userId  用户ID。
+    * userName  用户名。
+    * sessionId  会话ID。
+    * sessionName  自定义代理用户名。 > - [通过委托获取临时访问密钥和securitytoken](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=CreateTemporaryAccessKeyByAgency)且请求体中填写session_user.name参数时，会返回该字段。该字段的值即为session_user.name所填写的值。
+    * assumedBy  assumedBy
     *
     * @var string[]
     */
@@ -89,6 +113,14 @@ class LoginToken implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domainId  账号ID。
+    * expiresAt  logintoken的过期时间，默认10min。
+    * method  认证方法。当认证用户为华为云用户时，该字段内容为“token”，当认证用户为自定义代理用户时，该字段内容为“federation_proxy”。
+    * userId  用户ID。
+    * userName  用户名。
+    * sessionId  会话ID。
+    * sessionName  自定义代理用户名。 > - [通过委托获取临时访问密钥和securitytoken](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=CreateTemporaryAccessKeyByAgency)且请求体中填写session_user.name参数时，会返回该字段。该字段的值即为session_user.name所填写的值。
+    * assumedBy  assumedBy
     *
     * @var string[]
     */
@@ -105,6 +137,14 @@ class LoginToken implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domainId  账号ID。
+    * expiresAt  logintoken的过期时间，默认10min。
+    * method  认证方法。当认证用户为华为云用户时，该字段内容为“token”，当认证用户为自定义代理用户时，该字段内容为“federation_proxy”。
+    * userId  用户ID。
+    * userName  用户名。
+    * sessionId  会话ID。
+    * sessionName  自定义代理用户名。 > - [通过委托获取临时访问密钥和securitytoken](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=CreateTemporaryAccessKeyByAgency)且请求体中填写session_user.name参数时，会返回该字段。该字段的值即为session_user.name所填写的值。
+    * assumedBy  assumedBy
     *
     * @var string[]
     */
@@ -229,6 +269,7 @@ class LoginToken implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  账号ID。
     *
     * @return string
     */
@@ -252,6 +293,7 @@ class LoginToken implements ModelInterface, ArrayAccess
 
     /**
     * Gets expiresAt
+    *  logintoken的过期时间，默认10min。
     *
     * @return string
     */
@@ -275,6 +317,7 @@ class LoginToken implements ModelInterface, ArrayAccess
 
     /**
     * Gets method
+    *  认证方法。当认证用户为华为云用户时，该字段内容为“token”，当认证用户为自定义代理用户时，该字段内容为“federation_proxy”。
     *
     * @return string
     */
@@ -298,6 +341,7 @@ class LoginToken implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  用户ID。
     *
     * @return string
     */
@@ -321,6 +365,7 @@ class LoginToken implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
+    *  用户名。
     *
     * @return string
     */
@@ -344,6 +389,7 @@ class LoginToken implements ModelInterface, ArrayAccess
 
     /**
     * Gets sessionId
+    *  会话ID。
     *
     * @return string
     */
@@ -367,6 +413,7 @@ class LoginToken implements ModelInterface, ArrayAccess
 
     /**
     * Gets sessionName
+    *  自定义代理用户名。 > - [通过委托获取临时访问密钥和securitytoken](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=CreateTemporaryAccessKeyByAgency)且请求体中填写session_user.name参数时，会返回该字段。该字段的值即为session_user.name所填写的值。
     *
     * @return string|null
     */
@@ -390,6 +437,7 @@ class LoginToken implements ModelInterface, ArrayAccess
 
     /**
     * Gets assumedBy
+    *  assumedBy
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\LoginTokenAssumedBy|null
     */

@@ -20,6 +20,10 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * bssParam  bssParam
+    * volume  volume
+    * serverId  创建云硬盘并挂载到目标虚拟机。
+    * osSchHnTschedulerHints  osSchHnTschedulerHints
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * bssParam  bssParam
+    * volume  volume
+    * serverId  创建云硬盘并挂载到目标虚拟机。
+    * osSchHnTschedulerHints  osSchHnTschedulerHints
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * bssParam  bssParam
+    * volume  volume
+    * serverId  创建云硬盘并挂载到目标虚拟机。
+    * osSchHnTschedulerHints  osSchHnTschedulerHints
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * bssParam  bssParam
+    * volume  volume
+    * serverId  创建云硬盘并挂载到目标虚拟机。
+    * osSchHnTschedulerHints  osSchHnTschedulerHints
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * bssParam  bssParam
+    * volume  volume
+    * serverId  创建云硬盘并挂载到目标虚拟机。
+    * osSchHnTschedulerHints  osSchHnTschedulerHints
     *
     * @var string[]
     */
@@ -190,6 +210,7 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets bssParam
+    *  bssParam
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\BssParamForCreateVolume|null
     */
@@ -213,6 +234,7 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets volume
+    *  volume
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\CreateVolumeOption
     */
@@ -236,6 +258,7 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverId
+    *  创建云硬盘并挂载到目标虚拟机。
     *
     * @return string|null
     */
@@ -259,6 +282,7 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets osSchHnTschedulerHints
+    *  osSchHnTschedulerHints
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\CreateVolumeSchedulerHints|null
     */

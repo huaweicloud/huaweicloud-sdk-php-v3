@@ -20,6 +20,17 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  云硬盘快照ID。
+    * status  云硬盘快照状态。
+    * name  云硬盘快照名称。
+    * description  云硬盘快照描述信息。
+    * createdAt  云硬盘快照创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * updatedAt  快照更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * metadata  云硬盘快照的元数据信息。
+    * volumeId  快照所属的云硬盘ID。
+    * size  云硬盘快照大小，单位为GB。
+    * osExtendedSnapshotAttributesprojectId  预留属性。
+    * osExtendedSnapshotAttributesprogress  预留属性。
     *
     * @var string[]
     */
@@ -39,6 +50,17 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  云硬盘快照ID。
+    * status  云硬盘快照状态。
+    * name  云硬盘快照名称。
+    * description  云硬盘快照描述信息。
+    * createdAt  云硬盘快照创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * updatedAt  快照更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * metadata  云硬盘快照的元数据信息。
+    * volumeId  快照所属的云硬盘ID。
+    * size  云硬盘快照大小，单位为GB。
+    * osExtendedSnapshotAttributesprojectId  预留属性。
+    * osExtendedSnapshotAttributesprogress  预留属性。
     *
     * @var string[]
     */
@@ -79,6 +101,17 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  云硬盘快照ID。
+    * status  云硬盘快照状态。
+    * name  云硬盘快照名称。
+    * description  云硬盘快照描述信息。
+    * createdAt  云硬盘快照创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * updatedAt  快照更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * metadata  云硬盘快照的元数据信息。
+    * volumeId  快照所属的云硬盘ID。
+    * size  云硬盘快照大小，单位为GB。
+    * osExtendedSnapshotAttributesprojectId  预留属性。
+    * osExtendedSnapshotAttributesprogress  预留属性。
     *
     * @var string[]
     */
@@ -98,6 +131,17 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  云硬盘快照ID。
+    * status  云硬盘快照状态。
+    * name  云硬盘快照名称。
+    * description  云硬盘快照描述信息。
+    * createdAt  云硬盘快照创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * updatedAt  快照更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * metadata  云硬盘快照的元数据信息。
+    * volumeId  快照所属的云硬盘ID。
+    * size  云硬盘快照大小，单位为GB。
+    * osExtendedSnapshotAttributesprojectId  预留属性。
+    * osExtendedSnapshotAttributesprogress  预留属性。
     *
     * @var string[]
     */
@@ -117,6 +161,17 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  云硬盘快照ID。
+    * status  云硬盘快照状态。
+    * name  云硬盘快照名称。
+    * description  云硬盘快照描述信息。
+    * createdAt  云硬盘快照创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * updatedAt  快照更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
+    * metadata  云硬盘快照的元数据信息。
+    * volumeId  快照所属的云硬盘ID。
+    * size  云硬盘快照大小，单位为GB。
+    * osExtendedSnapshotAttributesprojectId  预留属性。
+    * osExtendedSnapshotAttributesprogress  预留属性。
     *
     * @var string[]
     */
@@ -229,6 +284,7 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  云硬盘快照ID。
     *
     * @return string|null
     */
@@ -252,6 +308,7 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  云硬盘快照状态。
     *
     * @return string|null
     */
@@ -275,6 +332,7 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云硬盘快照名称。
     *
     * @return string|null
     */
@@ -298,6 +356,7 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  云硬盘快照描述信息。
     *
     * @return string|null
     */
@@ -321,6 +380,7 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  云硬盘快照创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
     *
     * @return string|null
     */
@@ -344,6 +404,7 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
+    *  快照更新时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
     *
     * @return string|null
     */
@@ -367,6 +428,7 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets metadata
+    *  云硬盘快照的元数据信息。
     *
     * @return object|null
     */
@@ -390,6 +452,7 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeId
+    *  快照所属的云硬盘ID。
     *
     * @return string|null
     */
@@ -413,6 +476,7 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
+    *  云硬盘快照大小，单位为GB。
     *
     * @return int|null
     */
@@ -436,6 +500,7 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtendedSnapshotAttributesprojectId
+    *  预留属性。
     *
     * @return string|null
     */
@@ -459,6 +524,7 @@ class SnapshotDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtendedSnapshotAttributesprogress
+    *  预留属性。
     *
     * @return string|null
     */

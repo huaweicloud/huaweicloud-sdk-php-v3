@@ -20,6 +20,12 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  使用网络ACL策略ID过滤网络ACL策略
+    * name  使用name过滤网络ACL策略
+    * description  使用网络ACL策略描述过滤查询网络ACL策略
+    * tenantId  使用tenant_id过滤查询网络ACL策略
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  使用网络ACL策略ID过滤网络ACL策略
+    * name  使用name过滤网络ACL策略
+    * description  使用网络ACL策略描述过滤查询网络ACL策略
+    * tenantId  使用tenant_id过滤查询网络ACL策略
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  使用网络ACL策略ID过滤网络ACL策略
+    * name  使用name过滤网络ACL策略
+    * description  使用网络ACL策略描述过滤查询网络ACL策略
+    * tenantId  使用tenant_id过滤查询网络ACL策略
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  使用网络ACL策略ID过滤网络ACL策略
+    * name  使用name过滤网络ACL策略
+    * description  使用网络ACL策略描述过滤查询网络ACL策略
+    * tenantId  使用tenant_id过滤查询网络ACL策略
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * limit  每页返回的个数
+    * marker  分页查询起始的资源ID，为空时查询第一页
+    * id  使用网络ACL策略ID过滤网络ACL策略
+    * name  使用name过滤网络ACL策略
+    * description  使用网络ACL策略描述过滤查询网络ACL策略
+    * tenantId  使用tenant_id过滤查询网络ACL策略
     *
     * @var string[]
     */
@@ -202,6 +232,7 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  每页返回的个数
     *
     * @return int|null
     */
@@ -213,7 +244,7 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 每页返回的个数
     *
     * @return $this
     */
@@ -225,6 +256,7 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  分页查询起始的资源ID，为空时查询第一页
     *
     * @return string|null
     */
@@ -236,7 +268,7 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 分页查询起始的资源ID，为空时查询第一页
     *
     * @return $this
     */
@@ -248,6 +280,7 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  使用网络ACL策略ID过滤网络ACL策略
     *
     * @return string[]|null
     */
@@ -259,7 +292,7 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id id
+    * @param string[]|null $id 使用网络ACL策略ID过滤网络ACL策略
     *
     * @return $this
     */
@@ -271,6 +304,7 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  使用name过滤网络ACL策略
     *
     * @return string[]|null
     */
@@ -282,7 +316,7 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string[]|null $name name
+    * @param string[]|null $name 使用name过滤网络ACL策略
     *
     * @return $this
     */
@@ -294,6 +328,7 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  使用网络ACL策略描述过滤查询网络ACL策略
     *
     * @return string[]|null
     */
@@ -305,7 +340,7 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string[]|null $description description
+    * @param string[]|null $description 使用网络ACL策略描述过滤查询网络ACL策略
     *
     * @return $this
     */
@@ -317,6 +352,7 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  使用tenant_id过滤查询网络ACL策略
     *
     * @return string|null
     */
@@ -328,7 +364,7 @@ class NeutronListFirewallPoliciesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId tenantId
+    * @param string|null $tenantId 使用tenant_id过滤查询网络ACL策略
     *
     * @return $this
     */

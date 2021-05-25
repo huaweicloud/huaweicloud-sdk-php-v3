@@ -20,6 +20,9 @@ class TimeRange implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * startTime  规则条件触发的开始时间，格式：HH:mm。
+    * endTime  规则条件触发的结束时间，格式：HH:mm。若结束时间与开始时间一致，则时间为全天。
+    * daysOfWeek  星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。星期列表中的日期为开始时间的日期。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class TimeRange implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * startTime  规则条件触发的开始时间，格式：HH:mm。
+    * endTime  规则条件触发的结束时间，格式：HH:mm。若结束时间与开始时间一致，则时间为全天。
+    * daysOfWeek  星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。星期列表中的日期为开始时间的日期。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class TimeRange implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * startTime  规则条件触发的开始时间，格式：HH:mm。
+    * endTime  规则条件触发的结束时间，格式：HH:mm。若结束时间与开始时间一致，则时间为全天。
+    * daysOfWeek  星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。星期列表中的日期为开始时间的日期。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class TimeRange implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * startTime  规则条件触发的开始时间，格式：HH:mm。
+    * endTime  规则条件触发的结束时间，格式：HH:mm。若结束时间与开始时间一致，则时间为全天。
+    * daysOfWeek  星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。星期列表中的日期为开始时间的日期。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class TimeRange implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * startTime  规则条件触发的开始时间，格式：HH:mm。
+    * endTime  规则条件触发的结束时间，格式：HH:mm。若结束时间与开始时间一致，则时间为全天。
+    * daysOfWeek  星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。星期列表中的日期为开始时间的日期。
     *
     * @var string[]
     */
@@ -196,6 +211,7 @@ class TimeRange implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
+    *  规则条件触发的开始时间，格式：HH:mm。
     *
     * @return string
     */
@@ -219,6 +235,7 @@ class TimeRange implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
+    *  规则条件触发的结束时间，格式：HH:mm。若结束时间与开始时间一致，则时间为全天。
     *
     * @return string
     */
@@ -242,6 +259,7 @@ class TimeRange implements ModelInterface, ArrayAccess
 
     /**
     * Gets daysOfWeek
+    *  星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。星期列表中的日期为开始时间的日期。
     *
     * @return string|null
     */

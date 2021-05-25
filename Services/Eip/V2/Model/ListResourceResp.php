@@ -20,6 +20,10 @@ class ListResourceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceId  资源ID
+    * resourceName  资源名称，没有默认为空字符串
+    * tags  标签列表，没有标签默认为空数组
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class ListResourceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceId  资源ID
+    * resourceName  资源名称，没有默认为空字符串
+    * tags  标签列表，没有标签默认为空数组
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class ListResourceResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceId  资源ID
+    * resourceName  资源名称，没有默认为空字符串
+    * tags  标签列表，没有标签默认为空数组
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class ListResourceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceId  资源ID
+    * resourceName  资源名称，没有默认为空字符串
+    * tags  标签列表，没有标签默认为空数组
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class ListResourceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceId  资源ID
+    * resourceName  资源名称，没有默认为空字符串
+    * tags  标签列表，没有标签默认为空数组
     *
     * @var string[]
     */
@@ -190,6 +210,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets resouceDetail
+    *  资源详情。 资源对象，用于扩展。默认为空
     *
     * @return object|null
     */
@@ -213,6 +234,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
+    *  资源ID
     *
     * @return string|null
     */
@@ -236,6 +258,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
+    *  资源名称，没有默认为空字符串
     *
     * @return string|null
     */
@@ -259,6 +282,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
+    *  标签列表，没有标签默认为空数组
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\ResourceTagResp[]|null
     */

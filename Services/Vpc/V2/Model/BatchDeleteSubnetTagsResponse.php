@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Vpc\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowSubscriptionRequest implements ModelInterface, ArrayAccess
+class BatchDeleteSubnetTagsResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,26 +17,24 @@ class ShowSubscriptionRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowSubscriptionRequest';
+    protected static $openAPIModelName = 'BatchDeleteSubnetTagsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string',
-            'subscriptionId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null,
-        'subscriptionId' => null
     ];
 
     /**
@@ -61,32 +60,29 @@ class ShowSubscriptionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'Instance-Id',
-            'subscriptionId' => 'subscription_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId',
-            'subscriptionId' => 'setSubscriptionId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId',
-            'subscriptionId' => 'getSubscriptionId'
     ];
 
     /**
@@ -147,8 +143,6 @@ class ShowSubscriptionRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['subscriptionId'] = isset($data['subscriptionId']) ? $data['subscriptionId'] : null;
     }
 
     /**
@@ -159,12 +153,6 @@ class ShowSubscriptionRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['instanceId']) && !preg_match("/^[a-f0-9-]{36}$/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-f0-9-]{36}$/.";
-            }
-        if ($this->container['subscriptionId'] === null) {
-            $invalidProperties[] = "'subscriptionId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -177,52 +165,6 @@ class ShowSubscriptionRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets instanceId
-    *
-    * @return string|null
-    */
-    public function getInstanceId()
-    {
-        return $this->container['instanceId'];
-    }
-
-    /**
-    * Sets instanceId
-    *
-    * @param string|null $instanceId instanceId
-    *
-    * @return $this
-    */
-    public function setInstanceId($instanceId)
-    {
-        $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
-    * Gets subscriptionId
-    *
-    * @return string
-    */
-    public function getSubscriptionId()
-    {
-        return $this->container['subscriptionId'];
-    }
-
-    /**
-    * Sets subscriptionId
-    *
-    * @param string $subscriptionId subscriptionId
-    *
-    * @return $this
-    */
-    public function setSubscriptionId($subscriptionId)
-    {
-        $this->container['subscriptionId'] = $subscriptionId;
-        return $this;
     }
 
     /**

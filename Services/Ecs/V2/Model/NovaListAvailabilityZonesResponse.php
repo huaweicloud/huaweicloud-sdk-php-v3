@@ -21,6 +21,7 @@ class NovaListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * availabilityZoneInfo  可用域信息。
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class NovaListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * availabilityZoneInfo  可用域信息。
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class NovaListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * availabilityZoneInfo  可用域信息。
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class NovaListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * availabilityZoneInfo  可用域信息。
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class NovaListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * availabilityZoneInfo  可用域信息。
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class NovaListAvailabilityZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZoneInfo
+    *  可用域信息。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaAvailabilityZone[]|null
     */

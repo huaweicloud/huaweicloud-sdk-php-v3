@@ -21,6 +21,14 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * status  job的状态。SUCCESS：成功。RUNNING：运行中。FAIL：失败。INIT：正在初始化。
+    * entities  entities
+    * jobId  job的ID。
+    * jobType  job的类型。createVolume：创建单个云硬盘。batchCreateVolume：批量创建云硬盘。deleteVolume：删除单个云硬盘。extendVolume：扩容云硬盘。bulkDeleteVolume：批量删除云硬盘。deleteSingleVolume：批量删除时逐个删除单个云硬盘。retypeVolume：对云硬盘做硬盘类型变更。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  job执行失败时的错误码。
+    * failReason  job执行失败时的错误原因。
     *
     * @var string[]
     */
@@ -37,6 +45,14 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * status  job的状态。SUCCESS：成功。RUNNING：运行中。FAIL：失败。INIT：正在初始化。
+    * entities  entities
+    * jobId  job的ID。
+    * jobType  job的类型。createVolume：创建单个云硬盘。batchCreateVolume：批量创建云硬盘。deleteVolume：删除单个云硬盘。extendVolume：扩容云硬盘。bulkDeleteVolume：批量删除云硬盘。deleteSingleVolume：批量删除时逐个删除单个云硬盘。retypeVolume：对云硬盘做硬盘类型变更。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  job执行失败时的错误码。
+    * failReason  job执行失败时的错误原因。
     *
     * @var string[]
     */
@@ -74,6 +90,14 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * status  job的状态。SUCCESS：成功。RUNNING：运行中。FAIL：失败。INIT：正在初始化。
+    * entities  entities
+    * jobId  job的ID。
+    * jobType  job的类型。createVolume：创建单个云硬盘。batchCreateVolume：批量创建云硬盘。deleteVolume：删除单个云硬盘。extendVolume：扩容云硬盘。bulkDeleteVolume：批量删除云硬盘。deleteSingleVolume：批量删除时逐个删除单个云硬盘。retypeVolume：对云硬盘做硬盘类型变更。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  job执行失败时的错误码。
+    * failReason  job执行失败时的错误原因。
     *
     * @var string[]
     */
@@ -90,6 +114,14 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * status  job的状态。SUCCESS：成功。RUNNING：运行中。FAIL：失败。INIT：正在初始化。
+    * entities  entities
+    * jobId  job的ID。
+    * jobType  job的类型。createVolume：创建单个云硬盘。batchCreateVolume：批量创建云硬盘。deleteVolume：删除单个云硬盘。extendVolume：扩容云硬盘。bulkDeleteVolume：批量删除云硬盘。deleteSingleVolume：批量删除时逐个删除单个云硬盘。retypeVolume：对云硬盘做硬盘类型变更。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  job执行失败时的错误码。
+    * failReason  job执行失败时的错误原因。
     *
     * @var string[]
     */
@@ -106,6 +138,14 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * status  job的状态。SUCCESS：成功。RUNNING：运行中。FAIL：失败。INIT：正在初始化。
+    * entities  entities
+    * jobId  job的ID。
+    * jobType  job的类型。createVolume：创建单个云硬盘。batchCreateVolume：批量创建云硬盘。deleteVolume：删除单个云硬盘。extendVolume：扩容云硬盘。bulkDeleteVolume：批量删除云硬盘。deleteSingleVolume：批量删除时逐个删除单个云硬盘。retypeVolume：对云硬盘做硬盘类型变更。
+    * beginTime  开始时间。
+    * endTime  结束时间。
+    * errorCode  job执行失败时的错误码。
+    * failReason  job执行失败时的错误原因。
     *
     * @var string[]
     */
@@ -239,6 +279,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  job的状态。SUCCESS：成功。RUNNING：运行中。FAIL：失败。INIT：正在初始化。
     *
     * @return string|null
     */
@@ -262,6 +303,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets entities
+    *  entities
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\JobEntities|null
     */
@@ -285,6 +327,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
+    *  job的ID。
     *
     * @return string|null
     */
@@ -308,6 +351,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobType
+    *  job的类型。createVolume：创建单个云硬盘。batchCreateVolume：批量创建云硬盘。deleteVolume：删除单个云硬盘。extendVolume：扩容云硬盘。bulkDeleteVolume：批量删除云硬盘。deleteSingleVolume：批量删除时逐个删除单个云硬盘。retypeVolume：对云硬盘做硬盘类型变更。
     *
     * @return string|null
     */
@@ -331,6 +375,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
+    *  开始时间。
     *
     * @return string|null
     */
@@ -354,6 +399,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
+    *  结束时间。
     *
     * @return string|null
     */
@@ -377,6 +423,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
+    *  job执行失败时的错误码。
     *
     * @return string|null
     */
@@ -400,6 +447,7 @@ class ShowJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets failReason
+    *  job执行失败时的错误原因。
     *
     * @return string|null
     */

@@ -20,6 +20,8 @@ class MatchReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * key  键。当前仅限定为resource_name
+    * value  值。每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class MatchReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * key  键。当前仅限定为resource_name
+    * value  值。每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class MatchReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * key  键。当前仅限定为resource_name
+    * value  值。每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class MatchReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * key  键。当前仅限定为resource_name
+    * value  值。每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class MatchReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * key  键。当前仅限定为resource_name
+    * value  值。每个值最大长度255个unicode字符。
     *
     * @var string[]
     */
@@ -205,6 +215,7 @@ class MatchReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
+    *  键。当前仅限定为resource_name
     *
     * @return string
     */
@@ -228,6 +239,7 @@ class MatchReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
+    *  值。每个值最大长度255个unicode字符。
     *
     * @return string
     */

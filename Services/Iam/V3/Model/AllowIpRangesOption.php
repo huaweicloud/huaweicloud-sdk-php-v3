@@ -20,6 +20,8 @@ class AllowIpRangesOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * description  描述信息。
+    * ipRange  IP地址区间,例如:0.0.0.0-255.255.255.255。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class AllowIpRangesOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * description  描述信息。
+    * ipRange  IP地址区间,例如:0.0.0.0-255.255.255.255。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class AllowIpRangesOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * description  描述信息。
+    * ipRange  IP地址区间,例如:0.0.0.0-255.255.255.255。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class AllowIpRangesOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * description  描述信息。
+    * ipRange  IP地址区间,例如:0.0.0.0-255.255.255.255。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class AllowIpRangesOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * description  描述信息。
+    * ipRange  IP地址区间,例如:0.0.0.0-255.255.255.255。
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class AllowIpRangesOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  描述信息。
     *
     * @return string|null
     */
@@ -201,6 +212,7 @@ class AllowIpRangesOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipRange
+    *  IP地址区间,例如:0.0.0.0-255.255.255.255。
     *
     * @return string
     */

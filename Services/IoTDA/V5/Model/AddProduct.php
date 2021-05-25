@@ -20,6 +20,16 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * productId  产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。
+    * name  产品名称。
+    * deviceType  设备类型。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
+    * dataFormat  设备上报数据的格式，取值范围：json，binary。默认值json。
+    * serviceCapabilities  设备的服务能力列表。
+    * manufacturerName  厂商名称。
+    * industry  设备所属行业。
+    * description  产品的描述信息。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
     *
     * @var string[]
     */
@@ -38,6 +48,16 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * productId  产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。
+    * name  产品名称。
+    * deviceType  设备类型。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
+    * dataFormat  设备上报数据的格式，取值范围：json，binary。默认值json。
+    * serviceCapabilities  设备的服务能力列表。
+    * manufacturerName  厂商名称。
+    * industry  设备所属行业。
+    * description  产品的描述信息。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
     *
     * @var string[]
     */
@@ -77,6 +97,16 @@ class AddProduct implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * productId  产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。
+    * name  产品名称。
+    * deviceType  设备类型。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
+    * dataFormat  设备上报数据的格式，取值范围：json，binary。默认值json。
+    * serviceCapabilities  设备的服务能力列表。
+    * manufacturerName  厂商名称。
+    * industry  设备所属行业。
+    * description  产品的描述信息。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
     *
     * @var string[]
     */
@@ -95,6 +125,16 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * productId  产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。
+    * name  产品名称。
+    * deviceType  设备类型。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
+    * dataFormat  设备上报数据的格式，取值范围：json，binary。默认值json。
+    * serviceCapabilities  设备的服务能力列表。
+    * manufacturerName  厂商名称。
+    * industry  设备所属行业。
+    * description  产品的描述信息。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
     *
     * @var string[]
     */
@@ -113,6 +153,16 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * productId  产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。
+    * name  产品名称。
+    * deviceType  设备类型。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
+    * dataFormat  设备上报数据的格式，取值范围：json，binary。默认值json。
+    * serviceCapabilities  设备的服务能力列表。
+    * manufacturerName  厂商名称。
+    * industry  设备所属行业。
+    * description  产品的描述信息。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
     *
     * @var string[]
     */
@@ -265,6 +315,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
+    *  产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。
     *
     * @return string|null
     */
@@ -288,6 +339,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  产品名称。
     *
     * @return string
     */
@@ -311,6 +363,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceType
+    *  设备类型。
     *
     * @return string
     */
@@ -334,6 +387,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocolType
+    *  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
     *
     * @return string
     */
@@ -357,6 +411,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataFormat
+    *  设备上报数据的格式，取值范围：json，binary。默认值json。
     *
     * @return string
     */
@@ -380,6 +435,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceCapabilities
+    *  设备的服务能力列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCapability[]
     */
@@ -403,6 +459,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets manufacturerName
+    *  厂商名称。
     *
     * @return string|null
     */
@@ -426,6 +483,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets industry
+    *  设备所属行业。
     *
     * @return string|null
     */
@@ -449,6 +507,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  产品的描述信息。
     *
     * @return string|null
     */
@@ -472,6 +531,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
+    *  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
     *
     * @return string|null
     */

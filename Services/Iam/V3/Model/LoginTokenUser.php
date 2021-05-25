@@ -20,6 +20,10 @@ class LoginTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domain  domain
+    * name  被委托方用户名。
+    * passwordExpiresAt  被委托方用户的密码过期时间。
+    * id  被委托方用户ID。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class LoginTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domain  domain
+    * name  被委托方用户名。
+    * passwordExpiresAt  被委托方用户的密码过期时间。
+    * id  被委托方用户ID。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class LoginTokenUser implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domain  domain
+    * name  被委托方用户名。
+    * passwordExpiresAt  被委托方用户的密码过期时间。
+    * id  被委托方用户ID。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class LoginTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domain  domain
+    * name  被委托方用户名。
+    * passwordExpiresAt  被委托方用户的密码过期时间。
+    * id  被委托方用户ID。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class LoginTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domain  domain
+    * name  被委托方用户名。
+    * passwordExpiresAt  被委托方用户的密码过期时间。
+    * id  被委托方用户ID。
     *
     * @var string[]
     */
@@ -187,6 +207,7 @@ class LoginTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
+    *  domain
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\LoginTokenDomain|null
     */
@@ -210,6 +231,7 @@ class LoginTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  被委托方用户名。
     *
     * @return string|null
     */
@@ -233,6 +255,7 @@ class LoginTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets passwordExpiresAt
+    *  被委托方用户的密码过期时间。
     *
     * @return string|null
     */
@@ -256,6 +279,7 @@ class LoginTokenUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  被委托方用户ID。
     *
     * @return string|null
     */

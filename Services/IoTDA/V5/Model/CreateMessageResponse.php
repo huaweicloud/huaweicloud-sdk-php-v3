@@ -21,6 +21,8 @@ class CreateMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * messageId  消息id，由用户生成（推荐使用UUID），同一个设备下唯一， 如果用户不填写，则由物联网平台生成。
+    * result  result
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class CreateMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * messageId  消息id，由用户生成（推荐使用UUID），同一个设备下唯一， 如果用户不填写，则由物联网平台生成。
+    * result  result
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class CreateMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * messageId  消息id，由用户生成（推荐使用UUID），同一个设备下唯一， 如果用户不填写，则由物联网平台生成。
+    * result  result
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class CreateMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * messageId  消息id，由用户生成（推荐使用UUID），同一个设备下唯一， 如果用户不填写，则由物联网平台生成。
+    * result  result
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class CreateMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * messageId  消息id，由用户生成（推荐使用UUID），同一个设备下唯一， 如果用户不填写，则由物联网平台生成。
+    * result  result
     *
     * @var string[]
     */
@@ -176,6 +186,7 @@ class CreateMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageId
+    *  消息id，由用户生成（推荐使用UUID），同一个设备下唯一， 如果用户不填写，则由物联网平台生成。
     *
     * @return string|null
     */
@@ -199,6 +210,7 @@ class CreateMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
+    *  result
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\MessageResult|null
     */

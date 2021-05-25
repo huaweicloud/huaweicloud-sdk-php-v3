@@ -20,6 +20,10 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * appName  资源空间名称。
+    * appId  资源空间ID。
+    * instanceId  迁移前实例ID。
+    * serviceName  对接的服务名,IoTDA代表华为云设备接入云服务，CTNBGW代表天翼云设备接入服务
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * appName  资源空间名称。
+    * appId  资源空间ID。
+    * instanceId  迁移前实例ID。
+    * serviceName  对接的服务名,IoTDA代表华为云设备接入云服务，CTNBGW代表天翼云设备接入服务
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class AddApplication implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * appName  资源空间名称。
+    * appId  资源空间ID。
+    * instanceId  迁移前实例ID。
+    * serviceName  对接的服务名,IoTDA代表华为云设备接入云服务，CTNBGW代表天翼云设备接入服务
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * appName  资源空间名称。
+    * appId  资源空间ID。
+    * instanceId  迁移前实例ID。
+    * serviceName  对接的服务名,IoTDA代表华为云设备接入云服务，CTNBGW代表天翼云设备接入服务
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * appName  资源空间名称。
+    * appId  资源空间ID。
+    * instanceId  迁移前实例ID。
+    * serviceName  对接的服务名,IoTDA代表华为云设备接入云服务，CTNBGW代表天翼云设备接入服务
     *
     * @var string[]
     */
@@ -226,6 +246,7 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
+    *  资源空间名称。
     *
     * @return string
     */
@@ -249,6 +270,7 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
+    *  资源空间ID。
     *
     * @return string|null
     */
@@ -272,6 +294,7 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
+    *  迁移前实例ID。
     *
     * @return string|null
     */
@@ -295,6 +318,7 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceName
+    *  对接的服务名,IoTDA代表华为云设备接入云服务，CTNBGW代表天翼云设备接入服务
     *
     * @return string|null
     */

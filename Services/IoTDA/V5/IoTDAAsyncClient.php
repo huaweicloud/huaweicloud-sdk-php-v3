@@ -24,6 +24,13 @@ class IoTDAAsyncClient extends Client
         return new ClientBuilder(new IoTDAAsyncClient());
     }
 
+    /**
+     * 生成接入凭证
+     * 接入凭证是用于客户端使用AMQP等协议与平台建链的一个认证凭据。只保留一条记录，如果重复调用只会重置接入凭证，使得之前的失效。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createAccessCodeAsync($request)
     {
         return $this->createAccessCodeAsyncWithHttpInfo($request);
@@ -82,6 +89,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建AMQP队列
+     * 应用服务器可调用此接口在物联网平台创建一个AMQP队列。每个租户只能创建100个队列，若超过规格，则创建失败，若队列名称与已有的队列名称相同，则创建失败。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function addQueueAsync($request)
     {
         return $this->addQueueAsyncWithHttpInfo($request);
@@ -140,6 +154,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询AMQP列表
+     * 应用服务器可调用此接口查询物联网平台中的AMQP队列信息列表。可通过队列名称作模糊查询，支持分页。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function batchShowQueueAsync($request)
     {
         return $this->batchShowQueueAsyncWithHttpInfo($request);
@@ -207,6 +228,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除AMQP队列
+     * 应用服务器可调用此接口在物联网平台上删除指定AMQP队列。若当前队列正在使用，则会删除失败。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteQueueAsync($request)
     {
         return $this->deleteQueueAsyncWithHttpInfo($request);
@@ -265,6 +293,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询单个AMQP队列
+     * 应用服务器可调用此接口查询物联网平台中指定队列的详细信息。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showQueueAsync($request)
     {
         return $this->showQueueAsyncWithHttpInfo($request);
@@ -323,6 +358,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建资源空间
+     * 资源空间对应的是物联网平台原有的应用，在物联网平台的含义与应用一致，只是变更了名称。应用服务器可以调用此接口创建资源空间。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function addApplicationAsync($request)
     {
         return $this->addApplicationAsyncWithHttpInfo($request);
@@ -381,6 +423,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除资源空间
+     * 删除指定资源空间。删除资源空间属于高危操作，删除资源空间后，该空间下的产品、设备等资源将不可用，请谨慎操作！
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteApplicationAsync($request)
     {
         return $this->deleteApplicationAsyncWithHttpInfo($request);
@@ -439,6 +488,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询资源空间
+     * 资源空间对应的是物联网平台原有的应用，在物联网平台的含义与应用一致，只是变更了名称。应用服务器可以调用此接口查询指定资源空间详情。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showApplicationAsync($request)
     {
         return $this->showApplicationAsyncWithHttpInfo($request);
@@ -497,6 +553,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询资源空间列表
+     * 资源空间对应的是物联网平台原有的应用，在物联网平台的含义与应用一致，只是变更了名称。应用服务器可以调用此接口查询资源空间列表。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showApplicationsAsync($request)
     {
         return $this->showApplicationsAsyncWithHttpInfo($request);
@@ -555,6 +618,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 下发异步设备命令
+     * 设备的产品模型中定义了物联网平台可向设备下发的命令，应用服务器可调用此接口向指定设备下发异步命令，以实现对设备的控制。平台负责将命令发送给设备，并将设备执行命令结果异步通知应用服务器。 命令执行结果支持灵活的数据流转，应用服务器通过调用物联网平台的创建规则触发条件（Resource:device.command.status，Event:update）、创建规则动作并激活规则后，当命令状态变更时，物联网平台会根据规则将结果发送到规则指定的服务器，如用户自定义的HTTP服务器，AMQP服务器，以及华为云的其他储存服务器等, 详情参考[设备命令状态变更通知](https://support.huaweicloud.com/api-iothub/iot_06_v5_01212.html)。注意：此接口适用于NB设备异步命令下发，暂不支持其他协议类型设备命令下发。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createAsyncCommandAsync($request)
     {
         return $this->createAsyncCommandAsyncWithHttpInfo($request);
@@ -616,6 +686,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询设备下队列中的命令
+     * 查询设备下队列中的命（处理中的命令），包含PENDING,SENT,DELIVERED三种状态，注意：DELIVERED状态的命令经过系统设定的一段时间（具体以系统配置为准）仍然没有更新，就会从队列中移除，变为历史命令。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listAsyncCommandsAsync($request)
     {
         return $this->listAsyncCommandsAsyncWithHttpInfo($request);
@@ -698,6 +775,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询设备下的历史命令
+     * 查询设备下发的历史异步命令。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listAsyncHistoryCommandsAsync($request)
     {
         return $this->listAsyncHistoryCommandsAsyncWithHttpInfo($request);
@@ -780,6 +864,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询指定id的命令
+     * 物联网平台可查询指定id的命令。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showAsyncDeviceCommandAsync($request)
     {
         return $this->showAsyncDeviceCommandAsyncWithHttpInfo($request);
@@ -841,6 +932,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建批量任务
+     * 应用服务器可调用此接口为创建批量处理任务，对多个设备进行批量操作。当前支持批量软固件升级、批量创建设备、批量删除设备、批量冻结设备、批量解冻设备、批量创建命令任务。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createBatchTaskAsync($request)
     {
         return $this->createBatchTaskAsyncWithHttpInfo($request);
@@ -899,6 +997,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询批量任务列表
+     * 应用服务器可调用此接口查询物联网平台中批量任务列表，每一个任务又包括具体的任务内容、任务状态、任务完成情况统计等。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listBatchTasksAsync($request)
     {
         return $this->listBatchTasksAsyncWithHttpInfo($request);
@@ -972,6 +1077,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询批量任务
+     * 应用服务器可调用此接口查询物联网平台中指定批量任务的信息，包括任务内容、任务状态、任务完成情况统计以及子任务列表等。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showBatchTaskAsync($request)
     {
         return $this->showBatchTaskAsyncWithHttpInfo($request);
@@ -1039,6 +1151,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除批量任务文件
+     * 应用服务器可调用此接口删除批量任务文件。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteBatchTaskFileAsync($request)
     {
         return $this->deleteBatchTaskFileAsyncWithHttpInfo($request);
@@ -1097,6 +1216,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询批量任务文件列表
+     * 应用服务器可调用此接口查询批量任务文件列表。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listBatchTaskFilesAsync($request)
     {
         return $this->listBatchTaskFilesAsyncWithHttpInfo($request);
@@ -1152,6 +1278,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 上传设备CA证书
+     * 应用服务器可调用此接口在物联网平台上传设备的CA证书
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function addCertificateAsync($request)
     {
         return $this->addCertificateAsyncWithHttpInfo($request);
@@ -1210,6 +1343,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 验证设备CA证书
+     * 应用服务器可调用此接口在物联网平台验证设备的CA证书，目的是为了验证用户持有设备CA证书的私钥
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function checkCertificateAsync($request)
     {
         return $this->checkCertificateAsyncWithHttpInfo($request);
@@ -1274,6 +1414,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除设备CA证书
+     * 应用服务器可调用此接口在物联网平台删除设备的CA证书
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteCertificateAsync($request)
     {
         return $this->deleteCertificateAsyncWithHttpInfo($request);
@@ -1332,6 +1479,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 获取设备CA证书列表
+     * 应用服务器可调用此接口在物联网平台获取设备的CA证书列表
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listCertificatesAsync($request)
     {
         return $this->listCertificatesAsyncWithHttpInfo($request);
@@ -1399,6 +1553,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 下发设备命令
+     * 设备的产品模型中定义了物联网平台可向设备下发的命令，应用服务器可调用此接口向指定设备下发命令，以实现对设备的同步控制。平台负责将命令以同步方式发送给设备，并将设备执行命令结果同步返回, 如果设备没有响应，平台会返回给应用服务器超时，平台超时间是25秒。注意：此接口适用于MQTT设备同步命令下发，暂不支持NB-IoT设备命令下发。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createCommandAsync($request)
     {
         return $this->createCommandAsyncWithHttpInfo($request);
@@ -1460,6 +1621,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 添加设备组
+     * 应用服务器可调用此接口新建设备组，一个华为云账号下最多可有1,000个分组，包括父分组和子分组。设备组的最大层级关系不超过5层，即群组形成的关系树最大深度不超过5。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function addDeviceGroupAsync($request)
     {
         return $this->addDeviceGroupAsyncWithHttpInfo($request);
@@ -1518,6 +1686,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 管理设备组中的设备
+     * 应用服务器可调用此接口管理设备组中的设备。单个设备组内最多添加20,000个设备，一个设备最多可以被添加到10个设备组中。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createOrDeleteDeviceInGroupAsync($request)
     {
         return $this->createOrDeleteDeviceInGroupAsyncWithHttpInfo($request);
@@ -1582,6 +1757,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除设备组
+     * 应用服务器可调用此接口删除指定设备组，如果该设备组存在子设备组或者该设备组中存在设备，必须先删除子设备组并将设备从该设备组移除，才能删除该设备组。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteDeviceGroupAsync($request)
     {
         return $this->deleteDeviceGroupAsyncWithHttpInfo($request);
@@ -1640,6 +1822,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询设备组列表
+     * 应用服务器可调用此接口查询物联网平台中的设备组信息列表。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listDeviceGroupsAsync($request)
     {
         return $this->listDeviceGroupsAsyncWithHttpInfo($request);
@@ -1710,6 +1899,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询设备组
+     * 应用服务器可调用此接口查询指定设备组详情。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showDeviceGroupAsync($request)
     {
         return $this->showDeviceGroupAsyncWithHttpInfo($request);
@@ -1768,6 +1964,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询设备组设备列表
+     * 应用服务器可调用此接口查询指定设备组下的设备列表。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showDevicesInGroupAsync($request)
     {
         return $this->showDevicesInGroupAsyncWithHttpInfo($request);
@@ -1835,6 +2038,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改设备组
+     * 应用服务器可调用此接口修改物联网平台中指定设备组。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateDeviceGroupAsync($request)
     {
         return $this->updateDeviceGroupAsyncWithHttpInfo($request);
@@ -1896,6 +2106,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建设备
+     * 应用服务器可调用此接口在物联网平台创建一个设备，仅在创建后设备才可以接入物联网平台。  - 该接口支持使用gateway_id参数指定在父设备下创建一个子设备，并且支持多级子设备，当前最大支持二级子设备。 - 该接口同时还支持对设备进行初始配置，接口会读取创建设备请求参数product_id对应的产品详情，如果产品的属性有定义默认值，则会将该属性默认值写入该设备的设备影子中。 - 用户还可以使用创建设备请求参数shadow字段为设备指定初始配置，指定后将会根据service_id和desired设置的属性值与产品中对应属性的默认值比对，如果不同，则将以shadow字段中设置的属性值为准写入到设备影子中。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function addDeviceAsync($request)
     {
         return $this->addDeviceAsyncWithHttpInfo($request);
@@ -1954,6 +2171,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除设备
+     * 应用服务器可调用此接口在物联网平台上删除指定设备。若设备下连接了非直连设备，则必须把设备下的非直连设备都删除后，才能删除该设备。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteDeviceAsync($request)
     {
         return $this->deleteDeviceAsyncWithHttpInfo($request);
@@ -2012,6 +2236,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 冻结设备
+     * 应用服务器可调用此接口冻结设备，设备冻结后不能再连接上线，可以通过解冻设备接口解除设备冻结。注意，当前仅支持冻结与平台直连的设备。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function freezeDeviceAsync($request)
     {
         return $this->freezeDeviceAsyncWithHttpInfo($request);
@@ -2070,6 +2301,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询设备列表
+     * 应用服务器可调用此接口查询物联网平台中的设备信息列表。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listDevicesAsync($request)
     {
         return $this->listDevicesAsyncWithHttpInfo($request);
@@ -2158,6 +2396,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 重置设备密钥
+     * 应用服务器可调用此接口重置设备密钥，携带指定密钥时平台将设备密钥重置为指定的密钥，不携带密钥时平台将自动生成一个新的随机密钥返回。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function resetDeviceSecretAsync($request)
     {
         return $this->resetDeviceSecretAsyncWithHttpInfo($request);
@@ -2222,6 +2467,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询设备
+     * 应用服务器可调用此接口查询物联网平台中指定设备的详细信息。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showDeviceAsync($request)
     {
         return $this->showDeviceAsyncWithHttpInfo($request);
@@ -2280,6 +2532,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 解冻设备
+     * 应用服务器可调用此接口解冻设备，解除冻结后，设备可以连接上线。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function unfreezeDeviceAsync($request)
     {
         return $this->unfreezeDeviceAsyncWithHttpInfo($request);
@@ -2338,6 +2597,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改设备
+     * 应用服务器可调用此接口修改物联网平台中指定设备的基本信息。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateDeviceAsync($request)
     {
         return $this->updateDeviceAsyncWithHttpInfo($request);
@@ -2399,6 +2665,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询设备影子数据
+     * 应用服务器可调用此接口查询指定设备的设备影子信息，包括对设备的期望属性信息（desired区）和设备最新上报的属性信息（reported区）。  设备影子介绍： 设备影子是一个用于存储和检索设备当前状态信息的JSON文档。 - 每个设备有且只有一个设备影子，由设备ID唯一标识 - 设备影子仅保存最近一次设备的上报数据和预期数据 - 无论该设备是否在线，都可以通过该影子获取和设置设备的属性 - 设备上线或者设备上报属性时，如果desired区和reported区存在差异，则将差异部分下发给设备，配置的预期属性需在产品模型中定义且method具有可写属性“W”才可下发
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showDeviceShadowAsync($request)
     {
         return $this->showDeviceShadowAsyncWithHttpInfo($request);
@@ -2457,6 +2730,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 配置设备影子预期数据
+     * 应用服务器可调用此接口配置设备影子的预期属性（desired区），当设备上线或者设备上报属性时把属性下发给设备。  设备影子介绍： 设备影子是一个用于存储和检索设备当前状态信息的JSON文档。 - 每个设备有且只有一个设备影子，由设备ID唯一标识 - 设备影子仅保存最近一次设备的上报数据和预期数据 - 无论该设备是否在线，都可以通过该影子获取和设置设备的属性 - 设备上线或者设备上报属性时，如果desired区和reported区存在差异，则将差异部分下发给设备，配置的预期属性需在产品模型中定义且method具有可写属性“W”才可下发
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateDeviceShadowDesiredDataAsync($request)
     {
         return $this->updateDeviceShadowDesiredDataAsyncWithHttpInfo($request);
@@ -2518,6 +2798,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 下发设备消息
+     * 物联网平台可向设备下发消息，应用服务器可调用此接口向指定设备下发消息，以实现对设备的控制。应用将消息下发给平台后，平台返回应用响应结果，平台再将消息发送给设备。注意：此接口适用于MQTT设备消息下发，暂不支持其他协议接入的设备消息下发。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createMessageAsync($request)
     {
         return $this->createMessageAsyncWithHttpInfo($request);
@@ -2579,6 +2866,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询设备消息
+     * 物联网平台可查询指定设备下的消息，平台为每个设备默认最多保存20条消息，超过20条后， 后续的消息会替换下发最早的消息。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listDeviceMessagesAsync($request)
     {
         return $this->listDeviceMessagesAsyncWithHttpInfo($request);
@@ -2637,6 +2931,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询指定消息id的消息
+     * 物联网平台可查询指定消息id的消息。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showDeviceMessageAsync($request)
     {
         return $this->showDeviceMessageAsyncWithHttpInfo($request);
@@ -2698,6 +2999,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建产品
+     * 应用服务器可调用此接口创建产品。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createProductAsync($request)
     {
         return $this->createProductAsyncWithHttpInfo($request);
@@ -2756,6 +3064,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除产品
+     * 应用服务器可调用此接口删除已导入物联网平台的指定产品模型。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteProductAsync($request)
     {
         return $this->deleteProductAsyncWithHttpInfo($request);
@@ -2817,6 +3132,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询产品列表
+     * 应用服务器可调用此接口查询已导入物联网平台的产品模型信息列表，了解产品模型的概要信息。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listProductsAsync($request)
     {
         return $this->listProductsAsyncWithHttpInfo($request);
@@ -2884,6 +3206,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询产品
+     * 应用服务器可调用此接口查询已导入物联网平台的指定产品模型详细信息，包括产品模型的服务、属性、命令等。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showProductAsync($request)
     {
         return $this->showProductAsyncWithHttpInfo($request);
@@ -2945,6 +3274,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改产品
+     * 应用服务器可调用此接口修改已导入物联网平台的指定产品模型，包括产品模型的服务、属性、命令等。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateProductAsync($request)
     {
         return $this->updateProductAsyncWithHttpInfo($request);
@@ -3006,6 +3342,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询设备属性
+     * 设备的产品模型中定义了物联网平台可向设备下发的属性，应用服务器可调用此接口查询指定设备下属性。注意：此接口适用于MQTT设备，暂不支持NB-IoT设备。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listPropertiesAsync($request)
     {
         return $this->listPropertiesAsyncWithHttpInfo($request);
@@ -3070,6 +3413,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改设备属性
+     * 设备的产品模型中定义了物联网平台可向设备下发的属性，应用服务器可调用此接口向指定设备下属性。平台负责将属性以同步方式发送给设备，并将设备执行属性结果同步返回。注意：此接口适用于MQTT设备，暂不支持NB-IoT设备。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updatePropertiesAsync($request)
     {
         return $this->updatePropertiesAsyncWithHttpInfo($request);
@@ -3134,6 +3484,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建规则触发条件
+     * 应用服务器可调用此接口在物联网平台创建一条规则触发条件。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createRoutingRuleAsync($request)
     {
         return $this->createRoutingRuleAsyncWithHttpInfo($request);
@@ -3192,6 +3549,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建规则动作
+     * 应用服务器可调用此接口在物联网平台创建一条规则动作。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createRuleActionAsync($request)
     {
         return $this->createRuleActionAsyncWithHttpInfo($request);
@@ -3253,6 +3617,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除规则触发条件
+     * 应用服务器可调用此接口删除物联网平台中的指定规则条件。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteRoutingRuleAsync($request)
     {
         return $this->deleteRoutingRuleAsyncWithHttpInfo($request);
@@ -3311,6 +3682,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除规则动作
+     * 应用服务器可调用此接口删除物联网平台中的指定规则动作。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteRuleActionAsync($request)
     {
         return $this->deleteRuleActionAsyncWithHttpInfo($request);
@@ -3369,6 +3747,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询规则条件列表
+     * 应用服务器可调用此接口查询物联网平台中设置的规则条件列表。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listRoutingRulesAsync($request)
     {
         return $this->listRoutingRulesAsyncWithHttpInfo($request);
@@ -3448,6 +3833,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询规则动作列表
+     * 应用服务器可调用此接口查询物联网平台中设置的规则动作列表。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listRuleActionsAsync($request)
     {
         return $this->listRuleActionsAsyncWithHttpInfo($request);
@@ -3524,6 +3916,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询规则条件
+     * 应用服务器可调用此接口查询物联网平台中指定规则条件的配置信息。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showRoutingRuleAsync($request)
     {
         return $this->showRoutingRuleAsyncWithHttpInfo($request);
@@ -3582,6 +3981,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询规则动作
+     * 应用服务器可调用此接口查询物联网平台中指定规则动作的配置信息。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showRuleActionAsync($request)
     {
         return $this->showRuleActionAsyncWithHttpInfo($request);
@@ -3640,6 +4046,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改规则触发条件
+     * 应用服务器可调用此接口修改物联网平台中指定规则条件的配置参数。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateRoutingRuleAsync($request)
     {
         return $this->updateRoutingRuleAsyncWithHttpInfo($request);
@@ -3701,6 +4114,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改规则动作
+     * 应用服务器可调用此接口修改物联网平台中指定规则动作的配置。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateRuleActionAsync($request)
     {
         return $this->updateRuleActionAsyncWithHttpInfo($request);
@@ -3762,6 +4182,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改规则状态
+     * 应用服务器可调用此接口修改物联网平台中指定规则的状态，激活或者去激活规则。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function changeRuleStatusAsync($request)
     {
         return $this->changeRuleStatusAsyncWithHttpInfo($request);
@@ -3823,6 +4250,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建规则
+     * 应用服务器可调用此接口在物联网平台创建一条规则。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createRuleAsync($request)
     {
         return $this->createRuleAsyncWithHttpInfo($request);
@@ -3881,6 +4315,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除规则
+     * 应用服务器可调用此接口删除物联网平台中的指定规则。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteRuleAsync($request)
     {
         return $this->deleteRuleAsyncWithHttpInfo($request);
@@ -3939,6 +4380,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询规则列表
+     * 应用服务器可调用此接口查询物联网平台中设置的规则列表。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listRulesAsync($request)
     {
         return $this->listRulesAsyncWithHttpInfo($request);
@@ -4009,6 +4457,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询规则
+     * 应用服务器可调用此接口查询物联网平台中指定规则的配置信息。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showRuleAsync($request)
     {
         return $this->showRuleAsyncWithHttpInfo($request);
@@ -4067,6 +4522,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改规则
+     * 应用服务器可调用此接口修改物联网平台中指定规则的配置。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateRuleAsync($request)
     {
         return $this->updateRuleAsyncWithHttpInfo($request);
@@ -4128,320 +4590,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
-    public function createSubscriptionAsync($request)
-    {
-        return $this->createSubscriptionAsyncWithHttpInfo($request);
-    }
-    
-    public function createSubscriptionAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/{project_id}/subscriptions';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateSubscriptionResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateSubscriptionRequest',
-            $asyncRequest = true);
-    }
-
-    public function deleteSubscriptionAsync($request)
-    {
-        return $this->deleteSubscriptionAsyncWithHttpInfo($request);
-    }
-    
-    public function deleteSubscriptionAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/{project_id}/subscriptions/{subscription_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($localVarParams['subscriptionId'] !== null) {
-            $pathParams['subscription_id'] = $localVarParams['subscriptionId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='DELETE',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteSubscriptionResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteSubscriptionRequest',
-            $asyncRequest = true);
-    }
-
-    public function listSubscriptionsAsync($request)
-    {
-        return $this->listSubscriptionsAsyncWithHttpInfo($request);
-    }
-    
-    public function listSubscriptionsAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/{project_id}/subscriptions';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['resource'] !== null) {
-            $queryParams['resource'] = $localVarParams['resource'];
-        }
-        if ($localVarParams['event'] !== null) {
-            $queryParams['event'] = $localVarParams['event'];
-        }
-        if ($localVarParams['callbackurl'] !== null) {
-            $queryParams['callbackurl'] = $localVarParams['callbackurl'];
-        }
-        if ($localVarParams['appId'] !== null) {
-            $queryParams['app_id'] = $localVarParams['appId'];
-        }
-        if ($localVarParams['channel'] !== null) {
-            $queryParams['channel'] = $localVarParams['channel'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['marker'] !== null) {
-            $queryParams['marker'] = $localVarParams['marker'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListSubscriptionsResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListSubscriptionsRequest',
-            $asyncRequest = true);
-    }
-
-    public function showSubscriptionAsync($request)
-    {
-        return $this->showSubscriptionAsyncWithHttpInfo($request);
-    }
-    
-    public function showSubscriptionAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/{project_id}/subscriptions/{subscription_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($localVarParams['subscriptionId'] !== null) {
-            $pathParams['subscription_id'] = $localVarParams['subscriptionId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowSubscriptionResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowSubscriptionRequest',
-            $asyncRequest = true);
-    }
-
-    public function updateSubscriptionAsync($request)
-    {
-        return $this->updateSubscriptionAsyncWithHttpInfo($request);
-    }
-    
-    public function updateSubscriptionAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/{project_id}/subscriptions/{subscription_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($localVarParams['subscriptionId'] !== null) {
-            $pathParams['subscription_id'] = $localVarParams['subscriptionId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateSubscriptionResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateSubscriptionRequest',
-            $asyncRequest = true);
-    }
-
+    /**
+     * 按标签查询资源
+     * 应用服务器可调用此接口查询绑定了指定标签的资源。当前支持标签的资源有Device(设备)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listResourcesByTagsAsync($request)
     {
         return $this->listResourcesByTagsAsyncWithHttpInfo($request);
@@ -4509,6 +4664,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 绑定标签
+     * 应用服务器可调用此接口为指定资源绑定标签。当前支持标签的资源有Device(设备)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function tagDeviceAsync($request)
     {
         return $this->tagDeviceAsyncWithHttpInfo($request);
@@ -4567,6 +4729,13 @@ class IoTDAAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 解绑标签
+     * 应用服务器可调用此接口为指定资源解绑标签。当前支持标签的资源有Device(设备)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function untagDeviceAsync($request)
     {
         return $this->untagDeviceAsyncWithHttpInfo($request);

@@ -20,6 +20,8 @@ class RollbackSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  回滚的目标云硬盘名称。
+    * volumeId  回滚的目标云硬盘UUID。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class RollbackSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  回滚的目标云硬盘名称。
+    * volumeId  回滚的目标云硬盘UUID。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class RollbackSnapshotOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  回滚的目标云硬盘名称。
+    * volumeId  回滚的目标云硬盘UUID。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class RollbackSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  回滚的目标云硬盘名称。
+    * volumeId  回滚的目标云硬盘UUID。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class RollbackSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  回滚的目标云硬盘名称。
+    * volumeId  回滚的目标云硬盘UUID。
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class RollbackSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  回滚的目标云硬盘名称。
     *
     * @return string|null
     */
@@ -201,6 +212,7 @@ class RollbackSnapshotOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeId
+    *  回滚的目标云硬盘UUID。
     *
     * @return string
     */

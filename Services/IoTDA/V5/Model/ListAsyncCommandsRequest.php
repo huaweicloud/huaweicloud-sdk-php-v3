@@ -20,6 +20,16 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * deviceId  下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * limit  分页查询时每页显示的记录数，默认值为10，取值范围为1-50的整数。
+    * marker  上一次分页查询结果中最后一条记录的ID，在上一次分页查询时由物联网平台返回获得。分页查询时物联网平台是按marker也就是记录ID降序查询的，越新的数据记录ID也会越大。若填写marker，则本次只查询记录ID小于marker的数据记录。若不填写，则从记录ID最大也就是最新的一条数据开始查询。如果需要依次查询所有数据，则每次查询时必须填写上一次查询响应中的marker值。
+    * offset  表示从marker后偏移offset条记录开始查询。默认为0，取值范围为0-500的整数。当offset为0时，表示从marker后第一条记录开始输出。限制offset最大值是出于API性能考虑，您可以搭配marker使用该参数实现翻页，例如每页50条记录，1-11页内都可以直接使用offset跳转到指定页，但到11页后，由于offset限制为500，您需要使用第11页返回的marker作为下次查询的marker，以实现翻页到12-22页。
+    * startTime  查询命令下发时间在startTime之后的记录，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * endTime  查询命令下发时间在endTime之前的记录，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * status  命令状态。
+    * commandId  命令Id
+    * commandName  命令名称
     *
     * @var string[]
     */
@@ -38,6 +48,16 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * deviceId  下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * limit  分页查询时每页显示的记录数，默认值为10，取值范围为1-50的整数。
+    * marker  上一次分页查询结果中最后一条记录的ID，在上一次分页查询时由物联网平台返回获得。分页查询时物联网平台是按marker也就是记录ID降序查询的，越新的数据记录ID也会越大。若填写marker，则本次只查询记录ID小于marker的数据记录。若不填写，则从记录ID最大也就是最新的一条数据开始查询。如果需要依次查询所有数据，则每次查询时必须填写上一次查询响应中的marker值。
+    * offset  表示从marker后偏移offset条记录开始查询。默认为0，取值范围为0-500的整数。当offset为0时，表示从marker后第一条记录开始输出。限制offset最大值是出于API性能考虑，您可以搭配marker使用该参数实现翻页，例如每页50条记录，1-11页内都可以直接使用offset跳转到指定页，但到11页后，由于offset限制为500，您需要使用第11页返回的marker作为下次查询的marker，以实现翻页到12-22页。
+    * startTime  查询命令下发时间在startTime之后的记录，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * endTime  查询命令下发时间在endTime之前的记录，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * status  命令状态。
+    * commandId  命令Id
+    * commandName  命令名称
     *
     * @var string[]
     */
@@ -77,6 +97,16 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * deviceId  下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * limit  分页查询时每页显示的记录数，默认值为10，取值范围为1-50的整数。
+    * marker  上一次分页查询结果中最后一条记录的ID，在上一次分页查询时由物联网平台返回获得。分页查询时物联网平台是按marker也就是记录ID降序查询的，越新的数据记录ID也会越大。若填写marker，则本次只查询记录ID小于marker的数据记录。若不填写，则从记录ID最大也就是最新的一条数据开始查询。如果需要依次查询所有数据，则每次查询时必须填写上一次查询响应中的marker值。
+    * offset  表示从marker后偏移offset条记录开始查询。默认为0，取值范围为0-500的整数。当offset为0时，表示从marker后第一条记录开始输出。限制offset最大值是出于API性能考虑，您可以搭配marker使用该参数实现翻页，例如每页50条记录，1-11页内都可以直接使用offset跳转到指定页，但到11页后，由于offset限制为500，您需要使用第11页返回的marker作为下次查询的marker，以实现翻页到12-22页。
+    * startTime  查询命令下发时间在startTime之后的记录，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * endTime  查询命令下发时间在endTime之前的记录，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * status  命令状态。
+    * commandId  命令Id
+    * commandName  命令名称
     *
     * @var string[]
     */
@@ -95,6 +125,16 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * deviceId  下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * limit  分页查询时每页显示的记录数，默认值为10，取值范围为1-50的整数。
+    * marker  上一次分页查询结果中最后一条记录的ID，在上一次分页查询时由物联网平台返回获得。分页查询时物联网平台是按marker也就是记录ID降序查询的，越新的数据记录ID也会越大。若填写marker，则本次只查询记录ID小于marker的数据记录。若不填写，则从记录ID最大也就是最新的一条数据开始查询。如果需要依次查询所有数据，则每次查询时必须填写上一次查询响应中的marker值。
+    * offset  表示从marker后偏移offset条记录开始查询。默认为0，取值范围为0-500的整数。当offset为0时，表示从marker后第一条记录开始输出。限制offset最大值是出于API性能考虑，您可以搭配marker使用该参数实现翻页，例如每页50条记录，1-11页内都可以直接使用offset跳转到指定页，但到11页后，由于offset限制为500，您需要使用第11页返回的marker作为下次查询的marker，以实现翻页到12-22页。
+    * startTime  查询命令下发时间在startTime之后的记录，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * endTime  查询命令下发时间在endTime之前的记录，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * status  命令状态。
+    * commandId  命令Id
+    * commandName  命令名称
     *
     * @var string[]
     */
@@ -113,6 +153,16 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * deviceId  下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * limit  分页查询时每页显示的记录数，默认值为10，取值范围为1-50的整数。
+    * marker  上一次分页查询结果中最后一条记录的ID，在上一次分页查询时由物联网平台返回获得。分页查询时物联网平台是按marker也就是记录ID降序查询的，越新的数据记录ID也会越大。若填写marker，则本次只查询记录ID小于marker的数据记录。若不填写，则从记录ID最大也就是最新的一条数据开始查询。如果需要依次查询所有数据，则每次查询时必须填写上一次查询响应中的marker值。
+    * offset  表示从marker后偏移offset条记录开始查询。默认为0，取值范围为0-500的整数。当offset为0时，表示从marker后第一条记录开始输出。限制offset最大值是出于API性能考虑，您可以搭配marker使用该参数实现翻页，例如每页50条记录，1-11页内都可以直接使用offset跳转到指定页，但到11页后，由于offset限制为500，您需要使用第11页返回的marker作为下次查询的marker，以实现翻页到12-22页。
+    * startTime  查询命令下发时间在startTime之后的记录，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * endTime  查询命令下发时间在endTime之前的记录，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * status  命令状态。
+    * commandId  命令Id
+    * commandName  命令名称
     *
     * @var string[]
     */
@@ -262,6 +312,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceId
+    *  下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
     *
     * @return string
     */
@@ -273,7 +324,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets deviceId
     *
-    * @param string $deviceId deviceId
+    * @param string $deviceId 下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
     *
     * @return $this
     */
@@ -285,6 +336,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
+    *  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return string|null
     */
@@ -296,7 +348,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId instanceId
+    * @param string|null $instanceId 实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return $this
     */
@@ -308,6 +360,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
+    *  分页查询时每页显示的记录数，默认值为10，取值范围为1-50的整数。
     *
     * @return int|null
     */
@@ -319,7 +372,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit limit
+    * @param int|null $limit 分页查询时每页显示的记录数，默认值为10，取值范围为1-50的整数。
     *
     * @return $this
     */
@@ -331,6 +384,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
+    *  上一次分页查询结果中最后一条记录的ID，在上一次分页查询时由物联网平台返回获得。分页查询时物联网平台是按marker也就是记录ID降序查询的，越新的数据记录ID也会越大。若填写marker，则本次只查询记录ID小于marker的数据记录。若不填写，则从记录ID最大也就是最新的一条数据开始查询。如果需要依次查询所有数据，则每次查询时必须填写上一次查询响应中的marker值。
     *
     * @return string|null
     */
@@ -342,7 +396,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker marker
+    * @param string|null $marker 上一次分页查询结果中最后一条记录的ID，在上一次分页查询时由物联网平台返回获得。分页查询时物联网平台是按marker也就是记录ID降序查询的，越新的数据记录ID也会越大。若填写marker，则本次只查询记录ID小于marker的数据记录。若不填写，则从记录ID最大也就是最新的一条数据开始查询。如果需要依次查询所有数据，则每次查询时必须填写上一次查询响应中的marker值。
     *
     * @return $this
     */
@@ -354,6 +408,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
+    *  表示从marker后偏移offset条记录开始查询。默认为0，取值范围为0-500的整数。当offset为0时，表示从marker后第一条记录开始输出。限制offset最大值是出于API性能考虑，您可以搭配marker使用该参数实现翻页，例如每页50条记录，1-11页内都可以直接使用offset跳转到指定页，但到11页后，由于offset限制为500，您需要使用第11页返回的marker作为下次查询的marker，以实现翻页到12-22页。
     *
     * @return int|null
     */
@@ -365,7 +420,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset offset
+    * @param int|null $offset 表示从marker后偏移offset条记录开始查询。默认为0，取值范围为0-500的整数。当offset为0时，表示从marker后第一条记录开始输出。限制offset最大值是出于API性能考虑，您可以搭配marker使用该参数实现翻页，例如每页50条记录，1-11页内都可以直接使用offset跳转到指定页，但到11页后，由于offset限制为500，您需要使用第11页返回的marker作为下次查询的marker，以实现翻页到12-22页。
     *
     * @return $this
     */
@@ -377,6 +432,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
+    *  查询命令下发时间在startTime之后的记录，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @return string|null
     */
@@ -388,7 +444,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime startTime
+    * @param string|null $startTime 查询命令下发时间在startTime之后的记录，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @return $this
     */
@@ -400,6 +456,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
+    *  查询命令下发时间在endTime之前的记录，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @return string|null
     */
@@ -411,7 +468,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime endTime
+    * @param string|null $endTime 查询命令下发时间在endTime之前的记录，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     *
     * @return $this
     */
@@ -423,6 +480,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  命令状态。
     *
     * @return string|null
     */
@@ -434,7 +492,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status 命令状态。
     *
     * @return $this
     */
@@ -446,6 +504,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets commandId
+    *  命令Id
     *
     * @return string|null
     */
@@ -457,7 +516,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets commandId
     *
-    * @param string|null $commandId commandId
+    * @param string|null $commandId 命令Id
     *
     * @return $this
     */
@@ -469,6 +528,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets commandName
+    *  命令名称
     *
     * @return string|null
     */
@@ -480,7 +540,7 @@ class ListAsyncCommandsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets commandName
     *
-    * @param string|null $commandName commandName
+    * @param string|null $commandName 命令名称
     *
     * @return $this
     */

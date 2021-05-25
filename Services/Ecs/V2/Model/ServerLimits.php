@@ -20,6 +20,32 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * maxImageMeta  镜像元数据最大的长度。
+    * maxPersonality  可注入文件的最大个数。
+    * maxPersonalitySize  注入文件内容的最大长度（单位：Byte）。
+    * maxSecurityGroupRules  安全组中安全组规则最大的配置个数。   > 说明：  - 具体配额限制请以VPC配额限制为准。
+    * maxSecurityGroups  安全组最大使用个数。  > 说明：  - 具体配额限制请以VPC配额限制为准。
+    * maxServerGroupMembers  服务器组中的最大虚拟机数。
+    * maxServerGroups  服务器组的最大个数。
+    * maxServerMeta  可输入元数据的最大长度。
+    * maxTotalCores  CPU核数最大申请数量。
+    * maxTotalFloatingIps  最大的浮动IP使用个数。
+    * maxTotalInstances  云服务器最大申请数量。
+    * maxTotalKeypairs  可以申请的SSH密钥对最大数量。
+    * maxTotalRamSize  内存最大申请容量（单位：MB）。
+    * totalCoresUsed  当前已使用CPU核数。
+    * totalFloatingIpsUsed  当前浮动IP使用个数。
+    * totalInstancesUsed  当前云服务器使用个数。
+    * totalRamUsed  当前内存使用容量（单位：MB）。
+    * totalSecurityGroupsUsed  当前安全组使用个数。
+    * totalServerGroupsUsed  已使用的服务器组个数。
+    * maxTotalSpotInstances  竞价实例的最大申请数量。
+    * maxTotalSpotCores  竞价实例的CPU核数最大申请数量。
+    * maxTotalSpotRamSize  竞价实例的内存最大申请容量（单位：MB）。
+    * totalSpotInstancesUsed  当前竞价实例的使用个数。
+    * totalSpotCoresUsed  当前竞价实例已使用的CPU核数。
+    * totalSpotRamUsed  当前竞价实例的内存使用容量（单位：MB）。
+    * limitByFlavor  使用该flavor可以申请的弹性云服务器数量。  值为“-1”时，表示无数量限制。
     *
     * @var string[]
     */
@@ -54,6 +80,32 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * maxImageMeta  镜像元数据最大的长度。
+    * maxPersonality  可注入文件的最大个数。
+    * maxPersonalitySize  注入文件内容的最大长度（单位：Byte）。
+    * maxSecurityGroupRules  安全组中安全组规则最大的配置个数。   > 说明：  - 具体配额限制请以VPC配额限制为准。
+    * maxSecurityGroups  安全组最大使用个数。  > 说明：  - 具体配额限制请以VPC配额限制为准。
+    * maxServerGroupMembers  服务器组中的最大虚拟机数。
+    * maxServerGroups  服务器组的最大个数。
+    * maxServerMeta  可输入元数据的最大长度。
+    * maxTotalCores  CPU核数最大申请数量。
+    * maxTotalFloatingIps  最大的浮动IP使用个数。
+    * maxTotalInstances  云服务器最大申请数量。
+    * maxTotalKeypairs  可以申请的SSH密钥对最大数量。
+    * maxTotalRamSize  内存最大申请容量（单位：MB）。
+    * totalCoresUsed  当前已使用CPU核数。
+    * totalFloatingIpsUsed  当前浮动IP使用个数。
+    * totalInstancesUsed  当前云服务器使用个数。
+    * totalRamUsed  当前内存使用容量（单位：MB）。
+    * totalSecurityGroupsUsed  当前安全组使用个数。
+    * totalServerGroupsUsed  已使用的服务器组个数。
+    * maxTotalSpotInstances  竞价实例的最大申请数量。
+    * maxTotalSpotCores  竞价实例的CPU核数最大申请数量。
+    * maxTotalSpotRamSize  竞价实例的内存最大申请容量（单位：MB）。
+    * totalSpotInstancesUsed  当前竞价实例的使用个数。
+    * totalSpotCoresUsed  当前竞价实例已使用的CPU核数。
+    * totalSpotRamUsed  当前竞价实例的内存使用容量（单位：MB）。
+    * limitByFlavor  使用该flavor可以申请的弹性云服务器数量。  值为“-1”时，表示无数量限制。
     *
     * @var string[]
     */
@@ -109,6 +161,32 @@ class ServerLimits implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * maxImageMeta  镜像元数据最大的长度。
+    * maxPersonality  可注入文件的最大个数。
+    * maxPersonalitySize  注入文件内容的最大长度（单位：Byte）。
+    * maxSecurityGroupRules  安全组中安全组规则最大的配置个数。   > 说明：  - 具体配额限制请以VPC配额限制为准。
+    * maxSecurityGroups  安全组最大使用个数。  > 说明：  - 具体配额限制请以VPC配额限制为准。
+    * maxServerGroupMembers  服务器组中的最大虚拟机数。
+    * maxServerGroups  服务器组的最大个数。
+    * maxServerMeta  可输入元数据的最大长度。
+    * maxTotalCores  CPU核数最大申请数量。
+    * maxTotalFloatingIps  最大的浮动IP使用个数。
+    * maxTotalInstances  云服务器最大申请数量。
+    * maxTotalKeypairs  可以申请的SSH密钥对最大数量。
+    * maxTotalRamSize  内存最大申请容量（单位：MB）。
+    * totalCoresUsed  当前已使用CPU核数。
+    * totalFloatingIpsUsed  当前浮动IP使用个数。
+    * totalInstancesUsed  当前云服务器使用个数。
+    * totalRamUsed  当前内存使用容量（单位：MB）。
+    * totalSecurityGroupsUsed  当前安全组使用个数。
+    * totalServerGroupsUsed  已使用的服务器组个数。
+    * maxTotalSpotInstances  竞价实例的最大申请数量。
+    * maxTotalSpotCores  竞价实例的CPU核数最大申请数量。
+    * maxTotalSpotRamSize  竞价实例的内存最大申请容量（单位：MB）。
+    * totalSpotInstancesUsed  当前竞价实例的使用个数。
+    * totalSpotCoresUsed  当前竞价实例已使用的CPU核数。
+    * totalSpotRamUsed  当前竞价实例的内存使用容量（单位：MB）。
+    * limitByFlavor  使用该flavor可以申请的弹性云服务器数量。  值为“-1”时，表示无数量限制。
     *
     * @var string[]
     */
@@ -143,6 +221,32 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * maxImageMeta  镜像元数据最大的长度。
+    * maxPersonality  可注入文件的最大个数。
+    * maxPersonalitySize  注入文件内容的最大长度（单位：Byte）。
+    * maxSecurityGroupRules  安全组中安全组规则最大的配置个数。   > 说明：  - 具体配额限制请以VPC配额限制为准。
+    * maxSecurityGroups  安全组最大使用个数。  > 说明：  - 具体配额限制请以VPC配额限制为准。
+    * maxServerGroupMembers  服务器组中的最大虚拟机数。
+    * maxServerGroups  服务器组的最大个数。
+    * maxServerMeta  可输入元数据的最大长度。
+    * maxTotalCores  CPU核数最大申请数量。
+    * maxTotalFloatingIps  最大的浮动IP使用个数。
+    * maxTotalInstances  云服务器最大申请数量。
+    * maxTotalKeypairs  可以申请的SSH密钥对最大数量。
+    * maxTotalRamSize  内存最大申请容量（单位：MB）。
+    * totalCoresUsed  当前已使用CPU核数。
+    * totalFloatingIpsUsed  当前浮动IP使用个数。
+    * totalInstancesUsed  当前云服务器使用个数。
+    * totalRamUsed  当前内存使用容量（单位：MB）。
+    * totalSecurityGroupsUsed  当前安全组使用个数。
+    * totalServerGroupsUsed  已使用的服务器组个数。
+    * maxTotalSpotInstances  竞价实例的最大申请数量。
+    * maxTotalSpotCores  竞价实例的CPU核数最大申请数量。
+    * maxTotalSpotRamSize  竞价实例的内存最大申请容量（单位：MB）。
+    * totalSpotInstancesUsed  当前竞价实例的使用个数。
+    * totalSpotCoresUsed  当前竞价实例已使用的CPU核数。
+    * totalSpotRamUsed  当前竞价实例的内存使用容量（单位：MB）。
+    * limitByFlavor  使用该flavor可以申请的弹性云服务器数量。  值为“-1”时，表示无数量限制。
     *
     * @var string[]
     */
@@ -177,6 +281,32 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * maxImageMeta  镜像元数据最大的长度。
+    * maxPersonality  可注入文件的最大个数。
+    * maxPersonalitySize  注入文件内容的最大长度（单位：Byte）。
+    * maxSecurityGroupRules  安全组中安全组规则最大的配置个数。   > 说明：  - 具体配额限制请以VPC配额限制为准。
+    * maxSecurityGroups  安全组最大使用个数。  > 说明：  - 具体配额限制请以VPC配额限制为准。
+    * maxServerGroupMembers  服务器组中的最大虚拟机数。
+    * maxServerGroups  服务器组的最大个数。
+    * maxServerMeta  可输入元数据的最大长度。
+    * maxTotalCores  CPU核数最大申请数量。
+    * maxTotalFloatingIps  最大的浮动IP使用个数。
+    * maxTotalInstances  云服务器最大申请数量。
+    * maxTotalKeypairs  可以申请的SSH密钥对最大数量。
+    * maxTotalRamSize  内存最大申请容量（单位：MB）。
+    * totalCoresUsed  当前已使用CPU核数。
+    * totalFloatingIpsUsed  当前浮动IP使用个数。
+    * totalInstancesUsed  当前云服务器使用个数。
+    * totalRamUsed  当前内存使用容量（单位：MB）。
+    * totalSecurityGroupsUsed  当前安全组使用个数。
+    * totalServerGroupsUsed  已使用的服务器组个数。
+    * maxTotalSpotInstances  竞价实例的最大申请数量。
+    * maxTotalSpotCores  竞价实例的CPU核数最大申请数量。
+    * maxTotalSpotRamSize  竞价实例的内存最大申请容量（单位：MB）。
+    * totalSpotInstancesUsed  当前竞价实例的使用个数。
+    * totalSpotCoresUsed  当前竞价实例已使用的CPU核数。
+    * totalSpotRamUsed  当前竞价实例的内存使用容量（单位：MB）。
+    * limitByFlavor  使用该flavor可以申请的弹性云服务器数量。  值为“-1”时，表示无数量限制。
     *
     * @var string[]
     */
@@ -376,6 +506,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxImageMeta
+    *  镜像元数据最大的长度。
     *
     * @return int
     */
@@ -399,6 +530,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxPersonality
+    *  可注入文件的最大个数。
     *
     * @return int
     */
@@ -422,6 +554,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxPersonalitySize
+    *  注入文件内容的最大长度（单位：Byte）。
     *
     * @return int
     */
@@ -445,6 +578,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxSecurityGroupRules
+    *  安全组中安全组规则最大的配置个数。   > 说明：  - 具体配额限制请以VPC配额限制为准。
     *
     * @return int
     */
@@ -468,6 +602,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxSecurityGroups
+    *  安全组最大使用个数。  > 说明：  - 具体配额限制请以VPC配额限制为准。
     *
     * @return int
     */
@@ -491,6 +626,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxServerGroupMembers
+    *  服务器组中的最大虚拟机数。
     *
     * @return int
     */
@@ -514,6 +650,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxServerGroups
+    *  服务器组的最大个数。
     *
     * @return int
     */
@@ -537,6 +674,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxServerMeta
+    *  可输入元数据的最大长度。
     *
     * @return int
     */
@@ -560,6 +698,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxTotalCores
+    *  CPU核数最大申请数量。
     *
     * @return int
     */
@@ -583,6 +722,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxTotalFloatingIps
+    *  最大的浮动IP使用个数。
     *
     * @return int
     */
@@ -606,6 +746,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxTotalInstances
+    *  云服务器最大申请数量。
     *
     * @return int
     */
@@ -629,6 +770,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxTotalKeypairs
+    *  可以申请的SSH密钥对最大数量。
     *
     * @return int
     */
@@ -652,6 +794,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxTotalRamSize
+    *  内存最大申请容量（单位：MB）。
     *
     * @return int
     */
@@ -675,6 +818,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCoresUsed
+    *  当前已使用CPU核数。
     *
     * @return int
     */
@@ -698,6 +842,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalFloatingIpsUsed
+    *  当前浮动IP使用个数。
     *
     * @return int
     */
@@ -721,6 +866,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalInstancesUsed
+    *  当前云服务器使用个数。
     *
     * @return int
     */
@@ -744,6 +890,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalRamUsed
+    *  当前内存使用容量（单位：MB）。
     *
     * @return int
     */
@@ -767,6 +914,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalSecurityGroupsUsed
+    *  当前安全组使用个数。
     *
     * @return int
     */
@@ -790,6 +938,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalServerGroupsUsed
+    *  已使用的服务器组个数。
     *
     * @return int
     */
@@ -813,6 +962,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxTotalSpotInstances
+    *  竞价实例的最大申请数量。
     *
     * @return int|null
     */
@@ -836,6 +986,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxTotalSpotCores
+    *  竞价实例的CPU核数最大申请数量。
     *
     * @return int|null
     */
@@ -859,6 +1010,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxTotalSpotRamSize
+    *  竞价实例的内存最大申请容量（单位：MB）。
     *
     * @return int|null
     */
@@ -882,6 +1034,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalSpotInstancesUsed
+    *  当前竞价实例的使用个数。
     *
     * @return int|null
     */
@@ -905,6 +1058,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalSpotCoresUsed
+    *  当前竞价实例已使用的CPU核数。
     *
     * @return int|null
     */
@@ -928,6 +1082,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalSpotRamUsed
+    *  当前竞价实例的内存使用容量（单位：MB）。
     *
     * @return int|null
     */
@@ -951,6 +1106,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
 
     /**
     * Gets limitByFlavor
+    *  使用该flavor可以申请的弹性云服务器数量。  值为“-1”时，表示无数量限制。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\ProjectFlavorLimit[]|null
     */

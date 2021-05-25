@@ -21,6 +21,7 @@ class BatchRebootServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class BatchRebootServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class BatchRebootServersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class BatchRebootServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class BatchRebootServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class BatchRebootServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
+    *  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
     *
     * @return string|null
     */

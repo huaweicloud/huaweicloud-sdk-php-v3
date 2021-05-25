@@ -20,6 +20,8 @@ class ListAllProjectsPermissionsForAgencyRequest implements ModelInterface, Arra
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * agencyId  委托ID，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ListAllProjectsPermissionsForAgencyRequest implements ModelInterface, Arra
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * agencyId  委托ID，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ListAllProjectsPermissionsForAgencyRequest implements ModelInterface, Arra
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * agencyId  委托ID，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ListAllProjectsPermissionsForAgencyRequest implements ModelInterface, Arra
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * agencyId  委托ID，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ListAllProjectsPermissionsForAgencyRequest implements ModelInterface, Arra
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * agencyId  委托ID，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * domainId  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class ListAllProjectsPermissionsForAgencyRequest implements ModelInterface, Arra
 
     /**
     * Gets agencyId
+    *  委托ID，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string
     */
@@ -192,7 +203,7 @@ class ListAllProjectsPermissionsForAgencyRequest implements ModelInterface, Arra
     /**
     * Sets agencyId
     *
-    * @param string $agencyId agencyId
+    * @param string $agencyId 委托ID，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */
@@ -204,6 +215,7 @@ class ListAllProjectsPermissionsForAgencyRequest implements ModelInterface, Arra
 
     /**
     * Gets domainId
+    *  账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string
     */
@@ -215,7 +227,7 @@ class ListAllProjectsPermissionsForAgencyRequest implements ModelInterface, Arra
     /**
     * Sets domainId
     *
-    * @param string $domainId domainId
+    * @param string $domainId 账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */

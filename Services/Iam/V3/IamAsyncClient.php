@@ -24,6 +24,13 @@ class IamAsyncClient extends Client
         return new ClientBuilder(new IamAsyncClient(), "GlobalCredentials");
     }
 
+    /**
+     * 为委托授予所有项目服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)为委托授予所有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function associateAgencyWithAllProjectsPermissionAsync($request)
     {
         return $this->associateAgencyWithAllProjectsPermissionAsyncWithHttpInfo($request);
@@ -85,6 +92,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 为委托授予全局服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)为委托授予全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function associateAgencyWithDomainPermissionAsync($request)
     {
         return $this->associateAgencyWithDomainPermissionAsyncWithHttpInfo($request);
@@ -146,6 +160,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 为委托授予项目服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)为委托授予项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function associateAgencyWithProjectPermissionAsync($request)
     {
         return $this->associateAgencyWithProjectPermissionAsyncWithHttpInfo($request);
@@ -207,6 +228,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 检查委托下是否具有所有项目服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)检查委托是否具有所有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function checkAllProjectsPermissionForAgencyAsync($request)
     {
         return $this->checkAllProjectsPermissionForAgencyAsyncWithHttpInfo($request);
@@ -268,6 +296,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询委托是否拥有全局服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询委托是否拥有全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function checkDomainPermissionForAgencyAsync($request)
     {
         return $this->checkDomainPermissionForAgencyAsyncWithHttpInfo($request);
@@ -329,6 +364,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询委托是否拥有项目服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询委托是否拥有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function checkProjectPermissionForAgencyAsync($request)
     {
         return $this->checkProjectPermissionForAgencyAsyncWithHttpInfo($request);
@@ -390,6 +432,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建委托
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)创建委托。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createAgencyAsync($request)
     {
         return $this->createAgencyAsyncWithHttpInfo($request);
@@ -445,6 +494,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建委托自定义策略
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)创建委托自定义策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createAgencyCustomPolicyAsync($request)
     {
         return $this->createAgencyCustomPolicyAsyncWithHttpInfo($request);
@@ -500,6 +556,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建云服务自定义策略
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)创建云服务自定义策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createCloudServiceCustomPolicyAsync($request)
     {
         return $this->createCloudServiceCustomPolicyAsyncWithHttpInfo($request);
@@ -555,6 +618,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 获取自定义代理登录票据
+     * 该接口用于用于获取自定义代理登录票据logintoken。logintoken是系统颁发给自定义代理用户的登录票据，承载用户的身份、session等信息。调用自定义代理URL登录云服务控制台时，可以使用本接口获取的logintoken进行认证。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。    &gt; - logintoken的有效期为10分钟。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createLoginTokenAsync($request)
     {
         return $this->createLoginTokenAsyncWithHttpInfo($request);
@@ -610,6 +680,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 导入Metadata文件
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)导入Metadata文件。    账号在使用联邦认证功能前，需要先将Metadata文件导入到IAM中。Metadata文件是SAML 2.0协议约定的接口文件，包含访问接口地址和证书信息，请找企业管理员获取企业IdP的Metadata文件。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createMetadataAsync($request)
     {
         return $this->createMetadataAsyncWithHttpInfo($request);
@@ -671,6 +748,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建OpenId Connect身份提供商配置
+     * 创建OpenId Connect身份提供商配置
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createOpenIdConnectConfigAsync($request)
     {
         return $this->createOpenIdConnectConfigAsyncWithHttpInfo($request);
@@ -729,6 +813,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 获取联邦认证token(OpenId Connect Id token方式)
+     * 获取联邦认证token(OpenId Connect Id token方式)
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createTokenWithIdTokenAsync($request)
     {
         return $this->createTokenWithIdTokenAsyncWithHttpInfo($request);
@@ -787,6 +878,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除委托
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除委托。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteAgencyAsync($request)
     {
         return $this->deleteAgencyAsyncWithHttpInfo($request);
@@ -842,6 +940,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除自定义策略
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除自定义策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteCustomPolicyAsync($request)
     {
         return $this->deleteCustomPolicyAsyncWithHttpInfo($request);
@@ -897,6 +1002,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 移除用户组的所有项目服务权限
+     * 该接口可以用于移除用户组的所有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteDomainGroupInheritedRoleAsync($request)
     {
         return $this->deleteDomainGroupInheritedRoleAsyncWithHttpInfo($request);
@@ -958,6 +1070,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 添加IAM用户到用户组
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)添加IAM用户到用户组。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneAddUserToGroupAsync($request)
     {
         return $this->keystoneAddUserToGroupAsyncWithHttpInfo($request);
@@ -1016,6 +1135,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 为用户组授予全局服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)为用户组授予全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneAssociateGroupWithDomainPermissionAsync($request)
     {
         return $this->keystoneAssociateGroupWithDomainPermissionAsyncWithHttpInfo($request);
@@ -1077,6 +1203,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 为用户组授予项目服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)为用户组授予项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneAssociateGroupWithProjectPermissionAsync($request)
     {
         return $this->keystoneAssociateGroupWithProjectPermissionAsyncWithHttpInfo($request);
@@ -1138,6 +1271,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询用户组是否拥有全局服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组是否拥有全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneCheckDomainPermissionForGroupAsync($request)
     {
         return $this->keystoneCheckDomainPermissionForGroupAsyncWithHttpInfo($request);
@@ -1199,6 +1339,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询用户组是否拥有项目服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组是否拥有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneCheckProjectPermissionForGroupAsync($request)
     {
         return $this->keystoneCheckProjectPermissionForGroupAsyncWithHttpInfo($request);
@@ -1260,6 +1407,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询IAM用户是否在用户组中
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户是否在用户组中。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneCheckUserInGroupAsync($request)
     {
         return $this->keystoneCheckUserInGroupAsyncWithHttpInfo($request);
@@ -1318,6 +1472,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询用户组是否拥有所有项目指定权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组是否拥有所有项目指定权限。  该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneCheckroleForGroupAsync($request)
     {
         return $this->keystoneCheckroleForGroupAsyncWithHttpInfo($request);
@@ -1379,6 +1540,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建用户组
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)创建用户组。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneCreateGroupAsync($request)
     {
         return $this->keystoneCreateGroupAsyncWithHttpInfo($request);
@@ -1434,6 +1602,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 注册身份提供商
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)注册身份提供商。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneCreateIdentityProviderAsync($request)
     {
         return $this->keystoneCreateIdentityProviderAsyncWithHttpInfo($request);
@@ -1492,6 +1667,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 注册映射
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)注册映射。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneCreateMappingAsync($request)
     {
         return $this->keystoneCreateMappingAsyncWithHttpInfo($request);
@@ -1550,6 +1732,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建项目
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)创建项目。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneCreateProjectAsync($request)
     {
         return $this->keystoneCreateProjectAsyncWithHttpInfo($request);
@@ -1605,6 +1794,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 注册协议
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)注册协议（将协议关联到某一身份提供商）。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneCreateProtocolAsync($request)
     {
         return $this->keystoneCreateProtocolAsyncWithHttpInfo($request);
@@ -1666,6 +1862,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 获取联邦认证scoped token
+     * 该接口可以用于通过联邦认证方式获取scoped token。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneCreateScopedTokenAsync($request)
     {
         return $this->keystoneCreateScopedTokenAsyncWithHttpInfo($request);
@@ -1721,6 +1924,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除用户组
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除用户组。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneDeleteGroupAsync($request)
     {
         return $this->keystoneDeleteGroupAsyncWithHttpInfo($request);
@@ -1776,6 +1986,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除身份提供商
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html) 删除身份提供商。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneDeleteIdentityProviderAsync($request)
     {
         return $this->keystoneDeleteIdentityProviderAsyncWithHttpInfo($request);
@@ -1831,6 +2048,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除映射
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除映射。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneDeleteMappingAsync($request)
     {
         return $this->keystoneDeleteMappingAsyncWithHttpInfo($request);
@@ -1886,6 +2110,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除协议
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除协议。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneDeleteProtocolAsync($request)
     {
         return $this->keystoneDeleteProtocolAsyncWithHttpInfo($request);
@@ -1944,6 +2175,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询用户组的所有项目权限列表
+     * 该接口可以用于管理员查询用户组所有项目服务权限列表。  \\n\\n该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListAllProjectPermissionsForGroupAsync($request)
     {
         return $this->keystoneListAllProjectPermissionsForGroupAsyncWithHttpInfo($request);
@@ -2002,6 +2240,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询IAM用户可以访问的账号详情
+     * 该接口可以用于查询IAM用户可以用访问的账号详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListAuthDomainsAsync($request)
     {
         return $this->keystoneListAuthDomainsAsyncWithHttpInfo($request);
@@ -2054,6 +2299,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询IAM用户可以访问的项目列表
+     * 该接口可以用于查询IAM用户可以访问的项目列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListAuthProjectsAsync($request)
     {
         return $this->keystoneListAuthProjectsAsyncWithHttpInfo($request);
@@ -2106,6 +2358,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询全局服务中的用户组权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询全局服务中的用户组权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListDomainPermissionsForGroupAsync($request)
     {
         return $this->keystoneListDomainPermissionsForGroupAsyncWithHttpInfo($request);
@@ -2164,6 +2423,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询终端节点列表
+     * 该接口可以用于查询终端节点列表。终端节点用来提供服务访问入口。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListEndpointsAsync($request)
     {
         return $this->keystoneListEndpointsAsyncWithHttpInfo($request);
@@ -2222,6 +2488,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询用户组列表
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListGroupsAsync($request)
     {
         return $this->keystoneListGroupsAsyncWithHttpInfo($request);
@@ -2280,6 +2553,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询身份提供商列表
+     * 该接口可以用于查询身份提供商列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListIdentityProvidersAsync($request)
     {
         return $this->keystoneListIdentityProvidersAsyncWithHttpInfo($request);
@@ -2332,6 +2612,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询映射列表
+     * 该接口可以用于查询映射列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListMappingsAsync($request)
     {
         return $this->keystoneListMappingsAsyncWithHttpInfo($request);
@@ -2384,6 +2671,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询权限列表
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询权限列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListPermissionsAsync($request)
     {
         return $this->keystoneListPermissionsAsyncWithHttpInfo($request);
@@ -2448,6 +2742,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询项目服务中的用户组权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询项目服务中的用户组权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListProjectPermissionsForGroupAsync($request)
     {
         return $this->keystoneListProjectPermissionsForGroupAsyncWithHttpInfo($request);
@@ -2506,6 +2807,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询指定条件下的项目列表
+     * 该接口可以用于查询指定条件下的项目列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListProjectsAsync($request)
     {
         return $this->keystoneListProjectsAsyncWithHttpInfo($request);
@@ -2579,6 +2887,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询指定IAM用户的项目列表
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询指定IAM用户的项目列表，或IAM用户查询自己的项目列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListProjectsForUserAsync($request)
     {
         return $this->keystoneListProjectsForUserAsyncWithHttpInfo($request);
@@ -2634,6 +2949,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询协议列表
+     * 该接口可以用于查询协议列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListProtocolsAsync($request)
     {
         return $this->keystoneListProtocolsAsyncWithHttpInfo($request);
@@ -2689,6 +3011,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询区域列表
+     * 该接口可以用于查询区域列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListRegionsAsync($request)
     {
         return $this->keystoneListRegionsAsyncWithHttpInfo($request);
@@ -2741,6 +3070,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询服务列表
+     * 该接口可以用于查询服务列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListServicesAsync($request)
     {
         return $this->keystoneListServicesAsyncWithHttpInfo($request);
@@ -2796,6 +3132,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 管理员查询用户组所包含的IAM用户
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组中所包含的IAM用户。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListUsersForGroupByAdminAsync($request)
     {
         return $this->keystoneListUsersForGroupByAdminAsyncWithHttpInfo($request);
@@ -2851,6 +3194,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询版本信息列表
+     * 该接口用于查询Keystone API的版本信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListVersionsAsync($request)
     {
         return $this->keystoneListVersionsAsyncWithHttpInfo($request);
@@ -2903,6 +3253,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 移除用户组的全局服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)移除用户组的全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneRemoveDomainPermissionFromGroupAsync($request)
     {
         return $this->keystoneRemoveDomainPermissionFromGroupAsyncWithHttpInfo($request);
@@ -2964,6 +3321,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 移除用户组的项目服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)移除用户组的项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneRemoveProjectPermissionFromGroupAsync($request)
     {
         return $this->keystoneRemoveProjectPermissionFromGroupAsyncWithHttpInfo($request);
@@ -3025,6 +3389,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 移除用户组中的IAM用户
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)移除用户组中的IAM用户。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneRemoveUserFromGroupAsync($request)
     {
         return $this->keystoneRemoveUserFromGroupAsyncWithHttpInfo($request);
@@ -3083,6 +3454,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询服务目录
+     * 该接口可以用于查询请求头中X-Auth-Token对应的服务目录。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneShowCatalogAsync($request)
     {
         return $this->keystoneShowCatalogAsyncWithHttpInfo($request);
@@ -3135,6 +3513,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询终端节点详情
+     * 该接口可以用于查询终端节点详情。终端节点用来提供服务访问入口。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneShowEndpointAsync($request)
     {
         return $this->keystoneShowEndpointAsyncWithHttpInfo($request);
@@ -3190,6 +3575,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询用户组详情
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneShowGroupAsync($request)
     {
         return $this->keystoneShowGroupAsyncWithHttpInfo($request);
@@ -3245,6 +3637,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询身份提供商详情
+     * 该接口可以用于查询身份提供商详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneShowIdentityProviderAsync($request)
     {
         return $this->keystoneShowIdentityProviderAsyncWithHttpInfo($request);
@@ -3300,6 +3699,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询映射详情
+     * 该接口可以用于查询映射详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneShowMappingAsync($request)
     {
         return $this->keystoneShowMappingAsyncWithHttpInfo($request);
@@ -3355,6 +3761,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询权限详情
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询权限详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneShowPermissionAsync($request)
     {
         return $this->keystoneShowPermissionAsyncWithHttpInfo($request);
@@ -3410,6 +3823,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询项目详情
+     * 该接口可以用于查询项目详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneShowProjectAsync($request)
     {
         return $this->keystoneShowProjectAsyncWithHttpInfo($request);
@@ -3465,6 +3885,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询协议详情
+     * 该接口可以用于查询协议详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneShowProtocolAsync($request)
     {
         return $this->keystoneShowProtocolAsyncWithHttpInfo($request);
@@ -3523,6 +3950,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询区域详情
+     * 该接口可以用于查询区域详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneShowRegionAsync($request)
     {
         return $this->keystoneShowRegionAsyncWithHttpInfo($request);
@@ -3578,6 +4012,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询账号密码强度策略
+     * 该接口可以用于查询账号密码强度策略，查询结果包括密码强度策略的正则表达式及其描述。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneShowSecurityComplianceAsync($request)
     {
         return $this->keystoneShowSecurityComplianceAsyncWithHttpInfo($request);
@@ -3633,6 +4074,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 按条件查询账号密码强度策略
+     * 该接口可以用于按条件查询账号密码强度策略，查询结果包括密码强度策略的正则表达式及其描述。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneShowSecurityComplianceByOptionAsync($request)
     {
         return $this->keystoneShowSecurityComplianceByOptionAsyncWithHttpInfo($request);
@@ -3691,6 +4139,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询服务详情
+     * 该接口可以用于查询服务详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneShowServiceAsync($request)
     {
         return $this->keystoneShowServiceAsyncWithHttpInfo($request);
@@ -3746,6 +4201,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询版本信息
+     * 该接口用于查询Keystone API的3.0版本的信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneShowVersionAsync($request)
     {
         return $this->keystoneShowVersionAsyncWithHttpInfo($request);
@@ -3798,6 +4260,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 更新用户组
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)更新用户组信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneUpdateGroupAsync($request)
     {
         return $this->keystoneUpdateGroupAsyncWithHttpInfo($request);
@@ -3856,6 +4325,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 更新身份提供商
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)更新身份提供商。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneUpdateIdentityProviderAsync($request)
     {
         return $this->keystoneUpdateIdentityProviderAsyncWithHttpInfo($request);
@@ -3914,6 +4390,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 更新映射
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)更新映射。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneUpdateMappingAsync($request)
     {
         return $this->keystoneUpdateMappingAsyncWithHttpInfo($request);
@@ -3972,6 +4455,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改项目信息
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改项目信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneUpdateProjectAsync($request)
     {
         return $this->keystoneUpdateProjectAsyncWithHttpInfo($request);
@@ -4030,6 +4520,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 更新协议
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)更新协议。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneUpdateProtocolAsync($request)
     {
         return $this->keystoneUpdateProtocolAsyncWithHttpInfo($request);
@@ -4091,6 +4588,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询指定条件下的委托列表
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询指定条件下的委托列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listAgenciesAsync($request)
     {
         return $this->listAgenciesAsyncWithHttpInfo($request);
@@ -4152,6 +4656,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询委托下的所有项目服务权限列表
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询委托所有项目服务权限列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listAllProjectsPermissionsForAgencyAsync($request)
     {
         return $this->listAllProjectsPermissionsForAgencyAsyncWithHttpInfo($request);
@@ -4210,6 +4721,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询自定义策略列表
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询自定义策略列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listCustomPoliciesAsync($request)
     {
         return $this->listCustomPoliciesAsyncWithHttpInfo($request);
@@ -4268,6 +4786,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询全局服务中的委托权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询全局服务中的委托权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listDomainPermissionsForAgencyAsync($request)
     {
         return $this->listDomainPermissionsForAgencyAsyncWithHttpInfo($request);
@@ -4326,6 +4851,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询项目服务中的委托权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询项目服务中的委托权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listProjectPermissionsForAgencyAsync($request)
     {
         return $this->listProjectPermissionsForAgencyAsyncWithHttpInfo($request);
@@ -4384,6 +4916,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 移除委托下的所有项目服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)移除委托的所有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function removeAllProjectsPermissionFromAgencyAsync($request)
     {
         return $this->removeAllProjectsPermissionFromAgencyAsyncWithHttpInfo($request);
@@ -4445,6 +4984,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 移除委托的全局服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)移除委托的全局服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function removeDomainPermissionFromAgencyAsync($request)
     {
         return $this->removeDomainPermissionFromAgencyAsyncWithHttpInfo($request);
@@ -4506,6 +5052,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 移除委托的项目服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)移除委托的项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function removeProjectPermissionFromAgencyAsync($request)
     {
         return $this->removeProjectPermissionFromAgencyAsyncWithHttpInfo($request);
@@ -4567,6 +5120,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询委托详情
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询委托详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showAgencyAsync($request)
     {
         return $this->showAgencyAsyncWithHttpInfo($request);
@@ -4622,6 +5182,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询自定义策略详情
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询自定义策略详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showCustomPolicyAsync($request)
     {
         return $this->showCustomPolicyAsyncWithHttpInfo($request);
@@ -4677,6 +5244,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询账号接口访问策略
+     * 该接口可以用于查询账号接口访问控制策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showDomainApiAclPolicyAsync($request)
     {
         return $this->showDomainApiAclPolicyAsyncWithHttpInfo($request);
@@ -4732,6 +5306,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询账号控制台访问策略
+     * 该接口可以用于查询账号控制台访问控制策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showDomainConsoleAclPolicyAsync($request)
     {
         return $this->showDomainConsoleAclPolicyAsyncWithHttpInfo($request);
@@ -4787,6 +5368,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询账号登录策略
+     * 该接口可以用于查询账号登录策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showDomainLoginPolicyAsync($request)
     {
         return $this->showDomainLoginPolicyAsyncWithHttpInfo($request);
@@ -4842,6 +5430,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询账号密码策略
+     * 该接口可以用于查询账号密码策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showDomainPasswordPolicyAsync($request)
     {
         return $this->showDomainPasswordPolicyAsyncWithHttpInfo($request);
@@ -4897,6 +5492,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询账号操作保护策略
+     * 该接口可以用于查询账号操作保护策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showDomainProtectPolicyAsync($request)
     {
         return $this->showDomainProtectPolicyAsyncWithHttpInfo($request);
@@ -4952,6 +5554,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询账号配额
+     * 该接口可以用于查询账号配额。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showDomainQuotaAsync($request)
     {
         return $this->showDomainQuotaAsyncWithHttpInfo($request);
@@ -5010,6 +5619,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询Metadata文件
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询身份提供商导入到IAM中的Metadata文件。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showMetadataAsync($request)
     {
         return $this->showMetadataAsyncWithHttpInfo($request);
@@ -5068,6 +5684,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询OpenId Connect身份提供商配置
+     * 查询OpenId Connect身份提供商配置
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showOpenIdConnectConfigAsync($request)
     {
         return $this->showOpenIdConnectConfigAsyncWithHttpInfo($request);
@@ -5123,6 +5746,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询项目详情与状态
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询项目详情与状态。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showProjectDetailsAndStatusAsync($request)
     {
         return $this->showProjectDetailsAndStatusAsyncWithHttpInfo($request);
@@ -5178,6 +5808,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询项目配额
+     * 该接口可以用于查询项目配额。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showProjectQuotaAsync($request)
     {
         return $this->showProjectQuotaAsyncWithHttpInfo($request);
@@ -5233,6 +5870,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改委托
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改委托。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateAgencyAsync($request)
     {
         return $this->updateAgencyAsyncWithHttpInfo($request);
@@ -5291,6 +5935,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改委托自定义策略
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改委托自定义策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateAgencyCustomPolicyAsync($request)
     {
         return $this->updateAgencyCustomPolicyAsyncWithHttpInfo($request);
@@ -5349,6 +6000,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改云服务自定义策略
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改云服务自定义策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateCloudServiceCustomPolicyAsync($request)
     {
         return $this->updateCloudServiceCustomPolicyAsyncWithHttpInfo($request);
@@ -5407,6 +6065,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改账号接口访问策略
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改账号接口访问策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateDomainApiAclPolicyAsync($request)
     {
         return $this->updateDomainApiAclPolicyAsyncWithHttpInfo($request);
@@ -5465,6 +6130,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改账号控制台访问策略
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改账号控制台访问策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateDomainConsoleAclPolicyAsync($request)
     {
         return $this->updateDomainConsoleAclPolicyAsyncWithHttpInfo($request);
@@ -5523,6 +6195,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 为用户组授予所有项目服务权限
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)为用户组授予所有项目服务权限。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateDomainGroupInheritRoleAsync($request)
     {
         return $this->updateDomainGroupInheritRoleAsyncWithHttpInfo($request);
@@ -5584,6 +6263,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改账号登录策略
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改账号登录策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateDomainLoginPolicyAsync($request)
     {
         return $this->updateDomainLoginPolicyAsyncWithHttpInfo($request);
@@ -5642,6 +6328,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改账号密码策略
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改账号密码策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateDomainPasswordPolicyAsync($request)
     {
         return $this->updateDomainPasswordPolicyAsyncWithHttpInfo($request);
@@ -5700,6 +6393,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改账号操作保护策略
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改账号操作保护策略。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateDomainProtectPolicyAsync($request)
     {
         return $this->updateDomainProtectPolicyAsyncWithHttpInfo($request);
@@ -5758,6 +6458,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改OpenId Connect身份提供商配置
+     * 修改OpenId Connect身份提供商配置
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateOpenIdConnectConfigAsync($request)
     {
         return $this->updateOpenIdConnectConfigAsyncWithHttpInfo($request);
@@ -5816,6 +6523,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 设置项目状态
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)设置项目状态。项目状态包括：正常、冻结。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateProjectStatusAsync($request)
     {
         return $this->updateProjectStatusAsyncWithHttpInfo($request);
@@ -5874,6 +6588,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建永久访问密钥
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)给IAM用户创建永久访问密钥，或IAM用户给自己创建永久访问密钥。    访问密钥（Access Key ID/Secret Access Key，简称AK/SK），是您通过开发工具（API、CLI、SDK）访问华为云时的身份凭证，不用于登录控制台。系统通过AK识别访问用户的身份，通过SK进行签名验证，通过加密签名验证可以确保请求的机密性、完整性和请求者身份的正确性。在控制台创建访问密钥的方式请参见：[访问密钥](https://support.huaweicloud.com/usermanual-ca/zh-cn_topic_0046606340.html)  。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createPermanentAccessKeyAsync($request)
     {
         return $this->createPermanentAccessKeyAsyncWithHttpInfo($request);
@@ -5929,6 +6650,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 通过委托获取临时访问密钥
+     * 该接口可以用于通过委托来获取临时访问密钥（临时AK/SK）和securitytoken。    临时AK/SK和securitytoken是系统颁发给IAM用户的临时访问令牌，有效期为15分钟至24小时，过期后需要重新获取。临时AK/SK和securitytoken遵循权限最小化原则。鉴权时，临时AK/SK和securitytoken必须同时使用，请求头中需要添加“x-security-token”字段，使用方法详情请参考：[API签名参考](https://support.huaweicloud.com/devg-apisign/api-sign-provide.html) 。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createTemporaryAccessKeyByAgencyAsync($request)
     {
         return $this->createTemporaryAccessKeyByAgencyAsyncWithHttpInfo($request);
@@ -5984,6 +6712,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 通过token获取临时访问密钥
+     * 该接口可以用于通过token来获取临时AK/SK和securitytoken。    临时AK/SK和securitytoken是系统颁发给IAM用户的临时访问令牌，有效期为15分钟至24小时，过期后需要重新获取。临时AK/SK和securitytoken遵循权限最小化原则。鉴权时，临时AK/SK和securitytoken必须同时使用，请求头中需要添加“x-security-token”字段，使用方法详情请参考：[API签名参考](https://support.huaweicloud.com/devg-apisign/api-sign-provide.html)。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createTemporaryAccessKeyByTokenAsync($request)
     {
         return $this->createTemporaryAccessKeyByTokenAsyncWithHttpInfo($request);
@@ -6039,6 +6774,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除指定永久访问密钥
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除IAM用户的指定永久访问密钥，或IAM用户删除自己的指定永久访问密钥。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deletePermanentAccessKeyAsync($request)
     {
         return $this->deletePermanentAccessKeyAsyncWithHttpInfo($request);
@@ -6094,6 +6836,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询所有永久访问密钥
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户的所有永久访问密钥，或IAM用户查询自己的所有永久访问密钥。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listPermanentAccessKeysAsync($request)
     {
         return $this->listPermanentAccessKeysAsyncWithHttpInfo($request);
@@ -6149,6 +6898,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询指定永久访问密钥
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户的指定永久访问密钥，或IAM用户查询自己的指定永久访问密钥。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showPermanentAccessKeyAsync($request)
     {
         return $this->showPermanentAccessKeyAsyncWithHttpInfo($request);
@@ -6204,6 +6960,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改指定永久访问密钥
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改IAM用户的指定永久访问密钥，或IAM用户修改自己的指定永久访问密钥。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updatePermanentAccessKeyAsync($request)
     {
         return $this->updatePermanentAccessKeyAsyncWithHttpInfo($request);
@@ -6262,6 +7025,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 绑定MFA设备
+     * 该接口可以用于绑定MFA设备。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createBindingDeviceAsync($request)
     {
         return $this->createBindingDeviceAsyncWithHttpInfo($request);
@@ -6317,6 +7087,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 创建MFA设备
+     * 该接口可以用于创建MFA设备。  该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createMfaDeviceAsync($request)
     {
         return $this->createMfaDeviceAsyncWithHttpInfo($request);
@@ -6372,6 +7149,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 管理员创建IAM用户（推荐）
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)创建IAM用户。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function createUserAsync($request)
     {
         return $this->createUserAsyncWithHttpInfo($request);
@@ -6427,6 +7211,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 解绑MFA设备
+     * 该接口可以用于解绑MFA设备   该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteBindingDeviceAsync($request)
     {
         return $this->deleteBindingDeviceAsyncWithHttpInfo($request);
@@ -6482,6 +7273,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 删除MFA设备
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除MFA设备。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function deleteMfaDeviceAsync($request)
     {
         return $this->deleteMfaDeviceAsyncWithHttpInfo($request);
@@ -6540,6 +7338,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 管理员创建IAM用户
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)创建IAM用户。IAM用户首次登录时需要修改密码。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneCreateUserAsync($request)
     {
         return $this->keystoneCreateUserAsyncWithHttpInfo($request);
@@ -6595,6 +7400,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 管理员删除IAM用户
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除指定IAM用户。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneDeleteUserAsync($request)
     {
         return $this->keystoneDeleteUserAsyncWithHttpInfo($request);
@@ -6650,6 +7462,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询IAM用户所属用户组
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户所属用户组，或IAM用户查询自己所属用户组。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListGroupsForUserAsync($request)
     {
         return $this->keystoneListGroupsForUserAsyncWithHttpInfo($request);
@@ -6705,6 +7524,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 管理员查询IAM用户列表
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneListUsersAsync($request)
     {
         return $this->keystoneListUsersAsyncWithHttpInfo($request);
@@ -6769,6 +7595,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询IAM用户详情
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户详情，或IAM用户查询自己的用户详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneShowUserAsync($request)
     {
         return $this->keystoneShowUserAsyncWithHttpInfo($request);
@@ -6824,6 +7657,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 管理员修改IAM用户信息
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改IAM用户信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneUpdateUserByAdminAsync($request)
     {
         return $this->keystoneUpdateUserByAdminAsyncWithHttpInfo($request);
@@ -6882,6 +7722,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改IAM用户密码
+     * 该接口可以用于IAM用户修改自己的密码。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneUpdateUserPasswordAsync($request)
     {
         return $this->keystoneUpdateUserPasswordAsyncWithHttpInfo($request);
@@ -6940,6 +7787,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询IAM用户的登录保护状态信息列表
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户的登录保护状态列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listUserLoginProtectsAsync($request)
     {
         return $this->listUserLoginProtectsAsyncWithHttpInfo($request);
@@ -6992,6 +7846,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 该接口可以用于获取MFA设备。
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户的MFA绑定信息列表。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listUserMfaDevicesAsync($request)
     {
         return $this->listUserMfaDevicesAsyncWithHttpInfo($request);
@@ -7044,6 +7905,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询IAM用户详情（推荐）
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户详情，或IAM用户查询自己的详情。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showUserAsync($request)
     {
         return $this->showUserAsyncWithHttpInfo($request);
@@ -7099,6 +7967,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询指定IAM用户的登录保护状态信息
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询指定IAM用户的登录保护状态信息，或IAM用户查询自己的登录保护状态信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showUserLoginProtectAsync($request)
     {
         return $this->showUserLoginProtectAsyncWithHttpInfo($request);
@@ -7154,6 +8029,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 查询指定IAM用户的MFA绑定信息
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询指定IAM用户的MFA绑定信息，或IAM用户查询自己的MFA绑定信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function showUserMfaDeviceAsync($request)
     {
         return $this->showUserMfaDeviceAsyncWithHttpInfo($request);
@@ -7209,6 +8091,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改IAM用户登录保护状态信息
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改账号操作保护。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateLoginProtectAsync($request)
     {
         return $this->updateLoginProtectAsyncWithHttpInfo($request);
@@ -7267,6 +8156,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 管理员修改IAM用户信息（推荐）
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)修改IAM用户信息 。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateUserAsync($request)
     {
         return $this->updateUserAsyncWithHttpInfo($request);
@@ -7325,6 +8221,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 修改IAM用户信息（推荐）
+     * 该接口可以用于IAM用户修改自己的用户信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function updateUserInformationAsync($request)
     {
         return $this->updateUserInformationAsyncWithHttpInfo($request);
@@ -7383,6 +8286,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 获取委托Token
+     * 该接口可以用于获取委托方的token。    例如：A账号希望B账号管理自己的某些资源，所以A账号创建了委托给B账号，则A账号为委托方，B账号为被委托方。那么B账号可以通过该接口获取委托token。B账号仅能使用该token管理A账号的委托资源，不能管理自己账号中的资源。如果B账号需要管理自己账号中的资源，则需要获取自己的用户token。    token是系统颁发给用户的访问令牌，承载用户的身份、权限等信息。调用IAM以及其他云服务的接口时，可以使用本接口获取的token进行鉴权。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。如果使用全局区域的Endpoint调用，该token可以在所有区域使用；如果使用非全局区域的Endpoint调用，则该token仅在该区域生效，不能跨区域使用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。    &gt; - token的有效期为24小时，建议进行缓存，避免频繁调用。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneCreateAgencyTokenAsync($request)
     {
         return $this->keystoneCreateAgencyTokenAsyncWithHttpInfo($request);
@@ -7441,6 +8351,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 获取IAM用户Token（使用密码）
+     * 该接口可以用于通过用户名/密码的方式进行认证来获取IAM用户token。    token是系统颁发给IAM用户的访问令牌，承载用户的身份、权限等信息。调用IAM以及其他云服务的接口时，可以使用本接口获取的IAM用户token进行鉴权。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。如果使用全局区域的Endpoint调用，该token可以在所有区域使用；如果使用非全局区域的Endpoint调用，则该token仅在该区域生效，不能跨区域使用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。   &gt; - token的有效期为24小时，建议进行缓存，避免频繁调用。   &gt; - 通过Postman获取用户token示例请参见：[如何通过Postman获取用户token](https://support.huaweicloud.com/iam_faq/iam_01_034.html)。   &gt; - 如果需要获取具有Security Administrator权限的token，请参见：[IAM 常见问题](https://support.huaweicloud.com/iam_faq/iam_01_0608.html)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneCreateUserTokenByPasswordAsync($request)
     {
         return $this->keystoneCreateUserTokenByPasswordAsyncWithHttpInfo($request);
@@ -7499,6 +8416,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 获取IAM用户Token（使用密码+虚拟MFA）
+     * 该接口可以用于通过用户名/密码+虚拟MFA的方式进行认证，在IAM用户开启了的登录保护功能，并选择通过虚拟MFA验证时获取IAM用户token。    token是系统颁发给用户的访问令牌，承载用户的身份、权限等信息。调用IAM以及其他云服务的接口时，可以使用本接口获取的token进行鉴权。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。如果使用全局区域的Endpoint调用，该token可以在所有区域使用；如果使用非全局区域的Endpoint调用，则该token仅在该区域生效，不能跨区域使用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。   &gt; - token的有效期为24小时，建议进行缓存，避免频繁调用。   &gt; - 通过Postman获取用户token示例请参见：[如何通过Postman获取用户token](https://support.huaweicloud.com/iam_faq/iam_01_034.html)。   &gt; - 如果需要获取具有Security Administrator权限的token，请参见：[IAM 常见问题](https://support.huaweicloud.com/iam_faq/iam_01_0608.html)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneCreateUserTokenByPasswordAndMfaAsync($request)
     {
         return $this->keystoneCreateUserTokenByPasswordAndMfaAsyncWithHttpInfo($request);
@@ -7557,6 +8481,13 @@ class IamAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 校验Token的有效性
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)校验本账号中IAM用户token的有效性，或IAM用户校验自己token的有效性。管理员仅能校验本账号中IAM用户token的有效性，不能校验其他账号中IAM用户token的有效性。如果被校验的token有效，则返回该token的详细信息。    该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function keystoneValidateTokenAsync($request)
     {
         return $this->keystoneValidateTokenAsyncWithHttpInfo($request);

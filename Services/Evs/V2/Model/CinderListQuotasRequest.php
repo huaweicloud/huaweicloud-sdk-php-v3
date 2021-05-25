@@ -20,6 +20,8 @@ class CinderListQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * targetProjectId  目标的项目ID。与project_id保持一致即可。
+    * usage  是否查询配额详细信息。当前只支持传true。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class CinderListQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * targetProjectId  目标的项目ID。与project_id保持一致即可。
+    * usage  是否查询配额详细信息。当前只支持传true。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class CinderListQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * targetProjectId  目标的项目ID。与project_id保持一致即可。
+    * usage  是否查询配额详细信息。当前只支持传true。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class CinderListQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * targetProjectId  目标的项目ID。与project_id保持一致即可。
+    * usage  是否查询配额详细信息。当前只支持传true。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class CinderListQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * targetProjectId  目标的项目ID。与project_id保持一致即可。
+    * usage  是否查询配额详细信息。当前只支持传true。
     *
     * @var string[]
     */
@@ -202,6 +212,7 @@ class CinderListQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetProjectId
+    *  目标的项目ID。与project_id保持一致即可。
     *
     * @return string
     */
@@ -213,7 +224,7 @@ class CinderListQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Sets targetProjectId
     *
-    * @param string $targetProjectId targetProjectId
+    * @param string $targetProjectId 目标的项目ID。与project_id保持一致即可。
     *
     * @return $this
     */
@@ -225,6 +236,7 @@ class CinderListQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets usage
+    *  是否查询配额详细信息。当前只支持传true。
     *
     * @return string
     */
@@ -236,7 +248,7 @@ class CinderListQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Sets usage
     *
-    * @param string $usage usage
+    * @param string $usage 是否查询配额详细信息。当前只支持传true。
     *
     * @return $this
     */

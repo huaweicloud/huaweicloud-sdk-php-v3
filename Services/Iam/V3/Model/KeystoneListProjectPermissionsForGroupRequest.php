@@ -20,6 +20,8 @@ class KeystoneListProjectPermissionsForGroupRequest implements ModelInterface, A
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID，获取方式请参见：[获取项目名称、项目ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * groupId  用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class KeystoneListProjectPermissionsForGroupRequest implements ModelInterface, A
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID，获取方式请参见：[获取项目名称、项目ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * groupId  用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class KeystoneListProjectPermissionsForGroupRequest implements ModelInterface, A
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID，获取方式请参见：[获取项目名称、项目ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * groupId  用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class KeystoneListProjectPermissionsForGroupRequest implements ModelInterface, A
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID，获取方式请参见：[获取项目名称、项目ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * groupId  用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class KeystoneListProjectPermissionsForGroupRequest implements ModelInterface, A
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID，获取方式请参见：[获取项目名称、项目ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * groupId  用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class KeystoneListProjectPermissionsForGroupRequest implements ModelInterface, A
 
     /**
     * Gets projectId
+    *  项目ID，获取方式请参见：[获取项目名称、项目ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string
     */
@@ -192,7 +203,7 @@ class KeystoneListProjectPermissionsForGroupRequest implements ModelInterface, A
     /**
     * Sets projectId
     *
-    * @param string $projectId projectId
+    * @param string $projectId 项目ID，获取方式请参见：[获取项目名称、项目ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */
@@ -204,6 +215,7 @@ class KeystoneListProjectPermissionsForGroupRequest implements ModelInterface, A
 
     /**
     * Gets groupId
+    *  用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string
     */
@@ -215,7 +227,7 @@ class KeystoneListProjectPermissionsForGroupRequest implements ModelInterface, A
     /**
     * Sets groupId
     *
-    * @param string $groupId groupId
+    * @param string $groupId 用户组ID，获取方式请参见：[获取用户组ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */

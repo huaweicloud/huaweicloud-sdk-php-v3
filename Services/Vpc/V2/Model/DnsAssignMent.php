@@ -20,6 +20,9 @@ class DnsAssignMent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * hostname  端口hostname
+    * ipAddress  端口IP地址
+    * fqdn  端口内网fqdn
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class DnsAssignMent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * hostname  端口hostname
+    * ipAddress  端口IP地址
+    * fqdn  端口内网fqdn
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class DnsAssignMent implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * hostname  端口hostname
+    * ipAddress  端口IP地址
+    * fqdn  端口内网fqdn
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class DnsAssignMent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * hostname  端口hostname
+    * ipAddress  端口IP地址
+    * fqdn  端口内网fqdn
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class DnsAssignMent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * hostname  端口hostname
+    * ipAddress  端口IP地址
+    * fqdn  端口内网fqdn
     *
     * @var string[]
     */
@@ -181,6 +196,7 @@ class DnsAssignMent implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostname
+    *  端口hostname
     *
     * @return string|null
     */
@@ -204,6 +220,7 @@ class DnsAssignMent implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipAddress
+    *  端口IP地址
     *
     * @return string|null
     */
@@ -227,6 +244,7 @@ class DnsAssignMent implements ModelInterface, ArrayAccess
 
     /**
     * Gets fqdn
+    *  端口内网fqdn
     *
     * @return string|null
     */

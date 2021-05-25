@@ -21,6 +21,10 @@ class GlanceListImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * first  查询首页的URL。
+    * images  资源类型。
+    * schema  描述镜像列表模式的URL。
+    * next  查询下一页的URL。当查询镜像列表最后一页时，不存在next。
     *
     * @var string[]
     */
@@ -33,6 +37,10 @@ class GlanceListImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * first  查询首页的URL。
+    * images  资源类型。
+    * schema  描述镜像列表模式的URL。
+    * next  查询下一页的URL。当查询镜像列表最后一页时，不存在next。
     *
     * @var string[]
     */
@@ -66,6 +74,10 @@ class GlanceListImagesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * first  查询首页的URL。
+    * images  资源类型。
+    * schema  描述镜像列表模式的URL。
+    * next  查询下一页的URL。当查询镜像列表最后一页时，不存在next。
     *
     * @var string[]
     */
@@ -78,6 +90,10 @@ class GlanceListImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * first  查询首页的URL。
+    * images  资源类型。
+    * schema  描述镜像列表模式的URL。
+    * next  查询下一页的URL。当查询镜像列表最后一页时，不存在next。
     *
     * @var string[]
     */
@@ -90,6 +106,10 @@ class GlanceListImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * first  查询首页的URL。
+    * images  资源类型。
+    * schema  描述镜像列表模式的URL。
+    * next  查询下一页的URL。当查询镜像列表最后一页时，不存在next。
     *
     * @var string[]
     */
@@ -188,6 +208,7 @@ class GlanceListImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets first
+    *  查询首页的URL。
     *
     * @return string|null
     */
@@ -211,6 +232,7 @@ class GlanceListImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets images
+    *  资源类型。
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageResponseBody[]|null
     */
@@ -234,6 +256,7 @@ class GlanceListImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets schema
+    *  描述镜像列表模式的URL。
     *
     * @return string|null
     */
@@ -257,6 +280,7 @@ class GlanceListImagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets next
+    *  查询下一页的URL。当查询镜像列表最后一页时，不存在next。
     *
     * @return string|null
     */

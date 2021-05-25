@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Vpc\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class Subject implements ModelInterface, ArrayAccess
+class BatchCreateSubnetTagsResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,26 +17,24 @@ class Subject implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'Subject';
+    protected static $openAPIModelName = 'BatchCreateSubnetTagsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resource' => 'string',
-            'event' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resource' => null,
-        'event' => null
     ];
 
     /**
@@ -61,32 +60,29 @@ class Subject implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resource' => 'resource',
-            'event' => 'event'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'resource' => 'setResource',
-            'event' => 'setEvent'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'resource' => 'getResource',
-            'event' => 'getEvent'
     ];
 
     /**
@@ -147,8 +143,6 @@ class Subject implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['resource'] = isset($data['resource']) ? $data['resource'] : null;
-        $this->container['event'] = isset($data['event']) ? $data['event'] : null;
     }
 
     /**
@@ -159,24 +153,6 @@ class Subject implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['resource'] === null) {
-            $invalidProperties[] = "'resource' can't be null";
-        }
-            if ((mb_strlen($this->container['resource']) > 50)) {
-                $invalidProperties[] = "invalid value for 'resource', the character length must be smaller than or equal to 50.";
-            }
-            if ((mb_strlen($this->container['resource']) < 1)) {
-                $invalidProperties[] = "invalid value for 'resource', the character length must be bigger than or equal to 1.";
-            }
-        if ($this->container['event'] === null) {
-            $invalidProperties[] = "'event' can't be null";
-        }
-            if ((mb_strlen($this->container['event']) > 50)) {
-                $invalidProperties[] = "invalid value for 'event', the character length must be smaller than or equal to 50.";
-            }
-            if ((mb_strlen($this->container['event']) < 1)) {
-                $invalidProperties[] = "invalid value for 'event', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -189,52 +165,6 @@ class Subject implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets resource
-    *
-    * @return string
-    */
-    public function getResource()
-    {
-        return $this->container['resource'];
-    }
-
-    /**
-    * Sets resource
-    *
-    * @param string $resource 订阅的资源名称。 - device：设备。 - device.data：设备数据。 - device.message.status：设备消息状态。 - device.message：设备消息。 - device.status：设备状态。 - batchtask.status：批量任务状态。
-    *
-    * @return $this
-    */
-    public function setResource($resource)
-    {
-        $this->container['resource'] = $resource;
-        return $this;
-    }
-
-    /**
-    * Gets event
-    *
-    * @return string
-    */
-    public function getEvent()
-    {
-        return $this->container['event'];
-    }
-
-    /**
-    * Sets event
-    *
-    * @param string $event 订阅的资源事件，取值范围：activate、update、up。 event需要与resource关联使用，具体的“resource：event”映射关系如下： - device：activate（设备激活） - device.data：update（设备数据变化） - device.message.status：update（设备消息状态） - device.message：report（设备消息上报） - device.status：update （设备状态变化） - batchtask.status：update （批量任务状态变化）
-    *
-    * @return $this
-    */
-    public function setEvent($event)
-    {
-        $this->container['event'] = $event;
-        return $this;
     }
 
     /**

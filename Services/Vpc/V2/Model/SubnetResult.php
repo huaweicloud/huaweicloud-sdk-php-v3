@@ -20,6 +20,8 @@ class SubnetResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  uuid形式的一个资源标识。
+    * status  功能说明：子网的状态。   取值范围：ACTIVE,UNKNOWN,ERROR       ACTIVE表示子网已挂载到ROUTER上       UNKNOWN表示子网还未挂载到ROUTER上       ERROR表示子网状态故障
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class SubnetResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  uuid形式的一个资源标识。
+    * status  功能说明：子网的状态。   取值范围：ACTIVE,UNKNOWN,ERROR       ACTIVE表示子网已挂载到ROUTER上       UNKNOWN表示子网还未挂载到ROUTER上       ERROR表示子网状态故障
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class SubnetResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  uuid形式的一个资源标识。
+    * status  功能说明：子网的状态。   取值范围：ACTIVE,UNKNOWN,ERROR       ACTIVE表示子网已挂载到ROUTER上       UNKNOWN表示子网还未挂载到ROUTER上       ERROR表示子网状态故障
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class SubnetResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  uuid形式的一个资源标识。
+    * status  功能说明：子网的状态。   取值范围：ACTIVE,UNKNOWN,ERROR       ACTIVE表示子网已挂载到ROUTER上       UNKNOWN表示子网还未挂载到ROUTER上       ERROR表示子网状态故障
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class SubnetResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  uuid形式的一个资源标识。
+    * status  功能说明：子网的状态。   取值范围：ACTIVE,UNKNOWN,ERROR       ACTIVE表示子网已挂载到ROUTER上       UNKNOWN表示子网还未挂载到ROUTER上       ERROR表示子网状态故障
     *
     * @var string[]
     */
@@ -206,6 +216,7 @@ class SubnetResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  uuid形式的一个资源标识。
     *
     * @return string
     */
@@ -229,6 +240,7 @@ class SubnetResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
+    *  功能说明：子网的状态。   取值范围：ACTIVE,UNKNOWN,ERROR       ACTIVE表示子网已挂载到ROUTER上       UNKNOWN表示子网还未挂载到ROUTER上       ERROR表示子网状态故障
     *
     * @return string
     */

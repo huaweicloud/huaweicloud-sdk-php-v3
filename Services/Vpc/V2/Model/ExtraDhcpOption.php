@@ -20,6 +20,8 @@ class ExtraDhcpOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * optName  功能说明：子网配置的NTP地址名称 约束：目前只支持字段“ntp”
+    * optValue  功能说明：子网配置的NTP地址 约束：目前只支持IPv4地址，每个IP地址以逗号隔开，IP地址个数不能超过4个，不能存在相同地址。该字段为null表示取消该子网NTP的设置，不能为””(空字符串)。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ExtraDhcpOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * optName  功能说明：子网配置的NTP地址名称 约束：目前只支持字段“ntp”
+    * optValue  功能说明：子网配置的NTP地址 约束：目前只支持IPv4地址，每个IP地址以逗号隔开，IP地址个数不能超过4个，不能存在相同地址。该字段为null表示取消该子网NTP的设置，不能为””(空字符串)。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ExtraDhcpOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * optName  功能说明：子网配置的NTP地址名称 约束：目前只支持字段“ntp”
+    * optValue  功能说明：子网配置的NTP地址 约束：目前只支持IPv4地址，每个IP地址以逗号隔开，IP地址个数不能超过4个，不能存在相同地址。该字段为null表示取消该子网NTP的设置，不能为””(空字符串)。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ExtraDhcpOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * optName  功能说明：子网配置的NTP地址名称 约束：目前只支持字段“ntp”
+    * optValue  功能说明：子网配置的NTP地址 约束：目前只支持IPv4地址，每个IP地址以逗号隔开，IP地址个数不能超过4个，不能存在相同地址。该字段为null表示取消该子网NTP的设置，不能为””(空字符串)。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ExtraDhcpOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * optName  功能说明：子网配置的NTP地址名称 约束：目前只支持字段“ntp”
+    * optValue  功能说明：子网配置的NTP地址 约束：目前只支持IPv4地址，每个IP地址以逗号隔开，IP地址个数不能超过4个，不能存在相同地址。该字段为null表示取消该子网NTP的设置，不能为””(空字符串)。
     *
     * @var string[]
     */
@@ -199,6 +209,7 @@ class ExtraDhcpOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets optName
+    *  功能说明：子网配置的NTP地址名称 约束：目前只支持字段“ntp”
     *
     * @return string
     */
@@ -222,6 +233,7 @@ class ExtraDhcpOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets optValue
+    *  功能说明：子网配置的NTP地址 约束：目前只支持IPv4地址，每个IP地址以逗号隔开，IP地址个数不能超过4个，不能存在相同地址。该字段为null表示取消该子网NTP的设置，不能为””(空字符串)。
     *
     * @return string|null
     */

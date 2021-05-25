@@ -20,6 +20,11 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * volumeType  云硬盘的类型。
+    * size  云硬盘的容量，单位为GB。
+    * volumeId  云硬盘的ID。
+    * name  云硬盘的名称。
+    * subJobs  子Job的信息。当存在子Job信息时，entities中的其他字段将不会返回。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * volumeType  云硬盘的类型。
+    * size  云硬盘的容量，单位为GB。
+    * volumeId  云硬盘的ID。
+    * name  云硬盘的名称。
+    * subJobs  子Job的信息。当存在子Job信息时，entities中的其他字段将不会返回。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class JobEntities implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * volumeType  云硬盘的类型。
+    * size  云硬盘的容量，单位为GB。
+    * volumeId  云硬盘的ID。
+    * name  云硬盘的名称。
+    * subJobs  子Job的信息。当存在子Job信息时，entities中的其他字段将不会返回。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * volumeType  云硬盘的类型。
+    * size  云硬盘的容量，单位为GB。
+    * volumeId  云硬盘的ID。
+    * name  云硬盘的名称。
+    * subJobs  子Job的信息。当存在子Job信息时，entities中的其他字段将不会返回。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * volumeType  云硬盘的类型。
+    * size  云硬盘的容量，单位为GB。
+    * volumeId  云硬盘的ID。
+    * name  云硬盘的名称。
+    * subJobs  子Job的信息。当存在子Job信息时，entities中的其他字段将不会返回。
     *
     * @var string[]
     */
@@ -193,6 +218,7 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeType
+    *  云硬盘的类型。
     *
     * @return string|null
     */
@@ -216,6 +242,7 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
+    *  云硬盘的容量，单位为GB。
     *
     * @return int|null
     */
@@ -239,6 +266,7 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeId
+    *  云硬盘的ID。
     *
     * @return string|null
     */
@@ -262,6 +290,7 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  云硬盘的名称。
     *
     * @return string|null
     */
@@ -285,6 +314,7 @@ class JobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Gets subJobs
+    *  子Job的信息。当存在子Job信息时，entities中的其他字段将不会返回。
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\SubJob[]|null
     */

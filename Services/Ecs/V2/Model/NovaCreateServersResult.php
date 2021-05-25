@@ -20,6 +20,12 @@ class NovaCreateServersResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  弹性云服务器uuid。
+    * links  弹性云服务器URI自描述信息。
+    * securityGroups  弹性云服务器所在安全组。
+    * osDcFdiskConfig  diskConfig方式。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
+    * reservationId  通过返回的reservation_id，可以过滤查询到本次创建的弹性云服务器。  > 说明： >  > 批量创建弹性云服务器时，支持使用该字段。
+    * adminPass  Windows弹性云服务器Administrator用户的密码。
     *
     * @var string[]
     */
@@ -34,6 +40,12 @@ class NovaCreateServersResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  弹性云服务器uuid。
+    * links  弹性云服务器URI自描述信息。
+    * securityGroups  弹性云服务器所在安全组。
+    * osDcFdiskConfig  diskConfig方式。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
+    * reservationId  通过返回的reservation_id，可以过滤查询到本次创建的弹性云服务器。  > 说明： >  > 批量创建弹性云服务器时，支持使用该字段。
+    * adminPass  Windows弹性云服务器Administrator用户的密码。
     *
     * @var string[]
     */
@@ -69,6 +81,12 @@ class NovaCreateServersResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  弹性云服务器uuid。
+    * links  弹性云服务器URI自描述信息。
+    * securityGroups  弹性云服务器所在安全组。
+    * osDcFdiskConfig  diskConfig方式。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
+    * reservationId  通过返回的reservation_id，可以过滤查询到本次创建的弹性云服务器。  > 说明： >  > 批量创建弹性云服务器时，支持使用该字段。
+    * adminPass  Windows弹性云服务器Administrator用户的密码。
     *
     * @var string[]
     */
@@ -83,6 +101,12 @@ class NovaCreateServersResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  弹性云服务器uuid。
+    * links  弹性云服务器URI自描述信息。
+    * securityGroups  弹性云服务器所在安全组。
+    * osDcFdiskConfig  diskConfig方式。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
+    * reservationId  通过返回的reservation_id，可以过滤查询到本次创建的弹性云服务器。  > 说明： >  > 批量创建弹性云服务器时，支持使用该字段。
+    * adminPass  Windows弹性云服务器Administrator用户的密码。
     *
     * @var string[]
     */
@@ -97,6 +121,12 @@ class NovaCreateServersResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  弹性云服务器uuid。
+    * links  弹性云服务器URI自描述信息。
+    * securityGroups  弹性云服务器所在安全组。
+    * osDcFdiskConfig  diskConfig方式。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
+    * reservationId  通过返回的reservation_id，可以过滤查询到本次创建的弹性云服务器。  > 说明： >  > 批量创建弹性云服务器时，支持使用该字段。
+    * adminPass  Windows弹性云服务器Administrator用户的密码。
     *
     * @var string[]
     */
@@ -237,6 +267,7 @@ class NovaCreateServersResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  弹性云服务器uuid。
     *
     * @return string
     */
@@ -260,6 +291,7 @@ class NovaCreateServersResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  弹性云服务器URI自描述信息。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaLink[]
     */
@@ -283,6 +315,7 @@ class NovaCreateServersResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroups
+    *  弹性云服务器所在安全组。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaServerSecurityGroup[]
     */
@@ -306,6 +339,7 @@ class NovaCreateServersResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets osDcFdiskConfig
+    *  diskConfig方式。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
     *
     * @return string
     */
@@ -329,6 +363,7 @@ class NovaCreateServersResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets reservationId
+    *  通过返回的reservation_id，可以过滤查询到本次创建的弹性云服务器。  > 说明： >  > 批量创建弹性云服务器时，支持使用该字段。
     *
     * @return string|null
     */
@@ -352,6 +387,7 @@ class NovaCreateServersResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminPass
+    *  Windows弹性云服务器Administrator用户的密码。
     *
     * @return string
     */

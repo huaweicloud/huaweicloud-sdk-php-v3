@@ -20,6 +20,7 @@ class ShowPublicipRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * publicipId  弹性公网IP唯一标识
     *
     * @var string[]
     */
@@ -29,6 +30,7 @@ class ShowPublicipRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * publicipId  弹性公网IP唯一标识
     *
     * @var string[]
     */
@@ -59,6 +61,7 @@ class ShowPublicipRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * publicipId  弹性公网IP唯一标识
     *
     * @var string[]
     */
@@ -68,6 +71,7 @@ class ShowPublicipRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * publicipId  弹性公网IP唯一标识
     *
     * @var string[]
     */
@@ -77,6 +81,7 @@ class ShowPublicipRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * publicipId  弹性公网IP唯一标识
     *
     * @var string[]
     */
@@ -175,6 +180,7 @@ class ShowPublicipRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipId
+    *  弹性公网IP唯一标识
     *
     * @return string
     */
@@ -186,7 +192,7 @@ class ShowPublicipRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publicipId
     *
-    * @param string $publicipId publicipId
+    * @param string $publicipId 弹性公网IP唯一标识
     *
     * @return $this
     */

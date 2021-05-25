@@ -20,6 +20,16 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * publicKey  密钥对应publicKey信息。
+    * name  密钥名称。
+    * fingerprint  密钥对应指纹信息。
+    * createdAt  密钥创建时间。
+    * deleted  密钥删除标记。   - true，表示密钥已被删除。   - false，表示密钥未被删除。
+    * deletedAt  密钥删除时间。
+    * id  密钥ID。
+    * updatedAt  密钥更新时间。
+    * userId  密钥所属用户信息。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -30,7 +40,7 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
             'createdAt' => '\DateTime',
             'deleted' => 'bool',
             'deletedAt' => '\DateTime',
-            'id' => 'string',
+            'id' => 'int',
             'updatedAt' => '\DateTime',
             'userId' => 'string',
             'type' => 'string'
@@ -38,6 +48,16 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * publicKey  密钥对应publicKey信息。
+    * name  密钥名称。
+    * fingerprint  密钥对应指纹信息。
+    * createdAt  密钥创建时间。
+    * deleted  密钥删除标记。   - true，表示密钥已被删除。   - false，表示密钥未被删除。
+    * deletedAt  密钥删除时间。
+    * id  密钥ID。
+    * updatedAt  密钥更新时间。
+    * userId  密钥所属用户信息。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -48,7 +68,7 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
         'createdAt' => 'date-time',
         'deleted' => null,
         'deletedAt' => 'date-time',
-        'id' => null,
+        'id' => 'int32',
         'updatedAt' => 'date-time',
         'userId' => null,
         'type' => null
@@ -77,6 +97,16 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * publicKey  密钥对应publicKey信息。
+    * name  密钥名称。
+    * fingerprint  密钥对应指纹信息。
+    * createdAt  密钥创建时间。
+    * deleted  密钥删除标记。   - true，表示密钥已被删除。   - false，表示密钥未被删除。
+    * deletedAt  密钥删除时间。
+    * id  密钥ID。
+    * updatedAt  密钥更新时间。
+    * userId  密钥所属用户信息。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -95,6 +125,16 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * publicKey  密钥对应publicKey信息。
+    * name  密钥名称。
+    * fingerprint  密钥对应指纹信息。
+    * createdAt  密钥创建时间。
+    * deleted  密钥删除标记。   - true，表示密钥已被删除。   - false，表示密钥未被删除。
+    * deletedAt  密钥删除时间。
+    * id  密钥ID。
+    * updatedAt  密钥更新时间。
+    * userId  密钥所属用户信息。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -113,6 +153,16 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * publicKey  密钥对应publicKey信息。
+    * name  密钥名称。
+    * fingerprint  密钥对应指纹信息。
+    * createdAt  密钥创建时间。
+    * deleted  密钥删除标记。   - true，表示密钥已被删除。   - false，表示密钥未被删除。
+    * deletedAt  密钥删除时间。
+    * id  密钥ID。
+    * updatedAt  密钥更新时间。
+    * userId  密钥所属用户信息。
+    * type  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @var string[]
     */
@@ -250,6 +300,7 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicKey
+    *  密钥对应publicKey信息。
     *
     * @return string
     */
@@ -273,6 +324,7 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  密钥名称。
     *
     * @return string
     */
@@ -296,6 +348,7 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets fingerprint
+    *  密钥对应指纹信息。
     *
     * @return string
     */
@@ -319,6 +372,7 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
+    *  密钥创建时间。
     *
     * @return \DateTime
     */
@@ -342,6 +396,7 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets deleted
+    *  密钥删除标记。   - true，表示密钥已被删除。   - false，表示密钥未被删除。
     *
     * @return bool
     */
@@ -365,6 +420,7 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets deletedAt
+    *  密钥删除时间。
     *
     * @return \DateTime
     */
@@ -388,8 +444,9 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  密钥ID。
     *
-    * @return string
+    * @return int
     */
     public function getId()
     {
@@ -399,7 +456,7 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 密钥ID。
+    * @param int $id 密钥ID。
     *
     * @return $this
     */
@@ -411,6 +468,7 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
+    *  密钥更新时间。
     *
     * @return \DateTime
     */
@@ -434,6 +492,7 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  密钥所属用户信息。
     *
     * @return string
     */
@@ -457,6 +516,7 @@ class NovaKeypairDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  密钥类型，默认“ssh”  微版本2.2以上支持
     *
     * @return string|null
     */

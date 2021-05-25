@@ -20,6 +20,19 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  功能说明：网络ACL规则的uuid标识。
+    * name  功能说明：网络ACL规则名称。 取值范围：0-255个字符
+    * description  功能说明：网络ACL规则描述 取值范围：0-255个字符长度
+    * action  功能说明：对通过网络ACL的流量执行的操作。 取值范围：DENY（拒绝）/ALLOW（允许）
+    * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
+    * ipVersion  功能说明：IP协议版本 取值范围：Ipv4/Ipv6
+    * enabled  功能说明：是否使能网络ACL规则。 取值范围：true/false
+    * destinationIpAddress  功能说明：目的地址或者CIDR。
+    * destinationPort  功能说明：目的端口号或者一段端口范围。
+    * sourceIpAddress  功能说明：源地址或者CIDR。
+    * sourcePort  功能说明：源端口号或者一段端口范围。
+    * tenantId  功能说明：项目ID
+    * projectId  功能说明：项目ID
     *
     * @var string[]
     */
@@ -41,6 +54,19 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  功能说明：网络ACL规则的uuid标识。
+    * name  功能说明：网络ACL规则名称。 取值范围：0-255个字符
+    * description  功能说明：网络ACL规则描述 取值范围：0-255个字符长度
+    * action  功能说明：对通过网络ACL的流量执行的操作。 取值范围：DENY（拒绝）/ALLOW（允许）
+    * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
+    * ipVersion  功能说明：IP协议版本 取值范围：Ipv4/Ipv6
+    * enabled  功能说明：是否使能网络ACL规则。 取值范围：true/false
+    * destinationIpAddress  功能说明：目的地址或者CIDR。
+    * destinationPort  功能说明：目的端口号或者一段端口范围。
+    * sourceIpAddress  功能说明：源地址或者CIDR。
+    * sourcePort  功能说明：源端口号或者一段端口范围。
+    * tenantId  功能说明：项目ID
+    * projectId  功能说明：项目ID
     *
     * @var string[]
     */
@@ -83,6 +109,19 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  功能说明：网络ACL规则的uuid标识。
+    * name  功能说明：网络ACL规则名称。 取值范围：0-255个字符
+    * description  功能说明：网络ACL规则描述 取值范围：0-255个字符长度
+    * action  功能说明：对通过网络ACL的流量执行的操作。 取值范围：DENY（拒绝）/ALLOW（允许）
+    * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
+    * ipVersion  功能说明：IP协议版本 取值范围：Ipv4/Ipv6
+    * enabled  功能说明：是否使能网络ACL规则。 取值范围：true/false
+    * destinationIpAddress  功能说明：目的地址或者CIDR。
+    * destinationPort  功能说明：目的端口号或者一段端口范围。
+    * sourceIpAddress  功能说明：源地址或者CIDR。
+    * sourcePort  功能说明：源端口号或者一段端口范围。
+    * tenantId  功能说明：项目ID
+    * projectId  功能说明：项目ID
     *
     * @var string[]
     */
@@ -104,6 +143,19 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  功能说明：网络ACL规则的uuid标识。
+    * name  功能说明：网络ACL规则名称。 取值范围：0-255个字符
+    * description  功能说明：网络ACL规则描述 取值范围：0-255个字符长度
+    * action  功能说明：对通过网络ACL的流量执行的操作。 取值范围：DENY（拒绝）/ALLOW（允许）
+    * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
+    * ipVersion  功能说明：IP协议版本 取值范围：Ipv4/Ipv6
+    * enabled  功能说明：是否使能网络ACL规则。 取值范围：true/false
+    * destinationIpAddress  功能说明：目的地址或者CIDR。
+    * destinationPort  功能说明：目的端口号或者一段端口范围。
+    * sourceIpAddress  功能说明：源地址或者CIDR。
+    * sourcePort  功能说明：源端口号或者一段端口范围。
+    * tenantId  功能说明：项目ID
+    * projectId  功能说明：项目ID
     *
     * @var string[]
     */
@@ -125,6 +177,19 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  功能说明：网络ACL规则的uuid标识。
+    * name  功能说明：网络ACL规则名称。 取值范围：0-255个字符
+    * description  功能说明：网络ACL规则描述 取值范围：0-255个字符长度
+    * action  功能说明：对通过网络ACL的流量执行的操作。 取值范围：DENY（拒绝）/ALLOW（允许）
+    * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
+    * ipVersion  功能说明：IP协议版本 取值范围：Ipv4/Ipv6
+    * enabled  功能说明：是否使能网络ACL规则。 取值范围：true/false
+    * destinationIpAddress  功能说明：目的地址或者CIDR。
+    * destinationPort  功能说明：目的端口号或者一段端口范围。
+    * sourceIpAddress  功能说明：源地址或者CIDR。
+    * sourcePort  功能说明：源端口号或者一段端口范围。
+    * tenantId  功能说明：项目ID
+    * projectId  功能说明：项目ID
     *
     * @var string[]
     */
@@ -330,6 +395,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  功能说明：网络ACL规则的uuid标识。
     *
     * @return string
     */
@@ -353,6 +419,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：网络ACL规则名称。 取值范围：0-255个字符
     *
     * @return string
     */
@@ -376,6 +443,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：网络ACL规则描述 取值范围：0-255个字符长度
     *
     * @return string
     */
@@ -399,6 +467,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
+    *  功能说明：对通过网络ACL的流量执行的操作。 取值范围：DENY（拒绝）/ALLOW（允许）
     *
     * @return string
     */
@@ -422,6 +491,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
+    *  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
     *
     * @return string
     */
@@ -445,6 +515,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
+    *  功能说明：IP协议版本 取值范围：Ipv4/Ipv6
     *
     * @return int
     */
@@ -468,6 +539,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  功能说明：是否使能网络ACL规则。 取值范围：true/false
     *
     * @return bool
     */
@@ -491,6 +563,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationIpAddress
+    *  功能说明：目的地址或者CIDR。
     *
     * @return string
     */
@@ -514,6 +587,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationPort
+    *  功能说明：目的端口号或者一段端口范围。
     *
     * @return string
     */
@@ -537,6 +611,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceIpAddress
+    *  功能说明：源地址或者CIDR。
     *
     * @return string
     */
@@ -560,6 +635,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourcePort
+    *  功能说明：源端口号或者一段端口范围。
     *
     * @return string
     */
@@ -583,6 +659,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  功能说明：项目ID
     *
     * @return string
     */
@@ -606,6 +683,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  功能说明：项目ID
     *
     * @return string
     */

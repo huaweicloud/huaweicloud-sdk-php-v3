@@ -21,6 +21,7 @@ class UpdateDomainConsoleAclPolicyResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * consoleAclPolicy  consoleAclPolicy
     *
     * @var string[]
     */
@@ -30,6 +31,7 @@ class UpdateDomainConsoleAclPolicyResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * consoleAclPolicy  consoleAclPolicy
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class UpdateDomainConsoleAclPolicyResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * consoleAclPolicy  consoleAclPolicy
     *
     * @var string[]
     */
@@ -69,6 +72,7 @@ class UpdateDomainConsoleAclPolicyResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * consoleAclPolicy  consoleAclPolicy
     *
     * @var string[]
     */
@@ -78,6 +82,7 @@ class UpdateDomainConsoleAclPolicyResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * consoleAclPolicy  consoleAclPolicy
     *
     * @var string[]
     */
@@ -170,6 +175,7 @@ class UpdateDomainConsoleAclPolicyResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets consoleAclPolicy
+    *  consoleAclPolicy
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\AclPolicyResult|null
     */

@@ -21,6 +21,9 @@ class ListCustomPoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * links  links
+    * roles  自定义策略信息列表。
+    * totalNumber  返回自定义策略的总条数
     *
     * @var string[]
     */
@@ -32,6 +35,9 @@ class ListCustomPoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * links  links
+    * roles  自定义策略信息列表。
+    * totalNumber  返回自定义策略的总条数
     *
     * @var string[]
     */
@@ -64,6 +70,9 @@ class ListCustomPoliciesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * links  links
+    * roles  自定义策略信息列表。
+    * totalNumber  返回自定义策略的总条数
     *
     * @var string[]
     */
@@ -75,6 +84,9 @@ class ListCustomPoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * links  links
+    * roles  自定义策略信息列表。
+    * totalNumber  返回自定义策略的总条数
     *
     * @var string[]
     */
@@ -86,6 +98,9 @@ class ListCustomPoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * links  links
+    * roles  自定义策略信息列表。
+    * totalNumber  返回自定义策略的总条数
     *
     * @var string[]
     */
@@ -182,6 +197,7 @@ class ListCustomPoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\Links|null
     */
@@ -205,6 +221,7 @@ class ListCustomPoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets roles
+    *  自定义策略信息列表。
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\PolicyRoleResult[]|null
     */
@@ -228,6 +245,7 @@ class ListCustomPoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalNumber
+    *  返回自定义策略的总条数
     *
     * @return int|null
     */

@@ -20,6 +20,9 @@ class UpdateLoginProtectRespon implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * userId  待修改信息的IAM用户ID。
+    * enabled  IAM用户是否开启登录保护，开启为\"true\"，不开启为\"false\"。
+    * verificationMethod  IAM用户登录验证方式。手机验证为“sms”,邮箱验证为“email”,MFA验证为“vmfa”。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class UpdateLoginProtectRespon implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * userId  待修改信息的IAM用户ID。
+    * enabled  IAM用户是否开启登录保护，开启为\"true\"，不开启为\"false\"。
+    * verificationMethod  IAM用户登录验证方式。手机验证为“sms”,邮箱验证为“email”,MFA验证为“vmfa”。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class UpdateLoginProtectRespon implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * userId  待修改信息的IAM用户ID。
+    * enabled  IAM用户是否开启登录保护，开启为\"true\"，不开启为\"false\"。
+    * verificationMethod  IAM用户登录验证方式。手机验证为“sms”,邮箱验证为“email”,MFA验证为“vmfa”。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class UpdateLoginProtectRespon implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * userId  待修改信息的IAM用户ID。
+    * enabled  IAM用户是否开启登录保护，开启为\"true\"，不开启为\"false\"。
+    * verificationMethod  IAM用户登录验证方式。手机验证为“sms”,邮箱验证为“email”,MFA验证为“vmfa”。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class UpdateLoginProtectRespon implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * userId  待修改信息的IAM用户ID。
+    * enabled  IAM用户是否开启登录保护，开启为\"true\"，不开启为\"false\"。
+    * verificationMethod  IAM用户登录验证方式。手机验证为“sms”,邮箱验证为“email”,MFA验证为“vmfa”。
     *
     * @var string[]
     */
@@ -190,6 +205,7 @@ class UpdateLoginProtectRespon implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
+    *  待修改信息的IAM用户ID。
     *
     * @return string
     */
@@ -213,6 +229,7 @@ class UpdateLoginProtectRespon implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  IAM用户是否开启登录保护，开启为\"true\"，不开启为\"false\"。
     *
     * @return bool
     */
@@ -236,6 +253,7 @@ class UpdateLoginProtectRespon implements ModelInterface, ArrayAccess
 
     /**
     * Gets verificationMethod
+    *  IAM用户登录验证方式。手机验证为“sms”,邮箱验证为“email”,MFA验证为“vmfa”。
     *
     * @return string
     */

@@ -20,6 +20,8 @@ class AzInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * zoneName  可用分区的名字。
+    * zoneState  zoneState
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class AzInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * zoneName  可用分区的名字。
+    * zoneState  zoneState
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class AzInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * zoneName  可用分区的名字。
+    * zoneState  zoneState
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class AzInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * zoneName  可用分区的名字。
+    * zoneState  zoneState
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class AzInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * zoneName  可用分区的名字。
+    * zoneState  zoneState
     *
     * @var string[]
     */
@@ -181,6 +191,7 @@ class AzInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneName
+    *  可用分区的名字。
     *
     * @return string
     */
@@ -204,6 +215,7 @@ class AzInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneState
+    *  zoneState
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\ZoneState
     */

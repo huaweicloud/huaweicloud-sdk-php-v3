@@ -20,6 +20,9 @@ class AgencyTokenAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domainId  委托方A的账号ID。“domain_id”与“domain_name”至少填写一个。
+    * domainName  委托方A的账号名称。“domain_id”与“domain_name”至少填写一个。
+    * agencyName  委托方A创建的委托的名称。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class AgencyTokenAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domainId  委托方A的账号ID。“domain_id”与“domain_name”至少填写一个。
+    * domainName  委托方A的账号名称。“domain_id”与“domain_name”至少填写一个。
+    * agencyName  委托方A创建的委托的名称。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class AgencyTokenAssumerole implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domainId  委托方A的账号ID。“domain_id”与“domain_name”至少填写一个。
+    * domainName  委托方A的账号名称。“domain_id”与“domain_name”至少填写一个。
+    * agencyName  委托方A创建的委托的名称。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class AgencyTokenAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domainId  委托方A的账号ID。“domain_id”与“domain_name”至少填写一个。
+    * domainName  委托方A的账号名称。“domain_id”与“domain_name”至少填写一个。
+    * agencyName  委托方A创建的委托的名称。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class AgencyTokenAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domainId  委托方A的账号ID。“domain_id”与“domain_name”至少填写一个。
+    * domainName  委托方A的账号名称。“domain_id”与“domain_name”至少填写一个。
+    * agencyName  委托方A创建的委托的名称。
     *
     * @var string[]
     */
@@ -184,6 +199,7 @@ class AgencyTokenAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  委托方A的账号ID。“domain_id”与“domain_name”至少填写一个。
     *
     * @return string|null
     */
@@ -207,6 +223,7 @@ class AgencyTokenAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
+    *  委托方A的账号名称。“domain_id”与“domain_name”至少填写一个。
     *
     * @return string|null
     */
@@ -230,6 +247,7 @@ class AgencyTokenAssumerole implements ModelInterface, ArrayAccess
 
     /**
     * Gets agencyName
+    *  委托方A创建的委托的名称。
     *
     * @return string
     */

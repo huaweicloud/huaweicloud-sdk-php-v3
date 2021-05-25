@@ -20,6 +20,11 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * group  反亲和性组信息。  UUID格式。
+    * differentHost  与指定弹性云服务器满足反亲和性。   当前不支持该功能。
+    * sameHost  与指定的弹性云服务器满足亲和性。   当前不支持该功能。
+    * cidr  将弹性云服务器scheduler到指定网段的host上，host网段的cidr。   当前不支持该功能。
+    * buildNearHostIp  将弹性云服务器scheduler到指定网段的host上，host IP地址。   当前不支持该功能。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * group  反亲和性组信息。  UUID格式。
+    * differentHost  与指定弹性云服务器满足反亲和性。   当前不支持该功能。
+    * sameHost  与指定的弹性云服务器满足亲和性。   当前不支持该功能。
+    * cidr  将弹性云服务器scheduler到指定网段的host上，host网段的cidr。   当前不支持该功能。
+    * buildNearHostIp  将弹性云服务器scheduler到指定网段的host上，host IP地址。   当前不支持该功能。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * group  反亲和性组信息。  UUID格式。
+    * differentHost  与指定弹性云服务器满足反亲和性。   当前不支持该功能。
+    * sameHost  与指定的弹性云服务器满足亲和性。   当前不支持该功能。
+    * cidr  将弹性云服务器scheduler到指定网段的host上，host网段的cidr。   当前不支持该功能。
+    * buildNearHostIp  将弹性云服务器scheduler到指定网段的host上，host IP地址。   当前不支持该功能。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * group  反亲和性组信息。  UUID格式。
+    * differentHost  与指定弹性云服务器满足反亲和性。   当前不支持该功能。
+    * sameHost  与指定的弹性云服务器满足亲和性。   当前不支持该功能。
+    * cidr  将弹性云服务器scheduler到指定网段的host上，host网段的cidr。   当前不支持该功能。
+    * buildNearHostIp  将弹性云服务器scheduler到指定网段的host上，host IP地址。   当前不支持该功能。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * group  反亲和性组信息。  UUID格式。
+    * differentHost  与指定弹性云服务器满足反亲和性。   当前不支持该功能。
+    * sameHost  与指定的弹性云服务器满足亲和性。   当前不支持该功能。
+    * cidr  将弹性云服务器scheduler到指定网段的host上，host网段的cidr。   当前不支持该功能。
+    * buildNearHostIp  将弹性云服务器scheduler到指定网段的host上，host IP地址。   当前不支持该功能。
     *
     * @var string[]
     */
@@ -193,6 +218,7 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
+    *  反亲和性组信息。  UUID格式。
     *
     * @return string|null
     */
@@ -216,6 +242,7 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
 
     /**
     * Gets differentHost
+    *  与指定弹性云服务器满足反亲和性。   当前不支持该功能。
     *
     * @return string[]|null
     */
@@ -239,6 +266,7 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
 
     /**
     * Gets sameHost
+    *  与指定的弹性云服务器满足亲和性。   当前不支持该功能。
     *
     * @return string[]|null
     */
@@ -262,6 +290,7 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
 
     /**
     * Gets cidr
+    *  将弹性云服务器scheduler到指定网段的host上，host网段的cidr。   当前不支持该功能。
     *
     * @return string|null
     */
@@ -285,6 +314,7 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
 
     /**
     * Gets buildNearHostIp
+    *  将弹性云服务器scheduler到指定网段的host上，host IP地址。   当前不支持该功能。
     *
     * @return string|null
     */

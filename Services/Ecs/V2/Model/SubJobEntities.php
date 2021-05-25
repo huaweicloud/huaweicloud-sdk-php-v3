@@ -20,6 +20,9 @@ class SubJobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * serverId  云服务器相关操作显示server_id。
+    * nicId  网卡相关操作显示nic_id。
+    * errorcodeMessage  子任务执行失败的具体原因。
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class SubJobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * serverId  云服务器相关操作显示server_id。
+    * nicId  网卡相关操作显示nic_id。
+    * errorcodeMessage  子任务执行失败的具体原因。
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class SubJobEntities implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * serverId  云服务器相关操作显示server_id。
+    * nicId  网卡相关操作显示nic_id。
+    * errorcodeMessage  子任务执行失败的具体原因。
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class SubJobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * serverId  云服务器相关操作显示server_id。
+    * nicId  网卡相关操作显示nic_id。
+    * errorcodeMessage  子任务执行失败的具体原因。
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class SubJobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * serverId  云服务器相关操作显示server_id。
+    * nicId  网卡相关操作显示nic_id。
+    * errorcodeMessage  子任务执行失败的具体原因。
     *
     * @var string[]
     */
@@ -181,6 +196,7 @@ class SubJobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverId
+    *  云服务器相关操作显示server_id。
     *
     * @return string|null
     */
@@ -204,6 +220,7 @@ class SubJobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Gets nicId
+    *  网卡相关操作显示nic_id。
     *
     * @return string|null
     */
@@ -227,6 +244,7 @@ class SubJobEntities implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorcodeMessage
+    *  子任务执行失败的具体原因。
     *
     * @return string|null
     */

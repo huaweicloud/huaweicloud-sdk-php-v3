@@ -21,6 +21,14 @@ class NeutronRemoveFirewallRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  功能说明：网络ACL策略ID
+    * name  功能说明：网络ACL策略名称
+    * description  功能说明：网络ACL策略的描述信息 取值范围：0-255个字符
+    * firewallRules  功能说明：网络ACL策略关联的规则的ID列表
+    * audited  功能说明：每次policy或者它相关的rule有变动，该参数将会被置为False
+    * public  功能说明：网络ACL策略是否对其他网络ACL策略可见 取值范围：true(可见)、false(不可见)
+    * tenantId  功能说明：网络ACL策略所属项目ID
+    * projectId  功能说明：网络ACL策略所属项目ID
     *
     * @var string[]
     */
@@ -37,6 +45,14 @@ class NeutronRemoveFirewallRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  功能说明：网络ACL策略ID
+    * name  功能说明：网络ACL策略名称
+    * description  功能说明：网络ACL策略的描述信息 取值范围：0-255个字符
+    * firewallRules  功能说明：网络ACL策略关联的规则的ID列表
+    * audited  功能说明：每次policy或者它相关的rule有变动，该参数将会被置为False
+    * public  功能说明：网络ACL策略是否对其他网络ACL策略可见 取值范围：true(可见)、false(不可见)
+    * tenantId  功能说明：网络ACL策略所属项目ID
+    * projectId  功能说明：网络ACL策略所属项目ID
     *
     * @var string[]
     */
@@ -74,6 +90,14 @@ class NeutronRemoveFirewallRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  功能说明：网络ACL策略ID
+    * name  功能说明：网络ACL策略名称
+    * description  功能说明：网络ACL策略的描述信息 取值范围：0-255个字符
+    * firewallRules  功能说明：网络ACL策略关联的规则的ID列表
+    * audited  功能说明：每次policy或者它相关的rule有变动，该参数将会被置为False
+    * public  功能说明：网络ACL策略是否对其他网络ACL策略可见 取值范围：true(可见)、false(不可见)
+    * tenantId  功能说明：网络ACL策略所属项目ID
+    * projectId  功能说明：网络ACL策略所属项目ID
     *
     * @var string[]
     */
@@ -90,6 +114,14 @@ class NeutronRemoveFirewallRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  功能说明：网络ACL策略ID
+    * name  功能说明：网络ACL策略名称
+    * description  功能说明：网络ACL策略的描述信息 取值范围：0-255个字符
+    * firewallRules  功能说明：网络ACL策略关联的规则的ID列表
+    * audited  功能说明：每次policy或者它相关的rule有变动，该参数将会被置为False
+    * public  功能说明：网络ACL策略是否对其他网络ACL策略可见 取值范围：true(可见)、false(不可见)
+    * tenantId  功能说明：网络ACL策略所属项目ID
+    * projectId  功能说明：网络ACL策略所属项目ID
     *
     * @var string[]
     */
@@ -106,6 +138,14 @@ class NeutronRemoveFirewallRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  功能说明：网络ACL策略ID
+    * name  功能说明：网络ACL策略名称
+    * description  功能说明：网络ACL策略的描述信息 取值范围：0-255个字符
+    * firewallRules  功能说明：网络ACL策略关联的规则的ID列表
+    * audited  功能说明：每次policy或者它相关的rule有变动，该参数将会被置为False
+    * public  功能说明：网络ACL策略是否对其他网络ACL策略可见 取值范围：true(可见)、false(不可见)
+    * tenantId  功能说明：网络ACL策略所属项目ID
+    * projectId  功能说明：网络ACL策略所属项目ID
     *
     * @var string[]
     */
@@ -230,6 +270,7 @@ class NeutronRemoveFirewallRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  功能说明：网络ACL策略ID
     *
     * @return string|null
     */
@@ -253,6 +294,7 @@ class NeutronRemoveFirewallRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  功能说明：网络ACL策略名称
     *
     * @return string|null
     */
@@ -276,6 +318,7 @@ class NeutronRemoveFirewallRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  功能说明：网络ACL策略的描述信息 取值范围：0-255个字符
     *
     * @return string|null
     */
@@ -299,6 +342,7 @@ class NeutronRemoveFirewallRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets firewallRules
+    *  功能说明：网络ACL策略关联的规则的ID列表
     *
     * @return string[]|null
     */
@@ -322,6 +366,7 @@ class NeutronRemoveFirewallRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets audited
+    *  功能说明：每次policy或者它相关的rule有变动，该参数将会被置为False
     *
     * @return bool|null
     */
@@ -345,6 +390,7 @@ class NeutronRemoveFirewallRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets public
+    *  功能说明：网络ACL策略是否对其他网络ACL策略可见 取值范围：true(可见)、false(不可见)
     *
     * @return bool|null
     */
@@ -368,6 +414,7 @@ class NeutronRemoveFirewallRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  功能说明：网络ACL策略所属项目ID
     *
     * @return string|null
     */
@@ -391,6 +438,7 @@ class NeutronRemoveFirewallRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  功能说明：网络ACL策略所属项目ID
     *
     * @return string|null
     */

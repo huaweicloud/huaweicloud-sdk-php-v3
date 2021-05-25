@@ -21,6 +21,8 @@ class ResetDeviceSecretResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * secret  设备密钥。
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class ResetDeviceSecretResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * secret  设备密钥。
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class ResetDeviceSecretResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * secret  设备密钥。
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class ResetDeviceSecretResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * secret  设备密钥。
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class ResetDeviceSecretResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
+    * secret  设备密钥。
     *
     * @var string[]
     */
@@ -188,6 +198,7 @@ class ResetDeviceSecretResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceId
+    *  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
     *
     * @return string|null
     */
@@ -211,6 +222,7 @@ class ResetDeviceSecretResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets secret
+    *  设备密钥。
     *
     * @return string|null
     */

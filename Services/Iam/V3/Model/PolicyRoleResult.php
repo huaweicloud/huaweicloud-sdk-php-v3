@@ -20,6 +20,19 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domainId  自定义策略所属账号ID。
+    * references  自定义策略的引用次数。
+    * updatedTime  自定义策略更新时间。
+    * createdTime  自定义策略创建时间。
+    * descriptionCn  自定义策略的中文描述信息。
+    * catalog  自定义策略所在目录。
+    * name  自定义策略名。
+    * description  自定义策略的描述信息。
+    * links  links
+    * id  自定义策略ID。
+    * displayName  自定义策略展示名。
+    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * policy  policy
     *
     * @var string[]
     */
@@ -41,6 +54,19 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domainId  自定义策略所属账号ID。
+    * references  自定义策略的引用次数。
+    * updatedTime  自定义策略更新时间。
+    * createdTime  自定义策略创建时间。
+    * descriptionCn  自定义策略的中文描述信息。
+    * catalog  自定义策略所在目录。
+    * name  自定义策略名。
+    * description  自定义策略的描述信息。
+    * links  links
+    * id  自定义策略ID。
+    * displayName  自定义策略展示名。
+    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * policy  policy
     *
     * @var string[]
     */
@@ -83,6 +109,19 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domainId  自定义策略所属账号ID。
+    * references  自定义策略的引用次数。
+    * updatedTime  自定义策略更新时间。
+    * createdTime  自定义策略创建时间。
+    * descriptionCn  自定义策略的中文描述信息。
+    * catalog  自定义策略所在目录。
+    * name  自定义策略名。
+    * description  自定义策略的描述信息。
+    * links  links
+    * id  自定义策略ID。
+    * displayName  自定义策略展示名。
+    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * policy  policy
     *
     * @var string[]
     */
@@ -104,6 +143,19 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domainId  自定义策略所属账号ID。
+    * references  自定义策略的引用次数。
+    * updatedTime  自定义策略更新时间。
+    * createdTime  自定义策略创建时间。
+    * descriptionCn  自定义策略的中文描述信息。
+    * catalog  自定义策略所在目录。
+    * name  自定义策略名。
+    * description  自定义策略的描述信息。
+    * links  links
+    * id  自定义策略ID。
+    * displayName  自定义策略展示名。
+    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * policy  policy
     *
     * @var string[]
     */
@@ -125,6 +177,19 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domainId  自定义策略所属账号ID。
+    * references  自定义策略的引用次数。
+    * updatedTime  自定义策略更新时间。
+    * createdTime  自定义策略创建时间。
+    * descriptionCn  自定义策略的中文描述信息。
+    * catalog  自定义策略所在目录。
+    * name  自定义策略名。
+    * description  自定义策略的描述信息。
+    * links  links
+    * id  自定义策略ID。
+    * displayName  自定义策略展示名。
+    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * policy  policy
     *
     * @var string[]
     */
@@ -268,6 +333,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  自定义策略所属账号ID。
     *
     * @return string
     */
@@ -291,6 +357,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets references
+    *  自定义策略的引用次数。
     *
     * @return int|null
     */
@@ -314,6 +381,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedTime
+    *  自定义策略更新时间。
     *
     * @return string|null
     */
@@ -337,6 +405,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdTime
+    *  自定义策略创建时间。
     *
     * @return string|null
     */
@@ -360,6 +429,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets descriptionCn
+    *  自定义策略的中文描述信息。
     *
     * @return string|null
     */
@@ -383,6 +453,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets catalog
+    *  自定义策略所在目录。
     *
     * @return string
     */
@@ -406,6 +477,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  自定义策略名。
     *
     * @return string
     */
@@ -429,6 +501,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  自定义策略的描述信息。
     *
     * @return string
     */
@@ -452,6 +525,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  links
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\LinksSelf
     */
@@ -475,6 +549,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  自定义策略ID。
     *
     * @return string
     */
@@ -498,6 +573,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
+    *  自定义策略展示名。
     *
     * @return string
     */
@@ -521,6 +597,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     *
     * @return string
     */
@@ -544,6 +621,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets policy
+    *  policy
     *
     * @return \HuaweiCloud\SDK\Iam\V3\Model\ServicePolicy
     */

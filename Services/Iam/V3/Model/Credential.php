@@ -20,6 +20,10 @@ class Credential implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * expiresAt  AK/SK和securitytoken的过期时间。
+    * access  获取的AK。
+    * secret  获取的SK。
+    * securitytoken  securitytoken是将所获的AK、SK等信息进行加密后的字符串。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class Credential implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * expiresAt  AK/SK和securitytoken的过期时间。
+    * access  获取的AK。
+    * secret  获取的SK。
+    * securitytoken  securitytoken是将所获的AK、SK等信息进行加密后的字符串。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class Credential implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * expiresAt  AK/SK和securitytoken的过期时间。
+    * access  获取的AK。
+    * secret  获取的SK。
+    * securitytoken  securitytoken是将所获的AK、SK等信息进行加密后的字符串。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class Credential implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * expiresAt  AK/SK和securitytoken的过期时间。
+    * access  获取的AK。
+    * secret  获取的SK。
+    * securitytoken  securitytoken是将所获的AK、SK等信息进行加密后的字符串。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class Credential implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * expiresAt  AK/SK和securitytoken的过期时间。
+    * access  获取的AK。
+    * secret  获取的SK。
+    * securitytoken  securitytoken是将所获的AK、SK等信息进行加密后的字符串。
     *
     * @var string[]
     */
@@ -199,6 +219,7 @@ class Credential implements ModelInterface, ArrayAccess
 
     /**
     * Gets expiresAt
+    *  AK/SK和securitytoken的过期时间。
     *
     * @return string
     */
@@ -222,6 +243,7 @@ class Credential implements ModelInterface, ArrayAccess
 
     /**
     * Gets access
+    *  获取的AK。
     *
     * @return string
     */
@@ -245,6 +267,7 @@ class Credential implements ModelInterface, ArrayAccess
 
     /**
     * Gets secret
+    *  获取的SK。
     *
     * @return string
     */
@@ -268,6 +291,7 @@ class Credential implements ModelInterface, ArrayAccess
 
     /**
     * Gets securitytoken
+    *  securitytoken是将所获的AK、SK等信息进行加密后的字符串。
     *
     * @return string
     */

@@ -20,6 +20,10 @@ class ResourceResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * type  功能说明：根据type过滤查询指定类型的配额  取值范围：vpc，subnet，securityGroup，securityGroupRule，publicIp，vpn，vpngw，vpcPeer，firewall，shareBandwidth，shareBandwidthIP，loadbalancer，listener，physicalConnect，virtualInterface，vpcContainRoutetable，routetableContainRoutes
+    * used  功能说明：已创建的资源个数  取值范围：0~quota数
+    * quota  功能说明：资源的最大配额数  取值范围：各类型资源默认配额数~Integer最大值
+    * min  允许修改的配额最小值
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class ResourceResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * type  功能说明：根据type过滤查询指定类型的配额  取值范围：vpc，subnet，securityGroup，securityGroupRule，publicIp，vpn，vpngw，vpcPeer，firewall，shareBandwidth，shareBandwidthIP，loadbalancer，listener，physicalConnect，virtualInterface，vpcContainRoutetable，routetableContainRoutes
+    * used  功能说明：已创建的资源个数  取值范围：0~quota数
+    * quota  功能说明：资源的最大配额数  取值范围：各类型资源默认配额数~Integer最大值
+    * min  允许修改的配额最小值
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class ResourceResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * type  功能说明：根据type过滤查询指定类型的配额  取值范围：vpc，subnet，securityGroup，securityGroupRule，publicIp，vpn，vpngw，vpcPeer，firewall，shareBandwidth，shareBandwidthIP，loadbalancer，listener，physicalConnect，virtualInterface，vpcContainRoutetable，routetableContainRoutes
+    * used  功能说明：已创建的资源个数  取值范围：0~quota数
+    * quota  功能说明：资源的最大配额数  取值范围：各类型资源默认配额数~Integer最大值
+    * min  允许修改的配额最小值
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class ResourceResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * type  功能说明：根据type过滤查询指定类型的配额  取值范围：vpc，subnet，securityGroup，securityGroupRule，publicIp，vpn，vpngw，vpcPeer，firewall，shareBandwidth，shareBandwidthIP，loadbalancer，listener，physicalConnect，virtualInterface，vpcContainRoutetable，routetableContainRoutes
+    * used  功能说明：已创建的资源个数  取值范围：0~quota数
+    * quota  功能说明：资源的最大配额数  取值范围：各类型资源默认配额数~Integer最大值
+    * min  允许修改的配额最小值
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class ResourceResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * type  功能说明：根据type过滤查询指定类型的配额  取值范围：vpc，subnet，securityGroup，securityGroupRule，publicIp，vpn，vpngw，vpcPeer，firewall，shareBandwidth，shareBandwidthIP，loadbalancer，listener，physicalConnect，virtualInterface，vpcContainRoutetable，routetableContainRoutes
+    * used  功能说明：已创建的资源个数  取值范围：0~quota数
+    * quota  功能说明：资源的最大配额数  取值范围：各类型资源默认配额数~Integer最大值
+    * min  允许修改的配额最小值
     *
     * @var string[]
     */
@@ -252,6 +272,7 @@ class ResourceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
+    *  功能说明：根据type过滤查询指定类型的配额  取值范围：vpc，subnet，securityGroup，securityGroupRule，publicIp，vpn，vpngw，vpcPeer，firewall，shareBandwidth，shareBandwidthIP，loadbalancer，listener，physicalConnect，virtualInterface，vpcContainRoutetable，routetableContainRoutes
     *
     * @return string
     */
@@ -275,6 +296,7 @@ class ResourceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets used
+    *  功能说明：已创建的资源个数  取值范围：0~quota数
     *
     * @return int
     */
@@ -298,6 +320,7 @@ class ResourceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets quota
+    *  功能说明：资源的最大配额数  取值范围：各类型资源默认配额数~Integer最大值
     *
     * @return int
     */
@@ -321,6 +344,7 @@ class ResourceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets min
+    *  允许修改的配额最小值
     *
     * @return int
     */

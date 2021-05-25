@@ -20,6 +20,9 @@ class UpdateVpcRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID
+    * vpcId  虚拟私有云ID
+    * body  body
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class UpdateVpcRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID
+    * vpcId  虚拟私有云ID
+    * body  body
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class UpdateVpcRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID
+    * vpcId  虚拟私有云ID
+    * body  body
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class UpdateVpcRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID
+    * vpcId  虚拟私有云ID
+    * body  body
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class UpdateVpcRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID
+    * vpcId  虚拟私有云ID
+    * body  body
     *
     * @var string[]
     */
@@ -193,6 +208,7 @@ class UpdateVpcRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  项目ID
     *
     * @return string
     */
@@ -204,7 +220,7 @@ class UpdateVpcRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId projectId
+    * @param string $projectId 项目ID
     *
     * @return $this
     */
@@ -216,6 +232,7 @@ class UpdateVpcRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
+    *  虚拟私有云ID
     *
     * @return string
     */
@@ -227,7 +244,7 @@ class UpdateVpcRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId vpcId
+    * @param string $vpcId 虚拟私有云ID
     *
     * @return $this
     */
@@ -239,6 +256,7 @@ class UpdateVpcRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\UpdateVpcRequestBody|null
     */

@@ -20,6 +20,11 @@ class NovaSecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * description  安全组描述信息，长度0-255
+    * id  安全组ID，UUID格式
+    * name  安全组名字，长度0-255
+    * tenantId  租户ID或项目ID
+    * rules  安全组规则列表
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class NovaSecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * description  安全组描述信息，长度0-255
+    * id  安全组ID，UUID格式
+    * name  安全组名字，长度0-255
+    * tenantId  租户ID或项目ID
+    * rules  安全组规则列表
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class NovaSecurityGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * description  安全组描述信息，长度0-255
+    * id  安全组ID，UUID格式
+    * name  安全组名字，长度0-255
+    * tenantId  租户ID或项目ID
+    * rules  安全组规则列表
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class NovaSecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * description  安全组描述信息，长度0-255
+    * id  安全组ID，UUID格式
+    * name  安全组名字，长度0-255
+    * tenantId  租户ID或项目ID
+    * rules  安全组规则列表
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class NovaSecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * description  安全组描述信息，长度0-255
+    * id  安全组ID，UUID格式
+    * name  安全组名字，长度0-255
+    * tenantId  租户ID或项目ID
+    * rules  安全组规则列表
     *
     * @var string[]
     */
@@ -220,6 +245,7 @@ class NovaSecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  安全组描述信息，长度0-255
     *
     * @return string
     */
@@ -243,6 +269,7 @@ class NovaSecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  安全组ID，UUID格式
     *
     * @return string
     */
@@ -266,6 +293,7 @@ class NovaSecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  安全组名字，长度0-255
     *
     * @return string
     */
@@ -289,6 +317,7 @@ class NovaSecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
+    *  租户ID或项目ID
     *
     * @return string
     */
@@ -312,6 +341,7 @@ class NovaSecurityGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets rules
+    *  安全组规则列表
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaSecurityGroupCommonRule[]
     */

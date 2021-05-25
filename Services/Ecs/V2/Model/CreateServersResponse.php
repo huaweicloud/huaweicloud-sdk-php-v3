@@ -21,6 +21,9 @@ class CreateServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
+    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
+    * serverIds  云服务器ID列表。  通过云服务器ID查询云服务器详情 ，若返回404 可能云服务器还在创建或者已经创建失败。
     *
     * @var string[]
     */
@@ -32,6 +35,9 @@ class CreateServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
+    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
+    * serverIds  云服务器ID列表。  通过云服务器ID查询云服务器详情 ，若返回404 可能云服务器还在创建或者已经创建失败。
     *
     * @var string[]
     */
@@ -64,6 +70,9 @@ class CreateServersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
+    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
+    * serverIds  云服务器ID列表。  通过云服务器ID查询云服务器详情 ，若返回404 可能云服务器还在创建或者已经创建失败。
     *
     * @var string[]
     */
@@ -75,6 +84,9 @@ class CreateServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
+    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
+    * serverIds  云服务器ID列表。  通过云服务器ID查询云服务器详情 ，若返回404 可能云服务器还在创建或者已经创建失败。
     *
     * @var string[]
     */
@@ -86,6 +98,9 @@ class CreateServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * jobId  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
+    * orderId  订单号，创建包年包月的弹性云服务器时返回该参数。
+    * serverIds  云服务器ID列表。  通过云服务器ID查询云服务器详情 ，若返回404 可能云服务器还在创建或者已经创建失败。
     *
     * @var string[]
     */
@@ -182,6 +197,7 @@ class CreateServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
+    *  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
     *
     * @return string|null
     */
@@ -205,6 +221,7 @@ class CreateServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
+    *  订单号，创建包年包月的弹性云服务器时返回该参数。
     *
     * @return string|null
     */
@@ -228,6 +245,7 @@ class CreateServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverIds
+    *  云服务器ID列表。  通过云服务器ID查询云服务器详情 ，若返回404 可能云服务器还在创建或者已经创建失败。
     *
     * @return string[]|null
     */

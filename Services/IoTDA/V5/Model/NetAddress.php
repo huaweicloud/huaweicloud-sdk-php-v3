@@ -20,6 +20,9 @@ class NetAddress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * ip  服务的对应IP
+    * port  服务对应端口
+    * domain  服务对应的域名
     *
     * @var string[]
     */
@@ -31,6 +34,9 @@ class NetAddress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * ip  服务的对应IP
+    * port  服务对应端口
+    * domain  服务对应的域名
     *
     * @var string[]
     */
@@ -63,6 +69,9 @@ class NetAddress implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * ip  服务的对应IP
+    * port  服务对应端口
+    * domain  服务对应的域名
     *
     * @var string[]
     */
@@ -74,6 +83,9 @@ class NetAddress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * ip  服务的对应IP
+    * port  服务对应端口
+    * domain  服务对应的域名
     *
     * @var string[]
     */
@@ -85,6 +97,9 @@ class NetAddress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * ip  服务的对应IP
+    * port  服务对应端口
+    * domain  服务对应的域名
     *
     * @var string[]
     */
@@ -193,6 +208,7 @@ class NetAddress implements ModelInterface, ArrayAccess
 
     /**
     * Gets ip
+    *  服务的对应IP
     *
     * @return string|null
     */
@@ -216,6 +232,7 @@ class NetAddress implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
+    *  服务对应端口
     *
     * @return int|null
     */
@@ -239,6 +256,7 @@ class NetAddress implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
+    *  服务对应的域名
     *
     * @return string|null
     */

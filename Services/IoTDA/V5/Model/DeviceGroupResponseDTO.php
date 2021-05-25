@@ -20,6 +20,10 @@ class DeviceGroupResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
+    * name  设备组名称，单个资源空间下不可重复。
+    * description  设备组描述。
+    * superGroupId  父设备组ID，该设备组的父设备组ID。
     *
     * @var string[]
     */
@@ -32,6 +36,10 @@ class DeviceGroupResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
+    * name  设备组名称，单个资源空间下不可重复。
+    * description  设备组描述。
+    * superGroupId  父设备组ID，该设备组的父设备组ID。
     *
     * @var string[]
     */
@@ -65,6 +73,10 @@ class DeviceGroupResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
+    * name  设备组名称，单个资源空间下不可重复。
+    * description  设备组描述。
+    * superGroupId  父设备组ID，该设备组的父设备组ID。
     *
     * @var string[]
     */
@@ -77,6 +89,10 @@ class DeviceGroupResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
+    * name  设备组名称，单个资源空间下不可重复。
+    * description  设备组描述。
+    * superGroupId  父设备组ID，该设备组的父设备组ID。
     *
     * @var string[]
     */
@@ -89,6 +105,10 @@ class DeviceGroupResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
+    * name  设备组名称，单个资源空间下不可重复。
+    * description  设备组描述。
+    * superGroupId  父设备组ID，该设备组的父设备组ID。
     *
     * @var string[]
     */
@@ -187,6 +207,7 @@ class DeviceGroupResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
+    *  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
     *
     * @return string|null
     */
@@ -210,6 +231,7 @@ class DeviceGroupResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  设备组名称，单个资源空间下不可重复。
     *
     * @return string|null
     */
@@ -233,6 +255,7 @@ class DeviceGroupResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  设备组描述。
     *
     * @return string|null
     */
@@ -256,6 +279,7 @@ class DeviceGroupResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets superGroupId
+    *  父设备组ID，该设备组的父设备组ID。
     *
     * @return string|null
     */

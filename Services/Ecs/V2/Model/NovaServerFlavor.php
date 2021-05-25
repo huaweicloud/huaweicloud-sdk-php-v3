@@ -20,6 +20,15 @@ class NovaServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  云服务器类型ID。  微版本2.47后不支持。
+    * links  云服务器类型相关标记快捷链接信息。  微版本2.47后不支持。
+    * vcpus  该云服务器规格对应的CPU核数。  在微版本2.47后支持。
+    * ram  该云服务器规格对应的内存大小，单位为MB。  在微版本2.47后支持。
+    * disk  该云服务器规格对应要求系统盘大小，0为不限制。  在微版本2.47后支持。
+    * ephemeral  未使用。  在微版本2.47后支持。
+    * swap  未使用。  在微版本2.47后支持。
+    * originalName  云服务器规格名称。  在微版本2.47后支持。
+    * extraSpecs  flavor扩展字段。  在微版本2.47后支持。
     *
     * @var string[]
     */
@@ -37,6 +46,15 @@ class NovaServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  云服务器类型ID。  微版本2.47后不支持。
+    * links  云服务器类型相关标记快捷链接信息。  微版本2.47后不支持。
+    * vcpus  该云服务器规格对应的CPU核数。  在微版本2.47后支持。
+    * ram  该云服务器规格对应的内存大小，单位为MB。  在微版本2.47后支持。
+    * disk  该云服务器规格对应要求系统盘大小，0为不限制。  在微版本2.47后支持。
+    * ephemeral  未使用。  在微版本2.47后支持。
+    * swap  未使用。  在微版本2.47后支持。
+    * originalName  云服务器规格名称。  在微版本2.47后支持。
+    * extraSpecs  flavor扩展字段。  在微版本2.47后支持。
     *
     * @var string[]
     */
@@ -75,6 +93,15 @@ class NovaServerFlavor implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  云服务器类型ID。  微版本2.47后不支持。
+    * links  云服务器类型相关标记快捷链接信息。  微版本2.47后不支持。
+    * vcpus  该云服务器规格对应的CPU核数。  在微版本2.47后支持。
+    * ram  该云服务器规格对应的内存大小，单位为MB。  在微版本2.47后支持。
+    * disk  该云服务器规格对应要求系统盘大小，0为不限制。  在微版本2.47后支持。
+    * ephemeral  未使用。  在微版本2.47后支持。
+    * swap  未使用。  在微版本2.47后支持。
+    * originalName  云服务器规格名称。  在微版本2.47后支持。
+    * extraSpecs  flavor扩展字段。  在微版本2.47后支持。
     *
     * @var string[]
     */
@@ -92,6 +119,15 @@ class NovaServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  云服务器类型ID。  微版本2.47后不支持。
+    * links  云服务器类型相关标记快捷链接信息。  微版本2.47后不支持。
+    * vcpus  该云服务器规格对应的CPU核数。  在微版本2.47后支持。
+    * ram  该云服务器规格对应的内存大小，单位为MB。  在微版本2.47后支持。
+    * disk  该云服务器规格对应要求系统盘大小，0为不限制。  在微版本2.47后支持。
+    * ephemeral  未使用。  在微版本2.47后支持。
+    * swap  未使用。  在微版本2.47后支持。
+    * originalName  云服务器规格名称。  在微版本2.47后支持。
+    * extraSpecs  flavor扩展字段。  在微版本2.47后支持。
     *
     * @var string[]
     */
@@ -109,6 +145,15 @@ class NovaServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  云服务器类型ID。  微版本2.47后不支持。
+    * links  云服务器类型相关标记快捷链接信息。  微版本2.47后不支持。
+    * vcpus  该云服务器规格对应的CPU核数。  在微版本2.47后支持。
+    * ram  该云服务器规格对应的内存大小，单位为MB。  在微版本2.47后支持。
+    * disk  该云服务器规格对应要求系统盘大小，0为不限制。  在微版本2.47后支持。
+    * ephemeral  未使用。  在微版本2.47后支持。
+    * swap  未使用。  在微版本2.47后支持。
+    * originalName  云服务器规格名称。  在微版本2.47后支持。
+    * extraSpecs  flavor扩展字段。  在微版本2.47后支持。
     *
     * @var string[]
     */
@@ -217,6 +262,7 @@ class NovaServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
+    *  云服务器类型ID。  微版本2.47后不支持。
     *
     * @return string|null
     */
@@ -240,6 +286,7 @@ class NovaServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets links
+    *  云服务器类型相关标记快捷链接信息。  微版本2.47后不支持。
     *
     * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaLink[]|null
     */
@@ -263,6 +310,7 @@ class NovaServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets vcpus
+    *  该云服务器规格对应的CPU核数。  在微版本2.47后支持。
     *
     * @return int|null
     */
@@ -286,6 +334,7 @@ class NovaServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets ram
+    *  该云服务器规格对应的内存大小，单位为MB。  在微版本2.47后支持。
     *
     * @return int|null
     */
@@ -309,6 +358,7 @@ class NovaServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets disk
+    *  该云服务器规格对应要求系统盘大小，0为不限制。  在微版本2.47后支持。
     *
     * @return int|null
     */
@@ -332,6 +382,7 @@ class NovaServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets ephemeral
+    *  未使用。  在微版本2.47后支持。
     *
     * @return int|null
     */
@@ -355,6 +406,7 @@ class NovaServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets swap
+    *  未使用。  在微版本2.47后支持。
     *
     * @return int|null
     */
@@ -378,6 +430,7 @@ class NovaServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets originalName
+    *  云服务器规格名称。  在微版本2.47后支持。
     *
     * @return string|null
     */
@@ -401,6 +454,7 @@ class NovaServerFlavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets extraSpecs
+    *  flavor扩展字段。  在微版本2.47后支持。
     *
     * @return map[string,string]|null
     */

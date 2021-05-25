@@ -20,6 +20,8 @@ class CinderExportToImageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * volumeId  云硬盘ID。
+    * body  body
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class CinderExportToImageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * volumeId  云硬盘ID。
+    * body  body
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class CinderExportToImageRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * volumeId  云硬盘ID。
+    * body  body
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class CinderExportToImageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * volumeId  云硬盘ID。
+    * body  body
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class CinderExportToImageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * volumeId  云硬盘ID。
+    * body  body
     *
     * @var string[]
     */
@@ -178,6 +188,7 @@ class CinderExportToImageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeId
+    *  云硬盘ID。
     *
     * @return string
     */
@@ -189,7 +200,7 @@ class CinderExportToImageRequest implements ModelInterface, ArrayAccess
     /**
     * Sets volumeId
     *
-    * @param string $volumeId volumeId
+    * @param string $volumeId 云硬盘ID。
     *
     * @return $this
     */
@@ -201,6 +212,7 @@ class CinderExportToImageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Evs\V2\Model\CinderExportToImageRequestBody|null
     */

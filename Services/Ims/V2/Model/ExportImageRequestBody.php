@@ -20,6 +20,8 @@ class ExportImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * bucketUrl  目的文件的URL，格式：<bucket>:<file>。 说明：此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
+    * fileFormat  文件格式，支持qcow2、vhd、zvhd和vmdk。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ExportImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * bucketUrl  目的文件的URL，格式：<bucket>:<file>。 说明：此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
+    * fileFormat  文件格式，支持qcow2、vhd、zvhd和vmdk。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ExportImageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * bucketUrl  目的文件的URL，格式：<bucket>:<file>。 说明：此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
+    * fileFormat  文件格式，支持qcow2、vhd、zvhd和vmdk。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ExportImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * bucketUrl  目的文件的URL，格式：<bucket>:<file>。 说明：此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
+    * fileFormat  文件格式，支持qcow2、vhd、zvhd和vmdk。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ExportImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * bucketUrl  目的文件的URL，格式：<bucket>:<file>。 说明：此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
+    * fileFormat  文件格式，支持qcow2、vhd、zvhd和vmdk。
     *
     * @var string[]
     */
@@ -208,6 +218,7 @@ class ExportImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets bucketUrl
+    *  目的文件的URL，格式：<bucket>:<file>。 说明：此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
     *
     * @return string
     */
@@ -231,6 +242,7 @@ class ExportImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileFormat
+    *  文件格式，支持qcow2、vhd、zvhd和vmdk。
     *
     * @return string
     */

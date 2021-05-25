@@ -20,6 +20,8 @@ class ShowSecurityGroupRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * securityGroupRuleId  安全组规则ID
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class ShowSecurityGroupRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * securityGroupRuleId  安全组规则ID
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class ShowSecurityGroupRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * securityGroupRuleId  安全组规则ID
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class ShowSecurityGroupRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * securityGroupRuleId  安全组规则ID
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class ShowSecurityGroupRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  项目ID 获取项目ID，请参见获取项目ID
+    * securityGroupRuleId  安全组规则ID
     *
     * @var string[]
     */
@@ -184,6 +194,7 @@ class ShowSecurityGroupRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
+    *  项目ID 获取项目ID，请参见获取项目ID
     *
     * @return string
     */
@@ -195,7 +206,7 @@ class ShowSecurityGroupRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId projectId
+    * @param string $projectId 项目ID 获取项目ID，请参见获取项目ID
     *
     * @return $this
     */
@@ -207,6 +218,7 @@ class ShowSecurityGroupRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupRuleId
+    *  安全组规则ID
     *
     * @return string
     */
@@ -218,7 +230,7 @@ class ShowSecurityGroupRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupRuleId
     *
-    * @param string $securityGroupRuleId securityGroupRuleId
+    * @param string $securityGroupRuleId 安全组规则ID
     *
     * @return $this
     */

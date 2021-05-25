@@ -20,6 +20,8 @@ class IdentityproviderOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * description  身份提供商描述信息。
+    * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
     *
     * @var string[]
     */
@@ -30,6 +32,8 @@ class IdentityproviderOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * description  身份提供商描述信息。
+    * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
     *
     * @var string[]
     */
@@ -61,6 +65,8 @@ class IdentityproviderOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * description  身份提供商描述信息。
+    * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
     *
     * @var string[]
     */
@@ -71,6 +77,8 @@ class IdentityproviderOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * description  身份提供商描述信息。
+    * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
     *
     * @var string[]
     */
@@ -81,6 +89,8 @@ class IdentityproviderOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * description  身份提供商描述信息。
+    * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
     *
     * @var string[]
     */
@@ -175,6 +185,7 @@ class IdentityproviderOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  身份提供商描述信息。
     *
     * @return string|null
     */
@@ -198,6 +209,7 @@ class IdentityproviderOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  身份提供商是否启用，true为启用，false为停用，默认为false。
     *
     * @return bool|null
     */

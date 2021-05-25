@@ -21,6 +21,8 @@ class UpdatePrePaidBandwidthResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * bandwidth  bandwidth
+    * orderId  订单号（包周期场景返回该字段）
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class UpdatePrePaidBandwidthResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * bandwidth  bandwidth
+    * orderId  订单号（包周期场景返回该字段）
     *
     * @var string[]
     */
@@ -62,6 +66,8 @@ class UpdatePrePaidBandwidthResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * bandwidth  bandwidth
+    * orderId  订单号（包周期场景返回该字段）
     *
     * @var string[]
     */
@@ -72,6 +78,8 @@ class UpdatePrePaidBandwidthResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * bandwidth  bandwidth
+    * orderId  订单号（包周期场景返回该字段）
     *
     * @var string[]
     */
@@ -82,6 +90,8 @@ class UpdatePrePaidBandwidthResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * bandwidth  bandwidth
+    * orderId  订单号（包周期场景返回该字段）
     *
     * @var string[]
     */
@@ -179,6 +189,7 @@ class UpdatePrePaidBandwidthResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidth
+    *  bandwidth
     *
     * @return \HuaweiCloud\SDK\Eip\V2\Model\BandwidthResp|null
     */
@@ -202,6 +213,7 @@ class UpdatePrePaidBandwidthResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
+    *  订单号（包周期场景返回该字段）
     *
     * @return string|null
     */

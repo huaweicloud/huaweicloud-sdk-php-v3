@@ -20,6 +20,11 @@ class KeystoneCreateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  IAM用户名，长度5~32之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * domainId  IAM用户所属账号ID。
+    * password  IAM用户密码。   - 系统默认密码最小长度为6位字符，在6-32位之间支持用户自定义密码长度。   - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。   - 不能包含手机号和邮箱。   - 必须满足账户设置中密码策略的要求。
+    * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
+    * description  IAM用户描述信息。
     *
     * @var string[]
     */
@@ -33,6 +38,11 @@ class KeystoneCreateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  IAM用户名，长度5~32之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * domainId  IAM用户所属账号ID。
+    * password  IAM用户密码。   - 系统默认密码最小长度为6位字符，在6-32位之间支持用户自定义密码长度。   - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。   - 不能包含手机号和邮箱。   - 必须满足账户设置中密码策略的要求。
+    * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
+    * description  IAM用户描述信息。
     *
     * @var string[]
     */
@@ -67,6 +77,11 @@ class KeystoneCreateUserOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  IAM用户名，长度5~32之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * domainId  IAM用户所属账号ID。
+    * password  IAM用户密码。   - 系统默认密码最小长度为6位字符，在6-32位之间支持用户自定义密码长度。   - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。   - 不能包含手机号和邮箱。   - 必须满足账户设置中密码策略的要求。
+    * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
+    * description  IAM用户描述信息。
     *
     * @var string[]
     */
@@ -80,6 +95,11 @@ class KeystoneCreateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  IAM用户名，长度5~32之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * domainId  IAM用户所属账号ID。
+    * password  IAM用户密码。   - 系统默认密码最小长度为6位字符，在6-32位之间支持用户自定义密码长度。   - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。   - 不能包含手机号和邮箱。   - 必须满足账户设置中密码策略的要求。
+    * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
+    * description  IAM用户描述信息。
     *
     * @var string[]
     */
@@ -93,6 +113,11 @@ class KeystoneCreateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  IAM用户名，长度5~32之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * domainId  IAM用户所属账号ID。
+    * password  IAM用户密码。   - 系统默认密码最小长度为6位字符，在6-32位之间支持用户自定义密码长度。   - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。   - 不能包含手机号和邮箱。   - 必须满足账户设置中密码策略的要求。
+    * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
+    * description  IAM用户描述信息。
     *
     * @var string[]
     */
@@ -196,6 +221,7 @@ class KeystoneCreateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
+    *  IAM用户名，长度5~32之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
     *
     * @return string
     */
@@ -219,6 +245,7 @@ class KeystoneCreateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
+    *  IAM用户所属账号ID。
     *
     * @return string|null
     */
@@ -242,6 +269,7 @@ class KeystoneCreateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets password
+    *  IAM用户密码。   - 系统默认密码最小长度为6位字符，在6-32位之间支持用户自定义密码长度。   - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。   - 不能包含手机号和邮箱。   - 必须满足账户设置中密码策略的要求。
     *
     * @return string|null
     */
@@ -265,6 +293,7 @@ class KeystoneCreateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
+    *  是否启用IAM用户。true为启用，false为停用，默认为true。
     *
     * @return bool|null
     */
@@ -288,6 +317,7 @@ class KeystoneCreateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
+    *  IAM用户描述信息。
     *
     * @return string|null
     */
