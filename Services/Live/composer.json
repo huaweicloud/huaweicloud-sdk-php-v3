@@ -1,12 +1,12 @@
 {
-  "name": "huaweicloud/huaweicloud-sdk-ecs",
-  "description": "HUAWEICLOUD SDK ECS",
+  "name": "huaweicloud/huaweicloud-sdk-live",
+  "description": "HUAWEICLOUD SDK Live",
   "keywords": [
     "php",
     "sdk",
     "rest",
     "api",
-    "ecs"
+    "live"
   ],
   "version": "3.0.12-beta",
    "type": "library",
@@ -24,7 +24,7 @@
   },
   "autoload": {
     "psr-4": {
-      "HuaweiCloud\\SDK\\Ecs\\V3\\": "V3/"
+      "HuaweiCloud\\SDK\\Live\\V3\\": "V3/"
     }
   }
 }

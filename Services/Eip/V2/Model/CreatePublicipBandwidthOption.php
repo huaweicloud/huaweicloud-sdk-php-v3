@@ -20,7 +20,7 @@ class CreatePublicipBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * chargeMode  功能说明：按流量计费还是按带宽计费。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
+    * chargeMode  功能说明：按流量计费还是按带宽计费。 取值范围：bandwidth，traffic。  不填或为空时默认是bandwidth。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
     * id  功能说明：带宽ID  创建WHOLE类型带宽的弹性公网IP时可以指定之前的共享带宽创建  取值范围：WHOLE类型的带宽ID
     * name  功能说明：带宽名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  如果share_type是PER，该参数必须带,如果share_type是WHOLE并且id有值，该参数会忽略。
     * shareType  功能说明：带宽类型 取值范围：PER，WHOLE。 约束：该字段为WHOLE时，必须指定带宽ID。
@@ -38,7 +38,7 @@ class CreatePublicipBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * chargeMode  功能说明：按流量计费还是按带宽计费。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
+    * chargeMode  功能说明：按流量计费还是按带宽计费。 取值范围：bandwidth，traffic。  不填或为空时默认是bandwidth。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
     * id  功能说明：带宽ID  创建WHOLE类型带宽的弹性公网IP时可以指定之前的共享带宽创建  取值范围：WHOLE类型的带宽ID
     * name  功能说明：带宽名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  如果share_type是PER，该参数必须带,如果share_type是WHOLE并且id有值，该参数会忽略。
     * shareType  功能说明：带宽类型 取值范围：PER，WHOLE。 约束：该字段为WHOLE时，必须指定带宽ID。
@@ -77,7 +77,7 @@ class CreatePublicipBandwidthOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * chargeMode  功能说明：按流量计费还是按带宽计费。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
+    * chargeMode  功能说明：按流量计费还是按带宽计费。 取值范围：bandwidth，traffic。  不填或为空时默认是bandwidth。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
     * id  功能说明：带宽ID  创建WHOLE类型带宽的弹性公网IP时可以指定之前的共享带宽创建  取值范围：WHOLE类型的带宽ID
     * name  功能说明：带宽名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  如果share_type是PER，该参数必须带,如果share_type是WHOLE并且id有值，该参数会忽略。
     * shareType  功能说明：带宽类型 取值范围：PER，WHOLE。 约束：该字段为WHOLE时，必须指定带宽ID。
@@ -95,7 +95,7 @@ class CreatePublicipBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * chargeMode  功能说明：按流量计费还是按带宽计费。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
+    * chargeMode  功能说明：按流量计费还是按带宽计费。 取值范围：bandwidth，traffic。  不填或为空时默认是bandwidth。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
     * id  功能说明：带宽ID  创建WHOLE类型带宽的弹性公网IP时可以指定之前的共享带宽创建  取值范围：WHOLE类型的带宽ID
     * name  功能说明：带宽名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  如果share_type是PER，该参数必须带,如果share_type是WHOLE并且id有值，该参数会忽略。
     * shareType  功能说明：带宽类型 取值范围：PER，WHOLE。 约束：该字段为WHOLE时，必须指定带宽ID。
@@ -113,7 +113,7 @@ class CreatePublicipBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * chargeMode  功能说明：按流量计费还是按带宽计费。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
+    * chargeMode  功能说明：按流量计费还是按带宽计费。 取值范围：bandwidth，traffic。  不填或为空时默认是bandwidth。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
     * id  功能说明：带宽ID  创建WHOLE类型带宽的弹性公网IP时可以指定之前的共享带宽创建  取值范围：WHOLE类型的带宽ID
     * name  功能说明：带宽名称  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  如果share_type是PER，该参数必须带,如果share_type是WHOLE并且id有值，该参数会忽略。
     * shareType  功能说明：带宽类型 取值范围：PER，WHOLE。 约束：该字段为WHOLE时，必须指定带宽ID。
@@ -276,7 +276,7 @@ class CreatePublicipBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  功能说明：按流量计费还是按带宽计费。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
+    *  功能说明：按流量计费还是按带宽计费。 取值范围：bandwidth，traffic。  不填或为空时默认是bandwidth。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class CreatePublicipBandwidthOption implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode 功能说明：按流量计费还是按带宽计费。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
+    * @param string|null $chargeMode 功能说明：按流量计费还是按带宽计费。 取值范围：bandwidth，traffic。  不填或为空时默认是bandwidth。  其中IPv6国外默认是bandwidth，国内默认是traffic。取值为traffic，表示流量计费。
     *
     * @return $this
     */

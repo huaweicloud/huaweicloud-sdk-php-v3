@@ -1,3 +1,13 @@
+# 3.0.12-beta 2021-06-01
+
+### HuaweiCloud SDK LIVE
+
+- _Features_
+    - Support `Live` service.
+- _Bug Fix_
+    - None
+- _Change_
+    - None
 # 3.0.11-beta 2021-05-25
 
 ### HuaweiCloud SDK Core

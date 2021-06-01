@@ -1,3 +1,13 @@
+# 3.0.12-beta 2021-06-01
+
+### HuaweiCloud SDK LIVE
+
+- _新增特性_
+    - 支持视频直播服务
+- _解决问题_
+    - 无
+- _特性变更_
+    - 无
 # 3.0.11-beta 2021-05-25
 
 ### HuaweiCloud SDK Core
