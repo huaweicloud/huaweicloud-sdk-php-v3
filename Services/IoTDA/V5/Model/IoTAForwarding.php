@@ -20,8 +20,8 @@ class IoTAForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dataSourceId  IoTA服务对应的数据源Id
-    * projectId  IoTA服务对应的projectId信息
+    * dataSourceId  **参数说明**：IoTA服务对应的数据源Id。
+    * projectId  **参数说明**：IoTA服务对应的projectId信息。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class IoTAForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dataSourceId  IoTA服务对应的数据源Id
-    * projectId  IoTA服务对应的projectId信息
+    * dataSourceId  **参数说明**：IoTA服务对应的数据源Id。
+    * projectId  **参数说明**：IoTA服务对应的projectId信息。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class IoTAForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dataSourceId  IoTA服务对应的数据源Id
-    * projectId  IoTA服务对应的projectId信息
+    * dataSourceId  **参数说明**：IoTA服务对应的数据源Id。
+    * projectId  **参数说明**：IoTA服务对应的projectId信息。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class IoTAForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dataSourceId  IoTA服务对应的数据源Id
-    * projectId  IoTA服务对应的projectId信息
+    * dataSourceId  **参数说明**：IoTA服务对应的数据源Id。
+    * projectId  **参数说明**：IoTA服务对应的projectId信息。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class IoTAForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dataSourceId  IoTA服务对应的数据源Id
-    * projectId  IoTA服务对应的projectId信息
+    * dataSourceId  **参数说明**：IoTA服务对应的数据源Id。
+    * projectId  **参数说明**：IoTA服务对应的projectId信息。
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class IoTAForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataSourceId
-    *  IoTA服务对应的数据源Id
+    *  **参数说明**：IoTA服务对应的数据源Id。
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class IoTAForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets dataSourceId
     *
-    * @param string $dataSourceId IoTA服务对应的数据源Id
+    * @param string $dataSourceId **参数说明**：IoTA服务对应的数据源Id。
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class IoTAForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  IoTA服务对应的projectId信息
+    *  **参数说明**：IoTA服务对应的projectId信息。
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class IoTAForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId IoTA服务对应的projectId信息
+    * @param string $projectId **参数说明**：IoTA服务对应的projectId信息。
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * url  用于接收满足规则条件数据的http服务器地址。
-    * certId  证书id，通过证书上传接口上传证书获取Id
-    * cnName  当sni_enable为true时，此字段需要填写，当sni_enbale为false时，此字段默认为*
-    * sniEnable  需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能
+    * url  **参数说明**：用于接收满足规则条件数据的http服务器地址。
+    * certId  **参数说明**：证书id，请参见[获取证书ID](https://support.huaweicloud.com/usermanual-iothub/iot_01_0001.html#section3)
+    * cnName  **参数说明**：当sni_enable为true时，此字段需要填写，内容为将要请求的服务端证书的域名,举例:www.example.com:8443;当sni_enbale为false时，此字段默认不填写。
+    * sniEnable  **参数说明**：需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * url  用于接收满足规则条件数据的http服务器地址。
-    * certId  证书id，通过证书上传接口上传证书获取Id
-    * cnName  当sni_enable为true时，此字段需要填写，当sni_enbale为false时，此字段默认为*
-    * sniEnable  需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能
+    * url  **参数说明**：用于接收满足规则条件数据的http服务器地址。
+    * certId  **参数说明**：证书id，请参见[获取证书ID](https://support.huaweicloud.com/usermanual-iothub/iot_01_0001.html#section3)
+    * cnName  **参数说明**：当sni_enable为true时，此字段需要填写，内容为将要请求的服务端证书的域名,举例:www.example.com:8443;当sni_enbale为false时，此字段默认不填写。
+    * sniEnable  **参数说明**：需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class HttpForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * url  用于接收满足规则条件数据的http服务器地址。
-    * certId  证书id，通过证书上传接口上传证书获取Id
-    * cnName  当sni_enable为true时，此字段需要填写，当sni_enbale为false时，此字段默认为*
-    * sniEnable  需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能
+    * url  **参数说明**：用于接收满足规则条件数据的http服务器地址。
+    * certId  **参数说明**：证书id，请参见[获取证书ID](https://support.huaweicloud.com/usermanual-iothub/iot_01_0001.html#section3)
+    * cnName  **参数说明**：当sni_enable为true时，此字段需要填写，内容为将要请求的服务端证书的域名,举例:www.example.com:8443;当sni_enbale为false时，此字段默认不填写。
+    * sniEnable  **参数说明**：需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * url  用于接收满足规则条件数据的http服务器地址。
-    * certId  证书id，通过证书上传接口上传证书获取Id
-    * cnName  当sni_enable为true时，此字段需要填写，当sni_enbale为false时，此字段默认为*
-    * sniEnable  需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能
+    * url  **参数说明**：用于接收满足规则条件数据的http服务器地址。
+    * certId  **参数说明**：证书id，请参见[获取证书ID](https://support.huaweicloud.com/usermanual-iothub/iot_01_0001.html#section3)
+    * cnName  **参数说明**：当sni_enable为true时，此字段需要填写，内容为将要请求的服务端证书的域名,举例:www.example.com:8443;当sni_enbale为false时，此字段默认不填写。
+    * sniEnable  **参数说明**：需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * url  用于接收满足规则条件数据的http服务器地址。
-    * certId  证书id，通过证书上传接口上传证书获取Id
-    * cnName  当sni_enable为true时，此字段需要填写，当sni_enbale为false时，此字段默认为*
-    * sniEnable  需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能
+    * url  **参数说明**：用于接收满足规则条件数据的http服务器地址。
+    * certId  **参数说明**：证书id，请参见[获取证书ID](https://support.huaweicloud.com/usermanual-iothub/iot_01_0001.html#section3)
+    * cnName  **参数说明**：当sni_enable为true时，此字段需要填写，内容为将要请求的服务端证书的域名,举例:www.example.com:8443;当sni_enbale为false时，此字段默认不填写。
+    * sniEnable  **参数说明**：需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能。
     *
     * @var string[]
     */
@@ -206,11 +206,14 @@ class HttpForwarding implements ModelInterface, ArrayAccess
             if (!is_null($this->container['certId']) && (mb_strlen($this->container['certId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'certId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['cnName']) && (mb_strlen($this->container['cnName']) > 255)) {
-                $invalidProperties[] = "invalid value for 'cnName', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['cnName']) && (mb_strlen($this->container['cnName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'cnName', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['cnName']) && (mb_strlen($this->container['cnName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'cnName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['cnName']) && !preg_match("/\\b((?!\\$)\\S)+\\b/", $this->container['cnName'])) {
+                $invalidProperties[] = "invalid value for 'cnName', must be conform to the pattern /\\b((?!\\$)\\S)+\\b/.";
             }
         return $invalidProperties;
     }
@@ -228,7 +231,7 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  用于接收满足规则条件数据的http服务器地址。
+    *  **参数说明**：用于接收满足规则条件数据的http服务器地址。
     *
     * @return string
     */
@@ -240,7 +243,7 @@ class HttpForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string $url 用于接收满足规则条件数据的http服务器地址。
+    * @param string $url **参数说明**：用于接收满足规则条件数据的http服务器地址。
     *
     * @return $this
     */
@@ -252,7 +255,7 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets certId
-    *  证书id，通过证书上传接口上传证书获取Id
+    *  **参数说明**：证书id，请参见[获取证书ID](https://support.huaweicloud.com/usermanual-iothub/iot_01_0001.html#section3)
     *
     * @return string|null
     */
@@ -264,7 +267,7 @@ class HttpForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets certId
     *
-    * @param string|null $certId 证书id，通过证书上传接口上传证书获取Id
+    * @param string|null $certId **参数说明**：证书id，请参见[获取证书ID](https://support.huaweicloud.com/usermanual-iothub/iot_01_0001.html#section3)
     *
     * @return $this
     */
@@ -276,7 +279,7 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets cnName
-    *  当sni_enable为true时，此字段需要填写，当sni_enbale为false时，此字段默认为*
+    *  **参数说明**：当sni_enable为true时，此字段需要填写，内容为将要请求的服务端证书的域名,举例:www.example.com:8443;当sni_enbale为false时，此字段默认不填写。
     *
     * @return string|null
     */
@@ -288,7 +291,7 @@ class HttpForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets cnName
     *
-    * @param string|null $cnName 当sni_enable为true时，此字段需要填写，当sni_enbale为false时，此字段默认为*
+    * @param string|null $cnName **参数说明**：当sni_enable为true时，此字段需要填写，内容为将要请求的服务端证书的域名,举例:www.example.com:8443;当sni_enbale为false时，此字段默认不填写。
     *
     * @return $this
     */
@@ -300,7 +303,7 @@ class HttpForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets sniEnable
-    *  需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能
+    *  **参数说明**：需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能。
     *
     * @return bool|null
     */
@@ -312,7 +315,7 @@ class HttpForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets sniEnable
     *
-    * @param bool|null $sniEnable 需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能
+    * @param bool|null $sniEnable **参数说明**：需要https服务端和客户端都支持此功能，默认为false，设成true表明Https的客户端在发起请求时，需要携带cn_name；https服务端根据cn_name返回对应的证书；设为false可关闭此功能。
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  要解绑标签的资源类型。 - device：设备。
-    * resourceId  要解绑标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
-    * tagKeys  指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值。
+    * resourceType  **参数说明**：要绑定标签的资源类型。 **取值范围**： - device：设备。
+    * resourceId  **参数说明**：要绑定标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * tagKeys  **参数说明**：指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值 **取值范围**：标签键长度不超过64，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  要解绑标签的资源类型。 - device：设备。
-    * resourceId  要解绑标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
-    * tagKeys  指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值。
+    * resourceType  **参数说明**：要绑定标签的资源类型。 **取值范围**： - device：设备。
+    * resourceId  **参数说明**：要绑定标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * tagKeys  **参数说明**：指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值 **取值范围**：标签键长度不超过64，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  要解绑标签的资源类型。 - device：设备。
-    * resourceId  要解绑标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
-    * tagKeys  指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值。
+    * resourceType  **参数说明**：要绑定标签的资源类型。 **取值范围**： - device：设备。
+    * resourceId  **参数说明**：要绑定标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * tagKeys  **参数说明**：指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值 **取值范围**：标签键长度不超过64，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  要解绑标签的资源类型。 - device：设备。
-    * resourceId  要解绑标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
-    * tagKeys  指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值。
+    * resourceType  **参数说明**：要绑定标签的资源类型。 **取值范围**： - device：设备。
+    * resourceId  **参数说明**：要绑定标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * tagKeys  **参数说明**：指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值 **取值范围**：标签键长度不超过64，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  要解绑标签的资源类型。 - device：设备。
-    * resourceId  要解绑标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
-    * tagKeys  指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值。
+    * resourceType  **参数说明**：要绑定标签的资源类型。 **取值范围**： - device：设备。
+    * resourceId  **参数说明**：要绑定标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * tagKeys  **参数说明**：指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值 **取值范围**：标签键长度不超过64，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @var string[]
     */
@@ -211,7 +211,7 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  要解绑标签的资源类型。 - device：设备。
+    *  **参数说明**：要绑定标签的资源类型。 **取值范围**： - device：设备。
     *
     * @return string
     */
@@ -223,7 +223,7 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 要解绑标签的资源类型。 - device：设备。
+    * @param string $resourceType **参数说明**：要绑定标签的资源类型。 **取值范围**： - device：设备。
     *
     * @return $this
     */
@@ -235,7 +235,7 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  要解绑标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
+    *  **参数说明**：要绑定标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return string
     */
@@ -247,7 +247,7 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string $resourceId 要解绑标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。
+    * @param string $resourceId **参数说明**：要绑定标签的资源id。例如，资源类型为device，那么对应的资源id就是device_id。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return $this
     */
@@ -259,7 +259,7 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagKeys
-    *  指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值。
+    *  **参数说明**：指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值 **取值范围**：标签键长度不超过64，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @return string[]
     */
@@ -271,7 +271,7 @@ class UnbindTagsDTO implements ModelInterface, ArrayAccess
     /**
     * Sets tagKeys
     *
-    * @param string[] $tagKeys 指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值。
+    * @param string[] $tagKeys **参数说明**：指定资源要解绑的标签键列表，标签键列表中各项之间不允许重复，不能填写不存在的标签键值 **取值范围**：标签键长度不超过64，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @return $this
     */

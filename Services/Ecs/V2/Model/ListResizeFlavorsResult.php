@@ -34,6 +34,7 @@ class ListResizeFlavorsResult implements ModelInterface, ArrayAccess
     * osFlavorAccessisPublic  扩展属性，flavor是否给所有租户使用。  - true：表示给所有租户使用。 - false：表示给指定租户使用。  缺省值为true。
     * links  规格相关快捷链接地址。
     * extraSpecs  extraSpecs
+    * instanceQuota  预留属性。
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class ListResizeFlavorsResult implements ModelInterface, ArrayAccess
             'rxtxCap' => 'string',
             'osFlavorAccessisPublic' => 'bool',
             'links' => '\HuaweiCloud\SDK\Ecs\V2\Model\FlavorLink[]',
-            'extraSpecs' => '\HuaweiCloud\SDK\Ecs\V2\Model\FlavorExtraSpec'
+            'extraSpecs' => '\HuaweiCloud\SDK\Ecs\V2\Model\FlavorExtraSpec',
+            'instanceQuota' => 'object'
     ];
 
     /**
@@ -70,6 +72,7 @@ class ListResizeFlavorsResult implements ModelInterface, ArrayAccess
     * osFlavorAccessisPublic  扩展属性，flavor是否给所有租户使用。  - true：表示给所有租户使用。 - false：表示给指定租户使用。  缺省值为true。
     * links  规格相关快捷链接地址。
     * extraSpecs  extraSpecs
+    * instanceQuota  预留属性。
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class ListResizeFlavorsResult implements ModelInterface, ArrayAccess
         'rxtxCap' => null,
         'osFlavorAccessisPublic' => null,
         'links' => null,
-        'extraSpecs' => null
+        'extraSpecs' => null,
+        'instanceQuota' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class ListResizeFlavorsResult implements ModelInterface, ArrayAccess
     * osFlavorAccessisPublic  扩展属性，flavor是否给所有租户使用。  - true：表示给所有租户使用。 - false：表示给指定租户使用。  缺省值为true。
     * links  规格相关快捷链接地址。
     * extraSpecs  extraSpecs
+    * instanceQuota  预留属性。
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class ListResizeFlavorsResult implements ModelInterface, ArrayAccess
             'rxtxCap' => 'rxtx_cap',
             'osFlavorAccessisPublic' => 'os-flavor-access:is_public',
             'links' => 'links',
-            'extraSpecs' => 'extra_specs'
+            'extraSpecs' => 'extra_specs',
+            'instanceQuota' => 'instance_quota'
     ];
 
     /**
@@ -163,6 +169,7 @@ class ListResizeFlavorsResult implements ModelInterface, ArrayAccess
     * osFlavorAccessisPublic  扩展属性，flavor是否给所有租户使用。  - true：表示给所有租户使用。 - false：表示给指定租户使用。  缺省值为true。
     * links  规格相关快捷链接地址。
     * extraSpecs  extraSpecs
+    * instanceQuota  预留属性。
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class ListResizeFlavorsResult implements ModelInterface, ArrayAccess
             'rxtxCap' => 'setRxtxCap',
             'osFlavorAccessisPublic' => 'setOsFlavorAccessisPublic',
             'links' => 'setLinks',
-            'extraSpecs' => 'setExtraSpecs'
+            'extraSpecs' => 'setExtraSpecs',
+            'instanceQuota' => 'setInstanceQuota'
     ];
 
     /**
@@ -199,6 +207,7 @@ class ListResizeFlavorsResult implements ModelInterface, ArrayAccess
     * osFlavorAccessisPublic  扩展属性，flavor是否给所有租户使用。  - true：表示给所有租户使用。 - false：表示给指定租户使用。  缺省值为true。
     * links  规格相关快捷链接地址。
     * extraSpecs  extraSpecs
+    * instanceQuota  预留属性。
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class ListResizeFlavorsResult implements ModelInterface, ArrayAccess
             'rxtxCap' => 'getRxtxCap',
             'osFlavorAccessisPublic' => 'getOsFlavorAccessisPublic',
             'links' => 'getLinks',
-            'extraSpecs' => 'getExtraSpecs'
+            'extraSpecs' => 'getExtraSpecs',
+            'instanceQuota' => 'getInstanceQuota'
     ];
 
     /**
@@ -291,6 +301,7 @@ class ListResizeFlavorsResult implements ModelInterface, ArrayAccess
         $this->container['osFlavorAccessisPublic'] = isset($data['osFlavorAccessisPublic']) ? $data['osFlavorAccessisPublic'] : true;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['extraSpecs'] = isset($data['extraSpecs']) ? $data['extraSpecs'] : null;
+        $this->container['instanceQuota'] = isset($data['instanceQuota']) ? $data['instanceQuota'] : null;
     }
 
     /**
@@ -342,6 +353,9 @@ class ListResizeFlavorsResult implements ModelInterface, ArrayAccess
         }
         if ($this->container['extraSpecs'] === null) {
             $invalidProperties[] = "'extraSpecs' can't be null";
+        }
+        if ($this->container['instanceQuota'] === null) {
+            $invalidProperties[] = "'instanceQuota' can't be null";
         }
         return $invalidProperties;
     }
@@ -690,6 +704,30 @@ class ListResizeFlavorsResult implements ModelInterface, ArrayAccess
     public function setExtraSpecs($extraSpecs)
     {
         $this->container['extraSpecs'] = $extraSpecs;
+        return $this;
+    }
+
+    /**
+    * Gets instanceQuota
+    *  预留属性。
+    *
+    * @return object
+    */
+    public function getInstanceQuota()
+    {
+        return $this->container['instanceQuota'];
+    }
+
+    /**
+    * Sets instanceQuota
+    *
+    * @param object $instanceQuota 预留属性。
+    *
+    * @return $this
+    */
+    public function setInstanceQuota($instanceQuota)
+    {
+        $this->container['instanceQuota'] = $instanceQuota;
         return $this;
     }
 

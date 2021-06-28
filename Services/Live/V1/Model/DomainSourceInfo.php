@@ -20,10 +20,10 @@ class DomainSourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * protocol  回源、转推协议。
+    * protocol  回源、转推协议
     * sourceType  源站地址类型
-    * sources  回源、转推地址列表，格式为：{domain/IP}[:{port}]，port默认值为1935；最少1个，最多10个。
-    * sourcesPriority  多个回源、转推地址的优先级。
+    * sources  回源、转推地址列表，最少1个，最多10个；格式为：{domain/IP}[:{port}]，port默认值为1935
+    * sourcesPriority  多个回源、转推地址的优先级
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class DomainSourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * protocol  回源、转推协议。
+    * protocol  回源、转推协议
     * sourceType  源站地址类型
-    * sources  回源、转推地址列表，格式为：{domain/IP}[:{port}]，port默认值为1935；最少1个，最多10个。
-    * sourcesPriority  多个回源、转推地址的优先级。
+    * sources  回源、转推地址列表，最少1个，最多10个；格式为：{domain/IP}[:{port}]，port默认值为1935
+    * sourcesPriority  多个回源、转推地址的优先级
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class DomainSourceInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * protocol  回源、转推协议。
+    * protocol  回源、转推协议
     * sourceType  源站地址类型
-    * sources  回源、转推地址列表，格式为：{domain/IP}[:{port}]，port默认值为1935；最少1个，最多10个。
-    * sourcesPriority  多个回源、转推地址的优先级。
+    * sources  回源、转推地址列表，最少1个，最多10个；格式为：{domain/IP}[:{port}]，port默认值为1935
+    * sourcesPriority  多个回源、转推地址的优先级
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class DomainSourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * protocol  回源、转推协议。
+    * protocol  回源、转推协议
     * sourceType  源站地址类型
-    * sources  回源、转推地址列表，格式为：{domain/IP}[:{port}]，port默认值为1935；最少1个，最多10个。
-    * sourcesPriority  多个回源、转推地址的优先级。
+    * sources  回源、转推地址列表，最少1个，最多10个；格式为：{domain/IP}[:{port}]，port默认值为1935
+    * sourcesPriority  多个回源、转推地址的优先级
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class DomainSourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * protocol  回源、转推协议。
+    * protocol  回源、转推协议
     * sourceType  源站地址类型
-    * sources  回源、转推地址列表，格式为：{domain/IP}[:{port}]，port默认值为1935；最少1个，最多10个。
-    * sourcesPriority  多个回源、转推地址的优先级。
+    * sources  回源、转推地址列表，最少1个，最多10个；格式为：{domain/IP}[:{port}]，port默认值为1935
+    * sourcesPriority  多个回源、转推地址的优先级
     *
     * @var string[]
     */
@@ -246,9 +246,6 @@ class DomainSourceInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['sourceType'] === null) {
-            $invalidProperties[] = "'sourceType' can't be null";
-        }
             $allowedValues = $this->getSourceTypeAllowableValues();
                 if (!is_null($this->container['sourceType']) && !in_array($this->container['sourceType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -281,7 +278,7 @@ class DomainSourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  回源、转推协议。
+    *  回源、转推协议
     *
     * @return string|null
     */
@@ -293,7 +290,7 @@ class DomainSourceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 回源、转推协议。
+    * @param string|null $protocol 回源、转推协议
     *
     * @return $this
     */
@@ -307,7 +304,7 @@ class DomainSourceInfo implements ModelInterface, ArrayAccess
     * Gets sourceType
     *  源站地址类型
     *
-    * @return string
+    * @return string|null
     */
     public function getSourceType()
     {
@@ -317,7 +314,7 @@ class DomainSourceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param string $sourceType 源站地址类型
+    * @param string|null $sourceType 源站地址类型
     *
     * @return $this
     */
@@ -329,7 +326,7 @@ class DomainSourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets sources
-    *  回源、转推地址列表，格式为：{domain/IP}[:{port}]，port默认值为1935；最少1个，最多10个。
+    *  回源、转推地址列表，最少1个，最多10个；格式为：{domain/IP}[:{port}]，port默认值为1935
     *
     * @return string[]|null
     */
@@ -341,7 +338,7 @@ class DomainSourceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param string[]|null $sources 回源、转推地址列表，格式为：{domain/IP}[:{port}]，port默认值为1935；最少1个，最多10个。
+    * @param string[]|null $sources 回源、转推地址列表，最少1个，最多10个；格式为：{domain/IP}[:{port}]，port默认值为1935
     *
     * @return $this
     */
@@ -353,7 +350,7 @@ class DomainSourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourcesPriority
-    *  多个回源、转推地址的优先级。
+    *  多个回源、转推地址的优先级
     *
     * @return string|null
     */
@@ -365,7 +362,7 @@ class DomainSourceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sourcesPriority
     *
-    * @param string|null $sourcesPriority 多个回源、转推地址的优先级。
+    * @param string|null $sourcesPriority 多个回源、转推地址的优先级
     *
     * @return $this
     */

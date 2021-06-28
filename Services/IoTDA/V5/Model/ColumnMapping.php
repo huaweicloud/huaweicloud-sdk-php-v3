@@ -20,8 +20,8 @@ class ColumnMapping implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * columnName  数据库的列名
-    * jsonKey  流转数据的属性名
+    * columnName  **参数说明**：数据库的列名
+    * jsonKey  **参数说明**：流转数据的属性名
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ColumnMapping implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * columnName  数据库的列名
-    * jsonKey  流转数据的属性名
+    * columnName  **参数说明**：数据库的列名
+    * jsonKey  **参数说明**：流转数据的属性名
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ColumnMapping implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * columnName  数据库的列名
-    * jsonKey  流转数据的属性名
+    * columnName  **参数说明**：数据库的列名
+    * jsonKey  **参数说明**：流转数据的属性名
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ColumnMapping implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * columnName  数据库的列名
-    * jsonKey  流转数据的属性名
+    * columnName  **参数说明**：数据库的列名
+    * jsonKey  **参数说明**：流转数据的属性名
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ColumnMapping implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * columnName  数据库的列名
-    * jsonKey  流转数据的属性名
+    * columnName  **参数说明**：数据库的列名
+    * jsonKey  **参数说明**：流转数据的属性名
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class ColumnMapping implements ModelInterface, ArrayAccess
 
     /**
     * Gets columnName
-    *  数据库的列名
+    *  **参数说明**：数据库的列名
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class ColumnMapping implements ModelInterface, ArrayAccess
     /**
     * Sets columnName
     *
-    * @param string $columnName 数据库的列名
+    * @param string $columnName **参数说明**：数据库的列名
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class ColumnMapping implements ModelInterface, ArrayAccess
 
     /**
     * Gets jsonKey
-    *  流转数据的属性名
+    *  **参数说明**：流转数据的属性名
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class ColumnMapping implements ModelInterface, ArrayAccess
     /**
     * Sets jsonKey
     *
-    * @param string $jsonKey 流转数据的属性名
+    * @param string $jsonKey **参数说明**：流转数据的属性名
     *
     * @return $this
     */

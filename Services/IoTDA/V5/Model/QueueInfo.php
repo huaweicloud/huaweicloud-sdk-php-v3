@@ -20,7 +20,7 @@ class QueueInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * queueName  队列名称，同一租户不允许重复。
+    * queueName  **参数说明**：队列名称，同一租户不允许重复。 **取值范围**：长度不低于8不超过128，只允许字母、数字、下划线（_）、连接符（-）、间隔号（.）、冒号（:）的组合。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class QueueInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * queueName  队列名称，同一租户不允许重复。
+    * queueName  **参数说明**：队列名称，同一租户不允许重复。 **取值范围**：长度不低于8不超过128，只允许字母、数字、下划线（_）、连接符（-）、间隔号（.）、冒号（:）的组合。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class QueueInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * queueName  队列名称，同一租户不允许重复。
+    * queueName  **参数说明**：队列名称，同一租户不允许重复。 **取值范围**：长度不低于8不超过128，只允许字母、数字、下划线（_）、连接符（-）、间隔号（.）、冒号（:）的组合。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class QueueInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * queueName  队列名称，同一租户不允许重复。
+    * queueName  **参数说明**：队列名称，同一租户不允许重复。 **取值范围**：长度不低于8不超过128，只允许字母、数字、下划线（_）、连接符（-）、间隔号（.）、冒号（:）的组合。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class QueueInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * queueName  队列名称，同一租户不允许重复。
+    * queueName  **参数说明**：队列名称，同一租户不允许重复。 **取值范围**：长度不低于8不超过128，只允许字母、数字、下划线（_）、连接符（-）、间隔号（.）、冒号（:）的组合。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class QueueInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueName
-    *  队列名称，同一租户不允许重复。
+    *  **参数说明**：队列名称，同一租户不允许重复。 **取值范围**：长度不低于8不超过128，只允许字母、数字、下划线（_）、连接符（-）、间隔号（.）、冒号（:）的组合。
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class QueueInfo implements ModelInterface, ArrayAccess
     /**
     * Sets queueName
     *
-    * @param string $queueName 队列名称，同一租户不允许重复。
+    * @param string $queueName **参数说明**：队列名称，同一租户不允许重复。 **取值范围**：长度不低于8不超过128，只允许字母、数字、下划线（_）、连接符（-）、间隔号（.）、冒号（:）的组合。
     *
     * @return $this
     */

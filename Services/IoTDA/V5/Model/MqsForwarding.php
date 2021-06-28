@@ -20,11 +20,11 @@ class MqsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * url  MQS服务的URL
-    * userName  用于登录MQS的用户名
-    * password  用于登录MQS的密码
-    * topic  订阅的MQS主题
-    * encryptTransport  是否加密传输
+    * url  **参数说明**：MQS服务的URL
+    * userName  **参数说明**：用于登录MQS的用户名
+    * password  **参数说明**：用于登录MQS的密码
+    * topic  **参数说明**：订阅的MQS主题
+    * encryptTransport  **参数说明**：是否加密传输
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class MqsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * url  MQS服务的URL
-    * userName  用于登录MQS的用户名
-    * password  用于登录MQS的密码
-    * topic  订阅的MQS主题
-    * encryptTransport  是否加密传输
+    * url  **参数说明**：MQS服务的URL
+    * userName  **参数说明**：用于登录MQS的用户名
+    * password  **参数说明**：用于登录MQS的密码
+    * topic  **参数说明**：订阅的MQS主题
+    * encryptTransport  **参数说明**：是否加密传输
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class MqsForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * url  MQS服务的URL
-    * userName  用于登录MQS的用户名
-    * password  用于登录MQS的密码
-    * topic  订阅的MQS主题
-    * encryptTransport  是否加密传输
+    * url  **参数说明**：MQS服务的URL
+    * userName  **参数说明**：用于登录MQS的用户名
+    * password  **参数说明**：用于登录MQS的密码
+    * topic  **参数说明**：订阅的MQS主题
+    * encryptTransport  **参数说明**：是否加密传输
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class MqsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * url  MQS服务的URL
-    * userName  用于登录MQS的用户名
-    * password  用于登录MQS的密码
-    * topic  订阅的MQS主题
-    * encryptTransport  是否加密传输
+    * url  **参数说明**：MQS服务的URL
+    * userName  **参数说明**：用于登录MQS的用户名
+    * password  **参数说明**：用于登录MQS的密码
+    * topic  **参数说明**：订阅的MQS主题
+    * encryptTransport  **参数说明**：是否加密传输
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class MqsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * url  MQS服务的URL
-    * userName  用于登录MQS的用户名
-    * password  用于登录MQS的密码
-    * topic  订阅的MQS主题
-    * encryptTransport  是否加密传输
+    * url  **参数说明**：MQS服务的URL
+    * userName  **参数说明**：用于登录MQS的用户名
+    * password  **参数说明**：用于登录MQS的密码
+    * topic  **参数说明**：订阅的MQS主题
+    * encryptTransport  **参数说明**：是否加密传输
     *
     * @var string[]
     */
@@ -254,7 +254,7 @@ class MqsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  MQS服务的URL
+    *  **参数说明**：MQS服务的URL
     *
     * @return string
     */
@@ -266,7 +266,7 @@ class MqsForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string $url MQS服务的URL
+    * @param string $url **参数说明**：MQS服务的URL
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class MqsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  用于登录MQS的用户名
+    *  **参数说明**：用于登录MQS的用户名
     *
     * @return string
     */
@@ -290,7 +290,7 @@ class MqsForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string $userName 用于登录MQS的用户名
+    * @param string $userName **参数说明**：用于登录MQS的用户名
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class MqsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets password
-    *  用于登录MQS的密码
+    *  **参数说明**：用于登录MQS的密码
     *
     * @return string
     */
@@ -314,7 +314,7 @@ class MqsForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets password
     *
-    * @param string $password 用于登录MQS的密码
+    * @param string $password **参数说明**：用于登录MQS的密码
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class MqsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  订阅的MQS主题
+    *  **参数说明**：订阅的MQS主题
     *
     * @return string
     */
@@ -338,7 +338,7 @@ class MqsForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string $topic 订阅的MQS主题
+    * @param string $topic **参数说明**：订阅的MQS主题
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class MqsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets encryptTransport
-    *  是否加密传输
+    *  **参数说明**：是否加密传输
     *
     * @return bool|null
     */
@@ -362,7 +362,7 @@ class MqsForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets encryptTransport
     *
-    * @param bool|null $encryptTransport 是否加密传输
+    * @param bool|null $encryptTransport **参数说明**：是否加密传输
     *
     * @return $this
     */

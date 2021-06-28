@@ -20,9 +20,9 @@ class UpdateDesired implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
-    * desired  设备影子期望属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构；如果想要删除整个desired可以填写空object(例如\"desired\":{})，如果想要删除某一个属性期望值可以将属性置位null(例如{\"temperature\":null})
-    * version  设备影子的版本，携带改参数时平台会校验值必须等于当前影子版本，初始从0开始。
+    * serviceId  **参数说明**：设备的服务ID，在设备关联的产品模型中定义。
+    * desired  **参数说明**：设备影子期望属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构；如果想要删除整个desired可以填写空Object(例如\"desired\":{})，如果想要删除某一个属性期望值可以将属性置位null(例如{\"temperature\":null})
+    * version  **参数说明**：设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class UpdateDesired implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
-    * desired  设备影子期望属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构；如果想要删除整个desired可以填写空object(例如\"desired\":{})，如果想要删除某一个属性期望值可以将属性置位null(例如{\"temperature\":null})
-    * version  设备影子的版本，携带改参数时平台会校验值必须等于当前影子版本，初始从0开始。
+    * serviceId  **参数说明**：设备的服务ID，在设备关联的产品模型中定义。
+    * desired  **参数说明**：设备影子期望属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构；如果想要删除整个desired可以填写空Object(例如\"desired\":{})，如果想要删除某一个属性期望值可以将属性置位null(例如{\"temperature\":null})
+    * version  **参数说明**：设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class UpdateDesired implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
-    * desired  设备影子期望属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构；如果想要删除整个desired可以填写空object(例如\"desired\":{})，如果想要删除某一个属性期望值可以将属性置位null(例如{\"temperature\":null})
-    * version  设备影子的版本，携带改参数时平台会校验值必须等于当前影子版本，初始从0开始。
+    * serviceId  **参数说明**：设备的服务ID，在设备关联的产品模型中定义。
+    * desired  **参数说明**：设备影子期望属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构；如果想要删除整个desired可以填写空Object(例如\"desired\":{})，如果想要删除某一个属性期望值可以将属性置位null(例如{\"temperature\":null})
+    * version  **参数说明**：设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class UpdateDesired implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
-    * desired  设备影子期望属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构；如果想要删除整个desired可以填写空object(例如\"desired\":{})，如果想要删除某一个属性期望值可以将属性置位null(例如{\"temperature\":null})
-    * version  设备影子的版本，携带改参数时平台会校验值必须等于当前影子版本，初始从0开始。
+    * serviceId  **参数说明**：设备的服务ID，在设备关联的产品模型中定义。
+    * desired  **参数说明**：设备影子期望属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构；如果想要删除整个desired可以填写空Object(例如\"desired\":{})，如果想要删除某一个属性期望值可以将属性置位null(例如{\"temperature\":null})
+    * version  **参数说明**：设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class UpdateDesired implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceId  设备的服务ID，在设备关联的产品模型中定义。
-    * desired  设备影子期望属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构；如果想要删除整个desired可以填写空object(例如\"desired\":{})，如果想要删除某一个属性期望值可以将属性置位null(例如{\"temperature\":null})
-    * version  设备影子的版本，携带改参数时平台会校验值必须等于当前影子版本，初始从0开始。
+    * serviceId  **参数说明**：设备的服务ID，在设备关联的产品模型中定义。
+    * desired  **参数说明**：设备影子期望属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构；如果想要删除整个desired可以填写空Object(例如\"desired\":{})，如果想要删除某一个属性期望值可以将属性置位null(例如{\"temperature\":null})
+    * version  **参数说明**：设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class UpdateDesired implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceId
-    *  设备的服务ID，在设备关联的产品模型中定义。
+    *  **参数说明**：设备的服务ID，在设备关联的产品模型中定义。
     *
     * @return string
     */
@@ -220,7 +220,7 @@ class UpdateDesired implements ModelInterface, ArrayAccess
     /**
     * Sets serviceId
     *
-    * @param string $serviceId 设备的服务ID，在设备关联的产品模型中定义。
+    * @param string $serviceId **参数说明**：设备的服务ID，在设备关联的产品模型中定义。
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class UpdateDesired implements ModelInterface, ArrayAccess
 
     /**
     * Gets desired
-    *  设备影子期望属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构；如果想要删除整个desired可以填写空object(例如\"desired\":{})，如果想要删除某一个属性期望值可以将属性置位null(例如{\"temperature\":null})
+    *  **参数说明**：设备影子期望属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构；如果想要删除整个desired可以填写空Object(例如\"desired\":{})，如果想要删除某一个属性期望值可以将属性置位null(例如{\"temperature\":null})
     *
     * @return object
     */
@@ -244,7 +244,7 @@ class UpdateDesired implements ModelInterface, ArrayAccess
     /**
     * Sets desired
     *
-    * @param object $desired 设备影子期望属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构；如果想要删除整个desired可以填写空object(例如\"desired\":{})，如果想要删除某一个属性期望值可以将属性置位null(例如{\"temperature\":null})
+    * @param object $desired **参数说明**：设备影子期望属性数据，Json格式，里面是一个个键值对，每个键都是产品模型中属性的参数名(property_name)，目前如样例所示只支持一层结构；如果想要删除整个desired可以填写空Object(例如\"desired\":{})，如果想要删除某一个属性期望值可以将属性置位null(例如{\"temperature\":null})
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class UpdateDesired implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  设备影子的版本，携带改参数时平台会校验值必须等于当前影子版本，初始从0开始。
+    *  **参数说明**：设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
     *
     * @return int|null
     */
@@ -268,7 +268,7 @@ class UpdateDesired implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param int|null $version 设备影子的版本，携带改参数时平台会校验值必须等于当前影子版本，初始从0开始。
+    * @param int|null $version **参数说明**：设备影子的版本，携带该参数时平台会校验值必须等于当前影子版本，初始从0开始。
     *
     * @return $this
     */

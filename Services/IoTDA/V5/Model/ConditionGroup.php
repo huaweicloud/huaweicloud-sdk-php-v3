@@ -20,8 +20,8 @@ class ConditionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * conditions  规则的条件列表，单个规则最多支持设置10个条件。
-    * logic  规则条件列表中多个条件之间的逻辑关系，默认值：and。 - and：逻辑且。 - or：逻辑或。
+    * conditions  **参数说明**：规则的条件列表，单个规则最多支持设置10个条件。
+    * logic  **参数说明**：规则条件列表中多个条件之间的逻辑关系，默认值：and。 **取值范围**： - and：逻辑且。 - or：逻辑或。
     * timeRange  timeRange
     *
     * @var string[]
@@ -34,8 +34,8 @@ class ConditionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * conditions  规则的条件列表，单个规则最多支持设置10个条件。
-    * logic  规则条件列表中多个条件之间的逻辑关系，默认值：and。 - and：逻辑且。 - or：逻辑或。
+    * conditions  **参数说明**：规则的条件列表，单个规则最多支持设置10个条件。
+    * logic  **参数说明**：规则条件列表中多个条件之间的逻辑关系，默认值：and。 **取值范围**： - and：逻辑且。 - or：逻辑或。
     * timeRange  timeRange
     *
     * @var string[]
@@ -69,8 +69,8 @@ class ConditionGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * conditions  规则的条件列表，单个规则最多支持设置10个条件。
-    * logic  规则条件列表中多个条件之间的逻辑关系，默认值：and。 - and：逻辑且。 - or：逻辑或。
+    * conditions  **参数说明**：规则的条件列表，单个规则最多支持设置10个条件。
+    * logic  **参数说明**：规则条件列表中多个条件之间的逻辑关系，默认值：and。 **取值范围**： - and：逻辑且。 - or：逻辑或。
     * timeRange  timeRange
     *
     * @var string[]
@@ -83,8 +83,8 @@ class ConditionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * conditions  规则的条件列表，单个规则最多支持设置10个条件。
-    * logic  规则条件列表中多个条件之间的逻辑关系，默认值：and。 - and：逻辑且。 - or：逻辑或。
+    * conditions  **参数说明**：规则的条件列表，单个规则最多支持设置10个条件。
+    * logic  **参数说明**：规则条件列表中多个条件之间的逻辑关系，默认值：and。 **取值范围**： - and：逻辑且。 - or：逻辑或。
     * timeRange  timeRange
     *
     * @var string[]
@@ -97,8 +97,8 @@ class ConditionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * conditions  规则的条件列表，单个规则最多支持设置10个条件。
-    * logic  规则条件列表中多个条件之间的逻辑关系，默认值：and。 - and：逻辑且。 - or：逻辑或。
+    * conditions  **参数说明**：规则的条件列表，单个规则最多支持设置10个条件。
+    * logic  **参数说明**：规则条件列表中多个条件之间的逻辑关系，默认值：and。 **取值范围**： - and：逻辑且。 - or：逻辑或。
     * timeRange  timeRange
     *
     * @var string[]
@@ -199,7 +199,7 @@ class ConditionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets conditions
-    *  规则的条件列表，单个规则最多支持设置10个条件。
+    *  **参数说明**：规则的条件列表，单个规则最多支持设置10个条件。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\RuleCondition[]|null
     */
@@ -211,7 +211,7 @@ class ConditionGroup implements ModelInterface, ArrayAccess
     /**
     * Sets conditions
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\RuleCondition[]|null $conditions 规则的条件列表，单个规则最多支持设置10个条件。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\RuleCondition[]|null $conditions **参数说明**：规则的条件列表，单个规则最多支持设置10个条件。
     *
     * @return $this
     */
@@ -223,7 +223,7 @@ class ConditionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets logic
-    *  规则条件列表中多个条件之间的逻辑关系，默认值：and。 - and：逻辑且。 - or：逻辑或。
+    *  **参数说明**：规则条件列表中多个条件之间的逻辑关系，默认值：and。 **取值范围**： - and：逻辑且。 - or：逻辑或。
     *
     * @return string|null
     */
@@ -235,7 +235,7 @@ class ConditionGroup implements ModelInterface, ArrayAccess
     /**
     * Sets logic
     *
-    * @param string|null $logic 规则条件列表中多个条件之间的逻辑关系，默认值：and。 - and：逻辑且。 - or：逻辑或。
+    * @param string|null $logic **参数说明**：规则条件列表中多个条件之间的逻辑关系，默认值：and。 **取值范围**： - and：逻辑且。 - or：逻辑或。
     *
     * @return $this
     */

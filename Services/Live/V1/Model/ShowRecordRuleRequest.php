@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BandwidthInfo implements ModelInterface, ArrayAccess
+class ShowRecordRuleRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BandwidthInfo';
+    protected static $openAPIModelName = 'ShowRecordRuleRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bwBps  带宽峰值，单位：bps
-    * timestamp  带宽数据采样周期起始时刻，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * id  规则ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'bwBps' => 'int',
-            'timestamp' => 'string'
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bwBps  带宽峰值，单位：bps
-    * timestamp  带宽数据采样周期起始时刻，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * id  规则ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'bwBps' => 'int32',
-        'timestamp' => null
+        'id' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bwBps  带宽峰值，单位：bps
-    * timestamp  带宽数据采样周期起始时刻，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * id  规则ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'bwBps' => 'bw_bps',
-            'timestamp' => 'timestamp'
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bwBps  带宽峰值，单位：bps
-    * timestamp  带宽数据采样周期起始时刻，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * id  规则ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'bwBps' => 'setBwBps',
-            'timestamp' => 'setTimestamp'
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bwBps  带宽峰值，单位：bps
-    * timestamp  带宽数据采样周期起始时刻，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * id  规则ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'bwBps' => 'getBwBps',
-            'timestamp' => 'getTimestamp'
+            'id' => 'getId'
     ];
 
     /**
@@ -157,8 +147,7 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['bwBps'] = isset($data['bwBps']) ? $data['bwBps'] : null;
-        $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -169,15 +158,15 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['bwBps'] === null) {
-            $invalidProperties[] = "'bwBps' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
-            if (($this->container['bwBps'] < 0)) {
-                $invalidProperties[] = "invalid value for 'bwBps', must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['id']) > 128)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 128.";
             }
-        if ($this->container['timestamp'] === null) {
-            $invalidProperties[] = "'timestamp' can't be null";
-        }
+            if ((mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -193,50 +182,26 @@ class BandwidthInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets bwBps
-    *  带宽峰值，单位：bps
-    *
-    * @return int
-    */
-    public function getBwBps()
-    {
-        return $this->container['bwBps'];
-    }
-
-    /**
-    * Sets bwBps
-    *
-    * @param int $bwBps 带宽峰值，单位：bps
-    *
-    * @return $this
-    */
-    public function setBwBps($bwBps)
-    {
-        $this->container['bwBps'] = $bwBps;
-        return $this;
-    }
-
-    /**
-    * Gets timestamp
-    *  带宽数据采样周期起始时刻，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * Gets id
+    *  规则ID
     *
     * @return string
     */
-    public function getTimestamp()
+    public function getId()
     {
-        return $this->container['timestamp'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets timestamp
+    * Sets id
     *
-    * @param string $timestamp 带宽数据采样周期起始时刻，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * @param string $id 规则ID
     *
     * @return $this
     */
-    public function setTimestamp($timestamp)
+    public function setId($id)
     {
-        $this->container['timestamp'] = $timestamp;
+        $this->container['id'] = $id;
         return $this;
     }
 

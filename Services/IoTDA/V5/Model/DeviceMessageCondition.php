@@ -20,8 +20,8 @@ class DeviceMessageCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * productId  设备关联的产品ID，用于唯一标识一个产品模型，在管理门户导入产品模型后由平台分配获得。
-    * topic  产品关联的topic信息，用于过滤消息中指定topic消息。
+    * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，在管理门户导入产品模型后由平台分配获得。
+    * topic  **参数说明**：产品关联的topic信息，用于过滤消息中指定topic消息。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DeviceMessageCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * productId  设备关联的产品ID，用于唯一标识一个产品模型，在管理门户导入产品模型后由平台分配获得。
-    * topic  产品关联的topic信息，用于过滤消息中指定topic消息。
+    * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，在管理门户导入产品模型后由平台分配获得。
+    * topic  **参数说明**：产品关联的topic信息，用于过滤消息中指定topic消息。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DeviceMessageCondition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * productId  设备关联的产品ID，用于唯一标识一个产品模型，在管理门户导入产品模型后由平台分配获得。
-    * topic  产品关联的topic信息，用于过滤消息中指定topic消息。
+    * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，在管理门户导入产品模型后由平台分配获得。
+    * topic  **参数说明**：产品关联的topic信息，用于过滤消息中指定topic消息。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DeviceMessageCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * productId  设备关联的产品ID，用于唯一标识一个产品模型，在管理门户导入产品模型后由平台分配获得。
-    * topic  产品关联的topic信息，用于过滤消息中指定topic消息。
+    * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，在管理门户导入产品模型后由平台分配获得。
+    * topic  **参数说明**：产品关联的topic信息，用于过滤消息中指定topic消息。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DeviceMessageCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * productId  设备关联的产品ID，用于唯一标识一个产品模型，在管理门户导入产品模型后由平台分配获得。
-    * topic  产品关联的topic信息，用于过滤消息中指定topic消息。
+    * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，在管理门户导入产品模型后由平台分配获得。
+    * topic  **参数说明**：产品关联的topic信息，用于过滤消息中指定topic消息。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class DeviceMessageCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  设备关联的产品ID，用于唯一标识一个产品模型，在管理门户导入产品模型后由平台分配获得。
+    *  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，在管理门户导入产品模型后由平台分配获得。
     *
     * @return string|null
     */
@@ -203,7 +203,7 @@ class DeviceMessageCondition implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId 设备关联的产品ID，用于唯一标识一个产品模型，在管理门户导入产品模型后由平台分配获得。
+    * @param string|null $productId **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，在管理门户导入产品模型后由平台分配获得。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class DeviceMessageCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  产品关联的topic信息，用于过滤消息中指定topic消息。
+    *  **参数说明**：产品关联的topic信息，用于过滤消息中指定topic消息。
     *
     * @return string|null
     */
@@ -227,7 +227,7 @@ class DeviceMessageCondition implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic 产品关联的topic信息，用于过滤消息中指定topic消息。
+    * @param string|null $topic **参数说明**：产品关联的topic信息，用于过滤消息中指定topic消息。
     *
     * @return $this
     */

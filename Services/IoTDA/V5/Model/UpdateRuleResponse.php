@@ -29,8 +29,6 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
     * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
     * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
-    * edgeNodeIds  归属边缘侧节点设备ID列表。
-    * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
     * @var string[]
     */
@@ -42,9 +40,7 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
             'actions' => '\HuaweiCloud\SDK\IoTDA\V5\Model\RuleAction[]',
             'ruleType' => 'string',
             'status' => 'string',
-            'appId' => 'string',
-            'edgeNodeIds' => 'string[]',
-            'lastUpdateTime' => 'string'
+            'appId' => 'string'
     ];
 
     /**
@@ -57,8 +53,6 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
     * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
     * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
-    * edgeNodeIds  归属边缘侧节点设备ID列表。
-    * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
     * @var string[]
     */
@@ -70,9 +64,7 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
         'actions' => null,
         'ruleType' => null,
         'status' => null,
-        'appId' => null,
-        'edgeNodeIds' => null,
-        'lastUpdateTime' => null
+        'appId' => null
     ];
 
     /**
@@ -106,8 +98,6 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
     * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
     * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
-    * edgeNodeIds  归属边缘侧节点设备ID列表。
-    * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
     * @var string[]
     */
@@ -119,9 +109,7 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
             'actions' => 'actions',
             'ruleType' => 'rule_type',
             'status' => 'status',
-            'appId' => 'app_id',
-            'edgeNodeIds' => 'edge_node_ids',
-            'lastUpdateTime' => 'last_update_time'
+            'appId' => 'app_id'
     ];
 
     /**
@@ -134,8 +122,6 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
     * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
     * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
-    * edgeNodeIds  归属边缘侧节点设备ID列表。
-    * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
     * @var string[]
     */
@@ -147,9 +133,7 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
             'actions' => 'setActions',
             'ruleType' => 'setRuleType',
             'status' => 'setStatus',
-            'appId' => 'setAppId',
-            'edgeNodeIds' => 'setEdgeNodeIds',
-            'lastUpdateTime' => 'setLastUpdateTime'
+            'appId' => 'setAppId'
     ];
 
     /**
@@ -162,8 +146,6 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
     * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
     * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
-    * edgeNodeIds  归属边缘侧节点设备ID列表。
-    * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
     * @var string[]
     */
@@ -175,9 +157,7 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
             'actions' => 'getActions',
             'ruleType' => 'getRuleType',
             'status' => 'getStatus',
-            'appId' => 'getAppId',
-            'edgeNodeIds' => 'getEdgeNodeIds',
-            'lastUpdateTime' => 'getLastUpdateTime'
+            'appId' => 'getAppId'
     ];
 
     /**
@@ -246,8 +226,6 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
         $this->container['ruleType'] = isset($data['ruleType']) ? $data['ruleType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
-        $this->container['edgeNodeIds'] = isset($data['edgeNodeIds']) ? $data['edgeNodeIds'] : null;
-        $this->container['lastUpdateTime'] = isset($data['lastUpdateTime']) ? $data['lastUpdateTime'] : null;
     }
 
     /**
@@ -482,54 +460,6 @@ class UpdateRuleResponse implements ModelInterface, ArrayAccess
     public function setAppId($appId)
     {
         $this->container['appId'] = $appId;
-        return $this;
-    }
-
-    /**
-    * Gets edgeNodeIds
-    *  归属边缘侧节点设备ID列表。
-    *
-    * @return string[]|null
-    */
-    public function getEdgeNodeIds()
-    {
-        return $this->container['edgeNodeIds'];
-    }
-
-    /**
-    * Sets edgeNodeIds
-    *
-    * @param string[]|null $edgeNodeIds 归属边缘侧节点设备ID列表。
-    *
-    * @return $this
-    */
-    public function setEdgeNodeIds($edgeNodeIds)
-    {
-        $this->container['edgeNodeIds'] = $edgeNodeIds;
-        return $this;
-    }
-
-    /**
-    * Gets lastUpdateTime
-    *  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
-    *
-    * @return string|null
-    */
-    public function getLastUpdateTime()
-    {
-        return $this->container['lastUpdateTime'];
-    }
-
-    /**
-    * Sets lastUpdateTime
-    *
-    * @param string|null $lastUpdateTime 规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
-    *
-    * @return $this
-    */
-    public function setLastUpdateTime($lastUpdateTime)
-    {
-        $this->container['lastUpdateTime'] = $lastUpdateTime;
         return $this;
     }
 

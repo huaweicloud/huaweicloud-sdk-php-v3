@@ -2711,6 +2711,18 @@ class IamAsyncClient extends Client
         if ($localVarParams['perPage'] !== null) {
             $queryParams['per_page'] = $localVarParams['perPage'];
         }
+        if ($localVarParams['permissionType'] !== null) {
+            $queryParams['permission_type'] = $localVarParams['permissionType'];
+        }
+        if ($localVarParams['displayName'] !== null) {
+            $queryParams['display_name'] = $localVarParams['displayName'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['catalog'] !== null) {
+            $queryParams['catalog'] = $localVarParams['catalog'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

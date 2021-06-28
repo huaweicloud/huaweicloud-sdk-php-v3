@@ -20,9 +20,9 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * deviceName  设备名称。
-    * description  设备的描述信息。
-    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
+    * deviceName  **参数说明**：设备名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
+    * description  **参数说明**：设备的描述信息。 **取值范围**：长度不超过2048，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
+    * extensionInfo  **参数说明**：设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
     * authInfo  authInfo
     *
     * @var string[]
@@ -36,9 +36,9 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * deviceName  设备名称。
-    * description  设备的描述信息。
-    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
+    * deviceName  **参数说明**：设备名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
+    * description  **参数说明**：设备的描述信息。 **取值范围**：长度不超过2048，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
+    * extensionInfo  **参数说明**：设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
     * authInfo  authInfo
     *
     * @var string[]
@@ -73,9 +73,9 @@ class UpdateDevice implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * deviceName  设备名称。
-    * description  设备的描述信息。
-    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
+    * deviceName  **参数说明**：设备名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
+    * description  **参数说明**：设备的描述信息。 **取值范围**：长度不超过2048，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
+    * extensionInfo  **参数说明**：设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
     * authInfo  authInfo
     *
     * @var string[]
@@ -89,9 +89,9 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * deviceName  设备名称。
-    * description  设备的描述信息。
-    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
+    * deviceName  **参数说明**：设备名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
+    * description  **参数说明**：设备的描述信息。 **取值范围**：长度不超过2048，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
+    * extensionInfo  **参数说明**：设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
     * authInfo  authInfo
     *
     * @var string[]
@@ -105,9 +105,9 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * deviceName  设备名称。
-    * description  设备的描述信息。
-    * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
+    * deviceName  **参数说明**：设备名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
+    * description  **参数说明**：设备的描述信息。 **取值范围**：长度不超过2048，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
+    * extensionInfo  **参数说明**：设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
     * authInfo  authInfo
     *
     * @var string[]
@@ -225,7 +225,7 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceName
-    *  设备名称。
+    *  **参数说明**：设备名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
     *
     * @return string|null
     */
@@ -237,7 +237,7 @@ class UpdateDevice implements ModelInterface, ArrayAccess
     /**
     * Sets deviceName
     *
-    * @param string|null $deviceName 设备名称。
+    * @param string|null $deviceName **参数说明**：设备名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
     *
     * @return $this
     */
@@ -249,7 +249,7 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  设备的描述信息。
+    *  **参数说明**：设备的描述信息。 **取值范围**：长度不超过2048，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
     *
     * @return string|null
     */
@@ -261,7 +261,7 @@ class UpdateDevice implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 设备的描述信息。
+    * @param string|null $description **参数说明**：设备的描述信息。 **取值范围**：长度不超过2048，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
     *
     * @return $this
     */
@@ -273,7 +273,7 @@ class UpdateDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets extensionInfo
-    *  设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
+    *  **参数说明**：设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
     *
     * @return object|null
     */
@@ -285,7 +285,7 @@ class UpdateDevice implements ModelInterface, ArrayAccess
     /**
     * Sets extensionInfo
     *
-    * @param object|null $extensionInfo 设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
+    * @param object|null $extensionInfo **参数说明**：设备扩展信息。用户可以自定义任何想要的扩展信息，修改子设备信息时不会下发给网关。
     *
     * @return $this
     */

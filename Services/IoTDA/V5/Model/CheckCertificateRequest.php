@@ -20,9 +20,9 @@ class CheckCertificateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
-    * certificateId  设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
-    * actionId  对证书执行的操作，当前仅支持verify:校验证书
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * certificateId  **参数说明**：设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
+    * actionId  **参数说明**：对证书执行的操作。 **取值范围**：当前仅支持verify:校验证书。
     * body  body
     *
     * @var string[]
@@ -36,9 +36,9 @@ class CheckCertificateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
-    * certificateId  设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
-    * actionId  对证书执行的操作，当前仅支持verify:校验证书
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * certificateId  **参数说明**：设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
+    * actionId  **参数说明**：对证书执行的操作。 **取值范围**：当前仅支持verify:校验证书。
     * body  body
     *
     * @var string[]
@@ -73,9 +73,9 @@ class CheckCertificateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
-    * certificateId  设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
-    * actionId  对证书执行的操作，当前仅支持verify:校验证书
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * certificateId  **参数说明**：设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
+    * actionId  **参数说明**：对证书执行的操作。 **取值范围**：当前仅支持verify:校验证书。
     * body  body
     *
     * @var string[]
@@ -89,9 +89,9 @@ class CheckCertificateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
-    * certificateId  设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
-    * actionId  对证书执行的操作，当前仅支持verify:校验证书
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * certificateId  **参数说明**：设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
+    * actionId  **参数说明**：对证书执行的操作。 **取值范围**：当前仅支持verify:校验证书。
     * body  body
     *
     * @var string[]
@@ -105,9 +105,9 @@ class CheckCertificateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
-    * certificateId  设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
-    * actionId  对证书执行的操作，当前仅支持verify:校验证书
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * certificateId  **参数说明**：设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
+    * actionId  **参数说明**：对证书执行的操作。 **取值范围**：当前仅支持verify:校验证书。
     * body  body
     *
     * @var string[]
@@ -219,7 +219,7 @@ class CheckCertificateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    *  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return string|null
     */
@@ -231,7 +231,7 @@ class CheckCertificateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * @param string|null $instanceId **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class CheckCertificateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateId
-    *  设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
+    *  **参数说明**：设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class CheckCertificateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets certificateId
     *
-    * @param string $certificateId 设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
+    * @param string $certificateId **参数说明**：设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class CheckCertificateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionId
-    *  对证书执行的操作，当前仅支持verify:校验证书
+    *  **参数说明**：对证书执行的操作。 **取值范围**：当前仅支持verify:校验证书。
     *
     * @return string
     */
@@ -279,7 +279,7 @@ class CheckCertificateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets actionId
     *
-    * @param string $actionId 对证书执行的操作，当前仅支持verify:校验证书
+    * @param string $actionId **参数说明**：对证书执行的操作。 **取值范围**：当前仅支持verify:校验证书。
     *
     * @return $this
     */

@@ -60,7 +60,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -125,7 +124,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -190,7 +188,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -255,7 +252,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -320,7 +316,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -385,7 +380,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -447,7 +441,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -509,7 +502,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -571,7 +563,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -636,7 +627,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -698,7 +688,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -760,7 +749,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -792,7 +780,7 @@ class EcsClient extends Client
 
     /**
      * 创建云服务器
-     * 创建一台或多台云服务器。  指该接口兼容《弹性云服务器接口参考》创建云服务器v1的功能，同时合入新功能，支持创建包年/包月的弹性云服务器。  弹性云服务器的登录鉴权方式包括两种：密钥对、密码。为安全起见，推荐使用密钥对方式。  - 密钥对  指使用密钥对作为弹性云服务器的鉴权方式。  接口调用方法：使用key_name字段，指定弹性云服务器登录时使用的密钥文件。  - 密码  指使用设置初始密码方式作为弹性云服务器的鉴权方式，此时，您可以通过用户名密码方式登录弹性云服务器，Linux操作系统时为root用户的初始密码，Windows操作系统时为Administrator用户的初始密码。  接口调用方法：使用adminPass字段，指定管理员帐号的初始登录密码。对于镜像已安装Cloud-init的Linux云服务器，如果需要使用密文密码，可以使用user_data字段进行密码注入。  &gt; 对于安装Cloud-init镜像的Linux云服务器云主机，若指定user_data字段，则adminPass字段无效。
+     * 创建一台或多台云服务器。  指该接口兼容《弹性云服务器接口参考》创建云服务器v1的功能，同时合入新功能，支持创建包年/包月的弹性云服务器。  弹性云服务器的登录鉴权方式包括两种：密钥对、密码。为安全起见，推荐使用密钥对方式。  - 密钥对  指使用密钥对作为弹性云服务器的鉴权方式。  接口调用方法：使用key_name字段，指定弹性云服务器登录时使用的密钥文件。  - 密码  指使用设置初始密码方式作为弹性云服务器的鉴权方式，此时，您可以通过用户名密码方式登录弹性云服务器，Linux操作系统时为root用户的初始密码，Windows操作系统时为Administrator用户的初始密码。  接口调用方法：使用adminPass字段，指定管理员帐号的初始登录密码。对于镜像已安装Cloud-init的Linux云服务器，如果需要使用密文密码，可以使用user_data字段进行密码注入。  &gt; 对于安装Cloud-init镜像的Linux云服务器云主机，若指定user_data字段，则adminPass字段无效。  购买操作示例： - [使用API购买ECS过程中常见问题及处理方法](https://support.huaweicloud.com/api-ecs/ecs_04_0007.html) - [获取Token并检验Token的有效期 ](https://support.huaweicloud.com/api-ecs/ecs_04_0008.html)
      *
      * @param $request 请求对象
      * @return response
@@ -822,7 +810,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -884,7 +871,6 @@ class EcsClient extends Client
         if ($localVarParams['serverGroupId'] !== null) {
             $pathParams['server_group_id'] = $localVarParams['serverGroupId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -949,7 +935,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -1014,7 +999,6 @@ class EcsClient extends Client
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -1076,7 +1060,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1144,7 +1127,6 @@ class EcsClient extends Client
         if ($localVarParams['volumeId'] !== null) {
             $pathParams['volume_id'] = $localVarParams['volumeId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1206,7 +1188,6 @@ class EcsClient extends Client
         if ($localVarParams['availabilityZone'] !== null) {
             $queryParams['availability_zone'] = $localVarParams['availabilityZone'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1286,7 +1267,6 @@ class EcsClient extends Client
         if ($localVarParams['sourceFlavorName'] !== null) {
             $queryParams['source_flavor_name'] = $localVarParams['sourceFlavorName'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1348,7 +1328,6 @@ class EcsClient extends Client
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1413,7 +1392,6 @@ class EcsClient extends Client
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1475,7 +1453,6 @@ class EcsClient extends Client
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1564,7 +1541,6 @@ class EcsClient extends Client
         if ($localVarParams['tags'] !== null) {
             $queryParams['tags'] = $localVarParams['tags'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1629,7 +1605,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -1694,7 +1669,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1759,7 +1733,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1821,7 +1794,6 @@ class EcsClient extends Client
         if ($localVarParams['keypairName'] !== null) {
             $pathParams['keypair_name'] = $localVarParams['keypairName'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -1883,7 +1855,6 @@ class EcsClient extends Client
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -1948,7 +1919,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -2007,7 +1977,6 @@ class EcsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2075,7 +2044,6 @@ class EcsClient extends Client
         if ($localVarParams['openStackApiVersion'] !== null) {
             $headerParams['open_stack_api_version'] = $localVarParams['openStackApiVersion'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2137,7 +2105,6 @@ class EcsClient extends Client
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2235,7 +2202,6 @@ class EcsClient extends Client
         if ($localVarParams['openStackApiVersion'] !== null) {
             $headerParams['open_stack_api_version'] = $localVarParams['openStackApiVersion'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2300,7 +2266,6 @@ class EcsClient extends Client
         if ($localVarParams['keypairName'] !== null) {
             $pathParams['keypair_name'] = $localVarParams['keypairName'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2365,7 +2330,6 @@ class EcsClient extends Client
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2430,7 +2394,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2495,7 +2458,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -2560,7 +2522,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2625,7 +2586,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2687,7 +2647,6 @@ class EcsClient extends Client
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2749,7 +2708,6 @@ class EcsClient extends Client
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2811,7 +2769,6 @@ class EcsClient extends Client
         if ($localVarParams['serverGroupId'] !== null) {
             $pathParams['server_group_id'] = $localVarParams['serverGroupId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2870,7 +2827,6 @@ class EcsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2935,7 +2891,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2997,7 +2952,6 @@ class EcsClient extends Client
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -3062,7 +3016,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -3127,7 +3080,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -3192,7 +3144,6 @@ class EcsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -3254,7 +3205,6 @@ class EcsClient extends Client
         if ($localVarParams['jobId'] !== null) {
             $pathParams['job_id'] = $localVarParams['jobId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']

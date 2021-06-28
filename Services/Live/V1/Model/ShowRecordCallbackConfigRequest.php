@@ -7,9 +7,8 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListRecordConfigsResponse implements ModelInterface, ArrayAccess
+class ShowRecordCallbackConfigRequest implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,30 +16,26 @@ class ListRecordConfigsResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListRecordConfigsResponse';
+    protected static $openAPIModelName = 'ShowRecordCallbackConfigRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  查询结果的总元素数量
-    * recordConfig  录制配置数组
+    * id  配置ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'total' => 'int',
-            'recordConfig' => '\HuaweiCloud\SDK\Live\V1\Model\RecordConfigInfo[]'
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  查询结果的总元素数量
-    * recordConfig  录制配置数组
+    * id  配置ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'total' => 'int32',
-        'recordConfig' => null
+        'id' => null
     ];
 
     /**
@@ -66,38 +61,32 @@ class ListRecordConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  查询结果的总元素数量
-    * recordConfig  录制配置数组
+    * id  配置ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'total' => 'total',
-            'recordConfig' => 'record_config'
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  查询结果的总元素数量
-    * recordConfig  录制配置数组
+    * id  配置ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'total' => 'setTotal',
-            'recordConfig' => 'setRecordConfig'
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  查询结果的总元素数量
-    * recordConfig  录制配置数组
+    * id  配置ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'total' => 'getTotal',
-            'recordConfig' => 'getRecordConfig'
+            'id' => 'getId'
     ];
 
     /**
@@ -158,8 +147,7 @@ class ListRecordConfigsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
-        $this->container['recordConfig'] = isset($data['recordConfig']) ? $data['recordConfig'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -170,8 +158,14 @@ class ListRecordConfigsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['total']) && ($this->container['total'] < 0)) {
-                $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+            if ((mb_strlen($this->container['id']) > 128)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 128.";
+            }
+            if ((mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -188,50 +182,26 @@ class ListRecordConfigsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets total
-    *  查询结果的总元素数量
+    * Gets id
+    *  配置ID
     *
-    * @return int|null
+    * @return string
     */
-    public function getTotal()
+    public function getId()
     {
-        return $this->container['total'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets total
+    * Sets id
     *
-    * @param int|null $total 查询结果的总元素数量
+    * @param string $id 配置ID
     *
     * @return $this
     */
-    public function setTotal($total)
+    public function setId($id)
     {
-        $this->container['total'] = $total;
-        return $this;
-    }
-
-    /**
-    * Gets recordConfig
-    *  录制配置数组
-    *
-    * @return \HuaweiCloud\SDK\Live\V1\Model\RecordConfigInfo[]|null
-    */
-    public function getRecordConfig()
-    {
-        return $this->container['recordConfig'];
-    }
-
-    /**
-    * Sets recordConfig
-    *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\RecordConfigInfo[]|null $recordConfig 录制配置数组
-    *
-    * @return $this
-    */
-    public function setRecordConfig($recordConfig)
-    {
-        $this->container['recordConfig'] = $recordConfig;
+        $this->container['id'] = $id;
         return $this;
     }
 

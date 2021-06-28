@@ -20,8 +20,8 @@ class ActionIoTAForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regionName  IoTA服务对应的region区域
-    * projectId  IoTA服务对应的projectId信息
+    * regionName  **参数说明**：IoTA服务对应的region区域。
+    * projectId  **参数说明**：IoTA服务对应的projectId信息。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ActionIoTAForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regionName  IoTA服务对应的region区域
-    * projectId  IoTA服务对应的projectId信息
+    * regionName  **参数说明**：IoTA服务对应的region区域。
+    * projectId  **参数说明**：IoTA服务对应的projectId信息。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ActionIoTAForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regionName  IoTA服务对应的region区域
-    * projectId  IoTA服务对应的projectId信息
+    * regionName  **参数说明**：IoTA服务对应的region区域。
+    * projectId  **参数说明**：IoTA服务对应的projectId信息。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ActionIoTAForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regionName  IoTA服务对应的region区域
-    * projectId  IoTA服务对应的projectId信息
+    * regionName  **参数说明**：IoTA服务对应的region区域。
+    * projectId  **参数说明**：IoTA服务对应的projectId信息。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ActionIoTAForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regionName  IoTA服务对应的region区域
-    * projectId  IoTA服务对应的projectId信息
+    * regionName  **参数说明**：IoTA服务对应的region区域。
+    * projectId  **参数说明**：IoTA服务对应的projectId信息。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ActionIoTAForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionName
-    *  IoTA服务对应的region区域
+    *  **参数说明**：IoTA服务对应的region区域。
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class ActionIoTAForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets regionName
     *
-    * @param string $regionName IoTA服务对应的region区域
+    * @param string $regionName **参数说明**：IoTA服务对应的region区域。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ActionIoTAForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  IoTA服务对应的projectId信息
+    *  **参数说明**：IoTA服务对应的projectId信息。
     *
     * @return string
     */
@@ -233,7 +233,7 @@ class ActionIoTAForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId IoTA服务对应的projectId信息
+    * @param string $projectId **参数说明**：IoTA服务对应的projectId信息。
     *
     * @return $this
     */

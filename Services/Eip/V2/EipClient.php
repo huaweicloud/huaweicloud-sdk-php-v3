@@ -60,7 +60,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -122,7 +121,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -184,7 +182,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -246,7 +243,6 @@ class EipClient extends Client
         if ($localVarParams['bandwidthId'] !== null) {
             $pathParams['bandwidth_id'] = $localVarParams['bandwidthId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -317,7 +313,6 @@ class EipClient extends Client
         if ($localVarParams['shareType'] !== null) {
             $queryParams['share_type'] = $localVarParams['shareType'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -379,7 +374,6 @@ class EipClient extends Client
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -444,7 +438,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -506,7 +499,6 @@ class EipClient extends Client
         if ($localVarParams['bandwidthId'] !== null) {
             $pathParams['bandwidth_id'] = $localVarParams['bandwidthId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -571,7 +563,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -636,7 +627,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json-1', 'application/json-2']
@@ -701,7 +691,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -766,7 +755,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -828,7 +816,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json-1', 'application/json-2']
@@ -890,7 +877,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json-1', 'application/json-2']
@@ -955,7 +941,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -1017,7 +1002,6 @@ class EipClient extends Client
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -1082,7 +1066,6 @@ class EipClient extends Client
         if ($localVarParams['key'] !== null) {
             $pathParams['key'] = $localVarParams['key'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -1141,7 +1124,6 @@ class EipClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1224,7 +1206,6 @@ class EipClient extends Client
         if ($localVarParams['id'] !== null) {
             $queryParams['id'] = $localVarParams['id'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1286,7 +1267,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json-1', 'application/json-2']
@@ -1348,7 +1328,6 @@ class EipClient extends Client
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1410,7 +1389,6 @@ class EipClient extends Client
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1475,7 +1453,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json-1', 'application/json-2']
@@ -1537,7 +1514,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1599,7 +1575,6 @@ class EipClient extends Client
         if ($localVarParams['floatingipId'] !== null) {
             $pathParams['floatingip_id'] = $localVarParams['floatingipId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -1688,7 +1663,6 @@ class EipClient extends Client
         if ($localVarParams['floatingNetworkId'] !== null) {
             $queryParams['floating_network_id'] = $localVarParams['floatingNetworkId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1750,7 +1724,6 @@ class EipClient extends Client
         if ($localVarParams['floatingipId'] !== null) {
             $pathParams['floatingip_id'] = $localVarParams['floatingipId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1815,7 +1788,6 @@ class EipClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json-1', 'application/json-2']

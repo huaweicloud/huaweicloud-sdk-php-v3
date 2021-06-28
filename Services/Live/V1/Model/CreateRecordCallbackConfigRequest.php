@@ -7,9 +7,8 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowTrafficResponse implements ModelInterface, ArrayAccess
+class CreateRecordCallbackConfigRequest implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,30 +16,26 @@ class ShowTrafficResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowTrafficResponse';
+    protected static $openAPIModelName = 'CreateRecordCallbackConfigRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  查询结果的总元素数量
-    * trafficInfo  流量信息
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'total' => 'int',
-            'trafficInfo' => '\HuaweiCloud\SDK\Live\V1\Model\TrafficInfo[]'
+            'body' => '\HuaweiCloud\SDK\Live\V1\Model\RecordCallbackConfigRequest'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  查询结果的总元素数量
-    * trafficInfo  流量信息
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'total' => 'int32',
-        'trafficInfo' => null
+        'body' => null
     ];
 
     /**
@@ -66,38 +61,32 @@ class ShowTrafficResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  查询结果的总元素数量
-    * trafficInfo  流量信息
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'total' => 'total',
-            'trafficInfo' => 'traffic_info'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  查询结果的总元素数量
-    * trafficInfo  流量信息
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'total' => 'setTotal',
-            'trafficInfo' => 'setTrafficInfo'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  查询结果的总元素数量
-    * trafficInfo  流量信息
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'total' => 'getTotal',
-            'trafficInfo' => 'getTrafficInfo'
+            'body' => 'getBody'
     ];
 
     /**
@@ -158,8 +147,7 @@ class ShowTrafficResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
-        $this->container['trafficInfo'] = isset($data['trafficInfo']) ? $data['trafficInfo'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -170,9 +158,6 @@ class ShowTrafficResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['total']) && ($this->container['total'] < 0)) {
-                $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -188,50 +173,26 @@ class ShowTrafficResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets total
-    *  查询结果的总元素数量
+    * Gets body
+    *  body
     *
-    * @return int|null
+    * @return \HuaweiCloud\SDK\Live\V1\Model\RecordCallbackConfigRequest|null
     */
-    public function getTotal()
+    public function getBody()
     {
-        return $this->container['total'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets total
+    * Sets body
     *
-    * @param int|null $total 查询结果的总元素数量
+    * @param \HuaweiCloud\SDK\Live\V1\Model\RecordCallbackConfigRequest|null $body body
     *
     * @return $this
     */
-    public function setTotal($total)
+    public function setBody($body)
     {
-        $this->container['total'] = $total;
-        return $this;
-    }
-
-    /**
-    * Gets trafficInfo
-    *  流量信息
-    *
-    * @return \HuaweiCloud\SDK\Live\V1\Model\TrafficInfo[]|null
-    */
-    public function getTrafficInfo()
-    {
-        return $this->container['trafficInfo'];
-    }
-
-    /**
-    * Sets trafficInfo
-    *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\TrafficInfo[]|null $trafficInfo 流量信息
-    *
-    * @return $this
-    */
-    public function setTrafficInfo($trafficInfo)
-    {
-        $this->container['trafficInfo'] = $trafficInfo;
+        $this->container['body'] = $body;
         return $this;
     }
 

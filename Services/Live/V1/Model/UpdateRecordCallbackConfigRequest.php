@@ -7,9 +7,8 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowBandwidthResponse implements ModelInterface, ArrayAccess
+class UpdateRecordCallbackConfigRequest implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,30 +16,30 @@ class ShowBandwidthResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowBandwidthResponse';
+    protected static $openAPIModelName = 'UpdateRecordCallbackConfigRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  查询结果的总元素数量
-    * bandwidthInfo  带宽信息
+    * id  配置ID，在创建配置成功后返回
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'total' => 'int',
-            'bandwidthInfo' => '\HuaweiCloud\SDK\Live\V1\Model\BandwidthInfo[]'
+            'id' => 'string',
+            'body' => '\HuaweiCloud\SDK\Live\V1\Model\RecordCallbackConfigRequest'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  查询结果的总元素数量
-    * bandwidthInfo  带宽信息
+    * id  配置ID，在创建配置成功后返回
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'total' => 'int32',
-        'bandwidthInfo' => null
+        'id' => null,
+        'body' => null
     ];
 
     /**
@@ -66,38 +65,38 @@ class ShowBandwidthResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  查询结果的总元素数量
-    * bandwidthInfo  带宽信息
+    * id  配置ID，在创建配置成功后返回
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'total' => 'total',
-            'bandwidthInfo' => 'bandwidth_info'
+            'id' => 'id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  查询结果的总元素数量
-    * bandwidthInfo  带宽信息
+    * id  配置ID，在创建配置成功后返回
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'total' => 'setTotal',
-            'bandwidthInfo' => 'setBandwidthInfo'
+            'id' => 'setId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  查询结果的总元素数量
-    * bandwidthInfo  带宽信息
+    * id  配置ID，在创建配置成功后返回
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'total' => 'getTotal',
-            'bandwidthInfo' => 'getBandwidthInfo'
+            'id' => 'getId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -158,8 +157,8 @@ class ShowBandwidthResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
-        $this->container['bandwidthInfo'] = isset($data['bandwidthInfo']) ? $data['bandwidthInfo'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -170,8 +169,14 @@ class ShowBandwidthResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['total']) && ($this->container['total'] < 0)) {
-                $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+            if ((mb_strlen($this->container['id']) > 128)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 128.";
+            }
+            if ((mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -188,50 +193,50 @@ class ShowBandwidthResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets total
-    *  查询结果的总元素数量
+    * Gets id
+    *  配置ID，在创建配置成功后返回
     *
-    * @return int|null
+    * @return string
     */
-    public function getTotal()
+    public function getId()
     {
-        return $this->container['total'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets total
+    * Sets id
     *
-    * @param int|null $total 查询结果的总元素数量
+    * @param string $id 配置ID，在创建配置成功后返回
     *
     * @return $this
     */
-    public function setTotal($total)
+    public function setId($id)
     {
-        $this->container['total'] = $total;
+        $this->container['id'] = $id;
         return $this;
     }
 
     /**
-    * Gets bandwidthInfo
-    *  带宽信息
+    * Gets body
+    *  body
     *
-    * @return \HuaweiCloud\SDK\Live\V1\Model\BandwidthInfo[]|null
+    * @return \HuaweiCloud\SDK\Live\V1\Model\RecordCallbackConfigRequest|null
     */
-    public function getBandwidthInfo()
+    public function getBody()
     {
-        return $this->container['bandwidthInfo'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets bandwidthInfo
+    * Sets body
     *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\BandwidthInfo[]|null $bandwidthInfo 带宽信息
+    * @param \HuaweiCloud\SDK\Live\V1\Model\RecordCallbackConfigRequest|null $body body
     *
     * @return $this
     */
-    public function setBandwidthInfo($bandwidthInfo)
+    public function setBody($body)
     {
-        $this->container['bandwidthInfo'] = $bandwidthInfo;
+        $this->container['body'] = $body;
         return $this;
     }
 

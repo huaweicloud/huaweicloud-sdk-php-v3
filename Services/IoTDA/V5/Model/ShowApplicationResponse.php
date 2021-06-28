@@ -25,13 +25,6 @@ class ShowApplicationResponse implements ModelInterface, ArrayAccess
     * appName  资源空间名称。
     * createTime  资源空间创建时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * defaultApp  是否为默认资源空间
-    * appType  app的类型，标准版：Junior | 高级版：Normal
-    * username  用户名。
-    * permission  app与用户的授权关系时，响应为：all | bind | edit | query ，其中bind权限类似于ALL权限，属于子用户权限。
-    * lastInstanceId  迁移前实例ID。
-    * currentInstanceId  当前实例ID。
-    * serviceName  对接的服务名
-    * freezed  是否冻结
     *
     * @var string[]
     */
@@ -39,14 +32,7 @@ class ShowApplicationResponse implements ModelInterface, ArrayAccess
             'appId' => 'string',
             'appName' => 'string',
             'createTime' => 'string',
-            'defaultApp' => 'bool',
-            'appType' => 'string',
-            'username' => 'string',
-            'permission' => 'string',
-            'lastInstanceId' => 'string',
-            'currentInstanceId' => 'string',
-            'serviceName' => 'string',
-            'freezed' => 'bool'
+            'defaultApp' => 'bool'
     ];
 
     /**
@@ -55,13 +41,6 @@ class ShowApplicationResponse implements ModelInterface, ArrayAccess
     * appName  资源空间名称。
     * createTime  资源空间创建时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * defaultApp  是否为默认资源空间
-    * appType  app的类型，标准版：Junior | 高级版：Normal
-    * username  用户名。
-    * permission  app与用户的授权关系时，响应为：all | bind | edit | query ，其中bind权限类似于ALL权限，属于子用户权限。
-    * lastInstanceId  迁移前实例ID。
-    * currentInstanceId  当前实例ID。
-    * serviceName  对接的服务名
-    * freezed  是否冻结
     *
     * @var string[]
     */
@@ -69,14 +48,7 @@ class ShowApplicationResponse implements ModelInterface, ArrayAccess
         'appId' => null,
         'appName' => null,
         'createTime' => null,
-        'defaultApp' => null,
-        'appType' => null,
-        'username' => null,
-        'permission' => null,
-        'lastInstanceId' => null,
-        'currentInstanceId' => null,
-        'serviceName' => null,
-        'freezed' => null
+        'defaultApp' => null
     ];
 
     /**
@@ -106,13 +78,6 @@ class ShowApplicationResponse implements ModelInterface, ArrayAccess
     * appName  资源空间名称。
     * createTime  资源空间创建时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * defaultApp  是否为默认资源空间
-    * appType  app的类型，标准版：Junior | 高级版：Normal
-    * username  用户名。
-    * permission  app与用户的授权关系时，响应为：all | bind | edit | query ，其中bind权限类似于ALL权限，属于子用户权限。
-    * lastInstanceId  迁移前实例ID。
-    * currentInstanceId  当前实例ID。
-    * serviceName  对接的服务名
-    * freezed  是否冻结
     *
     * @var string[]
     */
@@ -120,14 +85,7 @@ class ShowApplicationResponse implements ModelInterface, ArrayAccess
             'appId' => 'app_id',
             'appName' => 'app_name',
             'createTime' => 'create_time',
-            'defaultApp' => 'default_app',
-            'appType' => 'app_type',
-            'username' => 'username',
-            'permission' => 'permission',
-            'lastInstanceId' => 'last_instance_id',
-            'currentInstanceId' => 'current_instance_id',
-            'serviceName' => 'service_name',
-            'freezed' => 'freezed'
+            'defaultApp' => 'default_app'
     ];
 
     /**
@@ -136,13 +94,6 @@ class ShowApplicationResponse implements ModelInterface, ArrayAccess
     * appName  资源空间名称。
     * createTime  资源空间创建时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * defaultApp  是否为默认资源空间
-    * appType  app的类型，标准版：Junior | 高级版：Normal
-    * username  用户名。
-    * permission  app与用户的授权关系时，响应为：all | bind | edit | query ，其中bind权限类似于ALL权限，属于子用户权限。
-    * lastInstanceId  迁移前实例ID。
-    * currentInstanceId  当前实例ID。
-    * serviceName  对接的服务名
-    * freezed  是否冻结
     *
     * @var string[]
     */
@@ -150,14 +101,7 @@ class ShowApplicationResponse implements ModelInterface, ArrayAccess
             'appId' => 'setAppId',
             'appName' => 'setAppName',
             'createTime' => 'setCreateTime',
-            'defaultApp' => 'setDefaultApp',
-            'appType' => 'setAppType',
-            'username' => 'setUsername',
-            'permission' => 'setPermission',
-            'lastInstanceId' => 'setLastInstanceId',
-            'currentInstanceId' => 'setCurrentInstanceId',
-            'serviceName' => 'setServiceName',
-            'freezed' => 'setFreezed'
+            'defaultApp' => 'setDefaultApp'
     ];
 
     /**
@@ -166,13 +110,6 @@ class ShowApplicationResponse implements ModelInterface, ArrayAccess
     * appName  资源空间名称。
     * createTime  资源空间创建时间，格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
     * defaultApp  是否为默认资源空间
-    * appType  app的类型，标准版：Junior | 高级版：Normal
-    * username  用户名。
-    * permission  app与用户的授权关系时，响应为：all | bind | edit | query ，其中bind权限类似于ALL权限，属于子用户权限。
-    * lastInstanceId  迁移前实例ID。
-    * currentInstanceId  当前实例ID。
-    * serviceName  对接的服务名
-    * freezed  是否冻结
     *
     * @var string[]
     */
@@ -180,14 +117,7 @@ class ShowApplicationResponse implements ModelInterface, ArrayAccess
             'appId' => 'getAppId',
             'appName' => 'getAppName',
             'createTime' => 'getCreateTime',
-            'defaultApp' => 'getDefaultApp',
-            'appType' => 'getAppType',
-            'username' => 'getUsername',
-            'permission' => 'getPermission',
-            'lastInstanceId' => 'getLastInstanceId',
-            'currentInstanceId' => 'getCurrentInstanceId',
-            'serviceName' => 'getServiceName',
-            'freezed' => 'getFreezed'
+            'defaultApp' => 'getDefaultApp'
     ];
 
     /**
@@ -252,13 +182,6 @@ class ShowApplicationResponse implements ModelInterface, ArrayAccess
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['defaultApp'] = isset($data['defaultApp']) ? $data['defaultApp'] : null;
-        $this->container['appType'] = isset($data['appType']) ? $data['appType'] : null;
-        $this->container['username'] = isset($data['username']) ? $data['username'] : null;
-        $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
-        $this->container['lastInstanceId'] = isset($data['lastInstanceId']) ? $data['lastInstanceId'] : null;
-        $this->container['currentInstanceId'] = isset($data['currentInstanceId']) ? $data['currentInstanceId'] : null;
-        $this->container['serviceName'] = isset($data['serviceName']) ? $data['serviceName'] : null;
-        $this->container['freezed'] = isset($data['freezed']) ? $data['freezed'] : null;
     }
 
     /**
@@ -286,42 +209,6 @@ class ShowApplicationResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) < 1)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['appType']) && (mb_strlen($this->container['appType']) > 32)) {
-                $invalidProperties[] = "invalid value for 'appType', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['appType']) && (mb_strlen($this->container['appType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'appType', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['username']) && (mb_strlen($this->container['username']) > 64)) {
-                $invalidProperties[] = "invalid value for 'username', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['username']) && (mb_strlen($this->container['username']) < 0)) {
-                $invalidProperties[] = "invalid value for 'username', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['permission']) && (mb_strlen($this->container['permission']) > 64)) {
-                $invalidProperties[] = "invalid value for 'permission', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['permission']) && (mb_strlen($this->container['permission']) < 0)) {
-                $invalidProperties[] = "invalid value for 'permission', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['lastInstanceId']) && (mb_strlen($this->container['lastInstanceId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'lastInstanceId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['lastInstanceId']) && (mb_strlen($this->container['lastInstanceId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'lastInstanceId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['currentInstanceId']) && (mb_strlen($this->container['currentInstanceId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'currentInstanceId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['currentInstanceId']) && (mb_strlen($this->container['currentInstanceId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'currentInstanceId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['serviceName']) && (mb_strlen($this->container['serviceName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'serviceName', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['serviceName']) && (mb_strlen($this->container['serviceName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'serviceName', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -430,174 +317,6 @@ class ShowApplicationResponse implements ModelInterface, ArrayAccess
     public function setDefaultApp($defaultApp)
     {
         $this->container['defaultApp'] = $defaultApp;
-        return $this;
-    }
-
-    /**
-    * Gets appType
-    *  app的类型，标准版：Junior | 高级版：Normal
-    *
-    * @return string|null
-    */
-    public function getAppType()
-    {
-        return $this->container['appType'];
-    }
-
-    /**
-    * Sets appType
-    *
-    * @param string|null $appType app的类型，标准版：Junior | 高级版：Normal
-    *
-    * @return $this
-    */
-    public function setAppType($appType)
-    {
-        $this->container['appType'] = $appType;
-        return $this;
-    }
-
-    /**
-    * Gets username
-    *  用户名。
-    *
-    * @return string|null
-    */
-    public function getUsername()
-    {
-        return $this->container['username'];
-    }
-
-    /**
-    * Sets username
-    *
-    * @param string|null $username 用户名。
-    *
-    * @return $this
-    */
-    public function setUsername($username)
-    {
-        $this->container['username'] = $username;
-        return $this;
-    }
-
-    /**
-    * Gets permission
-    *  app与用户的授权关系时，响应为：all | bind | edit | query ，其中bind权限类似于ALL权限，属于子用户权限。
-    *
-    * @return string|null
-    */
-    public function getPermission()
-    {
-        return $this->container['permission'];
-    }
-
-    /**
-    * Sets permission
-    *
-    * @param string|null $permission app与用户的授权关系时，响应为：all | bind | edit | query ，其中bind权限类似于ALL权限，属于子用户权限。
-    *
-    * @return $this
-    */
-    public function setPermission($permission)
-    {
-        $this->container['permission'] = $permission;
-        return $this;
-    }
-
-    /**
-    * Gets lastInstanceId
-    *  迁移前实例ID。
-    *
-    * @return string|null
-    */
-    public function getLastInstanceId()
-    {
-        return $this->container['lastInstanceId'];
-    }
-
-    /**
-    * Sets lastInstanceId
-    *
-    * @param string|null $lastInstanceId 迁移前实例ID。
-    *
-    * @return $this
-    */
-    public function setLastInstanceId($lastInstanceId)
-    {
-        $this->container['lastInstanceId'] = $lastInstanceId;
-        return $this;
-    }
-
-    /**
-    * Gets currentInstanceId
-    *  当前实例ID。
-    *
-    * @return string|null
-    */
-    public function getCurrentInstanceId()
-    {
-        return $this->container['currentInstanceId'];
-    }
-
-    /**
-    * Sets currentInstanceId
-    *
-    * @param string|null $currentInstanceId 当前实例ID。
-    *
-    * @return $this
-    */
-    public function setCurrentInstanceId($currentInstanceId)
-    {
-        $this->container['currentInstanceId'] = $currentInstanceId;
-        return $this;
-    }
-
-    /**
-    * Gets serviceName
-    *  对接的服务名
-    *
-    * @return string|null
-    */
-    public function getServiceName()
-    {
-        return $this->container['serviceName'];
-    }
-
-    /**
-    * Sets serviceName
-    *
-    * @param string|null $serviceName 对接的服务名
-    *
-    * @return $this
-    */
-    public function setServiceName($serviceName)
-    {
-        $this->container['serviceName'] = $serviceName;
-        return $this;
-    }
-
-    /**
-    * Gets freezed
-    *  是否冻结
-    *
-    * @return bool|null
-    */
-    public function getFreezed()
-    {
-        return $this->container['freezed'];
-    }
-
-    /**
-    * Sets freezed
-    *
-    * @param bool|null $freezed 是否冻结
-    *
-    * @return $this
-    */
-    public function setFreezed($freezed)
-    {
-        $this->container['freezed'] = $freezed;
         return $this;
     }
 

@@ -34,6 +34,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * influxdbForwarding  influxdbForwarding
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
+    * pulsarForwarding  pulsarForwarding
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'ltsForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\LtsForwarding',
             'influxdbForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\InfluxDBForwarding',
             'functiongraphForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\FunctionGraphForwarding',
-            'mrsKafkaForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\MrsKafkaForwarding'
+            'mrsKafkaForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\MrsKafkaForwarding',
+            'pulsarForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\PulsarForwarding'
     ];
 
     /**
@@ -70,6 +72,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * influxdbForwarding  influxdbForwarding
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
+    * pulsarForwarding  pulsarForwarding
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class ChannelDetail implements ModelInterface, ArrayAccess
         'ltsForwarding' => null,
         'influxdbForwarding' => null,
         'functiongraphForwarding' => null,
-        'mrsKafkaForwarding' => null
+        'mrsKafkaForwarding' => null,
+        'pulsarForwarding' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * influxdbForwarding  influxdbForwarding
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
+    * pulsarForwarding  pulsarForwarding
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'ltsForwarding' => 'lts_forwarding',
             'influxdbForwarding' => 'influxdb_forwarding',
             'functiongraphForwarding' => 'functiongraph_forwarding',
-            'mrsKafkaForwarding' => 'mrs_kafka_forwarding'
+            'mrsKafkaForwarding' => 'mrs_kafka_forwarding',
+            'pulsarForwarding' => 'pulsar_forwarding'
     ];
 
     /**
@@ -163,6 +169,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * influxdbForwarding  influxdbForwarding
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
+    * pulsarForwarding  pulsarForwarding
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'ltsForwarding' => 'setLtsForwarding',
             'influxdbForwarding' => 'setInfluxdbForwarding',
             'functiongraphForwarding' => 'setFunctiongraphForwarding',
-            'mrsKafkaForwarding' => 'setMrsKafkaForwarding'
+            'mrsKafkaForwarding' => 'setMrsKafkaForwarding',
+            'pulsarForwarding' => 'setPulsarForwarding'
     ];
 
     /**
@@ -199,6 +207,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * influxdbForwarding  influxdbForwarding
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
+    * pulsarForwarding  pulsarForwarding
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'ltsForwarding' => 'getLtsForwarding',
             'influxdbForwarding' => 'getInfluxdbForwarding',
             'functiongraphForwarding' => 'getFunctiongraphForwarding',
-            'mrsKafkaForwarding' => 'getMrsKafkaForwarding'
+            'mrsKafkaForwarding' => 'getMrsKafkaForwarding',
+            'pulsarForwarding' => 'getPulsarForwarding'
     ];
 
     /**
@@ -291,6 +301,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
         $this->container['influxdbForwarding'] = isset($data['influxdbForwarding']) ? $data['influxdbForwarding'] : null;
         $this->container['functiongraphForwarding'] = isset($data['functiongraphForwarding']) ? $data['functiongraphForwarding'] : null;
         $this->container['mrsKafkaForwarding'] = isset($data['mrsKafkaForwarding']) ? $data['mrsKafkaForwarding'] : null;
+        $this->container['pulsarForwarding'] = isset($data['pulsarForwarding']) ? $data['pulsarForwarding'] : null;
     }
 
     /**
@@ -648,6 +659,30 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     public function setMrsKafkaForwarding($mrsKafkaForwarding)
     {
         $this->container['mrsKafkaForwarding'] = $mrsKafkaForwarding;
+        return $this;
+    }
+
+    /**
+    * Gets pulsarForwarding
+    *  pulsarForwarding
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\PulsarForwarding|null
+    */
+    public function getPulsarForwarding()
+    {
+        return $this->container['pulsarForwarding'];
+    }
+
+    /**
+    * Sets pulsarForwarding
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\PulsarForwarding|null $pulsarForwarding pulsarForwarding
+    *
+    * @return $this
+    */
+    public function setPulsarForwarding($pulsarForwarding)
+    {
+        $this->container['pulsarForwarding'] = $pulsarForwarding;
         return $this;
     }
 

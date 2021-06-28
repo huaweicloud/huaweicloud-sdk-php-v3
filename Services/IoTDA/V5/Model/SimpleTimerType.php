@@ -20,9 +20,9 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * startTime  规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
-    * repeatInterval  规则触发的重复时间间隔，单位为秒。
-    * repeatCount  规则触发的重复次数。
+    * startTime  **参数说明**：规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * repeatInterval  **参数说明**：规则触发的重复时间间隔，单位为秒。
+    * repeatCount  **参数说明**：规则触发的重复次数。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * startTime  规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
-    * repeatInterval  规则触发的重复时间间隔，单位为秒。
-    * repeatCount  规则触发的重复次数。
+    * startTime  **参数说明**：规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * repeatInterval  **参数说明**：规则触发的重复时间间隔，单位为秒。
+    * repeatCount  **参数说明**：规则触发的重复次数。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * startTime  规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
-    * repeatInterval  规则触发的重复时间间隔，单位为秒。
-    * repeatCount  规则触发的重复次数。
+    * startTime  **参数说明**：规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * repeatInterval  **参数说明**：规则触发的重复时间间隔，单位为秒。
+    * repeatCount  **参数说明**：规则触发的重复次数。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * startTime  规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
-    * repeatInterval  规则触发的重复时间间隔，单位为秒。
-    * repeatCount  规则触发的重复次数。
+    * startTime  **参数说明**：规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * repeatInterval  **参数说明**：规则触发的重复时间间隔，单位为秒。
+    * repeatCount  **参数说明**：规则触发的重复次数。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * startTime  规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
-    * repeatInterval  规则触发的重复时间间隔，单位为秒。
-    * repeatCount  规则触发的重复次数。
+    * startTime  **参数说明**：规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * repeatInterval  **参数说明**：规则触发的重复时间间隔，单位为秒。
+    * repeatCount  **参数说明**：规则触发的重复次数。
     *
     * @var string[]
     */
@@ -220,7 +220,7 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    *  **参数说明**：规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
     * @return string
     */
@@ -232,7 +232,7 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string $startTime 规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * @param string $startTime **参数说明**：规则触发的开始时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Gets repeatInterval
-    *  规则触发的重复时间间隔，单位为秒。
+    *  **参数说明**：规则触发的重复时间间隔，单位为秒。
     *
     * @return int
     */
@@ -256,7 +256,7 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
     /**
     * Sets repeatInterval
     *
-    * @param int $repeatInterval 规则触发的重复时间间隔，单位为秒。
+    * @param int $repeatInterval **参数说明**：规则触发的重复时间间隔，单位为秒。
     *
     * @return $this
     */
@@ -268,7 +268,7 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Gets repeatCount
-    *  规则触发的重复次数。
+    *  **参数说明**：规则触发的重复次数。
     *
     * @return int
     */
@@ -280,7 +280,7 @@ class SimpleTimerType implements ModelInterface, ArrayAccess
     /**
     * Sets repeatCount
     *
-    * @param int $repeatCount 规则触发的重复次数。
+    * @param int $repeatCount **参数说明**：规则触发的重复次数。
     *
     * @return $this
     */

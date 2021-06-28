@@ -20,32 +20,28 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * deviceId  下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
-    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * deviceId  **参数说明**：下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'deviceId' => 'string',
-            'stageAuthToken' => 'string',
             'instanceId' => 'string',
             'body' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DevicePropertiesRequest'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * deviceId  下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
-    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * deviceId  **参数说明**：下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'deviceId' => null,
-        'stageAuthToken' => null,
         'instanceId' => null,
         'body' => null
     ];
@@ -73,48 +69,42 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * deviceId  下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
-    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * deviceId  **参数说明**：下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'deviceId' => 'device_id',
-            'stageAuthToken' => 'Stage-Auth-Token',
             'instanceId' => 'Instance-Id',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * deviceId  下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
-    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * deviceId  **参数说明**：下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
             'deviceId' => 'setDeviceId',
-            'stageAuthToken' => 'setStageAuthToken',
             'instanceId' => 'setInstanceId',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * deviceId  下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
-    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * deviceId  **参数说明**：下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
             'deviceId' => 'getDeviceId',
-            'stageAuthToken' => 'getStageAuthToken',
             'instanceId' => 'getInstanceId',
             'body' => 'getBody'
     ];
@@ -178,7 +168,6 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : null;
-        $this->container['stageAuthToken'] = isset($data['stageAuthToken']) ? $data['stageAuthToken'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
@@ -216,7 +205,7 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceId
-    *  下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
+    *  **参数说明**：下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return string
     */
@@ -228,7 +217,7 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets deviceId
     *
-    * @param string $deviceId 下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
+    * @param string $deviceId **参数说明**：下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return $this
     */
@@ -239,32 +228,8 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets stageAuthToken
-    *  Stage用户的Token, 仅提供给IoStage服务使用
-    *
-    * @return string|null
-    */
-    public function getStageAuthToken()
-    {
-        return $this->container['stageAuthToken'];
-    }
-
-    /**
-    * Sets stageAuthToken
-    *
-    * @param string|null $stageAuthToken Stage用户的Token, 仅提供给IoStage服务使用
-    *
-    * @return $this
-    */
-    public function setStageAuthToken($stageAuthToken)
-    {
-        $this->container['stageAuthToken'] = $stageAuthToken;
-        return $this;
-    }
-
-    /**
     * Gets instanceId
-    *  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    *  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return string|null
     */
@@ -276,7 +241,7 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * @param string|null $instanceId **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return $this
     */

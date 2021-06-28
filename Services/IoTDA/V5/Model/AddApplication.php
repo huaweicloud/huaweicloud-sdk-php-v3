@@ -20,34 +20,22 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * appName  资源空间名称。
-    * appId  资源空间ID。
-    * instanceId  迁移前实例ID。
-    * serviceName  对接的服务名,IoTDA代表华为云设备接入云服务，CTNBGW代表天翼云设备接入服务
+    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'appName' => 'string',
-            'appId' => 'string',
-            'instanceId' => 'string',
-            'serviceName' => 'string'
+            'appName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * appName  资源空间名称。
-    * appId  资源空间ID。
-    * instanceId  迁移前实例ID。
-    * serviceName  对接的服务名,IoTDA代表华为云设备接入云服务，CTNBGW代表天翼云设备接入服务
+    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'appName' => null,
-        'appId' => null,
-        'instanceId' => null,
-        'serviceName' => null
+        'appName' => null
     ];
 
     /**
@@ -73,50 +61,32 @@ class AddApplication implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * appName  资源空间名称。
-    * appId  资源空间ID。
-    * instanceId  迁移前实例ID。
-    * serviceName  对接的服务名,IoTDA代表华为云设备接入云服务，CTNBGW代表天翼云设备接入服务
+    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'appName' => 'app_name',
-            'appId' => 'app_id',
-            'instanceId' => 'instance_id',
-            'serviceName' => 'service_name'
+            'appName' => 'app_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * appName  资源空间名称。
-    * appId  资源空间ID。
-    * instanceId  迁移前实例ID。
-    * serviceName  对接的服务名,IoTDA代表华为云设备接入云服务，CTNBGW代表天翼云设备接入服务
+    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @var string[]
     */
     protected static $setters = [
-            'appName' => 'setAppName',
-            'appId' => 'setAppId',
-            'instanceId' => 'setInstanceId',
-            'serviceName' => 'setServiceName'
+            'appName' => 'setAppName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * appName  资源空间名称。
-    * appId  资源空间ID。
-    * instanceId  迁移前实例ID。
-    * serviceName  对接的服务名,IoTDA代表华为云设备接入云服务，CTNBGW代表天翼云设备接入服务
+    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @var string[]
     */
     protected static $getters = [
-            'appName' => 'getAppName',
-            'appId' => 'getAppId',
-            'instanceId' => 'getInstanceId',
-            'serviceName' => 'getServiceName'
+            'appName' => 'getAppName'
     ];
 
     /**
@@ -178,9 +148,6 @@ class AddApplication implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
-        $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['serviceName'] = isset($data['serviceName']) ? $data['serviceName'] : null;
     }
 
     /**
@@ -203,33 +170,6 @@ class AddApplication implements ModelInterface, ArrayAccess
             if (!preg_match("/^[a-zA-Z0-9_]*$/", $this->container['appName'])) {
                 $invalidProperties[] = "invalid value for 'appName', must be conform to the pattern /^[a-zA-Z0-9_]*$/.";
             }
-            if (!is_null($this->container['appId']) && (mb_strlen($this->container['appId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'appId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['appId']) && (mb_strlen($this->container['appId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'appId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['appId']) && !preg_match("/^[a-zA-Z0-9_-]*$/", $this->container['appId'])) {
-                $invalidProperties[] = "invalid value for 'appId', must be conform to the pattern /^[a-zA-Z0-9_-]*$/.";
-            }
-            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['instanceId']) && !preg_match("/^[a-zA-Z0-9_-]*$/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-zA-Z0-9_-]*$/.";
-            }
-            if (!is_null($this->container['serviceName']) && (mb_strlen($this->container['serviceName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'serviceName', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['serviceName']) && (mb_strlen($this->container['serviceName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'serviceName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['serviceName']) && !preg_match("/IoTDA|CTNBGW/", $this->container['serviceName'])) {
-                $invalidProperties[] = "invalid value for 'serviceName', must be conform to the pattern /IoTDA|CTNBGW/.";
-            }
         return $invalidProperties;
     }
 
@@ -246,7 +186,7 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
-    *  资源空间名称。
+    *  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return string
     */
@@ -258,85 +198,13 @@ class AddApplication implements ModelInterface, ArrayAccess
     /**
     * Sets appName
     *
-    * @param string $appName 资源空间名称。
+    * @param string $appName **参数说明**：资源空间名称。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return $this
     */
     public function setAppName($appName)
     {
         $this->container['appName'] = $appName;
-        return $this;
-    }
-
-    /**
-    * Gets appId
-    *  资源空间ID。
-    *
-    * @return string|null
-    */
-    public function getAppId()
-    {
-        return $this->container['appId'];
-    }
-
-    /**
-    * Sets appId
-    *
-    * @param string|null $appId 资源空间ID。
-    *
-    * @return $this
-    */
-    public function setAppId($appId)
-    {
-        $this->container['appId'] = $appId;
-        return $this;
-    }
-
-    /**
-    * Gets instanceId
-    *  迁移前实例ID。
-    *
-    * @return string|null
-    */
-    public function getInstanceId()
-    {
-        return $this->container['instanceId'];
-    }
-
-    /**
-    * Sets instanceId
-    *
-    * @param string|null $instanceId 迁移前实例ID。
-    *
-    * @return $this
-    */
-    public function setInstanceId($instanceId)
-    {
-        $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
-    * Gets serviceName
-    *  对接的服务名,IoTDA代表华为云设备接入云服务，CTNBGW代表天翼云设备接入服务
-    *
-    * @return string|null
-    */
-    public function getServiceName()
-    {
-        return $this->container['serviceName'];
-    }
-
-    /**
-    * Sets serviceName
-    *
-    * @param string|null $serviceName 对接的服务名,IoTDA代表华为云设备接入云服务，CTNBGW代表天翼云设备接入服务
-    *
-    * @return $this
-    */
-    public function setServiceName($serviceName)
-    {
-        $this->container['serviceName'] = $serviceName;
         return $this;
     }
 

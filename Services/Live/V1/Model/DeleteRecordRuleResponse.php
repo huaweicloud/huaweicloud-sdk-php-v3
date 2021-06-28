@@ -7,8 +7,9 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class TrafficInfo implements ModelInterface, ArrayAccess
+class DeleteRecordRuleResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,24 @@ class TrafficInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'TrafficInfo';
+    protected static $openAPIModelName = 'DeleteRecordRuleResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * traffic  采样周期内的总流量，单位：byte
-    * timestamp  流量数据采样周期起始时刻，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'traffic' => 'int',
-            'timestamp' => '\DateTime'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * traffic  采样周期内的总流量，单位：byte
-    * timestamp  流量数据采样周期起始时刻，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'traffic' => 'int32',
-        'timestamp' => 'date-time'
     ];
 
     /**
@@ -65,38 +60,29 @@ class TrafficInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * traffic  采样周期内的总流量，单位：byte
-    * timestamp  流量数据采样周期起始时刻，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'traffic' => 'traffic',
-            'timestamp' => 'timestamp'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * traffic  采样周期内的总流量，单位：byte
-    * timestamp  流量数据采样周期起始时刻，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'traffic' => 'setTraffic',
-            'timestamp' => 'setTimestamp'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * traffic  采样周期内的总流量，单位：byte
-    * timestamp  流量数据采样周期起始时刻，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'traffic' => 'getTraffic',
-            'timestamp' => 'getTimestamp'
     ];
 
     /**
@@ -157,8 +143,6 @@ class TrafficInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['traffic'] = isset($data['traffic']) ? $data['traffic'] : null;
-        $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
     }
 
     /**
@@ -169,15 +153,6 @@ class TrafficInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['traffic'] === null) {
-            $invalidProperties[] = "'traffic' can't be null";
-        }
-            if (($this->container['traffic'] < 0)) {
-                $invalidProperties[] = "invalid value for 'traffic', must be bigger than or equal to 0.";
-            }
-        if ($this->container['timestamp'] === null) {
-            $invalidProperties[] = "'timestamp' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -190,54 +165,6 @@ class TrafficInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets traffic
-    *  采样周期内的总流量，单位：byte
-    *
-    * @return int
-    */
-    public function getTraffic()
-    {
-        return $this->container['traffic'];
-    }
-
-    /**
-    * Sets traffic
-    *
-    * @param int $traffic 采样周期内的总流量，单位：byte
-    *
-    * @return $this
-    */
-    public function setTraffic($traffic)
-    {
-        $this->container['traffic'] = $traffic;
-        return $this;
-    }
-
-    /**
-    * Gets timestamp
-    *  流量数据采样周期起始时刻，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
-    *
-    * @return \DateTime
-    */
-    public function getTimestamp()
-    {
-        return $this->container['timestamp'];
-    }
-
-    /**
-    * Sets timestamp
-    *
-    * @param \DateTime $timestamp 流量数据采样周期起始时刻，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
-    *
-    * @return $this
-    */
-    public function setTimestamp($timestamp)
-    {
-        $this->container['timestamp'] = $timestamp;
-        return $this;
     }
 
     /**

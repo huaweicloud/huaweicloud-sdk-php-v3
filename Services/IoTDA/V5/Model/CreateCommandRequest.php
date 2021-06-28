@@ -20,8 +20,8 @@ class CreateCommandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * deviceId  下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * deviceId  **参数说明**：下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
@@ -34,8 +34,8 @@ class CreateCommandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * deviceId  下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * deviceId  **参数说明**：下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
@@ -69,8 +69,8 @@ class CreateCommandRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * deviceId  下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * deviceId  **参数说明**：下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
@@ -83,8 +83,8 @@ class CreateCommandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * deviceId  下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * deviceId  **参数说明**：下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
@@ -97,8 +97,8 @@ class CreateCommandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * deviceId  下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * deviceId  **参数说明**：下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
@@ -205,7 +205,7 @@ class CreateCommandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceId
-    *  下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
+    *  **参数说明**：下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class CreateCommandRequest implements ModelInterface, ArrayAccess
     /**
     * Sets deviceId
     *
-    * @param string $deviceId 下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
+    * @param string $deviceId **参数说明**：下发消息的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class CreateCommandRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    *  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class CreateCommandRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * @param string|null $instanceId **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return $this
     */

@@ -57,7 +57,6 @@ class LiveClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json; charset=UTF-8', 'application/json']
@@ -122,7 +121,6 @@ class LiveClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json; charset=UTF-8', 'application/json']
@@ -153,21 +151,21 @@ class LiveClient extends Client
     }
 
     /**
-     * 创建录制配置
-     * 创建录制配置接口
+     * 创建录制回调配置
+     * 创建录制回调配置接口
      *
      * @param $request 请求对象
      * @return response
      */
-    public function createRecordConfig($request)
+    public function createRecordCallbackConfig($request)
     {
-        return $this->createRecordConfigWithHttpInfo($request);
+        return $this->createRecordCallbackConfigWithHttpInfo($request);
     }
 
-    public function createRecordConfigWithHttpInfo($request)
+    public function createRecordCallbackConfigWithHttpInfo($request)
     {
         $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/record/config';
+        $resourcePath = '/v1/{project_id}/record/callbacks';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -184,7 +182,6 @@ class LiveClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -209,9 +206,70 @@ class LiveClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Live\V1\Model\CreateRecordConfigResponse',
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\CreateRecordCallbackConfigResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Live\V1\Model\CreateRecordConfigRequest');
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\CreateRecordCallbackConfigRequest');
+    }
+
+    /**
+     * 创建录制规则
+     * 创建录制规则接口，录制规则对新推送的流生效，对已经推送中的流不生效
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createRecordRule($request)
+    {
+        return $this->createRecordRuleWithHttpInfo($request);
+    }
+
+    public function createRecordRuleWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/record/rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8'],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\CreateRecordRuleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\CreateRecordRuleRequest');
     }
 
     /**
@@ -249,7 +307,6 @@ class LiveClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -311,7 +368,6 @@ class LiveClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -373,7 +429,6 @@ class LiveClient extends Client
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -441,7 +496,6 @@ class LiveClient extends Client
         if ($localVarParams['pushDomain'] !== null) {
             $queryParams['push_domain'] = $localVarParams['pushDomain'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -472,21 +526,21 @@ class LiveClient extends Client
     }
 
     /**
-     * 删除录制配置
-     * 删除录制配置接口
+     * 删除录制回调配置
+     * 删除录制回调配置接口
      *
      * @param $request 请求对象
      * @return response
      */
-    public function deleteRecordConfig($request)
+    public function deleteRecordCallbackConfig($request)
     {
-        return $this->deleteRecordConfigWithHttpInfo($request);
+        return $this->deleteRecordCallbackConfigWithHttpInfo($request);
     }
 
-    public function deleteRecordConfigWithHttpInfo($request)
+    public function deleteRecordCallbackConfigWithHttpInfo($request)
     {
         $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/record/config';
+        $resourcePath = '/v1/{project_id}/record/callbacks/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -500,13 +554,9 @@ class LiveClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['domain'] !== null) {
-            $queryParams['domain'] = $localVarParams['domain'];
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
         }
-        if ($localVarParams['appName'] !== null) {
-            $queryParams['app_name'] = $localVarParams['appName'];
-        }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -531,9 +581,70 @@ class LiveClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteRecordConfigResponse',
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteRecordCallbackConfigResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteRecordConfigRequest');
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteRecordCallbackConfigRequest');
+    }
+
+    /**
+     * 删除录制规则
+     * 删除录制规则接口
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteRecordRule($request)
+    {
+        return $this->deleteRecordRuleWithHttpInfo($request);
+    }
+
+    public function deleteRecordRuleWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/record/rules/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteRecordRuleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteRecordRuleRequest');
     }
 
     /**
@@ -577,7 +688,6 @@ class LiveClient extends Client
         if ($localVarParams['streamName'] !== null) {
             $queryParams['stream_name'] = $localVarParams['streamName'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -642,7 +752,6 @@ class LiveClient extends Client
         if ($localVarParams['appName'] !== null) {
             $queryParams['app_name'] = $localVarParams['appName'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -710,7 +819,6 @@ class LiveClient extends Client
         if ($localVarParams['endTime'] !== null) {
             $queryParams['end_time'] = $localVarParams['endTime'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json; charset=UTF-8', 'application/json']
@@ -784,7 +892,6 @@ class LiveClient extends Client
         if ($localVarParams['stream'] !== null) {
             $queryParams['stream'] = $localVarParams['stream'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json; charset=UTF-8', 'application/json']
@@ -815,21 +922,21 @@ class LiveClient extends Client
     }
 
     /**
-     * 查询录制配置
-     * 查询录制配置接口
+     * 查询录制回调配置列表
+     * 查询录制回调配置列表接口。通过指定条件，查询满足条件的配置列表。
      *
      * @param $request 请求对象
      * @return response
      */
-    public function listRecordConfigs($request)
+    public function listRecordCallbackConfigs($request)
     {
-        return $this->listRecordConfigsWithHttpInfo($request);
+        return $this->listRecordCallbackConfigsWithHttpInfo($request);
     }
 
-    public function listRecordConfigsWithHttpInfo($request)
+    public function listRecordCallbackConfigsWithHttpInfo($request)
     {
         $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/record/config';
+        $resourcePath = '/v1/{project_id}/record/callbacks';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -843,25 +950,18 @@ class LiveClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['domain'] !== null) {
-            $queryParams['domain'] = $localVarParams['domain'];
+        if ($localVarParams['publishDomain'] !== null) {
+            $queryParams['publish_domain'] = $localVarParams['publishDomain'];
         }
-        if ($localVarParams['appName'] !== null) {
-            $queryParams['app_name'] = $localVarParams['appName'];
+        if ($localVarParams['app'] !== null) {
+            $queryParams['app'] = $localVarParams['app'];
         }
-        if ($localVarParams['streamName'] !== null) {
-            $queryParams['stream_name'] = $localVarParams['streamName'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
-        if ($localVarParams['page'] !== null) {
-            $queryParams['page'] = $localVarParams['page'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['size'] !== null) {
-            $queryParams['size'] = $localVarParams['size'];
-        }
-        if ($localVarParams['recordType'] !== null) {
-            $queryParams['record_type'] = $localVarParams['recordType'];
-        }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json; charset=UTF-8', 'application/json']
@@ -886,9 +986,85 @@ class LiveClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ListRecordConfigsResponse',
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ListRecordCallbackConfigsResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ListRecordConfigsRequest');
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ListRecordCallbackConfigsRequest');
+    }
+
+    /**
+     * 查询录制规则列表
+     * 查询录制规则列表接口，通过指定条件，查询满足条件的录制规则列表。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRecordRules($request)
+    {
+        return $this->listRecordRulesWithHttpInfo($request);
+    }
+
+    public function listRecordRulesWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/record/rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['publishDomain'] !== null) {
+            $queryParams['publish_domain'] = $localVarParams['publishDomain'];
+        }
+        if ($localVarParams['app'] !== null) {
+            $queryParams['app'] = $localVarParams['app'];
+        }
+        if ($localVarParams['stream'] !== null) {
+            $queryParams['stream'] = $localVarParams['stream'];
+        }
+        if ($localVarParams['recordType'] !== null) {
+            $queryParams['record_type'] = $localVarParams['recordType'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ListRecordRulesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ListRecordRulesRequest');
     }
 
     /**
@@ -938,7 +1114,6 @@ class LiveClient extends Client
         if ($localVarParams['size'] !== null) {
             $queryParams['size'] = $localVarParams['size'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json; charset=UTF-8', 'application/json']
@@ -966,77 +1141,6 @@ class LiveClient extends Client
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\ListStreamForbiddenResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\ListStreamForbiddenRequest');
-    }
-
-    /**
-     * 查询直播加速的带宽数据
-     * 查询直播加速的播流域名网络带宽监控数据
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showBandwidth($request)
-    {
-        return $this->showBandwidthWithHttpInfo($request);
-    }
-
-    public function showBandwidthWithHttpInfo($request)
-    {
-        $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/stream/bandwidth';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['domain'] !== null) {
-            $queryParams['domain'] = $localVarParams['domain'];
-        }
-        if ($localVarParams['startTime'] !== null) {
-            $queryParams['start_time'] = $localVarParams['startTime'];
-        }
-        if ($localVarParams['endTime'] !== null) {
-            $queryParams['end_time'] = $localVarParams['endTime'];
-        }
-        if ($localVarParams['step'] !== null) {
-            $queryParams['step'] = $localVarParams['step'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json; charset=UTF-8', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json; charset=UTF-8', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowBandwidthResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowBandwidthRequest');
     }
 
     /**
@@ -1071,7 +1175,6 @@ class LiveClient extends Client
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json; charset=UTF-8', 'application/json']
@@ -1102,21 +1205,21 @@ class LiveClient extends Client
     }
 
     /**
-     * 查询直播播放在线人数
-     * 查询加速的直播播放在线人数
+     * 查询录制回调配置
+     * 查询录制回调配置接口
      *
      * @param $request 请求对象
      * @return response
      */
-    public function showOnlineUsers($request)
+    public function showRecordCallbackConfig($request)
     {
-        return $this->showOnlineUsersWithHttpInfo($request);
+        return $this->showRecordCallbackConfigWithHttpInfo($request);
     }
 
-    public function showOnlineUsersWithHttpInfo($request)
+    public function showRecordCallbackConfigWithHttpInfo($request)
     {
         $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/stream/users';
+        $resourcePath = '/v1/{project_id}/record/callbacks/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1130,25 +1233,9 @@ class LiveClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['domain'] !== null) {
-            $queryParams['domain'] = $localVarParams['domain'];
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
         }
-        if ($localVarParams['appName'] !== null) {
-            $queryParams['app_name'] = $localVarParams['appName'];
-        }
-        if ($localVarParams['streamName'] !== null) {
-            $queryParams['stream_name'] = $localVarParams['streamName'];
-        }
-        if ($localVarParams['startTime'] !== null) {
-            $queryParams['start_time'] = $localVarParams['startTime'];
-        }
-        if ($localVarParams['endTime'] !== null) {
-            $queryParams['end_time'] = $localVarParams['endTime'];
-        }
-        if ($localVarParams['step'] !== null) {
-            $queryParams['step'] = $localVarParams['step'];
-        }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json; charset=UTF-8', 'application/json']
@@ -1173,27 +1260,27 @@ class LiveClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowOnlineUsersResponse',
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowRecordCallbackConfigResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowOnlineUsersRequest');
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowRecordCallbackConfigRequest');
     }
 
     /**
-     * 查询直播加速的流量数据
-     * 查询直播加速的播流域名网络流量监控数据
+     * 查询录制规则配置
+     * 查询录制规则接口
      *
      * @param $request 请求对象
      * @return response
      */
-    public function showTraffic($request)
+    public function showRecordRule($request)
     {
-        return $this->showTrafficWithHttpInfo($request);
+        return $this->showRecordRuleWithHttpInfo($request);
     }
 
-    public function showTrafficWithHttpInfo($request)
+    public function showRecordRuleWithHttpInfo($request)
     {
         $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/stream/traffic';
+        $resourcePath = '/v1/{project_id}/record/rules/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1207,19 +1294,9 @@ class LiveClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['domain'] !== null) {
-            $queryParams['domain'] = $localVarParams['domain'];
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
         }
-        if ($localVarParams['startTime'] !== null) {
-            $queryParams['start_time'] = $localVarParams['startTime'];
-        }
-        if ($localVarParams['endTime'] !== null) {
-            $queryParams['end_time'] = $localVarParams['endTime'];
-        }
-        if ($localVarParams['step'] !== null) {
-            $queryParams['step'] = $localVarParams['step'];
-        }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json; charset=UTF-8', 'application/json']
@@ -1244,9 +1321,9 @@ class LiveClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowTrafficResponse',
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowRecordRuleResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowTrafficRequest');
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowRecordRuleRequest');
     }
 
     /**
@@ -1290,7 +1367,6 @@ class LiveClient extends Client
         if ($localVarParams['size'] !== null) {
             $queryParams['size'] = $localVarParams['size'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json; charset=UTF-8', 'application/json']
@@ -1352,7 +1428,6 @@ class LiveClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json; charset=UTF-8', 'application/json']
@@ -1380,6 +1455,134 @@ class LiveClient extends Client
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateDomainResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateDomainRequest');
+    }
+
+    /**
+     * 修改录制回调配置
+     * 修改录制回调配置接口
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateRecordCallbackConfig($request)
+    {
+        return $this->updateRecordCallbackConfigWithHttpInfo($request);
+    }
+
+    public function updateRecordCallbackConfigWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/record/callbacks/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateRecordCallbackConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateRecordCallbackConfigRequest');
+    }
+
+    /**
+     * 修改录制规则
+     * 修改录制规则接口，如果规则修改后，修改后的规则对正在录制的流无效，对新的流有效。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateRecordRule($request)
+    {
+        return $this->updateRecordRuleWithHttpInfo($request);
+    }
+
+    public function updateRecordRuleWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/record/rules/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8'],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateRecordRuleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateRecordRuleRequest');
     }
 
     /**
@@ -1417,7 +1620,6 @@ class LiveClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -1479,7 +1681,6 @@ class LiveClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []

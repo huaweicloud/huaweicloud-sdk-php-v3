@@ -120,7 +120,7 @@ class ObjectSerializer
 
             return $returnValues;
         } elseif ('object' === $responseType) {
-            settype($response, 'array');
+            settype($response, gettype($response));
 
             return $response;
         } elseif ('\DateTime' === $responseType) {

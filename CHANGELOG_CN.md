@@ -1,3 +1,13 @@
+# 3.0.13-beta 2021-06-25
+
+### HuaweiCloud SDK Core
+
+- _新增特性_
+    - 支持multipart/form-data
+- _解决问题_
+    - 无
+- _特性变更_
+    - 无
 # 3.0.12-beta 2021-06-01
 
 ### HuaweiCloud SDK LIVE

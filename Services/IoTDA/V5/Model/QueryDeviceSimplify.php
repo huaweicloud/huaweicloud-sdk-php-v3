@@ -23,13 +23,14 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
     * appId  资源空间ID。
     * appName  资源空间名称。
     * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
-    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为node_id。
     * gatewayId  网关ID，用于标识设备所属的父设备，即父设备的设备ID。当设备是直连设备时，gateway_id与设备的device_id一致。当设备是非直连设备时，gateway_id为设备所关联的父设备的device_id。
     * deviceName  设备名称。
     * nodeType  设备节点类型。 - ENDPOINT：非直连设备。 - GATEWAY：直连设备或网关。 - UNKNOWN：未知。
     * description  设备的描述信息。
     * fwVersion  设备的固件版本。
     * swVersion  设备的软件版本。
+    * deviceSdkVersion  设备的sdk信息。
     * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     * productName  设备关联的产品名称。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
@@ -48,6 +49,7 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
             'description' => 'string',
             'fwVersion' => 'string',
             'swVersion' => 'string',
+            'deviceSdkVersion' => 'string',
             'productId' => 'string',
             'productName' => 'string',
             'status' => 'string',
@@ -59,13 +61,14 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
     * appId  资源空间ID。
     * appName  资源空间名称。
     * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
-    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为node_id。
     * gatewayId  网关ID，用于标识设备所属的父设备，即父设备的设备ID。当设备是直连设备时，gateway_id与设备的device_id一致。当设备是非直连设备时，gateway_id为设备所关联的父设备的device_id。
     * deviceName  设备名称。
     * nodeType  设备节点类型。 - ENDPOINT：非直连设备。 - GATEWAY：直连设备或网关。 - UNKNOWN：未知。
     * description  设备的描述信息。
     * fwVersion  设备的固件版本。
     * swVersion  设备的软件版本。
+    * deviceSdkVersion  设备的sdk信息。
     * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     * productName  设备关联的产品名称。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
@@ -84,6 +87,7 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
         'description' => null,
         'fwVersion' => null,
         'swVersion' => null,
+        'deviceSdkVersion' => null,
         'productId' => null,
         'productName' => null,
         'status' => null,
@@ -116,13 +120,14 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
     * appId  资源空间ID。
     * appName  资源空间名称。
     * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
-    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为node_id。
     * gatewayId  网关ID，用于标识设备所属的父设备，即父设备的设备ID。当设备是直连设备时，gateway_id与设备的device_id一致。当设备是非直连设备时，gateway_id为设备所关联的父设备的device_id。
     * deviceName  设备名称。
     * nodeType  设备节点类型。 - ENDPOINT：非直连设备。 - GATEWAY：直连设备或网关。 - UNKNOWN：未知。
     * description  设备的描述信息。
     * fwVersion  设备的固件版本。
     * swVersion  设备的软件版本。
+    * deviceSdkVersion  设备的sdk信息。
     * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     * productName  设备关联的产品名称。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
@@ -141,6 +146,7 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
             'description' => 'description',
             'fwVersion' => 'fw_version',
             'swVersion' => 'sw_version',
+            'deviceSdkVersion' => 'device_sdk_version',
             'productId' => 'product_id',
             'productName' => 'product_name',
             'status' => 'status',
@@ -152,13 +158,14 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
     * appId  资源空间ID。
     * appName  资源空间名称。
     * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
-    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为node_id。
     * gatewayId  网关ID，用于标识设备所属的父设备，即父设备的设备ID。当设备是直连设备时，gateway_id与设备的device_id一致。当设备是非直连设备时，gateway_id为设备所关联的父设备的device_id。
     * deviceName  设备名称。
     * nodeType  设备节点类型。 - ENDPOINT：非直连设备。 - GATEWAY：直连设备或网关。 - UNKNOWN：未知。
     * description  设备的描述信息。
     * fwVersion  设备的固件版本。
     * swVersion  设备的软件版本。
+    * deviceSdkVersion  设备的sdk信息。
     * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     * productName  设备关联的产品名称。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
@@ -177,6 +184,7 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'fwVersion' => 'setFwVersion',
             'swVersion' => 'setSwVersion',
+            'deviceSdkVersion' => 'setDeviceSdkVersion',
             'productId' => 'setProductId',
             'productName' => 'setProductName',
             'status' => 'setStatus',
@@ -188,13 +196,14 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
     * appId  资源空间ID。
     * appName  资源空间名称。
     * deviceId  设备ID，用于唯一标识一个设备。在注册设备时直接指定，或者由物联网平台分配获得。由物联网平台分配时，生成规则为\"product_id\" + \"_\" + \"node_id\"拼接而成。
-    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * nodeId  设备标识码，通常使用IMEI、MAC地址或Serial No作为node_id。
     * gatewayId  网关ID，用于标识设备所属的父设备，即父设备的设备ID。当设备是直连设备时，gateway_id与设备的device_id一致。当设备是非直连设备时，gateway_id为设备所关联的父设备的device_id。
     * deviceName  设备名称。
     * nodeType  设备节点类型。 - ENDPOINT：非直连设备。 - GATEWAY：直连设备或网关。 - UNKNOWN：未知。
     * description  设备的描述信息。
     * fwVersion  设备的固件版本。
     * swVersion  设备的软件版本。
+    * deviceSdkVersion  设备的sdk信息。
     * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     * productName  设备关联的产品名称。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
@@ -213,6 +222,7 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'fwVersion' => 'getFwVersion',
             'swVersion' => 'getSwVersion',
+            'deviceSdkVersion' => 'getDeviceSdkVersion',
             'productId' => 'getProductId',
             'productName' => 'getProductName',
             'status' => 'getStatus',
@@ -287,6 +297,7 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['fwVersion'] = isset($data['fwVersion']) ? $data['fwVersion'] : null;
         $this->container['swVersion'] = isset($data['swVersion']) ? $data['swVersion'] : null;
+        $this->container['deviceSdkVersion'] = isset($data['deviceSdkVersion']) ? $data['deviceSdkVersion'] : null;
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
         $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -327,6 +338,9 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['swVersion']) && (mb_strlen($this->container['swVersion']) > 256)) {
                 $invalidProperties[] = "invalid value for 'swVersion', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['deviceSdkVersion']) && (mb_strlen($this->container['deviceSdkVersion']) > 256)) {
+                $invalidProperties[] = "invalid value for 'deviceSdkVersion', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['productId']) && !preg_match("/^[a-zA-Z0-9_-]{1,36}$/", $this->container['productId'])) {
                 $invalidProperties[] = "invalid value for 'productId', must be conform to the pattern /^[a-zA-Z0-9_-]{1,36}$/.";
@@ -425,7 +439,7 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeId
-    *  设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    *  设备标识码，通常使用IMEI、MAC地址或Serial No作为node_id。
     *
     * @return string|null
     */
@@ -437,7 +451,7 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
     /**
     * Sets nodeId
     *
-    * @param string|null $nodeId 设备标识码，通常使用IMEI、MAC地址或Serial No作为nodeId。
+    * @param string|null $nodeId 设备标识码，通常使用IMEI、MAC地址或Serial No作为node_id。
     *
     * @return $this
     */
@@ -588,6 +602,30 @@ class QueryDeviceSimplify implements ModelInterface, ArrayAccess
     public function setSwVersion($swVersion)
     {
         $this->container['swVersion'] = $swVersion;
+        return $this;
+    }
+
+    /**
+    * Gets deviceSdkVersion
+    *  设备的sdk信息。
+    *
+    * @return string|null
+    */
+    public function getDeviceSdkVersion()
+    {
+        return $this->container['deviceSdkVersion'];
+    }
+
+    /**
+    * Sets deviceSdkVersion
+    *
+    * @param string|null $deviceSdkVersion 设备的sdk信息。
+    *
+    * @return $this
+    */
+    public function setDeviceSdkVersion($deviceSdkVersion)
+    {
+        $this->container['deviceSdkVersion'] = $deviceSdkVersion;
         return $this;
     }
 

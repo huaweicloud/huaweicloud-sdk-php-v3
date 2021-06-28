@@ -21,11 +21,11 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * address  address
-    * dbName  连接MYSQL数据库的库名
-    * username  连接MYSQL数据库的用户名
-    * password  连接MYSQL数据库的密码
-    * tableName  MYSQL数据库的表名
-    * columnMappings  MYSQL数据库的列和流转数据的对应关系列表。
+    * dbName  **参数说明**：连接MYSQL数据库的库名。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * username  **参数说明**：连接MYSQL数据库的用户名
+    * password  **参数说明**：连接MYSQL数据库的密码
+    * tableName  **参数说明**：MYSQL数据库的表名
+    * columnMappings  **参数说明**：MYSQL数据库的列和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -41,11 +41,11 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * address  address
-    * dbName  连接MYSQL数据库的库名
-    * username  连接MYSQL数据库的用户名
-    * password  连接MYSQL数据库的密码
-    * tableName  MYSQL数据库的表名
-    * columnMappings  MYSQL数据库的列和流转数据的对应关系列表。
+    * dbName  **参数说明**：连接MYSQL数据库的库名。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * username  **参数说明**：连接MYSQL数据库的用户名
+    * password  **参数说明**：连接MYSQL数据库的密码
+    * tableName  **参数说明**：MYSQL数据库的表名
+    * columnMappings  **参数说明**：MYSQL数据库的列和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -82,11 +82,11 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * address  address
-    * dbName  连接MYSQL数据库的库名
-    * username  连接MYSQL数据库的用户名
-    * password  连接MYSQL数据库的密码
-    * tableName  MYSQL数据库的表名
-    * columnMappings  MYSQL数据库的列和流转数据的对应关系列表。
+    * dbName  **参数说明**：连接MYSQL数据库的库名。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * username  **参数说明**：连接MYSQL数据库的用户名
+    * password  **参数说明**：连接MYSQL数据库的密码
+    * tableName  **参数说明**：MYSQL数据库的表名
+    * columnMappings  **参数说明**：MYSQL数据库的列和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -102,11 +102,11 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * address  address
-    * dbName  连接MYSQL数据库的库名
-    * username  连接MYSQL数据库的用户名
-    * password  连接MYSQL数据库的密码
-    * tableName  MYSQL数据库的表名
-    * columnMappings  MYSQL数据库的列和流转数据的对应关系列表。
+    * dbName  **参数说明**：连接MYSQL数据库的库名。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * username  **参数说明**：连接MYSQL数据库的用户名
+    * password  **参数说明**：连接MYSQL数据库的密码
+    * tableName  **参数说明**：MYSQL数据库的表名
+    * columnMappings  **参数说明**：MYSQL数据库的列和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -122,11 +122,11 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * address  address
-    * dbName  连接MYSQL数据库的库名
-    * username  连接MYSQL数据库的用户名
-    * password  连接MYSQL数据库的密码
-    * tableName  MYSQL数据库的表名
-    * columnMappings  MYSQL数据库的列和流转数据的对应关系列表。
+    * dbName  **参数说明**：连接MYSQL数据库的库名。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * username  **参数说明**：连接MYSQL数据库的用户名
+    * password  **参数说明**：连接MYSQL数据库的密码
+    * tableName  **参数说明**：MYSQL数据库的表名
+    * columnMappings  **参数说明**：MYSQL数据库的列和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -219,11 +219,8 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
         if ($this->container['dbName'] === null) {
             $invalidProperties[] = "'dbName' can't be null";
         }
-            if ((mb_strlen($this->container['dbName']) > 64)) {
-                $invalidProperties[] = "invalid value for 'dbName', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['dbName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'dbName', the character length must be bigger than or equal to 1.";
+            if (!preg_match("/^[A-Za-z0-9_$-]{1,64}$/", $this->container['dbName'])) {
+                $invalidProperties[] = "invalid value for 'dbName', must be conform to the pattern /^[A-Za-z0-9_$-]{1,64}$/.";
             }
         if ($this->container['username'] === null) {
             $invalidProperties[] = "'username' can't be null";
@@ -295,7 +292,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbName
-    *  连接MYSQL数据库的库名
+    *  **参数说明**：连接MYSQL数据库的库名。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return string
     */
@@ -307,7 +304,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets dbName
     *
-    * @param string $dbName 连接MYSQL数据库的库名
+    * @param string $dbName **参数说明**：连接MYSQL数据库的库名。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return $this
     */
@@ -319,7 +316,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets username
-    *  连接MYSQL数据库的用户名
+    *  **参数说明**：连接MYSQL数据库的用户名
     *
     * @return string
     */
@@ -331,7 +328,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets username
     *
-    * @param string $username 连接MYSQL数据库的用户名
+    * @param string $username **参数说明**：连接MYSQL数据库的用户名
     *
     * @return $this
     */
@@ -343,7 +340,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets password
-    *  连接MYSQL数据库的密码
+    *  **参数说明**：连接MYSQL数据库的密码
     *
     * @return string
     */
@@ -355,7 +352,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets password
     *
-    * @param string $password 连接MYSQL数据库的密码
+    * @param string $password **参数说明**：连接MYSQL数据库的密码
     *
     * @return $this
     */
@@ -367,7 +364,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableName
-    *  MYSQL数据库的表名
+    *  **参数说明**：MYSQL数据库的表名
     *
     * @return string
     */
@@ -379,7 +376,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets tableName
     *
-    * @param string $tableName MYSQL数据库的表名
+    * @param string $tableName **参数说明**：MYSQL数据库的表名
     *
     * @return $this
     */
@@ -391,7 +388,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets columnMappings
-    *  MYSQL数据库的列和流转数据的对应关系列表。
+    *  **参数说明**：MYSQL数据库的列和流转数据的对应关系列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ColumnMapping[]
     */
@@ -403,7 +400,7 @@ class MysqlForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets columnMappings
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ColumnMapping[] $columnMappings MYSQL数据库的列和流转数据的对应关系列表。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ColumnMapping[] $columnMappings **参数说明**：MYSQL数据库的列和流转数据的对应关系列表。
     *
     * @return $this
     */

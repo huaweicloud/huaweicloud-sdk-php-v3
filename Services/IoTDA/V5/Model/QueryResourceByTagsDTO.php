@@ -20,8 +20,8 @@ class QueryResourceByTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  要查询的资源类型，当前支持设备（device）。
-    * tags  标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
+    * resourceType  **参数说明**：要查询的资源类型，当前支持设备（device）。
+    * tags  **参数说明**：标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class QueryResourceByTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  要查询的资源类型，当前支持设备（device）。
-    * tags  标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
+    * resourceType  **参数说明**：要查询的资源类型，当前支持设备（device）。
+    * tags  **参数说明**：标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class QueryResourceByTagsDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  要查询的资源类型，当前支持设备（device）。
-    * tags  标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
+    * resourceType  **参数说明**：要查询的资源类型，当前支持设备（device）。
+    * tags  **参数说明**：标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class QueryResourceByTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  要查询的资源类型，当前支持设备（device）。
-    * tags  标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
+    * resourceType  **参数说明**：要查询的资源类型，当前支持设备（device）。
+    * tags  **参数说明**：标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class QueryResourceByTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  要查询的资源类型，当前支持设备（device）。
-    * tags  标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
+    * resourceType  **参数说明**：要查询的资源类型，当前支持设备（device）。
+    * tags  **参数说明**：标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
     *
     * @var string[]
     */
@@ -194,7 +194,7 @@ class QueryResourceByTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  要查询的资源类型，当前支持设备（device）。
+    *  **参数说明**：要查询的资源类型，当前支持设备（device）。
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class QueryResourceByTagsDTO implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 要查询的资源类型，当前支持设备（device）。
+    * @param string $resourceType **参数说明**：要查询的资源类型，当前支持设备（device）。
     *
     * @return $this
     */
@@ -218,7 +218,7 @@ class QueryResourceByTagsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
+    *  **参数说明**：标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\TagV5DTO[]
     */
@@ -230,7 +230,7 @@ class QueryResourceByTagsDTO implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\TagV5DTO[] $tags 标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\TagV5DTO[] $tags **参数说明**：标签列表，支持按照标签key和value组合查询，传入的多个标签之间是或的关系。
     *
     * @return $this
     */

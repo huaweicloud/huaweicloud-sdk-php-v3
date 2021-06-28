@@ -20,16 +20,16 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * productId  产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。
-    * name  产品名称。
-    * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
-    * dataFormat  设备上报数据的格式，取值范围：json，binary。默认值json。
-    * serviceCapabilities  设备的服务能力列表。
-    * manufacturerName  厂商名称。
-    * industry  设备所属行业。
-    * description  产品的描述信息。
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * productId  **参数说明**：产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * name  **参数说明**：产品名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * deviceType  **参数说明**：设备类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * protocolType  **参数说明**：设备使用的协议类型。 **取值范围**：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF，OPC-UA，OPC-DA。
+    * dataFormat  **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式 默认值json。
+    * serviceCapabilities  **参数说明**：设备的服务能力列表。
+    * manufacturerName  **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * industry  **参数说明**：设备所属行业。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * description  **参数说明**：产品的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
+    * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * productId  产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。
-    * name  产品名称。
-    * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
-    * dataFormat  设备上报数据的格式，取值范围：json，binary。默认值json。
-    * serviceCapabilities  设备的服务能力列表。
-    * manufacturerName  厂商名称。
-    * industry  设备所属行业。
-    * description  产品的描述信息。
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * productId  **参数说明**：产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * name  **参数说明**：产品名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * deviceType  **参数说明**：设备类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * protocolType  **参数说明**：设备使用的协议类型。 **取值范围**：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF，OPC-UA，OPC-DA。
+    * dataFormat  **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式 默认值json。
+    * serviceCapabilities  **参数说明**：设备的服务能力列表。
+    * manufacturerName  **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * industry  **参数说明**：设备所属行业。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * description  **参数说明**：产品的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
+    * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class AddProduct implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * productId  产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。
-    * name  产品名称。
-    * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
-    * dataFormat  设备上报数据的格式，取值范围：json，binary。默认值json。
-    * serviceCapabilities  设备的服务能力列表。
-    * manufacturerName  厂商名称。
-    * industry  设备所属行业。
-    * description  产品的描述信息。
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * productId  **参数说明**：产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * name  **参数说明**：产品名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * deviceType  **参数说明**：设备类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * protocolType  **参数说明**：设备使用的协议类型。 **取值范围**：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF，OPC-UA，OPC-DA。
+    * dataFormat  **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式 默认值json。
+    * serviceCapabilities  **参数说明**：设备的服务能力列表。
+    * manufacturerName  **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * industry  **参数说明**：设备所属行业。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * description  **参数说明**：产品的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
+    * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * productId  产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。
-    * name  产品名称。
-    * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
-    * dataFormat  设备上报数据的格式，取值范围：json，binary。默认值json。
-    * serviceCapabilities  设备的服务能力列表。
-    * manufacturerName  厂商名称。
-    * industry  设备所属行业。
-    * description  产品的描述信息。
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * productId  **参数说明**：产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * name  **参数说明**：产品名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * deviceType  **参数说明**：设备类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * protocolType  **参数说明**：设备使用的协议类型。 **取值范围**：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF，OPC-UA，OPC-DA。
+    * dataFormat  **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式 默认值json。
+    * serviceCapabilities  **参数说明**：设备的服务能力列表。
+    * manufacturerName  **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * industry  **参数说明**：设备所属行业。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * description  **参数说明**：产品的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
+    * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * productId  产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。
-    * name  产品名称。
-    * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
-    * dataFormat  设备上报数据的格式，取值范围：json，binary。默认值json。
-    * serviceCapabilities  设备的服务能力列表。
-    * manufacturerName  厂商名称。
-    * industry  设备所属行业。
-    * description  产品的描述信息。
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * productId  **参数说明**：产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * name  **参数说明**：产品名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * deviceType  **参数说明**：设备类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * protocolType  **参数说明**：设备使用的协议类型。 **取值范围**：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF，OPC-UA，OPC-DA。
+    * dataFormat  **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式 默认值json。
+    * serviceCapabilities  **参数说明**：设备的服务能力列表。
+    * manufacturerName  **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * industry  **参数说明**：设备所属行业。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * description  **参数说明**：产品的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
+    * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @var string[]
     */
@@ -275,8 +275,8 @@ class AddProduct implements ModelInterface, ArrayAccess
         if ($this->container['protocolType'] === null) {
             $invalidProperties[] = "'protocolType' can't be null";
         }
-            if (!preg_match("/(MQTT|CoAP|HTTP|HTTPS|Modbus|ONVIF|OPC-UA)/", $this->container['protocolType'])) {
-                $invalidProperties[] = "invalid value for 'protocolType', must be conform to the pattern /(MQTT|CoAP|HTTP|HTTPS|Modbus|ONVIF|OPC-UA)/.";
+            if (!preg_match("/(MQTT|CoAP|HTTP|HTTPS|Modbus|ONVIF|OPC-UA|OPC-DA)/", $this->container['protocolType'])) {
+                $invalidProperties[] = "invalid value for 'protocolType', must be conform to the pattern /(MQTT|CoAP|HTTP|HTTPS|Modbus|ONVIF|OPC-UA|OPC-DA)/.";
             }
         if ($this->container['dataFormat'] === null) {
             $invalidProperties[] = "'dataFormat' can't be null";
@@ -315,7 +315,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。
+    *  **参数说明**：产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return string|null
     */
@@ -327,7 +327,7 @@ class AddProduct implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId 产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。
+    * @param string|null $productId **参数说明**：产品ID，用于唯一标识一个产品。如果携带此参数，平台将产品ID设置为该参数值；如果不携带此参数，产品ID在物联网平台创建产品后由平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return $this
     */
@@ -339,7 +339,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  产品名称。
+    *  **参数说明**：产品名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return string
     */
@@ -351,7 +351,7 @@ class AddProduct implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 产品名称。
+    * @param string $name **参数说明**：产品名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceType
-    *  设备类型。
+    *  **参数说明**：设备类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return string
     */
@@ -375,7 +375,7 @@ class AddProduct implements ModelInterface, ArrayAccess
     /**
     * Sets deviceType
     *
-    * @param string $deviceType 设备类型。
+    * @param string $deviceType **参数说明**：设备类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocolType
-    *  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
+    *  **参数说明**：设备使用的协议类型。 **取值范围**：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF，OPC-UA，OPC-DA。
     *
     * @return string
     */
@@ -399,7 +399,7 @@ class AddProduct implements ModelInterface, ArrayAccess
     /**
     * Sets protocolType
     *
-    * @param string $protocolType 设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
+    * @param string $protocolType **参数说明**：设备使用的协议类型。 **取值范围**：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF，OPC-UA，OPC-DA。
     *
     * @return $this
     */
@@ -411,7 +411,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataFormat
-    *  设备上报数据的格式，取值范围：json，binary。默认值json。
+    *  **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式 默认值json。
     *
     * @return string
     */
@@ -423,7 +423,7 @@ class AddProduct implements ModelInterface, ArrayAccess
     /**
     * Sets dataFormat
     *
-    * @param string $dataFormat 设备上报数据的格式，取值范围：json，binary。默认值json。
+    * @param string $dataFormat **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式 默认值json。
     *
     * @return $this
     */
@@ -435,7 +435,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceCapabilities
-    *  设备的服务能力列表。
+    *  **参数说明**：设备的服务能力列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCapability[]
     */
@@ -447,7 +447,7 @@ class AddProduct implements ModelInterface, ArrayAccess
     /**
     * Sets serviceCapabilities
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCapability[] $serviceCapabilities 设备的服务能力列表。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCapability[] $serviceCapabilities **参数说明**：设备的服务能力列表。
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets manufacturerName
-    *  厂商名称。
+    *  **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return string|null
     */
@@ -471,7 +471,7 @@ class AddProduct implements ModelInterface, ArrayAccess
     /**
     * Sets manufacturerName
     *
-    * @param string|null $manufacturerName 厂商名称。
+    * @param string|null $manufacturerName **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets industry
-    *  设备所属行业。
+    *  **参数说明**：设备所属行业。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return string|null
     */
@@ -495,7 +495,7 @@ class AddProduct implements ModelInterface, ArrayAccess
     /**
     * Sets industry
     *
-    * @param string|null $industry 设备所属行业。
+    * @param string|null $industry **参数说明**：设备所属行业。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return $this
     */
@@ -507,7 +507,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  产品的描述信息。
+    *  **参数说明**：产品的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @return string|null
     */
@@ -519,7 +519,7 @@ class AddProduct implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 产品的描述信息。
+    * @param string|null $description **参数说明**：产品的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @return $this
     */
@@ -531,7 +531,7 @@ class AddProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    *  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return string|null
     */
@@ -543,7 +543,7 @@ class AddProduct implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * @param string|null $appId **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的产品归属到哪个资源空间下，否则创建的产品将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return $this
     */

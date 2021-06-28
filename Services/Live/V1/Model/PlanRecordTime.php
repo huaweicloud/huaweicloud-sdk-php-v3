@@ -7,9 +7,8 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DeleteRecordConfigResponse implements ModelInterface, ArrayAccess
+class PlanRecordTime implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,24 +16,30 @@ class DeleteRecordConfigResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DeleteRecordConfigResponse';
+    protected static $openAPIModelName = 'PlanRecordTime';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * startTime  录制开始时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。
+    * endTime  录制结束时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。如果填写，填写的时间必须晚于当前时间。如果不填写，则在计划录制触发后不停止。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'startTime' => '\DateTime',
+            'endTime' => '\DateTime'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * startTime  录制开始时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。
+    * endTime  录制结束时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。如果填写，填写的时间必须晚于当前时间。如果不填写，则在计划录制触发后不停止。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'startTime' => 'date',
+        'endTime' => 'date'
     ];
 
     /**
@@ -60,29 +65,38 @@ class DeleteRecordConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * startTime  录制开始时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。
+    * endTime  录制结束时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。如果填写，填写的时间必须晚于当前时间。如果不填写，则在计划录制触发后不停止。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'startTime' => 'start_time',
+            'endTime' => 'end_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * startTime  录制开始时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。
+    * endTime  录制结束时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。如果填写，填写的时间必须晚于当前时间。如果不填写，则在计划录制触发后不停止。
     *
     * @var string[]
     */
     protected static $setters = [
+            'startTime' => 'setStartTime',
+            'endTime' => 'setEndTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * startTime  录制开始时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。
+    * endTime  录制结束时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。如果填写，填写的时间必须晚于当前时间。如果不填写，则在计划录制触发后不停止。
     *
     * @var string[]
     */
     protected static $getters = [
+            'startTime' => 'getStartTime',
+            'endTime' => 'getEndTime'
     ];
 
     /**
@@ -143,6 +157,8 @@ class DeleteRecordConfigResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
+        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
     }
 
     /**
@@ -153,6 +169,9 @@ class DeleteRecordConfigResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['startTime'] === null) {
+            $invalidProperties[] = "'startTime' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -165,6 +184,54 @@ class DeleteRecordConfigResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets startTime
+    *  录制开始时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。
+    *
+    * @return \DateTime
+    */
+    public function getStartTime()
+    {
+        return $this->container['startTime'];
+    }
+
+    /**
+    * Sets startTime
+    *
+    * @param \DateTime $startTime 录制开始时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。
+    *
+    * @return $this
+    */
+    public function setStartTime($startTime)
+    {
+        $this->container['startTime'] = $startTime;
+        return $this;
+    }
+
+    /**
+    * Gets endTime
+    *  录制结束时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。如果填写，填写的时间必须晚于当前时间。如果不填写，则在计划录制触发后不停止。
+    *
+    * @return \DateTime|null
+    */
+    public function getEndTime()
+    {
+        return $this->container['endTime'];
+    }
+
+    /**
+    * Sets endTime
+    *
+    * @param \DateTime|null $endTime 录制结束时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。如果填写，填写的时间必须晚于当前时间。如果不填写，则在计划录制触发后不停止。
+    *
+    * @return $this
+    */
+    public function setEndTime($endTime)
+    {
+        $this->container['endTime'] = $endTime;
+        return $this;
     }
 
     /**

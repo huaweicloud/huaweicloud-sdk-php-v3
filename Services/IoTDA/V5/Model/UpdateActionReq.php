@@ -20,30 +20,26 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * channel  **参数说明**：规则动作的类型。 **取值范围**： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'channel' => 'string',
-            'channelDetail' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ChannelDetail',
-            'batch' => 'bool'
+            'channelDetail' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ChannelDetail'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * channel  **参数说明**：规则动作的类型。 **取值范围**： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'channel' => null,
-        'channelDetail' => null,
-        'batch' => null
+        'channelDetail' => null
     ];
 
     /**
@@ -69,44 +65,38 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * channel  **参数说明**：规则动作的类型。 **取值范围**： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'channel' => 'channel',
-            'channelDetail' => 'channel_detail',
-            'batch' => 'batch'
+            'channelDetail' => 'channel_detail'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * channel  **参数说明**：规则动作的类型。 **取值范围**： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
     protected static $setters = [
             'channel' => 'setChannel',
-            'channelDetail' => 'setChannelDetail',
-            'batch' => 'setBatch'
+            'channelDetail' => 'setChannelDetail'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * channel  **参数说明**：规则动作的类型。 **取值范围**： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
     protected static $getters = [
             'channel' => 'getChannel',
-            'channelDetail' => 'getChannelDetail',
-            'batch' => 'getBatch'
+            'channelDetail' => 'getChannelDetail'
     ];
 
     /**
@@ -169,7 +159,6 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
     {
         $this->container['channel'] = isset($data['channel']) ? $data['channel'] : null;
         $this->container['channelDetail'] = isset($data['channelDetail']) ? $data['channelDetail'] : null;
-        $this->container['batch'] = isset($data['batch']) ? $data['batch'] : null;
     }
 
     /**
@@ -180,8 +169,8 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['channel']) && !preg_match("/(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|ROMA_FORWARDING|IoTA_FORWARDING|MQS_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING)/", $this->container['channel'])) {
-                $invalidProperties[] = "invalid value for 'channel', must be conform to the pattern /(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|ROMA_FORWARDING|IoTA_FORWARDING|MQS_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING)/.";
+            if (!is_null($this->container['channel']) && !preg_match("/(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|ROMA_FORWARDING|IoTA_FORWARDING|MQS_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING|PULSAR_FORWARDING)/", $this->container['channel'])) {
+                $invalidProperties[] = "invalid value for 'channel', must be conform to the pattern /(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|ROMA_FORWARDING|IoTA_FORWARDING|MQS_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING|PULSAR_FORWARDING)/.";
             }
         return $invalidProperties;
     }
@@ -199,7 +188,7 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets channel
-    *  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    *  **参数说明**：规则动作的类型。 **取值范围**： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     *
     * @return string|null
     */
@@ -211,7 +200,7 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
     /**
     * Sets channel
     *
-    * @param string|null $channel 规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * @param string|null $channel **参数说明**：规则动作的类型。 **取值范围**： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     *
     * @return $this
     */
@@ -242,30 +231,6 @@ class UpdateActionReq implements ModelInterface, ArrayAccess
     public function setChannelDetail($channelDetail)
     {
         $this->container['channelDetail'] = $channelDetail;
-        return $this;
-    }
-
-    /**
-    * Gets batch
-    *  是否支持批量接收推送消息。
-    *
-    * @return bool|null
-    */
-    public function getBatch()
-    {
-        return $this->container['batch'];
-    }
-
-    /**
-    * Sets batch
-    *
-    * @param bool|null $batch 是否支持批量接收推送消息。
-    *
-    * @return $this
-    */
-    public function setBatch($batch)
-    {
-        $this->container['batch'] = $batch;
         return $this;
     }
 

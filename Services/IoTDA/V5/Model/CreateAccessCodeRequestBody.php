@@ -20,7 +20,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  接入凭证类型，默认为AMQP的接入凭证类型。
+    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - AMQP
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  接入凭证类型，默认为AMQP的接入凭证类型。
+    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - AMQP
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  接入凭证类型，默认为AMQP的接入凭证类型。
+    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - AMQP
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  接入凭证类型，默认为AMQP的接入凭证类型。
+    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - AMQP
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  接入凭证类型，默认为AMQP的接入凭证类型。
+    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - AMQP
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  接入凭证类型，默认为AMQP的接入凭证类型。
+    *  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - AMQP
     *
     * @return string|null
     */
@@ -195,7 +195,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 接入凭证类型，默认为AMQP的接入凭证类型。
+    * @param string|null $type **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - AMQP
     *
     * @return $this
     */

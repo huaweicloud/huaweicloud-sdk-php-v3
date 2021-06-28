@@ -20,8 +20,8 @@ class ServiceEvent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * eventType  设备事件类型。
-    * paras  设备事件的参数列表。
+    * eventType  **参数说明**：设备事件类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备事件的参数列表。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ServiceEvent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * eventType  设备事件类型。
-    * paras  设备事件的参数列表。
+    * eventType  **参数说明**：设备事件类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备事件的参数列表。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ServiceEvent implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * eventType  设备事件类型。
-    * paras  设备事件的参数列表。
+    * eventType  **参数说明**：设备事件类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备事件的参数列表。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ServiceEvent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * eventType  设备事件类型。
-    * paras  设备事件的参数列表。
+    * eventType  **参数说明**：设备事件类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备事件的参数列表。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ServiceEvent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * eventType  设备事件类型。
-    * paras  设备事件的参数列表。
+    * eventType  **参数说明**：设备事件类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备事件的参数列表。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ServiceEvent implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
-    *  设备事件类型。
+    *  **参数说明**：设备事件类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ServiceEvent implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string $eventType 设备事件类型。
+    * @param string $eventType **参数说明**：设备事件类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ServiceEvent implements ModelInterface, ArrayAccess
 
     /**
     * Gets paras
-    *  设备事件的参数列表。
+    *  **参数说明**：设备事件的参数列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandPara[]|null
     */
@@ -227,7 +227,7 @@ class ServiceEvent implements ModelInterface, ArrayAccess
     /**
     * Sets paras
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandPara[]|null $paras 设备事件的参数列表。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandPara[]|null $paras **参数说明**：设备事件的参数列表。
     *
     * @return $this
     */

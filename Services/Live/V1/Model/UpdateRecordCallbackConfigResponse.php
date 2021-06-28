@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Live\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListAsyncCommandsResponse implements ModelInterface, ArrayAccess
+class UpdateRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,30 +17,24 @@ class ListAsyncCommandsResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListAsyncCommandsResponse';
+    protected static $openAPIModelName = 'UpdateRecordCallbackConfigResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * commands  设备命令列表。
-    * page  page
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'commands' => '\HuaweiCloud\SDK\IoTDA\V5\Model\AsyncDeviceCommand[]',
-            'page' => '\HuaweiCloud\SDK\IoTDA\V5\Model\Page'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * commands  设备命令列表。
-    * page  page
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'commands' => null,
-        'page' => null
     ];
 
     /**
@@ -66,38 +60,29 @@ class ListAsyncCommandsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * commands  设备命令列表。
-    * page  page
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'commands' => 'commands',
-            'page' => 'page'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * commands  设备命令列表。
-    * page  page
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'commands' => 'setCommands',
-            'page' => 'setPage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * commands  设备命令列表。
-    * page  page
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'commands' => 'getCommands',
-            'page' => 'getPage'
     ];
 
     /**
@@ -158,8 +143,6 @@ class ListAsyncCommandsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['commands'] = isset($data['commands']) ? $data['commands'] : null;
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
     }
 
     /**
@@ -182,54 +165,6 @@ class ListAsyncCommandsResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets commands
-    *  设备命令列表。
-    *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\AsyncDeviceCommand[]|null
-    */
-    public function getCommands()
-    {
-        return $this->container['commands'];
-    }
-
-    /**
-    * Sets commands
-    *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\AsyncDeviceCommand[]|null $commands 设备命令列表。
-    *
-    * @return $this
-    */
-    public function setCommands($commands)
-    {
-        $this->container['commands'] = $commands;
-        return $this;
-    }
-
-    /**
-    * Gets page
-    *  page
-    *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\Page|null
-    */
-    public function getPage()
-    {
-        return $this->container['page'];
-    }
-
-    /**
-    * Sets page
-    *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\Page|null $page page
-    *
-    * @return $this
-    */
-    public function setPage($page)
-    {
-        $this->container['page'] = $page;
-        return $this;
     }
 
     /**

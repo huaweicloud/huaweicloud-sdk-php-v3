@@ -20,16 +20,16 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * paraName  参数的名称。
-    * dataType  参数的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
-    * required  参数是否必选。默认为false。
-    * enumList  参数的枚举值列表。
-    * min  参数的最小值。
-    * max  参数的最大值。
-    * maxLength  参数的最大长度。
-    * step  参数的步长。
-    * unit  参数的单位。
-    * description  参数的描述。
+    * paraName  **参数说明**：参数的名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * dataType  **参数说明**：参数的数据类型。 **取值范围**：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  **参数说明**：参数是否必选。默认为false。
+    * enumList  **参数说明**：参数的枚举值列表。
+    * min  **参数说明**：参数的最小值。 **取值范围**：长度1-16。
+    * max  **参数说明**：参数的最大值。 **取值范围**：长度1-16。
+    * maxLength  **参数说明**：参数的最大长度。
+    * step  **参数说明**：参数的步长。
+    * unit  **参数说明**：参数的单位。 **取值范围**：长度不超过16。
+    * description  **参数说明**：参数的描述。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * paraName  参数的名称。
-    * dataType  参数的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
-    * required  参数是否必选。默认为false。
-    * enumList  参数的枚举值列表。
-    * min  参数的最小值。
-    * max  参数的最大值。
-    * maxLength  参数的最大长度。
-    * step  参数的步长。
-    * unit  参数的单位。
-    * description  参数的描述。
+    * paraName  **参数说明**：参数的名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * dataType  **参数说明**：参数的数据类型。 **取值范围**：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  **参数说明**：参数是否必选。默认为false。
+    * enumList  **参数说明**：参数的枚举值列表。
+    * min  **参数说明**：参数的最小值。 **取值范围**：长度1-16。
+    * max  **参数说明**：参数的最大值。 **取值范围**：长度1-16。
+    * maxLength  **参数说明**：参数的最大长度。
+    * step  **参数说明**：参数的步长。
+    * unit  **参数说明**：参数的单位。 **取值范围**：长度不超过16。
+    * description  **参数说明**：参数的描述。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * paraName  参数的名称。
-    * dataType  参数的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
-    * required  参数是否必选。默认为false。
-    * enumList  参数的枚举值列表。
-    * min  参数的最小值。
-    * max  参数的最大值。
-    * maxLength  参数的最大长度。
-    * step  参数的步长。
-    * unit  参数的单位。
-    * description  参数的描述。
+    * paraName  **参数说明**：参数的名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * dataType  **参数说明**：参数的数据类型。 **取值范围**：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  **参数说明**：参数是否必选。默认为false。
+    * enumList  **参数说明**：参数的枚举值列表。
+    * min  **参数说明**：参数的最小值。 **取值范围**：长度1-16。
+    * max  **参数说明**：参数的最大值。 **取值范围**：长度1-16。
+    * maxLength  **参数说明**：参数的最大长度。
+    * step  **参数说明**：参数的步长。
+    * unit  **参数说明**：参数的单位。 **取值范围**：长度不超过16。
+    * description  **参数说明**：参数的描述。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * paraName  参数的名称。
-    * dataType  参数的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
-    * required  参数是否必选。默认为false。
-    * enumList  参数的枚举值列表。
-    * min  参数的最小值。
-    * max  参数的最大值。
-    * maxLength  参数的最大长度。
-    * step  参数的步长。
-    * unit  参数的单位。
-    * description  参数的描述。
+    * paraName  **参数说明**：参数的名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * dataType  **参数说明**：参数的数据类型。 **取值范围**：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  **参数说明**：参数是否必选。默认为false。
+    * enumList  **参数说明**：参数的枚举值列表。
+    * min  **参数说明**：参数的最小值。 **取值范围**：长度1-16。
+    * max  **参数说明**：参数的最大值。 **取值范围**：长度1-16。
+    * maxLength  **参数说明**：参数的最大长度。
+    * step  **参数说明**：参数的步长。
+    * unit  **参数说明**：参数的单位。 **取值范围**：长度不超过16。
+    * description  **参数说明**：参数的描述。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * paraName  参数的名称。
-    * dataType  参数的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
-    * required  参数是否必选。默认为false。
-    * enumList  参数的枚举值列表。
-    * min  参数的最小值。
-    * max  参数的最大值。
-    * maxLength  参数的最大长度。
-    * step  参数的步长。
-    * unit  参数的单位。
-    * description  参数的描述。
+    * paraName  **参数说明**：参数的名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * dataType  **参数说明**：参数的数据类型。 **取值范围**：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  **参数说明**：参数是否必选。默认为false。
+    * enumList  **参数说明**：参数的枚举值列表。
+    * min  **参数说明**：参数的最小值。 **取值范围**：长度1-16。
+    * max  **参数说明**：参数的最大值。 **取值范围**：长度1-16。
+    * maxLength  **参数说明**：参数的最大长度。
+    * step  **参数说明**：参数的步长。
+    * unit  **参数说明**：参数的单位。 **取值范围**：长度不超过16。
+    * description  **参数说明**：参数的描述。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @var string[]
     */
@@ -303,7 +303,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets paraName
-    *  参数的名称。
+    *  **参数说明**：参数的名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return string
     */
@@ -315,7 +315,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
     /**
     * Sets paraName
     *
-    * @param string $paraName 参数的名称。
+    * @param string $paraName **参数说明**：参数的名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return $this
     */
@@ -327,7 +327,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataType
-    *  参数的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    *  **参数说明**：参数的数据类型。 **取值范围**：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
     *
     * @return string
     */
@@ -339,7 +339,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
     /**
     * Sets dataType
     *
-    * @param string $dataType 参数的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * @param string $dataType **参数说明**：参数的数据类型。 **取值范围**：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
     *
     * @return $this
     */
@@ -351,7 +351,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets required
-    *  参数是否必选。默认为false。
+    *  **参数说明**：参数是否必选。默认为false。
     *
     * @return bool|null
     */
@@ -363,7 +363,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
     /**
     * Sets required
     *
-    * @param bool|null $required 参数是否必选。默认为false。
+    * @param bool|null $required **参数说明**：参数是否必选。默认为false。
     *
     * @return $this
     */
@@ -375,7 +375,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets enumList
-    *  参数的枚举值列表。
+    *  **参数说明**：参数的枚举值列表。
     *
     * @return string[]|null
     */
@@ -387,7 +387,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
     /**
     * Sets enumList
     *
-    * @param string[]|null $enumList 参数的枚举值列表。
+    * @param string[]|null $enumList **参数说明**：参数的枚举值列表。
     *
     * @return $this
     */
@@ -399,7 +399,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets min
-    *  参数的最小值。
+    *  **参数说明**：参数的最小值。 **取值范围**：长度1-16。
     *
     * @return string|null
     */
@@ -411,7 +411,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
     /**
     * Sets min
     *
-    * @param string|null $min 参数的最小值。
+    * @param string|null $min **参数说明**：参数的最小值。 **取值范围**：长度1-16。
     *
     * @return $this
     */
@@ -423,7 +423,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets max
-    *  参数的最大值。
+    *  **参数说明**：参数的最大值。 **取值范围**：长度1-16。
     *
     * @return string|null
     */
@@ -435,7 +435,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
     /**
     * Sets max
     *
-    * @param string|null $max 参数的最大值。
+    * @param string|null $max **参数说明**：参数的最大值。 **取值范围**：长度1-16。
     *
     * @return $this
     */
@@ -447,7 +447,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxLength
-    *  参数的最大长度。
+    *  **参数说明**：参数的最大长度。
     *
     * @return int|null
     */
@@ -459,7 +459,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
     /**
     * Sets maxLength
     *
-    * @param int|null $maxLength 参数的最大长度。
+    * @param int|null $maxLength **参数说明**：参数的最大长度。
     *
     * @return $this
     */
@@ -471,7 +471,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets step
-    *  参数的步长。
+    *  **参数说明**：参数的步长。
     *
     * @return double|null
     */
@@ -483,7 +483,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
     /**
     * Sets step
     *
-    * @param double|null $step 参数的步长。
+    * @param double|null $step **参数说明**：参数的步长。
     *
     * @return $this
     */
@@ -495,7 +495,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  参数的单位。
+    *  **参数说明**：参数的单位。 **取值范围**：长度不超过16。
     *
     * @return string|null
     */
@@ -507,7 +507,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string|null $unit 参数的单位。
+    * @param string|null $unit **参数说明**：参数的单位。 **取值范围**：长度不超过16。
     *
     * @return $this
     */
@@ -519,7 +519,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  参数的描述。
+    *  **参数说明**：参数的描述。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @return string|null
     */
@@ -531,7 +531,7 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 参数的描述。
+    * @param string|null $description **参数说明**：参数的描述。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @return $this
     */

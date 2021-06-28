@@ -7,8 +7,9 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DeleteRecordConfigRequest implements ModelInterface, ArrayAccess
+class ListRecordRulesResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,30 @@ class DeleteRecordConfigRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DeleteRecordConfigRequest';
+    protected static $openAPIModelName = 'ListRecordRulesResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domain  直播播放域名
-    * appName  流应用名称
+    * total  查询结果的总元素数量
+    * recordConfig  录制配置数组
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'domain' => 'string',
-            'appName' => 'string'
+            'total' => 'int',
+            'recordConfig' => '\HuaweiCloud\SDK\Live\V1\Model\RecordRule[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domain  直播播放域名
-    * appName  流应用名称
+    * total  查询结果的总元素数量
+    * recordConfig  录制配置数组
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'domain' => null,
-        'appName' => null
+        'total' => 'int32',
+        'recordConfig' => null
     ];
 
     /**
@@ -65,38 +66,38 @@ class DeleteRecordConfigRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domain  直播播放域名
-    * appName  流应用名称
+    * total  查询结果的总元素数量
+    * recordConfig  录制配置数组
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'domain' => 'domain',
-            'appName' => 'app_name'
+            'total' => 'total',
+            'recordConfig' => 'record_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domain  直播播放域名
-    * appName  流应用名称
+    * total  查询结果的总元素数量
+    * recordConfig  录制配置数组
     *
     * @var string[]
     */
     protected static $setters = [
-            'domain' => 'setDomain',
-            'appName' => 'setAppName'
+            'total' => 'setTotal',
+            'recordConfig' => 'setRecordConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domain  直播播放域名
-    * appName  流应用名称
+    * total  查询结果的总元素数量
+    * recordConfig  录制配置数组
     *
     * @var string[]
     */
     protected static $getters = [
-            'domain' => 'getDomain',
-            'appName' => 'getAppName'
+            'total' => 'getTotal',
+            'recordConfig' => 'getRecordConfig'
     ];
 
     /**
@@ -157,8 +158,8 @@ class DeleteRecordConfigRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
-        $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['recordConfig'] = isset($data['recordConfig']) ? $data['recordConfig'] : null;
     }
 
     /**
@@ -169,23 +170,11 @@ class DeleteRecordConfigRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['domain'] === null) {
-            $invalidProperties[] = "'domain' can't be null";
-        }
-            if ((mb_strlen($this->container['domain']) > 64)) {
-                $invalidProperties[] = "invalid value for 'domain', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['total']) && ($this->container['total'] > 1024000)) {
+                $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 1024000.";
             }
-            if ((mb_strlen($this->container['domain']) < 1)) {
-                $invalidProperties[] = "invalid value for 'domain', the character length must be bigger than or equal to 1.";
-            }
-        if ($this->container['appName'] === null) {
-            $invalidProperties[] = "'appName' can't be null";
-        }
-            if ((mb_strlen($this->container['appName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'appName', the character length must be smaller than or equal to 128.";
-            }
-            if ((mb_strlen($this->container['appName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'appName', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['total']) && ($this->container['total'] < 0)) {
+                $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -202,50 +191,50 @@ class DeleteRecordConfigRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets domain
-    *  直播播放域名
+    * Gets total
+    *  查询结果的总元素数量
     *
-    * @return string
+    * @return int|null
     */
-    public function getDomain()
+    public function getTotal()
     {
-        return $this->container['domain'];
+        return $this->container['total'];
     }
 
     /**
-    * Sets domain
+    * Sets total
     *
-    * @param string $domain 直播播放域名
+    * @param int|null $total 查询结果的总元素数量
     *
     * @return $this
     */
-    public function setDomain($domain)
+    public function setTotal($total)
     {
-        $this->container['domain'] = $domain;
+        $this->container['total'] = $total;
         return $this;
     }
 
     /**
-    * Gets appName
-    *  流应用名称
+    * Gets recordConfig
+    *  录制配置数组
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Live\V1\Model\RecordRule[]|null
     */
-    public function getAppName()
+    public function getRecordConfig()
     {
-        return $this->container['appName'];
+        return $this->container['recordConfig'];
     }
 
     /**
-    * Sets appName
+    * Sets recordConfig
     *
-    * @param string $appName 流应用名称
+    * @param \HuaweiCloud\SDK\Live\V1\Model\RecordRule[]|null $recordConfig 录制配置数组
     *
     * @return $this
     */
-    public function setAppName($appName)
+    public function setRecordConfig($recordConfig)
     {
-        $this->container['appName'] = $appName;
+        $this->container['recordConfig'] = $recordConfig;
         return $this;
     }
 

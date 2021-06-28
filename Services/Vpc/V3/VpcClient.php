@@ -60,7 +60,6 @@ class VpcClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -125,7 +124,6 @@ class VpcClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -190,7 +188,6 @@ class VpcClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -255,7 +252,6 @@ class VpcClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -320,7 +316,6 @@ class VpcClient extends Client
         if ($localVarParams['securityGroupId'] !== null) {
             $pathParams['security_group_id'] = $localVarParams['securityGroupId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -385,7 +380,6 @@ class VpcClient extends Client
         if ($localVarParams['securityGroupRuleId'] !== null) {
             $pathParams['security_group_rule_id'] = $localVarParams['securityGroupRuleId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -450,7 +444,6 @@ class VpcClient extends Client
         if ($localVarParams['subNetworkInterfaceId'] !== null) {
             $pathParams['sub_network_interface_id'] = $localVarParams['subNetworkInterfaceId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -539,7 +532,6 @@ class VpcClient extends Client
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -619,7 +611,6 @@ class VpcClient extends Client
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -708,7 +699,6 @@ class VpcClient extends Client
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -773,7 +763,6 @@ class VpcClient extends Client
         if ($localVarParams['securityGroupId'] !== null) {
             $pathParams['security_group_id'] = $localVarParams['securityGroupId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -838,7 +827,6 @@ class VpcClient extends Client
         if ($localVarParams['securityGroupRuleId'] !== null) {
             $pathParams['security_group_rule_id'] = $localVarParams['securityGroupRuleId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -903,7 +891,6 @@ class VpcClient extends Client
         if ($localVarParams['subNetworkInterfaceId'] !== null) {
             $pathParams['sub_network_interface_id'] = $localVarParams['subNetworkInterfaceId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -965,7 +952,6 @@ class VpcClient extends Client
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1033,7 +1019,6 @@ class VpcClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1101,7 +1086,6 @@ class VpcClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']

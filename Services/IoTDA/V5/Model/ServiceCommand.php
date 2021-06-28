@@ -20,9 +20,9 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * commandName  设备命令名称。
-    * paras  设备命令的参数列表。
-    * responses  设备命令的响应列表。
+    * commandName  **参数说明**：设备命令名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备命令的参数列表。
+    * responses  **参数说明**：设备命令的响应列表。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * commandName  设备命令名称。
-    * paras  设备命令的参数列表。
-    * responses  设备命令的响应列表。
+    * commandName  **参数说明**：设备命令名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备命令的参数列表。
+    * responses  **参数说明**：设备命令的响应列表。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ServiceCommand implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * commandName  设备命令名称。
-    * paras  设备命令的参数列表。
-    * responses  设备命令的响应列表。
+    * commandName  **参数说明**：设备命令名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备命令的参数列表。
+    * responses  **参数说明**：设备命令的响应列表。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * commandName  设备命令名称。
-    * paras  设备命令的参数列表。
-    * responses  设备命令的响应列表。
+    * commandName  **参数说明**：设备命令名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备命令的参数列表。
+    * responses  **参数说明**：设备命令的响应列表。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * commandName  设备命令名称。
-    * paras  设备命令的参数列表。
-    * responses  设备命令的响应列表。
+    * commandName  **参数说明**：设备命令名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备命令的参数列表。
+    * responses  **参数说明**：设备命令的响应列表。
     *
     * @var string[]
     */
@@ -202,7 +202,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Gets commandName
-    *  设备命令名称。
+    *  **参数说明**：设备命令名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
     /**
     * Sets commandName
     *
-    * @param string $commandName 设备命令名称。
+    * @param string $commandName **参数说明**：设备命令名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return $this
     */
@@ -226,7 +226,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Gets paras
-    *  设备命令的参数列表。
+    *  **参数说明**：设备命令的参数列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandPara[]|null
     */
@@ -238,7 +238,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
     /**
     * Sets paras
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandPara[]|null $paras 设备命令的参数列表。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandPara[]|null $paras **参数说明**：设备命令的参数列表。
     *
     * @return $this
     */
@@ -250,7 +250,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Gets responses
-    *  设备命令的响应列表。
+    *  **参数说明**：设备命令的响应列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandResponse[]|null
     */
@@ -262,7 +262,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
     /**
     * Sets responses
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandResponse[]|null $responses 设备命令的响应列表。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandResponse[]|null $responses **参数说明**：设备命令的响应列表。
     *
     * @return $this
     */

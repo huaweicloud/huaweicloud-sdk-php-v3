@@ -20,8 +20,8 @@ class ServiceCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * responseName  设备命令响应名称。
-    * paras  设备命令响应的参数列表。
+    * responseName  **参数说明**：设备命令响应名称。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备命令响应的参数列表。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ServiceCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * responseName  设备命令响应名称。
-    * paras  设备命令响应的参数列表。
+    * responseName  **参数说明**：设备命令响应名称。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备命令响应的参数列表。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ServiceCommandResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * responseName  设备命令响应名称。
-    * paras  设备命令响应的参数列表。
+    * responseName  **参数说明**：设备命令响应名称。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备命令响应的参数列表。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ServiceCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * responseName  设备命令响应名称。
-    * paras  设备命令响应的参数列表。
+    * responseName  **参数说明**：设备命令响应名称。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备命令响应的参数列表。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ServiceCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * responseName  设备命令响应名称。
-    * paras  设备命令响应的参数列表。
+    * responseName  **参数说明**：设备命令响应名称。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * paras  **参数说明**：设备命令响应的参数列表。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ServiceCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets responseName
-    *  设备命令响应名称。
+    *  **参数说明**：设备命令响应名称。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ServiceCommandResponse implements ModelInterface, ArrayAccess
     /**
     * Sets responseName
     *
-    * @param string $responseName 设备命令响应名称。
+    * @param string $responseName **参数说明**：设备命令响应名称。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ServiceCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets paras
-    *  设备命令响应的参数列表。
+    *  **参数说明**：设备命令响应的参数列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandPara[]|null
     */
@@ -227,7 +227,7 @@ class ServiceCommandResponse implements ModelInterface, ArrayAccess
     /**
     * Sets paras
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandPara[]|null $paras 设备命令响应的参数列表。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommandPara[]|null $paras **参数说明**：设备命令响应的参数列表。
     *
     * @return $this
     */

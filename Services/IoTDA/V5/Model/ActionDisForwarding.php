@@ -20,10 +20,10 @@ class ActionDisForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regionName  DIS服务对应的region区域
-    * projectId  DIS服务对应的projectId信息
-    * streamName  DIS服务对应的通道名称，和通道ID参数中至少一个不为空，和通道ID参数都存在时，以通道ID参数值为准。通过调用DIS服务 [查询通道列表](https://support.huaweicloud.com/api-dis/dis_02_0024.html)接口获取。
-    * streamId  DIS服务对应的通道ID，和通道名称参数中至少一个不为空，和通道名称参数都存在时，以本参数值为准。通过调用DIS服务 [查询通道详情](https://support.huaweicloud.com/api-dis/dis_02_0025.html)接口获取。
+    * regionName  **参数说明**：DIS服务对应的region区域。
+    * projectId  **参数说明**：DIS服务对应的projectId信息。
+    * streamName  **参数说明**：DIS服务对应的通道名称，和通道ID参数中至少一个不为空，和通道ID参数都存在时，以通道ID参数值为准。通过调用DIS服务 [查询通道列表](https://support.huaweicloud.com/api-dis/dis_02_0024.html)接口获取。
+    * streamId  **参数说明**：DIS服务对应的通道ID，和通道名称参数中至少一个不为空，和通道名称参数都存在时，以本参数值为准。通过调用DIS服务 [查询通道详情](https://support.huaweicloud.com/api-dis/dis_02_0025.html)接口获取。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ActionDisForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regionName  DIS服务对应的region区域
-    * projectId  DIS服务对应的projectId信息
-    * streamName  DIS服务对应的通道名称，和通道ID参数中至少一个不为空，和通道ID参数都存在时，以通道ID参数值为准。通过调用DIS服务 [查询通道列表](https://support.huaweicloud.com/api-dis/dis_02_0024.html)接口获取。
-    * streamId  DIS服务对应的通道ID，和通道名称参数中至少一个不为空，和通道名称参数都存在时，以本参数值为准。通过调用DIS服务 [查询通道详情](https://support.huaweicloud.com/api-dis/dis_02_0025.html)接口获取。
+    * regionName  **参数说明**：DIS服务对应的region区域。
+    * projectId  **参数说明**：DIS服务对应的projectId信息。
+    * streamName  **参数说明**：DIS服务对应的通道名称，和通道ID参数中至少一个不为空，和通道ID参数都存在时，以通道ID参数值为准。通过调用DIS服务 [查询通道列表](https://support.huaweicloud.com/api-dis/dis_02_0024.html)接口获取。
+    * streamId  **参数说明**：DIS服务对应的通道ID，和通道名称参数中至少一个不为空，和通道名称参数都存在时，以本参数值为准。通过调用DIS服务 [查询通道详情](https://support.huaweicloud.com/api-dis/dis_02_0025.html)接口获取。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ActionDisForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regionName  DIS服务对应的region区域
-    * projectId  DIS服务对应的projectId信息
-    * streamName  DIS服务对应的通道名称，和通道ID参数中至少一个不为空，和通道ID参数都存在时，以通道ID参数值为准。通过调用DIS服务 [查询通道列表](https://support.huaweicloud.com/api-dis/dis_02_0024.html)接口获取。
-    * streamId  DIS服务对应的通道ID，和通道名称参数中至少一个不为空，和通道名称参数都存在时，以本参数值为准。通过调用DIS服务 [查询通道详情](https://support.huaweicloud.com/api-dis/dis_02_0025.html)接口获取。
+    * regionName  **参数说明**：DIS服务对应的region区域。
+    * projectId  **参数说明**：DIS服务对应的projectId信息。
+    * streamName  **参数说明**：DIS服务对应的通道名称，和通道ID参数中至少一个不为空，和通道ID参数都存在时，以通道ID参数值为准。通过调用DIS服务 [查询通道列表](https://support.huaweicloud.com/api-dis/dis_02_0024.html)接口获取。
+    * streamId  **参数说明**：DIS服务对应的通道ID，和通道名称参数中至少一个不为空，和通道名称参数都存在时，以本参数值为准。通过调用DIS服务 [查询通道详情](https://support.huaweicloud.com/api-dis/dis_02_0025.html)接口获取。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ActionDisForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regionName  DIS服务对应的region区域
-    * projectId  DIS服务对应的projectId信息
-    * streamName  DIS服务对应的通道名称，和通道ID参数中至少一个不为空，和通道ID参数都存在时，以通道ID参数值为准。通过调用DIS服务 [查询通道列表](https://support.huaweicloud.com/api-dis/dis_02_0024.html)接口获取。
-    * streamId  DIS服务对应的通道ID，和通道名称参数中至少一个不为空，和通道名称参数都存在时，以本参数值为准。通过调用DIS服务 [查询通道详情](https://support.huaweicloud.com/api-dis/dis_02_0025.html)接口获取。
+    * regionName  **参数说明**：DIS服务对应的region区域。
+    * projectId  **参数说明**：DIS服务对应的projectId信息。
+    * streamName  **参数说明**：DIS服务对应的通道名称，和通道ID参数中至少一个不为空，和通道ID参数都存在时，以通道ID参数值为准。通过调用DIS服务 [查询通道列表](https://support.huaweicloud.com/api-dis/dis_02_0024.html)接口获取。
+    * streamId  **参数说明**：DIS服务对应的通道ID，和通道名称参数中至少一个不为空，和通道名称参数都存在时，以本参数值为准。通过调用DIS服务 [查询通道详情](https://support.huaweicloud.com/api-dis/dis_02_0025.html)接口获取。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ActionDisForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regionName  DIS服务对应的region区域
-    * projectId  DIS服务对应的projectId信息
-    * streamName  DIS服务对应的通道名称，和通道ID参数中至少一个不为空，和通道ID参数都存在时，以通道ID参数值为准。通过调用DIS服务 [查询通道列表](https://support.huaweicloud.com/api-dis/dis_02_0024.html)接口获取。
-    * streamId  DIS服务对应的通道ID，和通道名称参数中至少一个不为空，和通道名称参数都存在时，以本参数值为准。通过调用DIS服务 [查询通道详情](https://support.huaweicloud.com/api-dis/dis_02_0025.html)接口获取。
+    * regionName  **参数说明**：DIS服务对应的region区域。
+    * projectId  **参数说明**：DIS服务对应的projectId信息。
+    * streamName  **参数说明**：DIS服务对应的通道名称，和通道ID参数中至少一个不为空，和通道ID参数都存在时，以通道ID参数值为准。通过调用DIS服务 [查询通道列表](https://support.huaweicloud.com/api-dis/dis_02_0024.html)接口获取。
+    * streamId  **参数说明**：DIS服务对应的通道ID，和通道名称参数中至少一个不为空，和通道名称参数都存在时，以本参数值为准。通过调用DIS服务 [查询通道详情](https://support.huaweicloud.com/api-dis/dis_02_0025.html)接口获取。
     *
     * @var string[]
     */
@@ -225,7 +225,7 @@ class ActionDisForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionName
-    *  DIS服务对应的region区域
+    *  **参数说明**：DIS服务对应的region区域。
     *
     * @return string
     */
@@ -237,7 +237,7 @@ class ActionDisForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets regionName
     *
-    * @param string $regionName DIS服务对应的region区域
+    * @param string $regionName **参数说明**：DIS服务对应的region区域。
     *
     * @return $this
     */
@@ -249,7 +249,7 @@ class ActionDisForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  DIS服务对应的projectId信息
+    *  **参数说明**：DIS服务对应的projectId信息。
     *
     * @return string
     */
@@ -261,7 +261,7 @@ class ActionDisForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId DIS服务对应的projectId信息
+    * @param string $projectId **参数说明**：DIS服务对应的projectId信息。
     *
     * @return $this
     */
@@ -273,7 +273,7 @@ class ActionDisForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets streamName
-    *  DIS服务对应的通道名称，和通道ID参数中至少一个不为空，和通道ID参数都存在时，以通道ID参数值为准。通过调用DIS服务 [查询通道列表](https://support.huaweicloud.com/api-dis/dis_02_0024.html)接口获取。
+    *  **参数说明**：DIS服务对应的通道名称，和通道ID参数中至少一个不为空，和通道ID参数都存在时，以通道ID参数值为准。通过调用DIS服务 [查询通道列表](https://support.huaweicloud.com/api-dis/dis_02_0024.html)接口获取。
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class ActionDisForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets streamName
     *
-    * @param string|null $streamName DIS服务对应的通道名称，和通道ID参数中至少一个不为空，和通道ID参数都存在时，以通道ID参数值为准。通过调用DIS服务 [查询通道列表](https://support.huaweicloud.com/api-dis/dis_02_0024.html)接口获取。
+    * @param string|null $streamName **参数说明**：DIS服务对应的通道名称，和通道ID参数中至少一个不为空，和通道ID参数都存在时，以通道ID参数值为准。通过调用DIS服务 [查询通道列表](https://support.huaweicloud.com/api-dis/dis_02_0024.html)接口获取。
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class ActionDisForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets streamId
-    *  DIS服务对应的通道ID，和通道名称参数中至少一个不为空，和通道名称参数都存在时，以本参数值为准。通过调用DIS服务 [查询通道详情](https://support.huaweicloud.com/api-dis/dis_02_0025.html)接口获取。
+    *  **参数说明**：DIS服务对应的通道ID，和通道名称参数中至少一个不为空，和通道名称参数都存在时，以本参数值为准。通过调用DIS服务 [查询通道详情](https://support.huaweicloud.com/api-dis/dis_02_0025.html)接口获取。
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class ActionDisForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets streamId
     *
-    * @param string|null $streamId DIS服务对应的通道ID，和通道名称参数中至少一个不为空，和通道名称参数都存在时，以本参数值为准。通过调用DIS服务 [查询通道详情](https://support.huaweicloud.com/api-dis/dis_02_0025.html)接口获取。
+    * @param string|null $streamId **参数说明**：DIS服务对应的通道ID，和通道名称参数中至少一个不为空，和通道名称参数都存在时，以本参数值为准。通过调用DIS服务 [查询通道详情](https://support.huaweicloud.com/api-dis/dis_02_0025.html)接口获取。
     *
     * @return $this
     */

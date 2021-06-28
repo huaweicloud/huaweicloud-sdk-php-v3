@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Live\V1\Model;
+namespace HuaweiCloud\SDK\IoTDA\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ObsFileAddr implements ModelInterface, ArrayAccess
+class PulsarForwarding implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,34 @@ class ObsFileAddr implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ObsFileAddr';
+    protected static $openAPIModelName = 'PulsarForwarding';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bucket  OBS的bucket名称
-    * location  OBS Bucket所在数据中心（OBS Location）
-    * object  OBS对象路径，遵守OSS Object定义，当用于指示input时,需要指定到具体对象；当用于指示output时, 只需指定到转码结果期望存放的路径
+    * url  **参数说明**：pulsar的访问url。
+    * topic  **参数说明**：用于接收满足规则条件数据的topic。
+    * certId  **参数说明**：证书id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'bucket' => 'string',
-            'location' => 'string',
-            'object' => 'string'
+            'url' => 'string',
+            'topic' => 'string',
+            'certId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bucket  OBS的bucket名称
-    * location  OBS Bucket所在数据中心（OBS Location）
-    * object  OBS对象路径，遵守OSS Object定义，当用于指示input时,需要指定到具体对象；当用于指示output时, 只需指定到转码结果期望存放的路径
+    * url  **参数说明**：pulsar的访问url。
+    * topic  **参数说明**：用于接收满足规则条件数据的topic。
+    * certId  **参数说明**：证书id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'bucket' => null,
-        'location' => null,
-        'object' => null
+        'url' => null,
+        'topic' => null,
+        'certId' => null
     ];
 
     /**
@@ -69,44 +69,44 @@ class ObsFileAddr implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bucket  OBS的bucket名称
-    * location  OBS Bucket所在数据中心（OBS Location）
-    * object  OBS对象路径，遵守OSS Object定义，当用于指示input时,需要指定到具体对象；当用于指示output时, 只需指定到转码结果期望存放的路径
+    * url  **参数说明**：pulsar的访问url。
+    * topic  **参数说明**：用于接收满足规则条件数据的topic。
+    * certId  **参数说明**：证书id
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'bucket' => 'bucket',
-            'location' => 'location',
-            'object' => 'object'
+            'url' => 'url',
+            'topic' => 'topic',
+            'certId' => 'cert_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bucket  OBS的bucket名称
-    * location  OBS Bucket所在数据中心（OBS Location）
-    * object  OBS对象路径，遵守OSS Object定义，当用于指示input时,需要指定到具体对象；当用于指示output时, 只需指定到转码结果期望存放的路径
+    * url  **参数说明**：pulsar的访问url。
+    * topic  **参数说明**：用于接收满足规则条件数据的topic。
+    * certId  **参数说明**：证书id
     *
     * @var string[]
     */
     protected static $setters = [
-            'bucket' => 'setBucket',
-            'location' => 'setLocation',
-            'object' => 'setObject'
+            'url' => 'setUrl',
+            'topic' => 'setTopic',
+            'certId' => 'setCertId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bucket  OBS的bucket名称
-    * location  OBS Bucket所在数据中心（OBS Location）
-    * object  OBS对象路径，遵守OSS Object定义，当用于指示input时,需要指定到具体对象；当用于指示output时, 只需指定到转码结果期望存放的路径
+    * url  **参数说明**：pulsar的访问url。
+    * topic  **参数说明**：用于接收满足规则条件数据的topic。
+    * certId  **参数说明**：证书id
     *
     * @var string[]
     */
     protected static $getters = [
-            'bucket' => 'getBucket',
-            'location' => 'getLocation',
-            'object' => 'getObject'
+            'url' => 'getUrl',
+            'topic' => 'getTopic',
+            'certId' => 'getCertId'
     ];
 
     /**
@@ -167,9 +167,9 @@ class ObsFileAddr implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['bucket'] = isset($data['bucket']) ? $data['bucket'] : null;
-        $this->container['location'] = isset($data['location']) ? $data['location'] : null;
-        $this->container['object'] = isset($data['object']) ? $data['object'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
+        $this->container['certId'] = isset($data['certId']) ? $data['certId'] : null;
     }
 
     /**
@@ -180,32 +180,29 @@ class ObsFileAddr implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['bucket'] === null) {
-            $invalidProperties[] = "'bucket' can't be null";
+        if ($this->container['url'] === null) {
+            $invalidProperties[] = "'url' can't be null";
         }
-            if ((mb_strlen($this->container['bucket']) > 64)) {
-                $invalidProperties[] = "invalid value for 'bucket', the character length must be smaller than or equal to 64.";
+            if ((mb_strlen($this->container['url']) > 512)) {
+                $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 512.";
             }
-            if ((mb_strlen($this->container['bucket']) < 1)) {
-                $invalidProperties[] = "invalid value for 'bucket', the character length must be bigger than or equal to 1.";
+            if ((mb_strlen($this->container['url']) < 1)) {
+                $invalidProperties[] = "invalid value for 'url', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['location'] === null) {
-            $invalidProperties[] = "'location' can't be null";
+        if ($this->container['topic'] === null) {
+            $invalidProperties[] = "'topic' can't be null";
         }
-            if ((mb_strlen($this->container['location']) > 128)) {
-                $invalidProperties[] = "invalid value for 'location', the character length must be smaller than or equal to 128.";
+            if ((mb_strlen($this->container['topic']) > 256)) {
+                $invalidProperties[] = "invalid value for 'topic', the character length must be smaller than or equal to 256.";
             }
-            if ((mb_strlen($this->container['location']) < 1)) {
-                $invalidProperties[] = "invalid value for 'location', the character length must be bigger than or equal to 1.";
+            if ((mb_strlen($this->container['topic']) < 1)) {
+                $invalidProperties[] = "invalid value for 'topic', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['object'] === null) {
-            $invalidProperties[] = "'object' can't be null";
-        }
-            if ((mb_strlen($this->container['object']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'object', the character length must be smaller than or equal to 1024.";
+            if (!is_null($this->container['certId']) && (mb_strlen($this->container['certId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'certId', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['object']) < 1)) {
-                $invalidProperties[] = "invalid value for 'object', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['certId']) && (mb_strlen($this->container['certId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'certId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -222,74 +219,74 @@ class ObsFileAddr implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets bucket
-    *  OBS的bucket名称
+    * Gets url
+    *  **参数说明**：pulsar的访问url。
     *
     * @return string
     */
-    public function getBucket()
+    public function getUrl()
     {
-        return $this->container['bucket'];
+        return $this->container['url'];
     }
 
     /**
-    * Sets bucket
+    * Sets url
     *
-    * @param string $bucket OBS的bucket名称
+    * @param string $url **参数说明**：pulsar的访问url。
     *
     * @return $this
     */
-    public function setBucket($bucket)
+    public function setUrl($url)
     {
-        $this->container['bucket'] = $bucket;
+        $this->container['url'] = $url;
         return $this;
     }
 
     /**
-    * Gets location
-    *  OBS Bucket所在数据中心（OBS Location）
+    * Gets topic
+    *  **参数说明**：用于接收满足规则条件数据的topic。
     *
     * @return string
     */
-    public function getLocation()
+    public function getTopic()
     {
-        return $this->container['location'];
+        return $this->container['topic'];
     }
 
     /**
-    * Sets location
+    * Sets topic
     *
-    * @param string $location OBS Bucket所在数据中心（OBS Location）
+    * @param string $topic **参数说明**：用于接收满足规则条件数据的topic。
     *
     * @return $this
     */
-    public function setLocation($location)
+    public function setTopic($topic)
     {
-        $this->container['location'] = $location;
+        $this->container['topic'] = $topic;
         return $this;
     }
 
     /**
-    * Gets object
-    *  OBS对象路径，遵守OSS Object定义，当用于指示input时,需要指定到具体对象；当用于指示output时, 只需指定到转码结果期望存放的路径
+    * Gets certId
+    *  **参数说明**：证书id
     *
-    * @return string
+    * @return string|null
     */
-    public function getObject()
+    public function getCertId()
     {
-        return $this->container['object'];
+        return $this->container['certId'];
     }
 
     /**
-    * Sets object
+    * Sets certId
     *
-    * @param string $object OBS对象路径，遵守OSS Object定义，当用于指示input时,需要指定到具体对象；当用于指示output时, 只需指定到转码结果期望存放的路径
+    * @param string|null $certId **参数说明**：证书id
     *
     * @return $this
     */
-    public function setObject($object)
+    public function setCertId($certId)
     {
-        $this->container['object'] = $object;
+        $this->container['certId'] = $certId;
         return $this;
     }
 

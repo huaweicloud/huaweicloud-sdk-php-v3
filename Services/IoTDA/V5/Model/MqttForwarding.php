@@ -20,7 +20,7 @@ class MqttForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  用于接收满足规则条件数据的topic。
+    * topic  **参数说明**：用于接收满足规则条件数据的topic。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、斜杠（/）、连接符（-）的组合。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class MqttForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  用于接收满足规则条件数据的topic。
+    * topic  **参数说明**：用于接收满足规则条件数据的topic。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、斜杠（/）、连接符（-）的组合。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class MqttForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  用于接收满足规则条件数据的topic。
+    * topic  **参数说明**：用于接收满足规则条件数据的topic。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、斜杠（/）、连接符（-）的组合。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class MqttForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  用于接收满足规则条件数据的topic。
+    * topic  **参数说明**：用于接收满足规则条件数据的topic。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、斜杠（/）、连接符（-）的组合。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class MqttForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  用于接收满足规则条件数据的topic。
+    * topic  **参数说明**：用于接收满足规则条件数据的topic。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、斜杠（/）、连接符（-）的组合。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class MqttForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  用于接收满足规则条件数据的topic。
+    *  **参数说明**：用于接收满足规则条件数据的topic。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、斜杠（/）、连接符（-）的组合。
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class MqttForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string $topic 用于接收满足规则条件数据的topic。
+    * @param string $topic **参数说明**：用于接收满足规则条件数据的topic。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、斜杠（/）、连接符（-）的组合。
     *
     * @return $this
     */

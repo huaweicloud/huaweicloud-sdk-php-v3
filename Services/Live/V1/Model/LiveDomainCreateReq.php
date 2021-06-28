@@ -23,6 +23,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     * domainSource  domainSource
     *
     * @var string[]
@@ -31,6 +32,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domain' => 'string',
             'domainType' => 'string',
             'region' => 'string',
+            'serviceArea' => 'string',
             'domainSource' => '\HuaweiCloud\SDK\Live\V1\Model\DomainSourceInfo'
     ];
 
@@ -39,6 +41,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     * domainSource  domainSource
     *
     * @var string[]
@@ -47,6 +50,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
         'domain' => null,
         'domainType' => null,
         'region' => null,
+        'serviceArea' => null,
         'domainSource' => null
     ];
 
@@ -76,6 +80,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     * domainSource  domainSource
     *
     * @var string[]
@@ -84,6 +89,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domain' => 'domain',
             'domainType' => 'domain_type',
             'region' => 'region',
+            'serviceArea' => 'service_area',
             'domainSource' => 'domain_source'
     ];
 
@@ -92,6 +98,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     * domainSource  domainSource
     *
     * @var string[]
@@ -100,6 +107,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domain' => 'setDomain',
             'domainType' => 'setDomainType',
             'region' => 'setRegion',
+            'serviceArea' => 'setServiceArea',
             'domainSource' => 'setDomainSource'
     ];
 
@@ -108,6 +116,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     * domainSource  domainSource
     *
     * @var string[]
@@ -116,6 +125,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domain' => 'getDomain',
             'domainType' => 'getDomainType',
             'region' => 'getRegion',
+            'serviceArea' => 'getServiceArea',
             'domainSource' => 'getDomainSource'
     ];
 
@@ -161,6 +171,9 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     }
     const DOMAIN_TYPE_PULL = 'pull';
     const DOMAIN_TYPE_PUSH = 'push';
+    const SERVICE_AREA_MAINLAND_CHINA = 'mainland_china';
+    const SERVICE_AREA_OUTSIDE_MAINLAND_CHINA = 'outside_mainland_china';
+    const SERVICE_AREA__GLOBAL = 'global';
     
 
     /**
@@ -173,6 +186,20 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
         return [
             self::DOMAIN_TYPE_PULL,
             self::DOMAIN_TYPE_PUSH,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getServiceAreaAllowableValues()
+    {
+        return [
+            self::SERVICE_AREA_MAINLAND_CHINA,
+            self::SERVICE_AREA_OUTSIDE_MAINLAND_CHINA,
+            self::SERVICE_AREA__GLOBAL,
         ];
     }
 
@@ -195,6 +222,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['domainType'] = isset($data['domainType']) ? $data['domainType'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
+        $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
         $this->container['domainSource'] = isset($data['domainSource']) ? $data['domainSource'] : null;
     }
 
@@ -235,6 +263,14 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['region']) < 1)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getServiceAreaAllowableValues();
+                if (!is_null($this->container['serviceArea']) && !in_array($this->container['serviceArea'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'serviceArea', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -318,6 +354,30 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     public function setRegion($region)
     {
         $this->container['region'] = $region;
+        return $this;
+    }
+
+    /**
+    * Gets serviceArea
+    *  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    *
+    * @return string|null
+    */
+    public function getServiceArea()
+    {
+        return $this->container['serviceArea'];
+    }
+
+    /**
+    * Sets serviceArea
+    *
+    * @param string|null $serviceArea 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    *
+    * @return $this
+    */
+    public function setServiceArea($serviceArea)
+    {
+        $this->container['serviceArea'] = $serviceArea;
         return $this;
     }
 

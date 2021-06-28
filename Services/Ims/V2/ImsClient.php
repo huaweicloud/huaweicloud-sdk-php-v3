@@ -60,7 +60,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -122,7 +121,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -187,7 +185,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -249,7 +246,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -311,7 +307,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -376,7 +371,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -441,7 +435,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -503,7 +496,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -565,7 +557,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -627,7 +618,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -689,7 +679,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -754,7 +743,6 @@ class ImsClient extends Client
         if ($localVarParams['key'] !== null) {
             $pathParams['key'] = $localVarParams['key'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -819,7 +807,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -881,7 +868,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -943,7 +929,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json', 'application/json-1']
@@ -1005,7 +990,6 @@ class ImsClient extends Client
         if ($localVarParams['imageId'] !== null) {
             $pathParams['image_id'] = $localVarParams['imageId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1175,7 +1159,6 @@ class ImsClient extends Client
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1234,7 +1217,6 @@ class ImsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1296,7 +1278,6 @@ class ImsClient extends Client
         if ($localVarParams['tag'] !== null) {
             $queryParams['tag'] = $localVarParams['tag'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1400,7 +1381,6 @@ class ImsClient extends Client
         if ($localVarParams['updatedAt'] !== null) {
             $queryParams['updated_at'] = $localVarParams['updatedAt'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1465,7 +1445,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1524,7 +1503,6 @@ class ImsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1589,7 +1567,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1651,7 +1628,6 @@ class ImsClient extends Client
         if ($localVarParams['jobId'] !== null) {
             $pathParams['job_id'] = $localVarParams['jobId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*']
@@ -1716,7 +1692,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1778,7 +1753,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1843,7 +1817,6 @@ class ImsClient extends Client
         if ($localVarParams['tag'] !== null) {
             $pathParams['tag'] = $localVarParams['tag'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -1908,7 +1881,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -1973,7 +1945,6 @@ class ImsClient extends Client
         if ($localVarParams['memberId'] !== null) {
             $pathParams['member_id'] = $localVarParams['memberId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -2038,7 +2009,6 @@ class ImsClient extends Client
         if ($localVarParams['tag'] !== null) {
             $pathParams['tag'] = $localVarParams['tag'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -2097,7 +2067,6 @@ class ImsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2159,7 +2128,6 @@ class ImsClient extends Client
         if ($localVarParams['imageId'] !== null) {
             $pathParams['image_id'] = $localVarParams['imageId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2218,7 +2186,6 @@ class ImsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2373,7 +2340,6 @@ class ImsClient extends Client
         if ($localVarParams['updatedAt'] !== null) {
             $queryParams['updated_at'] = $localVarParams['updatedAt'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2435,7 +2401,6 @@ class ImsClient extends Client
         if ($localVarParams['imageId'] !== null) {
             $pathParams['image_id'] = $localVarParams['imageId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2500,7 +2465,6 @@ class ImsClient extends Client
         if ($localVarParams['memberId'] !== null) {
             $pathParams['member_id'] = $localVarParams['memberId'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2559,7 +2523,6 @@ class ImsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2618,7 +2581,6 @@ class ImsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2683,7 +2645,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -2751,7 +2712,6 @@ class ImsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']

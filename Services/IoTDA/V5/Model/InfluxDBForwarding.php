@@ -21,11 +21,11 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * address  address
-    * dbName  连接InfluxDB数据库的库名,不存在会自动创建
-    * username  连接InfluxDB数据库的用户名
-    * password  连接InfluxDB数据库的密码
-    * measurement  InfluxDB数据库的measurement,不存在会自动创建
-    * columnMappings  InfluxDB数据库和流转数据的对应关系列表。
+    * dbName  **参数说明**：连接InfluxDB数据库的库名,不存在会自动创建
+    * username  **参数说明**：连接InfluxDB数据库的用户名
+    * password  **参数说明**：连接InfluxDB数据库的密码
+    * measurement  **参数说明**：InfluxDB数据库的measurement,不存在会自动创建
+    * columnMappings  **参数说明**：InfluxDB数据库和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -41,11 +41,11 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * address  address
-    * dbName  连接InfluxDB数据库的库名,不存在会自动创建
-    * username  连接InfluxDB数据库的用户名
-    * password  连接InfluxDB数据库的密码
-    * measurement  InfluxDB数据库的measurement,不存在会自动创建
-    * columnMappings  InfluxDB数据库和流转数据的对应关系列表。
+    * dbName  **参数说明**：连接InfluxDB数据库的库名,不存在会自动创建
+    * username  **参数说明**：连接InfluxDB数据库的用户名
+    * password  **参数说明**：连接InfluxDB数据库的密码
+    * measurement  **参数说明**：InfluxDB数据库的measurement,不存在会自动创建
+    * columnMappings  **参数说明**：InfluxDB数据库和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -82,11 +82,11 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * address  address
-    * dbName  连接InfluxDB数据库的库名,不存在会自动创建
-    * username  连接InfluxDB数据库的用户名
-    * password  连接InfluxDB数据库的密码
-    * measurement  InfluxDB数据库的measurement,不存在会自动创建
-    * columnMappings  InfluxDB数据库和流转数据的对应关系列表。
+    * dbName  **参数说明**：连接InfluxDB数据库的库名,不存在会自动创建
+    * username  **参数说明**：连接InfluxDB数据库的用户名
+    * password  **参数说明**：连接InfluxDB数据库的密码
+    * measurement  **参数说明**：InfluxDB数据库的measurement,不存在会自动创建
+    * columnMappings  **参数说明**：InfluxDB数据库和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -102,11 +102,11 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * address  address
-    * dbName  连接InfluxDB数据库的库名,不存在会自动创建
-    * username  连接InfluxDB数据库的用户名
-    * password  连接InfluxDB数据库的密码
-    * measurement  InfluxDB数据库的measurement,不存在会自动创建
-    * columnMappings  InfluxDB数据库和流转数据的对应关系列表。
+    * dbName  **参数说明**：连接InfluxDB数据库的库名,不存在会自动创建
+    * username  **参数说明**：连接InfluxDB数据库的用户名
+    * password  **参数说明**：连接InfluxDB数据库的密码
+    * measurement  **参数说明**：InfluxDB数据库的measurement,不存在会自动创建
+    * columnMappings  **参数说明**：InfluxDB数据库和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -122,11 +122,11 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * address  address
-    * dbName  连接InfluxDB数据库的库名,不存在会自动创建
-    * username  连接InfluxDB数据库的用户名
-    * password  连接InfluxDB数据库的密码
-    * measurement  InfluxDB数据库的measurement,不存在会自动创建
-    * columnMappings  InfluxDB数据库和流转数据的对应关系列表。
+    * dbName  **参数说明**：连接InfluxDB数据库的库名,不存在会自动创建
+    * username  **参数说明**：连接InfluxDB数据库的用户名
+    * password  **参数说明**：连接InfluxDB数据库的密码
+    * measurement  **参数说明**：InfluxDB数据库的measurement,不存在会自动创建
+    * columnMappings  **参数说明**：InfluxDB数据库和流转数据的对应关系列表。
     *
     * @var string[]
     */
@@ -295,7 +295,7 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbName
-    *  连接InfluxDB数据库的库名,不存在会自动创建
+    *  **参数说明**：连接InfluxDB数据库的库名,不存在会自动创建
     *
     * @return string
     */
@@ -307,7 +307,7 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets dbName
     *
-    * @param string $dbName 连接InfluxDB数据库的库名,不存在会自动创建
+    * @param string $dbName **参数说明**：连接InfluxDB数据库的库名,不存在会自动创建
     *
     * @return $this
     */
@@ -319,7 +319,7 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets username
-    *  连接InfluxDB数据库的用户名
+    *  **参数说明**：连接InfluxDB数据库的用户名
     *
     * @return string
     */
@@ -331,7 +331,7 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets username
     *
-    * @param string $username 连接InfluxDB数据库的用户名
+    * @param string $username **参数说明**：连接InfluxDB数据库的用户名
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets password
-    *  连接InfluxDB数据库的密码
+    *  **参数说明**：连接InfluxDB数据库的密码
     *
     * @return string
     */
@@ -355,7 +355,7 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets password
     *
-    * @param string $password 连接InfluxDB数据库的密码
+    * @param string $password **参数说明**：连接InfluxDB数据库的密码
     *
     * @return $this
     */
@@ -367,7 +367,7 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets measurement
-    *  InfluxDB数据库的measurement,不存在会自动创建
+    *  **参数说明**：InfluxDB数据库的measurement,不存在会自动创建
     *
     * @return string
     */
@@ -379,7 +379,7 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets measurement
     *
-    * @param string $measurement InfluxDB数据库的measurement,不存在会自动创建
+    * @param string $measurement **参数说明**：InfluxDB数据库的measurement,不存在会自动创建
     *
     * @return $this
     */
@@ -391,7 +391,7 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets columnMappings
-    *  InfluxDB数据库和流转数据的对应关系列表。
+    *  **参数说明**：InfluxDB数据库和流转数据的对应关系列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ColumnMapping[]
     */
@@ -403,7 +403,7 @@ class InfluxDBForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets columnMappings
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ColumnMapping[] $columnMappings InfluxDB数据库和流转数据的对应关系列表。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ColumnMapping[] $columnMappings **参数说明**：InfluxDB数据库和流转数据的对应关系列表。
     *
     * @return $this
     */

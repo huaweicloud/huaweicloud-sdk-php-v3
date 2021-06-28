@@ -20,15 +20,15 @@ class UpdateProduct implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，必须携带该参数指定修改的产品属于哪个资源空间，否则接口会提示错误。如果用户存在多资源空间，同时又不想携带该参数，可以联系华为技术支持对用户数据做资源空间合并。
-    * name  产品名称。
-    * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
-    * dataFormat  设备上报数据的格式，取值范围：json，binary。
-    * serviceCapabilities  设备的服务能力列表。
-    * manufacturerName  厂商名称。
-    * industry  设备所属行业。
-    * description  产品的描述信息。
+    * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，必须携带该参数指定修改的产品属于哪个资源空间，否则接口会提示错误。如果用户存在多资源空间，同时又不想携带该参数，可以联系华为技术支持对用户数据做资源空间合并。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * name  **参数说明**：产品名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * deviceType  **参数说明**：设备类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * protocolType  **参数说明**：设备使用的协议类型。 **取值范围**：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF，OPC-UA，OPC-DA。
+    * dataFormat  **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式
+    * serviceCapabilities  **参数说明**：设备的服务能力列表。
+    * manufacturerName  **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * industry  **参数说明**：设备所属行业。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * description  **参数说明**：产品的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class UpdateProduct implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，必须携带该参数指定修改的产品属于哪个资源空间，否则接口会提示错误。如果用户存在多资源空间，同时又不想携带该参数，可以联系华为技术支持对用户数据做资源空间合并。
-    * name  产品名称。
-    * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
-    * dataFormat  设备上报数据的格式，取值范围：json，binary。
-    * serviceCapabilities  设备的服务能力列表。
-    * manufacturerName  厂商名称。
-    * industry  设备所属行业。
-    * description  产品的描述信息。
+    * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，必须携带该参数指定修改的产品属于哪个资源空间，否则接口会提示错误。如果用户存在多资源空间，同时又不想携带该参数，可以联系华为技术支持对用户数据做资源空间合并。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * name  **参数说明**：产品名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * deviceType  **参数说明**：设备类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * protocolType  **参数说明**：设备使用的协议类型。 **取值范围**：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF，OPC-UA，OPC-DA。
+    * dataFormat  **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式
+    * serviceCapabilities  **参数说明**：设备的服务能力列表。
+    * manufacturerName  **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * industry  **参数说明**：设备所属行业。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * description  **参数说明**：产品的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，必须携带该参数指定修改的产品属于哪个资源空间，否则接口会提示错误。如果用户存在多资源空间，同时又不想携带该参数，可以联系华为技术支持对用户数据做资源空间合并。
-    * name  产品名称。
-    * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
-    * dataFormat  设备上报数据的格式，取值范围：json，binary。
-    * serviceCapabilities  设备的服务能力列表。
-    * manufacturerName  厂商名称。
-    * industry  设备所属行业。
-    * description  产品的描述信息。
+    * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，必须携带该参数指定修改的产品属于哪个资源空间，否则接口会提示错误。如果用户存在多资源空间，同时又不想携带该参数，可以联系华为技术支持对用户数据做资源空间合并。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * name  **参数说明**：产品名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * deviceType  **参数说明**：设备类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * protocolType  **参数说明**：设备使用的协议类型。 **取值范围**：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF，OPC-UA，OPC-DA。
+    * dataFormat  **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式
+    * serviceCapabilities  **参数说明**：设备的服务能力列表。
+    * manufacturerName  **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * industry  **参数说明**：设备所属行业。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * description  **参数说明**：产品的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class UpdateProduct implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，必须携带该参数指定修改的产品属于哪个资源空间，否则接口会提示错误。如果用户存在多资源空间，同时又不想携带该参数，可以联系华为技术支持对用户数据做资源空间合并。
-    * name  产品名称。
-    * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
-    * dataFormat  设备上报数据的格式，取值范围：json，binary。
-    * serviceCapabilities  设备的服务能力列表。
-    * manufacturerName  厂商名称。
-    * industry  设备所属行业。
-    * description  产品的描述信息。
+    * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，必须携带该参数指定修改的产品属于哪个资源空间，否则接口会提示错误。如果用户存在多资源空间，同时又不想携带该参数，可以联系华为技术支持对用户数据做资源空间合并。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * name  **参数说明**：产品名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * deviceType  **参数说明**：设备类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * protocolType  **参数说明**：设备使用的协议类型。 **取值范围**：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF，OPC-UA，OPC-DA。
+    * dataFormat  **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式
+    * serviceCapabilities  **参数说明**：设备的服务能力列表。
+    * manufacturerName  **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * industry  **参数说明**：设备所属行业。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * description  **参数说明**：产品的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class UpdateProduct implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，必须携带该参数指定修改的产品属于哪个资源空间，否则接口会提示错误。如果用户存在多资源空间，同时又不想携带该参数，可以联系华为技术支持对用户数据做资源空间合并。
-    * name  产品名称。
-    * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
-    * dataFormat  设备上报数据的格式，取值范围：json，binary。
-    * serviceCapabilities  设备的服务能力列表。
-    * manufacturerName  厂商名称。
-    * industry  设备所属行业。
-    * description  产品的描述信息。
+    * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，必须携带该参数指定修改的产品属于哪个资源空间，否则接口会提示错误。如果用户存在多资源空间，同时又不想携带该参数，可以联系华为技术支持对用户数据做资源空间合并。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * name  **参数说明**：产品名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * deviceType  **参数说明**：设备类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * protocolType  **参数说明**：设备使用的协议类型。 **取值范围**：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF，OPC-UA，OPC-DA。
+    * dataFormat  **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式
+    * serviceCapabilities  **参数说明**：设备的服务能力列表。
+    * manufacturerName  **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * industry  **参数说明**：设备所属行业。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * description  **参数说明**：产品的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @var string[]
     */
@@ -255,8 +255,8 @@ class UpdateProduct implements ModelInterface, ArrayAccess
             if (!is_null($this->container['deviceType']) && !preg_match("/^[一-龥a-zA-Z0-9_?'#().,&%@!-]{1,32}$/", $this->container['deviceType'])) {
                 $invalidProperties[] = "invalid value for 'deviceType', must be conform to the pattern /^[一-龥a-zA-Z0-9_?'#().,&%@!-]{1,32}$/.";
             }
-            if (!is_null($this->container['protocolType']) && !preg_match("/(MQTT|CoAP|HTTP|HTTPS|Modbus|ONVIF|OPC-UA)/", $this->container['protocolType'])) {
-                $invalidProperties[] = "invalid value for 'protocolType', must be conform to the pattern /(MQTT|CoAP|HTTP|HTTPS|Modbus|ONVIF|OPC-UA)/.";
+            if (!is_null($this->container['protocolType']) && !preg_match("/(MQTT|CoAP|HTTP|HTTPS|Modbus|ONVIF|OPC-UA|OPC-DA)/", $this->container['protocolType'])) {
+                $invalidProperties[] = "invalid value for 'protocolType', must be conform to the pattern /(MQTT|CoAP|HTTP|HTTPS|Modbus|ONVIF|OPC-UA|OPC-DA)/.";
             }
             if (!is_null($this->container['dataFormat']) && !preg_match("/(json|binary)/", $this->container['dataFormat'])) {
                 $invalidProperties[] = "invalid value for 'dataFormat', must be conform to the pattern /(json|binary)/.";
@@ -286,7 +286,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，必须携带该参数指定修改的产品属于哪个资源空间，否则接口会提示错误。如果用户存在多资源空间，同时又不想携带该参数，可以联系华为技术支持对用户数据做资源空间合并。
+    *  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，必须携带该参数指定修改的产品属于哪个资源空间，否则接口会提示错误。如果用户存在多资源空间，同时又不想携带该参数，可以联系华为技术支持对用户数据做资源空间合并。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，必须携带该参数指定修改的产品属于哪个资源空间，否则接口会提示错误。如果用户存在多资源空间，同时又不想携带该参数，可以联系华为技术支持对用户数据做资源空间合并。
+    * @param string|null $appId **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，必须携带该参数指定修改的产品属于哪个资源空间，否则接口会提示错误。如果用户存在多资源空间，同时又不想携带该参数，可以联系华为技术支持对用户数据做资源空间合并。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  产品名称。
+    *  **参数说明**：产品名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 产品名称。
+    * @param string|null $name **参数说明**：产品名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceType
-    *  设备类型。
+    *  **参数说明**：设备类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     /**
     * Sets deviceType
     *
-    * @param string|null $deviceType 设备类型。
+    * @param string|null $deviceType **参数说明**：设备类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocolType
-    *  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
+    *  **参数说明**：设备使用的协议类型。 **取值范围**：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF，OPC-UA，OPC-DA。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     /**
     * Sets protocolType
     *
-    * @param string|null $protocolType 设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA。
+    * @param string|null $protocolType **参数说明**：设备使用的协议类型。 **取值范围**：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF，OPC-UA，OPC-DA。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataFormat
-    *  设备上报数据的格式，取值范围：json，binary。
+    *  **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     /**
     * Sets dataFormat
     *
-    * @param string|null $dataFormat 设备上报数据的格式，取值范围：json，binary。
+    * @param string|null $dataFormat **参数说明**：设备上报数据的格式。 **取值范围**： - json：JSON格式 - binary：二进制码流格式
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceCapabilities
-    *  设备的服务能力列表。
+    *  **参数说明**：设备的服务能力列表。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCapability[]|null
     */
@@ -418,7 +418,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     /**
     * Sets serviceCapabilities
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCapability[]|null $serviceCapabilities 设备的服务能力列表。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCapability[]|null $serviceCapabilities **参数说明**：设备的服务能力列表。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets manufacturerName
-    *  厂商名称。
+    *  **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     /**
     * Sets manufacturerName
     *
-    * @param string|null $manufacturerName 厂商名称。
+    * @param string|null $manufacturerName **参数说明**：厂商名称。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets industry
-    *  设备所属行业。
+    *  **参数说明**：设备所属行业。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     /**
     * Sets industry
     *
-    * @param string|null $industry 设备所属行业。
+    * @param string|null $industry **参数说明**：设备所属行业。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return $this
     */
@@ -478,7 +478,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  产品的描述信息。
+    *  **参数说明**：产品的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @return string|null
     */
@@ -490,7 +490,7 @@ class UpdateProduct implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 产品的描述信息。
+    * @param string|null $description **参数说明**：产品的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @return $this
     */

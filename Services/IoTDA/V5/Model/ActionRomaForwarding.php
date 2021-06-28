@@ -20,9 +20,9 @@ class ActionRomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regionName  ROMA Connect服务对应的region区域
-    * projectId  ROMA Connect服务对应的projectId信息
-    * romaPushType  ROMA Connect服务对应参数类型
+    * regionName  **参数说明**：ROMA Connect服务对应的region区域。
+    * projectId  **参数说明**：ROMA Connect服务对应的projectId信息。
+    * romaPushType  **参数说明**：ROMA Connect服务对应参数类型。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ActionRomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regionName  ROMA Connect服务对应的region区域
-    * projectId  ROMA Connect服务对应的projectId信息
-    * romaPushType  ROMA Connect服务对应参数类型
+    * regionName  **参数说明**：ROMA Connect服务对应的region区域。
+    * projectId  **参数说明**：ROMA Connect服务对应的projectId信息。
+    * romaPushType  **参数说明**：ROMA Connect服务对应参数类型。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ActionRomaForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regionName  ROMA Connect服务对应的region区域
-    * projectId  ROMA Connect服务对应的projectId信息
-    * romaPushType  ROMA Connect服务对应参数类型
+    * regionName  **参数说明**：ROMA Connect服务对应的region区域。
+    * projectId  **参数说明**：ROMA Connect服务对应的projectId信息。
+    * romaPushType  **参数说明**：ROMA Connect服务对应参数类型。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ActionRomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regionName  ROMA Connect服务对应的region区域
-    * projectId  ROMA Connect服务对应的projectId信息
-    * romaPushType  ROMA Connect服务对应参数类型
+    * regionName  **参数说明**：ROMA Connect服务对应的region区域。
+    * projectId  **参数说明**：ROMA Connect服务对应的projectId信息。
+    * romaPushType  **参数说明**：ROMA Connect服务对应参数类型。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ActionRomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regionName  ROMA Connect服务对应的region区域
-    * projectId  ROMA Connect服务对应的projectId信息
-    * romaPushType  ROMA Connect服务对应参数类型
+    * regionName  **参数说明**：ROMA Connect服务对应的region区域。
+    * projectId  **参数说明**：ROMA Connect服务对应的projectId信息。
+    * romaPushType  **参数说明**：ROMA Connect服务对应参数类型。
     *
     * @var string[]
     */
@@ -211,7 +211,7 @@ class ActionRomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionName
-    *  ROMA Connect服务对应的region区域
+    *  **参数说明**：ROMA Connect服务对应的region区域。
     *
     * @return string
     */
@@ -223,7 +223,7 @@ class ActionRomaForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets regionName
     *
-    * @param string $regionName ROMA Connect服务对应的region区域
+    * @param string $regionName **参数说明**：ROMA Connect服务对应的region区域。
     *
     * @return $this
     */
@@ -235,7 +235,7 @@ class ActionRomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  ROMA Connect服务对应的projectId信息
+    *  **参数说明**：ROMA Connect服务对应的projectId信息。
     *
     * @return string
     */
@@ -247,7 +247,7 @@ class ActionRomaForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId ROMA Connect服务对应的projectId信息
+    * @param string $projectId **参数说明**：ROMA Connect服务对应的projectId信息。
     *
     * @return $this
     */
@@ -259,7 +259,7 @@ class ActionRomaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets romaPushType
-    *  ROMA Connect服务对应参数类型
+    *  **参数说明**：ROMA Connect服务对应参数类型。
     *
     * @return string|null
     */
@@ -271,7 +271,7 @@ class ActionRomaForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets romaPushType
     *
-    * @param string|null $romaPushType ROMA Connect服务对应参数类型
+    * @param string|null $romaPushType **参数说明**：ROMA Connect服务对应参数类型。
     *
     * @return $this
     */

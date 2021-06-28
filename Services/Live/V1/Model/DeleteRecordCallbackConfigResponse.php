@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowOnlineUsersResponse implements ModelInterface, ArrayAccess
+class DeleteRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,30 +17,24 @@ class ShowOnlineUsersResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowOnlineUsersResponse';
+    protected static $openAPIModelName = 'DeleteRecordCallbackConfigResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  查询结果的总元素数量
-    * userInfo  正在推流的音视频信息
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'total' => 'int',
-            'userInfo' => '\HuaweiCloud\SDK\Live\V1\Model\UserInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  查询结果的总元素数量
-    * userInfo  正在推流的音视频信息
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'total' => 'int32',
-        'userInfo' => null
     ];
 
     /**
@@ -66,38 +60,29 @@ class ShowOnlineUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  查询结果的总元素数量
-    * userInfo  正在推流的音视频信息
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'total' => 'total',
-            'userInfo' => 'user_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  查询结果的总元素数量
-    * userInfo  正在推流的音视频信息
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'total' => 'setTotal',
-            'userInfo' => 'setUserInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  查询结果的总元素数量
-    * userInfo  正在推流的音视频信息
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'total' => 'getTotal',
-            'userInfo' => 'getUserInfo'
     ];
 
     /**
@@ -158,8 +143,6 @@ class ShowOnlineUsersResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
-        $this->container['userInfo'] = isset($data['userInfo']) ? $data['userInfo'] : null;
     }
 
     /**
@@ -170,9 +153,6 @@ class ShowOnlineUsersResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['total']) && ($this->container['total'] < 0)) {
-                $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -185,54 +165,6 @@ class ShowOnlineUsersResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets total
-    *  查询结果的总元素数量
-    *
-    * @return int|null
-    */
-    public function getTotal()
-    {
-        return $this->container['total'];
-    }
-
-    /**
-    * Sets total
-    *
-    * @param int|null $total 查询结果的总元素数量
-    *
-    * @return $this
-    */
-    public function setTotal($total)
-    {
-        $this->container['total'] = $total;
-        return $this;
-    }
-
-    /**
-    * Gets userInfo
-    *  正在推流的音视频信息
-    *
-    * @return \HuaweiCloud\SDK\Live\V1\Model\UserInfo[]|null
-    */
-    public function getUserInfo()
-    {
-        return $this->container['userInfo'];
-    }
-
-    /**
-    * Sets userInfo
-    *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\UserInfo[]|null $userInfo 正在推流的音视频信息
-    *
-    * @return $this
-    */
-    public function setUserInfo($userInfo)
-    {
-        $this->container['userInfo'] = $userInfo;
-        return $this;
     }
 
     /**

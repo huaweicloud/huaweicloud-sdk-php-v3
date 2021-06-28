@@ -20,8 +20,8 @@ class FunctionGraphForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
-    * funcName  函数名称。
+    * funcUrn  **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。
+    * funcName  **参数说明**：函数名称。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class FunctionGraphForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
-    * funcName  函数名称。
+    * funcUrn  **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。
+    * funcName  **参数说明**：函数名称。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class FunctionGraphForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
-    * funcName  函数名称。
+    * funcUrn  **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。
+    * funcName  **参数说明**：函数名称。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class FunctionGraphForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
-    * funcName  函数名称。
+    * funcUrn  **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。
+    * funcName  **参数说明**：函数名称。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class FunctionGraphForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * funcUrn  函数的URN（Uniform Resource Name），唯一标识函数。
-    * funcName  函数名称。
+    * funcUrn  **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。
+    * funcName  **参数说明**：函数名称。
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class FunctionGraphForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets funcUrn
-    *  函数的URN（Uniform Resource Name），唯一标识函数。
+    *  **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class FunctionGraphForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets funcUrn
     *
-    * @param string $funcUrn 函数的URN（Uniform Resource Name），唯一标识函数。
+    * @param string $funcUrn **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class FunctionGraphForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets funcName
-    *  函数名称。
+    *  **参数说明**：函数名称。
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class FunctionGraphForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets funcName
     *
-    * @param string $funcName 函数名称。
+    * @param string $funcName **参数说明**：函数名称。
     *
     * @return $this
     */

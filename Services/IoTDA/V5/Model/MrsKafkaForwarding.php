@@ -20,26 +20,30 @@ class MrsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * addresses  转发kafka消息对应的地址列表
-    * topic  转发kafka消息关联的topic信息。
+    * addresses  **参数说明**：转发kafka消息对应的地址列表
+    * topic  **参数说明**：转发kafka消息关联的topic信息。
+    * kerberosAuthentication  是否Kerberos认证，默认为false。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'addresses' => '\HuaweiCloud\SDK\IoTDA\V5\Model\NetAddress[]',
-            'topic' => 'string'
+            'topic' => 'string',
+            'kerberosAuthentication' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * addresses  转发kafka消息对应的地址列表
-    * topic  转发kafka消息关联的topic信息。
+    * addresses  **参数说明**：转发kafka消息对应的地址列表
+    * topic  **参数说明**：转发kafka消息关联的topic信息。
+    * kerberosAuthentication  是否Kerberos认证，默认为false。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'addresses' => null,
-        'topic' => null
+        'topic' => null,
+        'kerberosAuthentication' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class MrsKafkaForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * addresses  转发kafka消息对应的地址列表
-    * topic  转发kafka消息关联的topic信息。
+    * addresses  **参数说明**：转发kafka消息对应的地址列表
+    * topic  **参数说明**：转发kafka消息关联的topic信息。
+    * kerberosAuthentication  是否Kerberos认证，默认为false。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'addresses' => 'addresses',
-            'topic' => 'topic'
+            'topic' => 'topic',
+            'kerberosAuthentication' => 'kerberos_authentication'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * addresses  转发kafka消息对应的地址列表
-    * topic  转发kafka消息关联的topic信息。
+    * addresses  **参数说明**：转发kafka消息对应的地址列表
+    * topic  **参数说明**：转发kafka消息关联的topic信息。
+    * kerberosAuthentication  是否Kerberos认证，默认为false。
     *
     * @var string[]
     */
     protected static $setters = [
             'addresses' => 'setAddresses',
-            'topic' => 'setTopic'
+            'topic' => 'setTopic',
+            'kerberosAuthentication' => 'setKerberosAuthentication'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * addresses  转发kafka消息对应的地址列表
-    * topic  转发kafka消息关联的topic信息。
+    * addresses  **参数说明**：转发kafka消息对应的地址列表
+    * topic  **参数说明**：转发kafka消息关联的topic信息。
+    * kerberosAuthentication  是否Kerberos认证，默认为false。
     *
     * @var string[]
     */
     protected static $getters = [
             'addresses' => 'getAddresses',
-            'topic' => 'getTopic'
+            'topic' => 'getTopic',
+            'kerberosAuthentication' => 'getKerberosAuthentication'
     ];
 
     /**
@@ -159,6 +169,7 @@ class MrsKafkaForwarding implements ModelInterface, ArrayAccess
     {
         $this->container['addresses'] = isset($data['addresses']) ? $data['addresses'] : null;
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
+        $this->container['kerberosAuthentication'] = isset($data['kerberosAuthentication']) ? $data['kerberosAuthentication'] : false;
     }
 
     /**
@@ -197,7 +208,7 @@ class MrsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets addresses
-    *  转发kafka消息对应的地址列表
+    *  **参数说明**：转发kafka消息对应的地址列表
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\NetAddress[]
     */
@@ -209,7 +220,7 @@ class MrsKafkaForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets addresses
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\NetAddress[] $addresses 转发kafka消息对应的地址列表
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\NetAddress[] $addresses **参数说明**：转发kafka消息对应的地址列表
     *
     * @return $this
     */
@@ -221,7 +232,7 @@ class MrsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  转发kafka消息关联的topic信息。
+    *  **参数说明**：转发kafka消息关联的topic信息。
     *
     * @return string
     */
@@ -233,13 +244,37 @@ class MrsKafkaForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string $topic 转发kafka消息关联的topic信息。
+    * @param string $topic **参数说明**：转发kafka消息关联的topic信息。
     *
     * @return $this
     */
     public function setTopic($topic)
     {
         $this->container['topic'] = $topic;
+        return $this;
+    }
+
+    /**
+    * Gets kerberosAuthentication
+    *  是否Kerberos认证，默认为false。
+    *
+    * @return bool|null
+    */
+    public function getKerberosAuthentication()
+    {
+        return $this->container['kerberosAuthentication'];
+    }
+
+    /**
+    * Sets kerberosAuthentication
+    *
+    * @param bool|null $kerberosAuthentication 是否Kerberos认证，默认为false。
+    *
+    * @return $this
+    */
+    public function setKerberosAuthentication($kerberosAuthentication)
+    {
+        $this->container['kerberosAuthentication'] = $kerberosAuthentication;
         return $this;
     }
 

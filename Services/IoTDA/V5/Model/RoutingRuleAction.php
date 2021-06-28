@@ -25,7 +25,6 @@ class RoutingRuleAction implements ModelInterface, ArrayAccess
     * appId  资源空间ID。
     * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
@@ -34,8 +33,7 @@ class RoutingRuleAction implements ModelInterface, ArrayAccess
             'ruleId' => 'string',
             'appId' => 'string',
             'channel' => 'string',
-            'channelDetail' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ChannelDetail',
-            'batch' => 'bool'
+            'channelDetail' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ChannelDetail'
     ];
 
     /**
@@ -45,7 +43,6 @@ class RoutingRuleAction implements ModelInterface, ArrayAccess
     * appId  资源空间ID。
     * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
@@ -54,8 +51,7 @@ class RoutingRuleAction implements ModelInterface, ArrayAccess
         'ruleId' => null,
         'appId' => null,
         'channel' => null,
-        'channelDetail' => null,
-        'batch' => null
+        'channelDetail' => null
     ];
 
     /**
@@ -86,7 +82,6 @@ class RoutingRuleAction implements ModelInterface, ArrayAccess
     * appId  资源空间ID。
     * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
@@ -95,8 +90,7 @@ class RoutingRuleAction implements ModelInterface, ArrayAccess
             'ruleId' => 'rule_id',
             'appId' => 'app_id',
             'channel' => 'channel',
-            'channelDetail' => 'channel_detail',
-            'batch' => 'batch'
+            'channelDetail' => 'channel_detail'
     ];
 
     /**
@@ -106,7 +100,6 @@ class RoutingRuleAction implements ModelInterface, ArrayAccess
     * appId  资源空间ID。
     * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
@@ -115,8 +108,7 @@ class RoutingRuleAction implements ModelInterface, ArrayAccess
             'ruleId' => 'setRuleId',
             'appId' => 'setAppId',
             'channel' => 'setChannel',
-            'channelDetail' => 'setChannelDetail',
-            'batch' => 'setBatch'
+            'channelDetail' => 'setChannelDetail'
     ];
 
     /**
@@ -126,7 +118,6 @@ class RoutingRuleAction implements ModelInterface, ArrayAccess
     * appId  资源空间ID。
     * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
@@ -135,8 +126,7 @@ class RoutingRuleAction implements ModelInterface, ArrayAccess
             'ruleId' => 'getRuleId',
             'appId' => 'getAppId',
             'channel' => 'getChannel',
-            'channelDetail' => 'getChannelDetail',
-            'batch' => 'getBatch'
+            'channelDetail' => 'getChannelDetail'
     ];
 
     /**
@@ -202,7 +192,6 @@ class RoutingRuleAction implements ModelInterface, ArrayAccess
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['channel'] = isset($data['channel']) ? $data['channel'] : null;
         $this->container['channelDetail'] = isset($data['channelDetail']) ? $data['channelDetail'] : null;
-        $this->container['batch'] = isset($data['batch']) ? $data['batch'] : null;
     }
 
     /**
@@ -222,8 +211,8 @@ class RoutingRuleAction implements ModelInterface, ArrayAccess
             if (!is_null($this->container['appId']) && !preg_match("/^[a-zA-Z0-9_-]{1,36}$/", $this->container['appId'])) {
                 $invalidProperties[] = "invalid value for 'appId', must be conform to the pattern /^[a-zA-Z0-9_-]{1,36}$/.";
             }
-            if (!is_null($this->container['channel']) && !preg_match("/(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|ROMA_FORWARDING|IoTA_FORWARDING|MQS_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING)/", $this->container['channel'])) {
-                $invalidProperties[] = "invalid value for 'channel', must be conform to the pattern /(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|ROMA_FORWARDING|IoTA_FORWARDING|MQS_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING)/.";
+            if (!is_null($this->container['channel']) && !preg_match("/(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|ROMA_FORWARDING|IoTA_FORWARDING|MQS_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING|PULSAR_FORWARDING)/", $this->container['channel'])) {
+                $invalidProperties[] = "invalid value for 'channel', must be conform to the pattern /(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|ROMA_FORWARDING|IoTA_FORWARDING|MQS_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING|PULSAR_FORWARDING)/.";
             }
         return $invalidProperties;
     }
@@ -356,30 +345,6 @@ class RoutingRuleAction implements ModelInterface, ArrayAccess
     public function setChannelDetail($channelDetail)
     {
         $this->container['channelDetail'] = $channelDetail;
-        return $this;
-    }
-
-    /**
-    * Gets batch
-    *  是否支持批量接收推送消息。
-    *
-    * @return bool|null
-    */
-    public function getBatch()
-    {
-        return $this->container['batch'];
-    }
-
-    /**
-    * Sets batch
-    *
-    * @param bool|null $batch 是否支持批量接收推送消息。
-    *
-    * @return $this
-    */
-    public function setBatch($batch)
-    {
-        $this->container['batch'] = $batch;
         return $this;
     }
 

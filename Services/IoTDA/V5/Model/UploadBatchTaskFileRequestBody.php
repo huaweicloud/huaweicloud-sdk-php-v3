@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Live\V1\Model;
+namespace HuaweiCloud\SDK\IoTDA\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UserInfo implements ModelInterface, ArrayAccess
+class UploadBatchTaskFileRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class UserInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UserInfo';
+    protected static $openAPIModelName = 'UploadBatchTaskFileRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * userNum  直播流的在线人数
-    * timestamp  操作执行的时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * file  **参数说明**：上传批量任务文件。 **取值范围**：当前仅支持xlsx/xls文件格式，且文件最大行数为30000行。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'userNum' => 'int',
-            'timestamp' => 'string'
+            'file' => '\SplFileObject'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * userNum  直播流的在线人数
-    * timestamp  操作执行的时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * file  **参数说明**：上传批量任务文件。 **取值范围**：当前仅支持xlsx/xls文件格式，且文件最大行数为30000行。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'userNum' => 'int32',
-        'timestamp' => null
+        'file' => 'binary'
     ];
 
     /**
@@ -65,38 +61,32 @@ class UserInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * userNum  直播流的在线人数
-    * timestamp  操作执行的时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * file  **参数说明**：上传批量任务文件。 **取值范围**：当前仅支持xlsx/xls文件格式，且文件最大行数为30000行。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'userNum' => 'user_num',
-            'timestamp' => 'timestamp'
+            'file' => 'file'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * userNum  直播流的在线人数
-    * timestamp  操作执行的时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * file  **参数说明**：上传批量任务文件。 **取值范围**：当前仅支持xlsx/xls文件格式，且文件最大行数为30000行。
     *
     * @var string[]
     */
     protected static $setters = [
-            'userNum' => 'setUserNum',
-            'timestamp' => 'setTimestamp'
+            'file' => 'setFile'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * userNum  直播流的在线人数
-    * timestamp  操作执行的时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
+    * file  **参数说明**：上传批量任务文件。 **取值范围**：当前仅支持xlsx/xls文件格式，且文件最大行数为30000行。
     *
     * @var string[]
     */
     protected static $getters = [
-            'userNum' => 'getUserNum',
-            'timestamp' => 'getTimestamp'
+            'file' => 'getFile'
     ];
 
     /**
@@ -157,8 +147,7 @@ class UserInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['userNum'] = isset($data['userNum']) ? $data['userNum'] : null;
-        $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
+        $this->container['file'] = isset($data['file']) ? $data['file'] : null;
     }
 
     /**
@@ -169,12 +158,15 @@ class UserInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['userNum'] === null) {
-            $invalidProperties[] = "'userNum' can't be null";
+        if ($this->container['file'] === null) {
+            $invalidProperties[] = "'file' can't be null";
         }
-        if ($this->container['timestamp'] === null) {
-            $invalidProperties[] = "'timestamp' can't be null";
-        }
+            if ((mb_strlen($this->container['file']) > 2097152)) {
+                $invalidProperties[] = "invalid value for 'file', the character length must be smaller than or equal to 2097152.";
+            }
+            if ((mb_strlen($this->container['file']) < 1)) {
+                $invalidProperties[] = "invalid value for 'file', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -190,50 +182,26 @@ class UserInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets userNum
-    *  直播流的在线人数
+    * Gets file
+    *  **参数说明**：上传批量任务文件。 **取值范围**：当前仅支持xlsx/xls文件格式，且文件最大行数为30000行。
     *
-    * @return int
+    * @return \SplFileObject
     */
-    public function getUserNum()
+    public function getFile()
     {
-        return $this->container['userNum'];
+        return $this->container['file'];
     }
 
     /**
-    * Sets userNum
+    * Sets file
     *
-    * @param int $userNum 直播流的在线人数
+    * @param \SplFileObject $file **参数说明**：上传批量任务文件。 **取值范围**：当前仅支持xlsx/xls文件格式，且文件最大行数为30000行。
     *
     * @return $this
     */
-    public function setUserNum($userNum)
+    public function setFile($file)
     {
-        $this->container['userNum'] = $userNum;
-        return $this;
-    }
-
-    /**
-    * Gets timestamp
-    *  操作执行的时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
-    *
-    * @return string
-    */
-    public function getTimestamp()
-    {
-        return $this->container['timestamp'];
-    }
-
-    /**
-    * Sets timestamp
-    *
-    * @param string $timestamp 操作执行的时间，UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ
-    *
-    * @return $this
-    */
-    public function setTimestamp($timestamp)
-    {
-        $this->container['timestamp'] = $timestamp;
+        $this->container['file'] = $file;
         return $this;
     }
 

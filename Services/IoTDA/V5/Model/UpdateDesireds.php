@@ -20,7 +20,7 @@ class UpdateDesireds implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * shadow  设备影子期望值构体。
+    * shadow  **参数说明**：设备影子期望值构体。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateDesireds implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * shadow  设备影子期望值构体。
+    * shadow  **参数说明**：设备影子期望值构体。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateDesireds implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * shadow  设备影子期望值构体。
+    * shadow  **参数说明**：设备影子期望值构体。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateDesireds implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * shadow  设备影子期望值构体。
+    * shadow  **参数说明**：设备影子期望值构体。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateDesireds implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * shadow  设备影子期望值构体。
+    * shadow  **参数说明**：设备影子期望值构体。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class UpdateDesireds implements ModelInterface, ArrayAccess
 
     /**
     * Gets shadow
-    *  设备影子期望值构体。
+    *  **参数说明**：设备影子期望值构体。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDesired[]|null
     */
@@ -186,7 +186,7 @@ class UpdateDesireds implements ModelInterface, ArrayAccess
     /**
     * Sets shadow
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDesired[]|null $shadow 设备影子期望值构体。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDesired[]|null $shadow **参数说明**：设备影子期望值构体。
     *
     * @return $this
     */

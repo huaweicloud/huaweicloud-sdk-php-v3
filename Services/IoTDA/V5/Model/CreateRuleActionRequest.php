@@ -20,29 +20,25 @@ class CreateRuleActionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
-    * xLbService  此参数定义了lbservice
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
-            'xLbService' => 'string',
             'body' => '\HuaweiCloud\SDK\IoTDA\V5\Model\AddActionReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
-    * xLbService  此参数定义了lbservice
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
-        'xLbService' => null,
         'body' => null
     ];
 
@@ -69,43 +65,37 @@ class CreateRuleActionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
-    * xLbService  此参数定义了lbservice
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instanceId' => 'Instance-Id',
-            'xLbService' => 'x-LB-Service',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
-    * xLbService  此参数定义了lbservice
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
-            'xLbService' => 'setXLbService',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
-    * xLbService  此参数定义了lbservice
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
-            'xLbService' => 'getXLbService',
             'body' => 'getBody'
     ];
 
@@ -168,7 +158,6 @@ class CreateRuleActionRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['xLbService'] = isset($data['xLbService']) ? $data['xLbService'] : 'L7Adapt4Out';
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -182,12 +171,6 @@ class CreateRuleActionRequest implements ModelInterface, ArrayAccess
         $invalidProperties = [];
             if (!is_null($this->container['instanceId']) && !preg_match("/^[a-f0-9-]{36}$/", $this->container['instanceId'])) {
                 $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-f0-9-]{36}$/.";
-            }
-            if (!is_null($this->container['xLbService']) && (mb_strlen($this->container['xLbService']) > 50)) {
-                $invalidProperties[] = "invalid value for 'xLbService', the character length must be smaller than or equal to 50.";
-            }
-            if (!is_null($this->container['xLbService']) && (mb_strlen($this->container['xLbService']) < 1)) {
-                $invalidProperties[] = "invalid value for 'xLbService', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -205,7 +188,7 @@ class CreateRuleActionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    *  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return string|null
     */
@@ -217,37 +200,13 @@ class CreateRuleActionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * @param string|null $instanceId **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return $this
     */
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
-    * Gets xLbService
-    *  此参数定义了lbservice
-    *
-    * @return string|null
-    */
-    public function getXLbService()
-    {
-        return $this->container['xLbService'];
-    }
-
-    /**
-    * Sets xLbService
-    *
-    * @param string|null $xLbService 此参数定义了lbservice
-    *
-    * @return $this
-    */
-    public function setXLbService($xLbService)
-    {
-        $this->container['xLbService'] = $xLbService;
         return $this;
     }
 

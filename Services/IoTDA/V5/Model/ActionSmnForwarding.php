@@ -20,12 +20,12 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regionName  SMN服务对应的region区域
-    * projectId  SMN服务对应的projectId信息
-    * themeName  SMN服务对应的主题名称
-    * topicUrn  SMN服务对应的topic的主题URN
-    * messageContent  短信或邮件的内容。
-    * messageTitle  短信或邮件的主题。
+    * regionName  **参数说明**：SMN服务对应的region区域。
+    * projectId  **参数说明**：SMN服务对应的projectId信息。
+    * themeName  **参数说明**：SMN服务对应的主题名称。
+    * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
+    * messageContent  **参数说明**：短信或邮件的内容。。
+    * messageTitle  **参数说明**：短信或邮件的主题。。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regionName  SMN服务对应的region区域
-    * projectId  SMN服务对应的projectId信息
-    * themeName  SMN服务对应的主题名称
-    * topicUrn  SMN服务对应的topic的主题URN
-    * messageContent  短信或邮件的内容。
-    * messageTitle  短信或邮件的主题。
+    * regionName  **参数说明**：SMN服务对应的region区域。
+    * projectId  **参数说明**：SMN服务对应的projectId信息。
+    * themeName  **参数说明**：SMN服务对应的主题名称。
+    * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
+    * messageContent  **参数说明**：短信或邮件的内容。。
+    * messageTitle  **参数说明**：短信或邮件的主题。。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regionName  SMN服务对应的region区域
-    * projectId  SMN服务对应的projectId信息
-    * themeName  SMN服务对应的主题名称
-    * topicUrn  SMN服务对应的topic的主题URN
-    * messageContent  短信或邮件的内容。
-    * messageTitle  短信或邮件的主题。
+    * regionName  **参数说明**：SMN服务对应的region区域。
+    * projectId  **参数说明**：SMN服务对应的projectId信息。
+    * themeName  **参数说明**：SMN服务对应的主题名称。
+    * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
+    * messageContent  **参数说明**：短信或邮件的内容。。
+    * messageTitle  **参数说明**：短信或邮件的主题。。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regionName  SMN服务对应的region区域
-    * projectId  SMN服务对应的projectId信息
-    * themeName  SMN服务对应的主题名称
-    * topicUrn  SMN服务对应的topic的主题URN
-    * messageContent  短信或邮件的内容。
-    * messageTitle  短信或邮件的主题。
+    * regionName  **参数说明**：SMN服务对应的region区域。
+    * projectId  **参数说明**：SMN服务对应的projectId信息。
+    * themeName  **参数说明**：SMN服务对应的主题名称。
+    * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
+    * messageContent  **参数说明**：短信或邮件的内容。。
+    * messageTitle  **参数说明**：短信或邮件的主题。。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regionName  SMN服务对应的region区域
-    * projectId  SMN服务对应的projectId信息
-    * themeName  SMN服务对应的主题名称
-    * topicUrn  SMN服务对应的topic的主题URN
-    * messageContent  短信或邮件的内容。
-    * messageTitle  短信或邮件的主题。
+    * regionName  **参数说明**：SMN服务对应的region区域。
+    * projectId  **参数说明**：SMN服务对应的projectId信息。
+    * themeName  **参数说明**：SMN服务对应的主题名称。
+    * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
+    * messageContent  **参数说明**：短信或邮件的内容。。
+    * messageTitle  **参数说明**：短信或邮件的主题。。
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionName
-    *  SMN服务对应的region区域
+    *  **参数说明**：SMN服务对应的region区域。
     *
     * @return string
     */
@@ -274,7 +274,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets regionName
     *
-    * @param string $regionName SMN服务对应的region区域
+    * @param string $regionName **参数说明**：SMN服务对应的region区域。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  SMN服务对应的projectId信息
+    *  **参数说明**：SMN服务对应的projectId信息。
     *
     * @return string
     */
@@ -298,7 +298,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId SMN服务对应的projectId信息
+    * @param string $projectId **参数说明**：SMN服务对应的projectId信息。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets themeName
-    *  SMN服务对应的主题名称
+    *  **参数说明**：SMN服务对应的主题名称。
     *
     * @return string
     */
@@ -322,7 +322,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets themeName
     *
-    * @param string $themeName SMN服务对应的主题名称
+    * @param string $themeName **参数说明**：SMN服务对应的主题名称。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicUrn
-    *  SMN服务对应的topic的主题URN
+    *  **参数说明**：SMN服务对应的topic的主题URN。
     *
     * @return string
     */
@@ -346,7 +346,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets topicUrn
     *
-    * @param string $topicUrn SMN服务对应的topic的主题URN
+    * @param string $topicUrn **参数说明**：SMN服务对应的topic的主题URN。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageContent
-    *  短信或邮件的内容。
+    *  **参数说明**：短信或邮件的内容。。
     *
     * @return string
     */
@@ -370,7 +370,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets messageContent
     *
-    * @param string $messageContent 短信或邮件的内容。
+    * @param string $messageContent **参数说明**：短信或邮件的内容。。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageTitle
-    *  短信或邮件的主题。
+    *  **参数说明**：短信或邮件的主题。。
     *
     * @return string
     */
@@ -394,7 +394,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets messageTitle
     *
-    * @param string $messageTitle 短信或邮件的主题。
+    * @param string $messageTitle **参数说明**：短信或邮件的主题。。
     *
     * @return $this
     */

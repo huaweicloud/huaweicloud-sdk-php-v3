@@ -20,13 +20,13 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regionName  Kafka服务对应的region区域
-    * projectId  Kafka服务对应的projectId信息
-    * addresses  转发kafka消息对应的地址列表
-    * topic  转发kafka消息关联的topic信息。
-    * username  转发kafka关联的用户名信息。
-    * password  转发kafka关联的密码信息。
-    * mechanism  转发kafka关联的鉴权机制。 类型说明： PAAS：非SASL鉴权。 PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
+    * regionName  **参数说明**：Kafka服务对应的region区域
+    * projectId  **参数说明**：Kafka服务对应的projectId信息
+    * addresses  **参数说明**：转发kafka消息对应的地址列表
+    * topic  **参数说明**：转发kafka消息关联的topic信息。
+    * username  **参数说明**：转发kafka关联的用户名信息。
+    * password  **参数说明**：转发kafka关联的密码信息。
+    * mechanism  **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regionName  Kafka服务对应的region区域
-    * projectId  Kafka服务对应的projectId信息
-    * addresses  转发kafka消息对应的地址列表
-    * topic  转发kafka消息关联的topic信息。
-    * username  转发kafka关联的用户名信息。
-    * password  转发kafka关联的密码信息。
-    * mechanism  转发kafka关联的鉴权机制。 类型说明： PAAS：非SASL鉴权。 PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
+    * regionName  **参数说明**：Kafka服务对应的region区域
+    * projectId  **参数说明**：Kafka服务对应的projectId信息
+    * addresses  **参数说明**：转发kafka消息对应的地址列表
+    * topic  **参数说明**：转发kafka消息关联的topic信息。
+    * username  **参数说明**：转发kafka关联的用户名信息。
+    * password  **参数说明**：转发kafka关联的密码信息。
+    * mechanism  **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regionName  Kafka服务对应的region区域
-    * projectId  Kafka服务对应的projectId信息
-    * addresses  转发kafka消息对应的地址列表
-    * topic  转发kafka消息关联的topic信息。
-    * username  转发kafka关联的用户名信息。
-    * password  转发kafka关联的密码信息。
-    * mechanism  转发kafka关联的鉴权机制。 类型说明： PAAS：非SASL鉴权。 PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
+    * regionName  **参数说明**：Kafka服务对应的region区域
+    * projectId  **参数说明**：Kafka服务对应的projectId信息
+    * addresses  **参数说明**：转发kafka消息对应的地址列表
+    * topic  **参数说明**：转发kafka消息关联的topic信息。
+    * username  **参数说明**：转发kafka关联的用户名信息。
+    * password  **参数说明**：转发kafka关联的密码信息。
+    * mechanism  **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regionName  Kafka服务对应的region区域
-    * projectId  Kafka服务对应的projectId信息
-    * addresses  转发kafka消息对应的地址列表
-    * topic  转发kafka消息关联的topic信息。
-    * username  转发kafka关联的用户名信息。
-    * password  转发kafka关联的密码信息。
-    * mechanism  转发kafka关联的鉴权机制。 类型说明： PAAS：非SASL鉴权。 PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
+    * regionName  **参数说明**：Kafka服务对应的region区域
+    * projectId  **参数说明**：Kafka服务对应的projectId信息
+    * addresses  **参数说明**：转发kafka消息对应的地址列表
+    * topic  **参数说明**：转发kafka消息关联的topic信息。
+    * username  **参数说明**：转发kafka关联的用户名信息。
+    * password  **参数说明**：转发kafka关联的密码信息。
+    * mechanism  **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regionName  Kafka服务对应的region区域
-    * projectId  Kafka服务对应的projectId信息
-    * addresses  转发kafka消息对应的地址列表
-    * topic  转发kafka消息关联的topic信息。
-    * username  转发kafka关联的用户名信息。
-    * password  转发kafka关联的密码信息。
-    * mechanism  转发kafka关联的鉴权机制。 类型说明： PAAS：非SASL鉴权。 PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
+    * regionName  **参数说明**：Kafka服务对应的region区域
+    * projectId  **参数说明**：Kafka服务对应的projectId信息
+    * addresses  **参数说明**：转发kafka消息对应的地址列表
+    * topic  **参数说明**：转发kafka消息关联的topic信息。
+    * username  **参数说明**：转发kafka关联的用户名信息。
+    * password  **参数说明**：转发kafka关联的密码信息。
+    * mechanism  **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
     *
     * @var string[]
     */
@@ -285,7 +285,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionName
-    *  Kafka服务对应的region区域
+    *  **参数说明**：Kafka服务对应的region区域
     *
     * @return string
     */
@@ -297,7 +297,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets regionName
     *
-    * @param string $regionName Kafka服务对应的region区域
+    * @param string $regionName **参数说明**：Kafka服务对应的region区域
     *
     * @return $this
     */
@@ -309,7 +309,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  Kafka服务对应的projectId信息
+    *  **参数说明**：Kafka服务对应的projectId信息
     *
     * @return string
     */
@@ -321,7 +321,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId Kafka服务对应的projectId信息
+    * @param string $projectId **参数说明**：Kafka服务对应的projectId信息
     *
     * @return $this
     */
@@ -333,7 +333,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets addresses
-    *  转发kafka消息对应的地址列表
+    *  **参数说明**：转发kafka消息对应的地址列表
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\NetAddress[]
     */
@@ -345,7 +345,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets addresses
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\NetAddress[] $addresses 转发kafka消息对应的地址列表
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\NetAddress[] $addresses **参数说明**：转发kafka消息对应的地址列表
     *
     * @return $this
     */
@@ -357,7 +357,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  转发kafka消息关联的topic信息。
+    *  **参数说明**：转发kafka消息关联的topic信息。
     *
     * @return string
     */
@@ -369,7 +369,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string $topic 转发kafka消息关联的topic信息。
+    * @param string $topic **参数说明**：转发kafka消息关联的topic信息。
     *
     * @return $this
     */
@@ -381,7 +381,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets username
-    *  转发kafka关联的用户名信息。
+    *  **参数说明**：转发kafka关联的用户名信息。
     *
     * @return string|null
     */
@@ -393,7 +393,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets username
     *
-    * @param string|null $username 转发kafka关联的用户名信息。
+    * @param string|null $username **参数说明**：转发kafka关联的用户名信息。
     *
     * @return $this
     */
@@ -405,7 +405,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets password
-    *  转发kafka关联的密码信息。
+    *  **参数说明**：转发kafka关联的密码信息。
     *
     * @return string|null
     */
@@ -417,7 +417,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets password
     *
-    * @param string|null $password 转发kafka关联的密码信息。
+    * @param string|null $password **参数说明**：转发kafka关联的密码信息。
     *
     * @return $this
     */
@@ -429,7 +429,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets mechanism
-    *  转发kafka关联的鉴权机制。 类型说明： PAAS：非SASL鉴权。 PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
+    *  **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
     *
     * @return string|null
     */
@@ -441,7 +441,7 @@ class DmsKafkaForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets mechanism
     *
-    * @param string|null $mechanism 转发kafka关联的鉴权机制。 类型说明： PAAS：非SASL鉴权。 PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
+    * @param string|null $mechanism **参数说明**：转发kafka关联的鉴权机制。 **取值范围**： - PAAS：非SASL鉴权。 - PLAIN：SASL/PLAIN模式。需要填写对应的用户名密码信息。
     *
     * @return $this
     */

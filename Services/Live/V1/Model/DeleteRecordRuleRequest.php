@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateRecordConfigRequest implements ModelInterface, ArrayAccess
+class DeleteRecordRuleRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,26 @@ class CreateRecordConfigRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateRecordConfigRequest';
+    protected static $openAPIModelName = 'DeleteRecordRuleRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * id  规则ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Live\V1\Model\RecordConfigInfo'
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * id  规则ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'id' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class CreateRecordConfigRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * id  规则ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * id  规则ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * id  规则ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'id' => 'getId'
     ];
 
     /**
@@ -147,7 +147,7 @@ class CreateRecordConfigRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -158,6 +158,15 @@ class CreateRecordConfigRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+            if ((mb_strlen($this->container['id']) > 128)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 128.";
+            }
+            if ((mb_strlen($this->container['id']) < 1)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -173,26 +182,26 @@ class CreateRecordConfigRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets id
+    *  规则ID
     *
-    * @return \HuaweiCloud\SDK\Live\V1\Model\RecordConfigInfo|null
+    * @return string
     */
-    public function getBody()
+    public function getId()
     {
-        return $this->container['body'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets body
+    * Sets id
     *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\RecordConfigInfo|null $body body
+    * @param string $id 规则ID
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setId($id)
     {
-        $this->container['body'] = $body;
+        $this->container['id'] = $id;
         return $this;
     }
 

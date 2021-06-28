@@ -687,184 +687,6 @@ class IoTDAAsyncClient extends Client
     }
 
     /**
-     * 查询设备下队列中的命令
-     * 查询设备下队列中的命（处理中的命令），包含PENDING,SENT,DELIVERED三种状态，注意：DELIVERED状态的命令经过系统设定的一段时间（具体以系统配置为准）仍然没有更新，就会从队列中移除，变为历史命令。
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listAsyncCommandsAsync($request)
-    {
-        return $this->listAsyncCommandsAsyncWithHttpInfo($request);
-    }
-    
-    public function listAsyncCommandsAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/async-commands';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['marker'] !== null) {
-            $queryParams['marker'] = $localVarParams['marker'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['startTime'] !== null) {
-            $queryParams['start_time'] = $localVarParams['startTime'];
-        }
-        if ($localVarParams['endTime'] !== null) {
-            $queryParams['end_time'] = $localVarParams['endTime'];
-        }
-        if ($localVarParams['status'] !== null) {
-            $queryParams['status'] = $localVarParams['status'];
-        }
-        if ($localVarParams['commandId'] !== null) {
-            $queryParams['command_id'] = $localVarParams['commandId'];
-        }
-        if ($localVarParams['commandName'] !== null) {
-            $queryParams['command_name'] = $localVarParams['commandName'];
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($localVarParams['deviceId'] !== null) {
-            $pathParams['device_id'] = $localVarParams['deviceId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListAsyncCommandsResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListAsyncCommandsRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询设备下的历史命令
-     * 查询设备下发的历史异步命令。
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listAsyncHistoryCommandsAsync($request)
-    {
-        return $this->listAsyncHistoryCommandsAsyncWithHttpInfo($request);
-    }
-    
-    public function listAsyncHistoryCommandsAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/async-commands-history';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['marker'] !== null) {
-            $queryParams['marker'] = $localVarParams['marker'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['startTime'] !== null) {
-            $queryParams['start_time'] = $localVarParams['startTime'];
-        }
-        if ($localVarParams['endTime'] !== null) {
-            $queryParams['end_time'] = $localVarParams['endTime'];
-        }
-        if ($localVarParams['status'] !== null) {
-            $queryParams['status'] = $localVarParams['status'];
-        }
-        if ($localVarParams['commandId'] !== null) {
-            $queryParams['command_id'] = $localVarParams['commandId'];
-        }
-        if ($localVarParams['commandName'] !== null) {
-            $queryParams['command_name'] = $localVarParams['commandName'];
-        }
-        if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($localVarParams['deviceId'] !== null) {
-            $pathParams['device_id'] = $localVarParams['deviceId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListAsyncHistoryCommandsResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListAsyncHistoryCommandsRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 查询指定id的命令
      * 物联网平台可查询指定id的命令。
      *
@@ -1279,6 +1101,76 @@ class IoTDAAsyncClient extends Client
     }
 
     /**
+     * 上传批量任务文件
+     * 应用服务器可调用此接口上传批量任务文件，用于创建批量任务。当前支持批量创建设备任务、批量删除设备任务、批量冻结设备任务、批量解冻设备任务的文件上传。 - [批量注册设备模板](https://developer.obs.cn-north-4.myhuaweicloud.com/template/BatchCreateDevices_Template.xlsx)   - [批量删除设备模板](https://developer.obs.cn-north-4.myhuaweicloud.com/template/BatchDeleteDevices_Template.xlsx)   - [批量冻结设备模板](https://developer.obs.cn-north-4.myhuaweicloud.com/template/BatchFreezeDevices_Template.xlsx)   - [批量解冻设备模板](https://developer.obs.cn-north-4.myhuaweicloud.com/template/BatchUnfreezeDevices_Template.xlsx)
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function uploadBatchTaskFileAsync($request)
+    {
+        return $this->uploadBatchTaskFileAsyncWithHttpInfo($request);
+    }
+    
+    public function uploadBatchTaskFileAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/{project_id}/batchtask-files';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = true;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        foreach ($httpBody::attributeMap() as $k => $v) {
+            $getter = $httpBody::getters()[$k];
+            $value = $httpBody->$getter();
+            $formParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['multipart/form-data']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UploadBatchTaskFileResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UploadBatchTaskFileRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 上传设备CA证书
      * 应用服务器可调用此接口在物联网平台上传设备的CA证书
      *
@@ -1555,7 +1447,7 @@ class IoTDAAsyncClient extends Client
 
     /**
      * 下发设备命令
-     * 设备的产品模型中定义了物联网平台可向设备下发的命令，应用服务器可调用此接口向指定设备下发命令，以实现对设备的同步控制。平台负责将命令以同步方式发送给设备，并将设备执行命令结果同步返回, 如果设备没有响应，平台会返回给应用服务器超时，平台超时间是25秒。注意：此接口适用于MQTT设备同步命令下发，暂不支持NB-IoT设备命令下发。
+     * 设备的产品模型中定义了物联网平台可向设备下发的命令，应用服务器可调用此接口向指定设备下发命令，以实现对设备的同步控制。平台负责将命令以同步方式发送给设备，并将设备执行命令结果同步返回, 如果设备没有响应，平台会返回给应用服务器超时，平台超时间是20秒。注意：此接口适用于MQTT设备同步命令下发，暂不支持NB-IoT设备命令下发。
      *
      * @param $request 请求对象
      * @return response
@@ -3373,9 +3265,6 @@ class IoTDAAsyncClient extends Client
         if ($localVarParams['serviceId'] !== null) {
             $queryParams['service_id'] = $localVarParams['serviceId'];
         }
-        if ($localVarParams['stageAuthToken'] !== null) {
-            $headerParams['stage_auth_token'] = $localVarParams['stageAuthToken'];
-        }
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
         }
@@ -3440,9 +3329,6 @@ class IoTDAAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['stageAuthToken'] !== null) {
-            $headerParams['stage_auth_token'] = $localVarParams['stageAuthToken'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
@@ -3579,9 +3465,6 @@ class IoTDAAsyncClient extends Client
         }
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($localVarParams['xLbService'] !== null) {
-            $headerParams['x_lb_service'] = $localVarParams['xLbService'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];

@@ -20,10 +20,10 @@ class ActionObsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regionName  OBS服务对应的region区域
-    * projectId  OBS服务对应的projectId信息
-    * bucketName  OBS服务对应的桶名称
-    * location  OBS服务对应桶的区域
+    * regionName  **参数说明**：OBS服务对应的region区域。
+    * projectId  **参数说明**：OBS服务对应的projectId信息。
+    * bucketName  **参数说明**：OBS服务对应的桶名称。
+    * location  **参数说明**：OBS服务对应桶的区域。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ActionObsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regionName  OBS服务对应的region区域
-    * projectId  OBS服务对应的projectId信息
-    * bucketName  OBS服务对应的桶名称
-    * location  OBS服务对应桶的区域
+    * regionName  **参数说明**：OBS服务对应的region区域。
+    * projectId  **参数说明**：OBS服务对应的projectId信息。
+    * bucketName  **参数说明**：OBS服务对应的桶名称。
+    * location  **参数说明**：OBS服务对应桶的区域。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ActionObsForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regionName  OBS服务对应的region区域
-    * projectId  OBS服务对应的projectId信息
-    * bucketName  OBS服务对应的桶名称
-    * location  OBS服务对应桶的区域
+    * regionName  **参数说明**：OBS服务对应的region区域。
+    * projectId  **参数说明**：OBS服务对应的projectId信息。
+    * bucketName  **参数说明**：OBS服务对应的桶名称。
+    * location  **参数说明**：OBS服务对应桶的区域。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ActionObsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regionName  OBS服务对应的region区域
-    * projectId  OBS服务对应的projectId信息
-    * bucketName  OBS服务对应的桶名称
-    * location  OBS服务对应桶的区域
+    * regionName  **参数说明**：OBS服务对应的region区域。
+    * projectId  **参数说明**：OBS服务对应的projectId信息。
+    * bucketName  **参数说明**：OBS服务对应的桶名称。
+    * location  **参数说明**：OBS服务对应桶的区域。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ActionObsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regionName  OBS服务对应的region区域
-    * projectId  OBS服务对应的projectId信息
-    * bucketName  OBS服务对应的桶名称
-    * location  OBS服务对应桶的区域
+    * regionName  **参数说明**：OBS服务对应的region区域。
+    * projectId  **参数说明**：OBS服务对应的projectId信息。
+    * bucketName  **参数说明**：OBS服务对应的桶名称。
+    * location  **参数说明**：OBS服务对应桶的区域。
     *
     * @var string[]
     */
@@ -228,7 +228,7 @@ class ActionObsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionName
-    *  OBS服务对应的region区域
+    *  **参数说明**：OBS服务对应的region区域。
     *
     * @return string
     */
@@ -240,7 +240,7 @@ class ActionObsForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets regionName
     *
-    * @param string $regionName OBS服务对应的region区域
+    * @param string $regionName **参数说明**：OBS服务对应的region区域。
     *
     * @return $this
     */
@@ -252,7 +252,7 @@ class ActionObsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  OBS服务对应的projectId信息
+    *  **参数说明**：OBS服务对应的projectId信息。
     *
     * @return string
     */
@@ -264,7 +264,7 @@ class ActionObsForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId OBS服务对应的projectId信息
+    * @param string $projectId **参数说明**：OBS服务对应的projectId信息。
     *
     * @return $this
     */
@@ -276,7 +276,7 @@ class ActionObsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets bucketName
-    *  OBS服务对应的桶名称
+    *  **参数说明**：OBS服务对应的桶名称。
     *
     * @return string
     */
@@ -288,7 +288,7 @@ class ActionObsForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets bucketName
     *
-    * @param string $bucketName OBS服务对应的桶名称
+    * @param string $bucketName **参数说明**：OBS服务对应的桶名称。
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class ActionObsForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets location
-    *  OBS服务对应桶的区域
+    *  **参数说明**：OBS服务对应桶的区域。
     *
     * @return string|null
     */
@@ -312,7 +312,7 @@ class ActionObsForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets location
     *
-    * @param string|null $location OBS服务对应桶的区域
+    * @param string|null $location **参数说明**：OBS服务对应桶的区域。
     *
     * @return $this
     */

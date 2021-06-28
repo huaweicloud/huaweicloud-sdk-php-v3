@@ -20,34 +20,30 @@ class AddActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleId  规则触发条件ID，用于唯一标识一条规则触发条件，在创建规则时由物联网平台分配获得。
-    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * ruleId  **参数说明**：规则触发条件ID，用于唯一标识一条规则触发条件，在创建规则时由物联网平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * channel  **参数说明**：规则动作的类型。 **取值范围**： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'ruleId' => 'string',
             'channel' => 'string',
-            'channelDetail' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ChannelDetail',
-            'batch' => 'bool'
+            'channelDetail' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ChannelDetail'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleId  规则触发条件ID，用于唯一标识一条规则触发条件，在创建规则时由物联网平台分配获得。
-    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * ruleId  **参数说明**：规则触发条件ID，用于唯一标识一条规则触发条件，在创建规则时由物联网平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * channel  **参数说明**：规则动作的类型。 **取值范围**： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'ruleId' => null,
         'channel' => null,
-        'channelDetail' => null,
-        'batch' => null
+        'channelDetail' => null
     ];
 
     /**
@@ -73,50 +69,44 @@ class AddActionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleId  规则触发条件ID，用于唯一标识一条规则触发条件，在创建规则时由物联网平台分配获得。
-    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * ruleId  **参数说明**：规则触发条件ID，用于唯一标识一条规则触发条件，在创建规则时由物联网平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * channel  **参数说明**：规则动作的类型。 **取值范围**： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'ruleId' => 'rule_id',
             'channel' => 'channel',
-            'channelDetail' => 'channel_detail',
-            'batch' => 'batch'
+            'channelDetail' => 'channel_detail'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleId  规则触发条件ID，用于唯一标识一条规则触发条件，在创建规则时由物联网平台分配获得。
-    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * ruleId  **参数说明**：规则触发条件ID，用于唯一标识一条规则触发条件，在创建规则时由物联网平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * channel  **参数说明**：规则动作的类型。 **取值范围**： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
     protected static $setters = [
             'ruleId' => 'setRuleId',
             'channel' => 'setChannel',
-            'channelDetail' => 'setChannelDetail',
-            'batch' => 'setBatch'
+            'channelDetail' => 'setChannelDetail'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleId  规则触发条件ID，用于唯一标识一条规则触发条件，在创建规则时由物联网平台分配获得。
-    * channel  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * ruleId  **参数说明**：规则触发条件ID，用于唯一标识一条规则触发条件，在创建规则时由物联网平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * channel  **参数说明**：规则动作的类型。 **取值范围**： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     * channelDetail  channelDetail
-    * batch  是否支持批量接收推送消息。
     *
     * @var string[]
     */
     protected static $getters = [
             'ruleId' => 'getRuleId',
             'channel' => 'getChannel',
-            'channelDetail' => 'getChannelDetail',
-            'batch' => 'getBatch'
+            'channelDetail' => 'getChannelDetail'
     ];
 
     /**
@@ -180,7 +170,6 @@ class AddActionReq implements ModelInterface, ArrayAccess
         $this->container['ruleId'] = isset($data['ruleId']) ? $data['ruleId'] : null;
         $this->container['channel'] = isset($data['channel']) ? $data['channel'] : null;
         $this->container['channelDetail'] = isset($data['channelDetail']) ? $data['channelDetail'] : null;
-        $this->container['batch'] = isset($data['batch']) ? $data['batch'] : false;
     }
 
     /**
@@ -200,8 +189,8 @@ class AddActionReq implements ModelInterface, ArrayAccess
         if ($this->container['channel'] === null) {
             $invalidProperties[] = "'channel' can't be null";
         }
-            if (!preg_match("/(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|ROMA_FORWARDING|IoTA_FORWARDING|MQS_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING)/", $this->container['channel'])) {
-                $invalidProperties[] = "invalid value for 'channel', must be conform to the pattern /(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|ROMA_FORWARDING|IoTA_FORWARDING|MQS_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING)/.";
+            if (!preg_match("/(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|ROMA_FORWARDING|IoTA_FORWARDING|MQS_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING|PULSAR_FORWARDING)/", $this->container['channel'])) {
+                $invalidProperties[] = "invalid value for 'channel', must be conform to the pattern /(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|ROMA_FORWARDING|IoTA_FORWARDING|MQS_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING|PULSAR_FORWARDING)/.";
             }
         if ($this->container['channelDetail'] === null) {
             $invalidProperties[] = "'channelDetail' can't be null";
@@ -222,7 +211,7 @@ class AddActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleId
-    *  规则触发条件ID，用于唯一标识一条规则触发条件，在创建规则时由物联网平台分配获得。
+    *  **参数说明**：规则触发条件ID，用于唯一标识一条规则触发条件，在创建规则时由物联网平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return string
     */
@@ -234,7 +223,7 @@ class AddActionReq implements ModelInterface, ArrayAccess
     /**
     * Sets ruleId
     *
-    * @param string $ruleId 规则触发条件ID，用于唯一标识一条规则触发条件，在创建规则时由物联网平台分配获得。
+    * @param string $ruleId **参数说明**：规则触发条件ID，用于唯一标识一条规则触发条件，在创建规则时由物联网平台分配获得。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return $this
     */
@@ -246,7 +235,7 @@ class AddActionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets channel
-    *  规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    *  **参数说明**：规则动作的类型。 **取值范围**： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     *
     * @return string
     */
@@ -258,7 +247,7 @@ class AddActionReq implements ModelInterface, ArrayAccess
     /**
     * Sets channel
     *
-    * @param string $channel 规则动作的类型，取值范围： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
+    * @param string $channel **参数说明**：规则动作的类型。 **取值范围**： - HTTP_FORWARDING：HTTP服务消息类型。 - DIS_FORWARDING：转发DIS服务消息类型。 - OBS_FORWARDING：转发OBS服务消息类型。 - AMQP_FORWARDING：转发AMQP服务消息类型。 - DMS_KAFKA_FORWARDING：转发kafka消息类型。
     *
     * @return $this
     */
@@ -289,30 +278,6 @@ class AddActionReq implements ModelInterface, ArrayAccess
     public function setChannelDetail($channelDetail)
     {
         $this->container['channelDetail'] = $channelDetail;
-        return $this;
-    }
-
-    /**
-    * Gets batch
-    *  是否支持批量接收推送消息。
-    *
-    * @return bool|null
-    */
-    public function getBatch()
-    {
-        return $this->container['batch'];
-    }
-
-    /**
-    * Sets batch
-    *
-    * @param bool|null $batch 是否支持批量接收推送消息。
-    *
-    * @return $this
-    */
-    public function setBatch($batch)
-    {
-        $this->container['batch'] = $batch;
         return $this;
     }
 

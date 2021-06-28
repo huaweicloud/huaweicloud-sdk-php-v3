@@ -290,7 +290,7 @@ class Client
     private function parseBody($body, $multipart, $formParams, $headerParams)
     {
         $httpBody = null;
-        if (isset($body)) {
+        if (isset($body)&&!$multipart) {
             // $_tempBody is the method argument, if present
             if ('application/json' === $headerParams['Content-Type']) {
                 $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($body));
@@ -298,7 +298,7 @@ class Client
                 $httpBody = $body;
             }
         } elseif (count($formParams) > 0) {
-            if ($multipart) {
+             if($multipart){
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ?
@@ -306,7 +306,7 @@ class Client
                     foreach ($formParamValueItems as $formParamValueItem) {
                         $multipartContents[] = [
                             'name' => $formParamName,
-                            'contents' => $formParamValueItem,
+                            'contents' => fopen($formParamValueItem->getPathname(),'r'),
                         ];
                     }
                 }
@@ -356,7 +356,9 @@ class Client
             $pathParams, $resourcePath,
             $this->credentials->getUpdatePathParams());
         $queryParams = $this->parseQueryParams($collectionFormats, $queryParams);
+        if(!$multipart){
         $postParams = $this->parsePostParams($collectionFormats, $postParams);
+        }
         $body = $this->parseBody($body, $multipart, $postParams, $headerParams);
         $sdkRequest = new SdkRequest($method = $method, $scheme = $scheme,
             $host = $host, $resourcePath = $resourcePath, $uri = '',$urL = '',

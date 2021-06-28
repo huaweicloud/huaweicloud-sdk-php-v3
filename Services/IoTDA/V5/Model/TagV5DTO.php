@@ -20,8 +20,8 @@ class TagV5DTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tagKey  标签键，在同一资源下标签键唯一。
-    * tagValue  标签值。
+    * tagKey  **参数说明**：标签键，在同一资源下标签键唯一。绑定资源时，如果设置的键已存在，则将覆盖之前的标签值。如果设置的键值不存在，则新增标签。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_.-等字符的组合。
+    * tagValue  **参数说明**：标签值。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TagV5DTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tagKey  标签键，在同一资源下标签键唯一。
-    * tagValue  标签值。
+    * tagKey  **参数说明**：标签键，在同一资源下标签键唯一。绑定资源时，如果设置的键已存在，则将覆盖之前的标签值。如果设置的键值不存在，则新增标签。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_.-等字符的组合。
+    * tagValue  **参数说明**：标签值。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TagV5DTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tagKey  标签键，在同一资源下标签键唯一。
-    * tagValue  标签值。
+    * tagKey  **参数说明**：标签键，在同一资源下标签键唯一。绑定资源时，如果设置的键已存在，则将覆盖之前的标签值。如果设置的键值不存在，则新增标签。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_.-等字符的组合。
+    * tagValue  **参数说明**：标签值。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TagV5DTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tagKey  标签键，在同一资源下标签键唯一。
-    * tagValue  标签值。
+    * tagKey  **参数说明**：标签键，在同一资源下标签键唯一。绑定资源时，如果设置的键已存在，则将覆盖之前的标签值。如果设置的键值不存在，则新增标签。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_.-等字符的组合。
+    * tagValue  **参数说明**：标签值。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TagV5DTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tagKey  标签键，在同一资源下标签键唯一。
-    * tagValue  标签值。
+    * tagKey  **参数说明**：标签键，在同一资源下标签键唯一。绑定资源时，如果设置的键已存在，则将覆盖之前的标签值。如果设置的键值不存在，则新增标签。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_.-等字符的组合。
+    * tagValue  **参数说明**：标签值。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @var string[]
     */
@@ -172,11 +172,11 @@ class TagV5DTO implements ModelInterface, ArrayAccess
         if ($this->container['tagKey'] === null) {
             $invalidProperties[] = "'tagKey' can't be null";
         }
-            if (!preg_match("/^[\\\\u4e00-\\\\u9fa5a-zA-Z0-9_.-]{1,64}$/", $this->container['tagKey'])) {
-                $invalidProperties[] = "invalid value for 'tagKey', must be conform to the pattern /^[\\\\u4e00-\\\\u9fa5a-zA-Z0-9_.-]{1,64}$/.";
+            if (!preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_.-]{1,64}$/", $this->container['tagKey'])) {
+                $invalidProperties[] = "invalid value for 'tagKey', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_.-]{1,64}$/.";
             }
-            if (!is_null($this->container['tagValue']) && !preg_match("/^[\\\\u4e00-\\\\u9fa5a-zA-Z0-9_.-]{1,128}$/", $this->container['tagValue'])) {
-                $invalidProperties[] = "invalid value for 'tagValue', must be conform to the pattern /^[\\\\u4e00-\\\\u9fa5a-zA-Z0-9_.-]{1,128}$/.";
+            if (!is_null($this->container['tagValue']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_.-]{1,128}$/", $this->container['tagValue'])) {
+                $invalidProperties[] = "invalid value for 'tagValue', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_.-]{1,128}$/.";
             }
         return $invalidProperties;
     }
@@ -194,7 +194,7 @@ class TagV5DTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagKey
-    *  标签键，在同一资源下标签键唯一。
+    *  **参数说明**：标签键，在同一资源下标签键唯一。绑定资源时，如果设置的键已存在，则将覆盖之前的标签值。如果设置的键值不存在，则新增标签。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class TagV5DTO implements ModelInterface, ArrayAccess
     /**
     * Sets tagKey
     *
-    * @param string $tagKey 标签键，在同一资源下标签键唯一。
+    * @param string $tagKey **参数说明**：标签键，在同一资源下标签键唯一。绑定资源时，如果设置的键已存在，则将覆盖之前的标签值。如果设置的键值不存在，则新增标签。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @return $this
     */
@@ -218,7 +218,7 @@ class TagV5DTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagValue
-    *  标签值。
+    *  **参数说明**：标签值。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class TagV5DTO implements ModelInterface, ArrayAccess
     /**
     * Sets tagValue
     *
-    * @param string|null $tagValue 标签值。
+    * @param string|null $tagValue **参数说明**：标签值。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_.-等字符的组合。
     *
     * @return $this
     */

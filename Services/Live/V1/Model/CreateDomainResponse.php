@@ -23,11 +23,12 @@ class CreateDomainResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
-    * domainCname  直播域名的CName
+    * domainCname  直播域名的CNAME
     * region  直播所属直播中心
     * status  直播域名的状态
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
-    * domainSource  domainSource
+    * statusDescribe  状态描述
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     *
     * @var string[]
     */
@@ -38,18 +39,20 @@ class CreateDomainResponse implements ModelInterface, ArrayAccess
             'region' => 'string',
             'status' => 'string',
             'createTime' => '\DateTime',
-            'domainSource' => '\HuaweiCloud\SDK\Live\V1\Model\DomainSourceInfo'
+            'statusDescribe' => 'string',
+            'serviceArea' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
-    * domainCname  直播域名的CName
+    * domainCname  直播域名的CNAME
     * region  直播所属直播中心
     * status  直播域名的状态
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
-    * domainSource  domainSource
+    * statusDescribe  状态描述
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     *
     * @var string[]
     */
@@ -60,7 +63,8 @@ class CreateDomainResponse implements ModelInterface, ArrayAccess
         'region' => null,
         'status' => null,
         'createTime' => 'date-time',
-        'domainSource' => null
+        'statusDescribe' => null,
+        'serviceArea' => null
     ];
 
     /**
@@ -88,11 +92,12 @@ class CreateDomainResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
-    * domainCname  直播域名的CName
+    * domainCname  直播域名的CNAME
     * region  直播所属直播中心
     * status  直播域名的状态
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
-    * domainSource  domainSource
+    * statusDescribe  状态描述
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     *
     * @var string[]
     */
@@ -103,18 +108,20 @@ class CreateDomainResponse implements ModelInterface, ArrayAccess
             'region' => 'region',
             'status' => 'status',
             'createTime' => 'create_time',
-            'domainSource' => 'domain_source'
+            'statusDescribe' => 'status_describe',
+            'serviceArea' => 'service_area'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
-    * domainCname  直播域名的CName
+    * domainCname  直播域名的CNAME
     * region  直播所属直播中心
     * status  直播域名的状态
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
-    * domainSource  domainSource
+    * statusDescribe  状态描述
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     *
     * @var string[]
     */
@@ -125,18 +132,20 @@ class CreateDomainResponse implements ModelInterface, ArrayAccess
             'region' => 'setRegion',
             'status' => 'setStatus',
             'createTime' => 'setCreateTime',
-            'domainSource' => 'setDomainSource'
+            'statusDescribe' => 'setStatusDescribe',
+            'serviceArea' => 'setServiceArea'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
-    * domainCname  直播域名的CName
+    * domainCname  直播域名的CNAME
     * region  直播所属直播中心
     * status  直播域名的状态
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
-    * domainSource  domainSource
+    * statusDescribe  状态描述
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     *
     * @var string[]
     */
@@ -147,7 +156,8 @@ class CreateDomainResponse implements ModelInterface, ArrayAccess
             'region' => 'getRegion',
             'status' => 'getStatus',
             'createTime' => 'getCreateTime',
-            'domainSource' => 'getDomainSource'
+            'statusDescribe' => 'getStatusDescribe',
+            'serviceArea' => 'getServiceArea'
     ];
 
     /**
@@ -195,6 +205,10 @@ class CreateDomainResponse implements ModelInterface, ArrayAccess
     const STATUS_ON = 'on';
     const STATUS_OFF = 'off';
     const STATUS_CONFIGURING = 'configuring';
+    const STATUS_DISABLE = 'disable';
+    const SERVICE_AREA_MAINLAND_CHINA = 'mainland_china';
+    const SERVICE_AREA_OUTSIDE_MAINLAND_CHINA = 'outside_mainland_china';
+    const SERVICE_AREA__GLOBAL = 'global';
     
 
     /**
@@ -221,6 +235,21 @@ class CreateDomainResponse implements ModelInterface, ArrayAccess
             self::STATUS_ON,
             self::STATUS_OFF,
             self::STATUS_CONFIGURING,
+            self::STATUS_DISABLE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getServiceAreaAllowableValues()
+    {
+        return [
+            self::SERVICE_AREA_MAINLAND_CHINA,
+            self::SERVICE_AREA_OUTSIDE_MAINLAND_CHINA,
+            self::SERVICE_AREA__GLOBAL,
         ];
     }
 
@@ -246,7 +275,8 @@ class CreateDomainResponse implements ModelInterface, ArrayAccess
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
-        $this->container['domainSource'] = isset($data['domainSource']) ? $data['domainSource'] : null;
+        $this->container['statusDescribe'] = isset($data['statusDescribe']) ? $data['statusDescribe'] : null;
+        $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
     }
 
     /**
@@ -275,6 +305,20 @@ class CreateDomainResponse implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['statusDescribe']) && (mb_strlen($this->container['statusDescribe']) > 256)) {
+                $invalidProperties[] = "invalid value for 'statusDescribe', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['statusDescribe']) && (mb_strlen($this->container['statusDescribe']) < 0)) {
+                $invalidProperties[] = "invalid value for 'statusDescribe', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getServiceAreaAllowableValues();
+                if (!is_null($this->container['serviceArea']) && !in_array($this->container['serviceArea'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'serviceArea', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -343,7 +387,7 @@ class CreateDomainResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainCname
-    *  直播域名的CName
+    *  直播域名的CNAME
     *
     * @return string|null
     */
@@ -355,7 +399,7 @@ class CreateDomainResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainCname
     *
-    * @param string|null $domainCname 直播域名的CName
+    * @param string|null $domainCname 直播域名的CNAME
     *
     * @return $this
     */
@@ -438,26 +482,50 @@ class CreateDomainResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets domainSource
-    *  domainSource
+    * Gets statusDescribe
+    *  状态描述
     *
-    * @return \HuaweiCloud\SDK\Live\V1\Model\DomainSourceInfo|null
+    * @return string|null
     */
-    public function getDomainSource()
+    public function getStatusDescribe()
     {
-        return $this->container['domainSource'];
+        return $this->container['statusDescribe'];
     }
 
     /**
-    * Sets domainSource
+    * Sets statusDescribe
     *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\DomainSourceInfo|null $domainSource domainSource
+    * @param string|null $statusDescribe 状态描述
     *
     * @return $this
     */
-    public function setDomainSource($domainSource)
+    public function setStatusDescribe($statusDescribe)
     {
-        $this->container['domainSource'] = $domainSource;
+        $this->container['statusDescribe'] = $statusDescribe;
+        return $this;
+    }
+
+    /**
+    * Gets serviceArea
+    *  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    *
+    * @return string|null
+    */
+    public function getServiceArea()
+    {
+        return $this->container['serviceArea'];
+    }
+
+    /**
+    * Sets serviceArea
+    *
+    * @param string|null $serviceArea 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    *
+    * @return $this
+    */
+    public function setServiceArea($serviceArea)
+    {
+        $this->container['serviceArea'] = $serviceArea;
         return $this;
     }
 

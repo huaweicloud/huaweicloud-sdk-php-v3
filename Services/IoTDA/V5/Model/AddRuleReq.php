@@ -20,14 +20,13 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleName  用户自定义的规则名称。
-    * description  用户自定义的规则描述。
+    * ruleName  **参数说明**：用户自定义的规则名称。
+    * description  **参数说明**：用户自定义的规则描述。
     * subject  subject
-    * appType  租户规则的生效范围，默认GLOBAL，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
-    * appId  资源空间ID。
-    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * dataVersion  规则推送消息的消息格式版本，租户无需设置，仅供内部兼容历史推送消息使用，iocsa的历史推送消息版本为V5.0.1
+    * appType  **参数说明**：租户规则的生效范围，默认GLOBAL，。 **取值范围**： - GLOBAL：生效范围为租户级。 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
+    * appId  **参数说明**：资源空间ID。。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * select  **参数说明**：用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  **参数说明**：用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
     *
     * @var string[]
     */
@@ -38,20 +37,18 @@ class AddRuleReq implements ModelInterface, ArrayAccess
             'appType' => 'string',
             'appId' => 'string',
             'select' => 'string',
-            'where' => 'string',
-            'dataVersion' => 'string'
+            'where' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleName  用户自定义的规则名称。
-    * description  用户自定义的规则描述。
+    * ruleName  **参数说明**：用户自定义的规则名称。
+    * description  **参数说明**：用户自定义的规则描述。
     * subject  subject
-    * appType  租户规则的生效范围，默认GLOBAL，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
-    * appId  资源空间ID。
-    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * dataVersion  规则推送消息的消息格式版本，租户无需设置，仅供内部兼容历史推送消息使用，iocsa的历史推送消息版本为V5.0.1
+    * appType  **参数说明**：租户规则的生效范围，默认GLOBAL，。 **取值范围**： - GLOBAL：生效范围为租户级。 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
+    * appId  **参数说明**：资源空间ID。。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * select  **参数说明**：用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  **参数说明**：用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
     *
     * @var string[]
     */
@@ -62,8 +59,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
         'appType' => null,
         'appId' => null,
         'select' => null,
-        'where' => null,
-        'dataVersion' => null
+        'where' => null
     ];
 
     /**
@@ -89,14 +85,13 @@ class AddRuleReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleName  用户自定义的规则名称。
-    * description  用户自定义的规则描述。
+    * ruleName  **参数说明**：用户自定义的规则名称。
+    * description  **参数说明**：用户自定义的规则描述。
     * subject  subject
-    * appType  租户规则的生效范围，默认GLOBAL，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
-    * appId  资源空间ID。
-    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * dataVersion  规则推送消息的消息格式版本，租户无需设置，仅供内部兼容历史推送消息使用，iocsa的历史推送消息版本为V5.0.1
+    * appType  **参数说明**：租户规则的生效范围，默认GLOBAL，。 **取值范围**： - GLOBAL：生效范围为租户级。 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
+    * appId  **参数说明**：资源空间ID。。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * select  **参数说明**：用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  **参数说明**：用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
     *
     * @var string[]
     */
@@ -107,20 +102,18 @@ class AddRuleReq implements ModelInterface, ArrayAccess
             'appType' => 'app_type',
             'appId' => 'app_id',
             'select' => 'select',
-            'where' => 'where',
-            'dataVersion' => 'data_version'
+            'where' => 'where'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleName  用户自定义的规则名称。
-    * description  用户自定义的规则描述。
+    * ruleName  **参数说明**：用户自定义的规则名称。
+    * description  **参数说明**：用户自定义的规则描述。
     * subject  subject
-    * appType  租户规则的生效范围，默认GLOBAL，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
-    * appId  资源空间ID。
-    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * dataVersion  规则推送消息的消息格式版本，租户无需设置，仅供内部兼容历史推送消息使用，iocsa的历史推送消息版本为V5.0.1
+    * appType  **参数说明**：租户规则的生效范围，默认GLOBAL，。 **取值范围**： - GLOBAL：生效范围为租户级。 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
+    * appId  **参数说明**：资源空间ID。。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * select  **参数说明**：用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  **参数说明**：用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
     *
     * @var string[]
     */
@@ -131,20 +124,18 @@ class AddRuleReq implements ModelInterface, ArrayAccess
             'appType' => 'setAppType',
             'appId' => 'setAppId',
             'select' => 'setSelect',
-            'where' => 'setWhere',
-            'dataVersion' => 'setDataVersion'
+            'where' => 'setWhere'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleName  用户自定义的规则名称。
-    * description  用户自定义的规则描述。
+    * ruleName  **参数说明**：用户自定义的规则名称。
+    * description  **参数说明**：用户自定义的规则描述。
     * subject  subject
-    * appType  租户规则的生效范围，默认GLOBAL，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
-    * appId  资源空间ID。
-    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * dataVersion  规则推送消息的消息格式版本，租户无需设置，仅供内部兼容历史推送消息使用，iocsa的历史推送消息版本为V5.0.1
+    * appType  **参数说明**：租户规则的生效范围，默认GLOBAL，。 **取值范围**： - GLOBAL：生效范围为租户级。 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
+    * appId  **参数说明**：资源空间ID。。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * select  **参数说明**：用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * where  **参数说明**：用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
     *
     * @var string[]
     */
@@ -155,8 +146,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
             'appType' => 'getAppType',
             'appId' => 'getAppId',
             'select' => 'getSelect',
-            'where' => 'getWhere',
-            'dataVersion' => 'getDataVersion'
+            'where' => 'getWhere'
     ];
 
     /**
@@ -224,7 +214,6 @@ class AddRuleReq implements ModelInterface, ArrayAccess
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['select'] = isset($data['select']) ? $data['select'] : null;
         $this->container['where'] = isset($data['where']) ? $data['where'] : null;
-        $this->container['dataVersion'] = isset($data['dataVersion']) ? $data['dataVersion'] : null;
     }
 
     /**
@@ -268,12 +257,6 @@ class AddRuleReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['where']) && (mb_strlen($this->container['where']) < 0)) {
                 $invalidProperties[] = "invalid value for 'where', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['dataVersion']) && (mb_strlen($this->container['dataVersion']) > 256)) {
-                $invalidProperties[] = "invalid value for 'dataVersion', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['dataVersion']) && (mb_strlen($this->container['dataVersion']) < 1)) {
-                $invalidProperties[] = "invalid value for 'dataVersion', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -290,7 +273,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleName
-    *  用户自定义的规则名称。
+    *  **参数说明**：用户自定义的规则名称。
     *
     * @return string|null
     */
@@ -302,7 +285,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets ruleName
     *
-    * @param string|null $ruleName 用户自定义的规则名称。
+    * @param string|null $ruleName **参数说明**：用户自定义的规则名称。
     *
     * @return $this
     */
@@ -314,7 +297,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  用户自定义的规则描述。
+    *  **参数说明**：用户自定义的规则描述。
     *
     * @return string|null
     */
@@ -326,7 +309,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 用户自定义的规则描述。
+    * @param string|null $description **参数说明**：用户自定义的规则描述。
     *
     * @return $this
     */
@@ -362,7 +345,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets appType
-    *  租户规则的生效范围，默认GLOBAL，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
+    *  **参数说明**：租户规则的生效范围，默认GLOBAL，。 **取值范围**： - GLOBAL：生效范围为租户级。 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
     *
     * @return string|null
     */
@@ -374,7 +357,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets appType
     *
-    * @param string|null $appType 租户规则的生效范围，默认GLOBAL，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
+    * @param string|null $appType **参数说明**：租户规则的生效范围，默认GLOBAL，。 **取值范围**： - GLOBAL：生效范围为租户级。 - APP：生效范围为资源空间级。如果类型为APP，创建的规则生效范围为携带的app_id指定的资源空间，不携带app_id则创建规则生效范围为[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)。
     *
     * @return $this
     */
@@ -386,7 +369,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  资源空间ID。
+    *  **参数说明**：资源空间ID。。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return string|null
     */
@@ -398,7 +381,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 资源空间ID。
+    * @param string|null $appId **参数说明**：资源空间ID。。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return $this
     */
@@ -410,7 +393,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets select
-    *  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    *  **参数说明**：用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
     *
     * @return string|null
     */
@@ -422,7 +405,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets select
     *
-    * @param string|null $select 用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * @param string|null $select **参数说明**：用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
     *
     * @return $this
     */
@@ -434,7 +417,7 @@ class AddRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets where
-    *  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    *  **参数说明**：用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
     *
     * @return string|null
     */
@@ -446,37 +429,13 @@ class AddRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets where
     *
-    * @param string|null $where 用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * @param string|null $where **参数说明**：用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
     *
     * @return $this
     */
     public function setWhere($where)
     {
         $this->container['where'] = $where;
-        return $this;
-    }
-
-    /**
-    * Gets dataVersion
-    *  规则推送消息的消息格式版本，租户无需设置，仅供内部兼容历史推送消息使用，iocsa的历史推送消息版本为V5.0.1
-    *
-    * @return string|null
-    */
-    public function getDataVersion()
-    {
-        return $this->container['dataVersion'];
-    }
-
-    /**
-    * Sets dataVersion
-    *
-    * @param string|null $dataVersion 规则推送消息的消息格式版本，租户无需设置，仅供内部兼容历史推送消息使用，iocsa的历史推送消息版本为V5.0.1
-    *
-    * @return $this
-    */
-    public function setDataVersion($dataVersion)
-    {
-        $this->container['dataVersion'] = $dataVersion;
         return $this;
     }
 

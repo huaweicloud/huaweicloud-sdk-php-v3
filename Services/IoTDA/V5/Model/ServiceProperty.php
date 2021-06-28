@@ -20,18 +20,18 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * propertyName  设备属性名称。
-    * dataType  设备属性的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
-    * required  设备属性是否必选。默认为false。
-    * enumList  设备属性的枚举值列表。
-    * min  设备属性的最小值。
-    * max  设备属性的最大值。
-    * maxLength  设备属性的最大长度。
-    * step  设备属性的步长。
-    * unit  设备属性的单位。
-    * method  设备属性的访问模式。取值范围：RWE，RW，RE，WE，E，W，R。 - R：属性值可读 - W：属性值可写 - E：属性值可订阅，即属性值变化时上报事件
-    * description  设备属性的描述。
-    * defaultValue  设备属性的默认值。如果设置了默认值，使用该产品创建设备时，会将该属性的默认值写入到该设备的设备影子预期数据中，待设备上线时将该属性默认值下发给设备。
+    * propertyName  **参数说明**：设备属性名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * dataType  **参数说明**：设备属性的数据类型。 **取值范围**：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  **参数说明**：设备属性是否必选。默认为false。
+    * enumList  **参数说明**：设备属性的枚举值列表。
+    * min  **参数说明**：设备属性的最小值。 **取值范围**：长度1-16。
+    * max  **参数说明**：设备属性的最大值。 **取值范围**：长度1-16。
+    * maxLength  **参数说明**：设备属性的最大长度。
+    * step  **参数说明**：设备属性的步长。
+    * unit  **参数说明**：设备属性的单位。 **取值范围**：长度不超过16。
+    * method  **参数说明**：设备属性的访问模式。 **取值范围**：RWE，RW，RE，WE，E，W，R。 - R：属性值可读 - W：属性值可写 - E：属性值可订阅，即属性值变化时上报事件
+    * description  **参数说明**：设备属性的描述。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
+    * defaultValue  **参数说明**：设备属性的默认值。如果设置了默认值，使用该产品创建设备时，会将该属性的默认值写入到该设备的设备影子预期数据中，待设备上线时将该属性默认值下发给设备。
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * propertyName  设备属性名称。
-    * dataType  设备属性的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
-    * required  设备属性是否必选。默认为false。
-    * enumList  设备属性的枚举值列表。
-    * min  设备属性的最小值。
-    * max  设备属性的最大值。
-    * maxLength  设备属性的最大长度。
-    * step  设备属性的步长。
-    * unit  设备属性的单位。
-    * method  设备属性的访问模式。取值范围：RWE，RW，RE，WE，E，W，R。 - R：属性值可读 - W：属性值可写 - E：属性值可订阅，即属性值变化时上报事件
-    * description  设备属性的描述。
-    * defaultValue  设备属性的默认值。如果设置了默认值，使用该产品创建设备时，会将该属性的默认值写入到该设备的设备影子预期数据中，待设备上线时将该属性默认值下发给设备。
+    * propertyName  **参数说明**：设备属性名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * dataType  **参数说明**：设备属性的数据类型。 **取值范围**：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  **参数说明**：设备属性是否必选。默认为false。
+    * enumList  **参数说明**：设备属性的枚举值列表。
+    * min  **参数说明**：设备属性的最小值。 **取值范围**：长度1-16。
+    * max  **参数说明**：设备属性的最大值。 **取值范围**：长度1-16。
+    * maxLength  **参数说明**：设备属性的最大长度。
+    * step  **参数说明**：设备属性的步长。
+    * unit  **参数说明**：设备属性的单位。 **取值范围**：长度不超过16。
+    * method  **参数说明**：设备属性的访问模式。 **取值范围**：RWE，RW，RE，WE，E，W，R。 - R：属性值可读 - W：属性值可写 - E：属性值可订阅，即属性值变化时上报事件
+    * description  **参数说明**：设备属性的描述。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
+    * defaultValue  **参数说明**：设备属性的默认值。如果设置了默认值，使用该产品创建设备时，会将该属性的默认值写入到该设备的设备影子预期数据中，待设备上线时将该属性默认值下发给设备。
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class ServiceProperty implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * propertyName  设备属性名称。
-    * dataType  设备属性的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
-    * required  设备属性是否必选。默认为false。
-    * enumList  设备属性的枚举值列表。
-    * min  设备属性的最小值。
-    * max  设备属性的最大值。
-    * maxLength  设备属性的最大长度。
-    * step  设备属性的步长。
-    * unit  设备属性的单位。
-    * method  设备属性的访问模式。取值范围：RWE，RW，RE，WE，E，W，R。 - R：属性值可读 - W：属性值可写 - E：属性值可订阅，即属性值变化时上报事件
-    * description  设备属性的描述。
-    * defaultValue  设备属性的默认值。如果设置了默认值，使用该产品创建设备时，会将该属性的默认值写入到该设备的设备影子预期数据中，待设备上线时将该属性默认值下发给设备。
+    * propertyName  **参数说明**：设备属性名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * dataType  **参数说明**：设备属性的数据类型。 **取值范围**：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  **参数说明**：设备属性是否必选。默认为false。
+    * enumList  **参数说明**：设备属性的枚举值列表。
+    * min  **参数说明**：设备属性的最小值。 **取值范围**：长度1-16。
+    * max  **参数说明**：设备属性的最大值。 **取值范围**：长度1-16。
+    * maxLength  **参数说明**：设备属性的最大长度。
+    * step  **参数说明**：设备属性的步长。
+    * unit  **参数说明**：设备属性的单位。 **取值范围**：长度不超过16。
+    * method  **参数说明**：设备属性的访问模式。 **取值范围**：RWE，RW，RE，WE，E，W，R。 - R：属性值可读 - W：属性值可写 - E：属性值可订阅，即属性值变化时上报事件
+    * description  **参数说明**：设备属性的描述。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
+    * defaultValue  **参数说明**：设备属性的默认值。如果设置了默认值，使用该产品创建设备时，会将该属性的默认值写入到该设备的设备影子预期数据中，待设备上线时将该属性默认值下发给设备。
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * propertyName  设备属性名称。
-    * dataType  设备属性的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
-    * required  设备属性是否必选。默认为false。
-    * enumList  设备属性的枚举值列表。
-    * min  设备属性的最小值。
-    * max  设备属性的最大值。
-    * maxLength  设备属性的最大长度。
-    * step  设备属性的步长。
-    * unit  设备属性的单位。
-    * method  设备属性的访问模式。取值范围：RWE，RW，RE，WE，E，W，R。 - R：属性值可读 - W：属性值可写 - E：属性值可订阅，即属性值变化时上报事件
-    * description  设备属性的描述。
-    * defaultValue  设备属性的默认值。如果设置了默认值，使用该产品创建设备时，会将该属性的默认值写入到该设备的设备影子预期数据中，待设备上线时将该属性默认值下发给设备。
+    * propertyName  **参数说明**：设备属性名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * dataType  **参数说明**：设备属性的数据类型。 **取值范围**：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  **参数说明**：设备属性是否必选。默认为false。
+    * enumList  **参数说明**：设备属性的枚举值列表。
+    * min  **参数说明**：设备属性的最小值。 **取值范围**：长度1-16。
+    * max  **参数说明**：设备属性的最大值。 **取值范围**：长度1-16。
+    * maxLength  **参数说明**：设备属性的最大长度。
+    * step  **参数说明**：设备属性的步长。
+    * unit  **参数说明**：设备属性的单位。 **取值范围**：长度不超过16。
+    * method  **参数说明**：设备属性的访问模式。 **取值范围**：RWE，RW，RE，WE，E，W，R。 - R：属性值可读 - W：属性值可写 - E：属性值可订阅，即属性值变化时上报事件
+    * description  **参数说明**：设备属性的描述。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
+    * defaultValue  **参数说明**：设备属性的默认值。如果设置了默认值，使用该产品创建设备时，会将该属性的默认值写入到该设备的设备影子预期数据中，待设备上线时将该属性默认值下发给设备。
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * propertyName  设备属性名称。
-    * dataType  设备属性的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
-    * required  设备属性是否必选。默认为false。
-    * enumList  设备属性的枚举值列表。
-    * min  设备属性的最小值。
-    * max  设备属性的最大值。
-    * maxLength  设备属性的最大长度。
-    * step  设备属性的步长。
-    * unit  设备属性的单位。
-    * method  设备属性的访问模式。取值范围：RWE，RW，RE，WE，E，W，R。 - R：属性值可读 - W：属性值可写 - E：属性值可订阅，即属性值变化时上报事件
-    * description  设备属性的描述。
-    * defaultValue  设备属性的默认值。如果设置了默认值，使用该产品创建设备时，会将该属性的默认值写入到该设备的设备影子预期数据中，待设备上线时将该属性默认值下发给设备。
+    * propertyName  **参数说明**：设备属性名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * dataType  **参数说明**：设备属性的数据类型。 **取值范围**：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * required  **参数说明**：设备属性是否必选。默认为false。
+    * enumList  **参数说明**：设备属性的枚举值列表。
+    * min  **参数说明**：设备属性的最小值。 **取值范围**：长度1-16。
+    * max  **参数说明**：设备属性的最大值。 **取值范围**：长度1-16。
+    * maxLength  **参数说明**：设备属性的最大长度。
+    * step  **参数说明**：设备属性的步长。
+    * unit  **参数说明**：设备属性的单位。 **取值范围**：长度不超过16。
+    * method  **参数说明**：设备属性的访问模式。 **取值范围**：RWE，RW，RE，WE，E，W，R。 - R：属性值可读 - W：属性值可写 - E：属性值可订阅，即属性值变化时上报事件
+    * description  **参数说明**：设备属性的描述。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
+    * defaultValue  **参数说明**：设备属性的默认值。如果设置了默认值，使用该产品创建设备时，会将该属性的默认值写入到该设备的设备影子预期数据中，待设备上线时将该属性默认值下发给设备。
     *
     * @var string[]
     */
@@ -331,7 +331,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets propertyName
-    *  设备属性名称。
+    *  **参数说明**：设备属性名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return string
     */
@@ -343,7 +343,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets propertyName
     *
-    * @param string $propertyName 设备属性名称。
+    * @param string $propertyName **参数说明**：设备属性名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataType
-    *  设备属性的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    *  **参数说明**：设备属性的数据类型。 **取值范围**：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
     *
     * @return string
     */
@@ -367,7 +367,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets dataType
     *
-    * @param string $dataType 设备属性的数据类型。取值范围：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
+    * @param string $dataType **参数说明**：设备属性的数据类型。 **取值范围**：int，long，decimal，string，DateTime，jsonObject，enum，boolean，string list。
     *
     * @return $this
     */
@@ -379,7 +379,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets required
-    *  设备属性是否必选。默认为false。
+    *  **参数说明**：设备属性是否必选。默认为false。
     *
     * @return bool|null
     */
@@ -391,7 +391,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets required
     *
-    * @param bool|null $required 设备属性是否必选。默认为false。
+    * @param bool|null $required **参数说明**：设备属性是否必选。默认为false。
     *
     * @return $this
     */
@@ -403,7 +403,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets enumList
-    *  设备属性的枚举值列表。
+    *  **参数说明**：设备属性的枚举值列表。
     *
     * @return string[]|null
     */
@@ -415,7 +415,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets enumList
     *
-    * @param string[]|null $enumList 设备属性的枚举值列表。
+    * @param string[]|null $enumList **参数说明**：设备属性的枚举值列表。
     *
     * @return $this
     */
@@ -427,7 +427,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets min
-    *  设备属性的最小值。
+    *  **参数说明**：设备属性的最小值。 **取值范围**：长度1-16。
     *
     * @return string|null
     */
@@ -439,7 +439,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets min
     *
-    * @param string|null $min 设备属性的最小值。
+    * @param string|null $min **参数说明**：设备属性的最小值。 **取值范围**：长度1-16。
     *
     * @return $this
     */
@@ -451,7 +451,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets max
-    *  设备属性的最大值。
+    *  **参数说明**：设备属性的最大值。 **取值范围**：长度1-16。
     *
     * @return string|null
     */
@@ -463,7 +463,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets max
     *
-    * @param string|null $max 设备属性的最大值。
+    * @param string|null $max **参数说明**：设备属性的最大值。 **取值范围**：长度1-16。
     *
     * @return $this
     */
@@ -475,7 +475,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxLength
-    *  设备属性的最大长度。
+    *  **参数说明**：设备属性的最大长度。
     *
     * @return int|null
     */
@@ -487,7 +487,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets maxLength
     *
-    * @param int|null $maxLength 设备属性的最大长度。
+    * @param int|null $maxLength **参数说明**：设备属性的最大长度。
     *
     * @return $this
     */
@@ -499,7 +499,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets step
-    *  设备属性的步长。
+    *  **参数说明**：设备属性的步长。
     *
     * @return double|null
     */
@@ -511,7 +511,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets step
     *
-    * @param double|null $step 设备属性的步长。
+    * @param double|null $step **参数说明**：设备属性的步长。
     *
     * @return $this
     */
@@ -523,7 +523,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  设备属性的单位。
+    *  **参数说明**：设备属性的单位。 **取值范围**：长度不超过16。
     *
     * @return string|null
     */
@@ -535,7 +535,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string|null $unit 设备属性的单位。
+    * @param string|null $unit **参数说明**：设备属性的单位。 **取值范围**：长度不超过16。
     *
     * @return $this
     */
@@ -547,7 +547,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets method
-    *  设备属性的访问模式。取值范围：RWE，RW，RE，WE，E，W，R。 - R：属性值可读 - W：属性值可写 - E：属性值可订阅，即属性值变化时上报事件
+    *  **参数说明**：设备属性的访问模式。 **取值范围**：RWE，RW，RE，WE，E，W，R。 - R：属性值可读 - W：属性值可写 - E：属性值可订阅，即属性值变化时上报事件
     *
     * @return string
     */
@@ -559,7 +559,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets method
     *
-    * @param string $method 设备属性的访问模式。取值范围：RWE，RW，RE，WE，E，W，R。 - R：属性值可读 - W：属性值可写 - E：属性值可订阅，即属性值变化时上报事件
+    * @param string $method **参数说明**：设备属性的访问模式。 **取值范围**：RWE，RW，RE，WE，E，W，R。 - R：属性值可读 - W：属性值可写 - E：属性值可订阅，即属性值变化时上报事件
     *
     * @return $this
     */
@@ -571,7 +571,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  设备属性的描述。
+    *  **参数说明**：设备属性的描述。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @return string|null
     */
@@ -583,7 +583,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 设备属性的描述。
+    * @param string|null $description **参数说明**：设备属性的描述。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     *
     * @return $this
     */
@@ -595,7 +595,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultValue
-    *  设备属性的默认值。如果设置了默认值，使用该产品创建设备时，会将该属性的默认值写入到该设备的设备影子预期数据中，待设备上线时将该属性默认值下发给设备。
+    *  **参数说明**：设备属性的默认值。如果设置了默认值，使用该产品创建设备时，会将该属性的默认值写入到该设备的设备影子预期数据中，待设备上线时将该属性默认值下发给设备。
     *
     * @return object|null
     */
@@ -607,7 +607,7 @@ class ServiceProperty implements ModelInterface, ArrayAccess
     /**
     * Sets defaultValue
     *
-    * @param object|null $defaultValue 设备属性的默认值。如果设置了默认值，使用该产品创建设备时，会将该属性的默认值写入到该设备的设备影子预期数据中，待设备上线时将该属性默认值下发给设备。
+    * @param object|null $defaultValue **参数说明**：设备属性的默认值。如果设置了默认值，使用该产品创建设备时，会将该属性的默认值写入到该设备的设备影子预期数据中，待设备上线时将该属性默认值下发给设备。
     *
     * @return $this
     */

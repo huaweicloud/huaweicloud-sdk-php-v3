@@ -20,8 +20,8 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * secret  设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。
-    * forceDisconnect  是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * secret  **参数说明**：设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。 **取值范围**：长度不低于8不超过32，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * secret  设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。
-    * forceDisconnect  是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * secret  **参数说明**：设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。 **取值范围**：长度不低于8不超过32，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * secret  设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。
-    * forceDisconnect  是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * secret  **参数说明**：设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。 **取值范围**：长度不低于8不超过32，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * secret  设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。
-    * forceDisconnect  是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * secret  **参数说明**：设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。 **取值范围**：长度不低于8不超过32，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * secret  设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。
-    * forceDisconnect  是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * secret  **参数说明**：设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。 **取值范围**：长度不低于8不超过32，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * forceDisconnect  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
     *
     * @var string[]
     */
@@ -194,7 +194,7 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
 
     /**
     * Gets secret
-    *  设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。
+    *  **参数说明**：设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。 **取值范围**：长度不低于8不超过32，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return string|null
     */
@@ -206,7 +206,7 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
     /**
     * Sets secret
     *
-    * @param string|null $secret 设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。
+    * @param string|null $secret **参数说明**：设备密钥，设置该字段时平台将设备密钥重置为指定值，若不设置则由平台自动生成。 **取值范围**：长度不低于8不超过32，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
     * @return $this
     */
@@ -218,7 +218,7 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
 
     /**
     * Gets forceDisconnect
-    *  是否强制断开设备的连接，当前仅限长连接。默认值false。
+    *  **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
     *
     * @return bool|null
     */
@@ -230,7 +230,7 @@ class ResetDeviceSecret implements ModelInterface, ArrayAccess
     /**
     * Sets forceDisconnect
     *
-    * @param bool|null $forceDisconnect 是否强制断开设备的连接，当前仅限长连接。默认值false。
+    * @param bool|null $forceDisconnect **参数说明**：是否强制断开设备的连接，当前仅限长连接。默认值false。
     *
     * @return $this
     */
