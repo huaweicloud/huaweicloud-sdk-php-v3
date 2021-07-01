@@ -8,7 +8,7 @@
     "api",
     "iotda"
   ],
-  "version": "3.0.13-beta",
+  "version": "1.0.0",
    "type": "library",
   "license": "Apache-2.0",
   "authors": [
@@ -20,7 +20,7 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "huaweicloud/huaweicloud-sdk-core": "3.0.13-beta"
+    "huaweicloud/huaweicloud-sdk-core": "1.0.0"
   },
   "autoload": {
     "psr-4": {

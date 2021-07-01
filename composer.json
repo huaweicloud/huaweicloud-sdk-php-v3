@@ -7,7 +7,7 @@
     "rest",
     "api"
   ],
-  "version": "3.0.13-beta",
+  "version": "1.0.0",
   "type": "library",
   "license": "Apache-2.0",
   "authors": [

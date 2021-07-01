@@ -1,3 +1,13 @@
+# 3.0.14-beta 2021-06-30
+
+### HuaweiCloud SDK Live
+
+- _Features_
+    - Support interfaces of version v2.
+- _Bug Fix_
+    - None
+- _Change_
+    - None
 # 3.0.13-beta 2021-06-25
 
 ### HuaweiCloud SDK Core
