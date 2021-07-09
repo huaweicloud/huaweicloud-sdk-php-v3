@@ -41,9 +41,9 @@ class FLVRecordConfig implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'recordCycle' => 'int32',
+        'recordCycle' => null,
         'recordPrefix' => null,
-        'recordMaxDurationToMergeFile' => 'int32'
+        'recordMaxDurationToMergeFile' => null
     ];
 
     /**
@@ -183,11 +183,23 @@ class FLVRecordConfig implements ModelInterface, ArrayAccess
         if ($this->container['recordCycle'] === null) {
             $invalidProperties[] = "'recordCycle' can't be null";
         }
+            if (($this->container['recordCycle'] > 43200)) {
+                $invalidProperties[] = "invalid value for 'recordCycle', must be smaller than or equal to 43200.";
+            }
+            if (($this->container['recordCycle'] < 0)) {
+                $invalidProperties[] = "invalid value for 'recordCycle', must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['recordPrefix']) && (mb_strlen($this->container['recordPrefix']) > 512)) {
                 $invalidProperties[] = "invalid value for 'recordPrefix', the character length must be smaller than or equal to 512.";
             }
             if (!is_null($this->container['recordPrefix']) && (mb_strlen($this->container['recordPrefix']) < 1)) {
                 $invalidProperties[] = "invalid value for 'recordPrefix', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['recordMaxDurationToMergeFile']) && ($this->container['recordMaxDurationToMergeFile'] > 300)) {
+                $invalidProperties[] = "invalid value for 'recordMaxDurationToMergeFile', must be smaller than or equal to 300.";
+            }
+            if (!is_null($this->container['recordMaxDurationToMergeFile']) && ($this->container['recordMaxDurationToMergeFile'] < 0)) {
+                $invalidProperties[] = "invalid value for 'recordMaxDurationToMergeFile', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }

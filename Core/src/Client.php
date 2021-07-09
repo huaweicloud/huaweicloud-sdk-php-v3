@@ -350,6 +350,9 @@ class Client
         $urlParseResult = parse_url($this->endpoint);
         $scheme = $urlParseResult['scheme'];
         $host = $urlParseResult['host'];
+        if(count($urlParseResult) === 3){
+            $host = $host.':'.$urlParseResult['port'];
+        }
         $headerParams = $this->parseHeaderParams($collectionFormats,
             $headerParams);
         $resourcePath = $this->parsePathParams($collectionFormats,

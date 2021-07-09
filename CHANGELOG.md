@@ -1,3 +1,63 @@
+# 3.0.15-beta 2021-07-09
+
+### HuaweiCloud SDK Core
+
+- _Features_
+    - Support Region Management
+- _Bug Fix_
+    - None
+- _Change_
+    - None
+    
+### HuaweiCloud SDK Live
+
+- _Features_
+    - None
+- _Bug Fix_
+    - Fixed the issue where the interface fails to be invoked using the IP address.
+- _Change_
+    - None 
+     
+### HuaweiCloud SDK EIP
+
+- _Features_
+    - None
+- _Bug Fix_
+    - None
+- _Change_
+    - Add the response parameter `publicip_border_group` to the interfaces `CreateSharedBandwidth`,`ListBandwidths`.
+
+### HuaweiCloud SDK IMS
+
+- _Features_
+    - None
+- _Bug Fix_
+    - None
+- _Change_
+    - Add the response parameters `__root_origin`,`checksum`,`size` to the interfaces `GlanceCreateImageMetadata`.
+    - Remove the request parameters `deleted`, `deleted_at` of the interface `GlanceAddImageMember`, and add the following request parameters:
+        - `__lazyloading`
+        - `__os_feature_list`
+        - `__root_origin`
+        - `__sequence_num`
+        - `__support_agent_list`
+        - `__system__cmkid`
+        - `active_at`
+        - `hw_vif_multiqueue_enabled`
+        - `max_ram`
+        - `__image_location`
+        - `__is_config_init`
+        - `__account_code`
+
+### HuaweiCloud SDK IoTDA
+
+- _Features_
+    - None
+- _Bug Fix_
+    - None
+- _Change_
+    - Add the response parameters `edge_node_ids`, `last_update_time` to the interface `ListRules`.
+    
 # 3.0.14-beta 2021-06-30
 
 ### HuaweiCloud SDK Live

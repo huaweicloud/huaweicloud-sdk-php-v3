@@ -43,7 +43,7 @@ class ListRoutingRulesResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'rules' => null,
-        'count' => 'int32',
+        'count' => null,
         'marker' => null
     ];
 

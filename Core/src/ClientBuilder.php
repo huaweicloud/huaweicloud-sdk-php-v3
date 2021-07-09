@@ -35,6 +35,7 @@ class ClientBuilder
     private $httpHandler = null;
     private $fileLoggerHandler = null;
     private $streamLoggerHandler = null;
+    private $region = null;
 
     /**
      * ClientBuilder constructor.
@@ -102,6 +103,18 @@ class ClientBuilder
     }
 
     /**
+     * @param mixed $region
+     *
+     * @return ClientBuilder
+     */
+    public function withRegion($region)
+    {
+        $this->region = $region;
+
+        return $this;
+    }
+
+    /**
      * @param $logPath
      * @param int $logLevel
      * @param int $logMaxFiles
@@ -113,9 +126,10 @@ class ClientBuilder
                                    $logLevel = Logger::INFO,
                                    $logMaxFiles = 5,
                                    $formatString = null
-    ) {
+    )
+    {
         $this->fileLoggerHandler = ['logPath' => $logPath, 'logLevel' =>
-            $logLevel,'logMaxFiles' => $logMaxFiles, 'formatString' =>
+            $logLevel, 'logMaxFiles' => $logMaxFiles, 'formatString' =>
             $formatString];
 
         return $this;
@@ -123,15 +137,16 @@ class ClientBuilder
 
     /**
      * @param string $stream
-     * @param int    $logLevel
-     * @param null   $formatString
+     * @param int $logLevel
+     * @param null $formatString
      *
      * @return ClientBuilder
      */
     public function withStreamLogger($stream = 'php://stdout',
                                      $logLevel = Logger::INFO,
                                      $formatString = null
-    ) {
+    )
+    {
         $this->streamLoggerHandler = ['stream' => $stream, 'logLevel' =>
             $logLevel, 'formatString' => $formatString];
 
@@ -164,7 +179,21 @@ class ClientBuilder
             $client->addFileLogger($this->fileLoggerHandler);
         }
         $client->initHttpClient();
-
+        $this->processRegion($client);
         return $client;
+    }
+
+    public function processRegion($client)
+    {
+        $region = $this->region;
+        $credentials = $this->credentials;
+        if (!empty($region)) {
+            $this->endpoint = $region->getEndpoint();
+            $credentials->processAuthParams($client, $region->getId());
+        }
+        if (!strpos($this->endpoint, "http") === 0) {
+            $this->endPoint = "https://" . $this->endPoint;
+        }
+        $client->withEndpoint($this->endpoint);
     }
 }

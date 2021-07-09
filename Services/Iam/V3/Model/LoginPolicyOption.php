@@ -53,12 +53,12 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'accountValidityPeriod' => 'int32',
+        'accountValidityPeriod' => null,
         'customInfoForLogin' => null,
-        'lockoutDuration' => 'int32',
-        'loginFailedTimes' => 'int32',
+        'lockoutDuration' => null,
+        'loginFailedTimes' => null,
         'periodWithLoginFailures' => 'int32',
-        'sessionTimeout' => 'int32',
+        'sessionTimeout' => null,
         'showRecentLoginInfo' => null
     ];
 

@@ -21,13 +21,16 @@
 namespace HuaweiCloud\SDK\Core\Auth;
 
 use HuaweiCloud\SDK\Core\Exceptions\SdkException;
+use HuaweiCloud\SDK\Core\Http\HttpConfig;
 use HuaweiCloud\SDK\Core\SdkRequest;
+use HuaweiCloud\SDK\Iam\V3\IamClient;
 
 class Credentials implements ICredentials
 {
     protected $ak;
     protected $sk;
     protected $securityToken;
+    protected $iamEndpoint;
 
     private static function getCredentialsClass($clientType, $credentialType)
     {
@@ -103,5 +106,27 @@ class Credentials implements ICredentials
 
     public function processAuthRequest(SdkRequest $request)
     {
+    }
+
+    public function processAuthParams($client, $regionId)
+    {
+    }
+
+    public function getIamClient($client, $credentials)
+    {
+        $iamEndPoint = empty($credentials->getIamEndpoint()) ? "https://iam.myhuaweicloud.com" : $this->getIamEndpoint();
+        $httpConfig = null;
+        if (null != $client->getHttpConfig()) {
+            $httpConfig = $client->getHttpConfig();
+        } else {
+            $httpConfig = HttpConfig::getDefaultConfig();
+            $httpConfig->setIgnoreSslVerification(true);
+        }
+        $iamClient = (new IamClient())
+            ->withHttpConfig($httpConfig)
+            ->withEndpoint($iamEndPoint)
+            ->withCredentials($credentials);
+        $iamClient->initHttpClient();
+        return $iamClient;
     }
 }

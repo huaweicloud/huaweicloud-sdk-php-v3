@@ -49,7 +49,7 @@ class ListPublicipsByTagsRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'tags' => null,
         'limit' => 'int32',
-        'offset' => 'int32',
+        'offset' => null,
         'action' => null,
         'matches' => null
     ];
@@ -222,6 +222,9 @@ class ListPublicipsByTagsRequestBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
         if ($this->container['action'] === null) {
             $invalidProperties[] = "'action' can't be null";

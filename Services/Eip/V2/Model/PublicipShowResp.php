@@ -36,6 +36,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * type  弹性公网IP的类型
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
+    * publicipBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'tenantId' => 'string',
             'type' => 'string',
             'publicIpv6Address' => 'string',
-            'ipVersion' => 'int'
+            'ipVersion' => 'int',
+            'publicipBorderGroup' => 'string'
     ];
 
     /**
@@ -76,6 +78,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * type  弹性公网IP的类型
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
+    * publicipBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
         'tenantId' => null,
         'type' => null,
         'publicIpv6Address' => null,
-        'ipVersion' => 'int32'
+        'ipVersion' => 'int32',
+        'publicipBorderGroup' => null
     ];
 
     /**
@@ -137,6 +141,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * type  弹性公网IP的类型
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
+    * publicipBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'tenantId' => 'tenant_id',
             'type' => 'type',
             'publicIpv6Address' => 'public_ipv6_address',
-            'ipVersion' => 'ip_version'
+            'ipVersion' => 'ip_version',
+            'publicipBorderGroup' => 'publicip_border_group'
     ];
 
     /**
@@ -177,6 +183,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * type  弹性公网IP的类型
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
+    * publicipBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'tenantId' => 'setTenantId',
             'type' => 'setType',
             'publicIpv6Address' => 'setPublicIpv6Address',
-            'ipVersion' => 'setIpVersion'
+            'ipVersion' => 'setIpVersion',
+            'publicipBorderGroup' => 'setPublicipBorderGroup'
     ];
 
     /**
@@ -217,6 +225,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * type  弹性公网IP的类型
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
+    * publicipBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'tenantId' => 'getTenantId',
             'type' => 'getType',
             'publicIpv6Address' => 'getPublicIpv6Address',
-            'ipVersion' => 'getIpVersion'
+            'ipVersion' => 'getIpVersion',
+            'publicipBorderGroup' => 'getPublicipBorderGroup'
     ];
 
     /**
@@ -380,6 +390,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['publicIpv6Address'] = isset($data['publicIpv6Address']) ? $data['publicIpv6Address'] : null;
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
+        $this->container['publicipBorderGroup'] = isset($data['publicipBorderGroup']) ? $data['publicipBorderGroup'] : null;
     }
 
     /**
@@ -447,6 +458,9 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['publicipBorderGroup']) && (mb_strlen($this->container['publicipBorderGroup']) > 36)) {
+                $invalidProperties[] = "invalid value for 'publicipBorderGroup', the character length must be smaller than or equal to 36.";
+            }
         return $invalidProperties;
     }
 
@@ -842,6 +856,30 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     public function setIpVersion($ipVersion)
     {
         $this->container['ipVersion'] = $ipVersion;
+        return $this;
+    }
+
+    /**
+    * Gets publicipBorderGroup
+    *  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
+    *
+    * @return string|null
+    */
+    public function getPublicipBorderGroup()
+    {
+        return $this->container['publicipBorderGroup'];
+    }
+
+    /**
+    * Sets publicipBorderGroup
+    *
+    * @param string|null $publicipBorderGroup 功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
+    *
+    * @return $this
+    */
+    public function setPublicipBorderGroup($publicipBorderGroup)
+    {
+        $this->container['publicipBorderGroup'] = $publicipBorderGroup;
         return $this;
     }
 

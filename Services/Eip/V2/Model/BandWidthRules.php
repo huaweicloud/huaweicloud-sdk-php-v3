@@ -53,8 +53,8 @@ class BandWidthRules implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'adminStateUp' => null,
-        'egressSize' => 'int32',
-        'egressGuarentedSize' => 'int32',
+        'egressSize' => null,
+        'egressGuarentedSize' => null,
         'publicipInfo' => null
     ];
 
@@ -221,6 +221,12 @@ class BandWidthRules implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['egressSize']) && ($this->container['egressSize'] < 0)) {
+                $invalidProperties[] = "invalid value for 'egressSize', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['egressGuarentedSize']) && ($this->container['egressGuarentedSize'] < 0)) {
+                $invalidProperties[] = "invalid value for 'egressGuarentedSize', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }

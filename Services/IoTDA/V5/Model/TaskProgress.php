@@ -53,13 +53,13 @@ class TaskProgress implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'total' => 'int32',
-        'processing' => 'int32',
-        'success' => 'int32',
-        'fail' => 'int32',
-        'waitting' => 'int32',
-        'failWaitRetry' => 'int32',
-        'stopped' => 'int32'
+        'total' => null,
+        'processing' => null,
+        'success' => null,
+        'fail' => null,
+        'waitting' => null,
+        'failWaitRetry' => null,
+        'stopped' => null
     ];
 
     /**

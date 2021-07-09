@@ -42,8 +42,8 @@ class TaskPolicy implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'scheduleTime' => null,
-        'retryCount' => 'int32',
-        'retryInterval' => 'int32'
+        'retryCount' => null,
+        'retryInterval' => null
     ];
 
     /**
@@ -182,6 +182,18 @@ class TaskPolicy implements ModelInterface, ArrayAccess
         $invalidProperties = [];
             if (!is_null($this->container['scheduleTime']) && !preg_match("/^[0-9]{8}[T]{1}[0-9]{6}[Z]{1}$/", $this->container['scheduleTime'])) {
                 $invalidProperties[] = "invalid value for 'scheduleTime', must be conform to the pattern /^[0-9]{8}[T]{1}[0-9]{6}[Z]{1}$/.";
+            }
+            if (!is_null($this->container['retryCount']) && ($this->container['retryCount'] > 5)) {
+                $invalidProperties[] = "invalid value for 'retryCount', must be smaller than or equal to 5.";
+            }
+            if (!is_null($this->container['retryCount']) && ($this->container['retryCount'] < 1)) {
+                $invalidProperties[] = "invalid value for 'retryCount', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['retryInterval']) && ($this->container['retryInterval'] > 1440)) {
+                $invalidProperties[] = "invalid value for 'retryInterval', must be smaller than or equal to 1440.";
+            }
+            if (!is_null($this->container['retryInterval']) && ($this->container['retryInterval'] < 0)) {
+                $invalidProperties[] = "invalid value for 'retryInterval', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }

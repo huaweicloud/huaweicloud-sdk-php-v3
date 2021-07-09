@@ -97,7 +97,7 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
         'minRam' => 'int32',
         'osVersion' => null,
         'imageUrl' => null,
-        'minDisk' => 'int32',
+        'minDisk' => null,
         'isConfig' => null,
         'cmkId' => null,
         'type' => null,

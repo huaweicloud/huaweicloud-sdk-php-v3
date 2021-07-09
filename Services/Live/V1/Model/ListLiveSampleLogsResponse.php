@@ -42,7 +42,7 @@ class ListLiveSampleLogsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'total' => 'int32',
+        'total' => null,
         'domain' => null,
         'logs' => null
     ];
@@ -181,6 +181,12 @@ class ListLiveSampleLogsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['total']) && ($this->container['total'] > 2016)) {
+                $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 2016.";
+            }
+            if (!is_null($this->container['total']) && ($this->container['total'] < 0)) {
+                $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['domain']) && (mb_strlen($this->container['domain']) > 64)) {
                 $invalidProperties[] = "invalid value for 'domain', the character length must be smaller than or equal to 64.";
             }

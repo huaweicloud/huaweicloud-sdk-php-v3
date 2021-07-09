@@ -31,4 +31,6 @@ interface ICredentials
     public function getUpdatePathParams();
 
     public function processAuthRequest(SdkRequest $request);
+
+    public function processAuthParams($client, $regionId);
 }

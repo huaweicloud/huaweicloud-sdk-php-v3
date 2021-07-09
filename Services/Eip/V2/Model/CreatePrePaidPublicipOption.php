@@ -39,7 +39,7 @@ class CreatePrePaidPublicipOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'ipVersion' => 'int32'
+        'ipVersion' => null
     ];
 
     /**
@@ -139,22 +139,7 @@ class CreatePrePaidPublicipOption implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const IP_VERSION_4 = 4;
-    const IP_VERSION_6 = 6;
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getIpVersionAllowableValues()
-    {
-        return [
-            self::IP_VERSION_4,
-            self::IP_VERSION_6,
-        ];
-    }
 
 
     /**
@@ -190,14 +175,6 @@ class CreatePrePaidPublicipOption implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['type']) > 36)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 36.";
             }
-            $allowedValues = $this->getIpVersionAllowableValues();
-                if (!is_null($this->container['ipVersion']) && !in_array($this->container['ipVersion'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'ipVersion', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 

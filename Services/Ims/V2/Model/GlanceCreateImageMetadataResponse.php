@@ -48,6 +48,9 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
     * owner  镜像所属项目ID。
     * virtualSize  镜像虚拟大小。单位为字节。
     * properties  镜像属性的集合，不表示具体的镜像属性
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file
+    * checksum  镜像文件md5值。
+    * size  目前暂时不使用。
     *
     * @var string[]
     */
@@ -78,7 +81,10 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
             'virtualEnvType' => 'string',
             'owner' => 'string',
             'virtualSize' => 'int',
-            'properties' => 'object'
+            'properties' => 'object',
+            'rootOrigin' => 'string',
+            'checksum' => 'string',
+            'size' => 'int'
     ];
 
     /**
@@ -110,6 +116,9 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
     * owner  镜像所属项目ID。
     * virtualSize  镜像虚拟大小。单位为字节。
     * properties  镜像属性的集合，不表示具体的镜像属性
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file
+    * checksum  镜像文件md5值。
+    * size  目前暂时不使用。
     *
     * @var string[]
     */
@@ -140,7 +149,10 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
         'virtualEnvType' => null,
         'owner' => null,
         'virtualSize' => 'int32',
-        'properties' => null
+        'properties' => null,
+        'rootOrigin' => null,
+        'checksum' => null,
+        'size' => 'int64'
     ];
 
     /**
@@ -193,6 +205,9 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
     * owner  镜像所属项目ID。
     * virtualSize  镜像虚拟大小。单位为字节。
     * properties  镜像属性的集合，不表示具体的镜像属性
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file
+    * checksum  镜像文件md5值。
+    * size  目前暂时不使用。
     *
     * @var string[]
     */
@@ -223,7 +238,10 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
             'virtualEnvType' => 'virtual_env_type',
             'owner' => 'owner',
             'virtualSize' => 'virtual_size',
-            'properties' => 'properties'
+            'properties' => 'properties',
+            'rootOrigin' => '__root_origin',
+            'checksum' => 'checksum',
+            'size' => 'size'
     ];
 
     /**
@@ -255,6 +273,9 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
     * owner  镜像所属项目ID。
     * virtualSize  镜像虚拟大小。单位为字节。
     * properties  镜像属性的集合，不表示具体的镜像属性
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file
+    * checksum  镜像文件md5值。
+    * size  目前暂时不使用。
     *
     * @var string[]
     */
@@ -285,7 +306,10 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
             'virtualEnvType' => 'setVirtualEnvType',
             'owner' => 'setOwner',
             'virtualSize' => 'setVirtualSize',
-            'properties' => 'setProperties'
+            'properties' => 'setProperties',
+            'rootOrigin' => 'setRootOrigin',
+            'checksum' => 'setChecksum',
+            'size' => 'setSize'
     ];
 
     /**
@@ -317,6 +341,9 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
     * owner  镜像所属项目ID。
     * virtualSize  镜像虚拟大小。单位为字节。
     * properties  镜像属性的集合，不表示具体的镜像属性
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file
+    * checksum  镜像文件md5值。
+    * size  目前暂时不使用。
     *
     * @var string[]
     */
@@ -347,7 +374,10 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
             'virtualEnvType' => 'getVirtualEnvType',
             'owner' => 'getOwner',
             'virtualSize' => 'getVirtualSize',
-            'properties' => 'getProperties'
+            'properties' => 'getProperties',
+            'rootOrigin' => 'getRootOrigin',
+            'checksum' => 'getChecksum',
+            'size' => 'getSize'
     ];
 
     /**
@@ -524,6 +554,9 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
         $this->container['virtualSize'] = isset($data['virtualSize']) ? $data['virtualSize'] : null;
         $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
+        $this->container['rootOrigin'] = isset($data['rootOrigin']) ? $data['rootOrigin'] : null;
+        $this->container['checksum'] = isset($data['checksum']) ? $data['checksum'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
     /**
@@ -1245,6 +1278,78 @@ class GlanceCreateImageMetadataResponse implements ModelInterface, ArrayAccess
     public function setProperties($properties)
     {
         $this->container['properties'] = $properties;
+        return $this;
+    }
+
+    /**
+    * Gets rootOrigin
+    *  表示当前镜像来源是从外部导入。取值：file
+    *
+    * @return string|null
+    */
+    public function getRootOrigin()
+    {
+        return $this->container['rootOrigin'];
+    }
+
+    /**
+    * Sets rootOrigin
+    *
+    * @param string|null $rootOrigin 表示当前镜像来源是从外部导入。取值：file
+    *
+    * @return $this
+    */
+    public function setRootOrigin($rootOrigin)
+    {
+        $this->container['rootOrigin'] = $rootOrigin;
+        return $this;
+    }
+
+    /**
+    * Gets checksum
+    *  镜像文件md5值。
+    *
+    * @return string|null
+    */
+    public function getChecksum()
+    {
+        return $this->container['checksum'];
+    }
+
+    /**
+    * Sets checksum
+    *
+    * @param string|null $checksum 镜像文件md5值。
+    *
+    * @return $this
+    */
+    public function setChecksum($checksum)
+    {
+        $this->container['checksum'] = $checksum;
+        return $this;
+    }
+
+    /**
+    * Gets size
+    *  目前暂时不使用。
+    *
+    * @return int|null
+    */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+    * Sets size
+    *
+    * @param int|null $size 目前暂时不使用。
+    *
+    * @return $this
+    */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
         return $this;
     }
 

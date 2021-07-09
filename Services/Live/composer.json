@@ -8,7 +8,7 @@
     "api",
     "live"
   ],
-  "version": "1.0.0",
+  "version": "3.0.15-beta",
    "type": "library",
   "license": "Apache-2.0",
   "authors": [
@@ -20,7 +20,7 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "huaweicloud/huaweicloud-sdk-core": "1.0.0"
+    "huaweicloud/huaweicloud-sdk-core": "3.0.15-beta"
   },
   "autoload": {
     "psr-4": {

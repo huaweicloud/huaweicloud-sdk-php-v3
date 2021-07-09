@@ -20,7 +20,10 @@
 
 namespace HuaweiCloud\SDK\Core\Auth;
 
+use HuaweiCloud\SDK\Core\Exceptions\SdkException;
 use HuaweiCloud\SDK\Core\SdkRequest;
+use HuaweiCloud\SDK\Iam\V3\Model\KeystoneListAuthDomainsRequest;
+use \Exception;
 
 class GlobalCredentials extends Credentials
 {
@@ -38,12 +41,15 @@ class GlobalCredentials extends Credentials
     public function __construct($ak = null,
                                 $sk = null,
                                 $domainId = null,
-                                $securityToken = null
-    ) {
+                                $securityToken = null,
+                                $iamEndpoint = null
+    )
+    {
         $this->ak = isset($ak) ? $ak : null;
         $this->sk = isset($sk) ? $sk : null;
         $this->domainId = isset($domainId) ? $domainId : null;
         $this->securityToken = isset($securityToken) ? $securityToken : null;
+        $this->iamEndpoint = isset($iamEndpoint) ? $iamEndpoint : null;
     }
 
     public function withAk($ak)
@@ -74,11 +80,20 @@ class GlobalCredentials extends Credentials
         return $this;
     }
 
+    public function withIamEndpoint($iamEndpoint)
+    {
+        $this->setIamEndpoint($iamEndpoint);
+
+        return $this;
+    }
+
     protected static $setters = [
         'ak' => 'setAk',
         'sk' => 'setSk',
         'securityToken' => 'setSecurityToken',
         'domainId' => 'setDomainId',
+        'iamEndpoint' => 'setIamEndpoint'
+
     ];
 
     protected static $getters = [
@@ -86,6 +101,7 @@ class GlobalCredentials extends Credentials
         'sk' => 'getSk',
         'securityToken' => 'getSecurityToken',
         'domainId' => 'getDomainId',
+        'iamEndPoint' => 'getIamEndPoint'
     ];
 
     public static function setters()
@@ -163,6 +179,22 @@ class GlobalCredentials extends Credentials
     }
 
     /**
+     * @return string
+     */
+    public function getIamEndpoint()
+    {
+        return $this->iamEndpoint;
+    }
+
+    /**
+     * @param string $iamEndpoint
+     */
+    public function setIamEndpoint($iamEndpoint)
+    {
+        $this->iamEndpoint = $iamEndpoint;
+    }
+
+    /**
      * @return array
      */
     public function getUpdatePathParams()
@@ -187,7 +219,9 @@ class GlobalCredentials extends Credentials
 
     public function signRequest(SdkRequest $request)
     {
-        $request->headerParams['X-Domain-Id'] = $this->domainId;
+        if (null != $this->domainId) {
+            $request->headerParams['X-Domain-Id'] = $this->domainId;
+        }
         if (null != $this->securityToken) {
             $request->headerParams['X-Security-Token'] = $this->securityToken;
         }
@@ -199,5 +233,31 @@ class GlobalCredentials extends Credentials
         $signer = new Signer($this);
 
         return $signer->sign($request);
+    }
+
+    public function processAuthParams($client, $regionId)
+    {
+        if (isset($this->domainId)) {
+            return;
+        }
+        $akWithName = $this->getAk() . $regionId;
+        $domainId = AuthCache::getAuth($akWithName);
+        if (isset($domainId)) {
+            $this->domainId = $domainId;
+            return;
+        }
+        $iamClient = parent::getIamClient($client, $this);
+        $keystoneListAuthDomainsRequest = new KeystoneListAuthDomainsRequest();
+        $response = $iamClient->keystoneListAuthDomains($keystoneListAuthDomainsRequest);
+        try {
+            if (null == $response || empty($response->getDomains())) {
+                throw new SdkException("Failed to get domain id automatically, please input domain id when initializing GlobalCredentials");
+            }
+            $this->domainId = reset($response->getDomains())->getId();
+            AuthCache::setAuth($akWithName, $this->domainId);
+        } catch (SdkException $e) {
+            $msg = $e->getMessage();
+            echo "\n" . $msg . "\n";
+        }
     }
 }

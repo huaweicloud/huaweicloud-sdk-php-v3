@@ -46,8 +46,8 @@ class ListRecordCallbackConfigsRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'publishDomain' => null,
         'app' => null,
-        'offset' => 'int32',
-        'limit' => 'int32'
+        'offset' => 'uint32',
+        'limit' => 'uint32'
     ];
 
     /**

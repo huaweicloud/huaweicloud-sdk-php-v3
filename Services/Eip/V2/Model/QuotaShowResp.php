@@ -45,9 +45,9 @@ class QuotaShowResp implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'used' => 'int32',
-        'quota' => 'int32',
-        'min' => 'int32'
+        'used' => null,
+        'quota' => null,
+        'min' => null
     ];
 
     /**

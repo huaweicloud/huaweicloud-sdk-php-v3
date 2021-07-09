@@ -24,11 +24,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * backupId  备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空
     * dataOrigin  镜像来源。公共镜像为空
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
-    * imageLocation  镜像的存储位置
     * imageSize  镜像文件的大小，单位为字节
     * imageSourceType  镜像后端存储类型，目前只支持uds
     * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
-    * isConfigInit  是否完成了初始化配置。取值为true或false。如果用户确定完成了初始化配置，则可以设置为true，否则设置为false。默认为false。
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
     * osBit  操作系统位数，一般取值为“32”或者“64”
@@ -67,7 +65,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取Dat            aImage，如果是裸金属服务器镜像，则取值是Ironic
     * virtualSize  目前暂时不使用
     * visibility  是否被其他租户可见，取值为private或public
-    * architecture  镜像架构类型。取值包括： x86 arm
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * hwFirmwareType  云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否是ARM架构类型的镜像，取值为“true”或者“false”。
@@ -76,6 +73,12 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
     * accountCode  收费镜像标识。
     * hwVifMultiqueueEnabled  镜像是否支持网卡多队列。取值为“true”或者“false”。
+    * isOffshelved  表示当前市场镜像是否下架。true：已下架 false：未下架
+    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
+    * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
+    * activeAt  镜像状态变为正常的时间。
+    * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
     *
     * @var string[]
     */
@@ -83,11 +86,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'backupId' => 'string',
             'dataOrigin' => 'string',
             'description' => 'string',
-            'imageLocation' => 'string',
             'imageSize' => 'string',
             'imageSourceType' => 'string',
             'imagetype' => 'string',
-            'isConfigInit' => 'string',
             'isregistered' => 'string',
             'originalimagename' => 'string',
             'osBit' => 'string',
@@ -126,7 +127,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'virtualEnvType' => 'string',
             'virtualSize' => 'int',
             'visibility' => 'string',
-            'architecture' => 'string',
             'supportFcInject' => 'string',
             'hwFirmwareType' => 'string',
             'supportArm' => 'string',
@@ -134,7 +134,13 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'systemCmkid' => 'string',
             'osFeatureList' => 'string',
             'accountCode' => 'string',
-            'hwVifMultiqueueEnabled' => 'string'
+            'hwVifMultiqueueEnabled' => 'string',
+            'isOffshelved' => 'string',
+            'lazyloading' => 'bool',
+            'rootOrigin' => 'string',
+            'sequenceNum' => 'string',
+            'activeAt' => 'string',
+            'supportAgentList' => 'string'
     ];
 
     /**
@@ -142,11 +148,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * backupId  备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空
     * dataOrigin  镜像来源。公共镜像为空
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
-    * imageLocation  镜像的存储位置
     * imageSize  镜像文件的大小，单位为字节
     * imageSourceType  镜像后端存储类型，目前只支持uds
     * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
-    * isConfigInit  是否完成了初始化配置。取值为true或false。如果用户确定完成了初始化配置，则可以设置为true，否则设置为false。默认为false。
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
     * osBit  操作系统位数，一般取值为“32”或者“64”
@@ -185,7 +189,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取Dat            aImage，如果是裸金属服务器镜像，则取值是Ironic
     * virtualSize  目前暂时不使用
     * visibility  是否被其他租户可见，取值为private或public
-    * architecture  镜像架构类型。取值包括： x86 arm
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * hwFirmwareType  云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否是ARM架构类型的镜像，取值为“true”或者“false”。
@@ -194,6 +197,12 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
     * accountCode  收费镜像标识。
     * hwVifMultiqueueEnabled  镜像是否支持网卡多队列。取值为“true”或者“false”。
+    * isOffshelved  表示当前市场镜像是否下架。true：已下架 false：未下架
+    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
+    * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
+    * activeAt  镜像状态变为正常的时间。
+    * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
     *
     * @var string[]
     */
@@ -201,11 +210,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
         'backupId' => null,
         'dataOrigin' => null,
         'description' => null,
-        'imageLocation' => null,
         'imageSize' => null,
         'imageSourceType' => null,
         'imagetype' => null,
-        'isConfigInit' => null,
         'isregistered' => null,
         'originalimagename' => null,
         'osBit' => null,
@@ -244,7 +251,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
         'virtualEnvType' => null,
         'virtualSize' => 'int32',
         'visibility' => null,
-        'architecture' => null,
         'supportFcInject' => null,
         'hwFirmwareType' => null,
         'supportArm' => null,
@@ -252,7 +258,13 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
         'systemCmkid' => null,
         'osFeatureList' => null,
         'accountCode' => null,
-        'hwVifMultiqueueEnabled' => null
+        'hwVifMultiqueueEnabled' => null,
+        'isOffshelved' => null,
+        'lazyloading' => null,
+        'rootOrigin' => null,
+        'sequenceNum' => null,
+        'activeAt' => null,
+        'supportAgentList' => null
     ];
 
     /**
@@ -281,11 +293,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * backupId  备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空
     * dataOrigin  镜像来源。公共镜像为空
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
-    * imageLocation  镜像的存储位置
     * imageSize  镜像文件的大小，单位为字节
     * imageSourceType  镜像后端存储类型，目前只支持uds
     * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
-    * isConfigInit  是否完成了初始化配置。取值为true或false。如果用户确定完成了初始化配置，则可以设置为true，否则设置为false。默认为false。
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
     * osBit  操作系统位数，一般取值为“32”或者“64”
@@ -324,7 +334,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取Dat            aImage，如果是裸金属服务器镜像，则取值是Ironic
     * virtualSize  目前暂时不使用
     * visibility  是否被其他租户可见，取值为private或public
-    * architecture  镜像架构类型。取值包括： x86 arm
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * hwFirmwareType  云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否是ARM架构类型的镜像，取值为“true”或者“false”。
@@ -333,6 +342,12 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
     * accountCode  收费镜像标识。
     * hwVifMultiqueueEnabled  镜像是否支持网卡多队列。取值为“true”或者“false”。
+    * isOffshelved  表示当前市场镜像是否下架。true：已下架 false：未下架
+    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
+    * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
+    * activeAt  镜像状态变为正常的时间。
+    * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
     *
     * @var string[]
     */
@@ -340,11 +355,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'backupId' => '__backup_id',
             'dataOrigin' => '__data_origin',
             'description' => '__description',
-            'imageLocation' => '__image_location',
             'imageSize' => '__image_size',
             'imageSourceType' => '__image_source_type',
             'imagetype' => '__imagetype',
-            'isConfigInit' => '__is_config_init',
             'isregistered' => '__isregistered',
             'originalimagename' => '__originalimagename',
             'osBit' => '__os_bit',
@@ -383,7 +396,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'virtualEnvType' => 'virtual_env_type',
             'virtualSize' => 'virtual_size',
             'visibility' => 'visibility',
-            'architecture' => 'architecture',
             'supportFcInject' => '__support_fc_inject',
             'hwFirmwareType' => 'hw_firmware_type',
             'supportArm' => '__support_arm',
@@ -391,7 +403,13 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'systemCmkid' => '__system__cmkid',
             'osFeatureList' => '__os_feature_list',
             'accountCode' => '__account_code',
-            'hwVifMultiqueueEnabled' => 'hw_vif_multiqueue_enabled'
+            'hwVifMultiqueueEnabled' => 'hw_vif_multiqueue_enabled',
+            'isOffshelved' => '__is_offshelved',
+            'lazyloading' => '__lazyloading',
+            'rootOrigin' => '__root_origin',
+            'sequenceNum' => '__sequence_num',
+            'activeAt' => 'active_at',
+            'supportAgentList' => '__support_agent_list'
     ];
 
     /**
@@ -399,11 +417,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * backupId  备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空
     * dataOrigin  镜像来源。公共镜像为空
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
-    * imageLocation  镜像的存储位置
     * imageSize  镜像文件的大小，单位为字节
     * imageSourceType  镜像后端存储类型，目前只支持uds
     * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
-    * isConfigInit  是否完成了初始化配置。取值为true或false。如果用户确定完成了初始化配置，则可以设置为true，否则设置为false。默认为false。
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
     * osBit  操作系统位数，一般取值为“32”或者“64”
@@ -442,7 +458,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取Dat            aImage，如果是裸金属服务器镜像，则取值是Ironic
     * virtualSize  目前暂时不使用
     * visibility  是否被其他租户可见，取值为private或public
-    * architecture  镜像架构类型。取值包括： x86 arm
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * hwFirmwareType  云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否是ARM架构类型的镜像，取值为“true”或者“false”。
@@ -451,6 +466,12 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
     * accountCode  收费镜像标识。
     * hwVifMultiqueueEnabled  镜像是否支持网卡多队列。取值为“true”或者“false”。
+    * isOffshelved  表示当前市场镜像是否下架。true：已下架 false：未下架
+    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
+    * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
+    * activeAt  镜像状态变为正常的时间。
+    * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
     *
     * @var string[]
     */
@@ -458,11 +479,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'backupId' => 'setBackupId',
             'dataOrigin' => 'setDataOrigin',
             'description' => 'setDescription',
-            'imageLocation' => 'setImageLocation',
             'imageSize' => 'setImageSize',
             'imageSourceType' => 'setImageSourceType',
             'imagetype' => 'setImagetype',
-            'isConfigInit' => 'setIsConfigInit',
             'isregistered' => 'setIsregistered',
             'originalimagename' => 'setOriginalimagename',
             'osBit' => 'setOsBit',
@@ -501,7 +520,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'virtualEnvType' => 'setVirtualEnvType',
             'virtualSize' => 'setVirtualSize',
             'visibility' => 'setVisibility',
-            'architecture' => 'setArchitecture',
             'supportFcInject' => 'setSupportFcInject',
             'hwFirmwareType' => 'setHwFirmwareType',
             'supportArm' => 'setSupportArm',
@@ -509,7 +527,13 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'systemCmkid' => 'setSystemCmkid',
             'osFeatureList' => 'setOsFeatureList',
             'accountCode' => 'setAccountCode',
-            'hwVifMultiqueueEnabled' => 'setHwVifMultiqueueEnabled'
+            'hwVifMultiqueueEnabled' => 'setHwVifMultiqueueEnabled',
+            'isOffshelved' => 'setIsOffshelved',
+            'lazyloading' => 'setLazyloading',
+            'rootOrigin' => 'setRootOrigin',
+            'sequenceNum' => 'setSequenceNum',
+            'activeAt' => 'setActiveAt',
+            'supportAgentList' => 'setSupportAgentList'
     ];
 
     /**
@@ -517,11 +541,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * backupId  备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空
     * dataOrigin  镜像来源。公共镜像为空
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
-    * imageLocation  镜像的存储位置
     * imageSize  镜像文件的大小，单位为字节
     * imageSourceType  镜像后端存储类型，目前只支持uds
     * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
-    * isConfigInit  是否完成了初始化配置。取值为true或false。如果用户确定完成了初始化配置，则可以设置为true，否则设置为false。默认为false。
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
     * osBit  操作系统位数，一般取值为“32”或者“64”
@@ -560,7 +582,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取Dat            aImage，如果是裸金属服务器镜像，则取值是Ironic
     * virtualSize  目前暂时不使用
     * visibility  是否被其他租户可见，取值为private或public
-    * architecture  镜像架构类型。取值包括： x86 arm
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * hwFirmwareType  云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否是ARM架构类型的镜像，取值为“true”或者“false”。
@@ -569,6 +590,12 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
     * accountCode  收费镜像标识。
     * hwVifMultiqueueEnabled  镜像是否支持网卡多队列。取值为“true”或者“false”。
+    * isOffshelved  表示当前市场镜像是否下架。true：已下架 false：未下架
+    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
+    * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
+    * activeAt  镜像状态变为正常的时间。
+    * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
     *
     * @var string[]
     */
@@ -576,11 +603,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'backupId' => 'getBackupId',
             'dataOrigin' => 'getDataOrigin',
             'description' => 'getDescription',
-            'imageLocation' => 'getImageLocation',
             'imageSize' => 'getImageSize',
             'imageSourceType' => 'getImageSourceType',
             'imagetype' => 'getImagetype',
-            'isConfigInit' => 'getIsConfigInit',
             'isregistered' => 'getIsregistered',
             'originalimagename' => 'getOriginalimagename',
             'osBit' => 'getOsBit',
@@ -619,7 +644,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'virtualEnvType' => 'getVirtualEnvType',
             'virtualSize' => 'getVirtualSize',
             'visibility' => 'getVisibility',
-            'architecture' => 'getArchitecture',
             'supportFcInject' => 'getSupportFcInject',
             'hwFirmwareType' => 'getHwFirmwareType',
             'supportArm' => 'getSupportArm',
@@ -627,7 +651,13 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'systemCmkid' => 'getSystemCmkid',
             'osFeatureList' => 'getOsFeatureList',
             'accountCode' => 'getAccountCode',
-            'hwVifMultiqueueEnabled' => 'getHwVifMultiqueueEnabled'
+            'hwVifMultiqueueEnabled' => 'getHwVifMultiqueueEnabled',
+            'isOffshelved' => 'getIsOffshelved',
+            'lazyloading' => 'getLazyloading',
+            'rootOrigin' => 'getRootOrigin',
+            'sequenceNum' => 'getSequenceNum',
+            'activeAt' => 'getActiveAt',
+            'supportAgentList' => 'getSupportAgentList'
     ];
 
     /**
@@ -675,8 +705,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     const IMAGETYPE_GOLD = 'gold';
     const IMAGETYPE__PRIVATE = 'private';
     const IMAGETYPE_SHARED = 'shared';
-    const IS_CONFIG_INIT_TRUE = 'true';
-    const IS_CONFIG_INIT_FALSE = 'false';
     const ISREGISTERED_TRUE = 'true';
     const ISREGISTERED_FALSE = 'false';
     const OS_BIT__32 = '32';
@@ -706,8 +734,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     const VIRTUAL_ENV_TYPE_DATA_IMAGE = 'DataImage';
     const VISIBILITY__PRIVATE = 'private';
     const VISIBILITY__PUBLIC = 'public';
-    const ARCHITECTURE_X86 = 'x86';
-    const ARCHITECTURE_ARM = 'arm';
     const SUPPORT_FC_INJECT_TRUE = 'true';
     const SUPPORT_FC_INJECT_FALSE = 'false';
     const HW_FIRMWARE_TYPE_BIOS = 'bios';
@@ -740,19 +766,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             self::IMAGETYPE_GOLD,
             self::IMAGETYPE__PRIVATE,
             self::IMAGETYPE_SHARED,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getIsConfigInitAllowableValues()
-    {
-        return [
-            self::IS_CONFIG_INIT_TRUE,
-            self::IS_CONFIG_INIT_FALSE,
         ];
     }
 
@@ -867,19 +880,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
-    public function getArchitectureAllowableValues()
-    {
-        return [
-            self::ARCHITECTURE_X86,
-            self::ARCHITECTURE_ARM,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
     public function getSupportFcInjectAllowableValues()
     {
         return [
@@ -933,11 +933,9 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
         $this->container['backupId'] = isset($data['backupId']) ? $data['backupId'] : null;
         $this->container['dataOrigin'] = isset($data['dataOrigin']) ? $data['dataOrigin'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['imageLocation'] = isset($data['imageLocation']) ? $data['imageLocation'] : null;
         $this->container['imageSize'] = isset($data['imageSize']) ? $data['imageSize'] : null;
         $this->container['imageSourceType'] = isset($data['imageSourceType']) ? $data['imageSourceType'] : null;
         $this->container['imagetype'] = isset($data['imagetype']) ? $data['imagetype'] : null;
-        $this->container['isConfigInit'] = isset($data['isConfigInit']) ? $data['isConfigInit'] : null;
         $this->container['isregistered'] = isset($data['isregistered']) ? $data['isregistered'] : null;
         $this->container['originalimagename'] = isset($data['originalimagename']) ? $data['originalimagename'] : null;
         $this->container['osBit'] = isset($data['osBit']) ? $data['osBit'] : null;
@@ -976,7 +974,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
         $this->container['virtualEnvType'] = isset($data['virtualEnvType']) ? $data['virtualEnvType'] : null;
         $this->container['virtualSize'] = isset($data['virtualSize']) ? $data['virtualSize'] : null;
         $this->container['visibility'] = isset($data['visibility']) ? $data['visibility'] : null;
-        $this->container['architecture'] = isset($data['architecture']) ? $data['architecture'] : null;
         $this->container['supportFcInject'] = isset($data['supportFcInject']) ? $data['supportFcInject'] : null;
         $this->container['hwFirmwareType'] = isset($data['hwFirmwareType']) ? $data['hwFirmwareType'] : null;
         $this->container['supportArm'] = isset($data['supportArm']) ? $data['supportArm'] : null;
@@ -985,6 +982,12 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
         $this->container['osFeatureList'] = isset($data['osFeatureList']) ? $data['osFeatureList'] : null;
         $this->container['accountCode'] = isset($data['accountCode']) ? $data['accountCode'] : null;
         $this->container['hwVifMultiqueueEnabled'] = isset($data['hwVifMultiqueueEnabled']) ? $data['hwVifMultiqueueEnabled'] : null;
+        $this->container['isOffshelved'] = isset($data['isOffshelved']) ? $data['isOffshelved'] : null;
+        $this->container['lazyloading'] = isset($data['lazyloading']) ? $data['lazyloading'] : null;
+        $this->container['rootOrigin'] = isset($data['rootOrigin']) ? $data['rootOrigin'] : null;
+        $this->container['sequenceNum'] = isset($data['sequenceNum']) ? $data['sequenceNum'] : null;
+        $this->container['activeAt'] = isset($data['activeAt']) ? $data['activeAt'] : null;
+        $this->container['supportAgentList'] = isset($data['supportAgentList']) ? $data['supportAgentList'] : null;
     }
 
     /**
@@ -1013,14 +1016,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['imagetype']) && !in_array($this->container['imagetype'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'imagetype', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            $allowedValues = $this->getIsConfigInitAllowableValues();
-                if (!is_null($this->container['isConfigInit']) && !in_array($this->container['isConfigInit'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'isConfigInit', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -1089,14 +1084,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['visibility']) && !in_array($this->container['visibility'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'visibility', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            $allowedValues = $this->getArchitectureAllowableValues();
-                if (!is_null($this->container['architecture']) && !in_array($this->container['architecture'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'architecture', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -1212,30 +1199,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets imageLocation
-    *  镜像的存储位置
-    *
-    * @return string|null
-    */
-    public function getImageLocation()
-    {
-        return $this->container['imageLocation'];
-    }
-
-    /**
-    * Sets imageLocation
-    *
-    * @param string|null $imageLocation 镜像的存储位置
-    *
-    * @return $this
-    */
-    public function setImageLocation($imageLocation)
-    {
-        $this->container['imageLocation'] = $imageLocation;
-        return $this;
-    }
-
-    /**
     * Gets imageSize
     *  镜像文件的大小，单位为字节
     *
@@ -1304,30 +1267,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     public function setImagetype($imagetype)
     {
         $this->container['imagetype'] = $imagetype;
-        return $this;
-    }
-
-    /**
-    * Gets isConfigInit
-    *  是否完成了初始化配置。取值为true或false。如果用户确定完成了初始化配置，则可以设置为true，否则设置为false。默认为false。
-    *
-    * @return string|null
-    */
-    public function getIsConfigInit()
-    {
-        return $this->container['isConfigInit'];
-    }
-
-    /**
-    * Sets isConfigInit
-    *
-    * @param string|null $isConfigInit 是否完成了初始化配置。取值为true或false。如果用户确定完成了初始化配置，则可以设置为true，否则设置为false。默认为false。
-    *
-    * @return $this
-    */
-    public function setIsConfigInit($isConfigInit)
-    {
-        $this->container['isConfigInit'] = $isConfigInit;
         return $this;
     }
 
@@ -2244,30 +2183,6 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets architecture
-    *  镜像架构类型。取值包括： x86 arm
-    *
-    * @return string|null
-    */
-    public function getArchitecture()
-    {
-        return $this->container['architecture'];
-    }
-
-    /**
-    * Sets architecture
-    *
-    * @param string|null $architecture 镜像架构类型。取值包括： x86 arm
-    *
-    * @return $this
-    */
-    public function setArchitecture($architecture)
-    {
-        $this->container['architecture'] = $architecture;
-        return $this;
-    }
-
-    /**
     * Gets supportFcInject
     *  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     *
@@ -2456,6 +2371,150 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     public function setHwVifMultiqueueEnabled($hwVifMultiqueueEnabled)
     {
         $this->container['hwVifMultiqueueEnabled'] = $hwVifMultiqueueEnabled;
+        return $this;
+    }
+
+    /**
+    * Gets isOffshelved
+    *  表示当前市场镜像是否下架。true：已下架 false：未下架
+    *
+    * @return string|null
+    */
+    public function getIsOffshelved()
+    {
+        return $this->container['isOffshelved'];
+    }
+
+    /**
+    * Sets isOffshelved
+    *
+    * @param string|null $isOffshelved 表示当前市场镜像是否下架。true：已下架 false：未下架
+    *
+    * @return $this
+    */
+    public function setIsOffshelved($isOffshelved)
+    {
+        $this->container['isOffshelved'] = $isOffshelved;
+        return $this;
+    }
+
+    /**
+    * Gets lazyloading
+    *  镜像是否支持延迟加载。取值为“True”或“False”。
+    *
+    * @return bool|null
+    */
+    public function getLazyloading()
+    {
+        return $this->container['lazyloading'];
+    }
+
+    /**
+    * Sets lazyloading
+    *
+    * @param bool|null $lazyloading 镜像是否支持延迟加载。取值为“True”或“False”。
+    *
+    * @return $this
+    */
+    public function setLazyloading($lazyloading)
+    {
+        $this->container['lazyloading'] = $lazyloading;
+        return $this;
+    }
+
+    /**
+    * Gets rootOrigin
+    *  表示当前镜像来源是从外部导入。取值：file。
+    *
+    * @return string|null
+    */
+    public function getRootOrigin()
+    {
+        return $this->container['rootOrigin'];
+    }
+
+    /**
+    * Sets rootOrigin
+    *
+    * @param string|null $rootOrigin 表示当前镜像来源是从外部导入。取值：file。
+    *
+    * @return $this
+    */
+    public function setRootOrigin($rootOrigin)
+    {
+        $this->container['rootOrigin'] = $rootOrigin;
+        return $this;
+    }
+
+    /**
+    * Gets sequenceNum
+    *  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
+    *
+    * @return string|null
+    */
+    public function getSequenceNum()
+    {
+        return $this->container['sequenceNum'];
+    }
+
+    /**
+    * Sets sequenceNum
+    *
+    * @param string|null $sequenceNum 表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
+    *
+    * @return $this
+    */
+    public function setSequenceNum($sequenceNum)
+    {
+        $this->container['sequenceNum'] = $sequenceNum;
+        return $this;
+    }
+
+    /**
+    * Gets activeAt
+    *  镜像状态变为正常的时间。
+    *
+    * @return string|null
+    */
+    public function getActiveAt()
+    {
+        return $this->container['activeAt'];
+    }
+
+    /**
+    * Sets activeAt
+    *
+    * @param string|null $activeAt 镜像状态变为正常的时间。
+    *
+    * @return $this
+    */
+    public function setActiveAt($activeAt)
+    {
+        $this->container['activeAt'] = $activeAt;
+        return $this;
+    }
+
+    /**
+    * Gets supportAgentList
+    *  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    *
+    * @return string|null
+    */
+    public function getSupportAgentList()
+    {
+        return $this->container['supportAgentList'];
+    }
+
+    /**
+    * Sets supportAgentList
+    *
+    * @param string|null $supportAgentList 镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    *
+    * @return $this
+    */
+    public function setSupportAgentList($supportAgentList)
+    {
+        $this->container['supportAgentList'] = $supportAgentList;
         return $this;
     }
 

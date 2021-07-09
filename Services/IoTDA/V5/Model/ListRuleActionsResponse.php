@@ -43,7 +43,7 @@ class ListRuleActionsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'actions' => null,
-        'count' => 'int32',
+        'count' => null,
         'marker' => null
     ];
 

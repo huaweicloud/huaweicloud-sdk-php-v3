@@ -45,8 +45,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * checksum  目前暂时不使用。
     * containerFormat  容器类型。
     * createdAt  创建时间。格式为UTC时间。
-    * deleted  是否是删除的镜像，取值为true或者false。
-    * deletedAt  删除时间。格式为UTC时间
     * diskFormat  镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
     * file  镜像文件下载和上传链接。
     * id  镜像ID。
@@ -69,6 +67,18 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
+    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
+    * sequenceNum  目前暂时不用
+    * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * systemCmkid  加密镜像所使用的密钥ID。
+    * activeAt  镜像状态变为正常的时间。
+    * hwVifMultiqueueEnabled  镜像是否支持网卡多队列。取值为true或者false。
+    * maxRam  镜像支持的最大内存，单位为MB。取值可以参考云服务器规格限制，一般不设置。
+    * imageLocation  镜像的存储位置。
+    * isConfigInit  是否完成了初始化配置。取值为true或false
+    * accountCode  收费镜像标识。
     *
     * @var string[]
     */
@@ -98,8 +108,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'checksum' => 'string',
             'containerFormat' => 'string',
             'createdAt' => 'string',
-            'deleted' => 'bool',
-            'deletedAt' => 'string',
             'diskFormat' => 'string',
             'file' => 'string',
             'id' => 'string',
@@ -121,7 +129,19 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'hwFirmwareType' => 'string',
             'supportArm' => 'string',
-            'isOffshelved' => 'string'
+            'isOffshelved' => 'string',
+            'lazyloading' => 'bool',
+            'osFeatureList' => 'string',
+            'rootOrigin' => 'string',
+            'sequenceNum' => 'string',
+            'supportAgentList' => 'string',
+            'systemCmkid' => 'string',
+            'activeAt' => 'string',
+            'hwVifMultiqueueEnabled' => 'string',
+            'maxRam' => 'string',
+            'imageLocation' => 'string',
+            'isConfigInit' => 'string',
+            'accountCode' => 'string'
     ];
 
     /**
@@ -151,8 +171,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * checksum  目前暂时不使用。
     * containerFormat  容器类型。
     * createdAt  创建时间。格式为UTC时间。
-    * deleted  是否是删除的镜像，取值为true或者false。
-    * deletedAt  删除时间。格式为UTC时间
     * diskFormat  镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
     * file  镜像文件下载和上传链接。
     * id  镜像ID。
@@ -175,6 +193,18 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
+    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
+    * sequenceNum  目前暂时不用
+    * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * systemCmkid  加密镜像所使用的密钥ID。
+    * activeAt  镜像状态变为正常的时间。
+    * hwVifMultiqueueEnabled  镜像是否支持网卡多队列。取值为true或者false。
+    * maxRam  镜像支持的最大内存，单位为MB。取值可以参考云服务器规格限制，一般不设置。
+    * imageLocation  镜像的存储位置。
+    * isConfigInit  是否完成了初始化配置。取值为true或false
+    * accountCode  收费镜像标识。
     *
     * @var string[]
     */
@@ -204,8 +234,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
         'checksum' => null,
         'containerFormat' => null,
         'createdAt' => null,
-        'deleted' => null,
-        'deletedAt' => null,
         'diskFormat' => null,
         'file' => null,
         'id' => null,
@@ -227,7 +255,19 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'hwFirmwareType' => null,
         'supportArm' => null,
-        'isOffshelved' => null
+        'isOffshelved' => null,
+        'lazyloading' => null,
+        'osFeatureList' => null,
+        'rootOrigin' => null,
+        'sequenceNum' => null,
+        'supportAgentList' => null,
+        'systemCmkid' => null,
+        'activeAt' => null,
+        'hwVifMultiqueueEnabled' => null,
+        'maxRam' => null,
+        'imageLocation' => null,
+        'isConfigInit' => null,
+        'accountCode' => null
     ];
 
     /**
@@ -278,8 +318,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * checksum  目前暂时不使用。
     * containerFormat  容器类型。
     * createdAt  创建时间。格式为UTC时间。
-    * deleted  是否是删除的镜像，取值为true或者false。
-    * deletedAt  删除时间。格式为UTC时间
     * diskFormat  镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
     * file  镜像文件下载和上传链接。
     * id  镜像ID。
@@ -302,6 +340,18 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
+    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
+    * sequenceNum  目前暂时不用
+    * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * systemCmkid  加密镜像所使用的密钥ID。
+    * activeAt  镜像状态变为正常的时间。
+    * hwVifMultiqueueEnabled  镜像是否支持网卡多队列。取值为true或者false。
+    * maxRam  镜像支持的最大内存，单位为MB。取值可以参考云服务器规格限制，一般不设置。
+    * imageLocation  镜像的存储位置。
+    * isConfigInit  是否完成了初始化配置。取值为true或false
+    * accountCode  收费镜像标识。
     *
     * @var string[]
     */
@@ -331,8 +381,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'checksum' => 'checksum',
             'containerFormat' => 'container_format',
             'createdAt' => 'created_at',
-            'deleted' => 'deleted',
-            'deletedAt' => 'deleted_at',
             'diskFormat' => 'disk_format',
             'file' => 'file',
             'id' => 'id',
@@ -354,7 +402,19 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'hwFirmwareType' => 'hw_firmware_type',
             'supportArm' => '__support_arm',
-            'isOffshelved' => '__is_offshelved'
+            'isOffshelved' => '__is_offshelved',
+            'lazyloading' => '__lazyloading',
+            'osFeatureList' => '__os_feature_list',
+            'rootOrigin' => '__root_origin',
+            'sequenceNum' => '__sequence_num',
+            'supportAgentList' => '__support_agent_list',
+            'systemCmkid' => '__system__cmkid',
+            'activeAt' => 'active_at',
+            'hwVifMultiqueueEnabled' => 'hw_vif_multiqueue_enabled',
+            'maxRam' => 'max_ram',
+            'imageLocation' => '__image_location',
+            'isConfigInit' => '__is_config_init',
+            'accountCode' => '__account_code'
     ];
 
     /**
@@ -384,8 +444,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * checksum  目前暂时不使用。
     * containerFormat  容器类型。
     * createdAt  创建时间。格式为UTC时间。
-    * deleted  是否是删除的镜像，取值为true或者false。
-    * deletedAt  删除时间。格式为UTC时间
     * diskFormat  镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
     * file  镜像文件下载和上传链接。
     * id  镜像ID。
@@ -408,6 +466,18 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
+    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
+    * sequenceNum  目前暂时不用
+    * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * systemCmkid  加密镜像所使用的密钥ID。
+    * activeAt  镜像状态变为正常的时间。
+    * hwVifMultiqueueEnabled  镜像是否支持网卡多队列。取值为true或者false。
+    * maxRam  镜像支持的最大内存，单位为MB。取值可以参考云服务器规格限制，一般不设置。
+    * imageLocation  镜像的存储位置。
+    * isConfigInit  是否完成了初始化配置。取值为true或false
+    * accountCode  收费镜像标识。
     *
     * @var string[]
     */
@@ -437,8 +507,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'checksum' => 'setChecksum',
             'containerFormat' => 'setContainerFormat',
             'createdAt' => 'setCreatedAt',
-            'deleted' => 'setDeleted',
-            'deletedAt' => 'setDeletedAt',
             'diskFormat' => 'setDiskFormat',
             'file' => 'setFile',
             'id' => 'setId',
@@ -460,7 +528,19 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'hwFirmwareType' => 'setHwFirmwareType',
             'supportArm' => 'setSupportArm',
-            'isOffshelved' => 'setIsOffshelved'
+            'isOffshelved' => 'setIsOffshelved',
+            'lazyloading' => 'setLazyloading',
+            'osFeatureList' => 'setOsFeatureList',
+            'rootOrigin' => 'setRootOrigin',
+            'sequenceNum' => 'setSequenceNum',
+            'supportAgentList' => 'setSupportAgentList',
+            'systemCmkid' => 'setSystemCmkid',
+            'activeAt' => 'setActiveAt',
+            'hwVifMultiqueueEnabled' => 'setHwVifMultiqueueEnabled',
+            'maxRam' => 'setMaxRam',
+            'imageLocation' => 'setImageLocation',
+            'isConfigInit' => 'setIsConfigInit',
+            'accountCode' => 'setAccountCode'
     ];
 
     /**
@@ -490,8 +570,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * checksum  目前暂时不使用。
     * containerFormat  容器类型。
     * createdAt  创建时间。格式为UTC时间。
-    * deleted  是否是删除的镜像，取值为true或者false。
-    * deletedAt  删除时间。格式为UTC时间
     * diskFormat  镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
     * file  镜像文件下载和上传链接。
     * id  镜像ID。
@@ -514,6 +592,18 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
+    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
+    * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
+    * sequenceNum  目前暂时不用
+    * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * systemCmkid  加密镜像所使用的密钥ID。
+    * activeAt  镜像状态变为正常的时间。
+    * hwVifMultiqueueEnabled  镜像是否支持网卡多队列。取值为true或者false。
+    * maxRam  镜像支持的最大内存，单位为MB。取值可以参考云服务器规格限制，一般不设置。
+    * imageLocation  镜像的存储位置。
+    * isConfigInit  是否完成了初始化配置。取值为true或false
+    * accountCode  收费镜像标识。
     *
     * @var string[]
     */
@@ -543,8 +633,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'checksum' => 'getChecksum',
             'containerFormat' => 'getContainerFormat',
             'createdAt' => 'getCreatedAt',
-            'deleted' => 'getDeleted',
-            'deletedAt' => 'getDeletedAt',
             'diskFormat' => 'getDiskFormat',
             'file' => 'getFile',
             'id' => 'getId',
@@ -566,7 +654,19 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'hwFirmwareType' => 'getHwFirmwareType',
             'supportArm' => 'getSupportArm',
-            'isOffshelved' => 'getIsOffshelved'
+            'isOffshelved' => 'getIsOffshelved',
+            'lazyloading' => 'getLazyloading',
+            'osFeatureList' => 'getOsFeatureList',
+            'rootOrigin' => 'getRootOrigin',
+            'sequenceNum' => 'getSequenceNum',
+            'supportAgentList' => 'getSupportAgentList',
+            'systemCmkid' => 'getSystemCmkid',
+            'activeAt' => 'getActiveAt',
+            'hwVifMultiqueueEnabled' => 'getHwVifMultiqueueEnabled',
+            'maxRam' => 'getMaxRam',
+            'imageLocation' => 'getImageLocation',
+            'isConfigInit' => 'getIsConfigInit',
+            'accountCode' => 'getAccountCode'
     ];
 
     /**
@@ -902,8 +1002,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
         $this->container['checksum'] = isset($data['checksum']) ? $data['checksum'] : null;
         $this->container['containerFormat'] = isset($data['containerFormat']) ? $data['containerFormat'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
-        $this->container['deleted'] = isset($data['deleted']) ? $data['deleted'] : null;
-        $this->container['deletedAt'] = isset($data['deletedAt']) ? $data['deletedAt'] : null;
         $this->container['diskFormat'] = isset($data['diskFormat']) ? $data['diskFormat'] : null;
         $this->container['file'] = isset($data['file']) ? $data['file'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
@@ -926,6 +1024,18 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
         $this->container['hwFirmwareType'] = isset($data['hwFirmwareType']) ? $data['hwFirmwareType'] : null;
         $this->container['supportArm'] = isset($data['supportArm']) ? $data['supportArm'] : null;
         $this->container['isOffshelved'] = isset($data['isOffshelved']) ? $data['isOffshelved'] : null;
+        $this->container['lazyloading'] = isset($data['lazyloading']) ? $data['lazyloading'] : null;
+        $this->container['osFeatureList'] = isset($data['osFeatureList']) ? $data['osFeatureList'] : null;
+        $this->container['rootOrigin'] = isset($data['rootOrigin']) ? $data['rootOrigin'] : null;
+        $this->container['sequenceNum'] = isset($data['sequenceNum']) ? $data['sequenceNum'] : null;
+        $this->container['supportAgentList'] = isset($data['supportAgentList']) ? $data['supportAgentList'] : null;
+        $this->container['systemCmkid'] = isset($data['systemCmkid']) ? $data['systemCmkid'] : null;
+        $this->container['activeAt'] = isset($data['activeAt']) ? $data['activeAt'] : null;
+        $this->container['hwVifMultiqueueEnabled'] = isset($data['hwVifMultiqueueEnabled']) ? $data['hwVifMultiqueueEnabled'] : null;
+        $this->container['maxRam'] = isset($data['maxRam']) ? $data['maxRam'] : null;
+        $this->container['imageLocation'] = isset($data['imageLocation']) ? $data['imageLocation'] : null;
+        $this->container['isConfigInit'] = isset($data['isConfigInit']) ? $data['isConfigInit'] : null;
+        $this->container['accountCode'] = isset($data['accountCode']) ? $data['accountCode'] : null;
     }
 
     /**
@@ -1059,12 +1169,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
         if ($this->container['createdAt'] === null) {
             $invalidProperties[] = "'createdAt' can't be null";
         }
-        if ($this->container['deleted'] === null) {
-            $invalidProperties[] = "'deleted' can't be null";
-        }
-        if ($this->container['deletedAt'] === null) {
-            $invalidProperties[] = "'deletedAt' can't be null";
-        }
         if ($this->container['diskFormat'] === null) {
             $invalidProperties[] = "'diskFormat' can't be null";
         }
@@ -1195,6 +1299,42 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['lazyloading'] === null) {
+            $invalidProperties[] = "'lazyloading' can't be null";
+        }
+        if ($this->container['osFeatureList'] === null) {
+            $invalidProperties[] = "'osFeatureList' can't be null";
+        }
+        if ($this->container['rootOrigin'] === null) {
+            $invalidProperties[] = "'rootOrigin' can't be null";
+        }
+        if ($this->container['sequenceNum'] === null) {
+            $invalidProperties[] = "'sequenceNum' can't be null";
+        }
+        if ($this->container['supportAgentList'] === null) {
+            $invalidProperties[] = "'supportAgentList' can't be null";
+        }
+        if ($this->container['systemCmkid'] === null) {
+            $invalidProperties[] = "'systemCmkid' can't be null";
+        }
+        if ($this->container['activeAt'] === null) {
+            $invalidProperties[] = "'activeAt' can't be null";
+        }
+        if ($this->container['hwVifMultiqueueEnabled'] === null) {
+            $invalidProperties[] = "'hwVifMultiqueueEnabled' can't be null";
+        }
+        if ($this->container['maxRam'] === null) {
+            $invalidProperties[] = "'maxRam' can't be null";
+        }
+        if ($this->container['imageLocation'] === null) {
+            $invalidProperties[] = "'imageLocation' can't be null";
+        }
+        if ($this->container['isConfigInit'] === null) {
+            $invalidProperties[] = "'isConfigInit' can't be null";
+        }
+        if ($this->container['accountCode'] === null) {
+            $invalidProperties[] = "'accountCode' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -1810,54 +1950,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets deleted
-    *  是否是删除的镜像，取值为true或者false。
-    *
-    * @return bool
-    */
-    public function getDeleted()
-    {
-        return $this->container['deleted'];
-    }
-
-    /**
-    * Sets deleted
-    *
-    * @param bool $deleted 是否是删除的镜像，取值为true或者false。
-    *
-    * @return $this
-    */
-    public function setDeleted($deleted)
-    {
-        $this->container['deleted'] = $deleted;
-        return $this;
-    }
-
-    /**
-    * Gets deletedAt
-    *  删除时间。格式为UTC时间
-    *
-    * @return string
-    */
-    public function getDeletedAt()
-    {
-        return $this->container['deletedAt'];
-    }
-
-    /**
-    * Sets deletedAt
-    *
-    * @param string $deletedAt 删除时间。格式为UTC时间
-    *
-    * @return $this
-    */
-    public function setDeletedAt($deletedAt)
-    {
-        $this->container['deletedAt'] = $deletedAt;
-        return $this;
-    }
-
-    /**
     * Gets diskFormat
     *  镜像的格式，目前支持vhd，zvhd、raw，qcow2,zvhd2。默认值是vhd。
     *
@@ -2382,6 +2474,294 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     public function setIsOffshelved($isOffshelved)
     {
         $this->container['isOffshelved'] = $isOffshelved;
+        return $this;
+    }
+
+    /**
+    * Gets lazyloading
+    *  镜像是否支持延迟加载。取值为“True”或“False”。
+    *
+    * @return bool
+    */
+    public function getLazyloading()
+    {
+        return $this->container['lazyloading'];
+    }
+
+    /**
+    * Sets lazyloading
+    *
+    * @param bool $lazyloading 镜像是否支持延迟加载。取值为“True”或“False”。
+    *
+    * @return $this
+    */
+    public function setLazyloading($lazyloading)
+    {
+        $this->container['lazyloading'] = $lazyloading;
+        return $this;
+    }
+
+    /**
+    * Gets osFeatureList
+    *  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
+    *
+    * @return string
+    */
+    public function getOsFeatureList()
+    {
+        return $this->container['osFeatureList'];
+    }
+
+    /**
+    * Sets osFeatureList
+    *
+    * @param string $osFeatureList 镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
+    *
+    * @return $this
+    */
+    public function setOsFeatureList($osFeatureList)
+    {
+        $this->container['osFeatureList'] = $osFeatureList;
+        return $this;
+    }
+
+    /**
+    * Gets rootOrigin
+    *  表示当前镜像来源是从外部导入。取值：file。
+    *
+    * @return string
+    */
+    public function getRootOrigin()
+    {
+        return $this->container['rootOrigin'];
+    }
+
+    /**
+    * Sets rootOrigin
+    *
+    * @param string $rootOrigin 表示当前镜像来源是从外部导入。取值：file。
+    *
+    * @return $this
+    */
+    public function setRootOrigin($rootOrigin)
+    {
+        $this->container['rootOrigin'] = $rootOrigin;
+        return $this;
+    }
+
+    /**
+    * Gets sequenceNum
+    *  目前暂时不用
+    *
+    * @return string
+    */
+    public function getSequenceNum()
+    {
+        return $this->container['sequenceNum'];
+    }
+
+    /**
+    * Sets sequenceNum
+    *
+    * @param string $sequenceNum 目前暂时不用
+    *
+    * @return $this
+    */
+    public function setSequenceNum($sequenceNum)
+    {
+        $this->container['sequenceNum'] = $sequenceNum;
+        return $this;
+    }
+
+    /**
+    * Gets supportAgentList
+    *  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    *
+    * @return string
+    */
+    public function getSupportAgentList()
+    {
+        return $this->container['supportAgentList'];
+    }
+
+    /**
+    * Sets supportAgentList
+    *
+    * @param string $supportAgentList 镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    *
+    * @return $this
+    */
+    public function setSupportAgentList($supportAgentList)
+    {
+        $this->container['supportAgentList'] = $supportAgentList;
+        return $this;
+    }
+
+    /**
+    * Gets systemCmkid
+    *  加密镜像所使用的密钥ID。
+    *
+    * @return string
+    */
+    public function getSystemCmkid()
+    {
+        return $this->container['systemCmkid'];
+    }
+
+    /**
+    * Sets systemCmkid
+    *
+    * @param string $systemCmkid 加密镜像所使用的密钥ID。
+    *
+    * @return $this
+    */
+    public function setSystemCmkid($systemCmkid)
+    {
+        $this->container['systemCmkid'] = $systemCmkid;
+        return $this;
+    }
+
+    /**
+    * Gets activeAt
+    *  镜像状态变为正常的时间。
+    *
+    * @return string
+    */
+    public function getActiveAt()
+    {
+        return $this->container['activeAt'];
+    }
+
+    /**
+    * Sets activeAt
+    *
+    * @param string $activeAt 镜像状态变为正常的时间。
+    *
+    * @return $this
+    */
+    public function setActiveAt($activeAt)
+    {
+        $this->container['activeAt'] = $activeAt;
+        return $this;
+    }
+
+    /**
+    * Gets hwVifMultiqueueEnabled
+    *  镜像是否支持网卡多队列。取值为true或者false。
+    *
+    * @return string
+    */
+    public function getHwVifMultiqueueEnabled()
+    {
+        return $this->container['hwVifMultiqueueEnabled'];
+    }
+
+    /**
+    * Sets hwVifMultiqueueEnabled
+    *
+    * @param string $hwVifMultiqueueEnabled 镜像是否支持网卡多队列。取值为true或者false。
+    *
+    * @return $this
+    */
+    public function setHwVifMultiqueueEnabled($hwVifMultiqueueEnabled)
+    {
+        $this->container['hwVifMultiqueueEnabled'] = $hwVifMultiqueueEnabled;
+        return $this;
+    }
+
+    /**
+    * Gets maxRam
+    *  镜像支持的最大内存，单位为MB。取值可以参考云服务器规格限制，一般不设置。
+    *
+    * @return string
+    */
+    public function getMaxRam()
+    {
+        return $this->container['maxRam'];
+    }
+
+    /**
+    * Sets maxRam
+    *
+    * @param string $maxRam 镜像支持的最大内存，单位为MB。取值可以参考云服务器规格限制，一般不设置。
+    *
+    * @return $this
+    */
+    public function setMaxRam($maxRam)
+    {
+        $this->container['maxRam'] = $maxRam;
+        return $this;
+    }
+
+    /**
+    * Gets imageLocation
+    *  镜像的存储位置。
+    *
+    * @return string
+    */
+    public function getImageLocation()
+    {
+        return $this->container['imageLocation'];
+    }
+
+    /**
+    * Sets imageLocation
+    *
+    * @param string $imageLocation 镜像的存储位置。
+    *
+    * @return $this
+    */
+    public function setImageLocation($imageLocation)
+    {
+        $this->container['imageLocation'] = $imageLocation;
+        return $this;
+    }
+
+    /**
+    * Gets isConfigInit
+    *  是否完成了初始化配置。取值为true或false
+    *
+    * @return string
+    */
+    public function getIsConfigInit()
+    {
+        return $this->container['isConfigInit'];
+    }
+
+    /**
+    * Sets isConfigInit
+    *
+    * @param string $isConfigInit 是否完成了初始化配置。取值为true或false
+    *
+    * @return $this
+    */
+    public function setIsConfigInit($isConfigInit)
+    {
+        $this->container['isConfigInit'] = $isConfigInit;
+        return $this;
+    }
+
+    /**
+    * Gets accountCode
+    *  收费镜像标识。
+    *
+    * @return string
+    */
+    public function getAccountCode()
+    {
+        return $this->container['accountCode'];
+    }
+
+    /**
+    * Sets accountCode
+    *
+    * @param string $accountCode 收费镜像标识。
+    *
+    * @return $this
+    */
+    public function setAccountCode($accountCode)
+    {
+        $this->container['accountCode'] = $accountCode;
         return $this;
     }
 

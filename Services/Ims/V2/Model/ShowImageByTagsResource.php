@@ -21,7 +21,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  镜像ID
-    * resouceDetail  resouceDetail
+    * resourceDetail  resourceDetail
     * tags  镜像的标签列表
     * resourceName  镜像名称
     *
@@ -29,7 +29,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'resourceId' => 'string',
-            'resouceDetail' => '\HuaweiCloud\SDK\Ims\V2\Model\QueryImageByTagsResourceDetail',
+            'resourceDetail' => '\HuaweiCloud\SDK\Ims\V2\Model\QueryImageByTagsResourceDetail',
             'tags' => '\HuaweiCloud\SDK\Ims\V2\Model\TagKeyValue[]',
             'resourceName' => 'string'
     ];
@@ -37,7 +37,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  镜像ID
-    * resouceDetail  resouceDetail
+    * resourceDetail  resourceDetail
     * tags  镜像的标签列表
     * resourceName  镜像名称
     *
@@ -45,7 +45,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'resourceId' => null,
-        'resouceDetail' => null,
+        'resourceDetail' => null,
         'tags' => null,
         'resourceName' => null
     ];
@@ -74,7 +74,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceId  镜像ID
-    * resouceDetail  resouceDetail
+    * resourceDetail  resourceDetail
     * tags  镜像的标签列表
     * resourceName  镜像名称
     *
@@ -82,7 +82,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'resourceId' => 'resource_id',
-            'resouceDetail' => 'resouce_detail',
+            'resourceDetail' => 'resource_detail',
             'tags' => 'tags',
             'resourceName' => 'resource_name'
     ];
@@ -90,7 +90,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  镜像ID
-    * resouceDetail  resouceDetail
+    * resourceDetail  resourceDetail
     * tags  镜像的标签列表
     * resourceName  镜像名称
     *
@@ -98,7 +98,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'resourceId' => 'setResourceId',
-            'resouceDetail' => 'setResouceDetail',
+            'resourceDetail' => 'setResourceDetail',
             'tags' => 'setTags',
             'resourceName' => 'setResourceName'
     ];
@@ -106,7 +106,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  镜像ID
-    * resouceDetail  resouceDetail
+    * resourceDetail  resourceDetail
     * tags  镜像的标签列表
     * resourceName  镜像名称
     *
@@ -114,7 +114,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'resourceId' => 'getResourceId',
-            'resouceDetail' => 'getResouceDetail',
+            'resourceDetail' => 'getResourceDetail',
             'tags' => 'getTags',
             'resourceName' => 'getResourceName'
     ];
@@ -178,7 +178,7 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
-        $this->container['resouceDetail'] = isset($data['resouceDetail']) ? $data['resouceDetail'] : null;
+        $this->container['resourceDetail'] = isset($data['resourceDetail']) ? $data['resourceDetail'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
     }
@@ -194,8 +194,8 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
         if ($this->container['resourceId'] === null) {
             $invalidProperties[] = "'resourceId' can't be null";
         }
-        if ($this->container['resouceDetail'] === null) {
-            $invalidProperties[] = "'resouceDetail' can't be null";
+        if ($this->container['resourceDetail'] === null) {
+            $invalidProperties[] = "'resourceDetail' can't be null";
         }
         if ($this->container['tags'] === null) {
             $invalidProperties[] = "'tags' can't be null";
@@ -242,26 +242,26 @@ class ShowImageByTagsResource implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resouceDetail
-    *  resouceDetail
+    * Gets resourceDetail
+    *  resourceDetail
     *
     * @return \HuaweiCloud\SDK\Ims\V2\Model\QueryImageByTagsResourceDetail
     */
-    public function getResouceDetail()
+    public function getResourceDetail()
     {
-        return $this->container['resouceDetail'];
+        return $this->container['resourceDetail'];
     }
 
     /**
-    * Sets resouceDetail
+    * Sets resourceDetail
     *
-    * @param \HuaweiCloud\SDK\Ims\V2\Model\QueryImageByTagsResourceDetail $resouceDetail resouceDetail
+    * @param \HuaweiCloud\SDK\Ims\V2\Model\QueryImageByTagsResourceDetail $resourceDetail resourceDetail
     *
     * @return $this
     */
-    public function setResouceDetail($resouceDetail)
+    public function setResourceDetail($resourceDetail)
     {
-        $this->container['resouceDetail'] = $resouceDetail;
+        $this->container['resourceDetail'] = $resourceDetail;
         return $this;
     }
 

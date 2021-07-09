@@ -46,8 +46,8 @@ class ShowTranscodingsTemplateRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'domain' => null,
         'appName' => null,
-        'page' => 'int32',
-        'size' => 'int32'
+        'page' => null,
+        'size' => null
     ];
 
     /**

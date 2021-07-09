@@ -24,11 +24,6 @@ class RuleAction implements ModelInterface, ArrayAccess
     * smnForwarding  smnForwarding
     * deviceAlarm  deviceAlarm
     * deviceCommand  deviceCommand
-    * disForwarding  disForwarding
-    * obsForwarding  obsForwarding
-    * romaForwarding  romaForwarding
-    * iotaForwarding  iotaForwarding
-    * kafkaForwarding  kafkaForwarding
     *
     * @var string[]
     */
@@ -36,12 +31,7 @@ class RuleAction implements ModelInterface, ArrayAccess
             'type' => 'string',
             'smnForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ActionSmnForwarding',
             'deviceAlarm' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ActionDeviceAlarm',
-            'deviceCommand' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ActionDeviceCommand',
-            'disForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ActionDisForwarding',
-            'obsForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ActionObsForwarding',
-            'romaForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ActionRomaForwarding',
-            'iotaForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ActionIoTAForwarding',
-            'kafkaForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ActionKafkaForwarding'
+            'deviceCommand' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ActionDeviceCommand'
     ];
 
     /**
@@ -50,11 +40,6 @@ class RuleAction implements ModelInterface, ArrayAccess
     * smnForwarding  smnForwarding
     * deviceAlarm  deviceAlarm
     * deviceCommand  deviceCommand
-    * disForwarding  disForwarding
-    * obsForwarding  obsForwarding
-    * romaForwarding  romaForwarding
-    * iotaForwarding  iotaForwarding
-    * kafkaForwarding  kafkaForwarding
     *
     * @var string[]
     */
@@ -62,12 +47,7 @@ class RuleAction implements ModelInterface, ArrayAccess
         'type' => null,
         'smnForwarding' => null,
         'deviceAlarm' => null,
-        'deviceCommand' => null,
-        'disForwarding' => null,
-        'obsForwarding' => null,
-        'romaForwarding' => null,
-        'iotaForwarding' => null,
-        'kafkaForwarding' => null
+        'deviceCommand' => null
     ];
 
     /**
@@ -97,11 +77,6 @@ class RuleAction implements ModelInterface, ArrayAccess
     * smnForwarding  smnForwarding
     * deviceAlarm  deviceAlarm
     * deviceCommand  deviceCommand
-    * disForwarding  disForwarding
-    * obsForwarding  obsForwarding
-    * romaForwarding  romaForwarding
-    * iotaForwarding  iotaForwarding
-    * kafkaForwarding  kafkaForwarding
     *
     * @var string[]
     */
@@ -109,12 +84,7 @@ class RuleAction implements ModelInterface, ArrayAccess
             'type' => 'type',
             'smnForwarding' => 'smn_forwarding',
             'deviceAlarm' => 'device_alarm',
-            'deviceCommand' => 'device_command',
-            'disForwarding' => 'dis_forwarding',
-            'obsForwarding' => 'obs_forwarding',
-            'romaForwarding' => 'roma_forwarding',
-            'iotaForwarding' => 'iota_forwarding',
-            'kafkaForwarding' => 'kafka_forwarding'
+            'deviceCommand' => 'device_command'
     ];
 
     /**
@@ -123,11 +93,6 @@ class RuleAction implements ModelInterface, ArrayAccess
     * smnForwarding  smnForwarding
     * deviceAlarm  deviceAlarm
     * deviceCommand  deviceCommand
-    * disForwarding  disForwarding
-    * obsForwarding  obsForwarding
-    * romaForwarding  romaForwarding
-    * iotaForwarding  iotaForwarding
-    * kafkaForwarding  kafkaForwarding
     *
     * @var string[]
     */
@@ -135,12 +100,7 @@ class RuleAction implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'smnForwarding' => 'setSmnForwarding',
             'deviceAlarm' => 'setDeviceAlarm',
-            'deviceCommand' => 'setDeviceCommand',
-            'disForwarding' => 'setDisForwarding',
-            'obsForwarding' => 'setObsForwarding',
-            'romaForwarding' => 'setRomaForwarding',
-            'iotaForwarding' => 'setIotaForwarding',
-            'kafkaForwarding' => 'setKafkaForwarding'
+            'deviceCommand' => 'setDeviceCommand'
     ];
 
     /**
@@ -149,11 +109,6 @@ class RuleAction implements ModelInterface, ArrayAccess
     * smnForwarding  smnForwarding
     * deviceAlarm  deviceAlarm
     * deviceCommand  deviceCommand
-    * disForwarding  disForwarding
-    * obsForwarding  obsForwarding
-    * romaForwarding  romaForwarding
-    * iotaForwarding  iotaForwarding
-    * kafkaForwarding  kafkaForwarding
     *
     * @var string[]
     */
@@ -161,12 +116,7 @@ class RuleAction implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'smnForwarding' => 'getSmnForwarding',
             'deviceAlarm' => 'getDeviceAlarm',
-            'deviceCommand' => 'getDeviceCommand',
-            'disForwarding' => 'getDisForwarding',
-            'obsForwarding' => 'getObsForwarding',
-            'romaForwarding' => 'getRomaForwarding',
-            'iotaForwarding' => 'getIotaForwarding',
-            'kafkaForwarding' => 'getKafkaForwarding'
+            'deviceCommand' => 'getDeviceCommand'
     ];
 
     /**
@@ -231,11 +181,6 @@ class RuleAction implements ModelInterface, ArrayAccess
         $this->container['smnForwarding'] = isset($data['smnForwarding']) ? $data['smnForwarding'] : null;
         $this->container['deviceAlarm'] = isset($data['deviceAlarm']) ? $data['deviceAlarm'] : null;
         $this->container['deviceCommand'] = isset($data['deviceCommand']) ? $data['deviceCommand'] : null;
-        $this->container['disForwarding'] = isset($data['disForwarding']) ? $data['disForwarding'] : null;
-        $this->container['obsForwarding'] = isset($data['obsForwarding']) ? $data['obsForwarding'] : null;
-        $this->container['romaForwarding'] = isset($data['romaForwarding']) ? $data['romaForwarding'] : null;
-        $this->container['iotaForwarding'] = isset($data['iotaForwarding']) ? $data['iotaForwarding'] : null;
-        $this->container['kafkaForwarding'] = isset($data['kafkaForwarding']) ? $data['kafkaForwarding'] : null;
     }
 
     /**
@@ -359,126 +304,6 @@ class RuleAction implements ModelInterface, ArrayAccess
     public function setDeviceCommand($deviceCommand)
     {
         $this->container['deviceCommand'] = $deviceCommand;
-        return $this;
-    }
-
-    /**
-    * Gets disForwarding
-    *  disForwarding
-    *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionDisForwarding|null
-    */
-    public function getDisForwarding()
-    {
-        return $this->container['disForwarding'];
-    }
-
-    /**
-    * Sets disForwarding
-    *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ActionDisForwarding|null $disForwarding disForwarding
-    *
-    * @return $this
-    */
-    public function setDisForwarding($disForwarding)
-    {
-        $this->container['disForwarding'] = $disForwarding;
-        return $this;
-    }
-
-    /**
-    * Gets obsForwarding
-    *  obsForwarding
-    *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionObsForwarding|null
-    */
-    public function getObsForwarding()
-    {
-        return $this->container['obsForwarding'];
-    }
-
-    /**
-    * Sets obsForwarding
-    *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ActionObsForwarding|null $obsForwarding obsForwarding
-    *
-    * @return $this
-    */
-    public function setObsForwarding($obsForwarding)
-    {
-        $this->container['obsForwarding'] = $obsForwarding;
-        return $this;
-    }
-
-    /**
-    * Gets romaForwarding
-    *  romaForwarding
-    *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionRomaForwarding|null
-    */
-    public function getRomaForwarding()
-    {
-        return $this->container['romaForwarding'];
-    }
-
-    /**
-    * Sets romaForwarding
-    *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ActionRomaForwarding|null $romaForwarding romaForwarding
-    *
-    * @return $this
-    */
-    public function setRomaForwarding($romaForwarding)
-    {
-        $this->container['romaForwarding'] = $romaForwarding;
-        return $this;
-    }
-
-    /**
-    * Gets iotaForwarding
-    *  iotaForwarding
-    *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionIoTAForwarding|null
-    */
-    public function getIotaForwarding()
-    {
-        return $this->container['iotaForwarding'];
-    }
-
-    /**
-    * Sets iotaForwarding
-    *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ActionIoTAForwarding|null $iotaForwarding iotaForwarding
-    *
-    * @return $this
-    */
-    public function setIotaForwarding($iotaForwarding)
-    {
-        $this->container['iotaForwarding'] = $iotaForwarding;
-        return $this;
-    }
-
-    /**
-    * Gets kafkaForwarding
-    *  kafkaForwarding
-    *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionKafkaForwarding|null
-    */
-    public function getKafkaForwarding()
-    {
-        return $this->container['kafkaForwarding'];
-    }
-
-    /**
-    * Sets kafkaForwarding
-    *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ActionKafkaForwarding|null $kafkaForwarding kafkaForwarding
-    *
-    * @return $this
-    */
-    public function setKafkaForwarding($kafkaForwarding)
-    {
-        $this->container['kafkaForwarding'] = $kafkaForwarding;
         return $this;
     }
 

@@ -20,7 +20,18 @@
 
 namespace HuaweiCloud\SDK\Core\Auth;
 
+
+use HuaweiCloud\SDK\Core\Client;
+use HuaweiCloud\SDK\Core\Exceptions\SdkException;
 use HuaweiCloud\SDK\Core\SdkRequest;
+use HuaweiCloud\SDK\Iam\V3\Model\{KeystoneCreateProjectOption,
+    KeystoneCreateProjectRequest,
+    KeystoneCreateProjectRequestBody,
+    KeystoneListProjectsRequest,
+    KeystoneListRegionsRequest,
+    KeystoneListAuthDomainsRequest
+};
+use \Exception;
 
 class BasicCredentials extends Credentials
 {
@@ -37,12 +48,15 @@ class BasicCredentials extends Credentials
     public function __construct($ak = null,
                                 $sk = null,
                                 $projectId = null,
-                                $securityToken = null
-    ) {
+                                $securityToken = null,
+                                $iamEndpoint = null
+    )
+    {
         $this->ak = isset($ak) ? $ak : null;
         $this->sk = isset($sk) ? $sk : null;
         $this->projectId = isset($projectId) ? $projectId : null;
         $this->securityToken = isset($securityToken) ? $securityToken : null;
+        $this->iamEndpoint = isset($iamEndpoint) ? $iamEndpoint : null;
     }
 
     public function withAk($ak)
@@ -78,11 +92,24 @@ class BasicCredentials extends Credentials
         return $this;
     }
 
+    /**
+     * @param $iamEndponit
+     *
+     * @return BasicCredentials
+     */
+    public function withIamEndpoint($iamEndpoint)
+    {
+        $this->setIamEndpoint($iamEndpoint);
+
+        return $this;
+    }
+
     protected static $setters = [
         'ak' => 'setAk',
         'sk' => 'setSk',
         'securityToken' => 'setSecurityToken',
         'projectId' => 'setProjectId',
+        'iamEndpoint' => 'setIamEndpoint'
     ];
 
     protected static $getters = [
@@ -90,6 +117,7 @@ class BasicCredentials extends Credentials
         'sk' => 'getSk',
         'securityToken' => 'getSecurityToken',
         'projectId' => 'getProjectId',
+        'iamEndPoint' => 'getIamEndPoint'
     ];
 
     public static function setters()
@@ -167,6 +195,22 @@ class BasicCredentials extends Credentials
     }
 
     /**
+     * @return string
+     */
+    public function getIamEndpoint()
+    {
+        return $this->iamEndpoint;
+    }
+
+    /**
+     * @param string $iamEndpoint
+     */
+    public function setIamEndpoint($iamEndpoint)
+    {
+        $this->iamEndpoint = $iamEndpoint;
+    }
+
+    /**
      * @return array
      */
     public function getUpdatePathParams()
@@ -186,7 +230,9 @@ class BasicCredentials extends Credentials
 
     private function signRequest(SdkRequest $request)
     {
-        $request->headerParams['X-Project-Id'] = $this->projectId;
+        if (null != $this->projectId) {
+            $request->headerParams['X-Project-Id'] = $this->projectId;
+        }
         if (null != $this->securityToken) {
             $request->headerParams['X-Security-Token'] = $this->securityToken;
         }
@@ -199,5 +245,117 @@ class BasicCredentials extends Credentials
         $signer = new Signer($this);
 
         return $signer->sign($request);
+    }
+
+    public function processAuthParams($client, $regionId)
+    {
+        if (isset($this->projectId)) {
+            return;
+        }
+        $akWithName = $this->getAk() . $regionId;
+        $projectId = AuthCache::getAuth($akWithName);
+        if (isset($projectId)) {
+            $this->projectId = $projectId;
+            return;
+        }
+        $iamClient = parent::getIamClient($client, $this);
+        $keystoneListProjectsRequest = new KeystoneListProjectsRequest();
+        $keystoneListProjectsRequest->setName($regionId);
+        $response = $iamClient->keystoneListProjects($keystoneListProjectsRequest);
+        try {
+            if (null == $response) {
+                throw new SdkException("Failed to get project id, please input project id when initializing BasicCredentials");
+            }
+            $projects = $response->getProjects();
+            if (1 == count($projects)) {
+                $this->projectId = reset($projects)->getId();
+            } else {
+                $this->projectId = $this->keystoneCreateProject($iamClient, $regionId);
+            }
+            AuthCache::setAuth($akWithName, $this->projectId);
+        } catch (SdkException $e) {
+            $msg = $e->getMessage();
+            echo "\n" . $msg . "\n";
+        }
+    }
+
+    private function keystoneCreateProject($iamClient, $regionId)
+    {
+        $filterRegionIds = $this->getSupportedRegions($iamClient);
+        try {
+            if (empty($filterRegionIds)) {
+                throw new SdkException("failed to list regions");
+            }
+            if (!in_array($regionId, $filterRegionIds)) {
+                throw new SdkException("the region input is not supported to create project automatically");
+            }
+            $domainId = $this->getDomainId($iamClient);
+            if (!isset($domainId)) {
+                throw new SdkException("failed to get domain id");
+            }
+            return $this->getCreateProjectId($iamClient, $regionId, $domainId);
+        } catch (SdkException $e) {
+            $msg = $e->getMessage();
+            echo "\n" . $msg . "\n";
+        }
+
+    }
+
+    private function getSupportedRegions($iamClient)
+    {
+        $publicRegionType = "public";
+        $keystoneListRegionsRequest = new KeystoneListRegionsRequest();
+        $response = $iamClient->keystoneListRegions($keystoneListRegionsRequest);
+        $filterRegionIds = [];
+        try {
+            if (null == $response) {
+                throw new SdkException("failed to list all regions");
+            }
+            $regions = $response->getRegions();
+            foreach ($regions as $region) {
+                if (strcmp($publicRegionType, $region->getType()) == 0 && null != $region->getId()) {
+                    array_push($filterRegionIds, $region->getId());
+                }
+            }
+            return $filterRegionIds;
+        } catch (SdkException $e) {
+            $msg = $e->getMessage();
+            echo "\n" . $msg . "\n";
+        }
+    }
+
+    private function getDomainId($iamClient)
+    {
+        $keystoneListAuthDomainsRequest = new KeystoneListAuthDomainsRequest();
+        $response = $iamClient->keystoneListAuthDomains($keystoneListAuthDomainsRequest);
+        try {
+            if (null == $response) {
+                throw new SdkException("failed to get domain id");
+            }
+            return reset($response->getDomains())->getId();
+        } catch (SdkException $e) {
+            $msg = $e->getMessage();
+            echo "\n" . $msg . "\n";
+        }
+
+    }
+
+    private function getCreateProjectId($iamClient, $regionId, $domainId)
+    {
+        $credentials = (new GlobalCredentials())->withAk($this->ak)->withSk($this->sk)->withDomainId($domainId);
+        $iamClient->withCredentials($credentials);
+        $keystoneCreateProjectOption = (new KeystoneCreateProjectOption())->setName($regionId)->setDomainId($domainId);
+        $keystoneCreateProjectRequestBody = (new KeystoneCreateProjectRequestBody())->setProject($keystoneCreateProjectOption);
+        $keystoneCreateProjectRequest = (new KeystoneCreateProjectRequest())->setBody($keystoneCreateProjectRequestBody);
+        $response = $iamClient->keystoneCreateProject($keystoneCreateProjectRequest);
+        try {
+            if (null == $response) {
+                throw new SdkException("failed to create project");
+            }
+        return $response->getProject()->getId();
+        } catch (SdkException $e) {
+            $msg = $e->getMessage();
+            echo "\n" . $msg . "\n";
+        }
     }
 }

@@ -22,24 +22,28 @@ class ExportImageRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * bucketUrl  目的文件的URL，格式：<bucket>:<file>。 说明：此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
     * fileFormat  文件格式，支持qcow2、vhd、zvhd和vmdk。
+    * isQuickExport  是否使用快速导出，取值为true或者false。 说明：若使用快速导出，则无法指定file_format参数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'bucketUrl' => 'string',
-            'fileFormat' => 'string'
+            'fileFormat' => 'string',
+            'isQuickExport' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * bucketUrl  目的文件的URL，格式：<bucket>:<file>。 说明：此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
     * fileFormat  文件格式，支持qcow2、vhd、zvhd和vmdk。
+    * isQuickExport  是否使用快速导出，取值为true或者false。 说明：若使用快速导出，则无法指定file_format参数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'bucketUrl' => null,
-        'fileFormat' => null
+        'fileFormat' => null,
+        'isQuickExport' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ExportImageRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * bucketUrl  目的文件的URL，格式：<bucket>:<file>。 说明：此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
     * fileFormat  文件格式，支持qcow2、vhd、zvhd和vmdk。
+    * isQuickExport  是否使用快速导出，取值为true或者false。 说明：若使用快速导出，则无法指定file_format参数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'bucketUrl' => 'bucket_url',
-            'fileFormat' => 'file_format'
+            'fileFormat' => 'file_format',
+            'isQuickExport' => 'is_quick_export'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * bucketUrl  目的文件的URL，格式：<bucket>:<file>。 说明：此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
     * fileFormat  文件格式，支持qcow2、vhd、zvhd和vmdk。
+    * isQuickExport  是否使用快速导出，取值为true或者false。 说明：若使用快速导出，则无法指定file_format参数。
     *
     * @var string[]
     */
     protected static $setters = [
             'bucketUrl' => 'setBucketUrl',
-            'fileFormat' => 'setFileFormat'
+            'fileFormat' => 'setFileFormat',
+            'isQuickExport' => 'setIsQuickExport'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * bucketUrl  目的文件的URL，格式：<bucket>:<file>。 说明：此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
     * fileFormat  文件格式，支持qcow2、vhd、zvhd和vmdk。
+    * isQuickExport  是否使用快速导出，取值为true或者false。 说明：若使用快速导出，则无法指定file_format参数。
     *
     * @var string[]
     */
     protected static $getters = [
             'bucketUrl' => 'getBucketUrl',
-            'fileFormat' => 'getFileFormat'
+            'fileFormat' => 'getFileFormat',
+            'isQuickExport' => 'getIsQuickExport'
     ];
 
     /**
@@ -178,6 +188,7 @@ class ExportImageRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['bucketUrl'] = isset($data['bucketUrl']) ? $data['bucketUrl'] : null;
         $this->container['fileFormat'] = isset($data['fileFormat']) ? $data['fileFormat'] : null;
+        $this->container['isQuickExport'] = isset($data['isQuickExport']) ? $data['isQuickExport'] : null;
     }
 
     /**
@@ -261,6 +272,30 @@ class ExportImageRequestBody implements ModelInterface, ArrayAccess
     public function setFileFormat($fileFormat)
     {
         $this->container['fileFormat'] = $fileFormat;
+        return $this;
+    }
+
+    /**
+    * Gets isQuickExport
+    *  是否使用快速导出，取值为true或者false。 说明：若使用快速导出，则无法指定file_format参数。
+    *
+    * @return bool|null
+    */
+    public function getIsQuickExport()
+    {
+        return $this->container['isQuickExport'];
+    }
+
+    /**
+    * Sets isQuickExport
+    *
+    * @param bool|null $isQuickExport 是否使用快速导出，取值为true或者false。 说明：若使用快速导出，则无法指定file_format参数。
+    *
+    * @return $this
+    */
+    public function setIsQuickExport($isQuickExport)
+    {
+        $this->container['isQuickExport'] = $isQuickExport;
         return $this;
     }
 
