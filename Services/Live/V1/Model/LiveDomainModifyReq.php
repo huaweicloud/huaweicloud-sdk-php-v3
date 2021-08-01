@@ -22,28 +22,24 @@ class LiveDomainModifyReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * domain  直播域名，不允许修改
     * status  直播域名状态，通过修改此字段，实现域名的启用和停用。注意：域名处于“配置中”状态时，不允对该域名执行启停操作。
-    * domainSource  domainSource
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'domain' => 'string',
-            'status' => 'string',
-            'domainSource' => '\HuaweiCloud\SDK\Live\V1\Model\DomainSourceInfo'
+            'status' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domain  直播域名，不允许修改
     * status  直播域名状态，通过修改此字段，实现域名的启用和停用。注意：域名处于“配置中”状态时，不允对该域名执行启停操作。
-    * domainSource  domainSource
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'domain' => null,
-        'status' => null,
-        'domainSource' => null
+        'status' => null
     ];
 
     /**
@@ -71,42 +67,36 @@ class LiveDomainModifyReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * domain  直播域名，不允许修改
     * status  直播域名状态，通过修改此字段，实现域名的启用和停用。注意：域名处于“配置中”状态时，不允对该域名执行启停操作。
-    * domainSource  domainSource
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'domain' => 'domain',
-            'status' => 'status',
-            'domainSource' => 'domain_source'
+            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domain  直播域名，不允许修改
     * status  直播域名状态，通过修改此字段，实现域名的启用和停用。注意：域名处于“配置中”状态时，不允对该域名执行启停操作。
-    * domainSource  domainSource
     *
     * @var string[]
     */
     protected static $setters = [
             'domain' => 'setDomain',
-            'status' => 'setStatus',
-            'domainSource' => 'setDomainSource'
+            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domain  直播域名，不允许修改
     * status  直播域名状态，通过修改此字段，实现域名的启用和停用。注意：域名处于“配置中”状态时，不允对该域名执行启停操作。
-    * domainSource  domainSource
     *
     * @var string[]
     */
     protected static $getters = [
             'domain' => 'getDomain',
-            'status' => 'getStatus',
-            'domainSource' => 'getDomainSource'
+            'status' => 'getStatus'
     ];
 
     /**
@@ -184,7 +174,6 @@ class LiveDomainModifyReq implements ModelInterface, ArrayAccess
     {
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['domainSource'] = isset($data['domainSource']) ? $data['domainSource'] : null;
     }
 
     /**
@@ -271,30 +260,6 @@ class LiveDomainModifyReq implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
-        return $this;
-    }
-
-    /**
-    * Gets domainSource
-    *  domainSource
-    *
-    * @return \HuaweiCloud\SDK\Live\V1\Model\DomainSourceInfo|null
-    */
-    public function getDomainSource()
-    {
-        return $this->container['domainSource'];
-    }
-
-    /**
-    * Sets domainSource
-    *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\DomainSourceInfo|null $domainSource domainSource
-    *
-    * @return $this
-    */
-    public function setDomainSource($domainSource)
-    {
-        $this->container['domainSource'] = $domainSource;
         return $this;
     }
 

@@ -24,7 +24,6 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
-    * domainSource  domainSource
     *
     * @var string[]
     */
@@ -32,8 +31,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domain' => 'string',
             'domainType' => 'string',
             'region' => 'string',
-            'serviceArea' => 'string',
-            'domainSource' => '\HuaweiCloud\SDK\Live\V1\Model\DomainSourceInfo'
+            'serviceArea' => 'string'
     ];
 
     /**
@@ -42,7 +40,6 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
-    * domainSource  domainSource
     *
     * @var string[]
     */
@@ -50,8 +47,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
         'domain' => null,
         'domainType' => null,
         'region' => null,
-        'serviceArea' => null,
-        'domainSource' => null
+        'serviceArea' => null
     ];
 
     /**
@@ -81,7 +77,6 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
-    * domainSource  domainSource
     *
     * @var string[]
     */
@@ -89,8 +84,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domain' => 'domain',
             'domainType' => 'domain_type',
             'region' => 'region',
-            'serviceArea' => 'service_area',
-            'domainSource' => 'domain_source'
+            'serviceArea' => 'service_area'
     ];
 
     /**
@@ -99,7 +93,6 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
-    * domainSource  domainSource
     *
     * @var string[]
     */
@@ -107,8 +100,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domain' => 'setDomain',
             'domainType' => 'setDomainType',
             'region' => 'setRegion',
-            'serviceArea' => 'setServiceArea',
-            'domainSource' => 'setDomainSource'
+            'serviceArea' => 'setServiceArea'
     ];
 
     /**
@@ -117,7 +109,6 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
-    * domainSource  domainSource
     *
     * @var string[]
     */
@@ -125,8 +116,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domain' => 'getDomain',
             'domainType' => 'getDomainType',
             'region' => 'getRegion',
-            'serviceArea' => 'getServiceArea',
-            'domainSource' => 'getDomainSource'
+            'serviceArea' => 'getServiceArea'
     ];
 
     /**
@@ -223,7 +213,6 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
         $this->container['domainType'] = isset($data['domainType']) ? $data['domainType'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
-        $this->container['domainSource'] = isset($data['domainSource']) ? $data['domainSource'] : null;
     }
 
     /**
@@ -378,30 +367,6 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     public function setServiceArea($serviceArea)
     {
         $this->container['serviceArea'] = $serviceArea;
-        return $this;
-    }
-
-    /**
-    * Gets domainSource
-    *  domainSource
-    *
-    * @return \HuaweiCloud\SDK\Live\V1\Model\DomainSourceInfo|null
-    */
-    public function getDomainSource()
-    {
-        return $this->container['domainSource'];
-    }
-
-    /**
-    * Sets domainSource
-    *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\DomainSourceInfo|null $domainSource domainSource
-    *
-    * @return $this
-    */
-    public function setDomainSource($domainSource)
-    {
-        $this->container['domainSource'] = $domainSource;
         return $this;
     }
 

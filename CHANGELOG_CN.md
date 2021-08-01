@@ -1,3 +1,23 @@
+# 3.0.16-beta 2021-07-30
+
+### HuaweiCloud SDK Live
+
+- _新增特性_
+    - 无
+- _解决问题_
+    - 无
+- _特性变更_
+    - 接口`ShowDomain`移除响应参数`domain_source`
+
+### HuaweiCloud SDK IMS
+
+- _新增特性_
+    - 无
+- _解决问题_
+    - [Issue 40](https://github.com/huaweicloud/huaweicloud-sdk-java-v3/issues/40): 修复响应参数`__lazyloading`类型定义错误的问题
+- _特性变更_
+    - 无
+    
 # 3.0.15-beta 2021-07-09
 
 ### HuaweiCloud SDK Core

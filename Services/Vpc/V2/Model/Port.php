@@ -41,6 +41,7 @@ class Port implements ModelInterface, ArrayAccess
     * instanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：不支持设置和更新，由系统自动维护
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
+    * zoneId  功能说明：port所属的可用分区
     *
     * @var string[]
     */
@@ -65,7 +66,8 @@ class Port implements ModelInterface, ArrayAccess
             'bindingprofile' => 'object',
             'instanceId' => 'string',
             'instanceType' => 'string',
-            'portSecurityEnabled' => 'bool'
+            'portSecurityEnabled' => 'bool',
+            'zoneId' => 'string'
     ];
 
     /**
@@ -91,6 +93,7 @@ class Port implements ModelInterface, ArrayAccess
     * instanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：不支持设置和更新，由系统自动维护
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
+    * zoneId  功能说明：port所属的可用分区
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class Port implements ModelInterface, ArrayAccess
         'bindingprofile' => null,
         'instanceId' => null,
         'instanceType' => null,
-        'portSecurityEnabled' => null
+        'portSecurityEnabled' => null,
+        'zoneId' => null
     ];
 
     /**
@@ -162,6 +166,7 @@ class Port implements ModelInterface, ArrayAccess
     * instanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：不支持设置和更新，由系统自动维护
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
+    * zoneId  功能说明：port所属的可用分区
     *
     * @var string[]
     */
@@ -186,7 +191,8 @@ class Port implements ModelInterface, ArrayAccess
             'bindingprofile' => 'binding:profile',
             'instanceId' => 'instance_id',
             'instanceType' => 'instance_type',
-            'portSecurityEnabled' => 'port_security_enabled'
+            'portSecurityEnabled' => 'port_security_enabled',
+            'zoneId' => 'zone_id'
     ];
 
     /**
@@ -212,6 +218,7 @@ class Port implements ModelInterface, ArrayAccess
     * instanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：不支持设置和更新，由系统自动维护
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
+    * zoneId  功能说明：port所属的可用分区
     *
     * @var string[]
     */
@@ -236,7 +243,8 @@ class Port implements ModelInterface, ArrayAccess
             'bindingprofile' => 'setBindingprofile',
             'instanceId' => 'setInstanceId',
             'instanceType' => 'setInstanceType',
-            'portSecurityEnabled' => 'setPortSecurityEnabled'
+            'portSecurityEnabled' => 'setPortSecurityEnabled',
+            'zoneId' => 'setZoneId'
     ];
 
     /**
@@ -262,6 +270,7 @@ class Port implements ModelInterface, ArrayAccess
     * instanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：不支持设置和更新，由系统自动维护
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
     * portSecurityEnabled  功能说明：端口安全使能标记，如果不使能则安全组和dhcp防欺骗不生效 取值范围：启用（true）或禁用（false）
+    * zoneId  功能说明：port所属的可用分区
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class Port implements ModelInterface, ArrayAccess
             'bindingprofile' => 'getBindingprofile',
             'instanceId' => 'getInstanceId',
             'instanceType' => 'getInstanceType',
-            'portSecurityEnabled' => 'getPortSecurityEnabled'
+            'portSecurityEnabled' => 'getPortSecurityEnabled',
+            'zoneId' => 'getZoneId'
     ];
 
     /**
@@ -404,6 +414,7 @@ class Port implements ModelInterface, ArrayAccess
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
         $this->container['portSecurityEnabled'] = isset($data['portSecurityEnabled']) ? $data['portSecurityEnabled'] : null;
+        $this->container['zoneId'] = isset($data['zoneId']) ? $data['zoneId'] : null;
     }
 
     /**
@@ -498,6 +509,9 @@ class Port implements ModelInterface, ArrayAccess
         }
         if ($this->container['portSecurityEnabled'] === null) {
             $invalidProperties[] = "'portSecurityEnabled' can't be null";
+        }
+        if ($this->container['zoneId'] === null) {
+            $invalidProperties[] = "'zoneId' can't be null";
         }
         return $invalidProperties;
     }
@@ -1014,6 +1028,30 @@ class Port implements ModelInterface, ArrayAccess
     public function setPortSecurityEnabled($portSecurityEnabled)
     {
         $this->container['portSecurityEnabled'] = $portSecurityEnabled;
+        return $this;
+    }
+
+    /**
+    * Gets zoneId
+    *  功能说明：port所属的可用分区
+    *
+    * @return string
+    */
+    public function getZoneId()
+    {
+        return $this->container['zoneId'];
+    }
+
+    /**
+    * Sets zoneId
+    *
+    * @param string $zoneId 功能说明：port所属的可用分区
+    *
+    * @return $this
+    */
+    public function setZoneId($zoneId)
+    {
+        $this->container['zoneId'] = $zoneId;
         return $this;
     }
 

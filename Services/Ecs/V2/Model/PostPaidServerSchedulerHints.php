@@ -20,7 +20,7 @@ class PostPaidServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * group  云服务器组ID，UUID格式。
+    * group  云服务器组ID，UUID格式。  云服务器组的ID可以从控制台或者参考[查询云服务器组列表](https://support.huaweicloud.com/api-ecs/ecs_03_1402.html)获取。
     * dedicatedHostId  专属主机的ID。专属主机的ID仅在tenancy为dedicated时生效。
     * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器云主机。参数值为shared或者dedicated。
     *
@@ -34,7 +34,7 @@ class PostPaidServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * group  云服务器组ID，UUID格式。
+    * group  云服务器组ID，UUID格式。  云服务器组的ID可以从控制台或者参考[查询云服务器组列表](https://support.huaweicloud.com/api-ecs/ecs_03_1402.html)获取。
     * dedicatedHostId  专属主机的ID。专属主机的ID仅在tenancy为dedicated时生效。
     * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器云主机。参数值为shared或者dedicated。
     *
@@ -69,7 +69,7 @@ class PostPaidServerSchedulerHints implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * group  云服务器组ID，UUID格式。
+    * group  云服务器组ID，UUID格式。  云服务器组的ID可以从控制台或者参考[查询云服务器组列表](https://support.huaweicloud.com/api-ecs/ecs_03_1402.html)获取。
     * dedicatedHostId  专属主机的ID。专属主机的ID仅在tenancy为dedicated时生效。
     * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器云主机。参数值为shared或者dedicated。
     *
@@ -83,7 +83,7 @@ class PostPaidServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * group  云服务器组ID，UUID格式。
+    * group  云服务器组ID，UUID格式。  云服务器组的ID可以从控制台或者参考[查询云服务器组列表](https://support.huaweicloud.com/api-ecs/ecs_03_1402.html)获取。
     * dedicatedHostId  专属主机的ID。专属主机的ID仅在tenancy为dedicated时生效。
     * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器云主机。参数值为shared或者dedicated。
     *
@@ -97,7 +97,7 @@ class PostPaidServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * group  云服务器组ID，UUID格式。
+    * group  云服务器组ID，UUID格式。  云服务器组的ID可以从控制台或者参考[查询云服务器组列表](https://support.huaweicloud.com/api-ecs/ecs_03_1402.html)获取。
     * dedicatedHostId  专属主机的ID。专属主机的ID仅在tenancy为dedicated时生效。
     * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器云主机。参数值为shared或者dedicated。
     *
@@ -196,7 +196,7 @@ class PostPaidServerSchedulerHints implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
-    *  云服务器组ID，UUID格式。
+    *  云服务器组ID，UUID格式。  云服务器组的ID可以从控制台或者参考[查询云服务器组列表](https://support.huaweicloud.com/api-ecs/ecs_03_1402.html)获取。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class PostPaidServerSchedulerHints implements ModelInterface, ArrayAccess
     /**
     * Sets group
     *
-    * @param string|null $group 云服务器组ID，UUID格式。
+    * @param string|null $group 云服务器组ID，UUID格式。  云服务器组的ID可以从控制台或者参考[查询云服务器组列表](https://support.huaweicloud.com/api-ecs/ecs_03_1402.html)获取。
     *
     * @return $this
     */

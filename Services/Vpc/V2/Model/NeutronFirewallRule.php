@@ -27,6 +27,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
     * ipVersion  功能说明：IP协议版本 取值范围：Ipv4/Ipv6
     * enabled  功能说明：是否使能网络ACL规则。 取值范围：true/false
+    * public  功能说明：是否支持跨租户共享 取值范围：true/false
     * destinationIpAddress  功能说明：目的地址或者CIDR。
     * destinationPort  功能说明：目的端口号或者一段端口范围。
     * sourceIpAddress  功能说明：源地址或者CIDR。
@@ -44,6 +45,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
             'protocol' => 'string',
             'ipVersion' => 'int',
             'enabled' => 'bool',
+            'public' => 'bool',
             'destinationIpAddress' => 'string',
             'destinationPort' => 'string',
             'sourceIpAddress' => 'string',
@@ -61,6 +63,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
     * ipVersion  功能说明：IP协议版本 取值范围：Ipv4/Ipv6
     * enabled  功能说明：是否使能网络ACL规则。 取值范围：true/false
+    * public  功能说明：是否支持跨租户共享 取值范围：true/false
     * destinationIpAddress  功能说明：目的地址或者CIDR。
     * destinationPort  功能说明：目的端口号或者一段端口范围。
     * sourceIpAddress  功能说明：源地址或者CIDR。
@@ -78,6 +81,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
         'protocol' => null,
         'ipVersion' => 'int32',
         'enabled' => null,
+        'public' => null,
         'destinationIpAddress' => null,
         'destinationPort' => null,
         'sourceIpAddress' => null,
@@ -116,6 +120,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
     * ipVersion  功能说明：IP协议版本 取值范围：Ipv4/Ipv6
     * enabled  功能说明：是否使能网络ACL规则。 取值范围：true/false
+    * public  功能说明：是否支持跨租户共享 取值范围：true/false
     * destinationIpAddress  功能说明：目的地址或者CIDR。
     * destinationPort  功能说明：目的端口号或者一段端口范围。
     * sourceIpAddress  功能说明：源地址或者CIDR。
@@ -133,6 +138,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
             'protocol' => 'protocol',
             'ipVersion' => 'ip_version',
             'enabled' => 'enabled',
+            'public' => 'public',
             'destinationIpAddress' => 'destination_ip_address',
             'destinationPort' => 'destination_port',
             'sourceIpAddress' => 'source_ip_address',
@@ -150,6 +156,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
     * ipVersion  功能说明：IP协议版本 取值范围：Ipv4/Ipv6
     * enabled  功能说明：是否使能网络ACL规则。 取值范围：true/false
+    * public  功能说明：是否支持跨租户共享 取值范围：true/false
     * destinationIpAddress  功能说明：目的地址或者CIDR。
     * destinationPort  功能说明：目的端口号或者一段端口范围。
     * sourceIpAddress  功能说明：源地址或者CIDR。
@@ -167,6 +174,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
             'protocol' => 'setProtocol',
             'ipVersion' => 'setIpVersion',
             'enabled' => 'setEnabled',
+            'public' => 'setPublic',
             'destinationIpAddress' => 'setDestinationIpAddress',
             'destinationPort' => 'setDestinationPort',
             'sourceIpAddress' => 'setSourceIpAddress',
@@ -184,6 +192,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：IP协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
     * ipVersion  功能说明：IP协议版本 取值范围：Ipv4/Ipv6
     * enabled  功能说明：是否使能网络ACL规则。 取值范围：true/false
+    * public  功能说明：是否支持跨租户共享 取值范围：true/false
     * destinationIpAddress  功能说明：目的地址或者CIDR。
     * destinationPort  功能说明：目的端口号或者一段端口范围。
     * sourceIpAddress  功能说明：源地址或者CIDR。
@@ -201,6 +210,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
             'protocol' => 'getProtocol',
             'ipVersion' => 'getIpVersion',
             'enabled' => 'getEnabled',
+            'public' => 'getPublic',
             'destinationIpAddress' => 'getDestinationIpAddress',
             'destinationPort' => 'getDestinationPort',
             'sourceIpAddress' => 'getSourceIpAddress',
@@ -289,6 +299,7 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
+        $this->container['public'] = isset($data['public']) ? $data['public'] : null;
         $this->container['destinationIpAddress'] = isset($data['destinationIpAddress']) ? $data['destinationIpAddress'] : null;
         $this->container['destinationPort'] = isset($data['destinationPort']) ? $data['destinationPort'] : null;
         $this->container['sourceIpAddress'] = isset($data['sourceIpAddress']) ? $data['sourceIpAddress'] : null;
@@ -354,6 +365,9 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
             }
         if ($this->container['enabled'] === null) {
             $invalidProperties[] = "'enabled' can't be null";
+        }
+        if ($this->container['public'] === null) {
+            $invalidProperties[] = "'public' can't be null";
         }
         if ($this->container['destinationIpAddress'] === null) {
             $invalidProperties[] = "'destinationIpAddress' can't be null";
@@ -558,6 +572,30 @@ class NeutronFirewallRule implements ModelInterface, ArrayAccess
     public function setEnabled($enabled)
     {
         $this->container['enabled'] = $enabled;
+        return $this;
+    }
+
+    /**
+    * Gets public
+    *  功能说明：是否支持跨租户共享 取值范围：true/false
+    *
+    * @return bool
+    */
+    public function getPublic()
+    {
+        return $this->container['public'];
+    }
+
+    /**
+    * Sets public
+    *
+    * @param bool $public 功能说明：是否支持跨租户共享 取值范围：true/false
+    *
+    * @return $this
+    */
+    public function setPublic($public)
+    {
+        $this->container['public'] = $public;
         return $this;
     }
 

@@ -24,7 +24,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
     * osBit  操作系统位数，一般取值为32或者64
     * osType  镜像系统类型，取值为Linux，Windows，Other
-    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS
     * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性
     * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性
     * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性
@@ -96,7 +96,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
     * osBit  操作系统位数，一般取值为32或者64
     * osType  镜像系统类型，取值为Linux，Windows，Other
-    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS
     * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性
     * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性
     * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性
@@ -189,7 +189,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
     * osBit  操作系统位数，一般取值为32或者64
     * osType  镜像系统类型，取值为Linux，Windows，Other
-    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS
     * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性
     * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性
     * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性
@@ -261,7 +261,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
     * osBit  操作系统位数，一般取值为32或者64
     * osType  镜像系统类型，取值为Linux，Windows，Other
-    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS
     * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性
     * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性
     * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性
@@ -333,7 +333,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
     * osBit  操作系统位数，一般取值为32或者64
     * osType  镜像系统类型，取值为Linux，Windows，Other
-    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
+    * platform  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS
     * supportDiskintensive  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性
     * supportHighperformance  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性
     * supportKvm  如果镜像支持KVM，取值为true，否则无需增加该属性
@@ -458,7 +458,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     const PLATFORM_FEDORA = 'Fedora';
     const PLATFORM_OTHER = 'Other';
     const PLATFORM_CORE_OS = 'CoreOS';
-    const PLATFORM_EULE_OS = 'EuleOS';
+    const PLATFORM_EULER_OS = 'EulerOS';
     const DISK_FORMAT_VHD = 'vhd';
     const DISK_FORMAT_ZVHD = 'zvhd';
     const DISK_FORMAT_RAW = 'raw';
@@ -533,7 +533,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
             self::PLATFORM_FEDORA,
             self::PLATFORM_OTHER,
             self::PLATFORM_CORE_OS,
-            self::PLATFORM_EULE_OS,
+            self::PLATFORM_EULER_OS,
         ];
     }
 
@@ -814,7 +814,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets platform
-    *  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
+    *  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS
     *
     * @return string|null
     */
@@ -826,7 +826,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets platform
     *
-    * @param string|null $platform 镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EuleOS
+    * @param string|null $platform 镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS
     *
     * @return $this
     */

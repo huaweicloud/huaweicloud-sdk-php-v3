@@ -68,7 +68,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
-    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * lazyloading  镜像是否支持延迟加载。取值为True或False。
     * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
     * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
     * sequenceNum  目前暂时不用
@@ -131,7 +131,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
             'hwFirmwareType' => 'string',
             'supportArm' => 'string',
             'isOffshelved' => 'string',
-            'lazyloading' => 'bool',
+            'lazyloading' => 'string',
             'osFeatureList' => 'string',
             'rootOrigin' => 'string',
             'sequenceNum' => 'string',
@@ -194,7 +194,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
-    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * lazyloading  镜像是否支持延迟加载。取值为True或False。
     * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
     * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
     * sequenceNum  目前暂时不用
@@ -341,7 +341,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
-    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * lazyloading  镜像是否支持延迟加载。取值为True或False。
     * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
     * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
     * sequenceNum  目前暂时不用
@@ -467,7 +467,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
-    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * lazyloading  镜像是否支持延迟加载。取值为True或False。
     * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
     * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
     * sequenceNum  目前暂时不用
@@ -593,7 +593,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
     * hwFirmwareType  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     * isOffshelved  表示当前市场镜像是否下架。 true：已下架 false：未下架
-    * lazyloading  镜像是否支持延迟加载。取值为“True”或“False”。
+    * lazyloading  镜像是否支持延迟加载。取值为True或False。
     * osFeatureList  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
     * rootOrigin  表示当前镜像来源是从外部导入。取值：file。
     * sequenceNum  目前暂时不用
@@ -2303,9 +2303,9 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lazyloading
-    *  镜像是否支持延迟加载。取值为“True”或“False”。
+    *  镜像是否支持延迟加载。取值为True或False。
     *
-    * @return bool|null
+    * @return string|null
     */
     public function getLazyloading()
     {
@@ -2315,7 +2315,7 @@ class GlanceUpdateImageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lazyloading
     *
-    * @param bool|null $lazyloading 镜像是否支持延迟加载。取值为“True”或“False”。
+    * @param string|null $lazyloading 镜像是否支持延迟加载。取值为True或False。
     *
     * @return $this
     */

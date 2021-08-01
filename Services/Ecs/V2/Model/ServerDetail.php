@@ -20,7 +20,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
+    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
     * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
     * hostId  弹性云服务器所在主机的主机ID。
@@ -28,8 +28,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * addresses  弹性云服务器的网络属性。
     * keyName  弹性云服务器使用的密钥对名称。
     * image  image
-    * osExtStStaskState  扩展属性，弹性云服务器当前任务的状态。
-    * osExtStSvmState  扩展属性，弹性云服务器当前状态。
+    * osExtStStaskState  扩展属性，弹性云服务器当前任务的状态。  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
+    * osExtStSvmState  扩展属性，弹性云服务器当前状态。  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * osExtSrvAttRinstanceName  扩展属性，弹性云服务器别名。
     * osExtSrvAttRhypervisorHostname  扩展属性，弹性云服务器所在虚拟化主机名。
     * flavor  flavor
@@ -118,7 +118,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
+    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
     * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
     * hostId  弹性云服务器所在主机的主机ID。
@@ -126,8 +126,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * addresses  弹性云服务器的网络属性。
     * keyName  弹性云服务器使用的密钥对名称。
     * image  image
-    * osExtStStaskState  扩展属性，弹性云服务器当前任务的状态。
-    * osExtStSvmState  扩展属性，弹性云服务器当前状态。
+    * osExtStStaskState  扩展属性，弹性云服务器当前任务的状态。  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
+    * osExtStSvmState  扩展属性，弹性云服务器当前状态。  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * osExtSrvAttRinstanceName  扩展属性，弹性云服务器别名。
     * osExtSrvAttRhypervisorHostname  扩展属性，弹性云服务器所在虚拟化主机名。
     * flavor  flavor
@@ -237,7 +237,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
+    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
     * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
     * hostId  弹性云服务器所在主机的主机ID。
@@ -245,8 +245,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * addresses  弹性云服务器的网络属性。
     * keyName  弹性云服务器使用的密钥对名称。
     * image  image
-    * osExtStStaskState  扩展属性，弹性云服务器当前任务的状态。
-    * osExtStSvmState  扩展属性，弹性云服务器当前状态。
+    * osExtStStaskState  扩展属性，弹性云服务器当前任务的状态。  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
+    * osExtStSvmState  扩展属性，弹性云服务器当前状态。  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * osExtSrvAttRinstanceName  扩展属性，弹性云服务器别名。
     * osExtSrvAttRhypervisorHostname  扩展属性，弹性云服务器所在虚拟化主机名。
     * flavor  flavor
@@ -335,7 +335,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
+    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
     * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
     * hostId  弹性云服务器所在主机的主机ID。
@@ -343,8 +343,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * addresses  弹性云服务器的网络属性。
     * keyName  弹性云服务器使用的密钥对名称。
     * image  image
-    * osExtStStaskState  扩展属性，弹性云服务器当前任务的状态。
-    * osExtStSvmState  扩展属性，弹性云服务器当前状态。
+    * osExtStStaskState  扩展属性，弹性云服务器当前任务的状态。  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
+    * osExtStSvmState  扩展属性，弹性云服务器当前状态。  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * osExtSrvAttRinstanceName  扩展属性，弹性云服务器别名。
     * osExtSrvAttRhypervisorHostname  扩展属性，弹性云服务器所在虚拟化主机名。
     * flavor  flavor
@@ -433,7 +433,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
+    * status  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * updated  弹性云服务器更新时间。  时间格式例如：2019-05-22T03:30:52Z
     * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
     * hostId  弹性云服务器所在主机的主机ID。
@@ -441,8 +441,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * addresses  弹性云服务器的网络属性。
     * keyName  弹性云服务器使用的密钥对名称。
     * image  image
-    * osExtStStaskState  扩展属性，弹性云服务器当前任务的状态。
-    * osExtStSvmState  扩展属性，弹性云服务器当前状态。
+    * osExtStStaskState  扩展属性，弹性云服务器当前任务的状态。  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
+    * osExtStSvmState  扩展属性，弹性云服务器当前状态。  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * osExtSrvAttRinstanceName  扩展属性，弹性云服务器别名。
     * osExtSrvAttRhypervisorHostname  扩展属性，弹性云服务器所在虚拟化主机名。
     * flavor  flavor
@@ -763,7 +763,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
+    *  弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     *
     * @return string
     */
@@ -775,7 +775,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE
+    * @param string $status 弹性云服务器状态。  取值范围：  ACTIVE、BUILD、DELETED、ERROR、HARD_REBOOT、MIGRATING、PAUSED、REBOOT、REBUILD、RESIZE、REVERT_RESIZE、SHUTOFF、SHELVED、SHELVED_OFFLOADED、SOFT_DELETED、SUSPENDED、VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     *
     * @return $this
     */
@@ -955,7 +955,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtStStaskState
-    *  扩展属性，弹性云服务器当前任务的状态。
+    *  扩展属性，弹性云服务器当前任务的状态。  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
     *
     * @return string
     */
@@ -967,7 +967,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     /**
     * Sets osExtStStaskState
     *
-    * @param string $osExtStStaskState 扩展属性，弹性云服务器当前任务的状态。
+    * @param string $osExtStStaskState 扩展属性，弹性云服务器当前任务的状态。  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
     *
     * @return $this
     */
@@ -979,7 +979,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtStSvmState
-    *  扩展属性，弹性云服务器当前状态。
+    *  扩展属性，弹性云服务器当前状态。  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     *
     * @return string
     */
@@ -991,7 +991,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     /**
     * Sets osExtStSvmState
     *
-    * @param string $osExtStSvmState 扩展属性，弹性云服务器当前状态。
+    * @param string $osExtStSvmState 扩展属性，弹性云服务器当前状态。  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     *
     * @return $this
     */

@@ -510,7 +510,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     const PLATFORM_FEDORA = 'Fedora';
     const PLATFORM_OTHER = 'Other';
     const PLATFORM_CORE_OS = 'CoreOS';
-    const PLATFORM_EULE_OS = 'EuleOS';
+    const PLATFORM_EULER_OS = 'EulerOS';
     const DISK_FORMAT_VHD = 'vhd';
     const DISK_FORMAT_ZVHD = 'zvhd';
     const DISK_FORMAT_RAW = 'raw';
@@ -615,7 +615,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
             self::PLATFORM_FEDORA,
             self::PLATFORM_OTHER,
             self::PLATFORM_CORE_OS,
-            self::PLATFORM_EULE_OS,
+            self::PLATFORM_EULER_OS,
         ];
     }
 

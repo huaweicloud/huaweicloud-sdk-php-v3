@@ -39,6 +39,7 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronSubnetId  对应子网（OpenStack Neutron接口）id
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
     * extraDhcpOpts  子网配置的NTP地址
+    * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
     *
     * @var string[]
     */
@@ -61,7 +62,8 @@ class Subnet implements ModelInterface, ArrayAccess
             'neutronNetworkId' => 'string',
             'neutronSubnetId' => 'string',
             'neutronSubnetIdV6' => 'string',
-            'extraDhcpOpts' => '\HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOption[]'
+            'extraDhcpOpts' => '\HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOption[]',
+            'scope' => 'string'
     ];
 
     /**
@@ -85,6 +87,7 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronSubnetId  对应子网（OpenStack Neutron接口）id
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
     * extraDhcpOpts  子网配置的NTP地址
+    * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
     *
     * @var string[]
     */
@@ -107,7 +110,8 @@ class Subnet implements ModelInterface, ArrayAccess
         'neutronNetworkId' => null,
         'neutronSubnetId' => null,
         'neutronSubnetIdV6' => null,
-        'extraDhcpOpts' => null
+        'extraDhcpOpts' => null,
+        'scope' => null
     ];
 
     /**
@@ -152,6 +156,7 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronSubnetId  对应子网（OpenStack Neutron接口）id
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
     * extraDhcpOpts  子网配置的NTP地址
+    * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
     *
     * @var string[]
     */
@@ -174,7 +179,8 @@ class Subnet implements ModelInterface, ArrayAccess
             'neutronNetworkId' => 'neutron_network_id',
             'neutronSubnetId' => 'neutron_subnet_id',
             'neutronSubnetIdV6' => 'neutron_subnet_id_v6',
-            'extraDhcpOpts' => 'extra_dhcp_opts'
+            'extraDhcpOpts' => 'extra_dhcp_opts',
+            'scope' => 'scope'
     ];
 
     /**
@@ -198,6 +204,7 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronSubnetId  对应子网（OpenStack Neutron接口）id
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
     * extraDhcpOpts  子网配置的NTP地址
+    * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
     *
     * @var string[]
     */
@@ -220,7 +227,8 @@ class Subnet implements ModelInterface, ArrayAccess
             'neutronNetworkId' => 'setNeutronNetworkId',
             'neutronSubnetId' => 'setNeutronSubnetId',
             'neutronSubnetIdV6' => 'setNeutronSubnetIdV6',
-            'extraDhcpOpts' => 'setExtraDhcpOpts'
+            'extraDhcpOpts' => 'setExtraDhcpOpts',
+            'scope' => 'setScope'
     ];
 
     /**
@@ -244,6 +252,7 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronSubnetId  对应子网（OpenStack Neutron接口）id
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
     * extraDhcpOpts  子网配置的NTP地址
+    * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
     *
     * @var string[]
     */
@@ -266,7 +275,8 @@ class Subnet implements ModelInterface, ArrayAccess
             'neutronNetworkId' => 'getNeutronNetworkId',
             'neutronSubnetId' => 'getNeutronSubnetId',
             'neutronSubnetIdV6' => 'getNeutronSubnetIdV6',
-            'extraDhcpOpts' => 'getExtraDhcpOpts'
+            'extraDhcpOpts' => 'getExtraDhcpOpts',
+            'scope' => 'getScope'
     ];
 
     /**
@@ -363,6 +373,7 @@ class Subnet implements ModelInterface, ArrayAccess
         $this->container['neutronSubnetId'] = isset($data['neutronSubnetId']) ? $data['neutronSubnetId'] : null;
         $this->container['neutronSubnetIdV6'] = isset($data['neutronSubnetIdV6']) ? $data['neutronSubnetIdV6'] : null;
         $this->container['extraDhcpOpts'] = isset($data['extraDhcpOpts']) ? $data['extraDhcpOpts'] : null;
+        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
     }
 
     /**
@@ -920,6 +931,30 @@ class Subnet implements ModelInterface, ArrayAccess
     public function setExtraDhcpOpts($extraDhcpOpts)
     {
         $this->container['extraDhcpOpts'] = $extraDhcpOpts;
+        return $this;
+    }
+
+    /**
+    * Gets scope
+    *  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
+    *
+    * @return string|null
+    */
+    public function getScope()
+    {
+        return $this->container['scope'];
+    }
+
+    /**
+    * Sets scope
+    *
+    * @param string|null $scope 功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
+    *
+    * @return $this
+    */
+    public function setScope($scope)
+    {
+        $this->container['scope'] = $scope;
         return $this;
     }
 

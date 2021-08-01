@@ -1,3 +1,23 @@
+# 3.0.16-beta 2021-07-30
+
+### HuaweiCloud SDK Live
+
+- _Features_
+    - None
+- _Bug Fix_
+    - None
+- _Change_
+    - Remove the response parameter `domain_source` of the interface `ShowDomain`.
+
+### HuaweiCloud SDK IMS
+
+- _Features_
+    - None
+- _Bug Fix_
+    - [Issue 40](https://github.com/huaweicloud/huaweicloud-sdk-java-v3/issues/40): Fix the issue that the type of the response parameter `__lazyloading` is incorrectly defined.
+- _Change_
+    - None
+
 # 3.0.15-beta 2021-07-09
 
 ### HuaweiCloud SDK Core

@@ -28,7 +28,7 @@ class NovaServerBlockDeviceMapping implements ModelInterface, ArrayAccess
     * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。  > 说明： >  > 当卷设备的源头类型全为volume时，boot_index的值有一个为0。
     * uuid  当source_type值是volume时，uuid为卷的uuid；  当source_type值是snapshot时，uuid为快照的uuid；  当source_type值是image时，uuid为镜像的uuid；
     * volumeSize  卷大小，整数，在source_type是image或blank，destination_type是volume的时候必选。  单位为GB。
-    * volumeType  卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 磁盘类型介绍。
+    * volumeType  卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 [磁盘类型介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class NovaServerBlockDeviceMapping implements ModelInterface, ArrayAccess
     * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。  > 说明： >  > 当卷设备的源头类型全为volume时，boot_index的值有一个为0。
     * uuid  当source_type值是volume时，uuid为卷的uuid；  当source_type值是snapshot时，uuid为快照的uuid；  当source_type值是image时，uuid为镜像的uuid；
     * volumeSize  卷大小，整数，在source_type是image或blank，destination_type是volume的时候必选。  单位为GB。
-    * volumeType  卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 磁盘类型介绍。
+    * volumeType  卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 [磁盘类型介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
     *
     * @var string[]
     */
@@ -101,7 +101,7 @@ class NovaServerBlockDeviceMapping implements ModelInterface, ArrayAccess
     * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。  > 说明： >  > 当卷设备的源头类型全为volume时，boot_index的值有一个为0。
     * uuid  当source_type值是volume时，uuid为卷的uuid；  当source_type值是snapshot时，uuid为快照的uuid；  当source_type值是image时，uuid为镜像的uuid；
     * volumeSize  卷大小，整数，在source_type是image或blank，destination_type是volume的时候必选。  单位为GB。
-    * volumeType  卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 磁盘类型介绍。
+    * volumeType  卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 [磁盘类型介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class NovaServerBlockDeviceMapping implements ModelInterface, ArrayAccess
     * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。  > 说明： >  > 当卷设备的源头类型全为volume时，boot_index的值有一个为0。
     * uuid  当source_type值是volume时，uuid为卷的uuid；  当source_type值是snapshot时，uuid为快照的uuid；  当source_type值是image时，uuid为镜像的uuid；
     * volumeSize  卷大小，整数，在source_type是image或blank，destination_type是volume的时候必选。  单位为GB。
-    * volumeType  卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 磁盘类型介绍。
+    * volumeType  卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 [磁盘类型介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
     *
     * @var string[]
     */
@@ -153,7 +153,7 @@ class NovaServerBlockDeviceMapping implements ModelInterface, ArrayAccess
     * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。  > 说明： >  > 当卷设备的源头类型全为volume时，boot_index的值有一个为0。
     * uuid  当source_type值是volume时，uuid为卷的uuid；  当source_type值是snapshot时，uuid为快照的uuid；  当source_type值是image时，uuid为镜像的uuid；
     * volumeSize  卷大小，整数，在source_type是image或blank，destination_type是volume的时候必选。  单位为GB。
-    * volumeType  卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 磁盘类型介绍。
+    * volumeType  卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 [磁盘类型介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
     *
     * @var string[]
     */
@@ -505,7 +505,7 @@ class NovaServerBlockDeviceMapping implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeType
-    *  卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 磁盘类型介绍。
+    *  卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 [磁盘类型介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
     *
     * @return string|null
     */
@@ -517,7 +517,7 @@ class NovaServerBlockDeviceMapping implements ModelInterface, ArrayAccess
     /**
     * Sets volumeType
     *
-    * @param string|null $volumeType 卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 磁盘类型介绍。
+    * @param string|null $volumeType 卷类型，在source_type是image，destination_type是volume时建议填写。  卷类型取值范围请参考 EVS 服务 [磁盘类型介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。
+    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。
+    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。
+    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。
+    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。
+    * availabilityZone  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
-    *  可用区，需要指定可用区（AZ）的名称或者ID或者code。
+    *  可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string|null $availabilityZone 可用区，需要指定可用区（AZ）的名称或者ID或者code。
+    * @param string|null $availabilityZone 可用区，需要指定可用区（AZ）的名称或者ID或者code。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
     *
     * @return $this
     */

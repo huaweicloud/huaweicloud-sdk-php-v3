@@ -28,7 +28,6 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * status  直播域名的状态
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
-    * domainSource  domainSource
     *
     * @var string[]
     */
@@ -40,8 +39,7 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
             'domainCname' => 'string',
             'status' => 'string',
             'relatedDomain' => 'string',
-            'createTime' => '\DateTime',
-            'domainSource' => '\HuaweiCloud\SDK\Live\V1\Model\DomainSourceInfo'
+            'createTime' => '\DateTime'
     ];
 
     /**
@@ -54,7 +52,6 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * status  直播域名的状态
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
-    * domainSource  domainSource
     *
     * @var string[]
     */
@@ -66,8 +63,7 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
         'domainCname' => null,
         'status' => null,
         'relatedDomain' => null,
-        'createTime' => 'date-time',
-        'domainSource' => null
+        'createTime' => 'date-time'
     ];
 
     /**
@@ -101,7 +97,6 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * status  直播域名的状态
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
-    * domainSource  domainSource
     *
     * @var string[]
     */
@@ -113,8 +108,7 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
             'domainCname' => 'domain_cname',
             'status' => 'status',
             'relatedDomain' => 'related_domain',
-            'createTime' => 'create_time',
-            'domainSource' => 'domain_source'
+            'createTime' => 'create_time'
     ];
 
     /**
@@ -127,7 +121,6 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * status  直播域名的状态
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
-    * domainSource  domainSource
     *
     * @var string[]
     */
@@ -139,8 +132,7 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
             'domainCname' => 'setDomainCname',
             'status' => 'setStatus',
             'relatedDomain' => 'setRelatedDomain',
-            'createTime' => 'setCreateTime',
-            'domainSource' => 'setDomainSource'
+            'createTime' => 'setCreateTime'
     ];
 
     /**
@@ -153,7 +145,6 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * status  直播域名的状态
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
-    * domainSource  domainSource
     *
     * @var string[]
     */
@@ -165,8 +156,7 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
             'domainCname' => 'getDomainCname',
             'status' => 'getStatus',
             'relatedDomain' => 'getRelatedDomain',
-            'createTime' => 'getCreateTime',
-            'domainSource' => 'getDomainSource'
+            'createTime' => 'getCreateTime'
     ];
 
     /**
@@ -296,7 +286,6 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['relatedDomain'] = isset($data['relatedDomain']) ? $data['relatedDomain'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
-        $this->container['domainSource'] = isset($data['domainSource']) ? $data['domainSource'] : null;
     }
 
     /**
@@ -366,9 +355,6 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
             }
         if ($this->container['createTime'] === null) {
             $invalidProperties[] = "'createTime' can't be null";
-        }
-        if ($this->container['domainSource'] === null) {
-            $invalidProperties[] = "'domainSource' can't be null";
         }
         return $invalidProperties;
     }
@@ -573,30 +559,6 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     public function setCreateTime($createTime)
     {
         $this->container['createTime'] = $createTime;
-        return $this;
-    }
-
-    /**
-    * Gets domainSource
-    *  domainSource
-    *
-    * @return \HuaweiCloud\SDK\Live\V1\Model\DomainSourceInfo
-    */
-    public function getDomainSource()
-    {
-        return $this->container['domainSource'];
-    }
-
-    /**
-    * Sets domainSource
-    *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\DomainSourceInfo $domainSource domainSource
-    *
-    * @return $this
-    */
-    public function setDomainSource($domainSource)
-    {
-        $this->container['domainSource'] = $domainSource;
         return $this;
     }
 

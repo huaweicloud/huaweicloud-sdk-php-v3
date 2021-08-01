@@ -20,7 +20,7 @@ class PrePaidServerEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * iptype  弹性IP地址类型。
+    * iptype  弹性IP地址类型。  详情请参见“[申请弹性公网IP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)”章节的“publicip”字段说明。
     * bandwidth  bandwidth
     * extendparam  extendparam
     *
@@ -34,7 +34,7 @@ class PrePaidServerEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * iptype  弹性IP地址类型。
+    * iptype  弹性IP地址类型。  详情请参见“[申请弹性公网IP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)”章节的“publicip”字段说明。
     * bandwidth  bandwidth
     * extendparam  extendparam
     *
@@ -69,7 +69,7 @@ class PrePaidServerEip implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * iptype  弹性IP地址类型。
+    * iptype  弹性IP地址类型。  详情请参见“[申请弹性公网IP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)”章节的“publicip”字段说明。
     * bandwidth  bandwidth
     * extendparam  extendparam
     *
@@ -83,7 +83,7 @@ class PrePaidServerEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * iptype  弹性IP地址类型。
+    * iptype  弹性IP地址类型。  详情请参见“[申请弹性公网IP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)”章节的“publicip”字段说明。
     * bandwidth  bandwidth
     * extendparam  extendparam
     *
@@ -97,7 +97,7 @@ class PrePaidServerEip implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * iptype  弹性IP地址类型。
+    * iptype  弹性IP地址类型。  详情请参见“[申请弹性公网IP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)”章节的“publicip”字段说明。
     * bandwidth  bandwidth
     * extendparam  extendparam
     *
@@ -202,7 +202,7 @@ class PrePaidServerEip implements ModelInterface, ArrayAccess
 
     /**
     * Gets iptype
-    *  弹性IP地址类型。
+    *  弹性IP地址类型。  详情请参见“[申请弹性公网IP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)”章节的“publicip”字段说明。
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class PrePaidServerEip implements ModelInterface, ArrayAccess
     /**
     * Sets iptype
     *
-    * @param string $iptype 弹性IP地址类型。
+    * @param string $iptype 弹性IP地址类型。  详情请参见“[申请弹性公网IP](https://support.huaweicloud.com/api-eip/eip_api_0001.html)”章节的“publicip”字段说明。
     *
     * @return $this
     */

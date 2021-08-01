@@ -136,7 +136,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
             'accountCode' => 'string',
             'hwVifMultiqueueEnabled' => 'string',
             'isOffshelved' => 'string',
-            'lazyloading' => 'bool',
+            'lazyloading' => 'string',
             'rootOrigin' => 'string',
             'sequenceNum' => 'string',
             'activeAt' => 'string',
@@ -2402,7 +2402,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * Gets lazyloading
     *  镜像是否支持延迟加载。取值为“True”或“False”。
     *
-    * @return bool|null
+    * @return string|null
     */
     public function getLazyloading()
     {
@@ -2412,7 +2412,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lazyloading
     *
-    * @param bool|null $lazyloading 镜像是否支持延迟加载。取值为“True”或“False”。
+    * @param string|null $lazyloading 镜像是否支持延迟加载。取值为“True”或“False”。
     *
     * @return $this
     */

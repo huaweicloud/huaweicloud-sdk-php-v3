@@ -22,7 +22,7 @@ class NovaServer implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  云服务器名称。
     * id  云服务器唯一标识。
-    * status  云服务器当前状态信息。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE
+    * status  云服务器当前状态信息。  取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * created  云服务器创建时间。 时间格式例如：2019-05-22T07:48:53Z
     * updated  云服务器上一次更新时间。时间格式例如：2019-05-22T07:48:53Z
     * flavor  flavor
@@ -41,8 +41,8 @@ class NovaServer implements ModelInterface, ArrayAccess
     * osExtSrvAttRhypervisorHostname  扩展属性，hypervisor主机名。
     * osExtSrvAttRinstanceName  扩展属性，云服务器实例ID。
     * osExtStSpowerState  扩展属性，云服务器电源状态。  取值范围：0，1，2，3，4  - 0 : pending - 1 : running - 2 : paused - 3 : shutdown - 4 : crashed
-    * osExtStStaskState  扩展属性，云服务器任务状态。   取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
-    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：   ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osExtStStaskState  扩展属性，云服务器任务状态。  取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
+    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：  ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * osSrvUsGlaunchedAt  扩展属性，云服务器启动时间。时间格式例如：2019-05-22T07:48:19.000000
     * osSrvUsGterminatedAt  扩展属性，云服务器关闭时间。  时间格式例如：2019-05-22T07:48:19.000000
     * osExtendedVolumesvolumesAttached  云服务器挂载的云磁盘信息。
@@ -114,7 +114,7 @@ class NovaServer implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  云服务器名称。
     * id  云服务器唯一标识。
-    * status  云服务器当前状态信息。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE
+    * status  云服务器当前状态信息。  取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * created  云服务器创建时间。 时间格式例如：2019-05-22T07:48:53Z
     * updated  云服务器上一次更新时间。时间格式例如：2019-05-22T07:48:53Z
     * flavor  flavor
@@ -133,8 +133,8 @@ class NovaServer implements ModelInterface, ArrayAccess
     * osExtSrvAttRhypervisorHostname  扩展属性，hypervisor主机名。
     * osExtSrvAttRinstanceName  扩展属性，云服务器实例ID。
     * osExtStSpowerState  扩展属性，云服务器电源状态。  取值范围：0，1，2，3，4  - 0 : pending - 1 : running - 2 : paused - 3 : shutdown - 4 : crashed
-    * osExtStStaskState  扩展属性，云服务器任务状态。   取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
-    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：   ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osExtStStaskState  扩展属性，云服务器任务状态。  取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
+    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：  ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * osSrvUsGlaunchedAt  扩展属性，云服务器启动时间。时间格式例如：2019-05-22T07:48:19.000000
     * osSrvUsGterminatedAt  扩展属性，云服务器关闭时间。  时间格式例如：2019-05-22T07:48:19.000000
     * osExtendedVolumesvolumesAttached  云服务器挂载的云磁盘信息。
@@ -227,7 +227,7 @@ class NovaServer implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  云服务器名称。
     * id  云服务器唯一标识。
-    * status  云服务器当前状态信息。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE
+    * status  云服务器当前状态信息。  取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * created  云服务器创建时间。 时间格式例如：2019-05-22T07:48:53Z
     * updated  云服务器上一次更新时间。时间格式例如：2019-05-22T07:48:53Z
     * flavor  flavor
@@ -246,8 +246,8 @@ class NovaServer implements ModelInterface, ArrayAccess
     * osExtSrvAttRhypervisorHostname  扩展属性，hypervisor主机名。
     * osExtSrvAttRinstanceName  扩展属性，云服务器实例ID。
     * osExtStSpowerState  扩展属性，云服务器电源状态。  取值范围：0，1，2，3，4  - 0 : pending - 1 : running - 2 : paused - 3 : shutdown - 4 : crashed
-    * osExtStStaskState  扩展属性，云服务器任务状态。   取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
-    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：   ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osExtStStaskState  扩展属性，云服务器任务状态。  取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
+    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：  ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * osSrvUsGlaunchedAt  扩展属性，云服务器启动时间。时间格式例如：2019-05-22T07:48:19.000000
     * osSrvUsGterminatedAt  扩展属性，云服务器关闭时间。  时间格式例如：2019-05-22T07:48:19.000000
     * osExtendedVolumesvolumesAttached  云服务器挂载的云磁盘信息。
@@ -319,7 +319,7 @@ class NovaServer implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  云服务器名称。
     * id  云服务器唯一标识。
-    * status  云服务器当前状态信息。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE
+    * status  云服务器当前状态信息。  取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * created  云服务器创建时间。 时间格式例如：2019-05-22T07:48:53Z
     * updated  云服务器上一次更新时间。时间格式例如：2019-05-22T07:48:53Z
     * flavor  flavor
@@ -338,8 +338,8 @@ class NovaServer implements ModelInterface, ArrayAccess
     * osExtSrvAttRhypervisorHostname  扩展属性，hypervisor主机名。
     * osExtSrvAttRinstanceName  扩展属性，云服务器实例ID。
     * osExtStSpowerState  扩展属性，云服务器电源状态。  取值范围：0，1，2，3，4  - 0 : pending - 1 : running - 2 : paused - 3 : shutdown - 4 : crashed
-    * osExtStStaskState  扩展属性，云服务器任务状态。   取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
-    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：   ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osExtStStaskState  扩展属性，云服务器任务状态。  取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
+    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：  ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * osSrvUsGlaunchedAt  扩展属性，云服务器启动时间。时间格式例如：2019-05-22T07:48:19.000000
     * osSrvUsGterminatedAt  扩展属性，云服务器关闭时间。  时间格式例如：2019-05-22T07:48:19.000000
     * osExtendedVolumesvolumesAttached  云服务器挂载的云磁盘信息。
@@ -411,7 +411,7 @@ class NovaServer implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  云服务器名称。
     * id  云服务器唯一标识。
-    * status  云服务器当前状态信息。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE
+    * status  云服务器当前状态信息。  取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * created  云服务器创建时间。 时间格式例如：2019-05-22T07:48:53Z
     * updated  云服务器上一次更新时间。时间格式例如：2019-05-22T07:48:53Z
     * flavor  flavor
@@ -430,8 +430,8 @@ class NovaServer implements ModelInterface, ArrayAccess
     * osExtSrvAttRhypervisorHostname  扩展属性，hypervisor主机名。
     * osExtSrvAttRinstanceName  扩展属性，云服务器实例ID。
     * osExtStSpowerState  扩展属性，云服务器电源状态。  取值范围：0，1，2，3，4  - 0 : pending - 1 : running - 2 : paused - 3 : shutdown - 4 : crashed
-    * osExtStStaskState  扩展属性，云服务器任务状态。   取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
-    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：   ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * osExtStStaskState  扩展属性，云服务器任务状态。  取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
+    * osExtStSvmState  扩展属性，云服务器状态。  取值范围：  ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     * osSrvUsGlaunchedAt  扩展属性，云服务器启动时间。时间格式例如：2019-05-22T07:48:19.000000
     * osSrvUsGterminatedAt  扩展属性，云服务器关闭时间。  时间格式例如：2019-05-22T07:48:19.000000
     * osExtendedVolumesvolumesAttached  云服务器挂载的云磁盘信息。
@@ -962,7 +962,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  云服务器当前状态信息。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE
+    *  云服务器当前状态信息。  取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     *
     * @return string
     */
@@ -974,7 +974,7 @@ class NovaServer implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 云服务器当前状态信息。   取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE
+    * @param string $status 云服务器当前状态信息。  取值范围： ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     *
     * @return $this
     */
@@ -1418,7 +1418,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtStStaskState
-    *  扩展属性，云服务器任务状态。   取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    *  扩展属性，云服务器任务状态。  取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
     *
     * @return string
     */
@@ -1430,7 +1430,7 @@ class NovaServer implements ModelInterface, ArrayAccess
     /**
     * Sets osExtStStaskState
     *
-    * @param string $osExtStStaskState 扩展属性，云服务器任务状态。   取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * @param string $osExtStStaskState 扩展属性，云服务器任务状态。  取值范围：  SHOUTOFF, RESIZE, REBUILD, VERIFY_RESIZE, REVERT_RESIZE, PAUSED, MIGRATING, SUSPENDED, RESCUE, ERROR, DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED  取值范围请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)表3。
     *
     * @return $this
     */
@@ -1442,7 +1442,7 @@ class NovaServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets osExtStSvmState
-    *  扩展属性，云服务器状态。  取值范围：   ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    *  扩展属性，云服务器状态。  取值范围：  ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     *
     * @return string
     */
@@ -1454,7 +1454,7 @@ class NovaServer implements ModelInterface, ArrayAccess
     /**
     * Sets osExtStSvmState
     *
-    * @param string $osExtStSvmState 扩展属性，云服务器状态。  取值范围：   ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED
+    * @param string $osExtStSvmState 扩展属性，云服务器状态。  取值范围：  ACTIVE,BUILDING,STOPPED,RESIZED,PAUSED,SUSPENDED,RESCUED,ERROR,DELETED,SOFT_DELETED,SHELVED,SHELVED_OFFLOADED  云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)。
     *
     * @return $this
     */

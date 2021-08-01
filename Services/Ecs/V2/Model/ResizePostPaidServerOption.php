@@ -20,7 +20,7 @@ class ResizePostPaidServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * flavorRef  变更后的云服务器规格ID。
+    * flavorRef  变更后的云服务器规格ID。  可通过[查询云服务器规格变更支持列表](https://support.huaweicloud.com/api-ecs/ecs_02_0402.html)接口查询允许变更的规格列表。
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ResizePostPaidServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * flavorRef  变更后的云服务器规格ID。
+    * flavorRef  变更后的云服务器规格ID。  可通过[查询云服务器规格变更支持列表](https://support.huaweicloud.com/api-ecs/ecs_02_0402.html)接口查询允许变更的规格列表。
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ResizePostPaidServerOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * flavorRef  变更后的云服务器规格ID。
+    * flavorRef  变更后的云服务器规格ID。  可通过[查询云服务器规格变更支持列表](https://support.huaweicloud.com/api-ecs/ecs_02_0402.html)接口查询允许变更的规格列表。
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ResizePostPaidServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * flavorRef  变更后的云服务器规格ID。
+    * flavorRef  变更后的云服务器规格ID。  可通过[查询云服务器规格变更支持列表](https://support.huaweicloud.com/api-ecs/ecs_02_0402.html)接口查询允许变更的规格列表。
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ResizePostPaidServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * flavorRef  变更后的云服务器规格ID。
+    * flavorRef  变更后的云服务器规格ID。  可通过[查询云服务器规格变更支持列表](https://support.huaweicloud.com/api-ecs/ecs_02_0402.html)接口查询允许变更的规格列表。
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
     *
     * @var string[]
@@ -188,7 +188,7 @@ class ResizePostPaidServerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavorRef
-    *  变更后的云服务器规格ID。
+    *  变更后的云服务器规格ID。  可通过[查询云服务器规格变更支持列表](https://support.huaweicloud.com/api-ecs/ecs_02_0402.html)接口查询允许变更的规格列表。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class ResizePostPaidServerOption implements ModelInterface, ArrayAccess
     /**
     * Sets flavorRef
     *
-    * @param string $flavorRef 变更后的云服务器规格ID。
+    * @param string $flavorRef 变更后的云服务器规格ID。  可通过[查询云服务器规格变更支持列表](https://support.huaweicloud.com/api-ecs/ecs_02_0402.html)接口查询允许变更的规格列表。
     *
     * @return $this
     */
