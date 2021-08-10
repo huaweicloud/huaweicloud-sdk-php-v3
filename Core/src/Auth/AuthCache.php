@@ -8,9 +8,12 @@ class AuthCache
 {
     static private $authCache = [];
 
-    static public function getAuth($akWithName)
+    static function getAuth($akWithName)
     {
-        return self::$authCache[$akWithName];
+        if(in_array($akWithName,self::$authCache)){
+          return self::$authCache[$akWithName];
+        }
+        return null;
     }
 
     static function setAuth($akWithName, $id)

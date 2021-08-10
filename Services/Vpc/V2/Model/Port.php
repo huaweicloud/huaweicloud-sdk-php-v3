@@ -36,7 +36,7 @@ class Port implements ModelInterface, ArrayAccess
     * bindingvnicType  功能说明：绑定的vNIC类型 取值范围：  - normal（软交换）  - direct: SRIOV硬直通（不支持）
     * dnsAssignment  功能说明：主网卡默认内网域名信息 约束：不支持设置和更新，由系统自动维护
     * dnsName  功能说明：主网卡默认内网DNS名称 约束：不支持设置和更新，由系统自动维护
-    * bindingvifDetails  功能说明：vif的详细信息，  \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 约束：管理员权限，普通租户不可指定
+    * bindingvifDetails  bindingvifDetails
     * bindingprofile  功能说明：提供用户设置自定义信息(扩展属性)
     * instanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：不支持设置和更新，由系统自动维护
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
@@ -62,7 +62,7 @@ class Port implements ModelInterface, ArrayAccess
             'bindingvnicType' => 'string',
             'dnsAssignment' => '\HuaweiCloud\SDK\Vpc\V2\Model\DnsAssignMent[]',
             'dnsName' => 'string',
-            'bindingvifDetails' => 'object',
+            'bindingvifDetails' => '\HuaweiCloud\SDK\Vpc\V2\Model\BindingVifDetails',
             'bindingprofile' => 'object',
             'instanceId' => 'string',
             'instanceType' => 'string',
@@ -88,7 +88,7 @@ class Port implements ModelInterface, ArrayAccess
     * bindingvnicType  功能说明：绑定的vNIC类型 取值范围：  - normal（软交换）  - direct: SRIOV硬直通（不支持）
     * dnsAssignment  功能说明：主网卡默认内网域名信息 约束：不支持设置和更新，由系统自动维护
     * dnsName  功能说明：主网卡默认内网DNS名称 约束：不支持设置和更新，由系统自动维护
-    * bindingvifDetails  功能说明：vif的详细信息，  \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 约束：管理员权限，普通租户不可指定
+    * bindingvifDetails  bindingvifDetails
     * bindingprofile  功能说明：提供用户设置自定义信息(扩展属性)
     * instanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：不支持设置和更新，由系统自动维护
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
@@ -161,7 +161,7 @@ class Port implements ModelInterface, ArrayAccess
     * bindingvnicType  功能说明：绑定的vNIC类型 取值范围：  - normal（软交换）  - direct: SRIOV硬直通（不支持）
     * dnsAssignment  功能说明：主网卡默认内网域名信息 约束：不支持设置和更新，由系统自动维护
     * dnsName  功能说明：主网卡默认内网DNS名称 约束：不支持设置和更新，由系统自动维护
-    * bindingvifDetails  功能说明：vif的详细信息，  \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 约束：管理员权限，普通租户不可指定
+    * bindingvifDetails  bindingvifDetails
     * bindingprofile  功能说明：提供用户设置自定义信息(扩展属性)
     * instanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：不支持设置和更新，由系统自动维护
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
@@ -213,7 +213,7 @@ class Port implements ModelInterface, ArrayAccess
     * bindingvnicType  功能说明：绑定的vNIC类型 取值范围：  - normal（软交换）  - direct: SRIOV硬直通（不支持）
     * dnsAssignment  功能说明：主网卡默认内网域名信息 约束：不支持设置和更新，由系统自动维护
     * dnsName  功能说明：主网卡默认内网DNS名称 约束：不支持设置和更新，由系统自动维护
-    * bindingvifDetails  功能说明：vif的详细信息，  \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 约束：管理员权限，普通租户不可指定
+    * bindingvifDetails  bindingvifDetails
     * bindingprofile  功能说明：提供用户设置自定义信息(扩展属性)
     * instanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：不支持设置和更新，由系统自动维护
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
@@ -265,7 +265,7 @@ class Port implements ModelInterface, ArrayAccess
     * bindingvnicType  功能说明：绑定的vNIC类型 取值范围：  - normal（软交换）  - direct: SRIOV硬直通（不支持）
     * dnsAssignment  功能说明：主网卡默认内网域名信息 约束：不支持设置和更新，由系统自动维护
     * dnsName  功能说明：主网卡默认内网DNS名称 约束：不支持设置和更新，由系统自动维护
-    * bindingvifDetails  功能说明：vif的详细信息，  \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 约束：管理员权限，普通租户不可指定
+    * bindingvifDetails  bindingvifDetails
     * bindingprofile  功能说明：提供用户设置自定义信息(扩展属性)
     * instanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：不支持设置和更新，由系统自动维护
     * instanceType  功能说明：端口所属实例类型，例如“RDS” 约束：不支持设置和更新，由系统自动维护
@@ -913,9 +913,9 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets bindingvifDetails
-    *  功能说明：vif的详细信息，  \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 约束：管理员权限，普通租户不可指定
+    *  bindingvifDetails
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Vpc\V2\Model\BindingVifDetails
     */
     public function getBindingvifDetails()
     {
@@ -925,7 +925,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets bindingvifDetails
     *
-    * @param object $bindingvifDetails 功能说明：vif的详细信息，  \"ovs_hybrid_plug\": 是否为ovs/bridge混合模式 约束：管理员权限，普通租户不可指定
+    * @param \HuaweiCloud\SDK\Vpc\V2\Model\BindingVifDetails $bindingvifDetails bindingvifDetails
     *
     * @return $this
     */

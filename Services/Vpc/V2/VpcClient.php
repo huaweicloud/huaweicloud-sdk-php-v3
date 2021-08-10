@@ -87,6 +87,73 @@ class VpcClient extends Client
     }
 
     /**
+     * 子网关联路由表
+     * 路由表关联子网。子网关联路由表A后，再关联B，不需要先跟路由表A解关联再关联路由表B
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function associateRouteTable($request)
+    {
+        return $this->associateRouteTableWithHttpInfo($request);
+    }
+
+    public function associateRouteTableWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/routetables/{routetable_id}/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['routetableId'] !== null) {
+            $pathParams['routetable_id'] = $localVarParams['routetableId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\AssociateRouteTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\AssociateRouteTableRequest');
+    }
+
+    /**
      * 批量创建子网资源标签
      * 为指定的子网资源实例批量添加标签。 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
      *
@@ -282,6 +349,70 @@ class VpcClient extends Client
             $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\CreatePortResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\CreatePortRequest');
+    }
+
+    /**
+     * 创建路由表
+     * 创建路由表
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createRouteTable($request)
+    {
+        return $this->createRouteTableWithHttpInfo($request);
+    }
+
+    public function createRouteTableWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/routetables';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateRouteTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateRouteTableRequest');
     }
 
     /**
@@ -669,6 +800,70 @@ class VpcClient extends Client
     }
 
     /**
+     * 删除路由表
+     * 删除路由表
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteRouteTable($request)
+    {
+        return $this->deleteRouteTableWithHttpInfo($request);
+    }
+
+    public function deleteRouteTableWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/routetables/{routetable_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['routetableId'] !== null) {
+            $pathParams['routetable_id'] = $localVarParams['routetableId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\DeleteRouteTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\DeleteRouteTableRequest');
+    }
+
+    /**
      * 删除安全组
      * 删除安全组。
      *
@@ -992,6 +1187,73 @@ class VpcClient extends Client
     }
 
     /**
+     * 子网解关联路由表
+     * 子网解关联路由表
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disassociateRouteTable($request)
+    {
+        return $this->disassociateRouteTableWithHttpInfo($request);
+    }
+
+    public function disassociateRouteTableWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/routetables/{routetable_id}/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['routetableId'] !== null) {
+            $pathParams['routetable_id'] = $localVarParams['routetableId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\DisassociateRouteTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\DisassociateRouteTableRequest');
+    }
+
+    /**
      * 查询端口列表
      * 查询提交请求的租户的所有端口，单次查询最多返回2000条数据。
      *
@@ -1086,6 +1348,82 @@ class VpcClient extends Client
             $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\ListPortsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListPortsRequest');
+    }
+
+    /**
+     * 查询路由表列表
+     * 查询提交请求的帐户的所有路由表列表，并根据过滤条件进行过滤
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRouteTables($request)
+    {
+        return $this->listRouteTablesWithHttpInfo($request);
+    }
+
+    public function listRouteTablesWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/routetables';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+        if ($localVarParams['subnetId'] !== null) {
+            $queryParams['subnet_id'] = $localVarParams['subnetId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\ListRouteTablesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListRouteTablesRequest');
     }
 
     /**
@@ -1695,6 +2033,70 @@ class VpcClient extends Client
     }
 
     /**
+     * 查询路由表
+     * 查询路由表详情
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRouteTable($request)
+    {
+        return $this->showRouteTableWithHttpInfo($request);
+    }
+
+    public function showRouteTableWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/routetables/{routetable_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['routetableId'] !== null) {
+            $pathParams['routetable_id'] = $localVarParams['routetableId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowRouteTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowRouteTableRequest');
+    }
+
+    /**
      * 查询安全组
      * 查询单个安全组详情。
      *
@@ -2076,6 +2478,73 @@ class VpcClient extends Client
             $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\UpdatePortResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\UpdatePortRequest');
+    }
+
+    /**
+     * 更新路由表
+     * 更新路由表，包括可以更新路由表的名称，描述，以及新增、更新、删除路由条目
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateRouteTable($request)
+    {
+        return $this->updateRouteTableWithHttpInfo($request);
+    }
+
+    public function updateRouteTableWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/routetables/{routetable_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['routetableId'] !== null) {
+            $pathParams['routetable_id'] = $localVarParams['routetableId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\UpdateRouteTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\UpdateRouteTableRequest');
     }
 
     /**

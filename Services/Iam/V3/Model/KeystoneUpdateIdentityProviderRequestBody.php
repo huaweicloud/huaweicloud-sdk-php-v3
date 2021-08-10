@@ -25,7 +25,7 @@ class KeystoneUpdateIdentityProviderRequestBody implements ModelInterface, Array
     * @var string[]
     */
     protected static $openAPITypes = [
-            'identityProvider' => '\HuaweiCloud\SDK\Iam\V3\Model\IdentityproviderOption'
+            'identityProvider' => '\HuaweiCloud\SDK\Iam\V3\Model\UpdateIdentityproviderOption'
     ];
 
     /**
@@ -179,7 +179,7 @@ class KeystoneUpdateIdentityProviderRequestBody implements ModelInterface, Array
     * Gets identityProvider
     *  identityProvider
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\IdentityproviderOption
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\UpdateIdentityproviderOption
     */
     public function getIdentityProvider()
     {
@@ -189,7 +189,7 @@ class KeystoneUpdateIdentityProviderRequestBody implements ModelInterface, Array
     /**
     * Sets identityProvider
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\IdentityproviderOption $identityProvider identityProvider
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\UpdateIdentityproviderOption $identityProvider identityProvider
     *
     * @return $this
     */

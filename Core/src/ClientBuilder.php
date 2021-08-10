@@ -23,6 +23,8 @@ namespace HuaweiCloud\SDK\Core;
 use HuaweiCloud\SDK\Core\Auth\Credentials;
 use Monolog\Logger;
 use HuaweiCloud\SDK\Core\Auth\BasicCredentials;
+use HuaweiCloud\SDK\Core\Exceptions\SdkException;
+use HuaweiCloud\SDK\Core\Utils\CommonUtils;
 
 class ClientBuilder
 {
@@ -163,9 +165,20 @@ class ClientBuilder
     
     public function build()
     {
+        $credentialType = $this->credentialType[0];
         if (null == $this->credentials) {
             $this->credentials = Credentials::getCredentialFromEnvironment(
-                $this->clientType, $this->credentialType[0]);
+                $this->clientType, $credentialType);
+        }
+        try {
+            $credentials = get_class($this->credentials);
+            if (!CommonUtils::endsWith($credentials, $credentialType)) {
+                throw new SdkException("the authentication type must is .$credentialType");
+            }
+        } catch (SdkException $e) {
+            $msg = $e->getMessage();
+            echo "\n" . $msg . "\n";
+            exit();
         }
         $client = $this->clientType
             ->withCredentials($this->credentials)

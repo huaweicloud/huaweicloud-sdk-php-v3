@@ -20,6 +20,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * ssoType  身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种。当返回为空字符串或者null时，默认为缺省类型virtual_user_sso类型。
     * id  身份提供商ID。
     * description  身份提供商描述信息。
     * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
@@ -29,6 +30,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'ssoType' => 'string',
             'id' => 'string',
             'description' => 'string',
             'enabled' => 'bool',
@@ -38,6 +40,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * ssoType  身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种。当返回为空字符串或者null时，默认为缺省类型virtual_user_sso类型。
     * id  身份提供商ID。
     * description  身份提供商描述信息。
     * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
@@ -47,6 +50,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'ssoType' => null,
         'id' => null,
         'description' => null,
         'enabled' => null,
@@ -77,6 +81,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * ssoType  身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种。当返回为空字符串或者null时，默认为缺省类型virtual_user_sso类型。
     * id  身份提供商ID。
     * description  身份提供商描述信息。
     * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
@@ -86,6 +91,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'ssoType' => 'sso_type',
             'id' => 'id',
             'description' => 'description',
             'enabled' => 'enabled',
@@ -95,6 +101,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * ssoType  身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种。当返回为空字符串或者null时，默认为缺省类型virtual_user_sso类型。
     * id  身份提供商ID。
     * description  身份提供商描述信息。
     * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
@@ -104,6 +111,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'ssoType' => 'setSsoType',
             'id' => 'setId',
             'description' => 'setDescription',
             'enabled' => 'setEnabled',
@@ -113,6 +121,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * ssoType  身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种。当返回为空字符串或者null时，默认为缺省类型virtual_user_sso类型。
     * id  身份提供商ID。
     * description  身份提供商描述信息。
     * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
@@ -122,6 +131,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'ssoType' => 'getSsoType',
             'id' => 'getId',
             'description' => 'getDescription',
             'enabled' => 'getEnabled',
@@ -187,6 +197,7 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['ssoType'] = isset($data['ssoType']) ? $data['ssoType'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
@@ -202,6 +213,9 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['ssoType'] === null) {
+            $invalidProperties[] = "'ssoType' can't be null";
+        }
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
@@ -229,6 +243,30 @@ class IdentityprovidersResult implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets ssoType
+    *  身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种。当返回为空字符串或者null时，默认为缺省类型virtual_user_sso类型。
+    *
+    * @return string
+    */
+    public function getSsoType()
+    {
+        return $this->container['ssoType'];
+    }
+
+    /**
+    * Sets ssoType
+    *
+    * @param string $ssoType 身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种。当返回为空字符串或者null时，默认为缺省类型virtual_user_sso类型。
+    *
+    * @return $this
+    */
+    public function setSsoType($ssoType)
+    {
+        $this->container['ssoType'] = $ssoType;
+        return $this;
     }
 
     /**

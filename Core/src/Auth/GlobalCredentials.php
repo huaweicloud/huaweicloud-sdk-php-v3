@@ -251,7 +251,10 @@ class GlobalCredentials extends Credentials
         $response = $iamClient->keystoneListAuthDomains($keystoneListAuthDomainsRequest);
         try {
             if (null == $response || empty($response->getDomains())) {
-                throw new SdkException("Failed to get domain id automatically, please input domain id when initializing GlobalCredentials");
+                throw new SdkException("No domain id found, please select one of the following solutions:\n\t" .
+                    "1. Manually specify domain_id when initializing the credentials.\n\t" .
+                    "2. Use the domain account to grant the current account permissions of the IAM service.\n\t" .
+                    "3. Use AK/SK of the domain account.");
             }
             $this->domainId = reset($response->getDomains())->getId();
             AuthCache::setAuth($akWithName, $this->domainId);

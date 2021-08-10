@@ -291,7 +291,10 @@ class BasicCredentials extends Credentials
             }
             $domainId = $this->getDomainId($iamClient);
             if (!isset($domainId)) {
-                throw new SdkException("failed to get domain id");
+                throw new SdkException("No domain id found, please select one of the following solutions:\n\t" .
+                    "1. Manually specify domain_id when initializing the credentials.\n\t" .
+                    "2. Use the domain account to grant the current account permissions of the IAM service.\n\t" .
+                    "3. Use AK/SK of the domain account.");
             }
             return $this->getCreateProjectId($iamClient, $regionId, $domainId);
         } catch (SdkException $e) {
@@ -330,7 +333,10 @@ class BasicCredentials extends Credentials
         $response = $iamClient->keystoneListAuthDomains($keystoneListAuthDomainsRequest);
         try {
             if (null == $response) {
-                throw new SdkException("failed to get domain id");
+                throw new SdkException("No domain id found, please select one of the following solutions:\n\t".
+                    "1. Manually specify domain_id when initializing the credentials.\n\t" .
+                    "2. Use the domain account to grant the current account permissions of the IAM service.\n\t" .
+                    "3. Use AK/SK of the domain account.");
             }
             return reset($response->getDomains())->getId();
         } catch (SdkException $e) {
@@ -352,7 +358,7 @@ class BasicCredentials extends Credentials
             if (null == $response) {
                 throw new SdkException("failed to create project");
             }
-        return $response->getProject()->getId();
+            return $response->getProject()->getId();
         } catch (SdkException $e) {
             $msg = $e->getMessage();
             echo "\n" . $msg . "\n";

@@ -20,7 +20,7 @@ class ProtocolOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * mappingId  映射ID。
+    * mappingId  映射ID。身份提供商类型为iam_user_sso时，不需要绑定映射ID，无需传入此字段；否则此字段必填。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ProtocolOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * mappingId  映射ID。
+    * mappingId  映射ID。身份提供商类型为iam_user_sso时，不需要绑定映射ID，无需传入此字段；否则此字段必填。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ProtocolOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * mappingId  映射ID。
+    * mappingId  映射ID。身份提供商类型为iam_user_sso时，不需要绑定映射ID，无需传入此字段；否则此字段必填。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ProtocolOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * mappingId  映射ID。
+    * mappingId  映射ID。身份提供商类型为iam_user_sso时，不需要绑定映射ID，无需传入此字段；否则此字段必填。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ProtocolOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * mappingId  映射ID。
+    * mappingId  映射ID。身份提供商类型为iam_user_sso时，不需要绑定映射ID，无需传入此字段；否则此字段必填。
     *
     * @var string[]
     */
@@ -158,9 +158,6 @@ class ProtocolOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['mappingId'] === null) {
-            $invalidProperties[] = "'mappingId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -177,9 +174,9 @@ class ProtocolOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets mappingId
-    *  映射ID。
+    *  映射ID。身份提供商类型为iam_user_sso时，不需要绑定映射ID，无需传入此字段；否则此字段必填。
     *
-    * @return string
+    * @return string|null
     */
     public function getMappingId()
     {
@@ -189,7 +186,7 @@ class ProtocolOption implements ModelInterface, ArrayAccess
     /**
     * Sets mappingId
     *
-    * @param string $mappingId 映射ID。
+    * @param string|null $mappingId 映射ID。身份提供商类型为iam_user_sso时，不需要绑定映射ID，无需传入此字段；否则此字段必填。
     *
     * @return $this
     */

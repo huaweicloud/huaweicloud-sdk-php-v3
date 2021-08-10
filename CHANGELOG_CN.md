@@ -1,3 +1,50 @@
+# 3.0.17-beta 2021-08-10
+
+### HuaweiCloud SDK Core
+
+- _Features_
+    - 支持自定义认证
+- _Bug Fix_
+    - None
+- _Change_
+    - None
+
+### HuaweiCloud SDK EIP
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListBandwidths`、`ShowPublicip`的响应参数名称调整：`publicip_border_group` -> `public_border_group`
+
+### HuaweiCloud SDK EVS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListVolumes`新增请求参数`server_id`
+  
+### HuaweiCloud SDK IAM
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`CreateDeployment`移除响应参数`order_id`
+  
+### HuaweiCloud SDK IMS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 修改接口`UpdateImage`的请求参数`value`为必填参数  
+  
 # 3.0.16-beta 2021-07-30
 
 ### HuaweiCloud SDK Live

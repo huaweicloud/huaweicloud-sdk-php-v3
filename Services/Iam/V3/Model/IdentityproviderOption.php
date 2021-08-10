@@ -20,24 +20,28 @@ class IdentityproviderOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * ssoType  身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种，缺省配置默认为virtual_user_sso类型。
     * description  身份提供商描述信息。
     * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'ssoType' => 'string',
             'description' => 'string',
             'enabled' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * ssoType  身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种，缺省配置默认为virtual_user_sso类型。
     * description  身份提供商描述信息。
     * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'ssoType' => null,
         'description' => null,
         'enabled' => null
     ];
@@ -65,36 +69,42 @@ class IdentityproviderOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * ssoType  身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种，缺省配置默认为virtual_user_sso类型。
     * description  身份提供商描述信息。
     * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'ssoType' => 'sso_type',
             'description' => 'description',
             'enabled' => 'enabled'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * ssoType  身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种，缺省配置默认为virtual_user_sso类型。
     * description  身份提供商描述信息。
     * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
     *
     * @var string[]
     */
     protected static $setters = [
+            'ssoType' => 'setSsoType',
             'description' => 'setDescription',
             'enabled' => 'setEnabled'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * ssoType  身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种，缺省配置默认为virtual_user_sso类型。
     * description  身份提供商描述信息。
     * enabled  身份提供商是否启用，true为启用，false为停用，默认为false。
     *
     * @var string[]
     */
     protected static $getters = [
+            'ssoType' => 'getSsoType',
             'description' => 'getDescription',
             'enabled' => 'getEnabled'
     ];
@@ -157,6 +167,7 @@ class IdentityproviderOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['ssoType'] = isset($data['ssoType']) ? $data['ssoType'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
     }
@@ -181,6 +192,30 @@ class IdentityproviderOption implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets ssoType
+    *  身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种，缺省配置默认为virtual_user_sso类型。
+    *
+    * @return string|null
+    */
+    public function getSsoType()
+    {
+        return $this->container['ssoType'];
+    }
+
+    /**
+    * Sets ssoType
+    *
+    * @param string|null $ssoType 身份提供商类型。当前支持virtual_user_sso和iam_user_sso两种，缺省配置默认为virtual_user_sso类型。
+    *
+    * @return $this
+    */
+    public function setSsoType($ssoType)
+    {
+        $this->container['ssoType'] = $ssoType;
+        return $this;
     }
 
     /**

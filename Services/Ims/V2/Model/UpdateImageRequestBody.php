@@ -211,6 +211,9 @@ class UpdateImageRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['path'] === null) {
             $invalidProperties[] = "'path' can't be null";
         }
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -277,7 +280,7 @@ class UpdateImageRequestBody implements ModelInterface, ArrayAccess
     * Gets value
     *  需要更新属性的值。
     *
-    * @return string|null
+    * @return string
     */
     public function getValue()
     {
@@ -287,7 +290,7 @@ class UpdateImageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 需要更新属性的值。
+    * @param string $value 需要更新属性的值。
     *
     * @return $this
     */

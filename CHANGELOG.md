@@ -1,3 +1,50 @@
+# 3.0.17-beta 2021-08-10
+
+### HuaweiCloud SDK Core
+
+- _Features_
+    - Support User-defined authentication
+- _Bug Fix_
+    - None
+- _Change_
+    - None
+    
+### HuaweiCloud SDK EIP
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the name of the response parameter of the interfaces `ListBandwidths` and `ShowPublicip`: `publicip_border_group` -> `public_border_group`
+  
+### HuaweiCloud SDK EVS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `server_id` to the interface `ListVolumes`.
+  
+### HuaweiCloud SDK IAM
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the response parameter `order_id` from the interface `CreateDeployment`.
+  
+### HuaweiCloud SDK IMS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the request parameter `value` of the interface `UpdateImage` as a required parameter.     
+
 # 3.0.16-beta 2021-07-30
 
 ### HuaweiCloud SDK Live

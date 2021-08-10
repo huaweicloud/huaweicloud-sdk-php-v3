@@ -37,6 +37,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * id  云硬盘ID。
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
+    * serverId  云服务器id
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
             'volumeTypeId' => 'string',
             'id' => 'string',
             'ids' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'serverId' => 'string'
     ];
 
     /**
@@ -79,6 +81,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * id  云硬盘ID。
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
+    * serverId  云服务器id
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
         'volumeTypeId' => null,
         'id' => null,
         'ids' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'serverId' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * id  云硬盘ID。
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
+    * serverId  云服务器id
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
             'volumeTypeId' => 'volume_type_id',
             'id' => 'id',
             'ids' => 'ids',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'serverId' => 'server_id'
     ];
 
     /**
@@ -184,6 +190,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * id  云硬盘ID。
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
+    * serverId  云服务器id
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
             'volumeTypeId' => 'setVolumeTypeId',
             'id' => 'setId',
             'ids' => 'setIds',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'serverId' => 'setServerId'
     ];
 
     /**
@@ -226,6 +234,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * id  云硬盘ID。
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
+    * serverId  云服务器id
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
             'volumeTypeId' => 'getVolumeTypeId',
             'id' => 'getId',
             'ids' => 'getIds',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'serverId' => 'getServerId'
     ];
 
     /**
@@ -324,6 +334,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['ids'] = isset($data['ids']) ? $data['ids'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
     }
 
     /**
@@ -759,6 +770,30 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets serverId
+    *  云服务器id
+    *
+    * @return string|null
+    */
+    public function getServerId()
+    {
+        return $this->container['serverId'];
+    }
+
+    /**
+    * Sets serverId
+    *
+    * @param string|null $serverId 云服务器id
+    *
+    * @return $this
+    */
+    public function setServerId($serverId)
+    {
+        $this->container['serverId'] = $serverId;
         return $this;
     }
 

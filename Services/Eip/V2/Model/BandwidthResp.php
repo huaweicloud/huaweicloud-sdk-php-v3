@@ -36,7 +36,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
     * bandwidthRules  功能说明：带宽规则对象（该字段仅在上海1局点返回）
     * createdAt  功能说明：资源创建时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
-    * publicipBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
             'bandwidthRules' => '\HuaweiCloud\SDK\Eip\V2\Model\BandWidthRules[]',
             'createdAt' => 'string',
             'updatedAt' => 'string',
-            'publicipBorderGroup' => 'string'
+            'publicBorderGroup' => 'string'
     ];
 
     /**
@@ -78,7 +78,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
     * bandwidthRules  功能说明：带宽规则对象（该字段仅在上海1局点返回）
     * createdAt  功能说明：资源创建时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
-    * publicipBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
         'bandwidthRules' => null,
         'createdAt' => null,
         'updatedAt' => null,
-        'publicipBorderGroup' => null
+        'publicBorderGroup' => null
     ];
 
     /**
@@ -141,7 +141,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
     * bandwidthRules  功能说明：带宽规则对象（该字段仅在上海1局点返回）
     * createdAt  功能说明：资源创建时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
-    * publicipBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
             'bandwidthRules' => 'bandwidth_rules',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
-            'publicipBorderGroup' => 'publicip_border_group'
+            'publicBorderGroup' => 'public_border_group'
     ];
 
     /**
@@ -183,7 +183,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
     * bandwidthRules  功能说明：带宽规则对象（该字段仅在上海1局点返回）
     * createdAt  功能说明：资源创建时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
-    * publicipBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
     *
     * @var string[]
     */
@@ -204,7 +204,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
             'bandwidthRules' => 'setBandwidthRules',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
-            'publicipBorderGroup' => 'setPublicipBorderGroup'
+            'publicBorderGroup' => 'setPublicBorderGroup'
     ];
 
     /**
@@ -225,7 +225,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
     * bandwidthRules  功能说明：带宽规则对象（该字段仅在上海1局点返回）
     * createdAt  功能说明：资源创建时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
-    * publicipBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
     *
     * @var string[]
     */
@@ -246,7 +246,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
             'bandwidthRules' => 'getBandwidthRules',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
-            'publicipBorderGroup' => 'getPublicipBorderGroup'
+            'publicBorderGroup' => 'getPublicBorderGroup'
     ];
 
     /**
@@ -370,7 +370,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
         $this->container['bandwidthRules'] = isset($data['bandwidthRules']) ? $data['bandwidthRules'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
-        $this->container['publicipBorderGroup'] = isset($data['publicipBorderGroup']) ? $data['publicipBorderGroup'] : null;
+        $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
     }
 
     /**
@@ -438,8 +438,8 @@ class BandwidthResp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['ruleQuota']) && ($this->container['ruleQuota'] < 0)) {
                 $invalidProperties[] = "invalid value for 'ruleQuota', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['publicipBorderGroup']) && (mb_strlen($this->container['publicipBorderGroup']) > 36)) {
-                $invalidProperties[] = "invalid value for 'publicipBorderGroup', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) > 36)) {
+                $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be smaller than or equal to 36.";
             }
         return $invalidProperties;
     }
@@ -840,26 +840,26 @@ class BandwidthResp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets publicipBorderGroup
+    * Gets publicBorderGroup
     *  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
     *
     * @return string|null
     */
-    public function getPublicipBorderGroup()
+    public function getPublicBorderGroup()
     {
-        return $this->container['publicipBorderGroup'];
+        return $this->container['publicBorderGroup'];
     }
 
     /**
-    * Sets publicipBorderGroup
+    * Sets publicBorderGroup
     *
-    * @param string|null $publicipBorderGroup 功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
+    * @param string|null $publicBorderGroup 功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：publicip只能绑定该字段相同的资源
     *
     * @return $this
     */
-    public function setPublicipBorderGroup($publicipBorderGroup)
+    public function setPublicBorderGroup($publicBorderGroup)
     {
-        $this->container['publicipBorderGroup'] = $publicipBorderGroup;
+        $this->container['publicBorderGroup'] = $publicBorderGroup;
         return $this;
     }
 
