@@ -37,7 +37,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * id  云硬盘ID。
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
-    * serverId  云服务器id
+    * serverId  云服务器id。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * id  云硬盘ID。
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
-    * serverId  云服务器id
+    * serverId  云服务器id。
     *
     * @var string[]
     */
@@ -146,7 +146,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * id  云硬盘ID。
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
-    * serverId  云服务器id
+    * serverId  云服务器id。
     *
     * @var string[]
     */
@@ -190,7 +190,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * id  云硬盘ID。
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
-    * serverId  云服务器id
+    * serverId  云服务器id。
     *
     * @var string[]
     */
@@ -234,7 +234,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * id  云硬盘ID。
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
-    * serverId  云服务器id
+    * serverId  云服务器id。
     *
     * @var string[]
     */
@@ -775,7 +775,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverId
-    *  云服务器id
+    *  云服务器id。
     *
     * @return string|null
     */
@@ -787,7 +787,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serverId
     *
-    * @param string|null $serverId 云服务器id
+    * @param string|null $serverId 云服务器id。
     *
     * @return $this
     */

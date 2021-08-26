@@ -65,6 +65,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * osschedulerHints  osschedulerHints
     * enterpriseProjectId  弹性云服务器所属的企业项目ID。
     * sysTags  弹性云服务器系统标签。
+    * cpuOptions  cpuOptions
+    * hypervisor  hypervisor
     *
     * @var string[]
     */
@@ -113,7 +115,9 @@ class ServerDetail implements ModelInterface, ArrayAccess
             'tags' => 'string[]',
             'osschedulerHints' => '\HuaweiCloud\SDK\Ecs\V2\Model\ServerSchedulerHints',
             'enterpriseProjectId' => 'string',
-            'sysTags' => '\HuaweiCloud\SDK\Ecs\V2\Model\ServerSystemTag[]'
+            'sysTags' => '\HuaweiCloud\SDK\Ecs\V2\Model\ServerSystemTag[]',
+            'cpuOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions',
+            'hypervisor' => '\HuaweiCloud\SDK\Ecs\V2\Model\Hypervisor'
     ];
 
     /**
@@ -163,6 +167,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * osschedulerHints  osschedulerHints
     * enterpriseProjectId  弹性云服务器所属的企业项目ID。
     * sysTags  弹性云服务器系统标签。
+    * cpuOptions  cpuOptions
+    * hypervisor  hypervisor
     *
     * @var string[]
     */
@@ -211,7 +217,9 @@ class ServerDetail implements ModelInterface, ArrayAccess
         'tags' => null,
         'osschedulerHints' => null,
         'enterpriseProjectId' => null,
-        'sysTags' => null
+        'sysTags' => null,
+        'cpuOptions' => null,
+        'hypervisor' => null
     ];
 
     /**
@@ -282,6 +290,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * osschedulerHints  osschedulerHints
     * enterpriseProjectId  弹性云服务器所属的企业项目ID。
     * sysTags  弹性云服务器系统标签。
+    * cpuOptions  cpuOptions
+    * hypervisor  hypervisor
     *
     * @var string[]
     */
@@ -330,7 +340,9 @@ class ServerDetail implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'osschedulerHints' => 'os:scheduler_hints',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'sysTags' => 'sys_tags'
+            'sysTags' => 'sys_tags',
+            'cpuOptions' => 'cpu_options',
+            'hypervisor' => 'hypervisor'
     ];
 
     /**
@@ -380,6 +392,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * osschedulerHints  osschedulerHints
     * enterpriseProjectId  弹性云服务器所属的企业项目ID。
     * sysTags  弹性云服务器系统标签。
+    * cpuOptions  cpuOptions
+    * hypervisor  hypervisor
     *
     * @var string[]
     */
@@ -428,7 +442,9 @@ class ServerDetail implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'osschedulerHints' => 'setOsschedulerHints',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'sysTags' => 'setSysTags'
+            'sysTags' => 'setSysTags',
+            'cpuOptions' => 'setCpuOptions',
+            'hypervisor' => 'setHypervisor'
     ];
 
     /**
@@ -478,6 +494,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * osschedulerHints  osschedulerHints
     * enterpriseProjectId  弹性云服务器所属的企业项目ID。
     * sysTags  弹性云服务器系统标签。
+    * cpuOptions  cpuOptions
+    * hypervisor  hypervisor
     *
     * @var string[]
     */
@@ -526,7 +544,9 @@ class ServerDetail implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'osschedulerHints' => 'getOsschedulerHints',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'sysTags' => 'getSysTags'
+            'sysTags' => 'getSysTags',
+            'cpuOptions' => 'getCpuOptions',
+            'hypervisor' => 'getHypervisor'
     ];
 
     /**
@@ -632,6 +652,8 @@ class ServerDetail implements ModelInterface, ArrayAccess
         $this->container['osschedulerHints'] = isset($data['osschedulerHints']) ? $data['osschedulerHints'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
+        $this->container['cpuOptions'] = isset($data['cpuOptions']) ? $data['cpuOptions'] : null;
+        $this->container['hypervisor'] = isset($data['hypervisor']) ? $data['hypervisor'] : null;
     }
 
     /**
@@ -1838,6 +1860,54 @@ class ServerDetail implements ModelInterface, ArrayAccess
     public function setSysTags($sysTags)
     {
         $this->container['sysTags'] = $sysTags;
+        return $this;
+    }
+
+    /**
+    * Gets cpuOptions
+    *  cpuOptions
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions|null
+    */
+    public function getCpuOptions()
+    {
+        return $this->container['cpuOptions'];
+    }
+
+    /**
+    * Sets cpuOptions
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions|null $cpuOptions cpuOptions
+    *
+    * @return $this
+    */
+    public function setCpuOptions($cpuOptions)
+    {
+        $this->container['cpuOptions'] = $cpuOptions;
+        return $this;
+    }
+
+    /**
+    * Gets hypervisor
+    *  hypervisor
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\Hypervisor|null
+    */
+    public function getHypervisor()
+    {
+        return $this->container['hypervisor'];
+    }
+
+    /**
+    * Sets hypervisor
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\Hypervisor|null $hypervisor hypervisor
+    *
+    * @return $this
+    */
+    public function setHypervisor($hypervisor)
+    {
+        $this->container['hypervisor'] = $hypervisor;
         return $this;
     }
 

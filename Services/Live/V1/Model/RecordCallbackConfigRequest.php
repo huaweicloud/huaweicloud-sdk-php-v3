@@ -26,7 +26,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
     * onDemandCallbackUrl  按需录制回调url地址
     * signType  加密类型
-    * key  回调秘钥，主要用于鉴权。为了保护用户数据信息安全，建议填写。
     *
     * @var string[]
     */
@@ -36,8 +35,7 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
             'notifyCallbackUrl' => 'string',
             'notifyEventSubscription' => 'string[]',
             'onDemandCallbackUrl' => 'string',
-            'signType' => 'string',
-            'key' => 'string'
+            'signType' => 'string'
     ];
 
     /**
@@ -48,7 +46,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
     * onDemandCallbackUrl  按需录制回调url地址
     * signType  加密类型
-    * key  回调秘钥，主要用于鉴权。为了保护用户数据信息安全，建议填写。
     *
     * @var string[]
     */
@@ -58,8 +55,7 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
         'notifyCallbackUrl' => null,
         'notifyEventSubscription' => null,
         'onDemandCallbackUrl' => null,
-        'signType' => null,
-        'key' => null
+        'signType' => null
     ];
 
     /**
@@ -91,7 +87,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
     * onDemandCallbackUrl  按需录制回调url地址
     * signType  加密类型
-    * key  回调秘钥，主要用于鉴权。为了保护用户数据信息安全，建议填写。
     *
     * @var string[]
     */
@@ -101,8 +96,7 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
             'notifyCallbackUrl' => 'notify_callback_url',
             'notifyEventSubscription' => 'notify_event_subscription',
             'onDemandCallbackUrl' => 'on_demand_callback_url',
-            'signType' => 'sign_type',
-            'key' => 'key'
+            'signType' => 'sign_type'
     ];
 
     /**
@@ -113,7 +107,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
     * onDemandCallbackUrl  按需录制回调url地址
     * signType  加密类型
-    * key  回调秘钥，主要用于鉴权。为了保护用户数据信息安全，建议填写。
     *
     * @var string[]
     */
@@ -123,8 +116,7 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
             'notifyCallbackUrl' => 'setNotifyCallbackUrl',
             'notifyEventSubscription' => 'setNotifyEventSubscription',
             'onDemandCallbackUrl' => 'setOnDemandCallbackUrl',
-            'signType' => 'setSignType',
-            'key' => 'setKey'
+            'signType' => 'setSignType'
     ];
 
     /**
@@ -135,7 +127,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
     * onDemandCallbackUrl  按需录制回调url地址
     * signType  加密类型
-    * key  回调秘钥，主要用于鉴权。为了保护用户数据信息安全，建议填写。
     *
     * @var string[]
     */
@@ -145,8 +136,7 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
             'notifyCallbackUrl' => 'getNotifyCallbackUrl',
             'notifyEventSubscription' => 'getNotifyEventSubscription',
             'onDemandCallbackUrl' => 'getOnDemandCallbackUrl',
-            'signType' => 'getSignType',
-            'key' => 'getKey'
+            'signType' => 'getSignType'
     ];
 
     /**
@@ -247,7 +237,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
         $this->container['notifyEventSubscription'] = isset($data['notifyEventSubscription']) ? $data['notifyEventSubscription'] : null;
         $this->container['onDemandCallbackUrl'] = isset($data['onDemandCallbackUrl']) ? $data['onDemandCallbackUrl'] : null;
         $this->container['signType'] = isset($data['signType']) ? $data['signType'] : null;
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
     }
 
     /**
@@ -296,12 +285,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) > 32)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) < 1)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -457,30 +440,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
     public function setSignType($signType)
     {
         $this->container['signType'] = $signType;
-        return $this;
-    }
-
-    /**
-    * Gets key
-    *  回调秘钥，主要用于鉴权。为了保护用户数据信息安全，建议填写。
-    *
-    * @return string|null
-    */
-    public function getKey()
-    {
-        return $this->container['key'];
-    }
-
-    /**
-    * Sets key
-    *
-    * @param string|null $key 回调秘钥，主要用于鉴权。为了保护用户数据信息安全，建议填写。
-    *
-    * @return $this
-    */
-    public function setKey($key)
-    {
-        $this->container['key'] = $key;
         return $this;
     }
 

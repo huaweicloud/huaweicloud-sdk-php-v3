@@ -458,8 +458,11 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) > 36)) {
-                $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) > 64)) {
+                $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) < 1)) {
+                $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }

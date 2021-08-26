@@ -1,3 +1,48 @@
+# 3.0.18-beta 2021-08-25
+
+### HuaweiCloud SDK FRS
+
+- _Features_
+  - Support the `Face Recognition Service`.
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the following response parameters to the interface `ListServerInterfaces`:
+    - `delete_on_termination`
+    - `driver_mode`
+    - `min_rate`
+    - `multiqueue_num`
+    - `pci_address`
+  - Add the response parameters `cpu_options` and `hypervisor` to the interface `ListServersDetails`.
+
+### HuaweiCloud SDK EIP
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request and response parameter `public_border_group` to the interface `BatchCreateSharedBandwidths`.
+  - Add the response parameter `public_border_group` to the interface `AddPublicipsIntoSharedBandwidth`.
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - Support the interface `RunRecord`.
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+  
 # 3.0.17-beta 2021-08-10
 
 ### HuaweiCloud SDK Core

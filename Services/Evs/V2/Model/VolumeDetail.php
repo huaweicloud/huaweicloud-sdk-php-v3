@@ -33,7 +33,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * createdAt  云硬盘创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
     * osVolTenantAttrtenantId  云硬盘所属的租户ID。租户ID就是项目ID。
     * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
-    * volumeType  云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
+    * volumeType  云硬盘类型。 目前支持“SSD”，“SAS”和“SATA”三种。 “SSD”为超高IO云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
     * size  云硬盘大小，单位为GB。
     * consistencygroupId  预留属性。
     * bootable  是否为启动云硬盘。 true：表示为启动云硬盘。 false：表示为非启动云硬盘。
@@ -53,6 +53,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * tags  云硬盘的标签。 如果云硬盘有标签，则会有该字段，否则该字段为空。
     * wwn  云硬盘挂载时的唯一标识。
     * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
+    * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
     *
     * @var string[]
     */
@@ -89,7 +90,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
             'dedicatedStorageName' => 'string',
             'tags' => 'map[string,string]',
             'wwn' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'serialNumber' => 'string'
     ];
 
     /**
@@ -107,7 +109,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * createdAt  云硬盘创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
     * osVolTenantAttrtenantId  云硬盘所属的租户ID。租户ID就是项目ID。
     * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
-    * volumeType  云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
+    * volumeType  云硬盘类型。 目前支持“SSD”，“SAS”和“SATA”三种。 “SSD”为超高IO云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
     * size  云硬盘大小，单位为GB。
     * consistencygroupId  预留属性。
     * bootable  是否为启动云硬盘。 true：表示为启动云硬盘。 false：表示为非启动云硬盘。
@@ -127,6 +129,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * tags  云硬盘的标签。 如果云硬盘有标签，则会有该字段，否则该字段为空。
     * wwn  云硬盘挂载时的唯一标识。
     * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
+    * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
     *
     * @var string[]
     */
@@ -163,7 +166,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
         'dedicatedStorageName' => null,
         'tags' => null,
         'wwn' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'serialNumber' => null
     ];
 
     /**
@@ -202,7 +206,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * createdAt  云硬盘创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
     * osVolTenantAttrtenantId  云硬盘所属的租户ID。租户ID就是项目ID。
     * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
-    * volumeType  云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
+    * volumeType  云硬盘类型。 目前支持“SSD”，“SAS”和“SATA”三种。 “SSD”为超高IO云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
     * size  云硬盘大小，单位为GB。
     * consistencygroupId  预留属性。
     * bootable  是否为启动云硬盘。 true：表示为启动云硬盘。 false：表示为非启动云硬盘。
@@ -222,6 +226,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * tags  云硬盘的标签。 如果云硬盘有标签，则会有该字段，否则该字段为空。
     * wwn  云硬盘挂载时的唯一标识。
     * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
+    * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
     *
     * @var string[]
     */
@@ -258,7 +263,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
             'dedicatedStorageName' => 'dedicated_storage_name',
             'tags' => 'tags',
             'wwn' => 'wwn',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'serialNumber' => 'serial_number'
     ];
 
     /**
@@ -276,7 +282,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * createdAt  云硬盘创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
     * osVolTenantAttrtenantId  云硬盘所属的租户ID。租户ID就是项目ID。
     * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
-    * volumeType  云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
+    * volumeType  云硬盘类型。 目前支持“SSD”，“SAS”和“SATA”三种。 “SSD”为超高IO云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
     * size  云硬盘大小，单位为GB。
     * consistencygroupId  预留属性。
     * bootable  是否为启动云硬盘。 true：表示为启动云硬盘。 false：表示为非启动云硬盘。
@@ -296,6 +302,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * tags  云硬盘的标签。 如果云硬盘有标签，则会有该字段，否则该字段为空。
     * wwn  云硬盘挂载时的唯一标识。
     * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
+    * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
     *
     * @var string[]
     */
@@ -332,7 +339,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
             'dedicatedStorageName' => 'setDedicatedStorageName',
             'tags' => 'setTags',
             'wwn' => 'setWwn',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'serialNumber' => 'setSerialNumber'
     ];
 
     /**
@@ -350,7 +358,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * createdAt  云硬盘创建时间。 时间格式：UTC YYYY-MM-DDTHH:MM:SS.XXXXXX
     * osVolTenantAttrtenantId  云硬盘所属的租户ID。租户ID就是项目ID。
     * volumeImageMetadata  云硬盘镜像的元数据。 > 说明： >  > 关于“volume_image_metadata”字段的详细说明，具体请参见：\"[查询镜像详情](https://support.huaweicloud.com/api-ims/ims_03_0703.html)\"。
-    * volumeType  云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
+    * volumeType  云硬盘类型。 目前支持“SSD”，“SAS”和“SATA”三种。 “SSD”为超高IO云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
     * size  云硬盘大小，单位为GB。
     * consistencygroupId  预留属性。
     * bootable  是否为启动云硬盘。 true：表示为启动云硬盘。 false：表示为非启动云硬盘。
@@ -370,6 +378,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * tags  云硬盘的标签。 如果云硬盘有标签，则会有该字段，否则该字段为空。
     * wwn  云硬盘挂载时的唯一标识。
     * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
+    * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
     *
     * @var string[]
     */
@@ -406,7 +415,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
             'dedicatedStorageName' => 'getDedicatedStorageName',
             'tags' => 'getTags',
             'wwn' => 'getWwn',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'serialNumber' => 'getSerialNumber'
     ];
 
     /**
@@ -500,6 +510,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['wwn'] = isset($data['wwn']) ? $data['wwn'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['serialNumber'] = isset($data['serialNumber']) ? $data['serialNumber'] : null;
     }
 
     /**
@@ -916,7 +927,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeType
-    *  云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
+    *  云硬盘类型。 目前支持“SSD”，“SAS”和“SATA”三种。 “SSD”为超高IO云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
     *
     * @return string
     */
@@ -928,7 +939,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     /**
     * Sets volumeType
     *
-    * @param string $volumeType 云硬盘类型。 目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种。 “SSD”为超高IO云硬盘 “GPSSD”为通用型云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
+    * @param string $volumeType 云硬盘类型。 目前支持“SSD”，“SAS”和“SATA”三种。 “SSD”为超高IO云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘
     *
     * @return $this
     */
@@ -1391,6 +1402,30 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets serialNumber
+    *  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
+    *
+    * @return string|null
+    */
+    public function getSerialNumber()
+    {
+        return $this->container['serialNumber'];
+    }
+
+    /**
+    * Sets serialNumber
+    *
+    * @param string|null $serialNumber 云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
+    *
+    * @return $this
+    */
+    public function setSerialNumber($serialNumber)
+    {
+        $this->container['serialNumber'] = $serialNumber;
         return $this;
     }
 

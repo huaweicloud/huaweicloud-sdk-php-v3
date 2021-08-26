@@ -27,6 +27,7 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
     * notifyCallbackUrl  录制回调通知url地址
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
     * onDemandCallbackUrl  按需录制回调url地址
+    * signType  加密类型
     * createTime  创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     * updateTime  修改时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     *
@@ -39,6 +40,7 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
             'notifyCallbackUrl' => 'string',
             'notifyEventSubscription' => 'string[]',
             'onDemandCallbackUrl' => 'string',
+            'signType' => 'string',
             'createTime' => '\DateTime',
             'updateTime' => '\DateTime'
     ];
@@ -51,6 +53,7 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
     * notifyCallbackUrl  录制回调通知url地址
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
     * onDemandCallbackUrl  按需录制回调url地址
+    * signType  加密类型
     * createTime  创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     * updateTime  修改时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     *
@@ -63,6 +66,7 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
         'notifyCallbackUrl' => null,
         'notifyEventSubscription' => null,
         'onDemandCallbackUrl' => null,
+        'signType' => null,
         'createTime' => 'date',
         'updateTime' => 'date'
     ];
@@ -96,6 +100,7 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
     * notifyCallbackUrl  录制回调通知url地址
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
     * onDemandCallbackUrl  按需录制回调url地址
+    * signType  加密类型
     * createTime  创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     * updateTime  修改时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     *
@@ -108,6 +113,7 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
             'notifyCallbackUrl' => 'notify_callback_url',
             'notifyEventSubscription' => 'notify_event_subscription',
             'onDemandCallbackUrl' => 'on_demand_callback_url',
+            'signType' => 'sign_type',
             'createTime' => 'create_time',
             'updateTime' => 'update_time'
     ];
@@ -120,6 +126,7 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
     * notifyCallbackUrl  录制回调通知url地址
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
     * onDemandCallbackUrl  按需录制回调url地址
+    * signType  加密类型
     * createTime  创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     * updateTime  修改时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     *
@@ -132,6 +139,7 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
             'notifyCallbackUrl' => 'setNotifyCallbackUrl',
             'notifyEventSubscription' => 'setNotifyEventSubscription',
             'onDemandCallbackUrl' => 'setOnDemandCallbackUrl',
+            'signType' => 'setSignType',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime'
     ];
@@ -144,6 +152,7 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
     * notifyCallbackUrl  录制回调通知url地址
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
     * onDemandCallbackUrl  按需录制回调url地址
+    * signType  加密类型
     * createTime  创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     * updateTime  修改时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     *
@@ -156,6 +165,7 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
             'notifyCallbackUrl' => 'getNotifyCallbackUrl',
             'notifyEventSubscription' => 'getNotifyEventSubscription',
             'onDemandCallbackUrl' => 'getOnDemandCallbackUrl',
+            'signType' => 'getSignType',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime'
     ];
@@ -204,6 +214,8 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
     const NOTIFY_EVENT_SUBSCRIPTION_RECORD_FILE_COMPLETE = 'RECORD_FILE_COMPLETE';
     const NOTIFY_EVENT_SUBSCRIPTION_RECORD_OVER = 'RECORD_OVER';
     const NOTIFY_EVENT_SUBSCRIPTION_RECORD_FAILED = 'RECORD_FAILED';
+    const SIGN_TYPE_MD5 = 'MD5';
+    const SIGN_TYPE_HMACSHA256 = 'HMACSHA256';
     
 
     /**
@@ -218,6 +230,19 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
             self::NOTIFY_EVENT_SUBSCRIPTION_RECORD_FILE_COMPLETE,
             self::NOTIFY_EVENT_SUBSCRIPTION_RECORD_OVER,
             self::NOTIFY_EVENT_SUBSCRIPTION_RECORD_FAILED,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSignTypeAllowableValues()
+    {
+        return [
+            self::SIGN_TYPE_MD5,
+            self::SIGN_TYPE_HMACSHA256,
         ];
     }
 
@@ -243,6 +268,7 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
         $this->container['notifyCallbackUrl'] = isset($data['notifyCallbackUrl']) ? $data['notifyCallbackUrl'] : null;
         $this->container['notifyEventSubscription'] = isset($data['notifyEventSubscription']) ? $data['notifyEventSubscription'] : null;
         $this->container['onDemandCallbackUrl'] = isset($data['onDemandCallbackUrl']) ? $data['onDemandCallbackUrl'] : null;
+        $this->container['signType'] = isset($data['signType']) ? $data['signType'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }
@@ -285,6 +311,14 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['onDemandCallbackUrl']) && (mb_strlen($this->container['onDemandCallbackUrl']) < 1)) {
                 $invalidProperties[] = "invalid value for 'onDemandCallbackUrl', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getSignTypeAllowableValues();
+                if (!is_null($this->container['signType']) && !in_array($this->container['signType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'signType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -440,6 +474,30 @@ class ShowRecordCallbackConfigResponse implements ModelInterface, ArrayAccess
     public function setOnDemandCallbackUrl($onDemandCallbackUrl)
     {
         $this->container['onDemandCallbackUrl'] = $onDemandCallbackUrl;
+        return $this;
+    }
+
+    /**
+    * Gets signType
+    *  加密类型
+    *
+    * @return string|null
+    */
+    public function getSignType()
+    {
+        return $this->container['signType'];
+    }
+
+    /**
+    * Sets signType
+    *
+    * @param string|null $signType 加密类型
+    *
+    * @return $this
+    */
+    public function setSignType($signType)
+    {
+        $this->container['signType'] = $signType;
         return $this;
     }
 

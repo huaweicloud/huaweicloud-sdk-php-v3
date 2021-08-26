@@ -29,7 +29,7 @@ class CreateRouteTableReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'routes' => '\HuaweiCloud\SDK\Vpc\V2\Model\Route[]',
+            'routes' => '\HuaweiCloud\SDK\Vpc\V2\Model\RouteTableRoute[]',
             'vpcId' => 'string',
             'description' => 'string'
     ];
@@ -251,7 +251,7 @@ class CreateRouteTableReq implements ModelInterface, ArrayAccess
     * Gets routes
     *  功能说明：路由对象，参见route字段说明  约束：每个路由表最大关联200条路由
     *
-    * @return \HuaweiCloud\SDK\Vpc\V2\Model\Route[]|null
+    * @return \HuaweiCloud\SDK\Vpc\V2\Model\RouteTableRoute[]|null
     */
     public function getRoutes()
     {
@@ -261,7 +261,7 @@ class CreateRouteTableReq implements ModelInterface, ArrayAccess
     /**
     * Sets routes
     *
-    * @param \HuaweiCloud\SDK\Vpc\V2\Model\Route[]|null $routes 功能说明：路由对象，参见route字段说明  约束：每个路由表最大关联200条路由
+    * @param \HuaweiCloud\SDK\Vpc\V2\Model\RouteTableRoute[]|null $routes 功能说明：路由对象，参见route字段说明  约束：每个路由表最大关联200条路由
     *
     * @return $this
     */

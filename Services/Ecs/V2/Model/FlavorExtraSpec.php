@@ -52,6 +52,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpuname  
     * infocpuname  
     * quotagpu  
+    * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     *
     * @var string[]
     */
@@ -87,7 +88,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'condcompute' => 'string',
             'infogpuname' => 'string',
             'infocpuname' => 'string',
-            'quotagpu' => 'string'
+            'quotagpu' => 'string',
+            'ecsinstanceArchitecture' => 'string'
     ];
 
     /**
@@ -124,6 +126,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpuname  
     * infocpuname  
     * quotagpu  
+    * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     *
     * @var string[]
     */
@@ -159,7 +162,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         'condcompute' => null,
         'infogpuname' => null,
         'infocpuname' => null,
-        'quotagpu' => null
+        'quotagpu' => null,
+        'ecsinstanceArchitecture' => null
     ];
 
     /**
@@ -217,6 +221,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpuname  
     * infocpuname  
     * quotagpu  
+    * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     *
     * @var string[]
     */
@@ -252,7 +257,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'condcompute' => 'cond:compute',
             'infogpuname' => 'info:gpu:name',
             'infocpuname' => 'info:cpu:name',
-            'quotagpu' => 'quota:gpu'
+            'quotagpu' => 'quota:gpu',
+            'ecsinstanceArchitecture' => 'ecs:instance_architecture'
     ];
 
     /**
@@ -289,6 +295,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpuname  
     * infocpuname  
     * quotagpu  
+    * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     *
     * @var string[]
     */
@@ -324,7 +331,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'condcompute' => 'setCondcompute',
             'infogpuname' => 'setInfogpuname',
             'infocpuname' => 'setInfocpuname',
-            'quotagpu' => 'setQuotagpu'
+            'quotagpu' => 'setQuotagpu',
+            'ecsinstanceArchitecture' => 'setEcsinstanceArchitecture'
     ];
 
     /**
@@ -361,6 +369,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpuname  
     * infocpuname  
     * quotagpu  
+    * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     *
     * @var string[]
     */
@@ -396,7 +405,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'condcompute' => 'getCondcompute',
             'infogpuname' => 'getInfogpuname',
             'infocpuname' => 'getInfocpuname',
-            'quotagpu' => 'getQuotagpu'
+            'quotagpu' => 'getQuotagpu',
+            'ecsinstanceArchitecture' => 'getEcsinstanceArchitecture'
     ];
 
     /**
@@ -489,6 +499,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         $this->container['infogpuname'] = isset($data['infogpuname']) ? $data['infogpuname'] : null;
         $this->container['infocpuname'] = isset($data['infocpuname']) ? $data['infocpuname'] : null;
         $this->container['quotagpu'] = isset($data['quotagpu']) ? $data['quotagpu'] : null;
+        $this->container['ecsinstanceArchitecture'] = isset($data['ecsinstanceArchitecture']) ? $data['ecsinstanceArchitecture'] : null;
     }
 
     /**
@@ -499,36 +510,6 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['ecsperformancetype'] === null) {
-            $invalidProperties[] = "'ecsperformancetype' can't be null";
-        }
-        if ($this->container['hwnumaNodes'] === null) {
-            $invalidProperties[] = "'hwnumaNodes' can't be null";
-        }
-        if ($this->container['resourceType'] === null) {
-            $invalidProperties[] = "'resourceType' can't be null";
-        }
-        if ($this->container['hpetSupport'] === null) {
-            $invalidProperties[] = "'hpetSupport' can't be null";
-        }
-        if ($this->container['instanceVnictype'] === null) {
-            $invalidProperties[] = "'instanceVnictype' can't be null";
-        }
-        if ($this->container['instanceVnicinstanceBandwidth'] === null) {
-            $invalidProperties[] = "'instanceVnicinstanceBandwidth' can't be null";
-        }
-        if ($this->container['instanceVnicmaxCount'] === null) {
-            $invalidProperties[] = "'instanceVnicmaxCount' can't be null";
-        }
-        if ($this->container['pciPassthroughenableGpu'] === null) {
-            $invalidProperties[] = "'pciPassthroughenableGpu' can't be null";
-        }
-        if ($this->container['pciPassthroughgpuSpecs'] === null) {
-            $invalidProperties[] = "'pciPassthroughgpuSpecs' can't be null";
-        }
-        if ($this->container['pciPassthroughalias'] === null) {
-            $invalidProperties[] = "'pciPassthroughalias' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -547,7 +528,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * Gets ecsperformancetype
     *  云服务器规格的分类：  - normal：通用型 - cpuv1：计算I型 - cpuv2：计算II型 - highmem：内存优化型 - gpu：GPU加速型 - entry：通用入门型 - saphana：大内存型 - ultracpu：超高性能计算型 - diskintensive：磁盘增强型 - highio：超高I/O型 - fpga：FPGA加速型  > 说明：  - 早期注册的规格该字段为hws:performancetype。
     *
-    * @return string
+    * @return string|null
     */
     public function getEcsperformancetype()
     {
@@ -557,7 +538,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Sets ecsperformancetype
     *
-    * @param string $ecsperformancetype 云服务器规格的分类：  - normal：通用型 - cpuv1：计算I型 - cpuv2：计算II型 - highmem：内存优化型 - gpu：GPU加速型 - entry：通用入门型 - saphana：大内存型 - ultracpu：超高性能计算型 - diskintensive：磁盘增强型 - highio：超高I/O型 - fpga：FPGA加速型  > 说明：  - 早期注册的规格该字段为hws:performancetype。
+    * @param string|null $ecsperformancetype 云服务器规格的分类：  - normal：通用型 - cpuv1：计算I型 - cpuv2：计算II型 - highmem：内存优化型 - gpu：GPU加速型 - entry：通用入门型 - saphana：大内存型 - ultracpu：超高性能计算型 - diskintensive：磁盘增强型 - highio：超高I/O型 - fpga：FPGA加速型  > 说明：  - 早期注册的规格该字段为hws:performancetype。
     *
     * @return $this
     */
@@ -571,7 +552,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * Gets hwnumaNodes
     *  主机的物理cpu数量。
     *
-    * @return string
+    * @return string|null
     */
     public function getHwnumaNodes()
     {
@@ -581,7 +562,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Sets hwnumaNodes
     *
-    * @param string $hwnumaNodes 主机的物理cpu数量。
+    * @param string|null $hwnumaNodes 主机的物理cpu数量。
     *
     * @return $this
     */
@@ -595,7 +576,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * Gets resourceType
     *  资源类型。resource_type是为了区分云服务器的物理主机类型。
     *
-    * @return string
+    * @return string|null
     */
     public function getResourceType()
     {
@@ -605,7 +586,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型。resource_type是为了区分云服务器的物理主机类型。
+    * @param string|null $resourceType 资源类型。resource_type是为了区分云服务器的物理主机类型。
     *
     * @return $this
     */
@@ -619,7 +600,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * Gets hpetSupport
     *  弹性运服务器高精度时钟是否开启，开启为true，否则为false。（该字段是否返回根据云服务器规格而定）
     *
-    * @return string
+    * @return string|null
     */
     public function getHpetSupport()
     {
@@ -629,7 +610,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Sets hpetSupport
     *
-    * @param string $hpetSupport 弹性运服务器高精度时钟是否开启，开启为true，否则为false。（该字段是否返回根据云服务器规格而定）
+    * @param string|null $hpetSupport 弹性运服务器高精度时钟是否开启，开启为true，否则为false。（该字段是否返回根据云服务器规格而定）
     *
     * @return $this
     */
@@ -643,7 +624,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * Gets instanceVnictype
     *  网卡类型，值固定为“enhanced”，表示使用增强型网络的资源创建云服务器。
     *
-    * @return string
+    * @return string|null
     */
     public function getInstanceVnictype()
     {
@@ -653,7 +634,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Sets instanceVnictype
     *
-    * @param string $instanceVnictype 网卡类型，值固定为“enhanced”，表示使用增强型网络的资源创建云服务器。
+    * @param string|null $instanceVnictype 网卡类型，值固定为“enhanced”，表示使用增强型网络的资源创建云服务器。
     *
     * @return $this
     */
@@ -667,7 +648,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * Gets instanceVnicinstanceBandwidth
     *  最大带宽，单位Mbps，最大值为10000。
     *
-    * @return string
+    * @return string|null
     */
     public function getInstanceVnicinstanceBandwidth()
     {
@@ -677,7 +658,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Sets instanceVnicinstanceBandwidth
     *
-    * @param string $instanceVnicinstanceBandwidth 最大带宽，单位Mbps，最大值为10000。
+    * @param string|null $instanceVnicinstanceBandwidth 最大带宽，单位Mbps，最大值为10000。
     *
     * @return $this
     */
@@ -691,7 +672,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * Gets instanceVnicmaxCount
     *  最大网卡个数，最大为4。
     *
-    * @return string
+    * @return string|null
     */
     public function getInstanceVnicmaxCount()
     {
@@ -701,7 +682,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Sets instanceVnicmaxCount
     *
-    * @param string $instanceVnicmaxCount 最大网卡个数，最大为4。
+    * @param string|null $instanceVnicmaxCount 最大网卡个数，最大为4。
     *
     * @return $this
     */
@@ -835,7 +816,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * Gets pciPassthroughenableGpu
     *  显卡是否直通。  值为“true”，表示GPU直通。
     *
-    * @return string
+    * @return string|null
     */
     public function getPciPassthroughenableGpu()
     {
@@ -845,7 +826,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Sets pciPassthroughenableGpu
     *
-    * @param string $pciPassthroughenableGpu 显卡是否直通。  值为“true”，表示GPU直通。
+    * @param string|null $pciPassthroughenableGpu 显卡是否直通。  值为“true”，表示GPU直通。
     *
     * @return $this
     */
@@ -859,7 +840,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * Gets pciPassthroughgpuSpecs
     *  G1型和G2型云服务器应用的技术，包括GPU虚拟化和GPU直通。  - 如果该规格的云服务器使用GPU虚拟化技术，且GPU卡的型号为M60-1Q，参数值可设置为“m60_1q:virt:1”。 - 如果该规格的云服务器使用GPU直通技术，且GPU卡的型号为M60，参数值可设置为“m60:direct_graphics:1”。
     *
-    * @return string
+    * @return string|null
     */
     public function getPciPassthroughgpuSpecs()
     {
@@ -869,7 +850,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Sets pciPassthroughgpuSpecs
     *
-    * @param string $pciPassthroughgpuSpecs G1型和G2型云服务器应用的技术，包括GPU虚拟化和GPU直通。  - 如果该规格的云服务器使用GPU虚拟化技术，且GPU卡的型号为M60-1Q，参数值可设置为“m60_1q:virt:1”。 - 如果该规格的云服务器使用GPU直通技术，且GPU卡的型号为M60，参数值可设置为“m60:direct_graphics:1”。
+    * @param string|null $pciPassthroughgpuSpecs G1型和G2型云服务器应用的技术，包括GPU虚拟化和GPU直通。  - 如果该规格的云服务器使用GPU虚拟化技术，且GPU卡的型号为M60-1Q，参数值可设置为“m60_1q:virt:1”。 - 如果该规格的云服务器使用GPU直通技术，且GPU卡的型号为M60，参数值可设置为“m60:direct_graphics:1”。
     *
     * @return $this
     */
@@ -883,7 +864,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * Gets pciPassthroughalias
     *  P1型v本地直通GPU的型号和数量，参数值可设置为“nvidia-p100:1”，表示使用该规格创建的弹性云服务器将占用1张NVIDIA P100显卡。
     *
-    * @return string
+    * @return string|null
     */
     public function getPciPassthroughalias()
     {
@@ -893,7 +874,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     /**
     * Sets pciPassthroughalias
     *
-    * @param string $pciPassthroughalias P1型v本地直通GPU的型号和数量，参数值可设置为“nvidia-p100:1”，表示使用该规格创建的弹性云服务器将占用1张NVIDIA P100显卡。
+    * @param string|null $pciPassthroughalias P1型v本地直通GPU的型号和数量，参数值可设置为“nvidia-p100:1”，表示使用该规格创建的弹性云服务器将占用1张NVIDIA P100显卡。
     *
     * @return $this
     */
@@ -1308,6 +1289,30 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     public function setQuotagpu($quotagpu)
     {
         $this->container['quotagpu'] = $quotagpu;
+        return $this;
+    }
+
+    /**
+    * Gets ecsinstanceArchitecture
+    *  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
+    *
+    * @return string|null
+    */
+    public function getEcsinstanceArchitecture()
+    {
+        return $this->container['ecsinstanceArchitecture'];
+    }
+
+    /**
+    * Sets ecsinstanceArchitecture
+    *
+    * @param string|null $ecsinstanceArchitecture 该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
+    *
+    * @return $this
+    */
+    public function setEcsinstanceArchitecture($ecsinstanceArchitecture)
+    {
+        $this->container['ecsinstanceArchitecture'] = $ecsinstanceArchitecture;
         return $this;
     }
 

@@ -21,21 +21,25 @@ class ListServerInterfacesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * attachableQuantity  attachableQuantity
     * interfaceAttachments  云服务器网卡信息列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'attachableQuantity' => '\HuaweiCloud\SDK\Ecs\V2\Model\InterfaceAttachableQuantity',
             'interfaceAttachments' => '\HuaweiCloud\SDK\Ecs\V2\Model\InterfaceAttachment[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * attachableQuantity  attachableQuantity
     * interfaceAttachments  云服务器网卡信息列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'attachableQuantity' => null,
         'interfaceAttachments' => null
     ];
 
@@ -62,31 +66,37 @@ class ListServerInterfacesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * attachableQuantity  attachableQuantity
     * interfaceAttachments  云服务器网卡信息列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'attachableQuantity' => 'attachableQuantity',
             'interfaceAttachments' => 'interfaceAttachments'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * attachableQuantity  attachableQuantity
     * interfaceAttachments  云服务器网卡信息列表
     *
     * @var string[]
     */
     protected static $setters = [
+            'attachableQuantity' => 'setAttachableQuantity',
             'interfaceAttachments' => 'setInterfaceAttachments'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * attachableQuantity  attachableQuantity
     * interfaceAttachments  云服务器网卡信息列表
     *
     * @var string[]
     */
     protected static $getters = [
+            'attachableQuantity' => 'getAttachableQuantity',
             'interfaceAttachments' => 'getInterfaceAttachments'
     ];
 
@@ -148,6 +158,7 @@ class ListServerInterfacesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['attachableQuantity'] = isset($data['attachableQuantity']) ? $data['attachableQuantity'] : null;
         $this->container['interfaceAttachments'] = isset($data['interfaceAttachments']) ? $data['interfaceAttachments'] : null;
     }
 
@@ -171,6 +182,30 @@ class ListServerInterfacesResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets attachableQuantity
+    *  attachableQuantity
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\InterfaceAttachableQuantity|null
+    */
+    public function getAttachableQuantity()
+    {
+        return $this->container['attachableQuantity'];
+    }
+
+    /**
+    * Sets attachableQuantity
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\InterfaceAttachableQuantity|null $attachableQuantity attachableQuantity
+    *
+    * @return $this
+    */
+    public function setAttachableQuantity($attachableQuantity)
+    {
+        $this->container['attachableQuantity'] = $attachableQuantity;
+        return $this;
     }
 
     /**

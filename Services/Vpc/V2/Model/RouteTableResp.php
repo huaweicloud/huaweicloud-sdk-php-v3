@@ -35,7 +35,7 @@ class RouteTableResp implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'default' => 'bool',
-            'routes' => '\HuaweiCloud\SDK\Vpc\V2\Model\Route[]',
+            'routes' => '\HuaweiCloud\SDK\Vpc\V2\Model\RouteTableRoute[]',
             'subnets' => '\HuaweiCloud\SDK\Vpc\V2\Model\SubnetList[]',
             'tenantId' => 'string',
             'vpcId' => 'string',
@@ -370,7 +370,7 @@ class RouteTableResp implements ModelInterface, ArrayAccess
     * Gets routes
     *  功能说明：路由对象，参见route字段说明。  约束：每个路由表最大关联200条路由
     *
-    * @return \HuaweiCloud\SDK\Vpc\V2\Model\Route[]
+    * @return \HuaweiCloud\SDK\Vpc\V2\Model\RouteTableRoute[]
     */
     public function getRoutes()
     {
@@ -380,7 +380,7 @@ class RouteTableResp implements ModelInterface, ArrayAccess
     /**
     * Sets routes
     *
-    * @param \HuaweiCloud\SDK\Vpc\V2\Model\Route[] $routes 功能说明：路由对象，参见route字段说明。  约束：每个路由表最大关联200条路由
+    * @param \HuaweiCloud\SDK\Vpc\V2\Model\RouteTableRoute[] $routes 功能说明：路由对象，参见route字段说明。  约束：每个路由表最大关联200条路由
     *
     * @return $this
     */

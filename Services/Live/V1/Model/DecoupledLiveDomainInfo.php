@@ -28,6 +28,8 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * status  直播域名的状态
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
+    * statusDescribe  状态描述
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     *
     * @var string[]
     */
@@ -39,7 +41,9 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
             'domainCname' => 'string',
             'status' => 'string',
             'relatedDomain' => 'string',
-            'createTime' => '\DateTime'
+            'createTime' => '\DateTime',
+            'statusDescribe' => 'string',
+            'serviceArea' => 'string'
     ];
 
     /**
@@ -52,6 +56,8 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * status  直播域名的状态
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
+    * statusDescribe  状态描述
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     *
     * @var string[]
     */
@@ -63,7 +69,9 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
         'domainCname' => null,
         'status' => null,
         'relatedDomain' => null,
-        'createTime' => 'date-time'
+        'createTime' => 'date-time',
+        'statusDescribe' => null,
+        'serviceArea' => null
     ];
 
     /**
@@ -97,6 +105,8 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * status  直播域名的状态
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
+    * statusDescribe  状态描述
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     *
     * @var string[]
     */
@@ -108,7 +118,9 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
             'domainCname' => 'domain_cname',
             'status' => 'status',
             'relatedDomain' => 'related_domain',
-            'createTime' => 'create_time'
+            'createTime' => 'create_time',
+            'statusDescribe' => 'status_describe',
+            'serviceArea' => 'service_area'
     ];
 
     /**
@@ -121,6 +133,8 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * status  直播域名的状态
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
+    * statusDescribe  状态描述
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     *
     * @var string[]
     */
@@ -132,7 +146,9 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
             'domainCname' => 'setDomainCname',
             'status' => 'setStatus',
             'relatedDomain' => 'setRelatedDomain',
-            'createTime' => 'setCreateTime'
+            'createTime' => 'setCreateTime',
+            'statusDescribe' => 'setStatusDescribe',
+            'serviceArea' => 'setServiceArea'
     ];
 
     /**
@@ -145,6 +161,8 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * status  直播域名的状态
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
+    * statusDescribe  状态描述
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
     *
     * @var string[]
     */
@@ -156,7 +174,9 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
             'domainCname' => 'getDomainCname',
             'status' => 'getStatus',
             'relatedDomain' => 'getRelatedDomain',
-            'createTime' => 'getCreateTime'
+            'createTime' => 'getCreateTime',
+            'statusDescribe' => 'getStatusDescribe',
+            'serviceArea' => 'getServiceArea'
     ];
 
     /**
@@ -213,6 +233,9 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     const STATUS_ON = 'on';
     const STATUS_OFF = 'off';
     const STATUS_CONFIGURING = 'configuring';
+    const SERVICE_AREA_MAINLAND_CHINA = 'mainland_china';
+    const SERVICE_AREA_OUTSIDE_MAINLAND_CHINA = 'outside_mainland_china';
+    const SERVICE_AREA__GLOBAL = 'global';
     
 
     /**
@@ -262,6 +285,20 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getServiceAreaAllowableValues()
+    {
+        return [
+            self::SERVICE_AREA_MAINLAND_CHINA,
+            self::SERVICE_AREA_OUTSIDE_MAINLAND_CHINA,
+            self::SERVICE_AREA__GLOBAL,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -286,6 +323,8 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['relatedDomain'] = isset($data['relatedDomain']) ? $data['relatedDomain'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['statusDescribe'] = isset($data['statusDescribe']) ? $data['statusDescribe'] : null;
+        $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
     }
 
     /**
@@ -356,6 +395,20 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
         if ($this->container['createTime'] === null) {
             $invalidProperties[] = "'createTime' can't be null";
         }
+            if (!is_null($this->container['statusDescribe']) && (mb_strlen($this->container['statusDescribe']) > 256)) {
+                $invalidProperties[] = "invalid value for 'statusDescribe', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['statusDescribe']) && (mb_strlen($this->container['statusDescribe']) < 0)) {
+                $invalidProperties[] = "invalid value for 'statusDescribe', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getServiceAreaAllowableValues();
+                if (!is_null($this->container['serviceArea']) && !in_array($this->container['serviceArea'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'serviceArea', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -559,6 +612,54 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     public function setCreateTime($createTime)
     {
         $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets statusDescribe
+    *  状态描述
+    *
+    * @return string|null
+    */
+    public function getStatusDescribe()
+    {
+        return $this->container['statusDescribe'];
+    }
+
+    /**
+    * Sets statusDescribe
+    *
+    * @param string|null $statusDescribe 状态描述
+    *
+    * @return $this
+    */
+    public function setStatusDescribe($statusDescribe)
+    {
+        $this->container['statusDescribe'] = $statusDescribe;
+        return $this;
+    }
+
+    /**
+    * Gets serviceArea
+    *  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    *
+    * @return string|null
+    */
+    public function getServiceArea()
+    {
+        return $this->container['serviceArea'];
+    }
+
+    /**
+    * Sets serviceArea
+    *
+    * @param string|null $serviceArea 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    *
+    * @return $this
+    */
+    public function setServiceArea($serviceArea)
+    {
+        $this->container['serviceArea'] = $serviceArea;
         return $this;
     }
 

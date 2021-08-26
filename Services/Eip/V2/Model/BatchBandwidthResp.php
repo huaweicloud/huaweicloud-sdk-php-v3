@@ -30,6 +30,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
     * tenantId  功能说明：用户所属租户ID
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
             'shareType' => 'string',
             'size' => 'int',
             'tenantId' => 'string',
-            'status' => 'string'
+            'status' => 'string',
+            'publicBorderGroup' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
     * tenantId  功能说明：用户所属租户ID
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
         'shareType' => null,
         'size' => 'int32',
         'tenantId' => null,
-        'status' => null
+        'status' => null,
+        'publicBorderGroup' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
     * tenantId  功能说明：用户所属租户ID
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
             'shareType' => 'share_type',
             'size' => 'size',
             'tenantId' => 'tenant_id',
-            'status' => 'status'
+            'status' => 'status',
+            'publicBorderGroup' => 'public_border_group'
     ];
 
     /**
@@ -135,6 +141,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
     * tenantId  功能说明：用户所属租户ID
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
             'shareType' => 'setShareType',
             'size' => 'setSize',
             'tenantId' => 'setTenantId',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'publicBorderGroup' => 'setPublicBorderGroup'
     ];
 
     /**
@@ -163,6 +171,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
     * tenantId  功能说明：用户所属租户ID
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
             'shareType' => 'getShareType',
             'size' => 'getSize',
             'tenantId' => 'getTenantId',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'publicBorderGroup' => 'getPublicBorderGroup'
     ];
 
     /**
@@ -294,6 +304,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
     }
 
     /**
@@ -352,6 +363,12 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) > 64)) {
+                $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) < 1)) {
+                $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -603,6 +620,30 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets publicBorderGroup
+    *  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
+    *
+    * @return string|null
+    */
+    public function getPublicBorderGroup()
+    {
+        return $this->container['publicBorderGroup'];
+    }
+
+    /**
+    * Sets publicBorderGroup
+    *
+    * @param string|null $publicBorderGroup 功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
+    *
+    * @return $this
+    */
+    public function setPublicBorderGroup($publicBorderGroup)
+    {
+        $this->container['publicBorderGroup'] = $publicBorderGroup;
         return $this;
     }
 

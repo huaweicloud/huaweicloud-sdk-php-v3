@@ -158,9 +158,6 @@ class NovaSecurityGroupCommonIpRange implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['cidr'] === null) {
-            $invalidProperties[] = "'cidr' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -179,7 +176,7 @@ class NovaSecurityGroupCommonIpRange implements ModelInterface, ArrayAccess
     * Gets cidr
     *  对端IP网段，cidr格式。
     *
-    * @return string
+    * @return string|null
     */
     public function getCidr()
     {
@@ -189,7 +186,7 @@ class NovaSecurityGroupCommonIpRange implements ModelInterface, ArrayAccess
     /**
     * Sets cidr
     *
-    * @param string $cidr 对端IP网段，cidr格式。
+    * @param string|null $cidr 对端IP网段，cidr格式。
     *
     * @return $this
     */

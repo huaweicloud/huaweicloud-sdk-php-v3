@@ -169,12 +169,6 @@ class NovaSecurityGroupCommonGroup implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['tenantId'] === null) {
-            $invalidProperties[] = "'tenantId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -193,7 +187,7 @@ class NovaSecurityGroupCommonGroup implements ModelInterface, ArrayAccess
     * Gets name
     *  对端安全组的名称
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -203,7 +197,7 @@ class NovaSecurityGroupCommonGroup implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 对端安全组的名称
+    * @param string|null $name 对端安全组的名称
     *
     * @return $this
     */
@@ -217,7 +211,7 @@ class NovaSecurityGroupCommonGroup implements ModelInterface, ArrayAccess
     * Gets tenantId
     *  对端安全组所属租户的租户ID
     *
-    * @return string
+    * @return string|null
     */
     public function getTenantId()
     {
@@ -227,7 +221,7 @@ class NovaSecurityGroupCommonGroup implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string $tenantId 对端安全组所属租户的租户ID
+    * @param string|null $tenantId 对端安全组所属租户的租户ID
     *
     * @return $this
     */

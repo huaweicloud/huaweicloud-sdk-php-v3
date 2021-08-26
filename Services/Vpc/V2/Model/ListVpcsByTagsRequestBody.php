@@ -30,8 +30,8 @@ class ListVpcsByTagsRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'action' => 'string',
-            'limit' => 'string',
-            'offset' => 'string',
+            'limit' => 'int',
+            'offset' => 'int',
             'matches' => '\HuaweiCloud\SDK\Vpc\V2\Model\Match[]',
             'tags' => '\HuaweiCloud\SDK\Vpc\V2\Model\ListTag[]'
     ];
@@ -48,8 +48,8 @@ class ListVpcsByTagsRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'action' => null,
-        'limit' => null,
-        'offset' => null,
+        'limit' => 'int32',
+        'offset' => 'int32',
         'matches' => null,
         'tags' => null
     ];
@@ -270,7 +270,7 @@ class ListVpcsByTagsRequestBody implements ModelInterface, ArrayAccess
     * Gets limit
     *  功能说明：查询记录数 取值范围：1-1000 约束：action为count时此参数不生效；action为filter时默认为1000
     *
-    * @return string|null
+    * @return int|null
     */
     public function getLimit()
     {
@@ -280,7 +280,7 @@ class ListVpcsByTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 功能说明：查询记录数 取值范围：1-1000 约束：action为count时此参数不生效；action为filter时默认为1000
+    * @param int|null $limit 功能说明：查询记录数 取值范围：1-1000 约束：action为count时此参数不生效；action为filter时默认为1000
     *
     * @return $this
     */
@@ -294,7 +294,7 @@ class ListVpcsByTagsRequestBody implements ModelInterface, ArrayAccess
     * Gets offset
     *  功能说明：索引位置， 从offset指定的下一条数据开始查询。 查询第一页数据时，不需要传入此参数，查询后续页码数据时，将查询前一页数据时响应体中的值带入此参数 约束：action为count时无此参数；action为filter时默认为0；必须为数字，不能为负数
     *
-    * @return string|null
+    * @return int|null
     */
     public function getOffset()
     {
@@ -304,7 +304,7 @@ class ListVpcsByTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 功能说明：索引位置， 从offset指定的下一条数据开始查询。 查询第一页数据时，不需要传入此参数，查询后续页码数据时，将查询前一页数据时响应体中的值带入此参数 约束：action为count时无此参数；action为filter时默认为0；必须为数字，不能为负数
+    * @param int|null $offset 功能说明：索引位置， 从offset指定的下一条数据开始查询。 查询第一页数据时，不需要传入此参数，查询后续页码数据时，将查询前一页数据时响应体中的值带入此参数 约束：action为count时无此参数；action为filter时默认为0；必须为数字，不能为负数
     *
     * @return $this
     */

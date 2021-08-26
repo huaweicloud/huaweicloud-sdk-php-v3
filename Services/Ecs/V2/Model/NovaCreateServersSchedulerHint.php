@@ -25,6 +25,8 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
     * sameHost  与指定的弹性云服务器满足亲和性。   当前不支持该功能。
     * cidr  将弹性云服务器scheduler到指定网段的host上，host网段的cidr。   当前不支持该功能。
     * buildNearHostIp  将弹性云服务器scheduler到指定网段的host上，host IP地址。   当前不支持该功能。
+    * tenancy  在专属主机或共享池中创建弹性云服务器。默认为在共享池创建。 值为： shared 或dedicated。 shared：表示共享池。 dedicated:表示专属主机。 创建与查询此值均有效。
+    * dedicatedHostId  专属主机ID。 此属性仅在tenancy值为dedicated时有效。 不指定此属性，系统将自动分配租户可自动放置弹性云服务器的专属主机。 创建与查询此值均有效。
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
             'differentHost' => 'string[]',
             'sameHost' => 'string[]',
             'cidr' => 'string',
-            'buildNearHostIp' => 'string'
+            'buildNearHostIp' => 'string',
+            'tenancy' => 'string',
+            'dedicatedHostId' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
     * sameHost  与指定的弹性云服务器满足亲和性。   当前不支持该功能。
     * cidr  将弹性云服务器scheduler到指定网段的host上，host网段的cidr。   当前不支持该功能。
     * buildNearHostIp  将弹性云服务器scheduler到指定网段的host上，host IP地址。   当前不支持该功能。
+    * tenancy  在专属主机或共享池中创建弹性云服务器。默认为在共享池创建。 值为： shared 或dedicated。 shared：表示共享池。 dedicated:表示专属主机。 创建与查询此值均有效。
+    * dedicatedHostId  专属主机ID。 此属性仅在tenancy值为dedicated时有效。 不指定此属性，系统将自动分配租户可自动放置弹性云服务器的专属主机。 创建与查询此值均有效。
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
         'differentHost' => null,
         'sameHost' => null,
         'cidr' => null,
-        'buildNearHostIp' => null
+        'buildNearHostIp' => null,
+        'tenancy' => null,
+        'dedicatedHostId' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
     * sameHost  与指定的弹性云服务器满足亲和性。   当前不支持该功能。
     * cidr  将弹性云服务器scheduler到指定网段的host上，host网段的cidr。   当前不支持该功能。
     * buildNearHostIp  将弹性云服务器scheduler到指定网段的host上，host IP地址。   当前不支持该功能。
+    * tenancy  在专属主机或共享池中创建弹性云服务器。默认为在共享池创建。 值为： shared 或dedicated。 shared：表示共享池。 dedicated:表示专属主机。 创建与查询此值均有效。
+    * dedicatedHostId  专属主机ID。 此属性仅在tenancy值为dedicated时有效。 不指定此属性，系统将自动分配租户可自动放置弹性云服务器的专属主机。 创建与查询此值均有效。
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
             'differentHost' => 'different_host',
             'sameHost' => 'same_host',
             'cidr' => 'cidr',
-            'buildNearHostIp' => 'build_near_host_ip'
+            'buildNearHostIp' => 'build_near_host_ip',
+            'tenancy' => 'tenancy',
+            'dedicatedHostId' => 'dedicated_host_id'
     ];
 
     /**
@@ -100,6 +112,8 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
     * sameHost  与指定的弹性云服务器满足亲和性。   当前不支持该功能。
     * cidr  将弹性云服务器scheduler到指定网段的host上，host网段的cidr。   当前不支持该功能。
     * buildNearHostIp  将弹性云服务器scheduler到指定网段的host上，host IP地址。   当前不支持该功能。
+    * tenancy  在专属主机或共享池中创建弹性云服务器。默认为在共享池创建。 值为： shared 或dedicated。 shared：表示共享池。 dedicated:表示专属主机。 创建与查询此值均有效。
+    * dedicatedHostId  专属主机ID。 此属性仅在tenancy值为dedicated时有效。 不指定此属性，系统将自动分配租户可自动放置弹性云服务器的专属主机。 创建与查询此值均有效。
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
             'differentHost' => 'setDifferentHost',
             'sameHost' => 'setSameHost',
             'cidr' => 'setCidr',
-            'buildNearHostIp' => 'setBuildNearHostIp'
+            'buildNearHostIp' => 'setBuildNearHostIp',
+            'tenancy' => 'setTenancy',
+            'dedicatedHostId' => 'setDedicatedHostId'
     ];
 
     /**
@@ -118,6 +134,8 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
     * sameHost  与指定的弹性云服务器满足亲和性。   当前不支持该功能。
     * cidr  将弹性云服务器scheduler到指定网段的host上，host网段的cidr。   当前不支持该功能。
     * buildNearHostIp  将弹性云服务器scheduler到指定网段的host上，host IP地址。   当前不支持该功能。
+    * tenancy  在专属主机或共享池中创建弹性云服务器。默认为在共享池创建。 值为： shared 或dedicated。 shared：表示共享池。 dedicated:表示专属主机。 创建与查询此值均有效。
+    * dedicatedHostId  专属主机ID。 此属性仅在tenancy值为dedicated时有效。 不指定此属性，系统将自动分配租户可自动放置弹性云服务器的专属主机。 创建与查询此值均有效。
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
             'differentHost' => 'getDifferentHost',
             'sameHost' => 'getSameHost',
             'cidr' => 'getCidr',
-            'buildNearHostIp' => 'getBuildNearHostIp'
+            'buildNearHostIp' => 'getBuildNearHostIp',
+            'tenancy' => 'getTenancy',
+            'dedicatedHostId' => 'getDedicatedHostId'
     ];
 
     /**
@@ -192,6 +212,8 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
         $this->container['sameHost'] = isset($data['sameHost']) ? $data['sameHost'] : null;
         $this->container['cidr'] = isset($data['cidr']) ? $data['cidr'] : null;
         $this->container['buildNearHostIp'] = isset($data['buildNearHostIp']) ? $data['buildNearHostIp'] : null;
+        $this->container['tenancy'] = isset($data['tenancy']) ? $data['tenancy'] : null;
+        $this->container['dedicatedHostId'] = isset($data['dedicatedHostId']) ? $data['dedicatedHostId'] : null;
     }
 
     /**
@@ -333,6 +355,54 @@ class NovaCreateServersSchedulerHint implements ModelInterface, ArrayAccess
     public function setBuildNearHostIp($buildNearHostIp)
     {
         $this->container['buildNearHostIp'] = $buildNearHostIp;
+        return $this;
+    }
+
+    /**
+    * Gets tenancy
+    *  在专属主机或共享池中创建弹性云服务器。默认为在共享池创建。 值为： shared 或dedicated。 shared：表示共享池。 dedicated:表示专属主机。 创建与查询此值均有效。
+    *
+    * @return string|null
+    */
+    public function getTenancy()
+    {
+        return $this->container['tenancy'];
+    }
+
+    /**
+    * Sets tenancy
+    *
+    * @param string|null $tenancy 在专属主机或共享池中创建弹性云服务器。默认为在共享池创建。 值为： shared 或dedicated。 shared：表示共享池。 dedicated:表示专属主机。 创建与查询此值均有效。
+    *
+    * @return $this
+    */
+    public function setTenancy($tenancy)
+    {
+        $this->container['tenancy'] = $tenancy;
+        return $this;
+    }
+
+    /**
+    * Gets dedicatedHostId
+    *  专属主机ID。 此属性仅在tenancy值为dedicated时有效。 不指定此属性，系统将自动分配租户可自动放置弹性云服务器的专属主机。 创建与查询此值均有效。
+    *
+    * @return string|null
+    */
+    public function getDedicatedHostId()
+    {
+        return $this->container['dedicatedHostId'];
+    }
+
+    /**
+    * Sets dedicatedHostId
+    *
+    * @param string|null $dedicatedHostId 专属主机ID。 此属性仅在tenancy值为dedicated时有效。 不指定此属性，系统将自动分配租户可自动放置弹性云服务器的专属主机。 创建与查询此值均有效。
+    *
+    * @return $this
+    */
+    public function setDedicatedHostId($dedicatedHostId)
+    {
+        $this->container['dedicatedHostId'] = $dedicatedHostId;
         return $this;
     }
 

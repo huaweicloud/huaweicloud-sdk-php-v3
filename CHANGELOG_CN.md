@@ -1,3 +1,48 @@
+# 3.0.18-beta 2021-08-25
+
+### HuaweiCloud SDK FRS
+
+- _新增特性_
+    - 支持人脸识别服务
+- _解决问题_
+    - 无
+- _特性变更_
+    - 无
+
+### HuaweiCloud SDK ECS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListServerInterfaces`新增以下响应参数:
+    - `delete_on_termination`
+    - `driver_mode`
+    - `min_rate`
+    - `multiqueue_num`
+    - `pci_address`
+  - 接口`ListServersDetails`新增响应参数`cpu_options`和`hypervisor`
+  
+### HuaweiCloud SDK EIP
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`BatchCreateSharedBandwidths`新增请求参数和响应参数`public_border_group`
+  - 接口`AddPublicipsIntoSharedBandwidth`新增响应参数`public_border_group`
+  
+### HuaweiCloud SDK Live
+
+- _新增特性_
+  - 支持接口`RunRecord`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无  
+
 # 3.0.17-beta 2021-08-10
 
 ### HuaweiCloud SDK Core

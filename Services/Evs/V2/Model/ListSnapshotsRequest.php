@@ -26,7 +26,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     * status  云硬盘快照状态，具体请参见A.3 云硬盘快照状态。
     * volumeId  快照所属云硬盘的ID。
     * availabilityZone  快照所属云硬盘的可用区。
-    * id  指定快照id进行过滤。
+    * id  指定快照id进行过滤。可以传入多个id过滤查询，格式：id=id1&id=id2&id=id3
     * dedicatedStorageName  专属存储的名称。
     * dedicatedStorageId  专属存储ID。
     * serviceType  服务类型。仅支持EVS、DSS、DESS。
@@ -56,7 +56,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     * status  云硬盘快照状态，具体请参见A.3 云硬盘快照状态。
     * volumeId  快照所属云硬盘的ID。
     * availabilityZone  快照所属云硬盘的可用区。
-    * id  指定快照id进行过滤。
+    * id  指定快照id进行过滤。可以传入多个id过滤查询，格式：id=id1&id=id2&id=id3
     * dedicatedStorageName  专属存储的名称。
     * dedicatedStorageId  专属存储ID。
     * serviceType  服务类型。仅支持EVS、DSS、DESS。
@@ -107,7 +107,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     * status  云硬盘快照状态，具体请参见A.3 云硬盘快照状态。
     * volumeId  快照所属云硬盘的ID。
     * availabilityZone  快照所属云硬盘的可用区。
-    * id  指定快照id进行过滤。
+    * id  指定快照id进行过滤。可以传入多个id过滤查询，格式：id=id1&id=id2&id=id3
     * dedicatedStorageName  专属存储的名称。
     * dedicatedStorageId  专属存储ID。
     * serviceType  服务类型。仅支持EVS、DSS、DESS。
@@ -137,7 +137,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     * status  云硬盘快照状态，具体请参见A.3 云硬盘快照状态。
     * volumeId  快照所属云硬盘的ID。
     * availabilityZone  快照所属云硬盘的可用区。
-    * id  指定快照id进行过滤。
+    * id  指定快照id进行过滤。可以传入多个id过滤查询，格式：id=id1&id=id2&id=id3
     * dedicatedStorageName  专属存储的名称。
     * dedicatedStorageId  专属存储ID。
     * serviceType  服务类型。仅支持EVS、DSS、DESS。
@@ -167,7 +167,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     * status  云硬盘快照状态，具体请参见A.3 云硬盘快照状态。
     * volumeId  快照所属云硬盘的ID。
     * availabilityZone  快照所属云硬盘的可用区。
-    * id  指定快照id进行过滤。
+    * id  指定快照id进行过滤。可以传入多个id过滤查询，格式：id=id1&id=id2&id=id3
     * dedicatedStorageName  专属存储的名称。
     * dedicatedStorageId  专属存储ID。
     * serviceType  服务类型。仅支持EVS、DSS、DESS。
@@ -428,7 +428,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  指定快照id进行过滤。
+    *  指定快照id进行过滤。可以传入多个id过滤查询，格式：id=id1&id=id2&id=id3
     *
     * @return string|null
     */
@@ -440,7 +440,7 @@ class ListSnapshotsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 指定快照id进行过滤。
+    * @param string|null $id 指定快照id进行过滤。可以传入多个id过滤查询，格式：id=id1&id=id2&id=id3
     *
     * @return $this
     */

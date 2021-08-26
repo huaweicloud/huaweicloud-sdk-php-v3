@@ -22,7 +22,7 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * bssParam  bssParam
     * volume  volume
-    * serverId  创建云硬盘并挂载到目标虚拟机。
+    * serverId  创建云硬盘并挂载到目标虚拟机。 目前只支持ECS服务的虚拟机，暂不支持BMS的裸金属服务器。
     * osSchHnTschedulerHints  osSchHnTschedulerHints
     *
     * @var string[]
@@ -38,7 +38,7 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * bssParam  bssParam
     * volume  volume
-    * serverId  创建云硬盘并挂载到目标虚拟机。
+    * serverId  创建云硬盘并挂载到目标虚拟机。 目前只支持ECS服务的虚拟机，暂不支持BMS的裸金属服务器。
     * osSchHnTschedulerHints  osSchHnTschedulerHints
     *
     * @var string[]
@@ -75,7 +75,7 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * bssParam  bssParam
     * volume  volume
-    * serverId  创建云硬盘并挂载到目标虚拟机。
+    * serverId  创建云硬盘并挂载到目标虚拟机。 目前只支持ECS服务的虚拟机，暂不支持BMS的裸金属服务器。
     * osSchHnTschedulerHints  osSchHnTschedulerHints
     *
     * @var string[]
@@ -91,7 +91,7 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * bssParam  bssParam
     * volume  volume
-    * serverId  创建云硬盘并挂载到目标虚拟机。
+    * serverId  创建云硬盘并挂载到目标虚拟机。 目前只支持ECS服务的虚拟机，暂不支持BMS的裸金属服务器。
     * osSchHnTschedulerHints  osSchHnTschedulerHints
     *
     * @var string[]
@@ -107,7 +107,7 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * bssParam  bssParam
     * volume  volume
-    * serverId  创建云硬盘并挂载到目标虚拟机。
+    * serverId  创建云硬盘并挂载到目标虚拟机。 目前只支持ECS服务的虚拟机，暂不支持BMS的裸金属服务器。
     * osSchHnTschedulerHints  osSchHnTschedulerHints
     *
     * @var string[]
@@ -258,7 +258,7 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets serverId
-    *  创建云硬盘并挂载到目标虚拟机。
+    *  创建云硬盘并挂载到目标虚拟机。 目前只支持ECS服务的虚拟机，暂不支持BMS的裸金属服务器。
     *
     * @return string|null
     */
@@ -270,7 +270,7 @@ class CreateVolumeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets serverId
     *
-    * @param string|null $serverId 创建云硬盘并挂载到目标虚拟机。
+    * @param string|null $serverId 创建云硬盘并挂载到目标虚拟机。 目前只支持ECS服务的虚拟机，暂不支持BMS的裸金属服务器。
     *
     * @return $this
     */
