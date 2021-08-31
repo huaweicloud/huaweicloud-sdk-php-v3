@@ -25,6 +25,11 @@ class OnlineInfo implements ModelInterface, ArrayAccess
     * stream  流名
     * videoCodec  视频编码方式 - H264 - H265
     * audioCodec  音频编码方式 - AAC
+    * videoFrameRate  视频帧率
+    * audioFrameRate  音频帧率
+    * videoBitrate  视频码率
+    * audioBitrate  音频码率
+    * resolution  视频分辨率
     * clientIp  推流设备的ip
     * startTime  开始推流时刻 UTC格式 2006-01-02T15:04:05Z
     *
@@ -36,6 +41,11 @@ class OnlineInfo implements ModelInterface, ArrayAccess
             'stream' => 'string',
             'videoCodec' => 'string',
             'audioCodec' => 'string',
+            'videoFrameRate' => 'int',
+            'audioFrameRate' => 'int',
+            'videoBitrate' => 'int',
+            'audioBitrate' => 'int',
+            'resolution' => 'string',
             'clientIp' => 'string',
             'startTime' => 'string'
     ];
@@ -47,6 +57,11 @@ class OnlineInfo implements ModelInterface, ArrayAccess
     * stream  流名
     * videoCodec  视频编码方式 - H264 - H265
     * audioCodec  音频编码方式 - AAC
+    * videoFrameRate  视频帧率
+    * audioFrameRate  音频帧率
+    * videoBitrate  视频码率
+    * audioBitrate  音频码率
+    * resolution  视频分辨率
     * clientIp  推流设备的ip
     * startTime  开始推流时刻 UTC格式 2006-01-02T15:04:05Z
     *
@@ -58,6 +73,11 @@ class OnlineInfo implements ModelInterface, ArrayAccess
         'stream' => null,
         'videoCodec' => null,
         'audioCodec' => null,
+        'videoFrameRate' => 'int64',
+        'audioFrameRate' => 'int64',
+        'videoBitrate' => 'int64',
+        'audioBitrate' => 'int64',
+        'resolution' => null,
         'clientIp' => null,
         'startTime' => null
     ];
@@ -90,6 +110,11 @@ class OnlineInfo implements ModelInterface, ArrayAccess
     * stream  流名
     * videoCodec  视频编码方式 - H264 - H265
     * audioCodec  音频编码方式 - AAC
+    * videoFrameRate  视频帧率
+    * audioFrameRate  音频帧率
+    * videoBitrate  视频码率
+    * audioBitrate  音频码率
+    * resolution  视频分辨率
     * clientIp  推流设备的ip
     * startTime  开始推流时刻 UTC格式 2006-01-02T15:04:05Z
     *
@@ -101,6 +126,11 @@ class OnlineInfo implements ModelInterface, ArrayAccess
             'stream' => 'stream',
             'videoCodec' => 'video_codec',
             'audioCodec' => 'audio_codec',
+            'videoFrameRate' => 'video_frame_rate',
+            'audioFrameRate' => 'audio_frame_rate',
+            'videoBitrate' => 'video_bitrate',
+            'audioBitrate' => 'audio_bitrate',
+            'resolution' => 'resolution',
             'clientIp' => 'client_ip',
             'startTime' => 'start_time'
     ];
@@ -112,6 +142,11 @@ class OnlineInfo implements ModelInterface, ArrayAccess
     * stream  流名
     * videoCodec  视频编码方式 - H264 - H265
     * audioCodec  音频编码方式 - AAC
+    * videoFrameRate  视频帧率
+    * audioFrameRate  音频帧率
+    * videoBitrate  视频码率
+    * audioBitrate  音频码率
+    * resolution  视频分辨率
     * clientIp  推流设备的ip
     * startTime  开始推流时刻 UTC格式 2006-01-02T15:04:05Z
     *
@@ -123,6 +158,11 @@ class OnlineInfo implements ModelInterface, ArrayAccess
             'stream' => 'setStream',
             'videoCodec' => 'setVideoCodec',
             'audioCodec' => 'setAudioCodec',
+            'videoFrameRate' => 'setVideoFrameRate',
+            'audioFrameRate' => 'setAudioFrameRate',
+            'videoBitrate' => 'setVideoBitrate',
+            'audioBitrate' => 'setAudioBitrate',
+            'resolution' => 'setResolution',
             'clientIp' => 'setClientIp',
             'startTime' => 'setStartTime'
     ];
@@ -134,6 +174,11 @@ class OnlineInfo implements ModelInterface, ArrayAccess
     * stream  流名
     * videoCodec  视频编码方式 - H264 - H265
     * audioCodec  音频编码方式 - AAC
+    * videoFrameRate  视频帧率
+    * audioFrameRate  音频帧率
+    * videoBitrate  视频码率
+    * audioBitrate  音频码率
+    * resolution  视频分辨率
     * clientIp  推流设备的ip
     * startTime  开始推流时刻 UTC格式 2006-01-02T15:04:05Z
     *
@@ -145,6 +190,11 @@ class OnlineInfo implements ModelInterface, ArrayAccess
             'stream' => 'getStream',
             'videoCodec' => 'getVideoCodec',
             'audioCodec' => 'getAudioCodec',
+            'videoFrameRate' => 'getVideoFrameRate',
+            'audioFrameRate' => 'getAudioFrameRate',
+            'videoBitrate' => 'getVideoBitrate',
+            'audioBitrate' => 'getAudioBitrate',
+            'resolution' => 'getResolution',
             'clientIp' => 'getClientIp',
             'startTime' => 'getStartTime'
     ];
@@ -240,6 +290,11 @@ class OnlineInfo implements ModelInterface, ArrayAccess
         $this->container['stream'] = isset($data['stream']) ? $data['stream'] : null;
         $this->container['videoCodec'] = isset($data['videoCodec']) ? $data['videoCodec'] : null;
         $this->container['audioCodec'] = isset($data['audioCodec']) ? $data['audioCodec'] : null;
+        $this->container['videoFrameRate'] = isset($data['videoFrameRate']) ? $data['videoFrameRate'] : null;
+        $this->container['audioFrameRate'] = isset($data['audioFrameRate']) ? $data['audioFrameRate'] : null;
+        $this->container['videoBitrate'] = isset($data['videoBitrate']) ? $data['videoBitrate'] : null;
+        $this->container['audioBitrate'] = isset($data['audioBitrate']) ? $data['audioBitrate'] : null;
+        $this->container['resolution'] = isset($data['resolution']) ? $data['resolution'] : null;
         $this->container['clientIp'] = isset($data['clientIp']) ? $data['clientIp'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
     }
@@ -444,6 +499,126 @@ class OnlineInfo implements ModelInterface, ArrayAccess
     public function setAudioCodec($audioCodec)
     {
         $this->container['audioCodec'] = $audioCodec;
+        return $this;
+    }
+
+    /**
+    * Gets videoFrameRate
+    *  视频帧率
+    *
+    * @return int|null
+    */
+    public function getVideoFrameRate()
+    {
+        return $this->container['videoFrameRate'];
+    }
+
+    /**
+    * Sets videoFrameRate
+    *
+    * @param int|null $videoFrameRate 视频帧率
+    *
+    * @return $this
+    */
+    public function setVideoFrameRate($videoFrameRate)
+    {
+        $this->container['videoFrameRate'] = $videoFrameRate;
+        return $this;
+    }
+
+    /**
+    * Gets audioFrameRate
+    *  音频帧率
+    *
+    * @return int|null
+    */
+    public function getAudioFrameRate()
+    {
+        return $this->container['audioFrameRate'];
+    }
+
+    /**
+    * Sets audioFrameRate
+    *
+    * @param int|null $audioFrameRate 音频帧率
+    *
+    * @return $this
+    */
+    public function setAudioFrameRate($audioFrameRate)
+    {
+        $this->container['audioFrameRate'] = $audioFrameRate;
+        return $this;
+    }
+
+    /**
+    * Gets videoBitrate
+    *  视频码率
+    *
+    * @return int|null
+    */
+    public function getVideoBitrate()
+    {
+        return $this->container['videoBitrate'];
+    }
+
+    /**
+    * Sets videoBitrate
+    *
+    * @param int|null $videoBitrate 视频码率
+    *
+    * @return $this
+    */
+    public function setVideoBitrate($videoBitrate)
+    {
+        $this->container['videoBitrate'] = $videoBitrate;
+        return $this;
+    }
+
+    /**
+    * Gets audioBitrate
+    *  音频码率
+    *
+    * @return int|null
+    */
+    public function getAudioBitrate()
+    {
+        return $this->container['audioBitrate'];
+    }
+
+    /**
+    * Sets audioBitrate
+    *
+    * @param int|null $audioBitrate 音频码率
+    *
+    * @return $this
+    */
+    public function setAudioBitrate($audioBitrate)
+    {
+        $this->container['audioBitrate'] = $audioBitrate;
+        return $this;
+    }
+
+    /**
+    * Gets resolution
+    *  视频分辨率
+    *
+    * @return string|null
+    */
+    public function getResolution()
+    {
+        return $this->container['resolution'];
+    }
+
+    /**
+    * Sets resolution
+    *
+    * @param string|null $resolution 视频分辨率
+    *
+    * @return $this
+    */
+    public function setResolution($resolution)
+    {
+        $this->container['resolution'] = $resolution;
         return $this;
     }
 

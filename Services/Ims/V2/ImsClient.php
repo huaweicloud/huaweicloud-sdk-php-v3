@@ -2647,12 +2647,12 @@ class ImsClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/openstack-images-v2.1-json-patch', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                ['application/json;charset=UTF-8']
+                ['application/openstack-images-v2.1-json-patch', 'application/json'],
+                ['application/openstack-images-v2.1-json-patch']
             );
         }
         $headers = array_merge(

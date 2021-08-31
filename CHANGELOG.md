@@ -1,3 +1,27 @@
+# 3.0.19-beta 2021-08-31
+
+### HuaweiCloud SDK FRS
+- _Features_
+  - Support the following interfaces:
+    - `DetectLiveByUrl`
+    - `DetectLiveFaceByUrl`
+    - `DetectLiveByFile`
+    - `DetectLiveFaceByFile`
+    - `DetectLiveByBase64`
+    - `DetectLiveFaceByBase64`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+  
+### HuaweiCloud SDK Live
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `video_frame_rate`,`audio_frame_rate`,`audio_bitrate` and `resolution`.
+
 # 3.0.18-beta 2021-08-25
 
 ### HuaweiCloud SDK FRS

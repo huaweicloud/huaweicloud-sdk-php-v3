@@ -180,6 +180,9 @@ class AddFacesByFileRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['imageFile'] === null) {
+            $invalidProperties[] = "'imageFile' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -198,7 +201,7 @@ class AddFacesByFileRequestBody implements ModelInterface, ArrayAccess
     * Gets imageFile
     *  本地图片文件，图片不能超过8MB，建议小于1MB。上传文件时，请求格式为multipart。
     *
-    * @return \SplFileObject|null
+    * @return \SplFileObject
     */
     public function getImageFile()
     {
@@ -208,7 +211,7 @@ class AddFacesByFileRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets imageFile
     *
-    * @param \SplFileObject|null $imageFile 本地图片文件，图片不能超过8MB，建议小于1MB。上传文件时，请求格式为multipart。
+    * @param \SplFileObject $imageFile 本地图片文件，图片不能超过8MB，建议小于1MB。上传文件时，请求格式为multipart。
     *
     * @return $this
     */

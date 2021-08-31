@@ -1,3 +1,27 @@
+# 3.0.19-beta 2021-08-31
+
+### HuaweiCloud SDK FRS
+- _新增特性_
+  - 支持以下接口:
+    - `DetectLiveByUrl`
+    - `DetectLiveFaceByUrl`
+    - `DetectLiveByFile`
+    - `DetectLiveFaceByFile`
+    - `DetectLiveByBase64`
+    - `DetectLiveFaceByBase64`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+  
+### HuaweiCloud SDK Live
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListLiveStreamsOnline`新增响应参数`video_frame_rate`、`audio_frame_rate`、`audio_bitrate`、`resolution
+  
 # 3.0.18-beta 2021-08-25
 
 ### HuaweiCloud SDK FRS

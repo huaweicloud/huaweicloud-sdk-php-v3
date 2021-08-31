@@ -1,0 +1,30 @@
+{
+  "name": "huaweicloud/huaweicloud-sdk-ocr",
+  "description": "HUAWEICLOUD SDK OCR",
+  "keywords": [
+    "php",
+    "sdk",
+    "rest",
+    "api",
+    "ocr"
+  ],
+  "version": "3.0.19-beta",
+   "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "HuaweiCloud_SDK",
+      "email": "hwcloudsdk@huawei.com",
+      "homepage": "https://sdkcenter.developer.huaweicloud.com/?language=PHP"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "huaweicloud/huaweicloud-sdk-core": "3.0.19-beta"
+  },
+  "autoload": {
+    "psr-4": {
+      "HuaweiCloud\\SDK\\Ocr\\V3\\": "V3/"
+    }
+  }
+}
