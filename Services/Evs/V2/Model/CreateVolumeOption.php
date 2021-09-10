@@ -20,7 +20,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * availabilityZone  指定要创建云硬盘的可用区。
+    * availabilityZone  指定要创建云硬盘的可用区。 获取方法请参见\"[获取可用区](https://apiexplorer.developer.huaweicloud.com/apiexplorer/sdk?product=EVS&api=CinderListAvailabilityZones)\"。
     * backupId  备份ID，从备份创建云硬盘时为必选。
     * count  批量创云硬盘的个数。如果无该参数，表明只创建1个云硬盘，目前最多支持批量创建100个。 从备份创建云硬盘时，不支持批量创建，数量只能为“1”。  如果发送请求时，将参数值设置为小数，则默认取小数点前的整数。
     * description  云硬盘的描述。最大支持255个字节。
@@ -31,7 +31,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
     * name  云硬盘名称。 如果为创建单个云硬盘，name为云硬盘名称。最大支持255个字节。 创建的云硬盘数量（count字段对应的值）大于1时，为区分不同云硬盘，创建过程中系统会自动在名称后加“-0000”的类似标记。例如：volume-0001、volume-0002。最大支持250个字节。
     * size  云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
     * snapshotId  快照ID，指定该参数表示创建云硬盘方式为从快照创建云硬盘
-    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
+    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”三种 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。 获取region可用的卷类型，请参见[查询云硬盘类型列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=EVS&api=CinderListVolumeTypes)
     * tags  云硬盘标签信息。
     *
     * @var string[]
@@ -54,7 +54,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * availabilityZone  指定要创建云硬盘的可用区。
+    * availabilityZone  指定要创建云硬盘的可用区。 获取方法请参见\"[获取可用区](https://apiexplorer.developer.huaweicloud.com/apiexplorer/sdk?product=EVS&api=CinderListAvailabilityZones)\"。
     * backupId  备份ID，从备份创建云硬盘时为必选。
     * count  批量创云硬盘的个数。如果无该参数，表明只创建1个云硬盘，目前最多支持批量创建100个。 从备份创建云硬盘时，不支持批量创建，数量只能为“1”。  如果发送请求时，将参数值设置为小数，则默认取小数点前的整数。
     * description  云硬盘的描述。最大支持255个字节。
@@ -65,7 +65,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
     * name  云硬盘名称。 如果为创建单个云硬盘，name为云硬盘名称。最大支持255个字节。 创建的云硬盘数量（count字段对应的值）大于1时，为区分不同云硬盘，创建过程中系统会自动在名称后加“-0000”的类似标记。例如：volume-0001、volume-0002。最大支持250个字节。
     * size  云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
     * snapshotId  快照ID，指定该参数表示创建云硬盘方式为从快照创建云硬盘
-    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
+    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”三种 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。 获取region可用的卷类型，请参见[查询云硬盘类型列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=EVS&api=CinderListVolumeTypes)
     * tags  云硬盘标签信息。
     *
     * @var string[]
@@ -109,7 +109,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * availabilityZone  指定要创建云硬盘的可用区。
+    * availabilityZone  指定要创建云硬盘的可用区。 获取方法请参见\"[获取可用区](https://apiexplorer.developer.huaweicloud.com/apiexplorer/sdk?product=EVS&api=CinderListAvailabilityZones)\"。
     * backupId  备份ID，从备份创建云硬盘时为必选。
     * count  批量创云硬盘的个数。如果无该参数，表明只创建1个云硬盘，目前最多支持批量创建100个。 从备份创建云硬盘时，不支持批量创建，数量只能为“1”。  如果发送请求时，将参数值设置为小数，则默认取小数点前的整数。
     * description  云硬盘的描述。最大支持255个字节。
@@ -120,7 +120,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
     * name  云硬盘名称。 如果为创建单个云硬盘，name为云硬盘名称。最大支持255个字节。 创建的云硬盘数量（count字段对应的值）大于1时，为区分不同云硬盘，创建过程中系统会自动在名称后加“-0000”的类似标记。例如：volume-0001、volume-0002。最大支持250个字节。
     * size  云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
     * snapshotId  快照ID，指定该参数表示创建云硬盘方式为从快照创建云硬盘
-    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
+    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”三种 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。 获取region可用的卷类型，请参见[查询云硬盘类型列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=EVS&api=CinderListVolumeTypes)
     * tags  云硬盘标签信息。
     *
     * @var string[]
@@ -143,7 +143,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * availabilityZone  指定要创建云硬盘的可用区。
+    * availabilityZone  指定要创建云硬盘的可用区。 获取方法请参见\"[获取可用区](https://apiexplorer.developer.huaweicloud.com/apiexplorer/sdk?product=EVS&api=CinderListAvailabilityZones)\"。
     * backupId  备份ID，从备份创建云硬盘时为必选。
     * count  批量创云硬盘的个数。如果无该参数，表明只创建1个云硬盘，目前最多支持批量创建100个。 从备份创建云硬盘时，不支持批量创建，数量只能为“1”。  如果发送请求时，将参数值设置为小数，则默认取小数点前的整数。
     * description  云硬盘的描述。最大支持255个字节。
@@ -154,7 +154,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
     * name  云硬盘名称。 如果为创建单个云硬盘，name为云硬盘名称。最大支持255个字节。 创建的云硬盘数量（count字段对应的值）大于1时，为区分不同云硬盘，创建过程中系统会自动在名称后加“-0000”的类似标记。例如：volume-0001、volume-0002。最大支持250个字节。
     * size  云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
     * snapshotId  快照ID，指定该参数表示创建云硬盘方式为从快照创建云硬盘
-    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
+    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”三种 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。 获取region可用的卷类型，请参见[查询云硬盘类型列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=EVS&api=CinderListVolumeTypes)
     * tags  云硬盘标签信息。
     *
     * @var string[]
@@ -177,7 +177,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * availabilityZone  指定要创建云硬盘的可用区。
+    * availabilityZone  指定要创建云硬盘的可用区。 获取方法请参见\"[获取可用区](https://apiexplorer.developer.huaweicloud.com/apiexplorer/sdk?product=EVS&api=CinderListAvailabilityZones)\"。
     * backupId  备份ID，从备份创建云硬盘时为必选。
     * count  批量创云硬盘的个数。如果无该参数，表明只创建1个云硬盘，目前最多支持批量创建100个。 从备份创建云硬盘时，不支持批量创建，数量只能为“1”。  如果发送请求时，将参数值设置为小数，则默认取小数点前的整数。
     * description  云硬盘的描述。最大支持255个字节。
@@ -188,7 +188,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
     * name  云硬盘名称。 如果为创建单个云硬盘，name为云硬盘名称。最大支持255个字节。 创建的云硬盘数量（count字段对应的值）大于1时，为区分不同云硬盘，创建过程中系统会自动在名称后加“-0000”的类似标记。例如：volume-0001、volume-0002。最大支持250个字节。
     * size  云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
     * snapshotId  快照ID，指定该参数表示创建云硬盘方式为从快照创建云硬盘
-    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
+    * volumeType  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”三种 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。 获取region可用的卷类型，请参见[查询云硬盘类型列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=EVS&api=CinderListVolumeTypes)
     * tags  云硬盘标签信息。
     *
     * @var string[]
@@ -312,6 +312,9 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
         if ($this->container['availabilityZone'] === null) {
             $invalidProperties[] = "'availabilityZone' can't be null";
         }
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
+        }
         if ($this->container['volumeType'] === null) {
             $invalidProperties[] = "'volumeType' can't be null";
         }
@@ -339,7 +342,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
-    *  指定要创建云硬盘的可用区。
+    *  指定要创建云硬盘的可用区。 获取方法请参见\"[获取可用区](https://apiexplorer.developer.huaweicloud.com/apiexplorer/sdk?product=EVS&api=CinderListAvailabilityZones)\"。
     *
     * @return string
     */
@@ -351,7 +354,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string $availabilityZone 指定要创建云硬盘的可用区。
+    * @param string $availabilityZone 指定要创建云硬盘的可用区。 获取方法请参见\"[获取可用区](https://apiexplorer.developer.huaweicloud.com/apiexplorer/sdk?product=EVS&api=CinderListAvailabilityZones)\"。
     *
     * @return $this
     */
@@ -557,7 +560,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
     * Gets size
     *  云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
     *
-    * @return int|null
+    * @return int
     */
     public function getSize()
     {
@@ -567,7 +570,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
+    * @param int $size 云硬盘大小，单位为GB，其限制如下： 系统盘：1GB-1024GB 数据盘：10GB-32768GB 创建空白云硬盘和从 镜像/快照 创建云硬盘时，size为必选，且云硬盘大小不能小于 镜像/快照 大小。 从备份创建云硬盘时，size为可选，不指定size时，云硬盘大小和备份大小一致。
     *
     * @return $this
     */
@@ -603,7 +606,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeType
-    *  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
+    *  云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”三种 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。 获取region可用的卷类型，请参见[查询云硬盘类型列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=EVS&api=CinderListVolumeTypes)
     *
     * @return string
     */
@@ -615,7 +618,7 @@ class CreateVolumeOption implements ModelInterface, ArrayAccess
     /**
     * Sets volumeType
     *
-    * @param string $volumeType 云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”和“SATA”四种 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 “SATA”为普通IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。
+    * @param string $volumeType 云硬盘类型。  目前支持“SSD”，“GPSSD”，“SAS”三种 “SSD”为超高IO云硬盘 \"GPSSD\"为通用型SSD云硬盘 “SAS”为高IO云硬盘 当指定的云硬盘类型在avaliability_zone内不存在时，则创建云硬盘失败。  说明： 从快照创建云硬盘时，volume_type字段必须和快照源云硬盘保持一致。 了解不同磁盘类型的详细信息，请参见 [磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0044524691.html)。 获取region可用的卷类型，请参见[查询云硬盘类型列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=EVS&api=CinderListVolumeTypes)
     *
     * @return $this
     */

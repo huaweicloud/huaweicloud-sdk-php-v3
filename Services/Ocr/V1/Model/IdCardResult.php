@@ -29,6 +29,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * issue  发证机关。
     * validFrom  有效起始日期。
     * validTo  有效结束日期。   > 说明：  - 身份证识别只支持中国大陆汉族身份证识别。
+    * verificationResult  verificationResult
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'number' => 'string',
             'issue' => 'string',
             'validFrom' => 'string',
-            'validTo' => 'string'
+            'validTo' => 'string',
+            'verificationResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\IdcardVerificationResult'
     ];
 
     /**
@@ -55,6 +57,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * issue  发证机关。
     * validFrom  有效起始日期。
     * validTo  有效结束日期。   > 说明：  - 身份证识别只支持中国大陆汉族身份证识别。
+    * verificationResult  verificationResult
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
         'number' => null,
         'issue' => null,
         'validFrom' => null,
-        'validTo' => null
+        'validTo' => null,
+        'verificationResult' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * issue  发证机关。
     * validFrom  有效起始日期。
     * validTo  有效结束日期。   > 说明：  - 身份证识别只支持中国大陆汉族身份证识别。
+    * verificationResult  verificationResult
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'number' => 'number',
             'issue' => 'issue',
             'validFrom' => 'valid_from',
-            'validTo' => 'valid_to'
+            'validTo' => 'valid_to',
+            'verificationResult' => 'verification_result'
     ];
 
     /**
@@ -128,6 +134,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * issue  发证机关。
     * validFrom  有效起始日期。
     * validTo  有效结束日期。   > 说明：  - 身份证识别只支持中国大陆汉族身份证识别。
+    * verificationResult  verificationResult
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'number' => 'setNumber',
             'issue' => 'setIssue',
             'validFrom' => 'setValidFrom',
-            'validTo' => 'setValidTo'
+            'validTo' => 'setValidTo',
+            'verificationResult' => 'setVerificationResult'
     ];
 
     /**
@@ -154,6 +162,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * issue  发证机关。
     * validFrom  有效起始日期。
     * validTo  有效结束日期。   > 说明：  - 身份证识别只支持中国大陆汉族身份证识别。
+    * verificationResult  verificationResult
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'number' => 'getNumber',
             'issue' => 'getIssue',
             'validFrom' => 'getValidFrom',
-            'validTo' => 'getValidTo'
+            'validTo' => 'getValidTo',
+            'verificationResult' => 'getVerificationResult'
     ];
 
     /**
@@ -236,6 +246,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
         $this->container['issue'] = isset($data['issue']) ? $data['issue'] : null;
         $this->container['validFrom'] = isset($data['validFrom']) ? $data['validFrom'] : null;
         $this->container['validTo'] = isset($data['validTo']) ? $data['validTo'] : null;
+        $this->container['verificationResult'] = isset($data['verificationResult']) ? $data['verificationResult'] : null;
     }
 
     /**
@@ -473,6 +484,30 @@ class IdCardResult implements ModelInterface, ArrayAccess
     public function setValidTo($validTo)
     {
         $this->container['validTo'] = $validTo;
+        return $this;
+    }
+
+    /**
+    * Gets verificationResult
+    *  verificationResult
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\IdcardVerificationResult|null
+    */
+    public function getVerificationResult()
+    {
+        return $this->container['verificationResult'];
+    }
+
+    /**
+    * Sets verificationResult
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\IdcardVerificationResult|null $verificationResult verificationResult
+    *
+    * @return $this
+    */
+    public function setVerificationResult($verificationResult)
+    {
+        $this->container['verificationResult'] = $verificationResult;
         return $this;
     }
 

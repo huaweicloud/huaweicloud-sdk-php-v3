@@ -20,29 +20,26 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  指示各对应票证的识别状态。
+    * status  status
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'status' => 'object',
+            'status' => '\HuaweiCloud\SDK\Ocr\V1\Model\AutoClassificationResultStatus',
             'content' => 'object',
             'type' => 'string',
-            'location' => 'int[][]',
-            'confidence' => 'object'
+            'location' => 'int[][]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  指示各对应票证的识别状态。
+    * status  status
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
     */
@@ -50,8 +47,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
         'status' => null,
         'content' => null,
         'type' => null,
-        'location' => 'int32',
-        'confidence' => null
+        'location' => 'int32'
     ];
 
     /**
@@ -77,11 +73,10 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  指示各对应票证的识别状态。
+    * status  status
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
     */
@@ -89,17 +84,15 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
             'status' => 'status',
             'content' => 'content',
             'type' => 'type',
-            'location' => 'location',
-            'confidence' => 'confidence'
+            'location' => 'location'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  指示各对应票证的识别状态。
+    * status  status
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
     */
@@ -107,17 +100,15 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'content' => 'setContent',
             'type' => 'setType',
-            'location' => 'setLocation',
-            'confidence' => 'setConfidence'
+            'location' => 'setLocation'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  指示各对应票证的识别状态。
+    * status  status
     * content  对应票证具体结构化识别的结果。
     * type  对应票证的类别。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
     */
@@ -125,8 +116,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'content' => 'getContent',
             'type' => 'getType',
-            'location' => 'getLocation',
-            'confidence' => 'getConfidence'
+            'location' => 'getLocation'
     ];
 
     /**
@@ -191,7 +181,6 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
-        $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
     }
 
     /**
@@ -230,9 +219,9 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  指示各对应票证的识别状态。
+    *  status
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\AutoClassificationResultStatus
     */
     public function getStatus()
     {
@@ -242,7 +231,7 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param object $status 指示各对应票证的识别状态。
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\AutoClassificationResultStatus $status status
     *
     * @return $this
     */
@@ -321,30 +310,6 @@ class AutoClassificationResult implements ModelInterface, ArrayAccess
     public function setLocation($location)
     {
         $this->container['location'] = $location;
-        return $this;
-    }
-
-    /**
-    * Gets confidence
-    *  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
-    *
-    * @return object|null
-    */
-    public function getConfidence()
-    {
-        return $this->container['confidence'];
-    }
-
-    /**
-    * Sets confidence
-    *
-    * @param object|null $confidence 相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
-    *
-    * @return $this
-    */
-    public function setConfidence($confidence)
-    {
-        $this->container['confidence'] = $confidence;
         return $this;
     }
 

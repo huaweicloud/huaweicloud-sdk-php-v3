@@ -191,6 +191,15 @@ class RouteTableRoute implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        if ($this->container['destination'] === null) {
+            $invalidProperties[] = "'destination' can't be null";
+        }
+        if ($this->container['nexthop'] === null) {
+            $invalidProperties[] = "'nexthop' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -209,7 +218,7 @@ class RouteTableRoute implements ModelInterface, ArrayAccess
     * Gets type
     *  功能说明：路由的类型 取值范围： ecs：弹性云服务器 eni：网卡 vip：虚拟IP nat：NAT网关 peering：对等连接 vpn：虚拟专用网络 dc：云专线 cc：云连接 egw：VPC终端节点
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -219,7 +228,7 @@ class RouteTableRoute implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 功能说明：路由的类型 取值范围： ecs：弹性云服务器 eni：网卡 vip：虚拟IP nat：NAT网关 peering：对等连接 vpn：虚拟专用网络 dc：云专线 cc：云连接 egw：VPC终端节点
+    * @param string $type 功能说明：路由的类型 取值范围： ecs：弹性云服务器 eni：网卡 vip：虚拟IP nat：NAT网关 peering：对等连接 vpn：虚拟专用网络 dc：云专线 cc：云连接 egw：VPC终端节点
     *
     * @return $this
     */
@@ -233,7 +242,7 @@ class RouteTableRoute implements ModelInterface, ArrayAccess
     * Gets destination
     *  功能说明：路由目的网段 约束：合法的CIDR格式
     *
-    * @return string|null
+    * @return string
     */
     public function getDestination()
     {
@@ -243,7 +252,7 @@ class RouteTableRoute implements ModelInterface, ArrayAccess
     /**
     * Sets destination
     *
-    * @param string|null $destination 功能说明：路由目的网段 约束：合法的CIDR格式
+    * @param string $destination 功能说明：路由目的网段 约束：合法的CIDR格式
     *
     * @return $this
     */
@@ -257,7 +266,7 @@ class RouteTableRoute implements ModelInterface, ArrayAccess
     * Gets nexthop
     *  功能说明：路由下一跳对象的ID 取值范围： 当type为ecs时，传入ecs实例ID 当type为eni时，取值为从网卡ID 当type为vip时，取值为vip对应的IP地址 当type为nat时，取值为nat实例对应的ID 当type为peering时，取值为peering对应实例ID 当type为vpn时，取值为vpn实例ID 当type为dc时，取值为dc实例ID 当type为cc时，取值为cc的实例ID
     *
-    * @return string|null
+    * @return string
     */
     public function getNexthop()
     {
@@ -267,7 +276,7 @@ class RouteTableRoute implements ModelInterface, ArrayAccess
     /**
     * Sets nexthop
     *
-    * @param string|null $nexthop 功能说明：路由下一跳对象的ID 取值范围： 当type为ecs时，传入ecs实例ID 当type为eni时，取值为从网卡ID 当type为vip时，取值为vip对应的IP地址 当type为nat时，取值为nat实例对应的ID 当type为peering时，取值为peering对应实例ID 当type为vpn时，取值为vpn实例ID 当type为dc时，取值为dc实例ID 当type为cc时，取值为cc的实例ID
+    * @param string $nexthop 功能说明：路由下一跳对象的ID 取值范围： 当type为ecs时，传入ecs实例ID 当type为eni时，取值为从网卡ID 当type为vip时，取值为vip对应的IP地址 当type为nat时，取值为nat实例对应的ID 当type为peering时，取值为peering对应实例ID 当type为vpn时，取值为vpn实例ID 当type为dc时，取值为dc实例ID 当type为cc时，取值为cc的实例ID
     *
     * @return $this
     */
