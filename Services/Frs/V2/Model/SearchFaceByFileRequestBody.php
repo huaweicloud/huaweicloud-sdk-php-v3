@@ -23,8 +23,8 @@ class SearchFaceByFileRequestBody implements ModelInterface, ArrayAccess
     * imageFile  本地图片文件，图片不能超过8MB,建议小于1MB。上传文件时，请求格式为multipart。  必选，与image_url、image_base64、face_id四选一。
     * topN  返回查询到的最相似的N张人脸，N默认为10。
     * threshold  人脸相似度阈值，低于这个阈值则不返回，取值范围0~1，一般情况下建议取值0.93，默认为0。
-    * sort  支持字段排序，参考[sort语法](zh-cn_topic_0130807047.xml)。
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * sort  支持字段排序，参考[sort语法](https://support.huaweicloud.com/api-face/face_02_0013.html)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     * returnFields  指定返回的自定义字段。
     *
     * @var string[]
@@ -43,8 +43,8 @@ class SearchFaceByFileRequestBody implements ModelInterface, ArrayAccess
     * imageFile  本地图片文件，图片不能超过8MB,建议小于1MB。上传文件时，请求格式为multipart。  必选，与image_url、image_base64、face_id四选一。
     * topN  返回查询到的最相似的N张人脸，N默认为10。
     * threshold  人脸相似度阈值，低于这个阈值则不返回，取值范围0~1，一般情况下建议取值0.93，默认为0。
-    * sort  支持字段排序，参考[sort语法](zh-cn_topic_0130807047.xml)。
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * sort  支持字段排序，参考[sort语法](https://support.huaweicloud.com/api-face/face_02_0013.html)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     * returnFields  指定返回的自定义字段。
     *
     * @var string[]
@@ -84,8 +84,8 @@ class SearchFaceByFileRequestBody implements ModelInterface, ArrayAccess
     * imageFile  本地图片文件，图片不能超过8MB,建议小于1MB。上传文件时，请求格式为multipart。  必选，与image_url、image_base64、face_id四选一。
     * topN  返回查询到的最相似的N张人脸，N默认为10。
     * threshold  人脸相似度阈值，低于这个阈值则不返回，取值范围0~1，一般情况下建议取值0.93，默认为0。
-    * sort  支持字段排序，参考[sort语法](zh-cn_topic_0130807047.xml)。
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * sort  支持字段排序，参考[sort语法](https://support.huaweicloud.com/api-face/face_02_0013.html)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     * returnFields  指定返回的自定义字段。
     *
     * @var string[]
@@ -104,8 +104,8 @@ class SearchFaceByFileRequestBody implements ModelInterface, ArrayAccess
     * imageFile  本地图片文件，图片不能超过8MB,建议小于1MB。上传文件时，请求格式为multipart。  必选，与image_url、image_base64、face_id四选一。
     * topN  返回查询到的最相似的N张人脸，N默认为10。
     * threshold  人脸相似度阈值，低于这个阈值则不返回，取值范围0~1，一般情况下建议取值0.93，默认为0。
-    * sort  支持字段排序，参考[sort语法](zh-cn_topic_0130807047.xml)。
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * sort  支持字段排序，参考[sort语法](https://support.huaweicloud.com/api-face/face_02_0013.html)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     * returnFields  指定返回的自定义字段。
     *
     * @var string[]
@@ -124,8 +124,8 @@ class SearchFaceByFileRequestBody implements ModelInterface, ArrayAccess
     * imageFile  本地图片文件，图片不能超过8MB,建议小于1MB。上传文件时，请求格式为multipart。  必选，与image_url、image_base64、face_id四选一。
     * topN  返回查询到的最相似的N张人脸，N默认为10。
     * threshold  人脸相似度阈值，低于这个阈值则不返回，取值范围0~1，一般情况下建议取值0.93，默认为0。
-    * sort  支持字段排序，参考[sort语法](zh-cn_topic_0130807047.xml)。
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * sort  支持字段排序，参考[sort语法](https://support.huaweicloud.com/api-face/face_02_0013.html)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     * returnFields  指定返回的自定义字段。
     *
     * @var string[]
@@ -304,7 +304,7 @@ class SearchFaceByFileRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets sort
-    *  支持字段排序，参考[sort语法](zh-cn_topic_0130807047.xml)。
+    *  支持字段排序，参考[sort语法](https://support.huaweicloud.com/api-face/face_02_0013.html)。
     *
     * @return string|null
     */
@@ -316,7 +316,7 @@ class SearchFaceByFileRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets sort
     *
-    * @param string|null $sort 支持字段排序，参考[sort语法](zh-cn_topic_0130807047.xml)。
+    * @param string|null $sort 支持字段排序，参考[sort语法](https://support.huaweicloud.com/api-face/face_02_0013.html)。
     *
     * @return $this
     */
@@ -328,7 +328,7 @@ class SearchFaceByFileRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets filter
-    *  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    *  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     *
     * @return string|null
     */
@@ -340,7 +340,7 @@ class SearchFaceByFileRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets filter
     *
-    * @param string|null $filter 过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * @param string|null $filter 过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     *
     * @return $this
     */

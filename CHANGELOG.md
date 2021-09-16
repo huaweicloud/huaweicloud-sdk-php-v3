@@ -1,3 +1,13 @@
+# 3.0.21-beta 2021-09-16
+
+### HuaweiCloud SDK OCR
+- _Features_
+  - Support the interface `RecognizeInvoiceVerification`.
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+   
 # 3.0.20-beta 2021-09-10
 
 ### HuaweiCloud SDK OCR

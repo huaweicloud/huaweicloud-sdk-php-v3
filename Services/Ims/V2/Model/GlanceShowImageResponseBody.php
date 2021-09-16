@@ -79,6 +79,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * imageLocation  镜像的存储位置。
     * isConfigInit  是否完成了初始化配置。取值为true或false
     * accountCode  收费镜像标识。
+    * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
     */
@@ -141,7 +142,8 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'maxRam' => 'string',
             'imageLocation' => 'string',
             'isConfigInit' => 'string',
-            'accountCode' => 'string'
+            'accountCode' => 'string',
+            'supportAmd' => 'string'
     ];
 
     /**
@@ -205,6 +207,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * imageLocation  镜像的存储位置。
     * isConfigInit  是否完成了初始化配置。取值为true或false
     * accountCode  收费镜像标识。
+    * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
     */
@@ -267,7 +270,8 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
         'maxRam' => null,
         'imageLocation' => null,
         'isConfigInit' => null,
-        'accountCode' => null
+        'accountCode' => null,
+        'supportAmd' => null
     ];
 
     /**
@@ -352,6 +356,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * imageLocation  镜像的存储位置。
     * isConfigInit  是否完成了初始化配置。取值为true或false
     * accountCode  收费镜像标识。
+    * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
     */
@@ -414,7 +419,8 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'maxRam' => 'max_ram',
             'imageLocation' => '__image_location',
             'isConfigInit' => '__is_config_init',
-            'accountCode' => '__account_code'
+            'accountCode' => '__account_code',
+            'supportAmd' => '__support_amd'
     ];
 
     /**
@@ -478,6 +484,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * imageLocation  镜像的存储位置。
     * isConfigInit  是否完成了初始化配置。取值为true或false
     * accountCode  收费镜像标识。
+    * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
     */
@@ -540,7 +547,8 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'maxRam' => 'setMaxRam',
             'imageLocation' => 'setImageLocation',
             'isConfigInit' => 'setIsConfigInit',
-            'accountCode' => 'setAccountCode'
+            'accountCode' => 'setAccountCode',
+            'supportAmd' => 'setSupportAmd'
     ];
 
     /**
@@ -604,6 +612,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * imageLocation  镜像的存储位置。
     * isConfigInit  是否完成了初始化配置。取值为true或false
     * accountCode  收费镜像标识。
+    * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
     */
@@ -666,7 +675,8 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
             'maxRam' => 'getMaxRam',
             'imageLocation' => 'getImageLocation',
             'isConfigInit' => 'getIsConfigInit',
-            'accountCode' => 'getAccountCode'
+            'accountCode' => 'getAccountCode',
+            'supportAmd' => 'getSupportAmd'
     ];
 
     /**
@@ -1036,6 +1046,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
         $this->container['imageLocation'] = isset($data['imageLocation']) ? $data['imageLocation'] : null;
         $this->container['isConfigInit'] = isset($data['isConfigInit']) ? $data['isConfigInit'] : null;
         $this->container['accountCode'] = isset($data['accountCode']) ? $data['accountCode'] : null;
+        $this->container['supportAmd'] = isset($data['supportAmd']) ? $data['supportAmd'] : null;
     }
 
     /**
@@ -2762,6 +2773,30 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     public function setAccountCode($accountCode)
     {
         $this->container['accountCode'] = $accountCode;
+        return $this;
+    }
+
+    /**
+    * Gets supportAmd
+    *  是否是AMD架构类型的镜像。取值为“true”或者“false”。
+    *
+    * @return string|null
+    */
+    public function getSupportAmd()
+    {
+        return $this->container['supportAmd'];
+    }
+
+    /**
+    * Sets supportAmd
+    *
+    * @param string|null $supportAmd 是否是AMD架构类型的镜像。取值为“true”或者“false”。
+    *
+    * @return $this
+    */
+    public function setSupportAmd($supportAmd)
+    {
+        $this->container['supportAmd'] = $supportAmd;
         return $this;
     }
 

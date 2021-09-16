@@ -20,12 +20,12 @@ class FaceSearchUrlReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     * topN  返回查询到的最相似的N张人脸，N默认为10。
-    * imageUrl  图片的URL路径，目前仅支持华为云上OBS的URL，且人脸识别服务有权限读取该OBS桶的数据。 开通读取权限的操作请参见[服务授权](zh-cn_topic_0107696818.xml)。
+    * imageUrl  图片的URL路径，目前仅支持华为云上OBS的URL，且人脸识别服务有权限读取该OBS桶的数据。 开通读取权限的操作请参见[服务授权](https://support.huaweicloud.com/api-face/face_02_0006.html)。
     * returnFields  指定返回的自定义字段。
     * threshold  人脸相似度阈值，低于这个阈值则不返回，取值范围0~1，一般情况下建议取值0.93，默认为0。
-    * sort  支持字段排序，参考[sort语法](zh-cn_topic_0130807047.xml)。
+    * sort  支持字段排序，参考[sort语法](https://support.huaweicloud.com/api-face/face_02_0013.html)。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class FaceSearchUrlReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     * topN  返回查询到的最相似的N张人脸，N默认为10。
-    * imageUrl  图片的URL路径，目前仅支持华为云上OBS的URL，且人脸识别服务有权限读取该OBS桶的数据。 开通读取权限的操作请参见[服务授权](zh-cn_topic_0107696818.xml)。
+    * imageUrl  图片的URL路径，目前仅支持华为云上OBS的URL，且人脸识别服务有权限读取该OBS桶的数据。 开通读取权限的操作请参见[服务授权](https://support.huaweicloud.com/api-face/face_02_0006.html)。
     * returnFields  指定返回的自定义字段。
     * threshold  人脸相似度阈值，低于这个阈值则不返回，取值范围0~1，一般情况下建议取值0.93，默认为0。
-    * sort  支持字段排序，参考[sort语法](zh-cn_topic_0130807047.xml)。
+    * sort  支持字段排序，参考[sort语法](https://support.huaweicloud.com/api-face/face_02_0013.html)。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class FaceSearchUrlReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     * topN  返回查询到的最相似的N张人脸，N默认为10。
-    * imageUrl  图片的URL路径，目前仅支持华为云上OBS的URL，且人脸识别服务有权限读取该OBS桶的数据。 开通读取权限的操作请参见[服务授权](zh-cn_topic_0107696818.xml)。
+    * imageUrl  图片的URL路径，目前仅支持华为云上OBS的URL，且人脸识别服务有权限读取该OBS桶的数据。 开通读取权限的操作请参见[服务授权](https://support.huaweicloud.com/api-face/face_02_0006.html)。
     * returnFields  指定返回的自定义字段。
     * threshold  人脸相似度阈值，低于这个阈值则不返回，取值范围0~1，一般情况下建议取值0.93，默认为0。
-    * sort  支持字段排序，参考[sort语法](zh-cn_topic_0130807047.xml)。
+    * sort  支持字段排序，参考[sort语法](https://support.huaweicloud.com/api-face/face_02_0013.html)。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class FaceSearchUrlReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     * topN  返回查询到的最相似的N张人脸，N默认为10。
-    * imageUrl  图片的URL路径，目前仅支持华为云上OBS的URL，且人脸识别服务有权限读取该OBS桶的数据。 开通读取权限的操作请参见[服务授权](zh-cn_topic_0107696818.xml)。
+    * imageUrl  图片的URL路径，目前仅支持华为云上OBS的URL，且人脸识别服务有权限读取该OBS桶的数据。 开通读取权限的操作请参见[服务授权](https://support.huaweicloud.com/api-face/face_02_0006.html)。
     * returnFields  指定返回的自定义字段。
     * threshold  人脸相似度阈值，低于这个阈值则不返回，取值范围0~1，一般情况下建议取值0.93，默认为0。
-    * sort  支持字段排序，参考[sort语法](zh-cn_topic_0130807047.xml)。
+    * sort  支持字段排序，参考[sort语法](https://support.huaweicloud.com/api-face/face_02_0013.html)。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class FaceSearchUrlReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     * topN  返回查询到的最相似的N张人脸，N默认为10。
-    * imageUrl  图片的URL路径，目前仅支持华为云上OBS的URL，且人脸识别服务有权限读取该OBS桶的数据。 开通读取权限的操作请参见[服务授权](zh-cn_topic_0107696818.xml)。
+    * imageUrl  图片的URL路径，目前仅支持华为云上OBS的URL，且人脸识别服务有权限读取该OBS桶的数据。 开通读取权限的操作请参见[服务授权](https://support.huaweicloud.com/api-face/face_02_0006.html)。
     * returnFields  指定返回的自定义字段。
     * threshold  人脸相似度阈值，低于这个阈值则不返回，取值范围0~1，一般情况下建议取值0.93，默认为0。
-    * sort  支持字段排序，参考[sort语法](zh-cn_topic_0130807047.xml)。
+    * sort  支持字段排序，参考[sort语法](https://support.huaweicloud.com/api-face/face_02_0013.html)。
     *
     * @var string[]
     */
@@ -232,7 +232,7 @@ class FaceSearchUrlReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets filter
-    *  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    *  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class FaceSearchUrlReq implements ModelInterface, ArrayAccess
     /**
     * Sets filter
     *
-    * @param string|null $filter 过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * @param string|null $filter 过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class FaceSearchUrlReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageUrl
-    *  图片的URL路径，目前仅支持华为云上OBS的URL，且人脸识别服务有权限读取该OBS桶的数据。 开通读取权限的操作请参见[服务授权](zh-cn_topic_0107696818.xml)。
+    *  图片的URL路径，目前仅支持华为云上OBS的URL，且人脸识别服务有权限读取该OBS桶的数据。 开通读取权限的操作请参见[服务授权](https://support.huaweicloud.com/api-face/face_02_0006.html)。
     *
     * @return string
     */
@@ -292,7 +292,7 @@ class FaceSearchUrlReq implements ModelInterface, ArrayAccess
     /**
     * Sets imageUrl
     *
-    * @param string $imageUrl 图片的URL路径，目前仅支持华为云上OBS的URL，且人脸识别服务有权限读取该OBS桶的数据。 开通读取权限的操作请参见[服务授权](zh-cn_topic_0107696818.xml)。
+    * @param string $imageUrl 图片的URL路径，目前仅支持华为云上OBS的URL，且人脸识别服务有权限读取该OBS桶的数据。 开通读取权限的操作请参见[服务授权](https://support.huaweicloud.com/api-face/face_02_0006.html)。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class FaceSearchUrlReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets sort
-    *  支持字段排序，参考[sort语法](zh-cn_topic_0130807047.xml)。
+    *  支持字段排序，参考[sort语法](https://support.huaweicloud.com/api-face/face_02_0013.html)。
     *
     * @return map[string,string][]|null
     */
@@ -364,7 +364,7 @@ class FaceSearchUrlReq implements ModelInterface, ArrayAccess
     /**
     * Sets sort
     *
-    * @param map[string,string][]|null $sort 支持字段排序，参考[sort语法](zh-cn_topic_0130807047.xml)。
+    * @param map[string,string][]|null $sort 支持字段排序，参考[sort语法](https://support.huaweicloud.com/api-face/face_02_0013.html)。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ShowAllFaceSetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * faceSetsInfo  人脸库信息集合，详见[FaceSetInfo](zh-cn_topic_0106912072.xml)。 调用失败时无此字段。
+    * faceSetsInfo  人脸库信息集合，详见[FaceSetInfo](https://support.huaweicloud.com/api-face/face_02_0020.html)。 调用失败时无此字段。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowAllFaceSetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * faceSetsInfo  人脸库信息集合，详见[FaceSetInfo](zh-cn_topic_0106912072.xml)。 调用失败时无此字段。
+    * faceSetsInfo  人脸库信息集合，详见[FaceSetInfo](https://support.huaweicloud.com/api-face/face_02_0020.html)。 调用失败时无此字段。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowAllFaceSetsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * faceSetsInfo  人脸库信息集合，详见[FaceSetInfo](zh-cn_topic_0106912072.xml)。 调用失败时无此字段。
+    * faceSetsInfo  人脸库信息集合，详见[FaceSetInfo](https://support.huaweicloud.com/api-face/face_02_0020.html)。 调用失败时无此字段。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowAllFaceSetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * faceSetsInfo  人脸库信息集合，详见[FaceSetInfo](zh-cn_topic_0106912072.xml)。 调用失败时无此字段。
+    * faceSetsInfo  人脸库信息集合，详见[FaceSetInfo](https://support.huaweicloud.com/api-face/face_02_0020.html)。 调用失败时无此字段。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowAllFaceSetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * faceSetsInfo  人脸库信息集合，详见[FaceSetInfo](zh-cn_topic_0106912072.xml)。 调用失败时无此字段。
+    * faceSetsInfo  人脸库信息集合，详见[FaceSetInfo](https://support.huaweicloud.com/api-face/face_02_0020.html)。 调用失败时无此字段。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowAllFaceSetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets faceSetsInfo
-    *  人脸库信息集合，详见[FaceSetInfo](zh-cn_topic_0106912072.xml)。 调用失败时无此字段。
+    *  人脸库信息集合，详见[FaceSetInfo](https://support.huaweicloud.com/api-face/face_02_0020.html)。 调用失败时无此字段。
     *
     * @return \HuaweiCloud\SDK\Frs\V2\Model\FaceSetInfo[]|null
     */
@@ -187,7 +187,7 @@ class ShowAllFaceSetsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets faceSetsInfo
     *
-    * @param \HuaweiCloud\SDK\Frs\V2\Model\FaceSetInfo[]|null $faceSetsInfo 人脸库信息集合，详见[FaceSetInfo](zh-cn_topic_0106912072.xml)。 调用失败时无此字段。
+    * @param \HuaweiCloud\SDK\Frs\V2\Model\FaceSetInfo[]|null $faceSetsInfo 人脸库信息集合，详见[FaceSetInfo](https://support.huaweicloud.com/api-face/face_02_0020.html)。 调用失败时无此字段。
     *
     * @return $this
     */

@@ -78,6 +78,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
     * activeAt  镜像状态变为正常的时间。
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
     */
@@ -139,7 +140,8 @@ class ImageInfo implements ModelInterface, ArrayAccess
             'rootOrigin' => 'string',
             'sequenceNum' => 'string',
             'activeAt' => 'string',
-            'supportAgentList' => 'string'
+            'supportAgentList' => 'string',
+            'supportAmd' => 'string'
     ];
 
     /**
@@ -202,6 +204,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
     * activeAt  镜像状态变为正常的时间。
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
     */
@@ -263,7 +266,8 @@ class ImageInfo implements ModelInterface, ArrayAccess
         'rootOrigin' => null,
         'sequenceNum' => null,
         'activeAt' => null,
-        'supportAgentList' => null
+        'supportAgentList' => null,
+        'supportAmd' => null
     ];
 
     /**
@@ -347,6 +351,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
     * activeAt  镜像状态变为正常的时间。
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
     */
@@ -408,7 +413,8 @@ class ImageInfo implements ModelInterface, ArrayAccess
             'rootOrigin' => '__root_origin',
             'sequenceNum' => '__sequence_num',
             'activeAt' => 'active_at',
-            'supportAgentList' => '__support_agent_list'
+            'supportAgentList' => '__support_agent_list',
+            'supportAmd' => '__support_amd'
     ];
 
     /**
@@ -471,6 +477,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
     * activeAt  镜像状态变为正常的时间。
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
     */
@@ -532,7 +539,8 @@ class ImageInfo implements ModelInterface, ArrayAccess
             'rootOrigin' => 'setRootOrigin',
             'sequenceNum' => 'setSequenceNum',
             'activeAt' => 'setActiveAt',
-            'supportAgentList' => 'setSupportAgentList'
+            'supportAgentList' => 'setSupportAgentList',
+            'supportAmd' => 'setSupportAmd'
     ];
 
     /**
@@ -595,6 +603,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * sequenceNum  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
     * activeAt  镜像状态变为正常的时间。
     * supportAgentList  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * supportAmd  是否是AMD架构类型的镜像。取值为“true”或者“false”。
     *
     * @var string[]
     */
@@ -656,7 +665,8 @@ class ImageInfo implements ModelInterface, ArrayAccess
             'rootOrigin' => 'getRootOrigin',
             'sequenceNum' => 'getSequenceNum',
             'activeAt' => 'getActiveAt',
-            'supportAgentList' => 'getSupportAgentList'
+            'supportAgentList' => 'getSupportAgentList',
+            'supportAmd' => 'getSupportAmd'
     ];
 
     /**
@@ -987,6 +997,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
         $this->container['sequenceNum'] = isset($data['sequenceNum']) ? $data['sequenceNum'] : null;
         $this->container['activeAt'] = isset($data['activeAt']) ? $data['activeAt'] : null;
         $this->container['supportAgentList'] = isset($data['supportAgentList']) ? $data['supportAgentList'] : null;
+        $this->container['supportAmd'] = isset($data['supportAmd']) ? $data['supportAmd'] : null;
     }
 
     /**
@@ -2616,6 +2627,30 @@ class ImageInfo implements ModelInterface, ArrayAccess
     public function setSupportAgentList($supportAgentList)
     {
         $this->container['supportAgentList'] = $supportAgentList;
+        return $this;
+    }
+
+    /**
+    * Gets supportAmd
+    *  是否是AMD架构类型的镜像。取值为“true”或者“false”。
+    *
+    * @return string|null
+    */
+    public function getSupportAmd()
+    {
+        return $this->container['supportAmd'];
+    }
+
+    /**
+    * Sets supportAmd
+    *
+    * @param string|null $supportAmd 是否是AMD架构类型的镜像。取值为“true”或者“false”。
+    *
+    * @return $this
+    */
+    public function setSupportAmd($supportAmd)
+    {
+        $this->container['supportAmd'] = $supportAmd;
         return $this;
     }
 

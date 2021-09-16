@@ -20,7 +20,7 @@ class DeleteFacesBatchReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteFacesBatchReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteFacesBatchReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteFacesBatchReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteFacesBatchReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * filter  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * filter  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class DeleteFacesBatchReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets filter
-    *  过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    *  过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class DeleteFacesBatchReq implements ModelInterface, ArrayAccess
     /**
     * Sets filter
     *
-    * @param string $filter 过滤条件，参考[filter语法](zh-cn_topic_0130807048.xml)。
+    * @param string $filter 过滤条件，参考[filter语法](https://support.huaweicloud.com/api-face/face_02_0014.html)。
     *
     * @return $this
     */
