@@ -1,3 +1,14 @@
+# 3.0.23-beta 2021-09-24
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - None
+- _Bug Fix_
+  - Fix the issue that the interface `ListRecordContents` cannot be found.
+- _Change_
+  - None
+
 # 3.0.22-beta 2021-09-24
 
 ### HuaweiCloud SDK IVS

@@ -1,3 +1,14 @@
+# 3.0.23-beta 2021-09-24
+
+### HuaweiCloud SDK Live
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 修复找不到接口`ListRecordContents`的问题
+- _特性变更_
+  - 无
+
 # 3.0.22-beta 2021-09-24
 
 ### HuaweiCloud SDK IVS
