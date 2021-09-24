@@ -1,3 +1,23 @@
+# 3.0.22-beta 2021-09-24
+
+### HuaweiCloud SDK IVS
+
+- _新增特性_
+  - 支持人证核身服务
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK Live
+
+- _新增特性_
+  - 支持接口`ListRecordContents`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
 # 3.0.21-beta 2021-09-16
 
 ### HuaweiCloud SDK OCR

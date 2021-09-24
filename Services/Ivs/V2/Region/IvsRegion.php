@@ -1,12 +1,12 @@
 <?php
-namespace HuaweiCloud\SDK\Frs\V2\Region;
+namespace HuaweiCloud\SDK\Ivs\V2\Region;
 
 use HuaweiCloud\SDK\Core\Region\Region;
 use InvalidArgumentException;
 
-class FrsRegion {
+class IvsRegion {
 
-    public static $REGION = array("https://face.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://face.cn-south-1.myhuaweicloud.com"=>"cn-south-1","https://face.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://face.cn-north-1.myhuaweicloud.com"=>"cn-north-1","https://face.ap-southeast-1.myhuaweicloud.com"=>"ap-southeast-1","https://face.ap-southeast-2.myhuaweicloud.com"=>"ap-southeast-2",);
+    public static $REGION = array("https://ivs.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://ivs.cn-north-1.myhuaweicloud.com"=>"cn-north-1",);
 
     public static function valueOf($regionId)
     {
