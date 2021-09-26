@@ -1,3 +1,14 @@
+# 3.0.24-beta 2021-09-26
+
+### HuaweiCloud SDK Meeting
+
+- _Features_
+  - Support the interfaces `InviteOperateVideo`,`SetSsoConfig` and `ShowSsoConfig`.
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
 # 3.0.23-beta 2021-09-24
 
 ### HuaweiCloud SDK Live
