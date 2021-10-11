@@ -186,9 +186,6 @@ class AssociateServerVirtualIpOption implements ModelInterface, ArrayAccess
         if ($this->container['ipAddress'] === null) {
             $invalidProperties[] = "'ipAddress' can't be null";
         }
-        if ($this->container['reverseBinding'] === null) {
-            $invalidProperties[] = "'reverseBinding' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -255,7 +252,7 @@ class AssociateServerVirtualIpOption implements ModelInterface, ArrayAccess
     * Gets reverseBinding
     *  私有IP的allowed_address_pairs属性是否添加网卡的IP/Mac对。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getReverseBinding()
     {
@@ -265,7 +262,7 @@ class AssociateServerVirtualIpOption implements ModelInterface, ArrayAccess
     /**
     * Sets reverseBinding
     *
-    * @param bool $reverseBinding 私有IP的allowed_address_pairs属性是否添加网卡的IP/Mac对。
+    * @param bool|null $reverseBinding 私有IP的allowed_address_pairs属性是否添加网卡的IP/Mac对。
     *
     * @return $this
     */
