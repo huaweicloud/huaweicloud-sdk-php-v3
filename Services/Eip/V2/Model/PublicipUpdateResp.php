@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class PublicipShowResp implements ModelInterface, ArrayAccess
+class PublicipUpdateResp implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'PublicipShowResp';
+    protected static $openAPIModelName = 'PublicipUpdateResp';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
@@ -36,8 +36,6 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * type  弹性公网IP的类型
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：publicip只能绑定该字段相同的资源
-    * allowShareBandwidthTypes  功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
     *
     * @var string[]
     */
@@ -57,9 +55,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'tenantId' => 'string',
             'type' => 'string',
             'publicIpv6Address' => 'string',
-            'ipVersion' => 'int',
-            'publicBorderGroup' => 'string',
-            'allowShareBandwidthTypes' => 'string[]'
+            'ipVersion' => 'int'
     ];
 
     /**
@@ -80,8 +76,6 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * type  弹性公网IP的类型
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：publicip只能绑定该字段相同的资源
-    * allowShareBandwidthTypes  功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
     *
     * @var string[]
     */
@@ -101,9 +95,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
         'tenantId' => null,
         'type' => null,
         'publicIpv6Address' => null,
-        'ipVersion' => 'int32',
-        'publicBorderGroup' => null,
-        'allowShareBandwidthTypes' => null
+        'ipVersion' => 'int32'
     ];
 
     /**
@@ -145,8 +137,6 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * type  弹性公网IP的类型
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：publicip只能绑定该字段相同的资源
-    * allowShareBandwidthTypes  功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
     *
     * @var string[]
     */
@@ -166,9 +156,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'tenantId' => 'tenant_id',
             'type' => 'type',
             'publicIpv6Address' => 'public_ipv6_address',
-            'ipVersion' => 'ip_version',
-            'publicBorderGroup' => 'public_border_group',
-            'allowShareBandwidthTypes' => 'allow_share_bandwidth_types'
+            'ipVersion' => 'ip_version'
     ];
 
     /**
@@ -189,8 +177,6 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * type  弹性公网IP的类型
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：publicip只能绑定该字段相同的资源
-    * allowShareBandwidthTypes  功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
     *
     * @var string[]
     */
@@ -210,9 +196,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'tenantId' => 'setTenantId',
             'type' => 'setType',
             'publicIpv6Address' => 'setPublicIpv6Address',
-            'ipVersion' => 'setIpVersion',
-            'publicBorderGroup' => 'setPublicBorderGroup',
-            'allowShareBandwidthTypes' => 'setAllowShareBandwidthTypes'
+            'ipVersion' => 'setIpVersion'
     ];
 
     /**
@@ -233,8 +217,6 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * type  弹性公网IP的类型
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：publicip只能绑定该字段相同的资源
-    * allowShareBandwidthTypes  功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
     *
     * @var string[]
     */
@@ -254,9 +236,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'tenantId' => 'getTenantId',
             'type' => 'getType',
             'publicIpv6Address' => 'getPublicIpv6Address',
-            'ipVersion' => 'getIpVersion',
-            'publicBorderGroup' => 'getPublicBorderGroup',
-            'allowShareBandwidthTypes' => 'getAllowShareBandwidthTypes'
+            'ipVersion' => 'getIpVersion'
     ];
 
     /**
@@ -400,8 +380,6 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['publicIpv6Address'] = isset($data['publicIpv6Address']) ? $data['publicIpv6Address'] : null;
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
-        $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
-        $this->container['allowShareBandwidthTypes'] = isset($data['allowShareBandwidthTypes']) ? $data['allowShareBandwidthTypes'] : null;
     }
 
     /**
@@ -469,12 +447,6 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) > 64)) {
-                $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) < 1)) {
-                $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -870,54 +842,6 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     public function setIpVersion($ipVersion)
     {
         $this->container['ipVersion'] = $ipVersion;
-        return $this;
-    }
-
-    /**
-    * Gets publicBorderGroup
-    *  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：publicip只能绑定该字段相同的资源
-    *
-    * @return string|null
-    */
-    public function getPublicBorderGroup()
-    {
-        return $this->container['publicBorderGroup'];
-    }
-
-    /**
-    * Sets publicBorderGroup
-    *
-    * @param string|null $publicBorderGroup 功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：publicip只能绑定该字段相同的资源
-    *
-    * @return $this
-    */
-    public function setPublicBorderGroup($publicBorderGroup)
-    {
-        $this->container['publicBorderGroup'] = $publicBorderGroup;
-        return $this;
-    }
-
-    /**
-    * Gets allowShareBandwidthTypes
-    *  功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
-    *
-    * @return string[]|null
-    */
-    public function getAllowShareBandwidthTypes()
-    {
-        return $this->container['allowShareBandwidthTypes'];
-    }
-
-    /**
-    * Sets allowShareBandwidthTypes
-    *
-    * @param string[]|null $allowShareBandwidthTypes 功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
-    *
-    * @return $this
-    */
-    public function setAllowShareBandwidthTypes($allowShareBandwidthTypes)
-    {
-        $this->container['allowShareBandwidthTypes'] = $allowShareBandwidthTypes;
         return $this;
     }
 

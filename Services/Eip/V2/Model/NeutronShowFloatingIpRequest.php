@@ -161,6 +161,12 @@ class NeutronShowFloatingIpRequest implements ModelInterface, ArrayAccess
         if ($this->container['floatingipId'] === null) {
             $invalidProperties[] = "'floatingipId' can't be null";
         }
+            if ((mb_strlen($this->container['floatingipId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'floatingipId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['floatingipId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'floatingipId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

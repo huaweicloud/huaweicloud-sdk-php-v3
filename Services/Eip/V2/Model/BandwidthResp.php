@@ -36,7 +36,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
     * bandwidthRules  功能说明：带宽规则对象（该字段仅在上海1局点返回）
     * createdAt  功能说明：资源创建时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能绑定与该字段相同的publicip
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能绑定与该字段相同的publicip
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
     * bandwidthRules  功能说明：带宽规则对象（该字段仅在上海1局点返回）
     * createdAt  功能说明：资源创建时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能绑定与该字段相同的publicip
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能绑定与该字段相同的publicip
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
     * bandwidthRules  功能说明：带宽规则对象（该字段仅在上海1局点返回）
     * createdAt  功能说明：资源创建时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能绑定与该字段相同的publicip
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能绑定与该字段相同的publicip
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
     * bandwidthRules  功能说明：带宽规则对象（该字段仅在上海1局点返回）
     * createdAt  功能说明：资源创建时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能绑定与该字段相同的publicip
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能绑定与该字段相同的publicip
     *
     * @var string[]
     */
@@ -225,7 +225,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
     * bandwidthRules  功能说明：带宽规则对象（该字段仅在上海1局点返回）
     * createdAt  功能说明：资源创建时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：资源更新时间，UTC时间  格式： yyyy-MM-ddTHH:mm:ss
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能绑定与该字段相同的publicip
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能绑定与该字段相同的publicip
     *
     * @var string[]
     */
@@ -844,7 +844,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能绑定与该字段相同的publicip
+    *  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能绑定与该字段相同的publicip
     *
     * @return string|null
     */
@@ -856,7 +856,7 @@ class BandwidthResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string|null $publicBorderGroup 功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域才会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能绑定与该字段相同的publicip
+    * @param string|null $publicBorderGroup 功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能绑定与该字段相同的publicip
     *
     * @return $this
     */

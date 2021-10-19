@@ -26,7 +26,7 @@ class UpdatePublicipResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'publicip' => '\HuaweiCloud\SDK\Eip\V2\Model\PublicipShowResp'
+            'publicip' => '\HuaweiCloud\SDK\Eip\V2\Model\PublicipUpdateResp'
     ];
 
     /**
@@ -177,7 +177,7 @@ class UpdatePublicipResponse implements ModelInterface, ArrayAccess
     * Gets publicip
     *  publicip
     *
-    * @return \HuaweiCloud\SDK\Eip\V2\Model\PublicipShowResp|null
+    * @return \HuaweiCloud\SDK\Eip\V2\Model\PublicipUpdateResp|null
     */
     public function getPublicip()
     {
@@ -187,7 +187,7 @@ class UpdatePublicipResponse implements ModelInterface, ArrayAccess
     /**
     * Sets publicip
     *
-    * @param \HuaweiCloud\SDK\Eip\V2\Model\PublicipShowResp|null $publicip publicip
+    * @param \HuaweiCloud\SDK\Eip\V2\Model\PublicipUpdateResp|null $publicip publicip
     *
     * @return $this
     */

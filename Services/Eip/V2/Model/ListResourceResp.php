@@ -194,6 +194,15 @@ class ListResourceResp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 36.";
             }
+            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'resourceName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'resourceName', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

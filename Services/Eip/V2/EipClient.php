@@ -1206,6 +1206,9 @@ class EipClient extends Client
         if ($localVarParams['id'] !== null) {
             $queryParams['id'] = $localVarParams['id'];
         }
+        if ($localVarParams['allowShareBandwidthTypeAny'] !== null) {
+            $queryParams['allow_share_bandwidth_type_any'] = $localVarParams['allowShareBandwidthTypeAny'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']

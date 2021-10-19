@@ -191,6 +191,30 @@ class QuotaShowResp implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 36)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['used']) && ($this->container['used'] > 999999)) {
+                $invalidProperties[] = "invalid value for 'used', must be smaller than or equal to 999999.";
+            }
+            if (!is_null($this->container['used']) && ($this->container['used'] < 0)) {
+                $invalidProperties[] = "invalid value for 'used', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['quota']) && ($this->container['quota'] > 999999)) {
+                $invalidProperties[] = "invalid value for 'quota', must be smaller than or equal to 999999.";
+            }
+            if (!is_null($this->container['quota']) && ($this->container['quota'] < -1)) {
+                $invalidProperties[] = "invalid value for 'quota', must be bigger than or equal to -1.";
+            }
+            if (!is_null($this->container['min']) && ($this->container['min'] > 999999)) {
+                $invalidProperties[] = "invalid value for 'min', must be smaller than or equal to 999999.";
+            }
+            if (!is_null($this->container['min']) && ($this->container['min'] < 0)) {
+                $invalidProperties[] = "invalid value for 'min', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

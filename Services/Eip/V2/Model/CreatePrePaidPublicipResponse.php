@@ -184,8 +184,14 @@ class CreatePrePaidPublicipResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['orderId']) && (mb_strlen($this->container['orderId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'orderId', the character length must be smaller than or equal to 36.";
             }
+            if (!is_null($this->container['orderId']) && (mb_strlen($this->container['orderId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'orderId', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['publicipId']) && (mb_strlen($this->container['publicipId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'publicipId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['publicipId']) && (mb_strlen($this->container['publicipId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'publicipId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }

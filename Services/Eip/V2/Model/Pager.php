@@ -184,6 +184,12 @@ class Pager implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['href']) && (mb_strlen($this->container['href']) > 256)) {
+                $invalidProperties[] = "invalid value for 'href', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['href']) && (mb_strlen($this->container['href']) < 0)) {
+                $invalidProperties[] = "invalid value for 'href', the character length must be bigger than or equal to 0.";
+            }
             $allowedValues = $this->getRelAllowableValues();
                 if (!is_null($this->container['rel']) && !in_array($this->container['rel'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(

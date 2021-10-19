@@ -175,6 +175,9 @@ class CreatePrePaidPublicipOption implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['type']) > 36)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 36.";
             }
+            if ((mb_strlen($this->container['type']) < 0)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 

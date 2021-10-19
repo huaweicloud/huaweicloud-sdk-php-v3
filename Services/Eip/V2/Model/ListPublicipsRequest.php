@@ -28,6 +28,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
     * privateIpAddress  关联端口的私有IP地址
     * id  弹性公网IP唯一标识
+    * allowShareBandwidthTypeAny  共享带宽类型，根据任一共享带宽类型过滤EIP列表。 可以指定多个带宽类型，不同的带宽类型间用逗号分隔。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
             'portId' => 'string[]',
             'publicIpAddress' => 'string[]',
             'privateIpAddress' => 'string[]',
-            'id' => 'string[]'
+            'id' => 'string[]',
+            'allowShareBandwidthTypeAny' => 'string[]'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
     * privateIpAddress  关联端口的私有IP地址
     * id  弹性公网IP唯一标识
+    * allowShareBandwidthTypeAny  共享带宽类型，根据任一共享带宽类型过滤EIP列表。 可以指定多个带宽类型，不同的带宽类型间用逗号分隔。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
         'portId' => null,
         'publicIpAddress' => null,
         'privateIpAddress' => null,
-        'id' => null
+        'id' => null,
+        'allowShareBandwidthTypeAny' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
     * privateIpAddress  关联端口的私有IP地址
     * id  弹性公网IP唯一标识
+    * allowShareBandwidthTypeAny  共享带宽类型，根据任一共享带宽类型过滤EIP列表。 可以指定多个带宽类型，不同的带宽类型间用逗号分隔。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
             'portId' => 'port_id',
             'publicIpAddress' => 'public_ip_address',
             'privateIpAddress' => 'private_ip_address',
-            'id' => 'id'
+            'id' => 'id',
+            'allowShareBandwidthTypeAny' => 'allow_share_bandwidth_type_any'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
     * privateIpAddress  关联端口的私有IP地址
     * id  弹性公网IP唯一标识
+    * allowShareBandwidthTypeAny  共享带宽类型，根据任一共享带宽类型过滤EIP列表。 可以指定多个带宽类型，不同的带宽类型间用逗号分隔。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
             'portId' => 'setPortId',
             'publicIpAddress' => 'setPublicIpAddress',
             'privateIpAddress' => 'setPrivateIpAddress',
-            'id' => 'setId'
+            'id' => 'setId',
+            'allowShareBandwidthTypeAny' => 'setAllowShareBandwidthTypeAny'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     * publicIpAddress  IPv4时是申请到的弹性公网IP地址，IPv6时是IPv6地址对应的IPv4地址
     * privateIpAddress  关联端口的私有IP地址
     * id  弹性公网IP唯一标识
+    * allowShareBandwidthTypeAny  共享带宽类型，根据任一共享带宽类型过滤EIP列表。 可以指定多个带宽类型，不同的带宽类型间用逗号分隔。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
             'portId' => 'getPortId',
             'publicIpAddress' => 'getPublicIpAddress',
             'privateIpAddress' => 'getPrivateIpAddress',
-            'id' => 'getId'
+            'id' => 'getId',
+            'allowShareBandwidthTypeAny' => 'getAllowShareBandwidthTypeAny'
     ];
 
     /**
@@ -240,6 +250,7 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
         $this->container['publicIpAddress'] = isset($data['publicIpAddress']) ? $data['publicIpAddress'] : null;
         $this->container['privateIpAddress'] = isset($data['privateIpAddress']) ? $data['privateIpAddress'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['allowShareBandwidthTypeAny'] = isset($data['allowShareBandwidthTypeAny']) ? $data['allowShareBandwidthTypeAny'] : null;
     }
 
     /**
@@ -467,6 +478,30 @@ class ListPublicipsRequest implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets allowShareBandwidthTypeAny
+    *  共享带宽类型，根据任一共享带宽类型过滤EIP列表。 可以指定多个带宽类型，不同的带宽类型间用逗号分隔。
+    *
+    * @return string[]|null
+    */
+    public function getAllowShareBandwidthTypeAny()
+    {
+        return $this->container['allowShareBandwidthTypeAny'];
+    }
+
+    /**
+    * Sets allowShareBandwidthTypeAny
+    *
+    * @param string[]|null $allowShareBandwidthTypeAny 共享带宽类型，根据任一共享带宽类型过滤EIP列表。 可以指定多个带宽类型，不同的带宽类型间用逗号分隔。
+    *
+    * @return $this
+    */
+    public function setAllowShareBandwidthTypeAny($allowShareBandwidthTypeAny)
+    {
+        $this->container['allowShareBandwidthTypeAny'] = $allowShareBandwidthTypeAny;
         return $this;
     }
 

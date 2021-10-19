@@ -30,7 +30,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
     * tenantId  功能说明：用户所属租户ID
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
     *
     * @var string[]
     */
@@ -60,7 +60,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
     * tenantId  功能说明：用户所属租户ID
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
     *
     * @var string[]
     */
@@ -111,7 +111,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
     * tenantId  功能说明：用户所属租户ID
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
     * tenantId  功能说明：用户所属租户ID
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
     *
     * @var string[]
     */
@@ -171,7 +171,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。
     * tenantId  功能说明：用户所属租户ID
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
-    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
+    * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
     *
     * @var string[]
     */
@@ -625,7 +625,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
+    *  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
     *
     * @return string|null
     */
@@ -637,7 +637,7 @@ class BatchBandwidthResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string|null $publicBorderGroup 功能说明：表示中心站点资源或者边缘站点资源，对接了边缘站点的区域会返回此字段 取值范围： center、边缘站点名称 上线区域：华北-乌兰察布一，华南-广州 约束：共享带宽只能插入与该字段相同的publicip
+    * @param string|null $publicBorderGroup 功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
     *
     * @return $this
     */

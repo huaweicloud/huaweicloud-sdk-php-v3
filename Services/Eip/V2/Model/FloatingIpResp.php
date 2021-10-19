@@ -310,20 +310,38 @@ class FloatingIpResp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['fixedIpAddress']) && (mb_strlen($this->container['fixedIpAddress']) > 64)) {
                 $invalidProperties[] = "invalid value for 'fixedIpAddress', the character length must be smaller than or equal to 64.";
             }
+            if (!is_null($this->container['fixedIpAddress']) && (mb_strlen($this->container['fixedIpAddress']) < 0)) {
+                $invalidProperties[] = "invalid value for 'fixedIpAddress', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['floatingIpAddress']) && (mb_strlen($this->container['floatingIpAddress']) > 64)) {
                 $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['floatingIpAddress']) && (mb_strlen($this->container['floatingIpAddress']) < 0)) {
+                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['floatingNetworkId']) && (mb_strlen($this->container['floatingNetworkId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'floatingNetworkId', the character length must be smaller than or equal to 36.";
             }
+            if (!is_null($this->container['floatingNetworkId']) && (mb_strlen($this->container['floatingNetworkId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'floatingNetworkId', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['portId']) && (mb_strlen($this->container['portId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'portId', the character length must be smaller than or equal to 36.";
             }
+            if (!is_null($this->container['portId']) && (mb_strlen($this->container['portId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'portId', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['routerId']) && (mb_strlen($this->container['routerId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'routerId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['routerId']) && (mb_strlen($this->container['routerId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'routerId', the character length must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
@@ -336,14 +354,26 @@ class FloatingIpResp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['tenantId']) && (mb_strlen($this->container['tenantId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'tenantId', the character length must be smaller than or equal to 36.";
             }
+            if (!is_null($this->container['tenantId']) && (mb_strlen($this->container['tenantId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'tenantId', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['dnsName']) && (mb_strlen($this->container['dnsName']) > 255)) {
                 $invalidProperties[] = "invalid value for 'dnsName', the character length must be smaller than or equal to 255.";
             }
+            if (!is_null($this->container['dnsName']) && (mb_strlen($this->container['dnsName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'dnsName', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['dnsDomain']) && (mb_strlen($this->container['dnsDomain']) > 255)) {
                 $invalidProperties[] = "invalid value for 'dnsDomain', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['dnsDomain']) && (mb_strlen($this->container['dnsDomain']) < 0)) {
+                $invalidProperties[] = "invalid value for 'dnsDomain', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }

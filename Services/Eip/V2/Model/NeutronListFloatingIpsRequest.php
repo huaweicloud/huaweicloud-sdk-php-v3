@@ -34,7 +34,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'limit' => 'string',
+            'limit' => 'int',
             'marker' => 'string',
             'pageReverse' => 'bool',
             'id' => 'string',
@@ -62,7 +62,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'limit' => null,
+        'limit' => 'int32',
         'marker' => null,
         'pageReverse' => null,
         'id' => null,
@@ -257,26 +257,59 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 36)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 0)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['floatingIpAddress']) && (mb_strlen($this->container['floatingIpAddress']) > 64)) {
                 $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be smaller than or equal to 64.";
             }
+            if (!is_null($this->container['floatingIpAddress']) && (mb_strlen($this->container['floatingIpAddress']) < 0)) {
+                $invalidProperties[] = "invalid value for 'floatingIpAddress', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['routerId']) && (mb_strlen($this->container['routerId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'routerId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['routerId']) && (mb_strlen($this->container['routerId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'routerId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['portId']) && (mb_strlen($this->container['portId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'portId', the character length must be smaller than or equal to 36.";
             }
+            if (!is_null($this->container['portId']) && (mb_strlen($this->container['portId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'portId', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['fixedIpAddress']) && (mb_strlen($this->container['fixedIpAddress']) > 64)) {
                 $invalidProperties[] = "invalid value for 'fixedIpAddress', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['fixedIpAddress']) && (mb_strlen($this->container['fixedIpAddress']) < 0)) {
+                $invalidProperties[] = "invalid value for 'fixedIpAddress', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['tenantId']) && (mb_strlen($this->container['tenantId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'tenantId', the character length must be smaller than or equal to 36.";
             }
+            if (!is_null($this->container['tenantId']) && (mb_strlen($this->container['tenantId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'tenantId', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['floatingNetworkId']) && (mb_strlen($this->container['floatingNetworkId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'floatingNetworkId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['floatingNetworkId']) && (mb_strlen($this->container['floatingNetworkId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'floatingNetworkId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -296,7 +329,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     * Gets limit
     *  每页显示的条目数量。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getLimit()
     {
@@ -306,7 +339,7 @@ class NeutronListFloatingIpsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 每页显示的条目数量。
+    * @param int|null $limit 每页显示的条目数量。
     *
     * @return $this
     */
