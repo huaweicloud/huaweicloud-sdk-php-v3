@@ -20,11 +20,11 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceId  **参数说明**：设备的服务ID。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
+    * serviceId  **参数说明**：设备的服务ID。注：产品内不允许重复。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
     * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
-    * properties  **参数说明**：设备服务支持的属性列表
-    * commands  **参数说明**：设备服务支持的命令列表。
-    * events  **参数说明**：设备服务支持的事件列表。
+    * properties  **参数说明**：设备服务支持的属性列表。 **取值范围**：数组长度大小不超过500。
+    * commands  **参数说明**：设备服务支持的命令列表。 **取值范围**：数组长度大小不超过500。
+    * events  **参数说明**：设备服务支持的事件列表。 **取值范围**：数组长度大小不超过500。
     * description  **参数说明**：设备服务的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     * option  **参数说明**：指定设备服务是否必选。目前本字段为非功能性字段，仅起到标识作用。 **取值范围**： - Master：主服务 - Mandatory：必选服务 - Optional：可选服务 默认值为Optional。
     *
@@ -42,11 +42,11 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceId  **参数说明**：设备的服务ID。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
+    * serviceId  **参数说明**：设备的服务ID。注：产品内不允许重复。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
     * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
-    * properties  **参数说明**：设备服务支持的属性列表
-    * commands  **参数说明**：设备服务支持的命令列表。
-    * events  **参数说明**：设备服务支持的事件列表。
+    * properties  **参数说明**：设备服务支持的属性列表。 **取值范围**：数组长度大小不超过500。
+    * commands  **参数说明**：设备服务支持的命令列表。 **取值范围**：数组长度大小不超过500。
+    * events  **参数说明**：设备服务支持的事件列表。 **取值范围**：数组长度大小不超过500。
     * description  **参数说明**：设备服务的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     * option  **参数说明**：指定设备服务是否必选。目前本字段为非功能性字段，仅起到标识作用。 **取值范围**： - Master：主服务 - Mandatory：必选服务 - Optional：可选服务 默认值为Optional。
     *
@@ -85,11 +85,11 @@ class ServiceCapability implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceId  **参数说明**：设备的服务ID。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
+    * serviceId  **参数说明**：设备的服务ID。注：产品内不允许重复。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
     * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
-    * properties  **参数说明**：设备服务支持的属性列表
-    * commands  **参数说明**：设备服务支持的命令列表。
-    * events  **参数说明**：设备服务支持的事件列表。
+    * properties  **参数说明**：设备服务支持的属性列表。 **取值范围**：数组长度大小不超过500。
+    * commands  **参数说明**：设备服务支持的命令列表。 **取值范围**：数组长度大小不超过500。
+    * events  **参数说明**：设备服务支持的事件列表。 **取值范围**：数组长度大小不超过500。
     * description  **参数说明**：设备服务的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     * option  **参数说明**：指定设备服务是否必选。目前本字段为非功能性字段，仅起到标识作用。 **取值范围**： - Master：主服务 - Mandatory：必选服务 - Optional：可选服务 默认值为Optional。
     *
@@ -107,11 +107,11 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceId  **参数说明**：设备的服务ID。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
+    * serviceId  **参数说明**：设备的服务ID。注：产品内不允许重复。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
     * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
-    * properties  **参数说明**：设备服务支持的属性列表
-    * commands  **参数说明**：设备服务支持的命令列表。
-    * events  **参数说明**：设备服务支持的事件列表。
+    * properties  **参数说明**：设备服务支持的属性列表。 **取值范围**：数组长度大小不超过500。
+    * commands  **参数说明**：设备服务支持的命令列表。 **取值范围**：数组长度大小不超过500。
+    * events  **参数说明**：设备服务支持的事件列表。 **取值范围**：数组长度大小不超过500。
     * description  **参数说明**：设备服务的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     * option  **参数说明**：指定设备服务是否必选。目前本字段为非功能性字段，仅起到标识作用。 **取值范围**： - Master：主服务 - Mandatory：必选服务 - Optional：可选服务 默认值为Optional。
     *
@@ -129,11 +129,11 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceId  **参数说明**：设备的服务ID。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
+    * serviceId  **参数说明**：设备的服务ID。注：产品内不允许重复。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
     * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
-    * properties  **参数说明**：设备服务支持的属性列表
-    * commands  **参数说明**：设备服务支持的命令列表。
-    * events  **参数说明**：设备服务支持的事件列表。
+    * properties  **参数说明**：设备服务支持的属性列表。 **取值范围**：数组长度大小不超过500。
+    * commands  **参数说明**：设备服务支持的命令列表。 **取值范围**：数组长度大小不超过500。
+    * events  **参数说明**：设备服务支持的事件列表。 **取值范围**：数组长度大小不超过500。
     * description  **参数说明**：设备服务的描述信息。 **取值范围**：长度不超过128，只允许中文、字母、数字、空白字符、以及_?'#().,;&%@!- ，、：；。/等字符的组合。
     * option  **参数说明**：指定设备服务是否必选。目前本字段为非功能性字段，仅起到标识作用。 **取值范围**： - Master：主服务 - Mandatory：必选服务 - Optional：可选服务 默认值为Optional。
     *
@@ -258,7 +258,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceId
-    *  **参数说明**：设备的服务ID。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
+    *  **参数说明**：设备的服务ID。注：产品内不允许重复。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
     *
     * @return string
     */
@@ -270,7 +270,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
     /**
     * Sets serviceId
     *
-    * @param string $serviceId **参数说明**：设备的服务ID。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
+    * @param string $serviceId **参数说明**：设备的服务ID。注：产品内不允许重复。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
     *
     * @return $this
     */
@@ -306,7 +306,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets properties
-    *  **参数说明**：设备服务支持的属性列表
+    *  **参数说明**：设备服务支持的属性列表。 **取值范围**：数组长度大小不超过500。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceProperty[]|null
     */
@@ -318,7 +318,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
     /**
     * Sets properties
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceProperty[]|null $properties **参数说明**：设备服务支持的属性列表
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceProperty[]|null $properties **参数说明**：设备服务支持的属性列表。 **取值范围**：数组长度大小不超过500。
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets commands
-    *  **参数说明**：设备服务支持的命令列表。
+    *  **参数说明**：设备服务支持的命令列表。 **取值范围**：数组长度大小不超过500。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommand[]|null
     */
@@ -342,7 +342,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
     /**
     * Sets commands
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommand[]|null $commands **参数说明**：设备服务支持的命令列表。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceCommand[]|null $commands **参数说明**：设备服务支持的命令列表。 **取值范围**：数组长度大小不超过500。
     *
     * @return $this
     */
@@ -354,7 +354,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets events
-    *  **参数说明**：设备服务支持的事件列表。
+    *  **参数说明**：设备服务支持的事件列表。 **取值范围**：数组长度大小不超过500。
     *
     * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceEvent[]|null
     */
@@ -366,7 +366,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
     /**
     * Sets events
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceEvent[]|null $events **参数说明**：设备服务支持的事件列表。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ServiceEvent[]|null $events **参数说明**：设备服务支持的事件列表。 **取值范围**：数组长度大小不超过500。
     *
     * @return $this
     */

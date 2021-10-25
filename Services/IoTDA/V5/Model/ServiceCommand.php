@@ -20,7 +20,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * commandName  **参数说明**：设备命令名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * commandName  **参数说明**：设备命令名称。注：设备服务内不允许重复。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     * paras  **参数说明**：设备命令的参数列表。
     * responses  **参数说明**：设备命令的响应列表。
     *
@@ -34,7 +34,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * commandName  **参数说明**：设备命令名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * commandName  **参数说明**：设备命令名称。注：设备服务内不允许重复。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     * paras  **参数说明**：设备命令的参数列表。
     * responses  **参数说明**：设备命令的响应列表。
     *
@@ -69,7 +69,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * commandName  **参数说明**：设备命令名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * commandName  **参数说明**：设备命令名称。注：设备服务内不允许重复。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     * paras  **参数说明**：设备命令的参数列表。
     * responses  **参数说明**：设备命令的响应列表。
     *
@@ -83,7 +83,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * commandName  **参数说明**：设备命令名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * commandName  **参数说明**：设备命令名称。注：设备服务内不允许重复。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     * paras  **参数说明**：设备命令的参数列表。
     * responses  **参数说明**：设备命令的响应列表。
     *
@@ -97,7 +97,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * commandName  **参数说明**：设备命令名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * commandName  **参数说明**：设备命令名称。注：设备服务内不允许重复。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     * paras  **参数说明**：设备命令的参数列表。
     * responses  **参数说明**：设备命令的响应列表。
     *
@@ -202,7 +202,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
 
     /**
     * Gets commandName
-    *  **参数说明**：设备命令名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    *  **参数说明**：设备命令名称。注：设备服务内不允许重复。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
     /**
     * Sets commandName
     *
-    * @param string $commandName **参数说明**：设备命令名称。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
+    * @param string $commandName **参数说明**：设备命令名称。注：设备服务内不允许重复。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     *
     * @return $this
     */

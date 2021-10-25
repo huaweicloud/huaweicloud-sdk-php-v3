@@ -21,21 +21,33 @@ class JobEntities implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * imageId  镜像ID
+    * currentTask  当前任务名称
+    * imageName  镜像名称
+    * processPercent  任务执行进度
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'imageId' => 'string'
+            'imageId' => 'string',
+            'currentTask' => 'string',
+            'imageName' => 'string',
+            'processPercent' => 'double'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * imageId  镜像ID
+    * currentTask  当前任务名称
+    * imageName  镜像名称
+    * processPercent  任务执行进度
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'imageId' => null
+        'imageId' => null,
+        'currentTask' => null,
+        'imageName' => null,
+        'processPercent' => 'double'
     ];
 
     /**
@@ -62,31 +74,49 @@ class JobEntities implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * imageId  镜像ID
+    * currentTask  当前任务名称
+    * imageName  镜像名称
+    * processPercent  任务执行进度
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'imageId' => 'image_id'
+            'imageId' => 'image_id',
+            'currentTask' => 'current_task',
+            'imageName' => 'image_name',
+            'processPercent' => 'process_percent'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * imageId  镜像ID
+    * currentTask  当前任务名称
+    * imageName  镜像名称
+    * processPercent  任务执行进度
     *
     * @var string[]
     */
     protected static $setters = [
-            'imageId' => 'setImageId'
+            'imageId' => 'setImageId',
+            'currentTask' => 'setCurrentTask',
+            'imageName' => 'setImageName',
+            'processPercent' => 'setProcessPercent'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * imageId  镜像ID
+    * currentTask  当前任务名称
+    * imageName  镜像名称
+    * processPercent  任务执行进度
     *
     * @var string[]
     */
     protected static $getters = [
-            'imageId' => 'getImageId'
+            'imageId' => 'getImageId',
+            'currentTask' => 'getCurrentTask',
+            'imageName' => 'getImageName',
+            'processPercent' => 'getProcessPercent'
     ];
 
     /**
@@ -148,6 +178,9 @@ class JobEntities implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['imageId'] = isset($data['imageId']) ? $data['imageId'] : null;
+        $this->container['currentTask'] = isset($data['currentTask']) ? $data['currentTask'] : null;
+        $this->container['imageName'] = isset($data['imageName']) ? $data['imageName'] : null;
+        $this->container['processPercent'] = isset($data['processPercent']) ? $data['processPercent'] : null;
     }
 
     /**
@@ -193,6 +226,78 @@ class JobEntities implements ModelInterface, ArrayAccess
     public function setImageId($imageId)
     {
         $this->container['imageId'] = $imageId;
+        return $this;
+    }
+
+    /**
+    * Gets currentTask
+    *  当前任务名称
+    *
+    * @return string|null
+    */
+    public function getCurrentTask()
+    {
+        return $this->container['currentTask'];
+    }
+
+    /**
+    * Sets currentTask
+    *
+    * @param string|null $currentTask 当前任务名称
+    *
+    * @return $this
+    */
+    public function setCurrentTask($currentTask)
+    {
+        $this->container['currentTask'] = $currentTask;
+        return $this;
+    }
+
+    /**
+    * Gets imageName
+    *  镜像名称
+    *
+    * @return string|null
+    */
+    public function getImageName()
+    {
+        return $this->container['imageName'];
+    }
+
+    /**
+    * Sets imageName
+    *
+    * @param string|null $imageName 镜像名称
+    *
+    * @return $this
+    */
+    public function setImageName($imageName)
+    {
+        $this->container['imageName'] = $imageName;
+        return $this;
+    }
+
+    /**
+    * Gets processPercent
+    *  任务执行进度
+    *
+    * @return double|null
+    */
+    public function getProcessPercent()
+    {
+        return $this->container['processPercent'];
+    }
+
+    /**
+    * Sets processPercent
+    *
+    * @param double|null $processPercent 任务执行进度
+    *
+    * @return $this
+    */
+    public function setProcessPercent($processPercent)
+    {
+        $this->container['processPercent'] = $processPercent;
         return $this;
     }
 

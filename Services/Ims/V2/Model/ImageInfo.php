@@ -1008,19 +1008,10 @@ class ImageInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['backupId'] === null) {
-            $invalidProperties[] = "'backupId' can't be null";
-        }
-        if ($this->container['dataOrigin'] === null) {
-            $invalidProperties[] = "'dataOrigin' can't be null";
-        }
-        if ($this->container['description'] === null) {
-            $invalidProperties[] = "'description' can't be null";
-        }
-            if ((mb_strlen($this->container['description']) > 1024)) {
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
             }
-            if ((mb_strlen($this->container['description']) < 0)) {
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['imageSize'] === null) {
@@ -1059,12 +1050,6 @@ class ImageInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['originalimagename'] === null) {
-            $invalidProperties[] = "'originalimagename' can't be null";
-        }
-        if ($this->container['osBit'] === null) {
-            $invalidProperties[] = "'osBit' can't be null";
-        }
             $allowedValues = $this->getOsBitAllowableValues();
                 if (!is_null($this->container['osBit']) && !in_array($this->container['osBit'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -1084,12 +1069,6 @@ class ImageInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['osVersion'] === null) {
-            $invalidProperties[] = "'osVersion' can't be null";
-        }
-        if ($this->container['platform'] === null) {
-            $invalidProperties[] = "'platform' can't be null";
-        }
             $allowedValues = $this->getPlatformAllowableValues();
                 if (!is_null($this->container['platform']) && !in_array($this->container['platform'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -1103,9 +1082,6 @@ class ImageInfo implements ModelInterface, ArrayAccess
         }
         if ($this->container['createdAt'] === null) {
             $invalidProperties[] = "'createdAt' can't be null";
-        }
-        if ($this->container['enterpriseProjectId'] === null) {
-            $invalidProperties[] = "'enterpriseProjectId' can't be null";
         }
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
@@ -1168,9 +1144,6 @@ class ImageInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['virtualSize'] === null) {
-            $invalidProperties[] = "'virtualSize' can't be null";
-        }
         if ($this->container['visibility'] === null) {
             $invalidProperties[] = "'visibility' can't be null";
         }
@@ -1206,23 +1179,8 @@ class ImageInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['isOffshelved'] === null) {
-            $invalidProperties[] = "'isOffshelved' can't be null";
-        }
-        if ($this->container['lazyloading'] === null) {
-            $invalidProperties[] = "'lazyloading' can't be null";
-        }
-        if ($this->container['rootOrigin'] === null) {
-            $invalidProperties[] = "'rootOrigin' can't be null";
-        }
-        if ($this->container['sequenceNum'] === null) {
-            $invalidProperties[] = "'sequenceNum' can't be null";
-        }
         if ($this->container['activeAt'] === null) {
             $invalidProperties[] = "'activeAt' can't be null";
-        }
-        if ($this->container['supportAgentList'] === null) {
-            $invalidProperties[] = "'supportAgentList' can't be null";
         }
         return $invalidProperties;
     }
@@ -1242,7 +1200,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * Gets backupId
     *  备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空
     *
-    * @return string
+    * @return string|null
     */
     public function getBackupId()
     {
@@ -1252,7 +1210,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backupId
     *
-    * @param string $backupId 备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空
+    * @param string|null $backupId 备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空
     *
     * @return $this
     */
@@ -1266,7 +1224,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * Gets dataOrigin
     *  镜像来源。公共镜像为空
     *
-    * @return string
+    * @return string|null
     */
     public function getDataOrigin()
     {
@@ -1276,7 +1234,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dataOrigin
     *
-    * @param string $dataOrigin 镜像来源。公共镜像为空
+    * @param string|null $dataOrigin 镜像来源。公共镜像为空
     *
     * @return $this
     */
@@ -1290,7 +1248,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * Gets description
     *  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
     *
-    * @return string
+    * @return string|null
     */
     public function getDescription()
     {
@@ -1300,7 +1258,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
+    * @param string|null $description 镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
     *
     * @return $this
     */
@@ -1410,7 +1368,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * Gets originalimagename
     *  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
     *
-    * @return string
+    * @return string|null
     */
     public function getOriginalimagename()
     {
@@ -1420,7 +1378,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets originalimagename
     *
-    * @param string $originalimagename 父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
+    * @param string|null $originalimagename 父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
     *
     * @return $this
     */
@@ -1434,7 +1392,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * Gets osBit
     *  操作系统位数，一般取值为“32”或者“64”
     *
-    * @return string
+    * @return string|null
     */
     public function getOsBit()
     {
@@ -1444,7 +1402,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osBit
     *
-    * @param string $osBit 操作系统位数，一般取值为“32”或者“64”
+    * @param string|null $osBit 操作系统位数，一般取值为“32”或者“64”
     *
     * @return $this
     */
@@ -1482,7 +1440,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * Gets osVersion
     *  操作系统具体版本
     *
-    * @return string
+    * @return string|null
     */
     public function getOsVersion()
     {
@@ -1492,7 +1450,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osVersion
     *
-    * @param string $osVersion 操作系统具体版本
+    * @param string|null $osVersion 操作系统具体版本
     *
     * @return $this
     */
@@ -1506,7 +1464,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * Gets platform
     *  镜像平台分类
     *
-    * @return string
+    * @return string|null
     */
     public function getPlatform()
     {
@@ -1516,7 +1474,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets platform
     *
-    * @param string $platform 镜像平台分类
+    * @param string|null $platform 镜像平台分类
     *
     * @return $this
     */
@@ -1890,7 +1848,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * Gets enterpriseProjectId
     *  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目，取值为UUID，表示属于该UUID对应的企业项目。
     *
-    * @return string
+    * @return string|null
     */
     public function getEnterpriseProjectId()
     {
@@ -1900,7 +1858,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string $enterpriseProjectId 表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目，取值为UUID，表示属于该UUID对应的企业项目。
+    * @param string|null $enterpriseProjectId 表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目，取值为UUID，表示属于该UUID对应的企业项目。
     *
     * @return $this
     */
@@ -2250,7 +2208,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * Gets virtualSize
     *  目前暂时不使用
     *
-    * @return int
+    * @return int|null
     */
     public function getVirtualSize()
     {
@@ -2260,7 +2218,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets virtualSize
     *
-    * @param int $virtualSize 目前暂时不使用
+    * @param int|null $virtualSize 目前暂时不使用
     *
     * @return $this
     */
@@ -2490,7 +2448,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * Gets isOffshelved
     *  表示当前市场镜像是否下架。true：已下架 false：未下架
     *
-    * @return string
+    * @return string|null
     */
     public function getIsOffshelved()
     {
@@ -2500,7 +2458,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isOffshelved
     *
-    * @param string $isOffshelved 表示当前市场镜像是否下架。true：已下架 false：未下架
+    * @param string|null $isOffshelved 表示当前市场镜像是否下架。true：已下架 false：未下架
     *
     * @return $this
     */
@@ -2514,7 +2472,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * Gets lazyloading
     *  镜像是否支持延迟加载。取值为“True”或“False”。
     *
-    * @return string
+    * @return string|null
     */
     public function getLazyloading()
     {
@@ -2524,7 +2482,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets lazyloading
     *
-    * @param string $lazyloading 镜像是否支持延迟加载。取值为“True”或“False”。
+    * @param string|null $lazyloading 镜像是否支持延迟加载。取值为“True”或“False”。
     *
     * @return $this
     */
@@ -2538,7 +2496,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * Gets rootOrigin
     *  表示当前镜像来源是从外部导入。取值：file。
     *
-    * @return string
+    * @return string|null
     */
     public function getRootOrigin()
     {
@@ -2548,7 +2506,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets rootOrigin
     *
-    * @param string $rootOrigin 表示当前镜像来源是从外部导入。取值：file。
+    * @param string|null $rootOrigin 表示当前镜像来源是从外部导入。取值：file。
     *
     * @return $this
     */
@@ -2562,7 +2520,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * Gets sequenceNum
     *  表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
     *
-    * @return string
+    * @return string|null
     */
     public function getSequenceNum()
     {
@@ -2572,7 +2530,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sequenceNum
     *
-    * @param string $sequenceNum 表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
+    * @param string|null $sequenceNum 表示当前镜像对应云服务器的系统盘插槽位置。目前暂时不用
     *
     * @return $this
     */
@@ -2610,7 +2568,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * Gets supportAgentList
     *  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
     *
-    * @return string
+    * @return string|null
     */
     public function getSupportAgentList()
     {
@@ -2620,7 +2578,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets supportAgentList
     *
-    * @param string $supportAgentList 镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * @param string|null $supportAgentList 镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
     *
     * @return $this
     */

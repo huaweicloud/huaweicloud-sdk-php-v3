@@ -26,7 +26,7 @@ class FrsAsyncClient extends Client
 
     /**
      * 添加人脸
-     * 添加人脸到人脸库中，检测到传入的单张图片中存在多少张人脸，则增加多少张人脸到人脸库当中。
+     * 添加人脸到人脸库中。将单张图片中的人脸添加至人脸库中，支持添加最大人脸或所有人脸。
      *
      * @param $request 请求对象
      * @return response
@@ -91,7 +91,7 @@ class FrsAsyncClient extends Client
 
     /**
      * 添加人脸
-     * 添加人脸到人脸库中，检测到传入的单张图片中存在多少张人脸，则增加多少张人脸到人脸库当中。
+     * 添加人脸到人脸库中。将单张图片中的人脸添加至人脸库中，支持添加最大人脸或所有人脸。
      *
      * @param $request 请求对象
      * @return response
@@ -161,7 +161,7 @@ class FrsAsyncClient extends Client
 
     /**
      * 添加人脸
-     * 添加人脸到人脸库中，检测到传入的单张图片中存在多少张人脸，则增加多少张人脸到人脸库当中。
+     * 添加人脸到人脸库中。将单张图片中的人脸添加至人脸库中，支持添加最大人脸或所有人脸。
      *
      * @param $request 请求对象
      * @return response

@@ -25,6 +25,7 @@ class CreateSharedBandwidthOption implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小。共享带宽的大小有最小值限制，默认为5M，可能因局点不同而不同。  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。  如果传入的参数为小数（如 10.2）或者字符类型（如“10”），会自动强制转换为整数。  调整带宽时的最小单位会根据带宽范围不同存在差异。  小于等于300Mbit/s：默认最小单位为1Mbit/s。  300Mbit/s~1000Mbit/s：默认最小单位为50Mbit/s。  大于1000Mbit/s：默认最小单位为500Mbit/s。
     * chargeMode  功能说明：按带宽计费还是按增强型95计费。  取值范围：bandwidth，95peak_plus(按增强型95计费)不返回或者为空时表示是bandwidth。  约束：只有共享带宽支持95peak_plus（按增强型95计费），按增强型95计费时需要指定保底百分比，默认是20%。
     * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
+    * bandwidthType  功能说明：指定带宽类型创建，默认中心站点为share，边缘站点为edgeshare 取值范围： 查询当前租户可见的带宽类型列表获取
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class CreateSharedBandwidthOption implements ModelInterface, ArrayAccess
             'name' => 'string',
             'size' => 'int',
             'chargeMode' => 'string',
-            'publicBorderGroup' => 'string'
+            'publicBorderGroup' => 'string',
+            'bandwidthType' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class CreateSharedBandwidthOption implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小。共享带宽的大小有最小值限制，默认为5M，可能因局点不同而不同。  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。  如果传入的参数为小数（如 10.2）或者字符类型（如“10”），会自动强制转换为整数。  调整带宽时的最小单位会根据带宽范围不同存在差异。  小于等于300Mbit/s：默认最小单位为1Mbit/s。  300Mbit/s~1000Mbit/s：默认最小单位为50Mbit/s。  大于1000Mbit/s：默认最小单位为500Mbit/s。
     * chargeMode  功能说明：按带宽计费还是按增强型95计费。  取值范围：bandwidth，95peak_plus(按增强型95计费)不返回或者为空时表示是bandwidth。  约束：只有共享带宽支持95peak_plus（按增强型95计费），按增强型95计费时需要指定保底百分比，默认是20%。
     * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
+    * bandwidthType  功能说明：指定带宽类型创建，默认中心站点为share，边缘站点为edgeshare 取值范围： 查询当前租户可见的带宽类型列表获取
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class CreateSharedBandwidthOption implements ModelInterface, ArrayAccess
         'name' => null,
         'size' => 'int32',
         'chargeMode' => null,
-        'publicBorderGroup' => null
+        'publicBorderGroup' => null,
+        'bandwidthType' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class CreateSharedBandwidthOption implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小。共享带宽的大小有最小值限制，默认为5M，可能因局点不同而不同。  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。  如果传入的参数为小数（如 10.2）或者字符类型（如“10”），会自动强制转换为整数。  调整带宽时的最小单位会根据带宽范围不同存在差异。  小于等于300Mbit/s：默认最小单位为1Mbit/s。  300Mbit/s~1000Mbit/s：默认最小单位为50Mbit/s。  大于1000Mbit/s：默认最小单位为500Mbit/s。
     * chargeMode  功能说明：按带宽计费还是按增强型95计费。  取值范围：bandwidth，95peak_plus(按增强型95计费)不返回或者为空时表示是bandwidth。  约束：只有共享带宽支持95peak_plus（按增强型95计费），按增强型95计费时需要指定保底百分比，默认是20%。
     * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
+    * bandwidthType  功能说明：指定带宽类型创建，默认中心站点为share，边缘站点为edgeshare 取值范围： 查询当前租户可见的带宽类型列表获取
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class CreateSharedBandwidthOption implements ModelInterface, ArrayAccess
             'name' => 'name',
             'size' => 'size',
             'chargeMode' => 'charge_mode',
-            'publicBorderGroup' => 'public_border_group'
+            'publicBorderGroup' => 'public_border_group',
+            'bandwidthType' => 'bandwidth_type'
     ];
 
     /**
@@ -100,6 +106,7 @@ class CreateSharedBandwidthOption implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小。共享带宽的大小有最小值限制，默认为5M，可能因局点不同而不同。  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。  如果传入的参数为小数（如 10.2）或者字符类型（如“10”），会自动强制转换为整数。  调整带宽时的最小单位会根据带宽范围不同存在差异。  小于等于300Mbit/s：默认最小单位为1Mbit/s。  300Mbit/s~1000Mbit/s：默认最小单位为50Mbit/s。  大于1000Mbit/s：默认最小单位为500Mbit/s。
     * chargeMode  功能说明：按带宽计费还是按增强型95计费。  取值范围：bandwidth，95peak_plus(按增强型95计费)不返回或者为空时表示是bandwidth。  约束：只有共享带宽支持95peak_plus（按增强型95计费），按增强型95计费时需要指定保底百分比，默认是20%。
     * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
+    * bandwidthType  功能说明：指定带宽类型创建，默认中心站点为share，边缘站点为edgeshare 取值范围： 查询当前租户可见的带宽类型列表获取
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class CreateSharedBandwidthOption implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'size' => 'setSize',
             'chargeMode' => 'setChargeMode',
-            'publicBorderGroup' => 'setPublicBorderGroup'
+            'publicBorderGroup' => 'setPublicBorderGroup',
+            'bandwidthType' => 'setBandwidthType'
     ];
 
     /**
@@ -118,6 +126,7 @@ class CreateSharedBandwidthOption implements ModelInterface, ArrayAccess
     * size  功能说明：带宽大小。共享带宽的大小有最小值限制，默认为5M，可能因局点不同而不同。  取值范围：默认5Mbit/s~2000Mbit/s（具体范围以各区域配置为准，请参见控制台对应页面显示）。  如果传入的参数为小数（如 10.2）或者字符类型（如“10”），会自动强制转换为整数。  调整带宽时的最小单位会根据带宽范围不同存在差异。  小于等于300Mbit/s：默认最小单位为1Mbit/s。  300Mbit/s~1000Mbit/s：默认最小单位为50Mbit/s。  大于1000Mbit/s：默认最小单位为500Mbit/s。
     * chargeMode  功能说明：按带宽计费还是按增强型95计费。  取值范围：bandwidth，95peak_plus(按增强型95计费)不返回或者为空时表示是bandwidth。  约束：只有共享带宽支持95peak_plus（按增强型95计费），按增强型95计费时需要指定保底百分比，默认是20%。
     * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：共享带宽只能插入与该字段相同的publicip
+    * bandwidthType  功能说明：指定带宽类型创建，默认中心站点为share，边缘站点为edgeshare 取值范围： 查询当前租户可见的带宽类型列表获取
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class CreateSharedBandwidthOption implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'size' => 'getSize',
             'chargeMode' => 'getChargeMode',
-            'publicBorderGroup' => 'getPublicBorderGroup'
+            'publicBorderGroup' => 'getPublicBorderGroup',
+            'bandwidthType' => 'getBandwidthType'
     ];
 
     /**
@@ -207,6 +217,7 @@ class CreateSharedBandwidthOption implements ModelInterface, ArrayAccess
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
+        $this->container['bandwidthType'] = isset($data['bandwidthType']) ? $data['bandwidthType'] : null;
     }
 
     /**
@@ -245,6 +256,12 @@ class CreateSharedBandwidthOption implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) < 1)) {
                 $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['bandwidthType']) && (mb_strlen($this->container['bandwidthType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'bandwidthType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['bandwidthType']) && (mb_strlen($this->container['bandwidthType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'bandwidthType', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -377,6 +394,30 @@ class CreateSharedBandwidthOption implements ModelInterface, ArrayAccess
     public function setPublicBorderGroup($publicBorderGroup)
     {
         $this->container['publicBorderGroup'] = $publicBorderGroup;
+        return $this;
+    }
+
+    /**
+    * Gets bandwidthType
+    *  功能说明：指定带宽类型创建，默认中心站点为share，边缘站点为edgeshare 取值范围： 查询当前租户可见的带宽类型列表获取
+    *
+    * @return string|null
+    */
+    public function getBandwidthType()
+    {
+        return $this->container['bandwidthType'];
+    }
+
+    /**
+    * Sets bandwidthType
+    *
+    * @param string|null $bandwidthType 功能说明：指定带宽类型创建，默认中心站点为share，边缘站点为edgeshare 取值范围： 查询当前租户可见的带宽类型列表获取
+    *
+    * @return $this
+    */
+    public function setBandwidthType($bandwidthType)
+    {
+        $this->container['bandwidthType'] = $bandwidthType;
         return $this;
     }
 

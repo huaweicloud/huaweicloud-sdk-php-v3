@@ -1057,15 +1057,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['backupId'] === null) {
-            $invalidProperties[] = "'backupId' can't be null";
-        }
-        if ($this->container['dataOrigin'] === null) {
-            $invalidProperties[] = "'dataOrigin' can't be null";
-        }
-        if ($this->container['description'] === null) {
-            $invalidProperties[] = "'description' can't be null";
-        }
         if ($this->container['imageSize'] === null) {
             $invalidProperties[] = "'imageSize' can't be null";
         }
@@ -1102,12 +1093,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['originalimagename'] === null) {
-            $invalidProperties[] = "'originalimagename' can't be null";
-        }
-        if ($this->container['osBit'] === null) {
-            $invalidProperties[] = "'osBit' can't be null";
-        }
             $allowedValues = $this->getOsBitAllowableValues();
                 if (!is_null($this->container['osBit']) && !in_array($this->container['osBit'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -1127,12 +1112,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['osVersion'] === null) {
-            $invalidProperties[] = "'osVersion' can't be null";
-        }
-        if ($this->container['platform'] === null) {
-            $invalidProperties[] = "'platform' can't be null";
-        }
             $allowedValues = $this->getPlatformAllowableValues();
                 if (!is_null($this->container['platform']) && !in_array($this->container['platform'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -1141,39 +1120,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['productcode'] === null) {
-            $invalidProperties[] = "'productcode' can't be null";
-        }
-        if ($this->container['supportDiskintensive'] === null) {
-            $invalidProperties[] = "'supportDiskintensive' can't be null";
-        }
-        if ($this->container['supportHighperformance'] === null) {
-            $invalidProperties[] = "'supportHighperformance' can't be null";
-        }
-        if ($this->container['supportKvm'] === null) {
-            $invalidProperties[] = "'supportKvm' can't be null";
-        }
-        if ($this->container['supportKvmGpuType'] === null) {
-            $invalidProperties[] = "'supportKvmGpuType' can't be null";
-        }
-        if ($this->container['supportKvmInfiniband'] === null) {
-            $invalidProperties[] = "'supportKvmInfiniband' can't be null";
-        }
-        if ($this->container['supportLargememory'] === null) {
-            $invalidProperties[] = "'supportLargememory' can't be null";
-        }
-        if ($this->container['supportXen'] === null) {
-            $invalidProperties[] = "'supportXen' can't be null";
-        }
-        if ($this->container['supportXenGpuType'] === null) {
-            $invalidProperties[] = "'supportXenGpuType' can't be null";
-        }
-        if ($this->container['supportXenHana'] === null) {
-            $invalidProperties[] = "'supportXenHana' can't be null";
-        }
-        if ($this->container['checksum'] === null) {
-            $invalidProperties[] = "'checksum' can't be null";
-        }
         if ($this->container['containerFormat'] === null) {
             $invalidProperties[] = "'containerFormat' can't be null";
         }
@@ -1218,9 +1164,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
         if ($this->container['self'] === null) {
             $invalidProperties[] = "'self' can't be null";
         }
-        if ($this->container['size'] === null) {
-            $invalidProperties[] = "'size' can't be null";
-        }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
@@ -1249,9 +1192,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['virtualSize'] === null) {
-            $invalidProperties[] = "'virtualSize' can't be null";
-        }
         if ($this->container['visibility'] === null) {
             $invalidProperties[] = "'visibility' can't be null";
         }
@@ -1263,9 +1203,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['supportFcInject'] === null) {
-            $invalidProperties[] = "'supportFcInject' can't be null";
-        }
             $allowedValues = $this->getSupportFcInjectAllowableValues();
                 if (!is_null($this->container['supportFcInject']) && !in_array($this->container['supportFcInject'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -1274,12 +1211,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['enterpriseProjectId'] === null) {
-            $invalidProperties[] = "'enterpriseProjectId' can't be null";
-        }
-        if ($this->container['hwFirmwareType'] === null) {
-            $invalidProperties[] = "'hwFirmwareType' can't be null";
-        }
             $allowedValues = $this->getHwFirmwareTypeAllowableValues();
                 if (!is_null($this->container['hwFirmwareType']) && !in_array($this->container['hwFirmwareType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -1288,9 +1219,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['supportArm'] === null) {
-            $invalidProperties[] = "'supportArm' can't be null";
-        }
             $allowedValues = $this->getSupportArmAllowableValues();
                 if (!is_null($this->container['supportArm']) && !in_array($this->container['supportArm'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -1299,9 +1227,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['isOffshelved'] === null) {
-            $invalidProperties[] = "'isOffshelved' can't be null";
-        }
             $allowedValues = $this->getIsOffshelvedAllowableValues();
                 if (!is_null($this->container['isOffshelved']) && !in_array($this->container['isOffshelved'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -1310,41 +1235,8 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['lazyloading'] === null) {
-            $invalidProperties[] = "'lazyloading' can't be null";
-        }
-        if ($this->container['osFeatureList'] === null) {
-            $invalidProperties[] = "'osFeatureList' can't be null";
-        }
-        if ($this->container['rootOrigin'] === null) {
-            $invalidProperties[] = "'rootOrigin' can't be null";
-        }
-        if ($this->container['sequenceNum'] === null) {
-            $invalidProperties[] = "'sequenceNum' can't be null";
-        }
-        if ($this->container['supportAgentList'] === null) {
-            $invalidProperties[] = "'supportAgentList' can't be null";
-        }
-        if ($this->container['systemCmkid'] === null) {
-            $invalidProperties[] = "'systemCmkid' can't be null";
-        }
         if ($this->container['activeAt'] === null) {
             $invalidProperties[] = "'activeAt' can't be null";
-        }
-        if ($this->container['hwVifMultiqueueEnabled'] === null) {
-            $invalidProperties[] = "'hwVifMultiqueueEnabled' can't be null";
-        }
-        if ($this->container['maxRam'] === null) {
-            $invalidProperties[] = "'maxRam' can't be null";
-        }
-        if ($this->container['imageLocation'] === null) {
-            $invalidProperties[] = "'imageLocation' can't be null";
-        }
-        if ($this->container['isConfigInit'] === null) {
-            $invalidProperties[] = "'isConfigInit' can't be null";
-        }
-        if ($this->container['accountCode'] === null) {
-            $invalidProperties[] = "'accountCode' can't be null";
         }
         return $invalidProperties;
     }
@@ -1364,7 +1256,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets backupId
     *  备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空。
     *
-    * @return string
+    * @return string|null
     */
     public function getBackupId()
     {
@@ -1374,7 +1266,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets backupId
     *
-    * @param string $backupId 备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空。
+    * @param string|null $backupId 备份ID。如果是备份创建的镜像，则填写为备份的ID，否则为空。
     *
     * @return $this
     */
@@ -1388,7 +1280,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets dataOrigin
     *  镜像来源。公共镜像为空。
     *
-    * @return string
+    * @return string|null
     */
     public function getDataOrigin()
     {
@@ -1398,7 +1290,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets dataOrigin
     *
-    * @param string $dataOrigin 镜像来源。公共镜像为空。
+    * @param string|null $dataOrigin 镜像来源。公共镜像为空。
     *
     * @return $this
     */
@@ -1412,7 +1304,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets description
     *  镜像描述信息。
     *
-    * @return string
+    * @return string|null
     */
     public function getDescription()
     {
@@ -1422,7 +1314,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 镜像描述信息。
+    * @param string|null $description 镜像描述信息。
     *
     * @return $this
     */
@@ -1532,7 +1424,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets originalimagename
     *  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
     *
-    * @return string
+    * @return string|null
     */
     public function getOriginalimagename()
     {
@@ -1542,7 +1434,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets originalimagename
     *
-    * @param string $originalimagename 父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
+    * @param string|null $originalimagename 父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
     *
     * @return $this
     */
@@ -1556,7 +1448,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets osBit
     *  操作系统位数，一般取值为“32”或者“64”。
     *
-    * @return string
+    * @return string|null
     */
     public function getOsBit()
     {
@@ -1566,7 +1458,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets osBit
     *
-    * @param string $osBit 操作系统位数，一般取值为“32”或者“64”。
+    * @param string|null $osBit 操作系统位数，一般取值为“32”或者“64”。
     *
     * @return $this
     */
@@ -1604,7 +1496,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets osVersion
     *  操作系统具体版本。
     *
-    * @return string
+    * @return string|null
     */
     public function getOsVersion()
     {
@@ -1614,7 +1506,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets osVersion
     *
-    * @param string $osVersion 操作系统具体版本。
+    * @param string|null $osVersion 操作系统具体版本。
     *
     * @return $this
     */
@@ -1628,7 +1520,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets platform
     *  镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS。
     *
-    * @return string
+    * @return string|null
     */
     public function getPlatform()
     {
@@ -1638,7 +1530,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets platform
     *
-    * @param string $platform 镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS。
+    * @param string|null $platform 镜像平台分类，取值为Windows，Ubuntu，RedHat，SUSE，CentOS，Debian，OpenSUSE, Oracle Linux，Fedora，Other，CoreOS和EulerOS。
     *
     * @return $this
     */
@@ -1652,7 +1544,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets productcode
     *  市场镜像的产品ID。
     *
-    * @return string
+    * @return string|null
     */
     public function getProductcode()
     {
@@ -1662,7 +1554,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets productcode
     *
-    * @param string $productcode 市场镜像的产品ID。
+    * @param string|null $productcode 市场镜像的产品ID。
     *
     * @return $this
     */
@@ -1676,7 +1568,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets supportDiskintensive
     *  表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性。
     *
-    * @return string
+    * @return string|null
     */
     public function getSupportDiskintensive()
     {
@@ -1686,7 +1578,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets supportDiskintensive
     *
-    * @param string $supportDiskintensive 表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性。
+    * @param string|null $supportDiskintensive 表示该镜像支持密集存储。如果镜像支持密集存储性能，则值为true，否则无需增加该属性。
     *
     * @return $this
     */
@@ -1700,7 +1592,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets supportHighperformance
     *  表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性。
     *
-    * @return string
+    * @return string|null
     */
     public function getSupportHighperformance()
     {
@@ -1710,7 +1602,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets supportHighperformance
     *
-    * @param string $supportHighperformance 表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性。
+    * @param string|null $supportHighperformance 表示该镜像支持高计算性能。如果镜像支持高计算性能，则值为true，否则无需增加该属性。
     *
     * @return $this
     */
@@ -1724,7 +1616,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets supportKvm
     *  如果镜像支持KVM，取值为true，否则无需增加该属性。
     *
-    * @return string
+    * @return string|null
     */
     public function getSupportKvm()
     {
@@ -1734,7 +1626,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets supportKvm
     *
-    * @param string $supportKvm 如果镜像支持KVM，取值为true，否则无需增加该属性。
+    * @param string|null $supportKvm 如果镜像支持KVM，取值为true，否则无需增加该属性。
     *
     * @return $this
     */
@@ -1748,7 +1640,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets supportKvmGpuType
     *  表示该镜像是支持KVM虚拟化平台下的GPU类型，如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
     *
-    * @return string
+    * @return string|null
     */
     public function getSupportKvmGpuType()
     {
@@ -1758,7 +1650,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets supportKvmGpuType
     *
-    * @param string $supportKvmGpuType 表示该镜像是支持KVM虚拟化平台下的GPU类型，如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * @param string|null $supportKvmGpuType 表示该镜像是支持KVM虚拟化平台下的GPU类型，如果不支持KVM虚拟机下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
     *
     * @return $this
     */
@@ -1772,7 +1664,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets supportKvmInfiniband
     *  如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
     *
-    * @return string
+    * @return string|null
     */
     public function getSupportKvmInfiniband()
     {
@@ -1782,7 +1674,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets supportKvmInfiniband
     *
-    * @param string $supportKvmInfiniband 如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
+    * @param string|null $supportKvmInfiniband 如果镜像支持KVM虚拟化下Infiniband网卡类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”属性不共存。
     *
     * @return $this
     */
@@ -1796,7 +1688,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets supportLargememory
     *  表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
     *
-    * @return string
+    * @return string|null
     */
     public function getSupportLargememory()
     {
@@ -1806,7 +1698,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets supportLargememory
     *
-    * @param string $supportLargememory 表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
+    * @param string|null $supportLargememory 表示该镜像支持超大内存。如果镜像支持超大内存，取值为true，否则无需增加该属性
     *
     * @return $this
     */
@@ -1820,7 +1712,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets supportXen
     *  如果镜像支持XEN，取值为true，否则无需增加该属性。
     *
-    * @return string
+    * @return string|null
     */
     public function getSupportXen()
     {
@@ -1830,7 +1722,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets supportXen
     *
-    * @param string $supportXen 如果镜像支持XEN，取值为true，否则无需增加该属性。
+    * @param string|null $supportXen 如果镜像支持XEN，取值为true，否则无需增加该属性。
     *
     * @return $this
     */
@@ -1844,7 +1736,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets supportXenGpuType
     *  表示该镜像是支持XEN虚拟化平台下的GPU优化类型，取值参考8.10-表 镜像支持的GPU类型说明。镜像操作系统类型请参考8.10-表 镜像类型。如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
     *
-    * @return string
+    * @return string|null
     */
     public function getSupportXenGpuType()
     {
@@ -1854,7 +1746,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets supportXenGpuType
     *
-    * @param string $supportXenGpuType 表示该镜像是支持XEN虚拟化平台下的GPU优化类型，取值参考8.10-表 镜像支持的GPU类型说明。镜像操作系统类型请参考8.10-表 镜像类型。如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * @param string|null $supportXenGpuType 表示该镜像是支持XEN虚拟化平台下的GPU优化类型，取值参考8.10-表 镜像支持的GPU类型说明。镜像操作系统类型请参考8.10-表 镜像类型。如果不支持XEN虚拟化下GPU类型，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
     *
     * @return $this
     */
@@ -1868,7 +1760,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets supportXenHana
     *  如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
     *
-    * @return string
+    * @return string|null
     */
     public function getSupportXenHana()
     {
@@ -1878,7 +1770,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets supportXenHana
     *
-    * @param string $supportXenHana 如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
+    * @param string|null $supportXenHana 如果镜像支持XEN虚拟化下HANA类型，取值为true。否则，无需添加该属性。该属性与“__support_xen”和“__support_kvm”属性不共存。
     *
     * @return $this
     */
@@ -1892,7 +1784,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets checksum
     *  目前暂时不使用。
     *
-    * @return string
+    * @return string|null
     */
     public function getChecksum()
     {
@@ -1902,7 +1794,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets checksum
     *
-    * @param string $checksum 目前暂时不使用。
+    * @param string|null $checksum 目前暂时不使用。
     *
     * @return $this
     */
@@ -2204,7 +2096,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets size
     *  目前暂时不使用。
     *
-    * @return int
+    * @return int|null
     */
     public function getSize()
     {
@@ -2214,7 +2106,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int $size 目前暂时不使用。
+    * @param int|null $size 目前暂时不使用。
     *
     * @return $this
     */
@@ -2324,7 +2216,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets virtualSize
     *  目前暂时不使用。
     *
-    * @return int
+    * @return int|null
     */
     public function getVirtualSize()
     {
@@ -2334,7 +2226,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets virtualSize
     *
-    * @param int $virtualSize 目前暂时不使用。
+    * @param int|null $virtualSize 目前暂时不使用。
     *
     * @return $this
     */
@@ -2372,7 +2264,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets supportFcInject
     *  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     *
-    * @return string
+    * @return string|null
     */
     public function getSupportFcInject()
     {
@@ -2382,7 +2274,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets supportFcInject
     *
-    * @param string $supportFcInject 表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
+    * @param string|null $supportFcInject 表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     *
     * @return $this
     */
@@ -2396,7 +2288,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets enterpriseProjectId
     *  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     *
-    * @return string
+    * @return string|null
     */
     public function getEnterpriseProjectId()
     {
@@ -2406,7 +2298,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string $enterpriseProjectId 表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
+    * @param string|null $enterpriseProjectId 表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     *
     * @return $this
     */
@@ -2420,7 +2312,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets hwFirmwareType
     *  云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     *
-    * @return string
+    * @return string|null
     */
     public function getHwFirmwareType()
     {
@@ -2430,7 +2322,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets hwFirmwareType
     *
-    * @param string $hwFirmwareType 云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
+    * @param string|null $hwFirmwareType 云主机云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     *
     * @return $this
     */
@@ -2444,7 +2336,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets supportArm
     *  是否为ARM架构类型的镜像，取值为“true”或者“false”。
     *
-    * @return string
+    * @return string|null
     */
     public function getSupportArm()
     {
@@ -2454,7 +2346,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets supportArm
     *
-    * @param string $supportArm 是否为ARM架构类型的镜像，取值为“true”或者“false”。
+    * @param string|null $supportArm 是否为ARM架构类型的镜像，取值为“true”或者“false”。
     *
     * @return $this
     */
@@ -2468,7 +2360,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets isOffshelved
     *  表示当前市场镜像是否下架。 true：已下架 false：未下架
     *
-    * @return string
+    * @return string|null
     */
     public function getIsOffshelved()
     {
@@ -2478,7 +2370,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets isOffshelved
     *
-    * @param string $isOffshelved 表示当前市场镜像是否下架。 true：已下架 false：未下架
+    * @param string|null $isOffshelved 表示当前市场镜像是否下架。 true：已下架 false：未下架
     *
     * @return $this
     */
@@ -2492,7 +2384,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets lazyloading
     *  镜像是否支持延迟加载。取值为True或False。
     *
-    * @return string
+    * @return string|null
     */
     public function getLazyloading()
     {
@@ -2502,7 +2394,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets lazyloading
     *
-    * @param string $lazyloading 镜像是否支持延迟加载。取值为True或False。
+    * @param string|null $lazyloading 镜像是否支持延迟加载。取值为True或False。
     *
     * @return $this
     */
@@ -2516,7 +2408,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets osFeatureList
     *  镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
     *
-    * @return string
+    * @return string|null
     */
     public function getOsFeatureList()
     {
@@ -2526,7 +2418,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets osFeatureList
     *
-    * @param string $osFeatureList 镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
+    * @param string|null $osFeatureList 镜像附加属性。该属性采用JSON格式来标识镜像支持的高级特性清单。
     *
     * @return $this
     */
@@ -2540,7 +2432,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets rootOrigin
     *  表示当前镜像来源是从外部导入。取值：file。
     *
-    * @return string
+    * @return string|null
     */
     public function getRootOrigin()
     {
@@ -2550,7 +2442,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets rootOrigin
     *
-    * @param string $rootOrigin 表示当前镜像来源是从外部导入。取值：file。
+    * @param string|null $rootOrigin 表示当前镜像来源是从外部导入。取值：file。
     *
     * @return $this
     */
@@ -2564,7 +2456,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets sequenceNum
     *  目前暂时不用
     *
-    * @return string
+    * @return string|null
     */
     public function getSequenceNum()
     {
@@ -2574,7 +2466,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets sequenceNum
     *
-    * @param string $sequenceNum 目前暂时不用
+    * @param string|null $sequenceNum 目前暂时不用
     *
     * @return $this
     */
@@ -2588,7 +2480,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets supportAgentList
     *  镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
     *
-    * @return string
+    * @return string|null
     */
     public function getSupportAgentList()
     {
@@ -2598,7 +2490,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets supportAgentList
     *
-    * @param string $supportAgentList 镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
+    * @param string|null $supportAgentList 镜像是否支持企业主机安全或主机监控。 hss：企业主机安全 ces：主机监控
     *
     * @return $this
     */
@@ -2612,7 +2504,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets systemCmkid
     *  加密镜像所使用的密钥ID。
     *
-    * @return string
+    * @return string|null
     */
     public function getSystemCmkid()
     {
@@ -2622,7 +2514,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets systemCmkid
     *
-    * @param string $systemCmkid 加密镜像所使用的密钥ID。
+    * @param string|null $systemCmkid 加密镜像所使用的密钥ID。
     *
     * @return $this
     */
@@ -2660,7 +2552,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets hwVifMultiqueueEnabled
     *  镜像是否支持网卡多队列。取值为true或者false。
     *
-    * @return string
+    * @return string|null
     */
     public function getHwVifMultiqueueEnabled()
     {
@@ -2670,7 +2562,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets hwVifMultiqueueEnabled
     *
-    * @param string $hwVifMultiqueueEnabled 镜像是否支持网卡多队列。取值为true或者false。
+    * @param string|null $hwVifMultiqueueEnabled 镜像是否支持网卡多队列。取值为true或者false。
     *
     * @return $this
     */
@@ -2684,7 +2576,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets maxRam
     *  镜像支持的最大内存，单位为MB。取值可以参考云服务器规格限制，一般不设置。
     *
-    * @return string
+    * @return string|null
     */
     public function getMaxRam()
     {
@@ -2694,7 +2586,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets maxRam
     *
-    * @param string $maxRam 镜像支持的最大内存，单位为MB。取值可以参考云服务器规格限制，一般不设置。
+    * @param string|null $maxRam 镜像支持的最大内存，单位为MB。取值可以参考云服务器规格限制，一般不设置。
     *
     * @return $this
     */
@@ -2708,7 +2600,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets imageLocation
     *  镜像的存储位置。
     *
-    * @return string
+    * @return string|null
     */
     public function getImageLocation()
     {
@@ -2718,7 +2610,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets imageLocation
     *
-    * @param string $imageLocation 镜像的存储位置。
+    * @param string|null $imageLocation 镜像的存储位置。
     *
     * @return $this
     */
@@ -2732,7 +2624,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets isConfigInit
     *  是否完成了初始化配置。取值为true或false
     *
-    * @return string
+    * @return string|null
     */
     public function getIsConfigInit()
     {
@@ -2742,7 +2634,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets isConfigInit
     *
-    * @param string $isConfigInit 是否完成了初始化配置。取值为true或false
+    * @param string|null $isConfigInit 是否完成了初始化配置。取值为true或false
     *
     * @return $this
     */
@@ -2756,7 +2648,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets accountCode
     *  收费镜像标识。
     *
-    * @return string
+    * @return string|null
     */
     public function getAccountCode()
     {
@@ -2766,7 +2658,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets accountCode
     *
-    * @param string $accountCode 收费镜像标识。
+    * @param string|null $accountCode 收费镜像标识。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleName  **参数说明**：用户自定义的规则名称。
+    * ruleName  **参数说明**：规则名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
     * description  **参数说明**：用户自定义的规则描述。
     * select  **参数说明**：用户自定义sql select语句，最大长度500，更新sql时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
     * where  **参数说明**：用户自定义sql where语句，最大长度500，更新操作时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
@@ -38,7 +38,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleName  **参数说明**：用户自定义的规则名称。
+    * ruleName  **参数说明**：规则名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
     * description  **参数说明**：用户自定义的规则描述。
     * select  **参数说明**：用户自定义sql select语句，最大长度500，更新sql时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
     * where  **参数说明**：用户自定义sql where语句，最大长度500，更新操作时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
@@ -77,7 +77,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleName  **参数说明**：用户自定义的规则名称。
+    * ruleName  **参数说明**：规则名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
     * description  **参数说明**：用户自定义的规则描述。
     * select  **参数说明**：用户自定义sql select语句，最大长度500，更新sql时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
     * where  **参数说明**：用户自定义sql where语句，最大长度500，更新操作时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
@@ -95,7 +95,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleName  **参数说明**：用户自定义的规则名称。
+    * ruleName  **参数说明**：规则名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
     * description  **参数说明**：用户自定义的规则描述。
     * select  **参数说明**：用户自定义sql select语句，最大长度500，更新sql时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
     * where  **参数说明**：用户自定义sql where语句，最大长度500，更新操作时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
@@ -113,7 +113,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleName  **参数说明**：用户自定义的规则名称。
+    * ruleName  **参数说明**：规则名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
     * description  **参数说明**：用户自定义的规则描述。
     * select  **参数说明**：用户自定义sql select语句，最大长度500，更新sql时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
     * where  **参数说明**：用户自定义sql where语句，最大长度500，更新操作时，select跟where必须同时传参，如果需要清除该参数的值，输入空字符串，该参数仅供标准版和企业版用户使用。
@@ -208,6 +208,9 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['ruleName']) && (mb_strlen($this->container['ruleName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'ruleName', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['ruleName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_?'#()\\.,&%@!-]*$/", $this->container['ruleName'])) {
+                $invalidProperties[] = "invalid value for 'ruleName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_?'#()\\.,&%@!-]*$/.";
+            }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 256.";
             }
@@ -242,7 +245,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleName
-    *  **参数说明**：用户自定义的规则名称。
+    *  **参数说明**：规则名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
     *
     * @return string|null
     */
@@ -254,7 +257,7 @@ class UpdateRuleReq implements ModelInterface, ArrayAccess
     /**
     * Sets ruleName
     *
-    * @param string|null $ruleName **参数说明**：用户自定义的规则名称。
+    * @param string|null $ruleName **参数说明**：规则名称。 **取值范围**：长度不超过256，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合
     *
     * @return $this
     */
