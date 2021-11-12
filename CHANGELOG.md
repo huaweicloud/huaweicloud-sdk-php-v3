@@ -1,3 +1,44 @@
+# 3.0.29-beta 2021-11-12
+
+### HuaweiCloud SDK IMS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `results` to the interface `ShowJob`.
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameters `country` and `protocol` to the interface `ListBandwidthDetail` and `ListUsersOfStream`.
+  - Add the request parameter `protocol` to the interface `ListDomainTrafficDetail`, `ListDomainBandwidthPeak` and `ListDomainTrafficSummary`.
+  - Add the request parameter `stream` to the interface `ListTranscodeData`.
+  - Add the request parameters `stream`, `start_time` and `end_time` to the interface `ListHistoryStreams`.
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `confidence` to the interface `RecognizeGeneralTable`.
+
+### HuaweiCloud SDK VPC
+
+- _Features_
+  - Support interfaces(V3): `AddVpcExtendCidr`¡¢`RemoveVpcExtendCidr`¡¢`ListVpcs`¡¢`ShowVpc`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
 # 3.0.28-beta 2021-10-25
 
 ### HuaweiCloud SDK EIP

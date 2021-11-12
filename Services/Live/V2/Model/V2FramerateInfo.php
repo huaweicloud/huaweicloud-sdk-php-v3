@@ -25,7 +25,7 @@ class V2FramerateInfo implements ModelInterface, ArrayAccess
     * stream  流名。
     * startTime  采样开始时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
     * endTime  采样结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
-    * dataList  帧率信息列表。
+    * dataList  帧率信息列表，单位为fps。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class V2FramerateInfo implements ModelInterface, ArrayAccess
     * stream  流名。
     * startTime  采样开始时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
     * endTime  采样结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
-    * dataList  帧率信息列表。
+    * dataList  帧率信息列表，单位为fps。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class V2FramerateInfo implements ModelInterface, ArrayAccess
     * stream  流名。
     * startTime  采样开始时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
     * endTime  采样结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
-    * dataList  帧率信息列表。
+    * dataList  帧率信息列表，单位为fps。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class V2FramerateInfo implements ModelInterface, ArrayAccess
     * stream  流名。
     * startTime  采样开始时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
     * endTime  采样结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
-    * dataList  帧率信息列表。
+    * dataList  帧率信息列表，单位为fps。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class V2FramerateInfo implements ModelInterface, ArrayAccess
     * stream  流名。
     * startTime  采样开始时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
     * endTime  采样结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。
-    * dataList  帧率信息列表。
+    * dataList  帧率信息列表，单位为fps。
     *
     * @var string[]
     */
@@ -379,7 +379,7 @@ class V2FramerateInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  帧率信息列表。
+    *  帧率信息列表，单位为fps。
     *
     * @return int[]|null
     */
@@ -391,7 +391,7 @@ class V2FramerateInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param int[]|null $dataList 帧率信息列表。
+    * @param int[]|null $dataList 帧率信息列表，单位为fps。
     *
     * @return $this
     */

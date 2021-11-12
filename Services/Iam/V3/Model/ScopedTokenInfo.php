@@ -20,13 +20,13 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * expiresAt  过期时间
-    * methods  获取token的方式，联邦用户默认为mapped
-    * issuedAt  生成时间
+    * expiresAt  过期时间。
+    * methods  获取token的方式，联邦用户默认为mapped。
+    * issuedAt  生成时间。
     * user  user
     * domain  domain
     * project  project
-    * roles  roles信息
+    * roles  roles信息。
     * catalog  catalog信息
     *
     * @var string[]
@@ -38,19 +38,19 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
             'user' => '\HuaweiCloud\SDK\Iam\V3\Model\FederationUserBody',
             'domain' => '\HuaweiCloud\SDK\Iam\V3\Model\DomainInfo',
             'project' => '\HuaweiCloud\SDK\Iam\V3\Model\ProjectInfo',
-            'roles' => '\HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoRoles[]',
+            'roles' => '\HuaweiCloud\SDK\Iam\V3\Model\ScopedTokenInfoRoles[]',
             'catalog' => '\HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoCatalog[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * expiresAt  过期时间
-    * methods  获取token的方式，联邦用户默认为mapped
-    * issuedAt  生成时间
+    * expiresAt  过期时间。
+    * methods  获取token的方式，联邦用户默认为mapped。
+    * issuedAt  生成时间。
     * user  user
     * domain  domain
     * project  project
-    * roles  roles信息
+    * roles  roles信息。
     * catalog  catalog信息
     *
     * @var string[]
@@ -89,13 +89,13 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * expiresAt  过期时间
-    * methods  获取token的方式，联邦用户默认为mapped
-    * issuedAt  生成时间
+    * expiresAt  过期时间。
+    * methods  获取token的方式，联邦用户默认为mapped。
+    * issuedAt  生成时间。
     * user  user
     * domain  domain
     * project  project
-    * roles  roles信息
+    * roles  roles信息。
     * catalog  catalog信息
     *
     * @var string[]
@@ -113,13 +113,13 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * expiresAt  过期时间
-    * methods  获取token的方式，联邦用户默认为mapped
-    * issuedAt  生成时间
+    * expiresAt  过期时间。
+    * methods  获取token的方式，联邦用户默认为mapped。
+    * issuedAt  生成时间。
     * user  user
     * domain  domain
     * project  project
-    * roles  roles信息
+    * roles  roles信息。
     * catalog  catalog信息
     *
     * @var string[]
@@ -137,13 +137,13 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * expiresAt  过期时间
-    * methods  获取token的方式，联邦用户默认为mapped
-    * issuedAt  生成时间
+    * expiresAt  过期时间。
+    * methods  获取token的方式，联邦用户默认为mapped。
+    * issuedAt  生成时间。
     * user  user
     * domain  domain
     * project  project
-    * roles  roles信息
+    * roles  roles信息。
     * catalog  catalog信息
     *
     * @var string[]
@@ -269,7 +269,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets expiresAt
-    *  过期时间
+    *  过期时间。
     *
     * @return string
     */
@@ -281,7 +281,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
     /**
     * Sets expiresAt
     *
-    * @param string $expiresAt 过期时间
+    * @param string $expiresAt 过期时间。
     *
     * @return $this
     */
@@ -293,7 +293,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets methods
-    *  获取token的方式，联邦用户默认为mapped
+    *  获取token的方式，联邦用户默认为mapped。
     *
     * @return string[]
     */
@@ -305,7 +305,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
     /**
     * Sets methods
     *
-    * @param string[] $methods 获取token的方式，联邦用户默认为mapped
+    * @param string[] $methods 获取token的方式，联邦用户默认为mapped。
     *
     * @return $this
     */
@@ -317,7 +317,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets issuedAt
-    *  生成时间
+    *  生成时间。
     *
     * @return string
     */
@@ -329,7 +329,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
     /**
     * Sets issuedAt
     *
-    * @param string $issuedAt 生成时间
+    * @param string $issuedAt 生成时间。
     *
     * @return $this
     */
@@ -413,9 +413,9 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets roles
-    *  roles信息
+    *  roles信息。
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoRoles[]
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\ScopedTokenInfoRoles[]
     */
     public function getRoles()
     {
@@ -425,7 +425,7 @@ class ScopedTokenInfo implements ModelInterface, ArrayAccess
     /**
     * Sets roles
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\UnscopedTokenInfoRoles[] $roles roles信息
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\ScopedTokenInfoRoles[] $roles roles信息。
     *
     * @return $this
     */

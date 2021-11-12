@@ -22,8 +22,8 @@ class FederationUserBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * osFederation  osFederation
     * domain  domain
-    * id  user id
-    * name  user name
+    * id  user id。
+    * name  user name。
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class FederationUserBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * osFederation  osFederation
     * domain  domain
-    * id  user id
-    * name  user name
+    * id  user id。
+    * name  user name。
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class FederationUserBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * osFederation  osFederation
     * domain  domain
-    * id  user id
-    * name  user name
+    * id  user id。
+    * name  user name。
     *
     * @var string[]
     */
@@ -91,8 +91,8 @@ class FederationUserBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * osFederation  osFederation
     * domain  domain
-    * id  user id
-    * name  user name
+    * id  user id。
+    * name  user name。
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class FederationUserBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * osFederation  osFederation
     * domain  domain
-    * id  user id
-    * name  user name
+    * id  user id。
+    * name  user name。
     *
     * @var string[]
     */
@@ -261,7 +261,7 @@ class FederationUserBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  user id
+    *  user id。
     *
     * @return string|null
     */
@@ -273,7 +273,7 @@ class FederationUserBody implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id user id
+    * @param string|null $id user id。
     *
     * @return $this
     */
@@ -285,7 +285,7 @@ class FederationUserBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  user name
+    *  user name。
     *
     * @return string|null
     */
@@ -297,7 +297,7 @@ class FederationUserBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name user name
+    * @param string|null $name user name。
     *
     * @return $this
     */

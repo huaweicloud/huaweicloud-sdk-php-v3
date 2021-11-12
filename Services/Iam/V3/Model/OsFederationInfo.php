@@ -22,7 +22,7 @@ class OsFederationInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * identityProvider  identityProvider
     * protocol  protocol
-    * groups  用户组信息
+    * groups  用户组信息。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class OsFederationInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * identityProvider  identityProvider
     * protocol  protocol
-    * groups  用户组信息
+    * groups  用户组信息。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class OsFederationInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * identityProvider  identityProvider
     * protocol  protocol
-    * groups  用户组信息
+    * groups  用户组信息。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class OsFederationInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * identityProvider  identityProvider
     * protocol  protocol
-    * groups  用户组信息
+    * groups  用户组信息。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class OsFederationInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * identityProvider  identityProvider
     * protocol  protocol
-    * groups  用户组信息
+    * groups  用户组信息。
     *
     * @var string[]
     */
@@ -253,7 +253,7 @@ class OsFederationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groups
-    *  用户组信息
+    *  用户组信息。
     *
     * @return object[]
     */
@@ -265,7 +265,7 @@ class OsFederationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groups
     *
-    * @param object[] $groups 用户组信息
+    * @param object[] $groups 用户组信息。
     *
     * @return $this
     */

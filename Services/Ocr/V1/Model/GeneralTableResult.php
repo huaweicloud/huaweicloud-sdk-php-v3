@@ -22,24 +22,28 @@ class GeneralTableResult implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * wordsRegionCount  文字区域数目。
     * wordsRegionList  文字区域识别结果列表，输出顺序从左到右，先上后下。
+    * excel  表格图像转换为excel的base64编码，图像中的文字和表格按位置写入excel。对返回的excel编码可用base64.b64decode解码并保存为.xlsx文件。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'wordsRegionCount' => 'int',
-            'wordsRegionList' => '\HuaweiCloud\SDK\Ocr\V1\Model\WordsRegionList[]'
+            'wordsRegionList' => '\HuaweiCloud\SDK\Ocr\V1\Model\WordsRegionList[]',
+            'excel' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * wordsRegionCount  文字区域数目。
     * wordsRegionList  文字区域识别结果列表，输出顺序从左到右，先上后下。
+    * excel  表格图像转换为excel的base64编码，图像中的文字和表格按位置写入excel。对返回的excel编码可用base64.b64decode解码并保存为.xlsx文件。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'wordsRegionCount' => 'int32',
-        'wordsRegionList' => null
+        'wordsRegionList' => null,
+        'excel' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class GeneralTableResult implements ModelInterface, ArrayAccess
     * and the value is the original name
     * wordsRegionCount  文字区域数目。
     * wordsRegionList  文字区域识别结果列表，输出顺序从左到右，先上后下。
+    * excel  表格图像转换为excel的base64编码，图像中的文字和表格按位置写入excel。对返回的excel编码可用base64.b64decode解码并保存为.xlsx文件。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'wordsRegionCount' => 'words_region_count',
-            'wordsRegionList' => 'words_region_list'
+            'wordsRegionList' => 'words_region_list',
+            'excel' => 'excel'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * wordsRegionCount  文字区域数目。
     * wordsRegionList  文字区域识别结果列表，输出顺序从左到右，先上后下。
+    * excel  表格图像转换为excel的base64编码，图像中的文字和表格按位置写入excel。对返回的excel编码可用base64.b64decode解码并保存为.xlsx文件。
     *
     * @var string[]
     */
     protected static $setters = [
             'wordsRegionCount' => 'setWordsRegionCount',
-            'wordsRegionList' => 'setWordsRegionList'
+            'wordsRegionList' => 'setWordsRegionList',
+            'excel' => 'setExcel'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * wordsRegionCount  文字区域数目。
     * wordsRegionList  文字区域识别结果列表，输出顺序从左到右，先上后下。
+    * excel  表格图像转换为excel的base64编码，图像中的文字和表格按位置写入excel。对返回的excel编码可用base64.b64decode解码并保存为.xlsx文件。
     *
     * @var string[]
     */
     protected static $getters = [
             'wordsRegionCount' => 'getWordsRegionCount',
-            'wordsRegionList' => 'getWordsRegionList'
+            'wordsRegionList' => 'getWordsRegionList',
+            'excel' => 'getExcel'
     ];
 
     /**
@@ -159,6 +169,7 @@ class GeneralTableResult implements ModelInterface, ArrayAccess
     {
         $this->container['wordsRegionCount'] = isset($data['wordsRegionCount']) ? $data['wordsRegionCount'] : null;
         $this->container['wordsRegionList'] = isset($data['wordsRegionList']) ? $data['wordsRegionList'] : null;
+        $this->container['excel'] = isset($data['excel']) ? $data['excel'] : null;
     }
 
     /**
@@ -234,6 +245,30 @@ class GeneralTableResult implements ModelInterface, ArrayAccess
     public function setWordsRegionList($wordsRegionList)
     {
         $this->container['wordsRegionList'] = $wordsRegionList;
+        return $this;
+    }
+
+    /**
+    * Gets excel
+    *  表格图像转换为excel的base64编码，图像中的文字和表格按位置写入excel。对返回的excel编码可用base64.b64decode解码并保存为.xlsx文件。
+    *
+    * @return string|null
+    */
+    public function getExcel()
+    {
+        return $this->container['excel'];
+    }
+
+    /**
+    * Sets excel
+    *
+    * @param string|null $excel 表格图像转换为excel的base64编码，图像中的文字和表格按位置写入excel。对返回的excel编码可用base64.b64decode解码并保存为.xlsx文件。
+    *
+    * @return $this
+    */
+    public function setExcel($excel)
+    {
+        $this->container['excel'] = $excel;
         return $this;
     }
 

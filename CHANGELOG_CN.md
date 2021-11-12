@@ -1,3 +1,44 @@
+# 3.0.29-beta 2021-11-12
+
+### HuaweiCloud SDK IMS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ShowJob`新增响应参数`results`
+
+### HuaweiCloud SDK Live
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListBandwidthDetail`、`ListUsersOfStream`新增请求参数`country`和`protocol`
+  - 接口`ListDomainTrafficDetail`、`ListDomainBandwidthPeak`、`ListDomainTrafficSummary`新增请求参数`protocol`
+  - 接口`ListTranscodeData`新增请求参数`stream`
+  - 接口`ListHistoryStreams`新增请求参数`stream`、`start_time`、`end_time`
+
+### HuaweiCloud SDK OCR
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`RecognizeGeneralTable`新增响应参数`confidence`
+
+### HuaweiCloud SDK VPC
+
+- _新增特性_
+  - 支持接口（V3）: `AddVpcExtendCidr`、`RemoveVpcExtendCidr`、`ListVpcs`、`ShowVpc`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
 # 3.0.28-beta 2021-10-25
 
 ### HuaweiCloud SDK EIP

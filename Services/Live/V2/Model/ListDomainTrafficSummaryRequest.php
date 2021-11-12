@@ -20,12 +20,13 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * app  应用名称。
     * stream  流名。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表。取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * isp  运营商列表。取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * protocol  请求协议
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -36,18 +37,20 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
             'stream' => 'string',
             'region' => 'string[]',
             'isp' => 'string[]',
+            'protocol' => 'string',
             'startTime' => 'string',
             'endTime' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * app  应用名称。
     * stream  流名。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表。取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * isp  运营商列表。取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * protocol  请求协议
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -58,6 +61,7 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
         'stream' => null,
         'region' => null,
         'isp' => null,
+        'protocol' => null,
         'startTime' => null,
         'endTime' => null
     ];
@@ -85,12 +89,13 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * app  应用名称。
     * stream  流名。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表。取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * isp  运营商列表。取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * protocol  请求协议
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -101,18 +106,20 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
             'stream' => 'stream',
             'region' => 'region',
             'isp' => 'isp',
+            'protocol' => 'protocol',
             'startTime' => 'start_time',
             'endTime' => 'end_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * app  应用名称。
     * stream  流名。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表。取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * isp  运营商列表。取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * protocol  请求协议
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -123,18 +130,20 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
             'stream' => 'setStream',
             'region' => 'setRegion',
             'isp' => 'setIsp',
+            'protocol' => 'setProtocol',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * app  应用名称。
     * stream  流名。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表。取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * isp  运营商列表。取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * protocol  请求协议
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -145,6 +154,7 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
             'stream' => 'getStream',
             'region' => 'getRegion',
             'isp' => 'getIsp',
+            'protocol' => 'getProtocol',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime'
     ];
@@ -189,7 +199,22 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PROTOCOL_FLV = 'flv';
+    const PROTOCOL_HLS = 'hls';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProtocolAllowableValues()
+    {
+        return [
+            self::PROTOCOL_FLV,
+            self::PROTOCOL_HLS,
+        ];
+    }
 
 
     /**
@@ -212,6 +237,7 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
         $this->container['stream'] = isset($data['stream']) ? $data['stream'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['isp'] = isset($data['isp']) ? $data['isp'] : null;
+        $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
     }
@@ -238,6 +264,20 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['stream']) && (mb_strlen($this->container['stream']) < 0)) {
                 $invalidProperties[] = "invalid value for 'stream', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getProtocolAllowableValues();
+                if (!is_null($this->container['protocol']) && !in_array($this->container['protocol'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'protocol', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['protocol']) && (mb_strlen($this->container['protocol']) > 128)) {
+                $invalidProperties[] = "invalid value for 'protocol', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['protocol']) && (mb_strlen($this->container['protocol']) < 0)) {
+                $invalidProperties[] = "invalid value for 'protocol', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['startTime']) && (mb_strlen($this->container['startTime']) > 64)) {
                 $invalidProperties[] = "invalid value for 'startTime', the character length must be smaller than or equal to 64.";
@@ -267,7 +307,7 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets playDomains
-    *  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    *  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     *
     * @return string[]
     */
@@ -279,7 +319,7 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets playDomains
     *
-    * @param string[] $playDomains 播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * @param string[] $playDomains 播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     *
     * @return $this
     */
@@ -363,7 +403,7 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isp
-    *  运营商列表。取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    *  运营商列表。取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     *
     * @return string[]|null
     */
@@ -375,7 +415,7 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isp
     *
-    * @param string[]|null $isp 运营商列表。取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * @param string[]|null $isp 运营商列表。取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     *
     * @return $this
     */
@@ -386,8 +426,32 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets protocol
+    *  请求协议
+    *
+    * @return string|null
+    */
+    public function getProtocol()
+    {
+        return $this->container['protocol'];
+    }
+
+    /**
+    * Sets protocol
+    *
+    * @param string|null $protocol 请求协议
+    *
+    * @return $this
+    */
+    public function setProtocol($protocol)
+    {
+        $this->container['protocol'] = $protocol;
+        return $this;
+    }
+
+    /**
     * Gets startTime
-    *  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    *  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     *
     * @return string|null
     */
@@ -399,7 +463,7 @@ class ListDomainTrafficSummaryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * @param string|null $startTime 起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     *
     * @return $this
     */

@@ -24,6 +24,7 @@ class JobEntities implements ModelInterface, ArrayAccess
     * currentTask  当前任务名称
     * imageName  镜像名称
     * processPercent  任务执行进度
+    * results  批量任务执行结果
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class JobEntities implements ModelInterface, ArrayAccess
             'imageId' => 'string',
             'currentTask' => 'string',
             'imageName' => 'string',
-            'processPercent' => 'double'
+            'processPercent' => 'double',
+            'results' => '\HuaweiCloud\SDK\Ims\V2\Model\JobEntitiesResult[]'
     ];
 
     /**
@@ -40,6 +42,7 @@ class JobEntities implements ModelInterface, ArrayAccess
     * currentTask  当前任务名称
     * imageName  镜像名称
     * processPercent  任务执行进度
+    * results  批量任务执行结果
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class JobEntities implements ModelInterface, ArrayAccess
         'imageId' => null,
         'currentTask' => null,
         'imageName' => null,
-        'processPercent' => 'double'
+        'processPercent' => 'double',
+        'results' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class JobEntities implements ModelInterface, ArrayAccess
     * currentTask  当前任务名称
     * imageName  镜像名称
     * processPercent  任务执行进度
+    * results  批量任务执行结果
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class JobEntities implements ModelInterface, ArrayAccess
             'imageId' => 'image_id',
             'currentTask' => 'current_task',
             'imageName' => 'image_name',
-            'processPercent' => 'process_percent'
+            'processPercent' => 'process_percent',
+            'results' => 'results'
     ];
 
     /**
@@ -93,6 +99,7 @@ class JobEntities implements ModelInterface, ArrayAccess
     * currentTask  当前任务名称
     * imageName  镜像名称
     * processPercent  任务执行进度
+    * results  批量任务执行结果
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class JobEntities implements ModelInterface, ArrayAccess
             'imageId' => 'setImageId',
             'currentTask' => 'setCurrentTask',
             'imageName' => 'setImageName',
-            'processPercent' => 'setProcessPercent'
+            'processPercent' => 'setProcessPercent',
+            'results' => 'setResults'
     ];
 
     /**
@@ -109,6 +117,7 @@ class JobEntities implements ModelInterface, ArrayAccess
     * currentTask  当前任务名称
     * imageName  镜像名称
     * processPercent  任务执行进度
+    * results  批量任务执行结果
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class JobEntities implements ModelInterface, ArrayAccess
             'imageId' => 'getImageId',
             'currentTask' => 'getCurrentTask',
             'imageName' => 'getImageName',
-            'processPercent' => 'getProcessPercent'
+            'processPercent' => 'getProcessPercent',
+            'results' => 'getResults'
     ];
 
     /**
@@ -181,6 +191,7 @@ class JobEntities implements ModelInterface, ArrayAccess
         $this->container['currentTask'] = isset($data['currentTask']) ? $data['currentTask'] : null;
         $this->container['imageName'] = isset($data['imageName']) ? $data['imageName'] : null;
         $this->container['processPercent'] = isset($data['processPercent']) ? $data['processPercent'] : null;
+        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
     }
 
     /**
@@ -298,6 +309,30 @@ class JobEntities implements ModelInterface, ArrayAccess
     public function setProcessPercent($processPercent)
     {
         $this->container['processPercent'] = $processPercent;
+        return $this;
+    }
+
+    /**
+    * Gets results
+    *  批量任务执行结果
+    *
+    * @return \HuaweiCloud\SDK\Ims\V2\Model\JobEntitiesResult[]|null
+    */
+    public function getResults()
+    {
+        return $this->container['results'];
+    }
+
+    /**
+    * Sets results
+    *
+    * @param \HuaweiCloud\SDK\Ims\V2\Model\JobEntitiesResult[]|null $results 批量任务执行结果
+    *
+    * @return $this
+    */
+    public function setResults($results)
+    {
+        $this->container['results'] = $results;
         return $this;
     }
 

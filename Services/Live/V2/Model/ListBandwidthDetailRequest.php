@@ -20,13 +20,15 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * app  应用名称。
     * stream  流名。
+    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ：电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * protocol  请求协议
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -35,8 +37,10 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             'playDomains' => 'string[]',
             'app' => 'string',
             'stream' => 'string',
+            'country' => 'string[]',
             'region' => 'string[]',
             'isp' => 'string[]',
+            'protocol' => 'string',
             'interval' => 'int',
             'startTime' => 'string',
             'endTime' => 'string'
@@ -44,13 +48,15 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * app  应用名称。
     * stream  流名。
+    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ：电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * protocol  请求协议
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -59,8 +65,10 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
         'playDomains' => null,
         'app' => null,
         'stream' => null,
+        'country' => null,
         'region' => null,
         'isp' => null,
+        'protocol' => null,
         'interval' => 'int32',
         'startTime' => null,
         'endTime' => null
@@ -89,13 +97,15 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * app  应用名称。
     * stream  流名。
+    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ：电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * protocol  请求协议
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -104,8 +114,10 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             'playDomains' => 'play_domains',
             'app' => 'app',
             'stream' => 'stream',
+            'country' => 'country',
             'region' => 'region',
             'isp' => 'isp',
+            'protocol' => 'protocol',
             'interval' => 'interval',
             'startTime' => 'start_time',
             'endTime' => 'end_time'
@@ -113,13 +125,15 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * app  应用名称。
     * stream  流名。
+    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ：电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * protocol  请求协议
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -128,8 +142,10 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             'playDomains' => 'setPlayDomains',
             'app' => 'setApp',
             'stream' => 'setStream',
+            'country' => 'setCountry',
             'region' => 'setRegion',
             'isp' => 'setIsp',
+            'protocol' => 'setProtocol',
             'interval' => 'setInterval',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime'
@@ -137,13 +153,15 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * app  应用名称。
     * stream  流名。
+    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ：电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * protocol  请求协议
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -152,8 +170,10 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             'playDomains' => 'getPlayDomains',
             'app' => 'getApp',
             'stream' => 'getStream',
+            'country' => 'getCountry',
             'region' => 'getRegion',
             'isp' => 'getIsp',
+            'protocol' => 'getProtocol',
             'interval' => 'getInterval',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime'
@@ -199,10 +219,25 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PROTOCOL_FLV = 'flv';
+    const PROTOCOL_HLS = 'hls';
     const INTERVAL_300 = 300;
     const INTERVAL_3600 = 3600;
     const INTERVAL_86400 = 86400;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProtocolAllowableValues()
+    {
+        return [
+            self::PROTOCOL_FLV,
+            self::PROTOCOL_HLS,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -237,8 +272,10 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
         $this->container['playDomains'] = isset($data['playDomains']) ? $data['playDomains'] : null;
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
         $this->container['stream'] = isset($data['stream']) ? $data['stream'] : null;
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['isp'] = isset($data['isp']) ? $data['isp'] : null;
+        $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['interval'] = isset($data['interval']) ? $data['interval'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
@@ -266,6 +303,20 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['stream']) && (mb_strlen($this->container['stream']) < 0)) {
                 $invalidProperties[] = "invalid value for 'stream', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getProtocolAllowableValues();
+                if (!is_null($this->container['protocol']) && !in_array($this->container['protocol'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'protocol', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['protocol']) && (mb_strlen($this->container['protocol']) > 128)) {
+                $invalidProperties[] = "invalid value for 'protocol', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['protocol']) && (mb_strlen($this->container['protocol']) < 0)) {
+                $invalidProperties[] = "invalid value for 'protocol', the character length must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getIntervalAllowableValues();
                 if (!is_null($this->container['interval']) && !in_array($this->container['interval'], $allowedValues, true)) {
@@ -309,7 +360,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets playDomains
-    *  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    *  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     *
     * @return string[]
     */
@@ -321,7 +372,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets playDomains
     *
-    * @param string[] $playDomains 播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * @param string[] $playDomains 播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     *
     * @return $this
     */
@@ -380,6 +431,30 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets country
+    *  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
+    *
+    * @return string[]|null
+    */
+    public function getCountry()
+    {
+        return $this->container['country'];
+    }
+
+    /**
+    * Sets country
+    *
+    * @param string[]|null $country 国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
+    *
+    * @return $this
+    */
+    public function setCountry($country)
+    {
+        $this->container['country'] = $country;
+        return $this;
+    }
+
+    /**
     * Gets region
     *  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
     *
@@ -405,7 +480,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isp
-    *  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    *  运营商列表，取值如下： - CMCC ：移动 - CTCC ：电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     *
     * @return string[]|null
     */
@@ -417,13 +492,37 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isp
     *
-    * @param string[]|null $isp 运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * @param string[]|null $isp 运营商列表，取值如下： - CMCC ：移动 - CTCC ：电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     *
     * @return $this
     */
     public function setIsp($isp)
     {
         $this->container['isp'] = $isp;
+        return $this;
+    }
+
+    /**
+    * Gets protocol
+    *  请求协议
+    *
+    * @return string|null
+    */
+    public function getProtocol()
+    {
+        return $this->container['protocol'];
+    }
+
+    /**
+    * Sets protocol
+    *
+    * @param string|null $protocol 请求协议
+    *
+    * @return $this
+    */
+    public function setProtocol($protocol)
+    {
+        $this->container['protocol'] = $protocol;
         return $this;
     }
 
@@ -453,7 +552,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    *  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     *
     * @return string|null
     */
@@ -465,7 +564,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * @param string|null $startTime 起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     *
     * @return $this
     */

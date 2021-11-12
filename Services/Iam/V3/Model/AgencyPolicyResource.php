@@ -20,7 +20,7 @@ class AgencyPolicyResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uri  委托资源的URI，长度不超过128。格式为：/iam/agencies/委托ID。例：   ``` \"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"] ```
+    * uri  委托资源的URI，长度不超过128。格式为：/iam/agencies/委托ID。例： ``` \"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"] ```
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class AgencyPolicyResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uri  委托资源的URI，长度不超过128。格式为：/iam/agencies/委托ID。例：   ``` \"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"] ```
+    * uri  委托资源的URI，长度不超过128。格式为：/iam/agencies/委托ID。例： ``` \"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"] ```
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class AgencyPolicyResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uri  委托资源的URI，长度不超过128。格式为：/iam/agencies/委托ID。例：   ``` \"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"] ```
+    * uri  委托资源的URI，长度不超过128。格式为：/iam/agencies/委托ID。例： ``` \"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"] ```
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AgencyPolicyResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uri  委托资源的URI，长度不超过128。格式为：/iam/agencies/委托ID。例：   ``` \"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"] ```
+    * uri  委托资源的URI，长度不超过128。格式为：/iam/agencies/委托ID。例： ``` \"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"] ```
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class AgencyPolicyResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uri  委托资源的URI，长度不超过128。格式为：/iam/agencies/委托ID。例：   ``` \"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"] ```
+    * uri  委托资源的URI，长度不超过128。格式为：/iam/agencies/委托ID。例： ``` \"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"] ```
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class AgencyPolicyResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets uri
-    *  委托资源的URI，长度不超过128。格式为：/iam/agencies/委托ID。例：   ``` \"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"] ```
+    *  委托资源的URI，长度不超过128。格式为：/iam/agencies/委托ID。例： ``` \"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"] ```
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class AgencyPolicyResource implements ModelInterface, ArrayAccess
     /**
     * Sets uri
     *
-    * @param string[] $uri 委托资源的URI，长度不超过128。格式为：/iam/agencies/委托ID。例：   ``` \"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"] ```
+    * @param string[] $uri 委托资源的URI，长度不超过128。格式为：/iam/agencies/委托ID。例： ``` \"uri\": [\"/iam/agencies/07805acaba800fdd4fbdc00b8f888c7c\"] ```
     *
     * @return $this
     */

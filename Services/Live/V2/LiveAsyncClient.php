@@ -26,7 +26,7 @@ class LiveAsyncClient extends Client
 
     /**
      * 查询播放带宽趋势接口
-     * 查询播放域名带宽数据。  最大查询跨度31天，最大查询周期90天。
+     * 查询播放域名带宽数据。  最大查询跨度31天，最大查询周期一年。
      *
      * @param $request 请求对象
      * @return response
@@ -61,11 +61,17 @@ class LiveAsyncClient extends Client
         if ($localVarParams['stream'] !== null) {
             $queryParams['stream'] = $localVarParams['stream'];
         }
+        if ($localVarParams['country'] !== null) {
+            $queryParams['country'] = $localVarParams['country'];
+        }
         if ($localVarParams['region'] !== null) {
             $queryParams['region'] = $localVarParams['region'];
         }
         if ($localVarParams['isp'] !== null) {
             $queryParams['isp'] = $localVarParams['isp'];
+        }
+        if ($localVarParams['protocol'] !== null) {
+            $queryParams['protocol'] = $localVarParams['protocol'];
         }
         if ($localVarParams['interval'] !== null) {
             $queryParams['interval'] = $localVarParams['interval'];
@@ -109,7 +115,7 @@ class LiveAsyncClient extends Client
 
     /**
      * 查询播放带宽峰值接口
-     * 查询指定时间范围内播放带宽峰值。  最大查询跨度31天，最大查询周期90天。
+     * 查询指定时间范围内播放带宽峰值。  最大查询跨度31天，最大查询周期一年。
      *
      * @param $request 请求对象
      * @return response
@@ -150,6 +156,9 @@ class LiveAsyncClient extends Client
         if ($localVarParams['isp'] !== null) {
             $queryParams['isp'] = $localVarParams['isp'];
         }
+        if ($localVarParams['protocol'] !== null) {
+            $queryParams['protocol'] = $localVarParams['protocol'];
+        }
         if ($localVarParams['startTime'] !== null) {
             $queryParams['start_time'] = $localVarParams['startTime'];
         }
@@ -189,7 +198,7 @@ class LiveAsyncClient extends Client
 
     /**
      * 查询播放流量趋势接口
-     * 查询播放域名流量数据。  最大查询跨度31天，最大查询周期90天。
+     * 查询播放域名流量数据。  最大查询跨度31天，最大查询周期一年。
      *
      * @param $request 请求对象
      * @return response
@@ -229,6 +238,9 @@ class LiveAsyncClient extends Client
         }
         if ($localVarParams['isp'] !== null) {
             $queryParams['isp'] = $localVarParams['isp'];
+        }
+        if ($localVarParams['protocol'] !== null) {
+            $queryParams['protocol'] = $localVarParams['protocol'];
         }
         if ($localVarParams['interval'] !== null) {
             $queryParams['interval'] = $localVarParams['interval'];
@@ -272,7 +284,7 @@ class LiveAsyncClient extends Client
 
     /**
      * 查询播放流量汇总接口
-     * 查询指定时间范围内流量汇总量。  最大查询跨度31天，最大查询周期90天。
+     * 查询指定时间范围内流量汇总量。  最大查询跨度31天，最大查询周期一年。
      *
      * @param $request 请求对象
      * @return response
@@ -313,6 +325,9 @@ class LiveAsyncClient extends Client
         if ($localVarParams['isp'] !== null) {
             $queryParams['isp'] = $localVarParams['isp'];
         }
+        if ($localVarParams['protocol'] !== null) {
+            $queryParams['protocol'] = $localVarParams['protocol'];
+        }
         if ($localVarParams['startTime'] !== null) {
             $queryParams['start_time'] = $localVarParams['startTime'];
         }
@@ -352,7 +367,7 @@ class LiveAsyncClient extends Client
 
     /**
      * 查询历史推流列表接口
-     * 查询历史推流列表。  最大查询跨度1天，最大查询周期7天。
+     * 查询历史推流列表。  不能查询现推流。  最大查询跨度1天，最大查询周期1个月。
      *
      * @param $request 请求对象
      * @return response
@@ -383,6 +398,15 @@ class LiveAsyncClient extends Client
         }
         if ($localVarParams['app'] !== null) {
             $queryParams['app'] = $localVarParams['app'];
+        }
+        if ($localVarParams['stream'] !== null) {
+            $queryParams['stream'] = $localVarParams['stream'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
@@ -662,6 +686,9 @@ class LiveAsyncClient extends Client
         if ($localVarParams['publishDomain'] !== null) {
             $queryParams['publish_domain'] = $localVarParams['publishDomain'];
         }
+        if ($localVarParams['stream'] !== null) {
+            $queryParams['stream'] = $localVarParams['stream'];
+        }
         if ($localVarParams['startTime'] !== null) {
             $queryParams['start_time'] = $localVarParams['startTime'];
         }
@@ -701,7 +728,7 @@ class LiveAsyncClient extends Client
 
     /**
      * 查询观众趋势接口
-     * 查询观众趋势。  最大查询跨度7天，最大查询周期90天。
+     * 查询观众趋势。  最大查询跨度31天，最大查询周期一年。
      *
      * @param $request 请求对象
      * @return response
@@ -739,8 +766,14 @@ class LiveAsyncClient extends Client
         if ($localVarParams['isp'] !== null) {
             $queryParams['isp'] = $localVarParams['isp'];
         }
+        if ($localVarParams['country'] !== null) {
+            $queryParams['country'] = $localVarParams['country'];
+        }
         if ($localVarParams['region'] !== null) {
             $queryParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['protocol'] !== null) {
+            $queryParams['protocol'] = $localVarParams['protocol'];
         }
         if ($localVarParams['interval'] !== null) {
             $queryParams['interval'] = $localVarParams['interval'];
@@ -784,7 +817,7 @@ class LiveAsyncClient extends Client
 
     /**
      * 查询域名维度推流路数接口
-     * 查询域名维度推流路数接口。  最大查询跨度31天，最大查询周期90天。
+     * 查询域名维度推流路数接口。  最大查询跨度31天，最大查询周期1年。
      *
      * @param $request 请求对象
      * @return response
@@ -852,7 +885,7 @@ class LiveAsyncClient extends Client
 
     /**
      * 查询播放画像信息接口
-     * 查询播放画像信息。  最大查询跨度1天，最大查询周期31天。
+     * 查询播放画像信息。  最大查询跨度1天，最大查询周期31天。 不统计协议为HLS的播放时长（play_duration）信息。
      *
      * @param $request 请求对象
      * @return response
@@ -920,7 +953,7 @@ class LiveAsyncClient extends Client
 
     /**
      * 查询上行带宽数据接口
-     * 查询上行带宽数据。  最大查询跨度31天，最大查询周期90天。
+     * 查询上行带宽数据。  最大查询跨度31天，最大查询周期1年。
      *
      * @param $request 请求对象
      * @return response
@@ -1003,7 +1036,7 @@ class LiveAsyncClient extends Client
 
     /**
      * 查询推流码率数据接口
-     * 查询推流监控码率数据接口。  最大查询跨度6小时，最大查询周期7天。
+     * 查询推流监控码率数据接口。  最大查询跨度1天，最大查询周期1个月。
      *
      * @param $request 请求对象
      * @return response
@@ -1077,7 +1110,7 @@ class LiveAsyncClient extends Client
 
     /**
      * 查询推流帧率数据接口
-     * 查询推流帧率数据接口。  最大查询跨度6小时，最大查询周期7天。
+     * 查询推流帧率数据接口。  最大查询跨度1天，最大查询周期1个月。
      *
      * @param $request 请求对象
      * @return response

@@ -23,10 +23,12 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     * playDomain  播放域名。
     * app  app名。
     * stream  流名。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * protocol  请求协议
     * interval  查询数据的时间粒度，支持60（默认值）, 300秒。不传值时，使用默认值60秒。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -36,7 +38,9 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
             'app' => 'string',
             'stream' => 'string',
             'isp' => 'string[]',
+            'country' => 'string[]',
             'region' => 'string[]',
+            'protocol' => 'string',
             'interval' => 'int',
             'startTime' => 'string',
             'endTime' => 'string'
@@ -47,10 +51,12 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     * playDomain  播放域名。
     * app  app名。
     * stream  流名。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * protocol  请求协议
     * interval  查询数据的时间粒度，支持60（默认值）, 300秒。不传值时，使用默认值60秒。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -60,7 +66,9 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
         'app' => null,
         'stream' => null,
         'isp' => null,
+        'country' => null,
         'region' => null,
+        'protocol' => null,
         'interval' => 'int32',
         'startTime' => null,
         'endTime' => null
@@ -92,10 +100,12 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     * playDomain  播放域名。
     * app  app名。
     * stream  流名。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * protocol  请求协议
     * interval  查询数据的时间粒度，支持60（默认值）, 300秒。不传值时，使用默认值60秒。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -105,7 +115,9 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
             'app' => 'app',
             'stream' => 'stream',
             'isp' => 'isp',
+            'country' => 'country',
             'region' => 'region',
+            'protocol' => 'protocol',
             'interval' => 'interval',
             'startTime' => 'start_time',
             'endTime' => 'end_time'
@@ -116,10 +128,12 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     * playDomain  播放域名。
     * app  app名。
     * stream  流名。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * protocol  请求协议
     * interval  查询数据的时间粒度，支持60（默认值）, 300秒。不传值时，使用默认值60秒。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -129,7 +143,9 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
             'app' => 'setApp',
             'stream' => 'setStream',
             'isp' => 'setIsp',
+            'country' => 'setCountry',
             'region' => 'setRegion',
+            'protocol' => 'setProtocol',
             'interval' => 'setInterval',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime'
@@ -140,10 +156,12 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     * playDomain  播放域名。
     * app  app名。
     * stream  流名。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
+    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * protocol  请求协议
     * interval  查询数据的时间粒度，支持60（默认值）, 300秒。不传值时，使用默认值60秒。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
     * @var string[]
@@ -153,7 +171,9 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
             'app' => 'getApp',
             'stream' => 'getStream',
             'isp' => 'getIsp',
+            'country' => 'getCountry',
             'region' => 'getRegion',
+            'protocol' => 'getProtocol',
             'interval' => 'getInterval',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime'
@@ -199,9 +219,24 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PROTOCOL_FLV = 'flv';
+    const PROTOCOL_HLS = 'hls';
     const INTERVAL_60 = 60;
     const INTERVAL_300 = 300;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getProtocolAllowableValues()
+    {
+        return [
+            self::PROTOCOL_FLV,
+            self::PROTOCOL_HLS,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -236,7 +271,9 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
         $this->container['stream'] = isset($data['stream']) ? $data['stream'] : null;
         $this->container['isp'] = isset($data['isp']) ? $data['isp'] : null;
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
+        $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['interval'] = isset($data['interval']) ? $data['interval'] : self::INTERVAL_60;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
@@ -270,6 +307,20 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['stream']) && (mb_strlen($this->container['stream']) < 0)) {
                 $invalidProperties[] = "invalid value for 'stream', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getProtocolAllowableValues();
+                if (!is_null($this->container['protocol']) && !in_array($this->container['protocol'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'protocol', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['protocol']) && (mb_strlen($this->container['protocol']) > 128)) {
+                $invalidProperties[] = "invalid value for 'protocol', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['protocol']) && (mb_strlen($this->container['protocol']) < 0)) {
+                $invalidProperties[] = "invalid value for 'protocol', the character length must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getIntervalAllowableValues();
                 if (!is_null($this->container['interval']) && !in_array($this->container['interval'], $allowedValues, true)) {
@@ -385,7 +436,7 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isp
-    *  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    *  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     *
     * @return string[]|null
     */
@@ -397,13 +448,37 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isp
     *
-    * @param string[]|null $isp 运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * @param string[]|null $isp 运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     *
     * @return $this
     */
     public function setIsp($isp)
     {
         $this->container['isp'] = $isp;
+        return $this;
+    }
+
+    /**
+    * Gets country
+    *  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
+    *
+    * @return string[]|null
+    */
+    public function getCountry()
+    {
+        return $this->container['country'];
+    }
+
+    /**
+    * Sets country
+    *
+    * @param string[]|null $country 国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
+    *
+    * @return $this
+    */
+    public function setCountry($country)
+    {
+        $this->container['country'] = $country;
         return $this;
     }
 
@@ -428,6 +503,30 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     public function setRegion($region)
     {
         $this->container['region'] = $region;
+        return $this;
+    }
+
+    /**
+    * Gets protocol
+    *  请求协议
+    *
+    * @return string|null
+    */
+    public function getProtocol()
+    {
+        return $this->container['protocol'];
+    }
+
+    /**
+    * Sets protocol
+    *
+    * @param string|null $protocol 请求协议
+    *
+    * @return $this
+    */
+    public function setProtocol($protocol)
+    {
+        $this->container['protocol'] = $protocol;
         return $this;
     }
 
@@ -457,7 +556,7 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    *  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     *
     * @return string|null
     */
@@ -469,7 +568,7 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期90天。  若参数为空，默认查询7天数据。
+    * @param string|null $startTime 起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     *
     * @return $this
     */

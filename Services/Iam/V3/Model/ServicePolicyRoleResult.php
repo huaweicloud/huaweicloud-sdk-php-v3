@@ -27,7 +27,7 @@ class ServicePolicyRoleResult implements ModelInterface, ArrayAccess
     * policy  policy
     * descriptionCn  自定义策略的中文描述信息。
     * domainId  自定义策略所属账号ID。
-    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * id  自定义策略ID。
     * name  自定义策略名。
     * updatedTime  自定义策略更新时间。
@@ -61,7 +61,7 @@ class ServicePolicyRoleResult implements ModelInterface, ArrayAccess
     * policy  policy
     * descriptionCn  自定义策略的中文描述信息。
     * domainId  自定义策略所属账号ID。
-    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * id  自定义策略ID。
     * name  自定义策略名。
     * updatedTime  自定义策略更新时间。
@@ -116,7 +116,7 @@ class ServicePolicyRoleResult implements ModelInterface, ArrayAccess
     * policy  policy
     * descriptionCn  自定义策略的中文描述信息。
     * domainId  自定义策略所属账号ID。
-    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * id  自定义策略ID。
     * name  自定义策略名。
     * updatedTime  自定义策略更新时间。
@@ -150,7 +150,7 @@ class ServicePolicyRoleResult implements ModelInterface, ArrayAccess
     * policy  policy
     * descriptionCn  自定义策略的中文描述信息。
     * domainId  自定义策略所属账号ID。
-    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * id  自定义策略ID。
     * name  自定义策略名。
     * updatedTime  自定义策略更新时间。
@@ -184,7 +184,7 @@ class ServicePolicyRoleResult implements ModelInterface, ArrayAccess
     * policy  policy
     * descriptionCn  自定义策略的中文描述信息。
     * domainId  自定义策略所属账号ID。
-    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * id  自定义策略ID。
     * name  自定义策略名。
     * updatedTime  自定义策略更新时间。
@@ -501,7 +501,7 @@ class ServicePolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    *  自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     *
     * @return string
     */
@@ -513,7 +513,7 @@ class ServicePolicyRoleResult implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * @param string $type 自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     *
     * @return $this
     */

@@ -270,6 +270,12 @@ class HistoryStreamInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['type']) && ($this->container['type'] < 0)) {
                 $invalidProperties[] = "invalid value for 'type', must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['videoCodec']) && (mb_strlen($this->container['videoCodec']) > 64)) {
+                $invalidProperties[] = "invalid value for 'videoCodec', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['videoCodec']) && (mb_strlen($this->container['videoCodec']) < 1)) {
+                $invalidProperties[] = "invalid value for 'videoCodec', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['audioCodec']) && (mb_strlen($this->container['audioCodec']) > 64)) {
                 $invalidProperties[] = "invalid value for 'audioCodec', the character length must be smaller than or equal to 64.";
             }

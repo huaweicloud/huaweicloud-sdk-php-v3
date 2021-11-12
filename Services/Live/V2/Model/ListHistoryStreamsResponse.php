@@ -22,7 +22,7 @@ class ListHistoryStreamsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * historyStreamList  历史流信息列表。
-    * total  总记录数
+    * total  总记录数。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ListHistoryStreamsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * historyStreamList  历史流信息列表。
-    * total  总记录数
+    * total  总记录数。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ListHistoryStreamsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * historyStreamList  历史流信息列表。
-    * total  总记录数
+    * total  总记录数。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ListHistoryStreamsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * historyStreamList  历史流信息列表。
-    * total  总记录数
+    * total  总记录数。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ListHistoryStreamsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * historyStreamList  历史流信息列表。
-    * total  总记录数
+    * total  总记录数。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -227,7 +227,7 @@ class ListHistoryStreamsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总记录数
+    *  总记录数。
     *
     * @return int|null
     */
@@ -239,7 +239,7 @@ class ListHistoryStreamsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总记录数
+    * @param int|null $total 总记录数。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountValidityPeriod  登录提示信息，取值范围[0,240]。
+    * accountValidityPeriod  账号在该值设置的有效期内未使用，则被停用。
     * customInfoForLogin  登录提示信息。
     * lockoutDuration  帐号锁定时长（分钟），取值范围[15,30]。
     * loginFailedTimes  限定时间内登录失败次数，取值范围[3,10]。
@@ -42,7 +42,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountValidityPeriod  登录提示信息，取值范围[0,240]。
+    * accountValidityPeriod  账号在该值设置的有效期内未使用，则被停用。
     * customInfoForLogin  登录提示信息。
     * lockoutDuration  帐号锁定时长（分钟），取值范围[15,30]。
     * loginFailedTimes  限定时间内登录失败次数，取值范围[3,10]。
@@ -85,7 +85,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountValidityPeriod  登录提示信息，取值范围[0,240]。
+    * accountValidityPeriod  账号在该值设置的有效期内未使用，则被停用。
     * customInfoForLogin  登录提示信息。
     * lockoutDuration  帐号锁定时长（分钟），取值范围[15,30]。
     * loginFailedTimes  限定时间内登录失败次数，取值范围[3,10]。
@@ -107,7 +107,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountValidityPeriod  登录提示信息，取值范围[0,240]。
+    * accountValidityPeriod  账号在该值设置的有效期内未使用，则被停用。
     * customInfoForLogin  登录提示信息。
     * lockoutDuration  帐号锁定时长（分钟），取值范围[15,30]。
     * loginFailedTimes  限定时间内登录失败次数，取值范围[3,10]。
@@ -129,7 +129,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountValidityPeriod  登录提示信息，取值范围[0,240]。
+    * accountValidityPeriod  账号在该值设置的有效期内未使用，则被停用。
     * customInfoForLogin  登录提示信息。
     * lockoutDuration  帐号锁定时长（分钟），取值范围[15,30]。
     * loginFailedTimes  限定时间内登录失败次数，取值范围[3,10]。
@@ -261,7 +261,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountValidityPeriod
-    *  登录提示信息，取值范围[0,240]。
+    *  账号在该值设置的有效期内未使用，则被停用。
     *
     * @return int
     */
@@ -273,7 +273,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets accountValidityPeriod
     *
-    * @param int $accountValidityPeriod 登录提示信息，取值范围[0,240]。
+    * @param int $accountValidityPeriod 账号在该值设置的有效期内未使用，则被停用。
     *
     * @return $this
     */

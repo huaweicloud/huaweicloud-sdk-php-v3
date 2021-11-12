@@ -21,7 +21,7 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * domain  domain
-    * name  IAM用户名。
+    * name  IAM用户名，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * password  IAM用户的登录密码。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domain  domain
-    * name  IAM用户名。
+    * name  IAM用户名，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * password  IAM用户的登录密码。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * domain  domain
-    * name  IAM用户名。
+    * name  IAM用户名，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * password  IAM用户的登录密码。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domain  domain
-    * name  IAM用户名。
+    * name  IAM用户名，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * password  IAM用户的登录密码。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domain  domain
-    * name  IAM用户名。
+    * name  IAM用户名，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * password  IAM用户的登录密码。
     *
     * @var string[]
@@ -229,7 +229,7 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  IAM用户名。
+    *  IAM用户名，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class PwdPasswordUser implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name IAM用户名。
+    * @param string $name IAM用户名，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     *
     * @return $this
     */

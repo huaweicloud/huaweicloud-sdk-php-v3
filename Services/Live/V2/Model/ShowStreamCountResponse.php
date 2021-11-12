@@ -21,7 +21,7 @@ class ShowStreamCountResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dataList  采样数据列表
+    * dataList  采样数据列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ShowStreamCountResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dataList  采样数据列表
+    * dataList  采样数据列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ShowStreamCountResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dataList  采样数据列表
+    * dataList  采样数据列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ShowStreamCountResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dataList  采样数据列表
+    * dataList  采样数据列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ShowStreamCountResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dataList  采样数据列表
+    * dataList  采样数据列表。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ShowStreamCountResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataList
-    *  采样数据列表
+    *  采样数据列表。
     *
     * @return \HuaweiCloud\SDK\Live\V2\Model\StreamCountData[]|null
     */
@@ -198,7 +198,7 @@ class ShowStreamCountResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dataList
     *
-    * @param \HuaweiCloud\SDK\Live\V2\Model\StreamCountData[]|null $dataList 采样数据列表
+    * @param \HuaweiCloud\SDK\Live\V2\Model\StreamCountData[]|null $dataList 采样数据列表。
     *
     * @return $this
     */

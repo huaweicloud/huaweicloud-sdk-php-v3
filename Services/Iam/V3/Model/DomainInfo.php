@@ -20,8 +20,8 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  租户id
-    * name  租户name
+    * id  租户id。
+    * name  租户name。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  租户id
-    * name  租户name
+    * id  租户id。
+    * name  租户name。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DomainInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  租户id
-    * name  租户name
+    * id  租户id。
+    * name  租户name。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  租户id
-    * name  租户name
+    * id  租户id。
+    * name  租户name。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  租户id
-    * name  租户name
+    * id  租户id。
+    * name  租户name。
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  租户id
+    *  租户id。
     *
     * @return string|null
     */
@@ -200,7 +200,7 @@ class DomainInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 租户id
+    * @param string|null $id 租户id。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  租户name
+    *  租户name。
     *
     * @return string
     */
@@ -224,7 +224,7 @@ class DomainInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 租户name
+    * @param string $name 租户name。
     *
     * @return $this
     */

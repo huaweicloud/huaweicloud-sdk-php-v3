@@ -20,7 +20,7 @@ class UpdateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  项目的状态信息，参数的值为\"suspended\"或\"normal\"。   - status值为\"suspended\"时，会将项目设置为冻结状态。   - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
+    * status  项目的状态信息，参数的值为\"suspended\"或\"normal\"。 - status值为\"suspended\"时，会将项目设置为冻结状态。 - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  项目的状态信息，参数的值为\"suspended\"或\"normal\"。   - status值为\"suspended\"时，会将项目设置为冻结状态。   - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
+    * status  项目的状态信息，参数的值为\"suspended\"或\"normal\"。 - status值为\"suspended\"时，会将项目设置为冻结状态。 - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateProjectOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  项目的状态信息，参数的值为\"suspended\"或\"normal\"。   - status值为\"suspended\"时，会将项目设置为冻结状态。   - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
+    * status  项目的状态信息，参数的值为\"suspended\"或\"normal\"。 - status值为\"suspended\"时，会将项目设置为冻结状态。 - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  项目的状态信息，参数的值为\"suspended\"或\"normal\"。   - status值为\"suspended\"时，会将项目设置为冻结状态。   - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
+    * status  项目的状态信息，参数的值为\"suspended\"或\"normal\"。 - status值为\"suspended\"时，会将项目设置为冻结状态。 - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  项目的状态信息，参数的值为\"suspended\"或\"normal\"。   - status值为\"suspended\"时，会将项目设置为冻结状态。   - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
+    * status  项目的状态信息，参数的值为\"suspended\"或\"normal\"。 - status值为\"suspended\"时，会将项目设置为冻结状态。 - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
     *
     * @var string[]
     */
@@ -200,7 +200,7 @@ class UpdateProjectOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  项目的状态信息，参数的值为\"suspended\"或\"normal\"。   - status值为\"suspended\"时，会将项目设置为冻结状态。   - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
+    *  项目的状态信息，参数的值为\"suspended\"或\"normal\"。 - status值为\"suspended\"时，会将项目设置为冻结状态。 - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
     *
     * @return string
     */
@@ -212,7 +212,7 @@ class UpdateProjectOption implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 项目的状态信息，参数的值为\"suspended\"或\"normal\"。   - status值为\"suspended\"时，会将项目设置为冻结状态。   - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
+    * @param string $status 项目的状态信息，参数的值为\"suspended\"或\"normal\"。 - status值为\"suspended\"时，会将项目设置为冻结状态。 - status值为\"normal\"时，会将项目设置为正常（解冻）状态。
     *
     * @return $this
     */

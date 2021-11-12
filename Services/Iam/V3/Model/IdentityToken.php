@@ -20,7 +20,7 @@ class IdentityToken implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  token的ID。与请求头中的X-Auth-Token填写其一即可，若都填写，优先校验X-Auth-Token。
+    * id  token的ID。与请求头中的X-Auth-Token含义相同，待废弃。
     * durationSeconds  AK/SK和securitytoken的有效期，时间单位为秒。取值范围：15min ~ 24h ，默认为15min。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class IdentityToken implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  token的ID。与请求头中的X-Auth-Token填写其一即可，若都填写，优先校验X-Auth-Token。
+    * id  token的ID。与请求头中的X-Auth-Token含义相同，待废弃。
     * durationSeconds  AK/SK和securitytoken的有效期，时间单位为秒。取值范围：15min ~ 24h ，默认为15min。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class IdentityToken implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  token的ID。与请求头中的X-Auth-Token填写其一即可，若都填写，优先校验X-Auth-Token。
+    * id  token的ID。与请求头中的X-Auth-Token含义相同，待废弃。
     * durationSeconds  AK/SK和securitytoken的有效期，时间单位为秒。取值范围：15min ~ 24h ，默认为15min。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class IdentityToken implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  token的ID。与请求头中的X-Auth-Token填写其一即可，若都填写，优先校验X-Auth-Token。
+    * id  token的ID。与请求头中的X-Auth-Token含义相同，待废弃。
     * durationSeconds  AK/SK和securitytoken的有效期，时间单位为秒。取值范围：15min ~ 24h ，默认为15min。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class IdentityToken implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  token的ID。与请求头中的X-Auth-Token填写其一即可，若都填写，优先校验X-Auth-Token。
+    * id  token的ID。与请求头中的X-Auth-Token含义相同，待废弃。
     * durationSeconds  AK/SK和securitytoken的有效期，时间单位为秒。取值范围：15min ~ 24h ，默认为15min。
     *
     * @var string[]
@@ -191,7 +191,7 @@ class IdentityToken implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  token的ID。与请求头中的X-Auth-Token填写其一即可，若都填写，优先校验X-Auth-Token。
+    *  token的ID。与请求头中的X-Auth-Token含义相同，待废弃。
     *
     * @return string|null
     */
@@ -203,7 +203,7 @@ class IdentityToken implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id token的ID。与请求头中的X-Auth-Token填写其一即可，若都填写，优先校验X-Auth-Token。
+    * @param string|null $id token的ID。与请求头中的X-Auth-Token含义相同，待废弃。
     *
     * @return $this
     */

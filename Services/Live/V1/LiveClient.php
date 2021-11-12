@@ -1226,6 +1226,70 @@ class LiveClient extends Client
     }
 
     /**
+     * 提交录制控制命令
+     * 对单条流的实时录制控制接口。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function runRecord($request)
+    {
+        return $this->runRecordWithHttpInfo($request);
+    }
+
+    public function runRecordWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/record/control';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['action'] !== null) {
+            $queryParams['action'] = $localVarParams['action'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\RunRecordResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\RunRecordRequest');
+    }
+
+    /**
      * 查询直播域名
      * 查询直播域名
      *

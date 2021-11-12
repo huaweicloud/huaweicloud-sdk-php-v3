@@ -25,7 +25,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
     * links  links
     * enabled  项目是否可用。
     * id  项目ID。
-    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
+    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。  如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
     * domainId  项目所属账号ID。
     * name  项目名称。
     *
@@ -49,7 +49,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
     * links  links
     * enabled  项目是否可用。
     * id  项目ID。
-    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
+    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。  如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
     * domainId  项目所属账号ID。
     * name  项目名称。
     *
@@ -94,7 +94,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
     * links  links
     * enabled  项目是否可用。
     * id  项目ID。
-    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
+    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。  如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
     * domainId  项目所属账号ID。
     * name  项目名称。
     *
@@ -118,7 +118,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
     * links  links
     * enabled  项目是否可用。
     * id  项目ID。
-    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
+    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。  如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
     * domainId  项目所属账号ID。
     * name  项目名称。
     *
@@ -142,7 +142,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
     * links  links
     * enabled  项目是否可用。
     * id  项目ID。
-    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
+    * parentId  如果查询自己创建的项目，则此处返回所属区域的项目ID。  如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
     * domainId  项目所属账号ID。
     * name  项目名称。
     *
@@ -395,7 +395,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
-    *  如果查询自己创建的项目，则此处返回所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
+    *  如果查询自己创建的项目，则此处返回所属区域的项目ID。  如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
     *
     * @return string
     */
@@ -407,7 +407,7 @@ class ProjectResult implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param string $parentId 如果查询自己创建的项目，则此处返回所属区域的项目ID。    如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
+    * @param string $parentId 如果查询自己创建的项目，则此处返回所属区域的项目ID。  如果查询的是系统内置项目，如cn-north-4，则此处返回账号ID。
     *
     * @return $this
     */

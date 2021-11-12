@@ -20,8 +20,8 @@ class UnscopedTokenInfoRoles implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  role id
-    * name  name id
+    * id  role id。
+    * name  name id。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UnscopedTokenInfoRoles implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  role id
-    * name  name id
+    * id  role id。
+    * name  name id。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UnscopedTokenInfoRoles implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  role id
-    * name  name id
+    * id  role id。
+    * name  name id。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UnscopedTokenInfoRoles implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  role id
-    * name  name id
+    * id  role id。
+    * name  name id。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UnscopedTokenInfoRoles implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  role id
-    * name  name id
+    * id  role id。
+    * name  name id。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class UnscopedTokenInfoRoles implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  role id
+    *  role id。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class UnscopedTokenInfoRoles implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id role id
+    * @param string|null $id role id。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class UnscopedTokenInfoRoles implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  name id
+    *  name id。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class UnscopedTokenInfoRoles implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name id
+    * @param string|null $name name id。
     *
     * @return $this
     */

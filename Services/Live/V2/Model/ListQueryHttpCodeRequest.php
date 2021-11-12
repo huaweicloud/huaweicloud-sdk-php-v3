@@ -20,10 +20,10 @@ class ListQueryHttpCodeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * code  状态码。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。若参数为空，默认查询最近1小时数据。  最大查询跨度1天，最大查询周期7天。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。  最大查询跨度1天，最大查询周期7天。
     *
@@ -40,10 +40,10 @@ class ListQueryHttpCodeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * code  状态码。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。若参数为空，默认查询最近1小时数据。  最大查询跨度1天，最大查询周期7天。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。  最大查询跨度1天，最大查询周期7天。
     *
@@ -81,10 +81,10 @@ class ListQueryHttpCodeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * code  状态码。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。若参数为空，默认查询最近1小时数据。  最大查询跨度1天，最大查询周期7天。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。  最大查询跨度1天，最大查询周期7天。
     *
@@ -101,10 +101,10 @@ class ListQueryHttpCodeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * code  状态码。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。若参数为空，默认查询最近1小时数据。  最大查询跨度1天，最大查询周期7天。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。  最大查询跨度1天，最大查询周期7天。
     *
@@ -121,10 +121,10 @@ class ListQueryHttpCodeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * playDomains  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     * code  状态码。
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
-    * isp  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。若参数为空，默认查询最近1小时数据。  最大查询跨度1天，最大查询周期7天。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。  最大查询跨度1天，最大查询周期7天。
     *
@@ -244,7 +244,7 @@ class ListQueryHttpCodeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets playDomains
-    *  播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    *  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     *
     * @return string[]
     */
@@ -256,7 +256,7 @@ class ListQueryHttpCodeRequest implements ModelInterface, ArrayAccess
     /**
     * Sets playDomains
     *
-    * @param string[] $playDomains 播放域名列表，最多支持查询10个域名，多个域名以逗号分隔。
+    * @param string[] $playDomains 播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
     *
     * @return $this
     */
@@ -316,7 +316,7 @@ class ListQueryHttpCodeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isp
-    *  运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    *  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     *
     * @return string[]|null
     */
@@ -328,7 +328,7 @@ class ListQueryHttpCodeRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isp
     *
-    * @param string[]|null $isp 运营商列表，取值如下： - \"CMCC ：移动\" - \"CTCC ： 电信\" - \"CUCC ：联通\" - \"OTHER: 其他\"  不填写查询所有运营商。
+    * @param string[]|null $isp 运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     *
     * @return $this
     */

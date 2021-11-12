@@ -22,6 +22,9 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * domain  推流域名。
     * app  应用名称。
+    * stream  流名称。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+    * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度1天，最大查询周期1个月。结束时间需大于起始时间。
     * offset  分页编号，默认为0
     * limit  每页记录数。  取值范围：[1,100]  默认值：10。
     *
@@ -30,6 +33,9 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'domain' => 'string',
             'app' => 'string',
+            'stream' => 'string',
+            'startTime' => 'string',
+            'endTime' => 'string',
             'offset' => 'int',
             'limit' => 'int'
     ];
@@ -38,6 +44,9 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * domain  推流域名。
     * app  应用名称。
+    * stream  流名称。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+    * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度1天，最大查询周期1个月。结束时间需大于起始时间。
     * offset  分页编号，默认为0
     * limit  每页记录数。  取值范围：[1,100]  默认值：10。
     *
@@ -46,6 +55,9 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'domain' => null,
         'app' => null,
+        'stream' => null,
+        'startTime' => null,
+        'endTime' => null,
         'offset' => 'int32',
         'limit' => 'int32'
     ];
@@ -75,6 +87,9 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * domain  推流域名。
     * app  应用名称。
+    * stream  流名称。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+    * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度1天，最大查询周期1个月。结束时间需大于起始时间。
     * offset  分页编号，默认为0
     * limit  每页记录数。  取值范围：[1,100]  默认值：10。
     *
@@ -83,6 +98,9 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'domain' => 'domain',
             'app' => 'app',
+            'stream' => 'stream',
+            'startTime' => 'start_time',
+            'endTime' => 'end_time',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
@@ -91,6 +109,9 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * domain  推流域名。
     * app  应用名称。
+    * stream  流名称。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+    * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度1天，最大查询周期1个月。结束时间需大于起始时间。
     * offset  分页编号，默认为0
     * limit  每页记录数。  取值范围：[1,100]  默认值：10。
     *
@@ -99,6 +120,9 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'domain' => 'setDomain',
             'app' => 'setApp',
+            'stream' => 'setStream',
+            'startTime' => 'setStartTime',
+            'endTime' => 'setEndTime',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
@@ -107,6 +131,9 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * domain  推流域名。
     * app  应用名称。
+    * stream  流名称。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+    * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度1天，最大查询周期1个月。结束时间需大于起始时间。
     * offset  分页编号，默认为0
     * limit  每页记录数。  取值范围：[1,100]  默认值：10。
     *
@@ -115,6 +142,9 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'domain' => 'getDomain',
             'app' => 'getApp',
+            'stream' => 'getStream',
+            'startTime' => 'getStartTime',
+            'endTime' => 'getEndTime',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -179,6 +209,9 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
+        $this->container['stream'] = isset($data['stream']) ? $data['stream'] : null;
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
+        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
     }
@@ -205,6 +238,24 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['app']) && (mb_strlen($this->container['app']) < 1)) {
                 $invalidProperties[] = "invalid value for 'app', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['stream']) && (mb_strlen($this->container['stream']) > 256)) {
+                $invalidProperties[] = "invalid value for 'stream', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['stream']) && (mb_strlen($this->container['stream']) < 1)) {
+                $invalidProperties[] = "invalid value for 'stream', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['startTime']) && (mb_strlen($this->container['startTime']) > 64)) {
+                $invalidProperties[] = "invalid value for 'startTime', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['startTime']) && (mb_strlen($this->container['startTime']) < 1)) {
+                $invalidProperties[] = "invalid value for 'startTime', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['endTime']) && (mb_strlen($this->container['endTime']) > 64)) {
+                $invalidProperties[] = "invalid value for 'endTime', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['endTime']) && (mb_strlen($this->container['endTime']) < 1)) {
+                $invalidProperties[] = "invalid value for 'endTime', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
@@ -277,6 +328,78 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     public function setApp($app)
     {
         $this->container['app'] = $app;
+        return $this;
+    }
+
+    /**
+    * Gets stream
+    *  流名称。
+    *
+    * @return string|null
+    */
+    public function getStream()
+    {
+        return $this->container['stream'];
+    }
+
+    /**
+    * Sets stream
+    *
+    * @param string|null $stream 流名称。
+    *
+    * @return $this
+    */
+    public function setStream($stream)
+    {
+        $this->container['stream'] = $stream;
+        return $this;
+    }
+
+    /**
+    * Gets startTime
+    *  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+    *
+    * @return string|null
+    */
+    public function getStartTime()
+    {
+        return $this->container['startTime'];
+    }
+
+    /**
+    * Sets startTime
+    *
+    * @param string|null $startTime 起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+    *
+    * @return $this
+    */
+    public function setStartTime($startTime)
+    {
+        $this->container['startTime'] = $startTime;
+        return $this;
+    }
+
+    /**
+    * Gets endTime
+    *  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度1天，最大查询周期1个月。结束时间需大于起始时间。
+    *
+    * @return string|null
+    */
+    public function getEndTime()
+    {
+        return $this->container['endTime'];
+    }
+
+    /**
+    * Sets endTime
+    *
+    * @param string|null $endTime 结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度1天，最大查询周期1个月。结束时间需大于起始时间。
+    *
+    * @return $this
+    */
+    public function setEndTime($endTime)
+    {
+        $this->container['endTime'] = $endTime;
         return $this;
     }
 

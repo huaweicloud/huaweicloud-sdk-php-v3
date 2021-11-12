@@ -29,7 +29,7 @@ class RoleResult implements ModelInterface, ArrayAccess
     * links  links
     * id  权限ID。
     * displayName  权限展示名。
-    * type  权限的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - AA表示在domain和project层均显示。   > - XX表示在domain和project层均不显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  权限的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - AA表示在domain和project层均显示。 > - XX表示在domain和project层均不显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * policy  policy
     * updatedTime  权限更新时间。
     * createdTime  权限创建时间。
@@ -63,7 +63,7 @@ class RoleResult implements ModelInterface, ArrayAccess
     * links  links
     * id  权限ID。
     * displayName  权限展示名。
-    * type  权限的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - AA表示在domain和project层均显示。   > - XX表示在domain和project层均不显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  权限的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - AA表示在domain和project层均显示。 > - XX表示在domain和project层均不显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * policy  policy
     * updatedTime  权限更新时间。
     * createdTime  权限创建时间。
@@ -118,7 +118,7 @@ class RoleResult implements ModelInterface, ArrayAccess
     * links  links
     * id  权限ID。
     * displayName  权限展示名。
-    * type  权限的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - AA表示在domain和project层均显示。   > - XX表示在domain和project层均不显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  权限的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - AA表示在domain和project层均显示。 > - XX表示在domain和project层均不显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * policy  policy
     * updatedTime  权限更新时间。
     * createdTime  权限创建时间。
@@ -152,7 +152,7 @@ class RoleResult implements ModelInterface, ArrayAccess
     * links  links
     * id  权限ID。
     * displayName  权限展示名。
-    * type  权限的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - AA表示在domain和project层均显示。   > - XX表示在domain和project层均不显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  权限的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - AA表示在domain和project层均显示。 > - XX表示在domain和project层均不显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * policy  policy
     * updatedTime  权限更新时间。
     * createdTime  权限创建时间。
@@ -186,7 +186,7 @@ class RoleResult implements ModelInterface, ArrayAccess
     * links  links
     * id  权限ID。
     * displayName  权限展示名。
-    * type  权限的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - AA表示在domain和project层均显示。   > - XX表示在domain和project层均不显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  权限的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - AA表示在domain和project层均显示。 > - XX表示在domain和project层均不显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * policy  policy
     * updatedTime  权限更新时间。
     * createdTime  权限创建时间。
@@ -534,7 +534,7 @@ class RoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  权限的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - AA表示在domain和project层均显示。   > - XX表示在domain和project层均不显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    *  权限的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - AA表示在domain和project层均显示。 > - XX表示在domain和project层均不显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     *
     * @return string
     */
@@ -546,7 +546,7 @@ class RoleResult implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 权限的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - AA表示在domain和project层均显示。   > - XX表示在domain和project层均不显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * @param string $type 权限的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - AA表示在domain和project层均显示。 > - XX表示在domain和project层均不显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     *
     * @return $this
     */

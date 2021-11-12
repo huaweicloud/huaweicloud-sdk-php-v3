@@ -22,7 +22,7 @@ class ListSnapshotDataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * snapshotList  采样数据列表。
-    * total  指定时间区间内截图数量总和
+    * total  指定时间区间内截图数量总和。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ListSnapshotDataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * snapshotList  采样数据列表。
-    * total  指定时间区间内截图数量总和
+    * total  指定时间区间内截图数量总和。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ListSnapshotDataResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * snapshotList  采样数据列表。
-    * total  指定时间区间内截图数量总和
+    * total  指定时间区间内截图数量总和。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ListSnapshotDataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * snapshotList  采样数据列表。
-    * total  指定时间区间内截图数量总和
+    * total  指定时间区间内截图数量总和。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ListSnapshotDataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * snapshotList  采样数据列表。
-    * total  指定时间区间内截图数量总和
+    * total  指定时间区间内截图数量总和。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -227,7 +227,7 @@ class ListSnapshotDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  指定时间区间内截图数量总和
+    *  指定时间区间内截图数量总和。
     *
     * @return int|null
     */
@@ -239,7 +239,7 @@ class ListSnapshotDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 指定时间区间内截图数量总和
+    * @param int|null $total 指定时间区间内截图数量总和。
     *
     * @return $this
     */

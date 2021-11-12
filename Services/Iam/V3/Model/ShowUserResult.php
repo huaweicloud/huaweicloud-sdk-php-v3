@@ -34,7 +34,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
-    * pwdStrength  IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+    * pwdStrength  IAM用户密码强度。结果为Low/Middle/High/None，分别表示密码强度低/中/高/无。
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
     * description  IAM用户描述信息
@@ -78,7 +78,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
-    * pwdStrength  IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+    * pwdStrength  IAM用户密码强度。结果为Low/Middle/High/None，分别表示密码强度低/中/高/无。
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
     * description  IAM用户描述信息
@@ -143,7 +143,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
-    * pwdStrength  IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+    * pwdStrength  IAM用户密码强度。结果为Low/Middle/High/None，分别表示密码强度低/中/高/无。
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
     * description  IAM用户描述信息
@@ -187,7 +187,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
-    * pwdStrength  IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+    * pwdStrength  IAM用户密码强度。结果为Low/Middle/High/None，分别表示密码强度低/中/高/无。
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
     * description  IAM用户描述信息
@@ -231,7 +231,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     * updateTime  IAM用户更新时间。
     * createTime  IAM用户创建时间。
     * lastLoginTime  IAM用户最后登录时间。
-    * pwdStrength  IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+    * pwdStrength  IAM用户密码强度。结果为Low/Middle/High/None，分别表示密码强度低/中/高/无。
     * isDomainOwner  IAM用户是否为根用户。
     * accessMode  IAM用户访问模式。
     * description  IAM用户描述信息
@@ -721,7 +721,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwdStrength
-    *  IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+    *  IAM用户密码强度。结果为Low/Middle/High/None，分别表示密码强度低/中/高/无。
     *
     * @return string|null
     */
@@ -733,7 +733,7 @@ class ShowUserResult implements ModelInterface, ArrayAccess
     /**
     * Sets pwdStrength
     *
-    * @param string|null $pwdStrength IAM用户密码强度。结果为low/middle/high/none，分别表示密码强度低/中/高/无。
+    * @param string|null $pwdStrength IAM用户密码强度。结果为Low/Middle/High/None，分别表示密码强度低/中/高/无。
     *
     * @return $this
     */

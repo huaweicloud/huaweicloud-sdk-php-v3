@@ -31,7 +31,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     * links  links
     * id  自定义策略ID。
     * displayName  自定义策略展示名。
-    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * policy  policy
     *
     * @var string[]
@@ -65,7 +65,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     * links  links
     * id  自定义策略ID。
     * displayName  自定义策略展示名。
-    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * policy  policy
     *
     * @var string[]
@@ -120,7 +120,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     * links  links
     * id  自定义策略ID。
     * displayName  自定义策略展示名。
-    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * policy  policy
     *
     * @var string[]
@@ -154,7 +154,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     * links  links
     * id  自定义策略ID。
     * displayName  自定义策略展示名。
-    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * policy  policy
     *
     * @var string[]
@@ -188,7 +188,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     * links  links
     * id  自定义策略ID。
     * displayName  自定义策略展示名。
-    * type  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * type  自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     * policy  policy
     *
     * @var string[]
@@ -597,7 +597,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    *  自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     *
     * @return string
     */
@@ -609,7 +609,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 自定义策略的显示模式。   > - AX表示在domain层显示。   > - XA表示在project层显示。   > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
+    * @param string $type 自定义策略的显示模式。 > - AX表示在domain层显示。 > - XA表示在project层显示。 > - 自定义策略的显示模式只能为AX或者XA，不能在domain层和project层都显示（AA），或者在domain层和project层都不显示（XX）。
     *
     * @return $this
     */

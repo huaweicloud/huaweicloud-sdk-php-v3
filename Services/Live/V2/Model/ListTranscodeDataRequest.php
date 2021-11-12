@@ -21,6 +21,7 @@ class ListTranscodeDataRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * publishDomain  推流域名。
+    * stream  流名。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  非整点时间按小时取整，若start_time为2020-08-18T07:20:40Z，则实际查询起始时间为2020-08-18T07:00:00Z。  若start_time为空，则默认查询最近24小时数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  非整点时间按小时取整，若end_time为2020-08-18T08:20:40Z，则实际查询起始时间为2020-08-18T08:00:00Z。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
@@ -28,6 +29,7 @@ class ListTranscodeDataRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'publishDomain' => 'string',
+            'stream' => 'string',
             'startTime' => 'string',
             'endTime' => 'string'
     ];
@@ -35,6 +37,7 @@ class ListTranscodeDataRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * publishDomain  推流域名。
+    * stream  流名。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  非整点时间按小时取整，若start_time为2020-08-18T07:20:40Z，则实际查询起始时间为2020-08-18T07:00:00Z。  若start_time为空，则默认查询最近24小时数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  非整点时间按小时取整，若end_time为2020-08-18T08:20:40Z，则实际查询起始时间为2020-08-18T08:00:00Z。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
@@ -42,6 +45,7 @@ class ListTranscodeDataRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'publishDomain' => null,
+        'stream' => null,
         'startTime' => null,
         'endTime' => null
     ];
@@ -70,6 +74,7 @@ class ListTranscodeDataRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * publishDomain  推流域名。
+    * stream  流名。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  非整点时间按小时取整，若start_time为2020-08-18T07:20:40Z，则实际查询起始时间为2020-08-18T07:00:00Z。  若start_time为空，则默认查询最近24小时数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  非整点时间按小时取整，若end_time为2020-08-18T08:20:40Z，则实际查询起始时间为2020-08-18T08:00:00Z。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
@@ -77,6 +82,7 @@ class ListTranscodeDataRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'publishDomain' => 'publish_domain',
+            'stream' => 'stream',
             'startTime' => 'start_time',
             'endTime' => 'end_time'
     ];
@@ -84,6 +90,7 @@ class ListTranscodeDataRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * publishDomain  推流域名。
+    * stream  流名。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  非整点时间按小时取整，若start_time为2020-08-18T07:20:40Z，则实际查询起始时间为2020-08-18T07:00:00Z。  若start_time为空，则默认查询最近24小时数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  非整点时间按小时取整，若end_time为2020-08-18T08:20:40Z，则实际查询起始时间为2020-08-18T08:00:00Z。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
@@ -91,6 +98,7 @@ class ListTranscodeDataRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'publishDomain' => 'setPublishDomain',
+            'stream' => 'setStream',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime'
     ];
@@ -98,6 +106,7 @@ class ListTranscodeDataRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * publishDomain  推流域名。
+    * stream  流名。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  非整点时间按小时取整，若start_time为2020-08-18T07:20:40Z，则实际查询起始时间为2020-08-18T07:00:00Z。  若start_time为空，则默认查询最近24小时数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  非整点时间按小时取整，若end_time为2020-08-18T08:20:40Z，则实际查询起始时间为2020-08-18T08:00:00Z。  若参数为空，默认为当前时间。结束时间需大于起始时间。
     *
@@ -105,6 +114,7 @@ class ListTranscodeDataRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'publishDomain' => 'getPublishDomain',
+            'stream' => 'getStream',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime'
     ];
@@ -168,6 +178,7 @@ class ListTranscodeDataRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['publishDomain'] = isset($data['publishDomain']) ? $data['publishDomain'] : null;
+        $this->container['stream'] = isset($data['stream']) ? $data['stream'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
     }
@@ -185,6 +196,12 @@ class ListTranscodeDataRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['publishDomain']) && (mb_strlen($this->container['publishDomain']) < 1)) {
                 $invalidProperties[] = "invalid value for 'publishDomain', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['stream']) && (mb_strlen($this->container['stream']) > 16384)) {
+                $invalidProperties[] = "invalid value for 'stream', the character length must be smaller than or equal to 16384.";
+            }
+            if (!is_null($this->container['stream']) && (mb_strlen($this->container['stream']) < 1)) {
+                $invalidProperties[] = "invalid value for 'stream', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['startTime']) && (mb_strlen($this->container['startTime']) > 64)) {
                 $invalidProperties[] = "invalid value for 'startTime', the character length must be smaller than or equal to 64.";
@@ -233,6 +250,30 @@ class ListTranscodeDataRequest implements ModelInterface, ArrayAccess
     public function setPublishDomain($publishDomain)
     {
         $this->container['publishDomain'] = $publishDomain;
+        return $this;
+    }
+
+    /**
+    * Gets stream
+    *  流名。
+    *
+    * @return string|null
+    */
+    public function getStream()
+    {
+        return $this->container['stream'];
+    }
+
+    /**
+    * Sets stream
+    *
+    * @param string|null $stream 流名。
+    *
+    * @return $this
+    */
+    public function setStream($stream)
+    {
+        $this->container['stream'] = $stream;
         return $this;
     }
 
