@@ -1194,7 +1194,7 @@ class VpcClient extends Client
     public function createAddressGroupWithHttpInfo($request)
     {
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/vpc/address_groups';
+        $resourcePath = '/v3/{project_id}/vpc/address-groups';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1258,7 +1258,7 @@ class VpcClient extends Client
     public function deleteAddressGroupWithHttpInfo($request)
     {
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/vpc/address_groups/{address_group_id}';
+        $resourcePath = '/v3/{project_id}/vpc/address-groups/{address_group_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1322,7 +1322,7 @@ class VpcClient extends Client
     public function deleteIpAddressGroupForceWithHttpInfo($request)
     {
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/vpc/address_groups/{address_group_id}/force';
+        $resourcePath = '/v3/{project_id}/vpc/address-groups/{address_group_id}/force';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1386,7 +1386,7 @@ class VpcClient extends Client
     public function listAddressGroupWithHttpInfo($request)
     {
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/vpc/address_groups';
+        $resourcePath = '/v3/{project_id}/vpc/address-groups';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1465,7 +1465,7 @@ class VpcClient extends Client
     public function showAddressGroupWithHttpInfo($request)
     {
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/vpc/address_groups/{address_group_id}';
+        $resourcePath = '/v3/{project_id}/vpc/address-groups/{address_group_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1529,7 +1529,7 @@ class VpcClient extends Client
     public function updateAddressGroupWithHttpInfo($request)
     {
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/vpc/address_groups/{address_group_id}';
+        $resourcePath = '/v3/{project_id}/vpc/address-groups/{address_group_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

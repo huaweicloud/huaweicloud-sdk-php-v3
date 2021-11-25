@@ -22,28 +22,24 @@ class HandwritingResult implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * wordsBlockCount  代表检测识别出来的文字块数目。 \"segment_digit\" 和\"segment\"默认为1。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
-    * extractedData  extractedData
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'wordsBlockCount' => 'int',
-            'wordsBlockList' => '\HuaweiCloud\SDK\Ocr\V1\Model\HandwritingWordsBlockList[]',
-            'extractedData' => '\HuaweiCloud\SDK\Ocr\V1\Model\ExtractedData'
+            'wordsBlockList' => '\HuaweiCloud\SDK\Ocr\V1\Model\HandwritingWordsBlockList[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * wordsBlockCount  代表检测识别出来的文字块数目。 \"segment_digit\" 和\"segment\"默认为1。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
-    * extractedData  extractedData
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'wordsBlockCount' => 'int32',
-        'wordsBlockList' => null,
-        'extractedData' => null
+        'wordsBlockList' => null
     ];
 
     /**
@@ -71,42 +67,36 @@ class HandwritingResult implements ModelInterface, ArrayAccess
     * and the value is the original name
     * wordsBlockCount  代表检测识别出来的文字块数目。 \"segment_digit\" 和\"segment\"默认为1。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
-    * extractedData  extractedData
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'wordsBlockCount' => 'words_block_count',
-            'wordsBlockList' => 'words_block_list',
-            'extractedData' => 'extracted_data'
+            'wordsBlockList' => 'words_block_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * wordsBlockCount  代表检测识别出来的文字块数目。 \"segment_digit\" 和\"segment\"默认为1。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
-    * extractedData  extractedData
     *
     * @var string[]
     */
     protected static $setters = [
             'wordsBlockCount' => 'setWordsBlockCount',
-            'wordsBlockList' => 'setWordsBlockList',
-            'extractedData' => 'setExtractedData'
+            'wordsBlockList' => 'setWordsBlockList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * wordsBlockCount  代表检测识别出来的文字块数目。 \"segment_digit\" 和\"segment\"默认为1。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
-    * extractedData  extractedData
     *
     * @var string[]
     */
     protected static $getters = [
             'wordsBlockCount' => 'getWordsBlockCount',
-            'wordsBlockList' => 'getWordsBlockList',
-            'extractedData' => 'getExtractedData'
+            'wordsBlockList' => 'getWordsBlockList'
     ];
 
     /**
@@ -169,7 +159,6 @@ class HandwritingResult implements ModelInterface, ArrayAccess
     {
         $this->container['wordsBlockCount'] = isset($data['wordsBlockCount']) ? $data['wordsBlockCount'] : null;
         $this->container['wordsBlockList'] = isset($data['wordsBlockList']) ? $data['wordsBlockList'] : null;
-        $this->container['extractedData'] = isset($data['extractedData']) ? $data['extractedData'] : null;
     }
 
     /**
@@ -245,30 +234,6 @@ class HandwritingResult implements ModelInterface, ArrayAccess
     public function setWordsBlockList($wordsBlockList)
     {
         $this->container['wordsBlockList'] = $wordsBlockList;
-        return $this;
-    }
-
-    /**
-    * Gets extractedData
-    *  extractedData
-    *
-    * @return \HuaweiCloud\SDK\Ocr\V1\Model\ExtractedData|null
-    */
-    public function getExtractedData()
-    {
-        return $this->container['extractedData'];
-    }
-
-    /**
-    * Sets extractedData
-    *
-    * @param \HuaweiCloud\SDK\Ocr\V1\Model\ExtractedData|null $extractedData extractedData
-    *
-    * @return $this
-    */
-    public function setExtractedData($extractedData)
-    {
-        $this->container['extractedData'] = $extractedData;
         return $this;
     }
 

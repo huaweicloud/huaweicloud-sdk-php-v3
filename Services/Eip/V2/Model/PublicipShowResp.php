@@ -38,6 +38,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
     * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：publicip只能绑定该字段相同的资源
     * allowShareBandwidthTypes  功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'publicIpv6Address' => 'string',
             'ipVersion' => 'int',
             'publicBorderGroup' => 'string',
-            'allowShareBandwidthTypes' => 'string[]'
+            'allowShareBandwidthTypes' => 'string[]',
+            'alias' => 'string'
     ];
 
     /**
@@ -82,6 +84,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
     * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：publicip只能绑定该字段相同的资源
     * allowShareBandwidthTypes  功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
         'publicIpv6Address' => null,
         'ipVersion' => 'int32',
         'publicBorderGroup' => null,
-        'allowShareBandwidthTypes' => null
+        'allowShareBandwidthTypes' => null,
+        'alias' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
     * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：publicip只能绑定该字段相同的资源
     * allowShareBandwidthTypes  功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'publicIpv6Address' => 'public_ipv6_address',
             'ipVersion' => 'ip_version',
             'publicBorderGroup' => 'public_border_group',
-            'allowShareBandwidthTypes' => 'allow_share_bandwidth_types'
+            'allowShareBandwidthTypes' => 'allow_share_bandwidth_types',
+            'alias' => 'alias'
     ];
 
     /**
@@ -191,6 +197,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
     * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：publicip只能绑定该字段相同的资源
     * allowShareBandwidthTypes  功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'publicIpv6Address' => 'setPublicIpv6Address',
             'ipVersion' => 'setIpVersion',
             'publicBorderGroup' => 'setPublicBorderGroup',
-            'allowShareBandwidthTypes' => 'setAllowShareBandwidthTypes'
+            'allowShareBandwidthTypes' => 'setAllowShareBandwidthTypes',
+            'alias' => 'setAlias'
     ];
 
     /**
@@ -235,6 +243,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * ipVersion  IP版本信息，取值范围是4和6  4：表示IPv4  6：表示IPv6
     * publicBorderGroup  功能说明：表示中心站点资源或者边缘站点资源 取值范围： center、边缘站点名称 约束：publicip只能绑定该字段相同的资源
     * allowShareBandwidthTypes  功能说明：表示此publicip可以加入的共享带宽类型列表，如果为空列表，则表示该           publicip不能加入任何共享带宽 约束：publicip只能加入到有该带宽类型的共享带宽中
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'publicIpv6Address' => 'getPublicIpv6Address',
             'ipVersion' => 'getIpVersion',
             'publicBorderGroup' => 'getPublicBorderGroup',
-            'allowShareBandwidthTypes' => 'getAllowShareBandwidthTypes'
+            'allowShareBandwidthTypes' => 'getAllowShareBandwidthTypes',
+            'alias' => 'getAlias'
     ];
 
     /**
@@ -402,6 +412,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
         $this->container['allowShareBandwidthTypes'] = isset($data['allowShareBandwidthTypes']) ? $data['allowShareBandwidthTypes'] : null;
+        $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
     }
 
     /**
@@ -474,6 +485,9 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['publicBorderGroup']) && (mb_strlen($this->container['publicBorderGroup']) < 1)) {
                 $invalidProperties[] = "invalid value for 'publicBorderGroup', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['alias']) && (mb_strlen($this->container['alias']) > 64)) {
+                $invalidProperties[] = "invalid value for 'alias', the character length must be smaller than or equal to 64.";
             }
         return $invalidProperties;
     }
@@ -918,6 +932,30 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     public function setAllowShareBandwidthTypes($allowShareBandwidthTypes)
     {
         $this->container['allowShareBandwidthTypes'] = $allowShareBandwidthTypes;
+        return $this;
+    }
+
+    /**
+    * Gets alias
+    *  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    *
+    * @return string|null
+    */
+    public function getAlias()
+    {
+        return $this->container['alias'];
+    }
+
+    /**
+    * Sets alias
+    *
+    * @param string|null $alias 功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    *
+    * @return $this
+    */
+    public function setAlias($alias)
+    {
+        $this->container['alias'] = $alias;
         return $this;
     }
 

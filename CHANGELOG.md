@@ -1,3 +1,24 @@
+# 3.0.30-beta 2021-11-25
+
+### HuaweiCloud SDK EIP
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request and response parameter `alias` to the interfaces `CreatePrePaidPublicip` and `CreatePublicip`.
+  - Add the response parameter `alias` to the interfaces `ShowPublicip` and `UpdatePublicip`.
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the response parameter `extracted_data` of the interface `RecognizeHandwriting`.
+
 # 3.0.29-beta 2021-11-12
 
 ### HuaweiCloud SDK IMS

@@ -1209,7 +1209,7 @@ class VpcAsyncClient extends Client
     
     public function createAddressGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/vpc/address_groups';
+        $resourcePath = '/v3/{project_id}/vpc/address-groups';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1274,7 +1274,7 @@ class VpcAsyncClient extends Client
     
     public function deleteAddressGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/vpc/address_groups/{address_group_id}';
+        $resourcePath = '/v3/{project_id}/vpc/address-groups/{address_group_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1339,7 +1339,7 @@ class VpcAsyncClient extends Client
     
     public function deleteIpAddressGroupForceAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/vpc/address_groups/{address_group_id}/force';
+        $resourcePath = '/v3/{project_id}/vpc/address-groups/{address_group_id}/force';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1404,7 +1404,7 @@ class VpcAsyncClient extends Client
     
     public function listAddressGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/vpc/address_groups';
+        $resourcePath = '/v3/{project_id}/vpc/address-groups';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1484,7 +1484,7 @@ class VpcAsyncClient extends Client
     
     public function showAddressGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/vpc/address_groups/{address_group_id}';
+        $resourcePath = '/v3/{project_id}/vpc/address-groups/{address_group_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1549,7 +1549,7 @@ class VpcAsyncClient extends Client
     
     public function updateAddressGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/vpc/address_groups/{address_group_id}';
+        $resourcePath = '/v3/{project_id}/vpc/address-groups/{address_group_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

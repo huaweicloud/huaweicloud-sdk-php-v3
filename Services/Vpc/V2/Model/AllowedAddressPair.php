@@ -20,7 +20,7 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 如果填写allowed_address_pairs参数，则ip_address是必选参数。
     * macAddress  mac地址
     *
     * @var string[]
@@ -32,7 +32,7 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 如果填写allowed_address_pairs参数，则ip_address是必选参数。
     * macAddress  mac地址
     *
     * @var string[]
@@ -65,7 +65,7 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 如果填写allowed_address_pairs参数，则ip_address是必选参数。
     * macAddress  mac地址
     *
     * @var string[]
@@ -77,7 +77,7 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 如果填写allowed_address_pairs参数，则ip_address是必选参数。
     * macAddress  mac地址
     *
     * @var string[]
@@ -89,7 +89,7 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * ipAddress  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 如果填写allowed_address_pairs参数，则ip_address是必选参数。
     * macAddress  mac地址
     *
     * @var string[]
@@ -169,10 +169,13 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['ipAddress']) && (mb_strlen($this->container['ipAddress']) > 255)) {
+        if ($this->container['ipAddress'] === null) {
+            $invalidProperties[] = "'ipAddress' can't be null";
+        }
+            if ((mb_strlen($this->container['ipAddress']) > 255)) {
                 $invalidProperties[] = "invalid value for 'ipAddress', the character length must be smaller than or equal to 255.";
             }
-            if (!is_null($this->container['ipAddress']) && (mb_strlen($this->container['ipAddress']) < 0)) {
+            if ((mb_strlen($this->container['ipAddress']) < 0)) {
                 $invalidProperties[] = "invalid value for 'ipAddress', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['macAddress']) && (mb_strlen($this->container['macAddress']) > 255)) {
@@ -197,9 +200,9 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipAddress
-    *  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    *  功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 如果填写allowed_address_pairs参数，则ip_address是必选参数。
     *
-    * @return string|null
+    * @return string
     */
     public function getIpAddress()
     {
@@ -209,7 +212,7 @@ class AllowedAddressPair implements ModelInterface, ArrayAccess
     /**
     * Sets ipAddress
     *
-    * @param string|null $ipAddress 功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * @param string $ipAddress 功能说明：IP地址 取值范围：可以是IP地址或CIDR 约束：不支持0.0.0.0/0如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 如果填写allowed_address_pairs参数，则ip_address是必选参数。
     *
     * @return $this
     */

@@ -23,7 +23,7 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     * domain  推流域名。
     * app  应用名称。
     * stream  流名称。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询1天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度1天，最大查询周期1个月。结束时间需大于起始时间。
     * offset  分页编号，默认为0
     * limit  每页记录数。  取值范围：[1,100]  默认值：10。
@@ -45,7 +45,7 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     * domain  推流域名。
     * app  应用名称。
     * stream  流名称。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询1天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度1天，最大查询周期1个月。结束时间需大于起始时间。
     * offset  分页编号，默认为0
     * limit  每页记录数。  取值范围：[1,100]  默认值：10。
@@ -88,7 +88,7 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     * domain  推流域名。
     * app  应用名称。
     * stream  流名称。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询1天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度1天，最大查询周期1个月。结束时间需大于起始时间。
     * offset  分页编号，默认为0
     * limit  每页记录数。  取值范围：[1,100]  默认值：10。
@@ -110,7 +110,7 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     * domain  推流域名。
     * app  应用名称。
     * stream  流名称。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询1天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度1天，最大查询周期1个月。结束时间需大于起始时间。
     * offset  分页编号，默认为0
     * limit  每页记录数。  取值范围：[1,100]  默认值：10。
@@ -132,7 +132,7 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     * domain  推流域名。
     * app  应用名称。
     * stream  流名称。
-    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+    * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询1天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度1天，最大查询周期1个月。结束时间需大于起始时间。
     * offset  分页编号，默认为0
     * limit  每页记录数。  取值范围：[1,100]  默认值：10。
@@ -357,7 +357,7 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+    *  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询1天数据。
     *
     * @return string|null
     */
@@ -369,7 +369,7 @@ class ListHistoryStreamsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询7天数据。
+    * @param string|null $startTime 起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期1个月。  若参数为空，默认查询1天数据。
     *
     * @return $this
     */

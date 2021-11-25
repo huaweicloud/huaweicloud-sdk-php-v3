@@ -30,6 +30,7 @@ class PublicipCreateResp implements ModelInterface, ArrayAccess
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6
     * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class PublicipCreateResp implements ModelInterface, ArrayAccess
             'type' => 'string',
             'publicIpv6Address' => 'string',
             'ipVersion' => 'int',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'alias' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class PublicipCreateResp implements ModelInterface, ArrayAccess
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6
     * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class PublicipCreateResp implements ModelInterface, ArrayAccess
         'type' => null,
         'publicIpv6Address' => null,
         'ipVersion' => 'int32',
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'alias' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class PublicipCreateResp implements ModelInterface, ArrayAccess
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6
     * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class PublicipCreateResp implements ModelInterface, ArrayAccess
             'type' => 'type',
             'publicIpv6Address' => 'public_ipv6_address',
             'ipVersion' => 'ip_version',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'alias' => 'alias'
     ];
 
     /**
@@ -135,6 +141,7 @@ class PublicipCreateResp implements ModelInterface, ArrayAccess
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6
     * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class PublicipCreateResp implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'publicIpv6Address' => 'setPublicIpv6Address',
             'ipVersion' => 'setIpVersion',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'alias' => 'setAlias'
     ];
 
     /**
@@ -163,6 +171,7 @@ class PublicipCreateResp implements ModelInterface, ArrayAccess
     * publicIpv6Address  IPv4时无此字段，IPv6时为申请到的弹性公网IP地址
     * ipVersion  IP版本信息，取值范围是4和6
     * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建弹性公网IP时，给弹性公网IP绑定企业项目ID。
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class PublicipCreateResp implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'publicIpv6Address' => 'getPublicIpv6Address',
             'ipVersion' => 'getIpVersion',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'alias' => 'getAlias'
     ];
 
     /**
@@ -299,6 +309,7 @@ class PublicipCreateResp implements ModelInterface, ArrayAccess
         $this->container['publicIpv6Address'] = isset($data['publicIpv6Address']) ? $data['publicIpv6Address'] : null;
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
     }
 
     /**
@@ -342,6 +353,9 @@ class PublicipCreateResp implements ModelInterface, ArrayAccess
 
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['alias']) && (mb_strlen($this->container['alias']) > 64)) {
+                $invalidProperties[] = "invalid value for 'alias', the character length must be smaller than or equal to 64.";
             }
         return $invalidProperties;
     }
@@ -594,6 +608,30 @@ class PublicipCreateResp implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets alias
+    *  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    *
+    * @return string|null
+    */
+    public function getAlias()
+    {
+        return $this->container['alias'];
+    }
+
+    /**
+    * Sets alias
+    *
+    * @param string|null $alias 功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    *
+    * @return $this
+    */
+    public function setAlias($alias)
+    {
+        $this->container['alias'] = $alias;
         return $this;
     }
 

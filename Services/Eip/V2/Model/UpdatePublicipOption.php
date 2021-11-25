@@ -22,24 +22,28 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * portId  功能说明：端口id  约束：必须是存在的端口id，如果不带该参数或者值为空时为解除绑定弹性公网IP，如果该端口不存在或端口已绑定弹性公网IP则会提示出错。  和ip_version字段互斥，不能同时更新。
     * ipVersion  功能说明：IP版本信息  取值范围：4和6  4：IPv4  6：IPv6  约束：必须是系统支持的IP版本类型，和port_id互斥，不能同时更新。
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'portId' => 'string',
-            'ipVersion' => 'int'
+            'ipVersion' => 'int',
+            'alias' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * portId  功能说明：端口id  约束：必须是存在的端口id，如果不带该参数或者值为空时为解除绑定弹性公网IP，如果该端口不存在或端口已绑定弹性公网IP则会提示出错。  和ip_version字段互斥，不能同时更新。
     * ipVersion  功能说明：IP版本信息  取值范围：4和6  4：IPv4  6：IPv6  约束：必须是系统支持的IP版本类型，和port_id互斥，不能同时更新。
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'portId' => null,
-        'ipVersion' => 'int32'
+        'ipVersion' => 'int32',
+        'alias' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
     * and the value is the original name
     * portId  功能说明：端口id  约束：必须是存在的端口id，如果不带该参数或者值为空时为解除绑定弹性公网IP，如果该端口不存在或端口已绑定弹性公网IP则会提示出错。  和ip_version字段互斥，不能同时更新。
     * ipVersion  功能说明：IP版本信息  取值范围：4和6  4：IPv4  6：IPv6  约束：必须是系统支持的IP版本类型，和port_id互斥，不能同时更新。
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'portId' => 'port_id',
-            'ipVersion' => 'ip_version'
+            'ipVersion' => 'ip_version',
+            'alias' => 'alias'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * portId  功能说明：端口id  约束：必须是存在的端口id，如果不带该参数或者值为空时为解除绑定弹性公网IP，如果该端口不存在或端口已绑定弹性公网IP则会提示出错。  和ip_version字段互斥，不能同时更新。
     * ipVersion  功能说明：IP版本信息  取值范围：4和6  4：IPv4  6：IPv6  约束：必须是系统支持的IP版本类型，和port_id互斥，不能同时更新。
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
     protected static $setters = [
             'portId' => 'setPortId',
-            'ipVersion' => 'setIpVersion'
+            'ipVersion' => 'setIpVersion',
+            'alias' => 'setAlias'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * portId  功能说明：端口id  约束：必须是存在的端口id，如果不带该参数或者值为空时为解除绑定弹性公网IP，如果该端口不存在或端口已绑定弹性公网IP则会提示出错。  和ip_version字段互斥，不能同时更新。
     * ipVersion  功能说明：IP版本信息  取值范围：4和6  4：IPv4  6：IPv6  约束：必须是系统支持的IP版本类型，和port_id互斥，不能同时更新。
+    * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @var string[]
     */
     protected static $getters = [
             'portId' => 'getPortId',
-            'ipVersion' => 'getIpVersion'
+            'ipVersion' => 'getIpVersion',
+            'alias' => 'getAlias'
     ];
 
     /**
@@ -174,6 +184,7 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
     {
         $this->container['portId'] = isset($data['portId']) ? $data['portId'] : null;
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
+        $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
     }
 
     /**
@@ -195,6 +206,9 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['alias']) && (mb_strlen($this->container['alias']) > 64)) {
+                $invalidProperties[] = "invalid value for 'alias', the character length must be smaller than or equal to 64.";
+            }
         return $invalidProperties;
     }
 
@@ -254,6 +268,30 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
     public function setIpVersion($ipVersion)
     {
         $this->container['ipVersion'] = $ipVersion;
+        return $this;
+    }
+
+    /**
+    * Gets alias
+    *  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    *
+    * @return string|null
+    */
+    public function getAlias()
+    {
+        return $this->container['alias'];
+    }
+
+    /**
+    * Sets alias
+    *
+    * @param string|null $alias 功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    *
+    * @return $this
+    */
+    public function setAlias($alias)
+    {
+        $this->container['alias'] = $alias;
         return $this;
     }
 

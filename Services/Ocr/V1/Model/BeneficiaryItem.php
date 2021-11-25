@@ -22,7 +22,7 @@ class BeneficiaryItem implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * beneficiaryName  beneficiaryName
     * beneficiaryType  beneficiaryType
-    * beneficiaryOrder  受益顺序。
+    * beneficiaryOrder  beneficiaryOrder
     * beneficiaryShare  beneficiaryShare
     *
     * @var string[]
@@ -30,7 +30,7 @@ class BeneficiaryItem implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'beneficiaryName' => '\HuaweiCloud\SDK\Ocr\V1\Model\InsurancePolicyDetail',
             'beneficiaryType' => '\HuaweiCloud\SDK\Ocr\V1\Model\InsurancePolicyDetail',
-            'beneficiaryOrder' => 'object',
+            'beneficiaryOrder' => '\HuaweiCloud\SDK\Ocr\V1\Model\InsurancePolicyDetail',
             'beneficiaryShare' => '\HuaweiCloud\SDK\Ocr\V1\Model\InsurancePolicyDetail'
     ];
 
@@ -38,7 +38,7 @@ class BeneficiaryItem implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * beneficiaryName  beneficiaryName
     * beneficiaryType  beneficiaryType
-    * beneficiaryOrder  受益顺序。
+    * beneficiaryOrder  beneficiaryOrder
     * beneficiaryShare  beneficiaryShare
     *
     * @var string[]
@@ -75,7 +75,7 @@ class BeneficiaryItem implements ModelInterface, ArrayAccess
     * and the value is the original name
     * beneficiaryName  beneficiaryName
     * beneficiaryType  beneficiaryType
-    * beneficiaryOrder  受益顺序。
+    * beneficiaryOrder  beneficiaryOrder
     * beneficiaryShare  beneficiaryShare
     *
     * @var string[]
@@ -91,7 +91,7 @@ class BeneficiaryItem implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * beneficiaryName  beneficiaryName
     * beneficiaryType  beneficiaryType
-    * beneficiaryOrder  受益顺序。
+    * beneficiaryOrder  beneficiaryOrder
     * beneficiaryShare  beneficiaryShare
     *
     * @var string[]
@@ -107,7 +107,7 @@ class BeneficiaryItem implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * beneficiaryName  beneficiaryName
     * beneficiaryType  beneficiaryType
-    * beneficiaryOrder  受益顺序。
+    * beneficiaryOrder  beneficiaryOrder
     * beneficiaryShare  beneficiaryShare
     *
     * @var string[]
@@ -255,9 +255,9 @@ class BeneficiaryItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets beneficiaryOrder
-    *  受益顺序。
+    *  beneficiaryOrder
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\InsurancePolicyDetail|null
     */
     public function getBeneficiaryOrder()
     {
@@ -267,7 +267,7 @@ class BeneficiaryItem implements ModelInterface, ArrayAccess
     /**
     * Sets beneficiaryOrder
     *
-    * @param object|null $beneficiaryOrder 受益顺序。
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\InsurancePolicyDetail|null $beneficiaryOrder beneficiaryOrder
     *
     * @return $this
     */

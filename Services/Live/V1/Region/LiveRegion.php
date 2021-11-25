@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class LiveRegion {
 
-    public static $REGION = array("https://live.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://live.cn-north-1.myhuaweicloud.com"=>"cn-north-1",);
+    public static $REGION = array("https://live.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://live.cn-north-1.myhuaweicloud.com"=>"cn-north-1","https://live.cn-east-3.myhuaweicloud.com"=>"cn-east-3",);
 
     public static function valueOf($regionId)
     {
