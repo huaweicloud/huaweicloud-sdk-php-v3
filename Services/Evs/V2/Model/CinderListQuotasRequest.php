@@ -139,7 +139,7 @@ class CinderListQuotasRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const USAGE_TRUE = 'true';
+    const USAGE_TRUE = 'True';
     
 
     /**

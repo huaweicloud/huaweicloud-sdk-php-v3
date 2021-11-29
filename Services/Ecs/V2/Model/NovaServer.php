@@ -62,6 +62,7 @@ class NovaServer implements ModelInterface, ArrayAccess
     * accessIPv6  预留属性。
     * configDrive  预留属性。
     * progress  预留属性
+    * osschedulerHints  osschedulerHints
     *
     * @var string[]
     */
@@ -107,7 +108,8 @@ class NovaServer implements ModelInterface, ArrayAccess
             'accessIPv4' => 'string',
             'accessIPv6' => 'string',
             'configDrive' => 'string',
-            'progress' => 'int'
+            'progress' => 'int',
+            'osschedulerHints' => '\HuaweiCloud\SDK\Ecs\V2\Model\NovaServerSchedulerHints'
     ];
 
     /**
@@ -154,6 +156,7 @@ class NovaServer implements ModelInterface, ArrayAccess
     * accessIPv6  预留属性。
     * configDrive  预留属性。
     * progress  预留属性
+    * osschedulerHints  osschedulerHints
     *
     * @var string[]
     */
@@ -199,7 +202,8 @@ class NovaServer implements ModelInterface, ArrayAccess
         'accessIPv4' => null,
         'accessIPv6' => null,
         'configDrive' => null,
-        'progress' => 'int32'
+        'progress' => 'int32',
+        'osschedulerHints' => null
     ];
 
     /**
@@ -267,6 +271,7 @@ class NovaServer implements ModelInterface, ArrayAccess
     * accessIPv6  预留属性。
     * configDrive  预留属性。
     * progress  预留属性
+    * osschedulerHints  osschedulerHints
     *
     * @var string[]
     */
@@ -312,7 +317,8 @@ class NovaServer implements ModelInterface, ArrayAccess
             'accessIPv4' => 'accessIPv4',
             'accessIPv6' => 'accessIPv6',
             'configDrive' => 'config_drive',
-            'progress' => 'progress'
+            'progress' => 'progress',
+            'osschedulerHints' => 'os:scheduler_hints'
     ];
 
     /**
@@ -359,6 +365,7 @@ class NovaServer implements ModelInterface, ArrayAccess
     * accessIPv6  预留属性。
     * configDrive  预留属性。
     * progress  预留属性
+    * osschedulerHints  osschedulerHints
     *
     * @var string[]
     */
@@ -404,7 +411,8 @@ class NovaServer implements ModelInterface, ArrayAccess
             'accessIPv4' => 'setAccessIPv4',
             'accessIPv6' => 'setAccessIPv6',
             'configDrive' => 'setConfigDrive',
-            'progress' => 'setProgress'
+            'progress' => 'setProgress',
+            'osschedulerHints' => 'setOsschedulerHints'
     ];
 
     /**
@@ -451,6 +459,7 @@ class NovaServer implements ModelInterface, ArrayAccess
     * accessIPv6  预留属性。
     * configDrive  预留属性。
     * progress  预留属性
+    * osschedulerHints  osschedulerHints
     *
     * @var string[]
     */
@@ -496,7 +505,8 @@ class NovaServer implements ModelInterface, ArrayAccess
             'accessIPv4' => 'getAccessIPv4',
             'accessIPv6' => 'getAccessIPv6',
             'configDrive' => 'getConfigDrive',
-            'progress' => 'getProgress'
+            'progress' => 'getProgress',
+            'osschedulerHints' => 'getOsschedulerHints'
     ];
 
     /**
@@ -746,6 +756,7 @@ class NovaServer implements ModelInterface, ArrayAccess
         $this->container['accessIPv6'] = isset($data['accessIPv6']) ? $data['accessIPv6'] : null;
         $this->container['configDrive'] = isset($data['configDrive']) ? $data['configDrive'] : null;
         $this->container['progress'] = isset($data['progress']) ? $data['progress'] : null;
+        $this->container['osschedulerHints'] = isset($data['osschedulerHints']) ? $data['osschedulerHints'] : null;
     }
 
     /**
@@ -1917,6 +1928,30 @@ class NovaServer implements ModelInterface, ArrayAccess
     public function setProgress($progress)
     {
         $this->container['progress'] = $progress;
+        return $this;
+    }
+
+    /**
+    * Gets osschedulerHints
+    *  osschedulerHints
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaServerSchedulerHints|null
+    */
+    public function getOsschedulerHints()
+    {
+        return $this->container['osschedulerHints'];
+    }
+
+    /**
+    * Sets osschedulerHints
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\NovaServerSchedulerHints|null $osschedulerHints osschedulerHints
+    *
+    * @return $this
+    */
+    public function setOsschedulerHints($osschedulerHints)
+    {
+        $this->container['osschedulerHints'] = $osschedulerHints;
         return $this;
     }
 

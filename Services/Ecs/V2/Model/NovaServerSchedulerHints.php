@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Evs\V2\Model;
+namespace HuaweiCloud\SDK\Ecs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CinderExportToImageRequestBody implements ModelInterface, ArrayAccess
+class NovaServerSchedulerHints implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class CinderExportToImageRequestBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CinderExportToImageRequestBody';
+    protected static $openAPIModelName = 'NovaServerSchedulerHints';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * osVolumeUploadImage  osVolumeUploadImage
+    * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器。 参数值为shared或者dedicated。
+    * dedicatedHostId  专属主机ID。 此属性仅在tenancy值为dedicated时有效。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'osVolumeUploadImage' => '\HuaweiCloud\SDK\Evs\V2\Model\CinderExportToImageOption'
+            'tenancy' => 'string[]',
+            'dedicatedHostId' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * osVolumeUploadImage  osVolumeUploadImage
+    * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器。 参数值为shared或者dedicated。
+    * dedicatedHostId  专属主机ID。 此属性仅在tenancy值为dedicated时有效。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'osVolumeUploadImage' => null
+        'tenancy' => null,
+        'dedicatedHostId' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class CinderExportToImageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * osVolumeUploadImage  osVolumeUploadImage
+    * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器。 参数值为shared或者dedicated。
+    * dedicatedHostId  专属主机ID。 此属性仅在tenancy值为dedicated时有效。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'osVolumeUploadImage' => 'os-volume_upload_image'
+            'tenancy' => 'tenancy',
+            'dedicatedHostId' => 'dedicated_host_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * osVolumeUploadImage  osVolumeUploadImage
+    * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器。 参数值为shared或者dedicated。
+    * dedicatedHostId  专属主机ID。 此属性仅在tenancy值为dedicated时有效。
     *
     * @var string[]
     */
     protected static $setters = [
-            'osVolumeUploadImage' => 'setOsVolumeUploadImage'
+            'tenancy' => 'setTenancy',
+            'dedicatedHostId' => 'setDedicatedHostId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * osVolumeUploadImage  osVolumeUploadImage
+    * tenancy  在指定的专属主机或者共享主机上创建弹性云服务器。 参数值为shared或者dedicated。
+    * dedicatedHostId  专属主机ID。 此属性仅在tenancy值为dedicated时有效。
     *
     * @var string[]
     */
     protected static $getters = [
-            'osVolumeUploadImage' => 'getOsVolumeUploadImage'
+            'tenancy' => 'getTenancy',
+            'dedicatedHostId' => 'getDedicatedHostId'
     ];
 
     /**
@@ -129,7 +139,22 @@ class CinderExportToImageRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TENANCY_SHARED = 'shared';
+    const TENANCY_DEDICATED = 'dedicated';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTenancyAllowableValues()
+    {
+        return [
+            self::TENANCY_SHARED,
+            self::TENANCY_DEDICATED,
+        ];
+    }
 
 
     /**
@@ -147,7 +172,8 @@ class CinderExportToImageRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['osVolumeUploadImage'] = isset($data['osVolumeUploadImage']) ? $data['osVolumeUploadImage'] : null;
+        $this->container['tenancy'] = isset($data['tenancy']) ? $data['tenancy'] : null;
+        $this->container['dedicatedHostId'] = isset($data['dedicatedHostId']) ? $data['dedicatedHostId'] : null;
     }
 
     /**
@@ -158,9 +184,6 @@ class CinderExportToImageRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['osVolumeUploadImage'] === null) {
-            $invalidProperties[] = "'osVolumeUploadImage' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -176,26 +199,50 @@ class CinderExportToImageRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets osVolumeUploadImage
-    *  osVolumeUploadImage
+    * Gets tenancy
+    *  在指定的专属主机或者共享主机上创建弹性云服务器。 参数值为shared或者dedicated。
     *
-    * @return \HuaweiCloud\SDK\Evs\V2\Model\CinderExportToImageOption
+    * @return string[]|null
     */
-    public function getOsVolumeUploadImage()
+    public function getTenancy()
     {
-        return $this->container['osVolumeUploadImage'];
+        return $this->container['tenancy'];
     }
 
     /**
-    * Sets osVolumeUploadImage
+    * Sets tenancy
     *
-    * @param \HuaweiCloud\SDK\Evs\V2\Model\CinderExportToImageOption $osVolumeUploadImage osVolumeUploadImage
+    * @param string[]|null $tenancy 在指定的专属主机或者共享主机上创建弹性云服务器。 参数值为shared或者dedicated。
     *
     * @return $this
     */
-    public function setOsVolumeUploadImage($osVolumeUploadImage)
+    public function setTenancy($tenancy)
     {
-        $this->container['osVolumeUploadImage'] = $osVolumeUploadImage;
+        $this->container['tenancy'] = $tenancy;
+        return $this;
+    }
+
+    /**
+    * Gets dedicatedHostId
+    *  专属主机ID。 此属性仅在tenancy值为dedicated时有效。
+    *
+    * @return string[]|null
+    */
+    public function getDedicatedHostId()
+    {
+        return $this->container['dedicatedHostId'];
+    }
+
+    /**
+    * Sets dedicatedHostId
+    *
+    * @param string[]|null $dedicatedHostId 专属主机ID。 此属性仅在tenancy值为dedicated时有效。
+    *
+    * @return $this
+    */
+    public function setDedicatedHostId($dedicatedHostId)
+    {
+        $this->container['dedicatedHostId'] = $dedicatedHostId;
         return $this;
     }
 
