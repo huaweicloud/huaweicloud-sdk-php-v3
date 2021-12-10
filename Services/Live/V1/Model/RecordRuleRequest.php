@@ -267,6 +267,9 @@ class RecordRuleRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['defaultRecordConfig'] === null) {
+            $invalidProperties[] = "'defaultRecordConfig' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -405,7 +408,7 @@ class RecordRuleRequest implements ModelInterface, ArrayAccess
     * Gets defaultRecordConfig
     *  defaultRecordConfig
     *
-    * @return \HuaweiCloud\SDK\Live\V1\Model\DefaultRecordConfig|null
+    * @return \HuaweiCloud\SDK\Live\V1\Model\DefaultRecordConfig
     */
     public function getDefaultRecordConfig()
     {
@@ -415,7 +418,7 @@ class RecordRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets defaultRecordConfig
     *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\DefaultRecordConfig|null $defaultRecordConfig defaultRecordConfig
+    * @param \HuaweiCloud\SDK\Live\V1\Model\DefaultRecordConfig $defaultRecordConfig defaultRecordConfig
     *
     * @return $this
     */

@@ -22,28 +22,24 @@ class DetectFace implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * boundingBox  boundingBox
     * attributes  attributes
-    * landmark  landmark
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'boundingBox' => '\HuaweiCloud\SDK\Frs\V2\Model\BoundingBox',
-            'attributes' => '\HuaweiCloud\SDK\Frs\V2\Model\Attributes',
-            'landmark' => '\HuaweiCloud\SDK\Frs\V2\Model\Landmark'
+            'attributes' => '\HuaweiCloud\SDK\Frs\V2\Model\Attributes'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * boundingBox  boundingBox
     * attributes  attributes
-    * landmark  landmark
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'boundingBox' => null,
-        'attributes' => null,
-        'landmark' => null
+        'attributes' => null
     ];
 
     /**
@@ -71,42 +67,36 @@ class DetectFace implements ModelInterface, ArrayAccess
     * and the value is the original name
     * boundingBox  boundingBox
     * attributes  attributes
-    * landmark  landmark
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'boundingBox' => 'bounding_box',
-            'attributes' => 'attributes',
-            'landmark' => 'landmark'
+            'attributes' => 'attributes'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * boundingBox  boundingBox
     * attributes  attributes
-    * landmark  landmark
     *
     * @var string[]
     */
     protected static $setters = [
             'boundingBox' => 'setBoundingBox',
-            'attributes' => 'setAttributes',
-            'landmark' => 'setLandmark'
+            'attributes' => 'setAttributes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * boundingBox  boundingBox
     * attributes  attributes
-    * landmark  landmark
     *
     * @var string[]
     */
     protected static $getters = [
             'boundingBox' => 'getBoundingBox',
-            'attributes' => 'getAttributes',
-            'landmark' => 'getLandmark'
+            'attributes' => 'getAttributes'
     ];
 
     /**
@@ -169,7 +159,6 @@ class DetectFace implements ModelInterface, ArrayAccess
     {
         $this->container['boundingBox'] = isset($data['boundingBox']) ? $data['boundingBox'] : null;
         $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
-        $this->container['landmark'] = isset($data['landmark']) ? $data['landmark'] : null;
     }
 
     /**
@@ -242,30 +231,6 @@ class DetectFace implements ModelInterface, ArrayAccess
     public function setAttributes($attributes)
     {
         $this->container['attributes'] = $attributes;
-        return $this;
-    }
-
-    /**
-    * Gets landmark
-    *  landmark
-    *
-    * @return \HuaweiCloud\SDK\Frs\V2\Model\Landmark|null
-    */
-    public function getLandmark()
-    {
-        return $this->container['landmark'];
-    }
-
-    /**
-    * Sets landmark
-    *
-    * @param \HuaweiCloud\SDK\Frs\V2\Model\Landmark|null $landmark landmark
-    *
-    * @return $this
-    */
-    public function setLandmark($landmark)
-    {
-        $this->container['landmark'] = $landmark;
         return $this;
     }
 
