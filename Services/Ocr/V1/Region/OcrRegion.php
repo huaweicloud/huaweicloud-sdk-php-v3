@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class OcrRegion {
 
-    public static $REGION = array("https://ocr.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://ocr.cn-south-1.myhuaweicloud.com"=>"cn-south-1","https://ocr.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://ocr.cn-north-1.myhuaweicloud.com"=>"cn-north-1",);
+    public static $REGION = array("https://ocr.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://ocr.cn-south-1.myhuaweicloud.com"=>"cn-south-1","https://ocr.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://ocr.cn-north-1.myhuaweicloud.com"=>"cn-north-1","https://ocr.ap-southeast-2.myhuaweicloud.com"=>"ap-southeast-2",);
 
     public static function valueOf($regionId)
     {

@@ -22,8 +22,8 @@ class ListRecordCallbackConfigsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * publishDomain  直播推流域名
     * app  流应用名称
-    * offset  分页编号，从0开始算
-    * limit  每页记录数，取值范围[1,100]
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
+    * limit  每页记录数，取值范围[1,100]，默认值10
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class ListRecordCallbackConfigsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * publishDomain  直播推流域名
     * app  流应用名称
-    * offset  分页编号，从0开始算
-    * limit  每页记录数，取值范围[1,100]
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
+    * limit  每页记录数，取值范围[1,100]，默认值10
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class ListRecordCallbackConfigsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * publishDomain  直播推流域名
     * app  流应用名称
-    * offset  分页编号，从0开始算
-    * limit  每页记录数，取值范围[1,100]
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
+    * limit  每页记录数，取值范围[1,100]，默认值10
     *
     * @var string[]
     */
@@ -91,8 +91,8 @@ class ListRecordCallbackConfigsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * publishDomain  直播推流域名
     * app  流应用名称
-    * offset  分页编号，从0开始算
-    * limit  每页记录数，取值范围[1,100]
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
+    * limit  每页记录数，取值范围[1,100]，默认值10
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class ListRecordCallbackConfigsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * publishDomain  直播推流域名
     * app  流应用名称
-    * offset  分页编号，从0开始算
-    * limit  每页记录数，取值范围[1,100]
+    * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
+    * limit  每页记录数，取值范围[1,100]，默认值10
     *
     * @var string[]
     */
@@ -279,7 +279,7 @@ class ListRecordCallbackConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页编号，从0开始算
+    *  偏移量，表示从此偏移量开始查询，offset大于等于0
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class ListRecordCallbackConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页编号，从0开始算
+    * @param int|null $offset 偏移量，表示从此偏移量开始查询，offset大于等于0
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class ListRecordCallbackConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页记录数，取值范围[1,100]
+    *  每页记录数，取值范围[1,100]，默认值10
     *
     * @return int|null
     */
@@ -315,7 +315,7 @@ class ListRecordCallbackConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页记录数，取值范围[1,100]
+    * @param int|null $limit 每页记录数，取值范围[1,100]，默认值10
     *
     * @return $this
     */
