@@ -20,7 +20,7 @@ class ListLiveStreamsOnlineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * publishDomain  域名
+    * publishDomain  推流域名
     * app  应用名
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
     * limit  每页记录数，取值范围[1,100]，默认值10
@@ -38,7 +38,7 @@ class ListLiveStreamsOnlineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * publishDomain  域名
+    * publishDomain  推流域名
     * app  应用名
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
     * limit  每页记录数，取值范围[1,100]，默认值10
@@ -77,7 +77,7 @@ class ListLiveStreamsOnlineRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * publishDomain  域名
+    * publishDomain  推流域名
     * app  应用名
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
     * limit  每页记录数，取值范围[1,100]，默认值10
@@ -95,7 +95,7 @@ class ListLiveStreamsOnlineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * publishDomain  域名
+    * publishDomain  推流域名
     * app  应用名
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
     * limit  每页记录数，取值范围[1,100]，默认值10
@@ -113,7 +113,7 @@ class ListLiveStreamsOnlineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * publishDomain  域名
+    * publishDomain  推流域名
     * app  应用名
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
     * limit  每页记录数，取值范围[1,100]，默认值10
@@ -248,7 +248,7 @@ class ListLiveStreamsOnlineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets publishDomain
-    *  域名
+    *  推流域名
     *
     * @return string
     */
@@ -260,7 +260,7 @@ class ListLiveStreamsOnlineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publishDomain
     *
-    * @param string $publishDomain 域名
+    * @param string $publishDomain 推流域名
     *
     * @return $this
     */

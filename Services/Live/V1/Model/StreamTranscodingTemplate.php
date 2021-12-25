@@ -20,7 +20,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domain  播放域名
+    * domain  推流域名
     * appName  应用名称。 默认为“live”，若您需要自定义应用名称，请先提交工单申请。
     * qualityInfo  视频质量信息
     *
@@ -34,7 +34,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domain  播放域名
+    * domain  推流域名
     * appName  应用名称。 默认为“live”，若您需要自定义应用名称，请先提交工单申请。
     * qualityInfo  视频质量信息
     *
@@ -69,7 +69,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domain  播放域名
+    * domain  推流域名
     * appName  应用名称。 默认为“live”，若您需要自定义应用名称，请先提交工单申请。
     * qualityInfo  视频质量信息
     *
@@ -83,7 +83,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domain  播放域名
+    * domain  推流域名
     * appName  应用名称。 默认为“live”，若您需要自定义应用名称，请先提交工单申请。
     * qualityInfo  视频质量信息
     *
@@ -97,7 +97,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domain  播放域名
+    * domain  推流域名
     * appName  应用名称。 默认为“live”，若您需要自定义应用名称，请先提交工单申请。
     * qualityInfo  视频质量信息
     *
@@ -217,7 +217,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
-    *  播放域名
+    *  推流域名
     *
     * @return string
     */
@@ -229,7 +229,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets domain
     *
-    * @param string $domain 播放域名
+    * @param string $domain 推流域名
     *
     * @return $this
     */

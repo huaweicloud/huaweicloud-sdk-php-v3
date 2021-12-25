@@ -21,7 +21,7 @@ class ListStreamForbiddenRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
-    * domain  播放或推流域名
+    * domain  推流域名
     * appName  应用名称，不指定则查询domain下所有应用的禁止直播推流信息
     * streamName  流名称
     * page  分页编号。 默认为0。
@@ -41,7 +41,7 @@ class ListStreamForbiddenRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
-    * domain  播放或推流域名
+    * domain  推流域名
     * appName  应用名称，不指定则查询domain下所有应用的禁止直播推流信息
     * streamName  流名称
     * page  分页编号。 默认为0。
@@ -82,7 +82,7 @@ class ListStreamForbiddenRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
-    * domain  播放或推流域名
+    * domain  推流域名
     * appName  应用名称，不指定则查询domain下所有应用的禁止直播推流信息
     * streamName  流名称
     * page  分页编号。 默认为0。
@@ -102,7 +102,7 @@ class ListStreamForbiddenRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
-    * domain  播放或推流域名
+    * domain  推流域名
     * appName  应用名称，不指定则查询domain下所有应用的禁止直播推流信息
     * streamName  流名称
     * page  分页编号。 默认为0。
@@ -122,7 +122,7 @@ class ListStreamForbiddenRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
-    * domain  播放或推流域名
+    * domain  推流域名
     * appName  应用名称，不指定则查询domain下所有应用的禁止直播推流信息
     * streamName  流名称
     * page  分页编号。 默认为0。
@@ -289,7 +289,7 @@ class ListStreamForbiddenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
-    *  播放或推流域名
+    *  推流域名
     *
     * @return string
     */
@@ -301,7 +301,7 @@ class ListStreamForbiddenRequest implements ModelInterface, ArrayAccess
     /**
     * Sets domain
     *
-    * @param string $domain 播放或推流域名
+    * @param string $domain 推流域名
     *
     * @return $this
     */

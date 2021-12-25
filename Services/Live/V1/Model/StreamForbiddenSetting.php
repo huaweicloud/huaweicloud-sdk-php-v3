@@ -20,7 +20,7 @@ class StreamForbiddenSetting implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domain  直播播放域名或推流域名
+    * domain  推流域名
     * appName  流应用名称
     * streamName  流名称
     * resumeTime  恢复流时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间，不指定则默认7天，最大禁推为90天
@@ -36,7 +36,7 @@ class StreamForbiddenSetting implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domain  直播播放域名或推流域名
+    * domain  推流域名
     * appName  流应用名称
     * streamName  流名称
     * resumeTime  恢复流时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间，不指定则默认7天，最大禁推为90天
@@ -73,7 +73,7 @@ class StreamForbiddenSetting implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domain  直播播放域名或推流域名
+    * domain  推流域名
     * appName  流应用名称
     * streamName  流名称
     * resumeTime  恢复流时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间，不指定则默认7天，最大禁推为90天
@@ -89,7 +89,7 @@ class StreamForbiddenSetting implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domain  直播播放域名或推流域名
+    * domain  推流域名
     * appName  流应用名称
     * streamName  流名称
     * resumeTime  恢复流时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间，不指定则默认7天，最大禁推为90天
@@ -105,7 +105,7 @@ class StreamForbiddenSetting implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domain  直播播放域名或推流域名
+    * domain  推流域名
     * appName  流应用名称
     * streamName  流名称
     * resumeTime  恢复流时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间，不指定则默认7天，最大禁推为90天
@@ -234,7 +234,7 @@ class StreamForbiddenSetting implements ModelInterface, ArrayAccess
 
     /**
     * Gets domain
-    *  直播播放域名或推流域名
+    *  推流域名
     *
     * @return string
     */
@@ -246,7 +246,7 @@ class StreamForbiddenSetting implements ModelInterface, ArrayAccess
     /**
     * Sets domain
     *
-    * @param string $domain 直播播放域名或推流域名
+    * @param string $domain 推流域名
     *
     * @return $this
     */

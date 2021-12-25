@@ -20,7 +20,7 @@ class DefaultRecordConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recordFormat  录制格式flv，hls，mp4
+    * recordFormat  录制格式，当前支持：FLV，HLS，MP4三种格式，设置格式时必须使用大写字母
     * obsAddr  obsAddr
     * hlsConfig  hlsConfig
     * flvConfig  flvConfig
@@ -38,7 +38,7 @@ class DefaultRecordConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recordFormat  录制格式flv，hls，mp4
+    * recordFormat  录制格式，当前支持：FLV，HLS，MP4三种格式，设置格式时必须使用大写字母
     * obsAddr  obsAddr
     * hlsConfig  hlsConfig
     * flvConfig  flvConfig
@@ -77,7 +77,7 @@ class DefaultRecordConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recordFormat  录制格式flv，hls，mp4
+    * recordFormat  录制格式，当前支持：FLV，HLS，MP4三种格式，设置格式时必须使用大写字母
     * obsAddr  obsAddr
     * hlsConfig  hlsConfig
     * flvConfig  flvConfig
@@ -95,7 +95,7 @@ class DefaultRecordConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recordFormat  录制格式flv，hls，mp4
+    * recordFormat  录制格式，当前支持：FLV，HLS，MP4三种格式，设置格式时必须使用大写字母
     * obsAddr  obsAddr
     * hlsConfig  hlsConfig
     * flvConfig  flvConfig
@@ -113,7 +113,7 @@ class DefaultRecordConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recordFormat  录制格式flv，hls，mp4
+    * recordFormat  录制格式，当前支持：FLV，HLS，MP4三种格式，设置格式时必须使用大写字母
     * obsAddr  obsAddr
     * hlsConfig  hlsConfig
     * flvConfig  flvConfig
@@ -224,7 +224,7 @@ class DefaultRecordConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordFormat
-    *  录制格式flv，hls，mp4
+    *  录制格式，当前支持：FLV，HLS，MP4三种格式，设置格式时必须使用大写字母
     *
     * @return \HuaweiCloud\SDK\Live\V1\Model\VideoFormatVar[]
     */
@@ -236,7 +236,7 @@ class DefaultRecordConfig implements ModelInterface, ArrayAccess
     /**
     * Sets recordFormat
     *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\VideoFormatVar[] $recordFormat 录制格式flv，hls，mp4
+    * @param \HuaweiCloud\SDK\Live\V1\Model\VideoFormatVar[] $recordFormat 录制格式，当前支持：FLV，HLS，MP4三种格式，设置格式时必须使用大写字母
     *
     * @return $this
     */
