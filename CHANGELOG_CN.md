@@ -1,3 +1,36 @@
+# 3.0.35-beta 2022-01-10
+
+### HuaweiCloud SDK ECS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`CreateServers`新增请求参数 `delete_on_termination`
+
+### HuaweiCloud SDK FunctionGraph
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`UpdateFunctionConfig`:
+    - 新增请求参数 `is_stateful_function`
+    - 新增响应参数 `is_stateful_function`
+
+### HuaweiCloud SDK IMS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`GlanceListImages`响应参数`active_at`改为非必填
+  - 接口`GlanceShowImage`响应参数`active_at`改为非必填
+  - 接口`GlanceUpdateImage`响应参数`active_at`改为非必填
+
 # 3.0.34-beta 2021-12-25
 
 ### HuaweiCloud SDK ECS

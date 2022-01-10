@@ -1235,9 +1235,6 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['activeAt'] === null) {
-            $invalidProperties[] = "'activeAt' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -2528,7 +2525,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     * Gets activeAt
     *  镜像状态变为正常的时间。
     *
-    * @return string
+    * @return string|null
     */
     public function getActiveAt()
     {
@@ -2538,7 +2535,7 @@ class GlanceShowImageResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets activeAt
     *
-    * @param string $activeAt 镜像状态变为正常的时间。
+    * @param string|null $activeAt 镜像状态变为正常的时间。
     *
     * @return $this
     */
