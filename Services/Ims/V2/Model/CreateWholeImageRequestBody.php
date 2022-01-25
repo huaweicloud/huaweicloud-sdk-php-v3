@@ -23,10 +23,10 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
     * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目。取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * imageTags  新规范的镜像标签列表。默认为空。tags和image_tags只能使用一个。
-    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
+    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数且必填。 如果使用备份创建整机镜像，该参数应换成backup_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     * name  镜像名称。 名称的首尾字母不能为空格。 名称的长度至为1～128位。 名称包含以下4种字符： 大写字母 小写字母 数字 特殊字符包含-、.、_、空格和中文。
     * tags  镜像标签列表。tags和image_tags只能使用一个。
-    * backupId  使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
+    * backupId  使用云服务器备份创建整机镜像使用此参数且必填。 如果使用ECS创建整机镜像，则该参数应传为instance_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     * wholeImageType  使用备份创建整机镜像时，该字段区分是CBR服务的备份还是CSBS服务的备份，取值为：CBR/CSBS。 使用ECS创建整机镜像时，该字段不填
     * maxRam  表示镜像支持的最大内存，单位为MB，默认不设置。
     * minRam  表示镜像支持的最小内存，单位为MB，默认为0。
@@ -53,10 +53,10 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
     * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目。取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * imageTags  新规范的镜像标签列表。默认为空。tags和image_tags只能使用一个。
-    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
+    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数且必填。 如果使用备份创建整机镜像，该参数应换成backup_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     * name  镜像名称。 名称的首尾字母不能为空格。 名称的长度至为1～128位。 名称包含以下4种字符： 大写字母 小写字母 数字 特殊字符包含-、.、_、空格和中文。
     * tags  镜像标签列表。tags和image_tags只能使用一个。
-    * backupId  使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
+    * backupId  使用云服务器备份创建整机镜像使用此参数且必填。 如果使用ECS创建整机镜像，则该参数应传为instance_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     * wholeImageType  使用备份创建整机镜像时，该字段区分是CBR服务的备份还是CSBS服务的备份，取值为：CBR/CSBS。 使用ECS创建整机镜像时，该字段不填
     * maxRam  表示镜像支持的最大内存，单位为MB，默认不设置。
     * minRam  表示镜像支持的最小内存，单位为MB，默认为0。
@@ -104,10 +104,10 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
     * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目。取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * imageTags  新规范的镜像标签列表。默认为空。tags和image_tags只能使用一个。
-    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
+    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数且必填。 如果使用备份创建整机镜像，该参数应换成backup_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     * name  镜像名称。 名称的首尾字母不能为空格。 名称的长度至为1～128位。 名称包含以下4种字符： 大写字母 小写字母 数字 特殊字符包含-、.、_、空格和中文。
     * tags  镜像标签列表。tags和image_tags只能使用一个。
-    * backupId  使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
+    * backupId  使用云服务器备份创建整机镜像使用此参数且必填。 如果使用ECS创建整机镜像，则该参数应传为instance_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     * wholeImageType  使用备份创建整机镜像时，该字段区分是CBR服务的备份还是CSBS服务的备份，取值为：CBR/CSBS。 使用ECS创建整机镜像时，该字段不填
     * maxRam  表示镜像支持的最大内存，单位为MB，默认不设置。
     * minRam  表示镜像支持的最小内存，单位为MB，默认为0。
@@ -134,10 +134,10 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
     * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目。取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * imageTags  新规范的镜像标签列表。默认为空。tags和image_tags只能使用一个。
-    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
+    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数且必填。 如果使用备份创建整机镜像，该参数应换成backup_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     * name  镜像名称。 名称的首尾字母不能为空格。 名称的长度至为1～128位。 名称包含以下4种字符： 大写字母 小写字母 数字 特殊字符包含-、.、_、空格和中文。
     * tags  镜像标签列表。tags和image_tags只能使用一个。
-    * backupId  使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
+    * backupId  使用云服务器备份创建整机镜像使用此参数且必填。 如果使用ECS创建整机镜像，则该参数应传为instance_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     * wholeImageType  使用备份创建整机镜像时，该字段区分是CBR服务的备份还是CSBS服务的备份，取值为：CBR/CSBS。 使用ECS创建整机镜像时，该字段不填
     * maxRam  表示镜像支持的最大内存，单位为MB，默认不设置。
     * minRam  表示镜像支持的最小内存，单位为MB，默认为0。
@@ -164,10 +164,10 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
     * enterpriseProjectId  表示当前镜像所属的企业项目。取值为0或无该值，表示属于default企业项目。取值为UUID，表示属于该UUID对应的企业项目。关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * imageTags  新规范的镜像标签列表。默认为空。tags和image_tags只能使用一个。
-    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
+    * instanceId  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数且必填。 如果使用备份创建整机镜像，该参数应换成backup_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     * name  镜像名称。 名称的首尾字母不能为空格。 名称的长度至为1～128位。 名称包含以下4种字符： 大写字母 小写字母 数字 特殊字符包含-、.、_、空格和中文。
     * tags  镜像标签列表。tags和image_tags只能使用一个。
-    * backupId  使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
+    * backupId  使用云服务器备份创建整机镜像使用此参数且必填。 如果使用ECS创建整机镜像，则该参数应传为instance_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     * wholeImageType  使用备份创建整机镜像时，该字段区分是CBR服务的备份还是CSBS服务的备份，取值为：CBR/CSBS。 使用ECS创建整机镜像时，该字段不填
     * maxRam  表示镜像支持的最大内存，单位为MB，默认不设置。
     * minRam  表示镜像支持的最小内存，单位为MB，默认为0。
@@ -371,7 +371,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
+    *  弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数且必填。 如果使用备份创建整机镜像，该参数应换成backup_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数。 如果使用备份创建整机镜像，该参数应换成backup_id
+    * @param string|null $instanceId 弹性云服务器ID。使用弹性云服务器制作整机镜像时使用此参数且必填。 如果使用备份创建整机镜像，该参数应换成backup_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     *
     * @return $this
     */
@@ -443,7 +443,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupId
-    *  使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
+    *  使用云服务器备份创建整机镜像使用此参数且必填。 如果使用ECS创建整机镜像，则该参数应传为instance_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     *
     * @return string|null
     */
@@ -455,7 +455,7 @@ class CreateWholeImageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets backupId
     *
-    * @param string|null $backupId 使用云服务器备份创建整机镜像使用此参数。 如果使用ECS创建整机镜像，则该参数应传为instance_id
+    * @param string|null $backupId 使用云服务器备份创建整机镜像使用此参数且必填。 如果使用ECS创建整机镜像，则该参数应传为instance_id。 非必填的原因是需要兼容“使用备份创建整机镜像”和“使用弹性云服务器制作整机镜像”两种场景的body体。
     *
     * @return $this
     */

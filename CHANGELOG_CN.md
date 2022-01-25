@@ -1,3 +1,14 @@
+# 3.0.36-rc 2022-01-25
+
+### HuaweiCloud SDK IAM
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`CreateLoginToken`新增响应参数`session_user_id`
+
 # 3.0.35-beta 2022-01-10
 
 ### HuaweiCloud SDK ECS

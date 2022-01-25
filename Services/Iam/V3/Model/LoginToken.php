@@ -26,6 +26,7 @@ class LoginToken implements ModelInterface, ArrayAccess
     * userId  用户ID。
     * userName  用户名。
     * sessionId  会话ID。
+    * sessionUserId  自定义代理用户ID。
     * sessionName  自定义代理用户名。 > - [通过委托获取临时访问密钥和securitytoken](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=CreateTemporaryAccessKeyByAgency)且请求体中填写session_user.name参数时，会返回该字段。该字段的值即为session_user.name所填写的值。
     * assumedBy  assumedBy
     *
@@ -38,6 +39,7 @@ class LoginToken implements ModelInterface, ArrayAccess
             'userId' => 'string',
             'userName' => 'string',
             'sessionId' => 'string',
+            'sessionUserId' => 'string',
             'sessionName' => 'string',
             'assumedBy' => '\HuaweiCloud\SDK\Iam\V3\Model\LoginTokenAssumedBy'
     ];
@@ -50,6 +52,7 @@ class LoginToken implements ModelInterface, ArrayAccess
     * userId  用户ID。
     * userName  用户名。
     * sessionId  会话ID。
+    * sessionUserId  自定义代理用户ID。
     * sessionName  自定义代理用户名。 > - [通过委托获取临时访问密钥和securitytoken](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=CreateTemporaryAccessKeyByAgency)且请求体中填写session_user.name参数时，会返回该字段。该字段的值即为session_user.name所填写的值。
     * assumedBy  assumedBy
     *
@@ -62,6 +65,7 @@ class LoginToken implements ModelInterface, ArrayAccess
         'userId' => null,
         'userName' => null,
         'sessionId' => null,
+        'sessionUserId' => null,
         'sessionName' => null,
         'assumedBy' => null
     ];
@@ -95,6 +99,7 @@ class LoginToken implements ModelInterface, ArrayAccess
     * userId  用户ID。
     * userName  用户名。
     * sessionId  会话ID。
+    * sessionUserId  自定义代理用户ID。
     * sessionName  自定义代理用户名。 > - [通过委托获取临时访问密钥和securitytoken](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=CreateTemporaryAccessKeyByAgency)且请求体中填写session_user.name参数时，会返回该字段。该字段的值即为session_user.name所填写的值。
     * assumedBy  assumedBy
     *
@@ -107,6 +112,7 @@ class LoginToken implements ModelInterface, ArrayAccess
             'userId' => 'user_id',
             'userName' => 'user_name',
             'sessionId' => 'session_id',
+            'sessionUserId' => 'session_user_id',
             'sessionName' => 'session_name',
             'assumedBy' => 'assumed_by'
     ];
@@ -119,6 +125,7 @@ class LoginToken implements ModelInterface, ArrayAccess
     * userId  用户ID。
     * userName  用户名。
     * sessionId  会话ID。
+    * sessionUserId  自定义代理用户ID。
     * sessionName  自定义代理用户名。 > - [通过委托获取临时访问密钥和securitytoken](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=CreateTemporaryAccessKeyByAgency)且请求体中填写session_user.name参数时，会返回该字段。该字段的值即为session_user.name所填写的值。
     * assumedBy  assumedBy
     *
@@ -131,6 +138,7 @@ class LoginToken implements ModelInterface, ArrayAccess
             'userId' => 'setUserId',
             'userName' => 'setUserName',
             'sessionId' => 'setSessionId',
+            'sessionUserId' => 'setSessionUserId',
             'sessionName' => 'setSessionName',
             'assumedBy' => 'setAssumedBy'
     ];
@@ -143,6 +151,7 @@ class LoginToken implements ModelInterface, ArrayAccess
     * userId  用户ID。
     * userName  用户名。
     * sessionId  会话ID。
+    * sessionUserId  自定义代理用户ID。
     * sessionName  自定义代理用户名。 > - [通过委托获取临时访问密钥和securitytoken](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=CreateTemporaryAccessKeyByAgency)且请求体中填写session_user.name参数时，会返回该字段。该字段的值即为session_user.name所填写的值。
     * assumedBy  assumedBy
     *
@@ -155,6 +164,7 @@ class LoginToken implements ModelInterface, ArrayAccess
             'userId' => 'getUserId',
             'userName' => 'getUserName',
             'sessionId' => 'getSessionId',
+            'sessionUserId' => 'getSessionUserId',
             'sessionName' => 'getSessionName',
             'assumedBy' => 'getAssumedBy'
     ];
@@ -223,6 +233,7 @@ class LoginToken implements ModelInterface, ArrayAccess
         $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
         $this->container['sessionId'] = isset($data['sessionId']) ? $data['sessionId'] : null;
+        $this->container['sessionUserId'] = isset($data['sessionUserId']) ? $data['sessionUserId'] : null;
         $this->container['sessionName'] = isset($data['sessionName']) ? $data['sessionName'] : null;
         $this->container['assumedBy'] = isset($data['assumedBy']) ? $data['assumedBy'] : null;
     }
@@ -408,6 +419,30 @@ class LoginToken implements ModelInterface, ArrayAccess
     public function setSessionId($sessionId)
     {
         $this->container['sessionId'] = $sessionId;
+        return $this;
+    }
+
+    /**
+    * Gets sessionUserId
+    *  自定义代理用户ID。
+    *
+    * @return string|null
+    */
+    public function getSessionUserId()
+    {
+        return $this->container['sessionUserId'];
+    }
+
+    /**
+    * Sets sessionUserId
+    *
+    * @param string|null $sessionUserId 自定义代理用户ID。
+    *
+    * @return $this
+    */
+    public function setSessionUserId($sessionUserId)
+    {
+        $this->container['sessionUserId'] = $sessionUserId;
         return $this;
     }
 
