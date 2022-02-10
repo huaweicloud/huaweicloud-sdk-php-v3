@@ -1,3 +1,24 @@
+# 3.0.37-rc 2022-02-10
+
+### HuaweiCloud SDK Live
+
+- _新增特性_
+  - 支持接口`ListTranscodeTaskCount`、`ListAreaDetail`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListRecordData`新增请求参数 `publish_domain`
+  - 接口`CreateRecordRule`移除请求参数 `plan_record_time`
+  - 接口`ListRecordRules`移除响应参数 `plan_record_time`
+  - 接口`ShowRecordRule`移除响应参数 `plan_record_time`
+  - 接口`UpdateRecordRule`:
+    - 移除请求参数 `plan_record_time`
+    - 移除响应参数 `plan_record_time`
+  - 接口`CreateRecordCallbackConfig`移除请求参数 `on_demand_callback_url`
+  - 接口`ListRecordCallbackConfigs`移除响应参数 `on_demand_callback_url`
+  - 接口`ShowRecordCallbackConfig`移除响应参数 `on_demand_callback_url`
+  - 接口`UpdateRecordCallbackConfig`移除请求参数 `on_demand_callback_url`
+
 # 3.0.36-rc 2022-01-25
 
 ### HuaweiCloud SDK IAM

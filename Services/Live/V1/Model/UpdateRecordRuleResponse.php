@@ -26,7 +26,6 @@ class UpdateRecordRuleResponse implements ModelInterface, ArrayAccess
     * app  应用名，如果任意应用填写*。录制规则匹配的时候，优先精确app匹配，如果匹配不到，则匹配*
     * stream  录制的流名，如果任意流名则填写*。录制规则匹配的时候，优先精确stream匹配，如果匹配不到，则匹配*
     * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD, ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD: 持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD: 命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。命令控制的接口参考/v1/{project_id}/record/control - PLAN_RECORD: 计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD: 按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。租户提供的接口定义参考：/customer-record-ondemand-url
-    * planRecordTime  planRecordTime
     * defaultRecordConfig  defaultRecordConfig
     * createTime  创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     * updateTime  修改时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
@@ -39,7 +38,6 @@ class UpdateRecordRuleResponse implements ModelInterface, ArrayAccess
             'app' => 'string',
             'stream' => 'string',
             'recordType' => 'string',
-            'planRecordTime' => '\HuaweiCloud\SDK\Live\V1\Model\PlanRecordTime',
             'defaultRecordConfig' => '\HuaweiCloud\SDK\Live\V1\Model\DefaultRecordConfig',
             'createTime' => '\DateTime',
             'updateTime' => '\DateTime'
@@ -52,7 +50,6 @@ class UpdateRecordRuleResponse implements ModelInterface, ArrayAccess
     * app  应用名，如果任意应用填写*。录制规则匹配的时候，优先精确app匹配，如果匹配不到，则匹配*
     * stream  录制的流名，如果任意流名则填写*。录制规则匹配的时候，优先精确stream匹配，如果匹配不到，则匹配*
     * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD, ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD: 持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD: 命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。命令控制的接口参考/v1/{project_id}/record/control - PLAN_RECORD: 计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD: 按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。租户提供的接口定义参考：/customer-record-ondemand-url
-    * planRecordTime  planRecordTime
     * defaultRecordConfig  defaultRecordConfig
     * createTime  创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     * updateTime  修改时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
@@ -65,7 +62,6 @@ class UpdateRecordRuleResponse implements ModelInterface, ArrayAccess
         'app' => null,
         'stream' => null,
         'recordType' => null,
-        'planRecordTime' => null,
         'defaultRecordConfig' => null,
         'createTime' => 'date',
         'updateTime' => 'date'
@@ -99,7 +95,6 @@ class UpdateRecordRuleResponse implements ModelInterface, ArrayAccess
     * app  应用名，如果任意应用填写*。录制规则匹配的时候，优先精确app匹配，如果匹配不到，则匹配*
     * stream  录制的流名，如果任意流名则填写*。录制规则匹配的时候，优先精确stream匹配，如果匹配不到，则匹配*
     * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD, ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD: 持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD: 命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。命令控制的接口参考/v1/{project_id}/record/control - PLAN_RECORD: 计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD: 按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。租户提供的接口定义参考：/customer-record-ondemand-url
-    * planRecordTime  planRecordTime
     * defaultRecordConfig  defaultRecordConfig
     * createTime  创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     * updateTime  修改时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
@@ -112,7 +107,6 @@ class UpdateRecordRuleResponse implements ModelInterface, ArrayAccess
             'app' => 'app',
             'stream' => 'stream',
             'recordType' => 'record_type',
-            'planRecordTime' => 'plan_record_time',
             'defaultRecordConfig' => 'default_record_config',
             'createTime' => 'create_time',
             'updateTime' => 'update_time'
@@ -125,7 +119,6 @@ class UpdateRecordRuleResponse implements ModelInterface, ArrayAccess
     * app  应用名，如果任意应用填写*。录制规则匹配的时候，优先精确app匹配，如果匹配不到，则匹配*
     * stream  录制的流名，如果任意流名则填写*。录制规则匹配的时候，优先精确stream匹配，如果匹配不到，则匹配*
     * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD, ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD: 持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD: 命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。命令控制的接口参考/v1/{project_id}/record/control - PLAN_RECORD: 计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD: 按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。租户提供的接口定义参考：/customer-record-ondemand-url
-    * planRecordTime  planRecordTime
     * defaultRecordConfig  defaultRecordConfig
     * createTime  创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     * updateTime  修改时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
@@ -138,7 +131,6 @@ class UpdateRecordRuleResponse implements ModelInterface, ArrayAccess
             'app' => 'setApp',
             'stream' => 'setStream',
             'recordType' => 'setRecordType',
-            'planRecordTime' => 'setPlanRecordTime',
             'defaultRecordConfig' => 'setDefaultRecordConfig',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime'
@@ -151,7 +143,6 @@ class UpdateRecordRuleResponse implements ModelInterface, ArrayAccess
     * app  应用名，如果任意应用填写*。录制规则匹配的时候，优先精确app匹配，如果匹配不到，则匹配*
     * stream  录制的流名，如果任意流名则填写*。录制规则匹配的时候，优先精确stream匹配，如果匹配不到，则匹配*
     * recordType  录制类型，包括：CONTINUOUS_RECORD，COMMAND_RECORD，PLAN_RECORD, ON_DEMAND_RECORD。默认CONTINUOUS_RECORD。 - CONTINUOUS_RECORD: 持续录制，在该规则类型配置后，只要有流到推送到录制系统，就触发录制。 - COMMAND_RECORD: 命令录制，在该规则类型配置后，在流推送到录制系统后，租户需要通过命令控制该流的录制开始和结束。命令控制的接口参考/v1/{project_id}/record/control - PLAN_RECORD: 计划录制，在该规则类型配置后，推的流如果在计划录制的时间区间则触发录制。 - ON_DEMAND_RECORD: 按需录制，在该规则类型配置后，录制系统收到推流后，需要调用租户提供的接口查询录制规则，并根据规则录制。租户提供的接口定义参考：/customer-record-ondemand-url
-    * planRecordTime  planRecordTime
     * defaultRecordConfig  defaultRecordConfig
     * createTime  创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
     * updateTime  修改时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。 在查询的时候返回
@@ -164,7 +155,6 @@ class UpdateRecordRuleResponse implements ModelInterface, ArrayAccess
             'app' => 'getApp',
             'stream' => 'getStream',
             'recordType' => 'getRecordType',
-            'planRecordTime' => 'getPlanRecordTime',
             'defaultRecordConfig' => 'getDefaultRecordConfig',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime'
@@ -252,7 +242,6 @@ class UpdateRecordRuleResponse implements ModelInterface, ArrayAccess
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
         $this->container['stream'] = isset($data['stream']) ? $data['stream'] : null;
         $this->container['recordType'] = isset($data['recordType']) ? $data['recordType'] : 'CONTINUOUS_RECORD';
-        $this->container['planRecordTime'] = isset($data['planRecordTime']) ? $data['planRecordTime'] : null;
         $this->container['defaultRecordConfig'] = isset($data['defaultRecordConfig']) ? $data['defaultRecordConfig'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
@@ -429,30 +418,6 @@ class UpdateRecordRuleResponse implements ModelInterface, ArrayAccess
     public function setRecordType($recordType)
     {
         $this->container['recordType'] = $recordType;
-        return $this;
-    }
-
-    /**
-    * Gets planRecordTime
-    *  planRecordTime
-    *
-    * @return \HuaweiCloud\SDK\Live\V1\Model\PlanRecordTime|null
-    */
-    public function getPlanRecordTime()
-    {
-        return $this->container['planRecordTime'];
-    }
-
-    /**
-    * Sets planRecordTime
-    *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\PlanRecordTime|null $planRecordTime planRecordTime
-    *
-    * @return $this
-    */
-    public function setPlanRecordTime($planRecordTime)
-    {
-        $this->container['planRecordTime'] = $planRecordTime;
         return $this;
     }
 

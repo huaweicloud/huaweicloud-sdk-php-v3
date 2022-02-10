@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Live\V1\Model;
+namespace HuaweiCloud\SDK\Bssintl\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class PlanRecordTime implements ModelInterface, ArrayAccess
+class PayOrdersRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class PlanRecordTime implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'PlanRecordTime';
+    protected static $openAPIModelName = 'PayOrdersRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * startTime  录制开始时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。
-    * endTime  录制结束时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。如果填写，填写的时间必须晚于当前时间。如果不填写，则在计划录制触发后不停止。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'startTime' => '\DateTime',
-            'endTime' => '\DateTime'
+            'body' => '\HuaweiCloud\SDK\Bssintl\V2\Model\PayCustomerOrderReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * startTime  录制开始时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。
-    * endTime  录制结束时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。如果填写，填写的时间必须晚于当前时间。如果不填写，则在计划录制触发后不停止。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'startTime' => 'date',
-        'endTime' => 'date'
+        'body' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class PlanRecordTime implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * startTime  录制开始时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。
-    * endTime  录制结束时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。如果填写，填写的时间必须晚于当前时间。如果不填写，则在计划录制触发后不停止。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'startTime' => 'start_time',
-            'endTime' => 'end_time'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * startTime  录制开始时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。
-    * endTime  录制结束时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。如果填写，填写的时间必须晚于当前时间。如果不填写，则在计划录制触发后不停止。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'startTime' => 'setStartTime',
-            'endTime' => 'setEndTime'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * startTime  录制开始时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。
-    * endTime  录制结束时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。如果填写，填写的时间必须晚于当前时间。如果不填写，则在计划录制触发后不停止。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'startTime' => 'getStartTime',
-            'endTime' => 'getEndTime'
+            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +147,7 @@ class PlanRecordTime implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
-        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,9 +158,6 @@ class PlanRecordTime implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['startTime'] === null) {
-            $invalidProperties[] = "'startTime' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -187,50 +173,26 @@ class PlanRecordTime implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets startTime
-    *  录制开始时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。
+    * Gets body
+    *  body
     *
-    * @return \DateTime
+    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\PayCustomerOrderReq|null
     */
-    public function getStartTime()
+    public function getBody()
     {
-        return $this->container['startTime'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets startTime
+    * Sets body
     *
-    * @param \DateTime $startTime 录制开始时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\PayCustomerOrderReq|null $body body
     *
     * @return $this
     */
-    public function setStartTime($startTime)
+    public function setBody($body)
     {
-        $this->container['startTime'] = $startTime;
-        return $this;
-    }
-
-    /**
-    * Gets endTime
-    *  录制结束时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。如果填写，填写的时间必须晚于当前时间。如果不填写，则在计划录制触发后不停止。
-    *
-    * @return \DateTime|null
-    */
-    public function getEndTime()
-    {
-        return $this->container['endTime'];
-    }
-
-    /**
-    * Sets endTime
-    *
-    * @param \DateTime|null $endTime 录制结束时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间。如果填写，填写的时间必须晚于当前时间。如果不填写，则在计划录制触发后不停止。
-    *
-    * @return $this
-    */
-    public function setEndTime($endTime)
-    {
-        $this->container['endTime'] = $endTime;
+        $this->container['body'] = $body;
         return $this;
     }
 

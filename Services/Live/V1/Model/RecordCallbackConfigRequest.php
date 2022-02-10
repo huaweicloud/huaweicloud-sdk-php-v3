@@ -24,7 +24,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
     * app  app名称。如果需要匹配任意应用则需填写*。录制规则匹配的时候，优先精确app匹配，如果匹配不到，则匹配*
     * notifyCallbackUrl  录制回调通知url地址
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
-    * onDemandCallbackUrl  按需录制回调url地址
     * signType  加密类型
     *
     * @var string[]
@@ -34,7 +33,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
             'app' => 'string',
             'notifyCallbackUrl' => 'string',
             'notifyEventSubscription' => 'string[]',
-            'onDemandCallbackUrl' => 'string',
             'signType' => 'string'
     ];
 
@@ -44,7 +42,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
     * app  app名称。如果需要匹配任意应用则需填写*。录制规则匹配的时候，优先精确app匹配，如果匹配不到，则匹配*
     * notifyCallbackUrl  录制回调通知url地址
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
-    * onDemandCallbackUrl  按需录制回调url地址
     * signType  加密类型
     *
     * @var string[]
@@ -54,7 +51,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
         'app' => null,
         'notifyCallbackUrl' => null,
         'notifyEventSubscription' => null,
-        'onDemandCallbackUrl' => null,
         'signType' => null
     ];
 
@@ -85,7 +81,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
     * app  app名称。如果需要匹配任意应用则需填写*。录制规则匹配的时候，优先精确app匹配，如果匹配不到，则匹配*
     * notifyCallbackUrl  录制回调通知url地址
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
-    * onDemandCallbackUrl  按需录制回调url地址
     * signType  加密类型
     *
     * @var string[]
@@ -95,7 +90,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
             'app' => 'app',
             'notifyCallbackUrl' => 'notify_callback_url',
             'notifyEventSubscription' => 'notify_event_subscription',
-            'onDemandCallbackUrl' => 'on_demand_callback_url',
             'signType' => 'sign_type'
     ];
 
@@ -105,7 +99,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
     * app  app名称。如果需要匹配任意应用则需填写*。录制规则匹配的时候，优先精确app匹配，如果匹配不到，则匹配*
     * notifyCallbackUrl  录制回调通知url地址
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
-    * onDemandCallbackUrl  按需录制回调url地址
     * signType  加密类型
     *
     * @var string[]
@@ -115,7 +108,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
             'app' => 'setApp',
             'notifyCallbackUrl' => 'setNotifyCallbackUrl',
             'notifyEventSubscription' => 'setNotifyEventSubscription',
-            'onDemandCallbackUrl' => 'setOnDemandCallbackUrl',
             'signType' => 'setSignType'
     ];
 
@@ -125,7 +117,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
     * app  app名称。如果需要匹配任意应用则需填写*。录制规则匹配的时候，优先精确app匹配，如果匹配不到，则匹配*
     * notifyCallbackUrl  录制回调通知url地址
     * notifyEventSubscription  订阅录制通知消息。消息类型。RECORD_NEW_FILE_START开始创建新的录制文件。RECORD_FILE_COMPLETE录制文件生成完成。RECORD_OVER录制结束。RECORD_FAILED表示录制失败。如果不填写,默认订阅RECORD_FILE_COMPLETE
-    * onDemandCallbackUrl  按需录制回调url地址
     * signType  加密类型
     *
     * @var string[]
@@ -135,7 +126,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
             'app' => 'getApp',
             'notifyCallbackUrl' => 'getNotifyCallbackUrl',
             'notifyEventSubscription' => 'getNotifyEventSubscription',
-            'onDemandCallbackUrl' => 'getOnDemandCallbackUrl',
             'signType' => 'getSignType'
     ];
 
@@ -235,7 +225,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
         $this->container['notifyCallbackUrl'] = isset($data['notifyCallbackUrl']) ? $data['notifyCallbackUrl'] : null;
         $this->container['notifyEventSubscription'] = isset($data['notifyEventSubscription']) ? $data['notifyEventSubscription'] : null;
-        $this->container['onDemandCallbackUrl'] = isset($data['onDemandCallbackUrl']) ? $data['onDemandCallbackUrl'] : null;
         $this->container['signType'] = isset($data['signType']) ? $data['signType'] : null;
     }
 
@@ -270,12 +259,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['notifyCallbackUrl']) && (mb_strlen($this->container['notifyCallbackUrl']) < 1)) {
                 $invalidProperties[] = "invalid value for 'notifyCallbackUrl', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['onDemandCallbackUrl']) && (mb_strlen($this->container['onDemandCallbackUrl']) > 256)) {
-                $invalidProperties[] = "invalid value for 'onDemandCallbackUrl', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['onDemandCallbackUrl']) && (mb_strlen($this->container['onDemandCallbackUrl']) < 1)) {
-                $invalidProperties[] = "invalid value for 'onDemandCallbackUrl', the character length must be bigger than or equal to 1.";
             }
             $allowedValues = $this->getSignTypeAllowableValues();
                 if (!is_null($this->container['signType']) && !in_array($this->container['signType'], $allowedValues, true)) {
@@ -392,30 +375,6 @@ class RecordCallbackConfigRequest implements ModelInterface, ArrayAccess
     public function setNotifyEventSubscription($notifyEventSubscription)
     {
         $this->container['notifyEventSubscription'] = $notifyEventSubscription;
-        return $this;
-    }
-
-    /**
-    * Gets onDemandCallbackUrl
-    *  按需录制回调url地址
-    *
-    * @return string|null
-    */
-    public function getOnDemandCallbackUrl()
-    {
-        return $this->container['onDemandCallbackUrl'];
-    }
-
-    /**
-    * Sets onDemandCallbackUrl
-    *
-    * @param string|null $onDemandCallbackUrl 按需录制回调url地址
-    *
-    * @return $this
-    */
-    public function setOnDemandCallbackUrl($onDemandCallbackUrl)
-    {
-        $this->container['onDemandCallbackUrl'] = $onDemandCallbackUrl;
         return $this;
     }
 

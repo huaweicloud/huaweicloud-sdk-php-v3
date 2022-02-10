@@ -26,6 +26,94 @@ class LiveClient extends Client
 
 
     /**
+     * 查询直播各区域指标分布接口
+     * 查询直播全球区域维度的详细数据接口。  最大查询跨度1天，最大查询周期90天。  支持查询当天，当前数据延时少于1分钟。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAreaDetail($request)
+    {
+        return $this->listAreaDetailWithHttpInfo($request);
+    }
+
+    public function listAreaDetailWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/stats/area/detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['playDomains'] !== null) {
+            $queryParams['play_domains'] = $localVarParams['playDomains'];
+        }
+        if ($localVarParams['app'] !== null) {
+            $queryParams['app'] = $localVarParams['app'];
+        }
+        if ($localVarParams['stream'] !== null) {
+            $queryParams['stream'] = $localVarParams['stream'];
+        }
+        if ($localVarParams['interval'] !== null) {
+            $queryParams['interval'] = $localVarParams['interval'];
+        }
+        if ($localVarParams['isp'] !== null) {
+            $queryParams['isp'] = $localVarParams['isp'];
+        }
+        if ($localVarParams['area'] !== null) {
+            $queryParams['area'] = $localVarParams['area'];
+        }
+        if ($localVarParams['metric'] !== null) {
+            $queryParams['metric'] = $localVarParams['metric'];
+        }
+        if ($localVarParams['protocol'] !== null) {
+            $queryParams['protocol'] = $localVarParams['protocol'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListAreaDetailResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListAreaDetailRequest');
+    }
+
+    /**
      * 查询播放带宽趋势接口
      * 查询播放域名带宽数据。  最大查询跨度31天，最大查询周期一年。
      *
@@ -364,7 +452,7 @@ class LiveClient extends Client
 
     /**
      * 查询历史推流列表接口
-     * 查询历史推流列表。  不能查询现推流。  最大查询跨度1天，最大查询周期1个月。
+     * 查询历史推流列表。  不能查询现推流。  最大查询跨度1天。
      *
      * @param $request 请求对象
      * @return response
@@ -546,6 +634,9 @@ class LiveClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['publishDomain'] !== null) {
+            $queryParams['publish_domain'] = $localVarParams['publishDomain'];
+        }
         if ($localVarParams['startTime'] !== null) {
             $queryParams['start_time'] = $localVarParams['startTime'];
         }
@@ -716,6 +807,76 @@ class LiveClient extends Client
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListTranscodeDataResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListTranscodeDataRequest');
+    }
+
+    /**
+     * 查询直播转码任务数接口
+     * 查询5分钟粒度的各档位转码任务数。  仅支持查询视频转码任务数。  最大查询跨度7天，最大查询周期90天。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTranscodeTaskCount($request)
+    {
+        return $this->listTranscodeTaskCountWithHttpInfo($request);
+    }
+
+    public function listTranscodeTaskCountWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/stats/transcode/task-count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['publishDomain'] !== null) {
+            $queryParams['publish_domain'] = $localVarParams['publishDomain'];
+        }
+        if ($localVarParams['app'] !== null) {
+            $queryParams['app'] = $localVarParams['app'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListTranscodeTaskCountResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListTranscodeTaskCountRequest');
     }
 
     /**
@@ -1024,7 +1185,7 @@ class LiveClient extends Client
 
     /**
      * 查询推流码率数据接口
-     * 查询推流监控码率数据接口。  最大查询跨度1天，最大查询周期1个月。
+     * 查询推流监控码率数据接口。  最大查询跨度1天，最大查询周期1个月。  返回的码率数据列表粒度为1秒钟。
      *
      * @param $request 请求对象
      * @return response
@@ -1097,7 +1258,7 @@ class LiveClient extends Client
 
     /**
      * 查询推流帧率数据接口
-     * 查询推流帧率数据接口。  最大查询跨度1天，最大查询周期1个月。
+     * 查询推流帧率数据接口。  最大查询跨度1天，最大查询周期1个月。  返回的帧率数据列表粒度为1秒钟。
      *
      * @param $request 请求对象
      * @return response

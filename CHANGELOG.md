@@ -1,3 +1,24 @@
+# 3.0.37-rc 2022-02-10
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - Support the interfaces `ListTranscodeTaskCount`, `ListAreaDetail`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `publish_domain` to the interface `ListRecordData`
+  - Remove the request parameter `plan_record_time` from the interface `CreateRecordRule`
+  - Remove the response parameter `plan_record_time` from the interface `ListRecordRules`
+  - Remove the response parameter `plan_record_time` from the interface `ShowRecordRule`
+  - Changes of the interface `UpdateRecordRule`:
+    - Remove the request parameter `plan_record_time`
+    - Remove the response parameter `plan_record_time`
+  - Remove the request parameter `on_demand_callback_url` from the interface `CreateRecordCallbackConfig`
+  - Remove the response parameter `on_demand_callback_url` from the interface `ListRecordCallbackConfigs`
+  - Remove the response parameter `on_demand_callback_url` from the interface `ShowRecordCallbackConfig`
+  - Remove the request parameter `on_demand_callback_url` from the interface `UpdateRecordCallbackConfig`
+
 # 3.0.36-rc 2022-01-25
 
 ### HuaweiCloud SDK IAM
