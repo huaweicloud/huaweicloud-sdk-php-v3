@@ -1078,6 +1078,9 @@ class VodAsyncClient extends Client
         if ($localVarParams['assetId'] !== null) {
             $queryParams['asset_id'] = $localVarParams['assetId'];
         }
+        if ($localVarParams['deleteType'] !== null) {
+            $queryParams['delete_type'] = $localVarParams['deleteType'];
+        }
         if ($localVarParams['authorization'] !== null) {
             $headerParams['authorization'] = $localVarParams['authorization'];
         }
@@ -1414,6 +1417,83 @@ class VodAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListAssetListResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListAssetListRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询域名播放日志
+     * 查询指定点播域名某段时间内在CDN的相关日志。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDomainLogsAsync($request)
+    {
+        return $this->listDomainLogsAsyncWithHttpInfo($request);
+    }
+    
+    public function listDomainLogsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/vod/cdn/logs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $queryParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['queryDate'] !== null) {
+            $queryParams['query_date'] = $localVarParams['queryDate'];
+        }
+        if ($localVarParams['pageSize'] !== null) {
+            $queryParams['page_size'] = $localVarParams['pageSize'];
+        }
+        if ($localVarParams['pageNumber'] !== null) {
+            $queryParams['page_number'] = $localVarParams['pageNumber'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListDomainLogsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListDomainLogsRequest',
             $asyncRequest = true);
     }
 

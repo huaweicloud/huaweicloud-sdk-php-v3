@@ -23,13 +23,15 @@ class DeleteAssetsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * assetId  媒资ID，支持一次删除多个媒资，批量删除时以逗号分隔。
+    * deleteType  删除类型，当值为origin时只删除源文件，保留转码后文件。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'authorization' => 'string',
             'xSdkDate' => 'string',
-            'assetId' => 'string[]'
+            'assetId' => 'string[]',
+            'deleteType' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class DeleteAssetsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * assetId  媒资ID，支持一次删除多个媒资，批量删除时以逗号分隔。
+    * deleteType  删除类型，当值为origin时只删除源文件，保留转码后文件。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'authorization' => null,
         'xSdkDate' => null,
-        'assetId' => null
+        'assetId' => null,
+        'deleteType' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class DeleteAssetsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * assetId  媒资ID，支持一次删除多个媒资，批量删除时以逗号分隔。
+    * deleteType  删除类型，当值为origin时只删除源文件，保留转码后文件。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'authorization' => 'Authorization',
             'xSdkDate' => 'X-Sdk-Date',
-            'assetId' => 'asset_id'
+            'assetId' => 'asset_id',
+            'deleteType' => 'delete_type'
     ];
 
     /**
@@ -86,13 +92,15 @@ class DeleteAssetsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * assetId  媒资ID，支持一次删除多个媒资，批量删除时以逗号分隔。
+    * deleteType  删除类型，当值为origin时只删除源文件，保留转码后文件。
     *
     * @var string[]
     */
     protected static $setters = [
             'authorization' => 'setAuthorization',
             'xSdkDate' => 'setXSdkDate',
-            'assetId' => 'setAssetId'
+            'assetId' => 'setAssetId',
+            'deleteType' => 'setDeleteType'
     ];
 
     /**
@@ -100,13 +108,15 @@ class DeleteAssetsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * assetId  媒资ID，支持一次删除多个媒资，批量删除时以逗号分隔。
+    * deleteType  删除类型，当值为origin时只删除源文件，保留转码后文件。
     *
     * @var string[]
     */
     protected static $getters = [
             'authorization' => 'getAuthorization',
             'xSdkDate' => 'getXSdkDate',
-            'assetId' => 'getAssetId'
+            'assetId' => 'getAssetId',
+            'deleteType' => 'getDeleteType'
     ];
 
     /**
@@ -170,6 +180,7 @@ class DeleteAssetsRequest implements ModelInterface, ArrayAccess
         $this->container['authorization'] = isset($data['authorization']) ? $data['authorization'] : null;
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
+        $this->container['deleteType'] = isset($data['deleteType']) ? $data['deleteType'] : null;
     }
 
     /**
@@ -278,6 +289,30 @@ class DeleteAssetsRequest implements ModelInterface, ArrayAccess
     public function setAssetId($assetId)
     {
         $this->container['assetId'] = $assetId;
+        return $this;
+    }
+
+    /**
+    * Gets deleteType
+    *  删除类型，当值为origin时只删除源文件，保留转码后文件。
+    *
+    * @return string|null
+    */
+    public function getDeleteType()
+    {
+        return $this->container['deleteType'];
+    }
+
+    /**
+    * Sets deleteType
+    *
+    * @param string|null $deleteType 删除类型，当值为origin时只删除源文件，保留转码后文件。
+    *
+    * @return $this
+    */
+    public function setDeleteType($deleteType)
+    {
+        $this->container['deleteType'] = $deleteType;
         return $this;
     }
 

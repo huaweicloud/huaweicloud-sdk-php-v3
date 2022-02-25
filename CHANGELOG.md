@@ -1,3 +1,41 @@
+# 3.0.38-rc 2022-02-25
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+    - Support `Content Delivery Network` service.
+- _Bug Fix_
+    - None
+- _Change_
+    - None
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - Support the interface `ListSingleStreamDetail`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK VOD
+
+- _Features_
+  - Support the interface `ListDomainLogs`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `delete_type` to the interface `DeleteAssets`
+
+### HuaweiCloud SDK VPC
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `subnetpool_id` to the interface `NeutronListSubnets`
+
 # 3.0.37-rc 2022-02-10
 
 ### HuaweiCloud SDK Live
@@ -79,7 +117,7 @@
 ### HuaweiCloud SDK OCR
 
 - _Features_
-  - Support the following interfaces£º
+  - Support the following interfaces:
     - `RecognizeThailandIdcard`
     - `RecognizeMyanmarIdcard`
     - `RecognizeMyanmarDriverLicense`
@@ -188,7 +226,7 @@
 ### HuaweiCloud SDK VPC
 
 - _Features_
-  - Support interfaces(V3): `AddVpcExtendCidr`¡¢`RemoveVpcExtendCidr`¡¢`ListVpcs`¡¢`ShowVpc`
+  - Support interfaces(V3): `AddVpcExtendCidr`,`RemoveVpcExtendCidr`,`ListVpcs`,`ShowVpc`
 - _Bug Fix_
   - None
 - _Change_
@@ -355,7 +393,7 @@
   - None
 - _Change_
   - None
-   
+  
 # 3.0.20-beta 2021-09-10
 
 ### HuaweiCloud SDK OCR
@@ -541,7 +579,7 @@
     - Fixed the issue where the interface fails to be invoked using the IP address.
 - _Change_
     - None 
-     
+    
 ### HuaweiCloud SDK EIP
 
 - _Features_

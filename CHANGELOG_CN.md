@@ -1,3 +1,41 @@
+# 3.0.38-rc 2022-02-25
+
+### HuaweiCloud SDK CDN
+
+- _新增特性_
+    - 支持内容分发网络服务
+- _解决问题_
+    - 无
+- _特性变更_
+    - 无
+
+### HuaweiCloud SDK Live
+
+- _新增特性_
+  - 支持接口`ListSingleStreamDetail`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK VOD
+
+- _新增特性_
+  - 支持接口`ListDomainLogs`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`DeleteAssets`新增请求参数 `delete_type`
+
+### HuaweiCloud SDK VPC
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`NeutronListSubnets`新增响应参数`subnetpool_id`
+
 # 3.0.37-rc 2022-02-10
 
 ### HuaweiCloud SDK Live
@@ -540,7 +578,7 @@
     - 修复通过ip调用接口失败的问题
 - _特性变更_
     - 无
-       
+      
 ### HuaweiCloud SDK EIP
 
 - _新增特性_

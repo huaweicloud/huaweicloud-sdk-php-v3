@@ -28,7 +28,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * effectiveTimeEnd  生效时间的结束时间 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
-    * status  资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。
     *
     * @var string[]
@@ -56,7 +56,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * effectiveTimeEnd  生效时间的结束时间 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
-    * status  资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。
     *
     * @var string[]
@@ -105,7 +105,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * effectiveTimeEnd  生效时间的结束时间 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
-    * status  资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。
     *
     * @var string[]
@@ -133,7 +133,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * effectiveTimeEnd  生效时间的结束时间 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
-    * status  资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。
     *
     * @var string[]
@@ -161,7 +161,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * effectiveTimeEnd  生效时间的结束时间 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
-    * status  资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。
     *
     * @var string[]
@@ -522,7 +522,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+    *  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     *
     * @return int|null
     */
@@ -534,7 +534,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+    * @param int|null $status 资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     *
     * @return $this
     */
