@@ -25,7 +25,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * productId  产品ID。
     * productSpecDesc  产品规格描述。
     * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
-    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。当订单为变更/一次性/订购中的新增附属资源的订单时，参数取值为null。
+    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * subscriptionNum  订购数量。
@@ -65,7 +65,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * productId  产品ID。
     * productSpecDesc  产品规格描述。
     * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
-    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。当订单为变更/一次性/订购中的新增附属资源的订单时，参数取值为null。
+    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * subscriptionNum  订购数量。
@@ -126,7 +126,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * productId  产品ID。
     * productSpecDesc  产品规格描述。
     * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
-    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。当订单为变更/一次性/订购中的新增附属资源的订单时，参数取值为null。
+    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * subscriptionNum  订购数量。
@@ -166,7 +166,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * productId  产品ID。
     * productSpecDesc  产品规格描述。
     * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
-    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。当订单为变更/一次性/订购中的新增附属资源的订单时，参数取值为null。
+    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * subscriptionNum  订购数量。
@@ -206,7 +206,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * productId  产品ID。
     * productSpecDesc  产品规格描述。
     * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
-    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。当订单为变更/一次性/订购中的新增附属资源的订单时，参数取值为null。
+    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * subscriptionNum  订购数量。
@@ -459,7 +459,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。当订单为变更/一次性/订购中的新增附属资源的订单时，参数取值为null。
+    *  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
     *
     * @return int|null
     */
@@ -471,7 +471,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int|null $periodNum 周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。当订单为变更/一次性/订购中的新增附属资源的订单时，参数取值为null。
+    * @param int|null $periodNum 周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
     *
     * @return $this
     */

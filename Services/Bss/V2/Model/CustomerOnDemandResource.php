@@ -29,7 +29,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     * resourceName  资源实例名称。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
-    * status  资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
     * resourceInfo  按需资源的容量大小。 格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"
     * productSpecDesc  产品规格描述。例如： 虚拟机：“通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux”硬盘：“云硬盘_SATA_LXH01|40.0GB”
@@ -63,7 +63,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     * resourceName  资源实例名称。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
-    * status  资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
     * resourceInfo  按需资源的容量大小。 格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"
     * productSpecDesc  产品规格描述。例如： 虚拟机：“通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux”硬盘：“云硬盘_SATA_LXH01|40.0GB”
@@ -118,7 +118,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     * resourceName  资源实例名称。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
-    * status  资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
     * resourceInfo  按需资源的容量大小。 格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"
     * productSpecDesc  产品规格描述。例如： 虚拟机：“通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux”硬盘：“云硬盘_SATA_LXH01|40.0GB”
@@ -152,7 +152,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     * resourceName  资源实例名称。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
-    * status  资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
     * resourceInfo  按需资源的容量大小。 格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"
     * productSpecDesc  产品规格描述。例如： 虚拟机：“通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux”硬盘：“云硬盘_SATA_LXH01|40.0GB”
@@ -186,7 +186,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     * resourceName  资源实例名称。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
-    * status  资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
     * resourceInfo  按需资源的容量大小。 格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"
     * productSpecDesc  产品规格描述。例如： 虚拟机：“通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux”硬盘：“云硬盘_SATA_LXH01|40.0GB”
@@ -522,7 +522,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+    *  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     *
     * @return int|null
     */
@@ -534,7 +534,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 资源状态： 1：正常（已开通）3：冻结中4：变更中5：正在关闭6：已关闭
+    * @param int|null $status 资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     *
     * @return $this
     */

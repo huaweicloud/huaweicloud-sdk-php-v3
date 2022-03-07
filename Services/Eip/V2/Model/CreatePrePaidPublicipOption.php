@@ -42,7 +42,7 @@ class CreatePrePaidPublicipOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'ipVersion' => null,
+        'ipVersion' => 'int32',
         'alias' => null
     ];
 
@@ -149,7 +149,22 @@ class CreatePrePaidPublicipOption implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const IP_VERSION_4 = 4;
+    const IP_VERSION_6 = 6;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getIpVersionAllowableValues()
+    {
+        return [
+            self::IP_VERSION_4,
+            self::IP_VERSION_6,
+        ];
+    }
 
 
     /**
@@ -168,7 +183,7 @@ class CreatePrePaidPublicipOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
+        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : self::IP_VERSION_4;
         $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
     }
 
@@ -189,6 +204,14 @@ class CreatePrePaidPublicipOption implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['type']) < 0)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getIpVersionAllowableValues();
+                if (!is_null($this->container['ipVersion']) && !in_array($this->container['ipVersion'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ipVersion', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['alias']) && (mb_strlen($this->container['alias']) > 64)) {
                 $invalidProperties[] = "invalid value for 'alias', the character length must be smaller than or equal to 64.";
             }

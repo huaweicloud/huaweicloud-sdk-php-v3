@@ -26,7 +26,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
     * accountName  精英服务商的账户名。
     * name  精英服务商的名称。
     * associatedOn  精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
-    * accountManagerId  客户经理ID。
+    * accountManagerId  客户经理登录账户名。
     * accountManagerName  客户经理的名称。
     *
     * @var string[]
@@ -50,7 +50,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
     * accountName  精英服务商的账户名。
     * name  精英服务商的名称。
     * associatedOn  精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
-    * accountManagerId  客户经理ID。
+    * accountManagerId  客户经理登录账户名。
     * accountManagerName  客户经理的名称。
     *
     * @var string[]
@@ -95,7 +95,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
     * accountName  精英服务商的账户名。
     * name  精英服务商的名称。
     * associatedOn  精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
-    * accountManagerId  客户经理ID。
+    * accountManagerId  客户经理登录账户名。
     * accountManagerName  客户经理的名称。
     *
     * @var string[]
@@ -119,7 +119,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
     * accountName  精英服务商的账户名。
     * name  精英服务商的名称。
     * associatedOn  精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
-    * accountManagerId  客户经理ID。
+    * accountManagerId  客户经理登录账户名。
     * accountManagerName  客户经理的名称。
     *
     * @var string[]
@@ -143,7 +143,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
     * accountName  精英服务商的账户名。
     * name  精英服务商的名称。
     * associatedOn  精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
-    * accountManagerId  客户经理ID。
+    * accountManagerId  客户经理登录账户名。
     * accountManagerName  客户经理的名称。
     *
     * @var string[]
@@ -395,7 +395,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountManagerId
-    *  客户经理ID。
+    *  客户经理登录账户名。
     *
     * @return string|null
     */
@@ -407,7 +407,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets accountManagerId
     *
-    * @param string|null $accountManagerId 客户经理ID。
+    * @param string|null $accountManagerId 客户经理登录账户名。
     *
     * @return $this
     */
