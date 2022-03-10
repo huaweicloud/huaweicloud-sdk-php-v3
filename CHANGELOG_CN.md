@@ -1,3 +1,18 @@
+# 3.0.40-rc 2022-03-10
+
+### HuaweiCloud SDK CDN
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ShowTopUrl`移除请求参数 `X-Auth-Token`
+  - 接口`ShowDomainLocationStats`移除请求参数 `X-Auth-Token`
+  - 接口`ShowDomainItemDetails`移除请求参数 `X-Auth-Token`
+  - 接口`ShowDomainStats`移除请求参数 `X-Auth-Token`
+  - 接口`ShowDomainItemLocationDetails`移除请求参数 `X-Auth-Token`
+
 # 3.0.39-rc 2022-03-07
 
 ### HuaweiCloud SDK EIP

@@ -1,3 +1,18 @@
+# 3.0.40-rc 2022-03-10
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the request parameter `X-Auth-Token` from the interface `ShowTopUrl`
+  - Remove the request parameter `X-Auth-Token` from the interface `ShowDomainLocationStats`
+  - Remove the request parameter `X-Auth-Token` from the interface `ShowDomainItemDetails`
+  - Remove the request parameter `X-Auth-Token` from the interface `ShowDomainStats`
+  - Remove the request parameter `X-Auth-Token` from the interface `ShowDomainItemLocationDetails`
+
 # 3.0.39-rc 2022-03-07
 
 ### HuaweiCloud SDK EIP
