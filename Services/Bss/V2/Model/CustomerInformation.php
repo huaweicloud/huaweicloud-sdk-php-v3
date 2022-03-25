@@ -24,7 +24,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * accountName  客户经理登录名称。
     * customerId  客户账号ID。
     * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
-    * associationType  关联类型： 1：推荐2：垫付
+    * associationType  关联类型： 1：顾问销售2：代售
     * label  标签。
     * telephone  客户电话号码。
     * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
@@ -62,7 +62,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * accountName  客户经理登录名称。
     * customerId  客户账号ID。
     * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
-    * associationType  关联类型： 1：推荐2：垫付
+    * associationType  关联类型： 1：顾问销售2：代售
     * label  标签。
     * telephone  客户电话号码。
     * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
@@ -121,7 +121,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * accountName  客户经理登录名称。
     * customerId  客户账号ID。
     * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
-    * associationType  关联类型： 1：推荐2：垫付
+    * associationType  关联类型： 1：顾问销售2：代售
     * label  标签。
     * telephone  客户电话号码。
     * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
@@ -159,7 +159,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * accountName  客户经理登录名称。
     * customerId  客户账号ID。
     * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
-    * associationType  关联类型： 1：推荐2：垫付
+    * associationType  关联类型： 1：顾问销售2：代售
     * label  标签。
     * telephone  客户电话号码。
     * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
@@ -197,7 +197,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * accountName  客户经理登录名称。
     * customerId  客户账号ID。
     * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
-    * associationType  关联类型： 1：推荐2：垫付
+    * associationType  关联类型： 1：顾问销售2：代售
     * label  标签。
     * telephone  客户电话号码。
     * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
@@ -430,7 +430,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets associationType
-    *  关联类型： 1：推荐2：垫付
+    *  关联类型： 1：顾问销售2：代售
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets associationType
     *
-    * @param string|null $associationType 关联类型： 1：推荐2：垫付
+    * @param string|null $associationType 关联类型： 1：顾问销售2：代售
     *
     * @return $this
     */

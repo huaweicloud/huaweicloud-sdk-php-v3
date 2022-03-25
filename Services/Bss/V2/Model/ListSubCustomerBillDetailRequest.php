@@ -31,7 +31,7 @@ class ListSubCustomerBillDetailRequest implements ModelInterface, ArrayAccess
     * resourceName  资源名称。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
     * accountManagerId  客户经理标识。
-    * associationType  子客户的关联类型：1：推荐2：垫付
+    * associationType  子客户的关联类型：1：顾问销售2：代售
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。如果华为云伙伴能力中心需要查询客户在精英服务商关联期间的消费，需要携带该字段；否则只能查询该客户在与自己关联期间的消费。 说明： 如果是普通经销商，那么此处可以为空。
@@ -73,7 +73,7 @@ class ListSubCustomerBillDetailRequest implements ModelInterface, ArrayAccess
     * resourceName  资源名称。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
     * accountManagerId  客户经理标识。
-    * associationType  子客户的关联类型：1：推荐2：垫付
+    * associationType  子客户的关联类型：1：顾问销售2：代售
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。如果华为云伙伴能力中心需要查询客户在精英服务商关联期间的消费，需要携带该字段；否则只能查询该客户在与自己关联期间的消费。 说明： 如果是普通经销商，那么此处可以为空。
@@ -136,7 +136,7 @@ class ListSubCustomerBillDetailRequest implements ModelInterface, ArrayAccess
     * resourceName  资源名称。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
     * accountManagerId  客户经理标识。
-    * associationType  子客户的关联类型：1：推荐2：垫付
+    * associationType  子客户的关联类型：1：顾问销售2：代售
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。如果华为云伙伴能力中心需要查询客户在精英服务商关联期间的消费，需要携带该字段；否则只能查询该客户在与自己关联期间的消费。 说明： 如果是普通经销商，那么此处可以为空。
@@ -178,7 +178,7 @@ class ListSubCustomerBillDetailRequest implements ModelInterface, ArrayAccess
     * resourceName  资源名称。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
     * accountManagerId  客户经理标识。
-    * associationType  子客户的关联类型：1：推荐2：垫付
+    * associationType  子客户的关联类型：1：顾问销售2：代售
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。如果华为云伙伴能力中心需要查询客户在精英服务商关联期间的消费，需要携带该字段；否则只能查询该客户在与自己关联期间的消费。 说明： 如果是普通经销商，那么此处可以为空。
@@ -220,7 +220,7 @@ class ListSubCustomerBillDetailRequest implements ModelInterface, ArrayAccess
     * resourceName  资源名称。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
     * accountManagerId  客户经理标识。
-    * associationType  子客户的关联类型：1：推荐2：垫付
+    * associationType  子客户的关联类型：1：顾问销售2：代售
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。如果华为云伙伴能力中心需要查询客户在精英服务商关联期间的消费，需要携带该字段；否则只能查询该客户在与自己关联期间的消费。 说明： 如果是普通经销商，那么此处可以为空。
@@ -644,7 +644,7 @@ class ListSubCustomerBillDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets associationType
-    *  子客户的关联类型：1：推荐2：垫付
+    *  子客户的关联类型：1：顾问销售2：代售
     *
     * @return string|null
     */
@@ -656,7 +656,7 @@ class ListSubCustomerBillDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets associationType
     *
-    * @param string|null $associationType 子客户的关联类型：1：推荐2：垫付
+    * @param string|null $associationType 子客户的关联类型：1：顾问销售2：代售
     *
     * @return $this
     */

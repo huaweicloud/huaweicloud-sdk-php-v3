@@ -2360,6 +2360,74 @@ class IoTDAAsyncClient extends Client
     }
 
     /**
+     * 重置设备指纹
+     * 应用服务器可调用此接口重置设备指纹。携带指定设备指纹时将之重置为指定值；不携带时将之置空，后续设备第一次接入时，该设备指纹的值将设置为第一次接入时的证书指纹。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function resetFingerprintAsync($request)
+    {
+        return $this->resetFingerprintAsyncWithHttpInfo($request);
+    }
+    
+    public function resetFingerprintAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/{project_id}/devices/{device_id}/reset-fingerprint';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['deviceId'] !== null) {
+            $pathParams['device_id'] = $localVarParams['deviceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ResetFingerprintResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ResetFingerprintRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询设备
      * 应用服务器可调用此接口查询物联网平台中指定设备的详细信息。
      *

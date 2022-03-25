@@ -1619,6 +1619,127 @@ class ImsAsyncClient extends Client
     }
 
     /**
+     * 查询版本列表（OpenStack原生）
+     * 查询API的版本信息列表，包括API的版本兼容性、域名信息等。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVersionsAsync($request)
+    {
+        return $this->listVersionsAsyncWithHttpInfo($request);
+    }
+    
+    public function listVersionsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ListVersionsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ListVersionsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询版本列表（OpenStack原生）
+     * 查询API的版本信息列表，包括API的版本兼容性、域名信息等。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVersionAsync($request)
+    {
+        return $this->showVersionAsyncWithHttpInfo($request);
+    }
+    
+    public function showVersionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/{version}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['version'] !== null) {
+            $pathParams['version'] = $localVarParams['version'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ShowVersionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ShowVersionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询job状态
      * 该接口为扩展接口，主要用于查询异步接口执行情况，比如查询导出镜像任务的执行状态。
      *

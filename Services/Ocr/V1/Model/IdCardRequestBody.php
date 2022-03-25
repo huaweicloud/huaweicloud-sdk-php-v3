@@ -24,6 +24,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * side  - front：身份证正面。  - back：身份证背面。  > 说明： 如果参数值为空或无该参数，系统自动识别，建议填写，准确率更高。
     * returnVerification  返回校验身份证号等信息的开关，默认false，可选值如下所示：  - true：返回校验信息  - false：不返回校验信息
+    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'image' => 'string',
             'url' => 'string',
             'side' => 'string',
-            'returnVerification' => 'bool'
+            'returnVerification' => 'bool',
+            'returnTextLocation' => 'bool'
     ];
 
     /**
@@ -40,6 +42,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * side  - front：身份证正面。  - back：身份证背面。  > 说明： 如果参数值为空或无该参数，系统自动识别，建议填写，准确率更高。
     * returnVerification  返回校验身份证号等信息的开关，默认false，可选值如下所示：  - true：返回校验信息  - false：不返回校验信息
+    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
         'image' => null,
         'url' => null,
         'side' => null,
-        'returnVerification' => null
+        'returnVerification' => null,
+        'returnTextLocation' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * side  - front：身份证正面。  - back：身份证背面。  > 说明： 如果参数值为空或无该参数，系统自动识别，建议填写，准确率更高。
     * returnVerification  返回校验身份证号等信息的开关，默认false，可选值如下所示：  - true：返回校验信息  - false：不返回校验信息
+    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'image' => 'image',
             'url' => 'url',
             'side' => 'side',
-            'returnVerification' => 'return_verification'
+            'returnVerification' => 'return_verification',
+            'returnTextLocation' => 'return_text_location'
     ];
 
     /**
@@ -93,6 +99,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * side  - front：身份证正面。  - back：身份证背面。  > 说明： 如果参数值为空或无该参数，系统自动识别，建议填写，准确率更高。
     * returnVerification  返回校验身份证号等信息的开关，默认false，可选值如下所示：  - true：返回校验信息  - false：不返回校验信息
+    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'image' => 'setImage',
             'url' => 'setUrl',
             'side' => 'setSide',
-            'returnVerification' => 'setReturnVerification'
+            'returnVerification' => 'setReturnVerification',
+            'returnTextLocation' => 'setReturnTextLocation'
     ];
 
     /**
@@ -109,6 +117,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * side  - front：身份证正面。  - back：身份证背面。  > 说明： 如果参数值为空或无该参数，系统自动识别，建议填写，准确率更高。
     * returnVerification  返回校验身份证号等信息的开关，默认false，可选值如下所示：  - true：返回校验信息  - false：不返回校验信息
+    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'image' => 'getImage',
             'url' => 'getUrl',
             'side' => 'getSide',
-            'returnVerification' => 'getReturnVerification'
+            'returnVerification' => 'getReturnVerification',
+            'returnTextLocation' => 'getReturnTextLocation'
     ];
 
     /**
@@ -181,6 +191,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['side'] = isset($data['side']) ? $data['side'] : null;
         $this->container['returnVerification'] = isset($data['returnVerification']) ? $data['returnVerification'] : null;
+        $this->container['returnTextLocation'] = isset($data['returnTextLocation']) ? $data['returnTextLocation'] : null;
     }
 
     /**
@@ -298,6 +309,30 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     public function setReturnVerification($returnVerification)
     {
         $this->container['returnVerification'] = $returnVerification;
+        return $this;
+    }
+
+    /**
+    * Gets returnTextLocation
+    *  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    *
+    * @return bool|null
+    */
+    public function getReturnTextLocation()
+    {
+        return $this->container['returnTextLocation'];
+    }
+
+    /**
+    * Sets returnTextLocation
+    *
+    * @param bool|null $returnTextLocation 识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    *
+    * @return $this
+    */
+    public function setReturnTextLocation($returnTextLocation)
+    {
+        $this->container['returnTextLocation'] = $returnTextLocation;
         return $this;
     }
 

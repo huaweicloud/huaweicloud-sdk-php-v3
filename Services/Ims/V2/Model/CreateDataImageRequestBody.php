@@ -27,7 +27,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
     * imageUrl  OBS桶中外部镜像文件地址。格式为<OBS桶名>:<OBS镜像文件名称>。 此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
     * minDisk  最小数据盘大小。取值范围40-2048GB。
     * name  镜像名称。
-    * osType  操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
+    * osType  操作系统类型。只能是Windows、Linux二者之一，默认Linux。
     * tags  镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
@@ -53,7 +53,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
     * imageUrl  OBS桶中外部镜像文件地址。格式为<OBS桶名>:<OBS镜像文件名称>。 此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
     * minDisk  最小数据盘大小。取值范围40-2048GB。
     * name  镜像名称。
-    * osType  操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
+    * osType  操作系统类型。只能是Windows、Linux二者之一，默认Linux。
     * tags  镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
@@ -100,7 +100,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
     * imageUrl  OBS桶中外部镜像文件地址。格式为<OBS桶名>:<OBS镜像文件名称>。 此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
     * minDisk  最小数据盘大小。取值范围40-2048GB。
     * name  镜像名称。
-    * osType  操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
+    * osType  操作系统类型。只能是Windows、Linux二者之一，默认Linux。
     * tags  镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
@@ -126,7 +126,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
     * imageUrl  OBS桶中外部镜像文件地址。格式为<OBS桶名>:<OBS镜像文件名称>。 此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
     * minDisk  最小数据盘大小。取值范围40-2048GB。
     * name  镜像名称。
-    * osType  操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
+    * osType  操作系统类型。只能是Windows、Linux二者之一，默认Linux。
     * tags  镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
@@ -152,7 +152,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
     * imageUrl  OBS桶中外部镜像文件地址。格式为<OBS桶名>:<OBS镜像文件名称>。 此处的OBS桶和镜像文件的存储类别必须是OBS标准存储。
     * minDisk  最小数据盘大小。取值范围40-2048GB。
     * name  镜像名称。
-    * osType  操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
+    * osType  操作系统类型。只能是Windows、Linux二者之一，默认Linux。
     * tags  镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
@@ -281,9 +281,6 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
             }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['osType'] === null) {
-            $invalidProperties[] = "'osType' can't be null";
         }
             $allowedValues = $this->getOsTypeAllowableValues();
                 if (!is_null($this->container['osType']) && !in_array($this->container['osType'], $allowedValues, true)) {
@@ -477,9 +474,9 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
+    *  操作系统类型。只能是Windows、Linux二者之一，默认Linux。
     *
-    * @return string
+    * @return string|null
     */
     public function getOsType()
     {
@@ -489,7 +486,7 @@ class CreateDataImageRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string $osType 操作系统类型。只能是Windows、Linux二者之一，值区分大小写。
+    * @param string|null $osType 操作系统类型。只能是Windows、Linux二者之一，默认Linux。
     *
     * @return $this
     */

@@ -28,8 +28,9 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * number  身份证号。
     * issue  发证机关。
     * validFrom  有效起始日期。
-    * validTo  有效结束日期。   > 说明：  - 身份证识别只支持中国大陆汉族身份证识别。
+    * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'issue' => 'string',
             'validFrom' => 'string',
             'validTo' => 'string',
-            'verificationResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\IdcardVerificationResult'
+            'verificationResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\IdcardVerificationResult',
+            'textLocation' => 'object'
     ];
 
     /**
@@ -56,8 +58,9 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * number  身份证号。
     * issue  发证机关。
     * validFrom  有效起始日期。
-    * validTo  有效结束日期。   > 说明：  - 身份证识别只支持中国大陆汉族身份证识别。
+    * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
         'issue' => null,
         'validFrom' => null,
         'validTo' => null,
-        'verificationResult' => null
+        'verificationResult' => null,
+        'textLocation' => null
     ];
 
     /**
@@ -105,8 +109,9 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * number  身份证号。
     * issue  发证机关。
     * validFrom  有效起始日期。
-    * validTo  有效结束日期。   > 说明：  - 身份证识别只支持中国大陆汉族身份证识别。
+    * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'issue' => 'issue',
             'validFrom' => 'valid_from',
             'validTo' => 'valid_to',
-            'verificationResult' => 'verification_result'
+            'verificationResult' => 'verification_result',
+            'textLocation' => 'text_location'
     ];
 
     /**
@@ -133,8 +139,9 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * number  身份证号。
     * issue  发证机关。
     * validFrom  有效起始日期。
-    * validTo  有效结束日期。   > 说明：  - 身份证识别只支持中国大陆汉族身份证识别。
+    * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'issue' => 'setIssue',
             'validFrom' => 'setValidFrom',
             'validTo' => 'setValidTo',
-            'verificationResult' => 'setVerificationResult'
+            'verificationResult' => 'setVerificationResult',
+            'textLocation' => 'setTextLocation'
     ];
 
     /**
@@ -161,8 +169,9 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * number  身份证号。
     * issue  发证机关。
     * validFrom  有效起始日期。
-    * validTo  有效结束日期。   > 说明：  - 身份证识别只支持中国大陆汉族身份证识别。
+    * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'issue' => 'getIssue',
             'validFrom' => 'getValidFrom',
             'validTo' => 'getValidTo',
-            'verificationResult' => 'getVerificationResult'
+            'verificationResult' => 'getVerificationResult',
+            'textLocation' => 'getTextLocation'
     ];
 
     /**
@@ -247,6 +257,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
         $this->container['validFrom'] = isset($data['validFrom']) ? $data['validFrom'] : null;
         $this->container['validTo'] = isset($data['validTo']) ? $data['validTo'] : null;
         $this->container['verificationResult'] = isset($data['verificationResult']) ? $data['verificationResult'] : null;
+        $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
     }
 
     /**
@@ -465,7 +476,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets validTo
-    *  有效结束日期。   > 说明：  - 身份证识别只支持中国大陆汉族身份证识别。
+    *  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
     *
     * @return string|null
     */
@@ -477,7 +488,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     /**
     * Sets validTo
     *
-    * @param string|null $validTo 有效结束日期。   > 说明：  - 身份证识别只支持中国大陆汉族身份证识别。
+    * @param string|null $validTo 有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
     *
     * @return $this
     */
@@ -508,6 +519,30 @@ class IdCardResult implements ModelInterface, ArrayAccess
     public function setVerificationResult($verificationResult)
     {
         $this->container['verificationResult'] = $verificationResult;
+        return $this;
+    }
+
+    /**
+    * Gets textLocation
+    *  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    *
+    * @return object|null
+    */
+    public function getTextLocation()
+    {
+        return $this->container['textLocation'];
+    }
+
+    /**
+    * Sets textLocation
+    *
+    * @param object|null $textLocation 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    *
+    * @return $this
+    */
+    public function setTextLocation($textLocation)
+    {
+        $this->container['textLocation'] = $textLocation;
         return $this;
     }
 

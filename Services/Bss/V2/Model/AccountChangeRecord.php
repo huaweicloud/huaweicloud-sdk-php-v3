@@ -25,7 +25,7 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
     * tradeTime  交易时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2016-03-28T14:45:38Z”。
     * tradeId  交易ID/订单ID。
     * changeAmount  变更金额，单位为元。
-    * balanceAfterChange  变更后余额，单位    为元。
+    * balanceAfterChange  变更后余额，单位为元。
     * type  收支类型。 1：收入2：支出
     *
     * @var string[]
@@ -47,7 +47,7 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
     * tradeTime  交易时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2016-03-28T14:45:38Z”。
     * tradeId  交易ID/订单ID。
     * changeAmount  变更金额，单位为元。
-    * balanceAfterChange  变更后余额，单位    为元。
+    * balanceAfterChange  变更后余额，单位为元。
     * type  收支类型。 1：收入2：支出
     *
     * @var string[]
@@ -90,7 +90,7 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
     * tradeTime  交易时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2016-03-28T14:45:38Z”。
     * tradeId  交易ID/订单ID。
     * changeAmount  变更金额，单位为元。
-    * balanceAfterChange  变更后余额，单位    为元。
+    * balanceAfterChange  变更后余额，单位为元。
     * type  收支类型。 1：收入2：支出
     *
     * @var string[]
@@ -112,7 +112,7 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
     * tradeTime  交易时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2016-03-28T14:45:38Z”。
     * tradeId  交易ID/订单ID。
     * changeAmount  变更金额，单位为元。
-    * balanceAfterChange  变更后余额，单位    为元。
+    * balanceAfterChange  变更后余额，单位为元。
     * type  收支类型。 1：收入2：支出
     *
     * @var string[]
@@ -134,7 +134,7 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
     * tradeTime  交易时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2016-03-28T14:45:38Z”。
     * tradeId  交易ID/订单ID。
     * changeAmount  变更金额，单位为元。
-    * balanceAfterChange  变更后余额，单位    为元。
+    * balanceAfterChange  变更后余额，单位为元。
     * type  收支类型。 1：收入2：支出
     *
     * @var string[]
@@ -360,7 +360,7 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets balanceAfterChange
-    *  变更后余额，单位    为元。
+    *  变更后余额，单位为元。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class AccountChangeRecord implements ModelInterface, ArrayAccess
     /**
     * Sets balanceAfterChange
     *
-    * @param string|null $balanceAfterChange 变更后余额，单位    为元。
+    * @param string|null $balanceAfterChange 变更后余额，单位为元。
     *
     * @return $this
     */

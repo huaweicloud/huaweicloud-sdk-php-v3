@@ -50,6 +50,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
     * itemList  货物或应税劳务列表。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -83,7 +84,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'issuer' => 'string',
             'sellerSeal' => 'string[]',
             'itemList' => '\HuaweiCloud\SDK\Ocr\V1\Model\ItemList[]',
-            'confidence' => 'object'
+            'confidence' => 'object',
+            'textLocation' => 'object'
     ];
 
     /**
@@ -118,6 +120,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
     * itemList  货物或应税劳务列表。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -151,7 +154,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
         'issuer' => null,
         'sellerSeal' => null,
         'itemList' => null,
-        'confidence' => null
+        'confidence' => null,
+        'textLocation' => null
     ];
 
     /**
@@ -207,6 +211,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
     * itemList  货物或应税劳务列表。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -240,7 +245,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'issuer' => 'issuer',
             'sellerSeal' => 'seller_seal',
             'itemList' => 'item_list',
-            'confidence' => 'confidence'
+            'confidence' => 'confidence',
+            'textLocation' => 'text_location'
     ];
 
     /**
@@ -275,6 +281,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
     * itemList  货物或应税劳务列表。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -308,7 +315,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'issuer' => 'setIssuer',
             'sellerSeal' => 'setSellerSeal',
             'itemList' => 'setItemList',
-            'confidence' => 'setConfidence'
+            'confidence' => 'setConfidence',
+            'textLocation' => 'setTextLocation'
     ];
 
     /**
@@ -343,6 +351,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * sellerSeal  销售方发票专用章。 当“advanced_mode”设置为“true”时才返回。
     * itemList  货物或应税劳务列表。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -376,7 +385,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'issuer' => 'getIssuer',
             'sellerSeal' => 'getSellerSeal',
             'itemList' => 'getItemList',
-            'confidence' => 'getConfidence'
+            'confidence' => 'getConfidence',
+            'textLocation' => 'getTextLocation'
     ];
 
     /**
@@ -467,6 +477,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
         $this->container['sellerSeal'] = isset($data['sellerSeal']) ? $data['sellerSeal'] : null;
         $this->container['itemList'] = isset($data['itemList']) ? $data['itemList'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
+        $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
     }
 
     /**
@@ -1208,6 +1219,30 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     public function setConfidence($confidence)
     {
         $this->container['confidence'] = $confidence;
+        return $this;
+    }
+
+    /**
+    * Gets textLocation
+    *  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    *
+    * @return object|null
+    */
+    public function getTextLocation()
+    {
+        return $this->container['textLocation'];
+    }
+
+    /**
+    * Sets textLocation
+    *
+    * @param object|null $textLocation 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    *
+    * @return $this
+    */
+    public function setTextLocation($textLocation)
+    {
+        $this->container['textLocation'] = $textLocation;
         return $this;
     }
 

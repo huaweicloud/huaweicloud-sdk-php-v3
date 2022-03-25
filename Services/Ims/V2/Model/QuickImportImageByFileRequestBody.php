@@ -29,7 +29,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
     * type  制作的镜像类型。系统盘镜像为ECS/BMS，数据盘镜像为DataImage. 制作数据盘镜像时该参数必选.
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。
-    * osType  操作系统版本。 创建数据盘镜像时该参数必填，取值为Linux或Windows。
+    * osType  操作系统版本。 创建数据盘镜像时该参数取值为Linux或Windows，默认Linux。
     * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
@@ -59,7 +59,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
     * type  制作的镜像类型。系统盘镜像为ECS/BMS，数据盘镜像为DataImage. 制作数据盘镜像时该参数必选.
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。
-    * osType  操作系统版本。 创建数据盘镜像时该参数必填，取值为Linux或Windows。
+    * osType  操作系统版本。 创建数据盘镜像时该参数取值为Linux或Windows，默认Linux。
     * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
@@ -110,7 +110,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
     * type  制作的镜像类型。系统盘镜像为ECS/BMS，数据盘镜像为DataImage. 制作数据盘镜像时该参数必选.
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。
-    * osType  操作系统版本。 创建数据盘镜像时该参数必填，取值为Linux或Windows。
+    * osType  操作系统版本。 创建数据盘镜像时该参数取值为Linux或Windows，默认Linux。
     * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
@@ -140,7 +140,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
     * type  制作的镜像类型。系统盘镜像为ECS/BMS，数据盘镜像为DataImage. 制作数据盘镜像时该参数必选.
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。
-    * osType  操作系统版本。 创建数据盘镜像时该参数必填，取值为Linux或Windows。
+    * osType  操作系统版本。 创建数据盘镜像时该参数取值为Linux或Windows，默认Linux。
     * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
@@ -170,7 +170,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
     * type  制作的镜像类型。系统盘镜像为ECS/BMS，数据盘镜像为DataImage. 制作数据盘镜像时该参数必选.
     * enterpriseProjectId  表示当前镜像所属的企业项目。 取值为0或无该值，表示属于default企业项目。 取值为UUID，表示属于该UUID对应的企业项目。 关于企业项目ID的获取及企业项目特性的详细信息，请参考《企业管理用户指南》。
     * architecture  镜像的架构类型。取值包括： x86 arm 默认使用“x86”。
-    * osType  操作系统版本。 创建数据盘镜像时该参数必填，取值为Linux或Windows。
+    * osType  操作系统版本。 创建数据盘镜像时该参数取值为Linux或Windows，默认Linux。
     * imageTags  新规范的镜像标签列表。默认为空。 tags和image_tags只能使用一个。
     *
     * @var string[]
@@ -601,7 +601,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  操作系统版本。 创建数据盘镜像时该参数必填，取值为Linux或Windows。
+    *  操作系统版本。 创建数据盘镜像时该参数取值为Linux或Windows，默认Linux。
     *
     * @return string|null
     */
@@ -613,7 +613,7 @@ class QuickImportImageByFileRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType 操作系统版本。 创建数据盘镜像时该参数必填，取值为Linux或Windows。
+    * @param string|null $osType 操作系统版本。 创建数据盘镜像时该参数取值为Linux或Windows，默认Linux。
     *
     * @return $this
     */

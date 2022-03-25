@@ -22,7 +22,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * billCycle  账期。 格式：YYYY-MM
     * customerId  客户账号ID。
-    * associationType  子客户的关联类型： 1：推荐2：垫付
+    * associationType  子客户的关联类型： 1：顾问销售2：代售
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
@@ -106,7 +106,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * billCycle  账期。 格式：YYYY-MM
     * customerId  客户账号ID。
-    * associationType  子客户的关联类型： 1：推荐2：垫付
+    * associationType  子客户的关联类型： 1：顾问销售2：代售
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
@@ -211,7 +211,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * and the value is the original name
     * billCycle  账期。 格式：YYYY-MM
     * customerId  客户账号ID。
-    * associationType  子客户的关联类型： 1：推荐2：垫付
+    * associationType  子客户的关联类型： 1：顾问销售2：代售
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
@@ -295,7 +295,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * billCycle  账期。 格式：YYYY-MM
     * customerId  客户账号ID。
-    * associationType  子客户的关联类型： 1：推荐2：垫付
+    * associationType  子客户的关联类型： 1：顾问销售2：代售
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
@@ -379,7 +379,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * billCycle  账期。 格式：YYYY-MM
     * customerId  客户账号ID。
-    * associationType  子客户的关联类型： 1：推荐2：垫付
+    * associationType  子客户的关联类型： 1：顾问销售2：代售
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
@@ -629,7 +629,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets associationType
-    *  子客户的关联类型： 1：推荐2：垫付
+    *  子客户的关联类型： 1：顾问销售2：代售
     *
     * @return string|null
     */
@@ -641,7 +641,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets associationType
     *
-    * @param string|null $associationType 子客户的关联类型： 1：推荐2：垫付
+    * @param string|null $associationType 子客户的关联类型： 1：顾问销售2：代售
     *
     * @return $this
     */

@@ -33,6 +33,7 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * issuingAuthority  发证机关。
     * fileNumber  档案编号。
     * record  记录。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
             'validTo' => 'string',
             'issuingAuthority' => 'string',
             'fileNumber' => 'string',
-            'record' => 'string'
+            'record' => 'string',
+            'textLocation' => 'object'
     ];
 
     /**
@@ -67,6 +69,7 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * issuingAuthority  发证机关。
     * fileNumber  档案编号。
     * record  记录。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
         'validTo' => null,
         'issuingAuthority' => null,
         'fileNumber' => null,
-        'record' => null
+        'record' => null,
+        'textLocation' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * issuingAuthority  发证机关。
     * fileNumber  档案编号。
     * record  记录。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
             'validTo' => 'valid_to',
             'issuingAuthority' => 'issuing_authority',
             'fileNumber' => 'file_number',
-            'record' => 'record'
+            'record' => 'record',
+            'textLocation' => 'text_location'
     ];
 
     /**
@@ -156,6 +162,7 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * issuingAuthority  发证机关。
     * fileNumber  档案编号。
     * record  记录。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
             'validTo' => 'setValidTo',
             'issuingAuthority' => 'setIssuingAuthority',
             'fileNumber' => 'setFileNumber',
-            'record' => 'setRecord'
+            'record' => 'setRecord',
+            'textLocation' => 'setTextLocation'
     ];
 
     /**
@@ -190,6 +198,7 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * issuingAuthority  发证机关。
     * fileNumber  档案编号。
     * record  记录。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
             'validTo' => 'getValidTo',
             'issuingAuthority' => 'getIssuingAuthority',
             'fileNumber' => 'getFileNumber',
-            'record' => 'getRecord'
+            'record' => 'getRecord',
+            'textLocation' => 'getTextLocation'
     ];
 
     /**
@@ -280,6 +290,7 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
         $this->container['issuingAuthority'] = isset($data['issuingAuthority']) ? $data['issuingAuthority'] : null;
         $this->container['fileNumber'] = isset($data['fileNumber']) ? $data['fileNumber'] : null;
         $this->container['record'] = isset($data['record']) ? $data['record'] : null;
+        $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
     }
 
     /**
@@ -613,6 +624,30 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     public function setRecord($record)
     {
         $this->container['record'] = $record;
+        return $this;
+    }
+
+    /**
+    * Gets textLocation
+    *  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    *
+    * @return object|null
+    */
+    public function getTextLocation()
+    {
+        return $this->container['textLocation'];
+    }
+
+    /**
+    * Sets textLocation
+    *
+    * @param object|null $textLocation 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    *
+    * @return $this
+    */
+    public function setTextLocation($textLocation)
+    {
+        $this->container['textLocation'] = $textLocation;
         return $this;
     }
 

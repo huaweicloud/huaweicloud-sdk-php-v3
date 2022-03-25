@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ecs\V2\Model;
+namespace HuaweiCloud\SDK\Ims\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
+class OsVersionResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,38 +16,34 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ServerExtendVolumeAttachment';
+    protected static $openAPIModelName = 'OsVersionResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  磁盘ID，格式为UUID。
-    * deleteOnTermination  删弹性云服务器时是否一并删除该磁盘。  - true：是 - false：否 微版本2.3及以上版本支持。
-    * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。
-    * device  云硬盘挂载盘符，即磁盘挂载点。
+    * status  接口状态。
+    * id  接口ID。
+    * links  自描述信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'status' => 'string',
             'id' => 'string',
-            'deleteOnTermination' => 'string',
-            'bootIndex' => 'string',
-            'device' => 'string'
+            'links' => '\HuaweiCloud\SDK\Ims\V2\Model\Links[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  磁盘ID，格式为UUID。
-    * deleteOnTermination  删弹性云服务器时是否一并删除该磁盘。  - true：是 - false：否 微版本2.3及以上版本支持。
-    * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。
-    * device  云硬盘挂载盘符，即磁盘挂载点。
+    * status  接口状态。
+    * id  接口ID。
+    * links  自描述信息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'status' => null,
         'id' => null,
-        'deleteOnTermination' => null,
-        'bootIndex' => null,
-        'device' => null
+        'links' => null
     ];
 
     /**
@@ -73,50 +69,44 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  磁盘ID，格式为UUID。
-    * deleteOnTermination  删弹性云服务器时是否一并删除该磁盘。  - true：是 - false：否 微版本2.3及以上版本支持。
-    * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。
-    * device  云硬盘挂载盘符，即磁盘挂载点。
+    * status  接口状态。
+    * id  接口ID。
+    * links  自描述信息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'status' => 'status',
             'id' => 'id',
-            'deleteOnTermination' => 'delete_on_termination',
-            'bootIndex' => 'bootIndex',
-            'device' => 'device'
+            'links' => 'links'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  磁盘ID，格式为UUID。
-    * deleteOnTermination  删弹性云服务器时是否一并删除该磁盘。  - true：是 - false：否 微版本2.3及以上版本支持。
-    * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。
-    * device  云硬盘挂载盘符，即磁盘挂载点。
+    * status  接口状态。
+    * id  接口ID。
+    * links  自描述信息。
     *
     * @var string[]
     */
     protected static $setters = [
+            'status' => 'setStatus',
             'id' => 'setId',
-            'deleteOnTermination' => 'setDeleteOnTermination',
-            'bootIndex' => 'setBootIndex',
-            'device' => 'setDevice'
+            'links' => 'setLinks'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  磁盘ID，格式为UUID。
-    * deleteOnTermination  删弹性云服务器时是否一并删除该磁盘。  - true：是 - false：否 微版本2.3及以上版本支持。
-    * bootIndex  启动标识，“0”代表启动盘，“-1“代表非启动盘。
-    * device  云硬盘挂载盘符，即磁盘挂载点。
+    * status  接口状态。
+    * id  接口ID。
+    * links  自描述信息。
     *
     * @var string[]
     */
     protected static $getters = [
+            'status' => 'getStatus',
             'id' => 'getId',
-            'deleteOnTermination' => 'getDeleteOnTermination',
-            'bootIndex' => 'getBootIndex',
-            'device' => 'getDevice'
+            'links' => 'getLinks'
     ];
 
     /**
@@ -177,10 +167,9 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['deleteOnTermination'] = isset($data['deleteOnTermination']) ? $data['deleteOnTermination'] : null;
-        $this->container['bootIndex'] = isset($data['bootIndex']) ? $data['bootIndex'] : null;
-        $this->container['device'] = isset($data['device']) ? $data['device'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
 
     /**
@@ -191,14 +180,8 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['deleteOnTermination'] === null) {
-            $invalidProperties[] = "'deleteOnTermination' can't be null";
-        }
-        if ($this->container['device'] === null) {
-            $invalidProperties[] = "'device' can't be null";
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
         }
         return $invalidProperties;
     }
@@ -215,10 +198,34 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  磁盘ID，格式为UUID。
+    * Gets status
+    *  接口状态。
     *
     * @return string
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string $status 接口状态。
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  接口ID。
+    *
+    * @return string|null
     */
     public function getId()
     {
@@ -228,7 +235,7 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 磁盘ID，格式为UUID。
+    * @param string|null $id 接口ID。
     *
     * @return $this
     */
@@ -239,74 +246,26 @@ class ServerExtendVolumeAttachment implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets deleteOnTermination
-    *  删弹性云服务器时是否一并删除该磁盘。  - true：是 - false：否 微版本2.3及以上版本支持。
+    * Gets links
+    *  自描述信息。
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Ims\V2\Model\Links[]|null
     */
-    public function getDeleteOnTermination()
+    public function getLinks()
     {
-        return $this->container['deleteOnTermination'];
+        return $this->container['links'];
     }
 
     /**
-    * Sets deleteOnTermination
+    * Sets links
     *
-    * @param string $deleteOnTermination 删弹性云服务器时是否一并删除该磁盘。  - true：是 - false：否 微版本2.3及以上版本支持。
+    * @param \HuaweiCloud\SDK\Ims\V2\Model\Links[]|null $links 自描述信息。
     *
     * @return $this
     */
-    public function setDeleteOnTermination($deleteOnTermination)
+    public function setLinks($links)
     {
-        $this->container['deleteOnTermination'] = $deleteOnTermination;
-        return $this;
-    }
-
-    /**
-    * Gets bootIndex
-    *  启动标识，“0”代表启动盘，“-1“代表非启动盘。
-    *
-    * @return string|null
-    */
-    public function getBootIndex()
-    {
-        return $this->container['bootIndex'];
-    }
-
-    /**
-    * Sets bootIndex
-    *
-    * @param string|null $bootIndex 启动标识，“0”代表启动盘，“-1“代表非启动盘。
-    *
-    * @return $this
-    */
-    public function setBootIndex($bootIndex)
-    {
-        $this->container['bootIndex'] = $bootIndex;
-        return $this;
-    }
-
-    /**
-    * Gets device
-    *  云硬盘挂载盘符，即磁盘挂载点。
-    *
-    * @return string
-    */
-    public function getDevice()
-    {
-        return $this->container['device'];
-    }
-
-    /**
-    * Sets device
-    *
-    * @param string $device 云硬盘挂载盘符，即磁盘挂载点。
-    *
-    * @return $this
-    */
-    public function setDevice($device)
-    {
-        $this->container['device'] = $device;
+        $this->container['links'] = $links;
         return $this;
     }
 

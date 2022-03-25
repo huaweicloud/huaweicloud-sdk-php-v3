@@ -21,7 +21,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * accountId  账户标识。
-    * accountType  账户类型。 1：余额2：信用5：奖励金
+    * accountType  账户类型。 1：余额2：信用5：奖励金7：保证金
     * amount  账户余额。
     * currency  币种。 CNY：人民币。
     * designatedAmount  专款专用余额。
@@ -43,7 +43,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * accountId  账户标识。
-    * accountType  账户类型。 1：余额2：信用5：奖励金
+    * accountType  账户类型。 1：余额2：信用5：奖励金7：保证金
     * amount  账户余额。
     * currency  币种。 CNY：人民币。
     * designatedAmount  专款专用余额。
@@ -86,7 +86,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * accountId  账户标识。
-    * accountType  账户类型。 1：余额2：信用5：奖励金
+    * accountType  账户类型。 1：余额2：信用5：奖励金7：保证金
     * amount  账户余额。
     * currency  币种。 CNY：人民币。
     * designatedAmount  专款专用余额。
@@ -108,7 +108,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * accountId  账户标识。
-    * accountType  账户类型。 1：余额2：信用5：奖励金
+    * accountType  账户类型。 1：余额2：信用5：奖励金7：保证金
     * amount  账户余额。
     * currency  币种。 CNY：人民币。
     * designatedAmount  专款专用余额。
@@ -130,7 +130,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * accountId  账户标识。
-    * accountType  账户类型。 1：余额2：信用5：奖励金
+    * accountType  账户类型。 1：余额2：信用5：奖励金7：保证金
     * amount  账户余额。
     * currency  币种。 CNY：人民币。
     * designatedAmount  专款专用余额。
@@ -279,7 +279,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountType
-    *  账户类型。 1：余额2：信用5：奖励金
+    *  账户类型。 1：余额2：信用5：奖励金7：保证金
     *
     * @return int
     */
@@ -291,7 +291,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets accountType
     *
-    * @param int $accountType 账户类型。 1：余额2：信用5：奖励金
+    * @param int $accountType 账户类型。 1：余额2：信用5：奖励金7：保证金
     *
     * @return $this
     */
