@@ -24,6 +24,8 @@ class UsageType implements ModelInterface, ArrayAccess
     * name  使用量类型名称。如：调用次数。
     * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
     * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class UsageType implements ModelInterface, ArrayAccess
             'code' => 'string',
             'name' => 'string',
             'resourceTypeCode' => 'string',
-            'serviceTypeCode' => 'string'
+            'serviceTypeCode' => 'string',
+            'resourceTypeName' => 'string',
+            'serviceTypeName' => 'string'
     ];
 
     /**
@@ -40,6 +44,8 @@ class UsageType implements ModelInterface, ArrayAccess
     * name  使用量类型名称。如：调用次数。
     * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
     * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class UsageType implements ModelInterface, ArrayAccess
         'code' => null,
         'name' => null,
         'resourceTypeCode' => null,
-        'serviceTypeCode' => null
+        'serviceTypeCode' => null,
+        'resourceTypeName' => null,
+        'serviceTypeName' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class UsageType implements ModelInterface, ArrayAccess
     * name  使用量类型名称。如：调用次数。
     * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
     * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class UsageType implements ModelInterface, ArrayAccess
             'code' => 'code',
             'name' => 'name',
             'resourceTypeCode' => 'resource_type_code',
-            'serviceTypeCode' => 'service_type_code'
+            'serviceTypeCode' => 'service_type_code',
+            'resourceTypeName' => 'resource_type_name',
+            'serviceTypeName' => 'service_type_name'
     ];
 
     /**
@@ -93,6 +105,8 @@ class UsageType implements ModelInterface, ArrayAccess
     * name  使用量类型名称。如：调用次数。
     * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
     * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class UsageType implements ModelInterface, ArrayAccess
             'code' => 'setCode',
             'name' => 'setName',
             'resourceTypeCode' => 'setResourceTypeCode',
-            'serviceTypeCode' => 'setServiceTypeCode'
+            'serviceTypeCode' => 'setServiceTypeCode',
+            'resourceTypeName' => 'setResourceTypeName',
+            'serviceTypeName' => 'setServiceTypeName'
     ];
 
     /**
@@ -109,6 +125,8 @@ class UsageType implements ModelInterface, ArrayAccess
     * name  使用量类型名称。如：调用次数。
     * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
     * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class UsageType implements ModelInterface, ArrayAccess
             'code' => 'getCode',
             'name' => 'getName',
             'resourceTypeCode' => 'getResourceTypeCode',
-            'serviceTypeCode' => 'getServiceTypeCode'
+            'serviceTypeCode' => 'getServiceTypeCode',
+            'resourceTypeName' => 'getResourceTypeName',
+            'serviceTypeName' => 'getServiceTypeName'
     ];
 
     /**
@@ -181,6 +201,8 @@ class UsageType implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
     }
 
     /**
@@ -298,6 +320,54 @@ class UsageType implements ModelInterface, ArrayAccess
     public function setServiceTypeCode($serviceTypeCode)
     {
         $this->container['serviceTypeCode'] = $serviceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypeName
+    *  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return string|null
+    */
+    public function getResourceTypeName()
+    {
+        return $this->container['resourceTypeName'];
+    }
+
+    /**
+    * Sets resourceTypeName
+    *
+    * @param string|null $resourceTypeName 资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return $this
+    */
+    public function setResourceTypeName($resourceTypeName)
+    {
+        $this->container['resourceTypeName'] = $resourceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeName
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return string|null
+    */
+    public function getServiceTypeName()
+    {
+        return $this->container['serviceTypeName'];
+    }
+
+    /**
+    * Sets serviceTypeName
+    *
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return $this
+    */
+    public function setServiceTypeName($serviceTypeName)
+    {
+        $this->container['serviceTypeName'] = $serviceTypeName;
         return $this;
     }
 

@@ -21,25 +21,29 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
-    * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
+    * limit  每次查询的数量，默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'xLanguage' => 'string',
-            'resourceTypeCode' => 'string'
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
-    * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
+    * limit  每次查询的数量，默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'xLanguage' => null,
-        'resourceTypeCode' => null
+        'limit' => 'int32',
+        'offset' => 'int32'
     ];
 
     /**
@@ -66,37 +70,43 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
-    * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
+    * limit  每次查询的数量，默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'xLanguage' => 'X-Language',
-            'resourceTypeCode' => 'resource_type_code'
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
-    * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
+    * limit  每次查询的数量，默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
     */
     protected static $setters = [
             'xLanguage' => 'setXLanguage',
-            'resourceTypeCode' => 'setResourceTypeCode'
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
-    * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
+    * limit  每次查询的数量，默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
     */
     protected static $getters = [
             'xLanguage' => 'getXLanguage',
-            'resourceTypeCode' => 'getResourceTypeCode'
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -157,8 +167,9 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'zh_cn';
-        $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'zh_CN';
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
     }
 
     /**
@@ -169,6 +180,18 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -208,26 +231,50 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resourceTypeCode
-    *  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
+    * Gets limit
+    *  每次查询的数量，默认值为10。
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getResourceTypeCode()
+    public function getLimit()
     {
-        return $this->container['resourceTypeCode'];
+        return $this->container['limit'];
     }
 
     /**
-    * Sets resourceTypeCode
+    * Sets limit
     *
-    * @param string|null $resourceTypeCode 资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
+    * @param int|null $limit 每次查询的数量，默认值为10。
     *
     * @return $this
     */
-    public function setResourceTypeCode($resourceTypeCode)
+    public function setLimit($limit)
     {
-        $this->container['resourceTypeCode'] = $resourceTypeCode;
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

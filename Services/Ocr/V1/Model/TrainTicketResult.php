@@ -38,6 +38,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
             'name' => 'string',
             'logId' => 'string',
             'saleLocation' => 'string',
-            'confidence' => 'object'
+            'confidence' => 'object',
+            'textLocation' => 'object'
     ];
 
     /**
@@ -82,6 +84,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
         'name' => null,
         'logId' => null,
         'saleLocation' => null,
-        'confidence' => null
+        'confidence' => null,
+        'textLocation' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
             'name' => 'name',
             'logId' => 'log_id',
             'saleLocation' => 'sale_location',
-            'confidence' => 'confidence'
+            'confidence' => 'confidence',
+            'textLocation' => 'text_location'
     ];
 
     /**
@@ -191,6 +197,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'logId' => 'setLogId',
             'saleLocation' => 'setSaleLocation',
-            'confidence' => 'setConfidence'
+            'confidence' => 'setConfidence',
+            'textLocation' => 'setTextLocation'
     ];
 
     /**
@@ -235,6 +243,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     * logId  车票最下方的序列号。
     * saleLocation  车票售票地点。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'logId' => 'getLogId',
             'saleLocation' => 'getSaleLocation',
-            'confidence' => 'getConfidence'
+            'confidence' => 'getConfidence',
+            'textLocation' => 'getTextLocation'
     ];
 
     /**
@@ -335,6 +345,7 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
         $this->container['logId'] = isset($data['logId']) ? $data['logId'] : null;
         $this->container['saleLocation'] = isset($data['saleLocation']) ? $data['saleLocation'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
+        $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
     }
 
     /**
@@ -788,6 +799,30 @@ class TrainTicketResult implements ModelInterface, ArrayAccess
     public function setConfidence($confidence)
     {
         $this->container['confidence'] = $confidence;
+        return $this;
+    }
+
+    /**
+    * Gets textLocation
+    *  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    *
+    * @return object|null
+    */
+    public function getTextLocation()
+    {
+        return $this->container['textLocation'];
+    }
+
+    /**
+    * Sets textLocation
+    *
+    * @param object|null $textLocation 对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    *
+    * @return $this
+    */
+    public function setTextLocation($textLocation)
+    {
+        $this->container['textLocation'] = $textLocation;
         return $this;
     }
 

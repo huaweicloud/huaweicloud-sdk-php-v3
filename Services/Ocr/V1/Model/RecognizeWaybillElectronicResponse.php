@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Bss\V2\Model;
+namespace HuaweiCloud\SDK\Ocr\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BatchSetSubCustomerDiscountRequest implements ModelInterface, ArrayAccess
+class RecognizeWaybillElectronicResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,26 +17,26 @@ class BatchSetSubCustomerDiscountRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BatchSetSubCustomerDiscountRequest';
+    protected static $openAPIModelName = 'RecognizeWaybillElectronicResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * result  result
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Bss\V2\Model\SetPartnerDiscountsReq'
+            'result' => '\HuaweiCloud\SDK\Ocr\V1\Model\WaybillElectronicResult'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * result  result
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'result' => null
     ];
 
     /**
@@ -61,32 +62,32 @@ class BatchSetSubCustomerDiscountRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * result  result
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'result' => 'result'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * result  result
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'result' => 'setResult'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * result  result
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'result' => 'getResult'
     ];
 
     /**
@@ -147,7 +148,7 @@ class BatchSetSubCustomerDiscountRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
     /**
@@ -173,26 +174,26 @@ class BatchSetSubCustomerDiscountRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets result
+    *  result
     *
-    * @return \HuaweiCloud\SDK\Bss\V2\Model\SetPartnerDiscountsReq|null
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\WaybillElectronicResult|null
     */
-    public function getBody()
+    public function getResult()
     {
-        return $this->container['body'];
+        return $this->container['result'];
     }
 
     /**
-    * Sets body
+    * Sets result
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\SetPartnerDiscountsReq|null $body body
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\WaybillElectronicResult|null $result result
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setResult($result)
     {
-        $this->container['body'] = $body;
+        $this->container['result'] = $result;
         return $this;
     }
 

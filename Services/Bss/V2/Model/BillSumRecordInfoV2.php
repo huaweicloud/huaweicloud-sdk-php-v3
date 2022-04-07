@@ -23,6 +23,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * billCycle  消费汇总数据所在账期，格式：YYYY-MM。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * officialAmount  官网价。
     * officialDiscountAmount  折扣金额。
@@ -45,6 +47,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
             'billCycle' => 'string',
             'resourceTypeCode' => 'string',
             'serviceTypeCode' => 'string',
+            'serviceTypeName' => 'string',
+            'resourceTypeName' => 'string',
             'chargingMode' => 'int',
             'officialAmount' => 'double',
             'officialDiscountAmount' => 'double',
@@ -67,6 +71,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * billCycle  消费汇总数据所在账期，格式：YYYY-MM。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * officialAmount  官网价。
     * officialDiscountAmount  折扣金额。
@@ -89,6 +95,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
         'billCycle' => null,
         'resourceTypeCode' => null,
         'serviceTypeCode' => null,
+        'serviceTypeName' => null,
+        'resourceTypeName' => null,
         'chargingMode' => 'int32',
         'officialAmount' => 'double',
         'officialDiscountAmount' => 'double',
@@ -132,6 +140,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * billCycle  消费汇总数据所在账期，格式：YYYY-MM。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * officialAmount  官网价。
     * officialDiscountAmount  折扣金额。
@@ -154,6 +164,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
             'billCycle' => 'bill_cycle',
             'resourceTypeCode' => 'resource_type_code',
             'serviceTypeCode' => 'service_type_code',
+            'serviceTypeName' => 'service_type_name',
+            'resourceTypeName' => 'resource_type_name',
             'chargingMode' => 'charging_mode',
             'officialAmount' => 'official_amount',
             'officialDiscountAmount' => 'official_discount_amount',
@@ -176,6 +188,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * billCycle  消费汇总数据所在账期，格式：YYYY-MM。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * officialAmount  官网价。
     * officialDiscountAmount  折扣金额。
@@ -198,6 +212,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
             'billCycle' => 'setBillCycle',
             'resourceTypeCode' => 'setResourceTypeCode',
             'serviceTypeCode' => 'setServiceTypeCode',
+            'serviceTypeName' => 'setServiceTypeName',
+            'resourceTypeName' => 'setResourceTypeName',
             'chargingMode' => 'setChargingMode',
             'officialAmount' => 'setOfficialAmount',
             'officialDiscountAmount' => 'setOfficialDiscountAmount',
@@ -220,6 +236,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * billCycle  消费汇总数据所在账期，格式：YYYY-MM。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * officialAmount  官网价。
     * officialDiscountAmount  折扣金额。
@@ -242,6 +260,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
             'billCycle' => 'getBillCycle',
             'resourceTypeCode' => 'getResourceTypeCode',
             'serviceTypeCode' => 'getServiceTypeCode',
+            'serviceTypeName' => 'getServiceTypeName',
+            'resourceTypeName' => 'getResourceTypeName',
             'chargingMode' => 'getChargingMode',
             'officialAmount' => 'getOfficialAmount',
             'officialDiscountAmount' => 'getOfficialDiscountAmount',
@@ -320,6 +340,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
         $this->container['billCycle'] = isset($data['billCycle']) ? $data['billCycle'] : null;
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['officialAmount'] = isset($data['officialAmount']) ? $data['officialAmount'] : null;
         $this->container['officialDiscountAmount'] = isset($data['officialDiscountAmount']) ? $data['officialDiscountAmount'] : null;
@@ -428,6 +450,54 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     public function setServiceTypeCode($serviceTypeCode)
     {
         $this->container['serviceTypeCode'] = $serviceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeName
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return string|null
+    */
+    public function getServiceTypeName()
+    {
+        return $this->container['serviceTypeName'];
+    }
+
+    /**
+    * Sets serviceTypeName
+    *
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return $this
+    */
+    public function setServiceTypeName($serviceTypeName)
+    {
+        $this->container['serviceTypeName'] = $serviceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypeName
+    *  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return string|null
+    */
+    public function getResourceTypeName()
+    {
+        return $this->container['resourceTypeName'];
+    }
+
+    /**
+    * Sets resourceTypeName
+    *
+    * @param string|null $resourceTypeName 资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return $this
+    */
+    public function setResourceTypeName($resourceTypeName)
+    {
+        $this->container['resourceTypeName'] = $resourceTypeName;
         return $this;
     }
 

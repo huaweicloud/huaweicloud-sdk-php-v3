@@ -28,6 +28,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * effectiveTime  费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
     * expireTime  费用对应的资源使用的结束时间，按需有效，包年/包月该字段保留。
     * resourceId  资源ID。
@@ -68,6 +70,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
             'regionName' => 'string',
             'serviceTypeCode' => 'string',
             'resourceTypeCode' => 'string',
+            'serviceTypeName' => 'string',
+            'resourceTypeName' => 'string',
             'effectiveTime' => 'string',
             'expireTime' => 'string',
             'resourceId' => 'string',
@@ -108,6 +112,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * effectiveTime  费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
     * expireTime  费用对应的资源使用的结束时间，按需有效，包年/包月该字段保留。
     * resourceId  资源ID。
@@ -148,6 +154,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
         'regionName' => null,
         'serviceTypeCode' => null,
         'resourceTypeCode' => null,
+        'serviceTypeName' => null,
+        'resourceTypeName' => null,
         'effectiveTime' => null,
         'expireTime' => null,
         'resourceId' => null,
@@ -209,6 +217,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * effectiveTime  费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
     * expireTime  费用对应的资源使用的结束时间，按需有效，包年/包月该字段保留。
     * resourceId  资源ID。
@@ -249,6 +259,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
             'regionName' => 'region_name',
             'serviceTypeCode' => 'service_type_code',
             'resourceTypeCode' => 'resource_type_code',
+            'serviceTypeName' => 'service_type_name',
+            'resourceTypeName' => 'resource_type_name',
             'effectiveTime' => 'effective_time',
             'expireTime' => 'expire_time',
             'resourceId' => 'resource_id',
@@ -289,6 +301,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * effectiveTime  费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
     * expireTime  费用对应的资源使用的结束时间，按需有效，包年/包月该字段保留。
     * resourceId  资源ID。
@@ -329,6 +343,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
             'regionName' => 'setRegionName',
             'serviceTypeCode' => 'setServiceTypeCode',
             'resourceTypeCode' => 'setResourceTypeCode',
+            'serviceTypeName' => 'setServiceTypeName',
+            'resourceTypeName' => 'setResourceTypeName',
             'effectiveTime' => 'setEffectiveTime',
             'expireTime' => 'setExpireTime',
             'resourceId' => 'setResourceId',
@@ -369,6 +385,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * effectiveTime  费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
     * expireTime  费用对应的资源使用的结束时间，按需有效，包年/包月该字段保留。
     * resourceId  资源ID。
@@ -409,6 +427,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
             'regionName' => 'getRegionName',
             'serviceTypeCode' => 'getServiceTypeCode',
             'resourceTypeCode' => 'getResourceTypeCode',
+            'serviceTypeName' => 'getServiceTypeName',
+            'resourceTypeName' => 'getResourceTypeName',
             'effectiveTime' => 'getEffectiveTime',
             'expireTime' => 'getExpireTime',
             'resourceId' => 'getResourceId',
@@ -505,6 +525,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
         $this->container['regionName'] = isset($data['regionName']) ? $data['regionName'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
         $this->container['effectiveTime'] = isset($data['effectiveTime']) ? $data['effectiveTime'] : null;
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
@@ -746,6 +768,54 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     public function setResourceTypeCode($resourceTypeCode)
     {
         $this->container['resourceTypeCode'] = $resourceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeName
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return string|null
+    */
+    public function getServiceTypeName()
+    {
+        return $this->container['serviceTypeName'];
+    }
+
+    /**
+    * Sets serviceTypeName
+    *
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return $this
+    */
+    public function setServiceTypeName($serviceTypeName)
+    {
+        $this->container['serviceTypeName'] = $serviceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypeName
+    *  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return string|null
+    */
+    public function getResourceTypeName()
+    {
+        return $this->container['resourceTypeName'];
+    }
+
+    /**
+    * Sets resourceTypeName
+    *
+    * @param string|null $resourceTypeName 资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return $this
+    */
+    public function setResourceTypeName($resourceTypeName)
+    {
+        $this->container['resourceTypeName'] = $resourceTypeName;
         return $this;
     }
 

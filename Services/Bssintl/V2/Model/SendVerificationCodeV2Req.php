@@ -24,8 +24,6 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * timeout  |参数名称：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟| |参数的约束及描述：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟|
     * email  |参数名称：指定发送邮箱地址。| |参数约束及描述：指定发送邮箱地址。|
     * lang  |参数名称：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。| |参数约束及描述：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。|
-    * scene  |参数名称：场景| |参数的约束及描述：该参数非必填，29：注册；18：实名认证个人银行卡认证；不填写默认为29|
-    * customerId  |参数名称：客户ID，如果scene=18的时候必填。| |参数约束及描述：客户ID，如果scene=18的时候必填。|
     *
     * @var string[]
     */
@@ -33,9 +31,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
             'receiverType' => 'int',
             'timeout' => 'int',
             'email' => 'string',
-            'lang' => 'string',
-            'scene' => 'int',
-            'customerId' => 'string'
+            'lang' => 'string'
     ];
 
     /**
@@ -44,8 +40,6 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * timeout  |参数名称：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟| |参数的约束及描述：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟|
     * email  |参数名称：指定发送邮箱地址。| |参数约束及描述：指定发送邮箱地址。|
     * lang  |参数名称：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。| |参数约束及描述：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。|
-    * scene  |参数名称：场景| |参数的约束及描述：该参数非必填，29：注册；18：实名认证个人银行卡认证；不填写默认为29|
-    * customerId  |参数名称：客户ID，如果scene=18的时候必填。| |参数约束及描述：客户ID，如果scene=18的时候必填。|
     *
     * @var string[]
     */
@@ -53,9 +47,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
         'receiverType' => 'int32',
         'timeout' => 'int32',
         'email' => null,
-        'lang' => null,
-        'scene' => 'int32',
-        'customerId' => null
+        'lang' => null
     ];
 
     /**
@@ -85,8 +77,6 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * timeout  |参数名称：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟| |参数的约束及描述：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟|
     * email  |参数名称：指定发送邮箱地址。| |参数约束及描述：指定发送邮箱地址。|
     * lang  |参数名称：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。| |参数约束及描述：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。|
-    * scene  |参数名称：场景| |参数的约束及描述：该参数非必填，29：注册；18：实名认证个人银行卡认证；不填写默认为29|
-    * customerId  |参数名称：客户ID，如果scene=18的时候必填。| |参数约束及描述：客户ID，如果scene=18的时候必填。|
     *
     * @var string[]
     */
@@ -94,9 +84,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
             'receiverType' => 'receiver_type',
             'timeout' => 'timeout',
             'email' => 'email',
-            'lang' => 'lang',
-            'scene' => 'scene',
-            'customerId' => 'customer_id'
+            'lang' => 'lang'
     ];
 
     /**
@@ -105,8 +93,6 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * timeout  |参数名称：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟| |参数的约束及描述：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟|
     * email  |参数名称：指定发送邮箱地址。| |参数约束及描述：指定发送邮箱地址。|
     * lang  |参数名称：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。| |参数约束及描述：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。|
-    * scene  |参数名称：场景| |参数的约束及描述：该参数非必填，29：注册；18：实名认证个人银行卡认证；不填写默认为29|
-    * customerId  |参数名称：客户ID，如果scene=18的时候必填。| |参数约束及描述：客户ID，如果scene=18的时候必填。|
     *
     * @var string[]
     */
@@ -114,9 +100,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
             'receiverType' => 'setReceiverType',
             'timeout' => 'setTimeout',
             'email' => 'setEmail',
-            'lang' => 'setLang',
-            'scene' => 'setScene',
-            'customerId' => 'setCustomerId'
+            'lang' => 'setLang'
     ];
 
     /**
@@ -125,8 +109,6 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * timeout  |参数名称：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟| |参数的约束及描述：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟|
     * email  |参数名称：指定发送邮箱地址。| |参数约束及描述：指定发送邮箱地址。|
     * lang  |参数名称：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。| |参数约束及描述：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。|
-    * scene  |参数名称：场景| |参数的约束及描述：该参数非必填，29：注册；18：实名认证个人银行卡认证；不填写默认为29|
-    * customerId  |参数名称：客户ID，如果scene=18的时候必填。| |参数约束及描述：客户ID，如果scene=18的时候必填。|
     *
     * @var string[]
     */
@@ -134,9 +116,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
             'receiverType' => 'getReceiverType',
             'timeout' => 'getTimeout',
             'email' => 'getEmail',
-            'lang' => 'getLang',
-            'scene' => 'getScene',
-            'customerId' => 'getCustomerId'
+            'lang' => 'getLang'
     ];
 
     /**
@@ -201,8 +181,6 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
         $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['lang'] = isset($data['lang']) ? $data['lang'] : null;
-        $this->container['scene'] = isset($data['scene']) ? $data['scene'] : 29;
-        $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
     }
 
     /**
@@ -239,18 +217,6 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['lang']) && (mb_strlen($this->container['lang']) < 0)) {
                 $invalidProperties[] = "invalid value for 'lang', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['scene']) && ($this->container['scene'] > 29)) {
-                $invalidProperties[] = "invalid value for 'scene', must be smaller than or equal to 29.";
-            }
-            if (!is_null($this->container['scene']) && ($this->container['scene'] < 18)) {
-                $invalidProperties[] = "invalid value for 'scene', must be bigger than or equal to 18.";
-            }
-            if (!is_null($this->container['customerId']) && (mb_strlen($this->container['customerId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'customerId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['customerId']) && (mb_strlen($this->container['customerId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'customerId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -359,54 +325,6 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     public function setLang($lang)
     {
         $this->container['lang'] = $lang;
-        return $this;
-    }
-
-    /**
-    * Gets scene
-    *  |参数名称：场景| |参数的约束及描述：该参数非必填，29：注册；18：实名认证个人银行卡认证；不填写默认为29|
-    *
-    * @return int|null
-    */
-    public function getScene()
-    {
-        return $this->container['scene'];
-    }
-
-    /**
-    * Sets scene
-    *
-    * @param int|null $scene |参数名称：场景| |参数的约束及描述：该参数非必填，29：注册；18：实名认证个人银行卡认证；不填写默认为29|
-    *
-    * @return $this
-    */
-    public function setScene($scene)
-    {
-        $this->container['scene'] = $scene;
-        return $this;
-    }
-
-    /**
-    * Gets customerId
-    *  |参数名称：客户ID，如果scene=18的时候必填。| |参数约束及描述：客户ID，如果scene=18的时候必填。|
-    *
-    * @return string|null
-    */
-    public function getCustomerId()
-    {
-        return $this->container['customerId'];
-    }
-
-    /**
-    * Sets customerId
-    *
-    * @param string|null $customerId |参数名称：客户ID，如果scene=18的时候必填。| |参数约束及描述：客户ID，如果scene=18的时候必填。|
-    *
-    * @return $this
-    */
-    public function setCustomerId($customerId)
-    {
-        $this->container['customerId'] = $customerId;
         return $this;
     }
 

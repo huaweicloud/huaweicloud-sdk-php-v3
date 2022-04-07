@@ -21,21 +21,25 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceTypes  返回的云服务类型信息，具体参见表3。
+    * totalCount  总数。
+    * serviceTypes  云服务类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'serviceTypes' => '\HuaweiCloud\SDK\Bss\V2\Model\ServiceType[]'
+            'totalCount' => 'int',
+            'serviceTypes' => '\HuaweiCloud\SDK\Bss\V2\Model\ServiceTypes[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceTypes  返回的云服务类型信息，具体参见表3。
+    * totalCount  总数。
+    * serviceTypes  云服务类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'totalCount' => 'int32',
         'serviceTypes' => null
     ];
 
@@ -62,31 +66,37 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceTypes  返回的云服务类型信息，具体参见表3。
+    * totalCount  总数。
+    * serviceTypes  云服务类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'totalCount' => 'total_count',
             'serviceTypes' => 'service_types'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceTypes  返回的云服务类型信息，具体参见表3。
+    * totalCount  总数。
+    * serviceTypes  云服务类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
     protected static $setters = [
+            'totalCount' => 'setTotalCount',
             'serviceTypes' => 'setServiceTypes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceTypes  返回的云服务类型信息，具体参见表3。
+    * totalCount  总数。
+    * serviceTypes  云服务类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
     protected static $getters = [
+            'totalCount' => 'getTotalCount',
             'serviceTypes' => 'getServiceTypes'
     ];
 
@@ -148,6 +158,7 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
         $this->container['serviceTypes'] = isset($data['serviceTypes']) ? $data['serviceTypes'] : null;
     }
 
@@ -174,10 +185,34 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets serviceTypes
-    *  返回的云服务类型信息，具体参见表3。
+    * Gets totalCount
+    *  总数。
     *
-    * @return \HuaweiCloud\SDK\Bss\V2\Model\ServiceType[]|null
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount 总数。
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypes
+    *  云服务类型信息列表，具体请参见表3。
+    *
+    * @return \HuaweiCloud\SDK\Bss\V2\Model\ServiceTypes[]|null
     */
     public function getServiceTypes()
     {
@@ -187,7 +222,7 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypes
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\ServiceType[]|null $serviceTypes 返回的云服务类型信息，具体参见表3。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\ServiceTypes[]|null $serviceTypes 云服务类型信息列表，具体请参见表3。
     *
     * @return $this
     */

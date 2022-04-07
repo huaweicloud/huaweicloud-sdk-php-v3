@@ -21,21 +21,25 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceTypes  |参数名称：返回数据| |参数约束以及描述：返回数据|
+    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
+    * serviceTypes  |参数名称：返回的云服务类型信息| |参数约束以及描述：返回的云服务类型信息|
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'serviceTypes' => '\HuaweiCloud\SDK\Bssintl\V2\Model\ServiceType[]'
+            'totalCount' => 'int',
+            'serviceTypes' => '\HuaweiCloud\SDK\Bssintl\V2\Model\ServiceTypes[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceTypes  |参数名称：返回数据| |参数约束以及描述：返回数据|
+    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
+    * serviceTypes  |参数名称：返回的云服务类型信息| |参数约束以及描述：返回的云服务类型信息|
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'totalCount' => 'int32',
         'serviceTypes' => null
     ];
 
@@ -62,31 +66,37 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceTypes  |参数名称：返回数据| |参数约束以及描述：返回数据|
+    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
+    * serviceTypes  |参数名称：返回的云服务类型信息| |参数约束以及描述：返回的云服务类型信息|
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'totalCount' => 'total_count',
             'serviceTypes' => 'service_types'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceTypes  |参数名称：返回数据| |参数约束以及描述：返回数据|
+    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
+    * serviceTypes  |参数名称：返回的云服务类型信息| |参数约束以及描述：返回的云服务类型信息|
     *
     * @var string[]
     */
     protected static $setters = [
+            'totalCount' => 'setTotalCount',
             'serviceTypes' => 'setServiceTypes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceTypes  |参数名称：返回数据| |参数约束以及描述：返回数据|
+    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
+    * serviceTypes  |参数名称：返回的云服务类型信息| |参数约束以及描述：返回的云服务类型信息|
     *
     * @var string[]
     */
     protected static $getters = [
+            'totalCount' => 'getTotalCount',
             'serviceTypes' => 'getServiceTypes'
     ];
 
@@ -148,6 +158,7 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
         $this->container['serviceTypes'] = isset($data['serviceTypes']) ? $data['serviceTypes'] : null;
     }
 
@@ -174,10 +185,34 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets serviceTypes
-    *  |参数名称：返回数据| |参数约束以及描述：返回数据|
+    * Gets totalCount
+    *  |参数名称：总记录数| |参数约束以及描述：总记录数|
     *
-    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\ServiceType[]|null
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount |参数名称：总记录数| |参数约束以及描述：总记录数|
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypes
+    *  |参数名称：返回的云服务类型信息| |参数约束以及描述：返回的云服务类型信息|
+    *
+    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\ServiceTypes[]|null
     */
     public function getServiceTypes()
     {
@@ -187,7 +222,7 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypes
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\ServiceType[]|null $serviceTypes |参数名称：返回数据| |参数约束以及描述：返回数据|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\ServiceTypes[]|null $serviceTypes |参数名称：返回的云服务类型信息| |参数约束以及描述：返回的云服务类型信息|
     *
     * @return $this
     */

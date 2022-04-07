@@ -26,6 +26,7 @@ class BankcardResult implements ModelInterface, ArrayAccess
     * expiryDate  有效期截止日期。
     * type  银行卡类别，如：储蓄卡，信用卡。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class BankcardResult implements ModelInterface, ArrayAccess
             'issueDate' => 'string',
             'expiryDate' => 'string',
             'type' => 'string',
-            'confidence' => 'object'
+            'confidence' => 'object',
+            'textLocation' => 'object'
     ];
 
     /**
@@ -46,6 +48,7 @@ class BankcardResult implements ModelInterface, ArrayAccess
     * expiryDate  有效期截止日期。
     * type  银行卡类别，如：储蓄卡，信用卡。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class BankcardResult implements ModelInterface, ArrayAccess
         'issueDate' => null,
         'expiryDate' => null,
         'type' => null,
-        'confidence' => null
+        'confidence' => null,
+        'textLocation' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class BankcardResult implements ModelInterface, ArrayAccess
     * expiryDate  有效期截止日期。
     * type  银行卡类别，如：储蓄卡，信用卡。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class BankcardResult implements ModelInterface, ArrayAccess
             'issueDate' => 'issue_date',
             'expiryDate' => 'expiry_date',
             'type' => 'type',
-            'confidence' => 'confidence'
+            'confidence' => 'confidence',
+            'textLocation' => 'text_location'
     ];
 
     /**
@@ -107,6 +113,7 @@ class BankcardResult implements ModelInterface, ArrayAccess
     * expiryDate  有效期截止日期。
     * type  银行卡类别，如：储蓄卡，信用卡。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class BankcardResult implements ModelInterface, ArrayAccess
             'issueDate' => 'setIssueDate',
             'expiryDate' => 'setExpiryDate',
             'type' => 'setType',
-            'confidence' => 'setConfidence'
+            'confidence' => 'setConfidence',
+            'textLocation' => 'setTextLocation'
     ];
 
     /**
@@ -127,6 +135,7 @@ class BankcardResult implements ModelInterface, ArrayAccess
     * expiryDate  有效期截止日期。
     * type  银行卡类别，如：储蓄卡，信用卡。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class BankcardResult implements ModelInterface, ArrayAccess
             'issueDate' => 'getIssueDate',
             'expiryDate' => 'getExpiryDate',
             'type' => 'getType',
-            'confidence' => 'getConfidence'
+            'confidence' => 'getConfidence',
+            'textLocation' => 'getTextLocation'
     ];
 
     /**
@@ -203,6 +213,7 @@ class BankcardResult implements ModelInterface, ArrayAccess
         $this->container['expiryDate'] = isset($data['expiryDate']) ? $data['expiryDate'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
+        $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class BankcardResult implements ModelInterface, ArrayAccess
     public function setConfidence($confidence)
     {
         $this->container['confidence'] = $confidence;
+        return $this;
+    }
+
+    /**
+    * Gets textLocation
+    *  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    *
+    * @return object|null
+    */
+    public function getTextLocation()
+    {
+        return $this->container['textLocation'];
+    }
+
+    /**
+    * Sets textLocation
+    *
+    * @param object|null $textLocation 对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    *
+    * @return $this
+    */
+    public function setTextLocation($textLocation)
+    {
+        $this->container['textLocation'] = $textLocation;
         return $this;
     }
 

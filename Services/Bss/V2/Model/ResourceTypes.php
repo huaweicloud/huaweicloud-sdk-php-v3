@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Evs\V2\Model;
+namespace HuaweiCloud\SDK\Bss\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
+class ResourceTypes implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,38 @@ class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'QuotaDetailVolumesSSD';
+    protected static $openAPIModelName = 'ResourceTypes';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * inUse  已使用的数量。
-    * limit  最大的数量。
-    * reserved  预留属性。
+    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型的名称。
+    * resourceTypeDesc  资源类型的描述。
+    * serviceTypeCode  资源类型归属的服务类型编码。例如：hws.service.type.offline。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'inUse' => 'int',
-            'limit' => 'int',
-            'reserved' => 'int'
+            'resourceTypeCode' => 'string',
+            'resourceTypeName' => 'string',
+            'resourceTypeDesc' => 'string',
+            'serviceTypeCode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * inUse  已使用的数量。
-    * limit  最大的数量。
-    * reserved  预留属性。
+    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型的名称。
+    * resourceTypeDesc  资源类型的描述。
+    * serviceTypeCode  资源类型归属的服务类型编码。例如：hws.service.type.offline。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'inUse' => 'int32',
-        'limit' => 'int32',
-        'reserved' => 'int32'
+        'resourceTypeCode' => null,
+        'resourceTypeName' => null,
+        'resourceTypeDesc' => null,
+        'serviceTypeCode' => null
     ];
 
     /**
@@ -69,44 +73,50 @@ class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * inUse  已使用的数量。
-    * limit  最大的数量。
-    * reserved  预留属性。
+    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型的名称。
+    * resourceTypeDesc  资源类型的描述。
+    * serviceTypeCode  资源类型归属的服务类型编码。例如：hws.service.type.offline。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'inUse' => 'in_use',
-            'limit' => 'limit',
-            'reserved' => 'reserved'
+            'resourceTypeCode' => 'resource_type_code',
+            'resourceTypeName' => 'resource_type_name',
+            'resourceTypeDesc' => 'resource_type_desc',
+            'serviceTypeCode' => 'service_type_code'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * inUse  已使用的数量。
-    * limit  最大的数量。
-    * reserved  预留属性。
+    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型的名称。
+    * resourceTypeDesc  资源类型的描述。
+    * serviceTypeCode  资源类型归属的服务类型编码。例如：hws.service.type.offline。
     *
     * @var string[]
     */
     protected static $setters = [
-            'inUse' => 'setInUse',
-            'limit' => 'setLimit',
-            'reserved' => 'setReserved'
+            'resourceTypeCode' => 'setResourceTypeCode',
+            'resourceTypeName' => 'setResourceTypeName',
+            'resourceTypeDesc' => 'setResourceTypeDesc',
+            'serviceTypeCode' => 'setServiceTypeCode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * inUse  已使用的数量。
-    * limit  最大的数量。
-    * reserved  预留属性。
+    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型的名称。
+    * resourceTypeDesc  资源类型的描述。
+    * serviceTypeCode  资源类型归属的服务类型编码。例如：hws.service.type.offline。
     *
     * @var string[]
     */
     protected static $getters = [
-            'inUse' => 'getInUse',
-            'limit' => 'getLimit',
-            'reserved' => 'getReserved'
+            'resourceTypeCode' => 'getResourceTypeCode',
+            'resourceTypeName' => 'getResourceTypeName',
+            'resourceTypeDesc' => 'getResourceTypeDesc',
+            'serviceTypeCode' => 'getServiceTypeCode'
     ];
 
     /**
@@ -167,9 +177,10 @@ class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['inUse'] = isset($data['inUse']) ? $data['inUse'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['reserved'] = isset($data['reserved']) ? $data['reserved'] : null;
+        $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
+        $this->container['resourceTypeDesc'] = isset($data['resourceTypeDesc']) ? $data['resourceTypeDesc'] : null;
+        $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
     }
 
     /**
@@ -180,15 +191,6 @@ class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['inUse'] === null) {
-            $invalidProperties[] = "'inUse' can't be null";
-        }
-        if ($this->container['limit'] === null) {
-            $invalidProperties[] = "'limit' can't be null";
-        }
-        if ($this->container['reserved'] === null) {
-            $invalidProperties[] = "'reserved' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -204,74 +206,98 @@ class QuotaDetailVolumesSSD implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets inUse
-    *  已使用的数量。
+    * Gets resourceTypeCode
+    *  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
     *
-    * @return int
+    * @return string|null
     */
-    public function getInUse()
+    public function getResourceTypeCode()
     {
-        return $this->container['inUse'];
+        return $this->container['resourceTypeCode'];
     }
 
     /**
-    * Sets inUse
+    * Sets resourceTypeCode
     *
-    * @param int $inUse 已使用的数量。
+    * @param string|null $resourceTypeCode 资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
     *
     * @return $this
     */
-    public function setInUse($inUse)
+    public function setResourceTypeCode($resourceTypeCode)
     {
-        $this->container['inUse'] = $inUse;
+        $this->container['resourceTypeCode'] = $resourceTypeCode;
         return $this;
     }
 
     /**
-    * Gets limit
-    *  最大的数量。
+    * Gets resourceTypeName
+    *  资源类型的名称。
     *
-    * @return int
+    * @return string|null
     */
-    public function getLimit()
+    public function getResourceTypeName()
     {
-        return $this->container['limit'];
+        return $this->container['resourceTypeName'];
     }
 
     /**
-    * Sets limit
+    * Sets resourceTypeName
     *
-    * @param int $limit 最大的数量。
+    * @param string|null $resourceTypeName 资源类型的名称。
     *
     * @return $this
     */
-    public function setLimit($limit)
+    public function setResourceTypeName($resourceTypeName)
     {
-        $this->container['limit'] = $limit;
+        $this->container['resourceTypeName'] = $resourceTypeName;
         return $this;
     }
 
     /**
-    * Gets reserved
-    *  预留属性。
+    * Gets resourceTypeDesc
+    *  资源类型的描述。
     *
-    * @return int
+    * @return string|null
     */
-    public function getReserved()
+    public function getResourceTypeDesc()
     {
-        return $this->container['reserved'];
+        return $this->container['resourceTypeDesc'];
     }
 
     /**
-    * Sets reserved
+    * Sets resourceTypeDesc
     *
-    * @param int $reserved 预留属性。
+    * @param string|null $resourceTypeDesc 资源类型的描述。
     *
     * @return $this
     */
-    public function setReserved($reserved)
+    public function setResourceTypeDesc($resourceTypeDesc)
     {
-        $this->container['reserved'] = $reserved;
+        $this->container['resourceTypeDesc'] = $resourceTypeDesc;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeCode
+    *  资源类型归属的服务类型编码。例如：hws.service.type.offline。
+    *
+    * @return string|null
+    */
+    public function getServiceTypeCode()
+    {
+        return $this->container['serviceTypeCode'];
+    }
+
+    /**
+    * Sets serviceTypeCode
+    *
+    * @param string|null $serviceTypeCode 资源类型归属的服务类型编码。例如：hws.service.type.offline。
+    *
+    * @return $this
+    */
+    public function setServiceTypeCode($serviceTypeCode)
+    {
+        $this->container['serviceTypeCode'] = $serviceTypeCode;
         return $this;
     }
 

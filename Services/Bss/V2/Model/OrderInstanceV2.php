@@ -26,6 +26,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
     * projectId  资源项目ID。
     * productId  产品ID。
@@ -45,6 +47,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'regionCode' => 'string',
             'serviceTypeCode' => 'string',
             'resourceTypeCode' => 'string',
+            'resourceTypeName' => 'string',
+            'serviceTypeName' => 'string',
             'resourceSpecCode' => 'string',
             'projectId' => 'string',
             'productId' => 'string',
@@ -64,6 +68,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
     * projectId  资源项目ID。
     * productId  产品ID。
@@ -83,6 +89,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
         'regionCode' => null,
         'serviceTypeCode' => null,
         'resourceTypeCode' => null,
+        'resourceTypeName' => null,
+        'serviceTypeName' => null,
         'resourceSpecCode' => null,
         'projectId' => null,
         'productId' => null,
@@ -123,6 +131,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
     * projectId  资源项目ID。
     * productId  产品ID。
@@ -142,6 +152,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'regionCode' => 'region_code',
             'serviceTypeCode' => 'service_type_code',
             'resourceTypeCode' => 'resource_type_code',
+            'resourceTypeName' => 'resource_type_name',
+            'serviceTypeName' => 'service_type_name',
             'resourceSpecCode' => 'resource_spec_code',
             'projectId' => 'project_id',
             'productId' => 'product_id',
@@ -161,6 +173,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
     * projectId  资源项目ID。
     * productId  产品ID。
@@ -180,6 +194,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'regionCode' => 'setRegionCode',
             'serviceTypeCode' => 'setServiceTypeCode',
             'resourceTypeCode' => 'setResourceTypeCode',
+            'resourceTypeName' => 'setResourceTypeName',
+            'serviceTypeName' => 'setServiceTypeName',
             'resourceSpecCode' => 'setResourceSpecCode',
             'projectId' => 'setProjectId',
             'productId' => 'setProductId',
@@ -199,6 +215,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
     * projectId  资源项目ID。
     * productId  产品ID。
@@ -218,6 +236,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'regionCode' => 'getRegionCode',
             'serviceTypeCode' => 'getServiceTypeCode',
             'resourceTypeCode' => 'getResourceTypeCode',
+            'resourceTypeName' => 'getResourceTypeName',
+            'serviceTypeName' => 'getServiceTypeName',
             'resourceSpecCode' => 'getResourceSpecCode',
             'projectId' => 'getProjectId',
             'productId' => 'getProductId',
@@ -293,6 +313,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
         $this->container['regionCode'] = isset($data['regionCode']) ? $data['regionCode'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
         $this->container['resourceSpecCode'] = isset($data['resourceSpecCode']) ? $data['resourceSpecCode'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
@@ -467,6 +489,54 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     public function setResourceTypeCode($resourceTypeCode)
     {
         $this->container['resourceTypeCode'] = $resourceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypeName
+    *  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return string|null
+    */
+    public function getResourceTypeName()
+    {
+        return $this->container['resourceTypeName'];
+    }
+
+    /**
+    * Sets resourceTypeName
+    *
+    * @param string|null $resourceTypeName 资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return $this
+    */
+    public function setResourceTypeName($resourceTypeName)
+    {
+        $this->container['resourceTypeName'] = $resourceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeName
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return string|null
+    */
+    public function getServiceTypeName()
+    {
+        return $this->container['serviceTypeName'];
+    }
+
+    /**
+    * Sets serviceTypeName
+    *
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return $this
+    */
+    public function setServiceTypeName($serviceTypeName)
+    {
+        $this->container['serviceTypeName'] = $serviceTypeName;
         return $this;
     }
 

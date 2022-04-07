@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Bssintl\V2\Model;
+namespace HuaweiCloud\SDK\Ocr\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ServiceType implements ModelInterface, ArrayAccess
+class DriverLicenseResultStatus implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,26 @@ class ServiceType implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ServiceType';
+    protected static $openAPIModelName = 'DriverLicenseResult_status';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
-    * abbreviation  |参数名称：云服务缩写| |参数约束及描述：云服务缩写|
+    * name  name
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'serviceTypeName' => 'string',
-            'serviceTypeCode' => 'string',
-            'abbreviation' => 'string'
+            'name' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
-    * abbreviation  |参数名称：云服务缩写| |参数约束及描述：云服务缩写|
+    * name  name
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'serviceTypeName' => null,
-        'serviceTypeCode' => null,
-        'abbreviation' => null
+        'name' => null
     ];
 
     /**
@@ -69,44 +61,32 @@ class ServiceType implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
-    * abbreviation  |参数名称：云服务缩写| |参数约束及描述：云服务缩写|
+    * name  name
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'serviceTypeName' => 'service_type_name',
-            'serviceTypeCode' => 'service_type_code',
-            'abbreviation' => 'abbreviation'
+            'name' => 'name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
-    * abbreviation  |参数名称：云服务缩写| |参数约束及描述：云服务缩写|
+    * name  name
     *
     * @var string[]
     */
     protected static $setters = [
-            'serviceTypeName' => 'setServiceTypeName',
-            'serviceTypeCode' => 'setServiceTypeCode',
-            'abbreviation' => 'setAbbreviation'
+            'name' => 'setName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
-    * abbreviation  |参数名称：云服务缩写| |参数约束及描述：云服务缩写|
+    * name  name
     *
     * @var string[]
     */
     protected static $getters = [
-            'serviceTypeName' => 'getServiceTypeName',
-            'serviceTypeCode' => 'getServiceTypeCode',
-            'abbreviation' => 'getAbbreviation'
+            'name' => 'getName'
     ];
 
     /**
@@ -167,9 +147,7 @@ class ServiceType implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
-        $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
-        $this->container['abbreviation'] = isset($data['abbreviation']) ? $data['abbreviation'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -195,74 +173,26 @@ class ServiceType implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets serviceTypeName
-    *  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
+    * Gets name
+    *  name
     *
     * @return string|null
     */
-    public function getServiceTypeName()
+    public function getName()
     {
-        return $this->container['serviceTypeName'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets serviceTypeName
+    * Sets name
     *
-    * @param string|null $serviceTypeName |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
+    * @param string|null $name name
     *
     * @return $this
     */
-    public function setServiceTypeName($serviceTypeName)
+    public function setName($name)
     {
-        $this->container['serviceTypeName'] = $serviceTypeName;
-        return $this;
-    }
-
-    /**
-    * Gets serviceTypeCode
-    *  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
-    *
-    * @return string|null
-    */
-    public function getServiceTypeCode()
-    {
-        return $this->container['serviceTypeCode'];
-    }
-
-    /**
-    * Sets serviceTypeCode
-    *
-    * @param string|null $serviceTypeCode |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
-    *
-    * @return $this
-    */
-    public function setServiceTypeCode($serviceTypeCode)
-    {
-        $this->container['serviceTypeCode'] = $serviceTypeCode;
-        return $this;
-    }
-
-    /**
-    * Gets abbreviation
-    *  |参数名称：云服务缩写| |参数约束及描述：云服务缩写|
-    *
-    * @return string|null
-    */
-    public function getAbbreviation()
-    {
-        return $this->container['abbreviation'];
-    }
-
-    /**
-    * Sets abbreviation
-    *
-    * @param string|null $abbreviation |参数名称：云服务缩写| |参数约束及描述：云服务缩写|
-    *
-    * @return $this
-    */
-    public function setAbbreviation($abbreviation)
-    {
-        $this->container['abbreviation'] = $abbreviation;
+        $this->container['name'] = $name;
         return $this;
     }
 

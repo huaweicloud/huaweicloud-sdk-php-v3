@@ -21,21 +21,25 @@ class ListResourceTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceTypes  资源类型信息，具体参见表3。
+    * totalCount  总数。
+    * resourceTypes  资源类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resourceTypes' => '\HuaweiCloud\SDK\Bss\V2\Model\ResourceType[]'
+            'totalCount' => 'int',
+            'resourceTypes' => '\HuaweiCloud\SDK\Bss\V2\Model\ResourceTypes[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceTypes  资源类型信息，具体参见表3。
+    * totalCount  总数。
+    * resourceTypes  资源类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'totalCount' => 'int32',
         'resourceTypes' => null
     ];
 
@@ -62,31 +66,37 @@ class ListResourceTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceTypes  资源类型信息，具体参见表3。
+    * totalCount  总数。
+    * resourceTypes  资源类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'totalCount' => 'total_count',
             'resourceTypes' => 'resource_types'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceTypes  资源类型信息，具体参见表3。
+    * totalCount  总数。
+    * resourceTypes  资源类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
     protected static $setters = [
+            'totalCount' => 'setTotalCount',
             'resourceTypes' => 'setResourceTypes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceTypes  资源类型信息，具体参见表3。
+    * totalCount  总数。
+    * resourceTypes  资源类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
     protected static $getters = [
+            'totalCount' => 'getTotalCount',
             'resourceTypes' => 'getResourceTypes'
     ];
 
@@ -148,6 +158,7 @@ class ListResourceTypesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
         $this->container['resourceTypes'] = isset($data['resourceTypes']) ? $data['resourceTypes'] : null;
     }
 
@@ -174,10 +185,34 @@ class ListResourceTypesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resourceTypes
-    *  资源类型信息，具体参见表3。
+    * Gets totalCount
+    *  总数。
     *
-    * @return \HuaweiCloud\SDK\Bss\V2\Model\ResourceType[]|null
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount 总数。
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypes
+    *  资源类型信息列表，具体请参见表3。
+    *
+    * @return \HuaweiCloud\SDK\Bss\V2\Model\ResourceTypes[]|null
     */
     public function getResourceTypes()
     {
@@ -187,7 +222,7 @@ class ListResourceTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypes
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\ResourceType[]|null $resourceTypes 资源类型信息，具体参见表3。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\ResourceTypes[]|null $resourceTypes 资源类型信息列表，具体请参见表3。
     *
     * @return $this
     */

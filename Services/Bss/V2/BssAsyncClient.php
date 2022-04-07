@@ -87,68 +87,6 @@ class BssAsyncClient extends Client
     }
 
     /**
-     * 设置伙伴折扣
-     * 合作伙伴可以为客户设置产品折扣，可指定有效期。被授予折扣后，客户在购买华为云产品（特殊产品除外）时，可享受伙伴授予折扣。  伙伴登录合作伙伴中心为客户设置折扣请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072335153.html)。  &gt;![](public_sys-resources/icon-note.gif) **说明：**  &gt;-   精英服务商（二级经销商）也可以通过该接口给子客户设置折扣。 &gt;-   暂不支持设置产品分类折扣。
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function batchSetSubCustomerDiscountAsync($request)
-    {
-        return $this->batchSetSubCustomerDiscountAsyncWithHttpInfo($request);
-    }
-    
-    public function batchSetSubCustomerDiscountAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2/partners/discounts';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\BatchSetSubCustomerDiscountResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\BatchSetSubCustomerDiscountRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 取消包年/包月资源自动续费
      * 客户设置自动续费后，还可以执行取消自动续费的操作。关闭自动续费后，资源到期将不会被自动续费。  客户在费用中心取消包年/包月资源自动续费请参见[这里](https://support.huaweicloud.com/usermanual-billing/renewals_topic_20000005.html)。  &gt;![](public_sys-resources/icon-note.gif) **说明：**  &gt;-   前提是已经调用“[设置包年/包月资源自动续费](设置包年-包月资源自动续费.md)”接口设置自动续费或在调用“[续订包年/包月资源](续订包年-包月资源.md)”接口时设置到期策略为自动续订。 &gt;-   目前支持取消自动续费的包年/包月产品同支持自动续费的包年/包月产品。 &gt;-   在调用本接口前，您可以调用“[查询客户包年/包月资源列表](查询客户包年-包月资源列表.md)”接口获取资源ID、资源过期时间以及资源过期后扣费策略等信息。
      *
@@ -1317,6 +1255,12 @@ class BssAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['billDateBegin'] !== null) {
+            $queryParams['bill_date_begin'] = $localVarParams['billDateBegin'];
+        }
+        if ($localVarParams['billDateEnd'] !== null) {
+            $queryParams['bill_date_end'] = $localVarParams['billDateEnd'];
+        }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
         }
@@ -1353,7 +1297,7 @@ class BssAsyncClient extends Client
 
     /**
      * 查询月度成本
-     * 功能描述：查询月度成本
+     * 客户可以查询指定月份的月度摊销成本。当前仅支持查询近18个月的摊销成本。摊销成本计算规则请参见[成本摊销规则](https://support.huaweicloud.com/usermanual-cost/costcenter_000002_01.html)。  客户可查询的数据范围同成本中心提供的[数据范围](https://support.huaweicloud.com/usermanual-cost/costcenter_0000004.html)一致。  客户登录成本中心导出成本明细请参见[导出成本明细数据](https://support.huaweicloud.com/usermanual-cost/costcenter_000002_03.html)。  &gt;![](public_sys-resources/icon-note.gif) **说明：**  &gt;该接口仅面向已开通成本中心的客户开放。如何开启成本中心请参见[这里](https://support.huaweicloud.com/usermanual-cost/costcenter_000004.html)。
      *
      * @param $request 请求对象
      * @return response
@@ -1382,9 +1326,6 @@ class BssAsyncClient extends Client
         if ($localVarParams['sharedMonth'] !== null) {
             $queryParams['shared_month'] = $localVarParams['sharedMonth'];
         }
-        if ($localVarParams['chargingMode'] !== null) {
-            $queryParams['charging_mode'] = $localVarParams['chargingMode'];
-        }
         if ($localVarParams['serviceTypeCode'] !== null) {
             $queryParams['service_type_code'] = $localVarParams['serviceTypeCode'];
         }
@@ -1393,6 +1334,9 @@ class BssAsyncClient extends Client
         }
         if ($localVarParams['regionCode'] !== null) {
             $queryParams['region_code'] = $localVarParams['regionCode'];
+        }
+        if ($localVarParams['chargingMode'] !== null) {
+            $queryParams['charging_mode'] = $localVarParams['chargingMode'];
         }
         if ($localVarParams['billType'] !== null) {
             $queryParams['bill_type'] = $localVarParams['billType'];
@@ -3395,7 +3339,7 @@ class BssAsyncClient extends Client
     
     public function listResourceTypesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/bases/resource-types';
+        $resourcePath = '/v2/products/resource-types';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3409,8 +3353,11 @@ class BssAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['resourceTypeCode'] !== null) {
-            $queryParams['resource_type_code'] = $localVarParams['resourceTypeCode'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
@@ -3448,7 +3395,7 @@ class BssAsyncClient extends Client
 
     /**
      * 查询95计费资源用量明细
-     * 客户在自建平台查询自己的资源使用量明细。  &gt;![](public_sys-resources/icon-caution.gif) **注意：**  &gt;当前仅支持查询CDN和OBS两种云服务类型的资源用量明细，仅针对95计费场景。
+     * 客户在自建平台查询自己的资源使用量明细。  &gt;![](public_sys-resources/icon-note.gif) **说明：**  &gt;当前仅支持查询CDN和OBS两种云服务类型的资源用量明细，仅针对95计费场景。
      *
      * @param $request 请求对象
      * @return response
@@ -3531,7 +3478,7 @@ class BssAsyncClient extends Client
 
     /**
      * 查询95计费资源用量汇总
-     * 客户在自建平台查询自己的资源使用量汇总。  &gt;![](public_sys-resources/icon-caution.gif) **注意：**  &gt;-   当前仅支持查询CDN和OBS两种云服务类型的资源用量汇总，仅针对95计费场景。 &gt;-   使用量汇总列表只包含月汇总金额和资源ID，若要查询具体某个资源的用量明细，请调用[查询资源用量明细](查询95计费资源用量明细.md)接口获取。
+     * 客户在自建平台查询自己的资源使用量汇总。  &gt;![](public_sys-resources/icon-note.gif) **说明：**  &gt;-   当前仅支持查询CDN和OBS两种云服务类型的资源用量汇总，仅针对95计费场景。 &gt;-   使用量汇总列表只包含月汇总金额和资源ID，若要查询具体某个资源的用量明细，请调用[查询资源用量明细](查询95计费资源用量明细.md)接口获取。
      *
      * @param $request 请求对象
      * @return response
@@ -3694,7 +3641,7 @@ class BssAsyncClient extends Client
     
     public function listServiceTypesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/bases/service-types';
+        $resourcePath = '/v2/products/service-types';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3708,8 +3655,11 @@ class BssAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['serviceTypeCode'] !== null) {
-            $queryParams['service_type_code'] = $localVarParams['serviceTypeCode'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
@@ -3742,6 +3692,77 @@ class BssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ListServiceTypesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ListServiceTypesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询储值卡列表
+     * 客户可以查看自己已经购买的储值卡列表。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listStoredValueCardsAsync($request)
+    {
+        return $this->listStoredValueCardsAsyncWithHttpInfo($request);
+    }
+    
+    public function listStoredValueCardsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/promotions/benefits/stored-value-cards';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['cardId'] !== null) {
+            $queryParams['card_id'] = $localVarParams['cardId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ListStoredValueCardsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ListStoredValueCardsRequest',
             $asyncRequest = true);
     }
 
@@ -3944,71 +3965,6 @@ class BssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ListSubCustomerCouponsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ListSubCustomerCouponsRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询伙伴折扣
-     * 合作伙伴可以查看为客户设置的折扣，每次查询一个客户。如果该客户没有设置折扣，返回null。精英服务商（二级经销商）也可以通过该接口查询子客户的折扣。  伙伴登录合作伙伴中心查看为客户设置折扣请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/zh-cn_topic_0072335153.html)。  &gt;![](public_sys-resources/icon-note.gif) **说明：**  &gt;目前通过该接口只能查询统一折扣信息。 &gt;暂不支持查询产品分类折扣。
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listSubCustomerDiscountsAsync($request)
-    {
-        return $this->listSubCustomerDiscountsAsyncWithHttpInfo($request);
-    }
-    
-    public function listSubCustomerDiscountsAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2/partners/discounts';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['customerId'] !== null) {
-            $queryParams['customer_id'] = $localVarParams['customerId'];
-        }
-        if ($localVarParams['indirectPartnerId'] !== null) {
-            $queryParams['indirect_partner_id'] = $localVarParams['indirectPartnerId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ListSubCustomerDiscountsResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ListSubCustomerDiscountsRequest',
             $asyncRequest = true);
     }
 

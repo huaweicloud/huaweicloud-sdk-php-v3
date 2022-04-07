@@ -29,9 +29,8 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * resourceSize  |参数名称：资源容量大小| |参数约束及描述：例如购买的卷大小或带宽大小，只有线性产品才有这个字段|
     * sizeMeasureId  |参数名称：资源容量度量标识| |参数约束及描述：枚举值如下：15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个只有线性产品才有这个字段|
     * periodType  |参数名称：订购周期类型| |参数约束及描述：0：天；1：周；2：月；3：年；4：小时；|
-    * periodNum  |参数名称：订购周期数| |参数约束及描述：订购周期数|
+    * periodNum  |参数名称：订购周期数| |参数约束及描述： 订购周期数|
     * subscriptionNum  |参数名称：订购数量| |参数约束及描述：订购数量,有值时不能小于0|
-    * feeInstallmentMode  |参数名称：费用分期模式| |参数约束及描述：HALF_PAY：半付；ZERO_PAY：零付；NA：不支持费用分期模式；不传默认为空，效果等同于NA|
     *
     * @var string[]
     */
@@ -46,8 +45,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
             'sizeMeasureId' => 'int',
             'periodType' => 'int',
             'periodNum' => 'int',
-            'subscriptionNum' => 'int',
-            'feeInstallmentMode' => 'string'
+            'subscriptionNum' => 'int'
     ];
 
     /**
@@ -61,9 +59,8 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * resourceSize  |参数名称：资源容量大小| |参数约束及描述：例如购买的卷大小或带宽大小，只有线性产品才有这个字段|
     * sizeMeasureId  |参数名称：资源容量度量标识| |参数约束及描述：枚举值如下：15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个只有线性产品才有这个字段|
     * periodType  |参数名称：订购周期类型| |参数约束及描述：0：天；1：周；2：月；3：年；4：小时；|
-    * periodNum  |参数名称：订购周期数| |参数约束及描述：订购周期数|
+    * periodNum  |参数名称：订购周期数| |参数约束及描述： 订购周期数|
     * subscriptionNum  |参数名称：订购数量| |参数约束及描述：订购数量,有值时不能小于0|
-    * feeInstallmentMode  |参数名称：费用分期模式| |参数约束及描述：HALF_PAY：半付；ZERO_PAY：零付；NA：不支持费用分期模式；不传默认为空，效果等同于NA|
     *
     * @var string[]
     */
@@ -78,8 +75,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
         'sizeMeasureId' => 'int32',
         'periodType' => 'int32',
         'periodNum' => 'int32',
-        'subscriptionNum' => 'int32',
-        'feeInstallmentMode' => null
+        'subscriptionNum' => 'int32'
     ];
 
     /**
@@ -114,9 +110,8 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * resourceSize  |参数名称：资源容量大小| |参数约束及描述：例如购买的卷大小或带宽大小，只有线性产品才有这个字段|
     * sizeMeasureId  |参数名称：资源容量度量标识| |参数约束及描述：枚举值如下：15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个只有线性产品才有这个字段|
     * periodType  |参数名称：订购周期类型| |参数约束及描述：0：天；1：周；2：月；3：年；4：小时；|
-    * periodNum  |参数名称：订购周期数| |参数约束及描述：订购周期数|
+    * periodNum  |参数名称：订购周期数| |参数约束及描述： 订购周期数|
     * subscriptionNum  |参数名称：订购数量| |参数约束及描述：订购数量,有值时不能小于0|
-    * feeInstallmentMode  |参数名称：费用分期模式| |参数约束及描述：HALF_PAY：半付；ZERO_PAY：零付；NA：不支持费用分期模式；不传默认为空，效果等同于NA|
     *
     * @var string[]
     */
@@ -131,8 +126,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
             'sizeMeasureId' => 'size_measure_id',
             'periodType' => 'period_type',
             'periodNum' => 'period_num',
-            'subscriptionNum' => 'subscription_num',
-            'feeInstallmentMode' => 'fee_installment_mode'
+            'subscriptionNum' => 'subscription_num'
     ];
 
     /**
@@ -146,9 +140,8 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * resourceSize  |参数名称：资源容量大小| |参数约束及描述：例如购买的卷大小或带宽大小，只有线性产品才有这个字段|
     * sizeMeasureId  |参数名称：资源容量度量标识| |参数约束及描述：枚举值如下：15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个只有线性产品才有这个字段|
     * periodType  |参数名称：订购周期类型| |参数约束及描述：0：天；1：周；2：月；3：年；4：小时；|
-    * periodNum  |参数名称：订购周期数| |参数约束及描述：订购周期数|
+    * periodNum  |参数名称：订购周期数| |参数约束及描述： 订购周期数|
     * subscriptionNum  |参数名称：订购数量| |参数约束及描述：订购数量,有值时不能小于0|
-    * feeInstallmentMode  |参数名称：费用分期模式| |参数约束及描述：HALF_PAY：半付；ZERO_PAY：零付；NA：不支持费用分期模式；不传默认为空，效果等同于NA|
     *
     * @var string[]
     */
@@ -163,8 +156,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
             'sizeMeasureId' => 'setSizeMeasureId',
             'periodType' => 'setPeriodType',
             'periodNum' => 'setPeriodNum',
-            'subscriptionNum' => 'setSubscriptionNum',
-            'feeInstallmentMode' => 'setFeeInstallmentMode'
+            'subscriptionNum' => 'setSubscriptionNum'
     ];
 
     /**
@@ -178,9 +170,8 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * resourceSize  |参数名称：资源容量大小| |参数约束及描述：例如购买的卷大小或带宽大小，只有线性产品才有这个字段|
     * sizeMeasureId  |参数名称：资源容量度量标识| |参数约束及描述：枚举值如下：15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个只有线性产品才有这个字段|
     * periodType  |参数名称：订购周期类型| |参数约束及描述：0：天；1：周；2：月；3：年；4：小时；|
-    * periodNum  |参数名称：订购周期数| |参数约束及描述：订购周期数|
+    * periodNum  |参数名称：订购周期数| |参数约束及描述： 订购周期数|
     * subscriptionNum  |参数名称：订购数量| |参数约束及描述：订购数量,有值时不能小于0|
-    * feeInstallmentMode  |参数名称：费用分期模式| |参数约束及描述：HALF_PAY：半付；ZERO_PAY：零付；NA：不支持费用分期模式；不传默认为空，效果等同于NA|
     *
     * @var string[]
     */
@@ -195,8 +186,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
             'sizeMeasureId' => 'getSizeMeasureId',
             'periodType' => 'getPeriodType',
             'periodNum' => 'getPeriodNum',
-            'subscriptionNum' => 'getSubscriptionNum',
-            'feeInstallmentMode' => 'getFeeInstallmentMode'
+            'subscriptionNum' => 'getSubscriptionNum'
     ];
 
     /**
@@ -268,7 +258,6 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
         $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
         $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
         $this->container['subscriptionNum'] = isset($data['subscriptionNum']) ? $data['subscriptionNum'] : null;
-        $this->container['feeInstallmentMode'] = isset($data['feeInstallmentMode']) ? $data['feeInstallmentMode'] : null;
     }
 
     /**
@@ -362,12 +351,6 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
             }
             if (($this->container['subscriptionNum'] < 1)) {
                 $invalidProperties[] = "invalid value for 'subscriptionNum', must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['feeInstallmentMode']) && (mb_strlen($this->container['feeInstallmentMode']) > 64)) {
-                $invalidProperties[] = "invalid value for 'feeInstallmentMode', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['feeInstallmentMode']) && (mb_strlen($this->container['feeInstallmentMode']) < 0)) {
-                $invalidProperties[] = "invalid value for 'feeInstallmentMode', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -601,7 +584,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  |参数名称：订购周期数| |参数约束及描述：订购周期数|
+    *  |参数名称：订购周期数| |参数约束及描述： 订购周期数|
     *
     * @return int
     */
@@ -613,7 +596,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int $periodNum |参数名称：订购周期数| |参数约束及描述：订购周期数|
+    * @param int $periodNum |参数名称：订购周期数| |参数约束及描述： 订购周期数|
     *
     * @return $this
     */
@@ -644,30 +627,6 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     public function setSubscriptionNum($subscriptionNum)
     {
         $this->container['subscriptionNum'] = $subscriptionNum;
-        return $this;
-    }
-
-    /**
-    * Gets feeInstallmentMode
-    *  |参数名称：费用分期模式| |参数约束及描述：HALF_PAY：半付；ZERO_PAY：零付；NA：不支持费用分期模式；不传默认为空，效果等同于NA|
-    *
-    * @return string|null
-    */
-    public function getFeeInstallmentMode()
-    {
-        return $this->container['feeInstallmentMode'];
-    }
-
-    /**
-    * Sets feeInstallmentMode
-    *
-    * @param string|null $feeInstallmentMode |参数名称：费用分期模式| |参数约束及描述：HALF_PAY：半付；ZERO_PAY：零付；NA：不支持费用分期模式；不传默认为空，效果等同于NA|
-    *
-    * @return $this
-    */
-    public function setFeeInstallmentMode($feeInstallmentMode)
-    {
-        $this->container['feeInstallmentMode'] = $feeInstallmentMode;
         return $this;
     }
 

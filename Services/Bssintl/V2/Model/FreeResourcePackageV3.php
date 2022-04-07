@@ -30,6 +30,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     * expireTime  |参数名称：失效时间，资源包到期时间，格式UTC。| |参数约束及描述：失效时间，资源包到期时间，格式UTC。|
     * status  |参数名称：状态：0：未生效1：生效中2：已用完3：已失效4：已退订| |参数的约束及描述：状态：0：未生效1：生效中2：已用完3：已失效4：已退订|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”| |参数约束及描述：云服务区编码，例如：“cn-north-1”|
     * sourceType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数的约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
     * bundleType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
@@ -49,6 +50,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
             'expireTime' => 'string',
             'status' => 'int',
             'serviceTypeCode' => 'string',
+            'serviceTypeName' => 'string',
             'regionCode' => 'string',
             'sourceType' => 'int',
             'bundleType' => 'string',
@@ -68,6 +70,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     * expireTime  |参数名称：失效时间，资源包到期时间，格式UTC。| |参数约束及描述：失效时间，资源包到期时间，格式UTC。|
     * status  |参数名称：状态：0：未生效1：生效中2：已用完3：已失效4：已退订| |参数的约束及描述：状态：0：未生效1：生效中2：已用完3：已失效4：已退订|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”| |参数约束及描述：云服务区编码，例如：“cn-north-1”|
     * sourceType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数的约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
     * bundleType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
@@ -87,6 +90,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
         'expireTime' => null,
         'status' => 'int32',
         'serviceTypeCode' => null,
+        'serviceTypeName' => null,
         'regionCode' => null,
         'sourceType' => 'int32',
         'bundleType' => null,
@@ -127,6 +131,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     * expireTime  |参数名称：失效时间，资源包到期时间，格式UTC。| |参数约束及描述：失效时间，资源包到期时间，格式UTC。|
     * status  |参数名称：状态：0：未生效1：生效中2：已用完3：已失效4：已退订| |参数的约束及描述：状态：0：未生效1：生效中2：已用完3：已失效4：已退订|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”| |参数约束及描述：云服务区编码，例如：“cn-north-1”|
     * sourceType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数的约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
     * bundleType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
@@ -146,6 +151,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
             'expireTime' => 'expire_time',
             'status' => 'status',
             'serviceTypeCode' => 'service_type_code',
+            'serviceTypeName' => 'service_type_name',
             'regionCode' => 'region_code',
             'sourceType' => 'source_type',
             'bundleType' => 'bundle_type',
@@ -165,6 +171,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     * expireTime  |参数名称：失效时间，资源包到期时间，格式UTC。| |参数约束及描述：失效时间，资源包到期时间，格式UTC。|
     * status  |参数名称：状态：0：未生效1：生效中2：已用完3：已失效4：已退订| |参数的约束及描述：状态：0：未生效1：生效中2：已用完3：已失效4：已退订|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”| |参数约束及描述：云服务区编码，例如：“cn-north-1”|
     * sourceType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数的约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
     * bundleType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
@@ -184,6 +191,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
             'expireTime' => 'setExpireTime',
             'status' => 'setStatus',
             'serviceTypeCode' => 'setServiceTypeCode',
+            'serviceTypeName' => 'setServiceTypeName',
             'regionCode' => 'setRegionCode',
             'sourceType' => 'setSourceType',
             'bundleType' => 'setBundleType',
@@ -203,6 +211,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     * expireTime  |参数名称：失效时间，资源包到期时间，格式UTC。| |参数约束及描述：失效时间，资源包到期时间，格式UTC。|
     * status  |参数名称：状态：0：未生效1：生效中2：已用完3：已失效4：已退订| |参数的约束及描述：状态：0：未生效1：生效中2：已用完3：已失效4：已退订|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”| |参数约束及描述：云服务区编码，例如：“cn-north-1”|
     * sourceType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数的约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
     * bundleType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
@@ -222,6 +231,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
             'expireTime' => 'getExpireTime',
             'status' => 'getStatus',
             'serviceTypeCode' => 'getServiceTypeCode',
+            'serviceTypeName' => 'getServiceTypeName',
             'regionCode' => 'getRegionCode',
             'sourceType' => 'getSourceType',
             'bundleType' => 'getBundleType',
@@ -297,6 +307,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
         $this->container['regionCode'] = isset($data['regionCode']) ? $data['regionCode'] : null;
         $this->container['sourceType'] = isset($data['sourceType']) ? $data['sourceType'] : null;
         $this->container['bundleType'] = isset($data['bundleType']) ? $data['bundleType'] : null;
@@ -563,6 +574,30 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     public function setServiceTypeCode($serviceTypeCode)
     {
         $this->container['serviceTypeCode'] = $serviceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeName
+    *  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    *
+    * @return string|null
+    */
+    public function getServiceTypeName()
+    {
+        return $this->container['serviceTypeName'];
+    }
+
+    /**
+    * Sets serviceTypeName
+    *
+    * @param string|null $serviceTypeName |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    *
+    * @return $this
+    */
+    public function setServiceTypeName($serviceTypeName)
+    {
+        $this->container['serviceTypeName'] = $serviceTypeName;
         return $this;
     }
 

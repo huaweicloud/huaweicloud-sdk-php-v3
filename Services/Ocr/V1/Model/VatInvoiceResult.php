@@ -25,6 +25,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
     * code  发票代码。
+    * printCode  打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
     * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
     * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
@@ -60,6 +61,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'attribution' => 'string',
             'supervisionSeal' => 'string[]',
             'code' => 'string',
+            'printCode' => 'string',
             'machineNumber' => 'string',
             'printNumber' => 'string',
             'checkCode' => 'string',
@@ -95,6 +97,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
     * code  发票代码。
+    * printCode  打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
     * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
     * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
@@ -130,6 +133,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
         'attribution' => null,
         'supervisionSeal' => null,
         'code' => null,
+        'printCode' => null,
         'machineNumber' => null,
         'printNumber' => null,
         'checkCode' => null,
@@ -186,6 +190,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
     * code  发票代码。
+    * printCode  打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
     * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
     * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
@@ -221,6 +226,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'attribution' => 'attribution',
             'supervisionSeal' => 'supervision_seal',
             'code' => 'code',
+            'printCode' => 'print_code',
             'machineNumber' => 'machine_number',
             'printNumber' => 'print_number',
             'checkCode' => 'check_code',
@@ -256,6 +262,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
     * code  发票代码。
+    * printCode  打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
     * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
     * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
@@ -291,6 +298,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'attribution' => 'setAttribution',
             'supervisionSeal' => 'setSupervisionSeal',
             'code' => 'setCode',
+            'printCode' => 'setPrintCode',
             'machineNumber' => 'setMachineNumber',
             'printNumber' => 'setPrintNumber',
             'checkCode' => 'setCheckCode',
@@ -326,6 +334,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
     * code  发票代码。
+    * printCode  打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
     * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
     * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
@@ -361,6 +370,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'attribution' => 'getAttribution',
             'supervisionSeal' => 'getSupervisionSeal',
             'code' => 'getCode',
+            'printCode' => 'getPrintCode',
             'machineNumber' => 'getMachineNumber',
             'printNumber' => 'getPrintNumber',
             'checkCode' => 'getCheckCode',
@@ -452,6 +462,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
         $this->container['attribution'] = isset($data['attribution']) ? $data['attribution'] : null;
         $this->container['supervisionSeal'] = isset($data['supervisionSeal']) ? $data['supervisionSeal'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['printCode'] = isset($data['printCode']) ? $data['printCode'] : null;
         $this->container['machineNumber'] = isset($data['machineNumber']) ? $data['machineNumber'] : null;
         $this->container['printNumber'] = isset($data['printNumber']) ? $data['printNumber'] : null;
         $this->container['checkCode'] = isset($data['checkCode']) ? $data['checkCode'] : null;
@@ -619,6 +630,30 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     public function setCode($code)
     {
         $this->container['code'] = $code;
+        return $this;
+    }
+
+    /**
+    * Gets printCode
+    *  打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
+    *
+    * @return string|null
+    */
+    public function getPrintCode()
+    {
+        return $this->container['printCode'];
+    }
+
+    /**
+    * Sets printCode
+    *
+    * @param string|null $printCode 打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
+    *
+    * @return $this
+    */
+    public function setPrintCode($printCode)
+    {
+        $this->container['printCode'] = $printCode;
         return $this;
     }
 

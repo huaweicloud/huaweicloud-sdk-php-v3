@@ -21,6 +21,7 @@ class IncentiveAndDiscountPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * serviceTypeCode  云服务类型列表。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * incentivePolicy  激励策略。 0：非特定产品1：特定产品2：无业绩无返点13：有业绩无返点
     * allowDiscount  是否允许应用伙伴授予折扣。 YES：允许应用NO：不许应用
     *
@@ -28,6 +29,7 @@ class IncentiveAndDiscountPolicy implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'serviceTypeCode' => 'string',
+            'serviceTypeName' => 'string',
             'incentivePolicy' => 'string',
             'allowDiscount' => 'string'
     ];
@@ -35,6 +37,7 @@ class IncentiveAndDiscountPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * serviceTypeCode  云服务类型列表。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * incentivePolicy  激励策略。 0：非特定产品1：特定产品2：无业绩无返点13：有业绩无返点
     * allowDiscount  是否允许应用伙伴授予折扣。 YES：允许应用NO：不许应用
     *
@@ -42,6 +45,7 @@ class IncentiveAndDiscountPolicy implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'serviceTypeCode' => null,
+        'serviceTypeName' => null,
         'incentivePolicy' => null,
         'allowDiscount' => null
     ];
@@ -70,6 +74,7 @@ class IncentiveAndDiscountPolicy implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * serviceTypeCode  云服务类型列表。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * incentivePolicy  激励策略。 0：非特定产品1：特定产品2：无业绩无返点13：有业绩无返点
     * allowDiscount  是否允许应用伙伴授予折扣。 YES：允许应用NO：不许应用
     *
@@ -77,6 +82,7 @@ class IncentiveAndDiscountPolicy implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'serviceTypeCode' => 'service_type_code',
+            'serviceTypeName' => 'service_type_name',
             'incentivePolicy' => 'incentive_policy',
             'allowDiscount' => 'allow_discount'
     ];
@@ -84,6 +90,7 @@ class IncentiveAndDiscountPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * serviceTypeCode  云服务类型列表。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * incentivePolicy  激励策略。 0：非特定产品1：特定产品2：无业绩无返点13：有业绩无返点
     * allowDiscount  是否允许应用伙伴授予折扣。 YES：允许应用NO：不许应用
     *
@@ -91,6 +98,7 @@ class IncentiveAndDiscountPolicy implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'serviceTypeCode' => 'setServiceTypeCode',
+            'serviceTypeName' => 'setServiceTypeName',
             'incentivePolicy' => 'setIncentivePolicy',
             'allowDiscount' => 'setAllowDiscount'
     ];
@@ -98,6 +106,7 @@ class IncentiveAndDiscountPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * serviceTypeCode  云服务类型列表。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * incentivePolicy  激励策略。 0：非特定产品1：特定产品2：无业绩无返点13：有业绩无返点
     * allowDiscount  是否允许应用伙伴授予折扣。 YES：允许应用NO：不许应用
     *
@@ -105,6 +114,7 @@ class IncentiveAndDiscountPolicy implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'serviceTypeCode' => 'getServiceTypeCode',
+            'serviceTypeName' => 'getServiceTypeName',
             'incentivePolicy' => 'getIncentivePolicy',
             'allowDiscount' => 'getAllowDiscount'
     ];
@@ -168,6 +178,7 @@ class IncentiveAndDiscountPolicy implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
         $this->container['incentivePolicy'] = isset($data['incentivePolicy']) ? $data['incentivePolicy'] : null;
         $this->container['allowDiscount'] = isset($data['allowDiscount']) ? $data['allowDiscount'] : null;
     }
@@ -215,6 +226,30 @@ class IncentiveAndDiscountPolicy implements ModelInterface, ArrayAccess
     public function setServiceTypeCode($serviceTypeCode)
     {
         $this->container['serviceTypeCode'] = $serviceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeName
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return string|null
+    */
+    public function getServiceTypeName()
+    {
+        return $this->container['serviceTypeName'];
+    }
+
+    /**
+    * Sets serviceTypeName
+    *
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return $this
+    */
+    public function setServiceTypeName($serviceTypeName)
+    {
+        $this->container['serviceTypeName'] = $serviceTypeName;
         return $this;
     }
 

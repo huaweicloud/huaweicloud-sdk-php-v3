@@ -24,6 +24,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目的名称。
@@ -55,6 +57,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
             'customerId' => 'string',
             'serviceTypeCode' => 'string',
             'resourceTypeCode' => 'string',
+            'serviceTypeName' => 'string',
+            'resourceTypeName' => 'string',
             'regionCode' => 'string',
             'enterpriseProjectId' => 'string',
             'enterpriseProjectName' => 'string',
@@ -86,6 +90,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目的名称。
@@ -117,6 +123,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
         'customerId' => null,
         'serviceTypeCode' => null,
         'resourceTypeCode' => null,
+        'serviceTypeName' => null,
+        'resourceTypeName' => null,
         'regionCode' => null,
         'enterpriseProjectId' => null,
         'enterpriseProjectName' => null,
@@ -169,6 +177,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目的名称。
@@ -200,6 +210,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
             'customerId' => 'customer_id',
             'serviceTypeCode' => 'service_type_code',
             'resourceTypeCode' => 'resource_type_code',
+            'serviceTypeName' => 'service_type_name',
+            'resourceTypeName' => 'resource_type_name',
             'regionCode' => 'region_code',
             'enterpriseProjectId' => 'enterprise_project_id',
             'enterpriseProjectName' => 'enterprise_project_name',
@@ -231,6 +243,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目的名称。
@@ -262,6 +276,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
             'customerId' => 'setCustomerId',
             'serviceTypeCode' => 'setServiceTypeCode',
             'resourceTypeCode' => 'setResourceTypeCode',
+            'serviceTypeName' => 'setServiceTypeName',
+            'resourceTypeName' => 'setResourceTypeName',
             'regionCode' => 'setRegionCode',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'enterpriseProjectName' => 'setEnterpriseProjectName',
@@ -293,6 +309,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目的名称。
@@ -324,6 +342,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
             'customerId' => 'getCustomerId',
             'serviceTypeCode' => 'getServiceTypeCode',
             'resourceTypeCode' => 'getResourceTypeCode',
+            'serviceTypeName' => 'getServiceTypeName',
+            'resourceTypeName' => 'getResourceTypeName',
             'regionCode' => 'getRegionCode',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'enterpriseProjectName' => 'getEnterpriseProjectName',
@@ -411,6 +431,8 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
         $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
         $this->container['regionCode'] = isset($data['regionCode']) ? $data['regionCode'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['enterpriseProjectName'] = isset($data['enterpriseProjectName']) ? $data['enterpriseProjectName'] : null;
@@ -551,6 +573,54 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     public function setResourceTypeCode($resourceTypeCode)
     {
         $this->container['resourceTypeCode'] = $resourceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeName
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return string|null
+    */
+    public function getServiceTypeName()
+    {
+        return $this->container['serviceTypeName'];
+    }
+
+    /**
+    * Sets serviceTypeName
+    *
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return $this
+    */
+    public function setServiceTypeName($serviceTypeName)
+    {
+        $this->container['serviceTypeName'] = $serviceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypeName
+    *  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return string|null
+    */
+    public function getResourceTypeName()
+    {
+        return $this->container['resourceTypeName'];
+    }
+
+    /**
+    * Sets resourceTypeName
+    *
+    * @param string|null $resourceTypeName 资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return $this
+    */
+    public function setResourceTypeName($resourceTypeName)
+    {
+        $this->container['resourceTypeName'] = $resourceTypeName;
         return $this;
     }
 

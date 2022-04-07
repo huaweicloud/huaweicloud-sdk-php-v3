@@ -25,6 +25,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * associationType  子客户的关联类型： 1：顾问销售2：代售
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
@@ -67,6 +69,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'associationType' => 'string',
             'serviceTypeCode' => 'string',
             'resourceTypeCode' => 'string',
+            'serviceTypeName' => 'string',
+            'resourceTypeName' => 'string',
             'chargingMode' => 'int',
             'tradeTime' => 'string',
             'tradeId' => 'string',
@@ -109,6 +113,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * associationType  子客户的关联类型： 1：顾问销售2：代售
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
@@ -151,6 +157,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
         'associationType' => null,
         'serviceTypeCode' => null,
         'resourceTypeCode' => null,
+        'serviceTypeName' => null,
+        'resourceTypeName' => null,
         'chargingMode' => 'int32',
         'tradeTime' => null,
         'tradeId' => null,
@@ -214,6 +222,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * associationType  子客户的关联类型： 1：顾问销售2：代售
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
@@ -256,6 +266,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'associationType' => 'association_type',
             'serviceTypeCode' => 'service_type_code',
             'resourceTypeCode' => 'resource_type_code',
+            'serviceTypeName' => 'service_type_name',
+            'resourceTypeName' => 'resource_type_name',
             'chargingMode' => 'charging_mode',
             'tradeTime' => 'trade_time',
             'tradeId' => 'trade_id',
@@ -298,6 +310,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * associationType  子客户的关联类型： 1：顾问销售2：代售
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
@@ -340,6 +354,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'associationType' => 'setAssociationType',
             'serviceTypeCode' => 'setServiceTypeCode',
             'resourceTypeCode' => 'setResourceTypeCode',
+            'serviceTypeName' => 'setServiceTypeName',
+            'resourceTypeName' => 'setResourceTypeName',
             'chargingMode' => 'setChargingMode',
             'tradeTime' => 'setTradeTime',
             'tradeId' => 'setTradeId',
@@ -382,6 +398,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * associationType  子客户的关联类型： 1：顾问销售2：代售
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
@@ -424,6 +442,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'associationType' => 'getAssociationType',
             'serviceTypeCode' => 'getServiceTypeCode',
             'resourceTypeCode' => 'getResourceTypeCode',
+            'serviceTypeName' => 'getServiceTypeName',
+            'resourceTypeName' => 'getResourceTypeName',
             'chargingMode' => 'getChargingMode',
             'tradeTime' => 'getTradeTime',
             'tradeId' => 'getTradeId',
@@ -522,6 +542,8 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
         $this->container['associationType'] = isset($data['associationType']) ? $data['associationType'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['tradeTime'] = isset($data['tradeTime']) ? $data['tradeTime'] : null;
         $this->container['tradeId'] = isset($data['tradeId']) ? $data['tradeId'] : null;
@@ -696,6 +718,54 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     public function setResourceTypeCode($resourceTypeCode)
     {
         $this->container['resourceTypeCode'] = $resourceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeName
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return string|null
+    */
+    public function getServiceTypeName()
+    {
+        return $this->container['serviceTypeName'];
+    }
+
+    /**
+    * Sets serviceTypeName
+    *
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return $this
+    */
+    public function setServiceTypeName($serviceTypeName)
+    {
+        $this->container['serviceTypeName'] = $serviceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypeName
+    *  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return string|null
+    */
+    public function getResourceTypeName()
+    {
+        return $this->container['resourceTypeName'];
+    }
+
+    /**
+    * Sets resourceTypeName
+    *
+    * @param string|null $resourceTypeName 资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return $this
+    */
+    public function setResourceTypeName($resourceTypeName)
+    {
+        $this->container['resourceTypeName'] = $resourceTypeName;
         return $this;
     }
 

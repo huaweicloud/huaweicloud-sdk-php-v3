@@ -28,8 +28,6 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  |参数名称：关联类型1.推荐，2.垫付，3.转售| |参数约束及描述：非必填，最大长度2|
     * associatedOnBegin  |参数名称：关联时间区间段开始，UTC时间。| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
     * associatedOnEnd  |参数名称：关联时间区间段结束，UTC时间| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
-    * customerId  |参数名称：子客户ID| |参数约束及描述：非必填，最大长度64|
-    * indirectPartnerId  |参数名称：二级渠道商ID| |参数约束及描述：如果想查询二级渠道子客户的列表，该字段必须携带，最大长度64|
     *
     * @var string[]
     */
@@ -41,9 +39,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             'label' => 'string',
             'associationType' => 'string',
             'associatedOnBegin' => 'string',
-            'associatedOnEnd' => 'string',
-            'customerId' => 'string',
-            'indirectPartnerId' => 'string'
+            'associatedOnEnd' => 'string'
     ];
 
     /**
@@ -56,8 +52,6 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  |参数名称：关联类型1.推荐，2.垫付，3.转售| |参数约束及描述：非必填，最大长度2|
     * associatedOnBegin  |参数名称：关联时间区间段开始，UTC时间。| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
     * associatedOnEnd  |参数名称：关联时间区间段结束，UTC时间| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
-    * customerId  |参数名称：子客户ID| |参数约束及描述：非必填，最大长度64|
-    * indirectPartnerId  |参数名称：二级渠道商ID| |参数约束及描述：如果想查询二级渠道子客户的列表，该字段必须携带，最大长度64|
     *
     * @var string[]
     */
@@ -69,9 +63,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
         'label' => null,
         'associationType' => null,
         'associatedOnBegin' => null,
-        'associatedOnEnd' => null,
-        'customerId' => null,
-        'indirectPartnerId' => null
+        'associatedOnEnd' => null
     ];
 
     /**
@@ -105,8 +97,6 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  |参数名称：关联类型1.推荐，2.垫付，3.转售| |参数约束及描述：非必填，最大长度2|
     * associatedOnBegin  |参数名称：关联时间区间段开始，UTC时间。| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
     * associatedOnEnd  |参数名称：关联时间区间段结束，UTC时间| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
-    * customerId  |参数名称：子客户ID| |参数约束及描述：非必填，最大长度64|
-    * indirectPartnerId  |参数名称：二级渠道商ID| |参数约束及描述：如果想查询二级渠道子客户的列表，该字段必须携带，最大长度64|
     *
     * @var string[]
     */
@@ -118,9 +108,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             'label' => 'label',
             'associationType' => 'association_type',
             'associatedOnBegin' => 'associated_on_begin',
-            'associatedOnEnd' => 'associated_on_end',
-            'customerId' => 'customer_id',
-            'indirectPartnerId' => 'indirect_partner_id'
+            'associatedOnEnd' => 'associated_on_end'
     ];
 
     /**
@@ -133,8 +121,6 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  |参数名称：关联类型1.推荐，2.垫付，3.转售| |参数约束及描述：非必填，最大长度2|
     * associatedOnBegin  |参数名称：关联时间区间段开始，UTC时间。| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
     * associatedOnEnd  |参数名称：关联时间区间段结束，UTC时间| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
-    * customerId  |参数名称：子客户ID| |参数约束及描述：非必填，最大长度64|
-    * indirectPartnerId  |参数名称：二级渠道商ID| |参数约束及描述：如果想查询二级渠道子客户的列表，该字段必须携带，最大长度64|
     *
     * @var string[]
     */
@@ -146,9 +132,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             'label' => 'setLabel',
             'associationType' => 'setAssociationType',
             'associatedOnBegin' => 'setAssociatedOnBegin',
-            'associatedOnEnd' => 'setAssociatedOnEnd',
-            'customerId' => 'setCustomerId',
-            'indirectPartnerId' => 'setIndirectPartnerId'
+            'associatedOnEnd' => 'setAssociatedOnEnd'
     ];
 
     /**
@@ -161,8 +145,6 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  |参数名称：关联类型1.推荐，2.垫付，3.转售| |参数约束及描述：非必填，最大长度2|
     * associatedOnBegin  |参数名称：关联时间区间段开始，UTC时间。| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
     * associatedOnEnd  |参数名称：关联时间区间段结束，UTC时间| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
-    * customerId  |参数名称：子客户ID| |参数约束及描述：非必填，最大长度64|
-    * indirectPartnerId  |参数名称：二级渠道商ID| |参数约束及描述：如果想查询二级渠道子客户的列表，该字段必须携带，最大长度64|
     *
     * @var string[]
     */
@@ -174,9 +156,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             'label' => 'getLabel',
             'associationType' => 'getAssociationType',
             'associatedOnBegin' => 'getAssociatedOnBegin',
-            'associatedOnEnd' => 'getAssociatedOnEnd',
-            'customerId' => 'getCustomerId',
-            'indirectPartnerId' => 'getIndirectPartnerId'
+            'associatedOnEnd' => 'getAssociatedOnEnd'
     ];
 
     /**
@@ -245,8 +225,6 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
         $this->container['associationType'] = isset($data['associationType']) ? $data['associationType'] : null;
         $this->container['associatedOnBegin'] = isset($data['associatedOnBegin']) ? $data['associatedOnBegin'] : null;
         $this->container['associatedOnEnd'] = isset($data['associatedOnEnd']) ? $data['associatedOnEnd'] : null;
-        $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
-        $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 
     /**
@@ -304,18 +282,6 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['associatedOnEnd']) && (mb_strlen($this->container['associatedOnEnd']) < 0)) {
                 $invalidProperties[] = "invalid value for 'associatedOnEnd', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['customerId']) && (mb_strlen($this->container['customerId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'customerId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['customerId']) && (mb_strlen($this->container['customerId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'customerId', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -520,54 +486,6 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     public function setAssociatedOnEnd($associatedOnEnd)
     {
         $this->container['associatedOnEnd'] = $associatedOnEnd;
-        return $this;
-    }
-
-    /**
-    * Gets customerId
-    *  |参数名称：子客户ID| |参数约束及描述：非必填，最大长度64|
-    *
-    * @return string|null
-    */
-    public function getCustomerId()
-    {
-        return $this->container['customerId'];
-    }
-
-    /**
-    * Sets customerId
-    *
-    * @param string|null $customerId |参数名称：子客户ID| |参数约束及描述：非必填，最大长度64|
-    *
-    * @return $this
-    */
-    public function setCustomerId($customerId)
-    {
-        $this->container['customerId'] = $customerId;
-        return $this;
-    }
-
-    /**
-    * Gets indirectPartnerId
-    *  |参数名称：二级渠道商ID| |参数约束及描述：如果想查询二级渠道子客户的列表，该字段必须携带，最大长度64|
-    *
-    * @return string|null
-    */
-    public function getIndirectPartnerId()
-    {
-        return $this->container['indirectPartnerId'];
-    }
-
-    /**
-    * Sets indirectPartnerId
-    *
-    * @param string|null $indirectPartnerId |参数名称：二级渠道商ID| |参数约束及描述：如果想查询二级渠道子客户的列表，该字段必须携带，最大长度64|
-    *
-    * @return $this
-    */
-    public function setIndirectPartnerId($indirectPartnerId)
-    {
-        $this->container['indirectPartnerId'] = $indirectPartnerId;
         return $this;
     }
 

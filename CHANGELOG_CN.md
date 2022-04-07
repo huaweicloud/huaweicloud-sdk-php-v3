@@ -1,3 +1,53 @@
+# 3.0.42-rc 2022-04-07
+
+### HuaweiCloud SDK BSS
+
+- _新增特性_
+  - 支持接口`ListStoredValueCards`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 移除接口`ListSubCustomerDiscounts`、`BatchSetSubCustomerDiscount`
+  - 接口`ShowRefundOrderDetails`新增响应参数 `resource_type_name`、`service_type_name`
+  - 接口`ListCustomerOrders`新增响应参数 `service_type_name`
+  - 接口`ShowCustomerOrderDetails`新增响应参数 `service_type_name`、`service_type_name`
+  - 接口`ListPayPerUseCustomerResources`新增响应参数 `resource_type_name`、`service_type_name`
+  - 接口`ListCustomerOnDemandResources`新增响应参数 `service_type_name`、`resource_type_name`
+  - 接口`ListSubcustomerMonthlyBills`新增响应参数 `cloud_service_type_name`、`resource_type_name`
+  - 接口`ListCustomerselfResourceRecordDetails`新增响应参数 `cloud_service_type_name`、`resource_type_name`、`period_type`
+  - 接口`ListCustomerselfResourceRecords`新增响应参数 `cloud_service_type_name`、`resource_type_name`
+  - 接口`ShowCustomerMonthlySum`新增响应参数 `service_type_name`、`resource_type_name`
+  - 接口`ListCustomerBillsFeeRecords`:
+    - 新增请求参数 `bill_date_begin`、`bill_date_end`
+    - 新增响应参数 `service_type_name`、`resource_type_name`
+  - 接口`ListUsageTypes`新增响应参数 `resource_type_name`、`service_type_name`
+  - 接口`ListSubCustomerBillDetail`新增响应参数 `service_type_name`、`resource_type_name`
+  - 接口`ListCustomerBillsMonthlyBreakDown`新增响应参数 `service_type_name`、`resource_type_name`
+  - 接口`ListFreeResourceInfos`新增响应参数 `service_type_name`
+  - 接口`ListIncentiveDiscountPolicies`新增响应参数 `service_type_name`
+
+### HuaweiCloud SDK OCR
+
+- _新增特性_
+  - 支持接口`RecognizeWaybillElectronic`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`RecognizeVatInvoice`新增响应参数 `print_code`
+  - 接口`RecognizeVehicleLicense`:
+    - 新增请求参数 `return_text_location`
+    - 新增响应参数 `text_location`
+  - 接口`RecognizeTaxiInvoice`:
+    - 新增请求参数 `return_text_location`
+    - 新增响应参数 `text_location`
+  - 接口`RecognizeDriverLicense`新增响应参数 `type`、`accumulated_scores`、`status`、`generation_date`、`current_time`
+  - 接口`RecognizeTrainTicket`:
+    - 新增请求参数 `return_text_location`
+    - 新增响应参数 `text_location`
+  - 接口`RecognizeBankcard`:
+    - 新增请求参数 `return_text_location`
+    - 新增响应参数 `text_location`
+
 # 3.0.41-rc 2022-03-25
 
 ### HuaweiCloud SDK CDN

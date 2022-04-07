@@ -29,7 +29,6 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  |参数名称：偏移量，从0开始。默认值：0| |参数的约束及描述：偏移量，从0开始。默认值：0|
     * limit  |参数名称：一次查询的条数，默认10条。| |参数的约束及描述：一次查询的条数，默认10条。|
     * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
-    * indirectPartnerId  |参数名称：二级经销商ID，如果想查询二级经销商的子客户的资源列表，必须携带该字段，否则只能查询自己的子客户的按需资源| |参数约束及描述：二级经销商ID，如果想查询二级经销商的子客户的资源列表，必须携带该字段，否则只能查询自己的子客户的按需资源|
     *
     * @var string[]
     */
@@ -42,8 +41,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
             'effectiveTimeEnd' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'status' => 'int',
-            'indirectPartnerId' => 'string'
+            'status' => 'int'
     ];
 
     /**
@@ -57,7 +55,6 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  |参数名称：偏移量，从0开始。默认值：0| |参数的约束及描述：偏移量，从0开始。默认值：0|
     * limit  |参数名称：一次查询的条数，默认10条。| |参数的约束及描述：一次查询的条数，默认10条。|
     * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
-    * indirectPartnerId  |参数名称：二级经销商ID，如果想查询二级经销商的子客户的资源列表，必须携带该字段，否则只能查询自己的子客户的按需资源| |参数约束及描述：二级经销商ID，如果想查询二级经销商的子客户的资源列表，必须携带该字段，否则只能查询自己的子客户的按需资源|
     *
     * @var string[]
     */
@@ -70,8 +67,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
         'effectiveTimeEnd' => null,
         'offset' => 'int32',
         'limit' => 'int32',
-        'status' => 'int32',
-        'indirectPartnerId' => null
+        'status' => 'int32'
     ];
 
     /**
@@ -106,7 +102,6 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  |参数名称：偏移量，从0开始。默认值：0| |参数的约束及描述：偏移量，从0开始。默认值：0|
     * limit  |参数名称：一次查询的条数，默认10条。| |参数的约束及描述：一次查询的条数，默认10条。|
     * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
-    * indirectPartnerId  |参数名称：二级经销商ID，如果想查询二级经销商的子客户的资源列表，必须携带该字段，否则只能查询自己的子客户的按需资源| |参数约束及描述：二级经销商ID，如果想查询二级经销商的子客户的资源列表，必须携带该字段，否则只能查询自己的子客户的按需资源|
     *
     * @var string[]
     */
@@ -119,8 +114,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
             'effectiveTimeEnd' => 'effective_time_end',
             'offset' => 'offset',
             'limit' => 'limit',
-            'status' => 'status',
-            'indirectPartnerId' => 'indirect_partner_id'
+            'status' => 'status'
     ];
 
     /**
@@ -134,7 +128,6 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  |参数名称：偏移量，从0开始。默认值：0| |参数的约束及描述：偏移量，从0开始。默认值：0|
     * limit  |参数名称：一次查询的条数，默认10条。| |参数的约束及描述：一次查询的条数，默认10条。|
     * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
-    * indirectPartnerId  |参数名称：二级经销商ID，如果想查询二级经销商的子客户的资源列表，必须携带该字段，否则只能查询自己的子客户的按需资源| |参数约束及描述：二级经销商ID，如果想查询二级经销商的子客户的资源列表，必须携带该字段，否则只能查询自己的子客户的按需资源|
     *
     * @var string[]
     */
@@ -147,8 +140,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
             'effectiveTimeEnd' => 'setEffectiveTimeEnd',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'status' => 'setStatus',
-            'indirectPartnerId' => 'setIndirectPartnerId'
+            'status' => 'setStatus'
     ];
 
     /**
@@ -162,7 +154,6 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  |参数名称：偏移量，从0开始。默认值：0| |参数的约束及描述：偏移量，从0开始。默认值：0|
     * limit  |参数名称：一次查询的条数，默认10条。| |参数的约束及描述：一次查询的条数，默认10条。|
     * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
-    * indirectPartnerId  |参数名称：二级经销商ID，如果想查询二级经销商的子客户的资源列表，必须携带该字段，否则只能查询自己的子客户的按需资源| |参数约束及描述：二级经销商ID，如果想查询二级经销商的子客户的资源列表，必须携带该字段，否则只能查询自己的子客户的按需资源|
     *
     * @var string[]
     */
@@ -175,8 +166,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
             'effectiveTimeEnd' => 'getEffectiveTimeEnd',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'status' => 'getStatus',
-            'indirectPartnerId' => 'getIndirectPartnerId'
+            'status' => 'getStatus'
     ];
 
     /**
@@ -246,7 +236,6 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 
     /**
@@ -307,12 +296,6 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['status']) && ($this->container['status'] < 1)) {
                 $invalidProperties[] = "invalid value for 'status', must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -541,30 +524,6 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
-        return $this;
-    }
-
-    /**
-    * Gets indirectPartnerId
-    *  |参数名称：二级经销商ID，如果想查询二级经销商的子客户的资源列表，必须携带该字段，否则只能查询自己的子客户的按需资源| |参数约束及描述：二级经销商ID，如果想查询二级经销商的子客户的资源列表，必须携带该字段，否则只能查询自己的子客户的按需资源|
-    *
-    * @return string|null
-    */
-    public function getIndirectPartnerId()
-    {
-        return $this->container['indirectPartnerId'];
-    }
-
-    /**
-    * Sets indirectPartnerId
-    *
-    * @param string|null $indirectPartnerId |参数名称：二级经销商ID，如果想查询二级经销商的子客户的资源列表，必须携带该字段，否则只能查询自己的子客户的按需资源| |参数约束及描述：二级经销商ID，如果想查询二级经销商的子客户的资源列表，必须携带该字段，否则只能查询自己的子客户的按需资源|
-    *
-    * @return $this
-    */
-    public function setIndirectPartnerId($indirectPartnerId)
-    {
-        $this->container['indirectPartnerId'] = $indirectPartnerId;
         return $this;
     }
 

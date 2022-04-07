@@ -28,7 +28,6 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该参数必填，且只允许最大长度30的字符串,该标识的具体值由华为分配|
     * password  |参数名称：密码| |参数的约束及描述：该参数选填，长度6~32位字符，至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符，不能和账号名或倒序的账号名相同，不能包含手机号，不能包含邮箱|
     * isCloseMarketMs  |是否关闭营销消息| |参数的约束及描述：该参数选填。false：不关闭，True：关闭，默认不关闭|
-    * indirectPartnerId  |参数名称：二级渠道ID| |参数的约束及描述：该参数非必填，二级渠道ID，最大长度64|
     * includeAssociationResult  |参数名称：是否返回关联结果| |参数的约束及描述：该参数非必填|
     *
     * @var string[]
@@ -42,7 +41,6 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
             'xaccountType' => 'string',
             'password' => 'string',
             'isCloseMarketMs' => 'string',
-            'indirectPartnerId' => 'string',
             'includeAssociationResult' => 'bool'
     ];
 
@@ -56,7 +54,6 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该参数必填，且只允许最大长度30的字符串,该标识的具体值由华为分配|
     * password  |参数名称：密码| |参数的约束及描述：该参数选填，长度6~32位字符，至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符，不能和账号名或倒序的账号名相同，不能包含手机号，不能包含邮箱|
     * isCloseMarketMs  |是否关闭营销消息| |参数的约束及描述：该参数选填。false：不关闭，True：关闭，默认不关闭|
-    * indirectPartnerId  |参数名称：二级渠道ID| |参数的约束及描述：该参数非必填，二级渠道ID，最大长度64|
     * includeAssociationResult  |参数名称：是否返回关联结果| |参数的约束及描述：该参数非必填|
     *
     * @var string[]
@@ -70,7 +67,6 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
         'xaccountType' => null,
         'password' => null,
         'isCloseMarketMs' => null,
-        'indirectPartnerId' => null,
         'includeAssociationResult' => null
     ];
 
@@ -105,7 +101,6 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该参数必填，且只允许最大长度30的字符串,该标识的具体值由华为分配|
     * password  |参数名称：密码| |参数的约束及描述：该参数选填，长度6~32位字符，至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符，不能和账号名或倒序的账号名相同，不能包含手机号，不能包含邮箱|
     * isCloseMarketMs  |是否关闭营销消息| |参数的约束及描述：该参数选填。false：不关闭，True：关闭，默认不关闭|
-    * indirectPartnerId  |参数名称：二级渠道ID| |参数的约束及描述：该参数非必填，二级渠道ID，最大长度64|
     * includeAssociationResult  |参数名称：是否返回关联结果| |参数的约束及描述：该参数非必填|
     *
     * @var string[]
@@ -119,7 +114,6 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
             'xaccountType' => 'xaccount_type',
             'password' => 'password',
             'isCloseMarketMs' => 'is_close_market_ms',
-            'indirectPartnerId' => 'indirect_partner_id',
             'includeAssociationResult' => 'include_association_result'
     ];
 
@@ -133,7 +127,6 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该参数必填，且只允许最大长度30的字符串,该标识的具体值由华为分配|
     * password  |参数名称：密码| |参数的约束及描述：该参数选填，长度6~32位字符，至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符，不能和账号名或倒序的账号名相同，不能包含手机号，不能包含邮箱|
     * isCloseMarketMs  |是否关闭营销消息| |参数的约束及描述：该参数选填。false：不关闭，True：关闭，默认不关闭|
-    * indirectPartnerId  |参数名称：二级渠道ID| |参数的约束及描述：该参数非必填，二级渠道ID，最大长度64|
     * includeAssociationResult  |参数名称：是否返回关联结果| |参数的约束及描述：该参数非必填|
     *
     * @var string[]
@@ -147,7 +140,6 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
             'xaccountType' => 'setXaccountType',
             'password' => 'setPassword',
             'isCloseMarketMs' => 'setIsCloseMarketMs',
-            'indirectPartnerId' => 'setIndirectPartnerId',
             'includeAssociationResult' => 'setIncludeAssociationResult'
     ];
 
@@ -161,7 +153,6 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该参数必填，且只允许最大长度30的字符串,该标识的具体值由华为分配|
     * password  |参数名称：密码| |参数的约束及描述：该参数选填，长度6~32位字符，至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符，不能和账号名或倒序的账号名相同，不能包含手机号，不能包含邮箱|
     * isCloseMarketMs  |是否关闭营销消息| |参数的约束及描述：该参数选填。false：不关闭，True：关闭，默认不关闭|
-    * indirectPartnerId  |参数名称：二级渠道ID| |参数的约束及描述：该参数非必填，二级渠道ID，最大长度64|
     * includeAssociationResult  |参数名称：是否返回关联结果| |参数的约束及描述：该参数非必填|
     *
     * @var string[]
@@ -175,7 +166,6 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
             'xaccountType' => 'getXaccountType',
             'password' => 'getPassword',
             'isCloseMarketMs' => 'getIsCloseMarketMs',
-            'indirectPartnerId' => 'getIndirectPartnerId',
             'includeAssociationResult' => 'getIncludeAssociationResult'
     ];
 
@@ -245,7 +235,6 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
         $this->container['xaccountType'] = isset($data['xaccountType']) ? $data['xaccountType'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['isCloseMarketMs'] = isset($data['isCloseMarketMs']) ? $data['isCloseMarketMs'] : 'false';
-        $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
         $this->container['includeAssociationResult'] = isset($data['includeAssociationResult']) ? $data['includeAssociationResult'] : null;
     }
 
@@ -310,12 +299,6 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['isCloseMarketMs']) && (mb_strlen($this->container['isCloseMarketMs']) < 0)) {
                 $invalidProperties[] = "invalid value for 'isCloseMarketMs', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -520,30 +503,6 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     public function setIsCloseMarketMs($isCloseMarketMs)
     {
         $this->container['isCloseMarketMs'] = $isCloseMarketMs;
-        return $this;
-    }
-
-    /**
-    * Gets indirectPartnerId
-    *  |参数名称：二级渠道ID| |参数的约束及描述：该参数非必填，二级渠道ID，最大长度64|
-    *
-    * @return string|null
-    */
-    public function getIndirectPartnerId()
-    {
-        return $this->container['indirectPartnerId'];
-    }
-
-    /**
-    * Sets indirectPartnerId
-    *
-    * @param string|null $indirectPartnerId |参数名称：二级渠道ID| |参数的约束及描述：该参数非必填，二级渠道ID，最大长度64|
-    *
-    * @return $this
-    */
-    public function setIndirectPartnerId($indirectPartnerId)
-    {
-        $this->container['indirectPartnerId'] = $indirectPartnerId;
         return $this;
     }
 

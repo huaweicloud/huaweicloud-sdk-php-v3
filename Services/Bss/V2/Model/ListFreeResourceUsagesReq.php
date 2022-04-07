@@ -20,7 +20,7 @@ class ListFreeResourceUsagesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * freeResourceIds  资源项ID列表，每个最大64字节。 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自“查询资源包列表”接口的响应。
+    * freeResourceIds  资源项ID列表，每个最大64字节。 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自查询资源包列表接口的响应。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListFreeResourceUsagesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * freeResourceIds  资源项ID列表，每个最大64字节。 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自“查询资源包列表”接口的响应。
+    * freeResourceIds  资源项ID列表，每个最大64字节。 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自查询资源包列表接口的响应。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListFreeResourceUsagesReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * freeResourceIds  资源项ID列表，每个最大64字节。 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自“查询资源包列表”接口的响应。
+    * freeResourceIds  资源项ID列表，每个最大64字节。 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自查询资源包列表接口的响应。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListFreeResourceUsagesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * freeResourceIds  资源项ID列表，每个最大64字节。 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自“查询资源包列表”接口的响应。
+    * freeResourceIds  资源项ID列表，每个最大64字节。 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自查询资源包列表接口的响应。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListFreeResourceUsagesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * freeResourceIds  资源项ID列表，每个最大64字节。 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自“查询资源包列表”接口的响应。
+    * freeResourceIds  资源项ID列表，每个最大64字节。 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自查询资源包列表接口的响应。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ListFreeResourceUsagesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeResourceIds
-    *  资源项ID列表，每个最大64字节。 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自“查询资源包列表”接口的响应。
+    *  资源项ID列表，每个最大64字节。 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自查询资源包列表接口的响应。
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class ListFreeResourceUsagesReq implements ModelInterface, ArrayAccess
     /**
     * Sets freeResourceIds
     *
-    * @param string[] $freeResourceIds 资源项ID列表，每个最大64字节。 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自“查询资源包列表”接口的响应。
+    * @param string[] $freeResourceIds 资源项ID列表，每个最大64字节。 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。资源项ID来自查询资源包列表接口的响应。
     *
     * @return $this
     */

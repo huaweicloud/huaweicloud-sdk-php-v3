@@ -23,6 +23,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
     * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * sourceType  |参数名称：客户订单订单来源类型：1：客户2：代理3：合同4：分销商| |参数的约束及描述：客户订单订单来源类型：1：客户2：代理3：合同4：分销商|
     * status  |参数名称：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认|
     * orderType  |参数名称：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整|
@@ -42,6 +43,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
             'orderId' => 'string',
             'customerId' => 'string',
             'serviceTypeCode' => 'string',
+            'serviceTypeName' => 'string',
             'sourceType' => 'int',
             'status' => 'int',
             'orderType' => 'int',
@@ -61,6 +63,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
     * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * sourceType  |参数名称：客户订单订单来源类型：1：客户2：代理3：合同4：分销商| |参数的约束及描述：客户订单订单来源类型：1：客户2：代理3：合同4：分销商|
     * status  |参数名称：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认|
     * orderType  |参数名称：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整|
@@ -80,6 +83,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
         'orderId' => null,
         'customerId' => null,
         'serviceTypeCode' => null,
+        'serviceTypeName' => null,
         'sourceType' => 'int32',
         'status' => 'int32',
         'orderType' => 'int32',
@@ -120,6 +124,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
     * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * sourceType  |参数名称：客户订单订单来源类型：1：客户2：代理3：合同4：分销商| |参数的约束及描述：客户订单订单来源类型：1：客户2：代理3：合同4：分销商|
     * status  |参数名称：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认|
     * orderType  |参数名称：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整|
@@ -139,6 +144,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
             'orderId' => 'order_id',
             'customerId' => 'customer_id',
             'serviceTypeCode' => 'service_type_code',
+            'serviceTypeName' => 'service_type_name',
             'sourceType' => 'source_type',
             'status' => 'status',
             'orderType' => 'order_type',
@@ -158,6 +164,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
     * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * sourceType  |参数名称：客户订单订单来源类型：1：客户2：代理3：合同4：分销商| |参数的约束及描述：客户订单订单来源类型：1：客户2：代理3：合同4：分销商|
     * status  |参数名称：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认|
     * orderType  |参数名称：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整|
@@ -177,6 +184,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
             'orderId' => 'setOrderId',
             'customerId' => 'setCustomerId',
             'serviceTypeCode' => 'setServiceTypeCode',
+            'serviceTypeName' => 'setServiceTypeName',
             'sourceType' => 'setSourceType',
             'status' => 'setStatus',
             'orderType' => 'setOrderType',
@@ -196,6 +204,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
     * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * sourceType  |参数名称：客户订单订单来源类型：1：客户2：代理3：合同4：分销商| |参数的约束及描述：客户订单订单来源类型：1：客户2：代理3：合同4：分销商|
     * status  |参数名称：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认|
     * orderType  |参数名称：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整|
@@ -215,6 +224,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
             'orderId' => 'getOrderId',
             'customerId' => 'getCustomerId',
             'serviceTypeCode' => 'getServiceTypeCode',
+            'serviceTypeName' => 'getServiceTypeName',
             'sourceType' => 'getSourceType',
             'status' => 'getStatus',
             'orderType' => 'getOrderType',
@@ -290,6 +300,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
         $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
         $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
         $this->container['sourceType'] = isset($data['sourceType']) ? $data['sourceType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['orderType'] = isset($data['orderType']) ? $data['orderType'] : null;
@@ -395,6 +406,30 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     public function setServiceTypeCode($serviceTypeCode)
     {
         $this->container['serviceTypeCode'] = $serviceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeName
+    *  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    *
+    * @return string|null
+    */
+    public function getServiceTypeName()
+    {
+        return $this->container['serviceTypeName'];
+    }
+
+    /**
+    * Sets serviceTypeName
+    *
+    * @param string|null $serviceTypeName |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    *
+    * @return $this
+    */
+    public function setServiceTypeName($serviceTypeName)
+    {
+        $this->container['serviceTypeName'] = $serviceTypeName;
         return $this;
     }
 

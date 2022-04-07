@@ -1296,68 +1296,6 @@ class BssintlAsyncClient extends Client
     }
 
     /**
-     * 查询订单可用优惠券
-     * 功能描述：客户在客户自建平台查看订单可用的优惠券列表
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listOrderCouponsByOrderIdAsync($request)
-    {
-        return $this->listOrderCouponsByOrderIdAsyncWithHttpInfo($request);
-    }
-    
-    public function listOrderCouponsByOrderIdAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2/orders/customer-orders/order-coupons';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['orderId'] !== null) {
-            $queryParams['order_id'] = $localVarParams['orderId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListOrderCouponsByOrderIdResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListOrderCouponsByOrderIdRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 查询订单可用折扣
      * 功能描述：功能介绍客户在伙伴销售平台支付待支付订单时，查询可使用的折扣。只返回商务合同折扣和伙伴授权折扣客户在客户自建平台查看订单可用的优惠券列表。
      *
@@ -1606,7 +1544,7 @@ class BssintlAsyncClient extends Client
     }
 
     /**
-     * 查询资源类型列表
+     * 查询资源类型列表(新)
      * 功能描述：客户在客户自建平台查询资源类型的列表。
      *
      * @param $request 请求对象
@@ -1619,7 +1557,7 @@ class BssintlAsyncClient extends Client
     
     public function listResourceTypesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/bases/resource-types';
+        $resourcePath = '/v2/products/resource-types';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1633,8 +1571,11 @@ class BssintlAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['resourceTypeCode'] !== null) {
-            $queryParams['resource_type_code'] = $localVarParams['resourceTypeCode'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
@@ -1742,7 +1683,7 @@ class BssintlAsyncClient extends Client
     }
 
     /**
-     * 查询云服务类型列表
+     * 查询云服务类型列表(新)
      * 功能描述：伙伴在伙伴销售平台查询云服务类型的列表。
      *
      * @param $request 请求对象
@@ -1755,7 +1696,7 @@ class BssintlAsyncClient extends Client
     
     public function listServiceTypesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/bases/service-types';
+        $resourcePath = '/v2/products/service-types';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1769,8 +1710,11 @@ class BssintlAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['serviceTypeCode'] !== null) {
-            $queryParams['service_type_code'] = $localVarParams['serviceTypeCode'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];

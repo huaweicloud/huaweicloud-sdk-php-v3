@@ -20,26 +20,30 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：云服务类型编码,最大长度64|
+    * xLanguage  |语言 zh_CN：中文 en_US：英文|
+    * limit  |参数名称：每次查询的数量。默认值为10。| |参数的约束及描述：每页大小，缺省为1000。|
+    * offset  |参数名称：页数，从0开始。默认值为0。| |参数的约束及描述：从0开始。默认值为0。|
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'xLanguage' => 'string',
-            'resourceTypeCode' => 'string'
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：云服务类型编码,最大长度64|
+    * xLanguage  |语言 zh_CN：中文 en_US：英文|
+    * limit  |参数名称：每次查询的数量。默认值为10。| |参数的约束及描述：每页大小，缺省为1000。|
+    * offset  |参数名称：页数，从0开始。默认值为0。| |参数的约束及描述：从0开始。默认值为0。|
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'xLanguage' => null,
-        'resourceTypeCode' => null
+        'limit' => 'int32',
+        'offset' => 'int32'
     ];
 
     /**
@@ -65,38 +69,44 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：云服务类型编码,最大长度64|
+    * xLanguage  |语言 zh_CN：中文 en_US：英文|
+    * limit  |参数名称：每次查询的数量。默认值为10。| |参数的约束及描述：每页大小，缺省为1000。|
+    * offset  |参数名称：页数，从0开始。默认值为0。| |参数的约束及描述：从0开始。默认值为0。|
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'xLanguage' => 'X-Language',
-            'resourceTypeCode' => 'resource_type_code'
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：云服务类型编码,最大长度64|
+    * xLanguage  |语言 zh_CN：中文 en_US：英文|
+    * limit  |参数名称：每次查询的数量。默认值为10。| |参数的约束及描述：每页大小，缺省为1000。|
+    * offset  |参数名称：页数，从0开始。默认值为0。| |参数的约束及描述：从0开始。默认值为0。|
     *
     * @var string[]
     */
     protected static $setters = [
             'xLanguage' => 'setXLanguage',
-            'resourceTypeCode' => 'setResourceTypeCode'
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：云服务类型编码,最大长度64|
+    * xLanguage  |语言 zh_CN：中文 en_US：英文|
+    * limit  |参数名称：每次查询的数量。默认值为10。| |参数的约束及描述：每页大小，缺省为1000。|
+    * offset  |参数名称：页数，从0开始。默认值为0。| |参数的约束及描述：从0开始。默认值为0。|
     *
     * @var string[]
     */
     protected static $getters = [
             'xLanguage' => 'getXLanguage',
-            'resourceTypeCode' => 'getResourceTypeCode'
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -157,8 +167,9 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'zh_cn';
-        $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'zh_CN';
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
     }
 
     /**
@@ -169,6 +180,18 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -185,7 +208,7 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  |忽略大小写，默认 zh_cn：中文 en_us：英文|
+    *  |语言 zh_CN：中文 en_US：英文|
     *
     * @return string|null
     */
@@ -197,7 +220,7 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage |忽略大小写，默认 zh_cn：中文 en_us：英文|
+    * @param string|null $xLanguage |语言 zh_CN：中文 en_US：英文|
     *
     * @return $this
     */
@@ -208,26 +231,50 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resourceTypeCode
-    *  |参数名称：资源类型编码| |参数的约束及描述：云服务类型编码,最大长度64|
+    * Gets limit
+    *  |参数名称：每次查询的数量。默认值为10。| |参数的约束及描述：每页大小，缺省为1000。|
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getResourceTypeCode()
+    public function getLimit()
     {
-        return $this->container['resourceTypeCode'];
+        return $this->container['limit'];
     }
 
     /**
-    * Sets resourceTypeCode
+    * Sets limit
     *
-    * @param string|null $resourceTypeCode |参数名称：资源类型编码| |参数的约束及描述：云服务类型编码,最大长度64|
+    * @param int|null $limit |参数名称：每次查询的数量。默认值为10。| |参数的约束及描述：每页大小，缺省为1000。|
     *
     * @return $this
     */
-    public function setResourceTypeCode($resourceTypeCode)
+    public function setLimit($limit)
     {
-        $this->container['resourceTypeCode'] = $resourceTypeCode;
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  |参数名称：页数，从0开始。默认值为0。| |参数的约束及描述：从0开始。默认值为0。|
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset |参数名称：页数，从0开始。默认值为0。| |参数的约束及描述：从0开始。默认值为0。|
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

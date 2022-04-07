@@ -21,8 +21,6 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价|
-    * installmentPeriodType  |参数名称：分期付款的周期类型2：月|
     * measureId  |参数名称：度量单位标识1：元|
     * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
     *
@@ -30,8 +28,6 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'officialWebsiteAmount' => 'float',
-            'installmentOfficialWebsiteAmount' => 'string',
-            'installmentPeriodType' => 'int',
             'measureId' => 'int',
             'productRatingResults' => '\HuaweiCloud\SDK\Bssintl\V2\Model\PeriodProductOfficialRatingResult[]'
     ];
@@ -39,8 +35,6 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价|
-    * installmentPeriodType  |参数名称：分期付款的周期类型2：月|
     * measureId  |参数名称：度量单位标识1：元|
     * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
     *
@@ -48,8 +42,6 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'officialWebsiteAmount' => 'bigdecimal',
-        'installmentOfficialWebsiteAmount' => null,
-        'installmentPeriodType' => 'int32',
         'measureId' => 'int32',
         'productRatingResults' => null
     ];
@@ -78,8 +70,6 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价|
-    * installmentPeriodType  |参数名称：分期付款的周期类型2：月|
     * measureId  |参数名称：度量单位标识1：元|
     * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
     *
@@ -87,8 +77,6 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'officialWebsiteAmount' => 'official_website_amount',
-            'installmentOfficialWebsiteAmount' => 'installment_official_website_amount',
-            'installmentPeriodType' => 'installment_period_type',
             'measureId' => 'measure_id',
             'productRatingResults' => 'product_rating_results'
     ];
@@ -96,8 +84,6 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价|
-    * installmentPeriodType  |参数名称：分期付款的周期类型2：月|
     * measureId  |参数名称：度量单位标识1：元|
     * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
     *
@@ -105,8 +91,6 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'officialWebsiteAmount' => 'setOfficialWebsiteAmount',
-            'installmentOfficialWebsiteAmount' => 'setInstallmentOfficialWebsiteAmount',
-            'installmentPeriodType' => 'setInstallmentPeriodType',
             'measureId' => 'setMeasureId',
             'productRatingResults' => 'setProductRatingResults'
     ];
@@ -114,8 +98,6 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价|
-    * installmentPeriodType  |参数名称：分期付款的周期类型2：月|
     * measureId  |参数名称：度量单位标识1：元|
     * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
     *
@@ -123,8 +105,6 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'officialWebsiteAmount' => 'getOfficialWebsiteAmount',
-            'installmentOfficialWebsiteAmount' => 'getInstallmentOfficialWebsiteAmount',
-            'installmentPeriodType' => 'getInstallmentPeriodType',
             'measureId' => 'getMeasureId',
             'productRatingResults' => 'getProductRatingResults'
     ];
@@ -188,8 +168,6 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['officialWebsiteAmount'] = isset($data['officialWebsiteAmount']) ? $data['officialWebsiteAmount'] : null;
-        $this->container['installmentOfficialWebsiteAmount'] = isset($data['installmentOfficialWebsiteAmount']) ? $data['installmentOfficialWebsiteAmount'] : null;
-        $this->container['installmentPeriodType'] = isset($data['installmentPeriodType']) ? $data['installmentPeriodType'] : null;
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
         $this->container['productRatingResults'] = isset($data['productRatingResults']) ? $data['productRatingResults'] : null;
     }
@@ -237,54 +215,6 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     public function setOfficialWebsiteAmount($officialWebsiteAmount)
     {
         $this->container['officialWebsiteAmount'] = $officialWebsiteAmount;
-        return $this;
-    }
-
-    /**
-    * Gets installmentOfficialWebsiteAmount
-    *  |参数名称：分期金额的官网价|
-    *
-    * @return string|null
-    */
-    public function getInstallmentOfficialWebsiteAmount()
-    {
-        return $this->container['installmentOfficialWebsiteAmount'];
-    }
-
-    /**
-    * Sets installmentOfficialWebsiteAmount
-    *
-    * @param string|null $installmentOfficialWebsiteAmount |参数名称：分期金额的官网价|
-    *
-    * @return $this
-    */
-    public function setInstallmentOfficialWebsiteAmount($installmentOfficialWebsiteAmount)
-    {
-        $this->container['installmentOfficialWebsiteAmount'] = $installmentOfficialWebsiteAmount;
-        return $this;
-    }
-
-    /**
-    * Gets installmentPeriodType
-    *  |参数名称：分期付款的周期类型2：月|
-    *
-    * @return int|null
-    */
-    public function getInstallmentPeriodType()
-    {
-        return $this->container['installmentPeriodType'];
-    }
-
-    /**
-    * Sets installmentPeriodType
-    *
-    * @param int|null $installmentPeriodType |参数名称：分期付款的周期类型2：月|
-    *
-    * @return $this
-    */
-    public function setInstallmentPeriodType($installmentPeriodType)
-    {
-        $this->container['installmentPeriodType'] = $installmentPeriodType;
         return $this;
     }
 

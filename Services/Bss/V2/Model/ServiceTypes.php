@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Bssintl\V2\Model;
+namespace HuaweiCloud\SDK\Bss\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ResourceType implements ModelInterface, ArrayAccess
+class ServiceTypes implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,34 @@ class ResourceType implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ResourceType';
+    protected static $openAPIModelName = 'ServiceTypes';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
-    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+    * serviceTypeName  云服务类型的名称。
+    * serviceTypeCode  云服务类型的编码。
+    * abbreviation  云服务类型的缩写。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resourceTypeCode' => 'string',
-            'resourceTypeName' => 'string',
-            'resourceTypeDesc' => 'string'
+            'serviceTypeName' => 'string',
+            'serviceTypeCode' => 'string',
+            'abbreviation' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
-    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+    * serviceTypeName  云服务类型的名称。
+    * serviceTypeCode  云服务类型的编码。
+    * abbreviation  云服务类型的缩写。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resourceTypeCode' => null,
-        'resourceTypeName' => null,
-        'resourceTypeDesc' => null
+        'serviceTypeName' => null,
+        'serviceTypeCode' => null,
+        'abbreviation' => null
     ];
 
     /**
@@ -69,44 +69,44 @@ class ResourceType implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
-    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+    * serviceTypeName  云服务类型的名称。
+    * serviceTypeCode  云服务类型的编码。
+    * abbreviation  云服务类型的缩写。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resourceTypeCode' => 'resource_type_code',
-            'resourceTypeName' => 'resource_type_name',
-            'resourceTypeDesc' => 'resource_type_desc'
+            'serviceTypeName' => 'service_type_name',
+            'serviceTypeCode' => 'service_type_code',
+            'abbreviation' => 'abbreviation'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
-    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+    * serviceTypeName  云服务类型的名称。
+    * serviceTypeCode  云服务类型的编码。
+    * abbreviation  云服务类型的缩写。
     *
     * @var string[]
     */
     protected static $setters = [
-            'resourceTypeCode' => 'setResourceTypeCode',
-            'resourceTypeName' => 'setResourceTypeName',
-            'resourceTypeDesc' => 'setResourceTypeDesc'
+            'serviceTypeName' => 'setServiceTypeName',
+            'serviceTypeCode' => 'setServiceTypeCode',
+            'abbreviation' => 'setAbbreviation'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
-    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+    * serviceTypeName  云服务类型的名称。
+    * serviceTypeCode  云服务类型的编码。
+    * abbreviation  云服务类型的缩写。
     *
     * @var string[]
     */
     protected static $getters = [
-            'resourceTypeCode' => 'getResourceTypeCode',
-            'resourceTypeName' => 'getResourceTypeName',
-            'resourceTypeDesc' => 'getResourceTypeDesc'
+            'serviceTypeName' => 'getServiceTypeName',
+            'serviceTypeCode' => 'getServiceTypeCode',
+            'abbreviation' => 'getAbbreviation'
     ];
 
     /**
@@ -167,9 +167,9 @@ class ResourceType implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
-        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
-        $this->container['resourceTypeDesc'] = isset($data['resourceTypeDesc']) ? $data['resourceTypeDesc'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
+        $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
+        $this->container['abbreviation'] = isset($data['abbreviation']) ? $data['abbreviation'] : null;
     }
 
     /**
@@ -195,74 +195,74 @@ class ResourceType implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resourceTypeCode
-    *  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+    * Gets serviceTypeName
+    *  云服务类型的名称。
     *
     * @return string|null
     */
-    public function getResourceTypeCode()
+    public function getServiceTypeName()
     {
-        return $this->container['resourceTypeCode'];
+        return $this->container['serviceTypeName'];
     }
 
     /**
-    * Sets resourceTypeCode
+    * Sets serviceTypeName
     *
-    * @param string|null $resourceTypeCode |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+    * @param string|null $serviceTypeName 云服务类型的名称。
     *
     * @return $this
     */
-    public function setResourceTypeCode($resourceTypeCode)
+    public function setServiceTypeName($serviceTypeName)
     {
-        $this->container['resourceTypeCode'] = $resourceTypeCode;
+        $this->container['serviceTypeName'] = $serviceTypeName;
         return $this;
     }
 
     /**
-    * Gets resourceTypeName
-    *  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
+    * Gets serviceTypeCode
+    *  云服务类型的编码。
     *
     * @return string|null
     */
-    public function getResourceTypeName()
+    public function getServiceTypeCode()
     {
-        return $this->container['resourceTypeName'];
+        return $this->container['serviceTypeCode'];
     }
 
     /**
-    * Sets resourceTypeName
+    * Sets serviceTypeCode
     *
-    * @param string|null $resourceTypeName |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
+    * @param string|null $serviceTypeCode 云服务类型的编码。
     *
     * @return $this
     */
-    public function setResourceTypeName($resourceTypeName)
+    public function setServiceTypeCode($serviceTypeCode)
     {
-        $this->container['resourceTypeName'] = $resourceTypeName;
+        $this->container['serviceTypeCode'] = $serviceTypeCode;
         return $this;
     }
 
     /**
-    * Gets resourceTypeDesc
-    *  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+    * Gets abbreviation
+    *  云服务类型的缩写。
     *
     * @return string|null
     */
-    public function getResourceTypeDesc()
+    public function getAbbreviation()
     {
-        return $this->container['resourceTypeDesc'];
+        return $this->container['abbreviation'];
     }
 
     /**
-    * Sets resourceTypeDesc
+    * Sets abbreviation
     *
-    * @param string|null $resourceTypeDesc |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+    * @param string|null $abbreviation 云服务类型的缩写。
     *
     * @return $this
     */
-    public function setResourceTypeDesc($resourceTypeDesc)
+    public function setAbbreviation($abbreviation)
     {
-        $this->container['resourceTypeDesc'] = $resourceTypeDesc;
+        $this->container['abbreviation'] = $abbreviation;
         return $this;
     }
 

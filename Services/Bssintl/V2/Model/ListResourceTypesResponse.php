@@ -21,21 +21,25 @@ class ListResourceTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceTypes  |参数名称：返回数据| |参数约束以及描述：返回数据|
+    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
+    * resourceTypes  |参数名称：资源类型信息| |参数约束以及描述：资源类型信息|
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resourceTypes' => '\HuaweiCloud\SDK\Bssintl\V2\Model\ResourceType[]'
+            'totalCount' => 'int',
+            'resourceTypes' => '\HuaweiCloud\SDK\Bssintl\V2\Model\ResourceTypes[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceTypes  |参数名称：返回数据| |参数约束以及描述：返回数据|
+    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
+    * resourceTypes  |参数名称：资源类型信息| |参数约束以及描述：资源类型信息|
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'totalCount' => 'int32',
         'resourceTypes' => null
     ];
 
@@ -62,31 +66,37 @@ class ListResourceTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceTypes  |参数名称：返回数据| |参数约束以及描述：返回数据|
+    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
+    * resourceTypes  |参数名称：资源类型信息| |参数约束以及描述：资源类型信息|
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'totalCount' => 'total_count',
             'resourceTypes' => 'resource_types'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceTypes  |参数名称：返回数据| |参数约束以及描述：返回数据|
+    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
+    * resourceTypes  |参数名称：资源类型信息| |参数约束以及描述：资源类型信息|
     *
     * @var string[]
     */
     protected static $setters = [
+            'totalCount' => 'setTotalCount',
             'resourceTypes' => 'setResourceTypes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceTypes  |参数名称：返回数据| |参数约束以及描述：返回数据|
+    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
+    * resourceTypes  |参数名称：资源类型信息| |参数约束以及描述：资源类型信息|
     *
     * @var string[]
     */
     protected static $getters = [
+            'totalCount' => 'getTotalCount',
             'resourceTypes' => 'getResourceTypes'
     ];
 
@@ -148,6 +158,7 @@ class ListResourceTypesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
         $this->container['resourceTypes'] = isset($data['resourceTypes']) ? $data['resourceTypes'] : null;
     }
 
@@ -174,10 +185,34 @@ class ListResourceTypesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resourceTypes
-    *  |参数名称：返回数据| |参数约束以及描述：返回数据|
+    * Gets totalCount
+    *  |参数名称：总记录数| |参数约束以及描述：总记录数|
     *
-    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\ResourceType[]|null
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount |参数名称：总记录数| |参数约束以及描述：总记录数|
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypes
+    *  |参数名称：资源类型信息| |参数约束以及描述：资源类型信息|
+    *
+    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\ResourceTypes[]|null
     */
     public function getResourceTypes()
     {
@@ -187,7 +222,7 @@ class ListResourceTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypes
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\ResourceType[]|null $resourceTypes |参数名称：返回数据| |参数约束以及描述：返回数据|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\ResourceTypes[]|null $resourceTypes |参数名称：资源类型信息| |参数约束以及描述：资源类型信息|
     *
     * @return $this
     */

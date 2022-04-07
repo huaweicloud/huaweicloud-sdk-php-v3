@@ -26,6 +26,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * regionCode  |参数名称：云服务资源池区域编码。| |参数约束及描述：云服务资源池区域编码。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
     * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * resourceSpecCode  |参数名称：云服务产品的资源规格，例如VM的资源规格举例为“s2.small.1.linux”。具体请参见对应云服务的相关介绍。| |参数约束及描述：云服务产品的资源规格，例如VM的资源规格举例为“s2.small.1.linux”。具体请参见对应云服务的相关介绍。|
     * projectId  |参数名称：资源项目ID。| |参数约束及描述：资源项目ID。|
     * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
@@ -45,6 +47,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'regionCode' => 'string',
             'serviceTypeCode' => 'string',
             'resourceTypeCode' => 'string',
+            'resourceTypeName' => 'string',
+            'serviceTypeName' => 'string',
             'resourceSpecCode' => 'string',
             'projectId' => 'string',
             'productId' => 'string',
@@ -64,6 +68,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * regionCode  |参数名称：云服务资源池区域编码。| |参数约束及描述：云服务资源池区域编码。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
     * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * resourceSpecCode  |参数名称：云服务产品的资源规格，例如VM的资源规格举例为“s2.small.1.linux”。具体请参见对应云服务的相关介绍。| |参数约束及描述：云服务产品的资源规格，例如VM的资源规格举例为“s2.small.1.linux”。具体请参见对应云服务的相关介绍。|
     * projectId  |参数名称：资源项目ID。| |参数约束及描述：资源项目ID。|
     * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
@@ -83,6 +89,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
         'regionCode' => null,
         'serviceTypeCode' => null,
         'resourceTypeCode' => null,
+        'resourceTypeName' => null,
+        'serviceTypeName' => null,
         'resourceSpecCode' => null,
         'projectId' => null,
         'productId' => null,
@@ -123,6 +131,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * regionCode  |参数名称：云服务资源池区域编码。| |参数约束及描述：云服务资源池区域编码。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
     * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * resourceSpecCode  |参数名称：云服务产品的资源规格，例如VM的资源规格举例为“s2.small.1.linux”。具体请参见对应云服务的相关介绍。| |参数约束及描述：云服务产品的资源规格，例如VM的资源规格举例为“s2.small.1.linux”。具体请参见对应云服务的相关介绍。|
     * projectId  |参数名称：资源项目ID。| |参数约束及描述：资源项目ID。|
     * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
@@ -142,6 +152,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'regionCode' => 'region_code',
             'serviceTypeCode' => 'service_type_code',
             'resourceTypeCode' => 'resource_type_code',
+            'resourceTypeName' => 'resource_type_name',
+            'serviceTypeName' => 'service_type_name',
             'resourceSpecCode' => 'resource_spec_code',
             'projectId' => 'project_id',
             'productId' => 'product_id',
@@ -161,6 +173,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * regionCode  |参数名称：云服务资源池区域编码。| |参数约束及描述：云服务资源池区域编码。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
     * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * resourceSpecCode  |参数名称：云服务产品的资源规格，例如VM的资源规格举例为“s2.small.1.linux”。具体请参见对应云服务的相关介绍。| |参数约束及描述：云服务产品的资源规格，例如VM的资源规格举例为“s2.small.1.linux”。具体请参见对应云服务的相关介绍。|
     * projectId  |参数名称：资源项目ID。| |参数约束及描述：资源项目ID。|
     * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
@@ -180,6 +194,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'regionCode' => 'setRegionCode',
             'serviceTypeCode' => 'setServiceTypeCode',
             'resourceTypeCode' => 'setResourceTypeCode',
+            'resourceTypeName' => 'setResourceTypeName',
+            'serviceTypeName' => 'setServiceTypeName',
             'resourceSpecCode' => 'setResourceSpecCode',
             'projectId' => 'setProjectId',
             'productId' => 'setProductId',
@@ -199,6 +215,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     * regionCode  |参数名称：云服务资源池区域编码。| |参数约束及描述：云服务资源池区域编码。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
     * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
     * resourceSpecCode  |参数名称：云服务产品的资源规格，例如VM的资源规格举例为“s2.small.1.linux”。具体请参见对应云服务的相关介绍。| |参数约束及描述：云服务产品的资源规格，例如VM的资源规格举例为“s2.small.1.linux”。具体请参见对应云服务的相关介绍。|
     * projectId  |参数名称：资源项目ID。| |参数约束及描述：资源项目ID。|
     * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
@@ -218,6 +236,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
             'regionCode' => 'getRegionCode',
             'serviceTypeCode' => 'getServiceTypeCode',
             'resourceTypeCode' => 'getResourceTypeCode',
+            'resourceTypeName' => 'getResourceTypeName',
+            'serviceTypeName' => 'getServiceTypeName',
             'resourceSpecCode' => 'getResourceSpecCode',
             'projectId' => 'getProjectId',
             'productId' => 'getProductId',
@@ -293,6 +313,8 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
         $this->container['regionCode'] = isset($data['regionCode']) ? $data['regionCode'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
         $this->container['resourceSpecCode'] = isset($data['resourceSpecCode']) ? $data['resourceSpecCode'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
@@ -467,6 +489,54 @@ class OrderInstanceV2 implements ModelInterface, ArrayAccess
     public function setResourceTypeCode($resourceTypeCode)
     {
         $this->container['resourceTypeCode'] = $resourceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypeName
+    *  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    *
+    * @return string|null
+    */
+    public function getResourceTypeName()
+    {
+        return $this->container['resourceTypeName'];
+    }
+
+    /**
+    * Sets resourceTypeName
+    *
+    * @param string|null $resourceTypeName |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    *
+    * @return $this
+    */
+    public function setResourceTypeName($resourceTypeName)
+    {
+        $this->container['resourceTypeName'] = $resourceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeName
+    *  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    *
+    * @return string|null
+    */
+    public function getServiceTypeName()
+    {
+        return $this->container['serviceTypeName'];
+    }
+
+    /**
+    * Sets serviceTypeName
+    *
+    * @param string|null $serviceTypeName |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    *
+    * @return $this
+    */
+    public function setServiceTypeName($serviceTypeName)
+    {
+        $this->container['serviceTypeName'] = $serviceTypeName;
         return $this;
     }
 

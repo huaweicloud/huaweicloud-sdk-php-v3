@@ -23,15 +23,13 @@ class QuotaDetailVolumesSAS implements ModelInterface, ArrayAccess
     * inUse  已使用的数量。
     * limit  最大的数量。
     * reserved  预留属性。
-    * allocated  预留属性。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'inUse' => 'int',
             'limit' => 'int',
-            'reserved' => 'int',
-            'allocated' => 'int'
+            'reserved' => 'int'
     ];
 
     /**
@@ -39,15 +37,13 @@ class QuotaDetailVolumesSAS implements ModelInterface, ArrayAccess
     * inUse  已使用的数量。
     * limit  最大的数量。
     * reserved  预留属性。
-    * allocated  预留属性。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'inUse' => 'int32',
         'limit' => 'int32',
-        'reserved' => 'int32',
-        'allocated' => 'int32'
+        'reserved' => 'int32'
     ];
 
     /**
@@ -76,15 +72,13 @@ class QuotaDetailVolumesSAS implements ModelInterface, ArrayAccess
     * inUse  已使用的数量。
     * limit  最大的数量。
     * reserved  预留属性。
-    * allocated  预留属性。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'inUse' => 'in_use',
             'limit' => 'limit',
-            'reserved' => 'reserved',
-            'allocated' => 'allocated'
+            'reserved' => 'reserved'
     ];
 
     /**
@@ -92,15 +86,13 @@ class QuotaDetailVolumesSAS implements ModelInterface, ArrayAccess
     * inUse  已使用的数量。
     * limit  最大的数量。
     * reserved  预留属性。
-    * allocated  预留属性。
     *
     * @var string[]
     */
     protected static $setters = [
             'inUse' => 'setInUse',
             'limit' => 'setLimit',
-            'reserved' => 'setReserved',
-            'allocated' => 'setAllocated'
+            'reserved' => 'setReserved'
     ];
 
     /**
@@ -108,15 +100,13 @@ class QuotaDetailVolumesSAS implements ModelInterface, ArrayAccess
     * inUse  已使用的数量。
     * limit  最大的数量。
     * reserved  预留属性。
-    * allocated  预留属性。
     *
     * @var string[]
     */
     protected static $getters = [
             'inUse' => 'getInUse',
             'limit' => 'getLimit',
-            'reserved' => 'getReserved',
-            'allocated' => 'getAllocated'
+            'reserved' => 'getReserved'
     ];
 
     /**
@@ -180,7 +170,6 @@ class QuotaDetailVolumesSAS implements ModelInterface, ArrayAccess
         $this->container['inUse'] = isset($data['inUse']) ? $data['inUse'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['reserved'] = isset($data['reserved']) ? $data['reserved'] : null;
-        $this->container['allocated'] = isset($data['allocated']) ? $data['allocated'] : null;
     }
 
     /**
@@ -199,9 +188,6 @@ class QuotaDetailVolumesSAS implements ModelInterface, ArrayAccess
         }
         if ($this->container['reserved'] === null) {
             $invalidProperties[] = "'reserved' can't be null";
-        }
-        if ($this->container['allocated'] === null) {
-            $invalidProperties[] = "'allocated' can't be null";
         }
         return $invalidProperties;
     }
@@ -286,30 +272,6 @@ class QuotaDetailVolumesSAS implements ModelInterface, ArrayAccess
     public function setReserved($reserved)
     {
         $this->container['reserved'] = $reserved;
-        return $this;
-    }
-
-    /**
-    * Gets allocated
-    *  预留属性。
-    *
-    * @return int
-    */
-    public function getAllocated()
-    {
-        return $this->container['allocated'];
-    }
-
-    /**
-    * Sets allocated
-    *
-    * @param int $allocated 预留属性。
-    *
-    * @return $this
-    */
-    public function setAllocated($allocated)
-    {
-        $this->container['allocated'] = $allocated;
         return $this;
     }
 

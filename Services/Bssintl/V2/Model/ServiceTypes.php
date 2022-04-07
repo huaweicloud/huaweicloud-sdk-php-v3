@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Bss\V2\Model;
+namespace HuaweiCloud\SDK\Bssintl\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BatchSetSubCustomerDiscountResponse implements ModelInterface, ArrayAccess
+class ServiceTypes implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,34 @@ class BatchSetSubCustomerDiscountResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BatchSetSubCustomerDiscountResponse';
+    protected static $openAPIModelName = 'ServiceTypes';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorDetails  部分成功部分失败的时候返回的失败记录，如果全成功，该记录为空，具体参见表2。
+    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
+    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
+    * abbreviation  |参数名称：云服务类型的缩写| |参数约束及描述：云服务类型的缩写|
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'errorDetails' => '\HuaweiCloud\SDK\Bss\V2\Model\ErrorDetail[]'
+            'serviceTypeName' => 'string',
+            'serviceTypeCode' => 'string',
+            'abbreviation' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorDetails  部分成功部分失败的时候返回的失败记录，如果全成功，该记录为空，具体参见表2。
+    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
+    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
+    * abbreviation  |参数名称：云服务类型的缩写| |参数约束及描述：云服务类型的缩写|
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'errorDetails' => null
+        'serviceTypeName' => null,
+        'serviceTypeCode' => null,
+        'abbreviation' => null
     ];
 
     /**
@@ -62,32 +69,44 @@ class BatchSetSubCustomerDiscountResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorDetails  部分成功部分失败的时候返回的失败记录，如果全成功，该记录为空，具体参见表2。
+    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
+    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
+    * abbreviation  |参数名称：云服务类型的缩写| |参数约束及描述：云服务类型的缩写|
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'errorDetails' => 'error_details'
+            'serviceTypeName' => 'service_type_name',
+            'serviceTypeCode' => 'service_type_code',
+            'abbreviation' => 'abbreviation'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorDetails  部分成功部分失败的时候返回的失败记录，如果全成功，该记录为空，具体参见表2。
+    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
+    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
+    * abbreviation  |参数名称：云服务类型的缩写| |参数约束及描述：云服务类型的缩写|
     *
     * @var string[]
     */
     protected static $setters = [
-            'errorDetails' => 'setErrorDetails'
+            'serviceTypeName' => 'setServiceTypeName',
+            'serviceTypeCode' => 'setServiceTypeCode',
+            'abbreviation' => 'setAbbreviation'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorDetails  部分成功部分失败的时候返回的失败记录，如果全成功，该记录为空，具体参见表2。
+    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
+    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
+    * abbreviation  |参数名称：云服务类型的缩写| |参数约束及描述：云服务类型的缩写|
     *
     * @var string[]
     */
     protected static $getters = [
-            'errorDetails' => 'getErrorDetails'
+            'serviceTypeName' => 'getServiceTypeName',
+            'serviceTypeCode' => 'getServiceTypeCode',
+            'abbreviation' => 'getAbbreviation'
     ];
 
     /**
@@ -148,7 +167,9 @@ class BatchSetSubCustomerDiscountResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['errorDetails'] = isset($data['errorDetails']) ? $data['errorDetails'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
+        $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
+        $this->container['abbreviation'] = isset($data['abbreviation']) ? $data['abbreviation'] : null;
     }
 
     /**
@@ -174,26 +195,74 @@ class BatchSetSubCustomerDiscountResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets errorDetails
-    *  部分成功部分失败的时候返回的失败记录，如果全成功，该记录为空，具体参见表2。
+    * Gets serviceTypeName
+    *  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
     *
-    * @return \HuaweiCloud\SDK\Bss\V2\Model\ErrorDetail[]|null
+    * @return string|null
     */
-    public function getErrorDetails()
+    public function getServiceTypeName()
     {
-        return $this->container['errorDetails'];
+        return $this->container['serviceTypeName'];
     }
 
     /**
-    * Sets errorDetails
+    * Sets serviceTypeName
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\ErrorDetail[]|null $errorDetails 部分成功部分失败的时候返回的失败记录，如果全成功，该记录为空，具体参见表2。
+    * @param string|null $serviceTypeName |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
     *
     * @return $this
     */
-    public function setErrorDetails($errorDetails)
+    public function setServiceTypeName($serviceTypeName)
     {
-        $this->container['errorDetails'] = $errorDetails;
+        $this->container['serviceTypeName'] = $serviceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeCode
+    *  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
+    *
+    * @return string|null
+    */
+    public function getServiceTypeCode()
+    {
+        return $this->container['serviceTypeCode'];
+    }
+
+    /**
+    * Sets serviceTypeCode
+    *
+    * @param string|null $serviceTypeCode |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
+    *
+    * @return $this
+    */
+    public function setServiceTypeCode($serviceTypeCode)
+    {
+        $this->container['serviceTypeCode'] = $serviceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets abbreviation
+    *  |参数名称：云服务类型的缩写| |参数约束及描述：云服务类型的缩写|
+    *
+    * @return string|null
+    */
+    public function getAbbreviation()
+    {
+        return $this->container['abbreviation'];
+    }
+
+    /**
+    * Sets abbreviation
+    *
+    * @param string|null $abbreviation |参数名称：云服务类型的缩写| |参数约束及描述：云服务类型的缩写|
+    *
+    * @return $this
+    */
+    public function setAbbreviation($abbreviation)
+    {
+        $this->container['abbreviation'] = $abbreviation;
         return $this;
     }
 

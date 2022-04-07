@@ -20,7 +20,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^([a-zA-Z_-]([a-zA-Z0-9_-])*)$。
+    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^\\(\\[a-zA-Z_-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\*\\)$。
     * mobilePhone  手机号。 目前系统只支持中国的手机号。 示例：13XXXXXXXXX
     * verificationCode  验证码。 请调用“发送验证码”接口获取。 如果手机号不存在，则不需要输入验证码。
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
@@ -48,7 +48,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^([a-zA-Z_-]([a-zA-Z0-9_-])*)$。
+    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^\\(\\[a-zA-Z_-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\*\\)$。
     * mobilePhone  手机号。 目前系统只支持中国的手机号。 示例：13XXXXXXXXX
     * verificationCode  验证码。 请调用“发送验证码”接口获取。 如果手机号不存在，则不需要输入验证码。
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
@@ -97,7 +97,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^([a-zA-Z_-]([a-zA-Z0-9_-])*)$。
+    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^\\(\\[a-zA-Z_-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\*\\)$。
     * mobilePhone  手机号。 目前系统只支持中国的手机号。 示例：13XXXXXXXXX
     * verificationCode  验证码。 请调用“发送验证码”接口获取。 如果手机号不存在，则不需要输入验证码。
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
@@ -125,7 +125,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^([a-zA-Z_-]([a-zA-Z0-9_-])*)$。
+    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^\\(\\[a-zA-Z_-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\*\\)$。
     * mobilePhone  手机号。 目前系统只支持中国的手机号。 示例：13XXXXXXXXX
     * verificationCode  验证码。 请调用“发送验证码”接口获取。 如果手机号不存在，则不需要输入验证码。
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
@@ -153,7 +153,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^([a-zA-Z_-]([a-zA-Z0-9_-])*)$。
+    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^\\(\\[a-zA-Z_-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\*\\)$。
     * mobilePhone  手机号。 目前系统只支持中国的手机号。 示例：13XXXXXXXXX
     * verificationCode  验证码。 请调用“发送验证码”接口获取。 如果手机号不存在，则不需要输入验证码。
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
@@ -333,7 +333,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^([a-zA-Z_-]([a-zA-Z0-9_-])*)$。
+    *  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^\\(\\[a-zA-Z_-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\*\\)$。
     *
     * @return string|null
     */
@@ -345,7 +345,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string|null $domainName 客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^([a-zA-Z_-]([a-zA-Z0-9_-])*)$。
+    * @param string|null $domainName 客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^\\(\\[a-zA-Z_-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\*\\)$。
     *
     * @return $this
     */

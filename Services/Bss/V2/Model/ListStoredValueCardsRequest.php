@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAccess
+class ListStoredValueCardsRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,36 +16,36 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListIncentiveDiscountPoliciesRequest';
+    protected static $openAPIModelName = 'ListStoredValueCardsRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * time  查询策略的指定时间。东八区时间，格式：YYYY-MM。 说明： 实际查询结果为指定时间所在月最后一天23:59:59的策略情况。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * status  状态：1：可使用2：已用完
+    * cardId  储值卡ID
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  每次查询的数量，默认值为10。
+    * limit  查询的优惠券数量，默认值为10。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'time' => 'string',
-            'serviceTypeCode' => 'string',
+            'status' => 'int',
+            'cardId' => 'string',
             'offset' => 'int',
             'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * time  查询策略的指定时间。东八区时间，格式：YYYY-MM。 说明： 实际查询结果为指定时间所在月最后一天23:59:59的策略情况。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * status  状态：1：可使用2：已用完
+    * cardId  储值卡ID
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  每次查询的数量，默认值为10。
+    * limit  查询的优惠券数量，默认值为10。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'time' => null,
-        'serviceTypeCode' => null,
+        'status' => 'int32',
+        'cardId' => null,
         'offset' => 'int32',
         'limit' => 'int32'
     ];
@@ -73,48 +73,48 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * time  查询策略的指定时间。东八区时间，格式：YYYY-MM。 说明： 实际查询结果为指定时间所在月最后一天23:59:59的策略情况。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * status  状态：1：可使用2：已用完
+    * cardId  储值卡ID
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  每次查询的数量，默认值为10。
+    * limit  查询的优惠券数量，默认值为10。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'time' => 'time',
-            'serviceTypeCode' => 'service_type_code',
+            'status' => 'status',
+            'cardId' => 'card_id',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * time  查询策略的指定时间。东八区时间，格式：YYYY-MM。 说明： 实际查询结果为指定时间所在月最后一天23:59:59的策略情况。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * status  状态：1：可使用2：已用完
+    * cardId  储值卡ID
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  每次查询的数量，默认值为10。
+    * limit  查询的优惠券数量，默认值为10。
     *
     * @var string[]
     */
     protected static $setters = [
-            'time' => 'setTime',
-            'serviceTypeCode' => 'setServiceTypeCode',
+            'status' => 'setStatus',
+            'cardId' => 'setCardId',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * time  查询策略的指定时间。东八区时间，格式：YYYY-MM。 说明： 实际查询结果为指定时间所在月最后一天23:59:59的策略情况。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * status  状态：1：可使用2：已用完
+    * cardId  储值卡ID
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  每次查询的数量，默认值为10。
+    * limit  查询的优惠券数量，默认值为10。
     *
     * @var string[]
     */
     protected static $getters = [
-            'time' => 'getTime',
-            'serviceTypeCode' => 'getServiceTypeCode',
+            'status' => 'getStatus',
+            'cardId' => 'getCardId',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -177,8 +177,8 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
-        $this->container['time'] = isset($data['time']) ? $data['time'] : null;
-        $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['cardId'] = isset($data['cardId']) ? $data['cardId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
     }
@@ -191,9 +191,15 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['time'] === null) {
-            $invalidProperties[] = "'time' can't be null";
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
         }
+            if (($this->container['status'] > 2)) {
+                $invalidProperties[] = "invalid value for 'status', must be smaller than or equal to 2.";
+            }
+            if (($this->container['status'] < 1)) {
+                $invalidProperties[] = "invalid value for 'status', must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
             }
@@ -221,50 +227,50 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets time
-    *  查询策略的指定时间。东八区时间，格式：YYYY-MM。 说明： 实际查询结果为指定时间所在月最后一天23:59:59的策略情况。
+    * Gets status
+    *  状态：1：可使用2：已用完
     *
-    * @return string
+    * @return int
     */
-    public function getTime()
+    public function getStatus()
     {
-        return $this->container['time'];
+        return $this->container['status'];
     }
 
     /**
-    * Sets time
+    * Sets status
     *
-    * @param string $time 查询策略的指定时间。东八区时间，格式：YYYY-MM。 说明： 实际查询结果为指定时间所在月最后一天23:59:59的策略情况。
+    * @param int $status 状态：1：可使用2：已用完
     *
     * @return $this
     */
-    public function setTime($time)
+    public function setStatus($status)
     {
-        $this->container['time'] = $time;
+        $this->container['status'] = $status;
         return $this;
     }
 
     /**
-    * Gets serviceTypeCode
-    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * Gets cardId
+    *  储值卡ID
     *
     * @return string|null
     */
-    public function getServiceTypeCode()
+    public function getCardId()
     {
-        return $this->container['serviceTypeCode'];
+        return $this->container['cardId'];
     }
 
     /**
-    * Sets serviceTypeCode
+    * Sets cardId
     *
-    * @param string|null $serviceTypeCode 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * @param string|null $cardId 储值卡ID
     *
     * @return $this
     */
-    public function setServiceTypeCode($serviceTypeCode)
+    public function setCardId($cardId)
     {
-        $this->container['serviceTypeCode'] = $serviceTypeCode;
+        $this->container['cardId'] = $cardId;
         return $this;
     }
 
@@ -294,7 +300,7 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets limit
-    *  每次查询的数量，默认值为10。
+    *  查询的优惠券数量，默认值为10。
     *
     * @return int|null
     */
@@ -306,7 +312,7 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
     /**
     * Sets limit
     *
-    * @param int|null $limit 每次查询的数量，默认值为10。
+    * @param int|null $limit 查询的优惠券数量，默认值为10。
     *
     * @return $this
     */

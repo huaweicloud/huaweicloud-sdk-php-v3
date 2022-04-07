@@ -36,6 +36,8 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
     * subCustomerId  企业子账号ID。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  页面大小。默认值为10。
+    * billDateBegin  查询的流水账单的开始日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
+    * billDateEnd  查询的流水账单的结束日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
     *
     * @var string[]
     */
@@ -55,7 +57,9 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
             'method' => 'string',
             'subCustomerId' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'billDateBegin' => 'string',
+            'billDateEnd' => 'string'
     ];
 
     /**
@@ -76,6 +80,8 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
     * subCustomerId  企业子账号ID。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  页面大小。默认值为10。
+    * billDateBegin  查询的流水账单的开始日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
+    * billDateEnd  查询的流水账单的结束日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
     *
     * @var string[]
     */
@@ -95,7 +101,9 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
         'method' => null,
         'subCustomerId' => null,
         'offset' => 'int32',
-        'limit' => 'int32'
+        'limit' => 'int32',
+        'billDateBegin' => null,
+        'billDateEnd' => null
     ];
 
     /**
@@ -137,6 +145,8 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
     * subCustomerId  企业子账号ID。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  页面大小。默认值为10。
+    * billDateBegin  查询的流水账单的开始日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
+    * billDateEnd  查询的流水账单的结束日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
     *
     * @var string[]
     */
@@ -156,7 +166,9 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
             'method' => 'method',
             'subCustomerId' => 'sub_customer_id',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'billDateBegin' => 'bill_date_begin',
+            'billDateEnd' => 'bill_date_end'
     ];
 
     /**
@@ -177,6 +189,8 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
     * subCustomerId  企业子账号ID。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  页面大小。默认值为10。
+    * billDateBegin  查询的流水账单的开始日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
+    * billDateEnd  查询的流水账单的结束日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
     *
     * @var string[]
     */
@@ -196,7 +210,9 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
             'method' => 'setMethod',
             'subCustomerId' => 'setSubCustomerId',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'billDateBegin' => 'setBillDateBegin',
+            'billDateEnd' => 'setBillDateEnd'
     ];
 
     /**
@@ -217,6 +233,8 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
     * subCustomerId  企业子账号ID。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  页面大小。默认值为10。
+    * billDateBegin  查询的流水账单的开始日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
+    * billDateEnd  查询的流水账单的结束日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
     *
     * @var string[]
     */
@@ -236,7 +254,9 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
             'method' => 'getMethod',
             'subCustomerId' => 'getSubCustomerId',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'billDateBegin' => 'getBillDateBegin',
+            'billDateEnd' => 'getBillDateEnd'
     ];
 
     /**
@@ -313,6 +333,8 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
         $this->container['subCustomerId'] = isset($data['subCustomerId']) ? $data['subCustomerId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
+        $this->container['billDateBegin'] = isset($data['billDateBegin']) ? $data['billDateBegin'] : null;
+        $this->container['billDateEnd'] = isset($data['billDateEnd']) ? $data['billDateEnd'] : null;
     }
 
     /**
@@ -757,6 +779,54 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets billDateBegin
+    *  查询的流水账单的开始日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
+    *
+    * @return string|null
+    */
+    public function getBillDateBegin()
+    {
+        return $this->container['billDateBegin'];
+    }
+
+    /**
+    * Sets billDateBegin
+    *
+    * @param string|null $billDateBegin 查询的流水账单的开始日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
+    *
+    * @return $this
+    */
+    public function setBillDateBegin($billDateBegin)
+    {
+        $this->container['billDateBegin'] = $billDateBegin;
+        return $this;
+    }
+
+    /**
+    * Gets billDateEnd
+    *  查询的流水账单的结束日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
+    *
+    * @return string|null
+    */
+    public function getBillDateEnd()
+    {
+        return $this->container['billDateEnd'];
+    }
+
+    /**
+    * Sets billDateEnd
+    *
+    * @param string|null $billDateEnd 查询的流水账单的结束日期，格式为YYYY-MM-DD。 说明： 必须和bill_cycle（即流水账单的所在账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照bill_cycle（即流水账单的所在账期）进行查询。
+    *
+    * @return $this
+    */
+    public function setBillDateEnd($billDateEnd)
+    {
+        $this->container['billDateEnd'] = $billDateEnd;
         return $this;
     }
 

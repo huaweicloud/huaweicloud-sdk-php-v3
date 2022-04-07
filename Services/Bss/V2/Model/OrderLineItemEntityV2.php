@@ -22,6 +22,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * orderLineItemId  订单项ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * productId  产品ID。
     * productSpecDesc  产品规格描述。
     * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
@@ -42,6 +43,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'orderLineItemId' => 'string',
             'serviceTypeCode' => 'string',
+            'serviceTypeName' => 'string',
             'productId' => 'string',
             'productSpecDesc' => 'string',
             'periodType' => 'int',
@@ -62,6 +64,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * orderLineItemId  订单项ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * productId  产品ID。
     * productSpecDesc  产品规格描述。
     * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
@@ -82,6 +85,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'orderLineItemId' => null,
         'serviceTypeCode' => null,
+        'serviceTypeName' => null,
         'productId' => null,
         'productSpecDesc' => null,
         'periodType' => 'int32',
@@ -123,6 +127,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * and the value is the original name
     * orderLineItemId  订单项ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * productId  产品ID。
     * productSpecDesc  产品规格描述。
     * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
@@ -143,6 +148,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'orderLineItemId' => 'order_line_item_id',
             'serviceTypeCode' => 'service_type_code',
+            'serviceTypeName' => 'service_type_name',
             'productId' => 'product_id',
             'productSpecDesc' => 'product_spec_desc',
             'periodType' => 'period_type',
@@ -163,6 +169,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * orderLineItemId  订单项ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * productId  产品ID。
     * productSpecDesc  产品规格描述。
     * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
@@ -183,6 +190,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     protected static $setters = [
             'orderLineItemId' => 'setOrderLineItemId',
             'serviceTypeCode' => 'setServiceTypeCode',
+            'serviceTypeName' => 'setServiceTypeName',
             'productId' => 'setProductId',
             'productSpecDesc' => 'setProductSpecDesc',
             'periodType' => 'setPeriodType',
@@ -203,6 +211,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * orderLineItemId  订单项ID。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * productId  产品ID。
     * productSpecDesc  产品规格描述。
     * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
@@ -223,6 +232,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     protected static $getters = [
             'orderLineItemId' => 'getOrderLineItemId',
             'serviceTypeCode' => 'getServiceTypeCode',
+            'serviceTypeName' => 'getServiceTypeName',
             'productId' => 'getProductId',
             'productSpecDesc' => 'getProductSpecDesc',
             'periodType' => 'getPeriodType',
@@ -299,6 +309,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     {
         $this->container['orderLineItemId'] = isset($data['orderLineItemId']) ? $data['orderLineItemId'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
         $this->container['productSpecDesc'] = isset($data['productSpecDesc']) ? $data['productSpecDesc'] : null;
         $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
@@ -382,6 +393,30 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     public function setServiceTypeCode($serviceTypeCode)
     {
         $this->container['serviceTypeCode'] = $serviceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeName
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return string|null
+    */
+    public function getServiceTypeName()
+    {
+        return $this->container['serviceTypeName'];
+    }
+
+    /**
+    * Sets serviceTypeName
+    *
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return $this
+    */
+    public function setServiceTypeName($serviceTypeName)
+    {
+        $this->container['serviceTypeName'] = $serviceTypeName;
         return $this;
     }
 

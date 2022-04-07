@@ -26,10 +26,6 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
     * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
     * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价| |参数约束及描述：分期金额的官网价|
-    * installmentOfficialDiscountAmount  |参数名称：分期金额的折扣价| |参数约束及描述：分期金额的折扣价|
-    * installmentAmount  |参数名称：分期金额的成交价| |参数约束及描述：分期金额的成交价,installment_amount=installment_official_website_amount-installment_discount_amount|
-    * installmentPeriodType  |参数名称：分期付款的周期类型| |参数约束及描述：2：月|
     *
     * @var string[]
     */
@@ -39,11 +35,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
             'amount' => 'float',
             'officialWebsiteAmount' => 'float',
             'discountAmount' => 'float',
-            'measureId' => 'int',
-            'installmentOfficialWebsiteAmount' => 'string',
-            'installmentOfficialDiscountAmount' => 'string',
-            'installmentAmount' => 'string',
-            'installmentPeriodType' => 'int'
+            'measureId' => 'int'
     ];
 
     /**
@@ -54,10 +46,6 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
     * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
     * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价| |参数约束及描述：分期金额的官网价|
-    * installmentOfficialDiscountAmount  |参数名称：分期金额的折扣价| |参数约束及描述：分期金额的折扣价|
-    * installmentAmount  |参数名称：分期金额的成交价| |参数约束及描述：分期金额的成交价,installment_amount=installment_official_website_amount-installment_discount_amount|
-    * installmentPeriodType  |参数名称：分期付款的周期类型| |参数约束及描述：2：月|
     *
     * @var string[]
     */
@@ -67,11 +55,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
         'amount' => 'bigdecimal',
         'officialWebsiteAmount' => 'bigdecimal',
         'discountAmount' => 'bigdecimal',
-        'measureId' => 'int32',
-        'installmentOfficialWebsiteAmount' => null,
-        'installmentOfficialDiscountAmount' => null,
-        'installmentAmount' => null,
-        'installmentPeriodType' => 'int32'
+        'measureId' => 'int32'
     ];
 
     /**
@@ -103,10 +87,6 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
     * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
     * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价| |参数约束及描述：分期金额的官网价|
-    * installmentOfficialDiscountAmount  |参数名称：分期金额的折扣价| |参数约束及描述：分期金额的折扣价|
-    * installmentAmount  |参数名称：分期金额的成交价| |参数约束及描述：分期金额的成交价,installment_amount=installment_official_website_amount-installment_discount_amount|
-    * installmentPeriodType  |参数名称：分期付款的周期类型| |参数约束及描述：2：月|
     *
     * @var string[]
     */
@@ -116,11 +96,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
             'amount' => 'amount',
             'officialWebsiteAmount' => 'official_website_amount',
             'discountAmount' => 'discount_amount',
-            'measureId' => 'measure_id',
-            'installmentOfficialWebsiteAmount' => 'installment_official_website_amount',
-            'installmentOfficialDiscountAmount' => 'installment_official_discount_amount',
-            'installmentAmount' => 'installment_amount',
-            'installmentPeriodType' => 'installment_period_type'
+            'measureId' => 'measure_id'
     ];
 
     /**
@@ -131,10 +107,6 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
     * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
     * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价| |参数约束及描述：分期金额的官网价|
-    * installmentOfficialDiscountAmount  |参数名称：分期金额的折扣价| |参数约束及描述：分期金额的折扣价|
-    * installmentAmount  |参数名称：分期金额的成交价| |参数约束及描述：分期金额的成交价,installment_amount=installment_official_website_amount-installment_discount_amount|
-    * installmentPeriodType  |参数名称：分期付款的周期类型| |参数约束及描述：2：月|
     *
     * @var string[]
     */
@@ -144,11 +116,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
             'amount' => 'setAmount',
             'officialWebsiteAmount' => 'setOfficialWebsiteAmount',
             'discountAmount' => 'setDiscountAmount',
-            'measureId' => 'setMeasureId',
-            'installmentOfficialWebsiteAmount' => 'setInstallmentOfficialWebsiteAmount',
-            'installmentOfficialDiscountAmount' => 'setInstallmentOfficialDiscountAmount',
-            'installmentAmount' => 'setInstallmentAmount',
-            'installmentPeriodType' => 'setInstallmentPeriodType'
+            'measureId' => 'setMeasureId'
     ];
 
     /**
@@ -159,10 +127,6 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
     * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
     * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价| |参数约束及描述：分期金额的官网价|
-    * installmentOfficialDiscountAmount  |参数名称：分期金额的折扣价| |参数约束及描述：分期金额的折扣价|
-    * installmentAmount  |参数名称：分期金额的成交价| |参数约束及描述：分期金额的成交价,installment_amount=installment_official_website_amount-installment_discount_amount|
-    * installmentPeriodType  |参数名称：分期付款的周期类型| |参数约束及描述：2：月|
     *
     * @var string[]
     */
@@ -172,11 +136,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
             'amount' => 'getAmount',
             'officialWebsiteAmount' => 'getOfficialWebsiteAmount',
             'discountAmount' => 'getDiscountAmount',
-            'measureId' => 'getMeasureId',
-            'installmentOfficialWebsiteAmount' => 'getInstallmentOfficialWebsiteAmount',
-            'installmentOfficialDiscountAmount' => 'getInstallmentOfficialDiscountAmount',
-            'installmentAmount' => 'getInstallmentAmount',
-            'installmentPeriodType' => 'getInstallmentPeriodType'
+            'measureId' => 'getMeasureId'
     ];
 
     /**
@@ -243,10 +203,6 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
         $this->container['officialWebsiteAmount'] = isset($data['officialWebsiteAmount']) ? $data['officialWebsiteAmount'] : null;
         $this->container['discountAmount'] = isset($data['discountAmount']) ? $data['discountAmount'] : null;
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
-        $this->container['installmentOfficialWebsiteAmount'] = isset($data['installmentOfficialWebsiteAmount']) ? $data['installmentOfficialWebsiteAmount'] : null;
-        $this->container['installmentOfficialDiscountAmount'] = isset($data['installmentOfficialDiscountAmount']) ? $data['installmentOfficialDiscountAmount'] : null;
-        $this->container['installmentAmount'] = isset($data['installmentAmount']) ? $data['installmentAmount'] : null;
-        $this->container['installmentPeriodType'] = isset($data['installmentPeriodType']) ? $data['installmentPeriodType'] : null;
     }
 
     /**
@@ -424,102 +380,6 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     public function setMeasureId($measureId)
     {
         $this->container['measureId'] = $measureId;
-        return $this;
-    }
-
-    /**
-    * Gets installmentOfficialWebsiteAmount
-    *  |参数名称：分期金额的官网价| |参数约束及描述：分期金额的官网价|
-    *
-    * @return string|null
-    */
-    public function getInstallmentOfficialWebsiteAmount()
-    {
-        return $this->container['installmentOfficialWebsiteAmount'];
-    }
-
-    /**
-    * Sets installmentOfficialWebsiteAmount
-    *
-    * @param string|null $installmentOfficialWebsiteAmount |参数名称：分期金额的官网价| |参数约束及描述：分期金额的官网价|
-    *
-    * @return $this
-    */
-    public function setInstallmentOfficialWebsiteAmount($installmentOfficialWebsiteAmount)
-    {
-        $this->container['installmentOfficialWebsiteAmount'] = $installmentOfficialWebsiteAmount;
-        return $this;
-    }
-
-    /**
-    * Gets installmentOfficialDiscountAmount
-    *  |参数名称：分期金额的折扣价| |参数约束及描述：分期金额的折扣价|
-    *
-    * @return string|null
-    */
-    public function getInstallmentOfficialDiscountAmount()
-    {
-        return $this->container['installmentOfficialDiscountAmount'];
-    }
-
-    /**
-    * Sets installmentOfficialDiscountAmount
-    *
-    * @param string|null $installmentOfficialDiscountAmount |参数名称：分期金额的折扣价| |参数约束及描述：分期金额的折扣价|
-    *
-    * @return $this
-    */
-    public function setInstallmentOfficialDiscountAmount($installmentOfficialDiscountAmount)
-    {
-        $this->container['installmentOfficialDiscountAmount'] = $installmentOfficialDiscountAmount;
-        return $this;
-    }
-
-    /**
-    * Gets installmentAmount
-    *  |参数名称：分期金额的成交价| |参数约束及描述：分期金额的成交价,installment_amount=installment_official_website_amount-installment_discount_amount|
-    *
-    * @return string|null
-    */
-    public function getInstallmentAmount()
-    {
-        return $this->container['installmentAmount'];
-    }
-
-    /**
-    * Sets installmentAmount
-    *
-    * @param string|null $installmentAmount |参数名称：分期金额的成交价| |参数约束及描述：分期金额的成交价,installment_amount=installment_official_website_amount-installment_discount_amount|
-    *
-    * @return $this
-    */
-    public function setInstallmentAmount($installmentAmount)
-    {
-        $this->container['installmentAmount'] = $installmentAmount;
-        return $this;
-    }
-
-    /**
-    * Gets installmentPeriodType
-    *  |参数名称：分期付款的周期类型| |参数约束及描述：2：月|
-    *
-    * @return int|null
-    */
-    public function getInstallmentPeriodType()
-    {
-        return $this->container['installmentPeriodType'];
-    }
-
-    /**
-    * Sets installmentPeriodType
-    *
-    * @param int|null $installmentPeriodType |参数名称：分期付款的周期类型| |参数约束及描述：2：月|
-    *
-    * @return $this
-    */
-    public function setInstallmentPeriodType($installmentPeriodType)
-    {
-        $this->container['installmentPeriodType'] = $installmentPeriodType;
         return $this;
     }
 

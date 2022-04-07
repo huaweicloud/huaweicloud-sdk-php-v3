@@ -27,6 +27,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * regionName  |参数名称：云服务区名称| |参数约束及描述：云服务区名称|
     * cloudServiceType  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
     * resourceType  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。|
     * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。|
@@ -77,6 +79,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'regionName' => 'string',
             'cloudServiceType' => 'string',
             'resourceType' => 'string',
+            'cloudServiceTypeName' => 'string',
+            'resourceTypeName' => 'string',
             'effectiveTime' => 'string',
             'expireTime' => 'string',
             'resourceId' => 'string',
@@ -127,6 +131,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * regionName  |参数名称：云服务区名称| |参数约束及描述：云服务区名称|
     * cloudServiceType  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
     * resourceType  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。|
     * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。|
@@ -177,6 +183,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         'regionName' => null,
         'cloudServiceType' => null,
         'resourceType' => null,
+        'cloudServiceTypeName' => null,
+        'resourceTypeName' => null,
         'effectiveTime' => null,
         'expireTime' => null,
         'resourceId' => null,
@@ -248,6 +256,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * regionName  |参数名称：云服务区名称| |参数约束及描述：云服务区名称|
     * cloudServiceType  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
     * resourceType  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。|
     * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。|
@@ -298,6 +308,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'regionName' => 'region_name',
             'cloudServiceType' => 'cloud_service_type',
             'resourceType' => 'resource_type',
+            'cloudServiceTypeName' => 'cloud_service_type_name',
+            'resourceTypeName' => 'resource_type_name',
             'effectiveTime' => 'effective_time',
             'expireTime' => 'expire_time',
             'resourceId' => 'resource_id',
@@ -348,6 +360,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * regionName  |参数名称：云服务区名称| |参数约束及描述：云服务区名称|
     * cloudServiceType  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
     * resourceType  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。|
     * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。|
@@ -398,6 +412,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'regionName' => 'setRegionName',
             'cloudServiceType' => 'setCloudServiceType',
             'resourceType' => 'setResourceType',
+            'cloudServiceTypeName' => 'setCloudServiceTypeName',
+            'resourceTypeName' => 'setResourceTypeName',
             'effectiveTime' => 'setEffectiveTime',
             'expireTime' => 'setExpireTime',
             'resourceId' => 'setResourceId',
@@ -448,6 +464,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * regionName  |参数名称：云服务区名称| |参数约束及描述：云服务区名称|
     * cloudServiceType  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
     * resourceType  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
     * effectiveTime  |参数名称：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。|
     * expireTime  |参数名称：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。|
     * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。|
@@ -498,6 +516,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'regionName' => 'getRegionName',
             'cloudServiceType' => 'getCloudServiceType',
             'resourceType' => 'getResourceType',
+            'cloudServiceTypeName' => 'getCloudServiceTypeName',
+            'resourceTypeName' => 'getResourceTypeName',
             'effectiveTime' => 'getEffectiveTime',
             'expireTime' => 'getExpireTime',
             'resourceId' => 'getResourceId',
@@ -604,6 +624,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         $this->container['regionName'] = isset($data['regionName']) ? $data['regionName'] : null;
         $this->container['cloudServiceType'] = isset($data['cloudServiceType']) ? $data['cloudServiceType'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
+        $this->container['cloudServiceTypeName'] = isset($data['cloudServiceTypeName']) ? $data['cloudServiceTypeName'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
         $this->container['effectiveTime'] = isset($data['effectiveTime']) ? $data['effectiveTime'] : null;
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
@@ -832,6 +854,54 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     public function setResourceType($resourceType)
     {
         $this->container['resourceType'] = $resourceType;
+        return $this;
+    }
+
+    /**
+    * Gets cloudServiceTypeName
+    *  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    *
+    * @return string|null
+    */
+    public function getCloudServiceTypeName()
+    {
+        return $this->container['cloudServiceTypeName'];
+    }
+
+    /**
+    * Sets cloudServiceTypeName
+    *
+    * @param string|null $cloudServiceTypeName |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    *
+    * @return $this
+    */
+    public function setCloudServiceTypeName($cloudServiceTypeName)
+    {
+        $this->container['cloudServiceTypeName'] = $cloudServiceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypeName
+    *  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
+    *
+    * @return string|null
+    */
+    public function getResourceTypeName()
+    {
+        return $this->container['resourceTypeName'];
+    }
+
+    /**
+    * Sets resourceTypeName
+    *
+    * @param string|null $resourceTypeName |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
+    *
+    * @return $this
+    */
+    public function setResourceTypeName($resourceTypeName)
+    {
+        $this->container['resourceTypeName'] = $resourceTypeName;
         return $this;
     }
 

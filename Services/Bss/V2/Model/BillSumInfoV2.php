@@ -22,6 +22,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * customerId  客户账号ID。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * billType  账单类型。 0：正常1：退订2：华为核销
     * chargeMode  计费模式。 1：包年/包月3: 按需
     * amount  金额。 对于billType=1或者2的账单，该金额为负值。
@@ -30,13 +31,15 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     * discountAmount  折扣金额，华为核销或者退订的时候没有该字段。
     * measureId  金额单位。 1：元
     * accountDetails  按不同账户消费类型和付费方式区分的支付总金额。 具体请参见表3。
-    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'customerId' => 'string',
             'cloudServiceType' => 'string',
+            'cloudServiceTypeName' => 'string',
             'billType' => 'string',
             'chargeMode' => 'string',
             'amount' => 'double',
@@ -45,13 +48,15 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
             'discountAmount' => 'double',
             'measureId' => 'int',
             'accountDetails' => '\HuaweiCloud\SDK\Bss\V2\Model\BalanceTypeDeductSumV2[]',
-            'resourceTypeCode' => 'string'
+            'resourceTypeCode' => 'string',
+            'resourceTypeName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * customerId  客户账号ID。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * billType  账单类型。 0：正常1：退订2：华为核销
     * chargeMode  计费模式。 1：包年/包月3: 按需
     * amount  金额。 对于billType=1或者2的账单，该金额为负值。
@@ -60,13 +65,15 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     * discountAmount  折扣金额，华为核销或者退订的时候没有该字段。
     * measureId  金额单位。 1：元
     * accountDetails  按不同账户消费类型和付费方式区分的支付总金额。 具体请参见表3。
-    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'customerId' => null,
         'cloudServiceType' => null,
+        'cloudServiceTypeName' => null,
         'billType' => null,
         'chargeMode' => null,
         'amount' => 'double',
@@ -75,7 +82,8 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
         'discountAmount' => 'double',
         'measureId' => 'int32',
         'accountDetails' => null,
-        'resourceTypeCode' => null
+        'resourceTypeCode' => null,
+        'resourceTypeName' => null
     ];
 
     /**
@@ -103,6 +111,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     * and the value is the original name
     * customerId  客户账号ID。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * billType  账单类型。 0：正常1：退订2：华为核销
     * chargeMode  计费模式。 1：包年/包月3: 按需
     * amount  金额。 对于billType=1或者2的账单，该金额为负值。
@@ -111,13 +120,15 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     * discountAmount  折扣金额，华为核销或者退订的时候没有该字段。
     * measureId  金额单位。 1：元
     * accountDetails  按不同账户消费类型和付费方式区分的支付总金额。 具体请参见表3。
-    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'customerId' => 'customer_id',
             'cloudServiceType' => 'cloud_service_type',
+            'cloudServiceTypeName' => 'cloud_service_type_name',
             'billType' => 'bill_type',
             'chargeMode' => 'charge_mode',
             'amount' => 'amount',
@@ -126,13 +137,15 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
             'discountAmount' => 'discount_amount',
             'measureId' => 'measure_id',
             'accountDetails' => 'account_details',
-            'resourceTypeCode' => 'resource_type_code'
+            'resourceTypeCode' => 'resource_type_code',
+            'resourceTypeName' => 'resource_type_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * customerId  客户账号ID。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * billType  账单类型。 0：正常1：退订2：华为核销
     * chargeMode  计费模式。 1：包年/包月3: 按需
     * amount  金额。 对于billType=1或者2的账单，该金额为负值。
@@ -141,13 +154,15 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     * discountAmount  折扣金额，华为核销或者退订的时候没有该字段。
     * measureId  金额单位。 1：元
     * accountDetails  按不同账户消费类型和付费方式区分的支付总金额。 具体请参见表3。
-    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @var string[]
     */
     protected static $setters = [
             'customerId' => 'setCustomerId',
             'cloudServiceType' => 'setCloudServiceType',
+            'cloudServiceTypeName' => 'setCloudServiceTypeName',
             'billType' => 'setBillType',
             'chargeMode' => 'setChargeMode',
             'amount' => 'setAmount',
@@ -156,13 +171,15 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
             'discountAmount' => 'setDiscountAmount',
             'measureId' => 'setMeasureId',
             'accountDetails' => 'setAccountDetails',
-            'resourceTypeCode' => 'setResourceTypeCode'
+            'resourceTypeCode' => 'setResourceTypeCode',
+            'resourceTypeName' => 'setResourceTypeName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * customerId  客户账号ID。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * billType  账单类型。 0：正常1：退订2：华为核销
     * chargeMode  计费模式。 1：包年/包月3: 按需
     * amount  金额。 对于billType=1或者2的账单，该金额为负值。
@@ -171,13 +188,15 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     * discountAmount  折扣金额，华为核销或者退订的时候没有该字段。
     * measureId  金额单位。 1：元
     * accountDetails  按不同账户消费类型和付费方式区分的支付总金额。 具体请参见表3。
-    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @var string[]
     */
     protected static $getters = [
             'customerId' => 'getCustomerId',
             'cloudServiceType' => 'getCloudServiceType',
+            'cloudServiceTypeName' => 'getCloudServiceTypeName',
             'billType' => 'getBillType',
             'chargeMode' => 'getChargeMode',
             'amount' => 'getAmount',
@@ -186,7 +205,8 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
             'discountAmount' => 'getDiscountAmount',
             'measureId' => 'getMeasureId',
             'accountDetails' => 'getAccountDetails',
-            'resourceTypeCode' => 'getResourceTypeCode'
+            'resourceTypeCode' => 'getResourceTypeCode',
+            'resourceTypeName' => 'getResourceTypeName'
     ];
 
     /**
@@ -249,6 +269,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     {
         $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
         $this->container['cloudServiceType'] = isset($data['cloudServiceType']) ? $data['cloudServiceType'] : null;
+        $this->container['cloudServiceTypeName'] = isset($data['cloudServiceTypeName']) ? $data['cloudServiceTypeName'] : null;
         $this->container['billType'] = isset($data['billType']) ? $data['billType'] : null;
         $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
@@ -258,6 +279,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
         $this->container['accountDetails'] = isset($data['accountDetails']) ? $data['accountDetails'] : null;
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
     }
 
     /**
@@ -327,6 +349,30 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     public function setCloudServiceType($cloudServiceType)
     {
         $this->container['cloudServiceType'] = $cloudServiceType;
+        return $this;
+    }
+
+    /**
+    * Gets cloudServiceTypeName
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return string|null
+    */
+    public function getCloudServiceTypeName()
+    {
+        return $this->container['cloudServiceTypeName'];
+    }
+
+    /**
+    * Sets cloudServiceTypeName
+    *
+    * @param string|null $cloudServiceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return $this
+    */
+    public function setCloudServiceTypeName($cloudServiceTypeName)
+    {
+        $this->container['cloudServiceTypeName'] = $cloudServiceTypeName;
         return $this;
     }
 
@@ -524,7 +570,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeCode
-    *  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    *  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
     *
     * @return string|null
     */
@@ -536,13 +582,37 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeCode
     *
-    * @param string|null $resourceTypeCode 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * @param string|null $resourceTypeCode 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
     *
     * @return $this
     */
     public function setResourceTypeCode($resourceTypeCode)
     {
         $this->container['resourceTypeCode'] = $resourceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypeName
+    *  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return string|null
+    */
+    public function getResourceTypeName()
+    {
+        return $this->container['resourceTypeName'];
+    }
+
+    /**
+    * Sets resourceTypeName
+    *
+    * @param string|null $resourceTypeName 资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return $this
+    */
+    public function setResourceTypeName($resourceTypeName)
+    {
+        $this->container['resourceTypeName'] = $resourceTypeName;
         return $this;
     }
 

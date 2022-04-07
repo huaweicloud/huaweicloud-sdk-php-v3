@@ -7,8 +7,9 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ServiceType implements ModelInterface, ArrayAccess
+class ListStoredValueCardsResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,34 +17,30 @@ class ServiceType implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ServiceType';
+    protected static $openAPIModelName = 'ListStoredValueCardsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceTypeName  云服务类型的名称。
-    * serviceTypeCode  云服务类型的编码。
-    * abbreviation  云服务类型的缩写。
+    * totalCount  符合查询条件的总条数。
+    * storedValueCards  优惠券记录。 具体请参见表2。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'serviceTypeName' => 'string',
-            'serviceTypeCode' => 'string',
-            'abbreviation' => 'string'
+            'totalCount' => 'int',
+            'storedValueCards' => '\HuaweiCloud\SDK\Bss\V2\Model\UserStoredValueCard[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceTypeName  云服务类型的名称。
-    * serviceTypeCode  云服务类型的编码。
-    * abbreviation  云服务类型的缩写。
+    * totalCount  符合查询条件的总条数。
+    * storedValueCards  优惠券记录。 具体请参见表2。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'serviceTypeName' => null,
-        'serviceTypeCode' => null,
-        'abbreviation' => null
+        'totalCount' => 'int32',
+        'storedValueCards' => null
     ];
 
     /**
@@ -69,44 +66,38 @@ class ServiceType implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceTypeName  云服务类型的名称。
-    * serviceTypeCode  云服务类型的编码。
-    * abbreviation  云服务类型的缩写。
+    * totalCount  符合查询条件的总条数。
+    * storedValueCards  优惠券记录。 具体请参见表2。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'serviceTypeName' => 'service_type_name',
-            'serviceTypeCode' => 'service_type_code',
-            'abbreviation' => 'abbreviation'
+            'totalCount' => 'total_count',
+            'storedValueCards' => 'stored_value_cards'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceTypeName  云服务类型的名称。
-    * serviceTypeCode  云服务类型的编码。
-    * abbreviation  云服务类型的缩写。
+    * totalCount  符合查询条件的总条数。
+    * storedValueCards  优惠券记录。 具体请参见表2。
     *
     * @var string[]
     */
     protected static $setters = [
-            'serviceTypeName' => 'setServiceTypeName',
-            'serviceTypeCode' => 'setServiceTypeCode',
-            'abbreviation' => 'setAbbreviation'
+            'totalCount' => 'setTotalCount',
+            'storedValueCards' => 'setStoredValueCards'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceTypeName  云服务类型的名称。
-    * serviceTypeCode  云服务类型的编码。
-    * abbreviation  云服务类型的缩写。
+    * totalCount  符合查询条件的总条数。
+    * storedValueCards  优惠券记录。 具体请参见表2。
     *
     * @var string[]
     */
     protected static $getters = [
-            'serviceTypeName' => 'getServiceTypeName',
-            'serviceTypeCode' => 'getServiceTypeCode',
-            'abbreviation' => 'getAbbreviation'
+            'totalCount' => 'getTotalCount',
+            'storedValueCards' => 'getStoredValueCards'
     ];
 
     /**
@@ -167,9 +158,8 @@ class ServiceType implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
-        $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
-        $this->container['abbreviation'] = isset($data['abbreviation']) ? $data['abbreviation'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['storedValueCards'] = isset($data['storedValueCards']) ? $data['storedValueCards'] : null;
     }
 
     /**
@@ -195,74 +185,50 @@ class ServiceType implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets serviceTypeName
-    *  云服务类型的名称。
+    * Gets totalCount
+    *  符合查询条件的总条数。
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getServiceTypeName()
+    public function getTotalCount()
     {
-        return $this->container['serviceTypeName'];
+        return $this->container['totalCount'];
     }
 
     /**
-    * Sets serviceTypeName
+    * Sets totalCount
     *
-    * @param string|null $serviceTypeName 云服务类型的名称。
+    * @param int|null $totalCount 符合查询条件的总条数。
     *
     * @return $this
     */
-    public function setServiceTypeName($serviceTypeName)
+    public function setTotalCount($totalCount)
     {
-        $this->container['serviceTypeName'] = $serviceTypeName;
+        $this->container['totalCount'] = $totalCount;
         return $this;
     }
 
     /**
-    * Gets serviceTypeCode
-    *  云服务类型的编码。
+    * Gets storedValueCards
+    *  优惠券记录。 具体请参见表2。
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Bss\V2\Model\UserStoredValueCard[]|null
     */
-    public function getServiceTypeCode()
+    public function getStoredValueCards()
     {
-        return $this->container['serviceTypeCode'];
+        return $this->container['storedValueCards'];
     }
 
     /**
-    * Sets serviceTypeCode
+    * Sets storedValueCards
     *
-    * @param string|null $serviceTypeCode 云服务类型的编码。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\UserStoredValueCard[]|null $storedValueCards 优惠券记录。 具体请参见表2。
     *
     * @return $this
     */
-    public function setServiceTypeCode($serviceTypeCode)
+    public function setStoredValueCards($storedValueCards)
     {
-        $this->container['serviceTypeCode'] = $serviceTypeCode;
-        return $this;
-    }
-
-    /**
-    * Gets abbreviation
-    *  云服务类型的缩写。
-    *
-    * @return string|null
-    */
-    public function getAbbreviation()
-    {
-        return $this->container['abbreviation'];
-    }
-
-    /**
-    * Sets abbreviation
-    *
-    * @param string|null $abbreviation 云服务类型的缩写。
-    *
-    * @return $this
-    */
-    public function setAbbreviation($abbreviation)
-    {
-        $this->container['abbreviation'] = $abbreviation;
+        $this->container['storedValueCards'] = $storedValueCards;
         return $this;
     }
 

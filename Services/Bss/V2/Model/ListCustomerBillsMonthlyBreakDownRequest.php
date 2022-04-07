@@ -22,10 +22,10 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
     * sharedMonth  查询分摊成本的月份，格式：YYYY-MM。
-    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例
     * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
@@ -40,10 +40,10 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     protected static $openAPITypes = [
             'xLanguage' => 'string',
             'sharedMonth' => 'string',
-            'chargingMode' => 'int',
             'serviceTypeCode' => 'string',
             'resourceTypeCode' => 'string',
             'regionCode' => 'string',
+            'chargingMode' => 'int',
             'billType' => 'int',
             'offset' => 'int',
             'limit' => 'int',
@@ -58,10 +58,10 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
     * sharedMonth  查询分摊成本的月份，格式：YYYY-MM。
-    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例
     * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
@@ -76,10 +76,10 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     protected static $openAPIFormats = [
         'xLanguage' => null,
         'sharedMonth' => null,
-        'chargingMode' => 'int32',
         'serviceTypeCode' => null,
         'resourceTypeCode' => null,
         'regionCode' => null,
+        'chargingMode' => 'int32',
         'billType' => 'int32',
         'offset' => 'int32',
         'limit' => 'int32',
@@ -115,10 +115,10 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     * and the value is the original name
     * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
     * sharedMonth  查询分摊成本的月份，格式：YYYY-MM。
-    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例
     * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
@@ -133,10 +133,10 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     protected static $attributeMap = [
             'xLanguage' => 'X-Language',
             'sharedMonth' => 'shared_month',
-            'chargingMode' => 'charging_mode',
             'serviceTypeCode' => 'service_type_code',
             'resourceTypeCode' => 'resource_type_code',
             'regionCode' => 'region_code',
+            'chargingMode' => 'charging_mode',
             'billType' => 'bill_type',
             'offset' => 'offset',
             'limit' => 'limit',
@@ -151,10 +151,10 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
     * sharedMonth  查询分摊成本的月份，格式：YYYY-MM。
-    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例
     * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
@@ -169,10 +169,10 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     protected static $setters = [
             'xLanguage' => 'setXLanguage',
             'sharedMonth' => 'setSharedMonth',
-            'chargingMode' => 'setChargingMode',
             'serviceTypeCode' => 'setServiceTypeCode',
             'resourceTypeCode' => 'setResourceTypeCode',
             'regionCode' => 'setRegionCode',
+            'chargingMode' => 'setChargingMode',
             'billType' => 'setBillType',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
@@ -187,10 +187,10 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
     * sharedMonth  查询分摊成本的月份，格式：YYYY-MM。
-    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例
     * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
@@ -205,10 +205,10 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     protected static $getters = [
             'xLanguage' => 'getXLanguage',
             'sharedMonth' => 'getSharedMonth',
-            'chargingMode' => 'getChargingMode',
             'serviceTypeCode' => 'getServiceTypeCode',
             'resourceTypeCode' => 'getResourceTypeCode',
             'regionCode' => 'getRegionCode',
+            'chargingMode' => 'getChargingMode',
             'billType' => 'getBillType',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
@@ -279,10 +279,10 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     {
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'zh_cn';
         $this->container['sharedMonth'] = isset($data['sharedMonth']) ? $data['sharedMonth'] : null;
-        $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
         $this->container['regionCode'] = isset($data['regionCode']) ? $data['regionCode'] : null;
+        $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['billType'] = isset($data['billType']) ? $data['billType'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
@@ -391,30 +391,6 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     }
 
     /**
-    * Gets chargingMode
-    *  计费模式。1：包年/包月3：按需10：预留实例
-    *
-    * @return int|null
-    */
-    public function getChargingMode()
-    {
-        return $this->container['chargingMode'];
-    }
-
-    /**
-    * Sets chargingMode
-    *
-    * @param int|null $chargingMode 计费模式。1：包年/包月3：按需10：预留实例
-    *
-    * @return $this
-    */
-    public function setChargingMode($chargingMode)
-    {
-        $this->container['chargingMode'] = $chargingMode;
-        return $this;
-    }
-
-    /**
     * Gets serviceTypeCode
     *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
@@ -483,6 +459,30 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     public function setRegionCode($regionCode)
     {
         $this->container['regionCode'] = $regionCode;
+        return $this;
+    }
+
+    /**
+    * Gets chargingMode
+    *  计费模式。1：包年/包月3：按需10：预留实例
+    *
+    * @return int|null
+    */
+    public function getChargingMode()
+    {
+        return $this->container['chargingMode'];
+    }
+
+    /**
+    * Sets chargingMode
+    *
+    * @param int|null $chargingMode 计费模式。1：包年/包月3：按需10：预留实例
+    *
+    * @return $this
+    */
+    public function setChargingMode($chargingMode)
+    {
+        $this->container['chargingMode'] = $chargingMode;
         return $this;
     }
 

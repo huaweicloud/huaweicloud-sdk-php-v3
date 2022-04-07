@@ -28,6 +28,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * regionName  |参数名称：云服务区名称| |参数的约束及描述：云服务区名称|
     * cloudServiceType  |参数名称：云服务类型编码| |参数的约束及描述：该参数非必填,，例如OBS的云服务类型编码为“hws.service.type.obs”|
     * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：该参数非必填，例如ECS的VM为“hws.resource.type.vm”。|
+    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
     * resInstanceId  |参数名称：资源实例ID| |参数的约束及描述：该参数非必填|
     * resourceName  |参数名称：资源名称| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
     * resourceTag  |参数名称：资源标签| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
@@ -47,6 +49,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * officialAmount  |参数名称：官网价| |参数的约束及描述：该参数非必填。|
     * discountAmount  |参数名称：对应官网价折扣金额| |参数的约束及描述：该参数非必填。|
     * measureId  |参数名称：金额单位。1: 元| |参数的约束及描述：该参数非必填|
+    * periodType  |参数名称：周期类型：19：年 20：月 24：天 25：小时 5：一次性| |参数的约束及描述：该参数非必填|
     *
     * @var string[]
     */
@@ -59,6 +62,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'regionName' => 'string',
             'cloudServiceType' => 'string',
             'resourceTypeCode' => 'string',
+            'cloudServiceTypeName' => 'string',
+            'resourceTypeName' => 'string',
             'resInstanceId' => 'string',
             'resourceName' => 'string',
             'resourceTag' => 'string',
@@ -77,7 +82,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'adjustmentAmount' => 'float',
             'officialAmount' => 'float',
             'discountAmount' => 'float',
-            'measureId' => 'int'
+            'measureId' => 'int',
+            'periodType' => 'int'
     ];
 
     /**
@@ -90,6 +96,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * regionName  |参数名称：云服务区名称| |参数的约束及描述：云服务区名称|
     * cloudServiceType  |参数名称：云服务类型编码| |参数的约束及描述：该参数非必填,，例如OBS的云服务类型编码为“hws.service.type.obs”|
     * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：该参数非必填，例如ECS的VM为“hws.resource.type.vm”。|
+    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
     * resInstanceId  |参数名称：资源实例ID| |参数的约束及描述：该参数非必填|
     * resourceName  |参数名称：资源名称| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
     * resourceTag  |参数名称：资源标签| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
@@ -109,6 +117,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * officialAmount  |参数名称：官网价| |参数的约束及描述：该参数非必填。|
     * discountAmount  |参数名称：对应官网价折扣金额| |参数的约束及描述：该参数非必填。|
     * measureId  |参数名称：金额单位。1: 元| |参数的约束及描述：该参数非必填|
+    * periodType  |参数名称：周期类型：19：年 20：月 24：天 25：小时 5：一次性| |参数的约束及描述：该参数非必填|
     *
     * @var string[]
     */
@@ -121,6 +130,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         'regionName' => null,
         'cloudServiceType' => null,
         'resourceTypeCode' => null,
+        'cloudServiceTypeName' => null,
+        'resourceTypeName' => null,
         'resInstanceId' => null,
         'resourceName' => null,
         'resourceTag' => null,
@@ -139,7 +150,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         'adjustmentAmount' => 'bigdecimal',
         'officialAmount' => 'bigdecimal',
         'discountAmount' => 'bigdecimal',
-        'measureId' => 'int32'
+        'measureId' => 'int32',
+        'periodType' => 'int32'
     ];
 
     /**
@@ -173,6 +185,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * regionName  |参数名称：云服务区名称| |参数的约束及描述：云服务区名称|
     * cloudServiceType  |参数名称：云服务类型编码| |参数的约束及描述：该参数非必填,，例如OBS的云服务类型编码为“hws.service.type.obs”|
     * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：该参数非必填，例如ECS的VM为“hws.resource.type.vm”。|
+    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
     * resInstanceId  |参数名称：资源实例ID| |参数的约束及描述：该参数非必填|
     * resourceName  |参数名称：资源名称| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
     * resourceTag  |参数名称：资源标签| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
@@ -192,6 +206,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * officialAmount  |参数名称：官网价| |参数的约束及描述：该参数非必填。|
     * discountAmount  |参数名称：对应官网价折扣金额| |参数的约束及描述：该参数非必填。|
     * measureId  |参数名称：金额单位。1: 元| |参数的约束及描述：该参数非必填|
+    * periodType  |参数名称：周期类型：19：年 20：月 24：天 25：小时 5：一次性| |参数的约束及描述：该参数非必填|
     *
     * @var string[]
     */
@@ -204,6 +219,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'regionName' => 'region_name',
             'cloudServiceType' => 'cloud_service_type',
             'resourceTypeCode' => 'resource_Type_code',
+            'cloudServiceTypeName' => 'cloud_service_type_name',
+            'resourceTypeName' => 'resource_type_name',
             'resInstanceId' => 'res_instance_id',
             'resourceName' => 'resource_name',
             'resourceTag' => 'resource_tag',
@@ -222,7 +239,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'adjustmentAmount' => 'adjustment_amount',
             'officialAmount' => 'official_amount',
             'discountAmount' => 'discount_amount',
-            'measureId' => 'measure_id'
+            'measureId' => 'measure_id',
+            'periodType' => 'period_type'
     ];
 
     /**
@@ -235,6 +253,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * regionName  |参数名称：云服务区名称| |参数的约束及描述：云服务区名称|
     * cloudServiceType  |参数名称：云服务类型编码| |参数的约束及描述：该参数非必填,，例如OBS的云服务类型编码为“hws.service.type.obs”|
     * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：该参数非必填，例如ECS的VM为“hws.resource.type.vm”。|
+    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
     * resInstanceId  |参数名称：资源实例ID| |参数的约束及描述：该参数非必填|
     * resourceName  |参数名称：资源名称| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
     * resourceTag  |参数名称：资源标签| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
@@ -254,6 +274,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * officialAmount  |参数名称：官网价| |参数的约束及描述：该参数非必填。|
     * discountAmount  |参数名称：对应官网价折扣金额| |参数的约束及描述：该参数非必填。|
     * measureId  |参数名称：金额单位。1: 元| |参数的约束及描述：该参数非必填|
+    * periodType  |参数名称：周期类型：19：年 20：月 24：天 25：小时 5：一次性| |参数的约束及描述：该参数非必填|
     *
     * @var string[]
     */
@@ -266,6 +287,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'regionName' => 'setRegionName',
             'cloudServiceType' => 'setCloudServiceType',
             'resourceTypeCode' => 'setResourceTypeCode',
+            'cloudServiceTypeName' => 'setCloudServiceTypeName',
+            'resourceTypeName' => 'setResourceTypeName',
             'resInstanceId' => 'setResInstanceId',
             'resourceName' => 'setResourceName',
             'resourceTag' => 'setResourceTag',
@@ -284,7 +307,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'adjustmentAmount' => 'setAdjustmentAmount',
             'officialAmount' => 'setOfficialAmount',
             'discountAmount' => 'setDiscountAmount',
-            'measureId' => 'setMeasureId'
+            'measureId' => 'setMeasureId',
+            'periodType' => 'setPeriodType'
     ];
 
     /**
@@ -297,6 +321,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * regionName  |参数名称：云服务区名称| |参数的约束及描述：云服务区名称|
     * cloudServiceType  |参数名称：云服务类型编码| |参数的约束及描述：该参数非必填,，例如OBS的云服务类型编码为“hws.service.type.obs”|
     * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：该参数非必填，例如ECS的VM为“hws.resource.type.vm”。|
+    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
     * resInstanceId  |参数名称：资源实例ID| |参数的约束及描述：该参数非必填|
     * resourceName  |参数名称：资源名称| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
     * resourceTag  |参数名称：资源标签| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
@@ -316,6 +342,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * officialAmount  |参数名称：官网价| |参数的约束及描述：该参数非必填。|
     * discountAmount  |参数名称：对应官网价折扣金额| |参数的约束及描述：该参数非必填。|
     * measureId  |参数名称：金额单位。1: 元| |参数的约束及描述：该参数非必填|
+    * periodType  |参数名称：周期类型：19：年 20：月 24：天 25：小时 5：一次性| |参数的约束及描述：该参数非必填|
     *
     * @var string[]
     */
@@ -328,6 +355,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'regionName' => 'getRegionName',
             'cloudServiceType' => 'getCloudServiceType',
             'resourceTypeCode' => 'getResourceTypeCode',
+            'cloudServiceTypeName' => 'getCloudServiceTypeName',
+            'resourceTypeName' => 'getResourceTypeName',
             'resInstanceId' => 'getResInstanceId',
             'resourceName' => 'getResourceName',
             'resourceTag' => 'getResourceTag',
@@ -346,7 +375,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'adjustmentAmount' => 'getAdjustmentAmount',
             'officialAmount' => 'getOfficialAmount',
             'discountAmount' => 'getDiscountAmount',
-            'measureId' => 'getMeasureId'
+            'measureId' => 'getMeasureId',
+            'periodType' => 'getPeriodType'
     ];
 
     /**
@@ -415,6 +445,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         $this->container['regionName'] = isset($data['regionName']) ? $data['regionName'] : null;
         $this->container['cloudServiceType'] = isset($data['cloudServiceType']) ? $data['cloudServiceType'] : null;
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
+        $this->container['cloudServiceTypeName'] = isset($data['cloudServiceTypeName']) ? $data['cloudServiceTypeName'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
         $this->container['resInstanceId'] = isset($data['resInstanceId']) ? $data['resInstanceId'] : null;
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['resourceTag'] = isset($data['resourceTag']) ? $data['resourceTag'] : null;
@@ -434,6 +466,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         $this->container['officialAmount'] = isset($data['officialAmount']) ? $data['officialAmount'] : null;
         $this->container['discountAmount'] = isset($data['discountAmount']) ? $data['discountAmount'] : null;
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
+        $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
     }
 
     /**
@@ -671,6 +704,54 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     public function setResourceTypeCode($resourceTypeCode)
     {
         $this->container['resourceTypeCode'] = $resourceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets cloudServiceTypeName
+    *  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    *
+    * @return string|null
+    */
+    public function getCloudServiceTypeName()
+    {
+        return $this->container['cloudServiceTypeName'];
+    }
+
+    /**
+    * Sets cloudServiceTypeName
+    *
+    * @param string|null $cloudServiceTypeName |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    *
+    * @return $this
+    */
+    public function setCloudServiceTypeName($cloudServiceTypeName)
+    {
+        $this->container['cloudServiceTypeName'] = $cloudServiceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypeName
+    *  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
+    *
+    * @return string|null
+    */
+    public function getResourceTypeName()
+    {
+        return $this->container['resourceTypeName'];
+    }
+
+    /**
+    * Sets resourceTypeName
+    *
+    * @param string|null $resourceTypeName |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
+    *
+    * @return $this
+    */
+    public function setResourceTypeName($resourceTypeName)
+    {
+        $this->container['resourceTypeName'] = $resourceTypeName;
         return $this;
     }
 
@@ -1127,6 +1208,30 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     public function setMeasureId($measureId)
     {
         $this->container['measureId'] = $measureId;
+        return $this;
+    }
+
+    /**
+    * Gets periodType
+    *  |参数名称：周期类型：19：年 20：月 24：天 25：小时 5：一次性| |参数的约束及描述：该参数非必填|
+    *
+    * @return int|null
+    */
+    public function getPeriodType()
+    {
+        return $this->container['periodType'];
+    }
+
+    /**
+    * Sets periodType
+    *
+    * @param int|null $periodType |参数名称：周期类型：19：年 20：月 24：天 25：小时 5：一次性| |参数的约束及描述：该参数非必填|
+    *
+    * @return $this
+    */
+    public function setPeriodType($periodType)
+    {
+        $this->container['periodType'] = $periodType;
         return $this;
     }
 

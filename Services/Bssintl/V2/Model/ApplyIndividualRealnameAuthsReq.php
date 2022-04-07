@@ -28,7 +28,6 @@ class ApplyIndividualRealnameAuthsReq implements ModelInterface, ArrayAccess
     * verifiedNumber  |参数名称：证件号码。| |参数约束及描述：证件号码。|
     * changeType  |参数名称：变更类型：-1：首次实名认证| |参数的约束及描述：变更类型：-1：首次实名认证|
     * xaccountType  |参数名称：华为分给合作伙伴的平台标识。该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值如何获取xaccountType的取值。| |参数约束及描述：华为分给合作伙伴的平台标识。该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值如何获取xaccountType的取值。|
-    * bankCardInfo  bankCardInfo
     *
     * @var string[]
     */
@@ -40,8 +39,7 @@ class ApplyIndividualRealnameAuthsReq implements ModelInterface, ArrayAccess
             'name' => 'string',
             'verifiedNumber' => 'string',
             'changeType' => 'int',
-            'xaccountType' => 'string',
-            'bankCardInfo' => '\HuaweiCloud\SDK\Bssintl\V2\Model\BankCardInfoV2'
+            'xaccountType' => 'string'
     ];
 
     /**
@@ -54,7 +52,6 @@ class ApplyIndividualRealnameAuthsReq implements ModelInterface, ArrayAccess
     * verifiedNumber  |参数名称：证件号码。| |参数约束及描述：证件号码。|
     * changeType  |参数名称：变更类型：-1：首次实名认证| |参数的约束及描述：变更类型：-1：首次实名认证|
     * xaccountType  |参数名称：华为分给合作伙伴的平台标识。该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值如何获取xaccountType的取值。| |参数约束及描述：华为分给合作伙伴的平台标识。该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值如何获取xaccountType的取值。|
-    * bankCardInfo  bankCardInfo
     *
     * @var string[]
     */
@@ -66,8 +63,7 @@ class ApplyIndividualRealnameAuthsReq implements ModelInterface, ArrayAccess
         'name' => null,
         'verifiedNumber' => null,
         'changeType' => 'int32',
-        'xaccountType' => null,
-        'bankCardInfo' => null
+        'xaccountType' => null
     ];
 
     /**
@@ -101,7 +97,6 @@ class ApplyIndividualRealnameAuthsReq implements ModelInterface, ArrayAccess
     * verifiedNumber  |参数名称：证件号码。| |参数约束及描述：证件号码。|
     * changeType  |参数名称：变更类型：-1：首次实名认证| |参数的约束及描述：变更类型：-1：首次实名认证|
     * xaccountType  |参数名称：华为分给合作伙伴的平台标识。该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值如何获取xaccountType的取值。| |参数约束及描述：华为分给合作伙伴的平台标识。该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值如何获取xaccountType的取值。|
-    * bankCardInfo  bankCardInfo
     *
     * @var string[]
     */
@@ -113,8 +108,7 @@ class ApplyIndividualRealnameAuthsReq implements ModelInterface, ArrayAccess
             'name' => 'name',
             'verifiedNumber' => 'verified_number',
             'changeType' => 'change_type',
-            'xaccountType' => 'xaccount_type',
-            'bankCardInfo' => 'bank_card_info'
+            'xaccountType' => 'xaccount_type'
     ];
 
     /**
@@ -127,7 +121,6 @@ class ApplyIndividualRealnameAuthsReq implements ModelInterface, ArrayAccess
     * verifiedNumber  |参数名称：证件号码。| |参数约束及描述：证件号码。|
     * changeType  |参数名称：变更类型：-1：首次实名认证| |参数的约束及描述：变更类型：-1：首次实名认证|
     * xaccountType  |参数名称：华为分给合作伙伴的平台标识。该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值如何获取xaccountType的取值。| |参数约束及描述：华为分给合作伙伴的平台标识。该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值如何获取xaccountType的取值。|
-    * bankCardInfo  bankCardInfo
     *
     * @var string[]
     */
@@ -139,8 +132,7 @@ class ApplyIndividualRealnameAuthsReq implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'verifiedNumber' => 'setVerifiedNumber',
             'changeType' => 'setChangeType',
-            'xaccountType' => 'setXaccountType',
-            'bankCardInfo' => 'setBankCardInfo'
+            'xaccountType' => 'setXaccountType'
     ];
 
     /**
@@ -153,7 +145,6 @@ class ApplyIndividualRealnameAuthsReq implements ModelInterface, ArrayAccess
     * verifiedNumber  |参数名称：证件号码。| |参数约束及描述：证件号码。|
     * changeType  |参数名称：变更类型：-1：首次实名认证| |参数的约束及描述：变更类型：-1：首次实名认证|
     * xaccountType  |参数名称：华为分给合作伙伴的平台标识。该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值如何获取xaccountType的取值。| |参数约束及描述：华为分给合作伙伴的平台标识。该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值如何获取xaccountType的取值。|
-    * bankCardInfo  bankCardInfo
     *
     * @var string[]
     */
@@ -165,8 +156,7 @@ class ApplyIndividualRealnameAuthsReq implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'verifiedNumber' => 'getVerifiedNumber',
             'changeType' => 'getChangeType',
-            'xaccountType' => 'getXaccountType',
-            'bankCardInfo' => 'getBankCardInfo'
+            'xaccountType' => 'getXaccountType'
     ];
 
     /**
@@ -235,7 +225,6 @@ class ApplyIndividualRealnameAuthsReq implements ModelInterface, ArrayAccess
         $this->container['verifiedNumber'] = isset($data['verifiedNumber']) ? $data['verifiedNumber'] : null;
         $this->container['changeType'] = isset($data['changeType']) ? $data['changeType'] : null;
         $this->container['xaccountType'] = isset($data['xaccountType']) ? $data['xaccountType'] : null;
-        $this->container['bankCardInfo'] = isset($data['bankCardInfo']) ? $data['bankCardInfo'] : null;
     }
 
     /**
@@ -509,30 +498,6 @@ class ApplyIndividualRealnameAuthsReq implements ModelInterface, ArrayAccess
     public function setXaccountType($xaccountType)
     {
         $this->container['xaccountType'] = $xaccountType;
-        return $this;
-    }
-
-    /**
-    * Gets bankCardInfo
-    *  bankCardInfo
-    *
-    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\BankCardInfoV2|null
-    */
-    public function getBankCardInfo()
-    {
-        return $this->container['bankCardInfo'];
-    }
-
-    /**
-    * Sets bankCardInfo
-    *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\BankCardInfoV2|null $bankCardInfo bankCardInfo
-    *
-    * @return $this
-    */
-    public function setBankCardInfo($bankCardInfo)
-    {
-        $this->container['bankCardInfo'] = $bankCardInfo;
         return $this;
     }
 

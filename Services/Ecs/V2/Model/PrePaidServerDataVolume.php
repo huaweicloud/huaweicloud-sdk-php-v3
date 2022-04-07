@@ -225,6 +225,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
     const VOLUMETYPE_GPSSD = 'GPSSD';
     const VOLUMETYPE_CO_P1 = 'co-p1';
     const VOLUMETYPE_UH_L1 = 'uh-l1';
+    const VOLUMETYPE_ESSD = 'ESSD';
     const CLUSTER_TYPE_DSS = 'DSS';
     
 
@@ -242,6 +243,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
             self::VOLUMETYPE_GPSSD,
             self::VOLUMETYPE_CO_P1,
             self::VOLUMETYPE_UH_L1,
+            self::VOLUMETYPE_ESSD,
         ];
     }
 

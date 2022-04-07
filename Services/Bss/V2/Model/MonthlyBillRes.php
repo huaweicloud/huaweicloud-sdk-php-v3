@@ -28,6 +28,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * resInstanceId  资源实例ID。
     * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
     * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
@@ -47,6 +49,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * officialAmount  官网价。
     * discountAmount  对应官网价折扣金额。
     * measureId  金额单位。 1：元
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     *
     * @var string[]
     */
@@ -59,6 +62,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'regionName' => 'string',
             'cloudServiceType' => 'string',
             'resourceTypeCode' => 'string',
+            'cloudServiceTypeName' => 'string',
+            'resourceTypeName' => 'string',
             'resInstanceId' => 'string',
             'resourceName' => 'string',
             'resourceTag' => 'string',
@@ -77,7 +82,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'adjustmentAmount' => 'double',
             'officialAmount' => 'double',
             'discountAmount' => 'double',
-            'measureId' => 'int'
+            'measureId' => 'int',
+            'periodType' => 'int'
     ];
 
     /**
@@ -90,6 +96,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * resInstanceId  资源实例ID。
     * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
     * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
@@ -109,6 +117,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * officialAmount  官网价。
     * discountAmount  对应官网价折扣金额。
     * measureId  金额单位。 1：元
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     *
     * @var string[]
     */
@@ -121,6 +130,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         'regionName' => null,
         'cloudServiceType' => null,
         'resourceTypeCode' => null,
+        'cloudServiceTypeName' => null,
+        'resourceTypeName' => null,
         'resInstanceId' => null,
         'resourceName' => null,
         'resourceTag' => null,
@@ -139,7 +150,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         'adjustmentAmount' => 'double',
         'officialAmount' => 'double',
         'discountAmount' => 'double',
-        'measureId' => 'int32'
+        'measureId' => 'int32',
+        'periodType' => 'int32'
     ];
 
     /**
@@ -173,6 +185,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * resInstanceId  资源实例ID。
     * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
     * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
@@ -192,6 +206,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * officialAmount  官网价。
     * discountAmount  对应官网价折扣金额。
     * measureId  金额单位。 1：元
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     *
     * @var string[]
     */
@@ -204,6 +219,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'regionName' => 'region_name',
             'cloudServiceType' => 'cloud_service_type',
             'resourceTypeCode' => 'resource_Type_code',
+            'cloudServiceTypeName' => 'cloud_service_type_name',
+            'resourceTypeName' => 'resource_type_name',
             'resInstanceId' => 'res_instance_id',
             'resourceName' => 'resource_name',
             'resourceTag' => 'resource_tag',
@@ -222,7 +239,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'adjustmentAmount' => 'adjustment_amount',
             'officialAmount' => 'official_amount',
             'discountAmount' => 'discount_amount',
-            'measureId' => 'measure_id'
+            'measureId' => 'measure_id',
+            'periodType' => 'period_type'
     ];
 
     /**
@@ -235,6 +253,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * resInstanceId  资源实例ID。
     * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
     * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
@@ -254,6 +274,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * officialAmount  官网价。
     * discountAmount  对应官网价折扣金额。
     * measureId  金额单位。 1：元
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     *
     * @var string[]
     */
@@ -266,6 +287,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'regionName' => 'setRegionName',
             'cloudServiceType' => 'setCloudServiceType',
             'resourceTypeCode' => 'setResourceTypeCode',
+            'cloudServiceTypeName' => 'setCloudServiceTypeName',
+            'resourceTypeName' => 'setResourceTypeName',
             'resInstanceId' => 'setResInstanceId',
             'resourceName' => 'setResourceName',
             'resourceTag' => 'setResourceTag',
@@ -284,7 +307,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'adjustmentAmount' => 'setAdjustmentAmount',
             'officialAmount' => 'setOfficialAmount',
             'discountAmount' => 'setDiscountAmount',
-            'measureId' => 'setMeasureId'
+            'measureId' => 'setMeasureId',
+            'periodType' => 'setPeriodType'
     ];
 
     /**
@@ -297,6 +321,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * resInstanceId  资源实例ID。
     * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
     * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
@@ -316,6 +342,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * officialAmount  官网价。
     * discountAmount  对应官网价折扣金额。
     * measureId  金额单位。 1：元
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     *
     * @var string[]
     */
@@ -328,6 +355,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'regionName' => 'getRegionName',
             'cloudServiceType' => 'getCloudServiceType',
             'resourceTypeCode' => 'getResourceTypeCode',
+            'cloudServiceTypeName' => 'getCloudServiceTypeName',
+            'resourceTypeName' => 'getResourceTypeName',
             'resInstanceId' => 'getResInstanceId',
             'resourceName' => 'getResourceName',
             'resourceTag' => 'getResourceTag',
@@ -346,7 +375,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'adjustmentAmount' => 'getAdjustmentAmount',
             'officialAmount' => 'getOfficialAmount',
             'discountAmount' => 'getDiscountAmount',
-            'measureId' => 'getMeasureId'
+            'measureId' => 'getMeasureId',
+            'periodType' => 'getPeriodType'
     ];
 
     /**
@@ -415,6 +445,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         $this->container['regionName'] = isset($data['regionName']) ? $data['regionName'] : null;
         $this->container['cloudServiceType'] = isset($data['cloudServiceType']) ? $data['cloudServiceType'] : null;
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
+        $this->container['cloudServiceTypeName'] = isset($data['cloudServiceTypeName']) ? $data['cloudServiceTypeName'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
         $this->container['resInstanceId'] = isset($data['resInstanceId']) ? $data['resInstanceId'] : null;
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['resourceTag'] = isset($data['resourceTag']) ? $data['resourceTag'] : null;
@@ -434,6 +466,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         $this->container['officialAmount'] = isset($data['officialAmount']) ? $data['officialAmount'] : null;
         $this->container['discountAmount'] = isset($data['discountAmount']) ? $data['discountAmount'] : null;
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
+        $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
     }
 
     /**
@@ -671,6 +704,54 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     public function setResourceTypeCode($resourceTypeCode)
     {
         $this->container['resourceTypeCode'] = $resourceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets cloudServiceTypeName
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return string|null
+    */
+    public function getCloudServiceTypeName()
+    {
+        return $this->container['cloudServiceTypeName'];
+    }
+
+    /**
+    * Sets cloudServiceTypeName
+    *
+    * @param string|null $cloudServiceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return $this
+    */
+    public function setCloudServiceTypeName($cloudServiceTypeName)
+    {
+        $this->container['cloudServiceTypeName'] = $cloudServiceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypeName
+    *  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return string|null
+    */
+    public function getResourceTypeName()
+    {
+        return $this->container['resourceTypeName'];
+    }
+
+    /**
+    * Sets resourceTypeName
+    *
+    * @param string|null $resourceTypeName 资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return $this
+    */
+    public function setResourceTypeName($resourceTypeName)
+    {
+        $this->container['resourceTypeName'] = $resourceTypeName;
         return $this;
     }
 
@@ -1127,6 +1208,30 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     public function setMeasureId($measureId)
     {
         $this->container['measureId'] = $measureId;
+        return $this;
+    }
+
+    /**
+    * Gets periodType
+    *  周期类型： 19：年20：月24：天25：小时5：一次性
+    *
+    * @return int|null
+    */
+    public function getPeriodType()
+    {
+        return $this->container['periodType'];
+    }
+
+    /**
+    * Sets periodType
+    *
+    * @param int|null $periodType 周期类型： 19：年20：月24：天25：小时5：一次性
+    *
+    * @return $this
+    */
+    public function setPeriodType($periodType)
+    {
+        $this->container['periodType'] = $periodType;
         return $this;
     }
 

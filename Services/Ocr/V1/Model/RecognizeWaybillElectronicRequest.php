@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Bssintl\V2\Model;
+namespace HuaweiCloud\SDK\Ocr\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListOrderCouponsByOrderIdRequest implements ModelInterface, ArrayAccess
+class RecognizeWaybillElectronicRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,26 @@ class ListOrderCouponsByOrderIdRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListOrderCouponsByOrderIdRequest';
+    protected static $openAPIModelName = 'RecognizeWaybillElectronicRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'orderId' => 'string'
+            'body' => '\HuaweiCloud\SDK\Ocr\V1\Model\WaybillElectronicRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'orderId' => null
+        'body' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class ListOrderCouponsByOrderIdRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'orderId' => 'order_id'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'orderId' => 'setOrderId'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'orderId' => 'getOrderId'
+            'body' => 'getBody'
     ];
 
     /**
@@ -147,7 +147,7 @@ class ListOrderCouponsByOrderIdRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -158,9 +158,6 @@ class ListOrderCouponsByOrderIdRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['orderId'] === null) {
-            $invalidProperties[] = "'orderId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -176,26 +173,26 @@ class ListOrderCouponsByOrderIdRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets orderId
-    *  |参数名称：订单ID。| |参数的约束及描述：|
+    * Gets body
+    *  body
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\WaybillElectronicRequestBody|null
     */
-    public function getOrderId()
+    public function getBody()
     {
-        return $this->container['orderId'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets orderId
+    * Sets body
     *
-    * @param string $orderId |参数名称：订单ID。| |参数的约束及描述：|
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\WaybillElectronicRequestBody|null $body body
     *
     * @return $this
     */
-    public function setOrderId($orderId)
+    public function setBody($body)
     {
-        $this->container['orderId'] = $orderId;
+        $this->container['body'] = $body;
         return $this;
     }
 

@@ -23,6 +23,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * billCycle  |参数名称：账期，格式为YYYY-MM| |参数约束及描述：账期，格式为YYYY-MM|
     * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
     * chargingMode  |参数名称：计费模式1：包周期；3：按需；10：预留实例| |参数约束及描述：计费模式1：包周期；3：按需；10：预留实例|
     * officialAmount  |参数名称：官网价| |参数的约束及描述：官网价|
     * officialDiscountAmount  |参数名称：折扣金额| |参数的约束及描述：折扣金额|
@@ -45,6 +47,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
             'billCycle' => 'string',
             'resourceTypeCode' => 'string',
             'serviceTypeCode' => 'string',
+            'serviceTypeName' => 'string',
+            'resourceTypeName' => 'string',
             'chargingMode' => 'int',
             'officialAmount' => 'float',
             'officialDiscountAmount' => 'float',
@@ -67,6 +71,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * billCycle  |参数名称：账期，格式为YYYY-MM| |参数约束及描述：账期，格式为YYYY-MM|
     * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
     * chargingMode  |参数名称：计费模式1：包周期；3：按需；10：预留实例| |参数约束及描述：计费模式1：包周期；3：按需；10：预留实例|
     * officialAmount  |参数名称：官网价| |参数的约束及描述：官网价|
     * officialDiscountAmount  |参数名称：折扣金额| |参数的约束及描述：折扣金额|
@@ -89,6 +95,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
         'billCycle' => null,
         'resourceTypeCode' => null,
         'serviceTypeCode' => null,
+        'serviceTypeName' => null,
+        'resourceTypeName' => null,
         'chargingMode' => 'int32',
         'officialAmount' => 'bigdecimal',
         'officialDiscountAmount' => 'bigdecimal',
@@ -132,6 +140,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * billCycle  |参数名称：账期，格式为YYYY-MM| |参数约束及描述：账期，格式为YYYY-MM|
     * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
     * chargingMode  |参数名称：计费模式1：包周期；3：按需；10：预留实例| |参数约束及描述：计费模式1：包周期；3：按需；10：预留实例|
     * officialAmount  |参数名称：官网价| |参数的约束及描述：官网价|
     * officialDiscountAmount  |参数名称：折扣金额| |参数的约束及描述：折扣金额|
@@ -154,6 +164,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
             'billCycle' => 'bill_cycle',
             'resourceTypeCode' => 'resource_type_code',
             'serviceTypeCode' => 'service_type_code',
+            'serviceTypeName' => 'service_type_name',
+            'resourceTypeName' => 'resource_type_name',
             'chargingMode' => 'charging_mode',
             'officialAmount' => 'official_amount',
             'officialDiscountAmount' => 'official_discount_amount',
@@ -176,6 +188,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * billCycle  |参数名称：账期，格式为YYYY-MM| |参数约束及描述：账期，格式为YYYY-MM|
     * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
     * chargingMode  |参数名称：计费模式1：包周期；3：按需；10：预留实例| |参数约束及描述：计费模式1：包周期；3：按需；10：预留实例|
     * officialAmount  |参数名称：官网价| |参数的约束及描述：官网价|
     * officialDiscountAmount  |参数名称：折扣金额| |参数的约束及描述：折扣金额|
@@ -198,6 +212,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
             'billCycle' => 'setBillCycle',
             'resourceTypeCode' => 'setResourceTypeCode',
             'serviceTypeCode' => 'setServiceTypeCode',
+            'serviceTypeName' => 'setServiceTypeName',
+            'resourceTypeName' => 'setResourceTypeName',
             'chargingMode' => 'setChargingMode',
             'officialAmount' => 'setOfficialAmount',
             'officialDiscountAmount' => 'setOfficialDiscountAmount',
@@ -220,6 +236,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * billCycle  |参数名称：账期，格式为YYYY-MM| |参数约束及描述：账期，格式为YYYY-MM|
     * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
     * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型|
+    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
     * chargingMode  |参数名称：计费模式1：包周期；3：按需；10：预留实例| |参数约束及描述：计费模式1：包周期；3：按需；10：预留实例|
     * officialAmount  |参数名称：官网价| |参数的约束及描述：官网价|
     * officialDiscountAmount  |参数名称：折扣金额| |参数的约束及描述：折扣金额|
@@ -242,6 +260,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
             'billCycle' => 'getBillCycle',
             'resourceTypeCode' => 'getResourceTypeCode',
             'serviceTypeCode' => 'getServiceTypeCode',
+            'serviceTypeName' => 'getServiceTypeName',
+            'resourceTypeName' => 'getResourceTypeName',
             'chargingMode' => 'getChargingMode',
             'officialAmount' => 'getOfficialAmount',
             'officialDiscountAmount' => 'getOfficialDiscountAmount',
@@ -320,6 +340,8 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
         $this->container['billCycle'] = isset($data['billCycle']) ? $data['billCycle'] : null;
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['officialAmount'] = isset($data['officialAmount']) ? $data['officialAmount'] : null;
         $this->container['officialDiscountAmount'] = isset($data['officialDiscountAmount']) ? $data['officialDiscountAmount'] : null;
@@ -428,6 +450,54 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     public function setServiceTypeCode($serviceTypeCode)
     {
         $this->container['serviceTypeCode'] = $serviceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeName
+    *  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    *
+    * @return string|null
+    */
+    public function getServiceTypeName()
+    {
+        return $this->container['serviceTypeName'];
+    }
+
+    /**
+    * Sets serviceTypeName
+    *
+    * @param string|null $serviceTypeName |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    *
+    * @return $this
+    */
+    public function setServiceTypeName($serviceTypeName)
+    {
+        $this->container['serviceTypeName'] = $serviceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypeName
+    *  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    *
+    * @return string|null
+    */
+    public function getResourceTypeName()
+    {
+        return $this->container['resourceTypeName'];
+    }
+
+    /**
+    * Sets resourceTypeName
+    *
+    * @param string|null $resourceTypeName |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    *
+    * @return $this
+    */
+    public function setResourceTypeName($resourceTypeName)
+    {
+        $this->container['resourceTypeName'] = $resourceTypeName;
         return $this;
     }
 

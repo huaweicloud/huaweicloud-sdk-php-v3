@@ -1,3 +1,53 @@
+# 3.0.42-rc 2022-04-07
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - Support the interface `ListStoredValueCards`
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the interfaces `ListSubCustomerDiscounts`, `BatchSetSubCustomerDiscount`
+  - Add the response parameters `resource_type_name`, `service_type_name` to the interface `ShowRefundOrderDetails`
+  - Add the response parameter `service_type_name` to the interface `ListCustomerOrders`
+  - Add the response parameters `service_type_name`, `service_type_name` to the interface `ShowCustomerOrderDetails`
+  - Add the response parameters `resource_type_name`, `service_type_name` to the interface `ListPayPerUseCustomerResources`
+  - Add the response parameters `service_type_name`, `resource_type_name` to the interface `ListCustomerOnDemandResources`
+  - Add the response parameters `cloud_service_type_name`, `resource_type_name` to the interface `ListSubcustomerMonthlyBills`
+  - Add the response parameters `cloud_service_type_name`, `resource_type_name`, `period_type` to the interface `ListCustomerselfResourceRecordDetails`
+  - Add the response parameters `cloud_service_type_name`, `resource_type_name` to the interface `ListCustomerselfResourceRecords`
+  - Add the response parameters `service_type_name`, `resource_type_name` to the interface `ShowCustomerMonthlySum`
+  - Changes of the interface `ListCustomerBillsFeeRecords`:
+    - Add the request parameters `bill_date_begin`, `bill_date_end`
+    - Add the response parameters `service_type_name`, `resource_type_name`
+  - Add the response parameters `resource_type_name`, `service_type_name` to the interface `ListUsageTypes`
+  - Add the response parameters `service_type_name`, `resource_type_name` to the interface `ListSubCustomerBillDetail`
+  - Add the response parameters `service_type_name`, `resource_type_name` to the interface `ListCustomerBillsMonthlyBreakDown`
+  - Add the response parameter `service_type_name` to the interface `ListFreeResourceInfos`
+  - Add the response parameter `service_type_name` to the interface `ListIncentiveDiscountPolicies`
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - Support the interface `RecognizeWaybillElectronic`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `print_code` to the interface `RecognizeVatInvoice`
+  - Changes of the interface `RecognizeVehicleLicense`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+  - Changes of the interface `RecognizeTaxiInvoice`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+  - Add the response parameters `type`, `accumulated_scores`, `status`, `generation_date`, `current_time` to the interface `RecognizeDriverLicense`
+  - Changes of the interface `RecognizeTrainTicket`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+  - Changes of the interface `RecognizeBankcard`:
+    - Add the request parameter `return_text_location`
+    - Add the response parameter `text_location`
+
 # 3.0.41-rc 2022-03-25
 
 ### HuaweiCloud SDK CDN

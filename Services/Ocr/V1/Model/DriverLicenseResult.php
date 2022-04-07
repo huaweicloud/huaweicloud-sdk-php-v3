@@ -20,6 +20,7 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * type  驾驶证类型。 normal：纸质驾驶证 electronic：电子驾驶证
     * number  驾驶证号。
     * name  姓名。
     * sex  性别。
@@ -33,11 +34,16 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * issuingAuthority  发证机关。
     * fileNumber  档案编号。
     * record  记录。
-    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * accumulatedScores  累积记分。
+    * status  状态。
+    * generationDate  生成时间。
+    * currentTime  当前时间。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'type' => 'string',
             'number' => 'string',
             'name' => 'string',
             'sex' => 'string',
@@ -51,11 +57,16 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
             'issuingAuthority' => 'string',
             'fileNumber' => 'string',
             'record' => 'string',
+            'accumulatedScores' => 'string',
+            'status' => '\HuaweiCloud\SDK\Ocr\V1\Model\DriverLicenseResultStatus[]',
+            'generationDate' => 'string',
+            'currentTime' => 'string',
             'textLocation' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * type  驾驶证类型。 normal：纸质驾驶证 electronic：电子驾驶证
     * number  驾驶证号。
     * name  姓名。
     * sex  性别。
@@ -69,11 +80,16 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * issuingAuthority  发证机关。
     * fileNumber  档案编号。
     * record  记录。
-    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * accumulatedScores  累积记分。
+    * status  状态。
+    * generationDate  生成时间。
+    * currentTime  当前时间。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'type' => null,
         'number' => null,
         'name' => null,
         'sex' => null,
@@ -87,6 +103,10 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
         'issuingAuthority' => null,
         'fileNumber' => null,
         'record' => null,
+        'accumulatedScores' => null,
+        'status' => null,
+        'generationDate' => null,
+        'currentTime' => null,
         'textLocation' => null
     ];
 
@@ -113,6 +133,7 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * type  驾驶证类型。 normal：纸质驾驶证 electronic：电子驾驶证
     * number  驾驶证号。
     * name  姓名。
     * sex  性别。
@@ -126,11 +147,16 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * issuingAuthority  发证机关。
     * fileNumber  档案编号。
     * record  记录。
-    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * accumulatedScores  累积记分。
+    * status  状态。
+    * generationDate  生成时间。
+    * currentTime  当前时间。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'type' => 'type',
             'number' => 'number',
             'name' => 'name',
             'sex' => 'sex',
@@ -144,11 +170,16 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
             'issuingAuthority' => 'issuing_authority',
             'fileNumber' => 'file_number',
             'record' => 'record',
+            'accumulatedScores' => 'accumulated_scores',
+            'status' => 'status',
+            'generationDate' => 'generation_date',
+            'currentTime' => 'current_time',
             'textLocation' => 'text_location'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * type  驾驶证类型。 normal：纸质驾驶证 electronic：电子驾驶证
     * number  驾驶证号。
     * name  姓名。
     * sex  性别。
@@ -162,11 +193,16 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * issuingAuthority  发证机关。
     * fileNumber  档案编号。
     * record  记录。
-    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * accumulatedScores  累积记分。
+    * status  状态。
+    * generationDate  生成时间。
+    * currentTime  当前时间。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
     protected static $setters = [
+            'type' => 'setType',
             'number' => 'setNumber',
             'name' => 'setName',
             'sex' => 'setSex',
@@ -180,11 +216,16 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
             'issuingAuthority' => 'setIssuingAuthority',
             'fileNumber' => 'setFileNumber',
             'record' => 'setRecord',
+            'accumulatedScores' => 'setAccumulatedScores',
+            'status' => 'setStatus',
+            'generationDate' => 'setGenerationDate',
+            'currentTime' => 'setCurrentTime',
             'textLocation' => 'setTextLocation'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * type  驾驶证类型。 normal：纸质驾驶证 electronic：电子驾驶证
     * number  驾驶证号。
     * name  姓名。
     * sex  性别。
@@ -198,11 +239,16 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * issuingAuthority  发证机关。
     * fileNumber  档案编号。
     * record  记录。
-    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * accumulatedScores  累积记分。
+    * status  状态。
+    * generationDate  生成时间。
+    * currentTime  当前时间。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
     protected static $getters = [
+            'type' => 'getType',
             'number' => 'getNumber',
             'name' => 'getName',
             'sex' => 'getSex',
@@ -216,6 +262,10 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
             'issuingAuthority' => 'getIssuingAuthority',
             'fileNumber' => 'getFileNumber',
             'record' => 'getRecord',
+            'accumulatedScores' => 'getAccumulatedScores',
+            'status' => 'getStatus',
+            'generationDate' => 'getGenerationDate',
+            'currentTime' => 'getCurrentTime',
             'textLocation' => 'getTextLocation'
     ];
 
@@ -277,6 +327,7 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['number'] = isset($data['number']) ? $data['number'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['sex'] = isset($data['sex']) ? $data['sex'] : null;
@@ -290,6 +341,10 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
         $this->container['issuingAuthority'] = isset($data['issuingAuthority']) ? $data['issuingAuthority'] : null;
         $this->container['fileNumber'] = isset($data['fileNumber']) ? $data['fileNumber'] : null;
         $this->container['record'] = isset($data['record']) ? $data['record'] : null;
+        $this->container['accumulatedScores'] = isset($data['accumulatedScores']) ? $data['accumulatedScores'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['generationDate'] = isset($data['generationDate']) ? $data['generationDate'] : null;
+        $this->container['currentTime'] = isset($data['currentTime']) ? $data['currentTime'] : null;
         $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
     }
 
@@ -313,6 +368,30 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets type
+    *  驾驶证类型。 normal：纸质驾驶证 electronic：电子驾驶证
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 驾驶证类型。 normal：纸质驾驶证 electronic：电子驾驶证
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+        return $this;
     }
 
     /**
@@ -628,8 +707,104 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets accumulatedScores
+    *  累积记分。
+    *
+    * @return string|null
+    */
+    public function getAccumulatedScores()
+    {
+        return $this->container['accumulatedScores'];
+    }
+
+    /**
+    * Sets accumulatedScores
+    *
+    * @param string|null $accumulatedScores 累积记分。
+    *
+    * @return $this
+    */
+    public function setAccumulatedScores($accumulatedScores)
+    {
+        $this->container['accumulatedScores'] = $accumulatedScores;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  状态。
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\DriverLicenseResultStatus[]|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\DriverLicenseResultStatus[]|null $status 状态。
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets generationDate
+    *  生成时间。
+    *
+    * @return string|null
+    */
+    public function getGenerationDate()
+    {
+        return $this->container['generationDate'];
+    }
+
+    /**
+    * Sets generationDate
+    *
+    * @param string|null $generationDate 生成时间。
+    *
+    * @return $this
+    */
+    public function setGenerationDate($generationDate)
+    {
+        $this->container['generationDate'] = $generationDate;
+        return $this;
+    }
+
+    /**
+    * Gets currentTime
+    *  当前时间。
+    *
+    * @return string|null
+    */
+    public function getCurrentTime()
+    {
+        return $this->container['currentTime'];
+    }
+
+    /**
+    * Sets currentTime
+    *
+    * @param string|null $currentTime 当前时间。
+    *
+    * @return $this
+    */
+    public function setCurrentTime($currentTime)
+    {
+        $this->container['currentTime'] = $currentTime;
+        return $this;
+    }
+
+    /**
     * Gets textLocation
-    *  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    *  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @return object|null
     */
@@ -641,7 +816,7 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets textLocation
     *
-    * @param object|null $textLocation 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * @param object|null $textLocation 对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @return $this
     */

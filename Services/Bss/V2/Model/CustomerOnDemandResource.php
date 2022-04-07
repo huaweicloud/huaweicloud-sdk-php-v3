@@ -25,6 +25,8 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     * availabilityZoneCode  所属可用区的编码。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * resourceId  资源ID。
     * resourceName  资源实例名称。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
@@ -42,6 +44,8 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
             'availabilityZoneCode' => 'string',
             'serviceTypeCode' => 'string',
             'resourceTypeCode' => 'string',
+            'serviceTypeName' => 'string',
+            'resourceTypeName' => 'string',
             'resourceId' => 'string',
             'resourceName' => 'string',
             'effectiveTime' => 'string',
@@ -59,6 +63,8 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     * availabilityZoneCode  所属可用区的编码。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * resourceId  资源ID。
     * resourceName  资源实例名称。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
@@ -76,6 +82,8 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
         'availabilityZoneCode' => null,
         'serviceTypeCode' => null,
         'resourceTypeCode' => null,
+        'serviceTypeName' => null,
+        'resourceTypeName' => null,
         'resourceId' => null,
         'resourceName' => null,
         'effectiveTime' => null,
@@ -114,6 +122,8 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     * availabilityZoneCode  所属可用区的编码。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * resourceId  资源ID。
     * resourceName  资源实例名称。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
@@ -131,6 +141,8 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
             'availabilityZoneCode' => 'availability_zone_code',
             'serviceTypeCode' => 'service_type_code',
             'resourceTypeCode' => 'resource_type_code',
+            'serviceTypeName' => 'service_type_name',
+            'resourceTypeName' => 'resource_type_name',
             'resourceId' => 'resource_id',
             'resourceName' => 'resource_name',
             'effectiveTime' => 'effective_time',
@@ -148,6 +160,8 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     * availabilityZoneCode  所属可用区的编码。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * resourceId  资源ID。
     * resourceName  资源实例名称。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
@@ -165,6 +179,8 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
             'availabilityZoneCode' => 'setAvailabilityZoneCode',
             'serviceTypeCode' => 'setServiceTypeCode',
             'resourceTypeCode' => 'setResourceTypeCode',
+            'serviceTypeName' => 'setServiceTypeName',
+            'resourceTypeName' => 'setResourceTypeName',
             'resourceId' => 'setResourceId',
             'resourceName' => 'setResourceName',
             'effectiveTime' => 'setEffectiveTime',
@@ -182,6 +198,8 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     * availabilityZoneCode  所属可用区的编码。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * resourceId  资源ID。
     * resourceName  资源实例名称。
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
@@ -199,6 +217,8 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
             'availabilityZoneCode' => 'getAvailabilityZoneCode',
             'serviceTypeCode' => 'getServiceTypeCode',
             'resourceTypeCode' => 'getResourceTypeCode',
+            'serviceTypeName' => 'getServiceTypeName',
+            'resourceTypeName' => 'getResourceTypeName',
             'resourceId' => 'getResourceId',
             'resourceName' => 'getResourceName',
             'effectiveTime' => 'getEffectiveTime',
@@ -272,6 +292,8 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
         $this->container['availabilityZoneCode'] = isset($data['availabilityZoneCode']) ? $data['availabilityZoneCode'] : null;
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
+        $this->container['serviceTypeName'] = isset($data['serviceTypeName']) ? $data['serviceTypeName'] : null;
+        $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['effectiveTime'] = isset($data['effectiveTime']) ? $data['effectiveTime'] : null;
@@ -421,6 +443,54 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     public function setResourceTypeCode($resourceTypeCode)
     {
         $this->container['resourceTypeCode'] = $resourceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeName
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return string|null
+    */
+    public function getServiceTypeName()
+    {
+        return $this->container['serviceTypeName'];
+    }
+
+    /**
+    * Sets serviceTypeName
+    *
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    *
+    * @return $this
+    */
+    public function setServiceTypeName($serviceTypeName)
+    {
+        $this->container['serviceTypeName'] = $serviceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets resourceTypeName
+    *  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return string|null
+    */
+    public function getResourceTypeName()
+    {
+        return $this->container['resourceTypeName'];
+    }
+
+    /**
+    * Sets resourceTypeName
+    *
+    * @param string|null $resourceTypeName 资源类型名称。例如ECS的资源类型名称为“云主机”。
+    *
+    * @return $this
+    */
+    public function setResourceTypeName($resourceTypeName)
+    {
+        $this->container['resourceTypeName'] = $resourceTypeName;
         return $this;
     }
 

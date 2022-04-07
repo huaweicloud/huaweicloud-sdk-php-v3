@@ -41,6 +41,7 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * remarks  备注。
     * inspectionRecord  检验记录。
     * codeNumber  条码号。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -65,7 +66,8 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'tractionMass' => 'string',
             'remarks' => 'string',
             'inspectionRecord' => 'string',
-            'codeNumber' => 'string'
+            'codeNumber' => 'string',
+            'textLocation' => 'object'
     ];
 
     /**
@@ -91,6 +93,7 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * remarks  备注。
     * inspectionRecord  检验记录。
     * codeNumber  条码号。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
         'tractionMass' => null,
         'remarks' => null,
         'inspectionRecord' => null,
-        'codeNumber' => null
+        'codeNumber' => null,
+        'textLocation' => null
     ];
 
     /**
@@ -162,6 +166,7 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * remarks  备注。
     * inspectionRecord  检验记录。
     * codeNumber  条码号。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -186,7 +191,8 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'tractionMass' => 'traction_mass',
             'remarks' => 'remarks',
             'inspectionRecord' => 'inspection_record',
-            'codeNumber' => 'code_number'
+            'codeNumber' => 'code_number',
+            'textLocation' => 'text_location'
     ];
 
     /**
@@ -212,6 +218,7 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * remarks  备注。
     * inspectionRecord  检验记录。
     * codeNumber  条码号。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -236,7 +243,8 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'tractionMass' => 'setTractionMass',
             'remarks' => 'setRemarks',
             'inspectionRecord' => 'setInspectionRecord',
-            'codeNumber' => 'setCodeNumber'
+            'codeNumber' => 'setCodeNumber',
+            'textLocation' => 'setTextLocation'
     ];
 
     /**
@@ -262,6 +270,7 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     * remarks  备注。
     * inspectionRecord  检验记录。
     * codeNumber  条码号。
+    * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
             'tractionMass' => 'getTractionMass',
             'remarks' => 'getRemarks',
             'inspectionRecord' => 'getInspectionRecord',
-            'codeNumber' => 'getCodeNumber'
+            'codeNumber' => 'getCodeNumber',
+            'textLocation' => 'getTextLocation'
     ];
 
     /**
@@ -368,6 +378,7 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
         $this->container['remarks'] = isset($data['remarks']) ? $data['remarks'] : null;
         $this->container['inspectionRecord'] = isset($data['inspectionRecord']) ? $data['inspectionRecord'] : null;
         $this->container['codeNumber'] = isset($data['codeNumber']) ? $data['codeNumber'] : null;
+        $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
     }
 
     /**
@@ -893,6 +904,30 @@ class VehicleLicenseResult implements ModelInterface, ArrayAccess
     public function setCodeNumber($codeNumber)
     {
         $this->container['codeNumber'] = $codeNumber;
+        return $this;
+    }
+
+    /**
+    * Gets textLocation
+    *  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
+    *
+    * @return object|null
+    */
+    public function getTextLocation()
+    {
+        return $this->container['textLocation'];
+    }
+
+    /**
+    * Sets textLocation
+    *
+    * @param object|null $textLocation 文本框在原图位置。输出左上、右上、右下、左下四个点坐标。  当“return_text_location”设置为“true”时才返回。
+    *
+    * @return $this
+    */
+    public function setTextLocation($textLocation)
+    {
+        $this->container['textLocation'] = $textLocation;
         return $this;
     }
 

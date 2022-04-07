@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Bss\V2\Model;
+namespace HuaweiCloud\SDK\Bssintl\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ResourceType implements ModelInterface, ArrayAccess
+class ResourceTypes implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,38 @@ class ResourceType implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ResourceType';
+    protected static $openAPIModelName = 'ResourceTypes';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
-    * resourceTypeName  资源类型的名称。
-    * resourceTypeDesc  资源类型的描述。
+    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
+    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+    * serviceTypeCode  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'resourceTypeCode' => 'string',
             'resourceTypeName' => 'string',
-            'resourceTypeDesc' => 'string'
+            'resourceTypeDesc' => 'string',
+            'serviceTypeCode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
-    * resourceTypeName  资源类型的名称。
-    * resourceTypeDesc  资源类型的描述。
+    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
+    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+    * serviceTypeCode  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'resourceTypeCode' => null,
         'resourceTypeName' => null,
-        'resourceTypeDesc' => null
+        'resourceTypeDesc' => null,
+        'serviceTypeCode' => null
     ];
 
     /**
@@ -69,44 +73,50 @@ class ResourceType implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
-    * resourceTypeName  资源类型的名称。
-    * resourceTypeDesc  资源类型的描述。
+    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
+    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+    * serviceTypeCode  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'resourceTypeCode' => 'resource_type_code',
             'resourceTypeName' => 'resource_type_name',
-            'resourceTypeDesc' => 'resource_type_desc'
+            'resourceTypeDesc' => 'resource_type_desc',
+            'serviceTypeCode' => 'service_type_code'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
-    * resourceTypeName  资源类型的名称。
-    * resourceTypeDesc  资源类型的描述。
+    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
+    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+    * serviceTypeCode  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
     *
     * @var string[]
     */
     protected static $setters = [
             'resourceTypeCode' => 'setResourceTypeCode',
             'resourceTypeName' => 'setResourceTypeName',
-            'resourceTypeDesc' => 'setResourceTypeDesc'
+            'resourceTypeDesc' => 'setResourceTypeDesc',
+            'serviceTypeCode' => 'setServiceTypeCode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
-    * resourceTypeName  资源类型的名称。
-    * resourceTypeDesc  资源类型的描述。
+    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
+    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+    * serviceTypeCode  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
     *
     * @var string[]
     */
     protected static $getters = [
             'resourceTypeCode' => 'getResourceTypeCode',
             'resourceTypeName' => 'getResourceTypeName',
-            'resourceTypeDesc' => 'getResourceTypeDesc'
+            'resourceTypeDesc' => 'getResourceTypeDesc',
+            'serviceTypeCode' => 'getServiceTypeCode'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ResourceType implements ModelInterface, ArrayAccess
         $this->container['resourceTypeCode'] = isset($data['resourceTypeCode']) ? $data['resourceTypeCode'] : null;
         $this->container['resourceTypeName'] = isset($data['resourceTypeName']) ? $data['resourceTypeName'] : null;
         $this->container['resourceTypeDesc'] = isset($data['resourceTypeDesc']) ? $data['resourceTypeDesc'] : null;
+        $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
     }
 
     /**
@@ -196,7 +207,7 @@ class ResourceType implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeCode
-    *  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
+    *  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
     *
     * @return string|null
     */
@@ -208,7 +219,7 @@ class ResourceType implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeCode
     *
-    * @param string|null $resourceTypeCode 资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
+    * @param string|null $resourceTypeCode |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
     *
     * @return $this
     */
@@ -220,7 +231,7 @@ class ResourceType implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeName
-    *  资源类型的名称。
+    *  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
     *
     * @return string|null
     */
@@ -232,7 +243,7 @@ class ResourceType implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeName
     *
-    * @param string|null $resourceTypeName 资源类型的名称。
+    * @param string|null $resourceTypeName |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
     *
     * @return $this
     */
@@ -244,7 +255,7 @@ class ResourceType implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeDesc
-    *  资源类型的描述。
+    *  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
     *
     * @return string|null
     */
@@ -256,13 +267,37 @@ class ResourceType implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeDesc
     *
-    * @param string|null $resourceTypeDesc 资源类型的描述。
+    * @param string|null $resourceTypeDesc |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
     *
     * @return $this
     */
     public function setResourceTypeDesc($resourceTypeDesc)
     {
         $this->container['resourceTypeDesc'] = $resourceTypeDesc;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeCode
+    *  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
+    *
+    * @return string|null
+    */
+    public function getServiceTypeCode()
+    {
+        return $this->container['serviceTypeCode'];
+    }
+
+    /**
+    * Sets serviceTypeCode
+    *
+    * @param string|null $serviceTypeCode |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
+    *
+    * @return $this
+    */
+    public function setServiceTypeCode($serviceTypeCode)
+    {
+        $this->container['serviceTypeCode'] = $serviceTypeCode;
         return $this;
     }
 
