@@ -20,7 +20,7 @@ class AccountManager implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountName  |参数名称：客户经理登录名称。| |参数约束及描述：客户经理登录名称。最大长度128，必填|
+    * accountName  客户经理登录名称。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class AccountManager implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountName  |参数名称：客户经理登录名称。| |参数约束及描述：客户经理登录名称。最大长度128，必填|
+    * accountName  客户经理登录名称。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class AccountManager implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountName  |参数名称：客户经理登录名称。| |参数约束及描述：客户经理登录名称。最大长度128，必填|
+    * accountName  客户经理登录名称。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AccountManager implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountName  |参数名称：客户经理登录名称。| |参数约束及描述：客户经理登录名称。最大长度128，必填|
+    * accountName  客户经理登录名称。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class AccountManager implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountName  |参数名称：客户经理登录名称。| |参数约束及描述：客户经理登录名称。最大长度128，必填|
+    * accountName  客户经理登录名称。
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class AccountManager implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountName
-    *  |参数名称：客户经理登录名称。| |参数约束及描述：客户经理登录名称。最大长度128，必填|
+    *  客户经理登录名称。
     *
     * @return string|null
     */
@@ -192,7 +192,7 @@ class AccountManager implements ModelInterface, ArrayAccess
     /**
     * Sets accountName
     *
-    * @param string|null $accountName |参数名称：客户经理登录名称。| |参数约束及描述：客户经理登录名称。最大长度128，必填|
+    * @param string|null $accountName 客户经理登录名称。
     *
     * @return $this
     */

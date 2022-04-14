@@ -20,34 +20,34 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的数量| |参数的约束及描述：|
-    * offset  |参数名称：偏移量| |参数的约束及描述：|
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，默认值为10。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'xLanguage' => 'string',
             'serviceTypeCode' => 'string',
-            'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的数量| |参数的约束及描述：|
-    * offset  |参数名称：偏移量| |参数的约束及描述：|
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，默认值为10。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'xLanguage' => null,
         'serviceTypeCode' => null,
-        'limit' => 'int32',
-        'offset' => 'int32'
+        'offset' => 'int32',
+        'limit' => 'int32'
     ];
 
     /**
@@ -73,50 +73,50 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的数量| |参数的约束及描述：|
-    * offset  |参数名称：偏移量| |参数的约束及描述：|
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，默认值为10。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'xLanguage' => 'X-Language',
             'serviceTypeCode' => 'service_type_code',
-            'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的数量| |参数的约束及描述：|
-    * offset  |参数名称：偏移量| |参数的约束及描述：|
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，默认值为10。
     *
     * @var string[]
     */
     protected static $setters = [
             'xLanguage' => 'setXLanguage',
             'serviceTypeCode' => 'setServiceTypeCode',
-            'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的数量| |参数的约束及描述：|
-    * offset  |参数名称：偏移量| |参数的约束及描述：|
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，默认值为10。
     *
     * @var string[]
     */
     protected static $getters = [
             'xLanguage' => 'getXLanguage',
             'serviceTypeCode' => 'getServiceTypeCode',
-            'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -179,8 +179,8 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
     {
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'zh_cn';
         $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
     }
 
     /**
@@ -194,17 +194,17 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
         if ($this->container['serviceTypeCode'] === null) {
             $invalidProperties[] = "'serviceTypeCode' can't be null";
         }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -222,7 +222,7 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  |忽略大小写，默认 zh_cn：中文 en_us：英文|
+    *  语言。中文：zh_CN英文：en_US缺省为zh_CN。
     *
     * @return string|null
     */
@@ -234,7 +234,7 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage |忽略大小写，默认 zh_cn：中文 en_us：英文|
+    * @param string|null $xLanguage 语言。中文：zh_CN英文：en_US缺省为zh_CN。
     *
     * @return $this
     */
@@ -246,7 +246,7 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeCode
-    *  |参数名称：云服务类型编码| |参数的约束及描述：|
+    *  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return string
     */
@@ -258,7 +258,7 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeCode
     *
-    * @param string $serviceTypeCode |参数名称：云服务类型编码| |参数的约束及描述：|
+    * @param string $serviceTypeCode 云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return $this
     */
@@ -269,32 +269,8 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets limit
-    *  |参数名称：每次查询的数量| |参数的约束及描述：|
-    *
-    * @return int|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int|null $limit |参数名称：每次查询的数量| |参数的约束及描述：|
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
     * Gets offset
-    *  |参数名称：偏移量| |参数的约束及描述：|
+    *  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return int|null
     */
@@ -306,13 +282,37 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset |参数名称：偏移量| |参数的约束及描述：|
+    * @param int|null $offset 偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return $this
     */
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每次查询的数量，默认值为10。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每次查询的数量，默认值为10。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

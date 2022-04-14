@@ -20,14 +20,14 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountName  |参数名称：客户登录名称（如果客户创建了子用户，此处需要填写主账号登录名称。关于主账号和子用户的具体介绍请参见身份管理身份管理中“账号”和“IAM用户”的描述）。支持模糊查询。| |参数约束及描述：客户登录名称（如果客户创建了子用户，此处需要填写主账号登录名称。关于主账号和子用户的具体介绍请参见身份管理身份管理中“账号”和“IAM用户”的描述）。支持模糊查询。|
-    * customer  |参数名称：实名认证名称。支持模糊查询。| |参数约束及描述：实名认证名称。支持模糊查询。|
-    * offset  |参数名称：偏移量，从0开始| |参数约束及描述： 偏移量，从0开始|
-    * limit  |参数名称：每次查询的数量。默认10，最多100。| |参数约束及描述： 每次查询的数量。默认10，最多100。|
-    * label  |参数名称：标签，支持模糊查找。| |参数约束及描述：非必填，最大长度64|
-    * associationType  |参数名称：关联类型1.推荐，2.垫付，3.转售| |参数约束及描述：非必填，最大长度2|
-    * associatedOnBegin  |参数名称：关联时间区间段开始，UTC时间。| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
-    * associatedOnEnd  |参数名称：关联时间区间段结束，UTC时间| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
+    * accountName  客户登录名称（如果客户创建了IAM用户，此处需要填写主账号登录名称。关于主账号和IAM用户的具体介绍请参见身份管理中“账号”和“IAM用户”的描述）。 支持模糊查询。
+    * customer  客户的实名认证名称，支持模糊查询。
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的客户数量。默认值为10。
+    * label  标签，支持模糊查找。
+    * associationType  关联类型： 1：顾问销售3：转售
+    * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountName  |参数名称：客户登录名称（如果客户创建了子用户，此处需要填写主账号登录名称。关于主账号和子用户的具体介绍请参见身份管理身份管理中“账号”和“IAM用户”的描述）。支持模糊查询。| |参数约束及描述：客户登录名称（如果客户创建了子用户，此处需要填写主账号登录名称。关于主账号和子用户的具体介绍请参见身份管理身份管理中“账号”和“IAM用户”的描述）。支持模糊查询。|
-    * customer  |参数名称：实名认证名称。支持模糊查询。| |参数约束及描述：实名认证名称。支持模糊查询。|
-    * offset  |参数名称：偏移量，从0开始| |参数约束及描述： 偏移量，从0开始|
-    * limit  |参数名称：每次查询的数量。默认10，最多100。| |参数约束及描述： 每次查询的数量。默认10，最多100。|
-    * label  |参数名称：标签，支持模糊查找。| |参数约束及描述：非必填，最大长度64|
-    * associationType  |参数名称：关联类型1.推荐，2.垫付，3.转售| |参数约束及描述：非必填，最大长度2|
-    * associatedOnBegin  |参数名称：关联时间区间段开始，UTC时间。| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
-    * associatedOnEnd  |参数名称：关联时间区间段结束，UTC时间| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
+    * accountName  客户登录名称（如果客户创建了IAM用户，此处需要填写主账号登录名称。关于主账号和IAM用户的具体介绍请参见身份管理中“账号”和“IAM用户”的描述）。 支持模糊查询。
+    * customer  客户的实名认证名称，支持模糊查询。
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的客户数量。默认值为10。
+    * label  标签，支持模糊查找。
+    * associationType  关联类型： 1：顾问销售3：转售
+    * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountName  |参数名称：客户登录名称（如果客户创建了子用户，此处需要填写主账号登录名称。关于主账号和子用户的具体介绍请参见身份管理身份管理中“账号”和“IAM用户”的描述）。支持模糊查询。| |参数约束及描述：客户登录名称（如果客户创建了子用户，此处需要填写主账号登录名称。关于主账号和子用户的具体介绍请参见身份管理身份管理中“账号”和“IAM用户”的描述）。支持模糊查询。|
-    * customer  |参数名称：实名认证名称。支持模糊查询。| |参数约束及描述：实名认证名称。支持模糊查询。|
-    * offset  |参数名称：偏移量，从0开始| |参数约束及描述： 偏移量，从0开始|
-    * limit  |参数名称：每次查询的数量。默认10，最多100。| |参数约束及描述： 每次查询的数量。默认10，最多100。|
-    * label  |参数名称：标签，支持模糊查找。| |参数约束及描述：非必填，最大长度64|
-    * associationType  |参数名称：关联类型1.推荐，2.垫付，3.转售| |参数约束及描述：非必填，最大长度2|
-    * associatedOnBegin  |参数名称：关联时间区间段开始，UTC时间。| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
-    * associatedOnEnd  |参数名称：关联时间区间段结束，UTC时间| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
+    * accountName  客户登录名称（如果客户创建了IAM用户，此处需要填写主账号登录名称。关于主账号和IAM用户的具体介绍请参见身份管理中“账号”和“IAM用户”的描述）。 支持模糊查询。
+    * customer  客户的实名认证名称，支持模糊查询。
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的客户数量。默认值为10。
+    * label  标签，支持模糊查找。
+    * associationType  关联类型： 1：顾问销售3：转售
+    * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountName  |参数名称：客户登录名称（如果客户创建了子用户，此处需要填写主账号登录名称。关于主账号和子用户的具体介绍请参见身份管理身份管理中“账号”和“IAM用户”的描述）。支持模糊查询。| |参数约束及描述：客户登录名称（如果客户创建了子用户，此处需要填写主账号登录名称。关于主账号和子用户的具体介绍请参见身份管理身份管理中“账号”和“IAM用户”的描述）。支持模糊查询。|
-    * customer  |参数名称：实名认证名称。支持模糊查询。| |参数约束及描述：实名认证名称。支持模糊查询。|
-    * offset  |参数名称：偏移量，从0开始| |参数约束及描述： 偏移量，从0开始|
-    * limit  |参数名称：每次查询的数量。默认10，最多100。| |参数约束及描述： 每次查询的数量。默认10，最多100。|
-    * label  |参数名称：标签，支持模糊查找。| |参数约束及描述：非必填，最大长度64|
-    * associationType  |参数名称：关联类型1.推荐，2.垫付，3.转售| |参数约束及描述：非必填，最大长度2|
-    * associatedOnBegin  |参数名称：关联时间区间段开始，UTC时间。| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
-    * associatedOnEnd  |参数名称：关联时间区间段结束，UTC时间| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
+    * accountName  客户登录名称（如果客户创建了IAM用户，此处需要填写主账号登录名称。关于主账号和IAM用户的具体介绍请参见身份管理中“账号”和“IAM用户”的描述）。 支持模糊查询。
+    * customer  客户的实名认证名称，支持模糊查询。
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的客户数量。默认值为10。
+    * label  标签，支持模糊查找。
+    * associationType  关联类型： 1：顾问销售3：转售
+    * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountName  |参数名称：客户登录名称（如果客户创建了子用户，此处需要填写主账号登录名称。关于主账号和子用户的具体介绍请参见身份管理身份管理中“账号”和“IAM用户”的描述）。支持模糊查询。| |参数约束及描述：客户登录名称（如果客户创建了子用户，此处需要填写主账号登录名称。关于主账号和子用户的具体介绍请参见身份管理身份管理中“账号”和“IAM用户”的描述）。支持模糊查询。|
-    * customer  |参数名称：实名认证名称。支持模糊查询。| |参数约束及描述：实名认证名称。支持模糊查询。|
-    * offset  |参数名称：偏移量，从0开始| |参数约束及描述： 偏移量，从0开始|
-    * limit  |参数名称：每次查询的数量。默认10，最多100。| |参数约束及描述： 每次查询的数量。默认10，最多100。|
-    * label  |参数名称：标签，支持模糊查找。| |参数约束及描述：非必填，最大长度64|
-    * associationType  |参数名称：关联类型1.推荐，2.垫付，3.转售| |参数约束及描述：非必填，最大长度2|
-    * associatedOnBegin  |参数名称：关联时间区间段开始，UTC时间。| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
-    * associatedOnEnd  |参数名称：关联时间区间段结束，UTC时间| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
+    * accountName  客户登录名称（如果客户创建了IAM用户，此处需要填写主账号登录名称。关于主账号和IAM用户的具体介绍请参见身份管理中“账号”和“IAM用户”的描述）。 支持模糊查询。
+    * customer  客户的实名认证名称，支持模糊查询。
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的客户数量。默认值为10。
+    * label  标签，支持模糊查找。
+    * associationType  关联类型： 1：顾问销售3：转售
+    * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     *
     * @var string[]
     */
@@ -299,7 +299,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountName
-    *  |参数名称：客户登录名称（如果客户创建了子用户，此处需要填写主账号登录名称。关于主账号和子用户的具体介绍请参见身份管理身份管理中“账号”和“IAM用户”的描述）。支持模糊查询。| |参数约束及描述：客户登录名称（如果客户创建了子用户，此处需要填写主账号登录名称。关于主账号和子用户的具体介绍请参见身份管理身份管理中“账号”和“IAM用户”的描述）。支持模糊查询。|
+    *  客户登录名称（如果客户创建了IAM用户，此处需要填写主账号登录名称。关于主账号和IAM用户的具体介绍请参见身份管理中“账号”和“IAM用户”的描述）。 支持模糊查询。
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     /**
     * Sets accountName
     *
-    * @param string|null $accountName |参数名称：客户登录名称（如果客户创建了子用户，此处需要填写主账号登录名称。关于主账号和子用户的具体介绍请参见身份管理身份管理中“账号”和“IAM用户”的描述）。支持模糊查询。| |参数约束及描述：客户登录名称（如果客户创建了子用户，此处需要填写主账号登录名称。关于主账号和子用户的具体介绍请参见身份管理身份管理中“账号”和“IAM用户”的描述）。支持模糊查询。|
+    * @param string|null $accountName 客户登录名称（如果客户创建了IAM用户，此处需要填写主账号登录名称。关于主账号和IAM用户的具体介绍请参见身份管理中“账号”和“IAM用户”的描述）。 支持模糊查询。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets customer
-    *  |参数名称：实名认证名称。支持模糊查询。| |参数约束及描述：实名认证名称。支持模糊查询。|
+    *  客户的实名认证名称，支持模糊查询。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     /**
     * Sets customer
     *
-    * @param string|null $customer |参数名称：实名认证名称。支持模糊查询。| |参数约束及描述：实名认证名称。支持模糊查询。|
+    * @param string|null $customer 客户的实名认证名称，支持模糊查询。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  |参数名称：偏移量，从0开始| |参数约束及描述： 偏移量，从0开始|
+    *  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return int|null
     */
@@ -359,7 +359,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset |参数名称：偏移量，从0开始| |参数约束及描述： 偏移量，从0开始|
+    * @param int|null $offset 偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  |参数名称：每次查询的数量。默认10，最多100。| |参数约束及描述： 每次查询的数量。默认10，最多100。|
+    *  每次查询的客户数量。默认值为10。
     *
     * @return int|null
     */
@@ -383,7 +383,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit |参数名称：每次查询的数量。默认10，最多100。| |参数约束及描述： 每次查询的数量。默认10，最多100。|
+    * @param int|null $limit 每次查询的客户数量。默认值为10。
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets label
-    *  |参数名称：标签，支持模糊查找。| |参数约束及描述：非必填，最大长度64|
+    *  标签，支持模糊查找。
     *
     * @return string|null
     */
@@ -407,7 +407,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     /**
     * Sets label
     *
-    * @param string|null $label |参数名称：标签，支持模糊查找。| |参数约束及描述：非必填，最大长度64|
+    * @param string|null $label 标签，支持模糊查找。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets associationType
-    *  |参数名称：关联类型1.推荐，2.垫付，3.转售| |参数约束及描述：非必填，最大长度2|
+    *  关联类型： 1：顾问销售3：转售
     *
     * @return string|null
     */
@@ -431,7 +431,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     /**
     * Sets associationType
     *
-    * @param string|null $associationType |参数名称：关联类型1.推荐，2.垫付，3.转售| |参数约束及描述：非必填，最大长度2|
+    * @param string|null $associationType 关联类型： 1：顾问销售3：转售
     *
     * @return $this
     */
@@ -443,7 +443,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets associatedOnBegin
-    *  |参数名称：关联时间区间段开始，UTC时间。| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
+    *  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     *
     * @return string|null
     */
@@ -455,7 +455,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     /**
     * Sets associatedOnBegin
     *
-    * @param string|null $associatedOnBegin |参数名称：关联时间区间段开始，UTC时间。| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
+    * @param string|null $associatedOnBegin 关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     *
     * @return $this
     */
@@ -467,7 +467,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets associatedOnEnd
-    *  |参数名称：关联时间区间段结束，UTC时间| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
+    *  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     *
     * @return string|null
     */
@@ -479,7 +479,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     /**
     * Sets associatedOnEnd
     *
-    * @param string|null $associatedOnEnd |参数名称：关联时间区间段结束，UTC时间| |参数约束及描述：格式为：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。|
+    * @param string|null $associatedOnEnd 关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     *
     * @return $this
     */

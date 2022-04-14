@@ -20,15 +20,15 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainName  |参数名称：客户的华为云账号名| |参数的约束及描述：该参数非必填，不能以“op_”或“shadow_”开头且不能全为数字。且只允许最大长度64的字符串,如果为空，随机生成。校验规则^[a-zA-Z0-9\\u00c0-\\u00ff-._ ]{0,64}$|
-    * email  |参数名称：邮箱| |参数的约束及描述：该参数非必填，且只允许最大长度64的字符串,必须含有@,如果接入的是香港站的网关，则该字段必填，否则该字段忽略|
-    * verificationCode  |参数名称：验证码| |参数的约束及描述：该参数必填，如果输入的是手机，就是手机验证码，如果输入的是邮箱，就是邮箱验证码|
-    * domainArea  |国家地区编码| |2位字母|
-    * xaccountId  |参数名称：第3方系统的用户唯一标识| |参数的约束及描述：该参数必填，且只允许最大长度128的字符串|
-    * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该参数必填，且只允许最大长度30的字符串,该标识的具体值由华为分配|
-    * password  |参数名称：密码| |参数的约束及描述：该参数选填，长度6~32位字符，至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符，不能和账号名或倒序的账号名相同，不能包含手机号，不能包含邮箱|
-    * isCloseMarketMs  |是否关闭营销消息| |参数的约束及描述：该参数选填。false：不关闭，True：关闭，默认不关闭|
-    * includeAssociationResult  |参数名称：是否返回关联结果| |参数的约束及描述：该参数非必填|
+    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^\\(\\[a-zA-Z_-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\*\\)$。
+    * email  邮箱地址。 格式：必须含有@。
+    * verificationCode  验证码。 请调用“发送验证码”接口获取。 如果邮箱不存在，不需要输入验证码。
+    * domainArea  客户所属国家地区的两位字母编号。该字母编号遵循ISO 3166标准。 例如：墨西哥 MX
+    * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
+    * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见[如何获取xaccountType的取值](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/bpconsole_apifaq_00002.html)。
+    * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含邮箱。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
+    * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
+    * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainName  |参数名称：客户的华为云账号名| |参数的约束及描述：该参数非必填，不能以“op_”或“shadow_”开头且不能全为数字。且只允许最大长度64的字符串,如果为空，随机生成。校验规则^[a-zA-Z0-9\\u00c0-\\u00ff-._ ]{0,64}$|
-    * email  |参数名称：邮箱| |参数的约束及描述：该参数非必填，且只允许最大长度64的字符串,必须含有@,如果接入的是香港站的网关，则该字段必填，否则该字段忽略|
-    * verificationCode  |参数名称：验证码| |参数的约束及描述：该参数必填，如果输入的是手机，就是手机验证码，如果输入的是邮箱，就是邮箱验证码|
-    * domainArea  |国家地区编码| |2位字母|
-    * xaccountId  |参数名称：第3方系统的用户唯一标识| |参数的约束及描述：该参数必填，且只允许最大长度128的字符串|
-    * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该参数必填，且只允许最大长度30的字符串,该标识的具体值由华为分配|
-    * password  |参数名称：密码| |参数的约束及描述：该参数选填，长度6~32位字符，至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符，不能和账号名或倒序的账号名相同，不能包含手机号，不能包含邮箱|
-    * isCloseMarketMs  |是否关闭营销消息| |参数的约束及描述：该参数选填。false：不关闭，True：关闭，默认不关闭|
-    * includeAssociationResult  |参数名称：是否返回关联结果| |参数的约束及描述：该参数非必填|
+    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^\\(\\[a-zA-Z_-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\*\\)$。
+    * email  邮箱地址。 格式：必须含有@。
+    * verificationCode  验证码。 请调用“发送验证码”接口获取。 如果邮箱不存在，不需要输入验证码。
+    * domainArea  客户所属国家地区的两位字母编号。该字母编号遵循ISO 3166标准。 例如：墨西哥 MX
+    * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
+    * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见[如何获取xaccountType的取值](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/bpconsole_apifaq_00002.html)。
+    * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含邮箱。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
+    * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
+    * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainName  |参数名称：客户的华为云账号名| |参数的约束及描述：该参数非必填，不能以“op_”或“shadow_”开头且不能全为数字。且只允许最大长度64的字符串,如果为空，随机生成。校验规则^[a-zA-Z0-9\\u00c0-\\u00ff-._ ]{0,64}$|
-    * email  |参数名称：邮箱| |参数的约束及描述：该参数非必填，且只允许最大长度64的字符串,必须含有@,如果接入的是香港站的网关，则该字段必填，否则该字段忽略|
-    * verificationCode  |参数名称：验证码| |参数的约束及描述：该参数必填，如果输入的是手机，就是手机验证码，如果输入的是邮箱，就是邮箱验证码|
-    * domainArea  |国家地区编码| |2位字母|
-    * xaccountId  |参数名称：第3方系统的用户唯一标识| |参数的约束及描述：该参数必填，且只允许最大长度128的字符串|
-    * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该参数必填，且只允许最大长度30的字符串,该标识的具体值由华为分配|
-    * password  |参数名称：密码| |参数的约束及描述：该参数选填，长度6~32位字符，至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符，不能和账号名或倒序的账号名相同，不能包含手机号，不能包含邮箱|
-    * isCloseMarketMs  |是否关闭营销消息| |参数的约束及描述：该参数选填。false：不关闭，True：关闭，默认不关闭|
-    * includeAssociationResult  |参数名称：是否返回关联结果| |参数的约束及描述：该参数非必填|
+    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^\\(\\[a-zA-Z_-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\*\\)$。
+    * email  邮箱地址。 格式：必须含有@。
+    * verificationCode  验证码。 请调用“发送验证码”接口获取。 如果邮箱不存在，不需要输入验证码。
+    * domainArea  客户所属国家地区的两位字母编号。该字母编号遵循ISO 3166标准。 例如：墨西哥 MX
+    * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
+    * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见[如何获取xaccountType的取值](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/bpconsole_apifaq_00002.html)。
+    * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含邮箱。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
+    * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
+    * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainName  |参数名称：客户的华为云账号名| |参数的约束及描述：该参数非必填，不能以“op_”或“shadow_”开头且不能全为数字。且只允许最大长度64的字符串,如果为空，随机生成。校验规则^[a-zA-Z0-9\\u00c0-\\u00ff-._ ]{0,64}$|
-    * email  |参数名称：邮箱| |参数的约束及描述：该参数非必填，且只允许最大长度64的字符串,必须含有@,如果接入的是香港站的网关，则该字段必填，否则该字段忽略|
-    * verificationCode  |参数名称：验证码| |参数的约束及描述：该参数必填，如果输入的是手机，就是手机验证码，如果输入的是邮箱，就是邮箱验证码|
-    * domainArea  |国家地区编码| |2位字母|
-    * xaccountId  |参数名称：第3方系统的用户唯一标识| |参数的约束及描述：该参数必填，且只允许最大长度128的字符串|
-    * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该参数必填，且只允许最大长度30的字符串,该标识的具体值由华为分配|
-    * password  |参数名称：密码| |参数的约束及描述：该参数选填，长度6~32位字符，至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符，不能和账号名或倒序的账号名相同，不能包含手机号，不能包含邮箱|
-    * isCloseMarketMs  |是否关闭营销消息| |参数的约束及描述：该参数选填。false：不关闭，True：关闭，默认不关闭|
-    * includeAssociationResult  |参数名称：是否返回关联结果| |参数的约束及描述：该参数非必填|
+    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^\\(\\[a-zA-Z_-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\*\\)$。
+    * email  邮箱地址。 格式：必须含有@。
+    * verificationCode  验证码。 请调用“发送验证码”接口获取。 如果邮箱不存在，不需要输入验证码。
+    * domainArea  客户所属国家地区的两位字母编号。该字母编号遵循ISO 3166标准。 例如：墨西哥 MX
+    * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
+    * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见[如何获取xaccountType的取值](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/bpconsole_apifaq_00002.html)。
+    * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含邮箱。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
+    * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
+    * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainName  |参数名称：客户的华为云账号名| |参数的约束及描述：该参数非必填，不能以“op_”或“shadow_”开头且不能全为数字。且只允许最大长度64的字符串,如果为空，随机生成。校验规则^[a-zA-Z0-9\\u00c0-\\u00ff-._ ]{0,64}$|
-    * email  |参数名称：邮箱| |参数的约束及描述：该参数非必填，且只允许最大长度64的字符串,必须含有@,如果接入的是香港站的网关，则该字段必填，否则该字段忽略|
-    * verificationCode  |参数名称：验证码| |参数的约束及描述：该参数必填，如果输入的是手机，就是手机验证码，如果输入的是邮箱，就是邮箱验证码|
-    * domainArea  |国家地区编码| |2位字母|
-    * xaccountId  |参数名称：第3方系统的用户唯一标识| |参数的约束及描述：该参数必填，且只允许最大长度128的字符串|
-    * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该参数必填，且只允许最大长度30的字符串,该标识的具体值由华为分配|
-    * password  |参数名称：密码| |参数的约束及描述：该参数选填，长度6~32位字符，至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符，不能和账号名或倒序的账号名相同，不能包含手机号，不能包含邮箱|
-    * isCloseMarketMs  |是否关闭营销消息| |参数的约束及描述：该参数选填。false：不关闭，True：关闭，默认不关闭|
-    * includeAssociationResult  |参数名称：是否返回关联结果| |参数的约束及描述：该参数非必填|
+    * domainName  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^\\(\\[a-zA-Z_-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\*\\)$。
+    * email  邮箱地址。 格式：必须含有@。
+    * verificationCode  验证码。 请调用“发送验证码”接口获取。 如果邮箱不存在，不需要输入验证码。
+    * domainArea  客户所属国家地区的两位字母编号。该字母编号遵循ISO 3166标准。 例如：墨西哥 MX
+    * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
+    * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见[如何获取xaccountType的取值](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/bpconsole_apifaq_00002.html)。
+    * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含邮箱。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
+    * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
+    * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
     */
@@ -316,7 +316,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  |参数名称：客户的华为云账号名| |参数的约束及描述：该参数非必填，不能以“op_”或“shadow_”开头且不能全为数字。且只允许最大长度64的字符串,如果为空，随机生成。校验规则^[a-zA-Z0-9\\u00c0-\\u00ff-._ ]{0,64}$|
+    *  客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^\\(\\[a-zA-Z_-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\*\\)$。
     *
     * @return string|null
     */
@@ -328,7 +328,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string|null $domainName |参数名称：客户的华为云账号名| |参数的约束及描述：该参数非必填，不能以“op_”或“shadow_”开头且不能全为数字。且只允许最大长度64的字符串,如果为空，随机生成。校验规则^[a-zA-Z0-9\\u00c0-\\u00ff-._ ]{0,64}$|
+    * @param string|null $domainName 客户的华为云账号名。 如果为空，随机生成。 不能以“op_”或“shadow_”开头且不能全为数字。 校验长度（5到32位）和规则^\\(\\[a-zA-Z_-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\*\\)$。
     *
     * @return $this
     */
@@ -340,7 +340,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  |参数名称：邮箱| |参数的约束及描述：该参数非必填，且只允许最大长度64的字符串,必须含有@,如果接入的是香港站的网关，则该字段必填，否则该字段忽略|
+    *  邮箱地址。 格式：必须含有@。
     *
     * @return string|null
     */
@@ -352,7 +352,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email |参数名称：邮箱| |参数的约束及描述：该参数非必填，且只允许最大长度64的字符串,必须含有@,如果接入的是香港站的网关，则该字段必填，否则该字段忽略|
+    * @param string|null $email 邮箱地址。 格式：必须含有@。
     *
     * @return $this
     */
@@ -364,7 +364,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets verificationCode
-    *  |参数名称：验证码| |参数的约束及描述：该参数必填，如果输入的是手机，就是手机验证码，如果输入的是邮箱，就是邮箱验证码|
+    *  验证码。 请调用“发送验证码”接口获取。 如果邮箱不存在，不需要输入验证码。
     *
     * @return string|null
     */
@@ -376,7 +376,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets verificationCode
     *
-    * @param string|null $verificationCode |参数名称：验证码| |参数的约束及描述：该参数必填，如果输入的是手机，就是手机验证码，如果输入的是邮箱，就是邮箱验证码|
+    * @param string|null $verificationCode 验证码。 请调用“发送验证码”接口获取。 如果邮箱不存在，不需要输入验证码。
     *
     * @return $this
     */
@@ -388,7 +388,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainArea
-    *  |国家地区编码| |2位字母|
+    *  客户所属国家地区的两位字母编号。该字母编号遵循ISO 3166标准。 例如：墨西哥 MX
     *
     * @return string|null
     */
@@ -400,7 +400,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets domainArea
     *
-    * @param string|null $domainArea |国家地区编码| |2位字母|
+    * @param string|null $domainArea 客户所属国家地区的两位字母编号。该字母编号遵循ISO 3166标准。 例如：墨西哥 MX
     *
     * @return $this
     */
@@ -412,7 +412,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets xaccountId
-    *  |参数名称：第3方系统的用户唯一标识| |参数的约束及描述：该参数必填，且只允许最大长度128的字符串|
+    *  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
     *
     * @return string
     */
@@ -424,7 +424,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets xaccountId
     *
-    * @param string $xaccountId |参数名称：第3方系统的用户唯一标识| |参数的约束及描述：该参数必填，且只允许最大长度128的字符串|
+    * @param string $xaccountId 伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
     *
     * @return $this
     */
@@ -436,7 +436,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets xaccountType
-    *  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该参数必填，且只允许最大长度30的字符串,该标识的具体值由华为分配|
+    *  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见[如何获取xaccountType的取值](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/bpconsole_apifaq_00002.html)。
     *
     * @return string
     */
@@ -448,7 +448,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets xaccountType
     *
-    * @param string $xaccountType |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该参数必填，且只允许最大长度30的字符串,该标识的具体值由华为分配|
+    * @param string $xaccountType 华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见[如何获取xaccountType的取值](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/bpconsole_apifaq_00002.html)。
     *
     * @return $this
     */
@@ -460,7 +460,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets password
-    *  |参数名称：密码| |参数的约束及描述：该参数选填，长度6~32位字符，至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符，不能和账号名或倒序的账号名相同，不能包含手机号，不能包含邮箱|
+    *  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含邮箱。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
     *
     * @return string|null
     */
@@ -472,7 +472,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets password
     *
-    * @param string|null $password |参数名称：密码| |参数的约束及描述：该参数选填，长度6~32位字符，至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符，不能和账号名或倒序的账号名相同，不能包含手机号，不能包含邮箱|
+    * @param string|null $password 密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含邮箱。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
     *
     * @return $this
     */
@@ -484,7 +484,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets isCloseMarketMs
-    *  |是否关闭营销消息| |参数的约束及描述：该参数选填。false：不关闭，True：关闭，默认不关闭|
+    *  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
     *
     * @return string|null
     */
@@ -496,7 +496,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets isCloseMarketMs
     *
-    * @param string|null $isCloseMarketMs |是否关闭营销消息| |参数的约束及描述：该参数选填。false：不关闭，True：关闭，默认不关闭|
+    * @param string|null $isCloseMarketMs 是否关闭营销消息的发送： true：关闭false：不关闭（默认）
     *
     * @return $this
     */
@@ -508,7 +508,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets includeAssociationResult
-    *  |参数名称：是否返回关联结果| |参数的约束及描述：该参数非必填|
+    *  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @return bool|null
     */
@@ -520,7 +520,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets includeAssociationResult
     *
-    * @param bool|null $includeAssociationResult |参数名称：是否返回关联结果| |参数的约束及描述：该参数非必填|
+    * @param bool|null $includeAssociationResult 是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @return $this
     */

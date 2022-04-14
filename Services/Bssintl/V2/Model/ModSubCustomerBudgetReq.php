@@ -20,29 +20,29 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * budgetAmount  |参数名称：调整的目标金额，可精确至小数点后面2位。| |参数的约束及描述：调整的目标金额，可精确至小数点后面2位。|
-    * cancelPartnerFrozen  |参数名称：是否在设置客户预算的同时解除账号冻结：0：否；1：是。默认为否。| |参数约束及描述：是否在设置客户预算的同时解除账号冻结：0：否；1：是。默认为否。|
+    * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
+    * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
+    * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'customerId' => 'string',
-            'budgetAmount' => 'float',
+            'budgetAmount' => 'double',
             'cancelPartnerFrozen' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * budgetAmount  |参数名称：调整的目标金额，可精确至小数点后面2位。| |参数的约束及描述：调整的目标金额，可精确至小数点后面2位。|
-    * cancelPartnerFrozen  |参数名称：是否在设置客户预算的同时解除账号冻结：0：否；1：是。默认为否。| |参数约束及描述：是否在设置客户预算的同时解除账号冻结：0：否；1：是。默认为否。|
+    * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
+    * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
+    * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'customerId' => null,
-        'budgetAmount' => 'bigdecimal',
+        'budgetAmount' => 'double',
         'cancelPartnerFrozen' => null
     ];
 
@@ -69,9 +69,9 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * budgetAmount  |参数名称：调整的目标金额，可精确至小数点后面2位。| |参数的约束及描述：调整的目标金额，可精确至小数点后面2位。|
-    * cancelPartnerFrozen  |参数名称：是否在设置客户预算的同时解除账号冻结：0：否；1：是。默认为否。| |参数约束及描述：是否在设置客户预算的同时解除账号冻结：0：否；1：是。默认为否。|
+    * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
+    * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
+    * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * budgetAmount  |参数名称：调整的目标金额，可精确至小数点后面2位。| |参数的约束及描述：调整的目标金额，可精确至小数点后面2位。|
-    * cancelPartnerFrozen  |参数名称：是否在设置客户预算的同时解除账号冻结：0：否；1：是。默认为否。| |参数约束及描述：是否在设置客户预算的同时解除账号冻结：0：否；1：是。默认为否。|
+    * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
+    * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
+    * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * budgetAmount  |参数名称：调整的目标金额，可精确至小数点后面2位。| |参数的约束及描述：调整的目标金额，可精确至小数点后面2位。|
-    * cancelPartnerFrozen  |参数名称：是否在设置客户预算的同时解除账号冻结：0：否；1：是。默认为否。| |参数约束及描述：是否在设置客户预算的同时解除账号冻结：0：否；1：是。默认为否。|
+    * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
+    * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
+    * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     *
     * @var string[]
     */
@@ -220,7 +220,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerId
-    *  |参数名称：客户ID。| |参数约束及描述：客户ID。|
+    *  客户账号ID。您可以调用查询客户列表接口获取customer_id。
     *
     * @return string
     */
@@ -232,7 +232,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     /**
     * Sets customerId
     *
-    * @param string $customerId |参数名称：客户ID。| |参数约束及描述：客户ID。|
+    * @param string $customerId 客户账号ID。您可以调用查询客户列表接口获取customer_id。
     *
     * @return $this
     */
@@ -244,9 +244,9 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets budgetAmount
-    *  |参数名称：调整的目标金额，可精确至小数点后面2位。| |参数的约束及描述：调整的目标金额，可精确至小数点后面2位。|
+    *  调整的目标金额。 单位：元。精确至小数点后2位。
     *
-    * @return float
+    * @return double
     */
     public function getBudgetAmount()
     {
@@ -256,7 +256,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     /**
     * Sets budgetAmount
     *
-    * @param float $budgetAmount |参数名称：调整的目标金额，可精确至小数点后面2位。| |参数的约束及描述：调整的目标金额，可精确至小数点后面2位。|
+    * @param double $budgetAmount 调整的目标金额。 单位：元。精确至小数点后2位。
     *
     * @return $this
     */
@@ -268,7 +268,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets cancelPartnerFrozen
-    *  |参数名称：是否在设置客户预算的同时解除账号冻结：0：否；1：是。默认为否。| |参数约束及描述：是否在设置客户预算的同时解除账号冻结：0：否；1：是。默认为否。|
+    *  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     *
     * @return string|null
     */
@@ -280,7 +280,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     /**
     * Sets cancelPartnerFrozen
     *
-    * @param string|null $cancelPartnerFrozen |参数名称：是否在设置客户预算的同时解除账号冻结：0：否；1：是。默认为否。| |参数约束及描述：是否在设置客户预算的同时解除账号冻结：0：否；1：是。默认为否。|
+    * @param string|null $cancelPartnerFrozen 是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     *
     * @return $this
     */

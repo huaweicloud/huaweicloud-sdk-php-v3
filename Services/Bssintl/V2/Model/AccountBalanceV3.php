@@ -20,45 +20,45 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountId  |参数名称：账户标识。| |参数约束及描述：账户标识。|
-    * accountType  |参数名称：账户类型：1：余额2：信用5：奖励7：保证金8：可拨款| |参数的约束及描述：账户类型：1：余额2：信用5：奖励7：保证金8：可拨款|
-    * amount  |参数名称：余额。| |参数的约束及描述：余额。|
-    * currency  |参数名称：币种。当前固定为CNY。| |参数约束及描述：币种。当前固定为CNY。|
-    * designatedAmount  |参数名称：专款专用余额。| |参数的约束及描述：专款专用余额。|
-    * creditAmount  |参数名称：总信用额度。只有账户类型是2:信用的时候才有该字段| |参数的约束及描述：总信用额度。只有账户类型是2:信用的时候才有该字段|
-    * measureId  |参数名称：度量单位。1：元。| |参数的约束及描述：度量单位。1：元。|
+    * accountId  账户标识。
+    * accountType  账户类型。 1：余额2：信用5：奖励金7：保证金
+    * amount  账户余额。
+    * currency  币种。 USD：美元。
+    * designatedAmount  专款专用余额。
+    * creditAmount  总信用额度，仅信用账户存在该字段。
+    * measureId  度量单位。 1：元
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'accountId' => 'string',
             'accountType' => 'int',
-            'amount' => 'float',
+            'amount' => 'double',
             'currency' => 'string',
-            'designatedAmount' => 'float',
-            'creditAmount' => 'float',
+            'designatedAmount' => 'double',
+            'creditAmount' => 'double',
             'measureId' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountId  |参数名称：账户标识。| |参数约束及描述：账户标识。|
-    * accountType  |参数名称：账户类型：1：余额2：信用5：奖励7：保证金8：可拨款| |参数的约束及描述：账户类型：1：余额2：信用5：奖励7：保证金8：可拨款|
-    * amount  |参数名称：余额。| |参数的约束及描述：余额。|
-    * currency  |参数名称：币种。当前固定为CNY。| |参数约束及描述：币种。当前固定为CNY。|
-    * designatedAmount  |参数名称：专款专用余额。| |参数的约束及描述：专款专用余额。|
-    * creditAmount  |参数名称：总信用额度。只有账户类型是2:信用的时候才有该字段| |参数的约束及描述：总信用额度。只有账户类型是2:信用的时候才有该字段|
-    * measureId  |参数名称：度量单位。1：元。| |参数的约束及描述：度量单位。1：元。|
+    * accountId  账户标识。
+    * accountType  账户类型。 1：余额2：信用5：奖励金7：保证金
+    * amount  账户余额。
+    * currency  币种。 USD：美元。
+    * designatedAmount  专款专用余额。
+    * creditAmount  总信用额度，仅信用账户存在该字段。
+    * measureId  度量单位。 1：元
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'accountId' => null,
         'accountType' => 'int32',
-        'amount' => 'bigdecimal',
+        'amount' => 'double',
         'currency' => null,
-        'designatedAmount' => 'bigdecimal',
-        'creditAmount' => 'bigdecimal',
+        'designatedAmount' => 'double',
+        'creditAmount' => 'double',
         'measureId' => 'int32'
     ];
 
@@ -85,13 +85,13 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountId  |参数名称：账户标识。| |参数约束及描述：账户标识。|
-    * accountType  |参数名称：账户类型：1：余额2：信用5：奖励7：保证金8：可拨款| |参数的约束及描述：账户类型：1：余额2：信用5：奖励7：保证金8：可拨款|
-    * amount  |参数名称：余额。| |参数的约束及描述：余额。|
-    * currency  |参数名称：币种。当前固定为CNY。| |参数约束及描述：币种。当前固定为CNY。|
-    * designatedAmount  |参数名称：专款专用余额。| |参数的约束及描述：专款专用余额。|
-    * creditAmount  |参数名称：总信用额度。只有账户类型是2:信用的时候才有该字段| |参数的约束及描述：总信用额度。只有账户类型是2:信用的时候才有该字段|
-    * measureId  |参数名称：度量单位。1：元。| |参数的约束及描述：度量单位。1：元。|
+    * accountId  账户标识。
+    * accountType  账户类型。 1：余额2：信用5：奖励金7：保证金
+    * amount  账户余额。
+    * currency  币种。 USD：美元。
+    * designatedAmount  专款专用余额。
+    * creditAmount  总信用额度，仅信用账户存在该字段。
+    * measureId  度量单位。 1：元
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountId  |参数名称：账户标识。| |参数约束及描述：账户标识。|
-    * accountType  |参数名称：账户类型：1：余额2：信用5：奖励7：保证金8：可拨款| |参数的约束及描述：账户类型：1：余额2：信用5：奖励7：保证金8：可拨款|
-    * amount  |参数名称：余额。| |参数的约束及描述：余额。|
-    * currency  |参数名称：币种。当前固定为CNY。| |参数约束及描述：币种。当前固定为CNY。|
-    * designatedAmount  |参数名称：专款专用余额。| |参数的约束及描述：专款专用余额。|
-    * creditAmount  |参数名称：总信用额度。只有账户类型是2:信用的时候才有该字段| |参数的约束及描述：总信用额度。只有账户类型是2:信用的时候才有该字段|
-    * measureId  |参数名称：度量单位。1：元。| |参数的约束及描述：度量单位。1：元。|
+    * accountId  账户标识。
+    * accountType  账户类型。 1：余额2：信用5：奖励金7：保证金
+    * amount  账户余额。
+    * currency  币种。 USD：美元。
+    * designatedAmount  专款专用余额。
+    * creditAmount  总信用额度，仅信用账户存在该字段。
+    * measureId  度量单位。 1：元
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountId  |参数名称：账户标识。| |参数约束及描述：账户标识。|
-    * accountType  |参数名称：账户类型：1：余额2：信用5：奖励7：保证金8：可拨款| |参数的约束及描述：账户类型：1：余额2：信用5：奖励7：保证金8：可拨款|
-    * amount  |参数名称：余额。| |参数的约束及描述：余额。|
-    * currency  |参数名称：币种。当前固定为CNY。| |参数约束及描述：币种。当前固定为CNY。|
-    * designatedAmount  |参数名称：专款专用余额。| |参数的约束及描述：专款专用余额。|
-    * creditAmount  |参数名称：总信用额度。只有账户类型是2:信用的时候才有该字段| |参数的约束及描述：总信用额度。只有账户类型是2:信用的时候才有该字段|
-    * measureId  |参数名称：度量单位。1：元。| |参数的约束及描述：度量单位。1：元。|
+    * accountId  账户标识。
+    * accountType  账户类型。 1：余额2：信用5：奖励金7：保证金
+    * amount  账户余额。
+    * currency  币种。 USD：美元。
+    * designatedAmount  专款专用余额。
+    * creditAmount  总信用额度，仅信用账户存在该字段。
+    * measureId  度量单位。 1：元
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
         $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
         $this->container['accountType'] = isset($data['accountType']) ? $data['accountType'] : null;
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
-        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : 'CNY';
+        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : 'USD';
         $this->container['designatedAmount'] = isset($data['designatedAmount']) ? $data['designatedAmount'] : null;
         $this->container['creditAmount'] = isset($data['creditAmount']) ? $data['creditAmount'] : null;
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
@@ -255,7 +255,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountId
-    *  |参数名称：账户标识。| |参数约束及描述：账户标识。|
+    *  账户标识。
     *
     * @return string
     */
@@ -267,7 +267,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets accountId
     *
-    * @param string $accountId |参数名称：账户标识。| |参数约束及描述：账户标识。|
+    * @param string $accountId 账户标识。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountType
-    *  |参数名称：账户类型：1：余额2：信用5：奖励7：保证金8：可拨款| |参数的约束及描述：账户类型：1：余额2：信用5：奖励7：保证金8：可拨款|
+    *  账户类型。 1：余额2：信用5：奖励金7：保证金
     *
     * @return int
     */
@@ -291,7 +291,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets accountType
     *
-    * @param int $accountType |参数名称：账户类型：1：余额2：信用5：奖励7：保证金8：可拨款| |参数的约束及描述：账户类型：1：余额2：信用5：奖励7：保证金8：可拨款|
+    * @param int $accountType 账户类型。 1：余额2：信用5：奖励金7：保证金
     *
     * @return $this
     */
@@ -303,9 +303,9 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets amount
-    *  |参数名称：余额。| |参数的约束及描述：余额。|
+    *  账户余额。
     *
-    * @return float
+    * @return double
     */
     public function getAmount()
     {
@@ -315,7 +315,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param float $amount |参数名称：余额。| |参数的约束及描述：余额。|
+    * @param double $amount 账户余额。
     *
     * @return $this
     */
@@ -327,7 +327,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets currency
-    *  |参数名称：币种。当前固定为CNY。| |参数约束及描述：币种。当前固定为CNY。|
+    *  币种。 USD：美元。
     *
     * @return string
     */
@@ -339,7 +339,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets currency
     *
-    * @param string $currency |参数名称：币种。当前固定为CNY。| |参数约束及描述：币种。当前固定为CNY。|
+    * @param string $currency 币种。 USD：美元。
     *
     * @return $this
     */
@@ -351,9 +351,9 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets designatedAmount
-    *  |参数名称：专款专用余额。| |参数的约束及描述：专款专用余额。|
+    *  专款专用余额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getDesignatedAmount()
     {
@@ -363,7 +363,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets designatedAmount
     *
-    * @param float|null $designatedAmount |参数名称：专款专用余额。| |参数的约束及描述：专款专用余额。|
+    * @param double|null $designatedAmount 专款专用余额。
     *
     * @return $this
     */
@@ -375,9 +375,9 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets creditAmount
-    *  |参数名称：总信用额度。只有账户类型是2:信用的时候才有该字段| |参数的约束及描述：总信用额度。只有账户类型是2:信用的时候才有该字段|
+    *  总信用额度，仅信用账户存在该字段。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getCreditAmount()
     {
@@ -387,7 +387,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets creditAmount
     *
-    * @param float|null $creditAmount |参数名称：总信用额度。只有账户类型是2:信用的时候才有该字段| |参数的约束及描述：总信用额度。只有账户类型是2:信用的时候才有该字段|
+    * @param double|null $creditAmount 总信用额度，仅信用账户存在该字段。
     *
     * @return $this
     */
@@ -399,7 +399,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：度量单位。1：元。| |参数的约束及描述：度量单位。1：元。|
+    *  度量单位。 1：元
     *
     * @return int
     */
@@ -411,7 +411,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int $measureId |参数名称：度量单位。1：元。| |参数的约束及描述：度量单位。1：元。|
+    * @param int $measureId 度量单位。 1：元
     *
     * @return $this
     */

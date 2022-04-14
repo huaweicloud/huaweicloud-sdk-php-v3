@@ -20,10 +20,10 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * measureId  |参数名称：度量单位ID| |参数的约束及描述：度量单位ID|
-    * measureName  |参数名称：度量单位名称（默认语言或者要查询语言名称）| |参数约束及描述：度量单位名称（默认语言或者要查询语言名称）|
-    * abbreviation  |参数名称：英文缩写| |参数约束及描述：英文缩写|
-    * measureType  |参数名称：度量类型| |参数的约束及描述：度量类型|
+    * measureId  度量单位ID。 例如：10表示GB。
+    * measureName  度量单位的名称，根据查询的语言类型返回结果。 例如：GB。
+    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“GB”。
+    * measureType  度量类型。 1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量25：测试类型
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * measureId  |参数名称：度量单位ID| |参数的约束及描述：度量单位ID|
-    * measureName  |参数名称：度量单位名称（默认语言或者要查询语言名称）| |参数约束及描述：度量单位名称（默认语言或者要查询语言名称）|
-    * abbreviation  |参数名称：英文缩写| |参数约束及描述：英文缩写|
-    * measureType  |参数名称：度量类型| |参数的约束及描述：度量类型|
+    * measureId  度量单位ID。 例如：10表示GB。
+    * measureName  度量单位的名称，根据查询的语言类型返回结果。 例如：GB。
+    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“GB”。
+    * measureType  度量类型。 1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量25：测试类型
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * measureId  |参数名称：度量单位ID| |参数的约束及描述：度量单位ID|
-    * measureName  |参数名称：度量单位名称（默认语言或者要查询语言名称）| |参数约束及描述：度量单位名称（默认语言或者要查询语言名称）|
-    * abbreviation  |参数名称：英文缩写| |参数约束及描述：英文缩写|
-    * measureType  |参数名称：度量类型| |参数的约束及描述：度量类型|
+    * measureId  度量单位ID。 例如：10表示GB。
+    * measureName  度量单位的名称，根据查询的语言类型返回结果。 例如：GB。
+    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“GB”。
+    * measureType  度量类型。 1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量25：测试类型
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * measureId  |参数名称：度量单位ID| |参数的约束及描述：度量单位ID|
-    * measureName  |参数名称：度量单位名称（默认语言或者要查询语言名称）| |参数约束及描述：度量单位名称（默认语言或者要查询语言名称）|
-    * abbreviation  |参数名称：英文缩写| |参数约束及描述：英文缩写|
-    * measureType  |参数名称：度量类型| |参数的约束及描述：度量类型|
+    * measureId  度量单位ID。 例如：10表示GB。
+    * measureName  度量单位的名称，根据查询的语言类型返回结果。 例如：GB。
+    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“GB”。
+    * measureType  度量类型。 1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量25：测试类型
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * measureId  |参数名称：度量单位ID| |参数的约束及描述：度量单位ID|
-    * measureName  |参数名称：度量单位名称（默认语言或者要查询语言名称）| |参数约束及描述：度量单位名称（默认语言或者要查询语言名称）|
-    * abbreviation  |参数名称：英文缩写| |参数约束及描述：英文缩写|
-    * measureType  |参数名称：度量类型| |参数的约束及描述：度量类型|
+    * measureId  度量单位ID。 例如：10表示GB。
+    * measureName  度量单位的名称，根据查询的语言类型返回结果。 例如：GB。
+    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“GB”。
+    * measureType  度量类型。 1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量25：测试类型
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：度量单位ID| |参数的约束及描述：度量单位ID|
+    *  度量单位ID。 例如：10表示GB。
     *
     * @return int|null
     */
@@ -219,7 +219,7 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId |参数名称：度量单位ID| |参数的约束及描述：度量单位ID|
+    * @param int|null $measureId 度量单位ID。 例如：10表示GB。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureName
-    *  |参数名称：度量单位名称（默认语言或者要查询语言名称）| |参数约束及描述：度量单位名称（默认语言或者要查询语言名称）|
+    *  度量单位的名称，根据查询的语言类型返回结果。 例如：GB。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
     /**
     * Sets measureName
     *
-    * @param string|null $measureName |参数名称：度量单位名称（默认语言或者要查询语言名称）| |参数约束及描述：度量单位名称（默认语言或者要查询语言名称）|
+    * @param string|null $measureName 度量单位的名称，根据查询的语言类型返回结果。 例如：GB。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
 
     /**
     * Gets abbreviation
-    *  |参数名称：英文缩写| |参数约束及描述：英文缩写|
+    *  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“GB”。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
     /**
     * Sets abbreviation
     *
-    * @param string|null $abbreviation |参数名称：英文缩写| |参数约束及描述：英文缩写|
+    * @param string|null $abbreviation 度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“GB”。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureType
-    *  |参数名称：度量类型| |参数的约束及描述：度量类型|
+    *  度量类型。 1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量25：测试类型
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
     /**
     * Sets measureType
     *
-    * @param int|null $measureType |参数名称：度量类型| |参数的约束及描述：度量类型|
+    * @param int|null $measureType 度量类型。 1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量25：测试类型
     *
     * @return $this
     */

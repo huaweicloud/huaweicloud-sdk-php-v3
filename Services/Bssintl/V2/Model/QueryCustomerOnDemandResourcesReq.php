@@ -20,15 +20,15 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * customerId  |参数名称：所属的客户ID。| |参数约束及描述：所属的客户ID。|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceIds  |参数名称：资源ID批量查询| |参数约束以及描述：用于查询指定资源ID对应的资源。最多支持同时传递50个Id的列表。|
-    * effectiveTimeBegin  |参数名称：生效时间的开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间的开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * effectiveTimeEnd  |参数名称：生效时间的结束时间UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间的结束时间UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * offset  |参数名称：偏移量，从0开始。默认值：0| |参数的约束及描述：偏移量，从0开始。默认值：0|
-    * limit  |参数名称：一次查询的条数，默认10条。| |参数的约束及描述：一次查询的条数，默认10条。|
-    * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
+    * customerId  客户账号ID。 您可以调用查询客户列表接口获取customer_id。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceIds  资源ID批量查询。 用于查询指定资源ID对应的资源。 最多支持同时传递50个ID的列表。
+    * effectiveTimeBegin  生效时间的开始时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * effectiveTimeEnd  生效时间的结束时间 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  一次查询的条数，默认值为10。
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * customerId  |参数名称：所属的客户ID。| |参数约束及描述：所属的客户ID。|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceIds  |参数名称：资源ID批量查询| |参数约束以及描述：用于查询指定资源ID对应的资源。最多支持同时传递50个Id的列表。|
-    * effectiveTimeBegin  |参数名称：生效时间的开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间的开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * effectiveTimeEnd  |参数名称：生效时间的结束时间UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间的结束时间UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * offset  |参数名称：偏移量，从0开始。默认值：0| |参数的约束及描述：偏移量，从0开始。默认值：0|
-    * limit  |参数名称：一次查询的条数，默认10条。| |参数的约束及描述：一次查询的条数，默认10条。|
-    * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
+    * customerId  客户账号ID。 您可以调用查询客户列表接口获取customer_id。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceIds  资源ID批量查询。 用于查询指定资源ID对应的资源。 最多支持同时传递50个ID的列表。
+    * effectiveTimeBegin  生效时间的开始时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * effectiveTimeEnd  生效时间的结束时间 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  一次查询的条数，默认值为10。
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * customerId  |参数名称：所属的客户ID。| |参数约束及描述：所属的客户ID。|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceIds  |参数名称：资源ID批量查询| |参数约束以及描述：用于查询指定资源ID对应的资源。最多支持同时传递50个Id的列表。|
-    * effectiveTimeBegin  |参数名称：生效时间的开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间的开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * effectiveTimeEnd  |参数名称：生效时间的结束时间UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间的结束时间UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * offset  |参数名称：偏移量，从0开始。默认值：0| |参数的约束及描述：偏移量，从0开始。默认值：0|
-    * limit  |参数名称：一次查询的条数，默认10条。| |参数的约束及描述：一次查询的条数，默认10条。|
-    * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
+    * customerId  客户账号ID。 您可以调用查询客户列表接口获取customer_id。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceIds  资源ID批量查询。 用于查询指定资源ID对应的资源。 最多支持同时传递50个ID的列表。
+    * effectiveTimeBegin  生效时间的开始时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * effectiveTimeEnd  生效时间的结束时间 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  一次查询的条数，默认值为10。
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * customerId  |参数名称：所属的客户ID。| |参数约束及描述：所属的客户ID。|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceIds  |参数名称：资源ID批量查询| |参数约束以及描述：用于查询指定资源ID对应的资源。最多支持同时传递50个Id的列表。|
-    * effectiveTimeBegin  |参数名称：生效时间的开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间的开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * effectiveTimeEnd  |参数名称：生效时间的结束时间UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间的结束时间UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * offset  |参数名称：偏移量，从0开始。默认值：0| |参数的约束及描述：偏移量，从0开始。默认值：0|
-    * limit  |参数名称：一次查询的条数，默认10条。| |参数的约束及描述：一次查询的条数，默认10条。|
-    * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
+    * customerId  客户账号ID。 您可以调用查询客户列表接口获取customer_id。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceIds  资源ID批量查询。 用于查询指定资源ID对应的资源。 最多支持同时传递50个ID的列表。
+    * effectiveTimeBegin  生效时间的开始时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * effectiveTimeEnd  生效时间的结束时间 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  一次查询的条数，默认值为10。
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * customerId  |参数名称：所属的客户ID。| |参数约束及描述：所属的客户ID。|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceIds  |参数名称：资源ID批量查询| |参数约束以及描述：用于查询指定资源ID对应的资源。最多支持同时传递50个Id的列表。|
-    * effectiveTimeBegin  |参数名称：生效时间的开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间的开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * effectiveTimeEnd  |参数名称：生效时间的结束时间UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间的结束时间UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * offset  |参数名称：偏移量，从0开始。默认值：0| |参数的约束及描述：偏移量，从0开始。默认值：0|
-    * limit  |参数名称：一次查询的条数，默认10条。| |参数的约束及描述：一次查询的条数，默认10条。|
-    * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
+    * customerId  客户账号ID。 您可以调用查询客户列表接口获取customer_id。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceIds  资源ID批量查询。 用于查询指定资源ID对应的资源。 最多支持同时传递50个ID的列表。
+    * effectiveTimeBegin  生效时间的开始时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * effectiveTimeEnd  生效时间的结束时间 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  一次查询的条数，默认值为10。
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     *
     * @var string[]
     */
@@ -313,7 +313,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerId
-    *  |参数名称：所属的客户ID。| |参数约束及描述：所属的客户ID。|
+    *  客户账号ID。 您可以调用查询客户列表接口获取customer_id。
     *
     * @return string
     */
@@ -325,7 +325,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets customerId
     *
-    * @param string $customerId |参数名称：所属的客户ID。| |参数约束及描述：所属的客户ID。|
+    * @param string $customerId 客户账号ID。 您可以调用查询客户列表接口获取customer_id。
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionCode
-    *  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
+    *  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     *
     * @return string|null
     */
@@ -349,7 +349,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets regionCode
     *
-    * @param string|null $regionCode |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
+    * @param string|null $regionCode 云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeCode
-    *  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return string|null
     */
@@ -373,7 +373,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeCode
     *
-    * @param string|null $serviceTypeCode |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    * @param string|null $serviceTypeCode 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceIds
-    *  |参数名称：资源ID批量查询| |参数约束以及描述：用于查询指定资源ID对应的资源。最多支持同时传递50个Id的列表。|
+    *  资源ID批量查询。 用于查询指定资源ID对应的资源。 最多支持同时传递50个ID的列表。
     *
     * @return string[]|null
     */
@@ -397,7 +397,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets resourceIds
     *
-    * @param string[]|null $resourceIds |参数名称：资源ID批量查询| |参数约束以及描述：用于查询指定资源ID对应的资源。最多支持同时传递50个Id的列表。|
+    * @param string[]|null $resourceIds 资源ID批量查询。 用于查询指定资源ID对应的资源。 最多支持同时传递50个ID的列表。
     *
     * @return $this
     */
@@ -409,7 +409,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets effectiveTimeBegin
-    *  |参数名称：生效时间的开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间的开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    *  生效时间的开始时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -421,7 +421,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets effectiveTimeBegin
     *
-    * @param string|null $effectiveTimeBegin |参数名称：生效时间的开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间的开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    * @param string|null $effectiveTimeBegin 生效时间的开始时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
@@ -433,7 +433,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets effectiveTimeEnd
-    *  |参数名称：生效时间的结束时间UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间的结束时间UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    *  生效时间的结束时间 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -445,7 +445,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets effectiveTimeEnd
     *
-    * @param string|null $effectiveTimeEnd |参数名称：生效时间的结束时间UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间的结束时间UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    * @param string|null $effectiveTimeEnd 生效时间的结束时间 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
@@ -457,7 +457,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  |参数名称：偏移量，从0开始。默认值：0| |参数的约束及描述：偏移量，从0开始。默认值：0|
+    *  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return int|null
     */
@@ -469,7 +469,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset |参数名称：偏移量，从0开始。默认值：0| |参数的约束及描述：偏移量，从0开始。默认值：0|
+    * @param int|null $offset 偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return $this
     */
@@ -481,7 +481,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  |参数名称：一次查询的条数，默认10条。| |参数的约束及描述：一次查询的条数，默认10条。|
+    *  一次查询的条数，默认值为10。
     *
     * @return int|null
     */
@@ -493,7 +493,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit |参数名称：一次查询的条数，默认10条。| |参数的约束及描述：一次查询的条数，默认10条。|
+    * @param int|null $limit 一次查询的条数，默认值为10。
     *
     * @return $this
     */
@@ -505,7 +505,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
+    *  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     *
     * @return int|null
     */
@@ -517,7 +517,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
+    * @param int|null $status 资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     *
     * @return $this
     */

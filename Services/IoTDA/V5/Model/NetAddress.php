@@ -186,9 +186,6 @@ class NetAddress implements ModelInterface, ArrayAccess
             if (!is_null($this->container['port']) && ($this->container['port'] > 65535)) {
                 $invalidProperties[] = "invalid value for 'port', must be smaller than or equal to 65535.";
             }
-            if (!is_null($this->container['port']) && ($this->container['port'] < 0)) {
-                $invalidProperties[] = "invalid value for 'port', must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['domain']) && !preg_match("/^([a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.)+[a-zA-Z]{2,6}$/", $this->container['domain'])) {
                 $invalidProperties[] = "invalid value for 'domain', must be conform to the pattern /^([a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.)+[a-zA-Z]{2,6}$/.";
             }

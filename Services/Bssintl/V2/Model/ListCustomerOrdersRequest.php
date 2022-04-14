@@ -20,19 +20,18 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
-    * customerId  |参数名称：客户账号ID。| |参数的约束及描述：|
-    * createTimeBegin  |参数名称：订单创建开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2020-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * createTimeEnd  |参数名称：订单创建结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2020-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数的约束及描述：|
-    * status  |参数名称：订单状态。1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：|
-    * orderType  |参数名称：订单类型。1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的大小，默认为10| |参数的约束及描述：最大值100|
-    * offset  |参数名称：偏移量，从0开始，默认为0| |参数的约束及描述：|
-    * orderBy  |参数名称：查询的订单列表排序。支持3中多个响应参数进行排序，但每次只能用一个。缺省或者带+为升序，带-表示倒序。例如：按照创建时间升序排序表示为+createTime| |参数的约束及描述：|
-    * paymentTimeBegin  |参数名称：订单支付开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * paymentTimeEnd  |参数名称：订单支付结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * indirectPartnerId  |参数名称：二级经销商ID，只有伙伴用自身token调用的时候，该字段才有含义。| |参数的约束及描述：|
+    * orderId  订单ID。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id。
+    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * status  订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认
+    * orderType  订单类型：1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * limit  每次查询的订单数量，默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。
+    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @var string[]
     */
@@ -48,25 +47,23 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'orderBy' => 'string',
             'paymentTimeBegin' => 'string',
-            'paymentTimeEnd' => 'string',
-            'indirectPartnerId' => 'string'
+            'paymentTimeEnd' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
-    * customerId  |参数名称：客户账号ID。| |参数的约束及描述：|
-    * createTimeBegin  |参数名称：订单创建开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2020-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * createTimeEnd  |参数名称：订单创建结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2020-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数的约束及描述：|
-    * status  |参数名称：订单状态。1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：|
-    * orderType  |参数名称：订单类型。1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的大小，默认为10| |参数的约束及描述：最大值100|
-    * offset  |参数名称：偏移量，从0开始，默认为0| |参数的约束及描述：|
-    * orderBy  |参数名称：查询的订单列表排序。支持3中多个响应参数进行排序，但每次只能用一个。缺省或者带+为升序，带-表示倒序。例如：按照创建时间升序排序表示为+createTime| |参数的约束及描述：|
-    * paymentTimeBegin  |参数名称：订单支付开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * paymentTimeEnd  |参数名称：订单支付结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * indirectPartnerId  |参数名称：二级经销商ID，只有伙伴用自身token调用的时候，该字段才有含义。| |参数的约束及描述：|
+    * orderId  订单ID。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id。
+    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * status  订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认
+    * orderType  订单类型：1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * limit  每次查询的订单数量，默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。
+    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @var string[]
     */
@@ -82,8 +79,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'orderBy' => null,
         'paymentTimeBegin' => null,
-        'paymentTimeEnd' => null,
-        'indirectPartnerId' => null
+        'paymentTimeEnd' => null
     ];
 
     /**
@@ -109,19 +105,18 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
-    * customerId  |参数名称：客户账号ID。| |参数的约束及描述：|
-    * createTimeBegin  |参数名称：订单创建开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2020-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * createTimeEnd  |参数名称：订单创建结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2020-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数的约束及描述：|
-    * status  |参数名称：订单状态。1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：|
-    * orderType  |参数名称：订单类型。1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的大小，默认为10| |参数的约束及描述：最大值100|
-    * offset  |参数名称：偏移量，从0开始，默认为0| |参数的约束及描述：|
-    * orderBy  |参数名称：查询的订单列表排序。支持3中多个响应参数进行排序，但每次只能用一个。缺省或者带+为升序，带-表示倒序。例如：按照创建时间升序排序表示为+createTime| |参数的约束及描述：|
-    * paymentTimeBegin  |参数名称：订单支付开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * paymentTimeEnd  |参数名称：订单支付结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * indirectPartnerId  |参数名称：二级经销商ID，只有伙伴用自身token调用的时候，该字段才有含义。| |参数的约束及描述：|
+    * orderId  订单ID。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id。
+    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * status  订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认
+    * orderType  订单类型：1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * limit  每次查询的订单数量，默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。
+    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @var string[]
     */
@@ -137,25 +132,23 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'orderBy' => 'order_by',
             'paymentTimeBegin' => 'payment_time_begin',
-            'paymentTimeEnd' => 'payment_time_end',
-            'indirectPartnerId' => 'indirect_partner_id'
+            'paymentTimeEnd' => 'payment_time_end'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
-    * customerId  |参数名称：客户账号ID。| |参数的约束及描述：|
-    * createTimeBegin  |参数名称：订单创建开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2020-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * createTimeEnd  |参数名称：订单创建结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2020-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数的约束及描述：|
-    * status  |参数名称：订单状态。1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：|
-    * orderType  |参数名称：订单类型。1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的大小，默认为10| |参数的约束及描述：最大值100|
-    * offset  |参数名称：偏移量，从0开始，默认为0| |参数的约束及描述：|
-    * orderBy  |参数名称：查询的订单列表排序。支持3中多个响应参数进行排序，但每次只能用一个。缺省或者带+为升序，带-表示倒序。例如：按照创建时间升序排序表示为+createTime| |参数的约束及描述：|
-    * paymentTimeBegin  |参数名称：订单支付开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * paymentTimeEnd  |参数名称：订单支付结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * indirectPartnerId  |参数名称：二级经销商ID，只有伙伴用自身token调用的时候，该字段才有含义。| |参数的约束及描述：|
+    * orderId  订单ID。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id。
+    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * status  订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认
+    * orderType  订单类型：1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * limit  每次查询的订单数量，默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。
+    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @var string[]
     */
@@ -171,25 +164,23 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'orderBy' => 'setOrderBy',
             'paymentTimeBegin' => 'setPaymentTimeBegin',
-            'paymentTimeEnd' => 'setPaymentTimeEnd',
-            'indirectPartnerId' => 'setIndirectPartnerId'
+            'paymentTimeEnd' => 'setPaymentTimeEnd'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
-    * customerId  |参数名称：客户账号ID。| |参数的约束及描述：|
-    * createTimeBegin  |参数名称：订单创建开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2020-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * createTimeEnd  |参数名称：订单创建结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2020-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数的约束及描述：|
-    * status  |参数名称：订单状态。1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：|
-    * orderType  |参数名称：订单类型。1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的大小，默认为10| |参数的约束及描述：最大值100|
-    * offset  |参数名称：偏移量，从0开始，默认为0| |参数的约束及描述：|
-    * orderBy  |参数名称：查询的订单列表排序。支持3中多个响应参数进行排序，但每次只能用一个。缺省或者带+为升序，带-表示倒序。例如：按照创建时间升序排序表示为+createTime| |参数的约束及描述：|
-    * paymentTimeBegin  |参数名称：订单支付开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * paymentTimeEnd  |参数名称：订单支付结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
-    * indirectPartnerId  |参数名称：二级经销商ID，只有伙伴用自身token调用的时候，该字段才有含义。| |参数的约束及描述：|
+    * orderId  订单ID。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id。
+    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * status  订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认
+    * orderType  订单类型：1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * limit  每次查询的订单数量，默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。
+    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @var string[]
     */
@@ -205,8 +196,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'orderBy' => 'getOrderBy',
             'paymentTimeBegin' => 'getPaymentTimeBegin',
-            'paymentTimeEnd' => 'getPaymentTimeEnd',
-            'indirectPartnerId' => 'getIndirectPartnerId'
+            'paymentTimeEnd' => 'getPaymentTimeEnd'
     ];
 
     /**
@@ -279,7 +269,6 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
         $this->container['orderBy'] = isset($data['orderBy']) ? $data['orderBy'] : null;
         $this->container['paymentTimeBegin'] = isset($data['paymentTimeBegin']) ? $data['paymentTimeBegin'] : null;
         $this->container['paymentTimeEnd'] = isset($data['paymentTimeEnd']) ? $data['paymentTimeEnd'] : null;
-        $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 
     /**
@@ -324,7 +313,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  |参数名称：订单ID。| |参数的约束及描述：|
+    *  订单ID。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
     *
     * @return string|null
     */
@@ -336,7 +325,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId |参数名称：订单ID。| |参数的约束及描述：|
+    * @param string|null $orderId 订单ID。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
     *
     * @return $this
     */
@@ -348,7 +337,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerId
-    *  |参数名称：客户账号ID。| |参数的约束及描述：|
+    *  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id。
     *
     * @return string|null
     */
@@ -360,7 +349,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets customerId
     *
-    * @param string|null $customerId |参数名称：客户账号ID。| |参数的约束及描述：|
+    * @param string|null $customerId 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id。
     *
     * @return $this
     */
@@ -372,7 +361,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTimeBegin
-    *  |参数名称：订单创建开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2020-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
+    *  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -384,7 +373,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets createTimeBegin
     *
-    * @param string|null $createTimeBegin |参数名称：订单创建开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2020-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
+    * @param string|null $createTimeBegin 订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
@@ -396,7 +385,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTimeEnd
-    *  |参数名称：订单创建结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2020-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
+    *  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -408,7 +397,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets createTimeEnd
     *
-    * @param string|null $createTimeEnd |参数名称：订单创建结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2020-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
+    * @param string|null $createTimeEnd 订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
@@ -420,7 +409,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeCode
-    *  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数的约束及描述：|
+    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return string|null
     */
@@ -432,7 +421,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeCode
     *
-    * @param string|null $serviceTypeCode |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数的约束及描述：|
+    * @param string|null $serviceTypeCode 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return $this
     */
@@ -444,7 +433,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  |参数名称：订单状态。1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：|
+    *  订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认
     *
     * @return int|null
     */
@@ -456,7 +445,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status |参数名称：订单状态。1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：|
+    * @param int|null $status 订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认
     *
     * @return $this
     */
@@ -468,7 +457,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderType
-    *  |参数名称：订单类型。1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：|
+    *  订单类型：1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
     *
     * @return string|null
     */
@@ -480,7 +469,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderType
     *
-    * @param string|null $orderType |参数名称：订单类型。1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：|
+    * @param string|null $orderType 订单类型：1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
     *
     * @return $this
     */
@@ -492,7 +481,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  |参数名称：每次查询的大小，默认为10| |参数的约束及描述：最大值100|
+    *  每次查询的订单数量，默认值为10。
     *
     * @return int|null
     */
@@ -504,7 +493,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit |参数名称：每次查询的大小，默认为10| |参数的约束及描述：最大值100|
+    * @param int|null $limit 每次查询的订单数量，默认值为10。
     *
     * @return $this
     */
@@ -516,7 +505,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  |参数名称：偏移量，从0开始，默认为0| |参数的约束及描述：|
+    *  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return int|null
     */
@@ -528,7 +517,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset |参数名称：偏移量，从0开始，默认为0| |参数的约束及描述：|
+    * @param int|null $offset 偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return $this
     */
@@ -540,7 +529,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderBy
-    *  |参数名称：查询的订单列表排序。支持3中多个响应参数进行排序，但每次只能用一个。缺省或者带+为升序，带-表示倒序。例如：按照创建时间升序排序表示为+createTime| |参数的约束及描述：|
+    *  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。
     *
     * @return string|null
     */
@@ -552,7 +541,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderBy
     *
-    * @param string|null $orderBy |参数名称：查询的订单列表排序。支持3中多个响应参数进行排序，但每次只能用一个。缺省或者带+为升序，带-表示倒序。例如：按照创建时间升序排序表示为+createTime| |参数的约束及描述：|
+    * @param string|null $orderBy 查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。
     *
     * @return $this
     */
@@ -564,7 +553,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets paymentTimeBegin
-    *  |参数名称：订单支付开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
+    *  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -576,7 +565,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets paymentTimeBegin
     *
-    * @param string|null $paymentTimeBegin |参数名称：订单支付开始时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
+    * @param string|null $paymentTimeBegin 订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
@@ -588,7 +577,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets paymentTimeEnd
-    *  |参数名称：订单支付结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
+    *  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -600,37 +589,13 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets paymentTimeEnd
     *
-    * @param string|null $paymentTimeEnd |参数名称：订单支付结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数的约束及描述：|
+    * @param string|null $paymentTimeEnd 订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
     public function setPaymentTimeEnd($paymentTimeEnd)
     {
         $this->container['paymentTimeEnd'] = $paymentTimeEnd;
-        return $this;
-    }
-
-    /**
-    * Gets indirectPartnerId
-    *  |参数名称：二级经销商ID，只有伙伴用自身token调用的时候，该字段才有含义。| |参数的约束及描述：|
-    *
-    * @return string|null
-    */
-    public function getIndirectPartnerId()
-    {
-        return $this->container['indirectPartnerId'];
-    }
-
-    /**
-    * Sets indirectPartnerId
-    *
-    * @param string|null $indirectPartnerId |参数名称：二级经销商ID，只有伙伴用自身token调用的时候，该字段才有含义。| |参数的约束及描述：|
-    *
-    * @return $this
-    */
-    public function setIndirectPartnerId($indirectPartnerId)
-    {
-        $this->container['indirectPartnerId'] = $indirectPartnerId;
         return $this;
     }
 

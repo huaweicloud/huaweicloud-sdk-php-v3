@@ -20,10 +20,10 @@ class ResourceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
-    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
-    * serviceTypeCode  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
+    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型的名称。
+    * resourceTypeDesc  资源类型的描述。
+    * serviceTypeCode  资源类型归属的服务类型编码。例如：hws.service.type.offline。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ResourceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
-    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
-    * serviceTypeCode  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
+    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型的名称。
+    * resourceTypeDesc  资源类型的描述。
+    * serviceTypeCode  资源类型归属的服务类型编码。例如：hws.service.type.offline。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ResourceTypes implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
-    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
-    * serviceTypeCode  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
+    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型的名称。
+    * resourceTypeDesc  资源类型的描述。
+    * serviceTypeCode  资源类型归属的服务类型编码。例如：hws.service.type.offline。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ResourceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
-    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
-    * serviceTypeCode  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
+    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型的名称。
+    * resourceTypeDesc  资源类型的描述。
+    * serviceTypeCode  资源类型归属的服务类型编码。例如：hws.service.type.offline。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ResourceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * resourceTypeName  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
-    * resourceTypeDesc  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
-    * serviceTypeCode  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
+    * resourceTypeCode  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
+    * resourceTypeName  资源类型的名称。
+    * resourceTypeDesc  资源类型的描述。
+    * serviceTypeCode  资源类型归属的服务类型编码。例如：hws.service.type.offline。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ResourceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeCode
-    *  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+    *  资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ResourceTypes implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeCode
     *
-    * @param string|null $resourceTypeCode |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+    * @param string|null $resourceTypeCode 资源类型的编码。例如ECS的VM为“hws.resource.type.vm”。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class ResourceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeName
-    *  |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
+    *  资源类型的名称。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class ResourceTypes implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeName
     *
-    * @param string|null $resourceTypeName |参数名称：资源类型名称| |参数约束及描述：资源类型名称|
+    * @param string|null $resourceTypeName 资源类型的名称。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ResourceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeDesc
-    *  |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+    *  资源类型的描述。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class ResourceTypes implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeDesc
     *
-    * @param string|null $resourceTypeDesc |参数名称：资源类型描述| |参数约束及描述：资源类型描述|
+    * @param string|null $resourceTypeDesc 资源类型的描述。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ResourceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeCode
-    *  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
+    *  资源类型归属的服务类型编码。例如：hws.service.type.offline。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class ResourceTypes implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeCode
     *
-    * @param string|null $serviceTypeCode |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
+    * @param string|null $serviceTypeCode 资源类型归属的服务类型编码。例如：hws.service.type.offline。
     *
     * @return $this
     */

@@ -38,7 +38,7 @@ class IoTDAAsyncClient extends Client
     
     public function createAccessCodeAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/auth/accesscode';
+        $resourcePath = '/v5/iot/{project_id}/auth/accesscode';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -103,7 +103,7 @@ class IoTDAAsyncClient extends Client
     
     public function addQueueAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/amqp-queues';
+        $resourcePath = '/v5/iot/{project_id}/amqp-queues';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -168,7 +168,7 @@ class IoTDAAsyncClient extends Client
     
     public function batchShowQueueAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/amqp-queues';
+        $resourcePath = '/v5/iot/{project_id}/amqp-queues';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -242,7 +242,7 @@ class IoTDAAsyncClient extends Client
     
     public function deleteQueueAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/amqp-queues/{queue_id}';
+        $resourcePath = '/v5/iot/{project_id}/amqp-queues/{queue_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -307,7 +307,7 @@ class IoTDAAsyncClient extends Client
     
     public function showQueueAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/amqp-queues/{queue_id}';
+        $resourcePath = '/v5/iot/{project_id}/amqp-queues/{queue_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -372,7 +372,7 @@ class IoTDAAsyncClient extends Client
     
     public function addApplicationAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/apps';
+        $resourcePath = '/v5/iot/{project_id}/apps';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -437,7 +437,7 @@ class IoTDAAsyncClient extends Client
     
     public function deleteApplicationAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/apps/{app_id}';
+        $resourcePath = '/v5/iot/{project_id}/apps/{app_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -502,7 +502,7 @@ class IoTDAAsyncClient extends Client
     
     public function showApplicationAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/apps/{app_id}';
+        $resourcePath = '/v5/iot/{project_id}/apps/{app_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -567,7 +567,7 @@ class IoTDAAsyncClient extends Client
     
     public function showApplicationsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/apps';
+        $resourcePath = '/v5/iot/{project_id}/apps';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -632,7 +632,7 @@ class IoTDAAsyncClient extends Client
     
     public function createAsyncCommandAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/async-commands';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/async-commands';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -645,6 +645,9 @@ class IoTDAAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['spAuthToken'] !== null) {
+            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
@@ -700,7 +703,7 @@ class IoTDAAsyncClient extends Client
     
     public function showAsyncDeviceCommandAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/async-commands/{command_id}';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/async-commands/{command_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -713,6 +716,9 @@ class IoTDAAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['spAuthToken'] !== null) {
+            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
@@ -768,7 +774,7 @@ class IoTDAAsyncClient extends Client
     
     public function createBatchTaskAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/batchtasks';
+        $resourcePath = '/v5/iot/{project_id}/batchtasks';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -833,7 +839,7 @@ class IoTDAAsyncClient extends Client
     
     public function listBatchTasksAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/batchtasks';
+        $resourcePath = '/v5/iot/{project_id}/batchtasks';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -913,7 +919,7 @@ class IoTDAAsyncClient extends Client
     
     public function showBatchTaskAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/batchtasks/{task_id}';
+        $resourcePath = '/v5/iot/{project_id}/batchtasks/{task_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -987,7 +993,7 @@ class IoTDAAsyncClient extends Client
     
     public function deleteBatchTaskFileAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/batchtask-files/{file_id}';
+        $resourcePath = '/v5/iot/{project_id}/batchtask-files/{file_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1052,7 +1058,7 @@ class IoTDAAsyncClient extends Client
     
     public function listBatchTaskFilesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/batchtask-files';
+        $resourcePath = '/v5/iot/{project_id}/batchtask-files';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1114,7 +1120,7 @@ class IoTDAAsyncClient extends Client
     
     public function uploadBatchTaskFileAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/batchtask-files';
+        $resourcePath = '/v5/iot/{project_id}/batchtask-files';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1184,7 +1190,7 @@ class IoTDAAsyncClient extends Client
     
     public function addCertificateAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/certificates';
+        $resourcePath = '/v5/iot/{project_id}/certificates';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1249,7 +1255,7 @@ class IoTDAAsyncClient extends Client
     
     public function checkCertificateAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/certificates/{certificate_id}/action';
+        $resourcePath = '/v5/iot/{project_id}/certificates/{certificate_id}/action';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1320,7 +1326,7 @@ class IoTDAAsyncClient extends Client
     
     public function deleteCertificateAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/certificates/{certificate_id}';
+        $resourcePath = '/v5/iot/{project_id}/certificates/{certificate_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1385,7 +1391,7 @@ class IoTDAAsyncClient extends Client
     
     public function listCertificatesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/certificates';
+        $resourcePath = '/v5/iot/{project_id}/certificates';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1459,7 +1465,7 @@ class IoTDAAsyncClient extends Client
     
     public function createCommandAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/commands';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/commands';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1472,6 +1478,9 @@ class IoTDAAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['spAuthToken'] !== null) {
+            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
@@ -1527,7 +1536,7 @@ class IoTDAAsyncClient extends Client
     
     public function addDeviceGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/device-group';
+        $resourcePath = '/v5/iot/{project_id}/device-group';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1592,7 +1601,7 @@ class IoTDAAsyncClient extends Client
     
     public function createOrDeleteDeviceInGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/device-group/{group_id}/action';
+        $resourcePath = '/v5/iot/{project_id}/device-group/{group_id}/action';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1663,7 +1672,7 @@ class IoTDAAsyncClient extends Client
     
     public function deleteDeviceGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/device-group/{group_id}';
+        $resourcePath = '/v5/iot/{project_id}/device-group/{group_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1728,7 +1737,7 @@ class IoTDAAsyncClient extends Client
     
     public function listDeviceGroupsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/device-group';
+        $resourcePath = '/v5/iot/{project_id}/device-group';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1805,7 +1814,7 @@ class IoTDAAsyncClient extends Client
     
     public function showDeviceGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/device-group/{group_id}';
+        $resourcePath = '/v5/iot/{project_id}/device-group/{group_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1870,7 +1879,7 @@ class IoTDAAsyncClient extends Client
     
     public function showDevicesInGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/device-group/{group_id}/devices';
+        $resourcePath = '/v5/iot/{project_id}/device-group/{group_id}/devices';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1944,7 +1953,7 @@ class IoTDAAsyncClient extends Client
     
     public function updateDeviceGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/device-group/{group_id}';
+        $resourcePath = '/v5/iot/{project_id}/device-group/{group_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2012,7 +2021,7 @@ class IoTDAAsyncClient extends Client
     
     public function addDeviceAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices';
+        $resourcePath = '/v5/iot/{project_id}/devices';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2077,7 +2086,7 @@ class IoTDAAsyncClient extends Client
     
     public function deleteDeviceAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2142,7 +2151,7 @@ class IoTDAAsyncClient extends Client
     
     public function freezeDeviceAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/freeze';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/freeze';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2207,7 +2216,7 @@ class IoTDAAsyncClient extends Client
     
     public function listDevicesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices';
+        $resourcePath = '/v5/iot/{project_id}/devices';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2302,7 +2311,7 @@ class IoTDAAsyncClient extends Client
     
     public function resetDeviceSecretAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/action';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/action';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2373,7 +2382,7 @@ class IoTDAAsyncClient extends Client
     
     public function resetFingerprintAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/reset-fingerprint';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/reset-fingerprint';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2441,7 +2450,7 @@ class IoTDAAsyncClient extends Client
     
     public function showDeviceAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2506,7 +2515,7 @@ class IoTDAAsyncClient extends Client
     
     public function unfreezeDeviceAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/unfreeze';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/unfreeze';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2571,7 +2580,7 @@ class IoTDAAsyncClient extends Client
     
     public function updateDeviceAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2627,7 +2636,7 @@ class IoTDAAsyncClient extends Client
 
     /**
      * 查询设备影子数据
-     * 应用服务器可调用此接口查询指定设备的设备影子信息，包括对设备的期望属性信息（desired区）和设备最新上报的属性信息（reported区）。  设备影子介绍： 设备影子是一个用于存储和检索设备当前状态信息的JSON文档。 - 每个设备有且只有一个设备影子，由设备ID唯一标识 - 设备影子仅保存最近一次设备的上报数据和预期数据 - 无论该设备是否在线，都可以通过该影子获取和设置设备的属性 - 设备上线或者设备上报属性时，如果desired区和reported区存在差异，则将差异部分下发给设备，配置的预期属性需在产品模型中定义且method具有可写属性“W”才可下发
+     * 应用服务器可调用此接口查询指定设备的设备影子信息，包括对设备的期望属性信息（desired区）和设备最新上报的属性信息（reported区）。  设备影子介绍： 设备影子是一个用于存储和检索设备当前状态信息的JSON文档。 - 每个设备有且只有一个设备影子，由设备ID唯一标识 - 设备影子仅保存最近一次设备的上报数据和预期数据 - 无论该设备是否在线，都可以通过该影子获取和设置设备的属性 - 设备上线或者设备上报属性时，如果desired区和reported区存在差异，则将差异部分下发给设备，配置的预期属性需在产品模型中定义且method具有可写属性“W”才可下发  限制： 设备影子JSON文档中的key不允许特殊字符：点(.)、dollar符号($)、空char(十六进制的ASCII码为00)。如果包含了以上特殊字符则无法正常刷新影子文档。
      *
      * @param $request 请求对象
      * @return response
@@ -2639,7 +2648,7 @@ class IoTDAAsyncClient extends Client
     
     public function showDeviceShadowAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/shadow';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/shadow';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2692,7 +2701,7 @@ class IoTDAAsyncClient extends Client
 
     /**
      * 配置设备影子预期数据
-     * 应用服务器可调用此接口配置设备影子的预期属性（desired区），当设备上线或者设备上报属性时把属性下发给设备。  设备影子介绍： 设备影子是一个用于存储和检索设备当前状态信息的JSON文档。 - 每个设备有且只有一个设备影子，由设备ID唯一标识 - 设备影子仅保存最近一次设备的上报数据和预期数据 - 无论该设备是否在线，都可以通过该影子获取和设置设备的属性 - 设备上线或者设备上报属性时，如果desired区和reported区存在差异，则将差异部分下发给设备，配置的预期属性需在产品模型中定义且method具有可写属性“W”才可下发
+     * 应用服务器可调用此接口配置设备影子的预期属性（desired区），当设备上线或者设备上报属性时把属性下发给设备。  设备影子介绍： 设备影子是一个用于存储和检索设备当前状态信息的JSON文档。 - 每个设备有且只有一个设备影子，由设备ID唯一标识 - 设备影子仅保存最近一次设备的上报数据和预期数据 - 无论该设备是否在线，都可以通过该影子获取和设置设备的属性 - 设备上线或者设备上报属性时，如果desired区和reported区存在差异，则将差异部分下发给设备，配置的预期属性需在产品模型中定义且method具有可写属性“W”才可下发  限制： 设备影子JSON文档中的key不允许特殊字符：点(.)、dollar符号($)、空char(十六进制的ASCII码为00)。如果包含了以上特殊字符则无法正常刷新影子文档。
      *
      * @param $request 请求对象
      * @return response
@@ -2704,7 +2713,7 @@ class IoTDAAsyncClient extends Client
     
     public function updateDeviceShadowDesiredDataAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/shadow';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/shadow';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2772,7 +2781,7 @@ class IoTDAAsyncClient extends Client
     
     public function createMessageAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/messages';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/messages';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2828,7 +2837,7 @@ class IoTDAAsyncClient extends Client
 
     /**
      * 查询设备消息
-     * 物联网平台可查询指定设备下发的消息，平台为每个设备默认最多保存20条消息，超过20条后， 后续的消息会替换下发最早的消息。
+     * 应用服务器可调用此接口查询平台下发给设备的消息，平台为每个设备默认最多保存20条消息，超过20条后， 后续的消息会替换下发最早的消息。
      *
      * @param $request 请求对象
      * @return response
@@ -2840,7 +2849,7 @@ class IoTDAAsyncClient extends Client
     
     public function listDeviceMessagesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/messages';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/messages';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2893,7 +2902,7 @@ class IoTDAAsyncClient extends Client
 
     /**
      * 查询指定消息id的消息
-     * 物联网平台可查询设备下发的指定消息id的消息。
+     * 应用服务器可调用此接口查询平台下发给设备的指定消息id的消息。
      *
      * @param $request 请求对象
      * @return response
@@ -2905,7 +2914,7 @@ class IoTDAAsyncClient extends Client
     
     public function showDeviceMessageAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/messages/{message_id}';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/messages/{message_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2973,7 +2982,7 @@ class IoTDAAsyncClient extends Client
     
     public function createProductAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/products';
+        $resourcePath = '/v5/iot/{project_id}/products';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3038,7 +3047,7 @@ class IoTDAAsyncClient extends Client
     
     public function deleteProductAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/products/{product_id}';
+        $resourcePath = '/v5/iot/{project_id}/products/{product_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3106,7 +3115,7 @@ class IoTDAAsyncClient extends Client
     
     public function listProductsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/products';
+        $resourcePath = '/v5/iot/{project_id}/products';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3180,7 +3189,7 @@ class IoTDAAsyncClient extends Client
     
     public function showProductAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/products/{product_id}';
+        $resourcePath = '/v5/iot/{project_id}/products/{product_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3248,7 +3257,7 @@ class IoTDAAsyncClient extends Client
     
     public function updateProductAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/products/{product_id}';
+        $resourcePath = '/v5/iot/{project_id}/products/{product_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3316,7 +3325,7 @@ class IoTDAAsyncClient extends Client
     
     public function listPropertiesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/properties';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/properties';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3332,6 +3341,9 @@ class IoTDAAsyncClient extends Client
         }
         if ($localVarParams['serviceId'] !== null) {
             $queryParams['service_id'] = $localVarParams['serviceId'];
+        }
+        if ($localVarParams['spAuthToken'] !== null) {
+            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
@@ -3384,7 +3396,7 @@ class IoTDAAsyncClient extends Client
     
     public function updatePropertiesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/devices/{device_id}/properties';
+        $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/properties';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3397,6 +3409,9 @@ class IoTDAAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['spAuthToken'] !== null) {
+            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
@@ -3452,7 +3467,7 @@ class IoTDAAsyncClient extends Client
     
     public function createRoutingRuleAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/routing-rule/rules';
+        $resourcePath = '/v5/iot/{project_id}/routing-rule/rules';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3517,7 +3532,7 @@ class IoTDAAsyncClient extends Client
     
     public function createRuleActionAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/routing-rule/actions';
+        $resourcePath = '/v5/iot/{project_id}/routing-rule/actions';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3582,7 +3597,7 @@ class IoTDAAsyncClient extends Client
     
     public function deleteRoutingRuleAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/routing-rule/rules/{rule_id}';
+        $resourcePath = '/v5/iot/{project_id}/routing-rule/rules/{rule_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3647,7 +3662,7 @@ class IoTDAAsyncClient extends Client
     
     public function deleteRuleActionAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/routing-rule/actions/{action_id}';
+        $resourcePath = '/v5/iot/{project_id}/routing-rule/actions/{action_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3712,7 +3727,7 @@ class IoTDAAsyncClient extends Client
     
     public function listRoutingRulesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/routing-rule/rules';
+        $resourcePath = '/v5/iot/{project_id}/routing-rule/rules';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3798,7 +3813,7 @@ class IoTDAAsyncClient extends Client
     
     public function listRuleActionsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/routing-rule/actions';
+        $resourcePath = '/v5/iot/{project_id}/routing-rule/actions';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3881,7 +3896,7 @@ class IoTDAAsyncClient extends Client
     
     public function showRoutingRuleAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/routing-rule/rules/{rule_id}';
+        $resourcePath = '/v5/iot/{project_id}/routing-rule/rules/{rule_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3946,7 +3961,7 @@ class IoTDAAsyncClient extends Client
     
     public function showRuleActionAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/routing-rule/actions/{action_id}';
+        $resourcePath = '/v5/iot/{project_id}/routing-rule/actions/{action_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4011,7 +4026,7 @@ class IoTDAAsyncClient extends Client
     
     public function updateRoutingRuleAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/routing-rule/rules/{rule_id}';
+        $resourcePath = '/v5/iot/{project_id}/routing-rule/rules/{rule_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4079,7 +4094,7 @@ class IoTDAAsyncClient extends Client
     
     public function updateRuleActionAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/routing-rule/actions/{action_id}';
+        $resourcePath = '/v5/iot/{project_id}/routing-rule/actions/{action_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4147,7 +4162,7 @@ class IoTDAAsyncClient extends Client
     
     public function changeRuleStatusAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/rules/{rule_id}/status';
+        $resourcePath = '/v5/iot/{project_id}/rules/{rule_id}/status';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4215,7 +4230,7 @@ class IoTDAAsyncClient extends Client
     
     public function createRuleAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/rules';
+        $resourcePath = '/v5/iot/{project_id}/rules';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4280,7 +4295,7 @@ class IoTDAAsyncClient extends Client
     
     public function deleteRuleAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/rules/{rule_id}';
+        $resourcePath = '/v5/iot/{project_id}/rules/{rule_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4345,7 +4360,7 @@ class IoTDAAsyncClient extends Client
     
     public function listRulesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/rules';
+        $resourcePath = '/v5/iot/{project_id}/rules';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4422,7 +4437,7 @@ class IoTDAAsyncClient extends Client
     
     public function showRuleAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/rules/{rule_id}';
+        $resourcePath = '/v5/iot/{project_id}/rules/{rule_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4487,7 +4502,7 @@ class IoTDAAsyncClient extends Client
     
     public function updateRuleAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/rules/{rule_id}';
+        $resourcePath = '/v5/iot/{project_id}/rules/{rule_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4555,7 +4570,7 @@ class IoTDAAsyncClient extends Client
     
     public function listResourcesByTagsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/tags/query-resources';
+        $resourcePath = '/v5/iot/{project_id}/tags/query-resources';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4629,7 +4644,7 @@ class IoTDAAsyncClient extends Client
     
     public function tagDeviceAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/tags/bind-resource';
+        $resourcePath = '/v5/iot/{project_id}/tags/bind-resource';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4694,7 +4709,7 @@ class IoTDAAsyncClient extends Client
     
     public function untagDeviceAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/{project_id}/tags/unbind-resource';
+        $resourcePath = '/v5/iot/{project_id}/tags/unbind-resource';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

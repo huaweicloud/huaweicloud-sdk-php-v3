@@ -21,32 +21,32 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountBalances  |参数名称：账户余额列表。具体请参见表 AccountBalanceV3| |参数约束以及描述：账户余额列表。具体请参见表 AccountBalanceV3|
-    * debtAmount  |参数名称：欠款总金额。| |参数的约束及描述：欠款总金额。|
-    * measureId  |参数名称：度量单位：1：元2：角3：分| |参数的约束及描述：度量单位：1：元2：角3：分|
-    * currency  |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
+    * accountBalances  账户余额列表。 具体请参见表1。
+    * debtAmount  欠款总金额。
+    * measureId  度量单位。 1：元
+    * currency  币种。 USD：美元。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'accountBalances' => '\HuaweiCloud\SDK\Bssintl\V2\Model\AccountBalanceV3[]',
-            'debtAmount' => 'float',
+            'debtAmount' => 'double',
             'measureId' => 'int',
             'currency' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountBalances  |参数名称：账户余额列表。具体请参见表 AccountBalanceV3| |参数约束以及描述：账户余额列表。具体请参见表 AccountBalanceV3|
-    * debtAmount  |参数名称：欠款总金额。| |参数的约束及描述：欠款总金额。|
-    * measureId  |参数名称：度量单位：1：元2：角3：分| |参数的约束及描述：度量单位：1：元2：角3：分|
-    * currency  |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
+    * accountBalances  账户余额列表。 具体请参见表1。
+    * debtAmount  欠款总金额。
+    * measureId  度量单位。 1：元
+    * currency  币种。 USD：美元。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'accountBalances' => null,
-        'debtAmount' => 'bigdecimal',
+        'debtAmount' => 'double',
         'measureId' => 'int32',
         'currency' => null
     ];
@@ -74,10 +74,10 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountBalances  |参数名称：账户余额列表。具体请参见表 AccountBalanceV3| |参数约束以及描述：账户余额列表。具体请参见表 AccountBalanceV3|
-    * debtAmount  |参数名称：欠款总金额。| |参数的约束及描述：欠款总金额。|
-    * measureId  |参数名称：度量单位：1：元2：角3：分| |参数的约束及描述：度量单位：1：元2：角3：分|
-    * currency  |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
+    * accountBalances  账户余额列表。 具体请参见表1。
+    * debtAmount  欠款总金额。
+    * measureId  度量单位。 1：元
+    * currency  币种。 USD：美元。
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountBalances  |参数名称：账户余额列表。具体请参见表 AccountBalanceV3| |参数约束以及描述：账户余额列表。具体请参见表 AccountBalanceV3|
-    * debtAmount  |参数名称：欠款总金额。| |参数的约束及描述：欠款总金额。|
-    * measureId  |参数名称：度量单位：1：元2：角3：分| |参数的约束及描述：度量单位：1：元2：角3：分|
-    * currency  |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
+    * accountBalances  账户余额列表。 具体请参见表1。
+    * debtAmount  欠款总金额。
+    * measureId  度量单位。 1：元
+    * currency  币种。 USD：美元。
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountBalances  |参数名称：账户余额列表。具体请参见表 AccountBalanceV3| |参数约束以及描述：账户余额列表。具体请参见表 AccountBalanceV3|
-    * debtAmount  |参数名称：欠款总金额。| |参数的约束及描述：欠款总金额。|
-    * measureId  |参数名称：度量单位：1：元2：角3：分| |参数的约束及描述：度量单位：1：元2：角3：分|
-    * currency  |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
+    * accountBalances  账户余额列表。 具体请参见表1。
+    * debtAmount  欠款总金额。
+    * measureId  度量单位。 1：元
+    * currency  币种。 USD：美元。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountBalances
-    *  |参数名称：账户余额列表。具体请参见表 AccountBalanceV3| |参数约束以及描述：账户余额列表。具体请参见表 AccountBalanceV3|
+    *  账户余额列表。 具体请参见表1。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\AccountBalanceV3[]|null
     */
@@ -220,7 +220,7 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accountBalances
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\AccountBalanceV3[]|null $accountBalances |参数名称：账户余额列表。具体请参见表 AccountBalanceV3| |参数约束以及描述：账户余额列表。具体请参见表 AccountBalanceV3|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\AccountBalanceV3[]|null $accountBalances 账户余额列表。 具体请参见表1。
     *
     * @return $this
     */
@@ -232,9 +232,9 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets debtAmount
-    *  |参数名称：欠款总金额。| |参数的约束及描述：欠款总金额。|
+    *  欠款总金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getDebtAmount()
     {
@@ -244,7 +244,7 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets debtAmount
     *
-    * @param float|null $debtAmount |参数名称：欠款总金额。| |参数的约束及描述：欠款总金额。|
+    * @param double|null $debtAmount 欠款总金额。
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：度量单位：1：元2：角3：分| |参数的约束及描述：度量单位：1：元2：角3：分|
+    *  度量单位。 1：元
     *
     * @return int|null
     */
@@ -268,7 +268,7 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId |参数名称：度量单位：1：元2：角3：分| |参数的约束及描述：度量单位：1：元2：角3：分|
+    * @param int|null $measureId 度量单位。 1：元
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets currency
-    *  |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
+    *  币种。 USD：美元。
     *
     * @return string|null
     */
@@ -292,7 +292,7 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets currency
     *
-    * @param string|null $currency |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
+    * @param string|null $currency 币种。 USD：美元。
     *
     * @return $this
     */

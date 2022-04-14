@@ -20,22 +20,22 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  |参数名称：该记录的ID。| |参数约束及描述：该记录的ID。|
-    * amount  |参数名称：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。| |参数的约束及描述：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。|
-    * measureId  |参数名称：度量单位。1：元| |参数约束及描述：度量单位。1：元|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * baseOrderId  |参数名称：退订金额、已消费金额或收取退订手续费对应的原订单ID。| |参数约束及描述：退订金额、已消费金额或收取退订手续费对应的原订单ID。|
+    * id  该记录的ID。
+    * amount  金额。 金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。
+    * measureId  金额的度量单位。 1：元
+    * customerId  客户账号ID。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * baseOrderId  退订金额、已消费金额或收取退订手续费对应的原订单ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
-            'amount' => 'float',
+            'amount' => 'double',
             'measureId' => 'string',
             'customerId' => 'string',
             'resourceTypeCode' => 'string',
@@ -48,22 +48,22 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  |参数名称：该记录的ID。| |参数约束及描述：该记录的ID。|
-    * amount  |参数名称：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。| |参数的约束及描述：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。|
-    * measureId  |参数名称：度量单位。1：元| |参数约束及描述：度量单位。1：元|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * baseOrderId  |参数名称：退订金额、已消费金额或收取退订手续费对应的原订单ID。| |参数约束及描述：退订金额、已消费金额或收取退订手续费对应的原订单ID。|
+    * id  该记录的ID。
+    * amount  金额。 金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。
+    * measureId  金额的度量单位。 1：元
+    * customerId  客户账号ID。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * baseOrderId  退订金额、已消费金额或收取退订手续费对应的原订单ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
-        'amount' => 'bigdecimal',
+        'amount' => 'double',
         'measureId' => null,
         'customerId' => null,
         'resourceTypeCode' => null,
@@ -97,16 +97,16 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  |参数名称：该记录的ID。| |参数约束及描述：该记录的ID。|
-    * amount  |参数名称：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。| |参数的约束及描述：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。|
-    * measureId  |参数名称：度量单位。1：元| |参数约束及描述：度量单位。1：元|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * baseOrderId  |参数名称：退订金额、已消费金额或收取退订手续费对应的原订单ID。| |参数约束及描述：退订金额、已消费金额或收取退订手续费对应的原订单ID。|
+    * id  该记录的ID。
+    * amount  金额。 金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。
+    * measureId  金额的度量单位。 1：元
+    * customerId  客户账号ID。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * baseOrderId  退订金额、已消费金额或收取退订手续费对应的原订单ID。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  |参数名称：该记录的ID。| |参数约束及描述：该记录的ID。|
-    * amount  |参数名称：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。| |参数的约束及描述：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。|
-    * measureId  |参数名称：度量单位。1：元| |参数约束及描述：度量单位。1：元|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * baseOrderId  |参数名称：退订金额、已消费金额或收取退订手续费对应的原订单ID。| |参数约束及描述：退订金额、已消费金额或收取退订手续费对应的原订单ID。|
+    * id  该记录的ID。
+    * amount  金额。 金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。
+    * measureId  金额的度量单位。 1：元
+    * customerId  客户账号ID。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * baseOrderId  退订金额、已消费金额或收取退订手续费对应的原订单ID。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  |参数名称：该记录的ID。| |参数约束及描述：该记录的ID。|
-    * amount  |参数名称：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。| |参数的约束及描述：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。|
-    * measureId  |参数名称：度量单位。1：元| |参数约束及描述：度量单位。1：元|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * baseOrderId  |参数名称：退订金额、已消费金额或收取退订手续费对应的原订单ID。| |参数约束及描述：退订金额、已消费金额或收取退订手续费对应的原订单ID。|
+    * id  该记录的ID。
+    * amount  金额。 金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。
+    * measureId  金额的度量单位。 1：元
+    * customerId  客户账号ID。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * baseOrderId  退订金额、已消费金额或收取退订手续费对应的原订单ID。
     *
     * @var string[]
     */
@@ -294,7 +294,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  |参数名称：该记录的ID。| |参数约束及描述：该记录的ID。|
+    *  该记录的ID。
     *
     * @return string
     */
@@ -306,7 +306,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id |参数名称：该记录的ID。| |参数约束及描述：该记录的ID。|
+    * @param string $id 该记录的ID。
     *
     * @return $this
     */
@@ -318,9 +318,9 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets amount
-    *  |参数名称：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。| |参数的约束及描述：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。|
+    *  金额。 金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。
     *
-    * @return float
+    * @return double
     */
     public function getAmount()
     {
@@ -330,7 +330,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param float $amount |参数名称：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。| |参数的约束及描述：金额。金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。|
+    * @param double $amount 金额。 金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。
     *
     * @return $this
     */
@@ -342,7 +342,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：度量单位。1：元| |参数约束及描述：度量单位。1：元|
+    *  金额的度量单位。 1：元
     *
     * @return string
     */
@@ -354,7 +354,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param string $measureId |参数名称：度量单位。1：元| |参数约束及描述：度量单位。1：元|
+    * @param string $measureId 金额的度量单位。 1：元
     *
     * @return $this
     */
@@ -366,7 +366,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerId
-    *  |参数名称：客户ID。| |参数约束及描述：客户ID。|
+    *  客户账号ID。
     *
     * @return string
     */
@@ -378,7 +378,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets customerId
     *
-    * @param string $customerId |参数名称：客户ID。| |参数约束及描述：客户ID。|
+    * @param string $customerId 客户账号ID。
     *
     * @return $this
     */
@@ -390,7 +390,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeCode
-    *  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    *  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
     *
     * @return string
     */
@@ -402,7 +402,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeCode
     *
-    * @param string $resourceTypeCode |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    * @param string $resourceTypeCode 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
     *
     * @return $this
     */
@@ -414,7 +414,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeCode
-    *  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
     *
     * @return string
     */
@@ -426,7 +426,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeCode
     *
-    * @param string $serviceTypeCode |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如ECS的云服务类型编码为“hws.service.type.ec2”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    * @param string $serviceTypeCode 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
     *
     * @return $this
     */
@@ -438,7 +438,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeName
-    *  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    *  资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @return string|null
     */
@@ -450,7 +450,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeName
     *
-    * @param string|null $resourceTypeName |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    * @param string|null $resourceTypeName 资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @return $this
     */
@@ -462,7 +462,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeName
-    *  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return string|null
     */
@@ -474,7 +474,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeName
     *
-    * @param string|null $serviceTypeName |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return $this
     */
@@ -486,7 +486,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionCode
-    *  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
+    *  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     *
     * @return string
     */
@@ -498,7 +498,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets regionCode
     *
-    * @param string $regionCode |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
+    * @param string $regionCode 云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     *
     * @return $this
     */
@@ -510,7 +510,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets baseOrderId
-    *  |参数名称：退订金额、已消费金额或收取退订手续费对应的原订单ID。| |参数约束及描述：退订金额、已消费金额或收取退订手续费对应的原订单ID。|
+    *  退订金额、已消费金额或收取退订手续费对应的原订单ID。
     *
     * @return string|null
     */
@@ -522,7 +522,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets baseOrderId
     *
-    * @param string|null $baseOrderId |参数名称：退订金额、已消费金额或收取退订手续费对应的原订单ID。| |参数约束及描述：退订金额、已消费金额或收取退订手续费对应的原订单ID。|
+    * @param string|null $baseOrderId 退订金额、已消费金额或收取退订手续费对应的原订单ID。
     *
     * @return $this
     */

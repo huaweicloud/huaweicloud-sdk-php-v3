@@ -20,54 +20,54 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * billDate  |参数名称：消费记录日期：格式：YYYY-MM-DD。按照东八区截取| |参数约束及描述：消费记录日期：格式：YYYY-MM-DD。按照东八区截取|
-    * billType  |参数名称：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费16：调账-扣费| |参数的约束及描述：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费 15消费-税金16：调账-扣费17：消费-保底差额 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
-    * customerId  |参数名称：消费的客户账号ID。| |参数约束及描述：如果是查询自己，这个地方是自身的ID; 如果是查询某个企业子客户，这个地方是企业子客户ID如果是查询以及下面的所有子客户，这个地方是消费的实际客户ID; 如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。|
-    * region  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * regionName  |参数名称：云服务区名称| |参数约束及描述：云服务区名称|
-    * cloudServiceType  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceType  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
-    * effectiveTime  |参数名称：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。|
-    * expireTime  |参数名称：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。|
-    * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。|
-    * resourceName  |参数名称：资源名称。| |参数约束及描述：资源名称。|
-    * resourceTag  |参数名称：资源标签。| |参数约束及描述：资源标签。|
-    * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
-    * productName  |参数名称：产品名称。| |参数约束及描述：产品名称。|
-    * productSpecDesc  |参数名称：产品规格描述。| |参数约束及描述：产品规格描述，举例为：普通IO|100.0GB。|
-    * skuCode  |参数名称：sku编码| |参数约束及描述：sku编码|
-    * specSize  |参数名称：线性大小| |参数约束及描述： 线性大小|
-    * specSizeMeasureId  |参数名称：线性大小单位| |参数的约束及描述：线性大小单位|
-    * tradeId  |参数名称：订单ID 或 交易ID，扣费维度的唯一标识| |参数约束及描述：订单ID 或 交易ID，扣费维度的唯一标识|
-    * tradeTime  |参数名称：交易时间| |参数名称：交易时间，某条消费记录对应的扣费时间。|
-    * enterpriseProjectId  |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
-    * enterpriseProjectName  |参数名称：企业项目名称。| |参数约束及描述：企业项目名称。|
-    * chargeMode  |参数名称：1 : 包周期；3: 按需。10: 预留实例。| |参数约束及描述：1 : 包周期；3: 按需。10: 预留实例。|
-    * orderId  |参数名称：订单ID，包周期资源使用记录才有该字段，按需资源为空。| |参数约束及描述：订单ID，包周期资源使用记录才有该字段，按需资源为空。|
-    * periodType  |参数名称：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。| |参数约束及描述：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。|
-    * usageType  |参数名称：使用量类型| |参数约束及描述：使用量类型|
-    * usage  |参数名称：使用量。| |参数约束及描述： 使用量。|
-    * usageMeasureId  |参数名称：使用量度量单位| |参数的约束及描述：使用量度量单位|
-    * freeResourceUsage  |参数名称：套餐内使用量。| |参数约束及描述： 套餐内使用量。|
-    * freeResourceMeasureId  |参数名称：套餐内使用量单位，具体枚举参考：usageMeasureId| |参数的约束及描述：套餐内使用量单位，具体枚举参考：usageMeasureId|
-    * riUsage  |参数名称：预留实例使用量。| |参数约束及描述： 预留实例使用量。|
-    * riUsageMeasureId  |参数名称：预留实例使用量单位。| |参数的约束及描述：预留实例使用量单位。|
-    * unitPrice  |参数名称：单价| |参数约束及描述：单价|
-    * unit  |参数名称：单价单位| |参数约束及描述：单价单位|
-    * officialAmount  |参数名称：官网价。| |参数约束及描述： 官网价。|
-    * discountAmount  |参数名称：折扣金额| |参数约束及描述： 折扣金额|
-    * amount  |参数名称：消费金额，包括现金券和代金券金额，精确到小数点后2位。| |参数约束及描述： 消费金额，包括现金券和代金券金额，精确到小数点后2位。|
-    * cashAmount  |参数名称：现金支付金额| |参数约束及描述： 现金支付金额|
-    * creditAmount  |参数名称：信用额度支付金额。| |参数约束及描述： 信用额度支付金额。|
-    * couponAmount  |参数名称：代金券支付金额。| |参数约束及描述： 代金券支付金额。|
-    * flexipurchaseCouponAmount  |参数名称：现金券支付金额。| |参数约束及描述： 现金券支付金额。|
-    * storedCardAmount  |参数名称：储值卡支付金额。| |参数约束及描述： 储值卡支付金额。|
-    * bonusAmount  |参数名称：奖励金支付金额（用于现网未清干净的奖励金）。| |参数约束及描述： 奖励金支付金额（用于现网未清干净的奖励金）。|
-    * debtAmount  |参数名称：欠费金额。| |参数约束及描述： 欠费金额。|
-    * adjustmentAmount  |参数名称：欠费核销金额。| |参数约束及描述： 欠费核销金额。|
-    * measureId  |参数名称：金额单位：1：元| |参数的约束及描述：金额单位：1：元|
+    * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区截取。
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金|
+    * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceType  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * effectiveTime  费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
+    * expireTime  费用对应的资源使用的结束时间，按需有效，包年/包月该字段保留。
+    * resourceId  资源ID。
+    * resourceName  资源名称。
+    * resourceTag  资源标签。
+    * productId  产品ID。
+    * productName  产品名称。
+    * productSpecDesc  产品的规格描述。
+    * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
+    * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
+    * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
+    * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * tradeTime  交易时间。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1
+    * enterpriseProjectName  企业项目的名称。
+    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
+    * usageType  资源使用量的类型，您可以调用查询使用量类型列表接口获取。
+    * usage  资源的使用量。
+    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * freeResourceUsage  套餐内使用量。
+    * freeResourceMeasureId  套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * riUsage  预留实例使用量。
+    * riUsageMeasureId  预留实例使用量单位。
+    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
+    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
+    * officialAmount  官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
+    * discountAmount  优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
+    * amount  应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括代金券金额，精确到小数点后8位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
+    * cashAmount  现金支付金额。
+    * creditAmount  信用额度支付金额。
+    * couponAmount  代金券支付金额。
+    * flexipurchaseCouponAmount  现金券支付金额。
+    * storedCardAmount  储值卡支付金额。
+    * bonusAmount  奖励金支付金额（用于现网客户未使用完的奖励金）。
+    * debtAmount  欠费金额。
+    * adjustmentAmount  欠费核销金额。
+    * measureId  金额单位。 1：元
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'productName' => 'string',
             'productSpecDesc' => 'string',
             'skuCode' => 'string',
-            'specSize' => 'float',
+            'specSize' => 'double',
             'specSizeMeasureId' => 'int',
             'tradeId' => 'string',
             'tradeTime' => 'string',
@@ -100,78 +100,78 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'orderId' => 'string',
             'periodType' => 'string',
             'usageType' => 'string',
-            'usage' => 'float',
+            'usage' => 'double',
             'usageMeasureId' => 'int',
-            'freeResourceUsage' => 'float',
+            'freeResourceUsage' => 'double',
             'freeResourceMeasureId' => 'int',
-            'riUsage' => 'float',
+            'riUsage' => 'double',
             'riUsageMeasureId' => 'int',
-            'unitPrice' => 'float',
+            'unitPrice' => 'double',
             'unit' => 'string',
-            'officialAmount' => 'float',
-            'discountAmount' => 'float',
-            'amount' => 'float',
-            'cashAmount' => 'float',
-            'creditAmount' => 'float',
-            'couponAmount' => 'float',
-            'flexipurchaseCouponAmount' => 'float',
-            'storedCardAmount' => 'float',
-            'bonusAmount' => 'float',
-            'debtAmount' => 'float',
-            'adjustmentAmount' => 'float',
+            'officialAmount' => 'double',
+            'discountAmount' => 'double',
+            'amount' => 'double',
+            'cashAmount' => 'double',
+            'creditAmount' => 'double',
+            'couponAmount' => 'double',
+            'flexipurchaseCouponAmount' => 'double',
+            'storedCardAmount' => 'double',
+            'bonusAmount' => 'double',
+            'debtAmount' => 'double',
+            'adjustmentAmount' => 'double',
             'measureId' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * billDate  |参数名称：消费记录日期：格式：YYYY-MM-DD。按照东八区截取| |参数约束及描述：消费记录日期：格式：YYYY-MM-DD。按照东八区截取|
-    * billType  |参数名称：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费16：调账-扣费| |参数的约束及描述：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费 15消费-税金16：调账-扣费17：消费-保底差额 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
-    * customerId  |参数名称：消费的客户账号ID。| |参数约束及描述：如果是查询自己，这个地方是自身的ID; 如果是查询某个企业子客户，这个地方是企业子客户ID如果是查询以及下面的所有子客户，这个地方是消费的实际客户ID; 如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。|
-    * region  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * regionName  |参数名称：云服务区名称| |参数约束及描述：云服务区名称|
-    * cloudServiceType  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceType  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
-    * effectiveTime  |参数名称：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。|
-    * expireTime  |参数名称：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。|
-    * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。|
-    * resourceName  |参数名称：资源名称。| |参数约束及描述：资源名称。|
-    * resourceTag  |参数名称：资源标签。| |参数约束及描述：资源标签。|
-    * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
-    * productName  |参数名称：产品名称。| |参数约束及描述：产品名称。|
-    * productSpecDesc  |参数名称：产品规格描述。| |参数约束及描述：产品规格描述，举例为：普通IO|100.0GB。|
-    * skuCode  |参数名称：sku编码| |参数约束及描述：sku编码|
-    * specSize  |参数名称：线性大小| |参数约束及描述： 线性大小|
-    * specSizeMeasureId  |参数名称：线性大小单位| |参数的约束及描述：线性大小单位|
-    * tradeId  |参数名称：订单ID 或 交易ID，扣费维度的唯一标识| |参数约束及描述：订单ID 或 交易ID，扣费维度的唯一标识|
-    * tradeTime  |参数名称：交易时间| |参数名称：交易时间，某条消费记录对应的扣费时间。|
-    * enterpriseProjectId  |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
-    * enterpriseProjectName  |参数名称：企业项目名称。| |参数约束及描述：企业项目名称。|
-    * chargeMode  |参数名称：1 : 包周期；3: 按需。10: 预留实例。| |参数约束及描述：1 : 包周期；3: 按需。10: 预留实例。|
-    * orderId  |参数名称：订单ID，包周期资源使用记录才有该字段，按需资源为空。| |参数约束及描述：订单ID，包周期资源使用记录才有该字段，按需资源为空。|
-    * periodType  |参数名称：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。| |参数约束及描述：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。|
-    * usageType  |参数名称：使用量类型| |参数约束及描述：使用量类型|
-    * usage  |参数名称：使用量。| |参数约束及描述： 使用量。|
-    * usageMeasureId  |参数名称：使用量度量单位| |参数的约束及描述：使用量度量单位|
-    * freeResourceUsage  |参数名称：套餐内使用量。| |参数约束及描述： 套餐内使用量。|
-    * freeResourceMeasureId  |参数名称：套餐内使用量单位，具体枚举参考：usageMeasureId| |参数的约束及描述：套餐内使用量单位，具体枚举参考：usageMeasureId|
-    * riUsage  |参数名称：预留实例使用量。| |参数约束及描述： 预留实例使用量。|
-    * riUsageMeasureId  |参数名称：预留实例使用量单位。| |参数的约束及描述：预留实例使用量单位。|
-    * unitPrice  |参数名称：单价| |参数约束及描述：单价|
-    * unit  |参数名称：单价单位| |参数约束及描述：单价单位|
-    * officialAmount  |参数名称：官网价。| |参数约束及描述： 官网价。|
-    * discountAmount  |参数名称：折扣金额| |参数约束及描述： 折扣金额|
-    * amount  |参数名称：消费金额，包括现金券和代金券金额，精确到小数点后2位。| |参数约束及描述： 消费金额，包括现金券和代金券金额，精确到小数点后2位。|
-    * cashAmount  |参数名称：现金支付金额| |参数约束及描述： 现金支付金额|
-    * creditAmount  |参数名称：信用额度支付金额。| |参数约束及描述： 信用额度支付金额。|
-    * couponAmount  |参数名称：代金券支付金额。| |参数约束及描述： 代金券支付金额。|
-    * flexipurchaseCouponAmount  |参数名称：现金券支付金额。| |参数约束及描述： 现金券支付金额。|
-    * storedCardAmount  |参数名称：储值卡支付金额。| |参数约束及描述： 储值卡支付金额。|
-    * bonusAmount  |参数名称：奖励金支付金额（用于现网未清干净的奖励金）。| |参数约束及描述： 奖励金支付金额（用于现网未清干净的奖励金）。|
-    * debtAmount  |参数名称：欠费金额。| |参数约束及描述： 欠费金额。|
-    * adjustmentAmount  |参数名称：欠费核销金额。| |参数约束及描述： 欠费核销金额。|
-    * measureId  |参数名称：金额单位：1：元| |参数的约束及描述：金额单位：1：元|
+    * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区截取。
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金|
+    * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceType  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * effectiveTime  费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
+    * expireTime  费用对应的资源使用的结束时间，按需有效，包年/包月该字段保留。
+    * resourceId  资源ID。
+    * resourceName  资源名称。
+    * resourceTag  资源标签。
+    * productId  产品ID。
+    * productName  产品名称。
+    * productSpecDesc  产品的规格描述。
+    * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
+    * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
+    * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
+    * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * tradeTime  交易时间。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1
+    * enterpriseProjectName  企业项目的名称。
+    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
+    * usageType  资源使用量的类型，您可以调用查询使用量类型列表接口获取。
+    * usage  资源的使用量。
+    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * freeResourceUsage  套餐内使用量。
+    * freeResourceMeasureId  套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * riUsage  预留实例使用量。
+    * riUsageMeasureId  预留实例使用量单位。
+    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
+    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
+    * officialAmount  官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
+    * discountAmount  优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
+    * amount  应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括代金券金额，精确到小数点后8位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
+    * cashAmount  现金支付金额。
+    * creditAmount  信用额度支付金额。
+    * couponAmount  代金券支付金额。
+    * flexipurchaseCouponAmount  现金券支付金额。
+    * storedCardAmount  储值卡支付金额。
+    * bonusAmount  奖励金支付金额（用于现网客户未使用完的奖励金）。
+    * debtAmount  欠费金额。
+    * adjustmentAmount  欠费核销金额。
+    * measureId  金额单位。 1：元
     *
     * @var string[]
     */
@@ -194,7 +194,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         'productName' => null,
         'productSpecDesc' => null,
         'skuCode' => null,
-        'specSize' => 'bigdecimal',
+        'specSize' => 'double',
         'specSizeMeasureId' => 'int32',
         'tradeId' => null,
         'tradeTime' => null,
@@ -204,25 +204,25 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         'orderId' => null,
         'periodType' => null,
         'usageType' => null,
-        'usage' => 'bigdecimal',
+        'usage' => 'double',
         'usageMeasureId' => 'int32',
-        'freeResourceUsage' => 'bigdecimal',
+        'freeResourceUsage' => 'double',
         'freeResourceMeasureId' => 'int32',
-        'riUsage' => 'bigdecimal',
+        'riUsage' => 'double',
         'riUsageMeasureId' => 'int32',
-        'unitPrice' => 'bigdecimal',
+        'unitPrice' => 'double',
         'unit' => null,
-        'officialAmount' => 'bigdecimal',
-        'discountAmount' => 'bigdecimal',
-        'amount' => 'bigdecimal',
-        'cashAmount' => 'bigdecimal',
-        'creditAmount' => 'bigdecimal',
-        'couponAmount' => 'bigdecimal',
-        'flexipurchaseCouponAmount' => 'bigdecimal',
-        'storedCardAmount' => 'bigdecimal',
-        'bonusAmount' => 'bigdecimal',
-        'debtAmount' => 'bigdecimal',
-        'adjustmentAmount' => 'bigdecimal',
+        'officialAmount' => 'double',
+        'discountAmount' => 'double',
+        'amount' => 'double',
+        'cashAmount' => 'double',
+        'creditAmount' => 'double',
+        'couponAmount' => 'double',
+        'flexipurchaseCouponAmount' => 'double',
+        'storedCardAmount' => 'double',
+        'bonusAmount' => 'double',
+        'debtAmount' => 'double',
+        'adjustmentAmount' => 'double',
         'measureId' => 'int32'
     ];
 
@@ -249,54 +249,54 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * billDate  |参数名称：消费记录日期：格式：YYYY-MM-DD。按照东八区截取| |参数约束及描述：消费记录日期：格式：YYYY-MM-DD。按照东八区截取|
-    * billType  |参数名称：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费16：调账-扣费| |参数的约束及描述：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费 15消费-税金16：调账-扣费17：消费-保底差额 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
-    * customerId  |参数名称：消费的客户账号ID。| |参数约束及描述：如果是查询自己，这个地方是自身的ID; 如果是查询某个企业子客户，这个地方是企业子客户ID如果是查询以及下面的所有子客户，这个地方是消费的实际客户ID; 如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。|
-    * region  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * regionName  |参数名称：云服务区名称| |参数约束及描述：云服务区名称|
-    * cloudServiceType  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceType  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
-    * effectiveTime  |参数名称：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。|
-    * expireTime  |参数名称：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。|
-    * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。|
-    * resourceName  |参数名称：资源名称。| |参数约束及描述：资源名称。|
-    * resourceTag  |参数名称：资源标签。| |参数约束及描述：资源标签。|
-    * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
-    * productName  |参数名称：产品名称。| |参数约束及描述：产品名称。|
-    * productSpecDesc  |参数名称：产品规格描述。| |参数约束及描述：产品规格描述，举例为：普通IO|100.0GB。|
-    * skuCode  |参数名称：sku编码| |参数约束及描述：sku编码|
-    * specSize  |参数名称：线性大小| |参数约束及描述： 线性大小|
-    * specSizeMeasureId  |参数名称：线性大小单位| |参数的约束及描述：线性大小单位|
-    * tradeId  |参数名称：订单ID 或 交易ID，扣费维度的唯一标识| |参数约束及描述：订单ID 或 交易ID，扣费维度的唯一标识|
-    * tradeTime  |参数名称：交易时间| |参数名称：交易时间，某条消费记录对应的扣费时间。|
-    * enterpriseProjectId  |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
-    * enterpriseProjectName  |参数名称：企业项目名称。| |参数约束及描述：企业项目名称。|
-    * chargeMode  |参数名称：1 : 包周期；3: 按需。10: 预留实例。| |参数约束及描述：1 : 包周期；3: 按需。10: 预留实例。|
-    * orderId  |参数名称：订单ID，包周期资源使用记录才有该字段，按需资源为空。| |参数约束及描述：订单ID，包周期资源使用记录才有该字段，按需资源为空。|
-    * periodType  |参数名称：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。| |参数约束及描述：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。|
-    * usageType  |参数名称：使用量类型| |参数约束及描述：使用量类型|
-    * usage  |参数名称：使用量。| |参数约束及描述： 使用量。|
-    * usageMeasureId  |参数名称：使用量度量单位| |参数的约束及描述：使用量度量单位|
-    * freeResourceUsage  |参数名称：套餐内使用量。| |参数约束及描述： 套餐内使用量。|
-    * freeResourceMeasureId  |参数名称：套餐内使用量单位，具体枚举参考：usageMeasureId| |参数的约束及描述：套餐内使用量单位，具体枚举参考：usageMeasureId|
-    * riUsage  |参数名称：预留实例使用量。| |参数约束及描述： 预留实例使用量。|
-    * riUsageMeasureId  |参数名称：预留实例使用量单位。| |参数的约束及描述：预留实例使用量单位。|
-    * unitPrice  |参数名称：单价| |参数约束及描述：单价|
-    * unit  |参数名称：单价单位| |参数约束及描述：单价单位|
-    * officialAmount  |参数名称：官网价。| |参数约束及描述： 官网价。|
-    * discountAmount  |参数名称：折扣金额| |参数约束及描述： 折扣金额|
-    * amount  |参数名称：消费金额，包括现金券和代金券金额，精确到小数点后2位。| |参数约束及描述： 消费金额，包括现金券和代金券金额，精确到小数点后2位。|
-    * cashAmount  |参数名称：现金支付金额| |参数约束及描述： 现金支付金额|
-    * creditAmount  |参数名称：信用额度支付金额。| |参数约束及描述： 信用额度支付金额。|
-    * couponAmount  |参数名称：代金券支付金额。| |参数约束及描述： 代金券支付金额。|
-    * flexipurchaseCouponAmount  |参数名称：现金券支付金额。| |参数约束及描述： 现金券支付金额。|
-    * storedCardAmount  |参数名称：储值卡支付金额。| |参数约束及描述： 储值卡支付金额。|
-    * bonusAmount  |参数名称：奖励金支付金额（用于现网未清干净的奖励金）。| |参数约束及描述： 奖励金支付金额（用于现网未清干净的奖励金）。|
-    * debtAmount  |参数名称：欠费金额。| |参数约束及描述： 欠费金额。|
-    * adjustmentAmount  |参数名称：欠费核销金额。| |参数约束及描述： 欠费核销金额。|
-    * measureId  |参数名称：金额单位：1：元| |参数的约束及描述：金额单位：1：元|
+    * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区截取。
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金|
+    * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceType  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * effectiveTime  费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
+    * expireTime  费用对应的资源使用的结束时间，按需有效，包年/包月该字段保留。
+    * resourceId  资源ID。
+    * resourceName  资源名称。
+    * resourceTag  资源标签。
+    * productId  产品ID。
+    * productName  产品名称。
+    * productSpecDesc  产品的规格描述。
+    * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
+    * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
+    * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
+    * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * tradeTime  交易时间。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1
+    * enterpriseProjectName  企业项目的名称。
+    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
+    * usageType  资源使用量的类型，您可以调用查询使用量类型列表接口获取。
+    * usage  资源的使用量。
+    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * freeResourceUsage  套餐内使用量。
+    * freeResourceMeasureId  套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * riUsage  预留实例使用量。
+    * riUsageMeasureId  预留实例使用量单位。
+    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
+    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
+    * officialAmount  官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
+    * discountAmount  优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
+    * amount  应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括代金券金额，精确到小数点后8位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
+    * cashAmount  现金支付金额。
+    * creditAmount  信用额度支付金额。
+    * couponAmount  代金券支付金额。
+    * flexipurchaseCouponAmount  现金券支付金额。
+    * storedCardAmount  储值卡支付金额。
+    * bonusAmount  奖励金支付金额（用于现网客户未使用完的奖励金）。
+    * debtAmount  欠费金额。
+    * adjustmentAmount  欠费核销金额。
+    * measureId  金额单位。 1：元
     *
     * @var string[]
     */
@@ -353,54 +353,54 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * billDate  |参数名称：消费记录日期：格式：YYYY-MM-DD。按照东八区截取| |参数约束及描述：消费记录日期：格式：YYYY-MM-DD。按照东八区截取|
-    * billType  |参数名称：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费16：调账-扣费| |参数的约束及描述：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费 15消费-税金16：调账-扣费17：消费-保底差额 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
-    * customerId  |参数名称：消费的客户账号ID。| |参数约束及描述：如果是查询自己，这个地方是自身的ID; 如果是查询某个企业子客户，这个地方是企业子客户ID如果是查询以及下面的所有子客户，这个地方是消费的实际客户ID; 如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。|
-    * region  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * regionName  |参数名称：云服务区名称| |参数约束及描述：云服务区名称|
-    * cloudServiceType  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceType  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
-    * effectiveTime  |参数名称：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。|
-    * expireTime  |参数名称：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。|
-    * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。|
-    * resourceName  |参数名称：资源名称。| |参数约束及描述：资源名称。|
-    * resourceTag  |参数名称：资源标签。| |参数约束及描述：资源标签。|
-    * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
-    * productName  |参数名称：产品名称。| |参数约束及描述：产品名称。|
-    * productSpecDesc  |参数名称：产品规格描述。| |参数约束及描述：产品规格描述，举例为：普通IO|100.0GB。|
-    * skuCode  |参数名称：sku编码| |参数约束及描述：sku编码|
-    * specSize  |参数名称：线性大小| |参数约束及描述： 线性大小|
-    * specSizeMeasureId  |参数名称：线性大小单位| |参数的约束及描述：线性大小单位|
-    * tradeId  |参数名称：订单ID 或 交易ID，扣费维度的唯一标识| |参数约束及描述：订单ID 或 交易ID，扣费维度的唯一标识|
-    * tradeTime  |参数名称：交易时间| |参数名称：交易时间，某条消费记录对应的扣费时间。|
-    * enterpriseProjectId  |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
-    * enterpriseProjectName  |参数名称：企业项目名称。| |参数约束及描述：企业项目名称。|
-    * chargeMode  |参数名称：1 : 包周期；3: 按需。10: 预留实例。| |参数约束及描述：1 : 包周期；3: 按需。10: 预留实例。|
-    * orderId  |参数名称：订单ID，包周期资源使用记录才有该字段，按需资源为空。| |参数约束及描述：订单ID，包周期资源使用记录才有该字段，按需资源为空。|
-    * periodType  |参数名称：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。| |参数约束及描述：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。|
-    * usageType  |参数名称：使用量类型| |参数约束及描述：使用量类型|
-    * usage  |参数名称：使用量。| |参数约束及描述： 使用量。|
-    * usageMeasureId  |参数名称：使用量度量单位| |参数的约束及描述：使用量度量单位|
-    * freeResourceUsage  |参数名称：套餐内使用量。| |参数约束及描述： 套餐内使用量。|
-    * freeResourceMeasureId  |参数名称：套餐内使用量单位，具体枚举参考：usageMeasureId| |参数的约束及描述：套餐内使用量单位，具体枚举参考：usageMeasureId|
-    * riUsage  |参数名称：预留实例使用量。| |参数约束及描述： 预留实例使用量。|
-    * riUsageMeasureId  |参数名称：预留实例使用量单位。| |参数的约束及描述：预留实例使用量单位。|
-    * unitPrice  |参数名称：单价| |参数约束及描述：单价|
-    * unit  |参数名称：单价单位| |参数约束及描述：单价单位|
-    * officialAmount  |参数名称：官网价。| |参数约束及描述： 官网价。|
-    * discountAmount  |参数名称：折扣金额| |参数约束及描述： 折扣金额|
-    * amount  |参数名称：消费金额，包括现金券和代金券金额，精确到小数点后2位。| |参数约束及描述： 消费金额，包括现金券和代金券金额，精确到小数点后2位。|
-    * cashAmount  |参数名称：现金支付金额| |参数约束及描述： 现金支付金额|
-    * creditAmount  |参数名称：信用额度支付金额。| |参数约束及描述： 信用额度支付金额。|
-    * couponAmount  |参数名称：代金券支付金额。| |参数约束及描述： 代金券支付金额。|
-    * flexipurchaseCouponAmount  |参数名称：现金券支付金额。| |参数约束及描述： 现金券支付金额。|
-    * storedCardAmount  |参数名称：储值卡支付金额。| |参数约束及描述： 储值卡支付金额。|
-    * bonusAmount  |参数名称：奖励金支付金额（用于现网未清干净的奖励金）。| |参数约束及描述： 奖励金支付金额（用于现网未清干净的奖励金）。|
-    * debtAmount  |参数名称：欠费金额。| |参数约束及描述： 欠费金额。|
-    * adjustmentAmount  |参数名称：欠费核销金额。| |参数约束及描述： 欠费核销金额。|
-    * measureId  |参数名称：金额单位：1：元| |参数的约束及描述：金额单位：1：元|
+    * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区截取。
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金|
+    * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceType  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * effectiveTime  费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
+    * expireTime  费用对应的资源使用的结束时间，按需有效，包年/包月该字段保留。
+    * resourceId  资源ID。
+    * resourceName  资源名称。
+    * resourceTag  资源标签。
+    * productId  产品ID。
+    * productName  产品名称。
+    * productSpecDesc  产品的规格描述。
+    * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
+    * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
+    * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
+    * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * tradeTime  交易时间。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1
+    * enterpriseProjectName  企业项目的名称。
+    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
+    * usageType  资源使用量的类型，您可以调用查询使用量类型列表接口获取。
+    * usage  资源的使用量。
+    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * freeResourceUsage  套餐内使用量。
+    * freeResourceMeasureId  套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * riUsage  预留实例使用量。
+    * riUsageMeasureId  预留实例使用量单位。
+    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
+    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
+    * officialAmount  官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
+    * discountAmount  优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
+    * amount  应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括代金券金额，精确到小数点后8位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
+    * cashAmount  现金支付金额。
+    * creditAmount  信用额度支付金额。
+    * couponAmount  代金券支付金额。
+    * flexipurchaseCouponAmount  现金券支付金额。
+    * storedCardAmount  储值卡支付金额。
+    * bonusAmount  奖励金支付金额（用于现网客户未使用完的奖励金）。
+    * debtAmount  欠费金额。
+    * adjustmentAmount  欠费核销金额。
+    * measureId  金额单位。 1：元
     *
     * @var string[]
     */
@@ -457,54 +457,54 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * billDate  |参数名称：消费记录日期：格式：YYYY-MM-DD。按照东八区截取| |参数约束及描述：消费记录日期：格式：YYYY-MM-DD。按照东八区截取|
-    * billType  |参数名称：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费16：调账-扣费| |参数的约束及描述：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费 15消费-税金16：调账-扣费17：消费-保底差额 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
-    * customerId  |参数名称：消费的客户账号ID。| |参数约束及描述：如果是查询自己，这个地方是自身的ID; 如果是查询某个企业子客户，这个地方是企业子客户ID如果是查询以及下面的所有子客户，这个地方是消费的实际客户ID; 如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。|
-    * region  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * regionName  |参数名称：云服务区名称| |参数约束及描述：云服务区名称|
-    * cloudServiceType  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceType  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
-    * effectiveTime  |参数名称：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。|
-    * expireTime  |参数名称：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。|
-    * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。|
-    * resourceName  |参数名称：资源名称。| |参数约束及描述：资源名称。|
-    * resourceTag  |参数名称：资源标签。| |参数约束及描述：资源标签。|
-    * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
-    * productName  |参数名称：产品名称。| |参数约束及描述：产品名称。|
-    * productSpecDesc  |参数名称：产品规格描述。| |参数约束及描述：产品规格描述，举例为：普通IO|100.0GB。|
-    * skuCode  |参数名称：sku编码| |参数约束及描述：sku编码|
-    * specSize  |参数名称：线性大小| |参数约束及描述： 线性大小|
-    * specSizeMeasureId  |参数名称：线性大小单位| |参数的约束及描述：线性大小单位|
-    * tradeId  |参数名称：订单ID 或 交易ID，扣费维度的唯一标识| |参数约束及描述：订单ID 或 交易ID，扣费维度的唯一标识|
-    * tradeTime  |参数名称：交易时间| |参数名称：交易时间，某条消费记录对应的扣费时间。|
-    * enterpriseProjectId  |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
-    * enterpriseProjectName  |参数名称：企业项目名称。| |参数约束及描述：企业项目名称。|
-    * chargeMode  |参数名称：1 : 包周期；3: 按需。10: 预留实例。| |参数约束及描述：1 : 包周期；3: 按需。10: 预留实例。|
-    * orderId  |参数名称：订单ID，包周期资源使用记录才有该字段，按需资源为空。| |参数约束及描述：订单ID，包周期资源使用记录才有该字段，按需资源为空。|
-    * periodType  |参数名称：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。| |参数约束及描述：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。|
-    * usageType  |参数名称：使用量类型| |参数约束及描述：使用量类型|
-    * usage  |参数名称：使用量。| |参数约束及描述： 使用量。|
-    * usageMeasureId  |参数名称：使用量度量单位| |参数的约束及描述：使用量度量单位|
-    * freeResourceUsage  |参数名称：套餐内使用量。| |参数约束及描述： 套餐内使用量。|
-    * freeResourceMeasureId  |参数名称：套餐内使用量单位，具体枚举参考：usageMeasureId| |参数的约束及描述：套餐内使用量单位，具体枚举参考：usageMeasureId|
-    * riUsage  |参数名称：预留实例使用量。| |参数约束及描述： 预留实例使用量。|
-    * riUsageMeasureId  |参数名称：预留实例使用量单位。| |参数的约束及描述：预留实例使用量单位。|
-    * unitPrice  |参数名称：单价| |参数约束及描述：单价|
-    * unit  |参数名称：单价单位| |参数约束及描述：单价单位|
-    * officialAmount  |参数名称：官网价。| |参数约束及描述： 官网价。|
-    * discountAmount  |参数名称：折扣金额| |参数约束及描述： 折扣金额|
-    * amount  |参数名称：消费金额，包括现金券和代金券金额，精确到小数点后2位。| |参数约束及描述： 消费金额，包括现金券和代金券金额，精确到小数点后2位。|
-    * cashAmount  |参数名称：现金支付金额| |参数约束及描述： 现金支付金额|
-    * creditAmount  |参数名称：信用额度支付金额。| |参数约束及描述： 信用额度支付金额。|
-    * couponAmount  |参数名称：代金券支付金额。| |参数约束及描述： 代金券支付金额。|
-    * flexipurchaseCouponAmount  |参数名称：现金券支付金额。| |参数约束及描述： 现金券支付金额。|
-    * storedCardAmount  |参数名称：储值卡支付金额。| |参数约束及描述： 储值卡支付金额。|
-    * bonusAmount  |参数名称：奖励金支付金额（用于现网未清干净的奖励金）。| |参数约束及描述： 奖励金支付金额（用于现网未清干净的奖励金）。|
-    * debtAmount  |参数名称：欠费金额。| |参数约束及描述： 欠费金额。|
-    * adjustmentAmount  |参数名称：欠费核销金额。| |参数约束及描述： 欠费核销金额。|
-    * measureId  |参数名称：金额单位：1：元| |参数的约束及描述：金额单位：1：元|
+    * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区截取。
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金|
+    * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceType  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * effectiveTime  费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
+    * expireTime  费用对应的资源使用的结束时间，按需有效，包年/包月该字段保留。
+    * resourceId  资源ID。
+    * resourceName  资源名称。
+    * resourceTag  资源标签。
+    * productId  产品ID。
+    * productName  产品名称。
+    * productSpecDesc  产品的规格描述。
+    * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
+    * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
+    * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
+    * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * tradeTime  交易时间。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1
+    * enterpriseProjectName  企业项目的名称。
+    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
+    * usageType  资源使用量的类型，您可以调用查询使用量类型列表接口获取。
+    * usage  资源的使用量。
+    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * freeResourceUsage  套餐内使用量。
+    * freeResourceMeasureId  套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * riUsage  预留实例使用量。
+    * riUsageMeasureId  预留实例使用量单位。
+    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
+    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
+    * officialAmount  官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
+    * discountAmount  优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
+    * amount  应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括代金券金额，精确到小数点后8位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
+    * cashAmount  现金支付金额。
+    * creditAmount  信用额度支付金额。
+    * couponAmount  代金券支付金额。
+    * flexipurchaseCouponAmount  现金券支付金额。
+    * storedCardAmount  储值卡支付金额。
+    * bonusAmount  奖励金支付金额（用于现网客户未使用完的奖励金）。
+    * debtAmount  欠费金额。
+    * adjustmentAmount  欠费核销金额。
+    * measureId  金额单位。 1：元
     *
     * @var string[]
     */
@@ -691,7 +691,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets billDate
-    *  |参数名称：消费记录日期：格式：YYYY-MM-DD。按照东八区截取| |参数约束及描述：消费记录日期：格式：YYYY-MM-DD。按照东八区截取|
+    *  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区截取。
     *
     * @return string|null
     */
@@ -703,7 +703,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets billDate
     *
-    * @param string|null $billDate |参数名称：消费记录日期：格式：YYYY-MM-DD。按照东八区截取| |参数约束及描述：消费记录日期：格式：YYYY-MM-DD。按照东八区截取|
+    * @param string|null $billDate 资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区截取。
     *
     * @return $this
     */
@@ -715,7 +715,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets billType
-    *  |参数名称：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费16：调账-扣费| |参数的约束及描述：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费 15消费-税金16：调账-扣费17：消费-保底差额 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
+    *  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金|
     *
     * @return int|null
     */
@@ -727,7 +727,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets billType
     *
-    * @param int|null $billType |参数名称：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费16：调账-扣费| |参数的约束及描述：账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿12：消费-按时计费13：消费-退订手续费14：消费-服务支持计划月末扣费 15消费-税金16：调账-扣费17：消费-保底差额 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
+    * @param int|null $billType 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金|
     *
     * @return $this
     */
@@ -739,7 +739,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerId
-    *  |参数名称：消费的客户账号ID。| |参数约束及描述：如果是查询自己，这个地方是自身的ID; 如果是查询某个企业子客户，这个地方是企业子客户ID如果是查询以及下面的所有子客户，这个地方是消费的实际客户ID; 如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。|
+    *  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     *
     * @return string|null
     */
@@ -751,7 +751,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets customerId
     *
-    * @param string|null $customerId |参数名称：消费的客户账号ID。| |参数约束及描述：如果是查询自己，这个地方是自身的ID; 如果是查询某个企业子客户，这个地方是企业子客户ID如果是查询以及下面的所有子客户，这个地方是消费的实际客户ID; 如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。|
+    * @param string|null $customerId 消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     *
     * @return $this
     */
@@ -763,7 +763,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
+    *  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     *
     * @return string|null
     */
@@ -775,7 +775,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
+    * @param string|null $region 云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     *
     * @return $this
     */
@@ -787,7 +787,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionName
-    *  |参数名称：云服务区名称| |参数约束及描述：云服务区名称|
+    *  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     *
     * @return string|null
     */
@@ -799,7 +799,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets regionName
     *
-    * @param string|null $regionName |参数名称：云服务区名称| |参数约束及描述：云服务区名称|
+    * @param string|null $regionName 云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     *
     * @return $this
     */
@@ -811,7 +811,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudServiceType
-    *  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return string|null
     */
@@ -823,7 +823,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets cloudServiceType
     *
-    * @param string|null $cloudServiceType |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    * @param string|null $cloudServiceType 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return $this
     */
@@ -835,7 +835,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    *  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
     *
     * @return string|null
     */
@@ -847,7 +847,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    * @param string|null $resourceType 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。
     *
     * @return $this
     */
@@ -859,7 +859,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudServiceTypeName
-    *  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return string|null
     */
@@ -871,7 +871,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets cloudServiceTypeName
     *
-    * @param string|null $cloudServiceTypeName |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    * @param string|null $cloudServiceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return $this
     */
@@ -883,7 +883,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeName
-    *  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
+    *  资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @return string|null
     */
@@ -895,7 +895,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeName
     *
-    * @param string|null $resourceTypeName |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
+    * @param string|null $resourceTypeName 资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @return $this
     */
@@ -907,7 +907,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets effectiveTime
-    *  |参数名称：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。|
+    *  费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
     *
     * @return string|null
     */
@@ -919,7 +919,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets effectiveTime
     *
-    * @param string|null $effectiveTime |参数名称：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的开始时间，按需有效，包周期该字段保留。|
+    * @param string|null $effectiveTime 费用对应的资源使用的开始时间，按需有效，包年/包月该字段保留。
     *
     * @return $this
     */
@@ -931,7 +931,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTime
-    *  |参数名称：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。|
+    *  费用对应的资源使用的结束时间，按需有效，包年/包月该字段保留。
     *
     * @return string|null
     */
@@ -943,7 +943,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets expireTime
     *
-    * @param string|null $expireTime |参数名称：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。| |参数约束及描述：费用对应的资源使用的结束时间，按需有效，包周期该字段保留。|
+    * @param string|null $expireTime 费用对应的资源使用的结束时间，按需有效，包年/包月该字段保留。
     *
     * @return $this
     */
@@ -955,7 +955,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  |参数名称：资源ID。| |参数约束及描述：资源ID。|
+    *  资源ID。
     *
     * @return string|null
     */
@@ -967,7 +967,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId |参数名称：资源ID。| |参数约束及描述：资源ID。|
+    * @param string|null $resourceId 资源ID。
     *
     * @return $this
     */
@@ -979,7 +979,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  |参数名称：资源名称。| |参数约束及描述：资源名称。|
+    *  资源名称。
     *
     * @return string|null
     */
@@ -991,7 +991,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string|null $resourceName |参数名称：资源名称。| |参数约束及描述：资源名称。|
+    * @param string|null $resourceName 资源名称。
     *
     * @return $this
     */
@@ -1003,7 +1003,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTag
-    *  |参数名称：资源标签。| |参数约束及描述：资源标签。|
+    *  资源标签。
     *
     * @return string|null
     */
@@ -1015,7 +1015,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTag
     *
-    * @param string|null $resourceTag |参数名称：资源标签。| |参数约束及描述：资源标签。|
+    * @param string|null $resourceTag 资源标签。
     *
     * @return $this
     */
@@ -1027,7 +1027,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  |参数名称：产品ID。| |参数约束及描述：产品ID。|
+    *  产品ID。
     *
     * @return string|null
     */
@@ -1039,7 +1039,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId |参数名称：产品ID。| |参数约束及描述：产品ID。|
+    * @param string|null $productId 产品ID。
     *
     * @return $this
     */
@@ -1051,7 +1051,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets productName
-    *  |参数名称：产品名称。| |参数约束及描述：产品名称。|
+    *  产品名称。
     *
     * @return string|null
     */
@@ -1063,7 +1063,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets productName
     *
-    * @param string|null $productName |参数名称：产品名称。| |参数约束及描述：产品名称。|
+    * @param string|null $productName 产品名称。
     *
     * @return $this
     */
@@ -1075,7 +1075,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets productSpecDesc
-    *  |参数名称：产品规格描述。| |参数约束及描述：产品规格描述，举例为：普通IO|100.0GB。|
+    *  产品的规格描述。
     *
     * @return string|null
     */
@@ -1087,7 +1087,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets productSpecDesc
     *
-    * @param string|null $productSpecDesc |参数名称：产品规格描述。| |参数约束及描述：产品规格描述，举例为：普通IO|100.0GB。|
+    * @param string|null $productSpecDesc 产品的规格描述。
     *
     * @return $this
     */
@@ -1099,7 +1099,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets skuCode
-    *  |参数名称：sku编码| |参数约束及描述：sku编码|
+    *  SKU编码，在账单中唯一标识一个资源的规格。
     *
     * @return string|null
     */
@@ -1111,7 +1111,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets skuCode
     *
-    * @param string|null $skuCode |参数名称：sku编码| |参数约束及描述：sku编码|
+    * @param string|null $skuCode SKU编码，在账单中唯一标识一个资源的规格。
     *
     * @return $this
     */
@@ -1123,9 +1123,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets specSize
-    *  |参数名称：线性大小| |参数约束及描述： 线性大小|
+    *  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getSpecSize()
     {
@@ -1135,7 +1135,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets specSize
     *
-    * @param float|null $specSize |参数名称：线性大小| |参数约束及描述： 线性大小|
+    * @param double|null $specSize 产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
     *
     * @return $this
     */
@@ -1147,7 +1147,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets specSizeMeasureId
-    *  |参数名称：线性大小单位| |参数的约束及描述：线性大小单位|
+    *  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
     *
     * @return int|null
     */
@@ -1159,7 +1159,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets specSizeMeasureId
     *
-    * @param int|null $specSizeMeasureId |参数名称：线性大小单位| |参数的约束及描述：线性大小单位|
+    * @param int|null $specSizeMeasureId 产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
     *
     * @return $this
     */
@@ -1171,7 +1171,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets tradeId
-    *  |参数名称：订单ID 或 交易ID，扣费维度的唯一标识| |参数约束及描述：订单ID 或 交易ID，扣费维度的唯一标识|
+    *  订单ID或交易ID，扣费维度的唯一标识。
     *
     * @return string|null
     */
@@ -1183,7 +1183,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets tradeId
     *
-    * @param string|null $tradeId |参数名称：订单ID 或 交易ID，扣费维度的唯一标识| |参数约束及描述：订单ID 或 交易ID，扣费维度的唯一标识|
+    * @param string|null $tradeId 订单ID或交易ID，扣费维度的唯一标识。
     *
     * @return $this
     */
@@ -1195,7 +1195,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets tradeTime
-    *  |参数名称：交易时间| |参数名称：交易时间，某条消费记录对应的扣费时间。|
+    *  交易时间。
     *
     * @return string|null
     */
@@ -1207,7 +1207,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets tradeTime
     *
-    * @param string|null $tradeTime |参数名称：交易时间| |参数名称：交易时间，某条消费记录对应的扣费时间。|
+    * @param string|null $tradeTime 交易时间。
     *
     * @return $this
     */
@@ -1219,7 +1219,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
+    *  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1
     *
     * @return string|null
     */
@@ -1231,7 +1231,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
+    * @param string|null $enterpriseProjectId 企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1
     *
     * @return $this
     */
@@ -1243,7 +1243,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectName
-    *  |参数名称：企业项目名称。| |参数约束及描述：企业项目名称。|
+    *  企业项目的名称。
     *
     * @return string|null
     */
@@ -1255,7 +1255,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectName
     *
-    * @param string|null $enterpriseProjectName |参数名称：企业项目名称。| |参数约束及描述：企业项目名称。|
+    * @param string|null $enterpriseProjectName 企业项目的名称。
     *
     * @return $this
     */
@@ -1267,7 +1267,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  |参数名称：1 : 包周期；3: 按需。10: 预留实例。| |参数约束及描述：1 : 包周期；3: 按需。10: 预留实例。|
+    *  计费模式。 1：包年/包月3：按需10：预留实例
     *
     * @return string|null
     */
@@ -1279,7 +1279,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode |参数名称：1 : 包周期；3: 按需。10: 预留实例。| |参数约束及描述：1 : 包周期；3: 按需。10: 预留实例。|
+    * @param string|null $chargeMode 计费模式。 1：包年/包月3：按需10：预留实例
     *
     * @return $this
     */
@@ -1291,7 +1291,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  |参数名称：订单ID，包周期资源使用记录才有该字段，按需资源为空。| |参数约束及描述：订单ID，包周期资源使用记录才有该字段，按需资源为空。|
+    *  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
     *
     * @return string|null
     */
@@ -1303,7 +1303,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId |参数名称：订单ID，包周期资源使用记录才有该字段，按需资源为空。| |参数约束及描述：订单ID，包周期资源使用记录才有该字段，按需资源为空。|
+    * @param string|null $orderId 订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
     *
     * @return $this
     */
@@ -1315,7 +1315,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  |参数名称：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。| |参数约束及描述：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。|
+    *  周期类型： 19：年20：月24：天25：小时5：一次性
     *
     * @return string|null
     */
@@ -1327,7 +1327,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param string|null $periodType |参数名称：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。| |参数约束及描述：周期类型：19：年；20：月；24：天；25：小时；5：分钟；6：秒。|
+    * @param string|null $periodType 周期类型： 19：年20：月24：天25：小时5：一次性
     *
     * @return $this
     */
@@ -1339,7 +1339,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets usageType
-    *  |参数名称：使用量类型| |参数约束及描述：使用量类型|
+    *  资源使用量的类型，您可以调用查询使用量类型列表接口获取。
     *
     * @return string|null
     */
@@ -1351,7 +1351,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets usageType
     *
-    * @param string|null $usageType |参数名称：使用量类型| |参数约束及描述：使用量类型|
+    * @param string|null $usageType 资源使用量的类型，您可以调用查询使用量类型列表接口获取。
     *
     * @return $this
     */
@@ -1363,9 +1363,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets usage
-    *  |参数名称：使用量。| |参数约束及描述： 使用量。|
+    *  资源的使用量。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getUsage()
     {
@@ -1375,7 +1375,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets usage
     *
-    * @param float|null $usage |参数名称：使用量。| |参数约束及描述： 使用量。|
+    * @param double|null $usage 资源的使用量。
     *
     * @return $this
     */
@@ -1387,7 +1387,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets usageMeasureId
-    *  |参数名称：使用量度量单位| |参数的约束及描述：使用量度量单位|
+    *  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
     *
     * @return int|null
     */
@@ -1399,7 +1399,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets usageMeasureId
     *
-    * @param int|null $usageMeasureId |参数名称：使用量度量单位| |参数的约束及描述：使用量度量单位|
+    * @param int|null $usageMeasureId 资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
     *
     * @return $this
     */
@@ -1411,9 +1411,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeResourceUsage
-    *  |参数名称：套餐内使用量。| |参数约束及描述： 套餐内使用量。|
+    *  套餐内使用量。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getFreeResourceUsage()
     {
@@ -1423,7 +1423,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets freeResourceUsage
     *
-    * @param float|null $freeResourceUsage |参数名称：套餐内使用量。| |参数约束及描述： 套餐内使用量。|
+    * @param double|null $freeResourceUsage 套餐内使用量。
     *
     * @return $this
     */
@@ -1435,7 +1435,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeResourceMeasureId
-    *  |参数名称：套餐内使用量单位，具体枚举参考：usageMeasureId| |参数的约束及描述：套餐内使用量单位，具体枚举参考：usageMeasureId|
+    *  套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
     *
     * @return int|null
     */
@@ -1447,7 +1447,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets freeResourceMeasureId
     *
-    * @param int|null $freeResourceMeasureId |参数名称：套餐内使用量单位，具体枚举参考：usageMeasureId| |参数的约束及描述：套餐内使用量单位，具体枚举参考：usageMeasureId|
+    * @param int|null $freeResourceMeasureId 套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
     *
     * @return $this
     */
@@ -1459,9 +1459,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets riUsage
-    *  |参数名称：预留实例使用量。| |参数约束及描述： 预留实例使用量。|
+    *  预留实例使用量。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getRiUsage()
     {
@@ -1471,7 +1471,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets riUsage
     *
-    * @param float|null $riUsage |参数名称：预留实例使用量。| |参数约束及描述： 预留实例使用量。|
+    * @param double|null $riUsage 预留实例使用量。
     *
     * @return $this
     */
@@ -1483,7 +1483,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets riUsageMeasureId
-    *  |参数名称：预留实例使用量单位。| |参数的约束及描述：预留实例使用量单位。|
+    *  预留实例使用量单位。
     *
     * @return int|null
     */
@@ -1495,7 +1495,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets riUsageMeasureId
     *
-    * @param int|null $riUsageMeasureId |参数名称：预留实例使用量单位。| |参数的约束及描述：预留实例使用量单位。|
+    * @param int|null $riUsageMeasureId 预留实例使用量单位。
     *
     * @return $this
     */
@@ -1507,9 +1507,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets unitPrice
-    *  |参数名称：单价| |参数约束及描述：单价|
+    *  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
     *
-    * @return float|null
+    * @return double|null
     */
     public function getUnitPrice()
     {
@@ -1519,7 +1519,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets unitPrice
     *
-    * @param float|null $unitPrice |参数名称：单价| |参数约束及描述：单价|
+    * @param double|null $unitPrice 产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
     *
     * @return $this
     */
@@ -1531,7 +1531,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  |参数名称：单价单位| |参数约束及描述：单价单位|
+    *  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
     *
     * @return string|null
     */
@@ -1543,7 +1543,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string|null $unit |参数名称：单价单位| |参数约束及描述：单价单位|
+    * @param string|null $unit 产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
     *
     * @return $this
     */
@@ -1555,9 +1555,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets officialAmount
-    *  |参数名称：官网价。| |参数约束及描述： 官网价。|
+    *  官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getOfficialAmount()
     {
@@ -1567,7 +1567,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets officialAmount
     *
-    * @param float|null $officialAmount |参数名称：官网价。| |参数约束及描述： 官网价。|
+    * @param double|null $officialAmount 官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
     *
     * @return $this
     */
@@ -1579,9 +1579,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountAmount
-    *  |参数名称：折扣金额| |参数约束及描述： 折扣金额|
+    *  优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getDiscountAmount()
     {
@@ -1591,7 +1591,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets discountAmount
     *
-    * @param float|null $discountAmount |参数名称：折扣金额| |参数约束及描述： 折扣金额|
+    * @param double|null $discountAmount 优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
     *
     * @return $this
     */
@@ -1603,9 +1603,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets amount
-    *  |参数名称：消费金额，包括现金券和代金券金额，精确到小数点后2位。| |参数约束及描述： 消费金额，包括现金券和代金券金额，精确到小数点后2位。|
+    *  应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括代金券金额，精确到小数点后8位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getAmount()
     {
@@ -1615,7 +1615,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param float|null $amount |参数名称：消费金额，包括现金券和代金券金额，精确到小数点后2位。| |参数约束及描述： 消费金额，包括现金券和代金券金额，精确到小数点后2位。|
+    * @param double|null $amount 应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括代金券金额，精确到小数点后8位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     *
     * @return $this
     */
@@ -1627,9 +1627,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets cashAmount
-    *  |参数名称：现金支付金额| |参数约束及描述： 现金支付金额|
+    *  现金支付金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getCashAmount()
     {
@@ -1639,7 +1639,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets cashAmount
     *
-    * @param float|null $cashAmount |参数名称：现金支付金额| |参数约束及描述： 现金支付金额|
+    * @param double|null $cashAmount 现金支付金额。
     *
     * @return $this
     */
@@ -1651,9 +1651,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets creditAmount
-    *  |参数名称：信用额度支付金额。| |参数约束及描述： 信用额度支付金额。|
+    *  信用额度支付金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getCreditAmount()
     {
@@ -1663,7 +1663,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets creditAmount
     *
-    * @param float|null $creditAmount |参数名称：信用额度支付金额。| |参数约束及描述： 信用额度支付金额。|
+    * @param double|null $creditAmount 信用额度支付金额。
     *
     * @return $this
     */
@@ -1675,9 +1675,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponAmount
-    *  |参数名称：代金券支付金额。| |参数约束及描述： 代金券支付金额。|
+    *  代金券支付金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getCouponAmount()
     {
@@ -1687,7 +1687,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets couponAmount
     *
-    * @param float|null $couponAmount |参数名称：代金券支付金额。| |参数约束及描述： 代金券支付金额。|
+    * @param double|null $couponAmount 代金券支付金额。
     *
     * @return $this
     */
@@ -1699,9 +1699,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets flexipurchaseCouponAmount
-    *  |参数名称：现金券支付金额。| |参数约束及描述： 现金券支付金额。|
+    *  现金券支付金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getFlexipurchaseCouponAmount()
     {
@@ -1711,7 +1711,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets flexipurchaseCouponAmount
     *
-    * @param float|null $flexipurchaseCouponAmount |参数名称：现金券支付金额。| |参数约束及描述： 现金券支付金额。|
+    * @param double|null $flexipurchaseCouponAmount 现金券支付金额。
     *
     * @return $this
     */
@@ -1723,9 +1723,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets storedCardAmount
-    *  |参数名称：储值卡支付金额。| |参数约束及描述： 储值卡支付金额。|
+    *  储值卡支付金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getStoredCardAmount()
     {
@@ -1735,7 +1735,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets storedCardAmount
     *
-    * @param float|null $storedCardAmount |参数名称：储值卡支付金额。| |参数约束及描述： 储值卡支付金额。|
+    * @param double|null $storedCardAmount 储值卡支付金额。
     *
     * @return $this
     */
@@ -1747,9 +1747,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets bonusAmount
-    *  |参数名称：奖励金支付金额（用于现网未清干净的奖励金）。| |参数约束及描述： 奖励金支付金额（用于现网未清干净的奖励金）。|
+    *  奖励金支付金额（用于现网客户未使用完的奖励金）。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getBonusAmount()
     {
@@ -1759,7 +1759,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets bonusAmount
     *
-    * @param float|null $bonusAmount |参数名称：奖励金支付金额（用于现网未清干净的奖励金）。| |参数约束及描述： 奖励金支付金额（用于现网未清干净的奖励金）。|
+    * @param double|null $bonusAmount 奖励金支付金额（用于现网客户未使用完的奖励金）。
     *
     * @return $this
     */
@@ -1771,9 +1771,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets debtAmount
-    *  |参数名称：欠费金额。| |参数约束及描述： 欠费金额。|
+    *  欠费金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getDebtAmount()
     {
@@ -1783,7 +1783,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets debtAmount
     *
-    * @param float|null $debtAmount |参数名称：欠费金额。| |参数约束及描述： 欠费金额。|
+    * @param double|null $debtAmount 欠费金额。
     *
     * @return $this
     */
@@ -1795,9 +1795,9 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets adjustmentAmount
-    *  |参数名称：欠费核销金额。| |参数约束及描述： 欠费核销金额。|
+    *  欠费核销金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getAdjustmentAmount()
     {
@@ -1807,7 +1807,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets adjustmentAmount
     *
-    * @param float|null $adjustmentAmount |参数名称：欠费核销金额。| |参数约束及描述： 欠费核销金额。|
+    * @param double|null $adjustmentAmount 欠费核销金额。
     *
     * @return $this
     */
@@ -1819,7 +1819,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：金额单位：1：元| |参数的约束及描述：金额单位：1：元|
+    *  金额单位。 1：元
     *
     * @return int|null
     */
@@ -1831,7 +1831,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId |参数名称：金额单位：1：元| |参数的约束及描述：金额单位：1：元|
+    * @param int|null $measureId 金额单位。 1：元
     *
     * @return $this
     */

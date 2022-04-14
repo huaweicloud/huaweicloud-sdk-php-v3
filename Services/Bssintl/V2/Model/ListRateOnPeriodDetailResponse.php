@@ -22,8 +22,8 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数的约束及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
-    * currency  |参数名称：币种| |参数约束及描述：比如CNY|
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
+    * currency  币种。 USD：美元。 值为空代表美元。
     *
     * @var string[]
     */
@@ -36,8 +36,8 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数的约束及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
-    * currency  |参数名称：币种| |参数约束及描述：比如CNY|
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
+    * currency  币种。 USD：美元。 值为空代表美元。
     *
     * @var string[]
     */
@@ -71,8 +71,8 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数的约束及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
-    * currency  |参数名称：币种| |参数约束及描述：比如CNY|
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
+    * currency  币种。 USD：美元。 值为空代表美元。
     *
     * @var string[]
     */
@@ -85,8 +85,8 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数的约束及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
-    * currency  |参数名称：币种| |参数约束及描述：比如CNY|
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
+    * currency  币种。 USD：美元。 值为空代表美元。
     *
     * @var string[]
     */
@@ -99,8 +99,8 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数的约束及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
-    * currency  |参数名称：币种| |参数约束及描述：比如CNY|
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
+    * currency  币种。 USD：美元。 值为空代表美元。
     *
     * @var string[]
     */
@@ -227,7 +227,7 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets optionalDiscountRatingResults
-    *  |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数的约束及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
+    *  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\OptionalDiscountRatingResult[]|null
     */
@@ -239,7 +239,7 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets optionalDiscountRatingResults
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\OptionalDiscountRatingResult[]|null $optionalDiscountRatingResults |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数的约束及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\OptionalDiscountRatingResult[]|null $optionalDiscountRatingResults 存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
     *
     * @return $this
     */
@@ -251,7 +251,7 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets currency
-    *  |参数名称：币种| |参数约束及描述：比如CNY|
+    *  币种。 USD：美元。 值为空代表美元。
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets currency
     *
-    * @param string|null $currency |参数名称：币种| |参数约束及描述：比如CNY|
+    * @param string|null $currency 币种。 USD：美元。 值为空代表美元。
     *
     * @return $this
     */

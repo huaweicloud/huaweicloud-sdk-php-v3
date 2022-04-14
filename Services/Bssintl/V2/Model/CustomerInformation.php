@@ -20,21 +20,21 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * customer  |参数名称：实名认证名称。虚拟账号下，该字段无效。| |参数约束及描述：实名认证名称。虚拟账号下，该字段无效。|
-    * accountName  |参数名称：客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。| |参数约束及描述：客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * associatedOn  |参数名称：客户和伙伴关联时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：客户和伙伴关联时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。|
-    * associationType  |参数名称：合作模式。1：推荐2：垫付3：转售| |参数约束及描述：合作模式。1：推荐2：垫付3：转售|
-    * label  |参数名称：标签，支持模糊查找。虚拟账号下，该字段无效。| |参数约束及描述：标签，支持模糊查找。虚拟账号下，该字段无效。|
-    * telephone  |参数名称：客户电话号码。虚拟账号下，该字段无效。| |参数约束及描述：客户电话号码。虚拟账号下，该字段无效。|
-    * verifiedStatus  |参数名称：实名认证状态，虚拟账号下，该字段无效。：null：实名认证开关关闭；-1：未实名认证；0：实名认证审核中；1：实名认证不通过；2：已实名认证；3：实名认证失败。| |参数约束及描述：实名认证状态，虚拟账号下，该字段无效。：null：实名认证开关关闭；-1：未实名认证；0：实名认证审核中；1：实名认证不通过；2：已实名认证；3：实名认证失败。|
-    * countryCode  |参数名称：国家码，电话号码的国家码前缀。虚拟账号下，该字段无效。例如：中国 0086。| |参数约束及描述：国家码，电话号码的国家码前缀。虚拟账号下，该字段无效。例如：中国 0086。|
-    * customerType  |参数名称：客户类型，虚拟账号下，该字段无效。：-1：无类型0：个人1：企业客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。| |参数的约束及描述：客户类型，虚拟账号下，该字段无效。：-1：无类型0：个人1：企业客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。|
-    * isFrozen  |参数名称：是否伙伴冻结，注意，只有转售子客户才能被伙伴冻结：0：否1：是| |参数的约束及描述：是否伙伴冻结，注意，只有转售子客户才能被伙伴冻结：0：否1：是|
-    * accountManagers  |参数名称：客户经理名称列表，目前只支持1个| |参数约束以及描述：客户经理名称列表，目前只支持1个|
-    * xaccountId  |参数名称：伙伴销售平台的用户唯一标识| |参数的约束及描述：该标识的具体值由伙伴分配|
-    * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该标识的具体值由华为分配|
-    * customerLevel  |参数名称：客户等级| |参数的约束及描述：V0、V1、V2、V3、V4、V5|
+    * customer  实名认证名称。
+    * accountName  客户经理登录名称。
+    * customerId  客户账号ID。
+    * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
+    * associationType  关联类型： 1：顾问销售3：转售
+    * label  标签。
+    * telephone  客户电话号码。
+    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
+    * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
+    * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
+    * isFrozen  是否冻结： 0：否1：是
+    * accountManagers  该客户对应的客户经理信息，目前只支持1个，具体参见表2。
+    * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
+    * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
+    * customerLevel  客户等级。 V0 V1 V2 V3 V4 V5
     *
     * @var string[]
     */
@@ -58,21 +58,21 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * customer  |参数名称：实名认证名称。虚拟账号下，该字段无效。| |参数约束及描述：实名认证名称。虚拟账号下，该字段无效。|
-    * accountName  |参数名称：客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。| |参数约束及描述：客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * associatedOn  |参数名称：客户和伙伴关联时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：客户和伙伴关联时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。|
-    * associationType  |参数名称：合作模式。1：推荐2：垫付3：转售| |参数约束及描述：合作模式。1：推荐2：垫付3：转售|
-    * label  |参数名称：标签，支持模糊查找。虚拟账号下，该字段无效。| |参数约束及描述：标签，支持模糊查找。虚拟账号下，该字段无效。|
-    * telephone  |参数名称：客户电话号码。虚拟账号下，该字段无效。| |参数约束及描述：客户电话号码。虚拟账号下，该字段无效。|
-    * verifiedStatus  |参数名称：实名认证状态，虚拟账号下，该字段无效。：null：实名认证开关关闭；-1：未实名认证；0：实名认证审核中；1：实名认证不通过；2：已实名认证；3：实名认证失败。| |参数约束及描述：实名认证状态，虚拟账号下，该字段无效。：null：实名认证开关关闭；-1：未实名认证；0：实名认证审核中；1：实名认证不通过；2：已实名认证；3：实名认证失败。|
-    * countryCode  |参数名称：国家码，电话号码的国家码前缀。虚拟账号下，该字段无效。例如：中国 0086。| |参数约束及描述：国家码，电话号码的国家码前缀。虚拟账号下，该字段无效。例如：中国 0086。|
-    * customerType  |参数名称：客户类型，虚拟账号下，该字段无效。：-1：无类型0：个人1：企业客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。| |参数的约束及描述：客户类型，虚拟账号下，该字段无效。：-1：无类型0：个人1：企业客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。|
-    * isFrozen  |参数名称：是否伙伴冻结，注意，只有转售子客户才能被伙伴冻结：0：否1：是| |参数的约束及描述：是否伙伴冻结，注意，只有转售子客户才能被伙伴冻结：0：否1：是|
-    * accountManagers  |参数名称：客户经理名称列表，目前只支持1个| |参数约束以及描述：客户经理名称列表，目前只支持1个|
-    * xaccountId  |参数名称：伙伴销售平台的用户唯一标识| |参数的约束及描述：该标识的具体值由伙伴分配|
-    * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该标识的具体值由华为分配|
-    * customerLevel  |参数名称：客户等级| |参数的约束及描述：V0、V1、V2、V3、V4、V5|
+    * customer  实名认证名称。
+    * accountName  客户经理登录名称。
+    * customerId  客户账号ID。
+    * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
+    * associationType  关联类型： 1：顾问销售3：转售
+    * label  标签。
+    * telephone  客户电话号码。
+    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
+    * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
+    * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
+    * isFrozen  是否冻结： 0：否1：是
+    * accountManagers  该客户对应的客户经理信息，目前只支持1个，具体参见表2。
+    * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
+    * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
+    * customerLevel  客户等级。 V0 V1 V2 V3 V4 V5
     *
     * @var string[]
     */
@@ -117,21 +117,21 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * customer  |参数名称：实名认证名称。虚拟账号下，该字段无效。| |参数约束及描述：实名认证名称。虚拟账号下，该字段无效。|
-    * accountName  |参数名称：客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。| |参数约束及描述：客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * associatedOn  |参数名称：客户和伙伴关联时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：客户和伙伴关联时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。|
-    * associationType  |参数名称：合作模式。1：推荐2：垫付3：转售| |参数约束及描述：合作模式。1：推荐2：垫付3：转售|
-    * label  |参数名称：标签，支持模糊查找。虚拟账号下，该字段无效。| |参数约束及描述：标签，支持模糊查找。虚拟账号下，该字段无效。|
-    * telephone  |参数名称：客户电话号码。虚拟账号下，该字段无效。| |参数约束及描述：客户电话号码。虚拟账号下，该字段无效。|
-    * verifiedStatus  |参数名称：实名认证状态，虚拟账号下，该字段无效。：null：实名认证开关关闭；-1：未实名认证；0：实名认证审核中；1：实名认证不通过；2：已实名认证；3：实名认证失败。| |参数约束及描述：实名认证状态，虚拟账号下，该字段无效。：null：实名认证开关关闭；-1：未实名认证；0：实名认证审核中；1：实名认证不通过；2：已实名认证；3：实名认证失败。|
-    * countryCode  |参数名称：国家码，电话号码的国家码前缀。虚拟账号下，该字段无效。例如：中国 0086。| |参数约束及描述：国家码，电话号码的国家码前缀。虚拟账号下，该字段无效。例如：中国 0086。|
-    * customerType  |参数名称：客户类型，虚拟账号下，该字段无效。：-1：无类型0：个人1：企业客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。| |参数的约束及描述：客户类型，虚拟账号下，该字段无效。：-1：无类型0：个人1：企业客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。|
-    * isFrozen  |参数名称：是否伙伴冻结，注意，只有转售子客户才能被伙伴冻结：0：否1：是| |参数的约束及描述：是否伙伴冻结，注意，只有转售子客户才能被伙伴冻结：0：否1：是|
-    * accountManagers  |参数名称：客户经理名称列表，目前只支持1个| |参数约束以及描述：客户经理名称列表，目前只支持1个|
-    * xaccountId  |参数名称：伙伴销售平台的用户唯一标识| |参数的约束及描述：该标识的具体值由伙伴分配|
-    * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该标识的具体值由华为分配|
-    * customerLevel  |参数名称：客户等级| |参数的约束及描述：V0、V1、V2、V3、V4、V5|
+    * customer  实名认证名称。
+    * accountName  客户经理登录名称。
+    * customerId  客户账号ID。
+    * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
+    * associationType  关联类型： 1：顾问销售3：转售
+    * label  标签。
+    * telephone  客户电话号码。
+    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
+    * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
+    * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
+    * isFrozen  是否冻结： 0：否1：是
+    * accountManagers  该客户对应的客户经理信息，目前只支持1个，具体参见表2。
+    * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
+    * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
+    * customerLevel  客户等级。 V0 V1 V2 V3 V4 V5
     *
     * @var string[]
     */
@@ -155,21 +155,21 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * customer  |参数名称：实名认证名称。虚拟账号下，该字段无效。| |参数约束及描述：实名认证名称。虚拟账号下，该字段无效。|
-    * accountName  |参数名称：客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。| |参数约束及描述：客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * associatedOn  |参数名称：客户和伙伴关联时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：客户和伙伴关联时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。|
-    * associationType  |参数名称：合作模式。1：推荐2：垫付3：转售| |参数约束及描述：合作模式。1：推荐2：垫付3：转售|
-    * label  |参数名称：标签，支持模糊查找。虚拟账号下，该字段无效。| |参数约束及描述：标签，支持模糊查找。虚拟账号下，该字段无效。|
-    * telephone  |参数名称：客户电话号码。虚拟账号下，该字段无效。| |参数约束及描述：客户电话号码。虚拟账号下，该字段无效。|
-    * verifiedStatus  |参数名称：实名认证状态，虚拟账号下，该字段无效。：null：实名认证开关关闭；-1：未实名认证；0：实名认证审核中；1：实名认证不通过；2：已实名认证；3：实名认证失败。| |参数约束及描述：实名认证状态，虚拟账号下，该字段无效。：null：实名认证开关关闭；-1：未实名认证；0：实名认证审核中；1：实名认证不通过；2：已实名认证；3：实名认证失败。|
-    * countryCode  |参数名称：国家码，电话号码的国家码前缀。虚拟账号下，该字段无效。例如：中国 0086。| |参数约束及描述：国家码，电话号码的国家码前缀。虚拟账号下，该字段无效。例如：中国 0086。|
-    * customerType  |参数名称：客户类型，虚拟账号下，该字段无效。：-1：无类型0：个人1：企业客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。| |参数的约束及描述：客户类型，虚拟账号下，该字段无效。：-1：无类型0：个人1：企业客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。|
-    * isFrozen  |参数名称：是否伙伴冻结，注意，只有转售子客户才能被伙伴冻结：0：否1：是| |参数的约束及描述：是否伙伴冻结，注意，只有转售子客户才能被伙伴冻结：0：否1：是|
-    * accountManagers  |参数名称：客户经理名称列表，目前只支持1个| |参数约束以及描述：客户经理名称列表，目前只支持1个|
-    * xaccountId  |参数名称：伙伴销售平台的用户唯一标识| |参数的约束及描述：该标识的具体值由伙伴分配|
-    * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该标识的具体值由华为分配|
-    * customerLevel  |参数名称：客户等级| |参数的约束及描述：V0、V1、V2、V3、V4、V5|
+    * customer  实名认证名称。
+    * accountName  客户经理登录名称。
+    * customerId  客户账号ID。
+    * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
+    * associationType  关联类型： 1：顾问销售3：转售
+    * label  标签。
+    * telephone  客户电话号码。
+    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
+    * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
+    * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
+    * isFrozen  是否冻结： 0：否1：是
+    * accountManagers  该客户对应的客户经理信息，目前只支持1个，具体参见表2。
+    * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
+    * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
+    * customerLevel  客户等级。 V0 V1 V2 V3 V4 V5
     *
     * @var string[]
     */
@@ -193,21 +193,21 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * customer  |参数名称：实名认证名称。虚拟账号下，该字段无效。| |参数约束及描述：实名认证名称。虚拟账号下，该字段无效。|
-    * accountName  |参数名称：客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。| |参数约束及描述：客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * associatedOn  |参数名称：客户和伙伴关联时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：客户和伙伴关联时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。|
-    * associationType  |参数名称：合作模式。1：推荐2：垫付3：转售| |参数约束及描述：合作模式。1：推荐2：垫付3：转售|
-    * label  |参数名称：标签，支持模糊查找。虚拟账号下，该字段无效。| |参数约束及描述：标签，支持模糊查找。虚拟账号下，该字段无效。|
-    * telephone  |参数名称：客户电话号码。虚拟账号下，该字段无效。| |参数约束及描述：客户电话号码。虚拟账号下，该字段无效。|
-    * verifiedStatus  |参数名称：实名认证状态，虚拟账号下，该字段无效。：null：实名认证开关关闭；-1：未实名认证；0：实名认证审核中；1：实名认证不通过；2：已实名认证；3：实名认证失败。| |参数约束及描述：实名认证状态，虚拟账号下，该字段无效。：null：实名认证开关关闭；-1：未实名认证；0：实名认证审核中；1：实名认证不通过；2：已实名认证；3：实名认证失败。|
-    * countryCode  |参数名称：国家码，电话号码的国家码前缀。虚拟账号下，该字段无效。例如：中国 0086。| |参数约束及描述：国家码，电话号码的国家码前缀。虚拟账号下，该字段无效。例如：中国 0086。|
-    * customerType  |参数名称：客户类型，虚拟账号下，该字段无效。：-1：无类型0：个人1：企业客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。| |参数的约束及描述：客户类型，虚拟账号下，该字段无效。：-1：无类型0：个人1：企业客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。|
-    * isFrozen  |参数名称：是否伙伴冻结，注意，只有转售子客户才能被伙伴冻结：0：否1：是| |参数的约束及描述：是否伙伴冻结，注意，只有转售子客户才能被伙伴冻结：0：否1：是|
-    * accountManagers  |参数名称：客户经理名称列表，目前只支持1个| |参数约束以及描述：客户经理名称列表，目前只支持1个|
-    * xaccountId  |参数名称：伙伴销售平台的用户唯一标识| |参数的约束及描述：该标识的具体值由伙伴分配|
-    * xaccountType  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该标识的具体值由华为分配|
-    * customerLevel  |参数名称：客户等级| |参数的约束及描述：V0、V1、V2、V3、V4、V5|
+    * customer  实名认证名称。
+    * accountName  客户经理登录名称。
+    * customerId  客户账号ID。
+    * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
+    * associationType  关联类型： 1：顾问销售3：转售
+    * label  标签。
+    * telephone  客户电话号码。
+    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
+    * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
+    * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
+    * isFrozen  是否冻结： 0：否1：是
+    * accountManagers  该客户对应的客户经理信息，目前只支持1个，具体参见表2。
+    * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
+    * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
+    * customerLevel  客户等级。 V0 V1 V2 V3 V4 V5
     *
     * @var string[]
     */
@@ -334,7 +334,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets customer
-    *  |参数名称：实名认证名称。虚拟账号下，该字段无效。| |参数约束及描述：实名认证名称。虚拟账号下，该字段无效。|
+    *  实名认证名称。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets customer
     *
-    * @param string|null $customer |参数名称：实名认证名称。虚拟账号下，该字段无效。| |参数约束及描述：实名认证名称。虚拟账号下，该字段无效。|
+    * @param string|null $customer 实名认证名称。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountName
-    *  |参数名称：客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。| |参数约束及描述：客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。|
+    *  客户经理登录名称。
     *
     * @return string
     */
@@ -370,7 +370,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets accountName
     *
-    * @param string $accountName |参数名称：客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。| |参数约束及描述：客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。|
+    * @param string $accountName 客户经理登录名称。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerId
-    *  |参数名称：客户ID。| |参数约束及描述：客户ID。|
+    *  客户账号ID。
     *
     * @return string
     */
@@ -394,7 +394,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets customerId
     *
-    * @param string $customerId |参数名称：客户ID。| |参数约束及描述：客户ID。|
+    * @param string $customerId 客户账号ID。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets associatedOn
-    *  |参数名称：客户和伙伴关联时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：客户和伙伴关联时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。|
+    *  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -418,7 +418,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets associatedOn
     *
-    * @param string|null $associatedOn |参数名称：客户和伙伴关联时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：客户和伙伴关联时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。|
+    * @param string|null $associatedOn 客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets associationType
-    *  |参数名称：合作模式。1：推荐2：垫付3：转售| |参数约束及描述：合作模式。1：推荐2：垫付3：转售|
+    *  关联类型： 1：顾问销售3：转售
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets associationType
     *
-    * @param string|null $associationType |参数名称：合作模式。1：推荐2：垫付3：转售| |参数约束及描述：合作模式。1：推荐2：垫付3：转售|
+    * @param string|null $associationType 关联类型： 1：顾问销售3：转售
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets label
-    *  |参数名称：标签，支持模糊查找。虚拟账号下，该字段无效。| |参数约束及描述：标签，支持模糊查找。虚拟账号下，该字段无效。|
+    *  标签。
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets label
     *
-    * @param string|null $label |参数名称：标签，支持模糊查找。虚拟账号下，该字段无效。| |参数约束及描述：标签，支持模糊查找。虚拟账号下，该字段无效。|
+    * @param string|null $label 标签。
     *
     * @return $this
     */
@@ -478,7 +478,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets telephone
-    *  |参数名称：客户电话号码。虚拟账号下，该字段无效。| |参数约束及描述：客户电话号码。虚拟账号下，该字段无效。|
+    *  客户电话号码。
     *
     * @return string|null
     */
@@ -490,7 +490,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets telephone
     *
-    * @param string|null $telephone |参数名称：客户电话号码。虚拟账号下，该字段无效。| |参数约束及描述：客户电话号码。虚拟账号下，该字段无效。|
+    * @param string|null $telephone 客户电话号码。
     *
     * @return $this
     */
@@ -502,7 +502,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets verifiedStatus
-    *  |参数名称：实名认证状态，虚拟账号下，该字段无效。：null：实名认证开关关闭；-1：未实名认证；0：实名认证审核中；1：实名认证不通过；2：已实名认证；3：实名认证失败。| |参数约束及描述：实名认证状态，虚拟账号下，该字段无效。：null：实名认证开关关闭；-1：未实名认证；0：实名认证审核中；1：实名认证不通过；2：已实名认证；3：实名认证失败。|
+    *  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
     *
     * @return string|null
     */
@@ -514,7 +514,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets verifiedStatus
     *
-    * @param string|null $verifiedStatus |参数名称：实名认证状态，虚拟账号下，该字段无效。：null：实名认证开关关闭；-1：未实名认证；0：实名认证审核中；1：实名认证不通过；2：已实名认证；3：实名认证失败。| |参数约束及描述：实名认证状态，虚拟账号下，该字段无效。：null：实名认证开关关闭；-1：未实名认证；0：实名认证审核中；1：实名认证不通过；2：已实名认证；3：实名认证失败。|
+    * @param string|null $verifiedStatus 实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
     *
     * @return $this
     */
@@ -526,7 +526,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets countryCode
-    *  |参数名称：国家码，电话号码的国家码前缀。虚拟账号下，该字段无效。例如：中国 0086。| |参数约束及描述：国家码，电话号码的国家码前缀。虚拟账号下，该字段无效。例如：中国 0086。|
+    *  国家码，电话号码的国家码前缀。 例如：中国 0086。
     *
     * @return string|null
     */
@@ -538,7 +538,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets countryCode
     *
-    * @param string|null $countryCode |参数名称：国家码，电话号码的国家码前缀。虚拟账号下，该字段无效。例如：中国 0086。| |参数约束及描述：国家码，电话号码的国家码前缀。虚拟账号下，该字段无效。例如：中国 0086。|
+    * @param string|null $countryCode 国家码，电话号码的国家码前缀。 例如：中国 0086。
     *
     * @return $this
     */
@@ -550,7 +550,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerType
-    *  |参数名称：客户类型，虚拟账号下，该字段无效。：-1：无类型0：个人1：企业客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。| |参数的约束及描述：客户类型，虚拟账号下，该字段无效。：-1：无类型0：个人1：企业客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。|
+    *  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
     *
     * @return int|null
     */
@@ -562,7 +562,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets customerType
     *
-    * @param int|null $customerType |参数名称：客户类型，虚拟账号下，该字段无效。：-1：无类型0：个人1：企业客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。| |参数的约束及描述：客户类型，虚拟账号下，该字段无效。：-1：无类型0：个人1：企业客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。|
+    * @param int|null $customerType 客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
     *
     * @return $this
     */
@@ -574,7 +574,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFrozen
-    *  |参数名称：是否伙伴冻结，注意，只有转售子客户才能被伙伴冻结：0：否1：是| |参数的约束及描述：是否伙伴冻结，注意，只有转售子客户才能被伙伴冻结：0：否1：是|
+    *  是否冻结： 0：否1：是
     *
     * @return int|null
     */
@@ -586,7 +586,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets isFrozen
     *
-    * @param int|null $isFrozen |参数名称：是否伙伴冻结，注意，只有转售子客户才能被伙伴冻结：0：否1：是| |参数的约束及描述：是否伙伴冻结，注意，只有转售子客户才能被伙伴冻结：0：否1：是|
+    * @param int|null $isFrozen 是否冻结： 0：否1：是
     *
     * @return $this
     */
@@ -598,7 +598,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountManagers
-    *  |参数名称：客户经理名称列表，目前只支持1个| |参数约束以及描述：客户经理名称列表，目前只支持1个|
+    *  该客户对应的客户经理信息，目前只支持1个，具体参见表2。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\AccountManager[]|null
     */
@@ -610,7 +610,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets accountManagers
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\AccountManager[]|null $accountManagers |参数名称：客户经理名称列表，目前只支持1个| |参数约束以及描述：客户经理名称列表，目前只支持1个|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\AccountManager[]|null $accountManagers 该客户对应的客户经理信息，目前只支持1个，具体参见表2。
     *
     * @return $this
     */
@@ -622,7 +622,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets xaccountId
-    *  |参数名称：伙伴销售平台的用户唯一标识| |参数的约束及描述：该标识的具体值由伙伴分配|
+    *  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
     *
     * @return string|null
     */
@@ -634,7 +634,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets xaccountId
     *
-    * @param string|null $xaccountId |参数名称：伙伴销售平台的用户唯一标识| |参数的约束及描述：该标识的具体值由伙伴分配|
+    * @param string|null $xaccountId 伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
     *
     * @return $this
     */
@@ -646,7 +646,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets xaccountType
-    *  |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该标识的具体值由华为分配|
+    *  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
     *
     * @return string|null
     */
@@ -658,7 +658,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets xaccountType
     *
-    * @param string|null $xaccountType |参数名称：华为分给合作伙伴的平台标识| |参数的约束及描述：该标识的具体值由华为分配|
+    * @param string|null $xaccountType 华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
     *
     * @return $this
     */
@@ -670,7 +670,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerLevel
-    *  |参数名称：客户等级| |参数的约束及描述：V0、V1、V2、V3、V4、V5|
+    *  客户等级。 V0 V1 V2 V3 V4 V5
     *
     * @return string|null
     */
@@ -682,7 +682,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets customerLevel
     *
-    * @param string|null $customerLevel |参数名称：客户等级| |参数的约束及描述：V0、V1、V2、V3、V4、V5|
+    * @param string|null $customerLevel 客户等级。 V0 V1 V2 V3 V4 V5
     *
     * @return $this
     */

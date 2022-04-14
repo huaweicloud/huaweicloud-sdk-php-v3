@@ -20,8 +20,8 @@ class PeriodToOnDemandReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operation  |参数名称：动作| |参数约束及描述：动作 动作SET_UP：设置CANCEL：取消|
-    * resourceIds  |参数名称：资源ID| |参数约束以及描述：资源ID 资源ID。您可以调用“2.1-查询客户包年/包月资源列表”接口获取资源ID。只支持传入主资源ID，最多100个资源ID。设置的时候，主资源和对应的子资源一起转按需。哪些资源是主资源请根据“2.1-查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。|
+    * operation  设置或取消包年/包月资源到期转按需的操作。 SET_UP：设置CANCEL：取消
+    * resourceIds  资源ID。 您可以调用“查询客户包年/包月资源列表”接口获取资源ID。 此处只支持设置主资源ID，最多可设置100个资源ID。设置后，主资源及其对应的从资源将一起转为按需资源。 请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”参数来标识资源是否为主资源。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class PeriodToOnDemandReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operation  |参数名称：动作| |参数约束及描述：动作 动作SET_UP：设置CANCEL：取消|
-    * resourceIds  |参数名称：资源ID| |参数约束以及描述：资源ID 资源ID。您可以调用“2.1-查询客户包年/包月资源列表”接口获取资源ID。只支持传入主资源ID，最多100个资源ID。设置的时候，主资源和对应的子资源一起转按需。哪些资源是主资源请根据“2.1-查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。|
+    * operation  设置或取消包年/包月资源到期转按需的操作。 SET_UP：设置CANCEL：取消
+    * resourceIds  资源ID。 您可以调用“查询客户包年/包月资源列表”接口获取资源ID。 此处只支持设置主资源ID，最多可设置100个资源ID。设置后，主资源及其对应的从资源将一起转为按需资源。 请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”参数来标识资源是否为主资源。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class PeriodToOnDemandReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operation  |参数名称：动作| |参数约束及描述：动作 动作SET_UP：设置CANCEL：取消|
-    * resourceIds  |参数名称：资源ID| |参数约束以及描述：资源ID 资源ID。您可以调用“2.1-查询客户包年/包月资源列表”接口获取资源ID。只支持传入主资源ID，最多100个资源ID。设置的时候，主资源和对应的子资源一起转按需。哪些资源是主资源请根据“2.1-查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。|
+    * operation  设置或取消包年/包月资源到期转按需的操作。 SET_UP：设置CANCEL：取消
+    * resourceIds  资源ID。 您可以调用“查询客户包年/包月资源列表”接口获取资源ID。 此处只支持设置主资源ID，最多可设置100个资源ID。设置后，主资源及其对应的从资源将一起转为按需资源。 请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”参数来标识资源是否为主资源。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class PeriodToOnDemandReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operation  |参数名称：动作| |参数约束及描述：动作 动作SET_UP：设置CANCEL：取消|
-    * resourceIds  |参数名称：资源ID| |参数约束以及描述：资源ID 资源ID。您可以调用“2.1-查询客户包年/包月资源列表”接口获取资源ID。只支持传入主资源ID，最多100个资源ID。设置的时候，主资源和对应的子资源一起转按需。哪些资源是主资源请根据“2.1-查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。|
+    * operation  设置或取消包年/包月资源到期转按需的操作。 SET_UP：设置CANCEL：取消
+    * resourceIds  资源ID。 您可以调用“查询客户包年/包月资源列表”接口获取资源ID。 此处只支持设置主资源ID，最多可设置100个资源ID。设置后，主资源及其对应的从资源将一起转为按需资源。 请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”参数来标识资源是否为主资源。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class PeriodToOnDemandReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operation  |参数名称：动作| |参数约束及描述：动作 动作SET_UP：设置CANCEL：取消|
-    * resourceIds  |参数名称：资源ID| |参数约束以及描述：资源ID 资源ID。您可以调用“2.1-查询客户包年/包月资源列表”接口获取资源ID。只支持传入主资源ID，最多100个资源ID。设置的时候，主资源和对应的子资源一起转按需。哪些资源是主资源请根据“2.1-查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。|
+    * operation  设置或取消包年/包月资源到期转按需的操作。 SET_UP：设置CANCEL：取消
+    * resourceIds  资源ID。 您可以调用“查询客户包年/包月资源列表”接口获取资源ID。 此处只支持设置主资源ID，最多可设置100个资源ID。设置后，主资源及其对应的从资源将一起转为按需资源。 请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”参数来标识资源是否为主资源。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class PeriodToOnDemandReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets operation
-    *  |参数名称：动作| |参数约束及描述：动作 动作SET_UP：设置CANCEL：取消|
+    *  设置或取消包年/包月资源到期转按需的操作。 SET_UP：设置CANCEL：取消
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class PeriodToOnDemandReq implements ModelInterface, ArrayAccess
     /**
     * Sets operation
     *
-    * @param string $operation |参数名称：动作| |参数约束及描述：动作 动作SET_UP：设置CANCEL：取消|
+    * @param string $operation 设置或取消包年/包月资源到期转按需的操作。 SET_UP：设置CANCEL：取消
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class PeriodToOnDemandReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceIds
-    *  |参数名称：资源ID| |参数约束以及描述：资源ID 资源ID。您可以调用“2.1-查询客户包年/包月资源列表”接口获取资源ID。只支持传入主资源ID，最多100个资源ID。设置的时候，主资源和对应的子资源一起转按需。哪些资源是主资源请根据“2.1-查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。|
+    *  资源ID。 您可以调用“查询客户包年/包月资源列表”接口获取资源ID。 此处只支持设置主资源ID，最多可设置100个资源ID。设置后，主资源及其对应的从资源将一起转为按需资源。 请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”参数来标识资源是否为主资源。
     *
     * @return string[]
     */
@@ -233,7 +233,7 @@ class PeriodToOnDemandReq implements ModelInterface, ArrayAccess
     /**
     * Sets resourceIds
     *
-    * @param string[] $resourceIds |参数名称：资源ID| |参数约束以及描述：资源ID 资源ID。您可以调用“2.1-查询客户包年/包月资源列表”接口获取资源ID。只支持传入主资源ID，最多100个资源ID。设置的时候，主资源和对应的子资源一起转按需。哪些资源是主资源请根据“2.1-查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。|
+    * @param string[] $resourceIds 资源ID。 您可以调用“查询客户包年/包月资源列表”接口获取资源ID。 此处只支持设置主资源ID，最多可设置100个资源ID。设置后，主资源及其对应的从资源将一起转为按需资源。 请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”参数来标识资源是否为主资源。
     *
     * @return $this
     */

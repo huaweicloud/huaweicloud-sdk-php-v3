@@ -20,7 +20,7 @@ class UrlAuthGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  A/B/C类防盗链开关（\"off\"/\"on\"）。
+    * status  A/B/C类防盗链开关（on：开启，off：关闭）。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     * expireTime  过期时间：范围：0-31536000单位为秒。
@@ -36,7 +36,7 @@ class UrlAuthGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  A/B/C类防盗链开关（\"off\"/\"on\"）。
+    * status  A/B/C类防盗链开关（on：开启，off：关闭）。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     * expireTime  过期时间：范围：0-31536000单位为秒。
@@ -73,7 +73,7 @@ class UrlAuthGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  A/B/C类防盗链开关（\"off\"/\"on\"）。
+    * status  A/B/C类防盗链开关（on：开启，off：关闭）。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     * expireTime  过期时间：范围：0-31536000单位为秒。
@@ -89,7 +89,7 @@ class UrlAuthGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  A/B/C类防盗链开关（\"off\"/\"on\"）。
+    * status  A/B/C类防盗链开关（on：开启，off：关闭）。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     * expireTime  过期时间：范围：0-31536000单位为秒。
@@ -105,7 +105,7 @@ class UrlAuthGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  A/B/C类防盗链开关（\"off\"/\"on\"）。
+    * status  A/B/C类防盗链开关（on：开启，off：关闭）。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     * expireTime  过期时间：范围：0-31536000单位为秒。
@@ -210,7 +210,7 @@ class UrlAuthGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  A/B/C类防盗链开关（\"off\"/\"on\"）。
+    *  A/B/C类防盗链开关（on：开启，off：关闭）。
     *
     * @return string
     */
@@ -222,7 +222,7 @@ class UrlAuthGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status A/B/C类防盗链开关（\"off\"/\"on\"）。
+    * @param string $status A/B/C类防盗链开关（on：开启，off：关闭）。
     *
     * @return $this
     */

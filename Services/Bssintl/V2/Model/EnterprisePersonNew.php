@@ -20,9 +20,9 @@ class EnterprisePersonNew implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * legelName  |参数名称：法人姓名| |参数的约束及描述：该参数必填，且只允许字符串|
-    * legelIdNumber  |参数名称：法人身份证号| |参数的约束及描述：该参数必填，且只允许字符串|
-    * certifierRole  |参数名称：认证人角色| |参数的约束及描述：该参数非必填，legalPerson ：法人代表 authorizedPerson：授权人|
+    * legelName  法人姓名。
+    * legelIdNumber  法人身份证号。
+    * certifierRole  认证人角色。 legalPerson ：法人代表。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class EnterprisePersonNew implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * legelName  |参数名称：法人姓名| |参数的约束及描述：该参数必填，且只允许字符串|
-    * legelIdNumber  |参数名称：法人身份证号| |参数的约束及描述：该参数必填，且只允许字符串|
-    * certifierRole  |参数名称：认证人角色| |参数的约束及描述：该参数非必填，legalPerson ：法人代表 authorizedPerson：授权人|
+    * legelName  法人姓名。
+    * legelIdNumber  法人身份证号。
+    * certifierRole  认证人角色。 legalPerson ：法人代表。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class EnterprisePersonNew implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * legelName  |参数名称：法人姓名| |参数的约束及描述：该参数必填，且只允许字符串|
-    * legelIdNumber  |参数名称：法人身份证号| |参数的约束及描述：该参数必填，且只允许字符串|
-    * certifierRole  |参数名称：认证人角色| |参数的约束及描述：该参数非必填，legalPerson ：法人代表 authorizedPerson：授权人|
+    * legelName  法人姓名。
+    * legelIdNumber  法人身份证号。
+    * certifierRole  认证人角色。 legalPerson ：法人代表。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class EnterprisePersonNew implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * legelName  |参数名称：法人姓名| |参数的约束及描述：该参数必填，且只允许字符串|
-    * legelIdNumber  |参数名称：法人身份证号| |参数的约束及描述：该参数必填，且只允许字符串|
-    * certifierRole  |参数名称：认证人角色| |参数的约束及描述：该参数非必填，legalPerson ：法人代表 authorizedPerson：授权人|
+    * legelName  法人姓名。
+    * legelIdNumber  法人身份证号。
+    * certifierRole  认证人角色。 legalPerson ：法人代表。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class EnterprisePersonNew implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * legelName  |参数名称：法人姓名| |参数的约束及描述：该参数必填，且只允许字符串|
-    * legelIdNumber  |参数名称：法人身份证号| |参数的约束及描述：该参数必填，且只允许字符串|
-    * certifierRole  |参数名称：认证人角色| |参数的约束及描述：该参数非必填，legalPerson ：法人代表 authorizedPerson：授权人|
+    * legelName  法人姓名。
+    * legelIdNumber  法人身份证号。
+    * certifierRole  认证人角色。 legalPerson ：法人代表。
     *
     * @var string[]
     */
@@ -220,7 +220,7 @@ class EnterprisePersonNew implements ModelInterface, ArrayAccess
 
     /**
     * Gets legelName
-    *  |参数名称：法人姓名| |参数的约束及描述：该参数必填，且只允许字符串|
+    *  法人姓名。
     *
     * @return string
     */
@@ -232,7 +232,7 @@ class EnterprisePersonNew implements ModelInterface, ArrayAccess
     /**
     * Sets legelName
     *
-    * @param string $legelName |参数名称：法人姓名| |参数的约束及描述：该参数必填，且只允许字符串|
+    * @param string $legelName 法人姓名。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class EnterprisePersonNew implements ModelInterface, ArrayAccess
 
     /**
     * Gets legelIdNumber
-    *  |参数名称：法人身份证号| |参数的约束及描述：该参数必填，且只允许字符串|
+    *  法人身份证号。
     *
     * @return string
     */
@@ -256,7 +256,7 @@ class EnterprisePersonNew implements ModelInterface, ArrayAccess
     /**
     * Sets legelIdNumber
     *
-    * @param string $legelIdNumber |参数名称：法人身份证号| |参数的约束及描述：该参数必填，且只允许字符串|
+    * @param string $legelIdNumber 法人身份证号。
     *
     * @return $this
     */
@@ -268,7 +268,7 @@ class EnterprisePersonNew implements ModelInterface, ArrayAccess
 
     /**
     * Gets certifierRole
-    *  |参数名称：认证人角色| |参数的约束及描述：该参数非必填，legalPerson ：法人代表 authorizedPerson：授权人|
+    *  认证人角色。 legalPerson ：法人代表。
     *
     * @return string|null
     */
@@ -280,7 +280,7 @@ class EnterprisePersonNew implements ModelInterface, ArrayAccess
     /**
     * Sets certifierRole
     *
-    * @param string|null $certifierRole |参数名称：认证人角色| |参数的约束及描述：该参数非必填，legalPerson ：法人代表 authorizedPerson：授权人|
+    * @param string|null $certifierRole 认证人角色。 legalPerson ：法人代表。
     *
     * @return $this
     */

@@ -21,8 +21,8 @@ class ShowRealnameAuthenticationReviewResultResponse implements ModelInterface, 
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * reviewResult  |参数名称：实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回：0：审核中1：不通过2：通过| |参数的约束及描述：实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回：0：审核中1：不通过2：通过|
-    * opinion  |参数名称：审批意见，只有状态码为200并且审核不通过才返回。| |参数约束及描述：审批意见，只有状态码为200并且审核不通过才返回。|
+    * reviewResult  实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回： 0：审核中1：不通过2：通过
+    * opinion  审批意见，只有状态码为200并且审核不通过才返回。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowRealnameAuthenticationReviewResultResponse implements ModelInterface, 
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * reviewResult  |参数名称：实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回：0：审核中1：不通过2：通过| |参数的约束及描述：实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回：0：审核中1：不通过2：通过|
-    * opinion  |参数名称：审批意见，只有状态码为200并且审核不通过才返回。| |参数约束及描述：审批意见，只有状态码为200并且审核不通过才返回。|
+    * reviewResult  实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回： 0：审核中1：不通过2：通过
+    * opinion  审批意见，只有状态码为200并且审核不通过才返回。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowRealnameAuthenticationReviewResultResponse implements ModelInterface, 
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * reviewResult  |参数名称：实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回：0：审核中1：不通过2：通过| |参数的约束及描述：实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回：0：审核中1：不通过2：通过|
-    * opinion  |参数名称：审批意见，只有状态码为200并且审核不通过才返回。| |参数约束及描述：审批意见，只有状态码为200并且审核不通过才返回。|
+    * reviewResult  实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回： 0：审核中1：不通过2：通过
+    * opinion  审批意见，只有状态码为200并且审核不通过才返回。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowRealnameAuthenticationReviewResultResponse implements ModelInterface, 
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * reviewResult  |参数名称：实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回：0：审核中1：不通过2：通过| |参数的约束及描述：实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回：0：审核中1：不通过2：通过|
-    * opinion  |参数名称：审批意见，只有状态码为200并且审核不通过才返回。| |参数约束及描述：审批意见，只有状态码为200并且审核不通过才返回。|
+    * reviewResult  实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回： 0：审核中1：不通过2：通过
+    * opinion  审批意见，只有状态码为200并且审核不通过才返回。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowRealnameAuthenticationReviewResultResponse implements ModelInterface, 
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * reviewResult  |参数名称：实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回：0：审核中1：不通过2：通过| |参数的约束及描述：实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回：0：审核中1：不通过2：通过|
-    * opinion  |参数名称：审批意见，只有状态码为200并且审核不通过才返回。| |参数约束及描述：审批意见，只有状态码为200并且审核不通过才返回。|
+    * reviewResult  实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回： 0：审核中1：不通过2：通过
+    * opinion  审批意见，只有状态码为200并且审核不通过才返回。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ShowRealnameAuthenticationReviewResultResponse implements ModelInterface, 
 
     /**
     * Gets reviewResult
-    *  |参数名称：实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回：0：审核中1：不通过2：通过| |参数的约束及描述：实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回：0：审核中1：不通过2：通过|
+    *  实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回： 0：审核中1：不通过2：通过
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ShowRealnameAuthenticationReviewResultResponse implements ModelInterface, 
     /**
     * Sets reviewResult
     *
-    * @param int|null $reviewResult |参数名称：实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回：0：审核中1：不通过2：通过| |参数的约束及描述：实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回：0：审核中1：不通过2：通过|
+    * @param int|null $reviewResult 实名认证审核结果，只有状态码为200并且已经提交过实名认证请求才返回： 0：审核中1：不通过2：通过
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ShowRealnameAuthenticationReviewResultResponse implements ModelInterface, 
 
     /**
     * Gets opinion
-    *  |参数名称：审批意见，只有状态码为200并且审核不通过才返回。| |参数约束及描述：审批意见，只有状态码为200并且审核不通过才返回。|
+    *  审批意见，只有状态码为200并且审核不通过才返回。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class ShowRealnameAuthenticationReviewResultResponse implements ModelInterface, 
     /**
     * Sets opinion
     *
-    * @param string|null $opinion |参数名称：审批意见，只有状态码为200并且审核不通过才返回。| |参数约束及描述：审批意见，只有状态码为200并且审核不通过才返回。|
+    * @param string|null $opinion 审批意见，只有状态码为200并且审核不通过才返回。
     *
     * @return $this
     */

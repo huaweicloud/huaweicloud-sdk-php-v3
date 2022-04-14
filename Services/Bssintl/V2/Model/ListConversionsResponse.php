@@ -21,7 +21,7 @@ class ListConversionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * conversions  |参数名称：度量信息| |参数约束以及描述：度量信息|
+    * conversions  度量单位的换算信息，具体参见表3。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListConversionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * conversions  |参数名称：度量信息| |参数约束以及描述：度量信息|
+    * conversions  度量单位的换算信息，具体参见表3。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListConversionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * conversions  |参数名称：度量信息| |参数约束以及描述：度量信息|
+    * conversions  度量单位的换算信息，具体参见表3。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListConversionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * conversions  |参数名称：度量信息| |参数约束以及描述：度量信息|
+    * conversions  度量单位的换算信息，具体参见表3。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListConversionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * conversions  |参数名称：度量信息| |参数约束以及描述：度量信息|
+    * conversions  度量单位的换算信息，具体参见表3。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListConversionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets conversions
-    *  |参数名称：度量信息| |参数约束以及描述：度量信息|
+    *  度量单位的换算信息，具体参见表3。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\Conversion[]|null
     */
@@ -187,7 +187,7 @@ class ListConversionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets conversions
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\Conversion[]|null $conversions |参数名称：度量信息| |参数约束以及描述：度量信息|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\Conversion[]|null $conversions 度量单位的换算信息，具体参见表3。
     *
     * @return $this
     */

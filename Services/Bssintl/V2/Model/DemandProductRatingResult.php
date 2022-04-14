@@ -20,44 +20,44 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
-    * productId  |参数名称：寻到的产品ID| |参数约束及描述：寻到的产品ID|
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠的金额|
-    * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * discountRatingResults  |参数名称：折扣优惠明细| |参数的约束及描述：包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息|
+    * id  同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
+    * productId  按需产品的ID。
+    * amount  折扣的金额。
+    * discountAmount  优惠额（官网价和总价的差）。
+    * officialWebsiteAmount  按需产品的官网价。
+    * measureId  度量单位标识。 1：元
+    * discountRatingResults  折扣优惠明细，包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息，具体参见表3。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
             'productId' => 'string',
-            'amount' => 'float',
-            'discountAmount' => 'float',
-            'officialWebsiteAmount' => 'float',
+            'amount' => 'double',
+            'discountAmount' => 'double',
+            'officialWebsiteAmount' => 'double',
             'measureId' => 'int',
             'discountRatingResults' => '\HuaweiCloud\SDK\Bssintl\V2\Model\DemandDiscountRatingResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
-    * productId  |参数名称：寻到的产品ID| |参数约束及描述：寻到的产品ID|
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠的金额|
-    * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * discountRatingResults  |参数名称：折扣优惠明细| |参数的约束及描述：包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息|
+    * id  同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
+    * productId  按需产品的ID。
+    * amount  折扣的金额。
+    * discountAmount  优惠额（官网价和总价的差）。
+    * officialWebsiteAmount  按需产品的官网价。
+    * measureId  度量单位标识。 1：元
+    * discountRatingResults  折扣优惠明细，包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息，具体参见表3。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
         'productId' => null,
-        'amount' => 'bigdecimal',
-        'discountAmount' => 'bigdecimal',
-        'officialWebsiteAmount' => 'bigdecimal',
+        'amount' => 'double',
+        'discountAmount' => 'double',
+        'officialWebsiteAmount' => 'double',
         'measureId' => 'int32',
         'discountRatingResults' => null
     ];
@@ -85,13 +85,13 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
-    * productId  |参数名称：寻到的产品ID| |参数约束及描述：寻到的产品ID|
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠的金额|
-    * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * discountRatingResults  |参数名称：折扣优惠明细| |参数的约束及描述：包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息|
+    * id  同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
+    * productId  按需产品的ID。
+    * amount  折扣的金额。
+    * discountAmount  优惠额（官网价和总价的差）。
+    * officialWebsiteAmount  按需产品的官网价。
+    * measureId  度量单位标识。 1：元
+    * discountRatingResults  折扣优惠明细，包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息，具体参见表3。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
-    * productId  |参数名称：寻到的产品ID| |参数约束及描述：寻到的产品ID|
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠的金额|
-    * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * discountRatingResults  |参数名称：折扣优惠明细| |参数的约束及描述：包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息|
+    * id  同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
+    * productId  按需产品的ID。
+    * amount  折扣的金额。
+    * discountAmount  优惠额（官网价和总价的差）。
+    * officialWebsiteAmount  按需产品的官网价。
+    * measureId  度量单位标识。 1：元
+    * discountRatingResults  折扣优惠明细，包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息，具体参见表3。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
-    * productId  |参数名称：寻到的产品ID| |参数约束及描述：寻到的产品ID|
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠的金额|
-    * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * discountRatingResults  |参数名称：折扣优惠明细| |参数的约束及描述：包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息|
+    * id  同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
+    * productId  按需产品的ID。
+    * amount  折扣的金额。
+    * discountAmount  优惠额（官网价和总价的差）。
+    * officialWebsiteAmount  按需产品的官网价。
+    * measureId  度量单位标识。 1：元
+    * discountRatingResults  折扣优惠明细，包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息，具体参见表3。
     *
     * @var string[]
     */
@@ -252,7 +252,7 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
+    *  同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
     *
     * @return string|null
     */
@@ -264,7 +264,7 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
+    * @param string|null $id 同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
     *
     * @return $this
     */
@@ -276,7 +276,7 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  |参数名称：寻到的产品ID| |参数约束及描述：寻到的产品ID|
+    *  按需产品的ID。
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId |参数名称：寻到的产品ID| |参数约束及描述：寻到的产品ID|
+    * @param string|null $productId 按需产品的ID。
     *
     * @return $this
     */
@@ -300,9 +300,9 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets amount
-    *  |参数名称：总额| |参数约束及描述：即最终优惠的金额|
+    *  折扣的金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getAmount()
     {
@@ -312,7 +312,7 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param float|null $amount |参数名称：总额| |参数约束及描述：即最终优惠的金额|
+    * @param double|null $amount 折扣的金额。
     *
     * @return $this
     */
@@ -324,9 +324,9 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountAmount
-    *  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
+    *  优惠额（官网价和总价的差）。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getDiscountAmount()
     {
@@ -336,7 +336,7 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets discountAmount
     *
-    * @param float|null $discountAmount |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
+    * @param double|null $discountAmount 优惠额（官网价和总价的差）。
     *
     * @return $this
     */
@@ -348,9 +348,9 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets officialWebsiteAmount
-    *  |参数名称：官网价| |参数约束及描述：官网价|
+    *  按需产品的官网价。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getOfficialWebsiteAmount()
     {
@@ -360,7 +360,7 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets officialWebsiteAmount
     *
-    * @param float|null $officialWebsiteAmount |参数名称：官网价| |参数约束及描述：官网价|
+    * @param double|null $officialWebsiteAmount 按需产品的官网价。
     *
     * @return $this
     */
@@ -372,7 +372,7 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：度量单位标识| |参数约束及描述：1：元|
+    *  度量单位标识。 1：元
     *
     * @return int|null
     */
@@ -384,7 +384,7 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId |参数名称：度量单位标识| |参数约束及描述：1：元|
+    * @param int|null $measureId 度量单位标识。 1：元
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountRatingResults
-    *  |参数名称：折扣优惠明细| |参数的约束及描述：包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息|
+    *  折扣优惠明细，包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息，具体参见表3。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\DemandDiscountRatingResult[]|null
     */
@@ -408,7 +408,7 @@ class DemandProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets discountRatingResults
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\DemandDiscountRatingResult[]|null $discountRatingResults |参数名称：折扣优惠明细| |参数的约束及描述：包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\DemandDiscountRatingResult[]|null $discountRatingResults 折扣优惠明细，包含产品本身的促销信息，同时包含商务或者伙伴折扣的优惠信息，具体参见表3。
     *
     * @return $this
     */

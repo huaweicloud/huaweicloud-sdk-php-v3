@@ -20,12 +20,12 @@ class UsageType implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  |参数名称：用量类型编码如：duration| |参数约束及描述：用量类型编码如：duration|
-    * name  |参数名称：用量类型名称| |参数约束及描述：用量类型名称|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * serviceTypeCode  |参数名称：服务类型编码| |参数约束及描述：服务类型编码|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * code  使用量类型编码。如：reqNumber。
+    * name  使用量类型名称。如：调用次数。
+    * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class UsageType implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  |参数名称：用量类型编码如：duration| |参数约束及描述：用量类型编码如：duration|
-    * name  |参数名称：用量类型名称| |参数约束及描述：用量类型名称|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * serviceTypeCode  |参数名称：服务类型编码| |参数约束及描述：服务类型编码|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * code  使用量类型编码。如：reqNumber。
+    * name  使用量类型名称。如：调用次数。
+    * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class UsageType implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  |参数名称：用量类型编码如：duration| |参数约束及描述：用量类型编码如：duration|
-    * name  |参数名称：用量类型名称| |参数约束及描述：用量类型名称|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * serviceTypeCode  |参数名称：服务类型编码| |参数约束及描述：服务类型编码|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * code  使用量类型编码。如：reqNumber。
+    * name  使用量类型名称。如：调用次数。
+    * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class UsageType implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  |参数名称：用量类型编码如：duration| |参数约束及描述：用量类型编码如：duration|
-    * name  |参数名称：用量类型名称| |参数约束及描述：用量类型名称|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * serviceTypeCode  |参数名称：服务类型编码| |参数约束及描述：服务类型编码|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * code  使用量类型编码。如：reqNumber。
+    * name  使用量类型名称。如：调用次数。
+    * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class UsageType implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  |参数名称：用量类型编码如：duration| |参数约束及描述：用量类型编码如：duration|
-    * name  |参数名称：用量类型名称| |参数约束及描述：用量类型名称|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * serviceTypeCode  |参数名称：服务类型编码| |参数约束及描述：服务类型编码|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * code  使用量类型编码。如：reqNumber。
+    * name  使用量类型名称。如：调用次数。
+    * resourceTypeCode  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class UsageType implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  |参数名称：用量类型编码如：duration| |参数约束及描述：用量类型编码如：duration|
+    *  使用量类型编码。如：reqNumber。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class UsageType implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string|null $code |参数名称：用量类型编码如：duration| |参数约束及描述：用量类型编码如：duration|
+    * @param string|null $code 使用量类型编码。如：reqNumber。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class UsageType implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  |参数名称：用量类型名称| |参数约束及描述：用量类型名称|
+    *  使用量类型名称。如：调用次数。
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class UsageType implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name |参数名称：用量类型名称| |参数约束及描述：用量类型名称|
+    * @param string|null $name 使用量类型名称。如：调用次数。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class UsageType implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeCode
-    *  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+    *  资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class UsageType implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeCode
     *
-    * @param string|null $resourceTypeCode |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+    * @param string|null $resourceTypeCode 资源类型编码。例如ECS的VM为“hws.resource.type.vm”。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class UsageType implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeCode
-    *  |参数名称：服务类型编码| |参数约束及描述：服务类型编码|
+    *  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class UsageType implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeCode
     *
-    * @param string|null $serviceTypeCode |参数名称：服务类型编码| |参数约束及描述：服务类型编码|
+    * @param string|null $serviceTypeCode 云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class UsageType implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeName
-    *  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    *  资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class UsageType implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeName
     *
-    * @param string|null $resourceTypeName |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    * @param string|null $resourceTypeName 资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class UsageType implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeName
-    *  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class UsageType implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeName
     *
-    * @param string|null $serviceTypeName |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return $this
     */

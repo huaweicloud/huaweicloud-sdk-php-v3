@@ -20,8 +20,8 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN
+    * orderId  订单ID。
     * limit  每页大小。默认值为10。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。华为云伙伴能力中心（一级经销商）查询精英服务商的客户订单详情时，需要携带该参数；否则只能查询自己客户的订单详情。
@@ -38,8 +38,8 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN
+    * orderId  订单ID。
     * limit  每页大小。默认值为10。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。华为云伙伴能力中心（一级经销商）查询精英服务商的客户订单详情时，需要携带该参数；否则只能查询自己客户的订单详情。
@@ -77,8 +77,8 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN
+    * orderId  订单ID。
     * limit  每页大小。默认值为10。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。华为云伙伴能力中心（一级经销商）查询精英服务商的客户订单详情时，需要携带该参数；否则只能查询自己客户的订单详情。
@@ -95,8 +95,8 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN
+    * orderId  订单ID。
     * limit  每页大小。默认值为10。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。华为云伙伴能力中心（一级经销商）查询精英服务商的客户订单详情时，需要携带该参数；否则只能查询自己客户的订单详情。
@@ -113,8 +113,8 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN
+    * orderId  订单ID。
     * limit  每页大小。默认值为10。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。华为云伙伴能力中心（一级经销商）查询精英服务商的客户订单详情时，需要携带该参数；否则只能查询自己客户的订单详情。
@@ -239,7 +239,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
+    *  语言：中文：zh_CN 英文：en_US 缺省为zh_CN
     *
     * @return string|null
     */
@@ -251,7 +251,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
+    * @param string|null $xLanguage 语言：中文：zh_CN 英文：en_US 缺省为zh_CN
     *
     * @return $this
     */
@@ -263,7 +263,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  |参数名称：订单ID。| |参数的约束及描述：|
+    *  订单ID。
     *
     * @return string
     */
@@ -275,7 +275,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string $orderId |参数名称：订单ID。| |参数的约束及描述：|
+    * @param string $orderId 订单ID。
     *
     * @return $this
     */

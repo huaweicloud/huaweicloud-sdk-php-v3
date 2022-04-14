@@ -20,13 +20,13 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * useLimitiInfoId  |参数名称：使用限制ID，主键。| |参数约束及描述：使用限制ID，主键。|
-    * limitKey  |参数名称：折扣限制，key的取值请参考表ICouponUseLimitInfo的limit_key要求。| |参数约束及描述：折扣限制，key的取值请参考表 ICouponUseLimitInfo的limit_key要求。|
-    * value1  |参数名称：value1。| |参数约束及描述：value1。|
-    * value2  |参数名称：value2。| |参数约束及描述：value2。|
-    * valueUnit  |参数名称：value单位。| |参数约束及描述：value单位。|
-    * limitType  |参数名称：限制类型。| |参数约束及描述：限制类型。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数约束及描述：促销计划ID。|
+    * useLimitiInfoId  使用限制ID，主键。
+    * limitKey  折扣限制，key的取值请参考表4。
+    * value1  value1。
+    * value2  value2。
+    * valueUnit  value单位。
+    * limitType  限制类型。
+    * promotionPlanId  促销计划ID。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * useLimitiInfoId  |参数名称：使用限制ID，主键。| |参数约束及描述：使用限制ID，主键。|
-    * limitKey  |参数名称：折扣限制，key的取值请参考表ICouponUseLimitInfo的limit_key要求。| |参数约束及描述：折扣限制，key的取值请参考表 ICouponUseLimitInfo的limit_key要求。|
-    * value1  |参数名称：value1。| |参数约束及描述：value1。|
-    * value2  |参数名称：value2。| |参数约束及描述：value2。|
-    * valueUnit  |参数名称：value单位。| |参数约束及描述：value单位。|
-    * limitType  |参数名称：限制类型。| |参数约束及描述：限制类型。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数约束及描述：促销计划ID。|
+    * useLimitiInfoId  使用限制ID，主键。
+    * limitKey  折扣限制，key的取值请参考表4。
+    * value1  value1。
+    * value2  value2。
+    * valueUnit  value单位。
+    * limitType  限制类型。
+    * promotionPlanId  促销计划ID。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * useLimitiInfoId  |参数名称：使用限制ID，主键。| |参数约束及描述：使用限制ID，主键。|
-    * limitKey  |参数名称：折扣限制，key的取值请参考表ICouponUseLimitInfo的limit_key要求。| |参数约束及描述：折扣限制，key的取值请参考表 ICouponUseLimitInfo的limit_key要求。|
-    * value1  |参数名称：value1。| |参数约束及描述：value1。|
-    * value2  |参数名称：value2。| |参数约束及描述：value2。|
-    * valueUnit  |参数名称：value单位。| |参数约束及描述：value单位。|
-    * limitType  |参数名称：限制类型。| |参数约束及描述：限制类型。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数约束及描述：促销计划ID。|
+    * useLimitiInfoId  使用限制ID，主键。
+    * limitKey  折扣限制，key的取值请参考表4。
+    * value1  value1。
+    * value2  value2。
+    * valueUnit  value单位。
+    * limitType  限制类型。
+    * promotionPlanId  促销计划ID。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * useLimitiInfoId  |参数名称：使用限制ID，主键。| |参数约束及描述：使用限制ID，主键。|
-    * limitKey  |参数名称：折扣限制，key的取值请参考表ICouponUseLimitInfo的limit_key要求。| |参数约束及描述：折扣限制，key的取值请参考表 ICouponUseLimitInfo的limit_key要求。|
-    * value1  |参数名称：value1。| |参数约束及描述：value1。|
-    * value2  |参数名称：value2。| |参数约束及描述：value2。|
-    * valueUnit  |参数名称：value单位。| |参数约束及描述：value单位。|
-    * limitType  |参数名称：限制类型。| |参数约束及描述：限制类型。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数约束及描述：促销计划ID。|
+    * useLimitiInfoId  使用限制ID，主键。
+    * limitKey  折扣限制，key的取值请参考表4。
+    * value1  value1。
+    * value2  value2。
+    * valueUnit  value单位。
+    * limitType  限制类型。
+    * promotionPlanId  促销计划ID。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * useLimitiInfoId  |参数名称：使用限制ID，主键。| |参数约束及描述：使用限制ID，主键。|
-    * limitKey  |参数名称：折扣限制，key的取值请参考表ICouponUseLimitInfo的limit_key要求。| |参数约束及描述：折扣限制，key的取值请参考表 ICouponUseLimitInfo的limit_key要求。|
-    * value1  |参数名称：value1。| |参数约束及描述：value1。|
-    * value2  |参数名称：value2。| |参数约束及描述：value2。|
-    * valueUnit  |参数名称：value单位。| |参数约束及描述：value单位。|
-    * limitType  |参数名称：限制类型。| |参数约束及描述：限制类型。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数约束及描述：促销计划ID。|
+    * useLimitiInfoId  使用限制ID，主键。
+    * limitKey  折扣限制，key的取值请参考表4。
+    * value1  value1。
+    * value2  value2。
+    * valueUnit  value单位。
+    * limitType  限制类型。
+    * promotionPlanId  促销计划ID。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets useLimitiInfoId
-    *  |参数名称：使用限制ID，主键。| |参数约束及描述：使用限制ID，主键。|
+    *  使用限制ID，主键。
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets useLimitiInfoId
     *
-    * @param string|null $useLimitiInfoId |参数名称：使用限制ID，主键。| |参数约束及描述：使用限制ID，主键。|
+    * @param string|null $useLimitiInfoId 使用限制ID，主键。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets limitKey
-    *  |参数名称：折扣限制，key的取值请参考表ICouponUseLimitInfo的limit_key要求。| |参数约束及描述：折扣限制，key的取值请参考表 ICouponUseLimitInfo的limit_key要求。|
+    *  折扣限制，key的取值请参考表4。
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets limitKey
     *
-    * @param string|null $limitKey |参数名称：折扣限制，key的取值请参考表ICouponUseLimitInfo的limit_key要求。| |参数约束及描述：折扣限制，key的取值请参考表 ICouponUseLimitInfo的limit_key要求。|
+    * @param string|null $limitKey 折扣限制，key的取值请参考表4。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets value1
-    *  |参数名称：value1。| |参数约束及描述：value1。|
+    *  value1。
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets value1
     *
-    * @param string|null $value1 |参数名称：value1。| |参数约束及描述：value1。|
+    * @param string|null $value1 value1。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets value2
-    *  |参数名称：value2。| |参数约束及描述：value2。|
+    *  value2。
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets value2
     *
-    * @param string|null $value2 |参数名称：value2。| |参数约束及描述：value2。|
+    * @param string|null $value2 value2。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets valueUnit
-    *  |参数名称：value单位。| |参数约束及描述：value单位。|
+    *  value单位。
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets valueUnit
     *
-    * @param string|null $valueUnit |参数名称：value单位。| |参数约束及描述：value单位。|
+    * @param string|null $valueUnit value单位。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets limitType
-    *  |参数名称：限制类型。| |参数约束及描述：限制类型。|
+    *  限制类型。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets limitType
     *
-    * @param string|null $limitType |参数名称：限制类型。| |参数约束及描述：限制类型。|
+    * @param string|null $limitType 限制类型。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets promotionPlanId
-    *  |参数名称：促销计划ID。| |参数约束及描述：促销计划ID。|
+    *  促销计划ID。
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class ICouponUseLimitInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets promotionPlanId
     *
-    * @param string|null $promotionPlanId |参数名称：促销计划ID。| |参数约束及描述：促销计划ID。|
+    * @param string|null $promotionPlanId 促销计划ID。
     *
     * @return $this
     */

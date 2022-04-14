@@ -21,8 +21,8 @@ class ListSubCustomerCouponsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  |参数名称：个数| |参数的约束及描述：个数|
-    * userCoupons  |参数名称：优惠券记录。具体请参见表 IQueryUserCouponsResult。| |参数约束以及描述：优惠券记录。具体请参见表 IQueryUserCouponsResult。|
+    * count  符合查询条件的总条数。
+    * userCoupons  优惠券记录。 具体请参见表2。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListSubCustomerCouponsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  |参数名称：个数| |参数的约束及描述：个数|
-    * userCoupons  |参数名称：优惠券记录。具体请参见表 IQueryUserCouponsResult。| |参数约束以及描述：优惠券记录。具体请参见表 IQueryUserCouponsResult。|
+    * count  符合查询条件的总条数。
+    * userCoupons  优惠券记录。 具体请参见表2。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListSubCustomerCouponsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  |参数名称：个数| |参数的约束及描述：个数|
-    * userCoupons  |参数名称：优惠券记录。具体请参见表 IQueryUserCouponsResult。| |参数约束以及描述：优惠券记录。具体请参见表 IQueryUserCouponsResult。|
+    * count  符合查询条件的总条数。
+    * userCoupons  优惠券记录。 具体请参见表2。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListSubCustomerCouponsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  |参数名称：个数| |参数的约束及描述：个数|
-    * userCoupons  |参数名称：优惠券记录。具体请参见表 IQueryUserCouponsResult。| |参数约束以及描述：优惠券记录。具体请参见表 IQueryUserCouponsResult。|
+    * count  符合查询条件的总条数。
+    * userCoupons  优惠券记录。 具体请参见表2。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListSubCustomerCouponsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  |参数名称：个数| |参数的约束及描述：个数|
-    * userCoupons  |参数名称：优惠券记录。具体请参见表 IQueryUserCouponsResult。| |参数约束以及描述：优惠券记录。具体请参见表 IQueryUserCouponsResult。|
+    * count  符合查询条件的总条数。
+    * userCoupons  优惠券记录。 具体请参见表2。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListSubCustomerCouponsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  |参数名称：个数| |参数的约束及描述：个数|
+    *  符合查询条件的总条数。
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListSubCustomerCouponsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count |参数名称：个数| |参数的约束及描述：个数|
+    * @param int|null $count 符合查询条件的总条数。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListSubCustomerCouponsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets userCoupons
-    *  |参数名称：优惠券记录。具体请参见表 IQueryUserCouponsResult。| |参数约束以及描述：优惠券记录。具体请参见表 IQueryUserCouponsResult。|
+    *  优惠券记录。 具体请参见表2。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\IQueryUserCouponsResultV2[]|null
     */
@@ -222,7 +222,7 @@ class ListSubCustomerCouponsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets userCoupons
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\IQueryUserCouponsResultV2[]|null $userCoupons |参数名称：优惠券记录。具体请参见表 IQueryUserCouponsResult。| |参数约束以及描述：优惠券记录。具体请参见表 IQueryUserCouponsResult。|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\IQueryUserCouponsResultV2[]|null $userCoupons 优惠券记录。 具体请参见表2。
     *
     * @return $this
     */

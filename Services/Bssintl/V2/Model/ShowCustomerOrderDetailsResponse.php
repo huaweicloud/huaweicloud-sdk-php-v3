@@ -21,9 +21,9 @@ class ShowCustomerOrderDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalCount  |参数名称：符合条件的记录总数。| |参数的约束及描述：符合条件的记录总数。|
+    * totalCount  订单项个数。
     * orderInfo  orderInfo
-    * orderLineItems  |参数名称：订单对应的订单项。具体请参见表 OrderLineItemEntityV2。| |参数约束及描述： 订单对应的订单项。具体请参见表 OrderLineItemEntityV2。|
+    * orderLineItems  订单对应的订单项。 具体请参见表5。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ShowCustomerOrderDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalCount  |参数名称：符合条件的记录总数。| |参数的约束及描述：符合条件的记录总数。|
+    * totalCount  订单项个数。
     * orderInfo  orderInfo
-    * orderLineItems  |参数名称：订单对应的订单项。具体请参见表 OrderLineItemEntityV2。| |参数约束及描述： 订单对应的订单项。具体请参见表 OrderLineItemEntityV2。|
+    * orderLineItems  订单对应的订单项。 具体请参见表5。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ShowCustomerOrderDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalCount  |参数名称：符合条件的记录总数。| |参数的约束及描述：符合条件的记录总数。|
+    * totalCount  订单项个数。
     * orderInfo  orderInfo
-    * orderLineItems  |参数名称：订单对应的订单项。具体请参见表 OrderLineItemEntityV2。| |参数约束及描述： 订单对应的订单项。具体请参见表 OrderLineItemEntityV2。|
+    * orderLineItems  订单对应的订单项。 具体请参见表5。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ShowCustomerOrderDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalCount  |参数名称：符合条件的记录总数。| |参数的约束及描述：符合条件的记录总数。|
+    * totalCount  订单项个数。
     * orderInfo  orderInfo
-    * orderLineItems  |参数名称：订单对应的订单项。具体请参见表 OrderLineItemEntityV2。| |参数约束及描述： 订单对应的订单项。具体请参见表 OrderLineItemEntityV2。|
+    * orderLineItems  订单对应的订单项。 具体请参见表5。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ShowCustomerOrderDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalCount  |参数名称：符合条件的记录总数。| |参数的约束及描述：符合条件的记录总数。|
+    * totalCount  订单项个数。
     * orderInfo  orderInfo
-    * orderLineItems  |参数名称：订单对应的订单项。具体请参见表 OrderLineItemEntityV2。| |参数约束及描述： 订单对应的订单项。具体请参见表 OrderLineItemEntityV2。|
+    * orderLineItems  订单对应的订单项。 具体请参见表5。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ShowCustomerOrderDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  |参数名称：符合条件的记录总数。| |参数的约束及描述：符合条件的记录总数。|
+    *  订单项个数。
     *
     * @return int|null
     */
@@ -209,7 +209,7 @@ class ShowCustomerOrderDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount |参数名称：符合条件的记录总数。| |参数的约束及描述：符合条件的记录总数。|
+    * @param int|null $totalCount 订单项个数。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ShowCustomerOrderDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderLineItems
-    *  |参数名称：订单对应的订单项。具体请参见表 OrderLineItemEntityV2。| |参数约束及描述： 订单对应的订单项。具体请参见表 OrderLineItemEntityV2。|
+    *  订单对应的订单项。 具体请参见表5。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\OrderLineItemEntityV2[]|null
     */
@@ -257,7 +257,7 @@ class ShowCustomerOrderDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets orderLineItems
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\OrderLineItemEntityV2[]|null $orderLineItems |参数名称：订单对应的订单项。具体请参见表 OrderLineItemEntityV2。| |参数约束及描述： 订单对应的订单项。具体请参见表 OrderLineItemEntityV2。|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\OrderLineItemEntityV2[]|null $orderLineItems 订单对应的订单项。 具体请参见表5。
     *
     * @return $this
     */

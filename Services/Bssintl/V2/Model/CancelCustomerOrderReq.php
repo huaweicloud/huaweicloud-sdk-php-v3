@@ -20,7 +20,7 @@ class CancelCustomerOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
+    * orderId  订单ID。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CancelCustomerOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
+    * orderId  订单ID。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CancelCustomerOrderReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
+    * orderId  订单ID。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CancelCustomerOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
+    * orderId  订单ID。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CancelCustomerOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
+    * orderId  订单ID。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值。
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class CancelCustomerOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  |参数名称：订单ID。| |参数约束及描述：订单ID。|
+    *  订单ID。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值。
     *
     * @return string
     */
@@ -195,7 +195,7 @@ class CancelCustomerOrderReq implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string $orderId |参数名称：订单ID。| |参数约束及描述：订单ID。|
+    * @param string $orderId 订单ID。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值。
     *
     * @return $this
     */

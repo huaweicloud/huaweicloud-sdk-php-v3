@@ -20,7 +20,7 @@ class ListPostpaidBillSumRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * billCycle  |参数名称：账期，格式YYYY-MM示例：2020-07| |参数的约束及描述：|
+    * billCycle  账单所归属的月份。格式：YYYY-MM。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListPostpaidBillSumRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * billCycle  |参数名称：账期，格式YYYY-MM示例：2020-07| |参数的约束及描述：|
+    * billCycle  账单所归属的月份。格式：YYYY-MM。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListPostpaidBillSumRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * billCycle  |参数名称：账期，格式YYYY-MM示例：2020-07| |参数的约束及描述：|
+    * billCycle  账单所归属的月份。格式：YYYY-MM。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListPostpaidBillSumRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * billCycle  |参数名称：账期，格式YYYY-MM示例：2020-07| |参数的约束及描述：|
+    * billCycle  账单所归属的月份。格式：YYYY-MM。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListPostpaidBillSumRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * billCycle  |参数名称：账期，格式YYYY-MM示例：2020-07| |参数的约束及描述：|
+    * billCycle  账单所归属的月份。格式：YYYY-MM。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ListPostpaidBillSumRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets billCycle
-    *  |参数名称：账期，格式YYYY-MM示例：2020-07| |参数的约束及描述：|
+    *  账单所归属的月份。格式：YYYY-MM。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ListPostpaidBillSumRequest implements ModelInterface, ArrayAccess
     /**
     * Sets billCycle
     *
-    * @param string $billCycle |参数名称：账期，格式YYYY-MM示例：2020-07| |参数的约束及描述：|
+    * @param string $billCycle 账单所归属的月份。格式：YYYY-MM。
     *
     * @return $this
     */

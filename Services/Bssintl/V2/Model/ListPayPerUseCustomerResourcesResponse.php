@@ -21,8 +21,8 @@ class ListPayPerUseCustomerResourcesResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  |参数名称：资源列表。具体请参见表2 OrderInstanceV2。| |参数约束以及描述：资源列表。具体请参见表2 OrderInstanceV2。|
-    * totalCount  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    * data  资源列表。 具体请参见表2。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListPayPerUseCustomerResourcesResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  |参数名称：资源列表。具体请参见表2 OrderInstanceV2。| |参数约束以及描述：资源列表。具体请参见表2 OrderInstanceV2。|
-    * totalCount  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    * data  资源列表。 具体请参见表2。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListPayPerUseCustomerResourcesResponse implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  |参数名称：资源列表。具体请参见表2 OrderInstanceV2。| |参数约束以及描述：资源列表。具体请参见表2 OrderInstanceV2。|
-    * totalCount  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    * data  资源列表。 具体请参见表2。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListPayPerUseCustomerResourcesResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  |参数名称：资源列表。具体请参见表2 OrderInstanceV2。| |参数约束以及描述：资源列表。具体请参见表2 OrderInstanceV2。|
-    * totalCount  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    * data  资源列表。 具体请参见表2。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListPayPerUseCustomerResourcesResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  |参数名称：资源列表。具体请参见表2 OrderInstanceV2。| |参数约束以及描述：资源列表。具体请参见表2 OrderInstanceV2。|
-    * totalCount  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    * data  资源列表。 具体请参见表2。
+    * totalCount  总记录数。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListPayPerUseCustomerResourcesResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets data
-    *  |参数名称：资源列表。具体请参见表2 OrderInstanceV2。| |参数约束以及描述：资源列表。具体请参见表2 OrderInstanceV2。|
+    *  资源列表。 具体请参见表2。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\OrderInstanceV2[]|null
     */
@@ -198,7 +198,7 @@ class ListPayPerUseCustomerResourcesResponse implements ModelInterface, ArrayAcc
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\OrderInstanceV2[]|null $data |参数名称：资源列表。具体请参见表2 OrderInstanceV2。| |参数约束以及描述：资源列表。具体请参见表2 OrderInstanceV2。|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\OrderInstanceV2[]|null $data 资源列表。 具体请参见表2。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListPayPerUseCustomerResourcesResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets totalCount
-    *  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    *  总记录数。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListPayPerUseCustomerResourcesResponse implements ModelInterface, ArrayAcc
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    * @param int|null $totalCount 总记录数。
     *
     * @return $this
     */

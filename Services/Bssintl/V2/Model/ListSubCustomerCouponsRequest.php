@@ -20,17 +20,16 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * couponId  |参数名称：优惠券ID。| |参数的约束及描述：优惠券ID。|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：订单ID。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数的约束及描述：促销计划ID。|
-    * couponType  |参数名称：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。| |参数的约束及描述：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。|
-    * status  |参数名称：客户优惠券实例状态：1：未激活；2：待使用；3：已使用；4：已过期。| |参数的约束及描述：客户优惠券实例状态：1：未激活；2：待使用；3：已使用；4：已过期。|
-    * activeStartTime  |参数名称：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数的约束及描述：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * activeEndTime  |参数名称：结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数的约束及描述：结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * offset  |参数名称：偏移量，默认为0| |参数的约束及描述：偏移量，默认为0|
-    * limit  |参数名称：每页数量，默认10。| |参数的约束及描述：每页数量，默认10。|
-    * sourceId  |参数名称：发券来源| |参数的约束及描述：如果是合作伙伴发送的券，这个地方是伙伴ID。 如果想查询某个伙伴发放的券，可以在这里输入伙伴ID|
-    * indirectPartnerId  |参数名称：经营服务商（二级经销商）ID，如果要查询二级经销商名下的券，要传递该字段，否则查询的就是一级经销商自己的券列表。| |参数的约束及描述：经营服务商（二级经销商）ID，如果要查询二级经销商名下的券，要传递该字段，否则查询的就是一级经销商自己的券列表。|
+    * couponId  优惠券ID。
+    * orderId  订单ID。
+    * promotionPlanId  促销计划ID。
+    * couponType  优惠券类型：1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
+    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  查询的优惠券数量，默认值为10。
+    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。
     *
     * @var string[]
     */
@@ -44,23 +43,21 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
             'activeEndTime' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'sourceId' => 'string',
-            'indirectPartnerId' => 'string'
+            'sourceId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * couponId  |参数名称：优惠券ID。| |参数的约束及描述：优惠券ID。|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：订单ID。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数的约束及描述：促销计划ID。|
-    * couponType  |参数名称：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。| |参数的约束及描述：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。|
-    * status  |参数名称：客户优惠券实例状态：1：未激活；2：待使用；3：已使用；4：已过期。| |参数的约束及描述：客户优惠券实例状态：1：未激活；2：待使用；3：已使用；4：已过期。|
-    * activeStartTime  |参数名称：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数的约束及描述：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * activeEndTime  |参数名称：结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数的约束及描述：结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * offset  |参数名称：偏移量，默认为0| |参数的约束及描述：偏移量，默认为0|
-    * limit  |参数名称：每页数量，默认10。| |参数的约束及描述：每页数量，默认10。|
-    * sourceId  |参数名称：发券来源| |参数的约束及描述：如果是合作伙伴发送的券，这个地方是伙伴ID。 如果想查询某个伙伴发放的券，可以在这里输入伙伴ID|
-    * indirectPartnerId  |参数名称：经营服务商（二级经销商）ID，如果要查询二级经销商名下的券，要传递该字段，否则查询的就是一级经销商自己的券列表。| |参数的约束及描述：经营服务商（二级经销商）ID，如果要查询二级经销商名下的券，要传递该字段，否则查询的就是一级经销商自己的券列表。|
+    * couponId  优惠券ID。
+    * orderId  订单ID。
+    * promotionPlanId  促销计划ID。
+    * couponType  优惠券类型：1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
+    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  查询的优惠券数量，默认值为10。
+    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。
     *
     * @var string[]
     */
@@ -74,8 +71,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
         'activeEndTime' => null,
         'offset' => 'int32',
         'limit' => 'int32',
-        'sourceId' => null,
-        'indirectPartnerId' => null
+        'sourceId' => null
     ];
 
     /**
@@ -101,17 +97,16 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * couponId  |参数名称：优惠券ID。| |参数的约束及描述：优惠券ID。|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：订单ID。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数的约束及描述：促销计划ID。|
-    * couponType  |参数名称：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。| |参数的约束及描述：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。|
-    * status  |参数名称：客户优惠券实例状态：1：未激活；2：待使用；3：已使用；4：已过期。| |参数的约束及描述：客户优惠券实例状态：1：未激活；2：待使用；3：已使用；4：已过期。|
-    * activeStartTime  |参数名称：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数的约束及描述：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * activeEndTime  |参数名称：结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数的约束及描述：结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * offset  |参数名称：偏移量，默认为0| |参数的约束及描述：偏移量，默认为0|
-    * limit  |参数名称：每页数量，默认10。| |参数的约束及描述：每页数量，默认10。|
-    * sourceId  |参数名称：发券来源| |参数的约束及描述：如果是合作伙伴发送的券，这个地方是伙伴ID。 如果想查询某个伙伴发放的券，可以在这里输入伙伴ID|
-    * indirectPartnerId  |参数名称：经营服务商（二级经销商）ID，如果要查询二级经销商名下的券，要传递该字段，否则查询的就是一级经销商自己的券列表。| |参数的约束及描述：经营服务商（二级经销商）ID，如果要查询二级经销商名下的券，要传递该字段，否则查询的就是一级经销商自己的券列表。|
+    * couponId  优惠券ID。
+    * orderId  订单ID。
+    * promotionPlanId  促销计划ID。
+    * couponType  优惠券类型：1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
+    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  查询的优惠券数量，默认值为10。
+    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。
     *
     * @var string[]
     */
@@ -125,23 +120,21 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
             'activeEndTime' => 'active_end_time',
             'offset' => 'offset',
             'limit' => 'limit',
-            'sourceId' => 'source_id',
-            'indirectPartnerId' => 'indirect_partner_id'
+            'sourceId' => 'source_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * couponId  |参数名称：优惠券ID。| |参数的约束及描述：优惠券ID。|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：订单ID。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数的约束及描述：促销计划ID。|
-    * couponType  |参数名称：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。| |参数的约束及描述：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。|
-    * status  |参数名称：客户优惠券实例状态：1：未激活；2：待使用；3：已使用；4：已过期。| |参数的约束及描述：客户优惠券实例状态：1：未激活；2：待使用；3：已使用；4：已过期。|
-    * activeStartTime  |参数名称：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数的约束及描述：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * activeEndTime  |参数名称：结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数的约束及描述：结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * offset  |参数名称：偏移量，默认为0| |参数的约束及描述：偏移量，默认为0|
-    * limit  |参数名称：每页数量，默认10。| |参数的约束及描述：每页数量，默认10。|
-    * sourceId  |参数名称：发券来源| |参数的约束及描述：如果是合作伙伴发送的券，这个地方是伙伴ID。 如果想查询某个伙伴发放的券，可以在这里输入伙伴ID|
-    * indirectPartnerId  |参数名称：经营服务商（二级经销商）ID，如果要查询二级经销商名下的券，要传递该字段，否则查询的就是一级经销商自己的券列表。| |参数的约束及描述：经营服务商（二级经销商）ID，如果要查询二级经销商名下的券，要传递该字段，否则查询的就是一级经销商自己的券列表。|
+    * couponId  优惠券ID。
+    * orderId  订单ID。
+    * promotionPlanId  促销计划ID。
+    * couponType  优惠券类型：1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
+    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  查询的优惠券数量，默认值为10。
+    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。
     *
     * @var string[]
     */
@@ -155,23 +148,21 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
             'activeEndTime' => 'setActiveEndTime',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'sourceId' => 'setSourceId',
-            'indirectPartnerId' => 'setIndirectPartnerId'
+            'sourceId' => 'setSourceId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * couponId  |参数名称：优惠券ID。| |参数的约束及描述：优惠券ID。|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：订单ID。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数的约束及描述：促销计划ID。|
-    * couponType  |参数名称：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。| |参数的约束及描述：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。|
-    * status  |参数名称：客户优惠券实例状态：1：未激活；2：待使用；3：已使用；4：已过期。| |参数的约束及描述：客户优惠券实例状态：1：未激活；2：待使用；3：已使用；4：已过期。|
-    * activeStartTime  |参数名称：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数的约束及描述：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * activeEndTime  |参数名称：结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数的约束及描述：结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * offset  |参数名称：偏移量，默认为0| |参数的约束及描述：偏移量，默认为0|
-    * limit  |参数名称：每页数量，默认10。| |参数的约束及描述：每页数量，默认10。|
-    * sourceId  |参数名称：发券来源| |参数的约束及描述：如果是合作伙伴发送的券，这个地方是伙伴ID。 如果想查询某个伙伴发放的券，可以在这里输入伙伴ID|
-    * indirectPartnerId  |参数名称：经营服务商（二级经销商）ID，如果要查询二级经销商名下的券，要传递该字段，否则查询的就是一级经销商自己的券列表。| |参数的约束及描述：经营服务商（二级经销商）ID，如果要查询二级经销商名下的券，要传递该字段，否则查询的就是一级经销商自己的券列表。|
+    * couponId  优惠券ID。
+    * orderId  订单ID。
+    * promotionPlanId  促销计划ID。
+    * couponType  优惠券类型：1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
+    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  查询的优惠券数量，默认值为10。
+    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。
     *
     * @var string[]
     */
@@ -185,8 +176,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
             'activeEndTime' => 'getActiveEndTime',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'sourceId' => 'getSourceId',
-            'indirectPartnerId' => 'getIndirectPartnerId'
+            'sourceId' => 'getSourceId'
     ];
 
     /**
@@ -257,7 +247,6 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['sourceId'] = isset($data['sourceId']) ? $data['sourceId'] : null;
-        $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 
     /**
@@ -308,7 +297,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponId
-    *  |参数名称：优惠券ID。| |参数的约束及描述：优惠券ID。|
+    *  优惠券ID。
     *
     * @return string|null
     */
@@ -320,7 +309,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets couponId
     *
-    * @param string|null $couponId |参数名称：优惠券ID。| |参数的约束及描述：优惠券ID。|
+    * @param string|null $couponId 优惠券ID。
     *
     * @return $this
     */
@@ -332,7 +321,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  |参数名称：订单ID。| |参数的约束及描述：订单ID。|
+    *  订单ID。
     *
     * @return string|null
     */
@@ -344,7 +333,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId |参数名称：订单ID。| |参数的约束及描述：订单ID。|
+    * @param string|null $orderId 订单ID。
     *
     * @return $this
     */
@@ -356,7 +345,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets promotionPlanId
-    *  |参数名称：促销计划ID。| |参数的约束及描述：促销计划ID。|
+    *  促销计划ID。
     *
     * @return string|null
     */
@@ -368,7 +357,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets promotionPlanId
     *
-    * @param string|null $promotionPlanId |参数名称：促销计划ID。| |参数的约束及描述：促销计划ID。|
+    * @param string|null $promotionPlanId 促销计划ID。
     *
     * @return $this
     */
@@ -380,7 +369,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponType
-    *  |参数名称：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。| |参数的约束及描述：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。|
+    *  优惠券类型：1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
     *
     * @return int|null
     */
@@ -392,7 +381,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets couponType
     *
-    * @param int|null $couponType |参数名称：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。| |参数的约束及描述：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。|
+    * @param int|null $couponType 优惠券类型：1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
     *
     * @return $this
     */
@@ -404,7 +393,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  |参数名称：客户优惠券实例状态：1：未激活；2：待使用；3：已使用；4：已过期。| |参数的约束及描述：客户优惠券实例状态：1：未激活；2：待使用；3：已使用；4：已过期。|
+    *  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
     *
     * @return int|null
     */
@@ -416,7 +405,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status |参数名称：客户优惠券实例状态：1：未激活；2：待使用；3：已使用；4：已过期。| |参数的约束及描述：客户优惠券实例状态：1：未激活；2：待使用；3：已使用；4：已过期。|
+    * @param int|null $status 客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
     *
     * @return $this
     */
@@ -428,7 +417,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets activeStartTime
-    *  |参数名称：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数的约束及描述：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+    *  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -440,7 +429,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets activeStartTime
     *
-    * @param string|null $activeStartTime |参数名称：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数的约束及描述：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+    * @param string|null $activeStartTime 激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
@@ -452,7 +441,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets activeEndTime
-    *  |参数名称：结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数的约束及描述：结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+    *  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -464,7 +453,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets activeEndTime
     *
-    * @param string|null $activeEndTime |参数名称：结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数的约束及描述：结束时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+    * @param string|null $activeEndTime 结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
@@ -476,7 +465,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  |参数名称：偏移量，默认为0| |参数的约束及描述：偏移量，默认为0|
+    *  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return int|null
     */
@@ -488,7 +477,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset |参数名称：偏移量，默认为0| |参数的约束及描述：偏移量，默认为0|
+    * @param int|null $offset 偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return $this
     */
@@ -500,7 +489,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  |参数名称：每页数量，默认10。| |参数的约束及描述：每页数量，默认10。|
+    *  查询的优惠券数量，默认值为10。
     *
     * @return int|null
     */
@@ -512,7 +501,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit |参数名称：每页数量，默认10。| |参数的约束及描述：每页数量，默认10。|
+    * @param int|null $limit 查询的优惠券数量，默认值为10。
     *
     * @return $this
     */
@@ -524,7 +513,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceId
-    *  |参数名称：发券来源| |参数的约束及描述：如果是合作伙伴发送的券，这个地方是伙伴ID。 如果想查询某个伙伴发放的券，可以在这里输入伙伴ID|
+    *  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。
     *
     * @return string|null
     */
@@ -536,37 +525,13 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sourceId
     *
-    * @param string|null $sourceId |参数名称：发券来源| |参数的约束及描述：如果是合作伙伴发送的券，这个地方是伙伴ID。 如果想查询某个伙伴发放的券，可以在这里输入伙伴ID|
+    * @param string|null $sourceId 发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。
     *
     * @return $this
     */
     public function setSourceId($sourceId)
     {
         $this->container['sourceId'] = $sourceId;
-        return $this;
-    }
-
-    /**
-    * Gets indirectPartnerId
-    *  |参数名称：经营服务商（二级经销商）ID，如果要查询二级经销商名下的券，要传递该字段，否则查询的就是一级经销商自己的券列表。| |参数的约束及描述：经营服务商（二级经销商）ID，如果要查询二级经销商名下的券，要传递该字段，否则查询的就是一级经销商自己的券列表。|
-    *
-    * @return string|null
-    */
-    public function getIndirectPartnerId()
-    {
-        return $this->container['indirectPartnerId'];
-    }
-
-    /**
-    * Sets indirectPartnerId
-    *
-    * @param string|null $indirectPartnerId |参数名称：经营服务商（二级经销商）ID，如果要查询二级经销商名下的券，要传递该字段，否则查询的就是一级经销商自己的券列表。| |参数的约束及描述：经营服务商（二级经销商）ID，如果要查询二级经销商名下的券，要传递该字段，否则查询的就是一级经销商自己的券列表。|
-    *
-    * @return $this
-    */
-    public function setIndirectPartnerId($indirectPartnerId)
-    {
-        $this->container['indirectPartnerId'] = $indirectPartnerId;
         return $this;
     }
 

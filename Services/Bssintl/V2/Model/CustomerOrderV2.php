@@ -20,20 +20,20 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * sourceType  |参数名称：客户订单订单来源类型：1：客户2：代理3：合同4：分销商| |参数的约束及描述：客户订单订单来源类型：1：客户2：代理3：合同4：分销商|
-    * status  |参数名称：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认|
-    * orderType  |参数名称：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整|
-    * amountAfterDiscount  |参数名称：订单优惠后金额（不含券不含卡的实付价格）。| |参数的约束及描述：订单优惠后金额（不含券不含卡的实付价格）。|
-    * officialAmount  |参数名称：订单金额（官网价）。退订订单中，该金额等于amount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于amount。|
-    * measureId  |参数名称：订单金额度量单位：1：元| |参数的约束及描述：订单金额度量单位：1：元|
-    * createTime  |参数名称：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * paymentTime  |参数名称：支付时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：支付时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * currency  |参数名称：货币编码。| |参数约束及描述：货币编码。如CNY|
-    * contractId  |参数名称：合同ID。| |参数约束及描述：合同ID。|
+    * orderId  订单ID。
+    * customerId  客户账号ID。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * sourceType  客户订单订单来源类型： 1：客户2：代理3：合同4：分销商
+    * status  订单状态： 1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认
+    * orderType  订单类型： 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * amountAfterDiscount  订单优惠后金额（不含券不含卡的实付价格）。
+    * officialAmount  订单金额（官网价）。 退订订单中，该金额等于amount_after_discount。
+    * measureId  订单金额度量单位： 1：元
+    * createTime  创建时间 。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * paymentTime  支付时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * currency  货币编码。
+    * contractId  合同ID。
     * amountInfo  amountInfo
     *
     * @var string[]
@@ -58,20 +58,20 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * sourceType  |参数名称：客户订单订单来源类型：1：客户2：代理3：合同4：分销商| |参数的约束及描述：客户订单订单来源类型：1：客户2：代理3：合同4：分销商|
-    * status  |参数名称：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认|
-    * orderType  |参数名称：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整|
-    * amountAfterDiscount  |参数名称：订单优惠后金额（不含券不含卡的实付价格）。| |参数的约束及描述：订单优惠后金额（不含券不含卡的实付价格）。|
-    * officialAmount  |参数名称：订单金额（官网价）。退订订单中，该金额等于amount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于amount。|
-    * measureId  |参数名称：订单金额度量单位：1：元| |参数的约束及描述：订单金额度量单位：1：元|
-    * createTime  |参数名称：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * paymentTime  |参数名称：支付时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：支付时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * currency  |参数名称：货币编码。| |参数约束及描述：货币编码。如CNY|
-    * contractId  |参数名称：合同ID。| |参数约束及描述：合同ID。|
+    * orderId  订单ID。
+    * customerId  客户账号ID。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * sourceType  客户订单订单来源类型： 1：客户2：代理3：合同4：分销商
+    * status  订单状态： 1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认
+    * orderType  订单类型： 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * amountAfterDiscount  订单优惠后金额（不含券不含卡的实付价格）。
+    * officialAmount  订单金额（官网价）。 退订订单中，该金额等于amount_after_discount。
+    * measureId  订单金额度量单位： 1：元
+    * createTime  创建时间 。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * paymentTime  支付时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * currency  货币编码。
+    * contractId  合同ID。
     * amountInfo  amountInfo
     *
     * @var string[]
@@ -117,20 +117,20 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * sourceType  |参数名称：客户订单订单来源类型：1：客户2：代理3：合同4：分销商| |参数的约束及描述：客户订单订单来源类型：1：客户2：代理3：合同4：分销商|
-    * status  |参数名称：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认|
-    * orderType  |参数名称：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整|
-    * amountAfterDiscount  |参数名称：订单优惠后金额（不含券不含卡的实付价格）。| |参数的约束及描述：订单优惠后金额（不含券不含卡的实付价格）。|
-    * officialAmount  |参数名称：订单金额（官网价）。退订订单中，该金额等于amount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于amount。|
-    * measureId  |参数名称：订单金额度量单位：1：元| |参数的约束及描述：订单金额度量单位：1：元|
-    * createTime  |参数名称：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * paymentTime  |参数名称：支付时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：支付时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * currency  |参数名称：货币编码。| |参数约束及描述：货币编码。如CNY|
-    * contractId  |参数名称：合同ID。| |参数约束及描述：合同ID。|
+    * orderId  订单ID。
+    * customerId  客户账号ID。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * sourceType  客户订单订单来源类型： 1：客户2：代理3：合同4：分销商
+    * status  订单状态： 1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认
+    * orderType  订单类型： 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * amountAfterDiscount  订单优惠后金额（不含券不含卡的实付价格）。
+    * officialAmount  订单金额（官网价）。 退订订单中，该金额等于amount_after_discount。
+    * measureId  订单金额度量单位： 1：元
+    * createTime  创建时间 。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * paymentTime  支付时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * currency  货币编码。
+    * contractId  合同ID。
     * amountInfo  amountInfo
     *
     * @var string[]
@@ -155,20 +155,20 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * sourceType  |参数名称：客户订单订单来源类型：1：客户2：代理3：合同4：分销商| |参数的约束及描述：客户订单订单来源类型：1：客户2：代理3：合同4：分销商|
-    * status  |参数名称：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认|
-    * orderType  |参数名称：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整|
-    * amountAfterDiscount  |参数名称：订单优惠后金额（不含券不含卡的实付价格）。| |参数的约束及描述：订单优惠后金额（不含券不含卡的实付价格）。|
-    * officialAmount  |参数名称：订单金额（官网价）。退订订单中，该金额等于amount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于amount。|
-    * measureId  |参数名称：订单金额度量单位：1：元| |参数的约束及描述：订单金额度量单位：1：元|
-    * createTime  |参数名称：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * paymentTime  |参数名称：支付时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：支付时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * currency  |参数名称：货币编码。| |参数约束及描述：货币编码。如CNY|
-    * contractId  |参数名称：合同ID。| |参数约束及描述：合同ID。|
+    * orderId  订单ID。
+    * customerId  客户账号ID。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * sourceType  客户订单订单来源类型： 1：客户2：代理3：合同4：分销商
+    * status  订单状态： 1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认
+    * orderType  订单类型： 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * amountAfterDiscount  订单优惠后金额（不含券不含卡的实付价格）。
+    * officialAmount  订单金额（官网价）。 退订订单中，该金额等于amount_after_discount。
+    * measureId  订单金额度量单位： 1：元
+    * createTime  创建时间 。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * paymentTime  支付时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * currency  货币编码。
+    * contractId  合同ID。
     * amountInfo  amountInfo
     *
     * @var string[]
@@ -193,20 +193,20 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * customerId  |参数名称：客户ID。| |参数约束及描述：客户ID。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * sourceType  |参数名称：客户订单订单来源类型：1：客户2：代理3：合同4：分销商| |参数的约束及描述：客户订单订单来源类型：1：客户2：代理3：合同4：分销商|
-    * status  |参数名称：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认|
-    * orderType  |参数名称：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整|
-    * amountAfterDiscount  |参数名称：订单优惠后金额（不含券不含卡的实付价格）。| |参数的约束及描述：订单优惠后金额（不含券不含卡的实付价格）。|
-    * officialAmount  |参数名称：订单金额（官网价）。退订订单中，该金额等于amount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于amount。|
-    * measureId  |参数名称：订单金额度量单位：1：元| |参数的约束及描述：订单金额度量单位：1：元|
-    * createTime  |参数名称：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * paymentTime  |参数名称：支付时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：支付时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * currency  |参数名称：货币编码。| |参数约束及描述：货币编码。如CNY|
-    * contractId  |参数名称：合同ID。| |参数约束及描述：合同ID。|
+    * orderId  订单ID。
+    * customerId  客户账号ID。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * sourceType  客户订单订单来源类型： 1：客户2：代理3：合同4：分销商
+    * status  订单状态： 1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认
+    * orderType  订单类型： 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * amountAfterDiscount  订单优惠后金额（不含券不含卡的实付价格）。
+    * officialAmount  订单金额（官网价）。 退订订单中，该金额等于amount_after_discount。
+    * measureId  订单金额度量单位： 1：元
+    * createTime  创建时间 。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * paymentTime  支付时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * currency  货币编码。
+    * contractId  合同ID。
     * amountInfo  amountInfo
     *
     * @var string[]
@@ -328,7 +328,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  |参数名称：订单ID。| |参数约束及描述：订单ID。|
+    *  订单ID。
     *
     * @return string|null
     */
@@ -340,7 +340,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId |参数名称：订单ID。| |参数约束及描述：订单ID。|
+    * @param string|null $orderId 订单ID。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerId
-    *  |参数名称：客户ID。| |参数约束及描述：客户ID。|
+    *  客户账号ID。
     *
     * @return string|null
     */
@@ -364,7 +364,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets customerId
     *
-    * @param string|null $customerId |参数名称：客户ID。| |参数约束及描述：客户ID。|
+    * @param string|null $customerId 客户账号ID。
     *
     * @return $this
     */
@@ -376,7 +376,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeCode
-    *  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    *  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
     *
     * @return string|null
     */
@@ -388,7 +388,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeCode
     *
-    * @param string|null $serviceTypeCode |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    * @param string|null $serviceTypeCode 云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
     *
     * @return $this
     */
@@ -400,7 +400,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeName
-    *  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return string|null
     */
@@ -412,7 +412,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeName
     *
-    * @param string|null $serviceTypeName |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return $this
     */
@@ -424,7 +424,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  |参数名称：客户订单订单来源类型：1：客户2：代理3：合同4：分销商| |参数的约束及描述：客户订单订单来源类型：1：客户2：代理3：合同4：分销商|
+    *  客户订单订单来源类型： 1：客户2：代理3：合同4：分销商
     *
     * @return int|null
     */
@@ -436,7 +436,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param int|null $sourceType |参数名称：客户订单订单来源类型：1：客户2：代理3：合同4：分销商| |参数的约束及描述：客户订单订单来源类型：1：客户2：代理3：合同4：分销商|
+    * @param int|null $sourceType 客户订单订单来源类型： 1：客户2：代理3：合同4：分销商
     *
     * @return $this
     */
@@ -448,7 +448,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  |参数名称：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认|
+    *  订单状态： 1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认
     *
     * @return int|null
     */
@@ -460,7 +460,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status |参数名称：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认| |参数的约束及描述：订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认|
+    * @param int|null $status 订单状态： 1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认
     *
     * @return $this
     */
@@ -472,7 +472,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderType
-    *  |参数名称：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整|
+    *  订单类型： 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
     *
     * @return int|null
     */
@@ -484,7 +484,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets orderType
     *
-    * @param int|null $orderType |参数名称：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整| |参数的约束及描述：订单类型：1：开通2：续订3：变更4：退订10：包周期转按需11：按需转包周期12：赠送13：试用14：转商用15：费用调整|
+    * @param int|null $orderType 订单类型： 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
     *
     * @return $this
     */
@@ -496,7 +496,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets amountAfterDiscount
-    *  |参数名称：订单优惠后金额（不含券不含卡的实付价格）。| |参数的约束及描述：订单优惠后金额（不含券不含卡的实付价格）。|
+    *  订单优惠后金额（不含券不含卡的实付价格）。
     *
     * @return double|null
     */
@@ -508,7 +508,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets amountAfterDiscount
     *
-    * @param double|null $amountAfterDiscount |参数名称：订单优惠后金额（不含券不含卡的实付价格）。| |参数的约束及描述：订单优惠后金额（不含券不含卡的实付价格）。|
+    * @param double|null $amountAfterDiscount 订单优惠后金额（不含券不含卡的实付价格）。
     *
     * @return $this
     */
@@ -520,7 +520,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets officialAmount
-    *  |参数名称：订单金额（官网价）。退订订单中，该金额等于amount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于amount。|
+    *  订单金额（官网价）。 退订订单中，该金额等于amount_after_discount。
     *
     * @return double|null
     */
@@ -532,7 +532,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets officialAmount
     *
-    * @param double|null $officialAmount |参数名称：订单金额（官网价）。退订订单中，该金额等于amount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于amount。|
+    * @param double|null $officialAmount 订单金额（官网价）。 退订订单中，该金额等于amount_after_discount。
     *
     * @return $this
     */
@@ -544,7 +544,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：订单金额度量单位：1：元| |参数的约束及描述：订单金额度量单位：1：元|
+    *  订单金额度量单位： 1：元
     *
     * @return int|null
     */
@@ -556,7 +556,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId |参数名称：订单金额度量单位：1：元| |参数的约束及描述：订单金额度量单位：1：元|
+    * @param int|null $measureId 订单金额度量单位： 1：元
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  |参数名称：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    *  创建时间 。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -580,7 +580,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime |参数名称：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：创建时间 。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    * @param string|null $createTime 创建时间 。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets paymentTime
-    *  |参数名称：支付时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：支付时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    *  支付时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -604,7 +604,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets paymentTime
     *
-    * @param string|null $paymentTime |参数名称：支付时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：支付时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    * @param string|null $paymentTime 支付时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
@@ -616,7 +616,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets currency
-    *  |参数名称：货币编码。| |参数约束及描述：货币编码。如CNY|
+    *  货币编码。
     *
     * @return string|null
     */
@@ -628,7 +628,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets currency
     *
-    * @param string|null $currency |参数名称：货币编码。| |参数约束及描述：货币编码。如CNY|
+    * @param string|null $currency 货币编码。
     *
     * @return $this
     */
@@ -640,7 +640,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets contractId
-    *  |参数名称：合同ID。| |参数约束及描述：合同ID。|
+    *  合同ID。
     *
     * @return string|null
     */
@@ -652,7 +652,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     /**
     * Sets contractId
     *
-    * @param string|null $contractId |参数名称：合同ID。| |参数约束及描述：合同ID。|
+    * @param string|null $contractId 合同ID。
     *
     * @return $this
     */

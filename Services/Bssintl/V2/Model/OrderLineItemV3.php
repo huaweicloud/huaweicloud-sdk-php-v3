@@ -20,34 +20,34 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderLineItemIds  |参数名称：用于合并的订单项列表，会将相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的进行合并| |参数约束以及描述：用于合并的订单项列表，会将相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的进行合并|
-    * discountMode  |参数名称：折扣模式 0：折扣 1：一口价 2：满减| |参数的约束及描述：折扣模式 0：折扣 1：一口价 2：满减|
-    * discountAmount  |参数名称：折扣额（减免金额）| |参数的约束及描述：折扣额（减免金额）|
-    * discountRatio  |参数名称：折扣比例，折扣为| |参数的约束及描述：折扣比例，折扣为|
+    * orderLineItemIds  可使用相同折扣的订单项合并后的订单项ID列表。 相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的订单项将进行合并。
+    * discountMode  订单可用折扣的模式 。 0：折扣1：一口价2：满减
+    * discountAmount  订单可用的折扣金额（即减免金额）。
+    * discountRatio  订单可用的折扣比例。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'orderLineItemIds' => 'string[]',
             'discountMode' => 'int',
-            'discountAmount' => 'float',
-            'discountRatio' => 'float'
+            'discountAmount' => 'double',
+            'discountRatio' => 'double'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderLineItemIds  |参数名称：用于合并的订单项列表，会将相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的进行合并| |参数约束以及描述：用于合并的订单项列表，会将相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的进行合并|
-    * discountMode  |参数名称：折扣模式 0：折扣 1：一口价 2：满减| |参数的约束及描述：折扣模式 0：折扣 1：一口价 2：满减|
-    * discountAmount  |参数名称：折扣额（减免金额）| |参数的约束及描述：折扣额（减免金额）|
-    * discountRatio  |参数名称：折扣比例，折扣为| |参数的约束及描述：折扣比例，折扣为|
+    * orderLineItemIds  可使用相同折扣的订单项合并后的订单项ID列表。 相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的订单项将进行合并。
+    * discountMode  订单可用折扣的模式 。 0：折扣1：一口价2：满减
+    * discountAmount  订单可用的折扣金额（即减免金额）。
+    * discountRatio  订单可用的折扣比例。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'orderLineItemIds' => null,
         'discountMode' => 'int32',
-        'discountAmount' => 'bigdecimal',
-        'discountRatio' => 'bigdecimal'
+        'discountAmount' => 'double',
+        'discountRatio' => 'double'
     ];
 
     /**
@@ -73,10 +73,10 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderLineItemIds  |参数名称：用于合并的订单项列表，会将相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的进行合并| |参数约束以及描述：用于合并的订单项列表，会将相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的进行合并|
-    * discountMode  |参数名称：折扣模式 0：折扣 1：一口价 2：满减| |参数的约束及描述：折扣模式 0：折扣 1：一口价 2：满减|
-    * discountAmount  |参数名称：折扣额（减免金额）| |参数的约束及描述：折扣额（减免金额）|
-    * discountRatio  |参数名称：折扣比例，折扣为| |参数的约束及描述：折扣比例，折扣为|
+    * orderLineItemIds  可使用相同折扣的订单项合并后的订单项ID列表。 相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的订单项将进行合并。
+    * discountMode  订单可用折扣的模式 。 0：折扣1：一口价2：满减
+    * discountAmount  订单可用的折扣金额（即减免金额）。
+    * discountRatio  订单可用的折扣比例。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderLineItemIds  |参数名称：用于合并的订单项列表，会将相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的进行合并| |参数约束以及描述：用于合并的订单项列表，会将相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的进行合并|
-    * discountMode  |参数名称：折扣模式 0：折扣 1：一口价 2：满减| |参数的约束及描述：折扣模式 0：折扣 1：一口价 2：满减|
-    * discountAmount  |参数名称：折扣额（减免金额）| |参数的约束及描述：折扣额（减免金额）|
-    * discountRatio  |参数名称：折扣比例，折扣为| |参数的约束及描述：折扣比例，折扣为|
+    * orderLineItemIds  可使用相同折扣的订单项合并后的订单项ID列表。 相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的订单项将进行合并。
+    * discountMode  订单可用折扣的模式 。 0：折扣1：一口价2：满减
+    * discountAmount  订单可用的折扣金额（即减免金额）。
+    * discountRatio  订单可用的折扣比例。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderLineItemIds  |参数名称：用于合并的订单项列表，会将相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的进行合并| |参数约束以及描述：用于合并的订单项列表，会将相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的进行合并|
-    * discountMode  |参数名称：折扣模式 0：折扣 1：一口价 2：满减| |参数的约束及描述：折扣模式 0：折扣 1：一口价 2：满减|
-    * discountAmount  |参数名称：折扣额（减免金额）| |参数的约束及描述：折扣额（减免金额）|
-    * discountRatio  |参数名称：折扣比例，折扣为| |参数的约束及描述：折扣比例，折扣为|
+    * orderLineItemIds  可使用相同折扣的订单项合并后的订单项ID列表。 相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的订单项将进行合并。
+    * discountMode  订单可用折扣的模式 。 0：折扣1：一口价2：满减
+    * discountAmount  订单可用的折扣金额（即减免金额）。
+    * discountRatio  订单可用的折扣比例。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderLineItemIds
-    *  |参数名称：用于合并的订单项列表，会将相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的进行合并| |参数约束以及描述：用于合并的订单项列表，会将相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的进行合并|
+    *  可使用相同折扣的订单项合并后的订单项ID列表。 相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的订单项将进行合并。
     *
     * @return string[]
     */
@@ -231,7 +231,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     /**
     * Sets orderLineItemIds
     *
-    * @param string[] $orderLineItemIds |参数名称：用于合并的订单项列表，会将相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的进行合并| |参数约束以及描述：用于合并的订单项列表，会将相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的进行合并|
+    * @param string[] $orderLineItemIds 可使用相同折扣的订单项合并后的订单项ID列表。 相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的订单项将进行合并。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountMode
-    *  |参数名称：折扣模式 0：折扣 1：一口价 2：满减| |参数的约束及描述：折扣模式 0：折扣 1：一口价 2：满减|
+    *  订单可用折扣的模式 。 0：折扣1：一口价2：满减
     *
     * @return int
     */
@@ -255,7 +255,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     /**
     * Sets discountMode
     *
-    * @param int $discountMode |参数名称：折扣模式 0：折扣 1：一口价 2：满减| |参数的约束及描述：折扣模式 0：折扣 1：一口价 2：满减|
+    * @param int $discountMode 订单可用折扣的模式 。 0：折扣1：一口价2：满减
     *
     * @return $this
     */
@@ -267,9 +267,9 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountAmount
-    *  |参数名称：折扣额（减免金额）| |参数的约束及描述：折扣额（减免金额）|
+    *  订单可用的折扣金额（即减免金额）。
     *
-    * @return float
+    * @return double
     */
     public function getDiscountAmount()
     {
@@ -279,7 +279,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     /**
     * Sets discountAmount
     *
-    * @param float $discountAmount |参数名称：折扣额（减免金额）| |参数的约束及描述：折扣额（减免金额）|
+    * @param double $discountAmount 订单可用的折扣金额（即减免金额）。
     *
     * @return $this
     */
@@ -291,9 +291,9 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountRatio
-    *  |参数名称：折扣比例，折扣为| |参数的约束及描述：折扣比例，折扣为|
+    *  订单可用的折扣比例。
     *
-    * @return float
+    * @return double
     */
     public function getDiscountRatio()
     {
@@ -303,7 +303,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     /**
     * Sets discountRatio
     *
-    * @param float $discountRatio |参数名称：折扣比例，折扣为| |参数的约束及描述：折扣比例，折扣为|
+    * @param double $discountRatio 订单可用的折扣比例。
     *
     * @return $this
     */

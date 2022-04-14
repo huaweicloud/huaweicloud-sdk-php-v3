@@ -20,11 +20,10 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的大小，默认为10| |参数的约束及描述：|
-    * offset  |参数名称：偏移量，从0开始，默认为0| |参数的约束及描述：|
-    * indirectPartnerId  |参数名称：二级经销商ID，只有伙伴用自身token调用的时候，该字段才有含义。| |参数的约束及描述：|
+    * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN|
+    * orderId  订单ID。
+    * limit  每页大小。默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
     */
@@ -32,17 +31,15 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'string',
             'orderId' => 'string',
             'limit' => 'int',
-            'offset' => 'int',
-            'indirectPartnerId' => 'string'
+            'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的大小，默认为10| |参数的约束及描述：|
-    * offset  |参数名称：偏移量，从0开始，默认为0| |参数的约束及描述：|
-    * indirectPartnerId  |参数名称：二级经销商ID，只有伙伴用自身token调用的时候，该字段才有含义。| |参数的约束及描述：|
+    * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN|
+    * orderId  订单ID。
+    * limit  每页大小。默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
     */
@@ -50,8 +47,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
         'xLanguage' => null,
         'orderId' => null,
         'limit' => 'int32',
-        'offset' => 'int32',
-        'indirectPartnerId' => null
+        'offset' => 'int32'
     ];
 
     /**
@@ -77,11 +73,10 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的大小，默认为10| |参数的约束及描述：|
-    * offset  |参数名称：偏移量，从0开始，默认为0| |参数的约束及描述：|
-    * indirectPartnerId  |参数名称：二级经销商ID，只有伙伴用自身token调用的时候，该字段才有含义。| |参数的约束及描述：|
+    * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN|
+    * orderId  订单ID。
+    * limit  每页大小。默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
     */
@@ -89,17 +84,15 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'X-Language',
             'orderId' => 'order_id',
             'limit' => 'limit',
-            'offset' => 'offset',
-            'indirectPartnerId' => 'indirect_partner_id'
+            'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的大小，默认为10| |参数的约束及描述：|
-    * offset  |参数名称：偏移量，从0开始，默认为0| |参数的约束及描述：|
-    * indirectPartnerId  |参数名称：二级经销商ID，只有伙伴用自身token调用的时候，该字段才有含义。| |参数的约束及描述：|
+    * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN|
+    * orderId  订单ID。
+    * limit  每页大小。默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
     */
@@ -107,17 +100,15 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'setXLanguage',
             'orderId' => 'setOrderId',
             'limit' => 'setLimit',
-            'offset' => 'setOffset',
-            'indirectPartnerId' => 'setIndirectPartnerId'
+            'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
-    * limit  |参数名称：每次查询的大小，默认为10| |参数的约束及描述：|
-    * offset  |参数名称：偏移量，从0开始，默认为0| |参数的约束及描述：|
-    * indirectPartnerId  |参数名称：二级经销商ID，只有伙伴用自身token调用的时候，该字段才有含义。| |参数的约束及描述：|
+    * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN|
+    * orderId  订单ID。
+    * limit  每页大小。默认值为10。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
     */
@@ -125,8 +116,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'getXLanguage',
             'orderId' => 'getOrderId',
             'limit' => 'getLimit',
-            'offset' => 'getOffset',
-            'indirectPartnerId' => 'getIndirectPartnerId'
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -191,7 +181,6 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
         $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
-        $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 
     /**
@@ -239,7 +228,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
+    *  语言：中文：zh_CN 英文：en_US 缺省为zh_CN|
     *
     * @return string|null
     */
@@ -251,7 +240,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage |参数名称：语言| |参数的约束及描述：中文：zh_CN 英文：en_US缺省为zh_CN|
+    * @param string|null $xLanguage 语言：中文：zh_CN 英文：en_US 缺省为zh_CN|
     *
     * @return $this
     */
@@ -263,7 +252,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  |参数名称：订单ID。| |参数的约束及描述：|
+    *  订单ID。
     *
     * @return string
     */
@@ -275,7 +264,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string $orderId |参数名称：订单ID。| |参数的约束及描述：|
+    * @param string $orderId 订单ID。
     *
     * @return $this
     */
@@ -287,7 +276,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  |参数名称：每次查询的大小，默认为10| |参数的约束及描述：|
+    *  每页大小。默认值为10。
     *
     * @return int|null
     */
@@ -299,7 +288,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit |参数名称：每次查询的大小，默认为10| |参数的约束及描述：|
+    * @param int|null $limit 每页大小。默认值为10。
     *
     * @return $this
     */
@@ -311,7 +300,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  |参数名称：偏移量，从0开始，默认为0| |参数的约束及描述：|
+    *  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return int|null
     */
@@ -323,37 +312,13 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset |参数名称：偏移量，从0开始，默认为0| |参数的约束及描述：|
+    * @param int|null $offset 偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return $this
     */
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
-        return $this;
-    }
-
-    /**
-    * Gets indirectPartnerId
-    *  |参数名称：二级经销商ID，只有伙伴用自身token调用的时候，该字段才有含义。| |参数的约束及描述：|
-    *
-    * @return string|null
-    */
-    public function getIndirectPartnerId()
-    {
-        return $this->container['indirectPartnerId'];
-    }
-
-    /**
-    * Sets indirectPartnerId
-    *
-    * @param string|null $indirectPartnerId |参数名称：二级经销商ID，只有伙伴用自身token调用的时候，该字段才有含义。| |参数的约束及描述：|
-    *
-    * @return $this
-    */
-    public function setIndirectPartnerId($indirectPartnerId)
-    {
-        $this->container['indirectPartnerId'] = $indirectPartnerId;
         return $this;
     }
 

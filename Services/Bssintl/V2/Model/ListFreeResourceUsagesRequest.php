@@ -20,7 +20,7 @@ class ListFreeResourceUsagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ListFreeResourceUsagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ListFreeResourceUsagesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ListFreeResourceUsagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ListFreeResourceUsagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  |忽略大小写，默认 zh_cn：中文 en_us：英文|
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
     * body  body
     *
     * @var string[]
@@ -191,7 +191,7 @@ class ListFreeResourceUsagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  |忽略大小写，默认 zh_cn：中文 en_us：英文|
+    *  语言。中文：zh_CN英文：en_US缺省为zh_CN。
     *
     * @return string|null
     */
@@ -203,7 +203,7 @@ class ListFreeResourceUsagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage |忽略大小写，默认 zh_cn：中文 en_us：英文|
+    * @param string|null $xLanguage 语言。中文：zh_CN英文：en_US缺省为zh_CN。
     *
     * @return $this
     */

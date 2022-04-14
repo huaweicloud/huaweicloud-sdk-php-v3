@@ -20,12 +20,12 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * discounts  |参数名称：费用项。具体请参见表 DiscountItemV2。| |参数约束以及描述：费用项。具体请参见表 DiscountItemV2。|
-    * flexipurchaseCouponAmount  |参数名称：现金券金额，预留。| |参数的约束及描述：现金券金额，预留。|
-    * couponAmount  |参数名称：代金券金额。| |参数的约束及描述：代金券金额。|
-    * storedCardAmount  |参数名称：储值卡金额，预留。| |参数的约束及描述：储值卡金额，预留。|
-    * commissionAmount  |参数名称：手续费（仅退订订单存在）。| |参数的约束及描述：手续费（仅退订订单存在）。|
-    * consumedAmount  |参数名称：消费金额（仅退订订单存在）。| |参数的约束及描述：消费金额（仅退订订单存在）。|
+    * discounts  费用项。 具体请参见表7。
+    * flexipurchaseCouponAmount  现金券金额，预留。
+    * couponAmount  代金券金额。
+    * storedCardAmount  储值卡金额，预留。
+    * commissionAmount  手续费（仅退订订单存在）。
+    * consumedAmount  消费金额（仅退订订单存在）。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * discounts  |参数名称：费用项。具体请参见表 DiscountItemV2。| |参数约束以及描述：费用项。具体请参见表 DiscountItemV2。|
-    * flexipurchaseCouponAmount  |参数名称：现金券金额，预留。| |参数的约束及描述：现金券金额，预留。|
-    * couponAmount  |参数名称：代金券金额。| |参数的约束及描述：代金券金额。|
-    * storedCardAmount  |参数名称：储值卡金额，预留。| |参数的约束及描述：储值卡金额，预留。|
-    * commissionAmount  |参数名称：手续费（仅退订订单存在）。| |参数的约束及描述：手续费（仅退订订单存在）。|
-    * consumedAmount  |参数名称：消费金额（仅退订订单存在）。| |参数的约束及描述：消费金额（仅退订订单存在）。|
+    * discounts  费用项。 具体请参见表7。
+    * flexipurchaseCouponAmount  现金券金额，预留。
+    * couponAmount  代金券金额。
+    * storedCardAmount  储值卡金额，预留。
+    * commissionAmount  手续费（仅退订订单存在）。
+    * consumedAmount  消费金额（仅退订订单存在）。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * discounts  |参数名称：费用项。具体请参见表 DiscountItemV2。| |参数约束以及描述：费用项。具体请参见表 DiscountItemV2。|
-    * flexipurchaseCouponAmount  |参数名称：现金券金额，预留。| |参数的约束及描述：现金券金额，预留。|
-    * couponAmount  |参数名称：代金券金额。| |参数的约束及描述：代金券金额。|
-    * storedCardAmount  |参数名称：储值卡金额，预留。| |参数的约束及描述：储值卡金额，预留。|
-    * commissionAmount  |参数名称：手续费（仅退订订单存在）。| |参数的约束及描述：手续费（仅退订订单存在）。|
-    * consumedAmount  |参数名称：消费金额（仅退订订单存在）。| |参数的约束及描述：消费金额（仅退订订单存在）。|
+    * discounts  费用项。 具体请参见表7。
+    * flexipurchaseCouponAmount  现金券金额，预留。
+    * couponAmount  代金券金额。
+    * storedCardAmount  储值卡金额，预留。
+    * commissionAmount  手续费（仅退订订单存在）。
+    * consumedAmount  消费金额（仅退订订单存在）。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * discounts  |参数名称：费用项。具体请参见表 DiscountItemV2。| |参数约束以及描述：费用项。具体请参见表 DiscountItemV2。|
-    * flexipurchaseCouponAmount  |参数名称：现金券金额，预留。| |参数的约束及描述：现金券金额，预留。|
-    * couponAmount  |参数名称：代金券金额。| |参数的约束及描述：代金券金额。|
-    * storedCardAmount  |参数名称：储值卡金额，预留。| |参数的约束及描述：储值卡金额，预留。|
-    * commissionAmount  |参数名称：手续费（仅退订订单存在）。| |参数的约束及描述：手续费（仅退订订单存在）。|
-    * consumedAmount  |参数名称：消费金额（仅退订订单存在）。| |参数的约束及描述：消费金额（仅退订订单存在）。|
+    * discounts  费用项。 具体请参见表7。
+    * flexipurchaseCouponAmount  现金券金额，预留。
+    * couponAmount  代金券金额。
+    * storedCardAmount  储值卡金额，预留。
+    * commissionAmount  手续费（仅退订订单存在）。
+    * consumedAmount  消费金额（仅退订订单存在）。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * discounts  |参数名称：费用项。具体请参见表 DiscountItemV2。| |参数约束以及描述：费用项。具体请参见表 DiscountItemV2。|
-    * flexipurchaseCouponAmount  |参数名称：现金券金额，预留。| |参数的约束及描述：现金券金额，预留。|
-    * couponAmount  |参数名称：代金券金额。| |参数的约束及描述：代金券金额。|
-    * storedCardAmount  |参数名称：储值卡金额，预留。| |参数的约束及描述：储值卡金额，预留。|
-    * commissionAmount  |参数名称：手续费（仅退订订单存在）。| |参数的约束及描述：手续费（仅退订订单存在）。|
-    * consumedAmount  |参数名称：消费金额（仅退订订单存在）。| |参数的约束及描述：消费金额（仅退订订单存在）。|
+    * discounts  费用项。 具体请参见表7。
+    * flexipurchaseCouponAmount  现金券金额，预留。
+    * couponAmount  代金券金额。
+    * storedCardAmount  储值卡金额，预留。
+    * commissionAmount  手续费（仅退订订单存在）。
+    * consumedAmount  消费金额（仅退订订单存在）。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets discounts
-    *  |参数名称：费用项。具体请参见表 DiscountItemV2。| |参数约束以及描述：费用项。具体请参见表 DiscountItemV2。|
+    *  费用项。 具体请参见表7。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\DiscountItemV2[]|null
     */
@@ -241,7 +241,7 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
     /**
     * Sets discounts
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\DiscountItemV2[]|null $discounts |参数名称：费用项。具体请参见表 DiscountItemV2。| |参数约束以及描述：费用项。具体请参见表 DiscountItemV2。|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\DiscountItemV2[]|null $discounts 费用项。 具体请参见表7。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets flexipurchaseCouponAmount
-    *  |参数名称：现金券金额，预留。| |参数的约束及描述：现金券金额，预留。|
+    *  现金券金额，预留。
     *
     * @return double|null
     */
@@ -265,7 +265,7 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
     /**
     * Sets flexipurchaseCouponAmount
     *
-    * @param double|null $flexipurchaseCouponAmount |参数名称：现金券金额，预留。| |参数的约束及描述：现金券金额，预留。|
+    * @param double|null $flexipurchaseCouponAmount 现金券金额，预留。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponAmount
-    *  |参数名称：代金券金额。| |参数的约束及描述：代金券金额。|
+    *  代金券金额。
     *
     * @return double|null
     */
@@ -289,7 +289,7 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
     /**
     * Sets couponAmount
     *
-    * @param double|null $couponAmount |参数名称：代金券金额。| |参数的约束及描述：代金券金额。|
+    * @param double|null $couponAmount 代金券金额。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets storedCardAmount
-    *  |参数名称：储值卡金额，预留。| |参数的约束及描述：储值卡金额，预留。|
+    *  储值卡金额，预留。
     *
     * @return double|null
     */
@@ -313,7 +313,7 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
     /**
     * Sets storedCardAmount
     *
-    * @param double|null $storedCardAmount |参数名称：储值卡金额，预留。| |参数的约束及描述：储值卡金额，预留。|
+    * @param double|null $storedCardAmount 储值卡金额，预留。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets commissionAmount
-    *  |参数名称：手续费（仅退订订单存在）。| |参数的约束及描述：手续费（仅退订订单存在）。|
+    *  手续费（仅退订订单存在）。
     *
     * @return double|null
     */
@@ -337,7 +337,7 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
     /**
     * Sets commissionAmount
     *
-    * @param double|null $commissionAmount |参数名称：手续费（仅退订订单存在）。| |参数的约束及描述：手续费（仅退订订单存在）。|
+    * @param double|null $commissionAmount 手续费（仅退订订单存在）。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumedAmount
-    *  |参数名称：消费金额（仅退订订单存在）。| |参数的约束及描述：消费金额（仅退订订单存在）。|
+    *  消费金额（仅退订订单存在）。
     *
     * @return double|null
     */
@@ -361,7 +361,7 @@ class AmountInfomationV2 implements ModelInterface, ArrayAccess
     /**
     * Sets consumedAmount
     *
-    * @param double|null $consumedAmount |参数名称：消费金额（仅退订订单存在）。| |参数的约束及描述：消费金额（仅退订订单存在）。|
+    * @param double|null $consumedAmount 消费金额（仅退订订单存在）。
     *
     * @return $this
     */

@@ -20,33 +20,33 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  |参数名称：ID标识，来源于请求中的ID| |参数约束及描述：ID标识，来源于请求中的ID|
-    * productId  |参数名称：产品ID| |参数约束及描述：产品ID|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识1：元|
+    * id  ID标识，来源于请求中的ID。
+    * productId  包年/包月产品的ID。
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * measureId  价格度量单位标识。 1：元
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
             'productId' => 'string',
-            'officialWebsiteAmount' => 'float',
+            'officialWebsiteAmount' => 'double',
             'measureId' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  |参数名称：ID标识，来源于请求中的ID| |参数约束及描述：ID标识，来源于请求中的ID|
-    * productId  |参数名称：产品ID| |参数约束及描述：产品ID|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识1：元|
+    * id  ID标识，来源于请求中的ID。
+    * productId  包年/包月产品的ID。
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * measureId  价格度量单位标识。 1：元
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
         'productId' => null,
-        'officialWebsiteAmount' => 'bigdecimal',
+        'officialWebsiteAmount' => 'double',
         'measureId' => 'int32'
     ];
 
@@ -73,10 +73,10 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  |参数名称：ID标识，来源于请求中的ID| |参数约束及描述：ID标识，来源于请求中的ID|
-    * productId  |参数名称：产品ID| |参数约束及描述：产品ID|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识1：元|
+    * id  ID标识，来源于请求中的ID。
+    * productId  包年/包月产品的ID。
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * measureId  价格度量单位标识。 1：元
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  |参数名称：ID标识，来源于请求中的ID| |参数约束及描述：ID标识，来源于请求中的ID|
-    * productId  |参数名称：产品ID| |参数约束及描述：产品ID|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识1：元|
+    * id  ID标识，来源于请求中的ID。
+    * productId  包年/包月产品的ID。
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * measureId  价格度量单位标识。 1：元
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  |参数名称：ID标识，来源于请求中的ID| |参数约束及描述：ID标识，来源于请求中的ID|
-    * productId  |参数名称：产品ID| |参数约束及描述：产品ID|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识1：元|
+    * id  ID标识，来源于请求中的ID。
+    * productId  包年/包月产品的ID。
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * measureId  价格度量单位标识。 1：元
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  |参数名称：ID标识，来源于请求中的ID| |参数约束及描述：ID标识，来源于请求中的ID|
+    *  ID标识，来源于请求中的ID。
     *
     * @return string|null
     */
@@ -231,7 +231,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id |参数名称：ID标识，来源于请求中的ID| |参数约束及描述：ID标识，来源于请求中的ID|
+    * @param string|null $id ID标识，来源于请求中的ID。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  |参数名称：产品ID| |参数约束及描述：产品ID|
+    *  包年/包月产品的ID。
     *
     * @return string|null
     */
@@ -255,7 +255,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId |参数名称：产品ID| |参数约束及描述：产品ID|
+    * @param string|null $productId 包年/包月产品的ID。
     *
     * @return $this
     */
@@ -267,9 +267,9 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets officialWebsiteAmount
-    *  |参数名称：官网价| |参数约束及描述：官网价|
+    *  包年/包月产品的官网价。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getOfficialWebsiteAmount()
     {
@@ -279,7 +279,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets officialWebsiteAmount
     *
-    * @param float|null $officialWebsiteAmount |参数名称：官网价| |参数约束及描述：官网价|
+    * @param double|null $officialWebsiteAmount 包年/包月产品的官网价。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：度量单位标识1：元|
+    *  价格度量单位标识。 1：元
     *
     * @return int|null
     */
@@ -303,7 +303,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId |参数名称：度量单位标识1：元|
+    * @param int|null $measureId 价格度量单位标识。 1：元
     *
     * @return $this
     */

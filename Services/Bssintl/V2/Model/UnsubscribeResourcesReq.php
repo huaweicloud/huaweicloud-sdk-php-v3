@@ -20,10 +20,10 @@ class UnsubscribeResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceIds  |参数名称：资源ID列表。最大支持1次性输入10个资源ID，只能输入主资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。| |参数约束以及描述：资源ID列表。最大支持1次性输入10个资源ID，只能输入主资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。|
-    * unsubscribeType  |参数名称：退订类型，取值如下：1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。| |参数的约束及描述：退订类型，取值如下：1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。|
-    * unsubscribeReasonType  |参数名称：退订理由分类，取值如下：1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他| |参数的约束及描述：退订理由分类，取值如下：1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他|
-    * unsubscribeReason  |参数名称：退订原因，一般由客户输入。| |参数约束及描述：退订原因，一般由客户输入。|
+    * resourceIds  资源ID列表。 最大支持1次性输入10个资源ID，只能输入主资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
+    * unsubscribeType  退订类型，取值如下： 1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。
+    * unsubscribeReasonType  退订理由分类，取值如下： 1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他
+    * unsubscribeReason  退订原因，一般由客户输入。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class UnsubscribeResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceIds  |参数名称：资源ID列表。最大支持1次性输入10个资源ID，只能输入主资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。| |参数约束以及描述：资源ID列表。最大支持1次性输入10个资源ID，只能输入主资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。|
-    * unsubscribeType  |参数名称：退订类型，取值如下：1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。| |参数的约束及描述：退订类型，取值如下：1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。|
-    * unsubscribeReasonType  |参数名称：退订理由分类，取值如下：1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他| |参数的约束及描述：退订理由分类，取值如下：1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他|
-    * unsubscribeReason  |参数名称：退订原因，一般由客户输入。| |参数约束及描述：退订原因，一般由客户输入。|
+    * resourceIds  资源ID列表。 最大支持1次性输入10个资源ID，只能输入主资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
+    * unsubscribeType  退订类型，取值如下： 1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。
+    * unsubscribeReasonType  退订理由分类，取值如下： 1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他
+    * unsubscribeReason  退订原因，一般由客户输入。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class UnsubscribeResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceIds  |参数名称：资源ID列表。最大支持1次性输入10个资源ID，只能输入主资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。| |参数约束以及描述：资源ID列表。最大支持1次性输入10个资源ID，只能输入主资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。|
-    * unsubscribeType  |参数名称：退订类型，取值如下：1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。| |参数的约束及描述：退订类型，取值如下：1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。|
-    * unsubscribeReasonType  |参数名称：退订理由分类，取值如下：1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他| |参数的约束及描述：退订理由分类，取值如下：1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他|
-    * unsubscribeReason  |参数名称：退订原因，一般由客户输入。| |参数约束及描述：退订原因，一般由客户输入。|
+    * resourceIds  资源ID列表。 最大支持1次性输入10个资源ID，只能输入主资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
+    * unsubscribeType  退订类型，取值如下： 1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。
+    * unsubscribeReasonType  退订理由分类，取值如下： 1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他
+    * unsubscribeReason  退订原因，一般由客户输入。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class UnsubscribeResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceIds  |参数名称：资源ID列表。最大支持1次性输入10个资源ID，只能输入主资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。| |参数约束以及描述：资源ID列表。最大支持1次性输入10个资源ID，只能输入主资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。|
-    * unsubscribeType  |参数名称：退订类型，取值如下：1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。| |参数的约束及描述：退订类型，取值如下：1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。|
-    * unsubscribeReasonType  |参数名称：退订理由分类，取值如下：1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他| |参数的约束及描述：退订理由分类，取值如下：1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他|
-    * unsubscribeReason  |参数名称：退订原因，一般由客户输入。| |参数约束及描述：退订原因，一般由客户输入。|
+    * resourceIds  资源ID列表。 最大支持1次性输入10个资源ID，只能输入主资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
+    * unsubscribeType  退订类型，取值如下： 1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。
+    * unsubscribeReasonType  退订理由分类，取值如下： 1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他
+    * unsubscribeReason  退订原因，一般由客户输入。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class UnsubscribeResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceIds  |参数名称：资源ID列表。最大支持1次性输入10个资源ID，只能输入主资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。| |参数约束以及描述：资源ID列表。最大支持1次性输入10个资源ID，只能输入主资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。|
-    * unsubscribeType  |参数名称：退订类型，取值如下：1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。| |参数的约束及描述：退订类型，取值如下：1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。|
-    * unsubscribeReasonType  |参数名称：退订理由分类，取值如下：1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他| |参数的约束及描述：退订理由分类，取值如下：1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他|
-    * unsubscribeReason  |参数名称：退订原因，一般由客户输入。| |参数约束及描述：退订原因，一般由客户输入。|
+    * resourceIds  资源ID列表。 最大支持1次性输入10个资源ID，只能输入主资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
+    * unsubscribeType  退订类型，取值如下： 1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。
+    * unsubscribeReasonType  退订理由分类，取值如下： 1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他
+    * unsubscribeReason  退订原因，一般由客户输入。
     *
     * @var string[]
     */
@@ -231,7 +231,7 @@ class UnsubscribeResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceIds
-    *  |参数名称：资源ID列表。最大支持1次性输入10个资源ID，只能输入主资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。| |参数约束以及描述：资源ID列表。最大支持1次性输入10个资源ID，只能输入主资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。|
+    *  资源ID列表。 最大支持1次性输入10个资源ID，只能输入主资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
     *
     * @return string[]
     */
@@ -243,7 +243,7 @@ class UnsubscribeResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets resourceIds
     *
-    * @param string[] $resourceIds |参数名称：资源ID列表。最大支持1次性输入10个资源ID，只能输入主资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。| |参数约束以及描述：资源ID列表。最大支持1次性输入10个资源ID，只能输入主资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。|
+    * @param string[] $resourceIds 资源ID列表。 最大支持1次性输入10个资源ID，只能输入主资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class UnsubscribeResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets unsubscribeType
-    *  |参数名称：退订类型，取值如下：1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。| |参数的约束及描述：退订类型，取值如下：1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。|
+    *  退订类型，取值如下： 1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。
     *
     * @return int
     */
@@ -267,7 +267,7 @@ class UnsubscribeResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets unsubscribeType
     *
-    * @param int $unsubscribeType |参数名称：退订类型，取值如下：1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。| |参数的约束及描述：退订类型，取值如下：1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。|
+    * @param int $unsubscribeType 退订类型，取值如下： 1：退订资源及其已续费周期。2：只退订资源已续费周期，不退订资源。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class UnsubscribeResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets unsubscribeReasonType
-    *  |参数名称：退订理由分类，取值如下：1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他| |参数的约束及描述：退订理由分类，取值如下：1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他|
+    *  退订理由分类，取值如下： 1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class UnsubscribeResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets unsubscribeReasonType
     *
-    * @param int|null $unsubscribeReasonType |参数名称：退订理由分类，取值如下：1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他| |参数的约束及描述：退订理由分类，取值如下：1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他|
+    * @param int|null $unsubscribeReasonType 退订理由分类，取值如下： 1：产品不好用2：产品功能无法满足需求3：不会操作/操作过于复杂4：对服务不满意5：其他
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class UnsubscribeResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets unsubscribeReason
-    *  |参数名称：退订原因，一般由客户输入。| |参数约束及描述：退订原因，一般由客户输入。|
+    *  退订原因，一般由客户输入。
     *
     * @return string|null
     */
@@ -315,7 +315,7 @@ class UnsubscribeResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets unsubscribeReason
     *
-    * @param string|null $unsubscribeReason |参数名称：退订原因，一般由客户输入。| |参数约束及描述：退订原因，一般由客户输入。|
+    * @param string|null $unsubscribeReason 退订原因，一般由客户输入。
     *
     * @return $this
     */

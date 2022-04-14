@@ -21,8 +21,8 @@ class ListSubCustomersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * customerInfos  |参数名称：客户信息列表。具体请参见表 CustomerInfo| |参数约束以及描述：客户信息列表。具体请参见表 CustomerInfo|
-    * count  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    * customerInfos  客户信息列表。 具体请参见表1。
+    * count  总记录数。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListSubCustomersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * customerInfos  |参数名称：客户信息列表。具体请参见表 CustomerInfo| |参数约束以及描述：客户信息列表。具体请参见表 CustomerInfo|
-    * count  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    * customerInfos  客户信息列表。 具体请参见表1。
+    * count  总记录数。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListSubCustomersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * customerInfos  |参数名称：客户信息列表。具体请参见表 CustomerInfo| |参数约束以及描述：客户信息列表。具体请参见表 CustomerInfo|
-    * count  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    * customerInfos  客户信息列表。 具体请参见表1。
+    * count  总记录数。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListSubCustomersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * customerInfos  |参数名称：客户信息列表。具体请参见表 CustomerInfo| |参数约束以及描述：客户信息列表。具体请参见表 CustomerInfo|
-    * count  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    * customerInfos  客户信息列表。 具体请参见表1。
+    * count  总记录数。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListSubCustomersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * customerInfos  |参数名称：客户信息列表。具体请参见表 CustomerInfo| |参数约束以及描述：客户信息列表。具体请参见表 CustomerInfo|
-    * count  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    * customerInfos  客户信息列表。 具体请参见表1。
+    * count  总记录数。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListSubCustomersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerInfos
-    *  |参数名称：客户信息列表。具体请参见表 CustomerInfo| |参数约束以及描述：客户信息列表。具体请参见表 CustomerInfo|
+    *  客户信息列表。 具体请参见表1。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\CustomerInformation[]|null
     */
@@ -198,7 +198,7 @@ class ListSubCustomersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets customerInfos
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\CustomerInformation[]|null $customerInfos |参数名称：客户信息列表。具体请参见表 CustomerInfo| |参数约束以及描述：客户信息列表。具体请参见表 CustomerInfo|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\CustomerInformation[]|null $customerInfos 客户信息列表。 具体请参见表1。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListSubCustomersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    *  总记录数。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListSubCustomersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    * @param int|null $count 总记录数。
     *
     * @return $this
     */

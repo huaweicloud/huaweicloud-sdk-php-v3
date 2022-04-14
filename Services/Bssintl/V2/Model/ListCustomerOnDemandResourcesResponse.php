@@ -21,8 +21,8 @@ class ListCustomerOnDemandResourcesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resources  |参数名称：客户按需资源列表。CustomerOnDemandResource| |参数约束以及描述：客户按需资源列表。CustomerOnDemandResource|
-    * totalCount  |参数名称：查询总数| |参数的约束及描述：查询总数|
+    * resources  客户资源列表。 具体参见表2。
+    * totalCount  查询总数。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListCustomerOnDemandResourcesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resources  |参数名称：客户按需资源列表。CustomerOnDemandResource| |参数约束以及描述：客户按需资源列表。CustomerOnDemandResource|
-    * totalCount  |参数名称：查询总数| |参数的约束及描述：查询总数|
+    * resources  客户资源列表。 具体参见表2。
+    * totalCount  查询总数。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListCustomerOnDemandResourcesResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resources  |参数名称：客户按需资源列表。CustomerOnDemandResource| |参数约束以及描述：客户按需资源列表。CustomerOnDemandResource|
-    * totalCount  |参数名称：查询总数| |参数的约束及描述：查询总数|
+    * resources  客户资源列表。 具体参见表2。
+    * totalCount  查询总数。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListCustomerOnDemandResourcesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resources  |参数名称：客户按需资源列表。CustomerOnDemandResource| |参数约束以及描述：客户按需资源列表。CustomerOnDemandResource|
-    * totalCount  |参数名称：查询总数| |参数的约束及描述：查询总数|
+    * resources  客户资源列表。 具体参见表2。
+    * totalCount  查询总数。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListCustomerOnDemandResourcesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resources  |参数名称：客户按需资源列表。CustomerOnDemandResource| |参数约束以及描述：客户按需资源列表。CustomerOnDemandResource|
-    * totalCount  |参数名称：查询总数| |参数的约束及描述：查询总数|
+    * resources  客户资源列表。 具体参见表2。
+    * totalCount  查询总数。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListCustomerOnDemandResourcesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets resources
-    *  |参数名称：客户按需资源列表。CustomerOnDemandResource| |参数约束以及描述：客户按需资源列表。CustomerOnDemandResource|
+    *  客户资源列表。 具体参见表2。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\CustomerOnDemandResource[]|null
     */
@@ -198,7 +198,7 @@ class ListCustomerOnDemandResourcesResponse implements ModelInterface, ArrayAcce
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\CustomerOnDemandResource[]|null $resources |参数名称：客户按需资源列表。CustomerOnDemandResource| |参数约束以及描述：客户按需资源列表。CustomerOnDemandResource|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\CustomerOnDemandResource[]|null $resources 客户资源列表。 具体参见表2。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListCustomerOnDemandResourcesResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets totalCount
-    *  |参数名称：查询总数| |参数的约束及描述：查询总数|
+    *  查询总数。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListCustomerOnDemandResourcesResponse implements ModelInterface, ArrayAcce
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount |参数名称：查询总数| |参数的约束及描述：查询总数|
+    * @param int|null $totalCount 查询总数。
     *
     * @return $this
     */

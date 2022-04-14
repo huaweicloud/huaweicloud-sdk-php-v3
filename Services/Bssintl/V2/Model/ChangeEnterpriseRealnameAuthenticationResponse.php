@@ -21,7 +21,7 @@ class ChangeEnterpriseRealnameAuthenticationResponse implements ModelInterface, 
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isReview  |参数名称：是否需要转人工审核，只有状态码为200才返回该参数：0：不需要1：需要| |参数的约束及描述：是否需要转人工审核，只有状态码为200才返回该参数：0：不需要1：需要|
+    * isReview  是否需要转人工审核，只有状态码为200才返回该参数。 0：不需要1：需要
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ChangeEnterpriseRealnameAuthenticationResponse implements ModelInterface, 
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isReview  |参数名称：是否需要转人工审核，只有状态码为200才返回该参数：0：不需要1：需要| |参数的约束及描述：是否需要转人工审核，只有状态码为200才返回该参数：0：不需要1：需要|
+    * isReview  是否需要转人工审核，只有状态码为200才返回该参数。 0：不需要1：需要
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ChangeEnterpriseRealnameAuthenticationResponse implements ModelInterface, 
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isReview  |参数名称：是否需要转人工审核，只有状态码为200才返回该参数：0：不需要1：需要| |参数的约束及描述：是否需要转人工审核，只有状态码为200才返回该参数：0：不需要1：需要|
+    * isReview  是否需要转人工审核，只有状态码为200才返回该参数。 0：不需要1：需要
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ChangeEnterpriseRealnameAuthenticationResponse implements ModelInterface, 
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isReview  |参数名称：是否需要转人工审核，只有状态码为200才返回该参数：0：不需要1：需要| |参数的约束及描述：是否需要转人工审核，只有状态码为200才返回该参数：0：不需要1：需要|
+    * isReview  是否需要转人工审核，只有状态码为200才返回该参数。 0：不需要1：需要
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ChangeEnterpriseRealnameAuthenticationResponse implements ModelInterface, 
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isReview  |参数名称：是否需要转人工审核，只有状态码为200才返回该参数：0：不需要1：需要| |参数的约束及描述：是否需要转人工审核，只有状态码为200才返回该参数：0：不需要1：需要|
+    * isReview  是否需要转人工审核，只有状态码为200才返回该参数。 0：不需要1：需要
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ChangeEnterpriseRealnameAuthenticationResponse implements ModelInterface, 
 
     /**
     * Gets isReview
-    *  |参数名称：是否需要转人工审核，只有状态码为200才返回该参数：0：不需要1：需要| |参数的约束及描述：是否需要转人工审核，只有状态码为200才返回该参数：0：不需要1：需要|
+    *  是否需要转人工审核，只有状态码为200才返回该参数。 0：不需要1：需要
     *
     * @return int|null
     */
@@ -187,7 +187,7 @@ class ChangeEnterpriseRealnameAuthenticationResponse implements ModelInterface, 
     /**
     * Sets isReview
     *
-    * @param int|null $isReview |参数名称：是否需要转人工审核，只有状态码为200才返回该参数：0：不需要1：需要| |参数的约束及描述：是否需要转人工审核，只有状态码为200才返回该参数：0：不需要1：需要|
+    * @param int|null $isReview 是否需要转人工审核，只有状态码为200才返回该参数。 0：不需要1：需要
     *
     * @return $this
     */

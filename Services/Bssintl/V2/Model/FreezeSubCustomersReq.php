@@ -20,8 +20,8 @@ class FreezeSubCustomersReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * customerIds  |参数名称：需要冻结的客户ID列表。| |参数约束以及描述：需要冻结的客户ID列表。|
-    * reason  |参数名称：冻结原因。| |参数约束及描述：冻结原因。|
+    * customerIds  需要冻结的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
+    * reason  冻结原因。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class FreezeSubCustomersReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * customerIds  |参数名称：需要冻结的客户ID列表。| |参数约束以及描述：需要冻结的客户ID列表。|
-    * reason  |参数名称：冻结原因。| |参数约束及描述：冻结原因。|
+    * customerIds  需要冻结的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
+    * reason  冻结原因。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class FreezeSubCustomersReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * customerIds  |参数名称：需要冻结的客户ID列表。| |参数约束以及描述：需要冻结的客户ID列表。|
-    * reason  |参数名称：冻结原因。| |参数约束及描述：冻结原因。|
+    * customerIds  需要冻结的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
+    * reason  冻结原因。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class FreezeSubCustomersReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * customerIds  |参数名称：需要冻结的客户ID列表。| |参数约束以及描述：需要冻结的客户ID列表。|
-    * reason  |参数名称：冻结原因。| |参数约束及描述：冻结原因。|
+    * customerIds  需要冻结的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
+    * reason  冻结原因。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class FreezeSubCustomersReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * customerIds  |参数名称：需要冻结的客户ID列表。| |参数约束以及描述：需要冻结的客户ID列表。|
-    * reason  |参数名称：冻结原因。| |参数约束及描述：冻结原因。|
+    * customerIds  需要冻结的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
+    * reason  冻结原因。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class FreezeSubCustomersReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerIds
-    *  |参数名称：需要冻结的客户ID列表。| |参数约束以及描述：需要冻结的客户ID列表。|
+    *  需要冻结的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     *
     * @return string[]
     */
@@ -209,7 +209,7 @@ class FreezeSubCustomersReq implements ModelInterface, ArrayAccess
     /**
     * Sets customerIds
     *
-    * @param string[] $customerIds |参数名称：需要冻结的客户ID列表。| |参数约束以及描述：需要冻结的客户ID列表。|
+    * @param string[] $customerIds 需要冻结的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class FreezeSubCustomersReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets reason
-    *  |参数名称：冻结原因。| |参数约束及描述：冻结原因。|
+    *  冻结原因。
     *
     * @return string
     */
@@ -233,7 +233,7 @@ class FreezeSubCustomersReq implements ModelInterface, ArrayAccess
     /**
     * Sets reason
     *
-    * @param string $reason |参数名称：冻结原因。| |参数约束及描述：冻结原因。|
+    * @param string $reason 冻结原因。
     *
     * @return $this
     */

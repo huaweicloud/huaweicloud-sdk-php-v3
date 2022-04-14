@@ -24,6 +24,8 @@ class RuleCondition implements ModelInterface, ArrayAccess
     * devicePropertyCondition  devicePropertyCondition
     * simpleTimerCondition  simpleTimerCondition
     * dailyTimerCondition  dailyTimerCondition
+    * deviceMessageCondition  deviceMessageCondition
+    * deviceStatusCondition  deviceStatusCondition
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class RuleCondition implements ModelInterface, ArrayAccess
             'type' => 'string',
             'devicePropertyCondition' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DeviceDataCondition',
             'simpleTimerCondition' => '\HuaweiCloud\SDK\IoTDA\V5\Model\SimpleTimerType',
-            'dailyTimerCondition' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DailyTimerType'
+            'dailyTimerCondition' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DailyTimerType',
+            'deviceMessageCondition' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DeviceMessageCondition',
+            'deviceStatusCondition' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DeviceStatusCondition'
     ];
 
     /**
@@ -40,6 +44,8 @@ class RuleCondition implements ModelInterface, ArrayAccess
     * devicePropertyCondition  devicePropertyCondition
     * simpleTimerCondition  simpleTimerCondition
     * dailyTimerCondition  dailyTimerCondition
+    * deviceMessageCondition  deviceMessageCondition
+    * deviceStatusCondition  deviceStatusCondition
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class RuleCondition implements ModelInterface, ArrayAccess
         'type' => null,
         'devicePropertyCondition' => null,
         'simpleTimerCondition' => null,
-        'dailyTimerCondition' => null
+        'dailyTimerCondition' => null,
+        'deviceMessageCondition' => null,
+        'deviceStatusCondition' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class RuleCondition implements ModelInterface, ArrayAccess
     * devicePropertyCondition  devicePropertyCondition
     * simpleTimerCondition  simpleTimerCondition
     * dailyTimerCondition  dailyTimerCondition
+    * deviceMessageCondition  deviceMessageCondition
+    * deviceStatusCondition  deviceStatusCondition
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class RuleCondition implements ModelInterface, ArrayAccess
             'type' => 'type',
             'devicePropertyCondition' => 'device_property_condition',
             'simpleTimerCondition' => 'simple_timer_condition',
-            'dailyTimerCondition' => 'daily_timer_condition'
+            'dailyTimerCondition' => 'daily_timer_condition',
+            'deviceMessageCondition' => 'device_message_condition',
+            'deviceStatusCondition' => 'device_status_condition'
     ];
 
     /**
@@ -93,6 +105,8 @@ class RuleCondition implements ModelInterface, ArrayAccess
     * devicePropertyCondition  devicePropertyCondition
     * simpleTimerCondition  simpleTimerCondition
     * dailyTimerCondition  dailyTimerCondition
+    * deviceMessageCondition  deviceMessageCondition
+    * deviceStatusCondition  deviceStatusCondition
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class RuleCondition implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'devicePropertyCondition' => 'setDevicePropertyCondition',
             'simpleTimerCondition' => 'setSimpleTimerCondition',
-            'dailyTimerCondition' => 'setDailyTimerCondition'
+            'dailyTimerCondition' => 'setDailyTimerCondition',
+            'deviceMessageCondition' => 'setDeviceMessageCondition',
+            'deviceStatusCondition' => 'setDeviceStatusCondition'
     ];
 
     /**
@@ -109,6 +125,8 @@ class RuleCondition implements ModelInterface, ArrayAccess
     * devicePropertyCondition  devicePropertyCondition
     * simpleTimerCondition  simpleTimerCondition
     * dailyTimerCondition  dailyTimerCondition
+    * deviceMessageCondition  deviceMessageCondition
+    * deviceStatusCondition  deviceStatusCondition
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class RuleCondition implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'devicePropertyCondition' => 'getDevicePropertyCondition',
             'simpleTimerCondition' => 'getSimpleTimerCondition',
-            'dailyTimerCondition' => 'getDailyTimerCondition'
+            'dailyTimerCondition' => 'getDailyTimerCondition',
+            'deviceMessageCondition' => 'getDeviceMessageCondition',
+            'deviceStatusCondition' => 'getDeviceStatusCondition'
     ];
 
     /**
@@ -181,6 +201,8 @@ class RuleCondition implements ModelInterface, ArrayAccess
         $this->container['devicePropertyCondition'] = isset($data['devicePropertyCondition']) ? $data['devicePropertyCondition'] : null;
         $this->container['simpleTimerCondition'] = isset($data['simpleTimerCondition']) ? $data['simpleTimerCondition'] : null;
         $this->container['dailyTimerCondition'] = isset($data['dailyTimerCondition']) ? $data['dailyTimerCondition'] : null;
+        $this->container['deviceMessageCondition'] = isset($data['deviceMessageCondition']) ? $data['deviceMessageCondition'] : null;
+        $this->container['deviceStatusCondition'] = isset($data['deviceStatusCondition']) ? $data['deviceStatusCondition'] : null;
     }
 
     /**
@@ -304,6 +326,54 @@ class RuleCondition implements ModelInterface, ArrayAccess
     public function setDailyTimerCondition($dailyTimerCondition)
     {
         $this->container['dailyTimerCondition'] = $dailyTimerCondition;
+        return $this;
+    }
+
+    /**
+    * Gets deviceMessageCondition
+    *  deviceMessageCondition
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceMessageCondition|null
+    */
+    public function getDeviceMessageCondition()
+    {
+        return $this->container['deviceMessageCondition'];
+    }
+
+    /**
+    * Sets deviceMessageCondition
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceMessageCondition|null $deviceMessageCondition deviceMessageCondition
+    *
+    * @return $this
+    */
+    public function setDeviceMessageCondition($deviceMessageCondition)
+    {
+        $this->container['deviceMessageCondition'] = $deviceMessageCondition;
+        return $this;
+    }
+
+    /**
+    * Gets deviceStatusCondition
+    *  deviceStatusCondition
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceStatusCondition|null
+    */
+    public function getDeviceStatusCondition()
+    {
+        return $this->container['deviceStatusCondition'];
+    }
+
+    /**
+    * Sets deviceStatusCondition
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceStatusCondition|null $deviceStatusCondition deviceStatusCondition
+    *
+    * @return $this
+    */
+    public function setDeviceStatusCondition($deviceStatusCondition)
+    {
+        $this->container['deviceStatusCondition'] = $deviceStatusCondition;
         return $this;
     }
 

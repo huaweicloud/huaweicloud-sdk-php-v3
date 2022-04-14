@@ -583,7 +583,7 @@ class BssintlAsyncClient extends Client
     }
 
     /**
-     * 冻结伙伴子客户
+     * 冻结客户账号
      * 功能描述：冻结伙伴子客户
      *
      * @param $request 请求对象
@@ -837,9 +837,6 @@ class BssintlAsyncClient extends Client
         }
         if ($localVarParams['paymentTimeEnd'] !== null) {
             $queryParams['payment_time_end'] = $localVarParams['paymentTimeEnd'];
-        }
-        if ($localVarParams['indirectPartnerId'] !== null) {
-            $queryParams['indirect_partner_id'] = $localVarParams['indirectPartnerId'];
         }
 
         if ($multipart) {
@@ -1172,6 +1169,77 @@ class BssintlAsyncClient extends Client
     }
 
     /**
+     * 查询发票列表
+     * 功能描述：查询发票列表
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listInvoicesAsync($request)
+    {
+        return $this->listInvoicesAsyncWithHttpInfo($request);
+    }
+    
+    public function listInvoicesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{domain_id}/payments/intl-invoices';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListInvoicesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListInvoicesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询使用量单位列表
      * 功能描述：伙伴在伙伴销售平台上查询资源使用量的度量单位及名称，度量单位类型等。
      *
@@ -1230,6 +1298,77 @@ class BssintlAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListMeasureUnitsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListMeasureUnitsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询消费汇总(客户)
+     * 功能描述：客户可以查询自身的消费汇总单的功能，消费按月汇总。
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listMonthlyExpendituresAsync($request)
+    {
+        return $this->listMonthlyExpendituresAsyncWithHttpInfo($request);
+    }
+    
+    public function listMonthlyExpendituresAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{domain_id}/customer/account-mgr/bill/monthly-sum';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['cycle'] !== null) {
+            $queryParams['cycle'] = $localVarParams['cycle'];
+        }
+        if ($localVarParams['cloudServiceTypeCode'] !== null) {
+            $queryParams['cloud_service_type_code'] = $localVarParams['cloudServiceTypeCode'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListMonthlyExpendituresResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListMonthlyExpendituresRequest',
             $asyncRequest = true);
     }
 
@@ -1544,8 +1683,8 @@ class BssintlAsyncClient extends Client
     }
 
     /**
-     * 查询资源类型列表(新)
-     * 功能描述：客户在客户自建平台查询资源类型的列表。
+     * 查询资源类型列表
+     * 伙伴在伙伴销售平台查询资源类型的列表。
      *
      * @param $request 请求对象
      * @return response
@@ -1571,11 +1710,11 @@ class BssintlAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
@@ -1642,11 +1781,11 @@ class BssintlAsyncClient extends Client
         if ($localVarParams['serviceTypeCode'] !== null) {
             $queryParams['service_type_code'] = $localVarParams['serviceTypeCode'];
         }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
@@ -1683,8 +1822,8 @@ class BssintlAsyncClient extends Client
     }
 
     /**
-     * 查询云服务类型列表(新)
-     * 功能描述：伙伴在伙伴销售平台查询云服务类型的列表。
+     * 查询云服务类型列表
+     * 伙伴在伙伴销售平台查询云服务类型的列表。
      *
      * @param $request 请求对象
      * @return response
@@ -1710,11 +1849,11 @@ class BssintlAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
@@ -1752,7 +1891,7 @@ class BssintlAsyncClient extends Client
 
     /**
      * 查询优惠券列表
-     * 功能描述：伙伴可以查询自身的优惠券信息。
+     * 功能描述：伙伴/客户可以查询自身的优惠券信息。
      *
      * @param $request 请求对象
      * @return response
@@ -1807,9 +1946,6 @@ class BssintlAsyncClient extends Client
         }
         if ($localVarParams['sourceId'] !== null) {
             $queryParams['source_id'] = $localVarParams['sourceId'];
-        }
-        if ($localVarParams['indirectPartnerId'] !== null) {
-            $queryParams['indirect_partner_id'] = $localVarParams['indirectPartnerId'];
         }
 
         if ($multipart) {
@@ -2101,7 +2237,7 @@ class BssintlAsyncClient extends Client
 
     /**
      * 发送验证码
-     * 功能描述：客户注册时，如果填写了手机号，可以向对应的手机发送注册验证码，校验信息的正确性。使用个人银行卡方式进行实名认证时，通过该接口向指定的手机发送验证码。
+     * 功能描述：客户注册时，如果填写了邮箱，可以向对应的邮箱发送注册验证码，校验信息的正确性。
      *
      * @param $request 请求对象
      * @return response
@@ -2163,7 +2299,7 @@ class BssintlAsyncClient extends Client
 
     /**
      * 查询账户余额
-     * 功能描述：查询账户余额
+     * 功能描述：客户可以查询自身的账户余额。
      *
      * @param $request 请求对象
      * @return response
@@ -2221,86 +2357,6 @@ class BssintlAsyncClient extends Client
     }
 
     /**
-     * 查询汇总账单
-     * 功能描述：客户在客户自建平台查询自身的消费汇总账单，此账单按月汇总消费数据。
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showCustomerMonthlySumAsync($request)
-    {
-        return $this->showCustomerMonthlySumAsyncWithHttpInfo($request);
-    }
-    
-    public function showCustomerMonthlySumAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2/bills/customer-bills/monthly-sum';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['billCycle'] !== null) {
-            $queryParams['bill_cycle'] = $localVarParams['billCycle'];
-        }
-        if ($localVarParams['serviceTypeCode'] !== null) {
-            $queryParams['service_type_code'] = $localVarParams['serviceTypeCode'];
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['method'] !== null) {
-            $queryParams['method'] = $localVarParams['method'];
-        }
-        if ($localVarParams['subCustomerId'] !== null) {
-            $queryParams['sub_customer_id'] = $localVarParams['subCustomerId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowCustomerMonthlySumResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowCustomerMonthlySumRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 查询订单详情
      * 功能描述：客户可以查看订单详情
      *
@@ -2333,9 +2389,6 @@ class BssintlAsyncClient extends Client
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['indirectPartnerId'] !== null) {
-            $queryParams['indirect_partner_id'] = $localVarParams['indirectPartnerId'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];
@@ -2561,7 +2614,7 @@ class BssintlAsyncClient extends Client
     }
 
     /**
-     * 解冻伙伴子客户
+     * 解冻客户账号
      * 功能描述：解冻伙伴子客户
      *
      * @param $request 请求对象

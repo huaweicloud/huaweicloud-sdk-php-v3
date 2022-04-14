@@ -20,28 +20,28 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识1：元|
-    * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * measureId  价格度量单位标识。 1：元
+    * productRatingResults  产品询价结果，具体参见表5。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'officialWebsiteAmount' => 'float',
+            'officialWebsiteAmount' => 'double',
             'measureId' => 'int',
             'productRatingResults' => '\HuaweiCloud\SDK\Bssintl\V2\Model\PeriodProductOfficialRatingResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识1：元|
-    * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * measureId  价格度量单位标识。 1：元
+    * productRatingResults  产品询价结果，具体参见表5。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'officialWebsiteAmount' => 'bigdecimal',
+        'officialWebsiteAmount' => 'double',
         'measureId' => 'int32',
         'productRatingResults' => null
     ];
@@ -69,9 +69,9 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识1：元|
-    * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * measureId  价格度量单位标识。 1：元
+    * productRatingResults  产品询价结果，具体参见表5。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识1：元|
-    * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * measureId  价格度量单位标识。 1：元
+    * productRatingResults  产品询价结果，具体参见表5。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识1：元|
-    * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * measureId  价格度量单位标识。 1：元
+    * productRatingResults  产品询价结果，具体参见表5。
     *
     * @var string[]
     */
@@ -196,9 +196,9 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets officialWebsiteAmount
-    *  |参数名称：官网价| |参数约束及描述：官网价|
+    *  包年/包月产品的官网价。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getOfficialWebsiteAmount()
     {
@@ -208,7 +208,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets officialWebsiteAmount
     *
-    * @param float|null $officialWebsiteAmount |参数名称：官网价| |参数约束及描述：官网价|
+    * @param double|null $officialWebsiteAmount 包年/包月产品的官网价。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：度量单位标识1：元|
+    *  价格度量单位标识。 1：元
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId |参数名称：度量单位标识1：元|
+    * @param int|null $measureId 价格度量单位标识。 1：元
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets productRatingResults
-    *  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+    *  产品询价结果，具体参见表5。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\PeriodProductOfficialRatingResult[]|null
     */
@@ -256,7 +256,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets productRatingResults
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\PeriodProductOfficialRatingResult[]|null $productRatingResults |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\PeriodProductOfficialRatingResult[]|null $productRatingResults 产品询价结果，具体参见表5。
     *
     * @return $this
     */

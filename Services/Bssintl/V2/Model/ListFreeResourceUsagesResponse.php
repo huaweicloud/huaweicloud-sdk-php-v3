@@ -21,7 +21,7 @@ class ListFreeResourceUsagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * freeResources  |参数名称：免费资源套餐信息列表（按订单、产品等信息汇总）| |参数约束以及描述：免费资源套餐信息列表（按订单、产品等信息汇总）|
+    * freeResources  资源套餐内的资源项信息（资源项ID级的详情），具体参见表2。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListFreeResourceUsagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * freeResources  |参数名称：免费资源套餐信息列表（按订单、产品等信息汇总）| |参数约束以及描述：免费资源套餐信息列表（按订单、产品等信息汇总）|
+    * freeResources  资源套餐内的资源项信息（资源项ID级的详情），具体参见表2。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListFreeResourceUsagesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * freeResources  |参数名称：免费资源套餐信息列表（按订单、产品等信息汇总）| |参数约束以及描述：免费资源套餐信息列表（按订单、产品等信息汇总）|
+    * freeResources  资源套餐内的资源项信息（资源项ID级的详情），具体参见表2。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListFreeResourceUsagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * freeResources  |参数名称：免费资源套餐信息列表（按订单、产品等信息汇总）| |参数约束以及描述：免费资源套餐信息列表（按订单、产品等信息汇总）|
+    * freeResources  资源套餐内的资源项信息（资源项ID级的详情），具体参见表2。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListFreeResourceUsagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * freeResources  |参数名称：免费资源套餐信息列表（按订单、产品等信息汇总）| |参数约束以及描述：免费资源套餐信息列表（按订单、产品等信息汇总）|
+    * freeResources  资源套餐内的资源项信息（资源项ID级的详情），具体参见表2。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListFreeResourceUsagesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeResources
-    *  |参数名称：免费资源套餐信息列表（按订单、产品等信息汇总）| |参数约束以及描述：免费资源套餐信息列表（按订单、产品等信息汇总）|
+    *  资源套餐内的资源项信息（资源项ID级的详情），具体参见表2。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\FreeResourceDetail[]|null
     */
@@ -187,7 +187,7 @@ class ListFreeResourceUsagesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets freeResources
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\FreeResourceDetail[]|null $freeResources |参数名称：免费资源套餐信息列表（按订单、产品等信息汇总）| |参数约束以及描述：免费资源套餐信息列表（按订单、产品等信息汇总）|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\FreeResourceDetail[]|null $freeResources 资源套餐内的资源项信息（资源项ID级的详情），具体参见表2。
     *
     * @return $this
     */

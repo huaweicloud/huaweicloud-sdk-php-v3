@@ -761,8 +761,8 @@ class CdnAsyncClient extends Client
     }
 
     /**
-     * 查询域名配置接口
-     * 查询域名配置接口，支持配置回源请求头、http header配置、url鉴权
+     * 查询域名全量配置
+     * 查询域名全量配置接口，支持配置回源请求头、http header配置、url鉴权、证书设置等
      *
      * @param $request 请求对象
      * @return response
@@ -1998,8 +1998,8 @@ class CdnAsyncClient extends Client
     }
 
     /**
-     * 修改域名全量配置接口
-     * 修改域名全量配置接口，支持配置回源请求头、http header配置、url鉴权
+     * 修改域名全量配置
+     * 修改域名全量配置接口，支持配置回源请求头、http header配置、url鉴权、证书设置等
      *
      * @param $request 请求对象
      * @return response

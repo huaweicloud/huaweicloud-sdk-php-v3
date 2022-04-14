@@ -20,7 +20,7 @@ class ListOrderDiscountsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * orderId  订单ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListOrderDiscountsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * orderId  订单ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListOrderDiscountsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * orderId  订单ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListOrderDiscountsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * orderId  订单ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListOrderDiscountsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderId  |参数名称：订单ID。| |参数的约束及描述：|
+    * orderId  订单ID。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ListOrderDiscountsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  |参数名称：订单ID。| |参数的约束及描述：|
+    *  订单ID。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ListOrderDiscountsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string $orderId |参数名称：订单ID。| |参数的约束及描述：|
+    * @param string $orderId 订单ID。
     *
     * @return $this
     */

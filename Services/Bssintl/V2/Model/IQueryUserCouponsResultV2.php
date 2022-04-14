@@ -20,34 +20,34 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * couponId  |参数名称：优惠券实例ID。| |参数约束及描述：优惠券实例ID。|
-    * couponCode  |参数名称：优惠券编码。| |参数约束及描述：优惠券编码。|
-    * status  |参数名称：优惠券状态：1：未激活；2：待使用；3：已使用；4：已过期。| |参数的约束及描述：优惠券状态：1：未激活；2：待使用；3：已使用；4：已过期。|
-    * customerId  |参数名称：客户ID| |参数约束及描述：客户ID|
-    * couponType  |参数名称：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。| |参数的约束及描述：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。|
-    * measureId  |参数名称：度量单位。1：元| |参数的约束及描述：度量单位。1：元|
-    * faceValue  |参数名称：优惠券金额。| |参数的约束及描述：优惠券金额。|
-    * validTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数约束及描述：促销计划ID。|
-    * planName  |参数名称：促销计划名称。| |参数约束及描述：促销计划名称。|
-    * planDesc  |参数名称：促销计划描述。| |参数约束及描述：促销计划描述。|
-    * mediaType  |参数名称：介质类型。| |参数的约束及描述：介质类型。|
-    * fetchMethod  |参数名称：获取方式：1：线上领取；2：线上兑换；3：线上发放；4：线下获取；5：事件赠送。| |参数的约束及描述：获取方式：1：线上领取；2：线上兑换；3：线上发放；4：线下获取；5：事件赠送。|
-    * useLimits  |参数名称：优惠券使用限制。具体请参见表 ICouponUseLimitInfo。| |参数约束以及描述：优惠券使用限制。具体请参见表 ICouponUseLimitInfo。|
-    * activeTime  |参数名称：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * reserveTime  |参数名称：使用时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：使用时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * promotionId  |参数名称：促销ID。| |参数约束及描述：促销ID。|
-    * createTime  |参数名称：创建时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：创建时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * couponVersion  |参数名称：优惠券版本：1：老版本，老版本优惠券只能使用一次；2：新版本，新版本优惠券可以反复使用。| |参数的约束及描述：优惠券版本：1：老版本，老版本优惠券只能使用一次；2：新版本，新版本优惠券可以反复使用。|
-    * balance  |参数名称：余额。如果为老版本优惠券，该值为空| |参数的约束及描述：余额。如果为老版本优惠券，该值为空|
-    * lockOrderId  |参数名称：锁定优惠券的订单ID。如果为老版本优惠券，该值为空。| |参数约束及描述：锁定优惠券的订单ID。如果为老版本优惠券，该值为空。|
-    * couponUsage  |参数名称：优惠券用途。| |参数约束及描述：优惠券用途。|
-    * isFrozen  |参数名称：优惠券是否冻结：0：否1：是可用优惠券接口返回时不包括冻结状态的优惠券。| |参数约束及描述：优惠券是否冻结：0：否1：是可用优惠券接口返回时不包括冻结状态的优惠券。|
-    * currency  |参数名称：币种。| |参数约束及描述：币种。|
-    * extendParam1  |参数名称：扩展字段。| |参数约束及描述：扩展字段。|
-    * sourceId  |参数名称：发放人标识| |参数约束及描述：用于标识优惠券唯一的发放人； 云豆兑换优惠券时sourceId填写云豆计划Id； 累计送优惠券时sourceId填写累计送计划Id； 抽奖送优惠券时sourceId填写抽奖计划Id； 事件送优惠券时sourceId填写事件计划Id； 定制优惠券时sourceId填写创建人Id；|
+    * couponId  优惠券实例ID。
+    * couponCode  优惠券编码。
+    * status  优惠券状态： 1：未激活2：待使用3：已使用4：已过期5：已回收
+    * customerId  客户账号ID。
+    * couponType  优惠券类型： 1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
+    * measureId  度量单位。 1：元
+    * faceValue  优惠券金额。
+    * validTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * orderId  订单ID。
+    * promotionPlanId  促销计划ID。
+    * planName  促销计划名称。
+    * planDesc  促销计划描述。
+    * mediaType  介质类型。 1：电子券2：纸质券
+    * fetchMethod  获取方式： 1：线上领取2：线上兑换3：线上发放4：线下获取5：事件赠送
+    * useLimits  优惠券使用限制。 具体请参见表3。
+    * activeTime  激活时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * reserveTime  使用时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * promotionId  促销ID。
+    * createTime  创建时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * couponVersion  优惠券版本： 1：老版本，老版本优惠券只能使用一次2：新版本，新版本优惠券可以反复使用
+    * balance  优惠券余额。单位：元。 如果为老版本优惠券，该值为空。
+    * lockOrderId  锁定优惠券的订单ID。 如果为老版本优惠券，该值为空。
+    * couponUsage  优惠券用途。
+    * isFrozen  优惠券是否冻结： 0：否1：是
+    * currency  币种。 USD：美元
+    * extendParam1  扩展字段。
+    * sourceId  发券来源。 如果是合作伙伴发送的券，此处为伙伴ID。如果是活动发券，此处为活动ID：云豆兑换优惠券：云豆计划ID累计送优惠券：累计送计划ID抽奖送优惠券：抽奖计划ID事件送优惠券：事件计划ID定制优惠券：创建人ID
     *
     * @var string[]
     */
@@ -84,34 +84,34 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * couponId  |参数名称：优惠券实例ID。| |参数约束及描述：优惠券实例ID。|
-    * couponCode  |参数名称：优惠券编码。| |参数约束及描述：优惠券编码。|
-    * status  |参数名称：优惠券状态：1：未激活；2：待使用；3：已使用；4：已过期。| |参数的约束及描述：优惠券状态：1：未激活；2：待使用；3：已使用；4：已过期。|
-    * customerId  |参数名称：客户ID| |参数约束及描述：客户ID|
-    * couponType  |参数名称：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。| |参数的约束及描述：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。|
-    * measureId  |参数名称：度量单位。1：元| |参数的约束及描述：度量单位。1：元|
-    * faceValue  |参数名称：优惠券金额。| |参数的约束及描述：优惠券金额。|
-    * validTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数约束及描述：促销计划ID。|
-    * planName  |参数名称：促销计划名称。| |参数约束及描述：促销计划名称。|
-    * planDesc  |参数名称：促销计划描述。| |参数约束及描述：促销计划描述。|
-    * mediaType  |参数名称：介质类型。| |参数的约束及描述：介质类型。|
-    * fetchMethod  |参数名称：获取方式：1：线上领取；2：线上兑换；3：线上发放；4：线下获取；5：事件赠送。| |参数的约束及描述：获取方式：1：线上领取；2：线上兑换；3：线上发放；4：线下获取；5：事件赠送。|
-    * useLimits  |参数名称：优惠券使用限制。具体请参见表 ICouponUseLimitInfo。| |参数约束以及描述：优惠券使用限制。具体请参见表 ICouponUseLimitInfo。|
-    * activeTime  |参数名称：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * reserveTime  |参数名称：使用时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：使用时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * promotionId  |参数名称：促销ID。| |参数约束及描述：促销ID。|
-    * createTime  |参数名称：创建时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：创建时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * couponVersion  |参数名称：优惠券版本：1：老版本，老版本优惠券只能使用一次；2：新版本，新版本优惠券可以反复使用。| |参数的约束及描述：优惠券版本：1：老版本，老版本优惠券只能使用一次；2：新版本，新版本优惠券可以反复使用。|
-    * balance  |参数名称：余额。如果为老版本优惠券，该值为空| |参数的约束及描述：余额。如果为老版本优惠券，该值为空|
-    * lockOrderId  |参数名称：锁定优惠券的订单ID。如果为老版本优惠券，该值为空。| |参数约束及描述：锁定优惠券的订单ID。如果为老版本优惠券，该值为空。|
-    * couponUsage  |参数名称：优惠券用途。| |参数约束及描述：优惠券用途。|
-    * isFrozen  |参数名称：优惠券是否冻结：0：否1：是可用优惠券接口返回时不包括冻结状态的优惠券。| |参数约束及描述：优惠券是否冻结：0：否1：是可用优惠券接口返回时不包括冻结状态的优惠券。|
-    * currency  |参数名称：币种。| |参数约束及描述：币种。|
-    * extendParam1  |参数名称：扩展字段。| |参数约束及描述：扩展字段。|
-    * sourceId  |参数名称：发放人标识| |参数约束及描述：用于标识优惠券唯一的发放人； 云豆兑换优惠券时sourceId填写云豆计划Id； 累计送优惠券时sourceId填写累计送计划Id； 抽奖送优惠券时sourceId填写抽奖计划Id； 事件送优惠券时sourceId填写事件计划Id； 定制优惠券时sourceId填写创建人Id；|
+    * couponId  优惠券实例ID。
+    * couponCode  优惠券编码。
+    * status  优惠券状态： 1：未激活2：待使用3：已使用4：已过期5：已回收
+    * customerId  客户账号ID。
+    * couponType  优惠券类型： 1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
+    * measureId  度量单位。 1：元
+    * faceValue  优惠券金额。
+    * validTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * orderId  订单ID。
+    * promotionPlanId  促销计划ID。
+    * planName  促销计划名称。
+    * planDesc  促销计划描述。
+    * mediaType  介质类型。 1：电子券2：纸质券
+    * fetchMethod  获取方式： 1：线上领取2：线上兑换3：线上发放4：线下获取5：事件赠送
+    * useLimits  优惠券使用限制。 具体请参见表3。
+    * activeTime  激活时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * reserveTime  使用时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * promotionId  促销ID。
+    * createTime  创建时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * couponVersion  优惠券版本： 1：老版本，老版本优惠券只能使用一次2：新版本，新版本优惠券可以反复使用
+    * balance  优惠券余额。单位：元。 如果为老版本优惠券，该值为空。
+    * lockOrderId  锁定优惠券的订单ID。 如果为老版本优惠券，该值为空。
+    * couponUsage  优惠券用途。
+    * isFrozen  优惠券是否冻结： 0：否1：是
+    * currency  币种。 USD：美元
+    * extendParam1  扩展字段。
+    * sourceId  发券来源。 如果是合作伙伴发送的券，此处为伙伴ID。如果是活动发券，此处为活动ID：云豆兑换优惠券：云豆计划ID累计送优惠券：累计送计划ID抽奖送优惠券：抽奖计划ID事件送优惠券：事件计划ID定制优惠券：创建人ID
     *
     * @var string[]
     */
@@ -169,34 +169,34 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * couponId  |参数名称：优惠券实例ID。| |参数约束及描述：优惠券实例ID。|
-    * couponCode  |参数名称：优惠券编码。| |参数约束及描述：优惠券编码。|
-    * status  |参数名称：优惠券状态：1：未激活；2：待使用；3：已使用；4：已过期。| |参数的约束及描述：优惠券状态：1：未激活；2：待使用；3：已使用；4：已过期。|
-    * customerId  |参数名称：客户ID| |参数约束及描述：客户ID|
-    * couponType  |参数名称：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。| |参数的约束及描述：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。|
-    * measureId  |参数名称：度量单位。1：元| |参数的约束及描述：度量单位。1：元|
-    * faceValue  |参数名称：优惠券金额。| |参数的约束及描述：优惠券金额。|
-    * validTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数约束及描述：促销计划ID。|
-    * planName  |参数名称：促销计划名称。| |参数约束及描述：促销计划名称。|
-    * planDesc  |参数名称：促销计划描述。| |参数约束及描述：促销计划描述。|
-    * mediaType  |参数名称：介质类型。| |参数的约束及描述：介质类型。|
-    * fetchMethod  |参数名称：获取方式：1：线上领取；2：线上兑换；3：线上发放；4：线下获取；5：事件赠送。| |参数的约束及描述：获取方式：1：线上领取；2：线上兑换；3：线上发放；4：线下获取；5：事件赠送。|
-    * useLimits  |参数名称：优惠券使用限制。具体请参见表 ICouponUseLimitInfo。| |参数约束以及描述：优惠券使用限制。具体请参见表 ICouponUseLimitInfo。|
-    * activeTime  |参数名称：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * reserveTime  |参数名称：使用时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：使用时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * promotionId  |参数名称：促销ID。| |参数约束及描述：促销ID。|
-    * createTime  |参数名称：创建时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：创建时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * couponVersion  |参数名称：优惠券版本：1：老版本，老版本优惠券只能使用一次；2：新版本，新版本优惠券可以反复使用。| |参数的约束及描述：优惠券版本：1：老版本，老版本优惠券只能使用一次；2：新版本，新版本优惠券可以反复使用。|
-    * balance  |参数名称：余额。如果为老版本优惠券，该值为空| |参数的约束及描述：余额。如果为老版本优惠券，该值为空|
-    * lockOrderId  |参数名称：锁定优惠券的订单ID。如果为老版本优惠券，该值为空。| |参数约束及描述：锁定优惠券的订单ID。如果为老版本优惠券，该值为空。|
-    * couponUsage  |参数名称：优惠券用途。| |参数约束及描述：优惠券用途。|
-    * isFrozen  |参数名称：优惠券是否冻结：0：否1：是可用优惠券接口返回时不包括冻结状态的优惠券。| |参数约束及描述：优惠券是否冻结：0：否1：是可用优惠券接口返回时不包括冻结状态的优惠券。|
-    * currency  |参数名称：币种。| |参数约束及描述：币种。|
-    * extendParam1  |参数名称：扩展字段。| |参数约束及描述：扩展字段。|
-    * sourceId  |参数名称：发放人标识| |参数约束及描述：用于标识优惠券唯一的发放人； 云豆兑换优惠券时sourceId填写云豆计划Id； 累计送优惠券时sourceId填写累计送计划Id； 抽奖送优惠券时sourceId填写抽奖计划Id； 事件送优惠券时sourceId填写事件计划Id； 定制优惠券时sourceId填写创建人Id；|
+    * couponId  优惠券实例ID。
+    * couponCode  优惠券编码。
+    * status  优惠券状态： 1：未激活2：待使用3：已使用4：已过期5：已回收
+    * customerId  客户账号ID。
+    * couponType  优惠券类型： 1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
+    * measureId  度量单位。 1：元
+    * faceValue  优惠券金额。
+    * validTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * orderId  订单ID。
+    * promotionPlanId  促销计划ID。
+    * planName  促销计划名称。
+    * planDesc  促销计划描述。
+    * mediaType  介质类型。 1：电子券2：纸质券
+    * fetchMethod  获取方式： 1：线上领取2：线上兑换3：线上发放4：线下获取5：事件赠送
+    * useLimits  优惠券使用限制。 具体请参见表3。
+    * activeTime  激活时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * reserveTime  使用时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * promotionId  促销ID。
+    * createTime  创建时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * couponVersion  优惠券版本： 1：老版本，老版本优惠券只能使用一次2：新版本，新版本优惠券可以反复使用
+    * balance  优惠券余额。单位：元。 如果为老版本优惠券，该值为空。
+    * lockOrderId  锁定优惠券的订单ID。 如果为老版本优惠券，该值为空。
+    * couponUsage  优惠券用途。
+    * isFrozen  优惠券是否冻结： 0：否1：是
+    * currency  币种。 USD：美元
+    * extendParam1  扩展字段。
+    * sourceId  发券来源。 如果是合作伙伴发送的券，此处为伙伴ID。如果是活动发券，此处为活动ID：云豆兑换优惠券：云豆计划ID累计送优惠券：累计送计划ID抽奖送优惠券：抽奖计划ID事件送优惠券：事件计划ID定制优惠券：创建人ID
     *
     * @var string[]
     */
@@ -233,34 +233,34 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * couponId  |参数名称：优惠券实例ID。| |参数约束及描述：优惠券实例ID。|
-    * couponCode  |参数名称：优惠券编码。| |参数约束及描述：优惠券编码。|
-    * status  |参数名称：优惠券状态：1：未激活；2：待使用；3：已使用；4：已过期。| |参数的约束及描述：优惠券状态：1：未激活；2：待使用；3：已使用；4：已过期。|
-    * customerId  |参数名称：客户ID| |参数约束及描述：客户ID|
-    * couponType  |参数名称：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。| |参数的约束及描述：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。|
-    * measureId  |参数名称：度量单位。1：元| |参数的约束及描述：度量单位。1：元|
-    * faceValue  |参数名称：优惠券金额。| |参数的约束及描述：优惠券金额。|
-    * validTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数约束及描述：促销计划ID。|
-    * planName  |参数名称：促销计划名称。| |参数约束及描述：促销计划名称。|
-    * planDesc  |参数名称：促销计划描述。| |参数约束及描述：促销计划描述。|
-    * mediaType  |参数名称：介质类型。| |参数的约束及描述：介质类型。|
-    * fetchMethod  |参数名称：获取方式：1：线上领取；2：线上兑换；3：线上发放；4：线下获取；5：事件赠送。| |参数的约束及描述：获取方式：1：线上领取；2：线上兑换；3：线上发放；4：线下获取；5：事件赠送。|
-    * useLimits  |参数名称：优惠券使用限制。具体请参见表 ICouponUseLimitInfo。| |参数约束以及描述：优惠券使用限制。具体请参见表 ICouponUseLimitInfo。|
-    * activeTime  |参数名称：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * reserveTime  |参数名称：使用时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：使用时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * promotionId  |参数名称：促销ID。| |参数约束及描述：促销ID。|
-    * createTime  |参数名称：创建时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：创建时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * couponVersion  |参数名称：优惠券版本：1：老版本，老版本优惠券只能使用一次；2：新版本，新版本优惠券可以反复使用。| |参数的约束及描述：优惠券版本：1：老版本，老版本优惠券只能使用一次；2：新版本，新版本优惠券可以反复使用。|
-    * balance  |参数名称：余额。如果为老版本优惠券，该值为空| |参数的约束及描述：余额。如果为老版本优惠券，该值为空|
-    * lockOrderId  |参数名称：锁定优惠券的订单ID。如果为老版本优惠券，该值为空。| |参数约束及描述：锁定优惠券的订单ID。如果为老版本优惠券，该值为空。|
-    * couponUsage  |参数名称：优惠券用途。| |参数约束及描述：优惠券用途。|
-    * isFrozen  |参数名称：优惠券是否冻结：0：否1：是可用优惠券接口返回时不包括冻结状态的优惠券。| |参数约束及描述：优惠券是否冻结：0：否1：是可用优惠券接口返回时不包括冻结状态的优惠券。|
-    * currency  |参数名称：币种。| |参数约束及描述：币种。|
-    * extendParam1  |参数名称：扩展字段。| |参数约束及描述：扩展字段。|
-    * sourceId  |参数名称：发放人标识| |参数约束及描述：用于标识优惠券唯一的发放人； 云豆兑换优惠券时sourceId填写云豆计划Id； 累计送优惠券时sourceId填写累计送计划Id； 抽奖送优惠券时sourceId填写抽奖计划Id； 事件送优惠券时sourceId填写事件计划Id； 定制优惠券时sourceId填写创建人Id；|
+    * couponId  优惠券实例ID。
+    * couponCode  优惠券编码。
+    * status  优惠券状态： 1：未激活2：待使用3：已使用4：已过期5：已回收
+    * customerId  客户账号ID。
+    * couponType  优惠券类型： 1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
+    * measureId  度量单位。 1：元
+    * faceValue  优惠券金额。
+    * validTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * orderId  订单ID。
+    * promotionPlanId  促销计划ID。
+    * planName  促销计划名称。
+    * planDesc  促销计划描述。
+    * mediaType  介质类型。 1：电子券2：纸质券
+    * fetchMethod  获取方式： 1：线上领取2：线上兑换3：线上发放4：线下获取5：事件赠送
+    * useLimits  优惠券使用限制。 具体请参见表3。
+    * activeTime  激活时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * reserveTime  使用时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * promotionId  促销ID。
+    * createTime  创建时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * couponVersion  优惠券版本： 1：老版本，老版本优惠券只能使用一次2：新版本，新版本优惠券可以反复使用
+    * balance  优惠券余额。单位：元。 如果为老版本优惠券，该值为空。
+    * lockOrderId  锁定优惠券的订单ID。 如果为老版本优惠券，该值为空。
+    * couponUsage  优惠券用途。
+    * isFrozen  优惠券是否冻结： 0：否1：是
+    * currency  币种。 USD：美元
+    * extendParam1  扩展字段。
+    * sourceId  发券来源。 如果是合作伙伴发送的券，此处为伙伴ID。如果是活动发券，此处为活动ID：云豆兑换优惠券：云豆计划ID累计送优惠券：累计送计划ID抽奖送优惠券：抽奖计划ID事件送优惠券：事件计划ID定制优惠券：创建人ID
     *
     * @var string[]
     */
@@ -297,34 +297,34 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * couponId  |参数名称：优惠券实例ID。| |参数约束及描述：优惠券实例ID。|
-    * couponCode  |参数名称：优惠券编码。| |参数约束及描述：优惠券编码。|
-    * status  |参数名称：优惠券状态：1：未激活；2：待使用；3：已使用；4：已过期。| |参数的约束及描述：优惠券状态：1：未激活；2：待使用；3：已使用；4：已过期。|
-    * customerId  |参数名称：客户ID| |参数约束及描述：客户ID|
-    * couponType  |参数名称：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。| |参数的约束及描述：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。|
-    * measureId  |参数名称：度量单位。1：元| |参数的约束及描述：度量单位。1：元|
-    * faceValue  |参数名称：优惠券金额。| |参数的约束及描述：优惠券金额。|
-    * validTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * promotionPlanId  |参数名称：促销计划ID。| |参数约束及描述：促销计划ID。|
-    * planName  |参数名称：促销计划名称。| |参数约束及描述：促销计划名称。|
-    * planDesc  |参数名称：促销计划描述。| |参数约束及描述：促销计划描述。|
-    * mediaType  |参数名称：介质类型。| |参数的约束及描述：介质类型。|
-    * fetchMethod  |参数名称：获取方式：1：线上领取；2：线上兑换；3：线上发放；4：线下获取；5：事件赠送。| |参数的约束及描述：获取方式：1：线上领取；2：线上兑换；3：线上发放；4：线下获取；5：事件赠送。|
-    * useLimits  |参数名称：优惠券使用限制。具体请参见表 ICouponUseLimitInfo。| |参数约束以及描述：优惠券使用限制。具体请参见表 ICouponUseLimitInfo。|
-    * activeTime  |参数名称：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * reserveTime  |参数名称：使用时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：使用时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * promotionId  |参数名称：促销ID。| |参数约束及描述：促销ID。|
-    * createTime  |参数名称：创建时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：创建时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
-    * couponVersion  |参数名称：优惠券版本：1：老版本，老版本优惠券只能使用一次；2：新版本，新版本优惠券可以反复使用。| |参数的约束及描述：优惠券版本：1：老版本，老版本优惠券只能使用一次；2：新版本，新版本优惠券可以反复使用。|
-    * balance  |参数名称：余额。如果为老版本优惠券，该值为空| |参数的约束及描述：余额。如果为老版本优惠券，该值为空|
-    * lockOrderId  |参数名称：锁定优惠券的订单ID。如果为老版本优惠券，该值为空。| |参数约束及描述：锁定优惠券的订单ID。如果为老版本优惠券，该值为空。|
-    * couponUsage  |参数名称：优惠券用途。| |参数约束及描述：优惠券用途。|
-    * isFrozen  |参数名称：优惠券是否冻结：0：否1：是可用优惠券接口返回时不包括冻结状态的优惠券。| |参数约束及描述：优惠券是否冻结：0：否1：是可用优惠券接口返回时不包括冻结状态的优惠券。|
-    * currency  |参数名称：币种。| |参数约束及描述：币种。|
-    * extendParam1  |参数名称：扩展字段。| |参数约束及描述：扩展字段。|
-    * sourceId  |参数名称：发放人标识| |参数约束及描述：用于标识优惠券唯一的发放人； 云豆兑换优惠券时sourceId填写云豆计划Id； 累计送优惠券时sourceId填写累计送计划Id； 抽奖送优惠券时sourceId填写抽奖计划Id； 事件送优惠券时sourceId填写事件计划Id； 定制优惠券时sourceId填写创建人Id；|
+    * couponId  优惠券实例ID。
+    * couponCode  优惠券编码。
+    * status  优惠券状态： 1：未激活2：待使用3：已使用4：已过期5：已回收
+    * customerId  客户账号ID。
+    * couponType  优惠券类型： 1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
+    * measureId  度量单位。 1：元
+    * faceValue  优惠券金额。
+    * validTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * orderId  订单ID。
+    * promotionPlanId  促销计划ID。
+    * planName  促销计划名称。
+    * planDesc  促销计划描述。
+    * mediaType  介质类型。 1：电子券2：纸质券
+    * fetchMethod  获取方式： 1：线上领取2：线上兑换3：线上发放4：线下获取5：事件赠送
+    * useLimits  优惠券使用限制。 具体请参见表3。
+    * activeTime  激活时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * reserveTime  使用时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * promotionId  促销ID。
+    * createTime  创建时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
+    * couponVersion  优惠券版本： 1：老版本，老版本优惠券只能使用一次2：新版本，新版本优惠券可以反复使用
+    * balance  优惠券余额。单位：元。 如果为老版本优惠券，该值为空。
+    * lockOrderId  锁定优惠券的订单ID。 如果为老版本优惠券，该值为空。
+    * couponUsage  优惠券用途。
+    * isFrozen  优惠券是否冻结： 0：否1：是
+    * currency  币种。 USD：美元
+    * extendParam1  扩展字段。
+    * sourceId  发券来源。 如果是合作伙伴发送的券，此处为伙伴ID。如果是活动发券，此处为活动ID：云豆兑换优惠券：云豆计划ID累计送优惠券：累计送计划ID抽奖送优惠券：抽奖计划ID事件送优惠券：事件计划ID定制优惠券：创建人ID
     *
     * @var string[]
     */
@@ -471,7 +471,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponId
-    *  |参数名称：优惠券实例ID。| |参数约束及描述：优惠券实例ID。|
+    *  优惠券实例ID。
     *
     * @return string|null
     */
@@ -483,7 +483,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets couponId
     *
-    * @param string|null $couponId |参数名称：优惠券实例ID。| |参数约束及描述：优惠券实例ID。|
+    * @param string|null $couponId 优惠券实例ID。
     *
     * @return $this
     */
@@ -495,7 +495,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponCode
-    *  |参数名称：优惠券编码。| |参数约束及描述：优惠券编码。|
+    *  优惠券编码。
     *
     * @return string|null
     */
@@ -507,7 +507,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets couponCode
     *
-    * @param string|null $couponCode |参数名称：优惠券编码。| |参数约束及描述：优惠券编码。|
+    * @param string|null $couponCode 优惠券编码。
     *
     * @return $this
     */
@@ -519,7 +519,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  |参数名称：优惠券状态：1：未激活；2：待使用；3：已使用；4：已过期。| |参数的约束及描述：优惠券状态：1：未激活；2：待使用；3：已使用；4：已过期。|
+    *  优惠券状态： 1：未激活2：待使用3：已使用4：已过期5：已回收
     *
     * @return int|null
     */
@@ -531,7 +531,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status |参数名称：优惠券状态：1：未激活；2：待使用；3：已使用；4：已过期。| |参数的约束及描述：优惠券状态：1：未激活；2：待使用；3：已使用；4：已过期。|
+    * @param int|null $status 优惠券状态： 1：未激活2：待使用3：已使用4：已过期5：已回收
     *
     * @return $this
     */
@@ -543,7 +543,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerId
-    *  |参数名称：客户ID| |参数约束及描述：客户ID|
+    *  客户账号ID。
     *
     * @return string|null
     */
@@ -555,7 +555,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets customerId
     *
-    * @param string|null $customerId |参数名称：客户ID| |参数约束及描述：客户ID|
+    * @param string|null $customerId 客户账号ID。
     *
     * @return $this
     */
@@ -567,7 +567,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponType
-    *  |参数名称：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。| |参数的约束及描述：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。|
+    *  优惠券类型： 1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
     *
     * @return int|null
     */
@@ -579,7 +579,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets couponType
     *
-    * @param int|null $couponType |参数名称：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。| |参数的约束及描述：优惠券类型：1：代金券；2：折扣券；3：产品券；4：现金券。|
+    * @param int|null $couponType 优惠券类型： 1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
     *
     * @return $this
     */
@@ -591,7 +591,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：度量单位。1：元| |参数的约束及描述：度量单位。1：元|
+    *  度量单位。 1：元
     *
     * @return int|null
     */
@@ -603,7 +603,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId |参数名称：度量单位。1：元| |参数的约束及描述：度量单位。1：元|
+    * @param int|null $measureId 度量单位。 1：元
     *
     * @return $this
     */
@@ -615,7 +615,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets faceValue
-    *  |参数名称：优惠券金额。| |参数的约束及描述：优惠券金额。|
+    *  优惠券金额。
     *
     * @return double|null
     */
@@ -627,7 +627,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets faceValue
     *
-    * @param double|null $faceValue |参数名称：优惠券金额。| |参数的约束及描述：优惠券金额。|
+    * @param double|null $faceValue 优惠券金额。
     *
     * @return $this
     */
@@ -639,7 +639,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets validTime
-    *  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+    *  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     *
     * @return string|null
     */
@@ -651,7 +651,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets validTime
     *
-    * @param string|null $validTime |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+    * @param string|null $validTime 生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     *
     * @return $this
     */
@@ -663,7 +663,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTime
-    *  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+    *  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     *
     * @return string|null
     */
@@ -675,7 +675,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets expireTime
     *
-    * @param string|null $expireTime |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+    * @param string|null $expireTime 失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     *
     * @return $this
     */
@@ -687,7 +687,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  |参数名称：订单ID。| |参数约束及描述：订单ID。|
+    *  订单ID。
     *
     * @return string|null
     */
@@ -699,7 +699,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId |参数名称：订单ID。| |参数约束及描述：订单ID。|
+    * @param string|null $orderId 订单ID。
     *
     * @return $this
     */
@@ -711,7 +711,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets promotionPlanId
-    *  |参数名称：促销计划ID。| |参数约束及描述：促销计划ID。|
+    *  促销计划ID。
     *
     * @return string|null
     */
@@ -723,7 +723,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets promotionPlanId
     *
-    * @param string|null $promotionPlanId |参数名称：促销计划ID。| |参数约束及描述：促销计划ID。|
+    * @param string|null $promotionPlanId 促销计划ID。
     *
     * @return $this
     */
@@ -735,7 +735,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets planName
-    *  |参数名称：促销计划名称。| |参数约束及描述：促销计划名称。|
+    *  促销计划名称。
     *
     * @return string|null
     */
@@ -747,7 +747,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets planName
     *
-    * @param string|null $planName |参数名称：促销计划名称。| |参数约束及描述：促销计划名称。|
+    * @param string|null $planName 促销计划名称。
     *
     * @return $this
     */
@@ -759,7 +759,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets planDesc
-    *  |参数名称：促销计划描述。| |参数约束及描述：促销计划描述。|
+    *  促销计划描述。
     *
     * @return string|null
     */
@@ -771,7 +771,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets planDesc
     *
-    * @param string|null $planDesc |参数名称：促销计划描述。| |参数约束及描述：促销计划描述。|
+    * @param string|null $planDesc 促销计划描述。
     *
     * @return $this
     */
@@ -783,7 +783,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets mediaType
-    *  |参数名称：介质类型。| |参数的约束及描述：介质类型。|
+    *  介质类型。 1：电子券2：纸质券
     *
     * @return int|null
     */
@@ -795,7 +795,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets mediaType
     *
-    * @param int|null $mediaType |参数名称：介质类型。| |参数的约束及描述：介质类型。|
+    * @param int|null $mediaType 介质类型。 1：电子券2：纸质券
     *
     * @return $this
     */
@@ -807,7 +807,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets fetchMethod
-    *  |参数名称：获取方式：1：线上领取；2：线上兑换；3：线上发放；4：线下获取；5：事件赠送。| |参数的约束及描述：获取方式：1：线上领取；2：线上兑换；3：线上发放；4：线下获取；5：事件赠送。|
+    *  获取方式： 1：线上领取2：线上兑换3：线上发放4：线下获取5：事件赠送
     *
     * @return int|null
     */
@@ -819,7 +819,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets fetchMethod
     *
-    * @param int|null $fetchMethod |参数名称：获取方式：1：线上领取；2：线上兑换；3：线上发放；4：线下获取；5：事件赠送。| |参数的约束及描述：获取方式：1：线上领取；2：线上兑换；3：线上发放；4：线下获取；5：事件赠送。|
+    * @param int|null $fetchMethod 获取方式： 1：线上领取2：线上兑换3：线上发放4：线下获取5：事件赠送
     *
     * @return $this
     */
@@ -831,7 +831,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets useLimits
-    *  |参数名称：优惠券使用限制。具体请参见表 ICouponUseLimitInfo。| |参数约束以及描述：优惠券使用限制。具体请参见表 ICouponUseLimitInfo。|
+    *  优惠券使用限制。 具体请参见表3。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\ICouponUseLimitInfoV2[]|null
     */
@@ -843,7 +843,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets useLimits
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\ICouponUseLimitInfoV2[]|null $useLimits |参数名称：优惠券使用限制。具体请参见表 ICouponUseLimitInfo。| |参数约束以及描述：优惠券使用限制。具体请参见表 ICouponUseLimitInfo。|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\ICouponUseLimitInfoV2[]|null $useLimits 优惠券使用限制。 具体请参见表3。
     *
     * @return $this
     */
@@ -855,7 +855,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets activeTime
-    *  |参数名称：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+    *  激活时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     *
     * @return string|null
     */
@@ -867,7 +867,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets activeTime
     *
-    * @param string|null $activeTime |参数名称：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：激活时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+    * @param string|null $activeTime 激活时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     *
     * @return $this
     */
@@ -879,7 +879,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets reserveTime
-    *  |参数名称：使用时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：使用时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+    *  使用时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     *
     * @return string|null
     */
@@ -891,7 +891,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets reserveTime
     *
-    * @param string|null $reserveTime |参数名称：使用时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：使用时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+    * @param string|null $reserveTime 使用时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     *
     * @return $this
     */
@@ -903,7 +903,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets promotionId
-    *  |参数名称：促销ID。| |参数约束及描述：促销ID。|
+    *  促销ID。
     *
     * @return string|null
     */
@@ -915,7 +915,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets promotionId
     *
-    * @param string|null $promotionId |参数名称：促销ID。| |参数约束及描述：促销ID。|
+    * @param string|null $promotionId 促销ID。
     *
     * @return $this
     */
@@ -927,7 +927,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  |参数名称：创建时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：创建时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+    *  创建时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     *
     * @return string|null
     */
@@ -939,7 +939,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime |参数名称：创建时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ| |参数约束及描述：创建时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ|
+    * @param string|null $createTime 创建时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     *
     * @return $this
     */
@@ -951,7 +951,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponVersion
-    *  |参数名称：优惠券版本：1：老版本，老版本优惠券只能使用一次；2：新版本，新版本优惠券可以反复使用。| |参数的约束及描述：优惠券版本：1：老版本，老版本优惠券只能使用一次；2：新版本，新版本优惠券可以反复使用。|
+    *  优惠券版本： 1：老版本，老版本优惠券只能使用一次2：新版本，新版本优惠券可以反复使用
     *
     * @return int|null
     */
@@ -963,7 +963,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets couponVersion
     *
-    * @param int|null $couponVersion |参数名称：优惠券版本：1：老版本，老版本优惠券只能使用一次；2：新版本，新版本优惠券可以反复使用。| |参数的约束及描述：优惠券版本：1：老版本，老版本优惠券只能使用一次；2：新版本，新版本优惠券可以反复使用。|
+    * @param int|null $couponVersion 优惠券版本： 1：老版本，老版本优惠券只能使用一次2：新版本，新版本优惠券可以反复使用
     *
     * @return $this
     */
@@ -975,7 +975,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets balance
-    *  |参数名称：余额。如果为老版本优惠券，该值为空| |参数的约束及描述：余额。如果为老版本优惠券，该值为空|
+    *  优惠券余额。单位：元。 如果为老版本优惠券，该值为空。
     *
     * @return double|null
     */
@@ -987,7 +987,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets balance
     *
-    * @param double|null $balance |参数名称：余额。如果为老版本优惠券，该值为空| |参数的约束及描述：余额。如果为老版本优惠券，该值为空|
+    * @param double|null $balance 优惠券余额。单位：元。 如果为老版本优惠券，该值为空。
     *
     * @return $this
     */
@@ -999,7 +999,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets lockOrderId
-    *  |参数名称：锁定优惠券的订单ID。如果为老版本优惠券，该值为空。| |参数约束及描述：锁定优惠券的订单ID。如果为老版本优惠券，该值为空。|
+    *  锁定优惠券的订单ID。 如果为老版本优惠券，该值为空。
     *
     * @return string|null
     */
@@ -1011,7 +1011,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets lockOrderId
     *
-    * @param string|null $lockOrderId |参数名称：锁定优惠券的订单ID。如果为老版本优惠券，该值为空。| |参数约束及描述：锁定优惠券的订单ID。如果为老版本优惠券，该值为空。|
+    * @param string|null $lockOrderId 锁定优惠券的订单ID。 如果为老版本优惠券，该值为空。
     *
     * @return $this
     */
@@ -1023,7 +1023,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponUsage
-    *  |参数名称：优惠券用途。| |参数约束及描述：优惠券用途。|
+    *  优惠券用途。
     *
     * @return string|null
     */
@@ -1035,7 +1035,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets couponUsage
     *
-    * @param string|null $couponUsage |参数名称：优惠券用途。| |参数约束及描述：优惠券用途。|
+    * @param string|null $couponUsage 优惠券用途。
     *
     * @return $this
     */
@@ -1047,7 +1047,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFrozen
-    *  |参数名称：优惠券是否冻结：0：否1：是可用优惠券接口返回时不包括冻结状态的优惠券。| |参数约束及描述：优惠券是否冻结：0：否1：是可用优惠券接口返回时不包括冻结状态的优惠券。|
+    *  优惠券是否冻结： 0：否1：是
     *
     * @return string|null
     */
@@ -1059,7 +1059,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets isFrozen
     *
-    * @param string|null $isFrozen |参数名称：优惠券是否冻结：0：否1：是可用优惠券接口返回时不包括冻结状态的优惠券。| |参数约束及描述：优惠券是否冻结：0：否1：是可用优惠券接口返回时不包括冻结状态的优惠券。|
+    * @param string|null $isFrozen 优惠券是否冻结： 0：否1：是
     *
     * @return $this
     */
@@ -1071,7 +1071,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets currency
-    *  |参数名称：币种。| |参数约束及描述：币种。|
+    *  币种。 USD：美元
     *
     * @return string|null
     */
@@ -1083,7 +1083,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets currency
     *
-    * @param string|null $currency |参数名称：币种。| |参数约束及描述：币种。|
+    * @param string|null $currency 币种。 USD：美元
     *
     * @return $this
     */
@@ -1095,7 +1095,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendParam1
-    *  |参数名称：扩展字段。| |参数约束及描述：扩展字段。|
+    *  扩展字段。
     *
     * @return string|null
     */
@@ -1107,7 +1107,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets extendParam1
     *
-    * @param string|null $extendParam1 |参数名称：扩展字段。| |参数约束及描述：扩展字段。|
+    * @param string|null $extendParam1 扩展字段。
     *
     * @return $this
     */
@@ -1119,7 +1119,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceId
-    *  |参数名称：发放人标识| |参数约束及描述：用于标识优惠券唯一的发放人； 云豆兑换优惠券时sourceId填写云豆计划Id； 累计送优惠券时sourceId填写累计送计划Id； 抽奖送优惠券时sourceId填写抽奖计划Id； 事件送优惠券时sourceId填写事件计划Id； 定制优惠券时sourceId填写创建人Id；|
+    *  发券来源。 如果是合作伙伴发送的券，此处为伙伴ID。如果是活动发券，此处为活动ID：云豆兑换优惠券：云豆计划ID累计送优惠券：累计送计划ID抽奖送优惠券：抽奖计划ID事件送优惠券：事件计划ID定制优惠券：创建人ID
     *
     * @return string|null
     */
@@ -1131,7 +1131,7 @@ class IQueryUserCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets sourceId
     *
-    * @param string|null $sourceId |参数名称：发放人标识| |参数约束及描述：用于标识优惠券唯一的发放人； 云豆兑换优惠券时sourceId填写云豆计划Id； 累计送优惠券时sourceId填写累计送计划Id； 抽奖送优惠券时sourceId填写抽奖计划Id； 事件送优惠券时sourceId填写事件计划Id； 定制优惠券时sourceId填写创建人Id；|
+    * @param string|null $sourceId 发券来源。 如果是合作伙伴发送的券，此处为伙伴ID。如果是活动发券，此处为活动ID：云豆兑换优惠券：云豆计划ID累计送优惠券：累计送计划ID抽奖送优惠券：抽奖计划ID事件送优惠券：事件计划ID定制优惠券：创建人ID
     *
     * @return $this
     */

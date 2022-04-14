@@ -21,7 +21,7 @@ class RenewalResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderIds  |参数名称：续订资源生成的订单ID的列表。| |参数约束以及描述：续订资源生成的订单ID的列表。|
+    * orderIds  续订资源生成的订单ID的列表。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class RenewalResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderIds  |参数名称：续订资源生成的订单ID的列表。| |参数约束以及描述：续订资源生成的订单ID的列表。|
+    * orderIds  续订资源生成的订单ID的列表。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class RenewalResourcesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderIds  |参数名称：续订资源生成的订单ID的列表。| |参数约束以及描述：续订资源生成的订单ID的列表。|
+    * orderIds  续订资源生成的订单ID的列表。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class RenewalResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderIds  |参数名称：续订资源生成的订单ID的列表。| |参数约束以及描述：续订资源生成的订单ID的列表。|
+    * orderIds  续订资源生成的订单ID的列表。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class RenewalResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderIds  |参数名称：续订资源生成的订单ID的列表。| |参数约束以及描述：续订资源生成的订单ID的列表。|
+    * orderIds  续订资源生成的订单ID的列表。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class RenewalResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderIds
-    *  |参数名称：续订资源生成的订单ID的列表。| |参数约束以及描述：续订资源生成的订单ID的列表。|
+    *  续订资源生成的订单ID的列表。
     *
     * @return string[]|null
     */
@@ -187,7 +187,7 @@ class RenewalResourcesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets orderIds
     *
-    * @param string[]|null $orderIds |参数名称：续订资源生成的订单ID的列表。| |参数约束以及描述：续订资源生成的订单ID的列表。|
+    * @param string[]|null $orderIds 续订资源生成的订单ID的列表。
     *
     * @return $this
     */

@@ -2067,6 +2067,9 @@ class EcsAsyncClient extends Client
         if ($localVarParams['tags'] !== null) {
             $queryParams['tags'] = $localVarParams['tags'];
         }
+        if ($localVarParams['ipEq'] !== null) {
+            $queryParams['ip_eq'] = $localVarParams['ipEq'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

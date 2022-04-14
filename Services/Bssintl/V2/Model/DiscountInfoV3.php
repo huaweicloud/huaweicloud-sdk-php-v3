@@ -20,10 +20,10 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * discountId  |参数名称：折扣ID，支付的时候，如果要使用折扣，需要将这个值填入| |参数约束及描述：折扣ID，支付的时候，如果要使用折扣，需要将这个值填入|
-    * discountValue  |参数名称：discountType为促销折扣或合作伙伴授予折扣时，为折扣率| |参数约束及描述：discountType为促销折扣或合作伙伴授予折扣时，为折扣率|
-    * discountType  |参数名称：折扣类型，取值为1：合同折扣（可以有多组）2：商务优惠（仅有一组）3：合作伙伴授予折扣（仅有一组）609：订单调价折扣| |参数的约束及描述：折扣类型，取值为1：合同折扣（可以有多组）2：商务优惠（仅有一组）3：合作伙伴授予折扣（仅有一组）609：订单调价折扣|
-    * orders  |参数名称：订单列表| |参数约束以及描述：订单列表|
+    * discountId  订单的可用折扣ID。 支付订单时，输入该参数的值，即可使用折扣。
+    * discountValue  折扣率或者满减值，如果折扣模式是一口价，这个值为空。
+    * discountType  折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
+    * orders  可使用折扣的订单列表。 具体请参见表3。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * discountId  |参数名称：折扣ID，支付的时候，如果要使用折扣，需要将这个值填入| |参数约束及描述：折扣ID，支付的时候，如果要使用折扣，需要将这个值填入|
-    * discountValue  |参数名称：discountType为促销折扣或合作伙伴授予折扣时，为折扣率| |参数约束及描述：discountType为促销折扣或合作伙伴授予折扣时，为折扣率|
-    * discountType  |参数名称：折扣类型，取值为1：合同折扣（可以有多组）2：商务优惠（仅有一组）3：合作伙伴授予折扣（仅有一组）609：订单调价折扣| |参数的约束及描述：折扣类型，取值为1：合同折扣（可以有多组）2：商务优惠（仅有一组）3：合作伙伴授予折扣（仅有一组）609：订单调价折扣|
-    * orders  |参数名称：订单列表| |参数约束以及描述：订单列表|
+    * discountId  订单的可用折扣ID。 支付订单时，输入该参数的值，即可使用折扣。
+    * discountValue  折扣率或者满减值，如果折扣模式是一口价，这个值为空。
+    * discountType  折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
+    * orders  可使用折扣的订单列表。 具体请参见表3。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * discountId  |参数名称：折扣ID，支付的时候，如果要使用折扣，需要将这个值填入| |参数约束及描述：折扣ID，支付的时候，如果要使用折扣，需要将这个值填入|
-    * discountValue  |参数名称：discountType为促销折扣或合作伙伴授予折扣时，为折扣率| |参数约束及描述：discountType为促销折扣或合作伙伴授予折扣时，为折扣率|
-    * discountType  |参数名称：折扣类型，取值为1：合同折扣（可以有多组）2：商务优惠（仅有一组）3：合作伙伴授予折扣（仅有一组）609：订单调价折扣| |参数的约束及描述：折扣类型，取值为1：合同折扣（可以有多组）2：商务优惠（仅有一组）3：合作伙伴授予折扣（仅有一组）609：订单调价折扣|
-    * orders  |参数名称：订单列表| |参数约束以及描述：订单列表|
+    * discountId  订单的可用折扣ID。 支付订单时，输入该参数的值，即可使用折扣。
+    * discountValue  折扣率或者满减值，如果折扣模式是一口价，这个值为空。
+    * discountType  折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
+    * orders  可使用折扣的订单列表。 具体请参见表3。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * discountId  |参数名称：折扣ID，支付的时候，如果要使用折扣，需要将这个值填入| |参数约束及描述：折扣ID，支付的时候，如果要使用折扣，需要将这个值填入|
-    * discountValue  |参数名称：discountType为促销折扣或合作伙伴授予折扣时，为折扣率| |参数约束及描述：discountType为促销折扣或合作伙伴授予折扣时，为折扣率|
-    * discountType  |参数名称：折扣类型，取值为1：合同折扣（可以有多组）2：商务优惠（仅有一组）3：合作伙伴授予折扣（仅有一组）609：订单调价折扣| |参数的约束及描述：折扣类型，取值为1：合同折扣（可以有多组）2：商务优惠（仅有一组）3：合作伙伴授予折扣（仅有一组）609：订单调价折扣|
-    * orders  |参数名称：订单列表| |参数约束以及描述：订单列表|
+    * discountId  订单的可用折扣ID。 支付订单时，输入该参数的值，即可使用折扣。
+    * discountValue  折扣率或者满减值，如果折扣模式是一口价，这个值为空。
+    * discountType  折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
+    * orders  可使用折扣的订单列表。 具体请参见表3。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * discountId  |参数名称：折扣ID，支付的时候，如果要使用折扣，需要将这个值填入| |参数约束及描述：折扣ID，支付的时候，如果要使用折扣，需要将这个值填入|
-    * discountValue  |参数名称：discountType为促销折扣或合作伙伴授予折扣时，为折扣率| |参数约束及描述：discountType为促销折扣或合作伙伴授予折扣时，为折扣率|
-    * discountType  |参数名称：折扣类型，取值为1：合同折扣（可以有多组）2：商务优惠（仅有一组）3：合作伙伴授予折扣（仅有一组）609：订单调价折扣| |参数的约束及描述：折扣类型，取值为1：合同折扣（可以有多组）2：商务优惠（仅有一组）3：合作伙伴授予折扣（仅有一组）609：订单调价折扣|
-    * orders  |参数名称：订单列表| |参数约束以及描述：订单列表|
+    * discountId  订单的可用折扣ID。 支付订单时，输入该参数的值，即可使用折扣。
+    * discountValue  折扣率或者满减值，如果折扣模式是一口价，这个值为空。
+    * discountType  折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
+    * orders  可使用折扣的订单列表。 具体请参见表3。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountId
-    *  |参数名称：折扣ID，支付的时候，如果要使用折扣，需要将这个值填入| |参数约束及描述：折扣ID，支付的时候，如果要使用折扣，需要将这个值填入|
+    *  订单的可用折扣ID。 支付订单时，输入该参数的值，即可使用折扣。
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
     /**
     * Sets discountId
     *
-    * @param string $discountId |参数名称：折扣ID，支付的时候，如果要使用折扣，需要将这个值填入| |参数约束及描述：折扣ID，支付的时候，如果要使用折扣，需要将这个值填入|
+    * @param string $discountId 订单的可用折扣ID。 支付订单时，输入该参数的值，即可使用折扣。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountValue
-    *  |参数名称：discountType为促销折扣或合作伙伴授予折扣时，为折扣率| |参数约束及描述：discountType为促销折扣或合作伙伴授予折扣时，为折扣率|
+    *  折扣率或者满减值，如果折扣模式是一口价，这个值为空。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
     /**
     * Sets discountValue
     *
-    * @param string $discountValue |参数名称：discountType为促销折扣或合作伙伴授予折扣时，为折扣率| |参数约束及描述：discountType为促销折扣或合作伙伴授予折扣时，为折扣率|
+    * @param string $discountValue 折扣率或者满减值，如果折扣模式是一口价，这个值为空。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountType
-    *  |参数名称：折扣类型，取值为1：合同折扣（可以有多组）2：商务优惠（仅有一组）3：合作伙伴授予折扣（仅有一组）609：订单调价折扣| |参数的约束及描述：折扣类型，取值为1：合同折扣（可以有多组）2：商务优惠（仅有一组）3：合作伙伴授予折扣（仅有一组）609：订单调价折扣|
+    *  折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
     *
     * @return int
     */
@@ -279,7 +279,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
     /**
     * Sets discountType
     *
-    * @param int $discountType |参数名称：折扣类型，取值为1：合同折扣（可以有多组）2：商务优惠（仅有一组）3：合作伙伴授予折扣（仅有一组）609：订单调价折扣| |参数的约束及描述：折扣类型，取值为1：合同折扣（可以有多组）2：商务优惠（仅有一组）3：合作伙伴授予折扣（仅有一组）609：订单调价折扣|
+    * @param int $discountType 折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets orders
-    *  |参数名称：订单列表| |参数约束以及描述：订单列表|
+    *  可使用折扣的订单列表。 具体请参见表3。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\OrderV3[]
     */
@@ -303,7 +303,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
     /**
     * Sets orders
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\OrderV3[] $orders |参数名称：订单列表| |参数约束以及描述：订单列表|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\OrderV3[] $orders 可使用折扣的订单列表。 具体请参见表3。
     *
     * @return $this
     */

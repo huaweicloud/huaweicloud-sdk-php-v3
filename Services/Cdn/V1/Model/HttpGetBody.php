@@ -32,7 +32,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
             'httpsStatus' => 'string',
             'certificateName' => 'string',
             'certificateValue' => 'string',
-            'certificateSource' => 'string',
+            'certificateSource' => 'int',
             'http2Status' => 'string'
     ];
 
@@ -292,7 +292,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     * Gets certificateSource
     *  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getCertificateSource()
     {
@@ -302,7 +302,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets certificateSource
     *
-    * @param string|null $certificateSource 证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
+    * @param int|null $certificateSource 证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
     *
     * @return $this
     */

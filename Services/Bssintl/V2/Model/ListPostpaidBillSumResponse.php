@@ -21,45 +21,45 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * billCycle  |参数名称：结算周期，只有成功才返回这个参数。表示某年某月的账单汇总。格式：YYYY-MM| |参数约束及描述：结算周期，只有成功才返回这个参数。表示某年某月的账单汇总。格式：YYYY-MM|
-    * initialAmountDue  |参数名称：初始应还金额（含税）| |参数的约束及描述：初始应还金额（含税）|
-    * consumeAmount  |参数名称：消费金额| |参数的约束及描述：消费金额|
-    * refunds  |参数名称：退款| |参数的约束及描述：退款|
-    * adjustments  |参数名称：调账| |参数的约束及描述：调账|
-    * taxAmount  |参数名称：销项税金额| |参数的约束及描述：销项税金额|
-    * currency  |参数名称：只有成功才返回这个参数。人民币：CNY美金：USD| |参数约束及描述：只有成功才返回这个参数。人民币：CNY美金：USD|
+    * billCycle  账单所归属的月份。只有成功才返回这个参数。 格式：YYYY-MM
+    * initialAmountDue  账单中的应还金额（含税）。 应还金额（包含销项税）=消费金额+退款金额+调账金额
+    * consumeAmount  账单中的消费金额。
+    * refunds  账单中的退款金额。
+    * adjustments  账单中的调账金额，即伙伴在账期内的调账信息如：欠款核销金额等。
+    * taxAmount  账单中的销项税金额，销项税不计入应还金额。
+    * currency  只有成功才返回这个参数。 美金：USD
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'billCycle' => 'string',
-            'initialAmountDue' => 'float',
-            'consumeAmount' => 'float',
-            'refunds' => 'float',
-            'adjustments' => 'float',
-            'taxAmount' => 'float',
+            'initialAmountDue' => 'double',
+            'consumeAmount' => 'double',
+            'refunds' => 'double',
+            'adjustments' => 'double',
+            'taxAmount' => 'double',
             'currency' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * billCycle  |参数名称：结算周期，只有成功才返回这个参数。表示某年某月的账单汇总。格式：YYYY-MM| |参数约束及描述：结算周期，只有成功才返回这个参数。表示某年某月的账单汇总。格式：YYYY-MM|
-    * initialAmountDue  |参数名称：初始应还金额（含税）| |参数的约束及描述：初始应还金额（含税）|
-    * consumeAmount  |参数名称：消费金额| |参数的约束及描述：消费金额|
-    * refunds  |参数名称：退款| |参数的约束及描述：退款|
-    * adjustments  |参数名称：调账| |参数的约束及描述：调账|
-    * taxAmount  |参数名称：销项税金额| |参数的约束及描述：销项税金额|
-    * currency  |参数名称：只有成功才返回这个参数。人民币：CNY美金：USD| |参数约束及描述：只有成功才返回这个参数。人民币：CNY美金：USD|
+    * billCycle  账单所归属的月份。只有成功才返回这个参数。 格式：YYYY-MM
+    * initialAmountDue  账单中的应还金额（含税）。 应还金额（包含销项税）=消费金额+退款金额+调账金额
+    * consumeAmount  账单中的消费金额。
+    * refunds  账单中的退款金额。
+    * adjustments  账单中的调账金额，即伙伴在账期内的调账信息如：欠款核销金额等。
+    * taxAmount  账单中的销项税金额，销项税不计入应还金额。
+    * currency  只有成功才返回这个参数。 美金：USD
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'billCycle' => null,
-        'initialAmountDue' => 'bigdecimal',
-        'consumeAmount' => 'bigdecimal',
-        'refunds' => 'bigdecimal',
-        'adjustments' => 'bigdecimal',
-        'taxAmount' => 'bigdecimal',
+        'initialAmountDue' => 'double',
+        'consumeAmount' => 'double',
+        'refunds' => 'double',
+        'adjustments' => 'double',
+        'taxAmount' => 'double',
         'currency' => null
     ];
 
@@ -86,13 +86,13 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * billCycle  |参数名称：结算周期，只有成功才返回这个参数。表示某年某月的账单汇总。格式：YYYY-MM| |参数约束及描述：结算周期，只有成功才返回这个参数。表示某年某月的账单汇总。格式：YYYY-MM|
-    * initialAmountDue  |参数名称：初始应还金额（含税）| |参数的约束及描述：初始应还金额（含税）|
-    * consumeAmount  |参数名称：消费金额| |参数的约束及描述：消费金额|
-    * refunds  |参数名称：退款| |参数的约束及描述：退款|
-    * adjustments  |参数名称：调账| |参数的约束及描述：调账|
-    * taxAmount  |参数名称：销项税金额| |参数的约束及描述：销项税金额|
-    * currency  |参数名称：只有成功才返回这个参数。人民币：CNY美金：USD| |参数约束及描述：只有成功才返回这个参数。人民币：CNY美金：USD|
+    * billCycle  账单所归属的月份。只有成功才返回这个参数。 格式：YYYY-MM
+    * initialAmountDue  账单中的应还金额（含税）。 应还金额（包含销项税）=消费金额+退款金额+调账金额
+    * consumeAmount  账单中的消费金额。
+    * refunds  账单中的退款金额。
+    * adjustments  账单中的调账金额，即伙伴在账期内的调账信息如：欠款核销金额等。
+    * taxAmount  账单中的销项税金额，销项税不计入应还金额。
+    * currency  只有成功才返回这个参数。 美金：USD
     *
     * @var string[]
     */
@@ -108,13 +108,13 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * billCycle  |参数名称：结算周期，只有成功才返回这个参数。表示某年某月的账单汇总。格式：YYYY-MM| |参数约束及描述：结算周期，只有成功才返回这个参数。表示某年某月的账单汇总。格式：YYYY-MM|
-    * initialAmountDue  |参数名称：初始应还金额（含税）| |参数的约束及描述：初始应还金额（含税）|
-    * consumeAmount  |参数名称：消费金额| |参数的约束及描述：消费金额|
-    * refunds  |参数名称：退款| |参数的约束及描述：退款|
-    * adjustments  |参数名称：调账| |参数的约束及描述：调账|
-    * taxAmount  |参数名称：销项税金额| |参数的约束及描述：销项税金额|
-    * currency  |参数名称：只有成功才返回这个参数。人民币：CNY美金：USD| |参数约束及描述：只有成功才返回这个参数。人民币：CNY美金：USD|
+    * billCycle  账单所归属的月份。只有成功才返回这个参数。 格式：YYYY-MM
+    * initialAmountDue  账单中的应还金额（含税）。 应还金额（包含销项税）=消费金额+退款金额+调账金额
+    * consumeAmount  账单中的消费金额。
+    * refunds  账单中的退款金额。
+    * adjustments  账单中的调账金额，即伙伴在账期内的调账信息如：欠款核销金额等。
+    * taxAmount  账单中的销项税金额，销项税不计入应还金额。
+    * currency  只有成功才返回这个参数。 美金：USD
     *
     * @var string[]
     */
@@ -130,13 +130,13 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * billCycle  |参数名称：结算周期，只有成功才返回这个参数。表示某年某月的账单汇总。格式：YYYY-MM| |参数约束及描述：结算周期，只有成功才返回这个参数。表示某年某月的账单汇总。格式：YYYY-MM|
-    * initialAmountDue  |参数名称：初始应还金额（含税）| |参数的约束及描述：初始应还金额（含税）|
-    * consumeAmount  |参数名称：消费金额| |参数的约束及描述：消费金额|
-    * refunds  |参数名称：退款| |参数的约束及描述：退款|
-    * adjustments  |参数名称：调账| |参数的约束及描述：调账|
-    * taxAmount  |参数名称：销项税金额| |参数的约束及描述：销项税金额|
-    * currency  |参数名称：只有成功才返回这个参数。人民币：CNY美金：USD| |参数约束及描述：只有成功才返回这个参数。人民币：CNY美金：USD|
+    * billCycle  账单所归属的月份。只有成功才返回这个参数。 格式：YYYY-MM
+    * initialAmountDue  账单中的应还金额（含税）。 应还金额（包含销项税）=消费金额+退款金额+调账金额
+    * consumeAmount  账单中的消费金额。
+    * refunds  账单中的退款金额。
+    * adjustments  账单中的调账金额，即伙伴在账期内的调账信息如：欠款核销金额等。
+    * taxAmount  账单中的销项税金额，销项税不计入应还金额。
+    * currency  只有成功才返回这个参数。 美金：USD
     *
     * @var string[]
     */
@@ -241,7 +241,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets billCycle
-    *  |参数名称：结算周期，只有成功才返回这个参数。表示某年某月的账单汇总。格式：YYYY-MM| |参数约束及描述：结算周期，只有成功才返回这个参数。表示某年某月的账单汇总。格式：YYYY-MM|
+    *  账单所归属的月份。只有成功才返回这个参数。 格式：YYYY-MM
     *
     * @return string|null
     */
@@ -253,7 +253,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets billCycle
     *
-    * @param string|null $billCycle |参数名称：结算周期，只有成功才返回这个参数。表示某年某月的账单汇总。格式：YYYY-MM| |参数约束及描述：结算周期，只有成功才返回这个参数。表示某年某月的账单汇总。格式：YYYY-MM|
+    * @param string|null $billCycle 账单所归属的月份。只有成功才返回这个参数。 格式：YYYY-MM
     *
     * @return $this
     */
@@ -265,9 +265,9 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets initialAmountDue
-    *  |参数名称：初始应还金额（含税）| |参数的约束及描述：初始应还金额（含税）|
+    *  账单中的应还金额（含税）。 应还金额（包含销项税）=消费金额+退款金额+调账金额
     *
-    * @return float|null
+    * @return double|null
     */
     public function getInitialAmountDue()
     {
@@ -277,7 +277,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets initialAmountDue
     *
-    * @param float|null $initialAmountDue |参数名称：初始应还金额（含税）| |参数的约束及描述：初始应还金额（含税）|
+    * @param double|null $initialAmountDue 账单中的应还金额（含税）。 应还金额（包含销项税）=消费金额+退款金额+调账金额
     *
     * @return $this
     */
@@ -289,9 +289,9 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumeAmount
-    *  |参数名称：消费金额| |参数的约束及描述：消费金额|
+    *  账单中的消费金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getConsumeAmount()
     {
@@ -301,7 +301,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets consumeAmount
     *
-    * @param float|null $consumeAmount |参数名称：消费金额| |参数的约束及描述：消费金额|
+    * @param double|null $consumeAmount 账单中的消费金额。
     *
     * @return $this
     */
@@ -313,9 +313,9 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets refunds
-    *  |参数名称：退款| |参数的约束及描述：退款|
+    *  账单中的退款金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getRefunds()
     {
@@ -325,7 +325,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets refunds
     *
-    * @param float|null $refunds |参数名称：退款| |参数的约束及描述：退款|
+    * @param double|null $refunds 账单中的退款金额。
     *
     * @return $this
     */
@@ -337,9 +337,9 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets adjustments
-    *  |参数名称：调账| |参数的约束及描述：调账|
+    *  账单中的调账金额，即伙伴在账期内的调账信息如：欠款核销金额等。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getAdjustments()
     {
@@ -349,7 +349,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets adjustments
     *
-    * @param float|null $adjustments |参数名称：调账| |参数的约束及描述：调账|
+    * @param double|null $adjustments 账单中的调账金额，即伙伴在账期内的调账信息如：欠款核销金额等。
     *
     * @return $this
     */
@@ -361,9 +361,9 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taxAmount
-    *  |参数名称：销项税金额| |参数的约束及描述：销项税金额|
+    *  账单中的销项税金额，销项税不计入应还金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getTaxAmount()
     {
@@ -373,7 +373,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taxAmount
     *
-    * @param float|null $taxAmount |参数名称：销项税金额| |参数的约束及描述：销项税金额|
+    * @param double|null $taxAmount 账单中的销项税金额，销项税不计入应还金额。
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets currency
-    *  |参数名称：只有成功才返回这个参数。人民币：CNY美金：USD| |参数约束及描述：只有成功才返回这个参数。人民币：CNY美金：USD|
+    *  只有成功才返回这个参数。 美金：USD
     *
     * @return string|null
     */
@@ -397,7 +397,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets currency
     *
-    * @param string|null $currency |参数名称：只有成功才返回这个参数。人民币：CNY美金：USD| |参数约束及描述：只有成功才返回这个参数。人民币：CNY美金：USD|
+    * @param string|null $currency 只有成功才返回这个参数。 美金：USD
     *
     * @return $this
     */

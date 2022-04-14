@@ -1,3 +1,26 @@
+# 3.0.43-rc 2022-04-14
+
+### HuaweiCloud SDK CDN
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`UpdateDomainFullConfig`新增请求参数 `sources`、`origin_protocol`、`force_redirect`、`compress`
+  - 接口`ShowDomainFullConfig`:
+    - 新增响应参数 `sources`、`origin_protocol`、`force_redirect`、`compress`
+    - 响应参数`certificate_source`类型调整 `string` -> `int32`
+
+### HuaweiCloud SDK ECS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListServersDetails`新增请求参数 `ip_eq`
+
 # 3.0.42-rc 2022-04-07
 
 ### HuaweiCloud SDK BSS

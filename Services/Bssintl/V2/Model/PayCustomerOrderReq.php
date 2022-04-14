@@ -20,9 +20,9 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * couponInfos  |参数名称：字段预留。优惠券列表，目前仅支持传递一个优惠券ID。请从“1.3-查询订单可用优惠券”接口的响应参数中获取。| |参数约束以及描述：字段预留。优惠券列表，目前仅支持传递一个优惠券ID。请从“1.3-查询订单可用优惠券”接口的响应参数中获取。|
-    * discountInfos  |参数名称：折扣ID列表，目前仅支持传递一个折扣ID。请从“1.9-查询订单可用折扣”接口的响应参数中获取。具体参见表 DiscountSimpleInfo。| |参数约束以及描述：折扣ID列表，目前仅支持传递一个折扣ID。请从“1.9-查询订单可用折扣”接口的响应参数中获取。具体参见表 DiscountSimpleInfo。|
+    * orderId  订单编号。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值或调用“续订包年/包月资源”接口时响应消息“order_ids”中的订单ID。
+    * couponInfos  字段预留。 具体参见表1。
+    * discountInfos  折扣ID列表，目前仅支持传递一个折扣ID。 请从“查询订单可用折扣”接口的响应参数中获取。 具体参见表2。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * couponInfos  |参数名称：字段预留。优惠券列表，目前仅支持传递一个优惠券ID。请从“1.3-查询订单可用优惠券”接口的响应参数中获取。| |参数约束以及描述：字段预留。优惠券列表，目前仅支持传递一个优惠券ID。请从“1.3-查询订单可用优惠券”接口的响应参数中获取。|
-    * discountInfos  |参数名称：折扣ID列表，目前仅支持传递一个折扣ID。请从“1.9-查询订单可用折扣”接口的响应参数中获取。具体参见表 DiscountSimpleInfo。| |参数约束以及描述：折扣ID列表，目前仅支持传递一个折扣ID。请从“1.9-查询订单可用折扣”接口的响应参数中获取。具体参见表 DiscountSimpleInfo。|
+    * orderId  订单编号。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值或调用“续订包年/包月资源”接口时响应消息“order_ids”中的订单ID。
+    * couponInfos  字段预留。 具体参见表1。
+    * discountInfos  折扣ID列表，目前仅支持传递一个折扣ID。 请从“查询订单可用折扣”接口的响应参数中获取。 具体参见表2。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * couponInfos  |参数名称：字段预留。优惠券列表，目前仅支持传递一个优惠券ID。请从“1.3-查询订单可用优惠券”接口的响应参数中获取。| |参数约束以及描述：字段预留。优惠券列表，目前仅支持传递一个优惠券ID。请从“1.3-查询订单可用优惠券”接口的响应参数中获取。|
-    * discountInfos  |参数名称：折扣ID列表，目前仅支持传递一个折扣ID。请从“1.9-查询订单可用折扣”接口的响应参数中获取。具体参见表 DiscountSimpleInfo。| |参数约束以及描述：折扣ID列表，目前仅支持传递一个折扣ID。请从“1.9-查询订单可用折扣”接口的响应参数中获取。具体参见表 DiscountSimpleInfo。|
+    * orderId  订单编号。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值或调用“续订包年/包月资源”接口时响应消息“order_ids”中的订单ID。
+    * couponInfos  字段预留。 具体参见表1。
+    * discountInfos  折扣ID列表，目前仅支持传递一个折扣ID。 请从“查询订单可用折扣”接口的响应参数中获取。 具体参见表2。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * couponInfos  |参数名称：字段预留。优惠券列表，目前仅支持传递一个优惠券ID。请从“1.3-查询订单可用优惠券”接口的响应参数中获取。| |参数约束以及描述：字段预留。优惠券列表，目前仅支持传递一个优惠券ID。请从“1.3-查询订单可用优惠券”接口的响应参数中获取。|
-    * discountInfos  |参数名称：折扣ID列表，目前仅支持传递一个折扣ID。请从“1.9-查询订单可用折扣”接口的响应参数中获取。具体参见表 DiscountSimpleInfo。| |参数约束以及描述：折扣ID列表，目前仅支持传递一个折扣ID。请从“1.9-查询订单可用折扣”接口的响应参数中获取。具体参见表 DiscountSimpleInfo。|
+    * orderId  订单编号。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值或调用“续订包年/包月资源”接口时响应消息“order_ids”中的订单ID。
+    * couponInfos  字段预留。 具体参见表1。
+    * discountInfos  折扣ID列表，目前仅支持传递一个折扣ID。 请从“查询订单可用折扣”接口的响应参数中获取。 具体参见表2。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderId  |参数名称：订单ID。| |参数约束及描述：订单ID。|
-    * couponInfos  |参数名称：字段预留。优惠券列表，目前仅支持传递一个优惠券ID。请从“1.3-查询订单可用优惠券”接口的响应参数中获取。| |参数约束以及描述：字段预留。优惠券列表，目前仅支持传递一个优惠券ID。请从“1.3-查询订单可用优惠券”接口的响应参数中获取。|
-    * discountInfos  |参数名称：折扣ID列表，目前仅支持传递一个折扣ID。请从“1.9-查询订单可用折扣”接口的响应参数中获取。具体参见表 DiscountSimpleInfo。| |参数约束以及描述：折扣ID列表，目前仅支持传递一个折扣ID。请从“1.9-查询订单可用折扣”接口的响应参数中获取。具体参见表 DiscountSimpleInfo。|
+    * orderId  订单编号。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值或调用“续订包年/包月资源”接口时响应消息“order_ids”中的订单ID。
+    * couponInfos  字段预留。 具体参见表1。
+    * discountInfos  折扣ID列表，目前仅支持传递一个折扣ID。 请从“查询订单可用折扣”接口的响应参数中获取。 具体参见表2。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  |参数名称：订单ID。| |参数约束及描述：订单ID。|
+    *  订单编号。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值或调用“续订包年/包月资源”接口时响应消息“order_ids”中的订单ID。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string $orderId |参数名称：订单ID。| |参数约束及描述：订单ID。|
+    * @param string $orderId 订单编号。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值或调用“续订包年/包月资源”接口时响应消息“order_ids”中的订单ID。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponInfos
-    *  |参数名称：字段预留。优惠券列表，目前仅支持传递一个优惠券ID。请从“1.3-查询订单可用优惠券”接口的响应参数中获取。| |参数约束以及描述：字段预留。优惠券列表，目前仅支持传递一个优惠券ID。请从“1.3-查询订单可用优惠券”接口的响应参数中获取。|
+    *  字段预留。 具体参见表1。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\CouponSimpleInfoOrderPay[]|null
     */
@@ -241,7 +241,7 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
     /**
     * Sets couponInfos
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\CouponSimpleInfoOrderPay[]|null $couponInfos |参数名称：字段预留。优惠券列表，目前仅支持传递一个优惠券ID。请从“1.3-查询订单可用优惠券”接口的响应参数中获取。| |参数约束以及描述：字段预留。优惠券列表，目前仅支持传递一个优惠券ID。请从“1.3-查询订单可用优惠券”接口的响应参数中获取。|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\CouponSimpleInfoOrderPay[]|null $couponInfos 字段预留。 具体参见表1。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountInfos
-    *  |参数名称：折扣ID列表，目前仅支持传递一个折扣ID。请从“1.9-查询订单可用折扣”接口的响应参数中获取。具体参见表 DiscountSimpleInfo。| |参数约束以及描述：折扣ID列表，目前仅支持传递一个折扣ID。请从“1.9-查询订单可用折扣”接口的响应参数中获取。具体参见表 DiscountSimpleInfo。|
+    *  折扣ID列表，目前仅支持传递一个折扣ID。 请从“查询订单可用折扣”接口的响应参数中获取。 具体参见表2。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\DiscountSimpleInfo[]|null
     */
@@ -265,7 +265,7 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
     /**
     * Sets discountInfos
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\DiscountSimpleInfo[]|null $discountInfos |参数名称：折扣ID列表，目前仅支持传递一个折扣ID。请从“1.9-查询订单可用折扣”接口的响应参数中获取。具体参见表 DiscountSimpleInfo。| |参数约束以及描述：折扣ID列表，目前仅支持传递一个折扣ID。请从“1.9-查询订单可用折扣”接口的响应参数中获取。具体参见表 DiscountSimpleInfo。|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\DiscountSimpleInfo[]|null $discountInfos 折扣ID列表，目前仅支持传递一个折扣ID。 请从“查询订单可用折扣”接口的响应参数中获取。 具体参见表2。
     *
     * @return $this
     */

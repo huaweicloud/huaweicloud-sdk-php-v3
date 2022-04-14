@@ -20,11 +20,11 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多100个资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多100个资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。|
-    * periodType  |参数名称：周期类型：2：月；3：年| |参数的约束及描述：周期类型：2：月；3：年|
-    * periodNum  |参数名称：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3|
-    * expirePolicy  |参数名称：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订| |参数的约束及描述：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订|
-    * isAutoPay  |参数名称：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。| |参数的约束及描述：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。|
+    * resourceIds  资源ID列表。 只支持传入主资源ID，最多100个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
+    * periodType  周期类型： 2：月3：年
+    * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
+    * expirePolicy  到期策略： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
+    * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多100个资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多100个资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。|
-    * periodType  |参数名称：周期类型：2：月；3：年| |参数的约束及描述：周期类型：2：月；3：年|
-    * periodNum  |参数名称：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3|
-    * expirePolicy  |参数名称：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订| |参数的约束及描述：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订|
-    * isAutoPay  |参数名称：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。| |参数的约束及描述：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。|
+    * resourceIds  资源ID列表。 只支持传入主资源ID，最多100个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
+    * periodType  周期类型： 2：月3：年
+    * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
+    * expirePolicy  到期策略： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
+    * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多100个资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多100个资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。|
-    * periodType  |参数名称：周期类型：2：月；3：年| |参数的约束及描述：周期类型：2：月；3：年|
-    * periodNum  |参数名称：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3|
-    * expirePolicy  |参数名称：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订| |参数的约束及描述：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订|
-    * isAutoPay  |参数名称：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。| |参数的约束及描述：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。|
+    * resourceIds  资源ID列表。 只支持传入主资源ID，最多100个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
+    * periodType  周期类型： 2：月3：年
+    * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
+    * expirePolicy  到期策略： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
+    * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多100个资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多100个资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。|
-    * periodType  |参数名称：周期类型：2：月；3：年| |参数的约束及描述：周期类型：2：月；3：年|
-    * periodNum  |参数名称：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3|
-    * expirePolicy  |参数名称：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订| |参数的约束及描述：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订|
-    * isAutoPay  |参数名称：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。| |参数的约束及描述：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。|
+    * resourceIds  资源ID列表。 只支持传入主资源ID，最多100个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
+    * periodType  周期类型： 2：月3：年
+    * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
+    * expirePolicy  到期策略： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
+    * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多100个资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多100个资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。|
-    * periodType  |参数名称：周期类型：2：月；3：年| |参数的约束及描述：周期类型：2：月；3：年|
-    * periodNum  |参数名称：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3|
-    * expirePolicy  |参数名称：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订| |参数的约束及描述：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订|
-    * isAutoPay  |参数名称：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。| |参数的约束及描述：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。|
+    * resourceIds  资源ID列表。 只支持传入主资源ID，最多100个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
+    * periodType  周期类型： 2：月3：年
+    * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
+    * expirePolicy  到期策略： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
+    * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
     */
@@ -254,7 +254,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceIds
-    *  |参数名称：资源ID列表。只支持传入主资源ID，最多100个资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多100个资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。|
+    *  资源ID列表。 只支持传入主资源ID，最多100个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
     *
     * @return string[]
     */
@@ -266,7 +266,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets resourceIds
     *
-    * @param string[] $resourceIds |参数名称：资源ID列表。只支持传入主资源ID，最多100个资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多100个资源ID。哪些资源是主资源请根据“2.1-查询客户包周期资源列表”接口响应参数中的“is_main_resource”来标识。|
+    * @param string[] $resourceIds 资源ID列表。 只支持传入主资源ID，最多100个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  |参数名称：周期类型：2：月；3：年| |参数的约束及描述：周期类型：2：月；3：年|
+    *  周期类型： 2：月3：年
     *
     * @return int
     */
@@ -290,7 +290,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param int $periodType |参数名称：周期类型：2：月；3：年| |参数的约束及描述：周期类型：2：月；3：年|
+    * @param int $periodType 周期类型： 2：月3：年
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  |参数名称：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3|
+    *  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
     *
     * @return int
     */
@@ -314,7 +314,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int $periodNum |参数名称：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11；如果是年，目前支持1-3|
+    * @param int $periodNum 周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets expirePolicy
-    *  |参数名称：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订| |参数的约束及描述：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订|
+    *  到期策略： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     *
     * @return int
     */
@@ -338,7 +338,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets expirePolicy
     *
-    * @param int $expirePolicy |参数名称：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订| |参数的约束及描述：到期策略：0：进入宽限期1：转按需2：自动退订3：自动续订|
+    * @param int $expirePolicy 到期策略： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoPay
-    *  |参数名称：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。| |参数的约束及描述：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。|
+    *  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @return int|null
     */
@@ -362,7 +362,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoPay
     *
-    * @param int|null $isAutoPay |参数名称：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。| |参数的约束及描述：是否自动支付。0：否1：是不填写的话，默认值是0，不自动支付。|
+    * @param int|null $isAutoPay 是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @return $this
     */

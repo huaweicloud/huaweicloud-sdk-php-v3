@@ -21,7 +21,7 @@ class ListOrderDiscountsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * discounts  |参数名称：可用的优惠券列表。具体请参见表1-30。| |参数约束以及描述：可用的优惠券列表。具体请参见表1-30。|
+    * discounts  可用的折扣列表。 具体请参见表2。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListOrderDiscountsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * discounts  |参数名称：可用的优惠券列表。具体请参见表1-30。| |参数约束以及描述：可用的优惠券列表。具体请参见表1-30。|
+    * discounts  可用的折扣列表。 具体请参见表2。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListOrderDiscountsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * discounts  |参数名称：可用的优惠券列表。具体请参见表1-30。| |参数约束以及描述：可用的优惠券列表。具体请参见表1-30。|
+    * discounts  可用的折扣列表。 具体请参见表2。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListOrderDiscountsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * discounts  |参数名称：可用的优惠券列表。具体请参见表1-30。| |参数约束以及描述：可用的优惠券列表。具体请参见表1-30。|
+    * discounts  可用的折扣列表。 具体请参见表2。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListOrderDiscountsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * discounts  |参数名称：可用的优惠券列表。具体请参见表1-30。| |参数约束以及描述：可用的优惠券列表。具体请参见表1-30。|
+    * discounts  可用的折扣列表。 具体请参见表2。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListOrderDiscountsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets discounts
-    *  |参数名称：可用的优惠券列表。具体请参见表1-30。| |参数约束以及描述：可用的优惠券列表。具体请参见表1-30。|
+    *  可用的折扣列表。 具体请参见表2。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\DiscountInfoV3[]|null
     */
@@ -187,7 +187,7 @@ class ListOrderDiscountsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets discounts
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\DiscountInfoV3[]|null $discounts |参数名称：可用的优惠券列表。具体请参见表1-30。| |参数约束以及描述：可用的优惠券列表。具体请参见表1-30。|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\DiscountInfoV3[]|null $discounts 可用的折扣列表。 具体请参见表2。
     *
     * @return $this
     */

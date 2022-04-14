@@ -21,7 +21,7 @@ class ListMeasureUnitsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * measureUnits  |参数名称：度量信息| |参数约束以及描述：度量信息|
+    * measureUnits  度量单位信息，具体参见表2。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListMeasureUnitsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * measureUnits  |参数名称：度量信息| |参数约束以及描述：度量信息|
+    * measureUnits  度量单位信息，具体参见表2。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListMeasureUnitsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * measureUnits  |参数名称：度量信息| |参数约束以及描述：度量信息|
+    * measureUnits  度量单位信息，具体参见表2。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListMeasureUnitsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * measureUnits  |参数名称：度量信息| |参数约束以及描述：度量信息|
+    * measureUnits  度量单位信息，具体参见表2。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListMeasureUnitsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * measureUnits  |参数名称：度量信息| |参数约束以及描述：度量信息|
+    * measureUnits  度量单位信息，具体参见表2。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListMeasureUnitsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureUnits
-    *  |参数名称：度量信息| |参数约束以及描述：度量信息|
+    *  度量单位信息，具体参见表2。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\MeasureUnitRest[]|null
     */
@@ -187,7 +187,7 @@ class ListMeasureUnitsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets measureUnits
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\MeasureUnitRest[]|null $measureUnits |参数名称：度量信息| |参数约束以及描述：度量信息|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\MeasureUnitRest[]|null $measureUnits 度量单位信息，具体参见表2。
     *
     * @return $this
     */

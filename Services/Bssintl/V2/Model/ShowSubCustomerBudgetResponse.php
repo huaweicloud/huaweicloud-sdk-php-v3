@@ -21,32 +21,32 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * budgetAmount  |参数名称：预算金额。| |参数的约束及描述：预算金额。|
-    * usedAmount  |参数名称：已经使用的预算。该预算存在一定的时延和误差。| |参数的约束及描述：已经使用的预算。该预算存在一定的时延和误差。|
-    * measureId  |参数名称：金额单位。1：元| |参数的约束及描述：金额单位。1：元|
-    * currency  |参数名称：公司名称币种。CNY：人民币USD：美金| |参数约束及描述：公司名称币种。CNY：人民币USD：美金|
+    * budgetAmount  初始预算金额。
+    * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
+    * measureId  金额单位。 1：元
+    * currency  币种。 USD：美金
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'budgetAmount' => 'float',
-            'usedAmount' => 'float',
+            'budgetAmount' => 'double',
+            'usedAmount' => 'double',
             'measureId' => 'int',
             'currency' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * budgetAmount  |参数名称：预算金额。| |参数的约束及描述：预算金额。|
-    * usedAmount  |参数名称：已经使用的预算。该预算存在一定的时延和误差。| |参数的约束及描述：已经使用的预算。该预算存在一定的时延和误差。|
-    * measureId  |参数名称：金额单位。1：元| |参数的约束及描述：金额单位。1：元|
-    * currency  |参数名称：公司名称币种。CNY：人民币USD：美金| |参数约束及描述：公司名称币种。CNY：人民币USD：美金|
+    * budgetAmount  初始预算金额。
+    * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
+    * measureId  金额单位。 1：元
+    * currency  币种。 USD：美金
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'budgetAmount' => 'bigdecimal',
-        'usedAmount' => 'bigdecimal',
+        'budgetAmount' => 'double',
+        'usedAmount' => 'double',
         'measureId' => 'int32',
         'currency' => null
     ];
@@ -74,10 +74,10 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * budgetAmount  |参数名称：预算金额。| |参数的约束及描述：预算金额。|
-    * usedAmount  |参数名称：已经使用的预算。该预算存在一定的时延和误差。| |参数的约束及描述：已经使用的预算。该预算存在一定的时延和误差。|
-    * measureId  |参数名称：金额单位。1：元| |参数的约束及描述：金额单位。1：元|
-    * currency  |参数名称：公司名称币种。CNY：人民币USD：美金| |参数约束及描述：公司名称币种。CNY：人民币USD：美金|
+    * budgetAmount  初始预算金额。
+    * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
+    * measureId  金额单位。 1：元
+    * currency  币种。 USD：美金
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * budgetAmount  |参数名称：预算金额。| |参数的约束及描述：预算金额。|
-    * usedAmount  |参数名称：已经使用的预算。该预算存在一定的时延和误差。| |参数的约束及描述：已经使用的预算。该预算存在一定的时延和误差。|
-    * measureId  |参数名称：金额单位。1：元| |参数的约束及描述：金额单位。1：元|
-    * currency  |参数名称：公司名称币种。CNY：人民币USD：美金| |参数约束及描述：公司名称币种。CNY：人民币USD：美金|
+    * budgetAmount  初始预算金额。
+    * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
+    * measureId  金额单位。 1：元
+    * currency  币种。 USD：美金
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * budgetAmount  |参数名称：预算金额。| |参数的约束及描述：预算金额。|
-    * usedAmount  |参数名称：已经使用的预算。该预算存在一定的时延和误差。| |参数的约束及描述：已经使用的预算。该预算存在一定的时延和误差。|
-    * measureId  |参数名称：金额单位。1：元| |参数的约束及描述：金额单位。1：元|
-    * currency  |参数名称：公司名称币种。CNY：人民币USD：美金| |参数约束及描述：公司名称币种。CNY：人民币USD：美金|
+    * budgetAmount  初始预算金额。
+    * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
+    * measureId  金额单位。 1：元
+    * currency  币种。 USD：美金
     *
     * @var string[]
     */
@@ -208,9 +208,9 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets budgetAmount
-    *  |参数名称：预算金额。| |参数的约束及描述：预算金额。|
+    *  初始预算金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getBudgetAmount()
     {
@@ -220,7 +220,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets budgetAmount
     *
-    * @param float|null $budgetAmount |参数名称：预算金额。| |参数的约束及描述：预算金额。|
+    * @param double|null $budgetAmount 初始预算金额。
     *
     * @return $this
     */
@@ -232,9 +232,9 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedAmount
-    *  |参数名称：已经使用的预算。该预算存在一定的时延和误差。| |参数的约束及描述：已经使用的预算。该预算存在一定的时延和误差。|
+    *  已经使用的预算。该预算存在一定的时延和误差。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getUsedAmount()
     {
@@ -244,7 +244,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets usedAmount
     *
-    * @param float|null $usedAmount |参数名称：已经使用的预算。该预算存在一定的时延和误差。| |参数的约束及描述：已经使用的预算。该预算存在一定的时延和误差。|
+    * @param double|null $usedAmount 已经使用的预算。该预算存在一定的时延和误差。
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：金额单位。1：元| |参数的约束及描述：金额单位。1：元|
+    *  金额单位。 1：元
     *
     * @return int|null
     */
@@ -268,7 +268,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId |参数名称：金额单位。1：元| |参数的约束及描述：金额单位。1：元|
+    * @param int|null $measureId 金额单位。 1：元
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets currency
-    *  |参数名称：公司名称币种。CNY：人民币USD：美金| |参数约束及描述：公司名称币种。CNY：人民币USD：美金|
+    *  币种。 USD：美金
     *
     * @return string|null
     */
@@ -292,7 +292,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets currency
     *
-    * @param string|null $currency |参数名称：公司名称币种。CNY：人民币USD：美金| |参数约束及描述：公司名称币种。CNY：人民币USD：美金|
+    * @param string|null $currency 币种。 USD：美金
     *
     * @return $this
     */

@@ -21,8 +21,8 @@ class CreateSubCustomerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainId  |参数名称：客户ID| |参数的约束及描述：只有成功或客户向伙伴授权发生异常（CBC.5025）时才会返回，且只允许最大长度64的字符串|
-    * domainName  |参数名称：用户登录名| |参数的约束及描述：只有成功的时候才会返回，且只允许最大长度64的字符串|
+    * domainId  客户ID。 只有成功或者错误码在CBC.99000050时才会返回。
+    * domainName  客户的华为云账号名。 若请求参数中传递了此参数值，此处返回的响应值与请求参数中取值一致。若请求参数中未传递此参数值，此处返回的响应值为系统随机生成的32位字符串。 只有成功时或者错误码在CBC.99000050时才会返回。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class CreateSubCustomerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainId  |参数名称：客户ID| |参数的约束及描述：只有成功或客户向伙伴授权发生异常（CBC.5025）时才会返回，且只允许最大长度64的字符串|
-    * domainName  |参数名称：用户登录名| |参数的约束及描述：只有成功的时候才会返回，且只允许最大长度64的字符串|
+    * domainId  客户ID。 只有成功或者错误码在CBC.99000050时才会返回。
+    * domainName  客户的华为云账号名。 若请求参数中传递了此参数值，此处返回的响应值与请求参数中取值一致。若请求参数中未传递此参数值，此处返回的响应值为系统随机生成的32位字符串。 只有成功时或者错误码在CBC.99000050时才会返回。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class CreateSubCustomerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainId  |参数名称：客户ID| |参数的约束及描述：只有成功或客户向伙伴授权发生异常（CBC.5025）时才会返回，且只允许最大长度64的字符串|
-    * domainName  |参数名称：用户登录名| |参数的约束及描述：只有成功的时候才会返回，且只允许最大长度64的字符串|
+    * domainId  客户ID。 只有成功或者错误码在CBC.99000050时才会返回。
+    * domainName  客户的华为云账号名。 若请求参数中传递了此参数值，此处返回的响应值与请求参数中取值一致。若请求参数中未传递此参数值，此处返回的响应值为系统随机生成的32位字符串。 只有成功时或者错误码在CBC.99000050时才会返回。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class CreateSubCustomerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainId  |参数名称：客户ID| |参数的约束及描述：只有成功或客户向伙伴授权发生异常（CBC.5025）时才会返回，且只允许最大长度64的字符串|
-    * domainName  |参数名称：用户登录名| |参数的约束及描述：只有成功的时候才会返回，且只允许最大长度64的字符串|
+    * domainId  客户ID。 只有成功或者错误码在CBC.99000050时才会返回。
+    * domainName  客户的华为云账号名。 若请求参数中传递了此参数值，此处返回的响应值与请求参数中取值一致。若请求参数中未传递此参数值，此处返回的响应值为系统随机生成的32位字符串。 只有成功时或者错误码在CBC.99000050时才会返回。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class CreateSubCustomerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainId  |参数名称：客户ID| |参数的约束及描述：只有成功或客户向伙伴授权发生异常（CBC.5025）时才会返回，且只允许最大长度64的字符串|
-    * domainName  |参数名称：用户登录名| |参数的约束及描述：只有成功的时候才会返回，且只允许最大长度64的字符串|
+    * domainId  客户ID。 只有成功或者错误码在CBC.99000050时才会返回。
+    * domainName  客户的华为云账号名。 若请求参数中传递了此参数值，此处返回的响应值与请求参数中取值一致。若请求参数中未传递此参数值，此处返回的响应值为系统随机生成的32位字符串。 只有成功时或者错误码在CBC.99000050时才会返回。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class CreateSubCustomerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  |参数名称：客户ID| |参数的约束及描述：只有成功或客户向伙伴授权发生异常（CBC.5025）时才会返回，且只允许最大长度64的字符串|
+    *  客户ID。 只有成功或者错误码在CBC.99000050时才会返回。
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class CreateSubCustomerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId |参数名称：客户ID| |参数的约束及描述：只有成功或客户向伙伴授权发生异常（CBC.5025）时才会返回，且只允许最大长度64的字符串|
+    * @param string|null $domainId 客户ID。 只有成功或者错误码在CBC.99000050时才会返回。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class CreateSubCustomerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  |参数名称：用户登录名| |参数的约束及描述：只有成功的时候才会返回，且只允许最大长度64的字符串|
+    *  客户的华为云账号名。 若请求参数中传递了此参数值，此处返回的响应值与请求参数中取值一致。若请求参数中未传递此参数值，此处返回的响应值为系统随机生成的32位字符串。 只有成功时或者错误码在CBC.99000050时才会返回。
     *
     * @return string|null
     */
@@ -222,7 +222,7 @@ class CreateSubCustomerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string|null $domainName |参数名称：用户登录名| |参数的约束及描述：只有成功的时候才会返回，且只允许最大长度64的字符串|
+    * @param string|null $domainName 客户的华为云账号名。 若请求参数中传递了此参数值，此处返回的响应值与请求参数中取值一致。若请求参数中未传递此参数值，此处返回的响应值为系统随机生成的32位字符串。 只有成功时或者错误码在CBC.99000050时才会返回。
     *
     * @return $this
     */

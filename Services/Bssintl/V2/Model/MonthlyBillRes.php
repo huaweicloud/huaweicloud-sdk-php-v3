@@ -20,36 +20,36 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cycle  |参数名称：资源详单数据所在账期| |参数的约束及描述：格式为YYYY-MM|
-    * billDate  |参数名称：消费日期| |参数的约束及描述：消费日期，格式为：YYYY-MM-DD|
-    * billType  |参数名称：账单类型| |参数的约束及描述：该参数非必填，1：消费-新购；2：消费-续订；3：消费-变更；4：退款-退订；5：消费-使用；8：消费-自动续订；9：调账-补偿；12：消费-按时计费；13：消费-退订手续费； 15消费-税金；14：消费-服务支持计划月末扣费；16：调账-扣费 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
-    * customerId  |参数名称：消费的客户账号ID。| |参数约束及描述：如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID; 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。|
-    * region  |参数名称：云服务区编码| |参数的约束及描述：该参数非必填，例如：“cn-north-1”。|
-    * regionName  |参数名称：云服务区名称| |参数的约束及描述：云服务区名称|
-    * cloudServiceType  |参数名称：云服务类型编码| |参数的约束及描述：该参数非必填,，例如OBS的云服务类型编码为“hws.service.type.obs”|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：该参数非必填，例如ECS的VM为“hws.resource.type.vm”。|
-    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
-    * resInstanceId  |参数名称：资源实例ID| |参数的约束及描述：该参数非必填|
-    * resourceName  |参数名称：资源名称| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
-    * resourceTag  |参数名称：资源标签| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
-    * skuCode  |参数名称：SKU编码| |参数的约束及描述：SKU（Stock Keeping Unit，库存量单元）编码，产品下的SKU分类属性|
-    * enterpriseProjectId  |参数名称：企业项目ID| |参数的约束及描述：该参数非必填|
-    * enterpriseProjectName  |参数名称：企业项目名称| |参数的约束及描述：该参数非必填|
-    * chargeMode  |参数名称：计费模式| |参数的约束及描述：1 : 包年/包月；3: 按需。10: 预留实例|
-    * consumeAmount  |参数名称：客户购买云服务类型的消费金额| |参数的约束及描述：该参数非必填，包含代金券，大陆站还包含现金券，大陆站精确到小数点后8位，国际站精确到小数点后2位。|
-    * cashAmount  |参数名称：现金支付金额| |参数的约束及描述：该参数非必填|
-    * creditAmount  |参数名称：信用额度支付金额| |参数的约束及描述：该参数非必填|
-    * couponAmount  |参数名称：代金券支付金额| |参数的约束及描述：该参数非必填。|
-    * flexipurchaseCouponAmount  |参数名称：现金券支付金额| |参数的约束及描述：该参数非必填。|
-    * storedCardAmount  |参数名称：储值卡支付金额| |参数的约束及描述：该参数非必填。|
-    * bonusAmount  |参数名称：奖励金支付金额（用于现网未清干净的奖励金）| |参数的约束及描述：该参数非必填。|
-    * debtAmount  |参数名称：欠费金额| |参数的约束及描述：该参数非必填。|
-    * adjustmentAmount  |参数名称：欠费核销金额| |参数的约束及描述：该参数非必填。|
-    * officialAmount  |参数名称：官网价| |参数的约束及描述：该参数非必填。|
-    * discountAmount  |参数名称：对应官网价折扣金额| |参数的约束及描述：该参数非必填。|
-    * measureId  |参数名称：金额单位。1: 元| |参数的约束及描述：该参数非必填|
-    * periodType  |参数名称：周期类型：19：年 20：月 24：天 25：小时 5：一次性| |参数的约束及描述：该参数非必填|
+    * cycle  资源详单数据所在账期，格式为YYYY-MM。 例如2020-01。
+    * billDate  消费日期，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
+    * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * resInstanceId  资源实例ID。
+    * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
+    * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
+    * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+    * enterpriseProjectName  企业项目名称。
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
+    * cashAmount  现金支付金额。
+    * creditAmount  信用额度支付金额。
+    * couponAmount  代金券支付金额。
+    * flexipurchaseCouponAmount  现金券支付金额。
+    * storedCardAmount  储值卡支付金额。
+    * bonusAmount  奖励金支付金额（用于现网客户未使用完的奖励金）。
+    * debtAmount  欠费金额。
+    * adjustmentAmount  欠费核销金额。
+    * officialAmount  官网价。
+    * discountAmount  对应官网价折扣金额。
+    * measureId  金额单位。 1：元
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     *
     * @var string[]
     */
@@ -71,53 +71,53 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'enterpriseProjectName' => 'string',
             'chargeMode' => 'int',
-            'consumeAmount' => 'float',
-            'cashAmount' => 'float',
-            'creditAmount' => 'float',
-            'couponAmount' => 'float',
-            'flexipurchaseCouponAmount' => 'float',
-            'storedCardAmount' => 'float',
-            'bonusAmount' => 'float',
-            'debtAmount' => 'float',
-            'adjustmentAmount' => 'float',
-            'officialAmount' => 'float',
-            'discountAmount' => 'float',
+            'consumeAmount' => 'double',
+            'cashAmount' => 'double',
+            'creditAmount' => 'double',
+            'couponAmount' => 'double',
+            'flexipurchaseCouponAmount' => 'double',
+            'storedCardAmount' => 'double',
+            'bonusAmount' => 'double',
+            'debtAmount' => 'double',
+            'adjustmentAmount' => 'double',
+            'officialAmount' => 'double',
+            'discountAmount' => 'double',
             'measureId' => 'int',
             'periodType' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cycle  |参数名称：资源详单数据所在账期| |参数的约束及描述：格式为YYYY-MM|
-    * billDate  |参数名称：消费日期| |参数的约束及描述：消费日期，格式为：YYYY-MM-DD|
-    * billType  |参数名称：账单类型| |参数的约束及描述：该参数非必填，1：消费-新购；2：消费-续订；3：消费-变更；4：退款-退订；5：消费-使用；8：消费-自动续订；9：调账-补偿；12：消费-按时计费；13：消费-退订手续费； 15消费-税金；14：消费-服务支持计划月末扣费；16：调账-扣费 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
-    * customerId  |参数名称：消费的客户账号ID。| |参数约束及描述：如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID; 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。|
-    * region  |参数名称：云服务区编码| |参数的约束及描述：该参数非必填，例如：“cn-north-1”。|
-    * regionName  |参数名称：云服务区名称| |参数的约束及描述：云服务区名称|
-    * cloudServiceType  |参数名称：云服务类型编码| |参数的约束及描述：该参数非必填,，例如OBS的云服务类型编码为“hws.service.type.obs”|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：该参数非必填，例如ECS的VM为“hws.resource.type.vm”。|
-    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
-    * resInstanceId  |参数名称：资源实例ID| |参数的约束及描述：该参数非必填|
-    * resourceName  |参数名称：资源名称| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
-    * resourceTag  |参数名称：资源标签| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
-    * skuCode  |参数名称：SKU编码| |参数的约束及描述：SKU（Stock Keeping Unit，库存量单元）编码，产品下的SKU分类属性|
-    * enterpriseProjectId  |参数名称：企业项目ID| |参数的约束及描述：该参数非必填|
-    * enterpriseProjectName  |参数名称：企业项目名称| |参数的约束及描述：该参数非必填|
-    * chargeMode  |参数名称：计费模式| |参数的约束及描述：1 : 包年/包月；3: 按需。10: 预留实例|
-    * consumeAmount  |参数名称：客户购买云服务类型的消费金额| |参数的约束及描述：该参数非必填，包含代金券，大陆站还包含现金券，大陆站精确到小数点后8位，国际站精确到小数点后2位。|
-    * cashAmount  |参数名称：现金支付金额| |参数的约束及描述：该参数非必填|
-    * creditAmount  |参数名称：信用额度支付金额| |参数的约束及描述：该参数非必填|
-    * couponAmount  |参数名称：代金券支付金额| |参数的约束及描述：该参数非必填。|
-    * flexipurchaseCouponAmount  |参数名称：现金券支付金额| |参数的约束及描述：该参数非必填。|
-    * storedCardAmount  |参数名称：储值卡支付金额| |参数的约束及描述：该参数非必填。|
-    * bonusAmount  |参数名称：奖励金支付金额（用于现网未清干净的奖励金）| |参数的约束及描述：该参数非必填。|
-    * debtAmount  |参数名称：欠费金额| |参数的约束及描述：该参数非必填。|
-    * adjustmentAmount  |参数名称：欠费核销金额| |参数的约束及描述：该参数非必填。|
-    * officialAmount  |参数名称：官网价| |参数的约束及描述：该参数非必填。|
-    * discountAmount  |参数名称：对应官网价折扣金额| |参数的约束及描述：该参数非必填。|
-    * measureId  |参数名称：金额单位。1: 元| |参数的约束及描述：该参数非必填|
-    * periodType  |参数名称：周期类型：19：年 20：月 24：天 25：小时 5：一次性| |参数的约束及描述：该参数非必填|
+    * cycle  资源详单数据所在账期，格式为YYYY-MM。 例如2020-01。
+    * billDate  消费日期，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
+    * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * resInstanceId  资源实例ID。
+    * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
+    * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
+    * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+    * enterpriseProjectName  企业项目名称。
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
+    * cashAmount  现金支付金额。
+    * creditAmount  信用额度支付金额。
+    * couponAmount  代金券支付金额。
+    * flexipurchaseCouponAmount  现金券支付金额。
+    * storedCardAmount  储值卡支付金额。
+    * bonusAmount  奖励金支付金额（用于现网客户未使用完的奖励金）。
+    * debtAmount  欠费金额。
+    * adjustmentAmount  欠费核销金额。
+    * officialAmount  官网价。
+    * discountAmount  对应官网价折扣金额。
+    * measureId  金额单位。 1：元
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     *
     * @var string[]
     */
@@ -139,17 +139,17 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'enterpriseProjectName' => null,
         'chargeMode' => 'int32',
-        'consumeAmount' => 'bigdecimal',
-        'cashAmount' => 'bigdecimal',
-        'creditAmount' => 'bigdecimal',
-        'couponAmount' => 'bigdecimal',
-        'flexipurchaseCouponAmount' => 'bigdecimal',
-        'storedCardAmount' => 'bigdecimal',
-        'bonusAmount' => 'bigdecimal',
-        'debtAmount' => 'bigdecimal',
-        'adjustmentAmount' => 'bigdecimal',
-        'officialAmount' => 'bigdecimal',
-        'discountAmount' => 'bigdecimal',
+        'consumeAmount' => 'double',
+        'cashAmount' => 'double',
+        'creditAmount' => 'double',
+        'couponAmount' => 'double',
+        'flexipurchaseCouponAmount' => 'double',
+        'storedCardAmount' => 'double',
+        'bonusAmount' => 'double',
+        'debtAmount' => 'double',
+        'adjustmentAmount' => 'double',
+        'officialAmount' => 'double',
+        'discountAmount' => 'double',
         'measureId' => 'int32',
         'periodType' => 'int32'
     ];
@@ -177,36 +177,36 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cycle  |参数名称：资源详单数据所在账期| |参数的约束及描述：格式为YYYY-MM|
-    * billDate  |参数名称：消费日期| |参数的约束及描述：消费日期，格式为：YYYY-MM-DD|
-    * billType  |参数名称：账单类型| |参数的约束及描述：该参数非必填，1：消费-新购；2：消费-续订；3：消费-变更；4：退款-退订；5：消费-使用；8：消费-自动续订；9：调账-补偿；12：消费-按时计费；13：消费-退订手续费； 15消费-税金；14：消费-服务支持计划月末扣费；16：调账-扣费 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
-    * customerId  |参数名称：消费的客户账号ID。| |参数约束及描述：如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID; 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。|
-    * region  |参数名称：云服务区编码| |参数的约束及描述：该参数非必填，例如：“cn-north-1”。|
-    * regionName  |参数名称：云服务区名称| |参数的约束及描述：云服务区名称|
-    * cloudServiceType  |参数名称：云服务类型编码| |参数的约束及描述：该参数非必填,，例如OBS的云服务类型编码为“hws.service.type.obs”|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：该参数非必填，例如ECS的VM为“hws.resource.type.vm”。|
-    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
-    * resInstanceId  |参数名称：资源实例ID| |参数的约束及描述：该参数非必填|
-    * resourceName  |参数名称：资源名称| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
-    * resourceTag  |参数名称：资源标签| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
-    * skuCode  |参数名称：SKU编码| |参数的约束及描述：SKU（Stock Keeping Unit，库存量单元）编码，产品下的SKU分类属性|
-    * enterpriseProjectId  |参数名称：企业项目ID| |参数的约束及描述：该参数非必填|
-    * enterpriseProjectName  |参数名称：企业项目名称| |参数的约束及描述：该参数非必填|
-    * chargeMode  |参数名称：计费模式| |参数的约束及描述：1 : 包年/包月；3: 按需。10: 预留实例|
-    * consumeAmount  |参数名称：客户购买云服务类型的消费金额| |参数的约束及描述：该参数非必填，包含代金券，大陆站还包含现金券，大陆站精确到小数点后8位，国际站精确到小数点后2位。|
-    * cashAmount  |参数名称：现金支付金额| |参数的约束及描述：该参数非必填|
-    * creditAmount  |参数名称：信用额度支付金额| |参数的约束及描述：该参数非必填|
-    * couponAmount  |参数名称：代金券支付金额| |参数的约束及描述：该参数非必填。|
-    * flexipurchaseCouponAmount  |参数名称：现金券支付金额| |参数的约束及描述：该参数非必填。|
-    * storedCardAmount  |参数名称：储值卡支付金额| |参数的约束及描述：该参数非必填。|
-    * bonusAmount  |参数名称：奖励金支付金额（用于现网未清干净的奖励金）| |参数的约束及描述：该参数非必填。|
-    * debtAmount  |参数名称：欠费金额| |参数的约束及描述：该参数非必填。|
-    * adjustmentAmount  |参数名称：欠费核销金额| |参数的约束及描述：该参数非必填。|
-    * officialAmount  |参数名称：官网价| |参数的约束及描述：该参数非必填。|
-    * discountAmount  |参数名称：对应官网价折扣金额| |参数的约束及描述：该参数非必填。|
-    * measureId  |参数名称：金额单位。1: 元| |参数的约束及描述：该参数非必填|
-    * periodType  |参数名称：周期类型：19：年 20：月 24：天 25：小时 5：一次性| |参数的约束及描述：该参数非必填|
+    * cycle  资源详单数据所在账期，格式为YYYY-MM。 例如2020-01。
+    * billDate  消费日期，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
+    * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * resInstanceId  资源实例ID。
+    * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
+    * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
+    * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+    * enterpriseProjectName  企业项目名称。
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
+    * cashAmount  现金支付金额。
+    * creditAmount  信用额度支付金额。
+    * couponAmount  代金券支付金额。
+    * flexipurchaseCouponAmount  现金券支付金额。
+    * storedCardAmount  储值卡支付金额。
+    * bonusAmount  奖励金支付金额（用于现网客户未使用完的奖励金）。
+    * debtAmount  欠费金额。
+    * adjustmentAmount  欠费核销金额。
+    * officialAmount  官网价。
+    * discountAmount  对应官网价折扣金额。
+    * measureId  金额单位。 1：元
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     *
     * @var string[]
     */
@@ -245,36 +245,36 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cycle  |参数名称：资源详单数据所在账期| |参数的约束及描述：格式为YYYY-MM|
-    * billDate  |参数名称：消费日期| |参数的约束及描述：消费日期，格式为：YYYY-MM-DD|
-    * billType  |参数名称：账单类型| |参数的约束及描述：该参数非必填，1：消费-新购；2：消费-续订；3：消费-变更；4：退款-退订；5：消费-使用；8：消费-自动续订；9：调账-补偿；12：消费-按时计费；13：消费-退订手续费； 15消费-税金；14：消费-服务支持计划月末扣费；16：调账-扣费 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
-    * customerId  |参数名称：消费的客户账号ID。| |参数约束及描述：如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID; 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。|
-    * region  |参数名称：云服务区编码| |参数的约束及描述：该参数非必填，例如：“cn-north-1”。|
-    * regionName  |参数名称：云服务区名称| |参数的约束及描述：云服务区名称|
-    * cloudServiceType  |参数名称：云服务类型编码| |参数的约束及描述：该参数非必填,，例如OBS的云服务类型编码为“hws.service.type.obs”|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：该参数非必填，例如ECS的VM为“hws.resource.type.vm”。|
-    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
-    * resInstanceId  |参数名称：资源实例ID| |参数的约束及描述：该参数非必填|
-    * resourceName  |参数名称：资源名称| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
-    * resourceTag  |参数名称：资源标签| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
-    * skuCode  |参数名称：SKU编码| |参数的约束及描述：SKU（Stock Keeping Unit，库存量单元）编码，产品下的SKU分类属性|
-    * enterpriseProjectId  |参数名称：企业项目ID| |参数的约束及描述：该参数非必填|
-    * enterpriseProjectName  |参数名称：企业项目名称| |参数的约束及描述：该参数非必填|
-    * chargeMode  |参数名称：计费模式| |参数的约束及描述：1 : 包年/包月；3: 按需。10: 预留实例|
-    * consumeAmount  |参数名称：客户购买云服务类型的消费金额| |参数的约束及描述：该参数非必填，包含代金券，大陆站还包含现金券，大陆站精确到小数点后8位，国际站精确到小数点后2位。|
-    * cashAmount  |参数名称：现金支付金额| |参数的约束及描述：该参数非必填|
-    * creditAmount  |参数名称：信用额度支付金额| |参数的约束及描述：该参数非必填|
-    * couponAmount  |参数名称：代金券支付金额| |参数的约束及描述：该参数非必填。|
-    * flexipurchaseCouponAmount  |参数名称：现金券支付金额| |参数的约束及描述：该参数非必填。|
-    * storedCardAmount  |参数名称：储值卡支付金额| |参数的约束及描述：该参数非必填。|
-    * bonusAmount  |参数名称：奖励金支付金额（用于现网未清干净的奖励金）| |参数的约束及描述：该参数非必填。|
-    * debtAmount  |参数名称：欠费金额| |参数的约束及描述：该参数非必填。|
-    * adjustmentAmount  |参数名称：欠费核销金额| |参数的约束及描述：该参数非必填。|
-    * officialAmount  |参数名称：官网价| |参数的约束及描述：该参数非必填。|
-    * discountAmount  |参数名称：对应官网价折扣金额| |参数的约束及描述：该参数非必填。|
-    * measureId  |参数名称：金额单位。1: 元| |参数的约束及描述：该参数非必填|
-    * periodType  |参数名称：周期类型：19：年 20：月 24：天 25：小时 5：一次性| |参数的约束及描述：该参数非必填|
+    * cycle  资源详单数据所在账期，格式为YYYY-MM。 例如2020-01。
+    * billDate  消费日期，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
+    * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * resInstanceId  资源实例ID。
+    * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
+    * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
+    * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+    * enterpriseProjectName  企业项目名称。
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
+    * cashAmount  现金支付金额。
+    * creditAmount  信用额度支付金额。
+    * couponAmount  代金券支付金额。
+    * flexipurchaseCouponAmount  现金券支付金额。
+    * storedCardAmount  储值卡支付金额。
+    * bonusAmount  奖励金支付金额（用于现网客户未使用完的奖励金）。
+    * debtAmount  欠费金额。
+    * adjustmentAmount  欠费核销金额。
+    * officialAmount  官网价。
+    * discountAmount  对应官网价折扣金额。
+    * measureId  金额单位。 1：元
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     *
     * @var string[]
     */
@@ -313,36 +313,36 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cycle  |参数名称：资源详单数据所在账期| |参数的约束及描述：格式为YYYY-MM|
-    * billDate  |参数名称：消费日期| |参数的约束及描述：消费日期，格式为：YYYY-MM-DD|
-    * billType  |参数名称：账单类型| |参数的约束及描述：该参数非必填，1：消费-新购；2：消费-续订；3：消费-变更；4：退款-退订；5：消费-使用；8：消费-自动续订；9：调账-补偿；12：消费-按时计费；13：消费-退订手续费； 15消费-税金；14：消费-服务支持计划月末扣费；16：调账-扣费 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
-    * customerId  |参数名称：消费的客户账号ID。| |参数约束及描述：如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID; 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。|
-    * region  |参数名称：云服务区编码| |参数的约束及描述：该参数非必填，例如：“cn-north-1”。|
-    * regionName  |参数名称：云服务区名称| |参数的约束及描述：云服务区名称|
-    * cloudServiceType  |参数名称：云服务类型编码| |参数的约束及描述：该参数非必填,，例如OBS的云服务类型编码为“hws.service.type.obs”|
-    * resourceTypeCode  |参数名称：资源类型编码| |参数的约束及描述：该参数非必填，例如ECS的VM为“hws.resource.type.vm”。|
-    * cloudServiceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
-    * resInstanceId  |参数名称：资源实例ID| |参数的约束及描述：该参数非必填|
-    * resourceName  |参数名称：资源名称| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
-    * resourceTag  |参数名称：资源标签| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
-    * skuCode  |参数名称：SKU编码| |参数的约束及描述：SKU（Stock Keeping Unit，库存量单元）编码，产品下的SKU分类属性|
-    * enterpriseProjectId  |参数名称：企业项目ID| |参数的约束及描述：该参数非必填|
-    * enterpriseProjectName  |参数名称：企业项目名称| |参数的约束及描述：该参数非必填|
-    * chargeMode  |参数名称：计费模式| |参数的约束及描述：1 : 包年/包月；3: 按需。10: 预留实例|
-    * consumeAmount  |参数名称：客户购买云服务类型的消费金额| |参数的约束及描述：该参数非必填，包含代金券，大陆站还包含现金券，大陆站精确到小数点后8位，国际站精确到小数点后2位。|
-    * cashAmount  |参数名称：现金支付金额| |参数的约束及描述：该参数非必填|
-    * creditAmount  |参数名称：信用额度支付金额| |参数的约束及描述：该参数非必填|
-    * couponAmount  |参数名称：代金券支付金额| |参数的约束及描述：该参数非必填。|
-    * flexipurchaseCouponAmount  |参数名称：现金券支付金额| |参数的约束及描述：该参数非必填。|
-    * storedCardAmount  |参数名称：储值卡支付金额| |参数的约束及描述：该参数非必填。|
-    * bonusAmount  |参数名称：奖励金支付金额（用于现网未清干净的奖励金）| |参数的约束及描述：该参数非必填。|
-    * debtAmount  |参数名称：欠费金额| |参数的约束及描述：该参数非必填。|
-    * adjustmentAmount  |参数名称：欠费核销金额| |参数的约束及描述：该参数非必填。|
-    * officialAmount  |参数名称：官网价| |参数的约束及描述：该参数非必填。|
-    * discountAmount  |参数名称：对应官网价折扣金额| |参数的约束及描述：该参数非必填。|
-    * measureId  |参数名称：金额单位。1: 元| |参数的约束及描述：该参数非必填|
-    * periodType  |参数名称：周期类型：19：年 20：月 24：天 25：小时 5：一次性| |参数的约束及描述：该参数非必填|
+    * cycle  资源详单数据所在账期，格式为YYYY-MM。 例如2020-01。
+    * billDate  消费日期，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
+    * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * resInstanceId  资源实例ID。
+    * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
+    * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
+    * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+    * enterpriseProjectName  企业项目名称。
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
+    * cashAmount  现金支付金额。
+    * creditAmount  信用额度支付金额。
+    * couponAmount  代金券支付金额。
+    * flexipurchaseCouponAmount  现金券支付金额。
+    * storedCardAmount  储值卡支付金额。
+    * bonusAmount  奖励金支付金额（用于现网客户未使用完的奖励金）。
+    * debtAmount  欠费金额。
+    * adjustmentAmount  欠费核销金额。
+    * officialAmount  官网价。
+    * discountAmount  对应官网价折扣金额。
+    * measureId  金额单位。 1：元
+    * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     *
     * @var string[]
     */
@@ -517,7 +517,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets cycle
-    *  |参数名称：资源详单数据所在账期| |参数的约束及描述：格式为YYYY-MM|
+    *  资源详单数据所在账期，格式为YYYY-MM。 例如2020-01。
     *
     * @return string|null
     */
@@ -529,7 +529,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets cycle
     *
-    * @param string|null $cycle |参数名称：资源详单数据所在账期| |参数的约束及描述：格式为YYYY-MM|
+    * @param string|null $cycle 资源详单数据所在账期，格式为YYYY-MM。 例如2020-01。
     *
     * @return $this
     */
@@ -541,7 +541,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets billDate
-    *  |参数名称：消费日期| |参数的约束及描述：消费日期，格式为：YYYY-MM-DD|
+    *  消费日期，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
     *
     * @return string|null
     */
@@ -553,7 +553,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets billDate
     *
-    * @param string|null $billDate |参数名称：消费日期| |参数的约束及描述：消费日期，格式为：YYYY-MM-DD|
+    * @param string|null $billDate 消费日期，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
     *
     * @return $this
     */
@@ -565,7 +565,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets billType
-    *  |参数名称：账单类型| |参数的约束及描述：该参数非必填，1：消费-新购；2：消费-续订；3：消费-变更；4：退款-退订；5：消费-使用；8：消费-自动续订；9：调账-补偿；12：消费-按时计费；13：消费-退订手续费； 15消费-税金；14：消费-服务支持计划月末扣费；16：调账-扣费 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
+    *  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     *
     * @return int|null
     */
@@ -577,7 +577,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets billType
     *
-    * @param int|null $billType |参数名称：账单类型| |参数的约束及描述：该参数非必填，1：消费-新购；2：消费-续订；3：消费-变更；4：退款-退订；5：消费-使用；8：消费-自动续订；9：调账-补偿；12：消费-按时计费；13：消费-退订手续费； 15消费-税金；14：消费-服务支持计划月末扣费；16：调账-扣费 100：退款-退订税金 101：调账-补偿税金 102：调账-扣费税金|
+    * @param int|null $billType 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     *
     * @return $this
     */
@@ -589,7 +589,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerId
-    *  |参数名称：消费的客户账号ID。| |参数约束及描述：如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID; 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。|
+    *  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     *
     * @return string|null
     */
@@ -601,7 +601,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets customerId
     *
-    * @param string|null $customerId |参数名称：消费的客户账号ID。| |参数约束及描述：如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID; 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。|
+    * @param string|null $customerId 消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     *
     * @return $this
     */
@@ -613,7 +613,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  |参数名称：云服务区编码| |参数的约束及描述：该参数非必填，例如：“cn-north-1”。|
+    *  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     *
     * @return string|null
     */
@@ -625,7 +625,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region |参数名称：云服务区编码| |参数的约束及描述：该参数非必填，例如：“cn-north-1”。|
+    * @param string|null $region 云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     *
     * @return $this
     */
@@ -637,7 +637,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionName
-    *  |参数名称：云服务区名称| |参数的约束及描述：云服务区名称|
+    *  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     *
     * @return string|null
     */
@@ -649,7 +649,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets regionName
     *
-    * @param string|null $regionName |参数名称：云服务区名称| |参数的约束及描述：云服务区名称|
+    * @param string|null $regionName 云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     *
     * @return $this
     */
@@ -661,7 +661,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudServiceType
-    *  |参数名称：云服务类型编码| |参数的约束及描述：该参数非必填,，例如OBS的云服务类型编码为“hws.service.type.obs”|
+    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return string|null
     */
@@ -673,7 +673,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets cloudServiceType
     *
-    * @param string|null $cloudServiceType |参数名称：云服务类型编码| |参数的约束及描述：该参数非必填,，例如OBS的云服务类型编码为“hws.service.type.obs”|
+    * @param string|null $cloudServiceType 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return $this
     */
@@ -685,7 +685,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeCode
-    *  |参数名称：资源类型编码| |参数的约束及描述：该参数非必填，例如ECS的VM为“hws.resource.type.vm”。|
+    *  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     *
     * @return string|null
     */
@@ -697,7 +697,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeCode
     *
-    * @param string|null $resourceTypeCode |参数名称：资源类型编码| |参数的约束及描述：该参数非必填，例如ECS的VM为“hws.resource.type.vm”。|
+    * @param string|null $resourceTypeCode 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     *
     * @return $this
     */
@@ -709,7 +709,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudServiceTypeName
-    *  |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return string|null
     */
@@ -721,7 +721,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets cloudServiceTypeName
     *
-    * @param string|null $cloudServiceTypeName |参数名称：服务类型编码名称| |参数约束及描述：资源类型编码名称|
+    * @param string|null $cloudServiceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return $this
     */
@@ -733,7 +733,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeName
-    *  |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
+    *  资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @return string|null
     */
@@ -745,7 +745,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeName
     *
-    * @param string|null $resourceTypeName |参数名称：资源类型编码名称| |参数约束及描述：服务类型编码名称|
+    * @param string|null $resourceTypeName 资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @return $this
     */
@@ -757,7 +757,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets resInstanceId
-    *  |参数名称：资源实例ID| |参数的约束及描述：该参数非必填|
+    *  资源实例ID。
     *
     * @return string|null
     */
@@ -769,7 +769,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets resInstanceId
     *
-    * @param string|null $resInstanceId |参数名称：资源实例ID| |参数的约束及描述：该参数非必填|
+    * @param string|null $resInstanceId 资源实例ID。
     *
     * @return $this
     */
@@ -781,7 +781,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  |参数名称：资源名称| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
+    *  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
     *
     * @return string|null
     */
@@ -793,7 +793,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string|null $resourceName |参数名称：资源名称| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
+    * @param string|null $resourceName 资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
     *
     * @return $this
     */
@@ -805,7 +805,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTag
-    *  |参数名称：资源标签| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
+    *  资源标签。客户在管理资源的时候，可以设置资源标签。
     *
     * @return string|null
     */
@@ -817,7 +817,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTag
     *
-    * @param string|null $resourceTag |参数名称：资源标签| |参数的约束及描述：客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称|
+    * @param string|null $resourceTag 资源标签。客户在管理资源的时候，可以设置资源标签。
     *
     * @return $this
     */
@@ -829,7 +829,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets skuCode
-    *  |参数名称：SKU编码| |参数的约束及描述：SKU（Stock Keeping Unit，库存量单元）编码，产品下的SKU分类属性|
+    *  SKU编码，在账单中唯一标识一个资源的规格。
     *
     * @return string|null
     */
@@ -841,7 +841,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets skuCode
     *
-    * @param string|null $skuCode |参数名称：SKU编码| |参数的约束及描述：SKU（Stock Keeping Unit，库存量单元）编码，产品下的SKU分类属性|
+    * @param string|null $skuCode SKU编码，在账单中唯一标识一个资源的规格。
     *
     * @return $this
     */
@@ -853,7 +853,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  |参数名称：企业项目ID| |参数的约束及描述：该参数非必填|
+    *  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
     *
     * @return string|null
     */
@@ -865,7 +865,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId |参数名称：企业项目ID| |参数的约束及描述：该参数非必填|
+    * @param string|null $enterpriseProjectId 企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
     *
     * @return $this
     */
@@ -877,7 +877,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectName
-    *  |参数名称：企业项目名称| |参数的约束及描述：该参数非必填|
+    *  企业项目名称。
     *
     * @return string|null
     */
@@ -889,7 +889,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectName
     *
-    * @param string|null $enterpriseProjectName |参数名称：企业项目名称| |参数的约束及描述：该参数非必填|
+    * @param string|null $enterpriseProjectName 企业项目名称。
     *
     * @return $this
     */
@@ -901,7 +901,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  |参数名称：计费模式| |参数的约束及描述：1 : 包年/包月；3: 按需。10: 预留实例|
+    *  计费模式。 1 : 包年/包月3：按需10：预留实例
     *
     * @return int|null
     */
@@ -913,7 +913,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param int|null $chargeMode |参数名称：计费模式| |参数的约束及描述：1 : 包年/包月；3: 按需。10: 预留实例|
+    * @param int|null $chargeMode 计费模式。 1 : 包年/包月3：按需10：预留实例
     *
     * @return $this
     */
@@ -925,9 +925,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumeAmount
-    *  |参数名称：客户购买云服务类型的消费金额| |参数的约束及描述：该参数非必填，包含代金券，大陆站还包含现金券，大陆站精确到小数点后8位，国际站精确到小数点后2位。|
+    *  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getConsumeAmount()
     {
@@ -937,7 +937,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets consumeAmount
     *
-    * @param float|null $consumeAmount |参数名称：客户购买云服务类型的消费金额| |参数的约束及描述：该参数非必填，包含代金券，大陆站还包含现金券，大陆站精确到小数点后8位，国际站精确到小数点后2位。|
+    * @param double|null $consumeAmount 客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     *
     * @return $this
     */
@@ -949,9 +949,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets cashAmount
-    *  |参数名称：现金支付金额| |参数的约束及描述：该参数非必填|
+    *  现金支付金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getCashAmount()
     {
@@ -961,7 +961,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets cashAmount
     *
-    * @param float|null $cashAmount |参数名称：现金支付金额| |参数的约束及描述：该参数非必填|
+    * @param double|null $cashAmount 现金支付金额。
     *
     * @return $this
     */
@@ -973,9 +973,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets creditAmount
-    *  |参数名称：信用额度支付金额| |参数的约束及描述：该参数非必填|
+    *  信用额度支付金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getCreditAmount()
     {
@@ -985,7 +985,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets creditAmount
     *
-    * @param float|null $creditAmount |参数名称：信用额度支付金额| |参数的约束及描述：该参数非必填|
+    * @param double|null $creditAmount 信用额度支付金额。
     *
     * @return $this
     */
@@ -997,9 +997,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponAmount
-    *  |参数名称：代金券支付金额| |参数的约束及描述：该参数非必填。|
+    *  代金券支付金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getCouponAmount()
     {
@@ -1009,7 +1009,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets couponAmount
     *
-    * @param float|null $couponAmount |参数名称：代金券支付金额| |参数的约束及描述：该参数非必填。|
+    * @param double|null $couponAmount 代金券支付金额。
     *
     * @return $this
     */
@@ -1021,9 +1021,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets flexipurchaseCouponAmount
-    *  |参数名称：现金券支付金额| |参数的约束及描述：该参数非必填。|
+    *  现金券支付金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getFlexipurchaseCouponAmount()
     {
@@ -1033,7 +1033,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets flexipurchaseCouponAmount
     *
-    * @param float|null $flexipurchaseCouponAmount |参数名称：现金券支付金额| |参数的约束及描述：该参数非必填。|
+    * @param double|null $flexipurchaseCouponAmount 现金券支付金额。
     *
     * @return $this
     */
@@ -1045,9 +1045,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets storedCardAmount
-    *  |参数名称：储值卡支付金额| |参数的约束及描述：该参数非必填。|
+    *  储值卡支付金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getStoredCardAmount()
     {
@@ -1057,7 +1057,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets storedCardAmount
     *
-    * @param float|null $storedCardAmount |参数名称：储值卡支付金额| |参数的约束及描述：该参数非必填。|
+    * @param double|null $storedCardAmount 储值卡支付金额。
     *
     * @return $this
     */
@@ -1069,9 +1069,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets bonusAmount
-    *  |参数名称：奖励金支付金额（用于现网未清干净的奖励金）| |参数的约束及描述：该参数非必填。|
+    *  奖励金支付金额（用于现网客户未使用完的奖励金）。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getBonusAmount()
     {
@@ -1081,7 +1081,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets bonusAmount
     *
-    * @param float|null $bonusAmount |参数名称：奖励金支付金额（用于现网未清干净的奖励金）| |参数的约束及描述：该参数非必填。|
+    * @param double|null $bonusAmount 奖励金支付金额（用于现网客户未使用完的奖励金）。
     *
     * @return $this
     */
@@ -1093,9 +1093,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets debtAmount
-    *  |参数名称：欠费金额| |参数的约束及描述：该参数非必填。|
+    *  欠费金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getDebtAmount()
     {
@@ -1105,7 +1105,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets debtAmount
     *
-    * @param float|null $debtAmount |参数名称：欠费金额| |参数的约束及描述：该参数非必填。|
+    * @param double|null $debtAmount 欠费金额。
     *
     * @return $this
     */
@@ -1117,9 +1117,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets adjustmentAmount
-    *  |参数名称：欠费核销金额| |参数的约束及描述：该参数非必填。|
+    *  欠费核销金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getAdjustmentAmount()
     {
@@ -1129,7 +1129,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets adjustmentAmount
     *
-    * @param float|null $adjustmentAmount |参数名称：欠费核销金额| |参数的约束及描述：该参数非必填。|
+    * @param double|null $adjustmentAmount 欠费核销金额。
     *
     * @return $this
     */
@@ -1141,9 +1141,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets officialAmount
-    *  |参数名称：官网价| |参数的约束及描述：该参数非必填。|
+    *  官网价。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getOfficialAmount()
     {
@@ -1153,7 +1153,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets officialAmount
     *
-    * @param float|null $officialAmount |参数名称：官网价| |参数的约束及描述：该参数非必填。|
+    * @param double|null $officialAmount 官网价。
     *
     * @return $this
     */
@@ -1165,9 +1165,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountAmount
-    *  |参数名称：对应官网价折扣金额| |参数的约束及描述：该参数非必填。|
+    *  对应官网价折扣金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getDiscountAmount()
     {
@@ -1177,7 +1177,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets discountAmount
     *
-    * @param float|null $discountAmount |参数名称：对应官网价折扣金额| |参数的约束及描述：该参数非必填。|
+    * @param double|null $discountAmount 对应官网价折扣金额。
     *
     * @return $this
     */
@@ -1189,7 +1189,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：金额单位。1: 元| |参数的约束及描述：该参数非必填|
+    *  金额单位。 1：元
     *
     * @return int|null
     */
@@ -1201,7 +1201,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId |参数名称：金额单位。1: 元| |参数的约束及描述：该参数非必填|
+    * @param int|null $measureId 金额单位。 1：元
     *
     * @return $this
     */
@@ -1213,7 +1213,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  |参数名称：周期类型：19：年 20：月 24：天 25：小时 5：一次性| |参数的约束及描述：该参数非必填|
+    *  周期类型： 19：年20：月24：天25：小时5：一次性
     *
     * @return int|null
     */
@@ -1225,7 +1225,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param int|null $periodType |参数名称：周期类型：19：年 20：月 24：天 25：小时 5：一次性| |参数的约束及描述：该参数非必填|
+    * @param int|null $periodType 周期类型： 19：年20：月24：天25：小时5：一次性
     *
     * @return $this
     */

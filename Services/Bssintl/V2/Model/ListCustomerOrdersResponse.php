@@ -21,8 +21,8 @@ class ListCustomerOrdersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalCount  |参数名称：符合条件的记录总数。| |参数的约束及描述：符合条件的记录总数。|
-    * orderInfos  |参数名称：客户订单详情信息。具体请参见表 CustomerOrderV2| |参数约束以及描述：客户订单详情信息。具体请参见表 CustomerOrderV2|
+    * totalCount  大于等于0的整数。 符合条件的记录总数。
+    * orderInfos  - 客户订单详情信息。 具体请参见表2
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListCustomerOrdersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalCount  |参数名称：符合条件的记录总数。| |参数的约束及描述：符合条件的记录总数。|
-    * orderInfos  |参数名称：客户订单详情信息。具体请参见表 CustomerOrderV2| |参数约束以及描述：客户订单详情信息。具体请参见表 CustomerOrderV2|
+    * totalCount  大于等于0的整数。 符合条件的记录总数。
+    * orderInfos  - 客户订单详情信息。 具体请参见表2
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListCustomerOrdersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalCount  |参数名称：符合条件的记录总数。| |参数的约束及描述：符合条件的记录总数。|
-    * orderInfos  |参数名称：客户订单详情信息。具体请参见表 CustomerOrderV2| |参数约束以及描述：客户订单详情信息。具体请参见表 CustomerOrderV2|
+    * totalCount  大于等于0的整数。 符合条件的记录总数。
+    * orderInfos  - 客户订单详情信息。 具体请参见表2
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListCustomerOrdersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalCount  |参数名称：符合条件的记录总数。| |参数的约束及描述：符合条件的记录总数。|
-    * orderInfos  |参数名称：客户订单详情信息。具体请参见表 CustomerOrderV2| |参数约束以及描述：客户订单详情信息。具体请参见表 CustomerOrderV2|
+    * totalCount  大于等于0的整数。 符合条件的记录总数。
+    * orderInfos  - 客户订单详情信息。 具体请参见表2
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListCustomerOrdersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalCount  |参数名称：符合条件的记录总数。| |参数的约束及描述：符合条件的记录总数。|
-    * orderInfos  |参数名称：客户订单详情信息。具体请参见表 CustomerOrderV2| |参数约束以及描述：客户订单详情信息。具体请参见表 CustomerOrderV2|
+    * totalCount  大于等于0的整数。 符合条件的记录总数。
+    * orderInfos  - 客户订单详情信息。 具体请参见表2
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListCustomerOrdersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  |参数名称：符合条件的记录总数。| |参数的约束及描述：符合条件的记录总数。|
+    *  大于等于0的整数。 符合条件的记录总数。
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListCustomerOrdersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount |参数名称：符合条件的记录总数。| |参数的约束及描述：符合条件的记录总数。|
+    * @param int|null $totalCount 大于等于0的整数。 符合条件的记录总数。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListCustomerOrdersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderInfos
-    *  |参数名称：客户订单详情信息。具体请参见表 CustomerOrderV2| |参数约束以及描述：客户订单详情信息。具体请参见表 CustomerOrderV2|
+    *  - 客户订单详情信息。 具体请参见表2
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\CustomerOrderV2[]|null
     */
@@ -222,7 +222,7 @@ class ListCustomerOrdersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets orderInfos
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\CustomerOrderV2[]|null $orderInfos |参数名称：客户订单详情信息。具体请参见表 CustomerOrderV2| |参数约束以及描述：客户订单详情信息。具体请参见表 CustomerOrderV2|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\CustomerOrderV2[]|null $orderInfos - 客户订单详情信息。 具体请参见表2
     *
     * @return $this
     */

@@ -21,19 +21,19 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠后的金额|
-    * discountAmount  |参数名称：优惠额| |参数约束及描述：（官网价和总价的差）|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * currency  |参数名称：币种| |参数约束及描述：比如CNY|
-    * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+    * amount  折扣的金额。
+    * discountAmount  优惠额（官网价和总价的差）。
+    * officialWebsiteAmount  按需产品的官网价。
+    * measureId  度量单位标识。 1：元
+    * currency  币种。 USD：美元。 值为空代表美元。
+    * productRatingResults  产品询价结果，具体参见表2。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'amount' => 'float',
-            'discountAmount' => 'float',
-            'officialWebsiteAmount' => 'float',
+            'amount' => 'double',
+            'discountAmount' => 'double',
+            'officialWebsiteAmount' => 'double',
             'measureId' => 'int',
             'currency' => 'string',
             'productRatingResults' => '\HuaweiCloud\SDK\Bssintl\V2\Model\DemandProductRatingResult[]'
@@ -41,19 +41,19 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠后的金额|
-    * discountAmount  |参数名称：优惠额| |参数约束及描述：（官网价和总价的差）|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * currency  |参数名称：币种| |参数约束及描述：比如CNY|
-    * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+    * amount  折扣的金额。
+    * discountAmount  优惠额（官网价和总价的差）。
+    * officialWebsiteAmount  按需产品的官网价。
+    * measureId  度量单位标识。 1：元
+    * currency  币种。 USD：美元。 值为空代表美元。
+    * productRatingResults  产品询价结果，具体参见表2。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'amount' => 'bigdecimal',
-        'discountAmount' => 'bigdecimal',
-        'officialWebsiteAmount' => 'bigdecimal',
+        'amount' => 'double',
+        'discountAmount' => 'double',
+        'officialWebsiteAmount' => 'double',
         'measureId' => 'int32',
         'currency' => null,
         'productRatingResults' => null
@@ -82,12 +82,12 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠后的金额|
-    * discountAmount  |参数名称：优惠额| |参数约束及描述：（官网价和总价的差）|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * currency  |参数名称：币种| |参数约束及描述：比如CNY|
-    * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+    * amount  折扣的金额。
+    * discountAmount  优惠额（官网价和总价的差）。
+    * officialWebsiteAmount  按需产品的官网价。
+    * measureId  度量单位标识。 1：元
+    * currency  币种。 USD：美元。 值为空代表美元。
+    * productRatingResults  产品询价结果，具体参见表2。
     *
     * @var string[]
     */
@@ -102,12 +102,12 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠后的金额|
-    * discountAmount  |参数名称：优惠额| |参数约束及描述：（官网价和总价的差）|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * currency  |参数名称：币种| |参数约束及描述：比如CNY|
-    * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+    * amount  折扣的金额。
+    * discountAmount  优惠额（官网价和总价的差）。
+    * officialWebsiteAmount  按需产品的官网价。
+    * measureId  度量单位标识。 1：元
+    * currency  币种。 USD：美元。 值为空代表美元。
+    * productRatingResults  产品询价结果，具体参见表2。
     *
     * @var string[]
     */
@@ -122,12 +122,12 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠后的金额|
-    * discountAmount  |参数名称：优惠额| |参数约束及描述：（官网价和总价的差）|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
-    * currency  |参数名称：币种| |参数约束及描述：比如CNY|
-    * productRatingResults  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+    * amount  折扣的金额。
+    * discountAmount  优惠额（官网价和总价的差）。
+    * officialWebsiteAmount  按需产品的官网价。
+    * measureId  度量单位标识。 1：元
+    * currency  币种。 USD：美元。 值为空代表美元。
+    * productRatingResults  产品询价结果，具体参见表2。
     *
     * @var string[]
     */
@@ -242,9 +242,9 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets amount
-    *  |参数名称：总额| |参数约束及描述：即最终优惠后的金额|
+    *  折扣的金额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getAmount()
     {
@@ -254,7 +254,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param float|null $amount |参数名称：总额| |参数约束及描述：即最终优惠后的金额|
+    * @param double|null $amount 折扣的金额。
     *
     * @return $this
     */
@@ -266,9 +266,9 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountAmount
-    *  |参数名称：优惠额| |参数约束及描述：（官网价和总价的差）|
+    *  优惠额（官网价和总价的差）。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getDiscountAmount()
     {
@@ -278,7 +278,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets discountAmount
     *
-    * @param float|null $discountAmount |参数名称：优惠额| |参数约束及描述：（官网价和总价的差）|
+    * @param double|null $discountAmount 优惠额（官网价和总价的差）。
     *
     * @return $this
     */
@@ -290,9 +290,9 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets officialWebsiteAmount
-    *  |参数名称：官网价| |参数约束及描述：官网价|
+    *  按需产品的官网价。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getOfficialWebsiteAmount()
     {
@@ -302,7 +302,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets officialWebsiteAmount
     *
-    * @param float|null $officialWebsiteAmount |参数名称：官网价| |参数约束及描述：官网价|
+    * @param double|null $officialWebsiteAmount 按需产品的官网价。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：度量单位标识| |参数约束及描述：1：元|
+    *  度量单位标识。 1：元
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId |参数名称：度量单位标识| |参数约束及描述：1：元|
+    * @param int|null $measureId 度量单位标识。 1：元
     *
     * @return $this
     */
@@ -338,7 +338,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets currency
-    *  |参数名称：币种| |参数约束及描述：比如CNY|
+    *  币种。 USD：美元。 值为空代表美元。
     *
     * @return string|null
     */
@@ -350,7 +350,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets currency
     *
-    * @param string|null $currency |参数名称：币种| |参数约束及描述：比如CNY|
+    * @param string|null $currency 币种。 USD：美元。 值为空代表美元。
     *
     * @return $this
     */
@@ -362,7 +362,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets productRatingResults
-    *  |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+    *  产品询价结果，具体参见表2。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\DemandProductRatingResult[]|null
     */
@@ -374,7 +374,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets productRatingResults
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\DemandProductRatingResult[]|null $productRatingResults |参数名称：产品询价结果| |参数的约束及描述：产品询价结果|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\DemandProductRatingResult[]|null $productRatingResults 产品询价结果，具体参见表2。
     *
     * @return $this
     */

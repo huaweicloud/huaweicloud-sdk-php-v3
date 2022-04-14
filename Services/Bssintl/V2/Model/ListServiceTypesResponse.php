@@ -21,8 +21,8 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
-    * serviceTypes  |参数名称：返回的云服务类型信息| |参数约束以及描述：返回的云服务类型信息|
+    * totalCount  总数。
+    * serviceTypes  云服务类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
-    * serviceTypes  |参数名称：返回的云服务类型信息| |参数约束以及描述：返回的云服务类型信息|
+    * totalCount  总数。
+    * serviceTypes  云服务类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
-    * serviceTypes  |参数名称：返回的云服务类型信息| |参数约束以及描述：返回的云服务类型信息|
+    * totalCount  总数。
+    * serviceTypes  云服务类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
-    * serviceTypes  |参数名称：返回的云服务类型信息| |参数约束以及描述：返回的云服务类型信息|
+    * totalCount  总数。
+    * serviceTypes  云服务类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalCount  |参数名称：总记录数| |参数约束以及描述：总记录数|
-    * serviceTypes  |参数名称：返回的云服务类型信息| |参数约束以及描述：返回的云服务类型信息|
+    * totalCount  总数。
+    * serviceTypes  云服务类型信息列表，具体请参见表3。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  |参数名称：总记录数| |参数约束以及描述：总记录数|
+    *  总数。
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount |参数名称：总记录数| |参数约束以及描述：总记录数|
+    * @param int|null $totalCount 总数。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypes
-    *  |参数名称：返回的云服务类型信息| |参数约束以及描述：返回的云服务类型信息|
+    *  云服务类型信息列表，具体请参见表3。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\ServiceTypes[]|null
     */
@@ -222,7 +222,7 @@ class ListServiceTypesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypes
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\ServiceTypes[]|null $serviceTypes |参数名称：返回的云服务类型信息| |参数约束以及描述：返回的云服务类型信息|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\ServiceTypes[]|null $serviceTypes 云服务类型信息列表，具体请参见表3。
     *
     * @return $this
     */

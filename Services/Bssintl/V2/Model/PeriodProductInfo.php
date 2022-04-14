@@ -20,17 +20,17 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
-    * cloudServiceType  |参数名称：用户购买云服务产品的云服务类型| |参数约束及描述：例如EC2，云服务类型为hws.service.type.ec2|
-    * resourceType  |参数名称：用户购买云服务产品的资源类型| |参数约束及描述：例如EC2中的VM，资源类型为hws.resource.type.vm。ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供|
-    * resourceSpec  |参数名称：用户购买云服务产品的资源规格| |参数约束及描述：例如VM的小型规格，资源规格为m1.tiny|
-    * region  |参数名称：云服务区编码| |参数约束及描述：云服务区编码|
-    * availableZone  |参数名称：可用区标识| |参数约束及描述：可用区标识|
-    * resourceSize  |参数名称：资源容量大小| |参数约束及描述：例如购买的卷大小或带宽大小，只有线性产品才有这个字段|
-    * sizeMeasureId  |参数名称：资源容量度量标识| |参数约束及描述：枚举值如下：15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个只有线性产品才有这个字段|
-    * periodType  |参数名称：订购周期类型| |参数约束及描述：0：天；1：周；2：月；3：年；4：小时；|
-    * periodNum  |参数名称：订购周期数| |参数约束及描述： 订购周期数|
-    * subscriptionNum  |参数名称：订购数量| |参数约束及描述：订购数量,有值时不能小于0|
+    * id  ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceType  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
+    * resourceSpec  云服务类型的资源规格，部分云服务类型和资源规格举例如下： 弹性云服务器：根据操作系统类型在云服务器规格的ID后添加“.win”或“.linux”，例如“s2.small.1.linux”。云服务器规格的ID字段，您可以调用查询规格详情和规格扩展信息列表接口获取。 带宽：12_bgp：动态BGP按流量计费带宽12_sbgp：静态BGP按流量计费带宽19_bgp：动态BGP按带宽计费带宽19_sbgp：静态BGP按带宽计费带宽19_share：按带宽计费共享带宽 IP：5_bgp：动态BGP公网IP5_sbgp：静态BGP公网IP 云数据库：云数据库的资源规格信息，您可以调用查询数据库规格接口获取。 分布式缓存服务：分布式缓存服务的资源规格信息，您可以调用查询产品规格列表接口获取。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * availableZone  可用区标识，例如：“cn-north-1a”。具体请参见地区和终端节点可用分区的“可用分区名称”列的值。
+    * resourceSize  资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
+    * sizeMeasureId  资源容量度量标识。 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
+    * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
+    * periodNum  订购包年/包月产品的周期数。
+    * subscriptionNum  订购包年/包月产品的数量。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
-    * cloudServiceType  |参数名称：用户购买云服务产品的云服务类型| |参数约束及描述：例如EC2，云服务类型为hws.service.type.ec2|
-    * resourceType  |参数名称：用户购买云服务产品的资源类型| |参数约束及描述：例如EC2中的VM，资源类型为hws.resource.type.vm。ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供|
-    * resourceSpec  |参数名称：用户购买云服务产品的资源规格| |参数约束及描述：例如VM的小型规格，资源规格为m1.tiny|
-    * region  |参数名称：云服务区编码| |参数约束及描述：云服务区编码|
-    * availableZone  |参数名称：可用区标识| |参数约束及描述：可用区标识|
-    * resourceSize  |参数名称：资源容量大小| |参数约束及描述：例如购买的卷大小或带宽大小，只有线性产品才有这个字段|
-    * sizeMeasureId  |参数名称：资源容量度量标识| |参数约束及描述：枚举值如下：15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个只有线性产品才有这个字段|
-    * periodType  |参数名称：订购周期类型| |参数约束及描述：0：天；1：周；2：月；3：年；4：小时；|
-    * periodNum  |参数名称：订购周期数| |参数约束及描述： 订购周期数|
-    * subscriptionNum  |参数名称：订购数量| |参数约束及描述：订购数量,有值时不能小于0|
+    * id  ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceType  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
+    * resourceSpec  云服务类型的资源规格，部分云服务类型和资源规格举例如下： 弹性云服务器：根据操作系统类型在云服务器规格的ID后添加“.win”或“.linux”，例如“s2.small.1.linux”。云服务器规格的ID字段，您可以调用查询规格详情和规格扩展信息列表接口获取。 带宽：12_bgp：动态BGP按流量计费带宽12_sbgp：静态BGP按流量计费带宽19_bgp：动态BGP按带宽计费带宽19_sbgp：静态BGP按带宽计费带宽19_share：按带宽计费共享带宽 IP：5_bgp：动态BGP公网IP5_sbgp：静态BGP公网IP 云数据库：云数据库的资源规格信息，您可以调用查询数据库规格接口获取。 分布式缓存服务：分布式缓存服务的资源规格信息，您可以调用查询产品规格列表接口获取。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * availableZone  可用区标识，例如：“cn-north-1a”。具体请参见地区和终端节点可用分区的“可用分区名称”列的值。
+    * resourceSize  资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
+    * sizeMeasureId  资源容量度量标识。 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
+    * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
+    * periodNum  订购包年/包月产品的周期数。
+    * subscriptionNum  订购包年/包月产品的数量。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
-    * cloudServiceType  |参数名称：用户购买云服务产品的云服务类型| |参数约束及描述：例如EC2，云服务类型为hws.service.type.ec2|
-    * resourceType  |参数名称：用户购买云服务产品的资源类型| |参数约束及描述：例如EC2中的VM，资源类型为hws.resource.type.vm。ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供|
-    * resourceSpec  |参数名称：用户购买云服务产品的资源规格| |参数约束及描述：例如VM的小型规格，资源规格为m1.tiny|
-    * region  |参数名称：云服务区编码| |参数约束及描述：云服务区编码|
-    * availableZone  |参数名称：可用区标识| |参数约束及描述：可用区标识|
-    * resourceSize  |参数名称：资源容量大小| |参数约束及描述：例如购买的卷大小或带宽大小，只有线性产品才有这个字段|
-    * sizeMeasureId  |参数名称：资源容量度量标识| |参数约束及描述：枚举值如下：15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个只有线性产品才有这个字段|
-    * periodType  |参数名称：订购周期类型| |参数约束及描述：0：天；1：周；2：月；3：年；4：小时；|
-    * periodNum  |参数名称：订购周期数| |参数约束及描述： 订购周期数|
-    * subscriptionNum  |参数名称：订购数量| |参数约束及描述：订购数量,有值时不能小于0|
+    * id  ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceType  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
+    * resourceSpec  云服务类型的资源规格，部分云服务类型和资源规格举例如下： 弹性云服务器：根据操作系统类型在云服务器规格的ID后添加“.win”或“.linux”，例如“s2.small.1.linux”。云服务器规格的ID字段，您可以调用查询规格详情和规格扩展信息列表接口获取。 带宽：12_bgp：动态BGP按流量计费带宽12_sbgp：静态BGP按流量计费带宽19_bgp：动态BGP按带宽计费带宽19_sbgp：静态BGP按带宽计费带宽19_share：按带宽计费共享带宽 IP：5_bgp：动态BGP公网IP5_sbgp：静态BGP公网IP 云数据库：云数据库的资源规格信息，您可以调用查询数据库规格接口获取。 分布式缓存服务：分布式缓存服务的资源规格信息，您可以调用查询产品规格列表接口获取。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * availableZone  可用区标识，例如：“cn-north-1a”。具体请参见地区和终端节点可用分区的“可用分区名称”列的值。
+    * resourceSize  资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
+    * sizeMeasureId  资源容量度量标识。 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
+    * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
+    * periodNum  订购包年/包月产品的周期数。
+    * subscriptionNum  订购包年/包月产品的数量。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
-    * cloudServiceType  |参数名称：用户购买云服务产品的云服务类型| |参数约束及描述：例如EC2，云服务类型为hws.service.type.ec2|
-    * resourceType  |参数名称：用户购买云服务产品的资源类型| |参数约束及描述：例如EC2中的VM，资源类型为hws.resource.type.vm。ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供|
-    * resourceSpec  |参数名称：用户购买云服务产品的资源规格| |参数约束及描述：例如VM的小型规格，资源规格为m1.tiny|
-    * region  |参数名称：云服务区编码| |参数约束及描述：云服务区编码|
-    * availableZone  |参数名称：可用区标识| |参数约束及描述：可用区标识|
-    * resourceSize  |参数名称：资源容量大小| |参数约束及描述：例如购买的卷大小或带宽大小，只有线性产品才有这个字段|
-    * sizeMeasureId  |参数名称：资源容量度量标识| |参数约束及描述：枚举值如下：15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个只有线性产品才有这个字段|
-    * periodType  |参数名称：订购周期类型| |参数约束及描述：0：天；1：周；2：月；3：年；4：小时；|
-    * periodNum  |参数名称：订购周期数| |参数约束及描述： 订购周期数|
-    * subscriptionNum  |参数名称：订购数量| |参数约束及描述：订购数量,有值时不能小于0|
+    * id  ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceType  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
+    * resourceSpec  云服务类型的资源规格，部分云服务类型和资源规格举例如下： 弹性云服务器：根据操作系统类型在云服务器规格的ID后添加“.win”或“.linux”，例如“s2.small.1.linux”。云服务器规格的ID字段，您可以调用查询规格详情和规格扩展信息列表接口获取。 带宽：12_bgp：动态BGP按流量计费带宽12_sbgp：静态BGP按流量计费带宽19_bgp：动态BGP按带宽计费带宽19_sbgp：静态BGP按带宽计费带宽19_share：按带宽计费共享带宽 IP：5_bgp：动态BGP公网IP5_sbgp：静态BGP公网IP 云数据库：云数据库的资源规格信息，您可以调用查询数据库规格接口获取。 分布式缓存服务：分布式缓存服务的资源规格信息，您可以调用查询产品规格列表接口获取。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * availableZone  可用区标识，例如：“cn-north-1a”。具体请参见地区和终端节点可用分区的“可用分区名称”列的值。
+    * resourceSize  资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
+    * sizeMeasureId  资源容量度量标识。 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
+    * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
+    * periodNum  订购包年/包月产品的周期数。
+    * subscriptionNum  订购包年/包月产品的数量。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
-    * cloudServiceType  |参数名称：用户购买云服务产品的云服务类型| |参数约束及描述：例如EC2，云服务类型为hws.service.type.ec2|
-    * resourceType  |参数名称：用户购买云服务产品的资源类型| |参数约束及描述：例如EC2中的VM，资源类型为hws.resource.type.vm。ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供|
-    * resourceSpec  |参数名称：用户购买云服务产品的资源规格| |参数约束及描述：例如VM的小型规格，资源规格为m1.tiny|
-    * region  |参数名称：云服务区编码| |参数约束及描述：云服务区编码|
-    * availableZone  |参数名称：可用区标识| |参数约束及描述：可用区标识|
-    * resourceSize  |参数名称：资源容量大小| |参数约束及描述：例如购买的卷大小或带宽大小，只有线性产品才有这个字段|
-    * sizeMeasureId  |参数名称：资源容量度量标识| |参数约束及描述：枚举值如下：15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个只有线性产品才有这个字段|
-    * periodType  |参数名称：订购周期类型| |参数约束及描述：0：天；1：周；2：月；3：年；4：小时；|
-    * periodNum  |参数名称：订购周期数| |参数约束及描述： 订购周期数|
-    * subscriptionNum  |参数名称：订购数量| |参数约束及描述：订购数量,有值时不能小于0|
+    * id  ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceType  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
+    * resourceSpec  云服务类型的资源规格，部分云服务类型和资源规格举例如下： 弹性云服务器：根据操作系统类型在云服务器规格的ID后添加“.win”或“.linux”，例如“s2.small.1.linux”。云服务器规格的ID字段，您可以调用查询规格详情和规格扩展信息列表接口获取。 带宽：12_bgp：动态BGP按流量计费带宽12_sbgp：静态BGP按流量计费带宽19_bgp：动态BGP按带宽计费带宽19_sbgp：静态BGP按带宽计费带宽19_share：按带宽计费共享带宽 IP：5_bgp：动态BGP公网IP5_sbgp：静态BGP公网IP 云数据库：云数据库的资源规格信息，您可以调用查询数据库规格接口获取。 分布式缓存服务：分布式缓存服务的资源规格信息，您可以调用查询产品规格列表接口获取。
+    * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * availableZone  可用区标识，例如：“cn-north-1a”。具体请参见地区和终端节点可用分区的“可用分区名称”列的值。
+    * resourceSize  资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
+    * sizeMeasureId  资源容量度量标识。 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
+    * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
+    * periodNum  订购包年/包月产品的周期数。
+    * subscriptionNum  订购包年/包月产品的数量。
     *
     * @var string[]
     */
@@ -368,7 +368,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
+    *  ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
     *
     * @return string
     */
@@ -380,7 +380,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id |参数名称：ID标识| |参数约束及描述：同一次询价中不能重复，用于标识返回询价结果和请求的映射关系|
+    * @param string $id ID标识，同一次询价中不能重复，用于标识返回询价结果和请求的映射关系。
     *
     * @return $this
     */
@@ -392,7 +392,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudServiceType
-    *  |参数名称：用户购买云服务产品的云服务类型| |参数约束及描述：例如EC2，云服务类型为hws.service.type.ec2|
+    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return string
     */
@@ -404,7 +404,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cloudServiceType
     *
-    * @param string $cloudServiceType |参数名称：用户购买云服务产品的云服务类型| |参数约束及描述：例如EC2，云服务类型为hws.service.type.ec2|
+    * @param string $cloudServiceType 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return $this
     */
@@ -416,7 +416,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  |参数名称：用户购买云服务产品的资源类型| |参数约束及描述：例如EC2中的VM，资源类型为hws.resource.type.vm。ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供|
+    *  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
     *
     * @return string
     */
@@ -428,7 +428,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType |参数名称：用户购买云服务产品的资源类型| |参数约束及描述：例如EC2中的VM，资源类型为hws.resource.type.vm。ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供|
+    * @param string $resourceType 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。 ResourceType是CloudServiceType中的一种资源，CloudServiceType由多种ResourceType组合提供。
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpec
-    *  |参数名称：用户购买云服务产品的资源规格| |参数约束及描述：例如VM的小型规格，资源规格为m1.tiny|
+    *  云服务类型的资源规格，部分云服务类型和资源规格举例如下： 弹性云服务器：根据操作系统类型在云服务器规格的ID后添加“.win”或“.linux”，例如“s2.small.1.linux”。云服务器规格的ID字段，您可以调用查询规格详情和规格扩展信息列表接口获取。 带宽：12_bgp：动态BGP按流量计费带宽12_sbgp：静态BGP按流量计费带宽19_bgp：动态BGP按带宽计费带宽19_sbgp：静态BGP按带宽计费带宽19_share：按带宽计费共享带宽 IP：5_bgp：动态BGP公网IP5_sbgp：静态BGP公网IP 云数据库：云数据库的资源规格信息，您可以调用查询数据库规格接口获取。 分布式缓存服务：分布式缓存服务的资源规格信息，您可以调用查询产品规格列表接口获取。
     *
     * @return string
     */
@@ -452,7 +452,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpec
     *
-    * @param string $resourceSpec |参数名称：用户购买云服务产品的资源规格| |参数约束及描述：例如VM的小型规格，资源规格为m1.tiny|
+    * @param string $resourceSpec 云服务类型的资源规格，部分云服务类型和资源规格举例如下： 弹性云服务器：根据操作系统类型在云服务器规格的ID后添加“.win”或“.linux”，例如“s2.small.1.linux”。云服务器规格的ID字段，您可以调用查询规格详情和规格扩展信息列表接口获取。 带宽：12_bgp：动态BGP按流量计费带宽12_sbgp：静态BGP按流量计费带宽19_bgp：动态BGP按带宽计费带宽19_sbgp：静态BGP按带宽计费带宽19_share：按带宽计费共享带宽 IP：5_bgp：动态BGP公网IP5_sbgp：静态BGP公网IP 云数据库：云数据库的资源规格信息，您可以调用查询数据库规格接口获取。 分布式缓存服务：分布式缓存服务的资源规格信息，您可以调用查询产品规格列表接口获取。
     *
     * @return $this
     */
@@ -464,7 +464,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  |参数名称：云服务区编码| |参数约束及描述：云服务区编码|
+    *  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     *
     * @return string
     */
@@ -476,7 +476,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region |参数名称：云服务区编码| |参数约束及描述：云服务区编码|
+    * @param string $region 云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZone
-    *  |参数名称：可用区标识| |参数约束及描述：可用区标识|
+    *  可用区标识，例如：“cn-north-1a”。具体请参见地区和终端节点可用分区的“可用分区名称”列的值。
     *
     * @return string|null
     */
@@ -500,7 +500,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets availableZone
     *
-    * @param string|null $availableZone |参数名称：可用区标识| |参数约束及描述：可用区标识|
+    * @param string|null $availableZone 可用区标识，例如：“cn-north-1a”。具体请参见地区和终端节点可用分区的“可用分区名称”列的值。
     *
     * @return $this
     */
@@ -512,7 +512,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSize
-    *  |参数名称：资源容量大小| |参数约束及描述：例如购买的卷大小或带宽大小，只有线性产品才有这个字段|
+    *  资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
     *
     * @return int|null
     */
@@ -524,7 +524,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSize
     *
-    * @param int|null $resourceSize |参数名称：资源容量大小| |参数约束及描述：例如购买的卷大小或带宽大小，只有线性产品才有这个字段|
+    * @param int|null $resourceSize 资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
     *
     * @return $this
     */
@@ -536,7 +536,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets sizeMeasureId
-    *  |参数名称：资源容量度量标识| |参数约束及描述：枚举值如下：15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个只有线性产品才有这个字段|
+    *  资源容量度量标识。 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
     *
     * @return int|null
     */
@@ -548,7 +548,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sizeMeasureId
     *
-    * @param int|null $sizeMeasureId |参数名称：资源容量度量标识| |参数约束及描述：枚举值如下：15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个只有线性产品才有这个字段|
+    * @param int|null $sizeMeasureId 资源容量度量标识。 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。
     *
     * @return $this
     */
@@ -560,7 +560,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  |参数名称：订购周期类型| |参数约束及描述：0：天；1：周；2：月；3：年；4：小时；|
+    *  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
     *
     * @return int
     */
@@ -572,7 +572,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param int $periodType |参数名称：订购周期类型| |参数约束及描述：0：天；1：周；2：月；3：年；4：小时；|
+    * @param int $periodType 订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
     *
     * @return $this
     */
@@ -584,7 +584,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  |参数名称：订购周期数| |参数约束及描述： 订购周期数|
+    *  订购包年/包月产品的周期数。
     *
     * @return int
     */
@@ -596,7 +596,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int $periodNum |参数名称：订购周期数| |参数约束及描述： 订购周期数|
+    * @param int $periodNum 订购包年/包月产品的周期数。
     *
     * @return $this
     */
@@ -608,7 +608,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets subscriptionNum
-    *  |参数名称：订购数量| |参数约束及描述：订购数量,有值时不能小于0|
+    *  订购包年/包月产品的数量。
     *
     * @return int
     */
@@ -620,7 +620,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets subscriptionNum
     *
-    * @param int $subscriptionNum |参数名称：订购数量| |参数约束及描述：订购数量,有值时不能小于0|
+    * @param int $subscriptionNum 订购包年/包月产品的数量。
     *
     * @return $this
     */

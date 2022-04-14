@@ -20,23 +20,23 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderLineItemId  |参数名称：订单项Id。| |参数约束及描述：订单项Id。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
-    * productSpecDesc  |参数名称：产品规格描述。| |参数约束及描述：产品规格描述。|
-    * periodType  |参数名称：周期类型。0：天；1：周；2：月；3：年；4：小时；5：一次性；6：按需（预留）；7：按用量报表使用（预留）。| |参数的约束及描述：周期类型。0：天；1：周；2：月；3：年；4：小时；5：一次性；6：按需（预留）；7：按用量报表使用（预留）。|
-    * periodNum  |参数名称：周期数量。| |参数的约束及描述：周期数量。|
-    * effectiveTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * subscriptionNum  |参数名称：订购数量。| |参数的约束及描述：订购数量。|
-    * amountAfterDiscount  |参数名称：订单优惠后金额（实付价格，不含券不含卡）。| |参数的约束及描述：订单优惠后金额（实付价格，不含券不含卡）。|
-    * officialAmount  |参数名称：订单金额（官网价）。退订订单中，该金额等于currencyAfterDiscount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于currencyAfterDiscount。|
+    * orderLineItemId  订单项ID。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * productId  产品ID。
+    * productSpecDesc  产品规格描述。
+    * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
+    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
+    * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * subscriptionNum  订购数量。
+    * amountAfterDiscount  订单优惠后金额（实付价格，不含券不含卡）。
+    * officialAmount  订单金额（官网价）。 退订订单中，该金额等于currencyAfterDiscount。
     * amountInfo  amountInfo
-    * currency  |参数名称：货币编码。| |参数约束及描述：货币编码。如CNY|
-    * categoryCode  |参数名称：产品目录编码。| |参数约束及描述：产品目录编码。|
-    * productOwnerService  |参数名称：产品归属的云服务类型编码。| |参数约束及描述：产品归属的云服务类型编码。|
-    * commercialResource  |参数名称：商务归属的资源类型编码。| |参数约束及描述：商务归属的资源类型编码。|
+    * currency  货币编码。
+    * categoryCode  产品目录编码。
+    * productOwnerService  产品归属的云服务类型编码。 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * commercialResource  商务归属的资源类型编码。 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     *
     * @var string[]
     */
@@ -62,23 +62,23 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderLineItemId  |参数名称：订单项Id。| |参数约束及描述：订单项Id。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
-    * productSpecDesc  |参数名称：产品规格描述。| |参数约束及描述：产品规格描述。|
-    * periodType  |参数名称：周期类型。0：天；1：周；2：月；3：年；4：小时；5：一次性；6：按需（预留）；7：按用量报表使用（预留）。| |参数的约束及描述：周期类型。0：天；1：周；2：月；3：年；4：小时；5：一次性；6：按需（预留）；7：按用量报表使用（预留）。|
-    * periodNum  |参数名称：周期数量。| |参数的约束及描述：周期数量。|
-    * effectiveTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * subscriptionNum  |参数名称：订购数量。| |参数的约束及描述：订购数量。|
-    * amountAfterDiscount  |参数名称：订单优惠后金额（实付价格，不含券不含卡）。| |参数的约束及描述：订单优惠后金额（实付价格，不含券不含卡）。|
-    * officialAmount  |参数名称：订单金额（官网价）。退订订单中，该金额等于currencyAfterDiscount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于currencyAfterDiscount。|
+    * orderLineItemId  订单项ID。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * productId  产品ID。
+    * productSpecDesc  产品规格描述。
+    * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
+    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
+    * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * subscriptionNum  订购数量。
+    * amountAfterDiscount  订单优惠后金额（实付价格，不含券不含卡）。
+    * officialAmount  订单金额（官网价）。 退订订单中，该金额等于currencyAfterDiscount。
     * amountInfo  amountInfo
-    * currency  |参数名称：货币编码。| |参数约束及描述：货币编码。如CNY|
-    * categoryCode  |参数名称：产品目录编码。| |参数约束及描述：产品目录编码。|
-    * productOwnerService  |参数名称：产品归属的云服务类型编码。| |参数约束及描述：产品归属的云服务类型编码。|
-    * commercialResource  |参数名称：商务归属的资源类型编码。| |参数约束及描述：商务归属的资源类型编码。|
+    * currency  货币编码。
+    * categoryCode  产品目录编码。
+    * productOwnerService  产品归属的云服务类型编码。 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * commercialResource  商务归属的资源类型编码。 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     *
     * @var string[]
     */
@@ -125,23 +125,23 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderLineItemId  |参数名称：订单项Id。| |参数约束及描述：订单项Id。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
-    * productSpecDesc  |参数名称：产品规格描述。| |参数约束及描述：产品规格描述。|
-    * periodType  |参数名称：周期类型。0：天；1：周；2：月；3：年；4：小时；5：一次性；6：按需（预留）；7：按用量报表使用（预留）。| |参数的约束及描述：周期类型。0：天；1：周；2：月；3：年；4：小时；5：一次性；6：按需（预留）；7：按用量报表使用（预留）。|
-    * periodNum  |参数名称：周期数量。| |参数的约束及描述：周期数量。|
-    * effectiveTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * subscriptionNum  |参数名称：订购数量。| |参数的约束及描述：订购数量。|
-    * amountAfterDiscount  |参数名称：订单优惠后金额（实付价格，不含券不含卡）。| |参数的约束及描述：订单优惠后金额（实付价格，不含券不含卡）。|
-    * officialAmount  |参数名称：订单金额（官网价）。退订订单中，该金额等于currencyAfterDiscount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于currencyAfterDiscount。|
+    * orderLineItemId  订单项ID。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * productId  产品ID。
+    * productSpecDesc  产品规格描述。
+    * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
+    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
+    * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * subscriptionNum  订购数量。
+    * amountAfterDiscount  订单优惠后金额（实付价格，不含券不含卡）。
+    * officialAmount  订单金额（官网价）。 退订订单中，该金额等于currencyAfterDiscount。
     * amountInfo  amountInfo
-    * currency  |参数名称：货币编码。| |参数约束及描述：货币编码。如CNY|
-    * categoryCode  |参数名称：产品目录编码。| |参数约束及描述：产品目录编码。|
-    * productOwnerService  |参数名称：产品归属的云服务类型编码。| |参数约束及描述：产品归属的云服务类型编码。|
-    * commercialResource  |参数名称：商务归属的资源类型编码。| |参数约束及描述：商务归属的资源类型编码。|
+    * currency  货币编码。
+    * categoryCode  产品目录编码。
+    * productOwnerService  产品归属的云服务类型编码。 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * commercialResource  商务归属的资源类型编码。 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     *
     * @var string[]
     */
@@ -167,23 +167,23 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderLineItemId  |参数名称：订单项Id。| |参数约束及描述：订单项Id。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
-    * productSpecDesc  |参数名称：产品规格描述。| |参数约束及描述：产品规格描述。|
-    * periodType  |参数名称：周期类型。0：天；1：周；2：月；3：年；4：小时；5：一次性；6：按需（预留）；7：按用量报表使用（预留）。| |参数的约束及描述：周期类型。0：天；1：周；2：月；3：年；4：小时；5：一次性；6：按需（预留）；7：按用量报表使用（预留）。|
-    * periodNum  |参数名称：周期数量。| |参数的约束及描述：周期数量。|
-    * effectiveTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * subscriptionNum  |参数名称：订购数量。| |参数的约束及描述：订购数量。|
-    * amountAfterDiscount  |参数名称：订单优惠后金额（实付价格，不含券不含卡）。| |参数的约束及描述：订单优惠后金额（实付价格，不含券不含卡）。|
-    * officialAmount  |参数名称：订单金额（官网价）。退订订单中，该金额等于currencyAfterDiscount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于currencyAfterDiscount。|
+    * orderLineItemId  订单项ID。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * productId  产品ID。
+    * productSpecDesc  产品规格描述。
+    * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
+    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
+    * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * subscriptionNum  订购数量。
+    * amountAfterDiscount  订单优惠后金额（实付价格，不含券不含卡）。
+    * officialAmount  订单金额（官网价）。 退订订单中，该金额等于currencyAfterDiscount。
     * amountInfo  amountInfo
-    * currency  |参数名称：货币编码。| |参数约束及描述：货币编码。如CNY|
-    * categoryCode  |参数名称：产品目录编码。| |参数约束及描述：产品目录编码。|
-    * productOwnerService  |参数名称：产品归属的云服务类型编码。| |参数约束及描述：产品归属的云服务类型编码。|
-    * commercialResource  |参数名称：商务归属的资源类型编码。| |参数约束及描述：商务归属的资源类型编码。|
+    * currency  货币编码。
+    * categoryCode  产品目录编码。
+    * productOwnerService  产品归属的云服务类型编码。 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * commercialResource  商务归属的资源类型编码。 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     *
     * @var string[]
     */
@@ -209,23 +209,23 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderLineItemId  |参数名称：订单项Id。| |参数约束及描述：订单项Id。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * productId  |参数名称：产品ID。| |参数约束及描述：产品ID。|
-    * productSpecDesc  |参数名称：产品规格描述。| |参数约束及描述：产品规格描述。|
-    * periodType  |参数名称：周期类型。0：天；1：周；2：月；3：年；4：小时；5：一次性；6：按需（预留）；7：按用量报表使用（预留）。| |参数的约束及描述：周期类型。0：天；1：周；2：月；3：年；4：小时；5：一次性；6：按需（预留）；7：按用量报表使用（预留）。|
-    * periodNum  |参数名称：周期数量。| |参数的约束及描述：周期数量。|
-    * effectiveTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * subscriptionNum  |参数名称：订购数量。| |参数的约束及描述：订购数量。|
-    * amountAfterDiscount  |参数名称：订单优惠后金额（实付价格，不含券不含卡）。| |参数的约束及描述：订单优惠后金额（实付价格，不含券不含卡）。|
-    * officialAmount  |参数名称：订单金额（官网价）。退订订单中，该金额等于currencyAfterDiscount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于currencyAfterDiscount。|
+    * orderLineItemId  订单项ID。
+    * serviceTypeCode  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * productId  产品ID。
+    * productSpecDesc  产品规格描述。
+    * periodType  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
+    * periodNum  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
+    * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * subscriptionNum  订购数量。
+    * amountAfterDiscount  订单优惠后金额（实付价格，不含券不含卡）。
+    * officialAmount  订单金额（官网价）。 退订订单中，该金额等于currencyAfterDiscount。
     * amountInfo  amountInfo
-    * currency  |参数名称：货币编码。| |参数约束及描述：货币编码。如CNY|
-    * categoryCode  |参数名称：产品目录编码。| |参数约束及描述：产品目录编码。|
-    * productOwnerService  |参数名称：产品归属的云服务类型编码。| |参数约束及描述：产品归属的云服务类型编码。|
-    * commercialResource  |参数名称：商务归属的资源类型编码。| |参数约束及描述：商务归属的资源类型编码。|
+    * currency  货币编码。
+    * categoryCode  产品目录编码。
+    * productOwnerService  产品归属的云服务类型编码。 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * commercialResource  商务归属的资源类型编码。 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     *
     * @var string[]
     */
@@ -350,7 +350,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderLineItemId
-    *  |参数名称：订单项Id。| |参数约束及描述：订单项Id。|
+    *  订单项ID。
     *
     * @return string|null
     */
@@ -362,7 +362,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets orderLineItemId
     *
-    * @param string|null $orderLineItemId |参数名称：订单项Id。| |参数约束及描述：订单项Id。|
+    * @param string|null $orderLineItemId 订单项ID。
     *
     * @return $this
     */
@@ -374,7 +374,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeCode
-    *  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    *  云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
     *
     * @return string|null
     */
@@ -386,7 +386,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeCode
     *
-    * @param string|null $serviceTypeCode |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    * @param string|null $serviceTypeCode 云服务类型编码。例如OBS的云服务类型编码为“hws.service.type.obs”。
     *
     * @return $this
     */
@@ -398,7 +398,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeName
-    *  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return string|null
     */
@@ -410,7 +410,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeName
     *
-    * @param string|null $serviceTypeName |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return $this
     */
@@ -422,7 +422,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  |参数名称：产品ID。| |参数约束及描述：产品ID。|
+    *  产品ID。
     *
     * @return string|null
     */
@@ -434,7 +434,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId |参数名称：产品ID。| |参数约束及描述：产品ID。|
+    * @param string|null $productId 产品ID。
     *
     * @return $this
     */
@@ -446,7 +446,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets productSpecDesc
-    *  |参数名称：产品规格描述。| |参数约束及描述：产品规格描述。|
+    *  产品规格描述。
     *
     * @return string|null
     */
@@ -458,7 +458,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets productSpecDesc
     *
-    * @param string|null $productSpecDesc |参数名称：产品规格描述。| |参数约束及描述：产品规格描述。|
+    * @param string|null $productSpecDesc 产品规格描述。
     *
     * @return $this
     */
@@ -470,7 +470,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  |参数名称：周期类型。0：天；1：周；2：月；3：年；4：小时；5：一次性；6：按需（预留）；7：按用量报表使用（预留）。| |参数的约束及描述：周期类型。0：天；1：周；2：月；3：年；4：小时；5：一次性；6：按需（预留）；7：按用量报表使用（预留）。|
+    *  周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
     *
     * @return int|null
     */
@@ -482,7 +482,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param int|null $periodType |参数名称：周期类型。0：天；1：周；2：月；3：年；4：小时；5：一次性；6：按需（预留）；7：按用量报表使用（预留）。| |参数的约束及描述：周期类型。0：天；1：周；2：月；3：年；4：小时；5：一次性；6：按需（预留）；7：按用量报表使用（预留）。|
+    * @param int|null $periodType 周期类型。 0：天1：周2：月3：年4：小时5：一次性6：按需（预留）7：按用量报表使用（预留）
     *
     * @return $this
     */
@@ -494,7 +494,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  |参数名称：周期数量。| |参数的约束及描述：周期数量。|
+    *  周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
     *
     * @return int|null
     */
@@ -506,7 +506,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int|null $periodNum |参数名称：周期数量。| |参数的约束及描述：周期数量。|
+    * @param int|null $periodNum 周期数量。  说明： 当订单为退订资源的订单时，参数取值为null。
     *
     * @return $this
     */
@@ -518,7 +518,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets effectiveTime
-    *  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    *  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -530,7 +530,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets effectiveTime
     *
-    * @param string|null $effectiveTime |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    * @param string|null $effectiveTime 生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
@@ -542,7 +542,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTime
-    *  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    *  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -554,7 +554,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets expireTime
     *
-    * @param string|null $expireTime |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    * @param string|null $expireTime 失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
@@ -566,7 +566,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets subscriptionNum
-    *  |参数名称：订购数量。| |参数的约束及描述：订购数量。|
+    *  订购数量。
     *
     * @return int|null
     */
@@ -578,7 +578,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets subscriptionNum
     *
-    * @param int|null $subscriptionNum |参数名称：订购数量。| |参数的约束及描述：订购数量。|
+    * @param int|null $subscriptionNum 订购数量。
     *
     * @return $this
     */
@@ -590,7 +590,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets amountAfterDiscount
-    *  |参数名称：订单优惠后金额（实付价格，不含券不含卡）。| |参数的约束及描述：订单优惠后金额（实付价格，不含券不含卡）。|
+    *  订单优惠后金额（实付价格，不含券不含卡）。
     *
     * @return double|null
     */
@@ -602,7 +602,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets amountAfterDiscount
     *
-    * @param double|null $amountAfterDiscount |参数名称：订单优惠后金额（实付价格，不含券不含卡）。| |参数的约束及描述：订单优惠后金额（实付价格，不含券不含卡）。|
+    * @param double|null $amountAfterDiscount 订单优惠后金额（实付价格，不含券不含卡）。
     *
     * @return $this
     */
@@ -614,7 +614,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets officialAmount
-    *  |参数名称：订单金额（官网价）。退订订单中，该金额等于currencyAfterDiscount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于currencyAfterDiscount。|
+    *  订单金额（官网价）。 退订订单中，该金额等于currencyAfterDiscount。
     *
     * @return double|null
     */
@@ -626,7 +626,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets officialAmount
     *
-    * @param double|null $officialAmount |参数名称：订单金额（官网价）。退订订单中，该金额等于currencyAfterDiscount。| |参数的约束及描述：订单金额（官网价）。退订订单中，该金额等于currencyAfterDiscount。|
+    * @param double|null $officialAmount 订单金额（官网价）。 退订订单中，该金额等于currencyAfterDiscount。
     *
     * @return $this
     */
@@ -662,7 +662,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets currency
-    *  |参数名称：货币编码。| |参数约束及描述：货币编码。如CNY|
+    *  货币编码。
     *
     * @return string|null
     */
@@ -674,7 +674,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets currency
     *
-    * @param string|null $currency |参数名称：货币编码。| |参数约束及描述：货币编码。如CNY|
+    * @param string|null $currency 货币编码。
     *
     * @return $this
     */
@@ -686,7 +686,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets categoryCode
-    *  |参数名称：产品目录编码。| |参数约束及描述：产品目录编码。|
+    *  产品目录编码。
     *
     * @return string|null
     */
@@ -698,7 +698,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets categoryCode
     *
-    * @param string|null $categoryCode |参数名称：产品目录编码。| |参数约束及描述：产品目录编码。|
+    * @param string|null $categoryCode 产品目录编码。
     *
     * @return $this
     */
@@ -710,7 +710,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets productOwnerService
-    *  |参数名称：产品归属的云服务类型编码。| |参数约束及描述：产品归属的云服务类型编码。|
+    *  产品归属的云服务类型编码。 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return string|null
     */
@@ -722,7 +722,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets productOwnerService
     *
-    * @param string|null $productOwnerService |参数名称：产品归属的云服务类型编码。| |参数约束及描述：产品归属的云服务类型编码。|
+    * @param string|null $productOwnerService 产品归属的云服务类型编码。 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return $this
     */
@@ -734,7 +734,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets commercialResource
-    *  |参数名称：商务归属的资源类型编码。| |参数约束及描述：商务归属的资源类型编码。|
+    *  商务归属的资源类型编码。 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     *
     * @return string|null
     */
@@ -746,7 +746,7 @@ class OrderLineItemEntityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets commercialResource
     *
-    * @param string|null $commercialResource |参数名称：商务归属的资源类型编码。| |参数约束及描述：商务归属的资源类型编码。|
+    * @param string|null $commercialResource 商务归属的资源类型编码。 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     *
     * @return $this
     */

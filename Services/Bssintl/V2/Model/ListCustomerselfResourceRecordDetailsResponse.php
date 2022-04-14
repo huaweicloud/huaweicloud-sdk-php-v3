@@ -21,9 +21,9 @@ class ListCustomerselfResourceRecordDetailsResponse implements ModelInterface, A
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * monthlyRecords  |参数名称：资源费用记录数据| |参数的约束及描述：该参数非必填|
-    * totalCount  |参数名称：结果集数量| |参数的约束及描述：该参数非必填，且只允许数字，只有成功才返回这个参数。|
-    * currency  |参数名称：货币单位代码| |参数的约束及描述：该参数非必填，最大长度3，CNY：人民币；USD：美元|
+    * monthlyRecords  资源详单数据记录。 具体请参见表1。
+    * totalCount  结果集数量，只有成功才返回这个参数。
+    * currency  货币单位代码： USD：美元
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListCustomerselfResourceRecordDetailsResponse implements ModelInterface, A
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * monthlyRecords  |参数名称：资源费用记录数据| |参数的约束及描述：该参数非必填|
-    * totalCount  |参数名称：结果集数量| |参数的约束及描述：该参数非必填，且只允许数字，只有成功才返回这个参数。|
-    * currency  |参数名称：货币单位代码| |参数的约束及描述：该参数非必填，最大长度3，CNY：人民币；USD：美元|
+    * monthlyRecords  资源详单数据记录。 具体请参见表1。
+    * totalCount  结果集数量，只有成功才返回这个参数。
+    * currency  货币单位代码： USD：美元
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListCustomerselfResourceRecordDetailsResponse implements ModelInterface, A
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * monthlyRecords  |参数名称：资源费用记录数据| |参数的约束及描述：该参数非必填|
-    * totalCount  |参数名称：结果集数量| |参数的约束及描述：该参数非必填，且只允许数字，只有成功才返回这个参数。|
-    * currency  |参数名称：货币单位代码| |参数的约束及描述：该参数非必填，最大长度3，CNY：人民币；USD：美元|
+    * monthlyRecords  资源详单数据记录。 具体请参见表1。
+    * totalCount  结果集数量，只有成功才返回这个参数。
+    * currency  货币单位代码： USD：美元
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListCustomerselfResourceRecordDetailsResponse implements ModelInterface, A
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * monthlyRecords  |参数名称：资源费用记录数据| |参数的约束及描述：该参数非必填|
-    * totalCount  |参数名称：结果集数量| |参数的约束及描述：该参数非必填，且只允许数字，只有成功才返回这个参数。|
-    * currency  |参数名称：货币单位代码| |参数的约束及描述：该参数非必填，最大长度3，CNY：人民币；USD：美元|
+    * monthlyRecords  资源详单数据记录。 具体请参见表1。
+    * totalCount  结果集数量，只有成功才返回这个参数。
+    * currency  货币单位代码： USD：美元
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListCustomerselfResourceRecordDetailsResponse implements ModelInterface, A
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * monthlyRecords  |参数名称：资源费用记录数据| |参数的约束及描述：该参数非必填|
-    * totalCount  |参数名称：结果集数量| |参数的约束及描述：该参数非必填，且只允许数字，只有成功才返回这个参数。|
-    * currency  |参数名称：货币单位代码| |参数的约束及描述：该参数非必填，最大长度3，CNY：人民币；USD：美元|
+    * monthlyRecords  资源详单数据记录。 具体请参见表1。
+    * totalCount  结果集数量，只有成功才返回这个参数。
+    * currency  货币单位代码： USD：美元
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class ListCustomerselfResourceRecordDetailsResponse implements ModelInterface, A
 
     /**
     * Gets monthlyRecords
-    *  |参数名称：资源费用记录数据| |参数的约束及描述：该参数非必填|
+    *  资源详单数据记录。 具体请参见表1。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\MonthlyBillRes[]|null
     */
@@ -215,7 +215,7 @@ class ListCustomerselfResourceRecordDetailsResponse implements ModelInterface, A
     /**
     * Sets monthlyRecords
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\MonthlyBillRes[]|null $monthlyRecords |参数名称：资源费用记录数据| |参数的约束及描述：该参数非必填|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\MonthlyBillRes[]|null $monthlyRecords 资源详单数据记录。 具体请参见表1。
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class ListCustomerselfResourceRecordDetailsResponse implements ModelInterface, A
 
     /**
     * Gets totalCount
-    *  |参数名称：结果集数量| |参数的约束及描述：该参数非必填，且只允许数字，只有成功才返回这个参数。|
+    *  结果集数量，只有成功才返回这个参数。
     *
     * @return int|null
     */
@@ -239,7 +239,7 @@ class ListCustomerselfResourceRecordDetailsResponse implements ModelInterface, A
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount |参数名称：结果集数量| |参数的约束及描述：该参数非必填，且只允许数字，只有成功才返回这个参数。|
+    * @param int|null $totalCount 结果集数量，只有成功才返回这个参数。
     *
     * @return $this
     */
@@ -251,7 +251,7 @@ class ListCustomerselfResourceRecordDetailsResponse implements ModelInterface, A
 
     /**
     * Gets currency
-    *  |参数名称：货币单位代码| |参数的约束及描述：该参数非必填，最大长度3，CNY：人民币；USD：美元|
+    *  货币单位代码： USD：美元
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class ListCustomerselfResourceRecordDetailsResponse implements ModelInterface, A
     /**
     * Sets currency
     *
-    * @param string|null $currency |参数名称：货币单位代码| |参数的约束及描述：该参数非必填，最大长度3，CNY：人民币；USD：美元|
+    * @param string|null $currency 货币单位代码： USD：美元
     *
     * @return $this
     */

@@ -21,8 +21,8 @@ class ListFreeResourceInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * freeResourcePackages  |参数名称：调账记录列表| |参数约束以及描述：调账记录列表|
-    * totalCount  |参数名称：总条数| |参数的约束及描述：总条数|
+    * freeResourcePackages  资源包信息列表，具体参见表2。
+    * totalCount  总条数。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListFreeResourceInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * freeResourcePackages  |参数名称：调账记录列表| |参数约束以及描述：调账记录列表|
-    * totalCount  |参数名称：总条数| |参数的约束及描述：总条数|
+    * freeResourcePackages  资源包信息列表，具体参见表2。
+    * totalCount  总条数。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListFreeResourceInfosResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * freeResourcePackages  |参数名称：调账记录列表| |参数约束以及描述：调账记录列表|
-    * totalCount  |参数名称：总条数| |参数的约束及描述：总条数|
+    * freeResourcePackages  资源包信息列表，具体参见表2。
+    * totalCount  总条数。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListFreeResourceInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * freeResourcePackages  |参数名称：调账记录列表| |参数约束以及描述：调账记录列表|
-    * totalCount  |参数名称：总条数| |参数的约束及描述：总条数|
+    * freeResourcePackages  资源包信息列表，具体参见表2。
+    * totalCount  总条数。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListFreeResourceInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * freeResourcePackages  |参数名称：调账记录列表| |参数约束以及描述：调账记录列表|
-    * totalCount  |参数名称：总条数| |参数的约束及描述：总条数|
+    * freeResourcePackages  资源包信息列表，具体参见表2。
+    * totalCount  总条数。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListFreeResourceInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeResourcePackages
-    *  |参数名称：调账记录列表| |参数约束以及描述：调账记录列表|
+    *  资源包信息列表，具体参见表2。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\FreeResourcePackageV3[]|null
     */
@@ -198,7 +198,7 @@ class ListFreeResourceInfosResponse implements ModelInterface, ArrayAccess
     /**
     * Sets freeResourcePackages
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\FreeResourcePackageV3[]|null $freeResourcePackages |参数名称：调账记录列表| |参数约束以及描述：调账记录列表|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\FreeResourcePackageV3[]|null $freeResourcePackages 资源包信息列表，具体参见表2。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListFreeResourceInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  |参数名称：总条数| |参数的约束及描述：总条数|
+    *  总条数。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListFreeResourceInfosResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount |参数名称：总条数| |参数的约束及描述：总条数|
+    * @param int|null $totalCount 总条数。
     *
     * @return $this
     */

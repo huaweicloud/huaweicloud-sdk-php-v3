@@ -20,11 +20,11 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * freeResourceId  |参数名称：资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。| |参数约束及描述：资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。|
-    * usageTypeName  |参数名称：使用量类型名称。| |参数约束及描述：使用量类型名称。|
-    * amount  |参数名称：资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。| |参数约束及描述：资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。|
-    * originalAmount  |参数名称：资源原始额度，针对可重置资源包，是指每个重置周期内的总量。| |参数约束及描述：资源原始额度，针对可重置资源包，是指每个重置周期内的总量。|
-    * measureId  |参数名称：度量单位，免费资源套餐额度度量单位。| |参数的约束及描述：度量单位，免费资源套餐额度度量单位。|
+    * freeResourceId  资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。
+    * usageTypeName  使用量类型名称。
+    * amount  资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
+    * originalAmount  资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
+    * measureId  度量单位，免费资源套餐额度度量单位。您可以调用查询度量单位列表接口获取。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * freeResourceId  |参数名称：资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。| |参数约束及描述：资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。|
-    * usageTypeName  |参数名称：使用量类型名称。| |参数约束及描述：使用量类型名称。|
-    * amount  |参数名称：资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。| |参数约束及描述：资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。|
-    * originalAmount  |参数名称：资源原始额度，针对可重置资源包，是指每个重置周期内的总量。| |参数约束及描述：资源原始额度，针对可重置资源包，是指每个重置周期内的总量。|
-    * measureId  |参数名称：度量单位，免费资源套餐额度度量单位。| |参数的约束及描述：度量单位，免费资源套餐额度度量单位。|
+    * freeResourceId  资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。
+    * usageTypeName  使用量类型名称。
+    * amount  资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
+    * originalAmount  资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
+    * measureId  度量单位，免费资源套餐额度度量单位。您可以调用查询度量单位列表接口获取。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * freeResourceId  |参数名称：资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。| |参数约束及描述：资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。|
-    * usageTypeName  |参数名称：使用量类型名称。| |参数约束及描述：使用量类型名称。|
-    * amount  |参数名称：资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。| |参数约束及描述：资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。|
-    * originalAmount  |参数名称：资源原始额度，针对可重置资源包，是指每个重置周期内的总量。| |参数约束及描述：资源原始额度，针对可重置资源包，是指每个重置周期内的总量。|
-    * measureId  |参数名称：度量单位，免费资源套餐额度度量单位。| |参数的约束及描述：度量单位，免费资源套餐额度度量单位。|
+    * freeResourceId  资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。
+    * usageTypeName  使用量类型名称。
+    * amount  资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
+    * originalAmount  资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
+    * measureId  度量单位，免费资源套餐额度度量单位。您可以调用查询度量单位列表接口获取。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * freeResourceId  |参数名称：资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。| |参数约束及描述：资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。|
-    * usageTypeName  |参数名称：使用量类型名称。| |参数约束及描述：使用量类型名称。|
-    * amount  |参数名称：资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。| |参数约束及描述：资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。|
-    * originalAmount  |参数名称：资源原始额度，针对可重置资源包，是指每个重置周期内的总量。| |参数约束及描述：资源原始额度，针对可重置资源包，是指每个重置周期内的总量。|
-    * measureId  |参数名称：度量单位，免费资源套餐额度度量单位。| |参数的约束及描述：度量单位，免费资源套餐额度度量单位。|
+    * freeResourceId  资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。
+    * usageTypeName  使用量类型名称。
+    * amount  资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
+    * originalAmount  资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
+    * measureId  度量单位，免费资源套餐额度度量单位。您可以调用查询度量单位列表接口获取。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * freeResourceId  |参数名称：资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。| |参数约束及描述：资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。|
-    * usageTypeName  |参数名称：使用量类型名称。| |参数约束及描述：使用量类型名称。|
-    * amount  |参数名称：资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。| |参数约束及描述：资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。|
-    * originalAmount  |参数名称：资源原始额度，针对可重置资源包，是指每个重置周期内的总量。| |参数约束及描述：资源原始额度，针对可重置资源包，是指每个重置周期内的总量。|
-    * measureId  |参数名称：度量单位，免费资源套餐额度度量单位。| |参数的约束及描述：度量单位，免费资源套餐额度度量单位。|
+    * freeResourceId  资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。
+    * usageTypeName  使用量类型名称。
+    * amount  资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
+    * originalAmount  资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
+    * measureId  度量单位，免费资源套餐额度度量单位。您可以调用查询度量单位列表接口获取。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeResourceId
-    *  |参数名称：资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。| |参数约束及描述：资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。|
+    *  资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets freeResourceId
     *
-    * @param string|null $freeResourceId |参数名称：资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。| |参数约束及描述：资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。|
+    * @param string|null $freeResourceId 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets usageTypeName
-    *  |参数名称：使用量类型名称。| |参数约束及描述：使用量类型名称。|
+    *  使用量类型名称。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets usageTypeName
     *
-    * @param string|null $usageTypeName |参数名称：使用量类型名称。| |参数约束及描述：使用量类型名称。|
+    * @param string|null $usageTypeName 使用量类型名称。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets amount
-    *  |参数名称：资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。| |参数约束及描述：资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。|
+    *  资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param string|null $amount |参数名称：资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。| |参数约束及描述：资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。|
+    * @param string|null $amount 资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets originalAmount
-    *  |参数名称：资源原始额度，针对可重置资源包，是指每个重置周期内的总量。| |参数约束及描述：资源原始额度，针对可重置资源包，是指每个重置周期内的总量。|
+    *  资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets originalAmount
     *
-    * @param string|null $originalAmount |参数名称：资源原始额度，针对可重置资源包，是指每个重置周期内的总量。| |参数约束及描述：资源原始额度，针对可重置资源包，是指每个重置周期内的总量。|
+    * @param string|null $originalAmount 资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：度量单位，免费资源套餐额度度量单位。| |参数的约束及描述：度量单位，免费资源套餐额度度量单位。|
+    *  度量单位，免费资源套餐额度度量单位。您可以调用查询度量单位列表接口获取。
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class FreeResourceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId |参数名称：度量单位，免费资源套餐额度度量单位。| |参数的约束及描述：度量单位，免费资源套餐额度度量单位。|
+    * @param int|null $measureId 度量单位，免费资源套餐额度度量单位。您可以调用查询度量单位列表接口获取。
     *
     * @return $this
     */

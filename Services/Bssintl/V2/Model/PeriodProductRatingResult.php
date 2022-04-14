@@ -20,42 +20,46 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  |参数名称：ID标识| |参数约束及描述：ID标识，来源于请求中的ID|
-    * productId  |参数名称：产品ID| |参数约束及描述：产品ID|
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠的金额|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
+    * id  ID标识，来源于请求中的ID。
+    * productId  包年/包月产品的ID。
+    * amount  总额，即最终优惠后的金额。 amount= official_website_amount - discountAmount。
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
+    * measureId  价格度量单位标识。 1：元
+    * limit  |参数名称：每页数量| |参数的约束及描述：该参数非必填，且只允许1-100数字，默认10，最多100|
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
             'productId' => 'string',
-            'amount' => 'float',
-            'officialWebsiteAmount' => 'float',
-            'discountAmount' => 'float',
-            'measureId' => 'int'
+            'amount' => 'double',
+            'officialWebsiteAmount' => 'double',
+            'discountAmount' => 'double',
+            'measureId' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  |参数名称：ID标识| |参数约束及描述：ID标识，来源于请求中的ID|
-    * productId  |参数名称：产品ID| |参数约束及描述：产品ID|
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠的金额|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
+    * id  ID标识，来源于请求中的ID。
+    * productId  包年/包月产品的ID。
+    * amount  总额，即最终优惠后的金额。 amount= official_website_amount - discountAmount。
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
+    * measureId  价格度量单位标识。 1：元
+    * limit  |参数名称：每页数量| |参数的约束及描述：该参数非必填，且只允许1-100数字，默认10，最多100|
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
         'productId' => null,
-        'amount' => 'bigdecimal',
-        'officialWebsiteAmount' => 'bigdecimal',
-        'discountAmount' => 'bigdecimal',
-        'measureId' => 'int32'
+        'amount' => 'double',
+        'officialWebsiteAmount' => 'double',
+        'discountAmount' => 'double',
+        'measureId' => 'int32',
+        'limit' => 'int32'
     ];
 
     /**
@@ -81,12 +85,13 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  |参数名称：ID标识| |参数约束及描述：ID标识，来源于请求中的ID|
-    * productId  |参数名称：产品ID| |参数约束及描述：产品ID|
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠的金额|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
+    * id  ID标识，来源于请求中的ID。
+    * productId  包年/包月产品的ID。
+    * amount  总额，即最终优惠后的金额。 amount= official_website_amount - discountAmount。
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
+    * measureId  价格度量单位标识。 1：元
+    * limit  |参数名称：每页数量| |参数的约束及描述：该参数非必填，且只允许1-100数字，默认10，最多100|
     *
     * @var string[]
     */
@@ -96,17 +101,19 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
             'amount' => 'amount',
             'officialWebsiteAmount' => 'official_website_amount',
             'discountAmount' => 'discount_amount',
-            'measureId' => 'measure_id'
+            'measureId' => 'measure_id',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  |参数名称：ID标识| |参数约束及描述：ID标识，来源于请求中的ID|
-    * productId  |参数名称：产品ID| |参数约束及描述：产品ID|
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠的金额|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
+    * id  ID标识，来源于请求中的ID。
+    * productId  包年/包月产品的ID。
+    * amount  总额，即最终优惠后的金额。 amount= official_website_amount - discountAmount。
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
+    * measureId  价格度量单位标识。 1：元
+    * limit  |参数名称：每页数量| |参数的约束及描述：该参数非必填，且只允许1-100数字，默认10，最多100|
     *
     * @var string[]
     */
@@ -116,17 +123,19 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
             'amount' => 'setAmount',
             'officialWebsiteAmount' => 'setOfficialWebsiteAmount',
             'discountAmount' => 'setDiscountAmount',
-            'measureId' => 'setMeasureId'
+            'measureId' => 'setMeasureId',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  |参数名称：ID标识| |参数约束及描述：ID标识，来源于请求中的ID|
-    * productId  |参数名称：产品ID| |参数约束及描述：产品ID|
-    * amount  |参数名称：总额| |参数约束及描述：即最终优惠的金额|
-    * officialWebsiteAmount  |参数名称：官网价| |参数约束及描述：官网价|
-    * discountAmount  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
-    * measureId  |参数名称：度量单位标识| |参数约束及描述：1：元|
+    * id  ID标识，来源于请求中的ID。
+    * productId  包年/包月产品的ID。
+    * amount  总额，即最终优惠后的金额。 amount= official_website_amount - discountAmount。
+    * officialWebsiteAmount  包年/包月产品的官网价。
+    * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
+    * measureId  价格度量单位标识。 1：元
+    * limit  |参数名称：每页数量| |参数的约束及描述：该参数非必填，且只允许1-100数字，默认10，最多100|
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
             'amount' => 'getAmount',
             'officialWebsiteAmount' => 'getOfficialWebsiteAmount',
             'discountAmount' => 'getDiscountAmount',
-            'measureId' => 'getMeasureId'
+            'measureId' => 'getMeasureId',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -202,7 +212,8 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
         $this->container['officialWebsiteAmount'] = isset($data['officialWebsiteAmount']) ? $data['officialWebsiteAmount'] : null;
         $this->container['discountAmount'] = isset($data['discountAmount']) ? $data['discountAmount'] : null;
-        $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
+        $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : 1;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
     }
 
     /**
@@ -225,6 +236,18 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
             if (!is_null($this->container['productId']) && (mb_strlen($this->container['productId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'productId', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['measureId']) && ($this->container['measureId'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'measureId', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['measureId']) && ($this->container['measureId'] < 1)) {
+                $invalidProperties[] = "invalid value for 'measureId', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -241,7 +264,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  |参数名称：ID标识| |参数约束及描述：ID标识，来源于请求中的ID|
+    *  ID标识，来源于请求中的ID。
     *
     * @return string|null
     */
@@ -253,7 +276,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id |参数名称：ID标识| |参数约束及描述：ID标识，来源于请求中的ID|
+    * @param string|null $id ID标识，来源于请求中的ID。
     *
     * @return $this
     */
@@ -265,7 +288,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  |参数名称：产品ID| |参数约束及描述：产品ID|
+    *  包年/包月产品的ID。
     *
     * @return string|null
     */
@@ -277,7 +300,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId |参数名称：产品ID| |参数约束及描述：产品ID|
+    * @param string|null $productId 包年/包月产品的ID。
     *
     * @return $this
     */
@@ -289,9 +312,9 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets amount
-    *  |参数名称：总额| |参数约束及描述：即最终优惠的金额|
+    *  总额，即最终优惠后的金额。 amount= official_website_amount - discountAmount。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getAmount()
     {
@@ -301,7 +324,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param float|null $amount |参数名称：总额| |参数约束及描述：即最终优惠的金额|
+    * @param double|null $amount 总额，即最终优惠后的金额。 amount= official_website_amount - discountAmount。
     *
     * @return $this
     */
@@ -313,9 +336,9 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets officialWebsiteAmount
-    *  |参数名称：官网价| |参数约束及描述：官网价|
+    *  包年/包月产品的官网价。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getOfficialWebsiteAmount()
     {
@@ -325,7 +348,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets officialWebsiteAmount
     *
-    * @param float|null $officialWebsiteAmount |参数名称：官网价| |参数约束及描述：官网价|
+    * @param double|null $officialWebsiteAmount 包年/包月产品的官网价。
     *
     * @return $this
     */
@@ -337,9 +360,9 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountAmount
-    *  |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
+    *  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getDiscountAmount()
     {
@@ -349,7 +372,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets discountAmount
     *
-    * @param float|null $discountAmount |参数名称：优惠额（官网价和总价的差）| |参数约束及描述：优惠额（官网价和总价的差）|
+    * @param double|null $discountAmount 可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     *
     * @return $this
     */
@@ -361,7 +384,7 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：度量单位标识| |参数约束及描述：1：元|
+    *  价格度量单位标识。 1：元
     *
     * @return int|null
     */
@@ -373,13 +396,37 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId |参数名称：度量单位标识| |参数约束及描述：1：元|
+    * @param int|null $measureId 价格度量单位标识。 1：元
     *
     * @return $this
     */
     public function setMeasureId($measureId)
     {
         $this->container['measureId'] = $measureId;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  |参数名称：每页数量| |参数的约束及描述：该参数非必填，且只允许1-100数字，默认10，最多100|
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit |参数名称：每页数量| |参数的约束及描述：该参数非必填，且只允许1-100数字，默认10，最多100|
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

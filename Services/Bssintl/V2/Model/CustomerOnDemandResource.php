@@ -20,21 +20,21 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * customerId  |参数名称：所属的客户ID。| |参数约束及描述：所属的客户ID。|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * availabilityZoneCode  |参数名称：所属的AZ的编码。| |参数约束及描述：所属的AZ的编码。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceId  |参数名称：具体资源的ID。| |参数约束及描述：具体资源的ID。|
-    * resourceName  |参数名称：资源实例的名称。| |参数约束及描述：资源实例的名称。|
-    * effectiveTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
-    * resourceSpecCode  |参数名称：按需资源规格编码。| |参数约束及描述：按需资源规格编码。|
-    * resourceInfo  |参数名称：资源容量大小。格式如| |参数约束及描述：资源容量大小。格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"|
-    * productSpecDesc  |参数名称：产品规格描述| |参数约束及描述：譬如虚拟机为：\"通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux\"，硬盘为：\"云硬盘_SATA_LXH01|40.0GB\"|
+    * customerId  客户账号ID。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * availabilityZoneCode  所属可用区的编码。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * resourceId  资源ID。
+    * resourceName  资源实例名称。
+    * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
+    * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
+    * resourceInfo  按需资源的容量大小。 格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"
+    * productSpecDesc  产品规格描述。例如： 虚拟机：“通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux”硬盘：“云硬盘_SATA_LXH01|40.0GB”
     *
     * @var string[]
     */
@@ -58,21 +58,21 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * customerId  |参数名称：所属的客户ID。| |参数约束及描述：所属的客户ID。|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * availabilityZoneCode  |参数名称：所属的AZ的编码。| |参数约束及描述：所属的AZ的编码。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceId  |参数名称：具体资源的ID。| |参数约束及描述：具体资源的ID。|
-    * resourceName  |参数名称：资源实例的名称。| |参数约束及描述：资源实例的名称。|
-    * effectiveTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
-    * resourceSpecCode  |参数名称：按需资源规格编码。| |参数约束及描述：按需资源规格编码。|
-    * resourceInfo  |参数名称：资源容量大小。格式如| |参数约束及描述：资源容量大小。格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"|
-    * productSpecDesc  |参数名称：产品规格描述| |参数约束及描述：譬如虚拟机为：\"通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux\"，硬盘为：\"云硬盘_SATA_LXH01|40.0GB\"|
+    * customerId  客户账号ID。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * availabilityZoneCode  所属可用区的编码。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * resourceId  资源ID。
+    * resourceName  资源实例名称。
+    * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
+    * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
+    * resourceInfo  按需资源的容量大小。 格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"
+    * productSpecDesc  产品规格描述。例如： 虚拟机：“通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux”硬盘：“云硬盘_SATA_LXH01|40.0GB”
     *
     * @var string[]
     */
@@ -117,21 +117,21 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * customerId  |参数名称：所属的客户ID。| |参数约束及描述：所属的客户ID。|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * availabilityZoneCode  |参数名称：所属的AZ的编码。| |参数约束及描述：所属的AZ的编码。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceId  |参数名称：具体资源的ID。| |参数约束及描述：具体资源的ID。|
-    * resourceName  |参数名称：资源实例的名称。| |参数约束及描述：资源实例的名称。|
-    * effectiveTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
-    * resourceSpecCode  |参数名称：按需资源规格编码。| |参数约束及描述：按需资源规格编码。|
-    * resourceInfo  |参数名称：资源容量大小。格式如| |参数约束及描述：资源容量大小。格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"|
-    * productSpecDesc  |参数名称：产品规格描述| |参数约束及描述：譬如虚拟机为：\"通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux\"，硬盘为：\"云硬盘_SATA_LXH01|40.0GB\"|
+    * customerId  客户账号ID。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * availabilityZoneCode  所属可用区的编码。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * resourceId  资源ID。
+    * resourceName  资源实例名称。
+    * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
+    * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
+    * resourceInfo  按需资源的容量大小。 格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"
+    * productSpecDesc  产品规格描述。例如： 虚拟机：“通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux”硬盘：“云硬盘_SATA_LXH01|40.0GB”
     *
     * @var string[]
     */
@@ -155,21 +155,21 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * customerId  |参数名称：所属的客户ID。| |参数约束及描述：所属的客户ID。|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * availabilityZoneCode  |参数名称：所属的AZ的编码。| |参数约束及描述：所属的AZ的编码。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceId  |参数名称：具体资源的ID。| |参数约束及描述：具体资源的ID。|
-    * resourceName  |参数名称：资源实例的名称。| |参数约束及描述：资源实例的名称。|
-    * effectiveTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
-    * resourceSpecCode  |参数名称：按需资源规格编码。| |参数约束及描述：按需资源规格编码。|
-    * resourceInfo  |参数名称：资源容量大小。格式如| |参数约束及描述：资源容量大小。格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"|
-    * productSpecDesc  |参数名称：产品规格描述| |参数约束及描述：譬如虚拟机为：\"通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux\"，硬盘为：\"云硬盘_SATA_LXH01|40.0GB\"|
+    * customerId  客户账号ID。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * availabilityZoneCode  所属可用区的编码。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * resourceId  资源ID。
+    * resourceName  资源实例名称。
+    * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
+    * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
+    * resourceInfo  按需资源的容量大小。 格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"
+    * productSpecDesc  产品规格描述。例如： 虚拟机：“通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux”硬盘：“云硬盘_SATA_LXH01|40.0GB”
     *
     * @var string[]
     */
@@ -193,21 +193,21 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * customerId  |参数名称：所属的客户ID。| |参数约束及描述：所属的客户ID。|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
-    * availabilityZoneCode  |参数名称：所属的AZ的编码。| |参数约束及描述：所属的AZ的编码。|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
-    * resourceTypeCode  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * resourceTypeName  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
-    * resourceId  |参数名称：具体资源的ID。| |参数约束及描述：具体资源的ID。|
-    * resourceName  |参数名称：资源实例的名称。| |参数约束及描述：资源实例的名称。|
-    * effectiveTime  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * expireTime  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
-    * status  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
-    * resourceSpecCode  |参数名称：按需资源规格编码。| |参数约束及描述：按需资源规格编码。|
-    * resourceInfo  |参数名称：资源容量大小。格式如| |参数约束及描述：资源容量大小。格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"|
-    * productSpecDesc  |参数名称：产品规格描述| |参数约束及描述：譬如虚拟机为：\"通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux\"，硬盘为：\"云硬盘_SATA_LXH01|40.0GB\"|
+    * customerId  客户账号ID。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * availabilityZoneCode  所属可用区的编码。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
+    * resourceId  资源ID。
+    * resourceName  资源实例名称。
+    * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
+    * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
+    * resourceSpecCode  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
+    * resourceInfo  按需资源的容量大小。 格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"
+    * productSpecDesc  产品规格描述。例如： 虚拟机：“通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux”硬盘：“云硬盘_SATA_LXH01|40.0GB”
     *
     * @var string[]
     */
@@ -328,7 +328,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerId
-    *  |参数名称：所属的客户ID。| |参数约束及描述：所属的客户ID。|
+    *  客户账号ID。
     *
     * @return string|null
     */
@@ -340,7 +340,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets customerId
     *
-    * @param string|null $customerId |参数名称：所属的客户ID。| |参数约束及描述：所属的客户ID。|
+    * @param string|null $customerId 客户账号ID。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionCode
-    *  |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
+    *  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     *
     * @return string|null
     */
@@ -364,7 +364,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets regionCode
     *
-    * @param string|null $regionCode |参数名称：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。| |参数约束及描述：云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点地区和终端节点对应云服务的“区域”列的值。|
+    * @param string|null $regionCode 云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     *
     * @return $this
     */
@@ -376,7 +376,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZoneCode
-    *  |参数名称：所属的AZ的编码。| |参数约束及描述：所属的AZ的编码。|
+    *  所属可用区的编码。
     *
     * @return string|null
     */
@@ -388,7 +388,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZoneCode
     *
-    * @param string|null $availabilityZoneCode |参数名称：所属的AZ的编码。| |参数约束及描述：所属的AZ的编码。|
+    * @param string|null $availabilityZoneCode 所属可用区的编码。
     *
     * @return $this
     */
@@ -400,7 +400,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeCode
-    *  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return string|null
     */
@@ -412,7 +412,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeCode
     *
-    * @param string|null $serviceTypeCode |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。具体请参见云服务类型云服务类型云服务类型云服务类型。|
+    * @param string|null $serviceTypeCode 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     *
     * @return $this
     */
@@ -424,7 +424,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeCode
-    *  |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    *  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     *
     * @return string|null
     */
@@ -436,7 +436,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeCode
     *
-    * @param string|null $resourceTypeCode |参数名称：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。| |参数约束及描述：资源类型编码，例如ECS的VM为“hws.resource.type.vm”。具体请参见资源类型资源类型资源类型资源类型。|
+    * @param string|null $resourceTypeCode 资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     *
     * @return $this
     */
@@ -448,7 +448,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeName
-    *  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return string|null
     */
@@ -460,7 +460,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeName
     *
-    * @param string|null $serviceTypeName |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return $this
     */
@@ -472,7 +472,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeName
-    *  |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    *  资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @return string|null
     */
@@ -484,7 +484,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeName
     *
-    * @param string|null $resourceTypeName |参数名称：资源类型编码名称| |参数约束及描述：资源类型编码名称|
+    * @param string|null $resourceTypeName 资源类型名称。例如ECS的资源类型名称为“云主机”。
     *
     * @return $this
     */
@@ -496,7 +496,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  |参数名称：具体资源的ID。| |参数约束及描述：具体资源的ID。|
+    *  资源ID。
     *
     * @return string|null
     */
@@ -508,7 +508,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId |参数名称：具体资源的ID。| |参数约束及描述：具体资源的ID。|
+    * @param string|null $resourceId 资源ID。
     *
     * @return $this
     */
@@ -520,7 +520,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  |参数名称：资源实例的名称。| |参数约束及描述：资源实例的名称。|
+    *  资源实例名称。
     *
     * @return string|null
     */
@@ -532,7 +532,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string|null $resourceName |参数名称：资源实例的名称。| |参数约束及描述：资源实例的名称。|
+    * @param string|null $resourceName 资源实例名称。
     *
     * @return $this
     */
@@ -544,7 +544,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets effectiveTime
-    *  |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    *  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -556,7 +556,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets effectiveTime
     *
-    * @param string|null $effectiveTime |参数名称：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：生效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    * @param string|null $effectiveTime 生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTime
-    *  |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    *  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return string|null
     */
@@ -580,7 +580,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets expireTime
     *
-    * @param string|null $expireTime |参数名称：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。| |参数约束及描述：失效时间。UTC时间，格式：yyyy-MM-ddTHH:mm:ssZ，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。|
+    * @param string|null $expireTime 失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。 其中，HH范围是0～23，mm和ss范围是0～59。
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
+    *  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     *
     * @return int|null
     */
@@ -604,7 +604,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status |参数名称：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。| |参数的约束及描述：资源状态：1：正常（已开通）；2：宽限期；3：冻结中；4：变更中；5：正在关闭；6：已关闭。|
+    * @param int|null $status 资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
     *
     * @return $this
     */
@@ -616,7 +616,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  |参数名称：按需资源规格编码。| |参数约束及描述：按需资源规格编码。|
+    *  云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
     *
     * @return string|null
     */
@@ -628,7 +628,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string|null $resourceSpecCode |参数名称：按需资源规格编码。| |参数约束及描述：按需资源规格编码。|
+    * @param string|null $resourceSpecCode 云服务产品的资源规格。如果是VM的资源规格，则需要在规格后面添加“.win”或“.linux”，例如“s2.small.1.linux”。
     *
     * @return $this
     */
@@ -640,7 +640,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceInfo
-    *  |参数名称：资源容量大小。格式如| |参数约束及描述：资源容量大小。格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"|
+    *  按需资源的容量大小。 格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"
     *
     * @return string|null
     */
@@ -652,7 +652,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceInfo
     *
-    * @param string|null $resourceInfo |参数名称：资源容量大小。格式如| |参数约束及描述：资源容量大小。格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"|
+    * @param string|null $resourceInfo 按需资源的容量大小。 格式如：\"resourceInfo\": \"{\\\"specSize\\\":40.0}\"
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets productSpecDesc
-    *  |参数名称：产品规格描述| |参数约束及描述：譬如虚拟机为：\"通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux\"，硬盘为：\"云硬盘_SATA_LXH01|40.0GB\"|
+    *  产品规格描述。例如： 虚拟机：“通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux”硬盘：“云硬盘_SATA_LXH01|40.0GB”
     *
     * @return string|null
     */
@@ -676,7 +676,7 @@ class CustomerOnDemandResource implements ModelInterface, ArrayAccess
     /**
     * Sets productSpecDesc
     *
-    * @param string|null $productSpecDesc |参数名称：产品规格描述| |参数约束及描述：譬如虚拟机为：\"通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux\"，硬盘为：\"云硬盘_SATA_LXH01|40.0GB\"|
+    * @param string|null $productSpecDesc 产品规格描述。例如： 虚拟机：“通用计算增强型|c6.2xlarge.4|8vCPUs|32GB|linux”硬盘：“云硬盘_SATA_LXH01|40.0GB”
     *
     * @return $this
     */

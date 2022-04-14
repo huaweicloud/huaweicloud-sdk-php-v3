@@ -20,10 +20,10 @@ class ResourceBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * productOwnerService  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
-    * name  |参数名称：资源名称，按照请求的X-Language返回对应语言的名称| |参数约束及描述：资源名称，按照请求的X-Language返回对应语言的名称|
-    * description  |参数名称：资源描述，按照请求的X-Language返回对应语言的描述| |参数约束及描述：资源描述，按照请求的X-Language返回对应语言的描述|
+    * resourceTypeCode  资源类型编码。例如：hws.resource.type.general。
+    * productOwnerService  资源类型归属的服务类型编码。例如：hws.service.type.offline。
+    * name  资源类型名称。例如：通用规格。
+    * description  资源类型描述。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ResourceBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * productOwnerService  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
-    * name  |参数名称：资源名称，按照请求的X-Language返回对应语言的名称| |参数约束及描述：资源名称，按照请求的X-Language返回对应语言的名称|
-    * description  |参数名称：资源描述，按照请求的X-Language返回对应语言的描述| |参数约束及描述：资源描述，按照请求的X-Language返回对应语言的描述|
+    * resourceTypeCode  资源类型编码。例如：hws.resource.type.general。
+    * productOwnerService  资源类型归属的服务类型编码。例如：hws.service.type.offline。
+    * name  资源类型名称。例如：通用规格。
+    * description  资源类型描述。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ResourceBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * productOwnerService  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
-    * name  |参数名称：资源名称，按照请求的X-Language返回对应语言的名称| |参数约束及描述：资源名称，按照请求的X-Language返回对应语言的名称|
-    * description  |参数名称：资源描述，按照请求的X-Language返回对应语言的描述| |参数约束及描述：资源描述，按照请求的X-Language返回对应语言的描述|
+    * resourceTypeCode  资源类型编码。例如：hws.resource.type.general。
+    * productOwnerService  资源类型归属的服务类型编码。例如：hws.service.type.offline。
+    * name  资源类型名称。例如：通用规格。
+    * description  资源类型描述。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ResourceBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * productOwnerService  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
-    * name  |参数名称：资源名称，按照请求的X-Language返回对应语言的名称| |参数约束及描述：资源名称，按照请求的X-Language返回对应语言的名称|
-    * description  |参数名称：资源描述，按照请求的X-Language返回对应语言的描述| |参数约束及描述：资源描述，按照请求的X-Language返回对应语言的描述|
+    * resourceTypeCode  资源类型编码。例如：hws.resource.type.general。
+    * productOwnerService  资源类型归属的服务类型编码。例如：hws.service.type.offline。
+    * name  资源类型名称。例如：通用规格。
+    * description  资源类型描述。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ResourceBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceTypeCode  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
-    * productOwnerService  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
-    * name  |参数名称：资源名称，按照请求的X-Language返回对应语言的名称| |参数约束及描述：资源名称，按照请求的X-Language返回对应语言的名称|
-    * description  |参数名称：资源描述，按照请求的X-Language返回对应语言的描述| |参数约束及描述：资源描述，按照请求的X-Language返回对应语言的描述|
+    * resourceTypeCode  资源类型编码。例如：hws.resource.type.general。
+    * productOwnerService  资源类型归属的服务类型编码。例如：hws.service.type.offline。
+    * name  资源类型名称。例如：通用规格。
+    * description  资源类型描述。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ResourceBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeCode
-    *  |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+    *  资源类型编码。例如：hws.resource.type.general。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ResourceBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeCode
     *
-    * @param string|null $resourceTypeCode |参数名称：资源类型编码| |参数约束及描述：资源类型编码|
+    * @param string|null $resourceTypeCode 资源类型编码。例如：hws.resource.type.general。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class ResourceBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets productOwnerService
-    *  |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
+    *  资源类型归属的服务类型编码。例如：hws.service.type.offline。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class ResourceBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets productOwnerService
     *
-    * @param string|null $productOwnerService |参数名称：资源类型归属的服务类型编码| |参数约束及描述：资源类型归属的服务类型编码|
+    * @param string|null $productOwnerService 资源类型归属的服务类型编码。例如：hws.service.type.offline。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ResourceBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  |参数名称：资源名称，按照请求的X-Language返回对应语言的名称| |参数约束及描述：资源名称，按照请求的X-Language返回对应语言的名称|
+    *  资源类型名称。例如：通用规格。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class ResourceBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name |参数名称：资源名称，按照请求的X-Language返回对应语言的名称| |参数约束及描述：资源名称，按照请求的X-Language返回对应语言的名称|
+    * @param string|null $name 资源类型名称。例如：通用规格。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ResourceBasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  |参数名称：资源描述，按照请求的X-Language返回对应语言的描述| |参数约束及描述：资源描述，按照请求的X-Language返回对应语言的描述|
+    *  资源类型描述。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class ResourceBasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description |参数名称：资源描述，按照请求的X-Language返回对应语言的描述| |参数约束及描述：资源描述，按照请求的X-Language返回对应语言的描述|
+    * @param string|null $description 资源类型描述。
     *
     * @return $this
     */

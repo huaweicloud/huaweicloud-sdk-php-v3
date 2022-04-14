@@ -21,7 +21,7 @@ class UnfreezeSubCustomersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorDetails  |参数名称：错误原因，部分成功部分失败的时候会返回失败的客户列表和错误原因。注意这个结构体在HTTP 200的时候返回| |参数约束以及描述：错误原因，部分成功部分失败的时候会返回失败的客户列表和错误原因。注意这个结构体在HTTP 200的时候返回|
+    * errorDetails  错误原因，只有部分失败的时候才返回。 具体请参见表1。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class UnfreezeSubCustomersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorDetails  |参数名称：错误原因，部分成功部分失败的时候会返回失败的客户列表和错误原因。注意这个结构体在HTTP 200的时候返回| |参数约束以及描述：错误原因，部分成功部分失败的时候会返回失败的客户列表和错误原因。注意这个结构体在HTTP 200的时候返回|
+    * errorDetails  错误原因，只有部分失败的时候才返回。 具体请参见表1。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class UnfreezeSubCustomersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorDetails  |参数名称：错误原因，部分成功部分失败的时候会返回失败的客户列表和错误原因。注意这个结构体在HTTP 200的时候返回| |参数约束以及描述：错误原因，部分成功部分失败的时候会返回失败的客户列表和错误原因。注意这个结构体在HTTP 200的时候返回|
+    * errorDetails  错误原因，只有部分失败的时候才返回。 具体请参见表1。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class UnfreezeSubCustomersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorDetails  |参数名称：错误原因，部分成功部分失败的时候会返回失败的客户列表和错误原因。注意这个结构体在HTTP 200的时候返回| |参数约束以及描述：错误原因，部分成功部分失败的时候会返回失败的客户列表和错误原因。注意这个结构体在HTTP 200的时候返回|
+    * errorDetails  错误原因，只有部分失败的时候才返回。 具体请参见表1。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UnfreezeSubCustomersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorDetails  |参数名称：错误原因，部分成功部分失败的时候会返回失败的客户列表和错误原因。注意这个结构体在HTTP 200的时候返回| |参数约束以及描述：错误原因，部分成功部分失败的时候会返回失败的客户列表和错误原因。注意这个结构体在HTTP 200的时候返回|
+    * errorDetails  错误原因，只有部分失败的时候才返回。 具体请参见表1。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class UnfreezeSubCustomersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorDetails
-    *  |参数名称：错误原因，部分成功部分失败的时候会返回失败的客户列表和错误原因。注意这个结构体在HTTP 200的时候返回| |参数约束以及描述：错误原因，部分成功部分失败的时候会返回失败的客户列表和错误原因。注意这个结构体在HTTP 200的时候返回|
+    *  错误原因，只有部分失败的时候才返回。 具体请参见表1。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\CustomerErrorDetail[]|null
     */
@@ -187,7 +187,7 @@ class UnfreezeSubCustomersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorDetails
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\CustomerErrorDetail[]|null $errorDetails |参数名称：错误原因，部分成功部分失败的时候会返回失败的客户列表和错误原因。注意这个结构体在HTTP 200的时候返回| |参数约束以及描述：错误原因，部分成功部分失败的时候会返回失败的客户列表和错误原因。注意这个结构体在HTTP 200的时候返回|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\CustomerErrorDetail[]|null $errorDetails 错误原因，只有部分失败的时候才返回。 具体请参见表1。
     *
     * @return $this
     */

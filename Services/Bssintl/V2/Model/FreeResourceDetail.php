@@ -20,16 +20,16 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * freeResourceId  |参数名称：套餐包ID| |参数约束及描述：套餐包ID|
-    * freeResourceTypeName  |参数名称：免费资源类型名称| |参数约束及描述：免费资源类型名称|
-    * quotaReuseCycle  |参数名称：重用周期| |参数的约束及描述：重用周期|
-    * quotaReuseCycleType  |参数名称：重置周期类别| |参数的约束及描述：重置周期类别|
-    * usageTypeName  |参数名称：使用量类型名称| |参数约束及描述：使用量类型名称|
-    * startTime  |参数名称：开始时间| |参数约束及描述：开始时间|
-    * endTime  |参数名称：结束时间| |参数约束及描述：结束时间|
-    * amount  |参数名称：免费资源剩余额度| |参数的约束及描述：免费资源剩余额度|
-    * originalAmount  |参数名称：免费资源原始额度| |参数的约束及描述：免费资源原始额度|
-    * measureId  |参数名称：度量单位| |参数的约束及描述：度量单位|
+    * freeResourceId  资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。
+    * freeResourceTypeName  资源项类型名称。
+    * quotaReuseCycle  重置周期，只有quota_reuse_mode为可重置，该字段才有意义。 1：小时2：天3：周4：月5：年
+    * quotaReuseCycleType  重置周期类别，只有quota_reuse_mode为可重置，该字段才有意义。 1：按自然周期重置是指重置周期是按照自然月/年来重置，例如如果周期是月，按自然周期重置，表示每个月的1号重置。 2：按订购周期重置。是指重置周期是按照订购时间来重置，例如如果周期是月，按订购周期重置，15号订购了该套餐，表示每个月的15号重置。
+    * usageTypeName  使用量类型名称。
+    * startTime  开始时间，格式UTC。 如果quota_reuse_mode为可重置，则此时间为当前时间所在的重置周期的开始时间。如果quota_reuse_mode为不可重置，则此时间为订购实例的生效时间。
+    * endTime  结束时间，格式UTC。 如果quota_reuse_mode为可重置，则此时间为当前时间所在的重置周期的结束时间。如果quota_reuse_mode为不可重置，则此时间为订购实例的失效时间。
+    * amount  资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
+    * originalAmount  资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
+    * measureId  度量单位，免费资源套餐额度度量单位。您可以调用查询度量单位列表接口获取。
     *
     * @var string[]
     */
@@ -41,23 +41,23 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
             'usageTypeName' => 'string',
             'startTime' => 'string',
             'endTime' => 'string',
-            'amount' => 'float',
-            'originalAmount' => 'float',
+            'amount' => 'double',
+            'originalAmount' => 'double',
             'measureId' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * freeResourceId  |参数名称：套餐包ID| |参数约束及描述：套餐包ID|
-    * freeResourceTypeName  |参数名称：免费资源类型名称| |参数约束及描述：免费资源类型名称|
-    * quotaReuseCycle  |参数名称：重用周期| |参数的约束及描述：重用周期|
-    * quotaReuseCycleType  |参数名称：重置周期类别| |参数的约束及描述：重置周期类别|
-    * usageTypeName  |参数名称：使用量类型名称| |参数约束及描述：使用量类型名称|
-    * startTime  |参数名称：开始时间| |参数约束及描述：开始时间|
-    * endTime  |参数名称：结束时间| |参数约束及描述：结束时间|
-    * amount  |参数名称：免费资源剩余额度| |参数的约束及描述：免费资源剩余额度|
-    * originalAmount  |参数名称：免费资源原始额度| |参数的约束及描述：免费资源原始额度|
-    * measureId  |参数名称：度量单位| |参数的约束及描述：度量单位|
+    * freeResourceId  资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。
+    * freeResourceTypeName  资源项类型名称。
+    * quotaReuseCycle  重置周期，只有quota_reuse_mode为可重置，该字段才有意义。 1：小时2：天3：周4：月5：年
+    * quotaReuseCycleType  重置周期类别，只有quota_reuse_mode为可重置，该字段才有意义。 1：按自然周期重置是指重置周期是按照自然月/年来重置，例如如果周期是月，按自然周期重置，表示每个月的1号重置。 2：按订购周期重置。是指重置周期是按照订购时间来重置，例如如果周期是月，按订购周期重置，15号订购了该套餐，表示每个月的15号重置。
+    * usageTypeName  使用量类型名称。
+    * startTime  开始时间，格式UTC。 如果quota_reuse_mode为可重置，则此时间为当前时间所在的重置周期的开始时间。如果quota_reuse_mode为不可重置，则此时间为订购实例的生效时间。
+    * endTime  结束时间，格式UTC。 如果quota_reuse_mode为可重置，则此时间为当前时间所在的重置周期的结束时间。如果quota_reuse_mode为不可重置，则此时间为订购实例的失效时间。
+    * amount  资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
+    * originalAmount  资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
+    * measureId  度量单位，免费资源套餐额度度量单位。您可以调用查询度量单位列表接口获取。
     *
     * @var string[]
     */
@@ -69,8 +69,8 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
         'usageTypeName' => null,
         'startTime' => null,
         'endTime' => null,
-        'amount' => 'bigdecimal',
-        'originalAmount' => 'bigdecimal',
+        'amount' => 'double',
+        'originalAmount' => 'double',
         'measureId' => 'int32'
     ];
 
@@ -97,16 +97,16 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * freeResourceId  |参数名称：套餐包ID| |参数约束及描述：套餐包ID|
-    * freeResourceTypeName  |参数名称：免费资源类型名称| |参数约束及描述：免费资源类型名称|
-    * quotaReuseCycle  |参数名称：重用周期| |参数的约束及描述：重用周期|
-    * quotaReuseCycleType  |参数名称：重置周期类别| |参数的约束及描述：重置周期类别|
-    * usageTypeName  |参数名称：使用量类型名称| |参数约束及描述：使用量类型名称|
-    * startTime  |参数名称：开始时间| |参数约束及描述：开始时间|
-    * endTime  |参数名称：结束时间| |参数约束及描述：结束时间|
-    * amount  |参数名称：免费资源剩余额度| |参数的约束及描述：免费资源剩余额度|
-    * originalAmount  |参数名称：免费资源原始额度| |参数的约束及描述：免费资源原始额度|
-    * measureId  |参数名称：度量单位| |参数的约束及描述：度量单位|
+    * freeResourceId  资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。
+    * freeResourceTypeName  资源项类型名称。
+    * quotaReuseCycle  重置周期，只有quota_reuse_mode为可重置，该字段才有意义。 1：小时2：天3：周4：月5：年
+    * quotaReuseCycleType  重置周期类别，只有quota_reuse_mode为可重置，该字段才有意义。 1：按自然周期重置是指重置周期是按照自然月/年来重置，例如如果周期是月，按自然周期重置，表示每个月的1号重置。 2：按订购周期重置。是指重置周期是按照订购时间来重置，例如如果周期是月，按订购周期重置，15号订购了该套餐，表示每个月的15号重置。
+    * usageTypeName  使用量类型名称。
+    * startTime  开始时间，格式UTC。 如果quota_reuse_mode为可重置，则此时间为当前时间所在的重置周期的开始时间。如果quota_reuse_mode为不可重置，则此时间为订购实例的生效时间。
+    * endTime  结束时间，格式UTC。 如果quota_reuse_mode为可重置，则此时间为当前时间所在的重置周期的结束时间。如果quota_reuse_mode为不可重置，则此时间为订购实例的失效时间。
+    * amount  资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
+    * originalAmount  资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
+    * measureId  度量单位，免费资源套餐额度度量单位。您可以调用查询度量单位列表接口获取。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * freeResourceId  |参数名称：套餐包ID| |参数约束及描述：套餐包ID|
-    * freeResourceTypeName  |参数名称：免费资源类型名称| |参数约束及描述：免费资源类型名称|
-    * quotaReuseCycle  |参数名称：重用周期| |参数的约束及描述：重用周期|
-    * quotaReuseCycleType  |参数名称：重置周期类别| |参数的约束及描述：重置周期类别|
-    * usageTypeName  |参数名称：使用量类型名称| |参数约束及描述：使用量类型名称|
-    * startTime  |参数名称：开始时间| |参数约束及描述：开始时间|
-    * endTime  |参数名称：结束时间| |参数约束及描述：结束时间|
-    * amount  |参数名称：免费资源剩余额度| |参数的约束及描述：免费资源剩余额度|
-    * originalAmount  |参数名称：免费资源原始额度| |参数的约束及描述：免费资源原始额度|
-    * measureId  |参数名称：度量单位| |参数的约束及描述：度量单位|
+    * freeResourceId  资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。
+    * freeResourceTypeName  资源项类型名称。
+    * quotaReuseCycle  重置周期，只有quota_reuse_mode为可重置，该字段才有意义。 1：小时2：天3：周4：月5：年
+    * quotaReuseCycleType  重置周期类别，只有quota_reuse_mode为可重置，该字段才有意义。 1：按自然周期重置是指重置周期是按照自然月/年来重置，例如如果周期是月，按自然周期重置，表示每个月的1号重置。 2：按订购周期重置。是指重置周期是按照订购时间来重置，例如如果周期是月，按订购周期重置，15号订购了该套餐，表示每个月的15号重置。
+    * usageTypeName  使用量类型名称。
+    * startTime  开始时间，格式UTC。 如果quota_reuse_mode为可重置，则此时间为当前时间所在的重置周期的开始时间。如果quota_reuse_mode为不可重置，则此时间为订购实例的生效时间。
+    * endTime  结束时间，格式UTC。 如果quota_reuse_mode为可重置，则此时间为当前时间所在的重置周期的结束时间。如果quota_reuse_mode为不可重置，则此时间为订购实例的失效时间。
+    * amount  资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
+    * originalAmount  资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
+    * measureId  度量单位，免费资源套餐额度度量单位。您可以调用查询度量单位列表接口获取。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * freeResourceId  |参数名称：套餐包ID| |参数约束及描述：套餐包ID|
-    * freeResourceTypeName  |参数名称：免费资源类型名称| |参数约束及描述：免费资源类型名称|
-    * quotaReuseCycle  |参数名称：重用周期| |参数的约束及描述：重用周期|
-    * quotaReuseCycleType  |参数名称：重置周期类别| |参数的约束及描述：重置周期类别|
-    * usageTypeName  |参数名称：使用量类型名称| |参数约束及描述：使用量类型名称|
-    * startTime  |参数名称：开始时间| |参数约束及描述：开始时间|
-    * endTime  |参数名称：结束时间| |参数约束及描述：结束时间|
-    * amount  |参数名称：免费资源剩余额度| |参数的约束及描述：免费资源剩余额度|
-    * originalAmount  |参数名称：免费资源原始额度| |参数的约束及描述：免费资源原始额度|
-    * measureId  |参数名称：度量单位| |参数的约束及描述：度量单位|
+    * freeResourceId  资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。
+    * freeResourceTypeName  资源项类型名称。
+    * quotaReuseCycle  重置周期，只有quota_reuse_mode为可重置，该字段才有意义。 1：小时2：天3：周4：月5：年
+    * quotaReuseCycleType  重置周期类别，只有quota_reuse_mode为可重置，该字段才有意义。 1：按自然周期重置是指重置周期是按照自然月/年来重置，例如如果周期是月，按自然周期重置，表示每个月的1号重置。 2：按订购周期重置。是指重置周期是按照订购时间来重置，例如如果周期是月，按订购周期重置，15号订购了该套餐，表示每个月的15号重置。
+    * usageTypeName  使用量类型名称。
+    * startTime  开始时间，格式UTC。 如果quota_reuse_mode为可重置，则此时间为当前时间所在的重置周期的开始时间。如果quota_reuse_mode为不可重置，则此时间为订购实例的生效时间。
+    * endTime  结束时间，格式UTC。 如果quota_reuse_mode为可重置，则此时间为当前时间所在的重置周期的结束时间。如果quota_reuse_mode为不可重置，则此时间为订购实例的失效时间。
+    * amount  资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
+    * originalAmount  资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
+    * measureId  度量单位，免费资源套餐额度度量单位。您可以调用查询度量单位列表接口获取。
     *
     * @var string[]
     */
@@ -273,7 +273,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeResourceId
-    *  |参数名称：套餐包ID| |参数约束及描述：套餐包ID|
+    *  资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets freeResourceId
     *
-    * @param string|null $freeResourceId |参数名称：套餐包ID| |参数约束及描述：套餐包ID|
+    * @param string|null $freeResourceId 资源项ID，一个资源包中会含有多个资源项，一个使用量类型对应一个资源项。
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeResourceTypeName
-    *  |参数名称：免费资源类型名称| |参数约束及描述：免费资源类型名称|
+    *  资源项类型名称。
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets freeResourceTypeName
     *
-    * @param string|null $freeResourceTypeName |参数名称：免费资源类型名称| |参数约束及描述：免费资源类型名称|
+    * @param string|null $freeResourceTypeName 资源项类型名称。
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaReuseCycle
-    *  |参数名称：重用周期| |参数的约束及描述：重用周期|
+    *  重置周期，只有quota_reuse_mode为可重置，该字段才有意义。 1：小时2：天3：周4：月5：年
     *
     * @return int|null
     */
@@ -333,7 +333,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets quotaReuseCycle
     *
-    * @param int|null $quotaReuseCycle |参数名称：重用周期| |参数的约束及描述：重用周期|
+    * @param int|null $quotaReuseCycle 重置周期，只有quota_reuse_mode为可重置，该字段才有意义。 1：小时2：天3：周4：月5：年
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaReuseCycleType
-    *  |参数名称：重置周期类别| |参数的约束及描述：重置周期类别|
+    *  重置周期类别，只有quota_reuse_mode为可重置，该字段才有意义。 1：按自然周期重置是指重置周期是按照自然月/年来重置，例如如果周期是月，按自然周期重置，表示每个月的1号重置。 2：按订购周期重置。是指重置周期是按照订购时间来重置，例如如果周期是月，按订购周期重置，15号订购了该套餐，表示每个月的15号重置。
     *
     * @return int|null
     */
@@ -357,7 +357,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets quotaReuseCycleType
     *
-    * @param int|null $quotaReuseCycleType |参数名称：重置周期类别| |参数的约束及描述：重置周期类别|
+    * @param int|null $quotaReuseCycleType 重置周期类别，只有quota_reuse_mode为可重置，该字段才有意义。 1：按自然周期重置是指重置周期是按照自然月/年来重置，例如如果周期是月，按自然周期重置，表示每个月的1号重置。 2：按订购周期重置。是指重置周期是按照订购时间来重置，例如如果周期是月，按订购周期重置，15号订购了该套餐，表示每个月的15号重置。
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets usageTypeName
-    *  |参数名称：使用量类型名称| |参数约束及描述：使用量类型名称|
+    *  使用量类型名称。
     *
     * @return string|null
     */
@@ -381,7 +381,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets usageTypeName
     *
-    * @param string|null $usageTypeName |参数名称：使用量类型名称| |参数约束及描述：使用量类型名称|
+    * @param string|null $usageTypeName 使用量类型名称。
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  |参数名称：开始时间| |参数约束及描述：开始时间|
+    *  开始时间，格式UTC。 如果quota_reuse_mode为可重置，则此时间为当前时间所在的重置周期的开始时间。如果quota_reuse_mode为不可重置，则此时间为订购实例的生效时间。
     *
     * @return string|null
     */
@@ -405,7 +405,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime |参数名称：开始时间| |参数约束及描述：开始时间|
+    * @param string|null $startTime 开始时间，格式UTC。 如果quota_reuse_mode为可重置，则此时间为当前时间所在的重置周期的开始时间。如果quota_reuse_mode为不可重置，则此时间为订购实例的生效时间。
     *
     * @return $this
     */
@@ -417,7 +417,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  |参数名称：结束时间| |参数约束及描述：结束时间|
+    *  结束时间，格式UTC。 如果quota_reuse_mode为可重置，则此时间为当前时间所在的重置周期的结束时间。如果quota_reuse_mode为不可重置，则此时间为订购实例的失效时间。
     *
     * @return string|null
     */
@@ -429,7 +429,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime |参数名称：结束时间| |参数约束及描述：结束时间|
+    * @param string|null $endTime 结束时间，格式UTC。 如果quota_reuse_mode为可重置，则此时间为当前时间所在的重置周期的结束时间。如果quota_reuse_mode为不可重置，则此时间为订购实例的失效时间。
     *
     * @return $this
     */
@@ -441,9 +441,9 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets amount
-    *  |参数名称：免费资源剩余额度| |参数的约束及描述：免费资源剩余额度|
+    *  资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getAmount()
     {
@@ -453,7 +453,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param float|null $amount |参数名称：免费资源剩余额度| |参数的约束及描述：免费资源剩余额度|
+    * @param double|null $amount 资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
     *
     * @return $this
     */
@@ -465,9 +465,9 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets originalAmount
-    *  |参数名称：免费资源原始额度| |参数的约束及描述：免费资源原始额度|
+    *  资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getOriginalAmount()
     {
@@ -477,7 +477,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets originalAmount
     *
-    * @param float|null $originalAmount |参数名称：免费资源原始额度| |参数的约束及描述：免费资源原始额度|
+    * @param double|null $originalAmount 资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  |参数名称：度量单位| |参数的约束及描述：度量单位|
+    *  度量单位，免费资源套餐额度度量单位。您可以调用查询度量单位列表接口获取。
     *
     * @return int|null
     */
@@ -501,7 +501,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId |参数名称：度量单位| |参数的约束及描述：度量单位|
+    * @param int|null $measureId 度量单位，免费资源套餐额度度量单位。您可以调用查询度量单位列表接口获取。
     *
     * @return $this
     */

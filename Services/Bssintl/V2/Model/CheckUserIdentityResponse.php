@@ -21,9 +21,9 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  |参数名称：返回码| |参数的约束及描述：该参数必填，且只允许字符串|
-    * errorMsg  |参数名称：返回码描述| |参数的约束及描述：该参数必填，且只允许字符串|
-    * checkResult  |参数名称：是否可以继续注册| |参数的约束及描述：该参数非必填，且只允许字符串,available: 该登录名称/手机号/邮箱可以继续注册,used_by_user: 该登录名称/手机号/邮箱不可以继续注册|
+    * errorCode  状态码。具体请参考状态码。只有失败才会返回这个参数。
+    * errorMsg  错误描述信息。只有失败才会返回这个参数。
+    * checkResult  available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  |参数名称：返回码| |参数的约束及描述：该参数必填，且只允许字符串|
-    * errorMsg  |参数名称：返回码描述| |参数的约束及描述：该参数必填，且只允许字符串|
-    * checkResult  |参数名称：是否可以继续注册| |参数的约束及描述：该参数非必填，且只允许字符串,available: 该登录名称/手机号/邮箱可以继续注册,used_by_user: 该登录名称/手机号/邮箱不可以继续注册|
+    * errorCode  状态码。具体请参考状态码。只有失败才会返回这个参数。
+    * errorMsg  错误描述信息。只有失败才会返回这个参数。
+    * checkResult  available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  |参数名称：返回码| |参数的约束及描述：该参数必填，且只允许字符串|
-    * errorMsg  |参数名称：返回码描述| |参数的约束及描述：该参数必填，且只允许字符串|
-    * checkResult  |参数名称：是否可以继续注册| |参数的约束及描述：该参数非必填，且只允许字符串,available: 该登录名称/手机号/邮箱可以继续注册,used_by_user: 该登录名称/手机号/邮箱不可以继续注册|
+    * errorCode  状态码。具体请参考状态码。只有失败才会返回这个参数。
+    * errorMsg  错误描述信息。只有失败才会返回这个参数。
+    * checkResult  available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  |参数名称：返回码| |参数的约束及描述：该参数必填，且只允许字符串|
-    * errorMsg  |参数名称：返回码描述| |参数的约束及描述：该参数必填，且只允许字符串|
-    * checkResult  |参数名称：是否可以继续注册| |参数的约束及描述：该参数非必填，且只允许字符串,available: 该登录名称/手机号/邮箱可以继续注册,used_by_user: 该登录名称/手机号/邮箱不可以继续注册|
+    * errorCode  状态码。具体请参考状态码。只有失败才会返回这个参数。
+    * errorMsg  错误描述信息。只有失败才会返回这个参数。
+    * checkResult  available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  |参数名称：返回码| |参数的约束及描述：该参数必填，且只允许字符串|
-    * errorMsg  |参数名称：返回码描述| |参数的约束及描述：该参数必填，且只允许字符串|
-    * checkResult  |参数名称：是否可以继续注册| |参数的约束及描述：该参数非必填，且只允许字符串,available: 该登录名称/手机号/邮箱可以继续注册,used_by_user: 该登录名称/手机号/邮箱不可以继续注册|
+    * errorCode  状态码。具体请参考状态码。只有失败才会返回这个参数。
+    * errorMsg  错误描述信息。只有失败才会返回这个参数。
+    * checkResult  available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  |参数名称：返回码| |参数的约束及描述：该参数必填，且只允许字符串|
+    *  状态码。具体请参考状态码。只有失败才会返回这个参数。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string|null $errorCode |参数名称：返回码| |参数的约束及描述：该参数必填，且只允许字符串|
+    * @param string|null $errorCode 状态码。具体请参考状态码。只有失败才会返回这个参数。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  |参数名称：返回码描述| |参数的约束及描述：该参数必填，且只允许字符串|
+    *  错误描述信息。只有失败才会返回这个参数。
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string|null $errorMsg |参数名称：返回码描述| |参数的约束及描述：该参数必填，且只允许字符串|
+    * @param string|null $errorMsg 错误描述信息。只有失败才会返回这个参数。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkResult
-    *  |参数名称：是否可以继续注册| |参数的约束及描述：该参数非必填，且只允许字符串,available: 该登录名称/手机号/邮箱可以继续注册,used_by_user: 该登录名称/手机号/邮箱不可以继续注册|
+    *  available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class CheckUserIdentityResponse implements ModelInterface, ArrayAccess
     /**
     * Sets checkResult
     *
-    * @param string|null $checkResult |参数名称：是否可以继续注册| |参数的约束及描述：该参数非必填，且只允许字符串,available: 该登录名称/手机号/邮箱可以继续注册,used_by_user: 该登录名称/手机号/邮箱不可以继续注册|
+    * @param string|null $checkResult available：该登录名称/手机号/邮箱有效。used_by_user：该登录名称/手机号/邮箱已被占用。
     *
     * @return $this
     */

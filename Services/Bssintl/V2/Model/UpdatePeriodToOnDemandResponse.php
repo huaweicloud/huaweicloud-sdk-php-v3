@@ -21,7 +21,7 @@ class UpdatePeriodToOnDemandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorDetails  |参数名称：返回数据| |参数约束以及描述：返回数据 HTTP 200的时候返回该字段，部分成功部分失败的时候返回的失败记录，如果全成功，该记录为空|
+    * errorDetails  HTTP 200的时候返回该字段；部分失败时仅返回失败的记录；如果全部成功，则该记录为空，具体参见表1。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class UpdatePeriodToOnDemandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorDetails  |参数名称：返回数据| |参数约束以及描述：返回数据 HTTP 200的时候返回该字段，部分成功部分失败的时候返回的失败记录，如果全成功，该记录为空|
+    * errorDetails  HTTP 200的时候返回该字段；部分失败时仅返回失败的记录；如果全部成功，则该记录为空，具体参见表1。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class UpdatePeriodToOnDemandResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorDetails  |参数名称：返回数据| |参数约束以及描述：返回数据 HTTP 200的时候返回该字段，部分成功部分失败的时候返回的失败记录，如果全成功，该记录为空|
+    * errorDetails  HTTP 200的时候返回该字段；部分失败时仅返回失败的记录；如果全部成功，则该记录为空，具体参见表1。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class UpdatePeriodToOnDemandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorDetails  |参数名称：返回数据| |参数约束以及描述：返回数据 HTTP 200的时候返回该字段，部分成功部分失败的时候返回的失败记录，如果全成功，该记录为空|
+    * errorDetails  HTTP 200的时候返回该字段；部分失败时仅返回失败的记录；如果全部成功，则该记录为空，具体参见表1。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UpdatePeriodToOnDemandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorDetails  |参数名称：返回数据| |参数约束以及描述：返回数据 HTTP 200的时候返回该字段，部分成功部分失败的时候返回的失败记录，如果全成功，该记录为空|
+    * errorDetails  HTTP 200的时候返回该字段；部分失败时仅返回失败的记录；如果全部成功，则该记录为空，具体参见表1。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class UpdatePeriodToOnDemandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorDetails
-    *  |参数名称：返回数据| |参数约束以及描述：返回数据 HTTP 200的时候返回该字段，部分成功部分失败的时候返回的失败记录，如果全成功，该记录为空|
+    *  HTTP 200的时候返回该字段；部分失败时仅返回失败的记录；如果全部成功，则该记录为空，具体参见表1。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\ErrorDetail[]|null
     */
@@ -187,7 +187,7 @@ class UpdatePeriodToOnDemandResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorDetails
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\ErrorDetail[]|null $errorDetails |参数名称：返回数据| |参数约束以及描述：返回数据 HTTP 200的时候返回该字段，部分成功部分失败的时候返回的失败记录，如果全成功，该记录为空|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\ErrorDetail[]|null $errorDetails HTTP 200的时候返回该字段；部分失败时仅返回失败的记录；如果全部成功，则该记录为空，具体参见表1。
     *
     * @return $this
     */

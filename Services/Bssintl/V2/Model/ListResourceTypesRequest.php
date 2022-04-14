@@ -20,30 +20,30 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  |语言 zh_CN：中文 en_US：英文|
-    * limit  |参数名称：每次查询的数量。默认值为10。| |参数的约束及描述：每页大小，缺省为1000。|
-    * offset  |参数名称：页数，从0开始。默认值为0。| |参数的约束及描述：从0开始。默认值为0。|
+    * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，默认值为10。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'xLanguage' => 'string',
-            'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  |语言 zh_CN：中文 en_US：英文|
-    * limit  |参数名称：每次查询的数量。默认值为10。| |参数的约束及描述：每页大小，缺省为1000。|
-    * offset  |参数名称：页数，从0开始。默认值为0。| |参数的约束及描述：从0开始。默认值为0。|
+    * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，默认值为10。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'xLanguage' => null,
-        'limit' => 'int32',
-        'offset' => 'int32'
+        'offset' => 'int32',
+        'limit' => 'int32'
     ];
 
     /**
@@ -69,44 +69,44 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  |语言 zh_CN：中文 en_US：英文|
-    * limit  |参数名称：每次查询的数量。默认值为10。| |参数的约束及描述：每页大小，缺省为1000。|
-    * offset  |参数名称：页数，从0开始。默认值为0。| |参数的约束及描述：从0开始。默认值为0。|
+    * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，默认值为10。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'xLanguage' => 'X-Language',
-            'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  |语言 zh_CN：中文 en_US：英文|
-    * limit  |参数名称：每次查询的数量。默认值为10。| |参数的约束及描述：每页大小，缺省为1000。|
-    * offset  |参数名称：页数，从0开始。默认值为0。| |参数的约束及描述：从0开始。默认值为0。|
+    * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，默认值为10。
     *
     * @var string[]
     */
     protected static $setters = [
             'xLanguage' => 'setXLanguage',
-            'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  |语言 zh_CN：中文 en_US：英文|
-    * limit  |参数名称：每次查询的数量。默认值为10。| |参数的约束及描述：每页大小，缺省为1000。|
-    * offset  |参数名称：页数，从0开始。默认值为0。| |参数的约束及描述：从0开始。默认值为0。|
+    * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
+    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，默认值为10。
     *
     * @var string[]
     */
     protected static $getters = [
             'xLanguage' => 'getXLanguage',
-            'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -168,8 +168,8 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'zh_CN';
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
     }
 
     /**
@@ -180,17 +180,17 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -208,7 +208,7 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  |语言 zh_CN：中文 en_US：英文|
+    *  语言。zh_CN：中文en_US：英文缺省为zh_CN。
     *
     * @return string|null
     */
@@ -220,7 +220,7 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage |语言 zh_CN：中文 en_US：英文|
+    * @param string|null $xLanguage 语言。zh_CN：中文en_US：英文缺省为zh_CN。
     *
     * @return $this
     */
@@ -231,32 +231,8 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets limit
-    *  |参数名称：每次查询的数量。默认值为10。| |参数的约束及描述：每页大小，缺省为1000。|
-    *
-    * @return int|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int|null $limit |参数名称：每次查询的数量。默认值为10。| |参数的约束及描述：每页大小，缺省为1000。|
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
     * Gets offset
-    *  |参数名称：页数，从0开始。默认值为0。| |参数的约束及描述：从0开始。默认值为0。|
+    *  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return int|null
     */
@@ -268,13 +244,37 @@ class ListResourceTypesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset |参数名称：页数，从0开始。默认值为0。| |参数的约束及描述：从0开始。默认值为0。|
+    * @param int|null $offset 偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return $this
     */
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每次查询的数量，默认值为10。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每次查询的数量，默认值为10。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

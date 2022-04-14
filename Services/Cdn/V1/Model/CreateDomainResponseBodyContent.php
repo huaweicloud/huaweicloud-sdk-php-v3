@@ -22,7 +22,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  加速域名ID。
     * domainName  加速域名。
-    * businessType  域名业务类型:-web:网站加速；-download:文件下载加速；-video:点播加速；-wholeSite:全站加速。
+    * businessType  域名业务类型：-web：网站加速；-download：文件下载加速；-video：点播加速；-wholeSite：全站加速。
     * serviceArea  域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义：online表示“已开启”、offline表示“已停用”、configuring表示“配置中”、configure_failed表示“配置失败”、checking表示“审核中”、check_failed表示“审核未通过”、deleting表示“删除中”。
@@ -66,7 +66,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  加速域名ID。
     * domainName  加速域名。
-    * businessType  域名业务类型:-web:网站加速；-download:文件下载加速；-video:点播加速；-wholeSite:全站加速。
+    * businessType  域名业务类型：-web：网站加速；-download：文件下载加速；-video：点播加速；-wholeSite：全站加速。
     * serviceArea  域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义：online表示“已开启”、offline表示“已停用”、configuring表示“配置中”、configure_failed表示“配置失败”、checking表示“审核中”、check_failed表示“审核未通过”、deleting表示“删除中”。
@@ -131,7 +131,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  加速域名ID。
     * domainName  加速域名。
-    * businessType  域名业务类型:-web:网站加速；-download:文件下载加速；-video:点播加速；-wholeSite:全站加速。
+    * businessType  域名业务类型：-web：网站加速；-download：文件下载加速；-video：点播加速；-wholeSite：全站加速。
     * serviceArea  域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义：online表示“已开启”、offline表示“已停用”、configuring表示“配置中”、configure_failed表示“配置失败”、checking表示“审核中”、check_failed表示“审核未通过”、deleting表示“删除中”。
@@ -175,7 +175,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  加速域名ID。
     * domainName  加速域名。
-    * businessType  域名业务类型:-web:网站加速；-download:文件下载加速；-video:点播加速；-wholeSite:全站加速。
+    * businessType  域名业务类型：-web：网站加速；-download：文件下载加速；-video：点播加速；-wholeSite：全站加速。
     * serviceArea  域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义：online表示“已开启”、offline表示“已停用”、configuring表示“配置中”、configure_failed表示“配置失败”、checking表示“审核中”、check_failed表示“审核未通过”、deleting表示“删除中”。
@@ -219,7 +219,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  加速域名ID。
     * domainName  加速域名。
-    * businessType  域名业务类型:-web:网站加速；-download:文件下载加速；-video:点播加速；-wholeSite:全站加速。
+    * businessType  域名业务类型：-web：网站加速；-download：文件下载加速；-video：点播加速；-wholeSite：全站加速。
     * serviceArea  域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
     * userDomainId  域名所属用户的domain_id。
     * domainStatus  加速域名状态。取值意义：online表示“已开启”、offline表示“已停用”、configuring表示“配置中”、configure_failed表示“配置失败”、checking表示“审核中”、check_failed表示“审核未通过”、deleting表示“删除中”。
@@ -409,7 +409,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessType
-    *  域名业务类型:-web:网站加速；-download:文件下载加速；-video:点播加速；-wholeSite:全站加速。
+    *  域名业务类型：-web：网站加速；-download：文件下载加速；-video：点播加速；-wholeSite：全站加速。
     *
     * @return string|null
     */
@@ -421,7 +421,7 @@ class CreateDomainResponseBodyContent implements ModelInterface, ArrayAccess
     /**
     * Sets businessType
     *
-    * @param string|null $businessType 域名业务类型:-web:网站加速；-download:文件下载加速；-video:点播加速；-wholeSite:全站加速。
+    * @param string|null $businessType 域名业务类型：-web：网站加速；-download：文件下载加速；-video：点播加速；-wholeSite：全站加速。
     *
     * @return $this
     */

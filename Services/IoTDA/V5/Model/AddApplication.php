@@ -20,7 +20,7 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，允许中文、字母、数字、下划线（_）、连接符（-）等一些特殊字符的组合。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，允许中文、字母、数字、下划线（_）、连接符（-）等一些特殊字符的组合。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class AddApplication implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，允许中文、字母、数字、下划线（_）、连接符（-）等一些特殊字符的组合。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，允许中文、字母、数字、下划线（_）、连接符（-）等一些特殊字符的组合。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * appName  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，允许中文、字母、数字、下划线（_）、连接符（-）等一些特殊字符的组合。
     *
     * @var string[]
     */
@@ -167,8 +167,8 @@ class AddApplication implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['appName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'appName', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_]*$/", $this->container['appName'])) {
-                $invalidProperties[] = "invalid value for 'appName', must be conform to the pattern /^[a-zA-Z0-9_]*$/.";
+            if (!preg_match("/^[一-龥a-zA-Z0-9_?''#().,&%@!-]*$/", $this->container['appName'])) {
+                $invalidProperties[] = "invalid value for 'appName', must be conform to the pattern /^[一-龥a-zA-Z0-9_?''#().,&%@!-]*$/.";
             }
         return $invalidProperties;
     }
@@ -186,7 +186,7 @@ class AddApplication implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
-    *  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    *  **参数说明**：资源空间名称。 **取值范围**：长度不超过64，允许中文、字母、数字、下划线（_）、连接符（-）等一些特殊字符的组合。
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class AddApplication implements ModelInterface, ArrayAccess
     /**
     * Sets appName
     *
-    * @param string $appName **参数说明**：资源空间名称。 **取值范围**：长度不超过64，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * @param string $appName **参数说明**：资源空间名称。 **取值范围**：长度不超过64，允许中文、字母、数字、下划线（_）、连接符（-）等一些特殊字符的组合。
     *
     * @return $this
     */

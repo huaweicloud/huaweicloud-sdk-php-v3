@@ -20,10 +20,14 @@ class Configs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * originRequestHeader  回源请求头配置。
+    * httpResponseHeader  http header配置。
     * urlAuth  urlAuth
     * https  https
+    * sources  源站配置。
+    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    * forceRedirect  forceRedirect
+    * compress  compress
     *
     * @var string[]
     */
@@ -31,15 +35,23 @@ class Configs implements ModelInterface, ArrayAccess
             'originRequestHeader' => '\HuaweiCloud\SDK\Cdn\V1\Model\OriginRequestHeader[]',
             'httpResponseHeader' => '\HuaweiCloud\SDK\Cdn\V1\Model\HttpResponseHeader[]',
             'urlAuth' => '\HuaweiCloud\SDK\Cdn\V1\Model\UrlAuth',
-            'https' => '\HuaweiCloud\SDK\Cdn\V1\Model\HttpPutBody'
+            'https' => '\HuaweiCloud\SDK\Cdn\V1\Model\HttpPutBody',
+            'sources' => '\HuaweiCloud\SDK\Cdn\V1\Model\SourcesConfig[]',
+            'originProtocol' => 'string',
+            'forceRedirect' => '\HuaweiCloud\SDK\Cdn\V1\Model\ForceRedirectConfig',
+            'compress' => '\HuaweiCloud\SDK\Cdn\V1\Model\Compress'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * originRequestHeader  回源请求头配置。
+    * httpResponseHeader  http header配置。
     * urlAuth  urlAuth
     * https  https
+    * sources  源站配置。
+    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    * forceRedirect  forceRedirect
+    * compress  compress
     *
     * @var string[]
     */
@@ -47,7 +59,11 @@ class Configs implements ModelInterface, ArrayAccess
         'originRequestHeader' => null,
         'httpResponseHeader' => null,
         'urlAuth' => null,
-        'https' => null
+        'https' => null,
+        'sources' => null,
+        'originProtocol' => null,
+        'forceRedirect' => null,
+        'compress' => null
     ];
 
     /**
@@ -73,10 +89,14 @@ class Configs implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * originRequestHeader  回源请求头配置。
+    * httpResponseHeader  http header配置。
     * urlAuth  urlAuth
     * https  https
+    * sources  源站配置。
+    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    * forceRedirect  forceRedirect
+    * compress  compress
     *
     * @var string[]
     */
@@ -84,15 +104,23 @@ class Configs implements ModelInterface, ArrayAccess
             'originRequestHeader' => 'origin_request_header',
             'httpResponseHeader' => 'http_response_header',
             'urlAuth' => 'url_auth',
-            'https' => 'https'
+            'https' => 'https',
+            'sources' => 'sources',
+            'originProtocol' => 'origin_protocol',
+            'forceRedirect' => 'force_redirect',
+            'compress' => 'compress'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * originRequestHeader  回源请求头配置。
+    * httpResponseHeader  http header配置。
     * urlAuth  urlAuth
     * https  https
+    * sources  源站配置。
+    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    * forceRedirect  forceRedirect
+    * compress  compress
     *
     * @var string[]
     */
@@ -100,15 +128,23 @@ class Configs implements ModelInterface, ArrayAccess
             'originRequestHeader' => 'setOriginRequestHeader',
             'httpResponseHeader' => 'setHttpResponseHeader',
             'urlAuth' => 'setUrlAuth',
-            'https' => 'setHttps'
+            'https' => 'setHttps',
+            'sources' => 'setSources',
+            'originProtocol' => 'setOriginProtocol',
+            'forceRedirect' => 'setForceRedirect',
+            'compress' => 'setCompress'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * originRequestHeader  回源请求头配置。
+    * httpResponseHeader  http header配置。
     * urlAuth  urlAuth
     * https  https
+    * sources  源站配置。
+    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    * forceRedirect  forceRedirect
+    * compress  compress
     *
     * @var string[]
     */
@@ -116,7 +152,11 @@ class Configs implements ModelInterface, ArrayAccess
             'originRequestHeader' => 'getOriginRequestHeader',
             'httpResponseHeader' => 'getHttpResponseHeader',
             'urlAuth' => 'getUrlAuth',
-            'https' => 'getHttps'
+            'https' => 'getHttps',
+            'sources' => 'getSources',
+            'originProtocol' => 'getOriginProtocol',
+            'forceRedirect' => 'getForceRedirect',
+            'compress' => 'getCompress'
     ];
 
     /**
@@ -181,6 +221,10 @@ class Configs implements ModelInterface, ArrayAccess
         $this->container['httpResponseHeader'] = isset($data['httpResponseHeader']) ? $data['httpResponseHeader'] : null;
         $this->container['urlAuth'] = isset($data['urlAuth']) ? $data['urlAuth'] : null;
         $this->container['https'] = isset($data['https']) ? $data['https'] : null;
+        $this->container['sources'] = isset($data['sources']) ? $data['sources'] : null;
+        $this->container['originProtocol'] = isset($data['originProtocol']) ? $data['originProtocol'] : null;
+        $this->container['forceRedirect'] = isset($data['forceRedirect']) ? $data['forceRedirect'] : null;
+        $this->container['compress'] = isset($data['compress']) ? $data['compress'] : null;
     }
 
     /**
@@ -207,7 +251,7 @@ class Configs implements ModelInterface, ArrayAccess
 
     /**
     * Gets originRequestHeader
-    *  回源请求头配置
+    *  回源请求头配置。
     *
     * @return \HuaweiCloud\SDK\Cdn\V1\Model\OriginRequestHeader[]|null
     */
@@ -219,7 +263,7 @@ class Configs implements ModelInterface, ArrayAccess
     /**
     * Sets originRequestHeader
     *
-    * @param \HuaweiCloud\SDK\Cdn\V1\Model\OriginRequestHeader[]|null $originRequestHeader 回源请求头配置
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\OriginRequestHeader[]|null $originRequestHeader 回源请求头配置。
     *
     * @return $this
     */
@@ -231,7 +275,7 @@ class Configs implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpResponseHeader
-    *  http header配置
+    *  http header配置。
     *
     * @return \HuaweiCloud\SDK\Cdn\V1\Model\HttpResponseHeader[]|null
     */
@@ -243,7 +287,7 @@ class Configs implements ModelInterface, ArrayAccess
     /**
     * Sets httpResponseHeader
     *
-    * @param \HuaweiCloud\SDK\Cdn\V1\Model\HttpResponseHeader[]|null $httpResponseHeader http header配置
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\HttpResponseHeader[]|null $httpResponseHeader http header配置。
     *
     * @return $this
     */
@@ -298,6 +342,102 @@ class Configs implements ModelInterface, ArrayAccess
     public function setHttps($https)
     {
         $this->container['https'] = $https;
+        return $this;
+    }
+
+    /**
+    * Gets sources
+    *  源站配置。
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V1\Model\SourcesConfig[]|null
+    */
+    public function getSources()
+    {
+        return $this->container['sources'];
+    }
+
+    /**
+    * Sets sources
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\SourcesConfig[]|null $sources 源站配置。
+    *
+    * @return $this
+    */
+    public function setSources($sources)
+    {
+        $this->container['sources'] = $sources;
+        return $this;
+    }
+
+    /**
+    * Gets originProtocol
+    *  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    *
+    * @return string|null
+    */
+    public function getOriginProtocol()
+    {
+        return $this->container['originProtocol'];
+    }
+
+    /**
+    * Sets originProtocol
+    *
+    * @param string|null $originProtocol 回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    *
+    * @return $this
+    */
+    public function setOriginProtocol($originProtocol)
+    {
+        $this->container['originProtocol'] = $originProtocol;
+        return $this;
+    }
+
+    /**
+    * Gets forceRedirect
+    *  forceRedirect
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V1\Model\ForceRedirectConfig|null
+    */
+    public function getForceRedirect()
+    {
+        return $this->container['forceRedirect'];
+    }
+
+    /**
+    * Sets forceRedirect
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\ForceRedirectConfig|null $forceRedirect forceRedirect
+    *
+    * @return $this
+    */
+    public function setForceRedirect($forceRedirect)
+    {
+        $this->container['forceRedirect'] = $forceRedirect;
+        return $this;
+    }
+
+    /**
+    * Gets compress
+    *  compress
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V1\Model\Compress|null
+    */
+    public function getCompress()
+    {
+        return $this->container['compress'];
+    }
+
+    /**
+    * Sets compress
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\Compress|null $compress compress
+    *
+    * @return $this
+    */
+    public function setCompress($compress)
+    {
+        $this->container['compress'] = $compress;
         return $this;
     }
 

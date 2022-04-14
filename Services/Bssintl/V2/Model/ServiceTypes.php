@@ -20,9 +20,9 @@ class ServiceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
-    * abbreviation  |参数名称：云服务类型的缩写| |参数约束及描述：云服务类型的缩写|
+    * serviceTypeName  云服务类型的名称。
+    * serviceTypeCode  云服务类型的编码。
+    * abbreviation  云服务类型的缩写。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ServiceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
-    * abbreviation  |参数名称：云服务类型的缩写| |参数约束及描述：云服务类型的缩写|
+    * serviceTypeName  云服务类型的名称。
+    * serviceTypeCode  云服务类型的编码。
+    * abbreviation  云服务类型的缩写。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ServiceTypes implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
-    * abbreviation  |参数名称：云服务类型的缩写| |参数约束及描述：云服务类型的缩写|
+    * serviceTypeName  云服务类型的名称。
+    * serviceTypeCode  云服务类型的编码。
+    * abbreviation  云服务类型的缩写。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ServiceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
-    * abbreviation  |参数名称：云服务类型的缩写| |参数约束及描述：云服务类型的缩写|
+    * serviceTypeName  云服务类型的名称。
+    * serviceTypeCode  云服务类型的编码。
+    * abbreviation  云服务类型的缩写。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ServiceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceTypeName  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
-    * serviceTypeCode  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
-    * abbreviation  |参数名称：云服务类型的缩写| |参数约束及描述：云服务类型的缩写|
+    * serviceTypeName  云服务类型的名称。
+    * serviceTypeCode  云服务类型的编码。
+    * abbreviation  云服务类型的缩写。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class ServiceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeName
-    *  |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
+    *  云服务类型的名称。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class ServiceTypes implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeName
     *
-    * @param string|null $serviceTypeName |参数名称：云服务类型名称| |参数约束及描述：云服务类型名称|
+    * @param string|null $serviceTypeName 云服务类型的名称。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class ServiceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeCode
-    *  |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
+    *  云服务类型的编码。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class ServiceTypes implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeCode
     *
-    * @param string|null $serviceTypeCode |参数名称：云服务类型编码| |参数约束及描述：云服务类型编码|
+    * @param string|null $serviceTypeCode 云服务类型的编码。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class ServiceTypes implements ModelInterface, ArrayAccess
 
     /**
     * Gets abbreviation
-    *  |参数名称：云服务类型的缩写| |参数约束及描述：云服务类型的缩写|
+    *  云服务类型的缩写。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class ServiceTypes implements ModelInterface, ArrayAccess
     /**
     * Sets abbreviation
     *
-    * @param string|null $abbreviation |参数名称：云服务类型的缩写| |参数约束及描述：云服务类型的缩写|
+    * @param string|null $abbreviation 云服务类型的缩写。
     *
     * @return $this
     */

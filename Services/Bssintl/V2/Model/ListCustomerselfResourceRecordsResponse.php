@@ -21,9 +21,9 @@ class ListCustomerselfResourceRecordsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * feeRecords  |参数名称：资源费用记录数据。具体请参见表 ResFeeRecordV2。| |参数约束以及描述：资源费用记录数据。具体请参见表 ResFeeRecordV2。|
-    * totalCount  |参数名称：结果集数量，只有成功才返回这个参数。| |参数的约束及描述：结果集数量，只有成功才返回这个参数。|
-    * currency  |参数名称：货币单位代码：CNY：人民币USD：美元| |参数约束及描述：货币单位代码：CNY：人民币USD：美元|
+    * feeRecords  资源费用记录数据。 具体请参见表3。
+    * totalCount  结果集数量，只有成功才返回这个参数。
+    * currency  货币单位代码： USD：美元
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListCustomerselfResourceRecordsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * feeRecords  |参数名称：资源费用记录数据。具体请参见表 ResFeeRecordV2。| |参数约束以及描述：资源费用记录数据。具体请参见表 ResFeeRecordV2。|
-    * totalCount  |参数名称：结果集数量，只有成功才返回这个参数。| |参数的约束及描述：结果集数量，只有成功才返回这个参数。|
-    * currency  |参数名称：货币单位代码：CNY：人民币USD：美元| |参数约束及描述：货币单位代码：CNY：人民币USD：美元|
+    * feeRecords  资源费用记录数据。 具体请参见表3。
+    * totalCount  结果集数量，只有成功才返回这个参数。
+    * currency  货币单位代码： USD：美元
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListCustomerselfResourceRecordsResponse implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * feeRecords  |参数名称：资源费用记录数据。具体请参见表 ResFeeRecordV2。| |参数约束以及描述：资源费用记录数据。具体请参见表 ResFeeRecordV2。|
-    * totalCount  |参数名称：结果集数量，只有成功才返回这个参数。| |参数的约束及描述：结果集数量，只有成功才返回这个参数。|
-    * currency  |参数名称：货币单位代码：CNY：人民币USD：美元| |参数约束及描述：货币单位代码：CNY：人民币USD：美元|
+    * feeRecords  资源费用记录数据。 具体请参见表3。
+    * totalCount  结果集数量，只有成功才返回这个参数。
+    * currency  货币单位代码： USD：美元
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListCustomerselfResourceRecordsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * feeRecords  |参数名称：资源费用记录数据。具体请参见表 ResFeeRecordV2。| |参数约束以及描述：资源费用记录数据。具体请参见表 ResFeeRecordV2。|
-    * totalCount  |参数名称：结果集数量，只有成功才返回这个参数。| |参数的约束及描述：结果集数量，只有成功才返回这个参数。|
-    * currency  |参数名称：货币单位代码：CNY：人民币USD：美元| |参数约束及描述：货币单位代码：CNY：人民币USD：美元|
+    * feeRecords  资源费用记录数据。 具体请参见表3。
+    * totalCount  结果集数量，只有成功才返回这个参数。
+    * currency  货币单位代码： USD：美元
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListCustomerselfResourceRecordsResponse implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * feeRecords  |参数名称：资源费用记录数据。具体请参见表 ResFeeRecordV2。| |参数约束以及描述：资源费用记录数据。具体请参见表 ResFeeRecordV2。|
-    * totalCount  |参数名称：结果集数量，只有成功才返回这个参数。| |参数的约束及描述：结果集数量，只有成功才返回这个参数。|
-    * currency  |参数名称：货币单位代码：CNY：人民币USD：美元| |参数约束及描述：货币单位代码：CNY：人民币USD：美元|
+    * feeRecords  资源费用记录数据。 具体请参见表3。
+    * totalCount  结果集数量，只有成功才返回这个参数。
+    * currency  货币单位代码： USD：美元
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ListCustomerselfResourceRecordsResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets feeRecords
-    *  |参数名称：资源费用记录数据。具体请参见表 ResFeeRecordV2。| |参数约束以及描述：资源费用记录数据。具体请参见表 ResFeeRecordV2。|
+    *  资源费用记录数据。 具体请参见表3。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\ResFeeRecordV2[]|null
     */
@@ -209,7 +209,7 @@ class ListCustomerselfResourceRecordsResponse implements ModelInterface, ArrayAc
     /**
     * Sets feeRecords
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\ResFeeRecordV2[]|null $feeRecords |参数名称：资源费用记录数据。具体请参见表 ResFeeRecordV2。| |参数约束以及描述：资源费用记录数据。具体请参见表 ResFeeRecordV2。|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\ResFeeRecordV2[]|null $feeRecords 资源费用记录数据。 具体请参见表3。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ListCustomerselfResourceRecordsResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets totalCount
-    *  |参数名称：结果集数量，只有成功才返回这个参数。| |参数的约束及描述：结果集数量，只有成功才返回这个参数。|
+    *  结果集数量，只有成功才返回这个参数。
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ListCustomerselfResourceRecordsResponse implements ModelInterface, ArrayAc
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount |参数名称：结果集数量，只有成功才返回这个参数。| |参数的约束及描述：结果集数量，只有成功才返回这个参数。|
+    * @param int|null $totalCount 结果集数量，只有成功才返回这个参数。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListCustomerselfResourceRecordsResponse implements ModelInterface, ArrayAc
 
     /**
     * Gets currency
-    *  |参数名称：货币单位代码：CNY：人民币USD：美元| |参数约束及描述：货币单位代码：CNY：人民币USD：美元|
+    *  货币单位代码： USD：美元
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class ListCustomerselfResourceRecordsResponse implements ModelInterface, ArrayAc
     /**
     * Sets currency
     *
-    * @param string|null $currency |参数名称：货币单位代码：CNY：人民币USD：美元| |参数约束及描述：货币单位代码：CNY：人民币USD：美元|
+    * @param string|null $currency 货币单位代码： USD：美元
     *
     * @return $this
     */

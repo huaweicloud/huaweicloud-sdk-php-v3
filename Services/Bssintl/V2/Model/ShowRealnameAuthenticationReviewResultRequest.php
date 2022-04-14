@@ -20,7 +20,7 @@ class ShowRealnameAuthenticationReviewResultRequest implements ModelInterface, A
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * customerId  |参数名称：客户ID。| |参数的约束及描述：|
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowRealnameAuthenticationReviewResultRequest implements ModelInterface, A
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * customerId  |参数名称：客户ID。| |参数的约束及描述：|
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowRealnameAuthenticationReviewResultRequest implements ModelInterface, A
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * customerId  |参数名称：客户ID。| |参数的约束及描述：|
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowRealnameAuthenticationReviewResultRequest implements ModelInterface, A
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * customerId  |参数名称：客户ID。| |参数的约束及描述：|
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowRealnameAuthenticationReviewResultRequest implements ModelInterface, A
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * customerId  |参数名称：客户ID。| |参数的约束及描述：|
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ShowRealnameAuthenticationReviewResultRequest implements ModelInterface, A
 
     /**
     * Gets customerId
-    *  |参数名称：客户ID。| |参数的约束及描述：|
+    *  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ShowRealnameAuthenticationReviewResultRequest implements ModelInterface, A
     /**
     * Sets customerId
     *
-    * @param string $customerId |参数名称：客户ID。| |参数的约束及描述：|
+    * @param string $customerId 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/mc_00021.html)接口获取customer_id。
     *
     * @return $this
     */

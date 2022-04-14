@@ -30,6 +30,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
     * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  只有管理员可以使用“deleted”状态过滤查询已经删除的弹性云服务器。  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * tags  查询tag字段中包含该值的云服务器。
+    * ipEq  IPv4地址过滤结果，匹配规则为精确匹配。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'reservationId' => 'string',
             'status' => 'string',
-            'tags' => 'string'
+            'tags' => 'string',
+            'ipEq' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
     * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  只有管理员可以使用“deleted”状态过滤查询已经删除的弹性云服务器。  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * tags  查询tag字段中包含该值的云服务器。
+    * ipEq  IPv4地址过滤结果，匹配规则为精确匹配。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'reservationId' => null,
         'status' => null,
-        'tags' => null
+        'tags' => null,
+        'ipEq' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
     * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  只有管理员可以使用“deleted”状态过滤查询已经删除的弹性云服务器。  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * tags  查询tag字段中包含该值的云服务器。
+    * ipEq  IPv4地址过滤结果，匹配规则为精确匹配。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'reservationId' => 'reservation_id',
             'status' => 'status',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'ipEq' => 'ip_eq'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
     * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  只有管理员可以使用“deleted”状态过滤查询已经删除的弹性云服务器。  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * tags  查询tag字段中包含该值的云服务器。
+    * ipEq  IPv4地址过滤结果，匹配规则为精确匹配。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'reservationId' => 'setReservationId',
             'status' => 'setStatus',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'ipEq' => 'setIpEq'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * reservationId  批量创建弹性云服务器时，指定返回的ID，用于查询本次批量创建的弹性云服务器。
     * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  只有管理员可以使用“deleted”状态过滤查询已经删除的弹性云服务器。  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * tags  查询tag字段中包含该值的云服务器。
+    * ipEq  IPv4地址过滤结果，匹配规则为精确匹配。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'reservationId' => 'getReservationId',
             'status' => 'getStatus',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'ipEq' => 'getIpEq'
     ];
 
     /**
@@ -247,6 +257,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
         $this->container['reservationId'] = isset($data['reservationId']) ? $data['reservationId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['ipEq'] = isset($data['ipEq']) ? $data['ipEq'] : null;
     }
 
     /**
@@ -514,6 +525,30 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets ipEq
+    *  IPv4地址过滤结果，匹配规则为精确匹配。
+    *
+    * @return string|null
+    */
+    public function getIpEq()
+    {
+        return $this->container['ipEq'];
+    }
+
+    /**
+    * Sets ipEq
+    *
+    * @param string|null $ipEq IPv4地址过滤结果，匹配规则为精确匹配。
+    *
+    * @return $this
+    */
+    public function setIpEq($ipEq)
+    {
+        $this->container['ipEq'] = $ipEq;
         return $this;
     }
 

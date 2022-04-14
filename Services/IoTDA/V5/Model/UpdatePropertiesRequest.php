@@ -21,6 +21,7 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * deviceId  **参数说明**：下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
     * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
@@ -28,6 +29,7 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'deviceId' => 'string',
+            'spAuthToken' => 'string',
             'instanceId' => 'string',
             'body' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DevicePropertiesRequest'
     ];
@@ -35,6 +37,7 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * deviceId  **参数说明**：下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
     * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
@@ -42,6 +45,7 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'deviceId' => null,
+        'spAuthToken' => null,
         'instanceId' => null,
         'body' => null
     ];
@@ -70,6 +74,7 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * deviceId  **参数说明**：下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
     * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
@@ -77,6 +82,7 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'deviceId' => 'device_id',
+            'spAuthToken' => 'Sp-Auth-Token',
             'instanceId' => 'Instance-Id',
             'body' => 'body'
     ];
@@ -84,6 +90,7 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * deviceId  **参数说明**：下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
     * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
@@ -91,6 +98,7 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'deviceId' => 'setDeviceId',
+            'spAuthToken' => 'setSpAuthToken',
             'instanceId' => 'setInstanceId',
             'body' => 'setBody'
     ];
@@ -98,6 +106,7 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * deviceId  **参数说明**：下发属性的设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。 **取值范围**：长度不超过128，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
     * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
@@ -105,6 +114,7 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'deviceId' => 'getDeviceId',
+            'spAuthToken' => 'getSpAuthToken',
             'instanceId' => 'getInstanceId',
             'body' => 'getBody'
     ];
@@ -168,6 +178,7 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : null;
+        $this->container['spAuthToken'] = isset($data['spAuthToken']) ? $data['spAuthToken'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
@@ -224,6 +235,30 @@ class UpdatePropertiesRequest implements ModelInterface, ArrayAccess
     public function setDeviceId($deviceId)
     {
         $this->container['deviceId'] = $deviceId;
+        return $this;
+    }
+
+    /**
+    * Gets spAuthToken
+    *  Sp用户Token。通过调用IoBPS服务获取SP用户Token
+    *
+    * @return string|null
+    */
+    public function getSpAuthToken()
+    {
+        return $this->container['spAuthToken'];
+    }
+
+    /**
+    * Sets spAuthToken
+    *
+    * @param string|null $spAuthToken Sp用户Token。通过调用IoBPS服务获取SP用户Token
+    *
+    * @return $this
+    */
+    public function setSpAuthToken($spAuthToken)
+    {
+        $this->container['spAuthToken'] = $spAuthToken;
         return $this;
     }
 

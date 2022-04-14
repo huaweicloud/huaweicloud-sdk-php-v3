@@ -20,8 +20,8 @@ class OrderV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderId  |参数名称：订单标识| |参数约束及描述：订单标识|
-    * orderLineItems  |参数名称：订单行列表| |参数约束以及描述：订单行列表|
+    * orderId  可使用折扣的订单ID。
+    * orderLineItems  可使用折扣的订单项列表，具体参见表4。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class OrderV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderId  |参数名称：订单标识| |参数约束及描述：订单标识|
-    * orderLineItems  |参数名称：订单行列表| |参数约束以及描述：订单行列表|
+    * orderId  可使用折扣的订单ID。
+    * orderLineItems  可使用折扣的订单项列表，具体参见表4。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class OrderV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderId  |参数名称：订单标识| |参数约束及描述：订单标识|
-    * orderLineItems  |参数名称：订单行列表| |参数约束以及描述：订单行列表|
+    * orderId  可使用折扣的订单ID。
+    * orderLineItems  可使用折扣的订单项列表，具体参见表4。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class OrderV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderId  |参数名称：订单标识| |参数约束及描述：订单标识|
-    * orderLineItems  |参数名称：订单行列表| |参数约束以及描述：订单行列表|
+    * orderId  可使用折扣的订单ID。
+    * orderLineItems  可使用折扣的订单项列表，具体参见表4。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class OrderV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderId  |参数名称：订单标识| |参数约束及描述：订单标识|
-    * orderLineItems  |参数名称：订单行列表| |参数约束以及描述：订单行列表|
+    * orderId  可使用折扣的订单ID。
+    * orderLineItems  可使用折扣的订单项列表，具体参见表4。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class OrderV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  |参数名称：订单标识| |参数约束及描述：订单标识|
+    *  可使用折扣的订单ID。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class OrderV3 implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string $orderId |参数名称：订单标识| |参数约束及描述：订单标识|
+    * @param string $orderId 可使用折扣的订单ID。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class OrderV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderLineItems
-    *  |参数名称：订单行列表| |参数约束以及描述：订单行列表|
+    *  可使用折扣的订单项列表，具体参见表4。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\OrderLineItemV3[]
     */
@@ -227,7 +227,7 @@ class OrderV3 implements ModelInterface, ArrayAccess
     /**
     * Sets orderLineItems
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\OrderLineItemV3[] $orderLineItems |参数名称：订单行列表| |参数约束以及描述：订单行列表|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\OrderLineItemV3[] $orderLineItems 可使用折扣的订单项列表，具体参见表4。
     *
     * @return $this
     */

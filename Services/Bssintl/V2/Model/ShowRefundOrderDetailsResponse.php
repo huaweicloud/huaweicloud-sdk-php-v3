@@ -21,8 +21,8 @@ class ShowRefundOrderDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalCount  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
-    * refundInfos  |参数名称：资源信息列表。具体请参见表2 OrderRefundInfoV2。| |参数约束以及描述：资源信息列表。具体请参见表2 OrderRefundInfoV2。|
+    * totalCount  查询总数。
+    * refundInfos  资源信息列表。 具体请参见表2。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowRefundOrderDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalCount  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
-    * refundInfos  |参数名称：资源信息列表。具体请参见表2 OrderRefundInfoV2。| |参数约束以及描述：资源信息列表。具体请参见表2 OrderRefundInfoV2。|
+    * totalCount  查询总数。
+    * refundInfos  资源信息列表。 具体请参见表2。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowRefundOrderDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalCount  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
-    * refundInfos  |参数名称：资源信息列表。具体请参见表2 OrderRefundInfoV2。| |参数约束以及描述：资源信息列表。具体请参见表2 OrderRefundInfoV2。|
+    * totalCount  查询总数。
+    * refundInfos  资源信息列表。 具体请参见表2。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowRefundOrderDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalCount  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
-    * refundInfos  |参数名称：资源信息列表。具体请参见表2 OrderRefundInfoV2。| |参数约束以及描述：资源信息列表。具体请参见表2 OrderRefundInfoV2。|
+    * totalCount  查询总数。
+    * refundInfos  资源信息列表。 具体请参见表2。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowRefundOrderDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalCount  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
-    * refundInfos  |参数名称：资源信息列表。具体请参见表2 OrderRefundInfoV2。| |参数约束以及描述：资源信息列表。具体请参见表2 OrderRefundInfoV2。|
+    * totalCount  查询总数。
+    * refundInfos  资源信息列表。 具体请参见表2。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ShowRefundOrderDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    *  查询总数。
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ShowRefundOrderDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount |参数名称：总记录数。| |参数的约束及描述：总记录数。|
+    * @param int|null $totalCount 查询总数。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ShowRefundOrderDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets refundInfos
-    *  |参数名称：资源信息列表。具体请参见表2 OrderRefundInfoV2。| |参数约束以及描述：资源信息列表。具体请参见表2 OrderRefundInfoV2。|
+    *  资源信息列表。 具体请参见表2。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\OrderRefundInfoV2[]|null
     */
@@ -222,7 +222,7 @@ class ShowRefundOrderDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets refundInfos
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\OrderRefundInfoV2[]|null $refundInfos |参数名称：资源信息列表。具体请参见表2 OrderRefundInfoV2。| |参数约束以及描述：资源信息列表。具体请参见表2 OrderRefundInfoV2。|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\OrderRefundInfoV2[]|null $refundInfos 资源信息列表。 具体请参见表2。
     *
     * @return $this
     */

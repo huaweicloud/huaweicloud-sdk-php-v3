@@ -20,22 +20,22 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderInstanceId  |参数名称：订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。| |参数约束及描述：订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。|
-    * orderId  |参数名称：订单ID，如果source_type为“1：软开云赠送”，该字段为空。| |参数约束及描述：订单ID，如果source_type为“1：软开云赠送”，该字段为空。|
-    * productId  |参数名称：产品ID，即资源包ID。| |参数约束及描述：产品ID，即资源包ID。|
-    * productName  |参数名称：产品名称，即资源包名称。| |参数约束及描述：产品名称，即资源包名称。|
-    * enterpriseProjectId  |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
-    * enterpriseProjectScope  |参数名称：企业项目应用范围：0：应用所有1：应用到具体企业项目| |参数的约束及描述：企业项目应用范围：0：应用所有1：应用到具体企业项目|
-    * effectiveTime  |参数名称：生效时间，购买资源包的时间，格式UTC。| |参数约束及描述：生效时间，购买资源包的时间，格式UTC。|
-    * expireTime  |参数名称：失效时间，资源包到期时间，格式UTC。| |参数约束及描述：失效时间，资源包到期时间，格式UTC。|
-    * status  |参数名称：状态：0：未生效1：生效中2：已用完3：已失效4：已退订| |参数的约束及描述：状态：0：未生效1：生效中2：已用完3：已失效4：已退订|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”| |参数约束及描述：云服务区编码，例如：“cn-north-1”|
-    * sourceType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数的约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
-    * bundleType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
-    * quotaReuseMode  |参数名称：使用模式。1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。| |参数的约束及描述：使用模式。1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。|
-    * freeResources  |参数名称：资源套餐内的资源项信息（资源项ID级的详情）| |参数约束以及描述：资源套餐内的资源项信息（资源项ID级的详情）|
+    * orderInstanceId  订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。
+    * orderId  订单ID，如果source_type为“1：软开云赠送”，该字段为空。
+    * productId  产品ID，即资源包ID。
+    * productName  产品名称，即资源包名称。
+    * enterpriseProjectId  企业项目ID。
+    * enterpriseProjectScope  企业项目应用范围： 0：应用所有1：应用到具体企业项目
+    * effectiveTime  生效时间，购买资源包的时间，格式UTC。
+    * expireTime  失效时间，资源包到期时间，格式UTC。
+    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * sourceType  资源包的来源类型： 0：订单1：软开云赠送
+    * bundleType  套餐绑定类型： ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐
+    * quotaReuseMode  使用模式。 1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。 2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。
+    * freeResources  资源套餐内的资源项信息（资源项ID级的详情），具体参见表3。
     *
     * @var string[]
     */
@@ -60,22 +60,22 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderInstanceId  |参数名称：订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。| |参数约束及描述：订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。|
-    * orderId  |参数名称：订单ID，如果source_type为“1：软开云赠送”，该字段为空。| |参数约束及描述：订单ID，如果source_type为“1：软开云赠送”，该字段为空。|
-    * productId  |参数名称：产品ID，即资源包ID。| |参数约束及描述：产品ID，即资源包ID。|
-    * productName  |参数名称：产品名称，即资源包名称。| |参数约束及描述：产品名称，即资源包名称。|
-    * enterpriseProjectId  |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
-    * enterpriseProjectScope  |参数名称：企业项目应用范围：0：应用所有1：应用到具体企业项目| |参数的约束及描述：企业项目应用范围：0：应用所有1：应用到具体企业项目|
-    * effectiveTime  |参数名称：生效时间，购买资源包的时间，格式UTC。| |参数约束及描述：生效时间，购买资源包的时间，格式UTC。|
-    * expireTime  |参数名称：失效时间，资源包到期时间，格式UTC。| |参数约束及描述：失效时间，资源包到期时间，格式UTC。|
-    * status  |参数名称：状态：0：未生效1：生效中2：已用完3：已失效4：已退订| |参数的约束及描述：状态：0：未生效1：生效中2：已用完3：已失效4：已退订|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”| |参数约束及描述：云服务区编码，例如：“cn-north-1”|
-    * sourceType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数的约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
-    * bundleType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
-    * quotaReuseMode  |参数名称：使用模式。1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。| |参数的约束及描述：使用模式。1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。|
-    * freeResources  |参数名称：资源套餐内的资源项信息（资源项ID级的详情）| |参数约束以及描述：资源套餐内的资源项信息（资源项ID级的详情）|
+    * orderInstanceId  订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。
+    * orderId  订单ID，如果source_type为“1：软开云赠送”，该字段为空。
+    * productId  产品ID，即资源包ID。
+    * productName  产品名称，即资源包名称。
+    * enterpriseProjectId  企业项目ID。
+    * enterpriseProjectScope  企业项目应用范围： 0：应用所有1：应用到具体企业项目
+    * effectiveTime  生效时间，购买资源包的时间，格式UTC。
+    * expireTime  失效时间，资源包到期时间，格式UTC。
+    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * sourceType  资源包的来源类型： 0：订单1：软开云赠送
+    * bundleType  套餐绑定类型： ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐
+    * quotaReuseMode  使用模式。 1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。 2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。
+    * freeResources  资源套餐内的资源项信息（资源项ID级的详情），具体参见表3。
     *
     * @var string[]
     */
@@ -121,22 +121,22 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderInstanceId  |参数名称：订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。| |参数约束及描述：订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。|
-    * orderId  |参数名称：订单ID，如果source_type为“1：软开云赠送”，该字段为空。| |参数约束及描述：订单ID，如果source_type为“1：软开云赠送”，该字段为空。|
-    * productId  |参数名称：产品ID，即资源包ID。| |参数约束及描述：产品ID，即资源包ID。|
-    * productName  |参数名称：产品名称，即资源包名称。| |参数约束及描述：产品名称，即资源包名称。|
-    * enterpriseProjectId  |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
-    * enterpriseProjectScope  |参数名称：企业项目应用范围：0：应用所有1：应用到具体企业项目| |参数的约束及描述：企业项目应用范围：0：应用所有1：应用到具体企业项目|
-    * effectiveTime  |参数名称：生效时间，购买资源包的时间，格式UTC。| |参数约束及描述：生效时间，购买资源包的时间，格式UTC。|
-    * expireTime  |参数名称：失效时间，资源包到期时间，格式UTC。| |参数约束及描述：失效时间，资源包到期时间，格式UTC。|
-    * status  |参数名称：状态：0：未生效1：生效中2：已用完3：已失效4：已退订| |参数的约束及描述：状态：0：未生效1：生效中2：已用完3：已失效4：已退订|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”| |参数约束及描述：云服务区编码，例如：“cn-north-1”|
-    * sourceType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数的约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
-    * bundleType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
-    * quotaReuseMode  |参数名称：使用模式。1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。| |参数的约束及描述：使用模式。1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。|
-    * freeResources  |参数名称：资源套餐内的资源项信息（资源项ID级的详情）| |参数约束以及描述：资源套餐内的资源项信息（资源项ID级的详情）|
+    * orderInstanceId  订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。
+    * orderId  订单ID，如果source_type为“1：软开云赠送”，该字段为空。
+    * productId  产品ID，即资源包ID。
+    * productName  产品名称，即资源包名称。
+    * enterpriseProjectId  企业项目ID。
+    * enterpriseProjectScope  企业项目应用范围： 0：应用所有1：应用到具体企业项目
+    * effectiveTime  生效时间，购买资源包的时间，格式UTC。
+    * expireTime  失效时间，资源包到期时间，格式UTC。
+    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * sourceType  资源包的来源类型： 0：订单1：软开云赠送
+    * bundleType  套餐绑定类型： ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐
+    * quotaReuseMode  使用模式。 1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。 2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。
+    * freeResources  资源套餐内的资源项信息（资源项ID级的详情），具体参见表3。
     *
     * @var string[]
     */
@@ -161,22 +161,22 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderInstanceId  |参数名称：订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。| |参数约束及描述：订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。|
-    * orderId  |参数名称：订单ID，如果source_type为“1：软开云赠送”，该字段为空。| |参数约束及描述：订单ID，如果source_type为“1：软开云赠送”，该字段为空。|
-    * productId  |参数名称：产品ID，即资源包ID。| |参数约束及描述：产品ID，即资源包ID。|
-    * productName  |参数名称：产品名称，即资源包名称。| |参数约束及描述：产品名称，即资源包名称。|
-    * enterpriseProjectId  |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
-    * enterpriseProjectScope  |参数名称：企业项目应用范围：0：应用所有1：应用到具体企业项目| |参数的约束及描述：企业项目应用范围：0：应用所有1：应用到具体企业项目|
-    * effectiveTime  |参数名称：生效时间，购买资源包的时间，格式UTC。| |参数约束及描述：生效时间，购买资源包的时间，格式UTC。|
-    * expireTime  |参数名称：失效时间，资源包到期时间，格式UTC。| |参数约束及描述：失效时间，资源包到期时间，格式UTC。|
-    * status  |参数名称：状态：0：未生效1：生效中2：已用完3：已失效4：已退订| |参数的约束及描述：状态：0：未生效1：生效中2：已用完3：已失效4：已退订|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”| |参数约束及描述：云服务区编码，例如：“cn-north-1”|
-    * sourceType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数的约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
-    * bundleType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
-    * quotaReuseMode  |参数名称：使用模式。1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。| |参数的约束及描述：使用模式。1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。|
-    * freeResources  |参数名称：资源套餐内的资源项信息（资源项ID级的详情）| |参数约束以及描述：资源套餐内的资源项信息（资源项ID级的详情）|
+    * orderInstanceId  订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。
+    * orderId  订单ID，如果source_type为“1：软开云赠送”，该字段为空。
+    * productId  产品ID，即资源包ID。
+    * productName  产品名称，即资源包名称。
+    * enterpriseProjectId  企业项目ID。
+    * enterpriseProjectScope  企业项目应用范围： 0：应用所有1：应用到具体企业项目
+    * effectiveTime  生效时间，购买资源包的时间，格式UTC。
+    * expireTime  失效时间，资源包到期时间，格式UTC。
+    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * sourceType  资源包的来源类型： 0：订单1：软开云赠送
+    * bundleType  套餐绑定类型： ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐
+    * quotaReuseMode  使用模式。 1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。 2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。
+    * freeResources  资源套餐内的资源项信息（资源项ID级的详情），具体参见表3。
     *
     * @var string[]
     */
@@ -201,22 +201,22 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderInstanceId  |参数名称：订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。| |参数约束及描述：订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。|
-    * orderId  |参数名称：订单ID，如果source_type为“1：软开云赠送”，该字段为空。| |参数约束及描述：订单ID，如果source_type为“1：软开云赠送”，该字段为空。|
-    * productId  |参数名称：产品ID，即资源包ID。| |参数约束及描述：产品ID，即资源包ID。|
-    * productName  |参数名称：产品名称，即资源包名称。| |参数约束及描述：产品名称，即资源包名称。|
-    * enterpriseProjectId  |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
-    * enterpriseProjectScope  |参数名称：企业项目应用范围：0：应用所有1：应用到具体企业项目| |参数的约束及描述：企业项目应用范围：0：应用所有1：应用到具体企业项目|
-    * effectiveTime  |参数名称：生效时间，购买资源包的时间，格式UTC。| |参数约束及描述：生效时间，购买资源包的时间，格式UTC。|
-    * expireTime  |参数名称：失效时间，资源包到期时间，格式UTC。| |参数约束及描述：失效时间，资源包到期时间，格式UTC。|
-    * status  |参数名称：状态：0：未生效1：生效中2：已用完3：已失效4：已退订| |参数的约束及描述：状态：0：未生效1：生效中2：已用完3：已失效4：已退订|
-    * serviceTypeCode  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。|
-    * serviceTypeName  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
-    * regionCode  |参数名称：云服务区编码，例如：“cn-north-1”| |参数约束及描述：云服务区编码，例如：“cn-north-1”|
-    * sourceType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数的约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
-    * bundleType  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
-    * quotaReuseMode  |参数名称：使用模式。1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。| |参数的约束及描述：使用模式。1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。|
-    * freeResources  |参数名称：资源套餐内的资源项信息（资源项ID级的详情）| |参数约束以及描述：资源套餐内的资源项信息（资源项ID级的详情）|
+    * orderInstanceId  订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。
+    * orderId  订单ID，如果source_type为“1：软开云赠送”，该字段为空。
+    * productId  产品ID，即资源包ID。
+    * productName  产品名称，即资源包名称。
+    * enterpriseProjectId  企业项目ID。
+    * enterpriseProjectScope  企业项目应用范围： 0：应用所有1：应用到具体企业项目
+    * effectiveTime  生效时间，购买资源包的时间，格式UTC。
+    * expireTime  失效时间，资源包到期时间，格式UTC。
+    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
+    * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
+    * regionCode  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * sourceType  资源包的来源类型： 0：订单1：软开云赠送
+    * bundleType  套餐绑定类型： ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐
+    * quotaReuseMode  使用模式。 1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。 2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。
+    * freeResources  资源套餐内的资源项信息（资源项ID级的详情），具体参见表3。
     *
     * @var string[]
     */
@@ -339,7 +339,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderInstanceId
-    *  |参数名称：订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。| |参数约束及描述：订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。|
+    *  订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。
     *
     * @return string|null
     */
@@ -351,7 +351,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets orderInstanceId
     *
-    * @param string|null $orderInstanceId |参数名称：订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。| |参数约束及描述：订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。|
+    * @param string|null $orderInstanceId 订购资源包产品后，系统生成的ID，是这个资源包列表的标识字段。
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  |参数名称：订单ID，如果source_type为“1：软开云赠送”，该字段为空。| |参数约束及描述：订单ID，如果source_type为“1：软开云赠送”，该字段为空。|
+    *  订单ID，如果source_type为“1：软开云赠送”，该字段为空。
     *
     * @return string|null
     */
@@ -375,7 +375,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId |参数名称：订单ID，如果source_type为“1：软开云赠送”，该字段为空。| |参数约束及描述：订单ID，如果source_type为“1：软开云赠送”，该字段为空。|
+    * @param string|null $orderId 订单ID，如果source_type为“1：软开云赠送”，该字段为空。
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  |参数名称：产品ID，即资源包ID。| |参数约束及描述：产品ID，即资源包ID。|
+    *  产品ID，即资源包ID。
     *
     * @return string|null
     */
@@ -399,7 +399,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId |参数名称：产品ID，即资源包ID。| |参数约束及描述：产品ID，即资源包ID。|
+    * @param string|null $productId 产品ID，即资源包ID。
     *
     * @return $this
     */
@@ -411,7 +411,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets productName
-    *  |参数名称：产品名称，即资源包名称。| |参数约束及描述：产品名称，即资源包名称。|
+    *  产品名称，即资源包名称。
     *
     * @return string|null
     */
@@ -423,7 +423,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets productName
     *
-    * @param string|null $productName |参数名称：产品名称，即资源包名称。| |参数约束及描述：产品名称，即资源包名称。|
+    * @param string|null $productName 产品名称，即资源包名称。
     *
     * @return $this
     */
@@ -435,7 +435,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
+    *  企业项目ID。
     *
     * @return string|null
     */
@@ -447,7 +447,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId |参数名称：企业项目ID。| |参数约束及描述：企业项目ID。|
+    * @param string|null $enterpriseProjectId 企业项目ID。
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectScope
-    *  |参数名称：企业项目应用范围：0：应用所有1：应用到具体企业项目| |参数的约束及描述：企业项目应用范围：0：应用所有1：应用到具体企业项目|
+    *  企业项目应用范围： 0：应用所有1：应用到具体企业项目
     *
     * @return int|null
     */
@@ -471,7 +471,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectScope
     *
-    * @param int|null $enterpriseProjectScope |参数名称：企业项目应用范围：0：应用所有1：应用到具体企业项目| |参数的约束及描述：企业项目应用范围：0：应用所有1：应用到具体企业项目|
+    * @param int|null $enterpriseProjectScope 企业项目应用范围： 0：应用所有1：应用到具体企业项目
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets effectiveTime
-    *  |参数名称：生效时间，购买资源包的时间，格式UTC。| |参数约束及描述：生效时间，购买资源包的时间，格式UTC。|
+    *  生效时间，购买资源包的时间，格式UTC。
     *
     * @return string|null
     */
@@ -495,7 +495,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets effectiveTime
     *
-    * @param string|null $effectiveTime |参数名称：生效时间，购买资源包的时间，格式UTC。| |参数约束及描述：生效时间，购买资源包的时间，格式UTC。|
+    * @param string|null $effectiveTime 生效时间，购买资源包的时间，格式UTC。
     *
     * @return $this
     */
@@ -507,7 +507,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTime
-    *  |参数名称：失效时间，资源包到期时间，格式UTC。| |参数约束及描述：失效时间，资源包到期时间，格式UTC。|
+    *  失效时间，资源包到期时间，格式UTC。
     *
     * @return string|null
     */
@@ -519,7 +519,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets expireTime
     *
-    * @param string|null $expireTime |参数名称：失效时间，资源包到期时间，格式UTC。| |参数约束及描述：失效时间，资源包到期时间，格式UTC。|
+    * @param string|null $expireTime 失效时间，资源包到期时间，格式UTC。
     *
     * @return $this
     */
@@ -531,7 +531,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  |参数名称：状态：0：未生效1：生效中2：已用完3：已失效4：已退订| |参数的约束及描述：状态：0：未生效1：生效中2：已用完3：已失效4：已退订|
+    *  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
     *
     * @return int|null
     */
@@ -543,7 +543,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status |参数名称：状态：0：未生效1：生效中2：已用完3：已失效4：已退订| |参数的约束及描述：状态：0：未生效1：生效中2：已用完3：已失效4：已退订|
+    * @param int|null $status 状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
     *
     * @return $this
     */
@@ -555,7 +555,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeCode
-    *  |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。|
+    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
     *
     * @return string|null
     */
@@ -567,7 +567,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeCode
     *
-    * @param string|null $serviceTypeCode |参数名称：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。| |参数约束及描述：云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。|
+    * @param string|null $serviceTypeCode 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
     *
     * @return $this
     */
@@ -579,7 +579,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeName
-    *  |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    *  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return string|null
     */
@@ -591,7 +591,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeName
     *
-    * @param string|null $serviceTypeName |参数名称：服务类型编码名称| |参数约束及描述：服务类型编码名称|
+    * @param string|null $serviceTypeName 云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     *
     * @return $this
     */
@@ -603,7 +603,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionCode
-    *  |参数名称：云服务区编码，例如：“cn-north-1”| |参数约束及描述：云服务区编码，例如：“cn-north-1”|
+    *  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     *
     * @return string|null
     */
@@ -615,7 +615,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets regionCode
     *
-    * @param string|null $regionCode |参数名称：云服务区编码，例如：“cn-north-1”| |参数约束及描述：云服务区编码，例如：“cn-north-1”|
+    * @param string|null $regionCode 云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     *
     * @return $this
     */
@@ -627,7 +627,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceType
-    *  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数的约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
+    *  资源包的来源类型： 0：订单1：软开云赠送
     *
     * @return int|null
     */
@@ -639,7 +639,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets sourceType
     *
-    * @param int|null $sourceType |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数的约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
+    * @param int|null $sourceType 资源包的来源类型： 0：订单1：软开云赠送
     *
     * @return $this
     */
@@ -651,7 +651,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets bundleType
-    *  |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
+    *  套餐绑定类型： ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐
     *
     * @return string|null
     */
@@ -663,7 +663,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets bundleType
     *
-    * @param string|null $bundleType |参数名称：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐| |参数约束及描述：套餐绑定类型：ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐|
+    * @param string|null $bundleType 套餐绑定类型： ATOMIC_PKG：原子套餐BUNDLE_PKG：组合套餐
     *
     * @return $this
     */
@@ -675,7 +675,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaReuseMode
-    *  |参数名称：使用模式。1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。| |参数的约束及描述：使用模式。1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。|
+    *  使用模式。 1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。 2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。
     *
     * @return int|null
     */
@@ -687,7 +687,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets quotaReuseMode
     *
-    * @param int|null $quotaReuseMode |参数名称：使用模式。1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。| |参数的约束及描述：使用模式。1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。|
+    * @param int|null $quotaReuseMode 使用模式。 1：可重置表示购买的资源包能够按照一定的周期恢复使用量。例如购买一个1年的按需资源包，使用量是40G，可重置，重置周期为1个月，表示1年内每个月会给予40G的使用量。 2：不可重置表示购买的资源包的使用量不会恢复。例如购买一个1年的按需资源包，使用量是40G，不可重置，表示1年内一共给予40G的使用量。
     *
     * @return $this
     */
@@ -699,7 +699,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets freeResources
-    *  |参数名称：资源套餐内的资源项信息（资源项ID级的详情）| |参数约束以及描述：资源套餐内的资源项信息（资源项ID级的详情）|
+    *  资源套餐内的资源项信息（资源项ID级的详情），具体参见表3。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\FreeResourceV3[]|null
     */
@@ -711,7 +711,7 @@ class FreeResourcePackageV3 implements ModelInterface, ArrayAccess
     /**
     * Sets freeResources
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\FreeResourceV3[]|null $freeResources |参数名称：资源套餐内的资源项信息（资源项ID级的详情）| |参数约束以及描述：资源套餐内的资源项信息（资源项ID级的详情）|
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\FreeResourceV3[]|null $freeResources 资源套餐内的资源项信息（资源项ID级的详情），具体参见表3。
     *
     * @return $this
     */

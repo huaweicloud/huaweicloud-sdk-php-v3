@@ -20,10 +20,10 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * receiverType  |参数名称：发送类型：1：发送短信验证码。2：发送邮件验证码。| |参数的约束及描述：发送类型：1：发送短信验证码。2：发送邮件验证码。|
-    * timeout  |参数名称：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟| |参数的约束及描述：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟|
-    * email  |参数名称：指定发送邮箱地址。| |参数约束及描述：指定发送邮箱地址。|
-    * lang  |参数名称：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。| |参数约束及描述：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。|
+    * receiverType  发送验证码的类型： 2：发送邮件验证码
+    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * email  指定发送验证码的邮箱地址。
+    * lang  根据该参数的取值选择发送邮件验证码的语言。 zh-cn：中文en-us：英文
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * receiverType  |参数名称：发送类型：1：发送短信验证码。2：发送邮件验证码。| |参数的约束及描述：发送类型：1：发送短信验证码。2：发送邮件验证码。|
-    * timeout  |参数名称：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟| |参数的约束及描述：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟|
-    * email  |参数名称：指定发送邮箱地址。| |参数约束及描述：指定发送邮箱地址。|
-    * lang  |参数名称：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。| |参数约束及描述：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。|
+    * receiverType  发送验证码的类型： 2：发送邮件验证码
+    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * email  指定发送验证码的邮箱地址。
+    * lang  根据该参数的取值选择发送邮件验证码的语言。 zh-cn：中文en-us：英文
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * receiverType  |参数名称：发送类型：1：发送短信验证码。2：发送邮件验证码。| |参数的约束及描述：发送类型：1：发送短信验证码。2：发送邮件验证码。|
-    * timeout  |参数名称：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟| |参数的约束及描述：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟|
-    * email  |参数名称：指定发送邮箱地址。| |参数约束及描述：指定发送邮箱地址。|
-    * lang  |参数名称：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。| |参数约束及描述：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。|
+    * receiverType  发送验证码的类型： 2：发送邮件验证码
+    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * email  指定发送验证码的邮箱地址。
+    * lang  根据该参数的取值选择发送邮件验证码的语言。 zh-cn：中文en-us：英文
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * receiverType  |参数名称：发送类型：1：发送短信验证码。2：发送邮件验证码。| |参数的约束及描述：发送类型：1：发送短信验证码。2：发送邮件验证码。|
-    * timeout  |参数名称：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟| |参数的约束及描述：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟|
-    * email  |参数名称：指定发送邮箱地址。| |参数约束及描述：指定发送邮箱地址。|
-    * lang  |参数名称：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。| |参数约束及描述：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。|
+    * receiverType  发送验证码的类型： 2：发送邮件验证码
+    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * email  指定发送验证码的邮箱地址。
+    * lang  根据该参数的取值选择发送邮件验证码的语言。 zh-cn：中文en-us：英文
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * receiverType  |参数名称：发送类型：1：发送短信验证码。2：发送邮件验证码。| |参数的约束及描述：发送类型：1：发送短信验证码。2：发送邮件验证码。|
-    * timeout  |参数名称：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟| |参数的约束及描述：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟|
-    * email  |参数名称：指定发送邮箱地址。| |参数约束及描述：指定发送邮箱地址。|
-    * lang  |参数名称：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。| |参数约束及描述：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。|
+    * receiverType  发送验证码的类型： 2：发送邮件验证码
+    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * email  指定发送验证码的邮箱地址。
+    * lang  根据该参数的取值选择发送邮件验证码的语言。 zh-cn：中文en-us：英文
     *
     * @var string[]
     */
@@ -234,7 +234,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets receiverType
-    *  |参数名称：发送类型：1：发送短信验证码。2：发送邮件验证码。| |参数的约束及描述：发送类型：1：发送短信验证码。2：发送邮件验证码。|
+    *  发送验证码的类型： 2：发送邮件验证码
     *
     * @return int
     */
@@ -246,7 +246,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets receiverType
     *
-    * @param int $receiverType |参数名称：发送类型：1：发送短信验证码。2：发送邮件验证码。| |参数的约束及描述：发送类型：1：发送短信验证码。2：发送邮件验证码。|
+    * @param int $receiverType 发送验证码的类型： 2：发送邮件验证码
     *
     * @return $this
     */
@@ -258,7 +258,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeout
-    *  |参数名称：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟| |参数的约束及描述：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟|
+    *  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
     *
     * @return int|null
     */
@@ -270,7 +270,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets timeout
     *
-    * @param int|null $timeout |参数名称：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟| |参数的约束及描述：验证码超时时间。如果不填的话，采用系统默认超时时间5分钟。单位：分钟|
+    * @param int|null $timeout 发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
     *
     * @return $this
     */
@@ -282,7 +282,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  |参数名称：指定发送邮箱地址。| |参数约束及描述：指定发送邮箱地址。|
+    *  指定发送验证码的邮箱地址。
     *
     * @return string|null
     */
@@ -294,7 +294,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email |参数名称：指定发送邮箱地址。| |参数约束及描述：指定发送邮箱地址。|
+    * @param string|null $email 指定发送验证码的邮箱地址。
     *
     * @return $this
     */
@@ -306,7 +306,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets lang
-    *  |参数名称：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。| |参数约束及描述：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。|
+    *  根据该参数的取值选择发送邮件验证码的语言。 zh-cn：中文en-us：英文
     *
     * @return string|null
     */
@@ -318,7 +318,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets lang
     *
-    * @param string|null $lang |参数名称：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。| |参数约束及描述：根据语言如果查询不到对应模板信息，就取系统默认语言对应的模板信息。zh-cn：中文；en-us：英文。|
+    * @param string|null $lang 根据该参数的取值选择发送邮件验证码的语言。 zh-cn：中文en-us：英文
     *
     * @return $this
     */

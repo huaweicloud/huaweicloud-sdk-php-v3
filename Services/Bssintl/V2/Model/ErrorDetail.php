@@ -20,9 +20,9 @@ class ErrorDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  |参数名称：返回码| |参数的约束及描述：该参数非必填，最大长度16|
-    * errorMsg  |参数名称：返回码描述| |参数的约束及描述：该参数非必填，最大长度1024|
-    * id  |参数名称：标示ID| |参数的约束及描述：该参数非必填，最大长度256|
+    * errorCode  状态码。
+    * errorMsg  错误描述信息。
+    * id  出现错误的客户ID或批量处理消息的ID。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ErrorDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  |参数名称：返回码| |参数的约束及描述：该参数非必填，最大长度16|
-    * errorMsg  |参数名称：返回码描述| |参数的约束及描述：该参数非必填，最大长度1024|
-    * id  |参数名称：标示ID| |参数的约束及描述：该参数非必填，最大长度256|
+    * errorCode  状态码。
+    * errorMsg  错误描述信息。
+    * id  出现错误的客户ID或批量处理消息的ID。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ErrorDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  |参数名称：返回码| |参数的约束及描述：该参数非必填，最大长度16|
-    * errorMsg  |参数名称：返回码描述| |参数的约束及描述：该参数非必填，最大长度1024|
-    * id  |参数名称：标示ID| |参数的约束及描述：该参数非必填，最大长度256|
+    * errorCode  状态码。
+    * errorMsg  错误描述信息。
+    * id  出现错误的客户ID或批量处理消息的ID。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ErrorDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  |参数名称：返回码| |参数的约束及描述：该参数非必填，最大长度16|
-    * errorMsg  |参数名称：返回码描述| |参数的约束及描述：该参数非必填，最大长度1024|
-    * id  |参数名称：标示ID| |参数的约束及描述：该参数非必填，最大长度256|
+    * errorCode  状态码。
+    * errorMsg  错误描述信息。
+    * id  出现错误的客户ID或批量处理消息的ID。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ErrorDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  |参数名称：返回码| |参数的约束及描述：该参数非必填，最大长度16|
-    * errorMsg  |参数名称：返回码描述| |参数的约束及描述：该参数非必填，最大长度1024|
-    * id  |参数名称：标示ID| |参数的约束及描述：该参数非必填，最大长度256|
+    * errorCode  状态码。
+    * errorMsg  错误描述信息。
+    * id  出现错误的客户ID或批量处理消息的ID。
     *
     * @var string[]
     */
@@ -214,7 +214,7 @@ class ErrorDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  |参数名称：返回码| |参数的约束及描述：该参数非必填，最大长度16|
+    *  状态码。
     *
     * @return string|null
     */
@@ -226,7 +226,7 @@ class ErrorDetail implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string|null $errorCode |参数名称：返回码| |参数的约束及描述：该参数非必填，最大长度16|
+    * @param string|null $errorCode 状态码。
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class ErrorDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  |参数名称：返回码描述| |参数的约束及描述：该参数非必填，最大长度1024|
+    *  错误描述信息。
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class ErrorDetail implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string|null $errorMsg |参数名称：返回码描述| |参数的约束及描述：该参数非必填，最大长度1024|
+    * @param string|null $errorMsg 错误描述信息。
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class ErrorDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  |参数名称：标示ID| |参数的约束及描述：该参数非必填，最大长度256|
+    *  出现错误的客户ID或批量处理消息的ID。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class ErrorDetail implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id |参数名称：标示ID| |参数的约束及描述：该参数非必填，最大长度256|
+    * @param string|null $id 出现错误的客户ID或批量处理消息的ID。
     *
     * @return $this
     */
