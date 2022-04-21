@@ -26,7 +26,11 @@ class EipAsyncClient extends Client
 
     /**
      * 共享带宽插入弹性公网IP
+     *
      * 共享带宽插入弹性公网IP。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -91,7 +95,11 @@ class EipAsyncClient extends Client
 
     /**
      * 批量创建共享带宽
+     *
      * 批量创建共享带宽。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -153,7 +161,11 @@ class EipAsyncClient extends Client
 
     /**
      * 创建共享带宽
+     *
      * 创建共享带宽。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -215,7 +227,11 @@ class EipAsyncClient extends Client
 
     /**
      * 删除共享带宽
+     *
      * 删除共享带宽。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -277,7 +293,11 @@ class EipAsyncClient extends Client
 
     /**
      * 查询带宽列表
+     *
      * 查询带宽列表。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -348,7 +368,11 @@ class EipAsyncClient extends Client
 
     /**
      * 查询配额接口
+     *
      * 查询配额
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -410,7 +434,11 @@ class EipAsyncClient extends Client
 
     /**
      * 共享带宽移除弹性公网IP
+     *
      * 共享带宽移除弹性公网IP。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -475,7 +503,11 @@ class EipAsyncClient extends Client
 
     /**
      * 查询带宽
+     *
      * 查询带宽
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -537,7 +569,11 @@ class EipAsyncClient extends Client
 
     /**
      * 更新带宽
+     *
      * 更新带宽。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -602,7 +638,11 @@ class EipAsyncClient extends Client
 
     /**
      * 更新包周期带宽
+     *
      * 更新带宽。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -667,7 +707,11 @@ class EipAsyncClient extends Client
 
     /**
      * 批量创建弹性公网IP资源标签
+     *
      * 为指定的弹性公网IP资源实例批量添加标签。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -732,7 +776,11 @@ class EipAsyncClient extends Client
 
     /**
      * 批量删除弹性公网IP资源标签
+     *
      * 为指定的弹性公网IP资源实例批量删除标签。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -797,7 +845,11 @@ class EipAsyncClient extends Client
 
     /**
      * 申请包周期弹性公网IP
+     *
      * 申请包年包月的弹性公网IP。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -859,7 +911,12 @@ class EipAsyncClient extends Client
 
     /**
      * 申请弹性公网IP
-     * 申请弹性公网IP，支持IPv4和IPv6。  弹性公网IP（Elastic IP）提供独立的公网IP资源，包括公网IP地址与公网出口带宽服务。可以与弹性云服务器、裸金属服务器、虚拟IP、弹性负载均衡、NAT网关等资源灵活地绑定及解绑。拥有多种灵活的计费方式，可以满足各种业务场景的需要。
+     *
+     * 申请弹性公网IP，支持IPv4和IPv6。
+     * 弹性公网IP（Elastic IP）提供独立的公网IP资源，包括公网IP地址与公网出口带宽服务。可以与弹性云服务器、裸金属服务器、虚拟IP、弹性负载均衡、NAT网关等资源灵活地绑定及解绑。拥有多种灵活的计费方式，可以满足各种业务场景的需要。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -921,7 +978,11 @@ class EipAsyncClient extends Client
 
     /**
      * 创建弹性公网IP资源标签
+     *
      * 给指定弹性IP资源实例增加标签信息。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -986,7 +1047,11 @@ class EipAsyncClient extends Client
 
     /**
      * 删除弹性公网IP
+     *
      * 删除弹性公网IP,绑定状态eip不允许直接删除。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1048,7 +1113,11 @@ class EipAsyncClient extends Client
 
     /**
      * 删除弹性公网IP的标签
+     *
      * 删除指定弹性公网IP的标签信息。其中project_id是项目ID，publicip_id 是要操作的弹性公网IP的id。key是要删除标签的键。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1113,7 +1182,11 @@ class EipAsyncClient extends Client
 
     /**
      * 查询租户的弹性公网IP标签
+     *
      * 查询租户在指定区域和实例类型的所有标签集合。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1172,7 +1245,11 @@ class EipAsyncClient extends Client
 
     /**
      * 查询弹性公网IP列表
+     *
      * 查询弹性公网IP列表
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1258,7 +1335,11 @@ class EipAsyncClient extends Client
 
     /**
      * 按标签查询弹性公网IP列表
+     *
      * 使用标签过滤弹性公网IP。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1320,7 +1401,11 @@ class EipAsyncClient extends Client
 
     /**
      * 查询弹性公网IP
+     *
      * 查询指定的弹性公网IP。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1382,7 +1467,11 @@ class EipAsyncClient extends Client
 
     /**
      * 查询弹性公网IP的标签
+     *
      * 查询指定弹性IP实例的标签信息。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1444,7 +1533,11 @@ class EipAsyncClient extends Client
 
     /**
      * 更新弹性公网IP
+     *
      * 更新弹性公网IP，将弹性公网IP跟一个网卡绑定或者解绑定，转换IP地址版本类型。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1509,7 +1602,11 @@ class EipAsyncClient extends Client
 
     /**
      * 创建浮动IP
+     *
      * 创建浮动IP的外部网络UUID，请使用GET /v2.0/networks?router:external&#x3D;True或neutron net-external-list方式获取。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1571,7 +1668,11 @@ class EipAsyncClient extends Client
 
     /**
      * 删除浮动IP
+     *
      * 删除指定的浮动IP。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1633,7 +1734,11 @@ class EipAsyncClient extends Client
 
     /**
      * 查询浮动IP列表
+     *
      * 查询提交请求的租户有权限操作的所有浮动IP地址。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1722,7 +1827,11 @@ class EipAsyncClient extends Client
 
     /**
      * 查询浮动IP
+     *
      * 查询浮动IP详情，包括浮动IP状态，浮动IP所属路由器ID，浮动IP的外部网络ID等等。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1784,7 +1893,13 @@ class EipAsyncClient extends Client
 
     /**
      * 更新浮动IP
-     * 更新浮动IP。  更新时需在URL中给出浮动IP地址的ID。  port_id 为空，则表示浮动IP从端口解绑。
+     *
+     * 更新浮动IP。
+     * 更新时需在URL中给出浮动IP地址的ID。
+     * port_id 为空，则表示浮动IP从端口解绑。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response

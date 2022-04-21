@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Bss\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ColumnMapping implements ModelInterface, ArrayAccess
+class SubCustomerInfoV3 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class ColumnMapping implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ColumnMapping';
+    protected static $openAPIModelName = 'SubCustomerInfoV3';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * columnName  **参数说明**：数据库的列名
-    * jsonKey  **参数说明**：流转数据的属性名
+    * customerId  客户账号ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'columnName' => 'string',
-            'jsonKey' => 'string'
+            'customerId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * columnName  **参数说明**：数据库的列名
-    * jsonKey  **参数说明**：流转数据的属性名
+    * customerId  客户账号ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'columnName' => null,
-        'jsonKey' => null
+        'customerId' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class ColumnMapping implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * columnName  **参数说明**：数据库的列名
-    * jsonKey  **参数说明**：流转数据的属性名
+    * customerId  客户账号ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'columnName' => 'column_name',
-            'jsonKey' => 'json_key'
+            'customerId' => 'customer_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * columnName  **参数说明**：数据库的列名
-    * jsonKey  **参数说明**：流转数据的属性名
+    * customerId  客户账号ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'columnName' => 'setColumnName',
-            'jsonKey' => 'setJsonKey'
+            'customerId' => 'setCustomerId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * columnName  **参数说明**：数据库的列名
-    * jsonKey  **参数说明**：流转数据的属性名
+    * customerId  客户账号ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'columnName' => 'getColumnName',
-            'jsonKey' => 'getJsonKey'
+            'customerId' => 'getCustomerId'
     ];
 
     /**
@@ -157,8 +147,7 @@ class ColumnMapping implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['columnName'] = isset($data['columnName']) ? $data['columnName'] : null;
-        $this->container['jsonKey'] = isset($data['jsonKey']) ? $data['jsonKey'] : null;
+        $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
     }
 
     /**
@@ -169,24 +158,6 @@ class ColumnMapping implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['columnName'] === null) {
-            $invalidProperties[] = "'columnName' can't be null";
-        }
-            if ((mb_strlen($this->container['columnName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'columnName', the character length must be smaller than or equal to 256.";
-            }
-            if ((mb_strlen($this->container['columnName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'columnName', the character length must be bigger than or equal to 1.";
-            }
-        if ($this->container['jsonKey'] === null) {
-            $invalidProperties[] = "'jsonKey' can't be null";
-        }
-            if ((mb_strlen($this->container['jsonKey']) > 256)) {
-                $invalidProperties[] = "invalid value for 'jsonKey', the character length must be smaller than or equal to 256.";
-            }
-            if ((mb_strlen($this->container['jsonKey']) < 1)) {
-                $invalidProperties[] = "invalid value for 'jsonKey', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -202,50 +173,26 @@ class ColumnMapping implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets columnName
-    *  **参数说明**：数据库的列名
+    * Gets customerId
+    *  客户账号ID。
     *
-    * @return string
+    * @return string|null
     */
-    public function getColumnName()
+    public function getCustomerId()
     {
-        return $this->container['columnName'];
+        return $this->container['customerId'];
     }
 
     /**
-    * Sets columnName
+    * Sets customerId
     *
-    * @param string $columnName **参数说明**：数据库的列名
+    * @param string|null $customerId 客户账号ID。
     *
     * @return $this
     */
-    public function setColumnName($columnName)
+    public function setCustomerId($customerId)
     {
-        $this->container['columnName'] = $columnName;
-        return $this;
-    }
-
-    /**
-    * Gets jsonKey
-    *  **参数说明**：流转数据的属性名
-    *
-    * @return string
-    */
-    public function getJsonKey()
-    {
-        return $this->container['jsonKey'];
-    }
-
-    /**
-    * Sets jsonKey
-    *
-    * @param string $jsonKey **参数说明**：流转数据的属性名
-    *
-    * @return $this
-    */
-    public function setJsonKey($jsonKey)
-    {
-        $this->container['jsonKey'] = $jsonKey;
+        $this->container['customerId'] = $customerId;
         return $this;
     }
 

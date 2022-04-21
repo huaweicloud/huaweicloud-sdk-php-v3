@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListStoredValueCardsRequest implements ModelInterface, ArrayAccess
+class ListConsumeSubCustomersReq implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,36 +16,32 @@ class ListStoredValueCardsRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListStoredValueCardsRequest';
+    protected static $openAPIModelName = 'ListConsumeSubCustomersReq';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  状态：1：可使用2：已用完
-    * cardId  储值卡ID。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  查询的优惠券数量，默认值为10。
+    * billCycle  账期所在月份。 格式：YYYY-MM
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  一次查询的条数，默认值为10。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'status' => 'int',
-            'cardId' => 'string',
+            'billCycle' => 'string',
             'offset' => 'int',
             'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  状态：1：可使用2：已用完
-    * cardId  储值卡ID。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  查询的优惠券数量，默认值为10。
+    * billCycle  账期所在月份。 格式：YYYY-MM
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  一次查询的条数，默认值为10。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'status' => 'int32',
-        'cardId' => null,
+        'billCycle' => null,
         'offset' => 'int32',
         'limit' => 'int32'
     ];
@@ -73,48 +69,42 @@ class ListStoredValueCardsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  状态：1：可使用2：已用完
-    * cardId  储值卡ID。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  查询的优惠券数量，默认值为10。
+    * billCycle  账期所在月份。 格式：YYYY-MM
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  一次查询的条数，默认值为10。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'status' => 'status',
-            'cardId' => 'card_id',
+            'billCycle' => 'bill_cycle',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  状态：1：可使用2：已用完
-    * cardId  储值卡ID。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  查询的优惠券数量，默认值为10。
+    * billCycle  账期所在月份。 格式：YYYY-MM
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  一次查询的条数，默认值为10。
     *
     * @var string[]
     */
     protected static $setters = [
-            'status' => 'setStatus',
-            'cardId' => 'setCardId',
+            'billCycle' => 'setBillCycle',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  状态：1：可使用2：已用完
-    * cardId  储值卡ID。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  查询的优惠券数量，默认值为10。
+    * billCycle  账期所在月份。 格式：YYYY-MM
+    * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  一次查询的条数，默认值为10。
     *
     * @var string[]
     */
     protected static $getters = [
-            'status' => 'getStatus',
-            'cardId' => 'getCardId',
+            'billCycle' => 'getBillCycle',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -177,8 +167,7 @@ class ListStoredValueCardsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['cardId'] = isset($data['cardId']) ? $data['cardId'] : null;
+        $this->container['billCycle'] = isset($data['billCycle']) ? $data['billCycle'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
     }
@@ -191,17 +180,20 @@ class ListStoredValueCardsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
+        if ($this->container['billCycle'] === null) {
+            $invalidProperties[] = "'billCycle' can't be null";
         }
-            if (($this->container['status'] > 2)) {
-                $invalidProperties[] = "invalid value for 'status', must be smaller than or equal to 2.";
+            if ((mb_strlen($this->container['billCycle']) > 10)) {
+                $invalidProperties[] = "invalid value for 'billCycle', the character length must be smaller than or equal to 10.";
             }
-            if (($this->container['status'] < 1)) {
-                $invalidProperties[] = "invalid value for 'status', must be bigger than or equal to 1.";
+            if ((mb_strlen($this->container['billCycle']) < 1)) {
+                $invalidProperties[] = "invalid value for 'billCycle', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483647.";
+            if (!preg_match("/^[0-9]{4}-[0-9]{2}$/", $this->container['billCycle'])) {
+                $invalidProperties[] = "invalid value for 'billCycle', must be conform to the pattern /^[0-9]{4}-[0-9]{2}$/.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 2147483646)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2147483646.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
@@ -227,56 +219,32 @@ class ListStoredValueCardsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets status
-    *  状态：1：可使用2：已用完
+    * Gets billCycle
+    *  账期所在月份。 格式：YYYY-MM
     *
-    * @return int
+    * @return string
     */
-    public function getStatus()
+    public function getBillCycle()
     {
-        return $this->container['status'];
+        return $this->container['billCycle'];
     }
 
     /**
-    * Sets status
+    * Sets billCycle
     *
-    * @param int $status 状态：1：可使用2：已用完
+    * @param string $billCycle 账期所在月份。 格式：YYYY-MM
     *
     * @return $this
     */
-    public function setStatus($status)
+    public function setBillCycle($billCycle)
     {
-        $this->container['status'] = $status;
-        return $this;
-    }
-
-    /**
-    * Gets cardId
-    *  储值卡ID。
-    *
-    * @return string|null
-    */
-    public function getCardId()
-    {
-        return $this->container['cardId'];
-    }
-
-    /**
-    * Sets cardId
-    *
-    * @param string|null $cardId 储值卡ID。
-    *
-    * @return $this
-    */
-    public function setCardId($cardId)
-    {
-        $this->container['cardId'] = $cardId;
+        $this->container['billCycle'] = $billCycle;
         return $this;
     }
 
     /**
     * Gets offset
-    *  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    *  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return int|null
     */
@@ -288,7 +256,7 @@ class ListStoredValueCardsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * @param int|null $offset 偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return $this
     */
@@ -300,7 +268,7 @@ class ListStoredValueCardsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询的优惠券数量，默认值为10。
+    *  一次查询的条数，默认值为10。
     *
     * @return int|null
     */
@@ -312,7 +280,7 @@ class ListStoredValueCardsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询的优惠券数量，默认值为10。
+    * @param int|null $limit 一次查询的条数，默认值为10。
     *
     * @return $this
     */

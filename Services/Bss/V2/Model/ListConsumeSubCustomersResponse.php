@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Bss\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ActionIoTAForwarding implements ModelInterface, ArrayAccess
+class ListConsumeSubCustomersResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,30 @@ class ActionIoTAForwarding implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ActionIoTAForwarding';
+    protected static $openAPIModelName = 'ListConsumeSubCustomersResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regionName  **参数说明**：IoTA服务对应的region区域。
-    * projectId  **参数说明**：IoTA服务对应的projectId信息。
+    * subCustomers  子客户列表。 具体请参见表SubCustomerInfo。
+    * totalCount  结果集数量，只有成功才返回这个参数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'regionName' => 'string',
-            'projectId' => 'string'
+            'subCustomers' => '\HuaweiCloud\SDK\Bss\V2\Model\SubCustomerInfoV3[]',
+            'totalCount' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regionName  **参数说明**：IoTA服务对应的region区域。
-    * projectId  **参数说明**：IoTA服务对应的projectId信息。
+    * subCustomers  子客户列表。 具体请参见表SubCustomerInfo。
+    * totalCount  结果集数量，只有成功才返回这个参数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'regionName' => null,
-        'projectId' => null
+        'subCustomers' => null,
+        'totalCount' => 'int32'
     ];
 
     /**
@@ -65,38 +66,38 @@ class ActionIoTAForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regionName  **参数说明**：IoTA服务对应的region区域。
-    * projectId  **参数说明**：IoTA服务对应的projectId信息。
+    * subCustomers  子客户列表。 具体请参见表SubCustomerInfo。
+    * totalCount  结果集数量，只有成功才返回这个参数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'regionName' => 'region_name',
-            'projectId' => 'project_id'
+            'subCustomers' => 'sub_customers',
+            'totalCount' => 'total_count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regionName  **参数说明**：IoTA服务对应的region区域。
-    * projectId  **参数说明**：IoTA服务对应的projectId信息。
+    * subCustomers  子客户列表。 具体请参见表SubCustomerInfo。
+    * totalCount  结果集数量，只有成功才返回这个参数。
     *
     * @var string[]
     */
     protected static $setters = [
-            'regionName' => 'setRegionName',
-            'projectId' => 'setProjectId'
+            'subCustomers' => 'setSubCustomers',
+            'totalCount' => 'setTotalCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regionName  **参数说明**：IoTA服务对应的region区域。
-    * projectId  **参数说明**：IoTA服务对应的projectId信息。
+    * subCustomers  子客户列表。 具体请参见表SubCustomerInfo。
+    * totalCount  结果集数量，只有成功才返回这个参数。
     *
     * @var string[]
     */
     protected static $getters = [
-            'regionName' => 'getRegionName',
-            'projectId' => 'getProjectId'
+            'subCustomers' => 'getSubCustomers',
+            'totalCount' => 'getTotalCount'
     ];
 
     /**
@@ -157,8 +158,8 @@ class ActionIoTAForwarding implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['regionName'] = isset($data['regionName']) ? $data['regionName'] : null;
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['subCustomers'] = isset($data['subCustomers']) ? $data['subCustomers'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
     }
 
     /**
@@ -169,18 +170,6 @@ class ActionIoTAForwarding implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['regionName'] === null) {
-            $invalidProperties[] = "'regionName' can't be null";
-        }
-            if ((mb_strlen($this->container['regionName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'regionName', the character length must be smaller than or equal to 256.";
-            }
-        if ($this->container['projectId'] === null) {
-            $invalidProperties[] = "'projectId' can't be null";
-        }
-            if ((mb_strlen($this->container['projectId']) > 256)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 256.";
-            }
         return $invalidProperties;
     }
 
@@ -196,50 +185,50 @@ class ActionIoTAForwarding implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets regionName
-    *  **参数说明**：IoTA服务对应的region区域。
+    * Gets subCustomers
+    *  子客户列表。 具体请参见表SubCustomerInfo。
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Bss\V2\Model\SubCustomerInfoV3[]|null
     */
-    public function getRegionName()
+    public function getSubCustomers()
     {
-        return $this->container['regionName'];
+        return $this->container['subCustomers'];
     }
 
     /**
-    * Sets regionName
+    * Sets subCustomers
     *
-    * @param string $regionName **参数说明**：IoTA服务对应的region区域。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\SubCustomerInfoV3[]|null $subCustomers 子客户列表。 具体请参见表SubCustomerInfo。
     *
     * @return $this
     */
-    public function setRegionName($regionName)
+    public function setSubCustomers($subCustomers)
     {
-        $this->container['regionName'] = $regionName;
+        $this->container['subCustomers'] = $subCustomers;
         return $this;
     }
 
     /**
-    * Gets projectId
-    *  **参数说明**：IoTA服务对应的projectId信息。
+    * Gets totalCount
+    *  结果集数量，只有成功才返回这个参数。
     *
-    * @return string
+    * @return int|null
     */
-    public function getProjectId()
+    public function getTotalCount()
     {
-        return $this->container['projectId'];
+        return $this->container['totalCount'];
     }
 
     /**
-    * Sets projectId
+    * Sets totalCount
     *
-    * @param string $projectId **参数说明**：IoTA服务对应的projectId信息。
+    * @param int|null $totalCount 结果集数量，只有成功才返回这个参数。
     *
     * @return $this
     */
-    public function setProjectId($projectId)
+    public function setTotalCount($totalCount)
     {
-        $this->container['projectId'] = $projectId;
+        $this->container['totalCount'] = $totalCount;
         return $this;
     }
 

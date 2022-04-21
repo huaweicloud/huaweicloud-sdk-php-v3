@@ -1,3 +1,14 @@
+# 3.0.44-rc 2022-04-21
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - Support the interface `ListConsumeSubCustomers`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `sub_service_type_code`, `sub_service_type_name`, `sub_resource_type_code`, `sub_resource_type_name`, `sub_resource_id`, `sub_resource_name` to the interface `ListCustomerBillsMonthlyBreakDown`
+
 # 3.0.43-rc 2022-04-14
 
 ### HuaweiCloud SDK CDN

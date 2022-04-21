@@ -27,7 +27,11 @@ class VpcClient extends Client
 
     /**
      * 接受对等连接请求
+     *
      * 租户A名下的VPC申请和租户B的VPC建立对等连接，需要等待租户B接受该请求。此接口用于租户接受其他租户发起的对等连接请求。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -88,7 +92,11 @@ class VpcClient extends Client
 
     /**
      * 子网关联路由表
+     *
      * 路由表关联子网。子网关联路由表A后，再关联B，不需要先跟路由表A解关联再关联路由表B
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -155,7 +163,12 @@ class VpcClient extends Client
 
     /**
      * 批量创建子网资源标签
-     * 为指定的子网资源实例批量添加标签。 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
+     *
+     * 为指定的子网资源实例批量添加标签。
+     * 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -222,7 +235,12 @@ class VpcClient extends Client
 
     /**
      * 批量删除子网资源标签
-     * 为指定的子网资源实例批量删除标签 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+     *
+     * 为指定的子网资源实例批量删除标签
+     * 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -289,7 +307,11 @@ class VpcClient extends Client
 
     /**
      * 创建端口
+     *
      * 创建端口。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -353,7 +375,11 @@ class VpcClient extends Client
 
     /**
      * 创建路由表
+     *
      * 创建路由表
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -417,7 +443,11 @@ class VpcClient extends Client
 
     /**
      * 创建安全组
+     *
      * 创建安全组。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -481,7 +511,11 @@ class VpcClient extends Client
 
     /**
      * 创建安全组规则
+     *
      * 创建安全组规则。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -545,7 +579,11 @@ class VpcClient extends Client
 
     /**
      * 创建子网
+     *
      * 创建子网。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -609,7 +647,12 @@ class VpcClient extends Client
 
     /**
      * 创建子网资源标签
-     * 给指定子网资源实例增加标签信息。 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
+     *
+     * 给指定子网资源实例增加标签信息。
+     * 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -676,7 +719,11 @@ class VpcClient extends Client
 
     /**
      * 创建对等连接
+     *
      * 创建对等连接。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -737,7 +784,11 @@ class VpcClient extends Client
 
     /**
      * 删除端口
+     *
      * 删除端口。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -801,7 +852,11 @@ class VpcClient extends Client
 
     /**
      * 删除路由表
+     *
      * 删除路由表
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -865,7 +920,11 @@ class VpcClient extends Client
 
     /**
      * 删除安全组
+     *
      * 删除安全组。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -929,7 +988,11 @@ class VpcClient extends Client
 
     /**
      * 删除安全组规则
+     *
      * 删除安全组规则。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -993,7 +1056,11 @@ class VpcClient extends Client
 
     /**
      * 删除子网
+     *
      * 删除子网
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1060,7 +1127,12 @@ class VpcClient extends Client
 
     /**
      * 删除子网资源标签
-     * 删除指定子网资源实例的标签信息。 该接口为幂等接口：删除的key不存在报404，Key不能为空或者空字符串
+     *
+     * 删除指定子网资源实例的标签信息。
+     * 该接口为幂等接口：删除的key不存在报404，Key不能为空或者空字符串
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1127,7 +1199,12 @@ class VpcClient extends Client
 
     /**
      * 删除对等连接
-     * 删除对等连接。 可以在在本端或对端任何一端删除对等连接。
+     *
+     * 删除对等连接。
+     * 可以在在本端或对端任何一端删除对等连接。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1188,7 +1265,11 @@ class VpcClient extends Client
 
     /**
      * 子网解关联路由表
+     *
      * 子网解关联路由表
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1255,7 +1336,11 @@ class VpcClient extends Client
 
     /**
      * 查询端口列表
+     *
      * 查询提交请求的租户的所有端口，单次查询最多返回2000条数据。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1352,7 +1437,11 @@ class VpcClient extends Client
 
     /**
      * 查询路由表列表
+     *
      * 查询提交请求的帐户的所有路由表列表，并根据过滤条件进行过滤
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1428,7 +1517,11 @@ class VpcClient extends Client
 
     /**
      * 查询安全组规则列表
+     *
      * 查询安全组规则列表。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1498,7 +1591,11 @@ class VpcClient extends Client
 
     /**
      * 查询安全组列表
+     *
      * 查询安全组列表
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1571,7 +1668,11 @@ class VpcClient extends Client
 
     /**
      * 查询子网项目标签
+     *
      * 查询租户在指定区域和实例类型的所有标签集合
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1632,7 +1733,11 @@ class VpcClient extends Client
 
     /**
      * 查询子网列表
+     *
      * 查询子网列表
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1702,7 +1807,11 @@ class VpcClient extends Client
 
     /**
      * 查询子网资源实例
+     *
      * 使用标签过滤实例
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1766,7 +1875,11 @@ class VpcClient extends Client
 
     /**
      * 查询对等连接列表
+     *
      * 查询提交请求的租户的所有对等连接。根据过滤条件进行过滤。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1845,7 +1958,11 @@ class VpcClient extends Client
 
     /**
      * 拒绝对等连接请求
+     *
      * 租户A名下的VPC申请和租户B的VPC建立对等连接，需要等待租户B接受该请求。此接口用于租户拒绝其他租户发起的对等连接请求。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1906,7 +2023,11 @@ class VpcClient extends Client
 
     /**
      * 查询端口
+     *
      * 查询单个端口详情。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1970,7 +2091,11 @@ class VpcClient extends Client
 
     /**
      * 查询配额
+     *
      * 查询单租户在VPC服务下的网络资源配额，包括vpc配额、子网配额、安全组配额、安全组规则配额、弹性公网IP配额，vpn配额等。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2034,7 +2159,11 @@ class VpcClient extends Client
 
     /**
      * 查询路由表
+     *
      * 查询路由表详情
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2098,7 +2227,11 @@ class VpcClient extends Client
 
     /**
      * 查询安全组
+     *
      * 查询单个安全组详情。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2162,7 +2295,11 @@ class VpcClient extends Client
 
     /**
      * 查询安全组规则
+     *
      * 查询单个安全组规则详情
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2226,7 +2363,11 @@ class VpcClient extends Client
 
     /**
      * 查询子网
+     *
      * 查询子网详情。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2290,7 +2431,11 @@ class VpcClient extends Client
 
     /**
      * 查询子网资源标签
+     *
      * 查询指定子网实例的标签信息。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2354,7 +2499,11 @@ class VpcClient extends Client
 
     /**
      * 查询对等连接
+     *
      * 查询对等连接详情。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2415,7 +2564,11 @@ class VpcClient extends Client
 
     /**
      * 更新端口
+     *
      * 更新端口。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2482,7 +2635,11 @@ class VpcClient extends Client
 
     /**
      * 更新路由表
+     *
      * 更新路由表，包括可以更新路由表的名称，描述，以及新增、更新、删除路由条目
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2549,7 +2706,11 @@ class VpcClient extends Client
 
     /**
      * 更新子网
+     *
      * 更新子网。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2619,7 +2780,11 @@ class VpcClient extends Client
 
     /**
      * 更新对等连接
+     *
      * 更新对等连接。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2683,7 +2848,11 @@ class VpcClient extends Client
 
     /**
      * 申请私有IP
+     *
      * 申请私有IP。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2747,7 +2916,11 @@ class VpcClient extends Client
 
     /**
      * 删除私有IP
+     *
      * 删除私有IP。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2811,7 +2984,11 @@ class VpcClient extends Client
 
     /**
      * 查询私有IP列表
+     *
      * 查询指定子网下的私有IP列表。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2881,7 +3058,18 @@ class VpcClient extends Client
 
     /**
      * 查询网络IP使用情况
-     * 显示一个指定网络中的IPv4地址使用情况。 包括此网络中的IP总数以及已用IP总数，以及网络下每一个子网的IP地址总数和可用IP地址总数。  &gt; 须知  - 系统预留地址指的是子网的第1个以及最后4个地址，一般用于网关、DHCP等服务。 - 这里以及下文描述的IP地址总数、已用IP地址总数不包含系统预留地址。 - 在分配IP时，用户可以指定系统预留的IP地址。但是不论IP是如何分配的，只要是处于系统预留IP地址段的IP均不会被统计到已用IP地址数目和IP地址总数中。
+     *
+     * 显示一个指定网络中的IPv4地址使用情况。
+     * 包括此网络中的IP总数以及已用IP总数，以及网络下每一个子网的IP地址总数和可用IP地址总数。
+     * 
+     * &gt; 须知
+     * 
+     * - 系统预留地址指的是子网的第1个以及最后4个地址，一般用于网关、DHCP等服务。
+     * - 这里以及下文描述的IP地址总数、已用IP地址总数不包含系统预留地址。
+     * - 在分配IP时，用户可以指定系统预留的IP地址。但是不论IP是如何分配的，只要是处于系统预留IP地址段的IP均不会被统计到已用IP地址数目和IP地址总数中。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2942,7 +3130,11 @@ class VpcClient extends Client
 
     /**
      * 查询私有IP
+     *
      * 指定ID查询私有IP。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3006,7 +3198,11 @@ class VpcClient extends Client
 
     /**
      * 创建安全组
+     *
      * 创建安全组
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3067,7 +3263,11 @@ class VpcClient extends Client
 
     /**
      * 创建安全组规则
+     *
      * 创建安全组规则
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3128,7 +3328,11 @@ class VpcClient extends Client
 
     /**
      * 删除安全组
+     *
      * 删除安全组
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3189,7 +3393,11 @@ class VpcClient extends Client
 
     /**
      * 删除安全组规则
+     *
      * 删除安全组规则
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3250,7 +3458,11 @@ class VpcClient extends Client
 
     /**
      * 查询安全组规则列表
+     *
      * 查询提交请求的租户有权限查看的所有安全组规则。单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3347,7 +3559,11 @@ class VpcClient extends Client
 
     /**
      * 查询安全组列表
+     *
      * 查询提交请求租户的所有安全组，单次查询最多返回2000条数据，超过2000后会返回分页标记。分页查询请参考分页查询 。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3423,7 +3639,11 @@ class VpcClient extends Client
 
     /**
      * 查询安全组
+     *
      * 查询安全组详情
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3484,7 +3704,11 @@ class VpcClient extends Client
 
     /**
      * 查询安全组规则
+     *
      * 查询安全组规则详情。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3545,7 +3769,11 @@ class VpcClient extends Client
 
     /**
      * 更新安全组
+     *
      * 更新安全组
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3609,7 +3837,11 @@ class VpcClient extends Client
 
     /**
      * 插入网络ACL规则
+     *
      * 插入一条网络ACL规则到某一网络ACL策略中。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3673,7 +3905,11 @@ class VpcClient extends Client
 
     /**
      * 创建网络ACL组
+     *
      * 创建网络ACL组
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3734,7 +3970,11 @@ class VpcClient extends Client
 
     /**
      * 创建网络ACL策略
+     *
      * 创建网络ACL策略。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3795,7 +4035,11 @@ class VpcClient extends Client
 
     /**
      * 创建网络ACL规则
+     *
      * 创建网络ACL规则。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3856,7 +4100,11 @@ class VpcClient extends Client
 
     /**
      * 删除网络ACL组
+     *
      * 删除网络ACL组
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3917,7 +4165,11 @@ class VpcClient extends Client
 
     /**
      * 删除网络ACL策略
+     *
      * 删除网络ACL策略。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3978,7 +4230,11 @@ class VpcClient extends Client
 
     /**
      * 删除网络ACL规则
+     *
      * 删除网络ACL规则。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4039,7 +4295,11 @@ class VpcClient extends Client
 
     /**
      * 查询所有网络ACL组
+     *
      * 查询提交请求的租户有权限操作的所有网络ACL组信息。单次查询最多返回2000条数据，超过2000后会返回分页标记。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4118,7 +4378,11 @@ class VpcClient extends Client
 
     /**
      * 查询所有网络ACL策略
+     *
      * 查询提交请求的租户有权限操作的所有网络ACL策略信息。单次查询最多返回2000条数据，超过2000后会返回分页标记。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4194,7 +4458,11 @@ class VpcClient extends Client
 
     /**
      * 查询所有网络ACL规则
+     *
      * 查询提交请求的租户有权限操作的所有网络ACL规则信息。单次查询最多返回2000条数据，超过2000后会返回分页标记。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4273,7 +4541,11 @@ class VpcClient extends Client
 
     /**
      * 移除网络ACL规则
+     *
      * 从某一网络ACL策略中移除一条网络ACL规则。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4337,7 +4609,11 @@ class VpcClient extends Client
 
     /**
      * 查询特定网络ACL组详情
+     *
      * 查询特定网络ACL组详情。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4398,7 +4674,11 @@ class VpcClient extends Client
 
     /**
      * 查询特定网络ACL策略详情
+     *
      * 查询特定网络ACL策略详情。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4459,7 +4739,11 @@ class VpcClient extends Client
 
     /**
      * 查询特定网络ACL规则
+     *
      * 查询特定网络ACL规则。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4520,7 +4804,11 @@ class VpcClient extends Client
 
     /**
      * 更新网络ACL组
+     *
      * 更新网络ACL组。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4584,7 +4872,11 @@ class VpcClient extends Client
 
     /**
      * 更新网络ACL策略
+     *
      * 更新网络ACL策略。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4648,7 +4940,11 @@ class VpcClient extends Client
 
     /**
      * 更新网络ACL规则
+     *
      * 更新网络ACL规则。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4712,7 +5008,12 @@ class VpcClient extends Client
 
     /**
      * 批量创建VPC资源标签
-     * 为指定的VPC资源实例批量添加标签。 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
+     *
+     * 为指定的VPC资源实例批量添加标签。
+     * 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4779,7 +5080,12 @@ class VpcClient extends Client
 
     /**
      * 批量删除VPC资源标签
-     * 为指定的VPC资源实例批量删除标签。 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+     *
+     * 为指定的VPC资源实例批量删除标签。
+     * 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4846,7 +5152,11 @@ class VpcClient extends Client
 
     /**
      * 创建VPC
+     *
      * 创建虚拟私有云。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4910,7 +5220,12 @@ class VpcClient extends Client
 
     /**
      * 创建VPC资源标签
-     * 给指定VPC资源实例增加标签信息 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
+     *
+     * 给指定VPC资源实例增加标签信息
+     * 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4977,7 +5292,11 @@ class VpcClient extends Client
 
     /**
      * 创建VPC路由
+     *
      * 创建路由
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5038,7 +5357,11 @@ class VpcClient extends Client
 
     /**
      * 删除VPC
+     *
      * 删除虚拟私有云。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5102,7 +5425,11 @@ class VpcClient extends Client
 
     /**
      * 删除VPC路由
+     *
      * 删除路由
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5163,7 +5490,12 @@ class VpcClient extends Client
 
     /**
      * 删除VPC资源标签
-     * 删除指定VPC资源实例的标签信息 该接口为幂等接口：删除的key不存在报404，Key不能为空或者空字符串
+     *
+     * 删除指定VPC资源实例的标签信息
+     * 该接口为幂等接口：删除的key不存在报404，Key不能为空或者空字符串
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5230,7 +5562,11 @@ class VpcClient extends Client
 
     /**
      * 查询VPC路由列表
+     *
      * 查询提交请求的租户的所有路由列表，并根据过滤条件进行过滤。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5309,7 +5645,11 @@ class VpcClient extends Client
 
     /**
      * 查询VPC项目标签
+     *
      * 查询租户在指定区域和实例类型的所有标签集合
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5370,7 +5710,11 @@ class VpcClient extends Client
 
     /**
      * 查询VPC列表
+     *
      * 查询虚拟私有云列表。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5443,7 +5787,11 @@ class VpcClient extends Client
 
     /**
      * 查询VPC资源实例
+     *
      * 使用标签过滤实例。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5507,7 +5855,11 @@ class VpcClient extends Client
 
     /**
      * 查询VPC
+     *
      * 查询虚拟私有云。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5571,7 +5923,11 @@ class VpcClient extends Client
 
     /**
      * 查询VPC路由
+     *
      * 查询路由详情
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5632,7 +5988,11 @@ class VpcClient extends Client
 
     /**
      * 查询VPC资源标签
+     *
      * 查询指定VPC实例的标签信息
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5696,7 +6056,11 @@ class VpcClient extends Client
 
     /**
      * 更新VPC
+     *
      * 更新虚拟私有云。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Bss\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class FunctionGraphForwarding implements ModelInterface, ArrayAccess
+class ListConsumeSubCustomersRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class FunctionGraphForwarding implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'FunctionGraphForwarding';
+    protected static $openAPIModelName = 'ListConsumeSubCustomersRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * funcUrn  **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。
-    * funcName  **参数说明**：函数名称。
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'funcUrn' => 'string',
-            'funcName' => 'string'
+            'xLanguage' => 'string',
+            'body' => '\HuaweiCloud\SDK\Bss\V2\Model\ListConsumeSubCustomersReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * funcUrn  **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。
-    * funcName  **参数说明**：函数名称。
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'funcUrn' => null,
-        'funcName' => null
+        'xLanguage' => null,
+        'body' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class FunctionGraphForwarding implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * funcUrn  **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。
-    * funcName  **参数说明**：函数名称。
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'funcUrn' => 'func_urn',
-            'funcName' => 'func_name'
+            'xLanguage' => 'X-Language',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * funcUrn  **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。
-    * funcName  **参数说明**：函数名称。
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'funcUrn' => 'setFuncUrn',
-            'funcName' => 'setFuncName'
+            'xLanguage' => 'setXLanguage',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * funcUrn  **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。
-    * funcName  **参数说明**：函数名称。
+    * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'funcUrn' => 'getFuncUrn',
-            'funcName' => 'getFuncName'
+            'xLanguage' => 'getXLanguage',
+            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +157,8 @@ class FunctionGraphForwarding implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['funcUrn'] = isset($data['funcUrn']) ? $data['funcUrn'] : null;
-        $this->container['funcName'] = isset($data['funcName']) ? $data['funcName'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : 'zh_cn';
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,23 +169,11 @@ class FunctionGraphForwarding implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['funcUrn'] === null) {
-            $invalidProperties[] = "'funcUrn' can't be null";
-        }
-            if ((mb_strlen($this->container['funcUrn']) > 65535)) {
-                $invalidProperties[] = "invalid value for 'funcUrn', the character length must be smaller than or equal to 65535.";
+            if (!is_null($this->container['xLanguage']) && (mb_strlen($this->container['xLanguage']) > 10)) {
+                $invalidProperties[] = "invalid value for 'xLanguage', the character length must be smaller than or equal to 10.";
             }
-            if ((mb_strlen($this->container['funcUrn']) < 0)) {
-                $invalidProperties[] = "invalid value for 'funcUrn', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['funcName'] === null) {
-            $invalidProperties[] = "'funcName' can't be null";
-        }
-            if ((mb_strlen($this->container['funcName']) > 65535)) {
-                $invalidProperties[] = "invalid value for 'funcName', the character length must be smaller than or equal to 65535.";
-            }
-            if ((mb_strlen($this->container['funcName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'funcName', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['xLanguage']) && (mb_strlen($this->container['xLanguage']) < 0)) {
+                $invalidProperties[] = "invalid value for 'xLanguage', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -202,50 +190,50 @@ class FunctionGraphForwarding implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets funcUrn
-    *  **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。
+    * Gets xLanguage
+    *  语言。中文：zh_CN英文：en_US缺省为zh_CN。
     *
-    * @return string
+    * @return string|null
     */
-    public function getFuncUrn()
+    public function getXLanguage()
     {
-        return $this->container['funcUrn'];
+        return $this->container['xLanguage'];
     }
 
     /**
-    * Sets funcUrn
+    * Sets xLanguage
     *
-    * @param string $funcUrn **参数说明**：函数的URN（Uniform Resource Name），唯一标识函数。
+    * @param string|null $xLanguage 语言。中文：zh_CN英文：en_US缺省为zh_CN。
     *
     * @return $this
     */
-    public function setFuncUrn($funcUrn)
+    public function setXLanguage($xLanguage)
     {
-        $this->container['funcUrn'] = $funcUrn;
+        $this->container['xLanguage'] = $xLanguage;
         return $this;
     }
 
     /**
-    * Gets funcName
-    *  **参数说明**：函数名称。
+    * Gets body
+    *  body
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Bss\V2\Model\ListConsumeSubCustomersReq|null
     */
-    public function getFuncName()
+    public function getBody()
     {
-        return $this->container['funcName'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets funcName
+    * Sets body
     *
-    * @param string $funcName **参数说明**：函数名称。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\ListConsumeSubCustomersReq|null $body body
     *
     * @return $this
     */
-    public function setFuncName($funcName)
+    public function setBody($body)
     {
-        $this->container['funcName'] = $funcName;
+        $this->container['body'] = $body;
         return $this;
     }
 

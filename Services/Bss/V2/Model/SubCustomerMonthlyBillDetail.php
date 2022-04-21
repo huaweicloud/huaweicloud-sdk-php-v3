@@ -58,7 +58,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * writeoffAmount  欠费核销金额。
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     * accountManagerId  客户经理标识。
-    * partnerId  经销商ID。  说明： 如果是普通经销商，那么此处可以为空。
+    * partnerId  关联的经销商ID。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     *
     * @var string[]
@@ -146,7 +146,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * writeoffAmount  欠费核销金额。
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     * accountManagerId  客户经理标识。
-    * partnerId  经销商ID。  说明： 如果是普通经销商，那么此处可以为空。
+    * partnerId  关联的经销商ID。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     *
     * @var string[]
@@ -255,7 +255,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * writeoffAmount  欠费核销金额。
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     * accountManagerId  客户经理标识。
-    * partnerId  经销商ID。  说明： 如果是普通经销商，那么此处可以为空。
+    * partnerId  关联的经销商ID。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     *
     * @var string[]
@@ -343,7 +343,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * writeoffAmount  欠费核销金额。
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     * accountManagerId  客户经理标识。
-    * partnerId  经销商ID。  说明： 如果是普通经销商，那么此处可以为空。
+    * partnerId  关联的经销商ID。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     *
     * @var string[]
@@ -431,7 +431,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * writeoffAmount  欠费核销金额。
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     * accountManagerId  客户经理标识。
-    * partnerId  经销商ID。  说明： 如果是普通经销商，那么此处可以为空。
+    * partnerId  关联的经销商ID。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
     *
     * @var string[]
@@ -1515,7 +1515,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets partnerId
-    *  经销商ID。  说明： 如果是普通经销商，那么此处可以为空。
+    *  关联的经销商ID。
     *
     * @return string|null
     */
@@ -1527,7 +1527,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets partnerId
     *
-    * @param string|null $partnerId 经销商ID。  说明： 如果是普通经销商，那么此处可以为空。
+    * @param string|null $partnerId 关联的经销商ID。
     *
     * @return $this
     */

@@ -58,6 +58,12 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * amortizedFlexipurchaseCouponAmount  月度成本分摊时，当月已分摊金额中包含的现金券分摊金额。
     * amortizedStoredValueCardAmount  月度成本分摊时，当月已分摊金额中包含的储值卡分摊金额。
     * amortizedBonusAmount  月度成本分摊时，当月已分摊金额中包含的奖励金分摊金额（用于现网未清干净的奖励金）。
+    * subServiceTypeCode  该字段为预留字段
+    * subServiceTypeName  该字段为预留字段
+    * subResourceTypeCode  该字段为预留字段
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -99,7 +105,13 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
             'amortizedCouponAmount' => 'double',
             'amortizedFlexipurchaseCouponAmount' => 'double',
             'amortizedStoredValueCardAmount' => 'double',
-            'amortizedBonusAmount' => 'double'
+            'amortizedBonusAmount' => 'double',
+            'subServiceTypeCode' => 'string',
+            'subServiceTypeName' => 'string',
+            'subResourceTypeCode' => 'string',
+            'subResourceTypeName' => 'string',
+            'subResourceId' => 'string',
+            'subResourceName' => 'string'
     ];
 
     /**
@@ -142,6 +154,12 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * amortizedFlexipurchaseCouponAmount  月度成本分摊时，当月已分摊金额中包含的现金券分摊金额。
     * amortizedStoredValueCardAmount  月度成本分摊时，当月已分摊金额中包含的储值卡分摊金额。
     * amortizedBonusAmount  月度成本分摊时，当月已分摊金额中包含的奖励金分摊金额（用于现网未清干净的奖励金）。
+    * subServiceTypeCode  该字段为预留字段
+    * subServiceTypeName  该字段为预留字段
+    * subResourceTypeCode  该字段为预留字段
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -183,7 +201,13 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
         'amortizedCouponAmount' => 'double',
         'amortizedFlexipurchaseCouponAmount' => 'double',
         'amortizedStoredValueCardAmount' => 'double',
-        'amortizedBonusAmount' => 'double'
+        'amortizedBonusAmount' => 'double',
+        'subServiceTypeCode' => null,
+        'subServiceTypeName' => null,
+        'subResourceTypeCode' => null,
+        'subResourceTypeName' => null,
+        'subResourceId' => null,
+        'subResourceName' => null
     ];
 
     /**
@@ -247,6 +271,12 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * amortizedFlexipurchaseCouponAmount  月度成本分摊时，当月已分摊金额中包含的现金券分摊金额。
     * amortizedStoredValueCardAmount  月度成本分摊时，当月已分摊金额中包含的储值卡分摊金额。
     * amortizedBonusAmount  月度成本分摊时，当月已分摊金额中包含的奖励金分摊金额（用于现网未清干净的奖励金）。
+    * subServiceTypeCode  该字段为预留字段
+    * subServiceTypeName  该字段为预留字段
+    * subResourceTypeCode  该字段为预留字段
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -288,7 +318,13 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
             'amortizedCouponAmount' => 'amortized_coupon_amount',
             'amortizedFlexipurchaseCouponAmount' => 'amortized_flexipurchase_coupon_amount',
             'amortizedStoredValueCardAmount' => 'amortized_stored_value_card_amount',
-            'amortizedBonusAmount' => 'amortized_bonus_amount'
+            'amortizedBonusAmount' => 'amortized_bonus_amount',
+            'subServiceTypeCode' => 'sub_service_type_code',
+            'subServiceTypeName' => 'sub_service_type_name',
+            'subResourceTypeCode' => 'sub_resource_type_code',
+            'subResourceTypeName' => 'sub_resource_type_name',
+            'subResourceId' => 'sub_resource_id',
+            'subResourceName' => 'sub_resource_name'
     ];
 
     /**
@@ -331,6 +367,12 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * amortizedFlexipurchaseCouponAmount  月度成本分摊时，当月已分摊金额中包含的现金券分摊金额。
     * amortizedStoredValueCardAmount  月度成本分摊时，当月已分摊金额中包含的储值卡分摊金额。
     * amortizedBonusAmount  月度成本分摊时，当月已分摊金额中包含的奖励金分摊金额（用于现网未清干净的奖励金）。
+    * subServiceTypeCode  该字段为预留字段
+    * subServiceTypeName  该字段为预留字段
+    * subResourceTypeCode  该字段为预留字段
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -372,7 +414,13 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
             'amortizedCouponAmount' => 'setAmortizedCouponAmount',
             'amortizedFlexipurchaseCouponAmount' => 'setAmortizedFlexipurchaseCouponAmount',
             'amortizedStoredValueCardAmount' => 'setAmortizedStoredValueCardAmount',
-            'amortizedBonusAmount' => 'setAmortizedBonusAmount'
+            'amortizedBonusAmount' => 'setAmortizedBonusAmount',
+            'subServiceTypeCode' => 'setSubServiceTypeCode',
+            'subServiceTypeName' => 'setSubServiceTypeName',
+            'subResourceTypeCode' => 'setSubResourceTypeCode',
+            'subResourceTypeName' => 'setSubResourceTypeName',
+            'subResourceId' => 'setSubResourceId',
+            'subResourceName' => 'setSubResourceName'
     ];
 
     /**
@@ -415,6 +463,12 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * amortizedFlexipurchaseCouponAmount  月度成本分摊时，当月已分摊金额中包含的现金券分摊金额。
     * amortizedStoredValueCardAmount  月度成本分摊时，当月已分摊金额中包含的储值卡分摊金额。
     * amortizedBonusAmount  月度成本分摊时，当月已分摊金额中包含的奖励金分摊金额（用于现网未清干净的奖励金）。
+    * subServiceTypeCode  该字段为预留字段
+    * subServiceTypeName  该字段为预留字段
+    * subResourceTypeCode  该字段为预留字段
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -456,7 +510,13 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
             'amortizedCouponAmount' => 'getAmortizedCouponAmount',
             'amortizedFlexipurchaseCouponAmount' => 'getAmortizedFlexipurchaseCouponAmount',
             'amortizedStoredValueCardAmount' => 'getAmortizedStoredValueCardAmount',
-            'amortizedBonusAmount' => 'getAmortizedBonusAmount'
+            'amortizedBonusAmount' => 'getAmortizedBonusAmount',
+            'subServiceTypeCode' => 'getSubServiceTypeCode',
+            'subServiceTypeName' => 'getSubServiceTypeName',
+            'subResourceTypeCode' => 'getSubResourceTypeCode',
+            'subResourceTypeName' => 'getSubResourceTypeName',
+            'subResourceId' => 'getSubResourceId',
+            'subResourceName' => 'getSubResourceName'
     ];
 
     /**
@@ -555,6 +615,12 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
         $this->container['amortizedFlexipurchaseCouponAmount'] = isset($data['amortizedFlexipurchaseCouponAmount']) ? $data['amortizedFlexipurchaseCouponAmount'] : null;
         $this->container['amortizedStoredValueCardAmount'] = isset($data['amortizedStoredValueCardAmount']) ? $data['amortizedStoredValueCardAmount'] : null;
         $this->container['amortizedBonusAmount'] = isset($data['amortizedBonusAmount']) ? $data['amortizedBonusAmount'] : null;
+        $this->container['subServiceTypeCode'] = isset($data['subServiceTypeCode']) ? $data['subServiceTypeCode'] : null;
+        $this->container['subServiceTypeName'] = isset($data['subServiceTypeName']) ? $data['subServiceTypeName'] : null;
+        $this->container['subResourceTypeCode'] = isset($data['subResourceTypeCode']) ? $data['subResourceTypeCode'] : null;
+        $this->container['subResourceTypeName'] = isset($data['subResourceTypeName']) ? $data['subResourceTypeName'] : null;
+        $this->container['subResourceId'] = isset($data['subResourceId']) ? $data['subResourceId'] : null;
+        $this->container['subResourceName'] = isset($data['subResourceName']) ? $data['subResourceName'] : null;
     }
 
     /**
@@ -1488,6 +1554,150 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     public function setAmortizedBonusAmount($amortizedBonusAmount)
     {
         $this->container['amortizedBonusAmount'] = $amortizedBonusAmount;
+        return $this;
+    }
+
+    /**
+    * Gets subServiceTypeCode
+    *  该字段为预留字段
+    *
+    * @return string|null
+    */
+    public function getSubServiceTypeCode()
+    {
+        return $this->container['subServiceTypeCode'];
+    }
+
+    /**
+    * Sets subServiceTypeCode
+    *
+    * @param string|null $subServiceTypeCode 该字段为预留字段
+    *
+    * @return $this
+    */
+    public function setSubServiceTypeCode($subServiceTypeCode)
+    {
+        $this->container['subServiceTypeCode'] = $subServiceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets subServiceTypeName
+    *  该字段为预留字段
+    *
+    * @return string|null
+    */
+    public function getSubServiceTypeName()
+    {
+        return $this->container['subServiceTypeName'];
+    }
+
+    /**
+    * Sets subServiceTypeName
+    *
+    * @param string|null $subServiceTypeName 该字段为预留字段
+    *
+    * @return $this
+    */
+    public function setSubServiceTypeName($subServiceTypeName)
+    {
+        $this->container['subServiceTypeName'] = $subServiceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets subResourceTypeCode
+    *  该字段为预留字段
+    *
+    * @return string|null
+    */
+    public function getSubResourceTypeCode()
+    {
+        return $this->container['subResourceTypeCode'];
+    }
+
+    /**
+    * Sets subResourceTypeCode
+    *
+    * @param string|null $subResourceTypeCode 该字段为预留字段
+    *
+    * @return $this
+    */
+    public function setSubResourceTypeCode($subResourceTypeCode)
+    {
+        $this->container['subResourceTypeCode'] = $subResourceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets subResourceTypeName
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubResourceTypeName()
+    {
+        return $this->container['subResourceTypeName'];
+    }
+
+    /**
+    * Sets subResourceTypeName
+    *
+    * @param string|null $subResourceTypeName 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubResourceTypeName($subResourceTypeName)
+    {
+        $this->container['subResourceTypeName'] = $subResourceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets subResourceId
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubResourceId()
+    {
+        return $this->container['subResourceId'];
+    }
+
+    /**
+    * Sets subResourceId
+    *
+    * @param string|null $subResourceId 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubResourceId($subResourceId)
+    {
+        $this->container['subResourceId'] = $subResourceId;
+        return $this;
+    }
+
+    /**
+    * Gets subResourceName
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubResourceName()
+    {
+        return $this->container['subResourceName'];
+    }
+
+    /**
+    * Sets subResourceName
+    *
+    * @param string|null $subResourceName 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubResourceName($subResourceName)
+    {
+        $this->container['subResourceName'] = $subResourceName;
         return $this;
     }
 

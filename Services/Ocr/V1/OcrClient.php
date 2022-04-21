@@ -27,7 +27,15 @@ class OcrClient extends Client
 
     /**
      * 智能分类识别
-     * 检测定位图片上指定要识别的票证（票据、证件或其他文字载体），并对其进行结构化识别。接口以列表形式返回图片上要识别票证的位置坐标、结构化识别的内容以及对应的类别。  计费次数说明：  只对识别成功的票证进行计费，识别失败的票证不计费。例如图片中包含三张票证，有两张识别成功，一张识别失败，此时接口计费两次。
+     *
+     * 检测定位图片上指定要识别的票证（票据、证件或其他文字载体），并对其进行结构化识别。接口以列表形式返回图片上要识别票证的位置坐标、结构化识别的内容以及对应的类别。
+     * 
+     * 计费次数说明：
+     * 
+     * 只对识别成功的票证进行计费，识别失败的票证不计费。例如图片中包含三张票证，有两张识别成功，一张识别失败，此时接口计费两次。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -88,7 +96,15 @@ class OcrClient extends Client
 
     /**
      * 银行卡识别
-     * 识别银行卡上的关键文字信息，并返回识别的结构化结果。  说明：  如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     *
+     * 识别银行卡上的关键文字信息，并返回识别的结构化结果。
+     * 
+     * 说明：
+     * 
+     * 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -149,7 +165,11 @@ class OcrClient extends Client
 
     /**
      * 名片识别
+     *
      * 识别名片图片上的文字信息，并返回识别的结构化结果。支持对多种不同版式名片进行结构化信息提取。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -210,7 +230,15 @@ class OcrClient extends Client
 
     /**
      * 营业执照识别
-     * 识别营业执照首页图片中的文字信息，并返回识别的结构化结果。  说明：   如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     *
+     * 识别营业执照首页图片中的文字信息，并返回识别的结构化结果。
+     * 
+     * 说明：
+     * 
+     * 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -271,7 +299,11 @@ class OcrClient extends Client
 
     /**
      * 智利身份证识别
+     *
      * 识别智利身份证图片中的文字内容，并返回识别的结构化结果。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -332,7 +364,15 @@ class OcrClient extends Client
 
     /**
      * 驾驶证识别
-     * 识别用户上传的驾驶证图片（或者用户提供的华为云上OBS的驾驶证图片文件的URL）中主页与副页的文字内容，并将识别的结果返回给用户。  说明：   如果图片中包含多张卡证票据，请调用智能分类识别服务。
+     *
+     * 识别用户上传的驾驶证图片（或者用户提供的华为云上OBS的驾驶证图片文件的URL）中主页与副页的文字内容，并将识别的结果返回给用户。
+     * 
+     * 说明：
+     * 
+     * 如果图片中包含多张卡证票据，请调用智能分类识别服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -393,7 +433,11 @@ class OcrClient extends Client
 
     /**
      * 财务报表识别
+     *
      * 识别用户上传的表格图片中的文字内容，并将识别的结果返回给用户。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -454,7 +498,15 @@ class OcrClient extends Client
 
     /**
      * 飞机行程单识别
-     * 识别飞机行程单中的文字信息，并返回识别的结构化结果。  说明：  如果图片中包含多张卡证票据，请调用智能分类识别服务。
+     *
+     * 识别飞机行程单中的文字信息，并返回识别的结构化结果。
+     * 
+     * 说明：
+     * 
+     * 如果图片中包含多张卡证票据，请调用智能分类识别服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -515,7 +567,11 @@ class OcrClient extends Client
 
     /**
      * 通用表格识别
+     *
      * 识别用于识别用户上传的通用表格图片（或者用户提供的华为云上OBS的通用表格图片文件的URL）中的文字内容，并将识别的结果返回给用户。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -576,7 +632,11 @@ class OcrClient extends Client
 
     /**
      * 通用文字识别
+     *
      * 识别图片上的文字信息，返回识别的文字和坐标。支持扫描文件、电子文档、书籍、票据和表单等多种场景的文字识别。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -637,7 +697,11 @@ class OcrClient extends Client
 
     /**
      * 手写文字识别
+     *
      * 识别文档中的手写文字信息，并将识别的结构化结果返回给用户。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -698,7 +762,17 @@ class OcrClient extends Client
 
     /**
      * 身份证识别
-     * 识别身份证图片中的文字内容，并将识别的结果返回给用户。  说明：   身份证识别支持中华人民共和国居民身份证识别。  如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     *
+     * 识别身份证图片中的文字内容，并将识别的结果返回给用户。
+     * 
+     * 说明：
+     * 
+     * 身份证识别支持中华人民共和国居民身份证识别。
+     * 
+     * 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -759,7 +833,11 @@ class OcrClient extends Client
 
     /**
      * 保险单识别
+     *
      * 识别保险单图片上的文字信息，并将识别的结构化结果返回给用户。支持对多板式保险单的扫描图片及手机照片进行结构化信息提取。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -820,7 +898,11 @@ class OcrClient extends Client
 
     /**
      * 发票验真
+     *
      * 发票验真服务支持9种增值税发票的信息核验，包括增值税专用发票、增值税普通发票、增值税普通发票（卷式）、增值税电子专用发票、增值税电子普通发票、增值税电子普通发票（通行费）、二手车销售统一发票、机动车销售统一发票、区块链电子发票，支持返回票面的全部信息。该接口的使用限制请参见[约束与限制](https://support.huaweicloud.com/productdesc-ocr/ocr_01_0006.html)，详细使用指导请参见[OCR服务使用简介](https://support.huaweicloud.com/qs-ocr/ocr_05_0001.html)章节。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -881,7 +963,11 @@ class OcrClient extends Client
 
     /**
      * 车牌识别
+     *
      * 识别输入图片中的车牌信息，并返回其坐标和内容。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -942,7 +1028,17 @@ class OcrClient extends Client
 
     /**
      * 机动车销售发票识别
-     * 识别机动车销售发票图片中的文字内容，并将识别的结果返回给用户。  说明：  该增值税发票仅限于中华人民共和国境内使用的增值税发票。  如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     *
+     * 识别机动车销售发票图片中的文字内容，并将识别的结果返回给用户。
+     * 
+     * 说明：
+     * 
+     * 该增值税发票仅限于中华人民共和国境内使用的增值税发票。
+     * 
+     * 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1003,7 +1099,11 @@ class OcrClient extends Client
 
     /**
      * 缅文驾驶证识别
+     *
      * 识别缅甸驾驶证中的文字信息，并返回识别的结构化结果。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1064,7 +1164,11 @@ class OcrClient extends Client
 
     /**
      * 缅文身份证识别
+     *
      * 识别缅文身份证中的文字信息，并返回识别的结构化结果。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1125,7 +1229,15 @@ class OcrClient extends Client
 
     /**
      * 护照识别
-     * 识别用户上传的护照首页图片中的文字信息，并返回识别的结构化结果。当前版本支持中国护照的全字段识别。外国护照支持护照下方两行国际标准化的机读码识别，并可从中提取6-7个关键字段信息。  说明：  如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     *
+     * 识别用户上传的护照首页图片中的文字信息，并返回识别的结构化结果。当前版本支持中国护照的全字段识别。外国护照支持护照下方两行国际标准化的机读码识别，并可从中提取6-7个关键字段信息。
+     * 
+     * 说明：
+     * 
+     * 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1186,7 +1298,15 @@ class OcrClient extends Client
 
     /**
      * 从业资格证识别
-     * 识别道路运输从业资格证上的关键文字信息，并返回识别的结构化结果。  说明：  如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     *
+     * 识别道路运输从业资格证上的关键文字信息，并返回识别的结构化结果。
+     * 
+     * 说明：
+     * 
+     * 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1247,7 +1367,15 @@ class OcrClient extends Client
 
     /**
      * 定额发票识别
-     * 识别定额发票中的文字信息，并返回识别的结构化结果。  说明：   如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     *
+     * 识别定额发票中的文字信息，并返回识别的结构化结果。
+     * 
+     * 说明：
+     * 
+     * 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1308,7 +1436,15 @@ class OcrClient extends Client
 
     /**
      * 出租车发票识别
-     * 识别出租车发票中的文字信息，并返回识别的结构化结果。  说明：  如果图片中包含多张卡证票据，请调用智能分类识别服务。
+     *
+     * 识别出租车发票中的文字信息，并返回识别的结构化结果。
+     * 
+     * 说明：
+     * 
+     * 如果图片中包含多张卡证票据，请调用智能分类识别服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1369,7 +1505,11 @@ class OcrClient extends Client
 
     /**
      * 泰文身份证识别
+     *
      * 识别泰国身份证中的文字信息，并返回识别的结构化结果。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1430,7 +1570,11 @@ class OcrClient extends Client
 
     /**
      * 泰国车牌识别
+     *
      * 识别泰国车牌图片中的车牌信息，并返回识别的结构化结果。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1491,7 +1635,15 @@ class OcrClient extends Client
 
     /**
      * 车辆通行费发票识别
-     * 识别车辆通行费发票中的文字信息，并返回识别的结构化结果。  说明：  如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     *
+     * 识别车辆通行费发票中的文字信息，并返回识别的结构化结果。
+     * 
+     * 说明：
+     * 
+     * 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1552,7 +1704,15 @@ class OcrClient extends Client
 
     /**
      * 火车票识别
-     * 识别火车票中的文字信息，并返回识别的结构化结果。  说明：  如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     *
+     * 识别火车票中的文字信息，并返回识别的结构化结果。
+     * 
+     * 说明：
+     * 
+     * 如果图片中包含多张卡证票据，请调用[智能分类识别](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;OCR&amp;api&#x3D;AutoClassification)服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1613,7 +1773,13 @@ class OcrClient extends Client
 
     /**
      * 道路运输证识别
-     * 识别道路运输证首页中的文字信息，并返回识别的结构化结果。  说明： 如果图片中包含多张卡证票据，请调用智能分类识别服务。
+     *
+     * 识别道路运输证首页中的文字信息，并返回识别的结构化结果。
+     * 
+     * 说明： 如果图片中包含多张卡证票据，请调用智能分类识别服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1674,7 +1840,17 @@ class OcrClient extends Client
 
     /**
      * 增值税发票识别
-     * 识别用户上传的增值税发票图片（或者用户提供的华为云上OBS的增值税发票图片文件的URL）中的文字内容，并将识别的结果返回给用户。  说明：  该增值税发票仅限于中华人民共和国境内使用的增值税发票。  如果图片中包含多张卡证票据，请调用智能分类识别服务。
+     *
+     * 识别用户上传的增值税发票图片（或者用户提供的华为云上OBS的增值税发票图片文件的URL）中的文字内容，并将识别的结果返回给用户。
+     * 
+     * 说明：
+     * 
+     * 该增值税发票仅限于中华人民共和国境内使用的增值税发票。
+     * 
+     * 如果图片中包含多张卡证票据，请调用智能分类识别服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1735,7 +1911,15 @@ class OcrClient extends Client
 
     /**
      * 行驶证识别
-     * 识别用户上传的行驶证图片（或者用户提供的华为云上OBS的行驶证图片文件的URL）中主页和副页的文字内容，并将识别的结果返回给用户。  说明：  如果图片中包含多张卡证票据，请调用智能分类识别服务。
+     *
+     * 识别用户上传的行驶证图片（或者用户提供的华为云上OBS的行驶证图片文件的URL）中主页和副页的文字内容，并将识别的结果返回给用户。
+     * 
+     * 说明：
+     * 
+     * 如果图片中包含多张卡证票据，请调用智能分类识别服务。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1796,7 +1980,11 @@ class OcrClient extends Client
 
     /**
      * 电子面单识别
+     *
      * 识别用户上传的韵达电子面单图片中的文字内容，并将识别的结果以json格式返回给用户。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1857,7 +2045,11 @@ class OcrClient extends Client
 
     /**
      * 网络图片识别
+     *
      * 识别网络图片中的文字内容，并返回识别的结构化结果。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1918,7 +2110,11 @@ class OcrClient extends Client
 
     /**
      * VIN码识别
+     *
      * 识别图片中的车架号信息，并将识别结果返回给用户。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response

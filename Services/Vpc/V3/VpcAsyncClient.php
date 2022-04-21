@@ -26,7 +26,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 批量创建辅助弹性网卡
+     *
      * 批量创建辅助弹性网卡
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -91,7 +95,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 创建安全组
+     *
      * 创建安全组
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -156,7 +164,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 创建安全组规则
+     *
      * 创建安全组规则
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -221,7 +233,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 创建辅助弹性网卡
+     *
      * 创建辅助弹性网卡
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -286,7 +302,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 删除安全组
+     *
      * 删除安全组
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -351,7 +371,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 删除安全组规则
+     *
      * 删除安全组规则
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -416,7 +440,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 删除辅助弹性网卡
+     *
      * 删除辅助弹性网卡
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -481,7 +509,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 查询安全组规则列表
+     *
      * 查询安全组规则列表
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -570,7 +602,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 查询安全组列表
+     *
      * 查询某租户下的安全组列表
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -650,7 +686,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 查询租户下辅助弹性网卡列表
+     *
      * 查询辅助弹性网卡列表，单次查询最多返回2000条数据
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -739,7 +779,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 迁移辅助弹性网卡
+     *
      * 批量迁移辅助弹性网卡
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -804,7 +848,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 查询安全组
+     *
      * 查询单个安全组详情
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -869,7 +917,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 查询安全组规则
+     *
      * 查询单个安全组规则
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -934,7 +986,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 查询租户下辅助弹性网卡
+     *
      * 查询辅助弹性网卡详情
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -999,7 +1055,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 查询租户下辅助弹性网卡数目
+     *
      * 查询辅助弹性网卡数目
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1061,7 +1121,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 更新安全组
+     *
      * 更新安全组
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1129,7 +1193,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 更新辅助弹性网卡
+     *
      * 更新辅助弹性网卡
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1197,7 +1265,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 创建地址组
+     *
      * 创建地址组
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1262,7 +1334,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 删除地址组
+     *
      * 删除地址组，非强制删除，删除前请确保未被其他资源引用
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1327,7 +1403,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 强制删除地址组
+     *
      * 强制删除地址组，删除的地址组与安全组规则关联时，会删除地址组与关联的安全组规则。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1392,7 +1472,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 查询地址组列表
+     *
      * 查询地址组列表，根据过滤条件进行过滤。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1472,7 +1556,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 查询地址组
+     *
      * 查询地址组详情。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1537,7 +1625,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 更新地址组
+     *
      * 更新地址组。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1605,7 +1697,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 添加VPC扩展网段
+     *
      * 添加VPC的扩展网段
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1673,7 +1769,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 创建VPC
+     *
      * 创建虚拟私有云
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1738,7 +1838,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 删除VPC
+     *
      * 删除VPC
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1803,7 +1907,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 查询VPC列表
+     *
      * 查询vpc列表
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1883,7 +1991,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 移除VPC扩展网段
+     *
      * 移除VPC扩展网段
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1951,7 +2063,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 查询VPC详情
+     *
      * 查询vpc详情
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2016,7 +2132,11 @@ class VpcAsyncClient extends Client
 
     /**
      * 更新VPC
+     *
      * 更新vpc
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response

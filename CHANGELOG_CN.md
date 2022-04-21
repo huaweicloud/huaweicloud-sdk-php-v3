@@ -1,3 +1,14 @@
+# 3.0.44-rc 2022-04-21
+
+### HuaweiCloud SDK BSS
+
+- _新增特性_
+  - 支持接口`ListConsumeSubCustomers`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListCustomerBillsMonthlyBreakDown`新增响应参数 `sub_service_type_code`、`sub_service_type_name`、`sub_resource_type_code`、`sub_resource_type_name`、`sub_resource_id`、`sub_resource_name`
+
 # 3.0.43-rc 2022-04-14
 
 ### HuaweiCloud SDK CDN
