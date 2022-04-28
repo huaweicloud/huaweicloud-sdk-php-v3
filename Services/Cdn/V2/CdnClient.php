@@ -21,7 +21,7 @@ class CdnClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CdnClient());
+        return new ClientBuilder(new CdnClient(), "GlobalCredentials");
     }
 
 

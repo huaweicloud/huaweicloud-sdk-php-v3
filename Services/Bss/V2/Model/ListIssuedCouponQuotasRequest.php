@@ -21,7 +21,7 @@ class ListIssuedCouponQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * quotaId  精英服务商的代金券额度ID。获取方法请参见查询优惠券额度。
-    * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。
+    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
     * parentQuotaId  父额度ID，即华为云伙伴能力中心用于发放给精英服务商代金券额度的额度ID。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询记录数。默认值为10。
@@ -39,7 +39,7 @@ class ListIssuedCouponQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * quotaId  精英服务商的代金券额度ID。获取方法请参见查询优惠券额度。
-    * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。
+    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
     * parentQuotaId  父额度ID，即华为云伙伴能力中心用于发放给精英服务商代金券额度的额度ID。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询记录数。默认值为10。
@@ -78,7 +78,7 @@ class ListIssuedCouponQuotasRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * quotaId  精英服务商的代金券额度ID。获取方法请参见查询优惠券额度。
-    * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。
+    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
     * parentQuotaId  父额度ID，即华为云伙伴能力中心用于发放给精英服务商代金券额度的额度ID。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询记录数。默认值为10。
@@ -96,7 +96,7 @@ class ListIssuedCouponQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * quotaId  精英服务商的代金券额度ID。获取方法请参见查询优惠券额度。
-    * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。
+    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
     * parentQuotaId  父额度ID，即华为云伙伴能力中心用于发放给精英服务商代金券额度的额度ID。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询记录数。默认值为10。
@@ -114,7 +114,7 @@ class ListIssuedCouponQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * quotaId  精英服务商的代金券额度ID。获取方法请参见查询优惠券额度。
-    * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。
+    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
     * parentQuotaId  父额度ID，即华为云伙伴能力中心用于发放给精英服务商代金券额度的额度ID。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询记录数。默认值为10。
@@ -254,7 +254,7 @@ class ListIssuedCouponQuotasRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerId
-    *  精英服务商ID。获取方法请参见查询精英服务商列表。
+    *  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
     *
     * @return string|null
     */
@@ -266,7 +266,7 @@ class ListIssuedCouponQuotasRequest implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerId
     *
-    * @param string|null $indirectPartnerId 精英服务商ID。获取方法请参见查询精英服务商列表。
+    * @param string|null $indirectPartnerId 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
     *
     * @return $this
     */

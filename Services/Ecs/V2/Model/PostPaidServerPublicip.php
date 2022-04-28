@@ -22,24 +22,28 @@ class PostPaidServerPublicip implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  为待创建云服务器分配已有弹性IP时，分配的弹性IP的ID，UUID格式。  约束：只能分配状态（status）为DOWN的弹性IP。
     * eip  eip
+    * deleteOnTermination  弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
-            'eip' => '\HuaweiCloud\SDK\Ecs\V2\Model\PostPaidServerEip'
+            'eip' => '\HuaweiCloud\SDK\Ecs\V2\Model\PostPaidServerEip',
+            'deleteOnTermination' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  为待创建云服务器分配已有弹性IP时，分配的弹性IP的ID，UUID格式。  约束：只能分配状态（status）为DOWN的弹性IP。
     * eip  eip
+    * deleteOnTermination  弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
-        'eip' => null
+        'eip' => null,
+        'deleteOnTermination' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class PostPaidServerPublicip implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  为待创建云服务器分配已有弹性IP时，分配的弹性IP的ID，UUID格式。  约束：只能分配状态（status）为DOWN的弹性IP。
     * eip  eip
+    * deleteOnTermination  弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
-            'eip' => 'eip'
+            'eip' => 'eip',
+            'deleteOnTermination' => 'delete_on_termination'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  为待创建云服务器分配已有弹性IP时，分配的弹性IP的ID，UUID格式。  约束：只能分配状态（status）为DOWN的弹性IP。
     * eip  eip
+    * deleteOnTermination  弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
-            'eip' => 'setEip'
+            'eip' => 'setEip',
+            'deleteOnTermination' => 'setDeleteOnTermination'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  为待创建云服务器分配已有弹性IP时，分配的弹性IP的ID，UUID格式。  约束：只能分配状态（status）为DOWN的弹性IP。
     * eip  eip
+    * deleteOnTermination  弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
-            'eip' => 'getEip'
+            'eip' => 'getEip',
+            'deleteOnTermination' => 'getDeleteOnTermination'
     ];
 
     /**
@@ -159,6 +169,7 @@ class PostPaidServerPublicip implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['eip'] = isset($data['eip']) ? $data['eip'] : null;
+        $this->container['deleteOnTermination'] = isset($data['deleteOnTermination']) ? $data['deleteOnTermination'] : false;
     }
 
     /**
@@ -228,6 +239,30 @@ class PostPaidServerPublicip implements ModelInterface, ArrayAccess
     public function setEip($eip)
     {
         $this->container['eip'] = $eip;
+        return $this;
+    }
+
+    /**
+    * Gets deleteOnTermination
+    *  弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
+    *
+    * @return bool|null
+    */
+    public function getDeleteOnTermination()
+    {
+        return $this->container['deleteOnTermination'];
+    }
+
+    /**
+    * Sets deleteOnTermination
+    *
+    * @param bool|null $deleteOnTermination 弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
+    *
+    * @return $this
+    */
+    public function setDeleteOnTermination($deleteOnTermination)
+    {
+        $this->container['deleteOnTermination'] = $deleteOnTermination;
         return $this;
     }
 

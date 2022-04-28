@@ -20,7 +20,7 @@ class AdjustToIndirectPartnerReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。
+    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
     * amount  华为云伙伴能力中心向精英服务商拨款的金额。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class AdjustToIndirectPartnerReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。
+    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
     * amount  华为云伙伴能力中心向精英服务商拨款的金额。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class AdjustToIndirectPartnerReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。
+    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
     * amount  华为云伙伴能力中心向精英服务商拨款的金额。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class AdjustToIndirectPartnerReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。
+    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
     * amount  华为云伙伴能力中心向精英服务商拨款的金额。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class AdjustToIndirectPartnerReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * indirectPartnerId  精英服务商ID。获取方法请参见查询精英服务商列表。
+    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
     * amount  华为云伙伴能力中心向精英服务商拨款的金额。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @var string[]
@@ -203,7 +203,7 @@ class AdjustToIndirectPartnerReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerId
-    *  精英服务商ID。获取方法请参见查询精英服务商列表。
+    *  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class AdjustToIndirectPartnerReq implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerId
     *
-    * @param string $indirectPartnerId 精英服务商ID。获取方法请参见查询精英服务商列表。
+    * @param string $indirectPartnerId 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
     *
     * @return $this
     */

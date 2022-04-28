@@ -58,7 +58,7 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
             'fileNumber' => 'string',
             'record' => 'string',
             'accumulatedScores' => 'string',
-            'status' => '\HuaweiCloud\SDK\Ocr\V1\Model\DriverLicenseResultStatus[]',
+            'status' => 'string[]',
             'generationDate' => 'string',
             'currentTime' => 'string',
             'textLocation' => 'object'
@@ -734,7 +734,7 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * Gets status
     *  状态。
     *
-    * @return \HuaweiCloud\SDK\Ocr\V1\Model\DriverLicenseResultStatus[]|null
+    * @return string[]|null
     */
     public function getStatus()
     {
@@ -744,7 +744,7 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param \HuaweiCloud\SDK\Ocr\V1\Model\DriverLicenseResultStatus[]|null $status 状态。
+    * @param string[]|null $status 状态。
     *
     * @return $this
     */

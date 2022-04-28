@@ -20,7 +20,7 @@ class DeletePostalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * addressId  |参数名称：邮寄地址ID|
+    * addressId  邮寄地址ID
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeletePostalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * addressId  |参数名称：邮寄地址ID|
+    * addressId  邮寄地址ID
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeletePostalRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * addressId  |参数名称：邮寄地址ID|
+    * addressId  邮寄地址ID
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeletePostalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * addressId  |参数名称：邮寄地址ID|
+    * addressId  邮寄地址ID
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeletePostalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * addressId  |参数名称：邮寄地址ID|
+    * addressId  邮寄地址ID
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class DeletePostalRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressId
-    *  |参数名称：邮寄地址ID|
+    *  邮寄地址ID
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class DeletePostalRequest implements ModelInterface, ArrayAccess
     /**
     * Sets addressId
     *
-    * @param string $addressId |参数名称：邮寄地址ID|
+    * @param string $addressId 邮寄地址ID
     *
     * @return $this
     */

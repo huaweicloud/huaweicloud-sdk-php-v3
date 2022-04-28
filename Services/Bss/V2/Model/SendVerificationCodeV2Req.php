@@ -25,7 +25,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
     * lang  根据该参数的取值选择发送短信验证码的语言。 zh-cn：中文en-us：英文
     * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 不填写默认为29。
-    * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。 如果scene=18的时候必填。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
     * lang  根据该参数的取值选择发送短信验证码的语言。 zh-cn：中文en-us：英文
     * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 不填写默认为29。
-    * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。 如果scene=18的时候必填。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
     * lang  根据该参数的取值选择发送短信验证码的语言。 zh-cn：中文en-us：英文
     * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 不填写默认为29。
-    * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。 如果scene=18的时候必填。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
     * lang  根据该参数的取值选择发送短信验证码的语言。 zh-cn：中文en-us：英文
     * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 不填写默认为29。
-    * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。 如果scene=18的时候必填。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
     * lang  根据该参数的取值选择发送短信验证码的语言。 zh-cn：中文en-us：英文
     * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 不填写默认为29。
-    * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。 如果scene=18的时候必填。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
     *
     * @var string[]
     */
@@ -388,7 +388,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerId
-    *  客户账号ID。您可以调用查询客户列表接口获取customer_id。 如果scene=18的时候必填。
+    *  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
     *
     * @return string|null
     */
@@ -400,7 +400,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets customerId
     *
-    * @param string|null $customerId 客户账号ID。您可以调用查询客户列表接口获取customer_id。 如果scene=18的时候必填。
+    * @param string|null $customerId 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
     *
     * @return $this
     */

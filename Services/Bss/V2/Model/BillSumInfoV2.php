@@ -21,7 +21,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * customerId  客户账号ID。
-    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
     * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * billType  账单类型。 0：正常1：退订2：华为核销
     * chargeMode  计费模式。 1：包年/包月3: 按需
@@ -55,7 +55,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * customerId  客户账号ID。
-    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
     * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * billType  账单类型。 0：正常1：退订2：华为核销
     * chargeMode  计费模式。 1：包年/包月3: 按需
@@ -110,7 +110,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * customerId  客户账号ID。
-    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
     * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * billType  账单类型。 0：正常1：退订2：华为核销
     * chargeMode  计费模式。 1：包年/包月3: 按需
@@ -144,7 +144,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * customerId  客户账号ID。
-    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
     * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * billType  账单类型。 0：正常1：退订2：华为核销
     * chargeMode  计费模式。 1：包年/包月3: 按需
@@ -178,7 +178,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * customerId  客户账号ID。
-    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
     * cloudServiceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * billType  账单类型。 0：正常1：退订2：华为核销
     * chargeMode  计费模式。 1：包年/包月3: 按需
@@ -330,7 +330,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudServiceType
-    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
     *
     * @return string|null
     */
@@ -342,7 +342,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets cloudServiceType
     *
-    * @param string|null $cloudServiceType 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * @param string|null $cloudServiceType 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。
     *
     * @return $this
     */
