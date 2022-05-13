@@ -20,8 +20,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * originRequestHeader  回源请求头配置。
-    * httpResponseHeader  http header配置。
+    * originRequestHeader  回源请求头配置
+    * httpResponseHeader  http header配置
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -44,8 +44,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * originRequestHeader  回源请求头配置。
-    * httpResponseHeader  http header配置。
+    * originRequestHeader  回源请求头配置
+    * httpResponseHeader  http header配置
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -89,8 +89,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * originRequestHeader  回源请求头配置。
-    * httpResponseHeader  http header配置。
+    * originRequestHeader  回源请求头配置
+    * httpResponseHeader  http header配置
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -113,8 +113,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * originRequestHeader  回源请求头配置。
-    * httpResponseHeader  http header配置。
+    * originRequestHeader  回源请求头配置
+    * httpResponseHeader  http header配置
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -137,8 +137,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * originRequestHeader  回源请求头配置。
-    * httpResponseHeader  http header配置。
+    * originRequestHeader  回源请求头配置
+    * httpResponseHeader  http header配置
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -251,7 +251,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets originRequestHeader
-    *  回源请求头配置。
+    *  回源请求头配置
     *
     * @return \HuaweiCloud\SDK\Cdn\V1\Model\OriginRequestHeader[]|null
     */
@@ -263,7 +263,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets originRequestHeader
     *
-    * @param \HuaweiCloud\SDK\Cdn\V1\Model\OriginRequestHeader[]|null $originRequestHeader 回源请求头配置。
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\OriginRequestHeader[]|null $originRequestHeader 回源请求头配置
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpResponseHeader
-    *  http header配置。
+    *  http header配置
     *
     * @return \HuaweiCloud\SDK\Cdn\V1\Model\HttpResponseHeader[]|null
     */
@@ -287,7 +287,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets httpResponseHeader
     *
-    * @param \HuaweiCloud\SDK\Cdn\V1\Model\HttpResponseHeader[]|null $httpResponseHeader http header配置。
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\HttpResponseHeader[]|null $httpResponseHeader http header配置
     *
     * @return $this
     */

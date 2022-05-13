@@ -6898,6 +6898,111 @@ class IamClient extends Client
     }
 
     /**
+     * 查询指定账号中的授权记录
+     *
+     * 该接口用于查询指定账号中的授权记录。
+     * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomainRoleAssignments($request)
+    {
+        return $this->showDomainRoleAssignmentsWithHttpInfo($request);
+    }
+
+    public function showDomainRoleAssignmentsWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v3.0/OS-PERMISSION/role-assignments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainId'] !== null) {
+            $queryParams['domain_id'] = $localVarParams['domainId'];
+        }
+        if ($localVarParams['roleId'] !== null) {
+            $queryParams['role_id'] = $localVarParams['roleId'];
+        }
+        if ($localVarParams['subject'] !== null) {
+            $queryParams['subject'] = $localVarParams['subject'];
+        }
+        if ($localVarParams['subjectUserId'] !== null) {
+            $queryParams['subject_user_id'] = $localVarParams['subjectUserId'];
+        }
+        if ($localVarParams['subjectGroupId'] !== null) {
+            $queryParams['subject_group_id'] = $localVarParams['subjectGroupId'];
+        }
+        if ($localVarParams['subjectAgencyId'] !== null) {
+            $queryParams['subject_agency_id'] = $localVarParams['subjectAgencyId'];
+        }
+        if ($localVarParams['scope'] !== null) {
+            $queryParams['scope'] = $localVarParams['scope'];
+        }
+        if ($localVarParams['scopeProjectId'] !== null) {
+            $queryParams['scope_project_id'] = $localVarParams['scopeProjectId'];
+        }
+        if ($localVarParams['scopeDomainId'] !== null) {
+            $queryParams['scope_domain_id'] = $localVarParams['scopeDomainId'];
+        }
+        if ($localVarParams['scopeEnterpriseProjectsId'] !== null) {
+            $queryParams['scope_enterprise_projects_id'] = $localVarParams['scopeEnterpriseProjectsId'];
+        }
+        if ($localVarParams['isInherited'] !== null) {
+            $queryParams['is_inherited'] = $localVarParams['isInherited'];
+        }
+        if ($localVarParams['includeGroup'] !== null) {
+            $queryParams['include_group'] = $localVarParams['includeGroup'];
+        }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['perPage'] !== null) {
+            $queryParams['per_page'] = $localVarParams['perPage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainRoleAssignmentsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainRoleAssignmentsRequest');
+    }
+
+    /**
      * 查询Metadata文件
      *
      * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询身份提供商导入到IAM中的Metadata文件。

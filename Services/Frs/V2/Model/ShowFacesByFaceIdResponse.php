@@ -23,7 +23,7 @@ class ShowFacesByFaceIdResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * faceSetId  人脸库ID，随机生成的包含八个字符的字符串。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
-    * faces  人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。
+    * faces  [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。](tag:hc) [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0018.html)。 调用失败时无此字段。](tag:hk)
     *
     * @var string[]
     */
@@ -37,7 +37,7 @@ class ShowFacesByFaceIdResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * faceSetId  人脸库ID，随机生成的包含八个字符的字符串。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
-    * faces  人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。
+    * faces  [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。](tag:hc) [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0018.html)。 调用失败时无此字段。](tag:hk)
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowFacesByFaceIdResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * faceSetId  人脸库ID，随机生成的包含八个字符的字符串。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
-    * faces  人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。
+    * faces  [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。](tag:hc) [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0018.html)。 调用失败时无此字段。](tag:hk)
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ShowFacesByFaceIdResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * faceSetId  人脸库ID，随机生成的包含八个字符的字符串。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
-    * faces  人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。
+    * faces  [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。](tag:hc) [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0018.html)。 调用失败时无此字段。](tag:hk)
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ShowFacesByFaceIdResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * faceSetId  人脸库ID，随机生成的包含八个字符的字符串。 调用失败时无此字段。
     * faceSetName  人脸库名称。 调用失败时无此字段。
-    * faces  人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。
+    * faces  [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。](tag:hc) [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0018.html)。 调用失败时无此字段。](tag:hk)
     *
     * @var string[]
     */
@@ -245,7 +245,7 @@ class ShowFacesByFaceIdResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets faces
-    *  人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。
+    *  [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。](tag:hc) [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0018.html)。 调用失败时无此字段。](tag:hk)
     *
     * @return \HuaweiCloud\SDK\Frs\V2\Model\FaceSetFace[]|null
     */
@@ -257,7 +257,7 @@ class ShowFacesByFaceIdResponse implements ModelInterface, ArrayAccess
     /**
     * Sets faces
     *
-    * @param \HuaweiCloud\SDK\Frs\V2\Model\FaceSetFace[]|null $faces 人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。
+    * @param \HuaweiCloud\SDK\Frs\V2\Model\FaceSetFace[]|null $faces [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/api-face/face_02_0018.html)。 调用失败时无此字段。](tag:hc) [人脸库当中的人脸结构，详见[FaceSetFace](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0018.html)。 调用失败时无此字段。](tag:hk)
     *
     * @return $this
     */

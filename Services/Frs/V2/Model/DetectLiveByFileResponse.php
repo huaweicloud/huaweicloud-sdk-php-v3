@@ -22,7 +22,7 @@ class DetectLiveByFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * videoResult  videoResult
-    * warningList  警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。 调用失败时无此字段
+    * warningList  [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。 调用失败时无此字段](tag:hc) [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0077.html)。 调用失败时无此字段](tag:hk)
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class DetectLiveByFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * videoResult  videoResult
-    * warningList  警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。 调用失败时无此字段
+    * warningList  [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。 调用失败时无此字段](tag:hc) [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0077.html)。 调用失败时无此字段](tag:hk)
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class DetectLiveByFileResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * videoResult  videoResult
-    * warningList  警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。 调用失败时无此字段
+    * warningList  [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。 调用失败时无此字段](tag:hc) [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0077.html)。 调用失败时无此字段](tag:hk)
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class DetectLiveByFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * videoResult  videoResult
-    * warningList  警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。 调用失败时无此字段
+    * warningList  [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。 调用失败时无此字段](tag:hc) [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0077.html)。 调用失败时无此字段](tag:hk)
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class DetectLiveByFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * videoResult  videoResult
-    * warningList  警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。 调用失败时无此字段
+    * warningList  [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。 调用失败时无此字段](tag:hc) [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0077.html)。 调用失败时无此字段](tag:hk)
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class DetectLiveByFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets warningList
-    *  警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。 调用失败时无此字段
+    *  [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。 调用失败时无此字段](tag:hc) [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0077.html)。 调用失败时无此字段](tag:hk)
     *
     * @return \HuaweiCloud\SDK\Frs\V2\Model\WarningList[]|null
     */
@@ -222,7 +222,7 @@ class DetectLiveByFileResponse implements ModelInterface, ArrayAccess
     /**
     * Sets warningList
     *
-    * @param \HuaweiCloud\SDK\Frs\V2\Model\WarningList[]|null $warningList 警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。 调用失败时无此字段
+    * @param \HuaweiCloud\SDK\Frs\V2\Model\WarningList[]|null $warningList [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/api-face/face_02_0077.html)。 调用失败时无此字段](tag:hc) [警告信息列表，WarningList结构见[WarningList](https://support.huaweicloud.com/intl/zh-cn/api-face/face_02_0077.html)。 调用失败时无此字段](tag:hk)
     *
     * @return $this
     */
