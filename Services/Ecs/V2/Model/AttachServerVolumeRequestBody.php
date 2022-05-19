@@ -21,21 +21,25 @@ class AttachServerVolumeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * volumeAttachment  volumeAttachment
+    * dryRun  是否只预检此次请求。  true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'volumeAttachment' => '\HuaweiCloud\SDK\Ecs\V2\Model\AttachServerVolumeOption'
+            'volumeAttachment' => '\HuaweiCloud\SDK\Ecs\V2\Model\AttachServerVolumeOption',
+            'dryRun' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * volumeAttachment  volumeAttachment
+    * dryRun  是否只预检此次请求。  true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'volumeAttachment' => null
+        'volumeAttachment' => null,
+        'dryRun' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class AttachServerVolumeRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * volumeAttachment  volumeAttachment
+    * dryRun  是否只预检此次请求。  true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'volumeAttachment' => 'volumeAttachment'
+            'volumeAttachment' => 'volumeAttachment',
+            'dryRun' => 'dry_run'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * volumeAttachment  volumeAttachment
+    * dryRun  是否只预检此次请求。  true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
     *
     * @var string[]
     */
     protected static $setters = [
-            'volumeAttachment' => 'setVolumeAttachment'
+            'volumeAttachment' => 'setVolumeAttachment',
+            'dryRun' => 'setDryRun'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * volumeAttachment  volumeAttachment
+    * dryRun  是否只预检此次请求。  true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
     *
     * @var string[]
     */
     protected static $getters = [
-            'volumeAttachment' => 'getVolumeAttachment'
+            'volumeAttachment' => 'getVolumeAttachment',
+            'dryRun' => 'getDryRun'
     ];
 
     /**
@@ -148,6 +158,7 @@ class AttachServerVolumeRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['volumeAttachment'] = isset($data['volumeAttachment']) ? $data['volumeAttachment'] : null;
+        $this->container['dryRun'] = isset($data['dryRun']) ? $data['dryRun'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class AttachServerVolumeRequestBody implements ModelInterface, ArrayAccess
     public function setVolumeAttachment($volumeAttachment)
     {
         $this->container['volumeAttachment'] = $volumeAttachment;
+        return $this;
+    }
+
+    /**
+    * Gets dryRun
+    *  是否只预检此次请求。  true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
+    *
+    * @return bool|null
+    */
+    public function getDryRun()
+    {
+        return $this->container['dryRun'];
+    }
+
+    /**
+    * Sets dryRun
+    *
+    * @param bool|null $dryRun 是否只预检此次请求。  true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
+    *
+    * @return $this
+    */
+    public function setDryRun($dryRun)
+    {
+        $this->container['dryRun'] = $dryRun;
         return $this;
     }
 

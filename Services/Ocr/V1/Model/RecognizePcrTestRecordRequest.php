@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ecs\V2\Model;
+namespace HuaweiCloud\SDK\Ocr\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ResizeServerRequestBody implements ModelInterface, ArrayAccess
+class RecognizePcrTestRecordRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class ResizeServerRequestBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ResizeServerRequestBody';
+    protected static $openAPIModelName = 'RecognizePcrTestRecordRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resize  resize
-    * dryRun  是否只预检此次请求。  true：发送检查请求，不会变更云服务器规格。检查项包括是否填写了必需参数、请求格式等。  如果检查不通过，则返回对应错误。 如果检查通过，则返回202状态码。 false：发送正常请求，通过检查后并且执行变更云服务器规格请求。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resize' => '\HuaweiCloud\SDK\Ecs\V2\Model\ResizePrePaidServerOption',
-            'dryRun' => 'bool'
+            'body' => '\HuaweiCloud\SDK\Ocr\V1\Model\PcrTestRecordRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resize  resize
-    * dryRun  是否只预检此次请求。  true：发送检查请求，不会变更云服务器规格。检查项包括是否填写了必需参数、请求格式等。  如果检查不通过，则返回对应错误。 如果检查通过，则返回202状态码。 false：发送正常请求，通过检查后并且执行变更云服务器规格请求。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resize' => null,
-        'dryRun' => null
+        'body' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class ResizeServerRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resize  resize
-    * dryRun  是否只预检此次请求。  true：发送检查请求，不会变更云服务器规格。检查项包括是否填写了必需参数、请求格式等。  如果检查不通过，则返回对应错误。 如果检查通过，则返回202状态码。 false：发送正常请求，通过检查后并且执行变更云服务器规格请求。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resize' => 'resize',
-            'dryRun' => 'dry_run'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resize  resize
-    * dryRun  是否只预检此次请求。  true：发送检查请求，不会变更云服务器规格。检查项包括是否填写了必需参数、请求格式等。  如果检查不通过，则返回对应错误。 如果检查通过，则返回202状态码。 false：发送正常请求，通过检查后并且执行变更云服务器规格请求。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'resize' => 'setResize',
-            'dryRun' => 'setDryRun'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resize  resize
-    * dryRun  是否只预检此次请求。  true：发送检查请求，不会变更云服务器规格。检查项包括是否填写了必需参数、请求格式等。  如果检查不通过，则返回对应错误。 如果检查通过，则返回202状态码。 false：发送正常请求，通过检查后并且执行变更云服务器规格请求。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'resize' => 'getResize',
-            'dryRun' => 'getDryRun'
+            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +147,7 @@ class ResizeServerRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['resize'] = isset($data['resize']) ? $data['resize'] : null;
-        $this->container['dryRun'] = isset($data['dryRun']) ? $data['dryRun'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,9 +158,6 @@ class ResizeServerRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['resize'] === null) {
-            $invalidProperties[] = "'resize' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -187,50 +173,26 @@ class ResizeServerRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resize
-    *  resize
+    * Gets body
+    *  body
     *
-    * @return \HuaweiCloud\SDK\Ecs\V2\Model\ResizePrePaidServerOption
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\PcrTestRecordRequestBody|null
     */
-    public function getResize()
+    public function getBody()
     {
-        return $this->container['resize'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets resize
+    * Sets body
     *
-    * @param \HuaweiCloud\SDK\Ecs\V2\Model\ResizePrePaidServerOption $resize resize
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\PcrTestRecordRequestBody|null $body body
     *
     * @return $this
     */
-    public function setResize($resize)
+    public function setBody($body)
     {
-        $this->container['resize'] = $resize;
-        return $this;
-    }
-
-    /**
-    * Gets dryRun
-    *  是否只预检此次请求。  true：发送检查请求，不会变更云服务器规格。检查项包括是否填写了必需参数、请求格式等。  如果检查不通过，则返回对应错误。 如果检查通过，则返回202状态码。 false：发送正常请求，通过检查后并且执行变更云服务器规格请求。
-    *
-    * @return bool|null
-    */
-    public function getDryRun()
-    {
-        return $this->container['dryRun'];
-    }
-
-    /**
-    * Sets dryRun
-    *
-    * @param bool|null $dryRun 是否只预检此次请求。  true：发送检查请求，不会变更云服务器规格。检查项包括是否填写了必需参数、请求格式等。  如果检查不通过，则返回对应错误。 如果检查通过，则返回202状态码。 false：发送正常请求，通过检查后并且执行变更云服务器规格请求。
-    *
-    * @return $this
-    */
-    public function setDryRun($dryRun)
-    {
-        $this->container['dryRun'] = $dryRun;
+        $this->container['body'] = $body;
         return $this;
     }
 

@@ -21,21 +21,25 @@ class ResizePostPaidServerRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resize  resize
+    * dryRun  是否只预检此次请求。  true：发送检查请求，不会变更云服务器规格。检查项包括是否填写了必需参数、请求格式等。  如果检查不通过，则返回对应错误。 如果检查通过，则返回202状态码。 false：发送正常请求，通过检查后并且执行变更云服务器规格请求。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resize' => '\HuaweiCloud\SDK\Ecs\V2\Model\ResizePostPaidServerOption'
+            'resize' => '\HuaweiCloud\SDK\Ecs\V2\Model\ResizePostPaidServerOption',
+            'dryRun' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resize  resize
+    * dryRun  是否只预检此次请求。  true：发送检查请求，不会变更云服务器规格。检查项包括是否填写了必需参数、请求格式等。  如果检查不通过，则返回对应错误。 如果检查通过，则返回202状态码。 false：发送正常请求，通过检查后并且执行变更云服务器规格请求。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resize' => null
+        'resize' => null,
+        'dryRun' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ResizePostPaidServerRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resize  resize
+    * dryRun  是否只预检此次请求。  true：发送检查请求，不会变更云服务器规格。检查项包括是否填写了必需参数、请求格式等。  如果检查不通过，则返回对应错误。 如果检查通过，则返回202状态码。 false：发送正常请求，通过检查后并且执行变更云服务器规格请求。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resize' => 'resize'
+            'resize' => 'resize',
+            'dryRun' => 'dry_run'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resize  resize
+    * dryRun  是否只预检此次请求。  true：发送检查请求，不会变更云服务器规格。检查项包括是否填写了必需参数、请求格式等。  如果检查不通过，则返回对应错误。 如果检查通过，则返回202状态码。 false：发送正常请求，通过检查后并且执行变更云服务器规格请求。
     *
     * @var string[]
     */
     protected static $setters = [
-            'resize' => 'setResize'
+            'resize' => 'setResize',
+            'dryRun' => 'setDryRun'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resize  resize
+    * dryRun  是否只预检此次请求。  true：发送检查请求，不会变更云服务器规格。检查项包括是否填写了必需参数、请求格式等。  如果检查不通过，则返回对应错误。 如果检查通过，则返回202状态码。 false：发送正常请求，通过检查后并且执行变更云服务器规格请求。
     *
     * @var string[]
     */
     protected static $getters = [
-            'resize' => 'getResize'
+            'resize' => 'getResize',
+            'dryRun' => 'getDryRun'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ResizePostPaidServerRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['resize'] = isset($data['resize']) ? $data['resize'] : null;
+        $this->container['dryRun'] = isset($data['dryRun']) ? $data['dryRun'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class ResizePostPaidServerRequestBody implements ModelInterface, ArrayAccess
     public function setResize($resize)
     {
         $this->container['resize'] = $resize;
+        return $this;
+    }
+
+    /**
+    * Gets dryRun
+    *  是否只预检此次请求。  true：发送检查请求，不会变更云服务器规格。检查项包括是否填写了必需参数、请求格式等。  如果检查不通过，则返回对应错误。 如果检查通过，则返回202状态码。 false：发送正常请求，通过检查后并且执行变更云服务器规格请求。
+    *
+    * @return bool|null
+    */
+    public function getDryRun()
+    {
+        return $this->container['dryRun'];
+    }
+
+    /**
+    * Sets dryRun
+    *
+    * @param bool|null $dryRun 是否只预检此次请求。  true：发送检查请求，不会变更云服务器规格。检查项包括是否填写了必需参数、请求格式等。  如果检查不通过，则返回对应错误。 如果检查通过，则返回202状态码。 false：发送正常请求，通过检查后并且执行变更云服务器规格请求。
+    *
+    * @return $this
+    */
+    public function setDryRun($dryRun)
+    {
+        $this->container['dryRun'] = $dryRun;
         return $this;
     }
 

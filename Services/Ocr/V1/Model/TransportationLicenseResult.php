@@ -24,7 +24,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * licenseNumber  道路运输证号。
     * vehicleNumber  车辆号牌。
     * vehicleType  车辆类型。
-    * vehicleWeight  吨(座)位。
+    * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
     * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
     * issueDate  签发日期（非必有，依赖对应运输证板式）。
@@ -41,7 +41,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'licenseNumber' => 'string',
             'vehicleNumber' => 'string',
             'vehicleType' => 'string',
-            'vehicleWeight' => 'string',
+            'maximumCapacity' => 'string',
             'vehicleSize' => 'string',
             'issuingAuthority' => 'string',
             'issueDate' => 'string',
@@ -58,7 +58,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * licenseNumber  道路运输证号。
     * vehicleNumber  车辆号牌。
     * vehicleType  车辆类型。
-    * vehicleWeight  吨(座)位。
+    * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
     * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
     * issueDate  签发日期（非必有，依赖对应运输证板式）。
@@ -75,7 +75,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
         'licenseNumber' => null,
         'vehicleNumber' => null,
         'vehicleType' => null,
-        'vehicleWeight' => null,
+        'maximumCapacity' => null,
         'vehicleSize' => null,
         'issuingAuthority' => null,
         'issueDate' => null,
@@ -113,7 +113,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * licenseNumber  道路运输证号。
     * vehicleNumber  车辆号牌。
     * vehicleType  车辆类型。
-    * vehicleWeight  吨(座)位。
+    * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
     * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
     * issueDate  签发日期（非必有，依赖对应运输证板式）。
@@ -130,7 +130,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'licenseNumber' => 'license_number',
             'vehicleNumber' => 'vehicle_number',
             'vehicleType' => 'vehicle_type',
-            'vehicleWeight' => 'vehicle_weight',
+            'maximumCapacity' => 'maximum_capacity',
             'vehicleSize' => 'vehicle_size',
             'issuingAuthority' => 'issuing_authority',
             'issueDate' => 'issue_date',
@@ -147,7 +147,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * licenseNumber  道路运输证号。
     * vehicleNumber  车辆号牌。
     * vehicleType  车辆类型。
-    * vehicleWeight  吨(座)位。
+    * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
     * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
     * issueDate  签发日期（非必有，依赖对应运输证板式）。
@@ -164,7 +164,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'licenseNumber' => 'setLicenseNumber',
             'vehicleNumber' => 'setVehicleNumber',
             'vehicleType' => 'setVehicleType',
-            'vehicleWeight' => 'setVehicleWeight',
+            'maximumCapacity' => 'setMaximumCapacity',
             'vehicleSize' => 'setVehicleSize',
             'issuingAuthority' => 'setIssuingAuthority',
             'issueDate' => 'setIssueDate',
@@ -181,7 +181,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * licenseNumber  道路运输证号。
     * vehicleNumber  车辆号牌。
     * vehicleType  车辆类型。
-    * vehicleWeight  吨(座)位。
+    * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
     * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
     * issueDate  签发日期（非必有，依赖对应运输证板式）。
@@ -198,7 +198,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'licenseNumber' => 'getLicenseNumber',
             'vehicleNumber' => 'getVehicleNumber',
             'vehicleType' => 'getVehicleType',
-            'vehicleWeight' => 'getVehicleWeight',
+            'maximumCapacity' => 'getMaximumCapacity',
             'vehicleSize' => 'getVehicleSize',
             'issuingAuthority' => 'getIssuingAuthority',
             'issueDate' => 'getIssueDate',
@@ -271,7 +271,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
         $this->container['licenseNumber'] = isset($data['licenseNumber']) ? $data['licenseNumber'] : null;
         $this->container['vehicleNumber'] = isset($data['vehicleNumber']) ? $data['vehicleNumber'] : null;
         $this->container['vehicleType'] = isset($data['vehicleType']) ? $data['vehicleType'] : null;
-        $this->container['vehicleWeight'] = isset($data['vehicleWeight']) ? $data['vehicleWeight'] : null;
+        $this->container['maximumCapacity'] = isset($data['maximumCapacity']) ? $data['maximumCapacity'] : null;
         $this->container['vehicleSize'] = isset($data['vehicleSize']) ? $data['vehicleSize'] : null;
         $this->container['issuingAuthority'] = isset($data['issuingAuthority']) ? $data['issuingAuthority'] : null;
         $this->container['issueDate'] = isset($data['issueDate']) ? $data['issueDate'] : null;
@@ -401,26 +401,26 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets vehicleWeight
+    * Gets maximumCapacity
     *  吨(座)位。
     *
     * @return string|null
     */
-    public function getVehicleWeight()
+    public function getMaximumCapacity()
     {
-        return $this->container['vehicleWeight'];
+        return $this->container['maximumCapacity'];
     }
 
     /**
-    * Sets vehicleWeight
+    * Sets maximumCapacity
     *
-    * @param string|null $vehicleWeight 吨(座)位。
+    * @param string|null $maximumCapacity 吨(座)位。
     *
     * @return $this
     */
-    public function setVehicleWeight($vehicleWeight)
+    public function setMaximumCapacity($maximumCapacity)
     {
-        $this->container['vehicleWeight'] = $vehicleWeight;
+        $this->container['maximumCapacity'] = $maximumCapacity;
         return $this;
     }
 

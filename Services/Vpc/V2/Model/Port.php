@@ -27,7 +27,7 @@ class Port implements ModelInterface, ArrayAccess
     * macAddress  功能描述：端口MAC地址 约束：由系统分配，不支持指定
     * fixedIps  功能说明：端口IP 例如：\"fixed_ips\": [{\"subnet_id\": \"4dc70db6-cb7f-4200-9790-a6a910776bba\", \"ip_address\": \"192.169.25.79\"}] 约束：一个端口只支持一个fixed_ip，且不支持更新。
     * deviceId  功能说明：端口所属设备ID 约束：不支持设置和更新，由系统自动维护
-    * deviceOwner  功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、network:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
+    * deviceOwner  功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、neutron:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
     * tenantId  项目ID
     * status  功能说明：端口状态，Hana硬直通虚拟机端口状态总为DOWN 取值范围：ACTIVE、BUILD、DOWN
     * securityGroups  安全组的ID列表
@@ -79,7 +79,7 @@ class Port implements ModelInterface, ArrayAccess
     * macAddress  功能描述：端口MAC地址 约束：由系统分配，不支持指定
     * fixedIps  功能说明：端口IP 例如：\"fixed_ips\": [{\"subnet_id\": \"4dc70db6-cb7f-4200-9790-a6a910776bba\", \"ip_address\": \"192.169.25.79\"}] 约束：一个端口只支持一个fixed_ip，且不支持更新。
     * deviceId  功能说明：端口所属设备ID 约束：不支持设置和更新，由系统自动维护
-    * deviceOwner  功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、network:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
+    * deviceOwner  功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、neutron:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
     * tenantId  项目ID
     * status  功能说明：端口状态，Hana硬直通虚拟机端口状态总为DOWN 取值范围：ACTIVE、BUILD、DOWN
     * securityGroups  安全组的ID列表
@@ -152,7 +152,7 @@ class Port implements ModelInterface, ArrayAccess
     * macAddress  功能描述：端口MAC地址 约束：由系统分配，不支持指定
     * fixedIps  功能说明：端口IP 例如：\"fixed_ips\": [{\"subnet_id\": \"4dc70db6-cb7f-4200-9790-a6a910776bba\", \"ip_address\": \"192.169.25.79\"}] 约束：一个端口只支持一个fixed_ip，且不支持更新。
     * deviceId  功能说明：端口所属设备ID 约束：不支持设置和更新，由系统自动维护
-    * deviceOwner  功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、network:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
+    * deviceOwner  功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、neutron:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
     * tenantId  项目ID
     * status  功能说明：端口状态，Hana硬直通虚拟机端口状态总为DOWN 取值范围：ACTIVE、BUILD、DOWN
     * securityGroups  安全组的ID列表
@@ -204,7 +204,7 @@ class Port implements ModelInterface, ArrayAccess
     * macAddress  功能描述：端口MAC地址 约束：由系统分配，不支持指定
     * fixedIps  功能说明：端口IP 例如：\"fixed_ips\": [{\"subnet_id\": \"4dc70db6-cb7f-4200-9790-a6a910776bba\", \"ip_address\": \"192.169.25.79\"}] 约束：一个端口只支持一个fixed_ip，且不支持更新。
     * deviceId  功能说明：端口所属设备ID 约束：不支持设置和更新，由系统自动维护
-    * deviceOwner  功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、network:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
+    * deviceOwner  功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、neutron:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
     * tenantId  项目ID
     * status  功能说明：端口状态，Hana硬直通虚拟机端口状态总为DOWN 取值范围：ACTIVE、BUILD、DOWN
     * securityGroups  安全组的ID列表
@@ -256,7 +256,7 @@ class Port implements ModelInterface, ArrayAccess
     * macAddress  功能描述：端口MAC地址 约束：由系统分配，不支持指定
     * fixedIps  功能说明：端口IP 例如：\"fixed_ips\": [{\"subnet_id\": \"4dc70db6-cb7f-4200-9790-a6a910776bba\", \"ip_address\": \"192.169.25.79\"}] 约束：一个端口只支持一个fixed_ip，且不支持更新。
     * deviceId  功能说明：端口所属设备ID 约束：不支持设置和更新，由系统自动维护
-    * deviceOwner  功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、network:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
+    * deviceOwner  功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、neutron:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
     * tenantId  项目ID
     * status  功能说明：端口状态，Hana硬直通虚拟机端口状态总为DOWN 取值范围：ACTIVE、BUILD、DOWN
     * securityGroups  安全组的ID列表
@@ -340,7 +340,7 @@ class Port implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const DEVICE_OWNER_NETWORKDHCP = 'network:dhcp';
-    const DEVICE_OWNER_NETWORKVIP_PORT = 'network:VIP_PORT';
+    const DEVICE_OWNER_NEUTRONVIP_PORT = 'neutron:VIP_PORT';
     const DEVICE_OWNER_NETWORKROUTER_INTERFACE_DISTRIBUTED = 'network:router_interface_distributed';
     const DEVICE_OWNER_NETWORKROUTER_CENTRALIZED_SNAT = 'network:router_centralized_snat';
     const STATUS_ACTIVE = 'ACTIVE';
@@ -357,7 +357,7 @@ class Port implements ModelInterface, ArrayAccess
     {
         return [
             self::DEVICE_OWNER_NETWORKDHCP,
-            self::DEVICE_OWNER_NETWORKVIP_PORT,
+            self::DEVICE_OWNER_NEUTRONVIP_PORT,
             self::DEVICE_OWNER_NETWORKROUTER_INTERFACE_DISTRIBUTED,
             self::DEVICE_OWNER_NETWORKROUTER_CENTRALIZED_SNAT,
         ];
@@ -697,7 +697,7 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceOwner
-    *  功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、network:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
+    *  功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、neutron:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
     *
     * @return string
     */
@@ -709,7 +709,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets deviceOwner
     *
-    * @param string $deviceOwner 功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、network:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
+    * @param string $deviceOwner 功能说明：设备所属 取值范围：合法设备所属，如network:dhcp、neutron:VIP_PORT、network:router_interface_distributed、network:router_centralized_snat 约束：不支持设置和更新，由系统自动维护
     *
     * @return $this
     */

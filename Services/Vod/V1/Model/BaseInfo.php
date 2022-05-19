@@ -31,6 +31,7 @@ class BaseInfo implements ModelInterface, ArrayAccess
     * tags  媒资标签。  单个标签不超过16个字节，最多不超过16个标签。  多个用逗号分隔，UTF8编码。
     * metaData  metaData
     * videoUrl  原始视频文件的访问地址。
+    * signUrl  原视频文件的OBS临时访问地址,仅媒资详情接口生效
     * coverInfoArray  封面信息。
     * subtitleInfo  字幕信息数组
     * sourcePath  sourcePath
@@ -50,6 +51,7 @@ class BaseInfo implements ModelInterface, ArrayAccess
             'tags' => 'string',
             'metaData' => '\HuaweiCloud\SDK\Vod\V1\Model\MetaData',
             'videoUrl' => 'string',
+            'signUrl' => 'string',
             'coverInfoArray' => '\HuaweiCloud\SDK\Vod\V1\Model\CoverInfo[]',
             'subtitleInfo' => '\HuaweiCloud\SDK\Vod\V1\Model\SubtitleInfo[]',
             'sourcePath' => '\HuaweiCloud\SDK\Vod\V1\Model\FileAddr',
@@ -69,6 +71,7 @@ class BaseInfo implements ModelInterface, ArrayAccess
     * tags  媒资标签。  单个标签不超过16个字节，最多不超过16个标签。  多个用逗号分隔，UTF8编码。
     * metaData  metaData
     * videoUrl  原始视频文件的访问地址。
+    * signUrl  原视频文件的OBS临时访问地址,仅媒资详情接口生效
     * coverInfoArray  封面信息。
     * subtitleInfo  字幕信息数组
     * sourcePath  sourcePath
@@ -88,6 +91,7 @@ class BaseInfo implements ModelInterface, ArrayAccess
         'tags' => null,
         'metaData' => null,
         'videoUrl' => null,
+        'signUrl' => null,
         'coverInfoArray' => null,
         'subtitleInfo' => null,
         'sourcePath' => null,
@@ -128,6 +132,7 @@ class BaseInfo implements ModelInterface, ArrayAccess
     * tags  媒资标签。  单个标签不超过16个字节，最多不超过16个标签。  多个用逗号分隔，UTF8编码。
     * metaData  metaData
     * videoUrl  原始视频文件的访问地址。
+    * signUrl  原视频文件的OBS临时访问地址,仅媒资详情接口生效
     * coverInfoArray  封面信息。
     * subtitleInfo  字幕信息数组
     * sourcePath  sourcePath
@@ -147,6 +152,7 @@ class BaseInfo implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'metaData' => 'meta_data',
             'videoUrl' => 'video_url',
+            'signUrl' => 'sign_url',
             'coverInfoArray' => 'cover_info_array',
             'subtitleInfo' => 'subtitle_info',
             'sourcePath' => 'source_path',
@@ -166,6 +172,7 @@ class BaseInfo implements ModelInterface, ArrayAccess
     * tags  媒资标签。  单个标签不超过16个字节，最多不超过16个标签。  多个用逗号分隔，UTF8编码。
     * metaData  metaData
     * videoUrl  原始视频文件的访问地址。
+    * signUrl  原视频文件的OBS临时访问地址,仅媒资详情接口生效
     * coverInfoArray  封面信息。
     * subtitleInfo  字幕信息数组
     * sourcePath  sourcePath
@@ -185,6 +192,7 @@ class BaseInfo implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'metaData' => 'setMetaData',
             'videoUrl' => 'setVideoUrl',
+            'signUrl' => 'setSignUrl',
             'coverInfoArray' => 'setCoverInfoArray',
             'subtitleInfo' => 'setSubtitleInfo',
             'sourcePath' => 'setSourcePath',
@@ -204,6 +212,7 @@ class BaseInfo implements ModelInterface, ArrayAccess
     * tags  媒资标签。  单个标签不超过16个字节，最多不超过16个标签。  多个用逗号分隔，UTF8编码。
     * metaData  metaData
     * videoUrl  原始视频文件的访问地址。
+    * signUrl  原视频文件的OBS临时访问地址,仅媒资详情接口生效
     * coverInfoArray  封面信息。
     * subtitleInfo  字幕信息数组
     * sourcePath  sourcePath
@@ -223,6 +232,7 @@ class BaseInfo implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'metaData' => 'getMetaData',
             'videoUrl' => 'getVideoUrl',
+            'signUrl' => 'getSignUrl',
             'coverInfoArray' => 'getCoverInfoArray',
             'subtitleInfo' => 'getSubtitleInfo',
             'sourcePath' => 'getSourcePath',
@@ -298,6 +308,7 @@ class BaseInfo implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['metaData'] = isset($data['metaData']) ? $data['metaData'] : null;
         $this->container['videoUrl'] = isset($data['videoUrl']) ? $data['videoUrl'] : null;
+        $this->container['signUrl'] = isset($data['signUrl']) ? $data['signUrl'] : null;
         $this->container['coverInfoArray'] = isset($data['coverInfoArray']) ? $data['coverInfoArray'] : null;
         $this->container['subtitleInfo'] = isset($data['subtitleInfo']) ? $data['subtitleInfo'] : null;
         $this->container['sourcePath'] = isset($data['sourcePath']) ? $data['sourcePath'] : null;
@@ -587,6 +598,30 @@ class BaseInfo implements ModelInterface, ArrayAccess
     public function setVideoUrl($videoUrl)
     {
         $this->container['videoUrl'] = $videoUrl;
+        return $this;
+    }
+
+    /**
+    * Gets signUrl
+    *  原视频文件的OBS临时访问地址,仅媒资详情接口生效
+    *
+    * @return string|null
+    */
+    public function getSignUrl()
+    {
+        return $this->container['signUrl'];
+    }
+
+    /**
+    * Sets signUrl
+    *
+    * @param string|null $signUrl 原视频文件的OBS临时访问地址,仅媒资详情接口生效
+    *
+    * @return $this
+    */
+    public function setSignUrl($signUrl)
+    {
+        $this->container['signUrl'] = $signUrl;
         return $this;
     }
 

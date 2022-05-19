@@ -23,7 +23,7 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domainName  加速域名，参考格式：www.test1.com。
-    * queryDate  查询日期，yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
+    * queryDate  查询开始时间，格式为yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
     * pageSize  每页显示日志数量。
     * pageNumber  当前页数。
     *
@@ -43,7 +43,7 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domainName  加速域名，参考格式：www.test1.com。
-    * queryDate  查询日期，yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
+    * queryDate  查询开始时间，格式为yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
     * pageSize  每页显示日志数量。
     * pageNumber  当前页数。
     *
@@ -84,7 +84,7 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domainName  加速域名，参考格式：www.test1.com。
-    * queryDate  查询日期，yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
+    * queryDate  查询开始时间，格式为yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
     * pageSize  每页显示日志数量。
     * pageNumber  当前页数。
     *
@@ -104,7 +104,7 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domainName  加速域名，参考格式：www.test1.com。
-    * queryDate  查询日期，yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
+    * queryDate  查询开始时间，格式为yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
     * pageSize  每页显示日志数量。
     * pageNumber  当前页数。
     *
@@ -124,7 +124,7 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domainName  加速域名，参考格式：www.test1.com。
-    * queryDate  查询日期，yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
+    * queryDate  查询开始时间，格式为yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
     * pageSize  每页显示日志数量。
     * pageNumber  当前页数。
     *
@@ -319,7 +319,7 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryDate
-    *  查询日期，yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
+    *  查询开始时间，格式为yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
     *
     * @return string
     */
@@ -331,7 +331,7 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets queryDate
     *
-    * @param string $queryDate 查询日期，yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
+    * @param string $queryDate 查询开始时间，格式为yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class Subtitle implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  字幕id。  取值范围：[1,8]。
     * type  字幕文件类型，目前暂只支持“SRT”。
-    * language  字幕语音类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
+    * language  字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
     * md5  字幕文件的MD5值。
     * description  字幕描述。
     *
@@ -40,7 +40,7 @@ class Subtitle implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  字幕id。  取值范围：[1,8]。
     * type  字幕文件类型，目前暂只支持“SRT”。
-    * language  字幕语音类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
+    * language  字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
     * md5  字幕文件的MD5值。
     * description  字幕描述。
     *
@@ -79,7 +79,7 @@ class Subtitle implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  字幕id。  取值范围：[1,8]。
     * type  字幕文件类型，目前暂只支持“SRT”。
-    * language  字幕语音类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
+    * language  字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
     * md5  字幕文件的MD5值。
     * description  字幕描述。
     *
@@ -97,7 +97,7 @@ class Subtitle implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  字幕id。  取值范围：[1,8]。
     * type  字幕文件类型，目前暂只支持“SRT”。
-    * language  字幕语音类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
+    * language  字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
     * md5  字幕文件的MD5值。
     * description  字幕描述。
     *
@@ -115,7 +115,7 @@ class Subtitle implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  字幕id。  取值范围：[1,8]。
     * type  字幕文件类型，目前暂只支持“SRT”。
-    * language  字幕语音类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
+    * language  字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
     * md5  字幕文件的MD5值。
     * description  字幕描述。
     *
@@ -319,7 +319,7 @@ class Subtitle implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  字幕语音类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
+    *  字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
     *
     * @return string
     */
@@ -331,7 +331,7 @@ class Subtitle implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string $language 字幕语音类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
+    * @param string $language 字幕语言类型。  取值如下： - CN：表示中文字幕。 - EN：表示英文字幕。
     *
     * @return $this
     */

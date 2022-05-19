@@ -250,7 +250,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const DEVICE_OWNER_NETWORKDHCP = 'network:dhcp';
-    const DEVICE_OWNER_NETWORKVIP_PORT = 'network:VIP_PORT';
+    const DEVICE_OWNER_NEUTRONVIP_PORT = 'neutron:VIP_PORT';
     const DEVICE_OWNER_NETWORKROUTER_INTERFACE_DISTRIBUTED = 'network:router_interface_distributed';
     const DEVICE_OWNER_NETWORKROUTER_CENTRALIZED_SNAT = 'network:router_centralized_snat';
     const STATUS_ACTIVE = 'ACTIVE';
@@ -267,7 +267,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     {
         return [
             self::DEVICE_OWNER_NETWORKDHCP,
-            self::DEVICE_OWNER_NETWORKVIP_PORT,
+            self::DEVICE_OWNER_NEUTRONVIP_PORT,
             self::DEVICE_OWNER_NETWORKROUTER_INTERFACE_DISTRIBUTED,
             self::DEVICE_OWNER_NETWORKROUTER_CENTRALIZED_SNAT,
         ];
