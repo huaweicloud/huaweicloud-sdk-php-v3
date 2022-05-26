@@ -1,3 +1,14 @@
+# 3.0.48-rc 2022-05-26
+
+### HuaweiCloud SDK ECS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`AttachServerVolume`新增请求参数 `volume_type`、`hw:passthrough`
+
 # 3.0.47-rc 2022-05-19
 
 ### HuaweiCloud SDK ECS

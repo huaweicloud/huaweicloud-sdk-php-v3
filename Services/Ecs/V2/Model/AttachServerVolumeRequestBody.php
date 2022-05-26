@@ -21,7 +21,7 @@ class AttachServerVolumeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * volumeAttachment  volumeAttachment
-    * dryRun  是否只预检此次请求。  true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
+    * dryRun  是否只预检此次请求。  - true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 - false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class AttachServerVolumeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * volumeAttachment  volumeAttachment
-    * dryRun  是否只预检此次请求。  true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
+    * dryRun  是否只预检此次请求。  - true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 - false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class AttachServerVolumeRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * volumeAttachment  volumeAttachment
-    * dryRun  是否只预检此次请求。  true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
+    * dryRun  是否只预检此次请求。  - true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 - false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class AttachServerVolumeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * volumeAttachment  volumeAttachment
-    * dryRun  是否只预检此次请求。  true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
+    * dryRun  是否只预检此次请求。  - true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 - false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class AttachServerVolumeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * volumeAttachment  volumeAttachment
-    * dryRun  是否只预检此次请求。  true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
+    * dryRun  是否只预检此次请求。  - true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 - false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
     *
     * @var string[]
     */
@@ -212,7 +212,7 @@ class AttachServerVolumeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets dryRun
-    *  是否只预检此次请求。  true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
+    *  是否只预检此次请求。  - true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 - false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
     *
     * @return bool|null
     */
@@ -224,7 +224,7 @@ class AttachServerVolumeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets dryRun
     *
-    * @param bool|null $dryRun 是否只预检此次请求。  true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
+    * @param bool|null $dryRun 是否只预检此次请求。  - true：发送检查请求，不会挂载磁盘。检查项包括是否填写了必需参数、请求格式、业务限制。如果检查不通过，则返回对应错误。如果检查通过，则返回响应结果。 - false：发送正常请求，通过检查后并且进行挂载磁盘请求。 默认值：false
     *
     * @return $this
     */
