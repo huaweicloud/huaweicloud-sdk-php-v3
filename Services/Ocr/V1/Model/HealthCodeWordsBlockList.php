@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cdn\V2\Model;
+namespace HuaweiCloud\SDK\Ocr\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowTopUrlResponse implements ModelInterface, ArrayAccess
+class HealthCodeWordsBlockList implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,30 +16,34 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowTopUrlResponse';
+    protected static $openAPIModelName = 'HealthCodeWordsBlockList';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * words  文字块识别结果。
+    * location  识别到的文字块的区域位置信息，列表形式，分别表示文字块4个顶点的（x,y）坐标。采用图像坐标系，图像坐标原点为图像左上角，x轴沿水平方向，y轴沿竖直方向。
+    * confidence  各个字段的置信度
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'serviceArea' => 'string',
-            'topUrlSummary' => '\HuaweiCloud\SDK\Cdn\V2\Model\TopUrlSummary[]'
+            'words' => 'string',
+            'location' => 'int[]',
+            'confidence' => 'float'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * words  文字块识别结果。
+    * location  识别到的文字块的区域位置信息，列表形式，分别表示文字块4个顶点的（x,y）坐标。采用图像坐标系，图像坐标原点为图像左上角，x轴沿水平方向，y轴沿竖直方向。
+    * confidence  各个字段的置信度
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'serviceArea' => null,
-        'topUrlSummary' => null
+        'words' => null,
+        'location' => 'int32',
+        'confidence' => 'float'
     ];
 
     /**
@@ -66,38 +69,44 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * words  文字块识别结果。
+    * location  识别到的文字块的区域位置信息，列表形式，分别表示文字块4个顶点的（x,y）坐标。采用图像坐标系，图像坐标原点为图像左上角，x轴沿水平方向，y轴沿竖直方向。
+    * confidence  各个字段的置信度
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'serviceArea' => 'service_area',
-            'topUrlSummary' => 'top_url_summary'
+            'words' => 'words',
+            'location' => 'location',
+            'confidence' => 'confidence'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * words  文字块识别结果。
+    * location  识别到的文字块的区域位置信息，列表形式，分别表示文字块4个顶点的（x,y）坐标。采用图像坐标系，图像坐标原点为图像左上角，x轴沿水平方向，y轴沿竖直方向。
+    * confidence  各个字段的置信度
     *
     * @var string[]
     */
     protected static $setters = [
-            'serviceArea' => 'setServiceArea',
-            'topUrlSummary' => 'setTopUrlSummary'
+            'words' => 'setWords',
+            'location' => 'setLocation',
+            'confidence' => 'setConfidence'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * words  文字块识别结果。
+    * location  识别到的文字块的区域位置信息，列表形式，分别表示文字块4个顶点的（x,y）坐标。采用图像坐标系，图像坐标原点为图像左上角，x轴沿水平方向，y轴沿竖直方向。
+    * confidence  各个字段的置信度
     *
     * @var string[]
     */
     protected static $getters = [
-            'serviceArea' => 'getServiceArea',
-            'topUrlSummary' => 'getTopUrlSummary'
+            'words' => 'getWords',
+            'location' => 'getLocation',
+            'confidence' => 'getConfidence'
     ];
 
     /**
@@ -158,8 +167,9 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
-        $this->container['topUrlSummary'] = isset($data['topUrlSummary']) ? $data['topUrlSummary'] : null;
+        $this->container['words'] = isset($data['words']) ? $data['words'] : null;
+        $this->container['location'] = isset($data['location']) ? $data['location'] : null;
+        $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
     }
 
     /**
@@ -170,12 +180,6 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['serviceArea']) && (mb_strlen($this->container['serviceArea']) > 512)) {
-                $invalidProperties[] = "invalid value for 'serviceArea', the character length must be smaller than or equal to 512.";
-            }
-            if (!is_null($this->container['serviceArea']) && (mb_strlen($this->container['serviceArea']) < 2)) {
-                $invalidProperties[] = "invalid value for 'serviceArea', the character length must be bigger than or equal to 2.";
-            }
         return $invalidProperties;
     }
 
@@ -191,50 +195,74 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets serviceArea
-    *  服务区域
+    * Gets words
+    *  文字块识别结果。
     *
     * @return string|null
     */
-    public function getServiceArea()
+    public function getWords()
     {
-        return $this->container['serviceArea'];
+        return $this->container['words'];
     }
 
     /**
-    * Sets serviceArea
+    * Sets words
     *
-    * @param string|null $serviceArea 服务区域
+    * @param string|null $words 文字块识别结果。
     *
     * @return $this
     */
-    public function setServiceArea($serviceArea)
+    public function setWords($words)
     {
-        $this->container['serviceArea'] = $serviceArea;
+        $this->container['words'] = $words;
         return $this;
     }
 
     /**
-    * Gets topUrlSummary
-    *  详情数据对象。
+    * Gets location
+    *  识别到的文字块的区域位置信息，列表形式，分别表示文字块4个顶点的（x,y）坐标。采用图像坐标系，图像坐标原点为图像左上角，x轴沿水平方向，y轴沿竖直方向。
     *
-    * @return \HuaweiCloud\SDK\Cdn\V2\Model\TopUrlSummary[]|null
+    * @return int[]|null
     */
-    public function getTopUrlSummary()
+    public function getLocation()
     {
-        return $this->container['topUrlSummary'];
+        return $this->container['location'];
     }
 
     /**
-    * Sets topUrlSummary
+    * Sets location
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\TopUrlSummary[]|null $topUrlSummary 详情数据对象。
+    * @param int[]|null $location 识别到的文字块的区域位置信息，列表形式，分别表示文字块4个顶点的（x,y）坐标。采用图像坐标系，图像坐标原点为图像左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @return $this
     */
-    public function setTopUrlSummary($topUrlSummary)
+    public function setLocation($location)
     {
-        $this->container['topUrlSummary'] = $topUrlSummary;
+        $this->container['location'] = $location;
+        return $this;
+    }
+
+    /**
+    * Gets confidence
+    *  各个字段的置信度
+    *
+    * @return float|null
+    */
+    public function getConfidence()
+    {
+        return $this->container['confidence'];
+    }
+
+    /**
+    * Sets confidence
+    *
+    * @param float|null $confidence 各个字段的置信度
+    *
+    * @return $this
+    */
+    public function setConfidence($confidence)
+    {
+        $this->container['confidence'] = $confidence;
         return $this;
     }
 

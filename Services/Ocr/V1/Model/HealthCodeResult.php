@@ -23,7 +23,9 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
     * name  姓名
     * time  健康码更新时间
     * color  健康码颜色，可选值包括： - \"green\" - \"yellow\" - \"red\" - \"gray\"
-    * confidence  各个字段的置信度
+    * confidence  各个字段的置信度。
+    * wordsBlockCount  代表检测识别出来的文字块数目。
+    * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
             'name' => 'string',
             'time' => 'string',
             'color' => 'string',
-            'confidence' => 'object'
+            'confidence' => 'object',
+            'wordsBlockCount' => 'int',
+            'wordsBlockList' => '\HuaweiCloud\SDK\Ocr\V1\Model\HealthCodeWordsBlockList[]'
     ];
 
     /**
@@ -39,7 +43,9 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
     * name  姓名
     * time  健康码更新时间
     * color  健康码颜色，可选值包括： - \"green\" - \"yellow\" - \"red\" - \"gray\"
-    * confidence  各个字段的置信度
+    * confidence  各个字段的置信度。
+    * wordsBlockCount  代表检测识别出来的文字块数目。
+    * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
         'name' => null,
         'time' => null,
         'color' => null,
-        'confidence' => null
+        'confidence' => null,
+        'wordsBlockCount' => 'int32',
+        'wordsBlockList' => null
     ];
 
     /**
@@ -76,7 +84,9 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
     * name  姓名
     * time  健康码更新时间
     * color  健康码颜色，可选值包括： - \"green\" - \"yellow\" - \"red\" - \"gray\"
-    * confidence  各个字段的置信度
+    * confidence  各个字段的置信度。
+    * wordsBlockCount  代表检测识别出来的文字块数目。
+    * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
             'name' => 'name',
             'time' => 'time',
             'color' => 'color',
-            'confidence' => 'confidence'
+            'confidence' => 'confidence',
+            'wordsBlockCount' => 'words_block_count',
+            'wordsBlockList' => 'words_block_list'
     ];
 
     /**
@@ -92,7 +104,9 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
     * name  姓名
     * time  健康码更新时间
     * color  健康码颜色，可选值包括： - \"green\" - \"yellow\" - \"red\" - \"gray\"
-    * confidence  各个字段的置信度
+    * confidence  各个字段的置信度。
+    * wordsBlockCount  代表检测识别出来的文字块数目。
+    * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'time' => 'setTime',
             'color' => 'setColor',
-            'confidence' => 'setConfidence'
+            'confidence' => 'setConfidence',
+            'wordsBlockCount' => 'setWordsBlockCount',
+            'wordsBlockList' => 'setWordsBlockList'
     ];
 
     /**
@@ -108,7 +124,9 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
     * name  姓名
     * time  健康码更新时间
     * color  健康码颜色，可选值包括： - \"green\" - \"yellow\" - \"red\" - \"gray\"
-    * confidence  各个字段的置信度
+    * confidence  各个字段的置信度。
+    * wordsBlockCount  代表检测识别出来的文字块数目。
+    * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'time' => 'getTime',
             'color' => 'getColor',
-            'confidence' => 'getConfidence'
+            'confidence' => 'getConfidence',
+            'wordsBlockCount' => 'getWordsBlockCount',
+            'wordsBlockList' => 'getWordsBlockList'
     ];
 
     /**
@@ -181,6 +201,8 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
         $this->container['color'] = isset($data['color']) ? $data['color'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
+        $this->container['wordsBlockCount'] = isset($data['wordsBlockCount']) ? $data['wordsBlockCount'] : null;
+        $this->container['wordsBlockList'] = isset($data['wordsBlockList']) ? $data['wordsBlockList'] : null;
     }
 
     /**
@@ -202,6 +224,12 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
         }
         if ($this->container['confidence'] === null) {
             $invalidProperties[] = "'confidence' can't be null";
+        }
+        if ($this->container['wordsBlockCount'] === null) {
+            $invalidProperties[] = "'wordsBlockCount' can't be null";
+        }
+        if ($this->container['wordsBlockList'] === null) {
+            $invalidProperties[] = "'wordsBlockList' can't be null";
         }
         return $invalidProperties;
     }
@@ -291,7 +319,7 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets confidence
-    *  各个字段的置信度
+    *  各个字段的置信度。
     *
     * @return object
     */
@@ -303,13 +331,61 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
     /**
     * Sets confidence
     *
-    * @param object $confidence 各个字段的置信度
+    * @param object $confidence 各个字段的置信度。
     *
     * @return $this
     */
     public function setConfidence($confidence)
     {
         $this->container['confidence'] = $confidence;
+        return $this;
+    }
+
+    /**
+    * Gets wordsBlockCount
+    *  代表检测识别出来的文字块数目。
+    *
+    * @return int
+    */
+    public function getWordsBlockCount()
+    {
+        return $this->container['wordsBlockCount'];
+    }
+
+    /**
+    * Sets wordsBlockCount
+    *
+    * @param int $wordsBlockCount 代表检测识别出来的文字块数目。
+    *
+    * @return $this
+    */
+    public function setWordsBlockCount($wordsBlockCount)
+    {
+        $this->container['wordsBlockCount'] = $wordsBlockCount;
+        return $this;
+    }
+
+    /**
+    * Gets wordsBlockList
+    *  识别文字块列表，输出顺序从左到右，从上到下。
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\HealthCodeWordsBlockList[]
+    */
+    public function getWordsBlockList()
+    {
+        return $this->container['wordsBlockList'];
+    }
+
+    /**
+    * Sets wordsBlockList
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\HealthCodeWordsBlockList[] $wordsBlockList 识别文字块列表，输出顺序从左到右，从上到下。
+    *
+    * @return $this
+    */
+    public function setWordsBlockList($wordsBlockList)
+    {
+        $this->container['wordsBlockList'] = $wordsBlockList;
         return $this;
     }
 

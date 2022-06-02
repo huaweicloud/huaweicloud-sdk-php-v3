@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cdn\V2\Model;
+namespace HuaweiCloud\SDK\Ocr\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowTopUrlResponse implements ModelInterface, ArrayAccess
+class PcrTestRecordConfidence implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,30 +16,38 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowTopUrlResponse';
+    protected static $openAPIModelName = 'PcrTestRecordConfidence';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * name  姓名的置信度
+    * samplingTime  核酸检测采样时间的置信度
+    * testTime  核酸检测结果更新时间的置信度
+    * testResult  核酸检测结果的置信度
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'serviceArea' => 'string',
-            'topUrlSummary' => '\HuaweiCloud\SDK\Cdn\V2\Model\TopUrlSummary[]'
+            'name' => 'float',
+            'samplingTime' => 'float',
+            'testTime' => 'float',
+            'testResult' => 'float'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * name  姓名的置信度
+    * samplingTime  核酸检测采样时间的置信度
+    * testTime  核酸检测结果更新时间的置信度
+    * testResult  核酸检测结果的置信度
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'serviceArea' => null,
-        'topUrlSummary' => null
+        'name' => 'float',
+        'samplingTime' => 'float',
+        'testTime' => 'float',
+        'testResult' => 'float'
     ];
 
     /**
@@ -66,38 +73,50 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * name  姓名的置信度
+    * samplingTime  核酸检测采样时间的置信度
+    * testTime  核酸检测结果更新时间的置信度
+    * testResult  核酸检测结果的置信度
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'serviceArea' => 'service_area',
-            'topUrlSummary' => 'top_url_summary'
+            'name' => 'name',
+            'samplingTime' => 'sampling_time',
+            'testTime' => 'test_time',
+            'testResult' => 'test_result'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * name  姓名的置信度
+    * samplingTime  核酸检测采样时间的置信度
+    * testTime  核酸检测结果更新时间的置信度
+    * testResult  核酸检测结果的置信度
     *
     * @var string[]
     */
     protected static $setters = [
-            'serviceArea' => 'setServiceArea',
-            'topUrlSummary' => 'setTopUrlSummary'
+            'name' => 'setName',
+            'samplingTime' => 'setSamplingTime',
+            'testTime' => 'setTestTime',
+            'testResult' => 'setTestResult'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * name  姓名的置信度
+    * samplingTime  核酸检测采样时间的置信度
+    * testTime  核酸检测结果更新时间的置信度
+    * testResult  核酸检测结果的置信度
     *
     * @var string[]
     */
     protected static $getters = [
-            'serviceArea' => 'getServiceArea',
-            'topUrlSummary' => 'getTopUrlSummary'
+            'name' => 'getName',
+            'samplingTime' => 'getSamplingTime',
+            'testTime' => 'getTestTime',
+            'testResult' => 'getTestResult'
     ];
 
     /**
@@ -158,8 +177,10 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
-        $this->container['topUrlSummary'] = isset($data['topUrlSummary']) ? $data['topUrlSummary'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['samplingTime'] = isset($data['samplingTime']) ? $data['samplingTime'] : null;
+        $this->container['testTime'] = isset($data['testTime']) ? $data['testTime'] : null;
+        $this->container['testResult'] = isset($data['testResult']) ? $data['testResult'] : null;
     }
 
     /**
@@ -170,12 +191,6 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['serviceArea']) && (mb_strlen($this->container['serviceArea']) > 512)) {
-                $invalidProperties[] = "invalid value for 'serviceArea', the character length must be smaller than or equal to 512.";
-            }
-            if (!is_null($this->container['serviceArea']) && (mb_strlen($this->container['serviceArea']) < 2)) {
-                $invalidProperties[] = "invalid value for 'serviceArea', the character length must be bigger than or equal to 2.";
-            }
         return $invalidProperties;
     }
 
@@ -191,50 +206,98 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets serviceArea
-    *  服务区域
+    * Gets name
+    *  姓名的置信度
     *
-    * @return string|null
+    * @return float|null
     */
-    public function getServiceArea()
+    public function getName()
     {
-        return $this->container['serviceArea'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets serviceArea
+    * Sets name
     *
-    * @param string|null $serviceArea 服务区域
+    * @param float|null $name 姓名的置信度
     *
     * @return $this
     */
-    public function setServiceArea($serviceArea)
+    public function setName($name)
     {
-        $this->container['serviceArea'] = $serviceArea;
+        $this->container['name'] = $name;
         return $this;
     }
 
     /**
-    * Gets topUrlSummary
-    *  详情数据对象。
+    * Gets samplingTime
+    *  核酸检测采样时间的置信度
     *
-    * @return \HuaweiCloud\SDK\Cdn\V2\Model\TopUrlSummary[]|null
+    * @return float|null
     */
-    public function getTopUrlSummary()
+    public function getSamplingTime()
     {
-        return $this->container['topUrlSummary'];
+        return $this->container['samplingTime'];
     }
 
     /**
-    * Sets topUrlSummary
+    * Sets samplingTime
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\TopUrlSummary[]|null $topUrlSummary 详情数据对象。
+    * @param float|null $samplingTime 核酸检测采样时间的置信度
     *
     * @return $this
     */
-    public function setTopUrlSummary($topUrlSummary)
+    public function setSamplingTime($samplingTime)
     {
-        $this->container['topUrlSummary'] = $topUrlSummary;
+        $this->container['samplingTime'] = $samplingTime;
+        return $this;
+    }
+
+    /**
+    * Gets testTime
+    *  核酸检测结果更新时间的置信度
+    *
+    * @return float|null
+    */
+    public function getTestTime()
+    {
+        return $this->container['testTime'];
+    }
+
+    /**
+    * Sets testTime
+    *
+    * @param float|null $testTime 核酸检测结果更新时间的置信度
+    *
+    * @return $this
+    */
+    public function setTestTime($testTime)
+    {
+        $this->container['testTime'] = $testTime;
+        return $this;
+    }
+
+    /**
+    * Gets testResult
+    *  核酸检测结果的置信度
+    *
+    * @return float|null
+    */
+    public function getTestResult()
+    {
+        return $this->container['testResult'];
+    }
+
+    /**
+    * Sets testResult
+    *
+    * @param float|null $testResult 核酸检测结果的置信度
+    *
+    * @return $this
+    */
+    public function setTestResult($testResult)
+    {
+        $this->container['testResult'] = $testResult;
         return $this;
     }
 

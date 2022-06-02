@@ -7,9 +7,8 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowTopUrlResponse implements ModelInterface, ArrayAccess
+class TopUrlSummary implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,30 +16,42 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowTopUrlResponse';
+    protected static $openAPIModelName = 'TopUrlSummary';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * url  URL名称。
+    * value  对应查询类型的值。（流量单位：Byte）
+    * startTime  查询起始时间戳。
+    * endTime  查询结束时间戳
+    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'serviceArea' => 'string',
-            'topUrlSummary' => '\HuaweiCloud\SDK\Cdn\V2\Model\TopUrlSummary[]'
+            'url' => 'string',
+            'value' => 'int',
+            'startTime' => 'int',
+            'endTime' => 'int',
+            'statType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * url  URL名称。
+    * value  对应查询类型的值。（流量单位：Byte）
+    * startTime  查询起始时间戳。
+    * endTime  查询结束时间戳
+    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'serviceArea' => null,
-        'topUrlSummary' => null
+        'url' => null,
+        'value' => 'int64',
+        'startTime' => 'int64',
+        'endTime' => 'int64',
+        'statType' => null
     ];
 
     /**
@@ -66,38 +77,56 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * url  URL名称。
+    * value  对应查询类型的值。（流量单位：Byte）
+    * startTime  查询起始时间戳。
+    * endTime  查询结束时间戳
+    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'serviceArea' => 'service_area',
-            'topUrlSummary' => 'top_url_summary'
+            'url' => 'url',
+            'value' => 'value',
+            'startTime' => 'start_time',
+            'endTime' => 'end_time',
+            'statType' => 'stat_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * url  URL名称。
+    * value  对应查询类型的值。（流量单位：Byte）
+    * startTime  查询起始时间戳。
+    * endTime  查询结束时间戳
+    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
     *
     * @var string[]
     */
     protected static $setters = [
-            'serviceArea' => 'setServiceArea',
-            'topUrlSummary' => 'setTopUrlSummary'
+            'url' => 'setUrl',
+            'value' => 'setValue',
+            'startTime' => 'setStartTime',
+            'endTime' => 'setEndTime',
+            'statType' => 'setStatType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceArea  服务区域
-    * topUrlSummary  详情数据对象。
+    * url  URL名称。
+    * value  对应查询类型的值。（流量单位：Byte）
+    * startTime  查询起始时间戳。
+    * endTime  查询结束时间戳
+    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
     *
     * @var string[]
     */
     protected static $getters = [
-            'serviceArea' => 'getServiceArea',
-            'topUrlSummary' => 'getTopUrlSummary'
+            'url' => 'getUrl',
+            'value' => 'getValue',
+            'startTime' => 'getStartTime',
+            'endTime' => 'getEndTime',
+            'statType' => 'getStatType'
     ];
 
     /**
@@ -158,8 +187,11 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
-        $this->container['topUrlSummary'] = isset($data['topUrlSummary']) ? $data['topUrlSummary'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
+        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['statType'] = isset($data['statType']) ? $data['statType'] : null;
     }
 
     /**
@@ -170,12 +202,6 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['serviceArea']) && (mb_strlen($this->container['serviceArea']) > 512)) {
-                $invalidProperties[] = "invalid value for 'serviceArea', the character length must be smaller than or equal to 512.";
-            }
-            if (!is_null($this->container['serviceArea']) && (mb_strlen($this->container['serviceArea']) < 2)) {
-                $invalidProperties[] = "invalid value for 'serviceArea', the character length must be bigger than or equal to 2.";
-            }
         return $invalidProperties;
     }
 
@@ -191,50 +217,122 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets serviceArea
-    *  服务区域
+    * Gets url
+    *  URL名称。
     *
     * @return string|null
     */
-    public function getServiceArea()
+    public function getUrl()
     {
-        return $this->container['serviceArea'];
+        return $this->container['url'];
     }
 
     /**
-    * Sets serviceArea
+    * Sets url
     *
-    * @param string|null $serviceArea 服务区域
+    * @param string|null $url URL名称。
     *
     * @return $this
     */
-    public function setServiceArea($serviceArea)
+    public function setUrl($url)
     {
-        $this->container['serviceArea'] = $serviceArea;
+        $this->container['url'] = $url;
         return $this;
     }
 
     /**
-    * Gets topUrlSummary
-    *  详情数据对象。
+    * Gets value
+    *  对应查询类型的值。（流量单位：Byte）
     *
-    * @return \HuaweiCloud\SDK\Cdn\V2\Model\TopUrlSummary[]|null
+    * @return int|null
     */
-    public function getTopUrlSummary()
+    public function getValue()
     {
-        return $this->container['topUrlSummary'];
+        return $this->container['value'];
     }
 
     /**
-    * Sets topUrlSummary
+    * Sets value
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\TopUrlSummary[]|null $topUrlSummary 详情数据对象。
+    * @param int|null $value 对应查询类型的值。（流量单位：Byte）
     *
     * @return $this
     */
-    public function setTopUrlSummary($topUrlSummary)
+    public function setValue($value)
     {
-        $this->container['topUrlSummary'] = $topUrlSummary;
+        $this->container['value'] = $value;
+        return $this;
+    }
+
+    /**
+    * Gets startTime
+    *  查询起始时间戳。
+    *
+    * @return int|null
+    */
+    public function getStartTime()
+    {
+        return $this->container['startTime'];
+    }
+
+    /**
+    * Sets startTime
+    *
+    * @param int|null $startTime 查询起始时间戳。
+    *
+    * @return $this
+    */
+    public function setStartTime($startTime)
+    {
+        $this->container['startTime'] = $startTime;
+        return $this;
+    }
+
+    /**
+    * Gets endTime
+    *  查询结束时间戳
+    *
+    * @return int|null
+    */
+    public function getEndTime()
+    {
+        return $this->container['endTime'];
+    }
+
+    /**
+    * Sets endTime
+    *
+    * @param int|null $endTime 查询结束时间戳
+    *
+    * @return $this
+    */
+    public function setEndTime($endTime)
+    {
+        $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets statType
+    *  参数类型支持：flux(流量)，req_num(请求总数)。
+    *
+    * @return string|null
+    */
+    public function getStatType()
+    {
+        return $this->container['statType'];
+    }
+
+    /**
+    * Sets statType
+    *
+    * @param string|null $statType 参数类型支持：flux(流量)，req_num(请求总数)。
+    *
+    * @return $this
+    */
+    public function setStatType($statType)
+    {
+        $this->container['statType'] = $statType;
         return $this;
     }
 

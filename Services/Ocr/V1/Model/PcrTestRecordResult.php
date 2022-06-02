@@ -24,7 +24,7 @@ class PcrTestRecordResult implements ModelInterface, ArrayAccess
     * samplingTime  核酸检测采样时间
     * testTime  核酸检测结果更新时间
     * testResult  核酸检测结果，可选值包括：  - \"positive\",即阳性  - \"negative\",即阴性  - \"unknown\",未知
-    * confidence  各个字段的置信度
+    * confidence  confidence
     * wordsBlockCount  代表检测识别出来的文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
     *
@@ -35,7 +35,7 @@ class PcrTestRecordResult implements ModelInterface, ArrayAccess
             'samplingTime' => 'string',
             'testTime' => 'string',
             'testResult' => 'string',
-            'confidence' => 'float',
+            'confidence' => '\HuaweiCloud\SDK\Ocr\V1\Model\PcrTestRecordConfidence',
             'wordsBlockCount' => 'int',
             'wordsBlockList' => '\HuaweiCloud\SDK\Ocr\V1\Model\PcrTestRecordWordsBlockList[]'
     ];
@@ -46,7 +46,7 @@ class PcrTestRecordResult implements ModelInterface, ArrayAccess
     * samplingTime  核酸检测采样时间
     * testTime  核酸检测结果更新时间
     * testResult  核酸检测结果，可选值包括：  - \"positive\",即阳性  - \"negative\",即阴性  - \"unknown\",未知
-    * confidence  各个字段的置信度
+    * confidence  confidence
     * wordsBlockCount  代表检测识别出来的文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
     *
@@ -57,7 +57,7 @@ class PcrTestRecordResult implements ModelInterface, ArrayAccess
         'samplingTime' => null,
         'testTime' => null,
         'testResult' => null,
-        'confidence' => 'float',
+        'confidence' => null,
         'wordsBlockCount' => 'int32',
         'wordsBlockList' => null
     ];
@@ -89,7 +89,7 @@ class PcrTestRecordResult implements ModelInterface, ArrayAccess
     * samplingTime  核酸检测采样时间
     * testTime  核酸检测结果更新时间
     * testResult  核酸检测结果，可选值包括：  - \"positive\",即阳性  - \"negative\",即阴性  - \"unknown\",未知
-    * confidence  各个字段的置信度
+    * confidence  confidence
     * wordsBlockCount  代表检测识别出来的文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
     *
@@ -111,7 +111,7 @@ class PcrTestRecordResult implements ModelInterface, ArrayAccess
     * samplingTime  核酸检测采样时间
     * testTime  核酸检测结果更新时间
     * testResult  核酸检测结果，可选值包括：  - \"positive\",即阳性  - \"negative\",即阴性  - \"unknown\",未知
-    * confidence  各个字段的置信度
+    * confidence  confidence
     * wordsBlockCount  代表检测识别出来的文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
     *
@@ -133,7 +133,7 @@ class PcrTestRecordResult implements ModelInterface, ArrayAccess
     * samplingTime  核酸检测采样时间
     * testTime  核酸检测结果更新时间
     * testResult  核酸检测结果，可选值包括：  - \"positive\",即阳性  - \"negative\",即阴性  - \"unknown\",未知
-    * confidence  各个字段的置信度
+    * confidence  confidence
     * wordsBlockCount  代表检测识别出来的文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
     *
@@ -357,9 +357,9 @@ class PcrTestRecordResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets confidence
-    *  各个字段的置信度
+    *  confidence
     *
-    * @return float
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\PcrTestRecordConfidence
     */
     public function getConfidence()
     {
@@ -369,7 +369,7 @@ class PcrTestRecordResult implements ModelInterface, ArrayAccess
     /**
     * Sets confidence
     *
-    * @param float $confidence 各个字段的置信度
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\PcrTestRecordConfidence $confidence confidence
     *
     * @return $this
     */
