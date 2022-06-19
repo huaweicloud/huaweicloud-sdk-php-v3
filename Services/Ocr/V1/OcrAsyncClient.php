@@ -909,6 +909,89 @@ class OcrAsyncClient extends Client
     }
 
     /**
+     * 通用证件识别
+     *
+     * 识别身份证件图像，并将识别的结构化结果返回给用户。支持多个国家的身份证、驾驶证和护照，具体国家和证件列表详见表1。
+     * 
+     * **表1支持国家列表**
+     * 
+     * | 国家/地区  | 英文名称    | 国家代码  country_region | 支持证件类型  id_type   |
+     * | ---------- | ----------- | ------------------------ | ----------------------- |
+     * | 越南       | Vietnam     | VNM                      | PP、DL、ID              |
+     * | 印度       | India       | IND                      | PP                      |
+     * | 菲律宾     | Philippines | PHL                      | PP、DL、ID(仅支持UUMID) |
+     * | 阿尔巴尼亚 | Albania     | ALB                      | PP、DL、ID              |
+     * | 巴西       | BRAZIL      | BRA                      | PP                      |
+     * | 印度尼西亚 | INDONESIA   | IDN                      | PP                      |
+     * | 马来西亚   | MALAYSIA    | MYS                      | PP                      |
+     * | 尼日利亚   | NIGERIA     | NGA                      | PP                      |
+     * | 巴基斯坦   | PAKISTAN    | PAK                      | PP                      |
+     * | 俄罗斯     | RUSSIA      | RUS                      | PP(仅支持国际标准版本)  |
+     * | 中国台湾   | TAIWAN      | TWN                      | PP                      |
+     * | 乌克兰     | UKRAINE     | UKR                      | PP                      |
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function recognizeIdDocumentAsync($request)
+    {
+        return $this->recognizeIdDocumentAsyncWithHttpInfo($request);
+    }
+    
+    public function recognizeIdDocumentAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/ocr/id-document';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeIdDocumentResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeIdDocumentRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 保险单识别
      *
      * 识别保险单图片上的文字信息，并将识别的结构化结果返回给用户。支持对多板式保险单的扫描图片及手机照片进行结构化信息提取。
