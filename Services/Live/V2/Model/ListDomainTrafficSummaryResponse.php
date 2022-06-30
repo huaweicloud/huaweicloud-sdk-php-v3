@@ -73,7 +73,7 @@ class ListDomainTrafficSummaryResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'trafficList' => 'traffic_list',
-            'xRequestId' => 'X-request-id'
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**

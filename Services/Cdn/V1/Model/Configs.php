@@ -28,6 +28,7 @@ class Configs implements ModelInterface, ArrayAccess
     * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
     * forceRedirect  forceRedirect
     * compress  compress
+    * cacheUrlParameterFilter  cacheUrlParameterFilter
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class Configs implements ModelInterface, ArrayAccess
             'sources' => '\HuaweiCloud\SDK\Cdn\V1\Model\SourcesConfig[]',
             'originProtocol' => 'string',
             'forceRedirect' => '\HuaweiCloud\SDK\Cdn\V1\Model\ForceRedirectConfig',
-            'compress' => '\HuaweiCloud\SDK\Cdn\V1\Model\Compress'
+            'compress' => '\HuaweiCloud\SDK\Cdn\V1\Model\Compress',
+            'cacheUrlParameterFilter' => '\HuaweiCloud\SDK\Cdn\V1\Model\CacheUrlParameterFilter'
     ];
 
     /**
@@ -52,6 +54,7 @@ class Configs implements ModelInterface, ArrayAccess
     * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
     * forceRedirect  forceRedirect
     * compress  compress
+    * cacheUrlParameterFilter  cacheUrlParameterFilter
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class Configs implements ModelInterface, ArrayAccess
         'sources' => null,
         'originProtocol' => null,
         'forceRedirect' => null,
-        'compress' => null
+        'compress' => null,
+        'cacheUrlParameterFilter' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class Configs implements ModelInterface, ArrayAccess
     * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
     * forceRedirect  forceRedirect
     * compress  compress
+    * cacheUrlParameterFilter  cacheUrlParameterFilter
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class Configs implements ModelInterface, ArrayAccess
             'sources' => 'sources',
             'originProtocol' => 'origin_protocol',
             'forceRedirect' => 'force_redirect',
-            'compress' => 'compress'
+            'compress' => 'compress',
+            'cacheUrlParameterFilter' => 'cache_url_parameter_filter'
     ];
 
     /**
@@ -121,6 +127,7 @@ class Configs implements ModelInterface, ArrayAccess
     * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
     * forceRedirect  forceRedirect
     * compress  compress
+    * cacheUrlParameterFilter  cacheUrlParameterFilter
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class Configs implements ModelInterface, ArrayAccess
             'sources' => 'setSources',
             'originProtocol' => 'setOriginProtocol',
             'forceRedirect' => 'setForceRedirect',
-            'compress' => 'setCompress'
+            'compress' => 'setCompress',
+            'cacheUrlParameterFilter' => 'setCacheUrlParameterFilter'
     ];
 
     /**
@@ -145,6 +153,7 @@ class Configs implements ModelInterface, ArrayAccess
     * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
     * forceRedirect  forceRedirect
     * compress  compress
+    * cacheUrlParameterFilter  cacheUrlParameterFilter
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class Configs implements ModelInterface, ArrayAccess
             'sources' => 'getSources',
             'originProtocol' => 'getOriginProtocol',
             'forceRedirect' => 'getForceRedirect',
-            'compress' => 'getCompress'
+            'compress' => 'getCompress',
+            'cacheUrlParameterFilter' => 'getCacheUrlParameterFilter'
     ];
 
     /**
@@ -225,6 +235,7 @@ class Configs implements ModelInterface, ArrayAccess
         $this->container['originProtocol'] = isset($data['originProtocol']) ? $data['originProtocol'] : null;
         $this->container['forceRedirect'] = isset($data['forceRedirect']) ? $data['forceRedirect'] : null;
         $this->container['compress'] = isset($data['compress']) ? $data['compress'] : null;
+        $this->container['cacheUrlParameterFilter'] = isset($data['cacheUrlParameterFilter']) ? $data['cacheUrlParameterFilter'] : null;
     }
 
     /**
@@ -438,6 +449,30 @@ class Configs implements ModelInterface, ArrayAccess
     public function setCompress($compress)
     {
         $this->container['compress'] = $compress;
+        return $this;
+    }
+
+    /**
+    * Gets cacheUrlParameterFilter
+    *  cacheUrlParameterFilter
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V1\Model\CacheUrlParameterFilter|null
+    */
+    public function getCacheUrlParameterFilter()
+    {
+        return $this->container['cacheUrlParameterFilter'];
+    }
+
+    /**
+    * Sets cacheUrlParameterFilter
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\CacheUrlParameterFilter|null $cacheUrlParameterFilter cacheUrlParameterFilter
+    *
+    * @return $this
+    */
+    public function setCacheUrlParameterFilter($cacheUrlParameterFilter)
+    {
+        $this->container['cacheUrlParameterFilter'] = $cacheUrlParameterFilter;
         return $this;
     }
 

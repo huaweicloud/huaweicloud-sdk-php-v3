@@ -103,7 +103,7 @@ class ListSingleStreamDetailResponse implements ModelInterface, ArrayAccess
             'videoFramerate' => 'video_framerate',
             'videoBitrate' => 'video_bitrate',
             'audioFramerate' => 'audio_framerate',
-            'xRequestId' => 'X-request-id'
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**

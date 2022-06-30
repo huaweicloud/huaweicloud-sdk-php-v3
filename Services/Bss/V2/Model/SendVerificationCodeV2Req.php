@@ -228,10 +228,13 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
             if (!is_null($this->container['timeout']) && ($this->container['timeout'] < 1)) {
                 $invalidProperties[] = "invalid value for 'timeout', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['mobilePhone']) && (mb_strlen($this->container['mobilePhone']) > 32)) {
+        if ($this->container['mobilePhone'] === null) {
+            $invalidProperties[] = "'mobilePhone' can't be null";
+        }
+            if ((mb_strlen($this->container['mobilePhone']) > 32)) {
                 $invalidProperties[] = "invalid value for 'mobilePhone', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['mobilePhone']) && (mb_strlen($this->container['mobilePhone']) < 0)) {
+            if ((mb_strlen($this->container['mobilePhone']) < 0)) {
                 $invalidProperties[] = "invalid value for 'mobilePhone', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['lang']) && (mb_strlen($this->container['lang']) > 16)) {
@@ -318,7 +321,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * Gets mobilePhone
     *  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
     *
-    * @return string|null
+    * @return string
     */
     public function getMobilePhone()
     {
@@ -328,7 +331,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets mobilePhone
     *
-    * @param string|null $mobilePhone 指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
+    * @param string $mobilePhone 指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
     *
     * @return $this
     */

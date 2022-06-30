@@ -79,7 +79,7 @@ class ListRecordContentsResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'total' => 'total',
             'recordContents' => 'record_contents',
-            'xRequestId' => 'X-request-id'
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**

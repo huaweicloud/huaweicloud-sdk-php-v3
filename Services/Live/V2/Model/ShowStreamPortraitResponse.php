@@ -73,7 +73,7 @@ class ShowStreamPortraitResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'streamPortraits' => 'stream_portraits',
-            'xRequestId' => 'X-request-id'
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**

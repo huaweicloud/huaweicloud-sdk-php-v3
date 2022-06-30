@@ -206,10 +206,13 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
             if (!is_null($this->container['timeout']) && ($this->container['timeout'] < 1)) {
                 $invalidProperties[] = "invalid value for 'timeout', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['email']) && (mb_strlen($this->container['email']) > 64)) {
+        if ($this->container['email'] === null) {
+            $invalidProperties[] = "'email' can't be null";
+        }
+            if ((mb_strlen($this->container['email']) > 64)) {
                 $invalidProperties[] = "invalid value for 'email', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['email']) && (mb_strlen($this->container['email']) < 0)) {
+            if ((mb_strlen($this->container['email']) < 0)) {
                 $invalidProperties[] = "invalid value for 'email', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['lang']) && (mb_strlen($this->container['lang']) > 16)) {
@@ -284,7 +287,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * Gets email
     *  指定发送验证码的邮箱地址。
     *
-    * @return string|null
+    * @return string
     */
     public function getEmail()
     {
@@ -294,7 +297,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 指定发送验证码的邮箱地址。
+    * @param string $email 指定发送验证码的邮箱地址。
     *
     * @return $this
     */

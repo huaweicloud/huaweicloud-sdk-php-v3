@@ -79,7 +79,7 @@ class ListTranscodeDataResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'transcodeDataList' => 'transcode_data_list',
             'summaryList' => 'summary_list',
-            'xRequestId' => 'X-request-id'
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**

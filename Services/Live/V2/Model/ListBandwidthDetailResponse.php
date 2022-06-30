@@ -73,7 +73,7 @@ class ListBandwidthDetailResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'dataList' => 'data_list',
-            'xRequestId' => 'X-request-id'
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**

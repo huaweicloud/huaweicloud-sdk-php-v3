@@ -298,6 +298,71 @@ class OcrClient extends Client
     }
 
     /**
+     * 柬文身份证识别
+     *
+     * 识别柬文身份证图片中的文字内容，并将识别的结构化结果返回给用户。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function recognizeCambodianIdCard($request)
+    {
+        return $this->recognizeCambodianIdCardWithHttpInfo($request);
+    }
+
+    public function recognizeCambodianIdCardWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/ocr/cambodian-idcard';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeCambodianIdCardResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeCambodianIdCardRequest');
+    }
+
+    /**
      * 智利身份证识别
      *
      * 识别智利身份证图片中的文字内容，并返回识别的结构化结果。
@@ -429,6 +494,71 @@ class OcrClient extends Client
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeDriverLicenseResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeDriverLicenseRequest');
+    }
+
+    /**
+     * 往来港澳台通行证识别
+     *
+     * 识别往来港澳台证件图片中的文字内容，并将识别的结构化结果返回给用户。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function recognizeExitEntryPermit($request)
+    {
+        return $this->recognizeExitEntryPermitWithHttpInfo($request);
+    }
+
+    public function recognizeExitEntryPermitWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/ocr/exit-entry-permit';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeExitEntryPermitResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeExitEntryPermitRequest');
     }
 
     /**
@@ -826,6 +956,71 @@ class OcrClient extends Client
     }
 
     /**
+     * 香港身份证识别
+     *
+     * 识别香港身份证中的文字内容，并将识别的结果返回给用户。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function recognizeHkIdCard($request)
+    {
+        return $this->recognizeHkIdCardWithHttpInfo($request);
+    }
+
+    public function recognizeHkIdCardWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/ocr/hk-id-card';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeHkIdCardResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeHkIdCardRequest');
+    }
+
+    /**
      * 身份证识别
      *
      * 识别身份证图片中的文字内容，并将识别的结果返回给用户。
@@ -1171,6 +1366,71 @@ class OcrClient extends Client
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeLicensePlateResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeLicensePlateRequest');
+    }
+
+    /**
+     * 港澳台居民来往内地通行证识别
+     *
+     * 识别港澳居民来往内地通行证上的文字内容，并将识别的结构化结果返回给用户。支持港澳居民来往内地通行证和台湾居民来往内地通行证两种卡证。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function recognizeMainlandTravelPermit($request)
+    {
+        return $this->recognizeMainlandTravelPermitWithHttpInfo($request);
+    }
+
+    public function recognizeMainlandTravelPermitWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/ocr/mainland-travel-permit';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeMainlandTravelPermitResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeMainlandTravelPermitRequest');
     }
 
     /**

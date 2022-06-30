@@ -20,28 +20,28 @@ class GeneralTextResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 359]。当detect_direction为false时，该字段值为 -1。
+    * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 360)。当detect_direction为false时，该字段值为 -1。
     * wordsBlockCount  识别文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，先上后下。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'direction' => 'int',
+            'direction' => 'float',
             'wordsBlockCount' => 'int',
             'wordsBlockList' => '\HuaweiCloud\SDK\Ocr\V1\Model\GeneralTextWordsBlockList[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 359]。当detect_direction为false时，该字段值为 -1。
+    * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 360)。当detect_direction为false时，该字段值为 -1。
     * wordsBlockCount  识别文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，先上后下。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'direction' => 'int32',
+        'direction' => 'float',
         'wordsBlockCount' => 'int32',
         'wordsBlockList' => null
     ];
@@ -69,7 +69,7 @@ class GeneralTextResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 359]。当detect_direction为false时，该字段值为 -1。
+    * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 360)。当detect_direction为false时，该字段值为 -1。
     * wordsBlockCount  识别文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，先上后下。
     *
@@ -83,7 +83,7 @@ class GeneralTextResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 359]。当detect_direction为false时，该字段值为 -1。
+    * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 360)。当detect_direction为false时，该字段值为 -1。
     * wordsBlockCount  识别文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，先上后下。
     *
@@ -97,7 +97,7 @@ class GeneralTextResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 359]。当detect_direction为false时，该字段值为 -1。
+    * direction  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 360)。当detect_direction为false时，该字段值为 -1。
     * wordsBlockCount  识别文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，先上后下。
     *
@@ -205,9 +205,9 @@ class GeneralTextResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets direction
-    *  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 359]。当detect_direction为false时，该字段值为 -1。
+    *  图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 360)。当detect_direction为false时，该字段值为 -1。
     *
-    * @return int
+    * @return float
     */
     public function getDirection()
     {
@@ -217,7 +217,7 @@ class GeneralTextResult implements ModelInterface, ArrayAccess
     /**
     * Sets direction
     *
-    * @param int $direction 图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 359]。当detect_direction为false时，该字段值为 -1。
+    * @param float $direction 图片朝向，仅当detect_direction为true时，该字段有效。返回图片逆时针旋转角度，值区间为[0， 360)。当detect_direction为false时，该字段值为 -1。
     *
     * @return $this
     */

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Live\V2\Model;
+namespace HuaweiCloud\SDK\Dns\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListTranscodeTaskCountResponse implements ModelInterface, ArrayAccess
+class ShowPublicZoneNameServerResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,30 +17,26 @@ class ListTranscodeTaskCountResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListTranscodeTaskCountResponse';
+    protected static $openAPIModelName = 'ShowPublicZoneNameServerResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * transcodeDataList  时间戳及相应时间的数值。
-    * xRequestId  xRequestId
+    * nameservers  查询单个公网Zone的名称服务器响应。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'transcodeDataList' => '\HuaweiCloud\SDK\Live\V2\Model\TranscodeCountData[]',
-            'xRequestId' => 'string'
+            'nameservers' => '\HuaweiCloud\SDK\Dns\V2\Model\Nameserver[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * transcodeDataList  时间戳及相应时间的数值。
-    * xRequestId  xRequestId
+    * nameservers  查询单个公网Zone的名称服务器响应。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'transcodeDataList' => null,
-        'xRequestId' => null
+        'nameservers' => null
     ];
 
     /**
@@ -66,38 +62,32 @@ class ListTranscodeTaskCountResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * transcodeDataList  时间戳及相应时间的数值。
-    * xRequestId  xRequestId
+    * nameservers  查询单个公网Zone的名称服务器响应。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'transcodeDataList' => 'transcode_data_list',
-            'xRequestId' => 'X-request-id'
+            'nameservers' => 'nameservers'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * transcodeDataList  时间戳及相应时间的数值。
-    * xRequestId  xRequestId
+    * nameservers  查询单个公网Zone的名称服务器响应。
     *
     * @var string[]
     */
     protected static $setters = [
-            'transcodeDataList' => 'setTranscodeDataList',
-            'xRequestId' => 'setXRequestId'
+            'nameservers' => 'setNameservers'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * transcodeDataList  时间戳及相应时间的数值。
-    * xRequestId  xRequestId
+    * nameservers  查询单个公网Zone的名称服务器响应。
     *
     * @var string[]
     */
     protected static $getters = [
-            'transcodeDataList' => 'getTranscodeDataList',
-            'xRequestId' => 'getXRequestId'
+            'nameservers' => 'getNameservers'
     ];
 
     /**
@@ -158,8 +148,7 @@ class ListTranscodeTaskCountResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['transcodeDataList'] = isset($data['transcodeDataList']) ? $data['transcodeDataList'] : null;
-        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
+        $this->container['nameservers'] = isset($data['nameservers']) ? $data['nameservers'] : null;
     }
 
     /**
@@ -185,50 +174,26 @@ class ListTranscodeTaskCountResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets transcodeDataList
-    *  时间戳及相应时间的数值。
+    * Gets nameservers
+    *  查询单个公网Zone的名称服务器响应。
     *
-    * @return \HuaweiCloud\SDK\Live\V2\Model\TranscodeCountData[]|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\Nameserver[]|null
     */
-    public function getTranscodeDataList()
+    public function getNameservers()
     {
-        return $this->container['transcodeDataList'];
+        return $this->container['nameservers'];
     }
 
     /**
-    * Sets transcodeDataList
+    * Sets nameservers
     *
-    * @param \HuaweiCloud\SDK\Live\V2\Model\TranscodeCountData[]|null $transcodeDataList 时间戳及相应时间的数值。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Nameserver[]|null $nameservers 查询单个公网Zone的名称服务器响应。
     *
     * @return $this
     */
-    public function setTranscodeDataList($transcodeDataList)
+    public function setNameservers($nameservers)
     {
-        $this->container['transcodeDataList'] = $transcodeDataList;
-        return $this;
-    }
-
-    /**
-    * Gets xRequestId
-    *  xRequestId
-    *
-    * @return string|null
-    */
-    public function getXRequestId()
-    {
-        return $this->container['xRequestId'];
-    }
-
-    /**
-    * Sets xRequestId
-    *
-    * @param string|null $xRequestId xRequestId
-    *
-    * @return $this
-    */
-    public function setXRequestId($xRequestId)
-    {
-        $this->container['xRequestId'] = $xRequestId;
+        $this->container['nameservers'] = $nameservers;
         return $this;
     }
 

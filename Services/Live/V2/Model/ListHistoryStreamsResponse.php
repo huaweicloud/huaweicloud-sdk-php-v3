@@ -79,7 +79,7 @@ class ListHistoryStreamsResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'historyStreamList' => 'history_stream_list',
             'total' => 'total',
-            'xRequestId' => 'X-request-id'
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**

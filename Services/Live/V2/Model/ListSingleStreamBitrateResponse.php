@@ -73,7 +73,7 @@ class ListSingleStreamBitrateResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'bitrateInfoList' => 'bitrate_info_list',
-            'xRequestId' => 'X-request-id'
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**

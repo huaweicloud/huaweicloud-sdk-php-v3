@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Live\V2\Model;
+namespace HuaweiCloud\SDK\Dns\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class TranscodeSpecCount implements ModelInterface, ArrayAccess
+class NameServersResp implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,34 @@ class TranscodeSpecCount implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'TranscodeSpecCount';
+    protected static $openAPIModelName = 'NameServersResp';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  转码规格，具体格式如下： - 若未开启高清低码，则格式为：编码格式_分辨率档位。 - 若已开启高清低码，则格式为：编码格式_PVC_分辨率档位。  其中，编码格式包括H264、H265，分辨率档位包括： - 4K：3840 x 2160及以下 - 2K：2560 x 1440及以下 - FHD：1920 x 1080及以下 - HD：1280 x 720及以下 - SD：640 x 480及以下  示例：若编码格式为H264，分辨率档位为FHD，则转码规格为H264_FHD。
-    * count  采样时间点转码任务数。
+    * type  待查询名称服务器的类型。  取值范围: public, private。  如果为空，表示查询所有类型的名称服务器。 如果为public，表示查询公网的名称服务器。  如果为private，表示查询内网的名称服务器。
+    * region  待查询的region ID。  当查询公网的名称服务器时，此处不填。
+    * nsRecords  nsRecords
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'count' => 'int'
+            'region' => 'string',
+            'nsRecords' => '\HuaweiCloud\SDK\Dns\V2\Model\NsRecords[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  转码规格，具体格式如下： - 若未开启高清低码，则格式为：编码格式_分辨率档位。 - 若已开启高清低码，则格式为：编码格式_PVC_分辨率档位。  其中，编码格式包括H264、H265，分辨率档位包括： - 4K：3840 x 2160及以下 - 2K：2560 x 1440及以下 - FHD：1920 x 1080及以下 - HD：1280 x 720及以下 - SD：640 x 480及以下  示例：若编码格式为H264，分辨率档位为FHD，则转码规格为H264_FHD。
-    * count  采样时间点转码任务数。
+    * type  待查询名称服务器的类型。  取值范围: public, private。  如果为空，表示查询所有类型的名称服务器。 如果为public，表示查询公网的名称服务器。  如果为private，表示查询内网的名称服务器。
+    * region  待查询的region ID。  当查询公网的名称服务器时，此处不填。
+    * nsRecords  nsRecords
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'count' => 'int64'
+        'region' => null,
+        'nsRecords' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class TranscodeSpecCount implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  转码规格，具体格式如下： - 若未开启高清低码，则格式为：编码格式_分辨率档位。 - 若已开启高清低码，则格式为：编码格式_PVC_分辨率档位。  其中，编码格式包括H264、H265，分辨率档位包括： - 4K：3840 x 2160及以下 - 2K：2560 x 1440及以下 - FHD：1920 x 1080及以下 - HD：1280 x 720及以下 - SD：640 x 480及以下  示例：若编码格式为H264，分辨率档位为FHD，则转码规格为H264_FHD。
-    * count  采样时间点转码任务数。
+    * type  待查询名称服务器的类型。  取值范围: public, private。  如果为空，表示查询所有类型的名称服务器。 如果为public，表示查询公网的名称服务器。  如果为private，表示查询内网的名称服务器。
+    * region  待查询的region ID。  当查询公网的名称服务器时，此处不填。
+    * nsRecords  nsRecords
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
-            'count' => 'count'
+            'region' => 'region',
+            'nsRecords' => 'ns_records'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  转码规格，具体格式如下： - 若未开启高清低码，则格式为：编码格式_分辨率档位。 - 若已开启高清低码，则格式为：编码格式_PVC_分辨率档位。  其中，编码格式包括H264、H265，分辨率档位包括： - 4K：3840 x 2160及以下 - 2K：2560 x 1440及以下 - FHD：1920 x 1080及以下 - HD：1280 x 720及以下 - SD：640 x 480及以下  示例：若编码格式为H264，分辨率档位为FHD，则转码规格为H264_FHD。
-    * count  采样时间点转码任务数。
+    * type  待查询名称服务器的类型。  取值范围: public, private。  如果为空，表示查询所有类型的名称服务器。 如果为public，表示查询公网的名称服务器。  如果为private，表示查询内网的名称服务器。
+    * region  待查询的region ID。  当查询公网的名称服务器时，此处不填。
+    * nsRecords  nsRecords
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
-            'count' => 'setCount'
+            'region' => 'setRegion',
+            'nsRecords' => 'setNsRecords'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  转码规格，具体格式如下： - 若未开启高清低码，则格式为：编码格式_分辨率档位。 - 若已开启高清低码，则格式为：编码格式_PVC_分辨率档位。  其中，编码格式包括H264、H265，分辨率档位包括： - 4K：3840 x 2160及以下 - 2K：2560 x 1440及以下 - FHD：1920 x 1080及以下 - HD：1280 x 720及以下 - SD：640 x 480及以下  示例：若编码格式为H264，分辨率档位为FHD，则转码规格为H264_FHD。
-    * count  采样时间点转码任务数。
+    * type  待查询名称服务器的类型。  取值范围: public, private。  如果为空，表示查询所有类型的名称服务器。 如果为public，表示查询公网的名称服务器。  如果为private，表示查询内网的名称服务器。
+    * region  待查询的region ID。  当查询公网的名称服务器时，此处不填。
+    * nsRecords  nsRecords
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
-            'count' => 'getCount'
+            'region' => 'getRegion',
+            'nsRecords' => 'getNsRecords'
     ];
 
     /**
@@ -158,7 +168,8 @@ class TranscodeSpecCount implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
+        $this->container['nsRecords'] = isset($data['nsRecords']) ? $data['nsRecords'] : null;
     }
 
     /**
@@ -169,18 +180,6 @@ class TranscodeSpecCount implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 64)) {
-                $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 1)) {
-                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['count']) && ($this->container['count'] > 1844674407)) {
-                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 1844674407.";
-            }
-            if (!is_null($this->container['count']) && ($this->container['count'] < 0)) {
-                $invalidProperties[] = "invalid value for 'count', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -197,7 +196,7 @@ class TranscodeSpecCount implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  转码规格，具体格式如下： - 若未开启高清低码，则格式为：编码格式_分辨率档位。 - 若已开启高清低码，则格式为：编码格式_PVC_分辨率档位。  其中，编码格式包括H264、H265，分辨率档位包括： - 4K：3840 x 2160及以下 - 2K：2560 x 1440及以下 - FHD：1920 x 1080及以下 - HD：1280 x 720及以下 - SD：640 x 480及以下  示例：若编码格式为H264，分辨率档位为FHD，则转码规格为H264_FHD。
+    *  待查询名称服务器的类型。  取值范围: public, private。  如果为空，表示查询所有类型的名称服务器。 如果为public，表示查询公网的名称服务器。  如果为private，表示查询内网的名称服务器。
     *
     * @return string|null
     */
@@ -209,7 +208,7 @@ class TranscodeSpecCount implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 转码规格，具体格式如下： - 若未开启高清低码，则格式为：编码格式_分辨率档位。 - 若已开启高清低码，则格式为：编码格式_PVC_分辨率档位。  其中，编码格式包括H264、H265，分辨率档位包括： - 4K：3840 x 2160及以下 - 2K：2560 x 1440及以下 - FHD：1920 x 1080及以下 - HD：1280 x 720及以下 - SD：640 x 480及以下  示例：若编码格式为H264，分辨率档位为FHD，则转码规格为H264_FHD。
+    * @param string|null $type 待查询名称服务器的类型。  取值范围: public, private。  如果为空，表示查询所有类型的名称服务器。 如果为public，表示查询公网的名称服务器。  如果为private，表示查询内网的名称服务器。
     *
     * @return $this
     */
@@ -220,26 +219,50 @@ class TranscodeSpecCount implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets count
-    *  采样时间点转码任务数。
+    * Gets region
+    *  待查询的region ID。  当查询公网的名称服务器时，此处不填。
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getCount()
+    public function getRegion()
     {
-        return $this->container['count'];
+        return $this->container['region'];
     }
 
     /**
-    * Sets count
+    * Sets region
     *
-    * @param int|null $count 采样时间点转码任务数。
+    * @param string|null $region 待查询的region ID。  当查询公网的名称服务器时，此处不填。
     *
     * @return $this
     */
-    public function setCount($count)
+    public function setRegion($region)
     {
-        $this->container['count'] = $count;
+        $this->container['region'] = $region;
+        return $this;
+    }
+
+    /**
+    * Gets nsRecords
+    *  nsRecords
+    *
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\NsRecords[]|null
+    */
+    public function getNsRecords()
+    {
+        return $this->container['nsRecords'];
+    }
+
+    /**
+    * Sets nsRecords
+    *
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\NsRecords[]|null $nsRecords nsRecords
+    *
+    * @return $this
+    */
+    public function setNsRecords($nsRecords)
+    {
+        $this->container['nsRecords'] = $nsRecords;
         return $this;
     }
 

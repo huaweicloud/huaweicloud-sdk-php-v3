@@ -1,3 +1,60 @@
+# 3.0.51-rc 2022-06-30
+
+### HuaweiCloud SDK DNS
+
+- _新增特性_
+  - 支持云解析服务
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK BSS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`SendVerificationMessageCode`请求参数`mobile_phone`改为必填
+
+### HuaweiCloud SDK BSSINTL
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`SendVerificationMessageCode`请求参数`email`改为必填
+
+### HuaweiCloud SDK CDN
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ShowDomainFullConfig`新增响应参数 `cache_url_parameter_filter`
+  - 接口`UpdateDomainFullConfig`新增请求参数 `cache_url_parameter_filter`
+
+### HuaweiCloud SDK DNS
+
+- _新增特性_
+  - 支持接口`CreateRecordSetWithBatchLines`、`BatchUpdateRecordSetWithLine`、`BatchDeleteRecordSetWithLine`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`CreateRecordSetWithLine`请求参数`records`改为非必填
+
+### HuaweiCloud SDK OCR
+
+- _新增特性_
+  - 支持接口`RecognizeHkIdCard`、`RecognizeCambodianIdCard`、`RecognizeExitEntryPermit`、`RecognizeMainlandTravelPermit`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`RecognizeGeneralText`响应参数`direction`类型调整 `int32` -> `float`
+
 # 3.0.50-rc 2022-06-19
 
 ### HuaweiCloud SDK OCR

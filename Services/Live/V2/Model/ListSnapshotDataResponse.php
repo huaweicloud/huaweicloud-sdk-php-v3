@@ -79,7 +79,7 @@ class ListSnapshotDataResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'snapshotList' => 'snapshot_list',
             'total' => 'total',
-            'xRequestId' => 'X-request-id'
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**

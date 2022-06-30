@@ -73,7 +73,7 @@ class ListDomainBandwidthPeakResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'bandwidthList' => 'bandwidth_list',
-            'xRequestId' => 'X-request-id'
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**

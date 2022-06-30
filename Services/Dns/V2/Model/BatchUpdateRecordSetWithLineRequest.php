@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Live\V2\Model;
+namespace HuaweiCloud\SDK\Dns\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class TranscodeCountData implements ModelInterface, ArrayAccess
+class BatchUpdateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class TranscodeCountData implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'TranscodeCountData';
+    protected static $openAPIModelName = 'BatchUpdateRecordSetWithLineRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * specList  每个采样时间中的转码任务数信息。
-    * time  采样时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ 。
+    * zoneId  所属zone的ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'specList' => '\HuaweiCloud\SDK\Live\V2\Model\TranscodeSpecCount[]',
-            'time' => 'string'
+            'zoneId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * specList  每个采样时间中的转码任务数信息。
-    * time  采样时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ 。
+    * zoneId  所属zone的ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'specList' => null,
-        'time' => null
+        'zoneId' => null,
+        'body' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class TranscodeCountData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * specList  每个采样时间中的转码任务数信息。
-    * time  采样时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ 。
+    * zoneId  所属zone的ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'specList' => 'spec_list',
-            'time' => 'time'
+            'zoneId' => 'zone_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * specList  每个采样时间中的转码任务数信息。
-    * time  采样时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ 。
+    * zoneId  所属zone的ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'specList' => 'setSpecList',
-            'time' => 'setTime'
+            'zoneId' => 'setZoneId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * specList  每个采样时间中的转码任务数信息。
-    * time  采样时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ 。
+    * zoneId  所属zone的ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'specList' => 'getSpecList',
-            'time' => 'getTime'
+            'zoneId' => 'getZoneId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +157,8 @@ class TranscodeCountData implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['specList'] = isset($data['specList']) ? $data['specList'] : null;
-        $this->container['time'] = isset($data['time']) ? $data['time'] : null;
+        $this->container['zoneId'] = isset($data['zoneId']) ? $data['zoneId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,12 +169,9 @@ class TranscodeCountData implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['time']) && (mb_strlen($this->container['time']) > 64)) {
-                $invalidProperties[] = "invalid value for 'time', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['time']) && (mb_strlen($this->container['time']) < 1)) {
-                $invalidProperties[] = "invalid value for 'time', the character length must be bigger than or equal to 1.";
-            }
+        if ($this->container['zoneId'] === null) {
+            $invalidProperties[] = "'zoneId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -190,50 +187,50 @@ class TranscodeCountData implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets specList
-    *  每个采样时间中的转码任务数信息。
+    * Gets zoneId
+    *  所属zone的ID。
     *
-    * @return \HuaweiCloud\SDK\Live\V2\Model\TranscodeSpecCount[]|null
+    * @return string
     */
-    public function getSpecList()
+    public function getZoneId()
     {
-        return $this->container['specList'];
+        return $this->container['zoneId'];
     }
 
     /**
-    * Sets specList
+    * Sets zoneId
     *
-    * @param \HuaweiCloud\SDK\Live\V2\Model\TranscodeSpecCount[]|null $specList 每个采样时间中的转码任务数信息。
+    * @param string $zoneId 所属zone的ID。
     *
     * @return $this
     */
-    public function setSpecList($specList)
+    public function setZoneId($zoneId)
     {
-        $this->container['specList'] = $specList;
+        $this->container['zoneId'] = $zoneId;
         return $this;
     }
 
     /**
-    * Gets time
-    *  采样时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ 。
+    * Gets body
+    *  body
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineReq|null
     */
-    public function getTime()
+    public function getBody()
     {
-        return $this->container['time'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets time
+    * Sets body
     *
-    * @param string|null $time 采样时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ 。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineReq|null $body body
     *
     * @return $this
     */
-    public function setTime($time)
+    public function setBody($body)
     {
-        $this->container['time'] = $time;
+        $this->container['body'] = $body;
         return $this;
     }
 

@@ -1,3 +1,60 @@
+# 3.0.51-rc 2022-06-30
+
+### HuaweiCloud SDK DNS
+
+- _Features_
+  - Support `Domain Name Service`.
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `mobile_phone` changed to required of the interface `SendVerificationMessageCode`
+
+### HuaweiCloud SDK BSSINTL
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `email` changed to required of the interface `SendVerificationMessageCode`
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `cache_url_parameter_filter` to the interface `ShowDomainFullConfig`
+  - Add the request parameter `cache_url_parameter_filter` to the interface `UpdateDomainFullConfig`
+
+### HuaweiCloud SDK DNS
+
+- _Features_
+  - Support the interfaces `CreateRecordSetWithBatchLines`, `BatchUpdateRecordSetWithLine`, `BatchDeleteRecordSetWithLine`
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `records` changed to not required of the interface `CreateRecordSetWithLine`
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - Support the interfaces `RecognizeHkIdCard`, `RecognizeCambodianIdCard`, `RecognizeExitEntryPermit`, `RecognizeMainlandTravelPermit`
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `int32` -> `float` of the response parameter `direction` of the interface `RecognizeGeneralText`
+
 # 3.0.50-rc 2022-06-19
 
 ### HuaweiCloud SDK OCR

@@ -73,7 +73,7 @@ class ListQueryHttpCodeResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'dataSeries' => 'data_series',
-            'xRequestId' => 'X-request-id'
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**

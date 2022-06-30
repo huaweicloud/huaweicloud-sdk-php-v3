@@ -73,7 +73,7 @@ class ListSingleStreamFramerateResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'framerateInfoList' => 'framerate_info_list',
-            'xRequestId' => 'X-request-id'
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
