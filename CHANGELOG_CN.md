@@ -1,3 +1,14 @@
+# 3.0.52-rc 2022-07-07
+
+### HuaweiCloud SDK OCR
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`RecognizeVatInvoice`新增响应参数 `title`
+
 # 3.0.51-rc 2022-06-30
 
 ### HuaweiCloud SDK DNS

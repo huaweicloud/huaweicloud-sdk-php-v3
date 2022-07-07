@@ -20,12 +20,13 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - roll：增值税普通发票（卷票）
+    * title  增值税发票标题
+    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic：增值税电子专用发票  - toll：增值税电子普通发票（通行费）  - roll：增值税普通发票（卷票）
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
     * code  发票代码。
-    * printCode  打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
+    * printCode  机打代码。当“advanced_mode”设置为“true”时才返回。
     * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
     * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
@@ -56,6 +57,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'title' => 'string',
             'type' => 'string',
             'serialNumber' => 'string',
             'attribution' => 'string',
@@ -92,12 +94,13 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - roll：增值税普通发票（卷票）
+    * title  增值税发票标题
+    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic：增值税电子专用发票  - toll：增值税电子普通发票（通行费）  - roll：增值税普通发票（卷票）
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
     * code  发票代码。
-    * printCode  打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
+    * printCode  机打代码。当“advanced_mode”设置为“true”时才返回。
     * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
     * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
@@ -128,6 +131,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'title' => null,
         'type' => null,
         'serialNumber' => null,
         'attribution' => null,
@@ -185,12 +189,13 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - roll：增值税普通发票（卷票）
+    * title  增值税发票标题
+    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic：增值税电子专用发票  - toll：增值税电子普通发票（通行费）  - roll：增值税普通发票（卷票）
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
     * code  发票代码。
-    * printCode  打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
+    * printCode  机打代码。当“advanced_mode”设置为“true”时才返回。
     * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
     * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
@@ -221,6 +226,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'title' => 'title',
             'type' => 'type',
             'serialNumber' => 'serial_number',
             'attribution' => 'attribution',
@@ -257,12 +263,13 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - roll：增值税普通发票（卷票）
+    * title  增值税发票标题
+    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic：增值税电子专用发票  - toll：增值税电子普通发票（通行费）  - roll：增值税普通发票（卷票）
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
     * code  发票代码。
-    * printCode  打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
+    * printCode  机打代码。当“advanced_mode”设置为“true”时才返回。
     * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
     * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
@@ -293,6 +300,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'title' => 'setTitle',
             'type' => 'setType',
             'serialNumber' => 'setSerialNumber',
             'attribution' => 'setAttribution',
@@ -329,12 +337,13 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - roll：增值税普通发票（卷票）
+    * title  增值税发票标题
+    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic：增值税电子专用发票  - toll：增值税电子普通发票（通行费）  - roll：增值税普通发票（卷票）
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
     * code  发票代码。
-    * printCode  打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
+    * printCode  机打代码。当“advanced_mode”设置为“true”时才返回。
     * machineNumber  机器编号。 当“advanced_mode”设置为“true”时才返回。
     * printNumber  机打号码。 当“advanced_mode”设置为“true”时才返回
     * checkCode  发票校验码，特定类型增值税发票内不存在该信息时返回空字符串。
@@ -365,6 +374,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'title' => 'getTitle',
             'type' => 'getType',
             'serialNumber' => 'getSerialNumber',
             'attribution' => 'getAttribution',
@@ -457,6 +467,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['serialNumber'] = isset($data['serialNumber']) ? $data['serialNumber'] : null;
         $this->container['attribution'] = isset($data['attribution']) ? $data['attribution'] : null;
@@ -514,8 +525,32 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets title
+    *  增值税发票标题
+    *
+    * @return string|null
+    */
+    public function getTitle()
+    {
+        return $this->container['title'];
+    }
+
+    /**
+    * Sets title
+    *
+    * @param string|null $title 增值税发票标题
+    *
+    * @return $this
+    */
+    public function setTitle($title)
+    {
+        $this->container['title'] = $title;
+        return $this;
+    }
+
+    /**
     * Gets type
-    *  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - roll：增值税普通发票（卷票）
+    *  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic：增值税电子专用发票  - toll：增值税电子普通发票（通行费）  - roll：增值税普通发票（卷票）
     *
     * @return string|null
     */
@@ -527,7 +562,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - roll：增值税普通发票（卷票）
+    * @param string|null $type 增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic：增值税电子专用发票  - toll：增值税电子普通发票（通行费）  - roll：增值税普通发票（卷票）
     *
     * @return $this
     */
@@ -635,7 +670,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets printCode
-    *  打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
+    *  机打代码。当“advanced_mode”设置为“true”时才返回。
     *
     * @return string|null
     */
@@ -647,7 +682,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets printCode
     *
-    * @param string|null $printCode 打印发票代码。普通发票和专用发票在右上角，电子发票、通行费发票、卷票无此字段。
+    * @param string|null $printCode 机打代码。当“advanced_mode”设置为“true”时才返回。
     *
     * @return $this
     */

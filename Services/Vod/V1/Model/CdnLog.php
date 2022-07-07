@@ -25,7 +25,7 @@ class CdnLog implements ModelInterface, ArrayAccess
     * endTime  查询结束时间。
     * name  日志名称。
     * size  日志大小。  单位：byte。
-    * link  日志下载链接。
+    * link  日志下载链接,日志文件[参数说明](https://support.huaweicloud.com/usermanual-cdn/zh-cn_topic_0073337424.html)。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class CdnLog implements ModelInterface, ArrayAccess
     * endTime  查询结束时间。
     * name  日志名称。
     * size  日志大小。  单位：byte。
-    * link  日志下载链接。
+    * link  日志下载链接,日志文件[参数说明](https://support.huaweicloud.com/usermanual-cdn/zh-cn_topic_0073337424.html)。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class CdnLog implements ModelInterface, ArrayAccess
     * endTime  查询结束时间。
     * name  日志名称。
     * size  日志大小。  单位：byte。
-    * link  日志下载链接。
+    * link  日志下载链接,日志文件[参数说明](https://support.huaweicloud.com/usermanual-cdn/zh-cn_topic_0073337424.html)。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class CdnLog implements ModelInterface, ArrayAccess
     * endTime  查询结束时间。
     * name  日志名称。
     * size  日志大小。  单位：byte。
-    * link  日志下载链接。
+    * link  日志下载链接,日志文件[参数说明](https://support.huaweicloud.com/usermanual-cdn/zh-cn_topic_0073337424.html)。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class CdnLog implements ModelInterface, ArrayAccess
     * endTime  查询结束时间。
     * name  日志名称。
     * size  日志大小。  单位：byte。
-    * link  日志下载链接。
+    * link  日志下载链接,日志文件[参数说明](https://support.huaweicloud.com/usermanual-cdn/zh-cn_topic_0073337424.html)。
     *
     * @var string[]
     */
@@ -349,7 +349,7 @@ class CdnLog implements ModelInterface, ArrayAccess
 
     /**
     * Gets link
-    *  日志下载链接。
+    *  日志下载链接,日志文件[参数说明](https://support.huaweicloud.com/usermanual-cdn/zh-cn_topic_0073337424.html)。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class CdnLog implements ModelInterface, ArrayAccess
     /**
     * Sets link
     *
-    * @param string|null $link 日志下载链接。
+    * @param string|null $link 日志下载链接,日志文件[参数说明](https://support.huaweicloud.com/usermanual-cdn/zh-cn_topic_0073337424.html)。
     *
     * @return $this
     */

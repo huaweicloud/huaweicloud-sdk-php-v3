@@ -28,7 +28,7 @@ class HealthCodeWordsBlockList implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'words' => 'string',
-            'location' => 'int[]',
+            'location' => 'int[][]',
             'confidence' => 'float'
     ];
 
@@ -222,7 +222,7 @@ class HealthCodeWordsBlockList implements ModelInterface, ArrayAccess
     * Gets location
     *  识别到的文字块的区域位置信息，列表形式，分别表示文字块4个顶点的（x,y）坐标。采用图像坐标系，图像坐标原点为图像左上角，x轴沿水平方向，y轴沿竖直方向。
     *
-    * @return int[]|null
+    * @return int[][]|null
     */
     public function getLocation()
     {
@@ -232,7 +232,7 @@ class HealthCodeWordsBlockList implements ModelInterface, ArrayAccess
     /**
     * Sets location
     *
-    * @param int[]|null $location 识别到的文字块的区域位置信息，列表形式，分别表示文字块4个顶点的（x,y）坐标。采用图像坐标系，图像坐标原点为图像左上角，x轴沿水平方向，y轴沿竖直方向。
+    * @param int[][]|null $location 识别到的文字块的区域位置信息，列表形式，分别表示文字块4个顶点的（x,y）坐标。采用图像坐标系，图像坐标原点为图像左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @return $this
     */

@@ -28,8 +28,8 @@ class CreateWatermarkTemplateReq implements ModelInterface, ArrayAccess
     * position  水印的位置。
     * width  水印图片宽。
     * height  水印图片高。
-    * timelineStart  水印开始时间。
-    * timelineDuration  水印持续时间。
+    * timelineStart  水印开始时间，与\"timeline_duration\"配合使用。 取值范围:[0, END)。\"END\"表示视频结束时间。 单位:秒。
+    * timelineDuration  水印持续时间，与\"timeline_start\"配合使用。 取值范围:(0,END-开始时间]。\"END\"表示视频结束时间。 单位:秒。 默认:END。
     * type  水印图片格式类型。
     * md5  水印图片MD5值。
     *
@@ -60,8 +60,8 @@ class CreateWatermarkTemplateReq implements ModelInterface, ArrayAccess
     * position  水印的位置。
     * width  水印图片宽。
     * height  水印图片高。
-    * timelineStart  水印开始时间。
-    * timelineDuration  水印持续时间。
+    * timelineStart  水印开始时间，与\"timeline_duration\"配合使用。 取值范围:[0, END)。\"END\"表示视频结束时间。 单位:秒。
+    * timelineDuration  水印持续时间，与\"timeline_start\"配合使用。 取值范围:(0,END-开始时间]。\"END\"表示视频结束时间。 单位:秒。 默认:END。
     * type  水印图片格式类型。
     * md5  水印图片MD5值。
     *
@@ -113,8 +113,8 @@ class CreateWatermarkTemplateReq implements ModelInterface, ArrayAccess
     * position  水印的位置。
     * width  水印图片宽。
     * height  水印图片高。
-    * timelineStart  水印开始时间。
-    * timelineDuration  水印持续时间。
+    * timelineStart  水印开始时间，与\"timeline_duration\"配合使用。 取值范围:[0, END)。\"END\"表示视频结束时间。 单位:秒。
+    * timelineDuration  水印持续时间，与\"timeline_start\"配合使用。 取值范围:(0,END-开始时间]。\"END\"表示视频结束时间。 单位:秒。 默认:END。
     * type  水印图片格式类型。
     * md5  水印图片MD5值。
     *
@@ -145,8 +145,8 @@ class CreateWatermarkTemplateReq implements ModelInterface, ArrayAccess
     * position  水印的位置。
     * width  水印图片宽。
     * height  水印图片高。
-    * timelineStart  水印开始时间。
-    * timelineDuration  水印持续时间。
+    * timelineStart  水印开始时间，与\"timeline_duration\"配合使用。 取值范围:[0, END)。\"END\"表示视频结束时间。 单位:秒。
+    * timelineDuration  水印持续时间，与\"timeline_start\"配合使用。 取值范围:(0,END-开始时间]。\"END\"表示视频结束时间。 单位:秒。 默认:END。
     * type  水印图片格式类型。
     * md5  水印图片MD5值。
     *
@@ -177,8 +177,8 @@ class CreateWatermarkTemplateReq implements ModelInterface, ArrayAccess
     * position  水印的位置。
     * width  水印图片宽。
     * height  水印图片高。
-    * timelineStart  水印开始时间。
-    * timelineDuration  水印持续时间。
+    * timelineStart  水印开始时间，与\"timeline_duration\"配合使用。 取值范围:[0, END)。\"END\"表示视频结束时间。 单位:秒。
+    * timelineDuration  水印持续时间，与\"timeline_start\"配合使用。 取值范围:(0,END-开始时间]。\"END\"表示视频结束时间。 单位:秒。 默认:END。
     * type  水印图片格式类型。
     * md5  水印图片MD5值。
     *
@@ -568,7 +568,7 @@ class CreateWatermarkTemplateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets timelineStart
-    *  水印开始时间。
+    *  水印开始时间，与\"timeline_duration\"配合使用。 取值范围:[0, END)。\"END\"表示视频结束时间。 单位:秒。
     *
     * @return string|null
     */
@@ -580,7 +580,7 @@ class CreateWatermarkTemplateReq implements ModelInterface, ArrayAccess
     /**
     * Sets timelineStart
     *
-    * @param string|null $timelineStart 水印开始时间。
+    * @param string|null $timelineStart 水印开始时间，与\"timeline_duration\"配合使用。 取值范围:[0, END)。\"END\"表示视频结束时间。 单位:秒。
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class CreateWatermarkTemplateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets timelineDuration
-    *  水印持续时间。
+    *  水印持续时间，与\"timeline_start\"配合使用。 取值范围:(0,END-开始时间]。\"END\"表示视频结束时间。 单位:秒。 默认:END。
     *
     * @return string|null
     */
@@ -604,7 +604,7 @@ class CreateWatermarkTemplateReq implements ModelInterface, ArrayAccess
     /**
     * Sets timelineDuration
     *
-    * @param string|null $timelineDuration 水印持续时间。
+    * @param string|null $timelineDuration 水印持续时间，与\"timeline_start\"配合使用。 取值范围:(0,END-开始时间]。\"END\"表示视频结束时间。 单位:秒。 默认:END。
     *
     * @return $this
     */
