@@ -77,7 +77,7 @@ class PublicipSingleShowResp implements ModelInterface, ArrayAccess
             'alias' => 'string',
             'profile' => '\HuaweiCloud\SDK\Eip\V3\Model\ProfileInfo',
             'fakeNetworkType' => 'bool',
-            'tags' => '\HuaweiCloud\SDK\Eip\V3\Model\TagsInfo[]',
+            'tags' => 'string[]',
             'associateInstanceMetadata' => 'string',
             'associateMode' => 'string',
             'allowShareBandwidthTypes' => 'string[]',
@@ -1298,7 +1298,7 @@ class PublicipSingleShowResp implements ModelInterface, ArrayAccess
     * Gets tags
     *  默认不显示。用户标签
     *
-    * @return \HuaweiCloud\SDK\Eip\V3\Model\TagsInfo[]|null
+    * @return string[]|null
     */
     public function getTags()
     {
@@ -1308,7 +1308,7 @@ class PublicipSingleShowResp implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Eip\V3\Model\TagsInfo[]|null $tags 默认不显示。用户标签
+    * @param string[]|null $tags 默认不显示。用户标签
     *
     * @return $this
     */

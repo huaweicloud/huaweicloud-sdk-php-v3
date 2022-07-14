@@ -164,8 +164,8 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['type']) && !preg_match("/AMQP|MQTT/", $this->container['type'])) {
-                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /AMQP|MQTT/.";
+            if (!is_null($this->container['type']) && !preg_match("/(AMQP)/", $this->container['type'])) {
+                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /(AMQP)/.";
             }
         return $invalidProperties;
     }

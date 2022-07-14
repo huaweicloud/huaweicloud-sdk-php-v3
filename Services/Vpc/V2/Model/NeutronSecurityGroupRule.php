@@ -29,6 +29,7 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：tcp/udp/icmp/icmpv6或IP协议编号（0~255） 约束：协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
     * remoteGroupId  所属安全组的对端ID
     * remoteIpPrefix  对端ip网段
+    * remoteAddressGroupId  功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
     * securityGroupId  所属安全组ID
     * tenantId  项目ID
     * projectId  项目ID
@@ -47,6 +48,7 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
             'protocol' => 'string',
             'remoteGroupId' => 'string',
             'remoteIpPrefix' => 'string',
+            'remoteAddressGroupId' => 'string',
             'securityGroupId' => 'string',
             'tenantId' => 'string',
             'projectId' => 'string',
@@ -65,6 +67,7 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：tcp/udp/icmp/icmpv6或IP协议编号（0~255） 约束：协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
     * remoteGroupId  所属安全组的对端ID
     * remoteIpPrefix  对端ip网段
+    * remoteAddressGroupId  功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
     * securityGroupId  所属安全组ID
     * tenantId  项目ID
     * projectId  项目ID
@@ -83,6 +86,7 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
         'protocol' => null,
         'remoteGroupId' => null,
         'remoteIpPrefix' => null,
+        'remoteAddressGroupId' => null,
         'securityGroupId' => null,
         'tenantId' => null,
         'projectId' => null,
@@ -122,6 +126,7 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：tcp/udp/icmp/icmpv6或IP协议编号（0~255） 约束：协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
     * remoteGroupId  所属安全组的对端ID
     * remoteIpPrefix  对端ip网段
+    * remoteAddressGroupId  功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
     * securityGroupId  所属安全组ID
     * tenantId  项目ID
     * projectId  项目ID
@@ -140,6 +145,7 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
             'protocol' => 'protocol',
             'remoteGroupId' => 'remote_group_id',
             'remoteIpPrefix' => 'remote_ip_prefix',
+            'remoteAddressGroupId' => 'remote_address_group_id',
             'securityGroupId' => 'security_group_id',
             'tenantId' => 'tenant_id',
             'projectId' => 'project_id',
@@ -158,6 +164,7 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：tcp/udp/icmp/icmpv6或IP协议编号（0~255） 约束：协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
     * remoteGroupId  所属安全组的对端ID
     * remoteIpPrefix  对端ip网段
+    * remoteAddressGroupId  功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
     * securityGroupId  所属安全组ID
     * tenantId  项目ID
     * projectId  项目ID
@@ -176,6 +183,7 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
             'protocol' => 'setProtocol',
             'remoteGroupId' => 'setRemoteGroupId',
             'remoteIpPrefix' => 'setRemoteIpPrefix',
+            'remoteAddressGroupId' => 'setRemoteAddressGroupId',
             'securityGroupId' => 'setSecurityGroupId',
             'tenantId' => 'setTenantId',
             'projectId' => 'setProjectId',
@@ -194,6 +202,7 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
     * protocol  功能说明：tcp/udp/icmp/icmpv6或IP协议编号（0~255） 约束：协议为icmpv6时，网络类型应该为IPv6；协议为icmp时，网络类型应该为IPv4
     * remoteGroupId  所属安全组的对端ID
     * remoteIpPrefix  对端ip网段
+    * remoteAddressGroupId  功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
     * securityGroupId  所属安全组ID
     * tenantId  项目ID
     * projectId  项目ID
@@ -212,6 +221,7 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
             'protocol' => 'getProtocol',
             'remoteGroupId' => 'getRemoteGroupId',
             'remoteIpPrefix' => 'getRemoteIpPrefix',
+            'remoteAddressGroupId' => 'getRemoteAddressGroupId',
             'securityGroupId' => 'getSecurityGroupId',
             'tenantId' => 'getTenantId',
             'projectId' => 'getProjectId',
@@ -301,6 +311,7 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['remoteGroupId'] = isset($data['remoteGroupId']) ? $data['remoteGroupId'] : null;
         $this->container['remoteIpPrefix'] = isset($data['remoteIpPrefix']) ? $data['remoteIpPrefix'] : null;
+        $this->container['remoteAddressGroupId'] = isset($data['remoteAddressGroupId']) ? $data['remoteAddressGroupId'] : null;
         $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
@@ -608,6 +619,30 @@ class NeutronSecurityGroupRule implements ModelInterface, ArrayAccess
     public function setRemoteIpPrefix($remoteIpPrefix)
     {
         $this->container['remoteIpPrefix'] = $remoteIpPrefix;
+        return $this;
+    }
+
+    /**
+    * Gets remoteAddressGroupId
+    *  功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
+    *
+    * @return string|null
+    */
+    public function getRemoteAddressGroupId()
+    {
+        return $this->container['remoteAddressGroupId'];
+    }
+
+    /**
+    * Sets remoteAddressGroupId
+    *
+    * @param string|null $remoteAddressGroupId 功能说明：远端IP地址组ID 约束：和remote_ip_prefix，remote_group_id互斥
+    *
+    * @return $this
+    */
+    public function setRemoteAddressGroupId($remoteAddressGroupId)
+    {
+        $this->container['remoteAddressGroupId'] = $remoteAddressGroupId;
         return $this;
     }
 

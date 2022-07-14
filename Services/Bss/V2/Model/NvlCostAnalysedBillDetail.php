@@ -64,6 +64,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * subResourceTypeName  该字段为预留字段。
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
+    * effectiveTagPairs  成本标签。
+    * costUnitPairs  成本单元。
     *
     * @var string[]
     */
@@ -111,7 +113,9 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'string',
             'subResourceTypeName' => 'string',
             'subResourceId' => 'string',
-            'subResourceName' => 'string'
+            'subResourceName' => 'string',
+            'effectiveTagPairs' => '\HuaweiCloud\SDK\Bss\V2\Model\TagPair[]',
+            'costUnitPairs' => '\HuaweiCloud\SDK\Bss\V2\Model\CostUnitPair[]'
     ];
 
     /**
@@ -160,6 +164,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * subResourceTypeName  该字段为预留字段。
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
+    * effectiveTagPairs  成本标签。
+    * costUnitPairs  成本单元。
     *
     * @var string[]
     */
@@ -207,7 +213,9 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
         'subResourceTypeCode' => null,
         'subResourceTypeName' => null,
         'subResourceId' => null,
-        'subResourceName' => null
+        'subResourceName' => null,
+        'effectiveTagPairs' => null,
+        'costUnitPairs' => null
     ];
 
     /**
@@ -277,6 +285,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * subResourceTypeName  该字段为预留字段。
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
+    * effectiveTagPairs  成本标签。
+    * costUnitPairs  成本单元。
     *
     * @var string[]
     */
@@ -324,7 +334,9 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'sub_resource_type_code',
             'subResourceTypeName' => 'sub_resource_type_name',
             'subResourceId' => 'sub_resource_id',
-            'subResourceName' => 'sub_resource_name'
+            'subResourceName' => 'sub_resource_name',
+            'effectiveTagPairs' => 'effective_tag_pairs',
+            'costUnitPairs' => 'cost_unit_pairs'
     ];
 
     /**
@@ -373,6 +385,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * subResourceTypeName  该字段为预留字段。
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
+    * effectiveTagPairs  成本标签。
+    * costUnitPairs  成本单元。
     *
     * @var string[]
     */
@@ -420,7 +434,9 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'setSubResourceTypeCode',
             'subResourceTypeName' => 'setSubResourceTypeName',
             'subResourceId' => 'setSubResourceId',
-            'subResourceName' => 'setSubResourceName'
+            'subResourceName' => 'setSubResourceName',
+            'effectiveTagPairs' => 'setEffectiveTagPairs',
+            'costUnitPairs' => 'setCostUnitPairs'
     ];
 
     /**
@@ -469,6 +485,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * subResourceTypeName  该字段为预留字段。
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
+    * effectiveTagPairs  成本标签。
+    * costUnitPairs  成本单元。
     *
     * @var string[]
     */
@@ -516,7 +534,9 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'getSubResourceTypeCode',
             'subResourceTypeName' => 'getSubResourceTypeName',
             'subResourceId' => 'getSubResourceId',
-            'subResourceName' => 'getSubResourceName'
+            'subResourceName' => 'getSubResourceName',
+            'effectiveTagPairs' => 'getEffectiveTagPairs',
+            'costUnitPairs' => 'getCostUnitPairs'
     ];
 
     /**
@@ -621,6 +641,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
         $this->container['subResourceTypeName'] = isset($data['subResourceTypeName']) ? $data['subResourceTypeName'] : null;
         $this->container['subResourceId'] = isset($data['subResourceId']) ? $data['subResourceId'] : null;
         $this->container['subResourceName'] = isset($data['subResourceName']) ? $data['subResourceName'] : null;
+        $this->container['effectiveTagPairs'] = isset($data['effectiveTagPairs']) ? $data['effectiveTagPairs'] : null;
+        $this->container['costUnitPairs'] = isset($data['costUnitPairs']) ? $data['costUnitPairs'] : null;
     }
 
     /**
@@ -1698,6 +1720,54 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     public function setSubResourceName($subResourceName)
     {
         $this->container['subResourceName'] = $subResourceName;
+        return $this;
+    }
+
+    /**
+    * Gets effectiveTagPairs
+    *  成本标签。
+    *
+    * @return \HuaweiCloud\SDK\Bss\V2\Model\TagPair[]|null
+    */
+    public function getEffectiveTagPairs()
+    {
+        return $this->container['effectiveTagPairs'];
+    }
+
+    /**
+    * Sets effectiveTagPairs
+    *
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\TagPair[]|null $effectiveTagPairs 成本标签。
+    *
+    * @return $this
+    */
+    public function setEffectiveTagPairs($effectiveTagPairs)
+    {
+        $this->container['effectiveTagPairs'] = $effectiveTagPairs;
+        return $this;
+    }
+
+    /**
+    * Gets costUnitPairs
+    *  成本单元。
+    *
+    * @return \HuaweiCloud\SDK\Bss\V2\Model\CostUnitPair[]|null
+    */
+    public function getCostUnitPairs()
+    {
+        return $this->container['costUnitPairs'];
+    }
+
+    /**
+    * Sets costUnitPairs
+    *
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\CostUnitPair[]|null $costUnitPairs 成本单元。
+    *
+    * @return $this
+    */
+    public function setCostUnitPairs($costUnitPairs)
+    {
+        $this->container['costUnitPairs'] = $costUnitPairs;
         return $this;
     }
 

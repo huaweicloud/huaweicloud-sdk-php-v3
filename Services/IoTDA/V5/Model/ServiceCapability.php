@@ -21,7 +21,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * serviceId  **参数说明**：设备的服务ID。注：产品内不允许重复。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
-    * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
+    * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
     * properties  **参数说明**：设备服务支持的属性列表。 **取值范围**：数组长度大小不超过500。
     * commands  **参数说明**：设备服务支持的命令列表。 **取值范围**：数组长度大小不超过500。
     * events  **参数说明**：设备服务支持的事件列表。 **取值范围**：数组长度大小不超过500。
@@ -43,7 +43,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * serviceId  **参数说明**：设备的服务ID。注：产品内不允许重复。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
-    * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
+    * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
     * properties  **参数说明**：设备服务支持的属性列表。 **取值范围**：数组长度大小不超过500。
     * commands  **参数说明**：设备服务支持的命令列表。 **取值范围**：数组长度大小不超过500。
     * events  **参数说明**：设备服务支持的事件列表。 **取值范围**：数组长度大小不超过500。
@@ -86,7 +86,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * serviceId  **参数说明**：设备的服务ID。注：产品内不允许重复。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
-    * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
+    * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
     * properties  **参数说明**：设备服务支持的属性列表。 **取值范围**：数组长度大小不超过500。
     * commands  **参数说明**：设备服务支持的命令列表。 **取值范围**：数组长度大小不超过500。
     * events  **参数说明**：设备服务支持的事件列表。 **取值范围**：数组长度大小不超过500。
@@ -108,7 +108,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * serviceId  **参数说明**：设备的服务ID。注：产品内不允许重复。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
-    * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
+    * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
     * properties  **参数说明**：设备服务支持的属性列表。 **取值范围**：数组长度大小不超过500。
     * commands  **参数说明**：设备服务支持的命令列表。 **取值范围**：数组长度大小不超过500。
     * events  **参数说明**：设备服务支持的事件列表。 **取值范围**：数组长度大小不超过500。
@@ -130,7 +130,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * serviceId  **参数说明**：设备的服务ID。注：产品内不允许重复。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
-    * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
+    * serviceType  **参数说明**：设备的服务类型。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
     * properties  **参数说明**：设备服务支持的属性列表。 **取值范围**：数组长度大小不超过500。
     * commands  **参数说明**：设备服务支持的命令列表。 **取值范围**：数组长度大小不超过500。
     * events  **参数说明**：设备服务支持的事件列表。 **取值范围**：数组长度大小不超过500。
@@ -233,8 +233,8 @@ class ServiceCapability implements ModelInterface, ArrayAccess
         if ($this->container['serviceType'] === null) {
             $invalidProperties[] = "'serviceType' can't be null";
         }
-            if (!preg_match("/^[一-龥a-zA-Z0-9_?'#().,&%@!\\-$]{1,32}$/", $this->container['serviceType'])) {
-                $invalidProperties[] = "invalid value for 'serviceType', must be conform to the pattern /^[一-龥a-zA-Z0-9_?'#().,&%@!\\-$]{1,32}$/.";
+            if (!preg_match("/^[一-龥a-zA-Z0-9_?'#().,&%@!\\-$]{1,64}$/", $this->container['serviceType'])) {
+                $invalidProperties[] = "invalid value for 'serviceType', must be conform to the pattern /^[一-龥a-zA-Z0-9_?'#().,&%@!\\-$]{1,64}$/.";
             }
             if (!is_null($this->container['description']) && !preg_match("/^[\\s一-龥a-zA-Z0-9_?'#().,;&%@!\\- ，、：；。\/]{1,128}$/", $this->container['description'])) {
                 $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[\\s一-龥a-zA-Z0-9_?'#().,;&%@!\\- ，、：；。\/]{1,128}$/.";
@@ -282,7 +282,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  **参数说明**：设备的服务类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
+    *  **参数说明**：设备的服务类型。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
     *
     * @return string
     */
@@ -294,7 +294,7 @@ class ServiceCapability implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string $serviceType **参数说明**：设备的服务类型。 **取值范围**：长度不超过32，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
+    * @param string $serviceType **参数说明**：设备的服务类型。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_?'#().,&%@!-$等字符的组合。
     *
     * @return $this
     */

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Bss\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class FileMapping implements ModelInterface, ArrayAccess
+class TagPair implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class FileMapping implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'FileMapping';
+    protected static $openAPIModelName = 'TagPair';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * csvMappings  **参数说明**：csv文件格式转换列表。当file_type为csv时，必填。
+    * tagKey  标签key。
+    * tagValue  标签value。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'csvMappings' => '\HuaweiCloud\SDK\IoTDA\V5\Model\CsvMappings[]'
+            'tagKey' => 'string',
+            'tagValue' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * csvMappings  **参数说明**：csv文件格式转换列表。当file_type为csv时，必填。
+    * tagKey  标签key。
+    * tagValue  标签value。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'csvMappings' => null
+        'tagKey' => null,
+        'tagValue' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class FileMapping implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * csvMappings  **参数说明**：csv文件格式转换列表。当file_type为csv时，必填。
+    * tagKey  标签key。
+    * tagValue  标签value。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'csvMappings' => 'csv_mappings'
+            'tagKey' => 'tag_key',
+            'tagValue' => 'tag_value'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * csvMappings  **参数说明**：csv文件格式转换列表。当file_type为csv时，必填。
+    * tagKey  标签key。
+    * tagValue  标签value。
     *
     * @var string[]
     */
     protected static $setters = [
-            'csvMappings' => 'setCsvMappings'
+            'tagKey' => 'setTagKey',
+            'tagValue' => 'setTagValue'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * csvMappings  **参数说明**：csv文件格式转换列表。当file_type为csv时，必填。
+    * tagKey  标签key。
+    * tagValue  标签value。
     *
     * @var string[]
     */
     protected static $getters = [
-            'csvMappings' => 'getCsvMappings'
+            'tagKey' => 'getTagKey',
+            'tagValue' => 'getTagValue'
     ];
 
     /**
@@ -147,7 +157,8 @@ class FileMapping implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['csvMappings'] = isset($data['csvMappings']) ? $data['csvMappings'] : null;
+        $this->container['tagKey'] = isset($data['tagKey']) ? $data['tagKey'] : null;
+        $this->container['tagValue'] = isset($data['tagValue']) ? $data['tagValue'] : null;
     }
 
     /**
@@ -173,26 +184,50 @@ class FileMapping implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets csvMappings
-    *  **参数说明**：csv文件格式转换列表。当file_type为csv时，必填。
+    * Gets tagKey
+    *  标签key。
     *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\CsvMappings[]|null
+    * @return string|null
     */
-    public function getCsvMappings()
+    public function getTagKey()
     {
-        return $this->container['csvMappings'];
+        return $this->container['tagKey'];
     }
 
     /**
-    * Sets csvMappings
+    * Sets tagKey
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\CsvMappings[]|null $csvMappings **参数说明**：csv文件格式转换列表。当file_type为csv时，必填。
+    * @param string|null $tagKey 标签key。
     *
     * @return $this
     */
-    public function setCsvMappings($csvMappings)
+    public function setTagKey($tagKey)
     {
-        $this->container['csvMappings'] = $csvMappings;
+        $this->container['tagKey'] = $tagKey;
+        return $this;
+    }
+
+    /**
+    * Gets tagValue
+    *  标签value。
+    *
+    * @return string|null
+    */
+    public function getTagValue()
+    {
+        return $this->container['tagValue'];
+    }
+
+    /**
+    * Sets tagValue
+    *
+    * @param string|null $tagValue 标签value。
+    *
+    * @return $this
+    */
+    public function setTagValue($tagValue)
+    {
+        $this->container['tagValue'] = $tagValue;
         return $this;
     }
 

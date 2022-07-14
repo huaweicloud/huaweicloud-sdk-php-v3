@@ -26,6 +26,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必传。
     * http2Status  是否使用HTTP2.0。（on：是，off：否。）,默认关闭，https_status=off时，该值不生效。
+    * tlsVersion  传输层安全性协议。目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。默认全部开启，不可全部关闭，只可开启连续或单个版本号。多版本开启时，使用逗号拼接传输，例：TLSv1.1,TLSv1.2。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class HttpPutBody implements ModelInterface, ArrayAccess
             'certificateValue' => 'string',
             'privateKey' => 'string',
             'certificateSource' => 'int',
-            'http2Status' => 'string'
+            'http2Status' => 'string',
+            'tlsVersion' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必传。
     * http2Status  是否使用HTTP2.0。（on：是，off：否。）,默认关闭，https_status=off时，该值不生效。
+    * tlsVersion  传输层安全性协议。目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。默认全部开启，不可全部关闭，只可开启连续或单个版本号。多版本开启时，使用逗号拼接传输，例：TLSv1.1,TLSv1.2。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class HttpPutBody implements ModelInterface, ArrayAccess
         'certificateValue' => null,
         'privateKey' => null,
         'certificateSource' => 'int32',
-        'http2Status' => null
+        'http2Status' => null,
+        'tlsVersion' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必传。
     * http2Status  是否使用HTTP2.0。（on：是，off：否。）,默认关闭，https_status=off时，该值不生效。
+    * tlsVersion  传输层安全性协议。目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。默认全部开启，不可全部关闭，只可开启连续或单个版本号。多版本开启时，使用逗号拼接传输，例：TLSv1.1,TLSv1.2。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class HttpPutBody implements ModelInterface, ArrayAccess
             'certificateValue' => 'certificate_value',
             'privateKey' => 'private_key',
             'certificateSource' => 'certificate_source',
-            'http2Status' => 'http2_status'
+            'http2Status' => 'http2_status',
+            'tlsVersion' => 'tls_version'
     ];
 
     /**
@@ -107,6 +113,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必传。
     * http2Status  是否使用HTTP2.0。（on：是，off：否。）,默认关闭，https_status=off时，该值不生效。
+    * tlsVersion  传输层安全性协议。目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。默认全部开启，不可全部关闭，只可开启连续或单个版本号。多版本开启时，使用逗号拼接传输，例：TLSv1.1,TLSv1.2。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class HttpPutBody implements ModelInterface, ArrayAccess
             'certificateValue' => 'setCertificateValue',
             'privateKey' => 'setPrivateKey',
             'certificateSource' => 'setCertificateSource',
-            'http2Status' => 'setHttp2Status'
+            'http2Status' => 'setHttp2Status',
+            'tlsVersion' => 'setTlsVersion'
     ];
 
     /**
@@ -127,6 +135,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必传。
     * http2Status  是否使用HTTP2.0。（on：是，off：否。）,默认关闭，https_status=off时，该值不生效。
+    * tlsVersion  传输层安全性协议。目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。默认全部开启，不可全部关闭，只可开启连续或单个版本号。多版本开启时，使用逗号拼接传输，例：TLSv1.1,TLSv1.2。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class HttpPutBody implements ModelInterface, ArrayAccess
             'certificateValue' => 'getCertificateValue',
             'privateKey' => 'getPrivateKey',
             'certificateSource' => 'getCertificateSource',
-            'http2Status' => 'getHttp2Status'
+            'http2Status' => 'getHttp2Status',
+            'tlsVersion' => 'getTlsVersion'
     ];
 
     /**
@@ -203,6 +213,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
         $this->container['privateKey'] = isset($data['privateKey']) ? $data['privateKey'] : null;
         $this->container['certificateSource'] = isset($data['certificateSource']) ? $data['certificateSource'] : null;
         $this->container['http2Status'] = isset($data['http2Status']) ? $data['http2Status'] : null;
+        $this->container['tlsVersion'] = isset($data['tlsVersion']) ? $data['tlsVersion'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     public function setHttp2Status($http2Status)
     {
         $this->container['http2Status'] = $http2Status;
+        return $this;
+    }
+
+    /**
+    * Gets tlsVersion
+    *  传输层安全性协议。目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。默认全部开启，不可全部关闭，只可开启连续或单个版本号。多版本开启时，使用逗号拼接传输，例：TLSv1.1,TLSv1.2。
+    *
+    * @return string|null
+    */
+    public function getTlsVersion()
+    {
+        return $this->container['tlsVersion'];
+    }
+
+    /**
+    * Sets tlsVersion
+    *
+    * @param string|null $tlsVersion 传输层安全性协议。目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。默认全部开启，不可全部关闭，只可开启连续或单个版本号。多版本开启时，使用逗号拼接传输，例：TLSv1.1,TLSv1.2。
+    *
+    * @return $this
+    */
+    public function setTlsVersion($tlsVersion)
+    {
+        $this->container['tlsVersion'] = $tlsVersion;
         return $this;
     }
 

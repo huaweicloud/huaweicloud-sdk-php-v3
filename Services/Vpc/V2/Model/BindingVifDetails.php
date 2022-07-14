@@ -21,21 +21,29 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * primaryInterface  功能说明：取值为true，表示是虚拟机的主网卡。
+    * portFilter  功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
+    * ovsHybridPlug  用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'primaryInterface' => 'bool'
+            'primaryInterface' => 'bool',
+            'portFilter' => 'bool',
+            'ovsHybridPlug' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * primaryInterface  功能说明：取值为true，表示是虚拟机的主网卡。
+    * portFilter  功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
+    * ovsHybridPlug  用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'primaryInterface' => null
+        'primaryInterface' => null,
+        'portFilter' => null,
+        'ovsHybridPlug' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * primaryInterface  功能说明：取值为true，表示是虚拟机的主网卡。
+    * portFilter  功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
+    * ovsHybridPlug  用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'primaryInterface' => 'primary_interface'
+            'primaryInterface' => 'primary_interface',
+            'portFilter' => 'port_filter',
+            'ovsHybridPlug' => 'ovs_hybrid_plug'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * primaryInterface  功能说明：取值为true，表示是虚拟机的主网卡。
+    * portFilter  功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
+    * ovsHybridPlug  用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
     *
     * @var string[]
     */
     protected static $setters = [
-            'primaryInterface' => 'setPrimaryInterface'
+            'primaryInterface' => 'setPrimaryInterface',
+            'portFilter' => 'setPortFilter',
+            'ovsHybridPlug' => 'setOvsHybridPlug'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * primaryInterface  功能说明：取值为true，表示是虚拟机的主网卡。
+    * portFilter  功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
+    * ovsHybridPlug  用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
     *
     * @var string[]
     */
     protected static $getters = [
-            'primaryInterface' => 'getPrimaryInterface'
+            'primaryInterface' => 'getPrimaryInterface',
+            'portFilter' => 'getPortFilter',
+            'ovsHybridPlug' => 'getOvsHybridPlug'
     ];
 
     /**
@@ -148,6 +168,8 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['primaryInterface'] = isset($data['primaryInterface']) ? $data['primaryInterface'] : null;
+        $this->container['portFilter'] = isset($data['portFilter']) ? $data['portFilter'] : null;
+        $this->container['ovsHybridPlug'] = isset($data['ovsHybridPlug']) ? $data['ovsHybridPlug'] : null;
     }
 
     /**
@@ -193,6 +215,54 @@ class BindingVifDetails implements ModelInterface, ArrayAccess
     public function setPrimaryInterface($primaryInterface)
     {
         $this->container['primaryInterface'] = $primaryInterface;
+        return $this;
+    }
+
+    /**
+    * Gets portFilter
+    *  功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
+    *
+    * @return bool|null
+    */
+    public function getPortFilter()
+    {
+        return $this->container['portFilter'];
+    }
+
+    /**
+    * Sets portFilter
+    *
+    * @param bool|null $portFilter 功能说明：表示该网络服务提供端口过滤特性，如安全组和反MAC/IP欺骗。
+    *
+    * @return $this
+    */
+    public function setPortFilter($portFilter)
+    {
+        $this->container['portFilter'] = $portFilter;
+        return $this;
+    }
+
+    /**
+    * Gets ovsHybridPlug
+    *  用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
+    *
+    * @return bool|null
+    */
+    public function getOvsHybridPlug()
+    {
+        return $this->container['ovsHybridPlug'];
+    }
+
+    /**
+    * Sets ovsHybridPlug
+    *
+    * @param bool|null $ovsHybridPlug 用于通知像nova这样的API消费者，应该使用OVS的混合插入策略。
+    *
+    * @return $this
+    */
+    public function setOvsHybridPlug($ovsHybridPlug)
+    {
+        $this->container['ovsHybridPlug'] = $ovsHybridPlug;
         return $this;
     }
 

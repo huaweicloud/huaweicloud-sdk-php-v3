@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Bss\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CsvMappings implements ModelInterface, ArrayAccess
+class CostUnitPair implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class CsvMappings implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CsvMappings';
+    protected static $openAPIModelName = 'CostUnitPair';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * columnName  **参数说明**：OBS文件中的列名
-    * jsonKey  **参数说明**：流转数据的属性名
+    * costUnitName  成本单元名称。
+    * costUnitRuleValue  成本单元规则值。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'columnName' => 'string',
-            'jsonKey' => 'string'
+            'costUnitName' => 'string',
+            'costUnitRuleValue' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * columnName  **参数说明**：OBS文件中的列名
-    * jsonKey  **参数说明**：流转数据的属性名
+    * costUnitName  成本单元名称。
+    * costUnitRuleValue  成本单元规则值。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'columnName' => null,
-        'jsonKey' => null
+        'costUnitName' => null,
+        'costUnitRuleValue' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class CsvMappings implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * columnName  **参数说明**：OBS文件中的列名
-    * jsonKey  **参数说明**：流转数据的属性名
+    * costUnitName  成本单元名称。
+    * costUnitRuleValue  成本单元规则值。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'columnName' => 'column_name',
-            'jsonKey' => 'json_key'
+            'costUnitName' => 'cost_unit_name',
+            'costUnitRuleValue' => 'cost_unit_rule_value'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * columnName  **参数说明**：OBS文件中的列名
-    * jsonKey  **参数说明**：流转数据的属性名
+    * costUnitName  成本单元名称。
+    * costUnitRuleValue  成本单元规则值。
     *
     * @var string[]
     */
     protected static $setters = [
-            'columnName' => 'setColumnName',
-            'jsonKey' => 'setJsonKey'
+            'costUnitName' => 'setCostUnitName',
+            'costUnitRuleValue' => 'setCostUnitRuleValue'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * columnName  **参数说明**：OBS文件中的列名
-    * jsonKey  **参数说明**：流转数据的属性名
+    * costUnitName  成本单元名称。
+    * costUnitRuleValue  成本单元规则值。
     *
     * @var string[]
     */
     protected static $getters = [
-            'columnName' => 'getColumnName',
-            'jsonKey' => 'getJsonKey'
+            'costUnitName' => 'getCostUnitName',
+            'costUnitRuleValue' => 'getCostUnitRuleValue'
     ];
 
     /**
@@ -157,8 +157,8 @@ class CsvMappings implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['columnName'] = isset($data['columnName']) ? $data['columnName'] : null;
-        $this->container['jsonKey'] = isset($data['jsonKey']) ? $data['jsonKey'] : null;
+        $this->container['costUnitName'] = isset($data['costUnitName']) ? $data['costUnitName'] : null;
+        $this->container['costUnitRuleValue'] = isset($data['costUnitRuleValue']) ? $data['costUnitRuleValue'] : null;
     }
 
     /**
@@ -169,24 +169,6 @@ class CsvMappings implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['columnName'] === null) {
-            $invalidProperties[] = "'columnName' can't be null";
-        }
-            if ((mb_strlen($this->container['columnName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'columnName', the character length must be smaller than or equal to 256.";
-            }
-            if ((mb_strlen($this->container['columnName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'columnName', the character length must be bigger than or equal to 1.";
-            }
-        if ($this->container['jsonKey'] === null) {
-            $invalidProperties[] = "'jsonKey' can't be null";
-        }
-            if ((mb_strlen($this->container['jsonKey']) > 256)) {
-                $invalidProperties[] = "invalid value for 'jsonKey', the character length must be smaller than or equal to 256.";
-            }
-            if ((mb_strlen($this->container['jsonKey']) < 1)) {
-                $invalidProperties[] = "invalid value for 'jsonKey', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -202,50 +184,50 @@ class CsvMappings implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets columnName
-    *  **参数说明**：OBS文件中的列名
+    * Gets costUnitName
+    *  成本单元名称。
     *
-    * @return string
+    * @return string|null
     */
-    public function getColumnName()
+    public function getCostUnitName()
     {
-        return $this->container['columnName'];
+        return $this->container['costUnitName'];
     }
 
     /**
-    * Sets columnName
+    * Sets costUnitName
     *
-    * @param string $columnName **参数说明**：OBS文件中的列名
+    * @param string|null $costUnitName 成本单元名称。
     *
     * @return $this
     */
-    public function setColumnName($columnName)
+    public function setCostUnitName($costUnitName)
     {
-        $this->container['columnName'] = $columnName;
+        $this->container['costUnitName'] = $costUnitName;
         return $this;
     }
 
     /**
-    * Gets jsonKey
-    *  **参数说明**：流转数据的属性名
+    * Gets costUnitRuleValue
+    *  成本单元规则值。
     *
-    * @return string
+    * @return string|null
     */
-    public function getJsonKey()
+    public function getCostUnitRuleValue()
     {
-        return $this->container['jsonKey'];
+        return $this->container['costUnitRuleValue'];
     }
 
     /**
-    * Sets jsonKey
+    * Sets costUnitRuleValue
     *
-    * @param string $jsonKey **参数说明**：流转数据的属性名
+    * @param string|null $costUnitRuleValue 成本单元规则值。
     *
     * @return $this
     */
-    public function setJsonKey($jsonKey)
+    public function setCostUnitRuleValue($costUnitRuleValue)
     {
-        $this->container['jsonKey'] = $jsonKey;
+        $this->container['costUnitRuleValue'] = $costUnitRuleValue;
         return $this;
     }
 

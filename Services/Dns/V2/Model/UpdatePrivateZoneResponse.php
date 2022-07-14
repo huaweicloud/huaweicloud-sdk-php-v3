@@ -36,7 +36,7 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
-    * routers  Private zone关联的Router(VPC)信息
+    * routers  内网Zone关联的Router(VPC)信息
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
-    * routers  Private zone关联的Router(VPC)信息
+    * routers  内网Zone关联的Router(VPC)信息
     *
     * @var string[]
     */
@@ -137,7 +137,7 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
-    * routers  Private zone关联的Router(VPC)信息
+    * routers  内网Zone关联的Router(VPC)信息
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
-    * routers  Private zone关联的Router(VPC)信息
+    * routers  内网Zone关联的Router(VPC)信息
     *
     * @var string[]
     */
@@ -217,7 +217,7 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。
     * links  links
     * masters  主从模式中，从DNS服务器用以获取DNS信息。
-    * routers  Private zone关联的Router(VPC)信息
+    * routers  内网Zone关联的Router(VPC)信息
     *
     * @var string[]
     */
@@ -700,7 +700,7 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets routers
-    *  Private zone关联的Router(VPC)信息
+    *  内网Zone关联的Router(VPC)信息
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\RouterWithStatus[]|null
     */
@@ -712,7 +712,7 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets routers
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\RouterWithStatus[]|null $routers Private zone关联的Router(VPC)信息
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\RouterWithStatus[]|null $routers 内网Zone关联的Router(VPC)信息
     *
     * @return $this
     */

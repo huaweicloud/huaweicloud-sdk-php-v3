@@ -8,7 +8,7 @@
     "api",
     "core"
   ],
-  "version": "3.0.52-rc",
+  "version": "3.0.53-rc",
   "type": "library",
   "license": "Apache-2.0",
   "authors": [

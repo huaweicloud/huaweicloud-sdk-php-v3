@@ -25,6 +25,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
     * http2Status  是否使用HTTP2.0。（on：是，off：否）
+    * tlsVersion  传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class HttpGetBody implements ModelInterface, ArrayAccess
             'certificateName' => 'string',
             'certificateValue' => 'string',
             'certificateSource' => 'int',
-            'http2Status' => 'string'
+            'http2Status' => 'string',
+            'tlsVersion' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
     * http2Status  是否使用HTTP2.0。（on：是，off：否）
+    * tlsVersion  传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class HttpGetBody implements ModelInterface, ArrayAccess
         'certificateName' => null,
         'certificateValue' => null,
         'certificateSource' => null,
-        'http2Status' => null
+        'http2Status' => null,
+        'tlsVersion' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
     * http2Status  是否使用HTTP2.0。（on：是，off：否）
+    * tlsVersion  传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class HttpGetBody implements ModelInterface, ArrayAccess
             'certificateName' => 'certificate_name',
             'certificateValue' => 'certificate_value',
             'certificateSource' => 'certificate_source',
-            'http2Status' => 'http2_status'
+            'http2Status' => 'http2_status',
+            'tlsVersion' => 'tls_version'
     ];
 
     /**
@@ -100,6 +106,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
     * http2Status  是否使用HTTP2.0。（on：是，off：否）
+    * tlsVersion  传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class HttpGetBody implements ModelInterface, ArrayAccess
             'certificateName' => 'setCertificateName',
             'certificateValue' => 'setCertificateValue',
             'certificateSource' => 'setCertificateSource',
-            'http2Status' => 'setHttp2Status'
+            'http2Status' => 'setHttp2Status',
+            'tlsVersion' => 'setTlsVersion'
     ];
 
     /**
@@ -118,6 +126,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
     * http2Status  是否使用HTTP2.0。（on：是，off：否）
+    * tlsVersion  传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class HttpGetBody implements ModelInterface, ArrayAccess
             'certificateName' => 'getCertificateName',
             'certificateValue' => 'getCertificateValue',
             'certificateSource' => 'getCertificateSource',
-            'http2Status' => 'getHttp2Status'
+            'http2Status' => 'getHttp2Status',
+            'tlsVersion' => 'getTlsVersion'
     ];
 
     /**
@@ -192,6 +202,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
         $this->container['certificateValue'] = isset($data['certificateValue']) ? $data['certificateValue'] : null;
         $this->container['certificateSource'] = isset($data['certificateSource']) ? $data['certificateSource'] : null;
         $this->container['http2Status'] = isset($data['http2Status']) ? $data['http2Status'] : null;
+        $this->container['tlsVersion'] = isset($data['tlsVersion']) ? $data['tlsVersion'] : null;
     }
 
     /**
@@ -333,6 +344,30 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     public function setHttp2Status($http2Status)
     {
         $this->container['http2Status'] = $http2Status;
+        return $this;
+    }
+
+    /**
+    * Gets tlsVersion
+    *  传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
+    *
+    * @return string|null
+    */
+    public function getTlsVersion()
+    {
+        return $this->container['tlsVersion'];
+    }
+
+    /**
+    * Sets tlsVersion
+    *
+    * @param string|null $tlsVersion 传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
+    *
+    * @return $this
+    */
+    public function setTlsVersion($tlsVersion)
+    {
+        $this->container['tlsVersion'] = $tlsVersion;
         return $this;
     }
 

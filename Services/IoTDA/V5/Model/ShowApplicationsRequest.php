@@ -175,8 +175,8 @@ class ShowApplicationsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['instanceId']) && !preg_match("/^[a-f0-9-]{36}$/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-f0-9-]{36}$/.";
+            if (!is_null($this->container['instanceId']) && !preg_match("/[0-9a-f-]{1,36}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[0-9a-f-]{1,36}/.";
             }
         return $invalidProperties;
     }

@@ -25,7 +25,6 @@ class ObsForwarding implements ModelInterface, ArrayAccess
     * bucketName  **参数说明**：OBS服务对应的桶名称
     * location  **参数说明**：OBS服务对应桶的区域
     * filePath  **参数说明**：OBS服务中存储通道文件的自定义目录,多级目录可用(/)进行分隔，不可以斜杠(/)开头或结尾，不能包含两个以上相邻的斜杠(/) **取值范围**: 英文字母(a-zA-Z)、数字(0-9)、下划线(_)、中划线(-)、斜杠(/)和大括号({})，最大字符长度256个字符。其中大括号只能用于对应模板参数。 **模板参数**:    - \\{YYYY\\} 年   - \\{MM\\} 月   - \\{DD\\} 日   - \\{HH\\} 小时   - \\{appId\\} 应用ID   - \\{deviceId\\} 设备ID   例如:自定义目录结构为\\{YYYY\\}/\\{MM\\}/\\{DD\\}/\\{HH\\},则会在转发数据时，根据当前时间往对应的目录结构2021>08>11>09下生成对应的数据。
-    * fileMapping  fileMapping
     *
     * @var string[]
     */
@@ -34,8 +33,7 @@ class ObsForwarding implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'bucketName' => 'string',
             'location' => 'string',
-            'filePath' => 'string',
-            'fileMapping' => '\HuaweiCloud\SDK\IoTDA\V5\Model\FileMapping'
+            'filePath' => 'string'
     ];
 
     /**
@@ -45,7 +43,6 @@ class ObsForwarding implements ModelInterface, ArrayAccess
     * bucketName  **参数说明**：OBS服务对应的桶名称
     * location  **参数说明**：OBS服务对应桶的区域
     * filePath  **参数说明**：OBS服务中存储通道文件的自定义目录,多级目录可用(/)进行分隔，不可以斜杠(/)开头或结尾，不能包含两个以上相邻的斜杠(/) **取值范围**: 英文字母(a-zA-Z)、数字(0-9)、下划线(_)、中划线(-)、斜杠(/)和大括号({})，最大字符长度256个字符。其中大括号只能用于对应模板参数。 **模板参数**:    - \\{YYYY\\} 年   - \\{MM\\} 月   - \\{DD\\} 日   - \\{HH\\} 小时   - \\{appId\\} 应用ID   - \\{deviceId\\} 设备ID   例如:自定义目录结构为\\{YYYY\\}/\\{MM\\}/\\{DD\\}/\\{HH\\},则会在转发数据时，根据当前时间往对应的目录结构2021>08>11>09下生成对应的数据。
-    * fileMapping  fileMapping
     *
     * @var string[]
     */
@@ -54,8 +51,7 @@ class ObsForwarding implements ModelInterface, ArrayAccess
         'projectId' => null,
         'bucketName' => null,
         'location' => null,
-        'filePath' => null,
-        'fileMapping' => null
+        'filePath' => null
     ];
 
     /**
@@ -86,7 +82,6 @@ class ObsForwarding implements ModelInterface, ArrayAccess
     * bucketName  **参数说明**：OBS服务对应的桶名称
     * location  **参数说明**：OBS服务对应桶的区域
     * filePath  **参数说明**：OBS服务中存储通道文件的自定义目录,多级目录可用(/)进行分隔，不可以斜杠(/)开头或结尾，不能包含两个以上相邻的斜杠(/) **取值范围**: 英文字母(a-zA-Z)、数字(0-9)、下划线(_)、中划线(-)、斜杠(/)和大括号({})，最大字符长度256个字符。其中大括号只能用于对应模板参数。 **模板参数**:    - \\{YYYY\\} 年   - \\{MM\\} 月   - \\{DD\\} 日   - \\{HH\\} 小时   - \\{appId\\} 应用ID   - \\{deviceId\\} 设备ID   例如:自定义目录结构为\\{YYYY\\}/\\{MM\\}/\\{DD\\}/\\{HH\\},则会在转发数据时，根据当前时间往对应的目录结构2021>08>11>09下生成对应的数据。
-    * fileMapping  fileMapping
     *
     * @var string[]
     */
@@ -95,8 +90,7 @@ class ObsForwarding implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'bucketName' => 'bucket_name',
             'location' => 'location',
-            'filePath' => 'file_path',
-            'fileMapping' => 'file_mapping'
+            'filePath' => 'file_path'
     ];
 
     /**
@@ -106,7 +100,6 @@ class ObsForwarding implements ModelInterface, ArrayAccess
     * bucketName  **参数说明**：OBS服务对应的桶名称
     * location  **参数说明**：OBS服务对应桶的区域
     * filePath  **参数说明**：OBS服务中存储通道文件的自定义目录,多级目录可用(/)进行分隔，不可以斜杠(/)开头或结尾，不能包含两个以上相邻的斜杠(/) **取值范围**: 英文字母(a-zA-Z)、数字(0-9)、下划线(_)、中划线(-)、斜杠(/)和大括号({})，最大字符长度256个字符。其中大括号只能用于对应模板参数。 **模板参数**:    - \\{YYYY\\} 年   - \\{MM\\} 月   - \\{DD\\} 日   - \\{HH\\} 小时   - \\{appId\\} 应用ID   - \\{deviceId\\} 设备ID   例如:自定义目录结构为\\{YYYY\\}/\\{MM\\}/\\{DD\\}/\\{HH\\},则会在转发数据时，根据当前时间往对应的目录结构2021>08>11>09下生成对应的数据。
-    * fileMapping  fileMapping
     *
     * @var string[]
     */
@@ -115,8 +108,7 @@ class ObsForwarding implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'bucketName' => 'setBucketName',
             'location' => 'setLocation',
-            'filePath' => 'setFilePath',
-            'fileMapping' => 'setFileMapping'
+            'filePath' => 'setFilePath'
     ];
 
     /**
@@ -126,7 +118,6 @@ class ObsForwarding implements ModelInterface, ArrayAccess
     * bucketName  **参数说明**：OBS服务对应的桶名称
     * location  **参数说明**：OBS服务对应桶的区域
     * filePath  **参数说明**：OBS服务中存储通道文件的自定义目录,多级目录可用(/)进行分隔，不可以斜杠(/)开头或结尾，不能包含两个以上相邻的斜杠(/) **取值范围**: 英文字母(a-zA-Z)、数字(0-9)、下划线(_)、中划线(-)、斜杠(/)和大括号({})，最大字符长度256个字符。其中大括号只能用于对应模板参数。 **模板参数**:    - \\{YYYY\\} 年   - \\{MM\\} 月   - \\{DD\\} 日   - \\{HH\\} 小时   - \\{appId\\} 应用ID   - \\{deviceId\\} 设备ID   例如:自定义目录结构为\\{YYYY\\}/\\{MM\\}/\\{DD\\}/\\{HH\\},则会在转发数据时，根据当前时间往对应的目录结构2021>08>11>09下生成对应的数据。
-    * fileMapping  fileMapping
     *
     * @var string[]
     */
@@ -135,8 +126,7 @@ class ObsForwarding implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'bucketName' => 'getBucketName',
             'location' => 'getLocation',
-            'filePath' => 'getFilePath',
-            'fileMapping' => 'getFileMapping'
+            'filePath' => 'getFilePath'
     ];
 
     /**
@@ -202,7 +192,6 @@ class ObsForwarding implements ModelInterface, ArrayAccess
         $this->container['bucketName'] = isset($data['bucketName']) ? $data['bucketName'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
         $this->container['filePath'] = isset($data['filePath']) ? $data['filePath'] : null;
-        $this->container['fileMapping'] = isset($data['fileMapping']) ? $data['fileMapping'] : null;
     }
 
     /**
@@ -380,30 +369,6 @@ class ObsForwarding implements ModelInterface, ArrayAccess
     public function setFilePath($filePath)
     {
         $this->container['filePath'] = $filePath;
-        return $this;
-    }
-
-    /**
-    * Gets fileMapping
-    *  fileMapping
-    *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\FileMapping|null
-    */
-    public function getFileMapping()
-    {
-        return $this->container['fileMapping'];
-    }
-
-    /**
-    * Sets fileMapping
-    *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\FileMapping|null $fileMapping fileMapping
-    *
-    * @return $this
-    */
-    public function setFileMapping($fileMapping)
-    {
-        $this->container['fileMapping'] = $fileMapping;
         return $this;
     }
 

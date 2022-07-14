@@ -686,9 +686,6 @@ class IoTDAAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['spAuthToken'] !== null) {
-            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
-        }
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
         }
@@ -760,9 +757,6 @@ class IoTDAAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['spAuthToken'] !== null) {
-            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
@@ -1076,11 +1070,11 @@ class IoTDAAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -1142,11 +1136,11 @@ class IoTDAAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -1226,11 +1220,11 @@ class IoTDAAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['multipart/form-data']
             );
         }
@@ -1576,9 +1570,6 @@ class IoTDAAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['spAuthToken'] !== null) {
-            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
@@ -3572,9 +3563,6 @@ class IoTDAAsyncClient extends Client
         if ($localVarParams['serviceId'] !== null) {
             $queryParams['service_id'] = $localVarParams['serviceId'];
         }
-        if ($localVarParams['spAuthToken'] !== null) {
-            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
-        }
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
         }
@@ -3615,7 +3603,7 @@ class IoTDAAsyncClient extends Client
     /**
      * 修改设备属性
      *
-     * 设备的产品模型中定义了物联网平台可向设备下发的属性，应用服务器可调用此接口向指定设备下属性。平台负责将属性以同步方式发送给设备，并将设备执行属性结果同步返回。注意：此接口适用于MQTT设备，暂不支持NB-IoT设备。
+     * 设备的产品模型中定义了物联网平台可向设备下发的属性，应用服务器可调用此接口向指定设备下发属性。平台负责将属性以同步方式发送给设备，并将设备执行属性结果同步返回。注意：此接口适用于MQTT设备，暂不支持NB-IoT设备。
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -3643,9 +3631,6 @@ class IoTDAAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['spAuthToken'] !== null) {
-            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];

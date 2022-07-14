@@ -172,8 +172,8 @@ class InitialDesired implements ModelInterface, ArrayAccess
         if ($this->container['serviceId'] === null) {
             $invalidProperties[] = "'serviceId' can't be null";
         }
-            if (!preg_match("/^[一-龥a-zA-Z0-9_?'#().,&%@!\\-$]{1,32}$/", $this->container['serviceId'])) {
-                $invalidProperties[] = "invalid value for 'serviceId', must be conform to the pattern /^[一-龥a-zA-Z0-9_?'#().,&%@!\\-$]{1,32}$/.";
+            if (!preg_match("/^[一-龥a-zA-Z0-9_?'#().,&%@!\\-$]{1,64}$/", $this->container['serviceId'])) {
+                $invalidProperties[] = "invalid value for 'serviceId', must be conform to the pattern /^[一-龥a-zA-Z0-9_?'#().,&%@!\\-$]{1,64}$/.";
             }
         if ($this->container['desired'] === null) {
             $invalidProperties[] = "'desired' can't be null";

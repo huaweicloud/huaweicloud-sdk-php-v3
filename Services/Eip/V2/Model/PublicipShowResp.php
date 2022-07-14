@@ -47,7 +47,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
             'bandwidthName' => 'string',
             'bandwidthShareType' => 'string',
             'bandwidthSize' => 'int',
-            'createTime' => '\DateTime',
+            'createTime' => 'string',
             'enterpriseProjectId' => 'string',
             'id' => 'string',
             'portId' => 'string',
@@ -93,7 +93,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
         'bandwidthName' => null,
         'bandwidthShareType' => null,
         'bandwidthSize' => 'int32',
-        'createTime' => 'date-time',
+        'createTime' => null,
         'enterpriseProjectId' => null,
         'id' => null,
         'portId' => null,
@@ -603,7 +603,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     * Gets createTime
     *  弹性公网IP申请时间（UTC）
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getCreateTime()
     {
@@ -613,7 +613,7 @@ class PublicipShowResp implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 弹性公网IP申请时间（UTC）
+    * @param string|null $createTime 弹性公网IP申请时间（UTC）
     *
     * @return $this
     */
