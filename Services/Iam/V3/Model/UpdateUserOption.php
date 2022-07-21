@@ -21,7 +21,7 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
-    * name  新IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * name  新IAM用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * password  IAM用户新密码。 - 系统默认密码最小长度为6字符，在6-32字符之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 必须满足账户设置中[密码策略](https://support.huaweicloud.com/usermanual-iam/iam_01_0607.html)的要求。 - 新密码不能与当前密码相同。
     * email  IAM用户新邮箱，需符合邮箱格式，长度小于等于255字符。
     * areacode  国家码。必须与手机号同时存在。中国大陆为“0086”。
@@ -51,7 +51,7 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
-    * name  新IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * name  新IAM用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * password  IAM用户新密码。 - 系统默认密码最小长度为6字符，在6-32字符之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 必须满足账户设置中[密码策略](https://support.huaweicloud.com/usermanual-iam/iam_01_0607.html)的要求。 - 新密码不能与当前密码相同。
     * email  IAM用户新邮箱，需符合邮箱格式，长度小于等于255字符。
     * areacode  国家码。必须与手机号同时存在。中国大陆为“0086”。
@@ -102,7 +102,7 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
-    * name  新IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * name  新IAM用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * password  IAM用户新密码。 - 系统默认密码最小长度为6字符，在6-32字符之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 必须满足账户设置中[密码策略](https://support.huaweicloud.com/usermanual-iam/iam_01_0607.html)的要求。 - 新密码不能与当前密码相同。
     * email  IAM用户新邮箱，需符合邮箱格式，长度小于等于255字符。
     * areacode  国家码。必须与手机号同时存在。中国大陆为“0086”。
@@ -132,7 +132,7 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
-    * name  新IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * name  新IAM用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * password  IAM用户新密码。 - 系统默认密码最小长度为6字符，在6-32字符之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 必须满足账户设置中[密码策略](https://support.huaweicloud.com/usermanual-iam/iam_01_0607.html)的要求。 - 新密码不能与当前密码相同。
     * email  IAM用户新邮箱，需符合邮箱格式，长度小于等于255字符。
     * areacode  国家码。必须与手机号同时存在。中国大陆为“0086”。
@@ -162,7 +162,7 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * accessMode  IAM用户访问方式。 - default：默认访问模式，编程访问和管理控制台访问。 - programmatic：编程访问。 - console：管理控制台访问。
-    * name  新IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * name  新IAM用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * password  IAM用户新密码。 - 系统默认密码最小长度为6字符，在6-32字符之间支持用户自定义密码长度。 - 至少包含以下四种字符中的两种： 大写字母、小写字母、数字和特殊字符。 - 必须满足账户设置中[密码策略](https://support.huaweicloud.com/usermanual-iam/iam_01_0607.html)的要求。 - 新密码不能与当前密码相同。
     * email  IAM用户新邮箱，需符合邮箱格式，长度小于等于255字符。
     * areacode  国家码。必须与手机号同时存在。中国大陆为“0086”。
@@ -308,7 +308,7 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  新IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    *  新IAM用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class UpdateUserOption implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 新IAM用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * @param string|null $name 新IAM用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     *
     * @return $this
     */

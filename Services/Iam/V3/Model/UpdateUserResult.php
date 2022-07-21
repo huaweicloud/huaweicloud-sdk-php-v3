@@ -25,7 +25,7 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户的新描述信息。
-    * name  IAM用户新用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * name  IAM用户新用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * phone  IAM用户新手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
     * domainId  IAM用户所属账号ID。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
@@ -61,7 +61,7 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户的新描述信息。
-    * name  IAM用户新用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * name  IAM用户新用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * phone  IAM用户新手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
     * domainId  IAM用户所属账号ID。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
@@ -118,7 +118,7 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户的新描述信息。
-    * name  IAM用户新用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * name  IAM用户新用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * phone  IAM用户新手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
     * domainId  IAM用户所属账号ID。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
@@ -154,7 +154,7 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户的新描述信息。
-    * name  IAM用户新用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * name  IAM用户新用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * phone  IAM用户新手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
     * domainId  IAM用户所属账号ID。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
@@ -190,7 +190,7 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     * xuserId  IAM用户在外部系统中的ID。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * xuserType  IAM用户在外部系统中的类型。 >外部系统指与华为云对接的外部企业管理系统，xaccount_type、xaccount_id、xdomain_type、xdomain_id、xuser_type、xuser_id等参数值，无法在华为云获取，请咨询企业管理员。
     * description  IAM用户的新描述信息。
-    * name  IAM用户新用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * name  IAM用户新用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     * phone  IAM用户新手机号，纯数字，长度小于等于32字符。必须与国家码同时存在。
     * domainId  IAM用户所属账号ID。
     * enabled  是否启用IAM用户。true为启用，false为停用，默认为true。
@@ -452,7 +452,7 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  IAM用户新用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    *  IAM用户新用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     *
     * @return string
     */
@@ -464,7 +464,7 @@ class UpdateUserResult implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name IAM用户新用户名，长度5~32字符之间，首位不能为数字，特殊字符只能包含下划线“_”、中划线“-”和空格。
+    * @param string $name IAM用户新用户名，长度1~64之间，只能包含如下字符：大小写字母、空格、数字或特殊字符（-_.）且不能以数字开头。
     *
     * @return $this
     */

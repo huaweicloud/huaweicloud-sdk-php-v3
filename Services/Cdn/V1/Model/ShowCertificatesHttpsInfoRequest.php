@@ -24,7 +24,7 @@ class ShowCertificatesHttpsInfoRequest implements ModelInterface, ArrayAccess
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
     * domainName  加速域名。
     * userDomainId  域名所属用户的domain_id。
-    * enterpriseProjectId  企业项目ID。该参数仅对开启了企业项目功能的用户生效，不传表示查询default项目。\"ALL\"表示查询所有该用户已授权项目的资源。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class ShowCertificatesHttpsInfoRequest implements ModelInterface, ArrayAccess
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
     * domainName  加速域名。
     * userDomainId  域名所属用户的domain_id。
-    * enterpriseProjectId  企业项目ID。该参数仅对开启了企业项目功能的用户生效，不传表示查询default项目。\"ALL\"表示查询所有该用户已授权项目的资源。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowCertificatesHttpsInfoRequest implements ModelInterface, ArrayAccess
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
     * domainName  加速域名。
     * userDomainId  域名所属用户的domain_id。
-    * enterpriseProjectId  企业项目ID。该参数仅对开启了企业项目功能的用户生效，不传表示查询default项目。\"ALL\"表示查询所有该用户已授权项目的资源。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ShowCertificatesHttpsInfoRequest implements ModelInterface, ArrayAccess
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
     * domainName  加速域名。
     * userDomainId  域名所属用户的domain_id。
-    * enterpriseProjectId  企业项目ID。该参数仅对开启了企业项目功能的用户生效，不传表示查询default项目。\"ALL\"表示查询所有该用户已授权项目的资源。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class ShowCertificatesHttpsInfoRequest implements ModelInterface, ArrayAccess
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
     * domainName  加速域名。
     * userDomainId  域名所属用户的domain_id。
-    * enterpriseProjectId  企业项目ID。该参数仅对开启了企业项目功能的用户生效，不传表示查询default项目。\"ALL\"表示查询所有该用户已授权项目的资源。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -314,7 +314,7 @@ class ShowCertificatesHttpsInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID。该参数仅对开启了企业项目功能的用户生效，不传表示查询default项目。\"ALL\"表示查询所有该用户已授权项目的资源。注意：当使用子账号调用接口时，该参数必传。
+    *  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class ShowCertificatesHttpsInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID。该参数仅对开启了企业项目功能的用户生效，不传表示查询default项目。\"ALL\"表示查询所有该用户已授权项目的资源。注意：当使用子账号调用接口时，该参数必传。
+    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @return $this
     */

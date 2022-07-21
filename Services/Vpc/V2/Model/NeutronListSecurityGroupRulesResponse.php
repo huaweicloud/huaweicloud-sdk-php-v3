@@ -22,21 +22,25 @@ class NeutronListSecurityGroupRulesResponse implements ModelInterface, ArrayAcce
     /**
     * Array of property to type mappings. Used for (de)serialization
     * securityGroupRules  安全组规则对象列表
+    * securityGroupRulesLinks  分页信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'securityGroupRules' => '\HuaweiCloud\SDK\Vpc\V2\Model\NeutronSecurityGroupRule[]'
+            'securityGroupRules' => '\HuaweiCloud\SDK\Vpc\V2\Model\NeutronSecurityGroupRule[]',
+            'securityGroupRulesLinks' => '\HuaweiCloud\SDK\Vpc\V2\Model\NeutronPageLink[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * securityGroupRules  安全组规则对象列表
+    * securityGroupRulesLinks  分页信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'securityGroupRules' => null
+        'securityGroupRules' => null,
+        'securityGroupRulesLinks' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class NeutronListSecurityGroupRulesResponse implements ModelInterface, ArrayAcce
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * securityGroupRules  安全组规则对象列表
+    * securityGroupRulesLinks  分页信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'securityGroupRules' => 'security_group_rules'
+            'securityGroupRules' => 'security_group_rules',
+            'securityGroupRulesLinks' => 'security_group_rules_links'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * securityGroupRules  安全组规则对象列表
+    * securityGroupRulesLinks  分页信息
     *
     * @var string[]
     */
     protected static $setters = [
-            'securityGroupRules' => 'setSecurityGroupRules'
+            'securityGroupRules' => 'setSecurityGroupRules',
+            'securityGroupRulesLinks' => 'setSecurityGroupRulesLinks'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * securityGroupRules  安全组规则对象列表
+    * securityGroupRulesLinks  分页信息
     *
     * @var string[]
     */
     protected static $getters = [
-            'securityGroupRules' => 'getSecurityGroupRules'
+            'securityGroupRules' => 'getSecurityGroupRules',
+            'securityGroupRulesLinks' => 'getSecurityGroupRulesLinks'
     ];
 
     /**
@@ -149,6 +159,7 @@ class NeutronListSecurityGroupRulesResponse implements ModelInterface, ArrayAcce
     public function __construct(array $data = null)
     {
         $this->container['securityGroupRules'] = isset($data['securityGroupRules']) ? $data['securityGroupRules'] : null;
+        $this->container['securityGroupRulesLinks'] = isset($data['securityGroupRulesLinks']) ? $data['securityGroupRulesLinks'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class NeutronListSecurityGroupRulesResponse implements ModelInterface, ArrayAcce
     public function setSecurityGroupRules($securityGroupRules)
     {
         $this->container['securityGroupRules'] = $securityGroupRules;
+        return $this;
+    }
+
+    /**
+    * Gets securityGroupRulesLinks
+    *  分页信息
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V2\Model\NeutronPageLink[]|null
+    */
+    public function getSecurityGroupRulesLinks()
+    {
+        return $this->container['securityGroupRulesLinks'];
+    }
+
+    /**
+    * Sets securityGroupRulesLinks
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V2\Model\NeutronPageLink[]|null $securityGroupRulesLinks 分页信息
+    *
+    * @return $this
+    */
+    public function setSecurityGroupRulesLinks($securityGroupRulesLinks)
+    {
+        $this->container['securityGroupRulesLinks'] = $securityGroupRulesLinks;
         return $this;
     }
 

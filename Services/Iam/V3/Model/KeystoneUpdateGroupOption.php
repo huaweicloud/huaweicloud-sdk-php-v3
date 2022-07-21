@@ -22,7 +22,7 @@ class KeystoneUpdateGroupOption implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * description  用户组描述信息，长度小于等于255字节。name与description至少填写一个。
     * domainId  用户组所属账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-    * name  用户组名，长度小于等于64字节。name与description至少填写一个。
+    * name  用户组名，长度小于等于128字符。name与description至少填写一个。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class KeystoneUpdateGroupOption implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * description  用户组描述信息，长度小于等于255字节。name与description至少填写一个。
     * domainId  用户组所属账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-    * name  用户组名，长度小于等于64字节。name与description至少填写一个。
+    * name  用户组名，长度小于等于128字符。name与description至少填写一个。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class KeystoneUpdateGroupOption implements ModelInterface, ArrayAccess
     * and the value is the original name
     * description  用户组描述信息，长度小于等于255字节。name与description至少填写一个。
     * domainId  用户组所属账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-    * name  用户组名，长度小于等于64字节。name与description至少填写一个。
+    * name  用户组名，长度小于等于128字符。name与description至少填写一个。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class KeystoneUpdateGroupOption implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * description  用户组描述信息，长度小于等于255字节。name与description至少填写一个。
     * domainId  用户组所属账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-    * name  用户组名，长度小于等于64字节。name与description至少填写一个。
+    * name  用户组名，长度小于等于128字符。name与description至少填写一个。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class KeystoneUpdateGroupOption implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * description  用户组描述信息，长度小于等于255字节。name与description至少填写一个。
     * domainId  用户组所属账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-    * name  用户组名，长度小于等于64字节。name与description至少填写一个。
+    * name  用户组名，长度小于等于128字符。name与description至少填写一个。
     *
     * @var string[]
     */
@@ -244,7 +244,7 @@ class KeystoneUpdateGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  用户组名，长度小于等于64字节。name与description至少填写一个。
+    *  用户组名，长度小于等于128字符。name与description至少填写一个。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class KeystoneUpdateGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 用户组名，长度小于等于64字节。name与description至少填写一个。
+    * @param string|null $name 用户组名，长度小于等于128字符。name与description至少填写一个。
     *
     * @return $this
     */

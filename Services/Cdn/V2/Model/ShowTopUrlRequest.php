@@ -25,7 +25,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
     * domainName  域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com all表示查询名下全部域名
     * statType  - 参数类型支持：flux(流量),req_num(请求数)
     * serviceArea  服务区域：mainland_china(大陆)，outside_mainland_china(海外)，默认为mainland_china
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
     * domainName  域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com all表示查询名下全部域名
     * statType  - 参数类型支持：flux(流量),req_num(请求数)
     * serviceArea  服务区域：mainland_china(大陆)，outside_mainland_china(海外)，默认为mainland_china
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
     * domainName  域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com all表示查询名下全部域名
     * statType  - 参数类型支持：flux(流量),req_num(请求数)
     * serviceArea  服务区域：mainland_china(大陆)，outside_mainland_china(海外)，默认为mainland_china
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
     * domainName  域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com all表示查询名下全部域名
     * statType  - 参数类型支持：flux(流量),req_num(请求数)
     * serviceArea  服务区域：mainland_china(大陆)，outside_mainland_china(海外)，默认为mainland_china
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
     * domainName  域名列表，多个域名以逗号（半角）分隔，如：www.test1.com,www.test2.com all表示查询名下全部域名
     * statType  - 参数类型支持：flux(流量),req_num(请求数)
     * serviceArea  服务区域：mainland_china(大陆)，outside_mainland_china(海外)，默认为mainland_china
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -397,7 +397,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    *  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @return string|null
     */
@@ -409,7 +409,7 @@ class ShowTopUrlRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @return $this
     */

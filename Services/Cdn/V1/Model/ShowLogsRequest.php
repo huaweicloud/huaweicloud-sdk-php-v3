@@ -24,7 +24,7 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     * queryDate  查询开始时间，查询开始时间到开始时间+1天内的日志数据，取值范围是距离当前30天内。
     * pageSize  单页最大数量，取值范围为1-10000。
     * pageNumber  当前查询第几页，取值范围为1-65535。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     * queryDate  查询开始时间，查询开始时间到开始时间+1天内的日志数据，取值范围是距离当前30天内。
     * pageSize  单页最大数量，取值范围为1-10000。
     * pageNumber  当前查询第几页，取值范围为1-65535。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     * queryDate  查询开始时间，查询开始时间到开始时间+1天内的日志数据，取值范围是距离当前30天内。
     * pageSize  单页最大数量，取值范围为1-10000。
     * pageNumber  当前查询第几页，取值范围为1-65535。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     * queryDate  查询开始时间，查询开始时间到开始时间+1天内的日志数据，取值范围是距离当前30天内。
     * pageSize  单页最大数量，取值范围为1-10000。
     * pageNumber  当前查询第几页，取值范围为1-65535。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     * queryDate  查询开始时间，查询开始时间到开始时间+1天内的日志数据，取值范围是距离当前30天内。
     * pageSize  单页最大数量，取值范围为1-10000。
     * pageNumber  当前查询第几页，取值范围为1-65535。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @var string[]
     */
@@ -332,7 +332,7 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    *  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
     *
     * @return $this
     */
