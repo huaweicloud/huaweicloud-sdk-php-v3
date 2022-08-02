@@ -296,8 +296,8 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
             if (!is_null($this->container['password']) && (mb_strlen($this->container['password']) > 32)) {
                 $invalidProperties[] = "invalid value for 'password', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['password']) && (mb_strlen($this->container['password']) < 6)) {
-                $invalidProperties[] = "invalid value for 'password', the character length must be bigger than or equal to 6.";
+            if (!is_null($this->container['password']) && (mb_strlen($this->container['password']) < 8)) {
+                $invalidProperties[] = "invalid value for 'password', the character length must be bigger than or equal to 8.";
             }
             if (!is_null($this->container['isCloseMarketMs']) && (mb_strlen($this->container['isCloseMarketMs']) > 10)) {
                 $invalidProperties[] = "invalid value for 'isCloseMarketMs', the character length must be smaller than or equal to 10.";

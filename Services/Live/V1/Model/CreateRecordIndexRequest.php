@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Live\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UploadBatchTaskFileRequestBody implements ModelInterface, ArrayAccess
+class CreateRecordIndexRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,26 @@ class UploadBatchTaskFileRequestBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UploadBatchTaskFileRequestBody';
+    protected static $openAPIModelName = 'CreateRecordIndexRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * file  **参数说明**：上传批量任务文件。 **取值范围**：当前仅支持xlsx/xls文件格式，且文件最大行数为30000行。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'file' => '\SplFileObject'
+            'body' => '\HuaweiCloud\SDK\Live\V1\Model\RecordIndexRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * file  **参数说明**：上传批量任务文件。 **取值范围**：当前仅支持xlsx/xls文件格式，且文件最大行数为30000行。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'file' => 'binary'
+        'body' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class UploadBatchTaskFileRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * file  **参数说明**：上传批量任务文件。 **取值范围**：当前仅支持xlsx/xls文件格式，且文件最大行数为30000行。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'file' => 'file'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * file  **参数说明**：上传批量任务文件。 **取值范围**：当前仅支持xlsx/xls文件格式，且文件最大行数为30000行。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'file' => 'setFile'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * file  **参数说明**：上传批量任务文件。 **取值范围**：当前仅支持xlsx/xls文件格式，且文件最大行数为30000行。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'file' => 'getFile'
+            'body' => 'getBody'
     ];
 
     /**
@@ -147,7 +147,7 @@ class UploadBatchTaskFileRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['file'] = isset($data['file']) ? $data['file'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -158,15 +158,6 @@ class UploadBatchTaskFileRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['file'] === null) {
-            $invalidProperties[] = "'file' can't be null";
-        }
-            if ((mb_strlen($this->container['file']) > 2097152)) {
-                $invalidProperties[] = "invalid value for 'file', the character length must be smaller than or equal to 2097152.";
-            }
-            if ((mb_strlen($this->container['file']) < 1)) {
-                $invalidProperties[] = "invalid value for 'file', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -182,26 +173,26 @@ class UploadBatchTaskFileRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets file
-    *  **参数说明**：上传批量任务文件。 **取值范围**：当前仅支持xlsx/xls文件格式，且文件最大行数为30000行。
+    * Gets body
+    *  body
     *
-    * @return \SplFileObject
+    * @return \HuaweiCloud\SDK\Live\V1\Model\RecordIndexRequestBody|null
     */
-    public function getFile()
+    public function getBody()
     {
-        return $this->container['file'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets file
+    * Sets body
     *
-    * @param \SplFileObject $file **参数说明**：上传批量任务文件。 **取值范围**：当前仅支持xlsx/xls文件格式，且文件最大行数为30000行。
+    * @param \HuaweiCloud\SDK\Live\V1\Model\RecordIndexRequestBody|null $body body
     *
     * @return $this
     */
-    public function setFile($file)
+    public function setBody($body)
     {
-        $this->container['file'] = $file;
+        $this->container['body'] = $body;
         return $this;
     }
 

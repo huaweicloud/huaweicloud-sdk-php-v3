@@ -23,7 +23,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  查询绑定某个企业项目的弹性云服务器。  若需要查询当前用户所有企业项目绑定的弹性云服务，请传参all_granted_eps。
     * flavor  云服务器规格ID,已上线的规格请参见《弹性云服务器用户指南》的“实例和应用场景”章节。
     * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
-    * limit  查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
+    * limit  查询返回云服务器当前页面的大小。每页默认值是25，最多返回1000台云服务器的信息。
     * name  云服务器名称，匹配规则为模糊匹配。
     * notTags  查询tag字段中不包含该值的云服务器。
     * offset  页码。 当前页面数，默认为1。  取值大于等于0，取值为0时返回第1页。
@@ -53,7 +53,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  查询绑定某个企业项目的弹性云服务器。  若需要查询当前用户所有企业项目绑定的弹性云服务，请传参all_granted_eps。
     * flavor  云服务器规格ID,已上线的规格请参见《弹性云服务器用户指南》的“实例和应用场景”章节。
     * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
-    * limit  查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
+    * limit  查询返回云服务器当前页面的大小。每页默认值是25，最多返回1000台云服务器的信息。
     * name  云服务器名称，匹配规则为模糊匹配。
     * notTags  查询tag字段中不包含该值的云服务器。
     * offset  页码。 当前页面数，默认为1。  取值大于等于0，取值为0时返回第1页。
@@ -104,7 +104,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  查询绑定某个企业项目的弹性云服务器。  若需要查询当前用户所有企业项目绑定的弹性云服务，请传参all_granted_eps。
     * flavor  云服务器规格ID,已上线的规格请参见《弹性云服务器用户指南》的“实例和应用场景”章节。
     * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
-    * limit  查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
+    * limit  查询返回云服务器当前页面的大小。每页默认值是25，最多返回1000台云服务器的信息。
     * name  云服务器名称，匹配规则为模糊匹配。
     * notTags  查询tag字段中不包含该值的云服务器。
     * offset  页码。 当前页面数，默认为1。  取值大于等于0，取值为0时返回第1页。
@@ -134,7 +134,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  查询绑定某个企业项目的弹性云服务器。  若需要查询当前用户所有企业项目绑定的弹性云服务，请传参all_granted_eps。
     * flavor  云服务器规格ID,已上线的规格请参见《弹性云服务器用户指南》的“实例和应用场景”章节。
     * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
-    * limit  查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
+    * limit  查询返回云服务器当前页面的大小。每页默认值是25，最多返回1000台云服务器的信息。
     * name  云服务器名称，匹配规则为模糊匹配。
     * notTags  查询tag字段中不包含该值的云服务器。
     * offset  页码。 当前页面数，默认为1。  取值大于等于0，取值为0时返回第1页。
@@ -164,7 +164,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  查询绑定某个企业项目的弹性云服务器。  若需要查询当前用户所有企业项目绑定的弹性云服务，请传参all_granted_eps。
     * flavor  云服务器规格ID,已上线的规格请参见《弹性云服务器用户指南》的“实例和应用场景”章节。
     * ip  IPv4地址过滤结果，匹配规则为模糊匹配。
-    * limit  查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
+    * limit  查询返回云服务器当前页面的大小。每页默认值是25，最多返回1000台云服务器的信息。
     * name  云服务器名称，匹配规则为模糊匹配。
     * notTags  查询tag字段中不包含该值的云服务器。
     * offset  页码。 当前页面数，默认为1。  取值大于等于0，取值为0时返回第1页。
@@ -362,7 +362,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
+    *  查询返回云服务器当前页面的大小。每页默认值是25，最多返回1000台云服务器的信息。
     *
     * @return int|null
     */
@@ -374,7 +374,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询返回云服务器当前页面的大小。每页最多返回1000台云服务器的信息。
+    * @param int|null $limit 查询返回云服务器当前页面的大小。每页默认值是25，最多返回1000台云服务器的信息。
     *
     * @return $this
     */

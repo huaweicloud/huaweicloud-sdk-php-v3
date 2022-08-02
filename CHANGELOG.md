@@ -1,3 +1,14 @@
+# 3.0.55-rc 2022-08-02
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - Support the interface `CreateRecordIndex`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
 # 3.0.54-rc 2022-07-21
 
 ### HuaweiCloud SDK VPC

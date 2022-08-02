@@ -229,8 +229,8 @@ class NewCustomerV2 implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['password']) > 32)) {
                 $invalidProperties[] = "invalid value for 'password', the character length must be smaller than or equal to 32.";
             }
-            if ((mb_strlen($this->container['password']) < 0)) {
-                $invalidProperties[] = "invalid value for 'password', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['password']) < 8)) {
+                $invalidProperties[] = "invalid value for 'password', the character length must be bigger than or equal to 8.";
             }
             if (!is_null($this->container['verificationCode']) && (mb_strlen($this->container['verificationCode']) > 6)) {
                 $invalidProperties[] = "invalid value for 'verificationCode', the character length must be smaller than or equal to 6.";
