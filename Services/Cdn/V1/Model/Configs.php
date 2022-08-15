@@ -20,8 +20,8 @@ class Configs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * originRequestHeader  回源请求头改写 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。
+    * httpResponseHeader  http header配置 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -29,6 +29,7 @@ class Configs implements ModelInterface, ArrayAccess
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
+    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
     *
     * @var string[]
     */
@@ -41,13 +42,14 @@ class Configs implements ModelInterface, ArrayAccess
             'originProtocol' => 'string',
             'forceRedirect' => '\HuaweiCloud\SDK\Cdn\V1\Model\ForceRedirectConfig',
             'compress' => '\HuaweiCloud\SDK\Cdn\V1\Model\Compress',
-            'cacheUrlParameterFilter' => '\HuaweiCloud\SDK\Cdn\V1\Model\CacheUrlParameterFilter'
+            'cacheUrlParameterFilter' => '\HuaweiCloud\SDK\Cdn\V1\Model\CacheUrlParameterFilter',
+            'ipv6Accelerate' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * originRequestHeader  回源请求头改写 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。
+    * httpResponseHeader  http header配置 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -55,6 +57,7 @@ class Configs implements ModelInterface, ArrayAccess
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
+    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class Configs implements ModelInterface, ArrayAccess
         'originProtocol' => null,
         'forceRedirect' => null,
         'compress' => null,
-        'cacheUrlParameterFilter' => null
+        'cacheUrlParameterFilter' => null,
+        'ipv6Accelerate' => 'int32'
     ];
 
     /**
@@ -93,8 +97,8 @@ class Configs implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * originRequestHeader  回源请求头改写 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。
+    * httpResponseHeader  http header配置 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -102,6 +106,7 @@ class Configs implements ModelInterface, ArrayAccess
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
+    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
     *
     * @var string[]
     */
@@ -114,13 +119,14 @@ class Configs implements ModelInterface, ArrayAccess
             'originProtocol' => 'origin_protocol',
             'forceRedirect' => 'force_redirect',
             'compress' => 'compress',
-            'cacheUrlParameterFilter' => 'cache_url_parameter_filter'
+            'cacheUrlParameterFilter' => 'cache_url_parameter_filter',
+            'ipv6Accelerate' => 'ipv6_accelerate'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * originRequestHeader  回源请求头改写 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。
+    * httpResponseHeader  http header配置 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -128,6 +134,7 @@ class Configs implements ModelInterface, ArrayAccess
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
+    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
     *
     * @var string[]
     */
@@ -140,13 +147,14 @@ class Configs implements ModelInterface, ArrayAccess
             'originProtocol' => 'setOriginProtocol',
             'forceRedirect' => 'setForceRedirect',
             'compress' => 'setCompress',
-            'cacheUrlParameterFilter' => 'setCacheUrlParameterFilter'
+            'cacheUrlParameterFilter' => 'setCacheUrlParameterFilter',
+            'ipv6Accelerate' => 'setIpv6Accelerate'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * originRequestHeader  回源请求头改写 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。
+    * httpResponseHeader  http header配置 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -154,6 +162,7 @@ class Configs implements ModelInterface, ArrayAccess
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
+    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class Configs implements ModelInterface, ArrayAccess
             'originProtocol' => 'getOriginProtocol',
             'forceRedirect' => 'getForceRedirect',
             'compress' => 'getCompress',
-            'cacheUrlParameterFilter' => 'getCacheUrlParameterFilter'
+            'cacheUrlParameterFilter' => 'getCacheUrlParameterFilter',
+            'ipv6Accelerate' => 'getIpv6Accelerate'
     ];
 
     /**
@@ -236,6 +246,7 @@ class Configs implements ModelInterface, ArrayAccess
         $this->container['forceRedirect'] = isset($data['forceRedirect']) ? $data['forceRedirect'] : null;
         $this->container['compress'] = isset($data['compress']) ? $data['compress'] : null;
         $this->container['cacheUrlParameterFilter'] = isset($data['cacheUrlParameterFilter']) ? $data['cacheUrlParameterFilter'] : null;
+        $this->container['ipv6Accelerate'] = isset($data['ipv6Accelerate']) ? $data['ipv6Accelerate'] : null;
     }
 
     /**
@@ -262,7 +273,7 @@ class Configs implements ModelInterface, ArrayAccess
 
     /**
     * Gets originRequestHeader
-    *  回源请求头配置
+    *  回源请求头改写 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。
     *
     * @return \HuaweiCloud\SDK\Cdn\V1\Model\OriginRequestHeader[]|null
     */
@@ -274,7 +285,7 @@ class Configs implements ModelInterface, ArrayAccess
     /**
     * Sets originRequestHeader
     *
-    * @param \HuaweiCloud\SDK\Cdn\V1\Model\OriginRequestHeader[]|null $originRequestHeader 回源请求头配置
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\OriginRequestHeader[]|null $originRequestHeader 回源请求头改写 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。
     *
     * @return $this
     */
@@ -286,7 +297,7 @@ class Configs implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpResponseHeader
-    *  http header配置
+    *  http header配置 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。
     *
     * @return \HuaweiCloud\SDK\Cdn\V1\Model\HttpResponseHeader[]|null
     */
@@ -298,7 +309,7 @@ class Configs implements ModelInterface, ArrayAccess
     /**
     * Sets httpResponseHeader
     *
-    * @param \HuaweiCloud\SDK\Cdn\V1\Model\HttpResponseHeader[]|null $httpResponseHeader http header配置
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\HttpResponseHeader[]|null $httpResponseHeader http header配置 该功能将覆盖原有配置（清空之前的配置），在使用此接口时，请上传全量头部信息。
     *
     * @return $this
     */
@@ -473,6 +484,30 @@ class Configs implements ModelInterface, ArrayAccess
     public function setCacheUrlParameterFilter($cacheUrlParameterFilter)
     {
         $this->container['cacheUrlParameterFilter'] = $cacheUrlParameterFilter;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6Accelerate
+    *  ipv6设置（1：打开；0：关闭）
+    *
+    * @return int|null
+    */
+    public function getIpv6Accelerate()
+    {
+        return $this->container['ipv6Accelerate'];
+    }
+
+    /**
+    * Sets ipv6Accelerate
+    *
+    * @param int|null $ipv6Accelerate ipv6设置（1：打开；0：关闭）
+    *
+    * @return $this
+    */
+    public function setIpv6Accelerate($ipv6Accelerate)
+    {
+        $this->container['ipv6Accelerate'] = $ipv6Accelerate;
         return $this;
     }
 

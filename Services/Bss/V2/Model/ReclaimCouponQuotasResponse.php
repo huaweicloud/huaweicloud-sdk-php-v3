@@ -21,8 +21,8 @@ class ReclaimCouponQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorDetails  回收失败的精英服务商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
-    * simpleQuotaInfos  回收成功的精英服务商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
+    * errorDetails  回收失败的云经销商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
+    * simpleQuotaInfos  回收成功的云经销商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ReclaimCouponQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorDetails  回收失败的精英服务商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
-    * simpleQuotaInfos  回收成功的精英服务商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
+    * errorDetails  回收失败的云经销商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
+    * simpleQuotaInfos  回收成功的云经销商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ReclaimCouponQuotasResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorDetails  回收失败的精英服务商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
-    * simpleQuotaInfos  回收成功的精英服务商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
+    * errorDetails  回收失败的云经销商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
+    * simpleQuotaInfos  回收成功的云经销商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ReclaimCouponQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorDetails  回收失败的精英服务商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
-    * simpleQuotaInfos  回收成功的精英服务商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
+    * errorDetails  回收失败的云经销商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
+    * simpleQuotaInfos  回收成功的云经销商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ReclaimCouponQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorDetails  回收失败的精英服务商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
-    * simpleQuotaInfos  回收成功的精英服务商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
+    * errorDetails  回收失败的云经销商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
+    * simpleQuotaInfos  回收成功的云经销商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ReclaimCouponQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorDetails
-    *  回收失败的精英服务商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
+    *  回收失败的云经销商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
     *
     * @return \HuaweiCloud\SDK\Bss\V2\Model\ErrorDetail[]|null
     */
@@ -198,7 +198,7 @@ class ReclaimCouponQuotasResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorDetails
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\ErrorDetail[]|null $errorDetails 回收失败的精英服务商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\ErrorDetail[]|null $errorDetails 回收失败的云经销商额度信息，具体参见表1，只有HTTP STATUS 200的时候才有这个结构体。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ReclaimCouponQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets simpleQuotaInfos
-    *  回收成功的精英服务商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
+    *  回收成功的云经销商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
     *
     * @return \HuaweiCloud\SDK\Bss\V2\Model\QuotaReclaim[]|null
     */
@@ -222,7 +222,7 @@ class ReclaimCouponQuotasResponse implements ModelInterface, ArrayAccess
     /**
     * Sets simpleQuotaInfos
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\QuotaReclaim[]|null $simpleQuotaInfos 回收成功的精英服务商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\QuotaReclaim[]|null $simpleQuotaInfos 回收成功的云经销商额度信息，具体参见表2，只有HTTP STATUS 200的时候才有这个结构体。
     *
     * @return $this
     */

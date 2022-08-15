@@ -29,7 +29,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
     * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询云经销商子客户的按需资源列表，必须携带该字段，除此之外，此参数不做处理。否则只能查询自己的子客户按需资源。
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
     * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询云经销商子客户的按需资源列表，必须携带该字段，除此之外，此参数不做处理。否则只能查询自己的子客户按需资源。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
     * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询云经销商子客户的按需资源列表，必须携带该字段，除此之外，此参数不做处理。否则只能查询自己的子客户按需资源。
     *
     * @var string[]
     */
@@ -134,7 +134,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
     * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询云经销商子客户的按需资源列表，必须携带该字段，除此之外，此参数不做处理。否则只能查询自己的子客户按需资源。
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
     * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询云经销商子客户的按需资源列表，必须携带该字段，除此之外，此参数不做处理。否则只能查询自己的子客户按需资源。
     *
     * @var string[]
     */
@@ -546,7 +546,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerId
-    *  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。
+    *  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询云经销商子客户的按需资源列表，必须携带该字段，除此之外，此参数不做处理。否则只能查询自己的子客户按需资源。
     *
     * @return string|null
     */
@@ -558,7 +558,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerId
     *
-    * @param string|null $indirectPartnerId 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询精英服务商子客户的按需资源列表，必须携带该字段，否则只能查询自己的子客户按需资源。
+    * @param string|null $indirectPartnerId 云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。如果需要查询云经销商子客户的按需资源列表，必须携带该字段，除此之外，此参数不做处理。否则只能查询自己的子客户按需资源。
     *
     * @return $this
     */

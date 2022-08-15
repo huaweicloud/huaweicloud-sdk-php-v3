@@ -20,7 +20,7 @@ class QuotaReclaim implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * quotaId  被回收的精英服务商的代金券额度ID。
+    * quotaId  被回收的云经销商的代金券额度ID。
     * quotaBalance  被回收额度后的代金券额度余额。单位：元。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class QuotaReclaim implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * quotaId  被回收的精英服务商的代金券额度ID。
+    * quotaId  被回收的云经销商的代金券额度ID。
     * quotaBalance  被回收额度后的代金券额度余额。单位：元。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class QuotaReclaim implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * quotaId  被回收的精英服务商的代金券额度ID。
+    * quotaId  被回收的云经销商的代金券额度ID。
     * quotaBalance  被回收额度后的代金券额度余额。单位：元。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class QuotaReclaim implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * quotaId  被回收的精英服务商的代金券额度ID。
+    * quotaId  被回收的云经销商的代金券额度ID。
     * quotaBalance  被回收额度后的代金券额度余额。单位：元。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class QuotaReclaim implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * quotaId  被回收的精英服务商的代金券额度ID。
+    * quotaId  被回收的云经销商的代金券额度ID。
     * quotaBalance  被回收额度后的代金券额度余额。单位：元。
     *
     * @var string[]
@@ -185,7 +185,7 @@ class QuotaReclaim implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaId
-    *  被回收的精英服务商的代金券额度ID。
+    *  被回收的云经销商的代金券额度ID。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class QuotaReclaim implements ModelInterface, ArrayAccess
     /**
     * Sets quotaId
     *
-    * @param string|null $quotaId 被回收的精英服务商的代金券额度ID。
+    * @param string|null $quotaId 被回收的云经销商的代金券额度ID。
     *
     * @return $this
     */

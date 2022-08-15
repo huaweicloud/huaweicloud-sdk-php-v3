@@ -22,7 +22,7 @@ class ListIndirectPartnersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * count  符合条件的记录个数，只有成功的时候出现。
-    * indirectPartners  精英服务商列表，具体参见表1。
+    * indirectPartners  云经销商列表，具体参见表1。
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListIndirectPartnersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * count  符合条件的记录个数，只有成功的时候出现。
-    * indirectPartners  精英服务商列表，具体参见表1。
+    * indirectPartners  云经销商列表，具体参见表1。
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListIndirectPartnersResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * count  符合条件的记录个数，只有成功的时候出现。
-    * indirectPartners  精英服务商列表，具体参见表1。
+    * indirectPartners  云经销商列表，具体参见表1。
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListIndirectPartnersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * count  符合条件的记录个数，只有成功的时候出现。
-    * indirectPartners  精英服务商列表，具体参见表1。
+    * indirectPartners  云经销商列表，具体参见表1。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListIndirectPartnersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * count  符合条件的记录个数，只有成功的时候出现。
-    * indirectPartners  精英服务商列表，具体参见表1。
+    * indirectPartners  云经销商列表，具体参见表1。
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class ListIndirectPartnersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartners
-    *  精英服务商列表，具体参见表1。
+    *  云经销商列表，具体参见表1。
     *
     * @return \HuaweiCloud\SDK\Bss\V2\Model\IndirectPartnerInfo[]|null
     */
@@ -222,7 +222,7 @@ class ListIndirectPartnersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartners
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\IndirectPartnerInfo[]|null $indirectPartners 精英服务商列表，具体参见表1。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\IndirectPartnerInfo[]|null $indirectPartners 云经销商列表，具体参见表1。
     *
     * @return $this
     */

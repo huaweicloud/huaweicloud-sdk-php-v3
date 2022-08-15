@@ -23,7 +23,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     * resourceIds  资源ID列表。 只支持传入主资源ID，最多100个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
     * periodType  周期类型： 2：月3：年
     * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
-    * expirePolicy  到期策略： 1：转按需2：自动退订3：自动续订
+    * expirePolicy  到期策略： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
@@ -41,7 +41,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     * resourceIds  资源ID列表。 只支持传入主资源ID，最多100个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
     * periodType  周期类型： 2：月3：年
     * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
-    * expirePolicy  到期策略： 1：转按需2：自动退订3：自动续订
+    * expirePolicy  到期策略： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
@@ -80,7 +80,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     * resourceIds  资源ID列表。 只支持传入主资源ID，最多100个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
     * periodType  周期类型： 2：月3：年
     * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
-    * expirePolicy  到期策略： 1：转按需2：自动退订3：自动续订
+    * expirePolicy  到期策略： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     * resourceIds  资源ID列表。 只支持传入主资源ID，最多100个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
     * periodType  周期类型： 2：月3：年
     * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
-    * expirePolicy  到期策略： 1：转按需2：自动退订3：自动续订
+    * expirePolicy  到期策略： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
@@ -116,7 +116,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     * resourceIds  资源ID列表。 只支持传入主资源ID，最多100个资源ID。 哪些资源是主资源请根据“查询客户包年/包月资源列表”接口响应参数中的“is_main_resource”来标识。
     * periodType  周期类型： 2：月3：年
     * periodNum  周期数目： 如果是月，目前支持1-11如果是年，目前支持1-3
-    * expirePolicy  到期策略： 1：转按需2：自动退订3：自动续订
+    * expirePolicy  到期策略： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     * isAutoPay  是否自动支付。 0：否1：是 不填写的话，默认值是0，不自动支付。
     *
     * @var string[]
@@ -326,7 +326,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets expirePolicy
-    *  到期策略： 1：转按需2：自动退订3：自动续订
+    *  到期策略： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     *
     * @return int
     */
@@ -338,7 +338,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets expirePolicy
     *
-    * @param int $expirePolicy 到期策略： 1：转按需2：自动退订3：自动续订
+    * @param int $expirePolicy 到期策略： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     *
     * @return $this
     */

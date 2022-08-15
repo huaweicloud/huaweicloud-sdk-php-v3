@@ -21,7 +21,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * title  增值税发票标题
-    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic：增值税电子专用发票  - toll：增值税电子普通发票（通行费）  - roll：增值税普通发票（卷票）
+    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
@@ -95,7 +95,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * title  增值税发票标题
-    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic：增值税电子专用发票  - toll：增值税电子普通发票（通行费）  - roll：增值税普通发票（卷票）
+    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
@@ -190,7 +190,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * title  增值税发票标题
-    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic：增值税电子专用发票  - toll：增值税电子普通发票（通行费）  - roll：增值税普通发票（卷票）
+    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
@@ -264,7 +264,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * title  增值税发票标题
-    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic：增值税电子专用发票  - toll：增值税电子普通发票（通行费）  - roll：增值税普通发票（卷票）
+    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
@@ -338,7 +338,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * title  增值税发票标题
-    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic：增值税电子专用发票  - toll：增值税电子普通发票（通行费）  - roll：增值税普通发票（卷票）
+    * type  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）
     * serialNumber  发票联次。 当“advanced_mode”设置为“true”时才返回。
     * attribution  发票归属地。 当“advanced_mode”设置为“true”时才返回。
     * supervisionSeal  发票监制章。 当“advanced_mode”设置为“true”时才返回。
@@ -550,7 +550,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic：增值税电子专用发票  - toll：增值税电子普通发票（通行费）  - roll：增值税普通发票（卷票）
+    *  增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）
     *
     * @return string|null
     */
@@ -562,7 +562,7 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic：增值税电子专用发票  - toll：增值税电子普通发票（通行费）  - roll：增值税普通发票（卷票）
+    * @param string|null $type 增值税发票类型，可选值包括：  - special: 增值税专用发票  - normal: 增值税普通发票  - electronic: 增值税电子普通发票  - special_electronic: 增值税电子专用发票  - toll: 增值税电子普通发票（通行费）  - roll: 增值税普通发票（卷票）
     *
     * @return $this
     */

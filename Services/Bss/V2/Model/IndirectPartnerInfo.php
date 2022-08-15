@@ -20,12 +20,12 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * indirectPartnerId  精英服务商ID。
-    * mobilePhone  精英服务商的手机号码。
-    * email  精英服务商的邮箱。
-    * accountName  精英服务商的账户名。
-    * name  精英服务商的名称。
-    * associatedOn  精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
+    * indirectPartnerId  云经销商ID。
+    * mobilePhone  云经销商的手机号码。
+    * email  云经销商的邮箱。
+    * accountName  云经销商的账户名。
+    * name  云经销商的名称。
+    * associatedOn  云经销商关联华为云总经销商的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
     * accountManagerId  客户经理登录账户名。
     * accountManagerName  客户经理的名称。
     *
@@ -44,12 +44,12 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * indirectPartnerId  精英服务商ID。
-    * mobilePhone  精英服务商的手机号码。
-    * email  精英服务商的邮箱。
-    * accountName  精英服务商的账户名。
-    * name  精英服务商的名称。
-    * associatedOn  精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
+    * indirectPartnerId  云经销商ID。
+    * mobilePhone  云经销商的手机号码。
+    * email  云经销商的邮箱。
+    * accountName  云经销商的账户名。
+    * name  云经销商的名称。
+    * associatedOn  云经销商关联华为云总经销商的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
     * accountManagerId  客户经理登录账户名。
     * accountManagerName  客户经理的名称。
     *
@@ -89,12 +89,12 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * indirectPartnerId  精英服务商ID。
-    * mobilePhone  精英服务商的手机号码。
-    * email  精英服务商的邮箱。
-    * accountName  精英服务商的账户名。
-    * name  精英服务商的名称。
-    * associatedOn  精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
+    * indirectPartnerId  云经销商ID。
+    * mobilePhone  云经销商的手机号码。
+    * email  云经销商的邮箱。
+    * accountName  云经销商的账户名。
+    * name  云经销商的名称。
+    * associatedOn  云经销商关联华为云总经销商的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
     * accountManagerId  客户经理登录账户名。
     * accountManagerName  客户经理的名称。
     *
@@ -113,12 +113,12 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * indirectPartnerId  精英服务商ID。
-    * mobilePhone  精英服务商的手机号码。
-    * email  精英服务商的邮箱。
-    * accountName  精英服务商的账户名。
-    * name  精英服务商的名称。
-    * associatedOn  精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
+    * indirectPartnerId  云经销商ID。
+    * mobilePhone  云经销商的手机号码。
+    * email  云经销商的邮箱。
+    * accountName  云经销商的账户名。
+    * name  云经销商的名称。
+    * associatedOn  云经销商关联华为云总经销商的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
     * accountManagerId  客户经理登录账户名。
     * accountManagerName  客户经理的名称。
     *
@@ -137,12 +137,12 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * indirectPartnerId  精英服务商ID。
-    * mobilePhone  精英服务商的手机号码。
-    * email  精英服务商的邮箱。
-    * accountName  精英服务商的账户名。
-    * name  精英服务商的名称。
-    * associatedOn  精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
+    * indirectPartnerId  云经销商ID。
+    * mobilePhone  云经销商的手机号码。
+    * email  云经销商的邮箱。
+    * accountName  云经销商的账户名。
+    * name  云经销商的名称。
+    * associatedOn  云经销商关联华为云总经销商的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
     * accountManagerId  客户经理登录账户名。
     * accountManagerName  客户经理的名称。
     *
@@ -251,7 +251,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerId
-    *  精英服务商ID。
+    *  云经销商ID。
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerId
     *
-    * @param string|null $indirectPartnerId 精英服务商ID。
+    * @param string|null $indirectPartnerId 云经销商ID。
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets mobilePhone
-    *  精英服务商的手机号码。
+    *  云经销商的手机号码。
     *
     * @return string|null
     */
@@ -287,7 +287,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets mobilePhone
     *
-    * @param string|null $mobilePhone 精英服务商的手机号码。
+    * @param string|null $mobilePhone 云经销商的手机号码。
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  精英服务商的邮箱。
+    *  云经销商的邮箱。
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 精英服务商的邮箱。
+    * @param string|null $email 云经销商的邮箱。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountName
-    *  精英服务商的账户名。
+    *  云经销商的账户名。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets accountName
     *
-    * @param string|null $accountName 精英服务商的账户名。
+    * @param string|null $accountName 云经销商的账户名。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  精英服务商的名称。
+    *  云经销商的名称。
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 精英服务商的名称。
+    * @param string|null $name 云经销商的名称。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets associatedOn
-    *  精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
+    *  云经销商关联华为云总经销商的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class IndirectPartnerInfo implements ModelInterface, ArrayAccess
     /**
     * Sets associatedOn
     *
-    * @param string|null $associatedOn 精英服务商关联华为云伙伴能力中心的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
+    * @param string|null $associatedOn 云经销商关联华为云总经销商的时间。 UTC时间（包括时区），例如2016-03-28T00:00:00Z。
     *
     * @return $this
     */

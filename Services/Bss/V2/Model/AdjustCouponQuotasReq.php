@@ -20,9 +20,9 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * quotaId  华为云伙伴能力中心发放的代金券额度的ID。获取方法请参见查询优惠券额度。
-    * indirectPartnerIds  精英服务商ID列表。
-    * quotaAmount  华为云伙伴能力中心向精英服务商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
+    * quotaId  华为云总经销商发放的代金券额度的ID。获取方法请参见查询优惠券额度。
+    * indirectPartnerIds  云经销商ID列表。
+    * quotaAmount  华为云总经销商向云经销商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * quotaId  华为云伙伴能力中心发放的代金券额度的ID。获取方法请参见查询优惠券额度。
-    * indirectPartnerIds  精英服务商ID列表。
-    * quotaAmount  华为云伙伴能力中心向精英服务商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
+    * quotaId  华为云总经销商发放的代金券额度的ID。获取方法请参见查询优惠券额度。
+    * indirectPartnerIds  云经销商ID列表。
+    * quotaAmount  华为云总经销商向云经销商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * quotaId  华为云伙伴能力中心发放的代金券额度的ID。获取方法请参见查询优惠券额度。
-    * indirectPartnerIds  精英服务商ID列表。
-    * quotaAmount  华为云伙伴能力中心向精英服务商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
+    * quotaId  华为云总经销商发放的代金券额度的ID。获取方法请参见查询优惠券额度。
+    * indirectPartnerIds  云经销商ID列表。
+    * quotaAmount  华为云总经销商向云经销商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * quotaId  华为云伙伴能力中心发放的代金券额度的ID。获取方法请参见查询优惠券额度。
-    * indirectPartnerIds  精英服务商ID列表。
-    * quotaAmount  华为云伙伴能力中心向精英服务商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
+    * quotaId  华为云总经销商发放的代金券额度的ID。获取方法请参见查询优惠券额度。
+    * indirectPartnerIds  云经销商ID列表。
+    * quotaAmount  华为云总经销商向云经销商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * quotaId  华为云伙伴能力中心发放的代金券额度的ID。获取方法请参见查询优惠券额度。
-    * indirectPartnerIds  精英服务商ID列表。
-    * quotaAmount  华为云伙伴能力中心向精英服务商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
+    * quotaId  华为云总经销商发放的代金券额度的ID。获取方法请参见查询优惠券额度。
+    * indirectPartnerIds  云经销商ID列表。
+    * quotaAmount  华为云总经销商向云经销商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @var string[]
     */
@@ -217,7 +217,7 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaId
-    *  华为云伙伴能力中心发放的代金券额度的ID。获取方法请参见查询优惠券额度。
+    *  华为云总经销商发放的代金券额度的ID。获取方法请参见查询优惠券额度。
     *
     * @return string
     */
@@ -229,7 +229,7 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
     /**
     * Sets quotaId
     *
-    * @param string $quotaId 华为云伙伴能力中心发放的代金券额度的ID。获取方法请参见查询优惠券额度。
+    * @param string $quotaId 华为云总经销商发放的代金券额度的ID。获取方法请参见查询优惠券额度。
     *
     * @return $this
     */
@@ -241,7 +241,7 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerIds
-    *  精英服务商ID列表。
+    *  云经销商ID列表。
     *
     * @return string[]
     */
@@ -253,7 +253,7 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerIds
     *
-    * @param string[] $indirectPartnerIds 精英服务商ID列表。
+    * @param string[] $indirectPartnerIds 云经销商ID列表。
     *
     * @return $this
     */
@@ -265,7 +265,7 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaAmount
-    *  华为云伙伴能力中心向精英服务商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
+    *  华为云总经销商向云经销商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @return double
     */
@@ -277,7 +277,7 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
     /**
     * Sets quotaAmount
     *
-    * @param double $quotaAmount 华为云伙伴能力中心向精英服务商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
+    * @param double $quotaAmount 华为云总经销商向云经销商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @return $this
     */

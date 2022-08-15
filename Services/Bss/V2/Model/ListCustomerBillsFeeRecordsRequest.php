@@ -22,7 +22,7 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  语言。zh_CN：中文 en_US：英文。默认为zh_CN：中文。
     * billCycle  查询的流水账单所在账期，格式为YYYY-MM。
-    * providerType  服务商。1：华为云2：云市场为空时查询包含华为云和云市场在内的全部服务商。
+    * providerType  服务商。1：华为云2：云商店为空时查询包含华为云和云商店在内的全部服务商。此参数不携带或携带值为空时，不作为筛选条件。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用[查询资源类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256519451.html)接口获取。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
@@ -66,7 +66,7 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  语言。zh_CN：中文 en_US：英文。默认为zh_CN：中文。
     * billCycle  查询的流水账单所在账期，格式为YYYY-MM。
-    * providerType  服务商。1：华为云2：云市场为空时查询包含华为云和云市场在内的全部服务商。
+    * providerType  服务商。1：华为云2：云商店为空时查询包含华为云和云商店在内的全部服务商。此参数不携带或携带值为空时，不作为筛选条件。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用[查询资源类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256519451.html)接口获取。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
@@ -131,7 +131,7 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xLanguage  语言。zh_CN：中文 en_US：英文。默认为zh_CN：中文。
     * billCycle  查询的流水账单所在账期，格式为YYYY-MM。
-    * providerType  服务商。1：华为云2：云市场为空时查询包含华为云和云市场在内的全部服务商。
+    * providerType  服务商。1：华为云2：云商店为空时查询包含华为云和云商店在内的全部服务商。此参数不携带或携带值为空时，不作为筛选条件。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用[查询资源类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256519451.html)接口获取。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
@@ -175,7 +175,7 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  语言。zh_CN：中文 en_US：英文。默认为zh_CN：中文。
     * billCycle  查询的流水账单所在账期，格式为YYYY-MM。
-    * providerType  服务商。1：华为云2：云市场为空时查询包含华为云和云市场在内的全部服务商。
+    * providerType  服务商。1：华为云2：云商店为空时查询包含华为云和云商店在内的全部服务商。此参数不携带或携带值为空时，不作为筛选条件。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用[查询资源类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256519451.html)接口获取。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
@@ -219,7 +219,7 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  语言。zh_CN：中文 en_US：英文。默认为zh_CN：中文。
     * billCycle  查询的流水账单所在账期，格式为YYYY-MM。
-    * providerType  服务商。1：华为云2：云市场为空时查询包含华为云和云市场在内的全部服务商。
+    * providerType  服务商。1：华为云2：云商店为空时查询包含华为云和云商店在内的全部服务商。此参数不携带或携带值为空时，不作为筛选条件。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用[查询资源类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256519451.html)接口获取。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
@@ -448,7 +448,7 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets providerType
-    *  服务商。1：华为云2：云市场为空时查询包含华为云和云市场在内的全部服务商。
+    *  服务商。1：华为云2：云商店为空时查询包含华为云和云商店在内的全部服务商。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return int|null
     */
@@ -460,7 +460,7 @@ class ListCustomerBillsFeeRecordsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets providerType
     *
-    * @param int|null $providerType 服务商。1：华为云2：云市场为空时查询包含华为云和云市场在内的全部服务商。
+    * @param int|null $providerType 服务商。1：华为云2：云商店为空时查询包含华为云和云商店在内的全部服务商。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */

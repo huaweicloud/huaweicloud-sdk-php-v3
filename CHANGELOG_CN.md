@@ -1,3 +1,33 @@
+# 3.0.56-rc 2022-08-11
+
+### HuaweiCloud SDK BSS
+
+- _新增特性_
+  - 支持接口`ListCosts`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK CDN
+
+- _新增特性_
+  - 支持接口`ShowUrlTaskInfo`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ShowDomainFullConfig`新增响应参数 `ipv6_accelerate`
+  - 接口`UpdateDomainFullConfig`新增请求参数 `ipv6_accelerate`
+
+### HuaweiCloud SDK OCR
+
+- _新增特性_
+  - 支持接口`RecognizeMacaoIdCard`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
 # 3.0.55-rc 2022-08-02
 
 ### HuaweiCloud SDK Live

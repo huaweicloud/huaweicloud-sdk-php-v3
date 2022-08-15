@@ -32,10 +32,10 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * limitInfos  代金券额度上的限制属性，具体参见表3。
-    * indirectPartnerId  精英服务商ID。
-    * indirectPartnerAccountName  精英服务商账号名。
-    * indirectPartnerName  精英服务商名称。
-    * parentQuotaId  父额度ID，即华为云伙伴能力中心用于发放给精英服务商代金券额度的额度ID。
+    * indirectPartnerId  云经销商ID。
+    * indirectPartnerAccountName  云经销商账号名。
+    * indirectPartnerName  云经销商名称。
+    * parentQuotaId  父额度ID，即华为云总经销商用于发放给云经销商代金券额度的额度ID。
     *
     * @var string[]
     */
@@ -72,10 +72,10 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * limitInfos  代金券额度上的限制属性，具体参见表3。
-    * indirectPartnerId  精英服务商ID。
-    * indirectPartnerAccountName  精英服务商账号名。
-    * indirectPartnerName  精英服务商名称。
-    * parentQuotaId  父额度ID，即华为云伙伴能力中心用于发放给精英服务商代金券额度的额度ID。
+    * indirectPartnerId  云经销商ID。
+    * indirectPartnerAccountName  云经销商账号名。
+    * indirectPartnerName  云经销商名称。
+    * parentQuotaId  父额度ID，即华为云总经销商用于发放给云经销商代金券额度的额度ID。
     *
     * @var string[]
     */
@@ -133,10 +133,10 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * limitInfos  代金券额度上的限制属性，具体参见表3。
-    * indirectPartnerId  精英服务商ID。
-    * indirectPartnerAccountName  精英服务商账号名。
-    * indirectPartnerName  精英服务商名称。
-    * parentQuotaId  父额度ID，即华为云伙伴能力中心用于发放给精英服务商代金券额度的额度ID。
+    * indirectPartnerId  云经销商ID。
+    * indirectPartnerAccountName  云经销商账号名。
+    * indirectPartnerName  云经销商名称。
+    * parentQuotaId  父额度ID，即华为云总经销商用于发放给云经销商代金券额度的额度ID。
     *
     * @var string[]
     */
@@ -173,10 +173,10 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * limitInfos  代金券额度上的限制属性，具体参见表3。
-    * indirectPartnerId  精英服务商ID。
-    * indirectPartnerAccountName  精英服务商账号名。
-    * indirectPartnerName  精英服务商名称。
-    * parentQuotaId  父额度ID，即华为云伙伴能力中心用于发放给精英服务商代金券额度的额度ID。
+    * indirectPartnerId  云经销商ID。
+    * indirectPartnerAccountName  云经销商账号名。
+    * indirectPartnerName  云经销商名称。
+    * parentQuotaId  父额度ID，即华为云总经销商用于发放给云经销商代金券额度的额度ID。
     *
     * @var string[]
     */
@@ -213,10 +213,10 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
     * effectiveTime  生效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * limitInfos  代金券额度上的限制属性，具体参见表3。
-    * indirectPartnerId  精英服务商ID。
-    * indirectPartnerAccountName  精英服务商账号名。
-    * indirectPartnerName  精英服务商名称。
-    * parentQuotaId  父额度ID，即华为云伙伴能力中心用于发放给精英服务商代金券额度的额度ID。
+    * indirectPartnerId  云经销商ID。
+    * indirectPartnerAccountName  云经销商账号名。
+    * indirectPartnerName  云经销商名称。
+    * parentQuotaId  父额度ID，即华为云总经销商用于发放给云经销商代金券额度的额度ID。
     *
     * @var string[]
     */
@@ -627,7 +627,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerId
-    *  精英服务商ID。
+    *  云经销商ID。
     *
     * @return string|null
     */
@@ -639,7 +639,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerId
     *
-    * @param string|null $indirectPartnerId 精英服务商ID。
+    * @param string|null $indirectPartnerId 云经销商ID。
     *
     * @return $this
     */
@@ -651,7 +651,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerAccountName
-    *  精英服务商账号名。
+    *  云经销商账号名。
     *
     * @return string|null
     */
@@ -663,7 +663,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerAccountName
     *
-    * @param string|null $indirectPartnerAccountName 精英服务商账号名。
+    * @param string|null $indirectPartnerAccountName 云经销商账号名。
     *
     * @return $this
     */
@@ -675,7 +675,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerName
-    *  精英服务商名称。
+    *  云经销商名称。
     *
     * @return string|null
     */
@@ -687,7 +687,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerName
     *
-    * @param string|null $indirectPartnerName 精英服务商名称。
+    * @param string|null $indirectPartnerName 云经销商名称。
     *
     * @return $this
     */
@@ -699,7 +699,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentQuotaId
-    *  父额度ID，即华为云伙伴能力中心用于发放给精英服务商代金券额度的额度ID。
+    *  父额度ID，即华为云总经销商用于发放给云经销商代金券额度的额度ID。
     *
     * @return string|null
     */
@@ -711,7 +711,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
     /**
     * Sets parentQuotaId
     *
-    * @param string|null $parentQuotaId 父额度ID，即华为云伙伴能力中心用于发放给精英服务商代金券额度的额度ID。
+    * @param string|null $parentQuotaId 父额度ID，即华为云总经销商用于发放给云经销商代金券额度的额度ID。
     *
     * @return $this
     */

@@ -1,3 +1,33 @@
+# 3.0.56-rc 2022-08-11
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - Support the interface `ListCosts`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - Support the interface `ShowUrlTaskInfo`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `ipv6_accelerate` to the interface `ShowDomainFullConfig`
+  - Add the request parameter `ipv6_accelerate` to the interface `UpdateDomainFullConfig`
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - Support the interface `RecognizeMacaoIdCard`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
 # 3.0.55-rc 2022-08-02
 
 ### HuaweiCloud SDK Live

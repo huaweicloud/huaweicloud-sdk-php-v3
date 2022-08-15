@@ -23,14 +23,14 @@ class QuotaRecord implements ModelInterface, ArrayAccess
     * id  记录ID。
     * operator  操作员的账号名称。
     * operationType  操作类型。 10：发放额度11：回收额度
-    * quotaId  精英服务商的代金券额度ID。 即华为云伙伴能力中心给精英服务商发放代金券额度时，产生的精英服务商的代金券额度ID，或者从精英服务商回收代金券额度时，精英服务商的代金券额度ID。
-    * parentQuotaId  父额度ID。 这即华为云伙伴能力中心给精英服务商发放代金券额度时，华为云伙伴能力中心的额度ID，或者从精英服务商回收代金券额度时，回收的华为云伙伴能力中心的额度ID。
+    * quotaId  云经销商的代金券额度ID。 即华为云总经销商给云经销商发放代金券额度时，产生的云经销商的代金券额度ID，或者从云经销商回收代金券额度时，云经销商的代金券额度ID。
+    * parentQuotaId  父额度ID。 这即华为云总经销商给云经销商发放代金券额度时，华为云总经销商的额度ID，或者从云经销商回收代金券额度时，回收的华为云总经销商的额度ID。
     * amount  发放回收的金额。 取值大于0且精确到小数点后2位，单位：元。
     * operationTime  操作时间，UTC时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * result  操作结果。 0：成功-1：失败
-    * indirectPartnerAccountName  精英服务商的账号名。
-    * indirectPartnerId  精英服务商ID。
-    * indirectPartnerName  精英服务商的公司名称。
+    * indirectPartnerAccountName  云经销商的账号名。
+    * indirectPartnerId  云经销商ID。
+    * indirectPartnerName  云经销商的公司名称。
     * remark  备注。
     *
     * @var string[]
@@ -55,14 +55,14 @@ class QuotaRecord implements ModelInterface, ArrayAccess
     * id  记录ID。
     * operator  操作员的账号名称。
     * operationType  操作类型。 10：发放额度11：回收额度
-    * quotaId  精英服务商的代金券额度ID。 即华为云伙伴能力中心给精英服务商发放代金券额度时，产生的精英服务商的代金券额度ID，或者从精英服务商回收代金券额度时，精英服务商的代金券额度ID。
-    * parentQuotaId  父额度ID。 这即华为云伙伴能力中心给精英服务商发放代金券额度时，华为云伙伴能力中心的额度ID，或者从精英服务商回收代金券额度时，回收的华为云伙伴能力中心的额度ID。
+    * quotaId  云经销商的代金券额度ID。 即华为云总经销商给云经销商发放代金券额度时，产生的云经销商的代金券额度ID，或者从云经销商回收代金券额度时，云经销商的代金券额度ID。
+    * parentQuotaId  父额度ID。 这即华为云总经销商给云经销商发放代金券额度时，华为云总经销商的额度ID，或者从云经销商回收代金券额度时，回收的华为云总经销商的额度ID。
     * amount  发放回收的金额。 取值大于0且精确到小数点后2位，单位：元。
     * operationTime  操作时间，UTC时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * result  操作结果。 0：成功-1：失败
-    * indirectPartnerAccountName  精英服务商的账号名。
-    * indirectPartnerId  精英服务商ID。
-    * indirectPartnerName  精英服务商的公司名称。
+    * indirectPartnerAccountName  云经销商的账号名。
+    * indirectPartnerId  云经销商ID。
+    * indirectPartnerName  云经销商的公司名称。
     * remark  备注。
     *
     * @var string[]
@@ -108,14 +108,14 @@ class QuotaRecord implements ModelInterface, ArrayAccess
     * id  记录ID。
     * operator  操作员的账号名称。
     * operationType  操作类型。 10：发放额度11：回收额度
-    * quotaId  精英服务商的代金券额度ID。 即华为云伙伴能力中心给精英服务商发放代金券额度时，产生的精英服务商的代金券额度ID，或者从精英服务商回收代金券额度时，精英服务商的代金券额度ID。
-    * parentQuotaId  父额度ID。 这即华为云伙伴能力中心给精英服务商发放代金券额度时，华为云伙伴能力中心的额度ID，或者从精英服务商回收代金券额度时，回收的华为云伙伴能力中心的额度ID。
+    * quotaId  云经销商的代金券额度ID。 即华为云总经销商给云经销商发放代金券额度时，产生的云经销商的代金券额度ID，或者从云经销商回收代金券额度时，云经销商的代金券额度ID。
+    * parentQuotaId  父额度ID。 这即华为云总经销商给云经销商发放代金券额度时，华为云总经销商的额度ID，或者从云经销商回收代金券额度时，回收的华为云总经销商的额度ID。
     * amount  发放回收的金额。 取值大于0且精确到小数点后2位，单位：元。
     * operationTime  操作时间，UTC时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * result  操作结果。 0：成功-1：失败
-    * indirectPartnerAccountName  精英服务商的账号名。
-    * indirectPartnerId  精英服务商ID。
-    * indirectPartnerName  精英服务商的公司名称。
+    * indirectPartnerAccountName  云经销商的账号名。
+    * indirectPartnerId  云经销商ID。
+    * indirectPartnerName  云经销商的公司名称。
     * remark  备注。
     *
     * @var string[]
@@ -140,14 +140,14 @@ class QuotaRecord implements ModelInterface, ArrayAccess
     * id  记录ID。
     * operator  操作员的账号名称。
     * operationType  操作类型。 10：发放额度11：回收额度
-    * quotaId  精英服务商的代金券额度ID。 即华为云伙伴能力中心给精英服务商发放代金券额度时，产生的精英服务商的代金券额度ID，或者从精英服务商回收代金券额度时，精英服务商的代金券额度ID。
-    * parentQuotaId  父额度ID。 这即华为云伙伴能力中心给精英服务商发放代金券额度时，华为云伙伴能力中心的额度ID，或者从精英服务商回收代金券额度时，回收的华为云伙伴能力中心的额度ID。
+    * quotaId  云经销商的代金券额度ID。 即华为云总经销商给云经销商发放代金券额度时，产生的云经销商的代金券额度ID，或者从云经销商回收代金券额度时，云经销商的代金券额度ID。
+    * parentQuotaId  父额度ID。 这即华为云总经销商给云经销商发放代金券额度时，华为云总经销商的额度ID，或者从云经销商回收代金券额度时，回收的华为云总经销商的额度ID。
     * amount  发放回收的金额。 取值大于0且精确到小数点后2位，单位：元。
     * operationTime  操作时间，UTC时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * result  操作结果。 0：成功-1：失败
-    * indirectPartnerAccountName  精英服务商的账号名。
-    * indirectPartnerId  精英服务商ID。
-    * indirectPartnerName  精英服务商的公司名称。
+    * indirectPartnerAccountName  云经销商的账号名。
+    * indirectPartnerId  云经销商ID。
+    * indirectPartnerName  云经销商的公司名称。
     * remark  备注。
     *
     * @var string[]
@@ -172,14 +172,14 @@ class QuotaRecord implements ModelInterface, ArrayAccess
     * id  记录ID。
     * operator  操作员的账号名称。
     * operationType  操作类型。 10：发放额度11：回收额度
-    * quotaId  精英服务商的代金券额度ID。 即华为云伙伴能力中心给精英服务商发放代金券额度时，产生的精英服务商的代金券额度ID，或者从精英服务商回收代金券额度时，精英服务商的代金券额度ID。
-    * parentQuotaId  父额度ID。 这即华为云伙伴能力中心给精英服务商发放代金券额度时，华为云伙伴能力中心的额度ID，或者从精英服务商回收代金券额度时，回收的华为云伙伴能力中心的额度ID。
+    * quotaId  云经销商的代金券额度ID。 即华为云总经销商给云经销商发放代金券额度时，产生的云经销商的代金券额度ID，或者从云经销商回收代金券额度时，云经销商的代金券额度ID。
+    * parentQuotaId  父额度ID。 这即华为云总经销商给云经销商发放代金券额度时，华为云总经销商的额度ID，或者从云经销商回收代金券额度时，回收的华为云总经销商的额度ID。
     * amount  发放回收的金额。 取值大于0且精确到小数点后2位，单位：元。
     * operationTime  操作时间，UTC时间，UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * result  操作结果。 0：成功-1：失败
-    * indirectPartnerAccountName  精英服务商的账号名。
-    * indirectPartnerId  精英服务商ID。
-    * indirectPartnerName  精英服务商的公司名称。
+    * indirectPartnerAccountName  云经销商的账号名。
+    * indirectPartnerId  云经销商ID。
+    * indirectPartnerName  云经销商的公司名称。
     * remark  备注。
     *
     * @var string[]
@@ -367,7 +367,7 @@ class QuotaRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaId
-    *  精英服务商的代金券额度ID。 即华为云伙伴能力中心给精英服务商发放代金券额度时，产生的精英服务商的代金券额度ID，或者从精英服务商回收代金券额度时，精英服务商的代金券额度ID。
+    *  云经销商的代金券额度ID。 即华为云总经销商给云经销商发放代金券额度时，产生的云经销商的代金券额度ID，或者从云经销商回收代金券额度时，云经销商的代金券额度ID。
     *
     * @return string|null
     */
@@ -379,7 +379,7 @@ class QuotaRecord implements ModelInterface, ArrayAccess
     /**
     * Sets quotaId
     *
-    * @param string|null $quotaId 精英服务商的代金券额度ID。 即华为云伙伴能力中心给精英服务商发放代金券额度时，产生的精英服务商的代金券额度ID，或者从精英服务商回收代金券额度时，精英服务商的代金券额度ID。
+    * @param string|null $quotaId 云经销商的代金券额度ID。 即华为云总经销商给云经销商发放代金券额度时，产生的云经销商的代金券额度ID，或者从云经销商回收代金券额度时，云经销商的代金券额度ID。
     *
     * @return $this
     */
@@ -391,7 +391,7 @@ class QuotaRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentQuotaId
-    *  父额度ID。 这即华为云伙伴能力中心给精英服务商发放代金券额度时，华为云伙伴能力中心的额度ID，或者从精英服务商回收代金券额度时，回收的华为云伙伴能力中心的额度ID。
+    *  父额度ID。 这即华为云总经销商给云经销商发放代金券额度时，华为云总经销商的额度ID，或者从云经销商回收代金券额度时，回收的华为云总经销商的额度ID。
     *
     * @return string|null
     */
@@ -403,7 +403,7 @@ class QuotaRecord implements ModelInterface, ArrayAccess
     /**
     * Sets parentQuotaId
     *
-    * @param string|null $parentQuotaId 父额度ID。 这即华为云伙伴能力中心给精英服务商发放代金券额度时，华为云伙伴能力中心的额度ID，或者从精英服务商回收代金券额度时，回收的华为云伙伴能力中心的额度ID。
+    * @param string|null $parentQuotaId 父额度ID。 这即华为云总经销商给云经销商发放代金券额度时，华为云总经销商的额度ID，或者从云经销商回收代金券额度时，回收的华为云总经销商的额度ID。
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class QuotaRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerAccountName
-    *  精英服务商的账号名。
+    *  云经销商的账号名。
     *
     * @return string|null
     */
@@ -499,7 +499,7 @@ class QuotaRecord implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerAccountName
     *
-    * @param string|null $indirectPartnerAccountName 精英服务商的账号名。
+    * @param string|null $indirectPartnerAccountName 云经销商的账号名。
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class QuotaRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerId
-    *  精英服务商ID。
+    *  云经销商ID。
     *
     * @return string|null
     */
@@ -523,7 +523,7 @@ class QuotaRecord implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerId
     *
-    * @param string|null $indirectPartnerId 精英服务商ID。
+    * @param string|null $indirectPartnerId 云经销商ID。
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class QuotaRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerName
-    *  精英服务商的公司名称。
+    *  云经销商的公司名称。
     *
     * @return string|null
     */
@@ -547,7 +547,7 @@ class QuotaRecord implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerName
     *
-    * @param string|null $indirectPartnerName 精英服务商的公司名称。
+    * @param string|null $indirectPartnerName 云经销商的公司名称。
     *
     * @return $this
     */

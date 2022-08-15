@@ -20,7 +20,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。 指定subnet_id时不能再指定port_id参数。
+    * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
     * securityGroups  添加网卡的安全组信息
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
@@ -38,7 +38,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。 指定subnet_id时不能再指定port_id参数。
+    * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
     * securityGroups  添加网卡的安全组信息
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
@@ -77,7 +77,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。 指定subnet_id时不能再指定port_id参数。
+    * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
     * securityGroups  添加网卡的安全组信息
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
@@ -95,7 +95,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。 指定subnet_id时不能再指定port_id参数。
+    * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
     * securityGroups  添加网卡的安全组信息
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
@@ -113,7 +113,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。 指定subnet_id时不能再指定port_id参数。
+    * subnetId  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
     * securityGroups  添加网卡的安全组信息
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
@@ -221,7 +221,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。 指定subnet_id时不能再指定port_id参数。
+    *  云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
     *
     * @return string
     */
@@ -233,7 +233,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId 云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。 指定subnet_id时不能再指定port_id参数。
+    * @param string $subnetId 云服务器添加网卡的信息。  需要指定云服务器所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
     *
     * @return $this
     */

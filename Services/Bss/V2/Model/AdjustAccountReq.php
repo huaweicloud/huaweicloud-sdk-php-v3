@@ -22,7 +22,7 @@ class AdjustAccountReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
     * amount  拨款金额。 单位：元。取值大于0且精确到小数点后2位。 注意该值不能大于“查询伙伴账户余额”接口响应消息表2中参数amount - designated_amount的值。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商（二级经销商）给子客户拨款时，需携带该参数。  说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足，如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 云经销商（二级经销商）给子客户拨款时，需携带该参数。除此之外，该参数不做处理。  说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足。如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class AdjustAccountReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
     * amount  拨款金额。 单位：元。取值大于0且精确到小数点后2位。 注意该值不能大于“查询伙伴账户余额”接口响应消息表2中参数amount - designated_amount的值。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商（二级经销商）给子客户拨款时，需携带该参数。  说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足，如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 云经销商（二级经销商）给子客户拨款时，需携带该参数。除此之外，该参数不做处理。  说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足。如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AdjustAccountReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
     * amount  拨款金额。 单位：元。取值大于0且精确到小数点后2位。 注意该值不能大于“查询伙伴账户余额”接口响应消息表2中参数amount - designated_amount的值。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商（二级经销商）给子客户拨款时，需携带该参数。  说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足，如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 云经销商（二级经销商）给子客户拨款时，需携带该参数。除此之外，该参数不做处理。  说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足。如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class AdjustAccountReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
     * amount  拨款金额。 单位：元。取值大于0且精确到小数点后2位。 注意该值不能大于“查询伙伴账户余额”接口响应消息表2中参数amount - designated_amount的值。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商（二级经销商）给子客户拨款时，需携带该参数。  说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足，如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 云经销商（二级经销商）给子客户拨款时，需携带该参数。除此之外，该参数不做处理。  说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足。如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class AdjustAccountReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
     * amount  拨款金额。 单位：元。取值大于0且精确到小数点后2位。 注意该值不能大于“查询伙伴账户余额”接口响应消息表2中参数amount - designated_amount的值。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商（二级经销商）给子客户拨款时，需携带该参数。  说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足，如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 云经销商（二级经销商）给子客户拨款时，需携带该参数。除此之外，该参数不做处理。  说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足。如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
     *
     * @var string[]
     */
@@ -268,7 +268,7 @@ class AdjustAccountReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerId
-    *  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商（二级经销商）给子客户拨款时，需携带该参数。  说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足，如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
+    *  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 云经销商（二级经销商）给子客户拨款时，需携带该参数。除此之外，该参数不做处理。  说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足。如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
     *
     * @return string|null
     */
@@ -280,7 +280,7 @@ class AdjustAccountReq implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerId
     *
-    * @param string|null $indirectPartnerId 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商（二级经销商）给子客户拨款时，需携带该参数。  说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足，如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
+    * @param string|null $indirectPartnerId 云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 云经销商（二级经销商）给子客户拨款时，需携带该参数。除此之外，该参数不做处理。  说明： 该参数存在的情况下，如果结果返回余额不足，表示对应的二级经销商的余额不足。如果该参数不存在，则余额不足表示调用的伙伴自身账号的余额不足。
     *
     * @return $this
     */

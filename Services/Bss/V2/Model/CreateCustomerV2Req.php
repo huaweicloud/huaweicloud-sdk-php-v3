@@ -27,8 +27,8 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
     * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含手机号。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
     * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
-    * cooperationType  合作类型。 1：顾问销售。 仅支持1，如果不传递，默认会创建成代售模式的客户。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
+    * cooperationType  合作类型。 1：顾问销售。 不传递或传递非1的值，默认会创建成代售模式的客户。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
     * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
@@ -55,8 +55,8 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
     * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含手机号。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
     * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
-    * cooperationType  合作类型。 1：顾问销售。 仅支持1，如果不传递，默认会创建成代售模式的客户。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
+    * cooperationType  合作类型。 1：顾问销售。 不传递或传递非1的值，默认会创建成代售模式的客户。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
     * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
@@ -104,8 +104,8 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
     * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含手机号。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
     * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
-    * cooperationType  合作类型。 1：顾问销售。 仅支持1，如果不传递，默认会创建成代售模式的客户。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
+    * cooperationType  合作类型。 1：顾问销售。 不传递或传递非1的值，默认会创建成代售模式的客户。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
     * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
@@ -132,8 +132,8 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
     * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含手机号。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
     * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
-    * cooperationType  合作类型。 1：顾问销售。 仅支持1，如果不传递，默认会创建成代售模式的客户。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
+    * cooperationType  合作类型。 1：顾问销售。 不传递或传递非1的值，默认会创建成代售模式的客户。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
     * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
@@ -160,8 +160,8 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
     * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含手机号。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
     * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
-    * cooperationType  合作类型。 1：顾问销售。 仅支持1，如果不传递，默认会创建成代售模式的客户。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
+    * cooperationType  合作类型。 1：顾问销售。 不传递或传递非1的值，默认会创建成代售模式的客户。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
     * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
@@ -501,7 +501,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets cooperationType
-    *  合作类型。 1：顾问销售。 仅支持1，如果不传递，默认会创建成代售模式的客户。
+    *  合作类型。 1：顾问销售。 不传递或传递非1的值，默认会创建成代售模式的客户。
     *
     * @return string|null
     */
@@ -513,7 +513,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets cooperationType
     *
-    * @param string|null $cooperationType 合作类型。 1：顾问销售。 仅支持1，如果不传递，默认会创建成代售模式的客户。
+    * @param string|null $cooperationType 合作类型。 1：顾问销售。 不传递或传递非1的值，默认会创建成代售模式的客户。
     *
     * @return $this
     */
@@ -525,7 +525,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerId
-    *  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
+    *  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
     *
     * @return string|null
     */
@@ -537,7 +537,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerId
     *
-    * @param string|null $indirectPartnerId 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。
+    * @param string|null $indirectPartnerId 云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
     *
     * @return $this
     */

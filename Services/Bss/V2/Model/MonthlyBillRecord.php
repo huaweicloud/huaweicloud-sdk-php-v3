@@ -32,7 +32,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * consumeTime  消费时间。 计费模式为包年/包月和预留实例场景时为订单的支付时间。计费模式为按需场景时为话单的生/失效时间。
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
-    * providerType  服务商。 1：华为云2：云市场
+    * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * status  支付状态。 1：已支付2：未结清3：未结算
@@ -98,7 +98,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * consumeTime  消费时间。 计费模式为包年/包月和预留实例场景时为订单的支付时间。计费模式为按需场景时为话单的生/失效时间。
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
-    * providerType  服务商。 1：华为云2：云市场
+    * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * status  支付状态。 1：已支付2：未结清3：未结算
@@ -185,7 +185,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * consumeTime  消费时间。 计费模式为包年/包月和预留实例场景时为订单的支付时间。计费模式为按需场景时为话单的生/失效时间。
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
-    * providerType  服务商。 1：华为云2：云市场
+    * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * status  支付状态。 1：已支付2：未结清3：未结算
@@ -251,7 +251,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * consumeTime  消费时间。 计费模式为包年/包月和预留实例场景时为订单的支付时间。计费模式为按需场景时为话单的生/失效时间。
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
-    * providerType  服务商。 1：华为云2：云市场
+    * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * status  支付状态。 1：已支付2：未结清3：未结算
@@ -317,7 +317,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * consumeTime  消费时间。 计费模式为包年/包月和预留实例场景时为订单的支付时间。计费模式为按需场景时为话单的生/失效时间。
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
-    * providerType  服务商。 1：华为云2：云市场
+    * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * status  支付状态。 1：已支付2：未结清3：未结算
@@ -770,7 +770,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets providerType
-    *  服务商。 1：华为云2：云市场
+    *  服务商。 1：华为云2：云商店
     *
     * @return int|null
     */
@@ -782,7 +782,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets providerType
     *
-    * @param int|null $providerType 服务商。 1：华为云2：云市场
+    * @param int|null $providerType 服务商。 1：华为云2：云商店
     *
     * @return $this
     */

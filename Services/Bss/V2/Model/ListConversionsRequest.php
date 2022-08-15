@@ -21,7 +21,7 @@ class ListConversionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
-    * measureType  度量类型。1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量25：测试类型
+    * measureType  度量类型。1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量26：通用资源包抵扣单位此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ListConversionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
-    * measureType  度量类型。1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量25：测试类型
+    * measureType  度量类型。1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量26：通用资源包抵扣单位此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ListConversionsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
-    * measureType  度量类型。1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量25：测试类型
+    * measureType  度量类型。1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量26：通用资源包抵扣单位此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ListConversionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
-    * measureType  度量类型。1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量25：测试类型
+    * measureType  度量类型。1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量26：通用资源包抵扣单位此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ListConversionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  语言。zh_CN：中文en_US：英文缺省为zh_CN。
-    * measureType  度量类型。1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量25：测试类型
+    * measureType  度量类型。1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量26：通用资源包抵扣单位此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class ListConversionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureType
-    *  度量类型。1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量25：测试类型
+    *  度量类型。1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量26：通用资源包抵扣单位此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class ListConversionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets measureType
     *
-    * @param int|null $measureType 度量类型。1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量25：测试类型
+    * @param int|null $measureType 度量类型。1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量26：通用资源包抵扣单位此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @return $this
     */

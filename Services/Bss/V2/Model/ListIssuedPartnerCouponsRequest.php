@@ -20,20 +20,20 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * couponId  优惠券ID。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
-    * orderId  订单ID。
-    * couponType  优惠券类型：1：代金券4：现金券
-    * status  客户优惠券实例状态：1：未激活2：可使用3：已使用4：已过期5：已回收
-    * createTimeBegin  创建时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间大于这个时间的记录。
-    * createTimeEnd  创建时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间小于这个时间的记录。
-    * effectiveTimeBegin  生效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间大于这个时间的记录。
-    * effectiveTimeEnd  生效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间小于这个时间的记录。
-    * expireTimeBegin  失效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间大于这个时间的记录。
-    * expireTimeEnd  失效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间小于这个时间的记录。
+    * couponId  优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * couponType  优惠券类型。1：代金券4：现金券此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * status  客户优惠券实例状态：1：未激活2：可使用3：已使用4：已过期5：已回收此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * createTimeBegin  创建时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeEnd  创建时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * effectiveTimeBegin  生效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * effectiveTimeEnd  生效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * expireTimeBegin  失效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * expireTimeEnd  失效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  查询的每页数量。默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券时，需要携带该参数；否则只能查询发放给自己子客户的优惠券。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券时，需要携带该参数；否则只能查询发放给自己子客户的优惠券。
     *
     * @var string[]
     */
@@ -56,20 +56,20 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * couponId  优惠券ID。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
-    * orderId  订单ID。
-    * couponType  优惠券类型：1：代金券4：现金券
-    * status  客户优惠券实例状态：1：未激活2：可使用3：已使用4：已过期5：已回收
-    * createTimeBegin  创建时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间大于这个时间的记录。
-    * createTimeEnd  创建时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间小于这个时间的记录。
-    * effectiveTimeBegin  生效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间大于这个时间的记录。
-    * effectiveTimeEnd  生效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间小于这个时间的记录。
-    * expireTimeBegin  失效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间大于这个时间的记录。
-    * expireTimeEnd  失效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间小于这个时间的记录。
+    * couponId  优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * couponType  优惠券类型。1：代金券4：现金券此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * status  客户优惠券实例状态：1：未激活2：可使用3：已使用4：已过期5：已回收此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * createTimeBegin  创建时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeEnd  创建时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * effectiveTimeBegin  生效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * effectiveTimeEnd  生效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * expireTimeBegin  失效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * expireTimeEnd  失效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  查询的每页数量。默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券时，需要携带该参数；否则只能查询发放给自己子客户的优惠券。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券时，需要携带该参数；否则只能查询发放给自己子客户的优惠券。
     *
     * @var string[]
     */
@@ -113,20 +113,20 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * couponId  优惠券ID。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
-    * orderId  订单ID。
-    * couponType  优惠券类型：1：代金券4：现金券
-    * status  客户优惠券实例状态：1：未激活2：可使用3：已使用4：已过期5：已回收
-    * createTimeBegin  创建时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间大于这个时间的记录。
-    * createTimeEnd  创建时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间小于这个时间的记录。
-    * effectiveTimeBegin  生效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间大于这个时间的记录。
-    * effectiveTimeEnd  生效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间小于这个时间的记录。
-    * expireTimeBegin  失效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间大于这个时间的记录。
-    * expireTimeEnd  失效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间小于这个时间的记录。
+    * couponId  优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * couponType  优惠券类型。1：代金券4：现金券此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * status  客户优惠券实例状态：1：未激活2：可使用3：已使用4：已过期5：已回收此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * createTimeBegin  创建时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeEnd  创建时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * effectiveTimeBegin  生效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * effectiveTimeEnd  生效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * expireTimeBegin  失效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * expireTimeEnd  失效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  查询的每页数量。默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券时，需要携带该参数；否则只能查询发放给自己子客户的优惠券。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券时，需要携带该参数；否则只能查询发放给自己子客户的优惠券。
     *
     * @var string[]
     */
@@ -149,20 +149,20 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * couponId  优惠券ID。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
-    * orderId  订单ID。
-    * couponType  优惠券类型：1：代金券4：现金券
-    * status  客户优惠券实例状态：1：未激活2：可使用3：已使用4：已过期5：已回收
-    * createTimeBegin  创建时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间大于这个时间的记录。
-    * createTimeEnd  创建时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间小于这个时间的记录。
-    * effectiveTimeBegin  生效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间大于这个时间的记录。
-    * effectiveTimeEnd  生效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间小于这个时间的记录。
-    * expireTimeBegin  失效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间大于这个时间的记录。
-    * expireTimeEnd  失效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间小于这个时间的记录。
+    * couponId  优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * couponType  优惠券类型。1：代金券4：现金券此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * status  客户优惠券实例状态：1：未激活2：可使用3：已使用4：已过期5：已回收此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * createTimeBegin  创建时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeEnd  创建时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * effectiveTimeBegin  生效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * effectiveTimeEnd  生效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * expireTimeBegin  失效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * expireTimeEnd  失效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  查询的每页数量。默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券时，需要携带该参数；否则只能查询发放给自己子客户的优惠券。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券时，需要携带该参数；否则只能查询发放给自己子客户的优惠券。
     *
     * @var string[]
     */
@@ -185,20 +185,20 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * couponId  优惠券ID。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
-    * orderId  订单ID。
-    * couponType  优惠券类型：1：代金券4：现金券
-    * status  客户优惠券实例状态：1：未激活2：可使用3：已使用4：已过期5：已回收
-    * createTimeBegin  创建时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间大于这个时间的记录。
-    * createTimeEnd  创建时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间小于这个时间的记录。
-    * effectiveTimeBegin  生效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间大于这个时间的记录。
-    * effectiveTimeEnd  生效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间小于这个时间的记录。
-    * expireTimeBegin  失效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间大于这个时间的记录。
-    * expireTimeEnd  失效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间小于这个时间的记录。
+    * couponId  优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * couponType  优惠券类型。1：代金券4：现金券此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * status  客户优惠券实例状态：1：未激活2：可使用3：已使用4：已过期5：已回收此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * createTimeBegin  创建时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeEnd  创建时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * effectiveTimeBegin  生效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * effectiveTimeEnd  生效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * expireTimeBegin  失效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * expireTimeEnd  失效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  查询的每页数量。默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券时，需要携带该参数；否则只能查询发放给自己子客户的优惠券。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券时，需要携带该参数；否则只能查询发放给自己子客户的优惠券。
     *
     * @var string[]
     */
@@ -341,7 +341,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponId
-    *  优惠券ID。
+    *  优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     *
     * @return string|null
     */
@@ -353,7 +353,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets couponId
     *
-    * @param string|null $couponId 优惠券ID。
+    * @param string|null $couponId 优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerId
-    *  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
+    *  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     *
     * @return string|null
     */
@@ -377,7 +377,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets customerId
     *
-    * @param string|null $customerId 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
+    * @param string|null $customerId 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单ID。
+    *  订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     *
     * @return string|null
     */
@@ -401,7 +401,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单ID。
+    * @param string|null $orderId 订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     *
     * @return $this
     */
@@ -413,7 +413,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponType
-    *  优惠券类型：1：代金券4：现金券
+    *  优惠券类型。1：代金券4：现金券此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @return int|null
     */
@@ -425,7 +425,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets couponType
     *
-    * @param int|null $couponType 优惠券类型：1：代金券4：现金券
+    * @param int|null $couponType 优惠券类型。1：代金券4：现金券此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @return $this
     */
@@ -437,7 +437,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  客户优惠券实例状态：1：未激活2：可使用3：已使用4：已过期5：已回收
+    *  客户优惠券实例状态：1：未激活2：可使用3：已使用4：已过期5：已回收此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @return int|null
     */
@@ -449,7 +449,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 客户优惠券实例状态：1：未激活2：可使用3：已使用4：已过期5：已回收
+    * @param int|null $status 客户优惠券实例状态：1：未激活2：可使用3：已使用4：已过期5：已回收此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @return $this
     */
@@ -461,7 +461,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTimeBegin
-    *  创建时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间大于这个时间的记录。
+    *  创建时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -473,7 +473,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets createTimeBegin
     *
-    * @param string|null $createTimeBegin 创建时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间大于这个时间的记录。
+    * @param string|null $createTimeBegin 创建时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -485,7 +485,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTimeEnd
-    *  创建时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间小于这个时间的记录。
+    *  创建时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -497,7 +497,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets createTimeEnd
     *
-    * @param string|null $createTimeEnd 创建时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间小于这个时间的记录。
+    * @param string|null $createTimeEnd 创建时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出创建时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -509,7 +509,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets effectiveTimeBegin
-    *  生效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间大于这个时间的记录。
+    *  生效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -521,7 +521,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets effectiveTimeBegin
     *
-    * @param string|null $effectiveTimeBegin 生效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间大于这个时间的记录。
+    * @param string|null $effectiveTimeBegin 生效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -533,7 +533,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets effectiveTimeEnd
-    *  生效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间小于这个时间的记录。
+    *  生效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -545,7 +545,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets effectiveTimeEnd
     *
-    * @param string|null $effectiveTimeEnd 生效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间小于这个时间的记录。
+    * @param string|null $effectiveTimeEnd 生效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出生效时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -557,7 +557,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTimeBegin
-    *  失效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间大于这个时间的记录。
+    *  失效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -569,7 +569,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets expireTimeBegin
     *
-    * @param string|null $expireTimeBegin 失效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间大于这个时间的记录。
+    * @param string|null $expireTimeBegin 失效时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -581,7 +581,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTimeEnd
-    *  失效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间小于这个时间的记录。
+    *  失效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -593,7 +593,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets expireTimeEnd
     *
-    * @param string|null $expireTimeEnd 失效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间小于这个时间的记录。
+    * @param string|null $expireTimeEnd 失效时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出失效时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -653,7 +653,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerId
-    *  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券时，需要携带该参数；否则只能查询发放给自己子客户的优惠券。
+    *  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券时，需要携带该参数；否则只能查询发放给自己子客户的优惠券。
     *
     * @return string|null
     */
@@ -665,7 +665,7 @@ class ListIssuedPartnerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerId
     *
-    * @param string|null $indirectPartnerId 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券时，需要携带该参数；否则只能查询发放给自己子客户的优惠券。
+    * @param string|null $indirectPartnerId 云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券时，需要携带该参数；否则只能查询发放给自己子客户的优惠券。
     *
     * @return $this
     */

@@ -20,17 +20,17 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * couponId  优惠券ID。
-    * orderId  订单ID。
-    * promotionPlanId  促销计划ID。
-    * couponType  优惠券类型：1：代金券2：折扣券3：产品券4：现金券
-    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
-    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
-    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * couponId  优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * promotionPlanId  促销计划ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * couponType  优惠券类型：1：代金券2：折扣券3：产品券4：现金券此参数不携带或携带值为空时，不作为筛选条件。
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期此参数不携带或携带值为空时，不作为筛选条件。
+    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  查询的优惠券数量，默认值为10。
-    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。
-    * indirectPartnerId  精英服务商（二级经销商）ID。华为云伙伴能力中心（一级经销商）查询精英服务商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
+    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * indirectPartnerId  云经销商（二级经销商）ID。华为云总经销商（一级经销商）查询云经销商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * couponId  优惠券ID。
-    * orderId  订单ID。
-    * promotionPlanId  促销计划ID。
-    * couponType  优惠券类型：1：代金券2：折扣券3：产品券4：现金券
-    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
-    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
-    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * couponId  优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * promotionPlanId  促销计划ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * couponType  优惠券类型：1：代金券2：折扣券3：产品券4：现金券此参数不携带或携带值为空时，不作为筛选条件。
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期此参数不携带或携带值为空时，不作为筛选条件。
+    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  查询的优惠券数量，默认值为10。
-    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。
-    * indirectPartnerId  精英服务商（二级经销商）ID。华为云伙伴能力中心（一级经销商）查询精英服务商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
+    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * indirectPartnerId  云经销商（二级经销商）ID。华为云总经销商（一级经销商）查询云经销商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * couponId  优惠券ID。
-    * orderId  订单ID。
-    * promotionPlanId  促销计划ID。
-    * couponType  优惠券类型：1：代金券2：折扣券3：产品券4：现金券
-    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
-    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
-    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * couponId  优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * promotionPlanId  促销计划ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * couponType  优惠券类型：1：代金券2：折扣券3：产品券4：现金券此参数不携带或携带值为空时，不作为筛选条件。
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期此参数不携带或携带值为空时，不作为筛选条件。
+    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  查询的优惠券数量，默认值为10。
-    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。
-    * indirectPartnerId  精英服务商（二级经销商）ID。华为云伙伴能力中心（一级经销商）查询精英服务商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
+    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * indirectPartnerId  云经销商（二级经销商）ID。华为云总经销商（一级经销商）查询云经销商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * couponId  优惠券ID。
-    * orderId  订单ID。
-    * promotionPlanId  促销计划ID。
-    * couponType  优惠券类型：1：代金券2：折扣券3：产品券4：现金券
-    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
-    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
-    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * couponId  优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * promotionPlanId  促销计划ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * couponType  优惠券类型：1：代金券2：折扣券3：产品券4：现金券此参数不携带或携带值为空时，不作为筛选条件。
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期此参数不携带或携带值为空时，不作为筛选条件。
+    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  查询的优惠券数量，默认值为10。
-    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。
-    * indirectPartnerId  精英服务商（二级经销商）ID。华为云伙伴能力中心（一级经销商）查询精英服务商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
+    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * indirectPartnerId  云经销商（二级经销商）ID。华为云总经销商（一级经销商）查询云经销商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * couponId  优惠券ID。
-    * orderId  订单ID。
-    * promotionPlanId  促销计划ID。
-    * couponType  优惠券类型：1：代金券2：折扣券3：产品券4：现金券
-    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
-    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
-    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * couponId  优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * promotionPlanId  促销计划ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * couponType  优惠券类型：1：代金券2：折扣券3：产品券4：现金券此参数不携带或携带值为空时，不作为筛选条件。
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期此参数不携带或携带值为空时，不作为筛选条件。
+    * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  查询的优惠券数量，默认值为10。
-    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。
-    * indirectPartnerId  精英服务商（二级经销商）ID。华为云伙伴能力中心（一级经销商）查询精英服务商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
+    * sourceId  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
+    * indirectPartnerId  云经销商（二级经销商）ID。华为云总经销商（一级经销商）查询云经销商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
     *
     * @var string[]
     */
@@ -308,7 +308,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponId
-    *  优惠券ID。
+    *  优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets couponId
     *
-    * @param string|null $couponId 优惠券ID。
+    * @param string|null $couponId 优惠券ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单ID。
+    *  订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单ID。
+    * @param string|null $orderId 订单ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets promotionPlanId
-    *  促销计划ID。
+    *  促销计划ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets promotionPlanId
     *
-    * @param string|null $promotionPlanId 促销计划ID。
+    * @param string|null $promotionPlanId 促销计划ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponType
-    *  优惠券类型：1：代金券2：折扣券3：产品券4：现金券
+    *  优惠券类型：1：代金券2：折扣券3：产品券4：现金券此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return int|null
     */
@@ -392,7 +392,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets couponType
     *
-    * @param int|null $couponType 优惠券类型：1：代金券2：折扣券3：产品券4：现金券
+    * @param int|null $couponType 优惠券类型：1：代金券2：折扣券3：产品券4：现金券此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
+    *  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return int|null
     */
@@ -416,7 +416,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
+    * @param int|null $status 客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets activeStartTime
-    *  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    *  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -440,7 +440,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets activeStartTime
     *
-    * @param string|null $activeStartTime 激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * @param string|null $activeStartTime 激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets activeEndTime
-    *  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    *  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -464,7 +464,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets activeEndTime
     *
-    * @param string|null $activeEndTime 结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * @param string|null $activeEndTime 结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceId
-    *  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。
+    *  发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     *
     * @return string|null
     */
@@ -536,7 +536,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sourceId
     *
-    * @param string|null $sourceId 发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。
+    * @param string|null $sourceId 发券来源，如果是合作伙伴发送的券，此处为伙伴ID。如果需要查询某个伙伴发放的券，可以在此处输入该伙伴ID。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     *
     * @return $this
     */
@@ -548,7 +548,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerId
-    *  精英服务商（二级经销商）ID。华为云伙伴能力中心（一级经销商）查询精英服务商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
+    *  云经销商（二级经销商）ID。华为云总经销商（一级经销商）查询云经销商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
     *
     * @return string|null
     */
@@ -560,7 +560,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerId
     *
-    * @param string|null $indirectPartnerId 精英服务商（二级经销商）ID。华为云伙伴能力中心（一级经销商）查询精英服务商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
+    * @param string|null $indirectPartnerId 云经销商（二级经销商）ID。华为云总经销商（一级经销商）查询云经销商名下的优惠券时，需要携带该参数；否则只能查询自己的优惠券列表。
     *
     * @return $this
     */

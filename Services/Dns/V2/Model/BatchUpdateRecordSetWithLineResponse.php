@@ -29,7 +29,7 @@ class BatchUpdateRecordSetWithLineResponse implements ModelInterface, ArrayAcces
     */
     protected static $openAPITypes = [
             'links' => '\HuaweiCloud\SDK\Dns\V2\Model\PageLink',
-            'recordsets' => '\HuaweiCloud\SDK\Dns\V2\Model\QueryRecordSetWithLineAndTagsResp[]',
+            'recordsets' => '\HuaweiCloud\SDK\Dns\V2\Model\QueryRecordSetWithLineResp[]',
             'metadata' => '\HuaweiCloud\SDK\Dns\V2\Model\Metedata'
     ];
 
@@ -223,7 +223,7 @@ class BatchUpdateRecordSetWithLineResponse implements ModelInterface, ArrayAcces
     * Gets recordsets
     *  recordsets
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\QueryRecordSetWithLineAndTagsResp[]|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\QueryRecordSetWithLineResp[]|null
     */
     public function getRecordsets()
     {
@@ -233,7 +233,7 @@ class BatchUpdateRecordSetWithLineResponse implements ModelInterface, ArrayAcces
     /**
     * Sets recordsets
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\QueryRecordSetWithLineAndTagsResp[]|null $recordsets recordsets
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\QueryRecordSetWithLineResp[]|null $recordsets recordsets
     *
     * @return $this
     */

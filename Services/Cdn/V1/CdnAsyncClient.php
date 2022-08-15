@@ -2003,6 +2003,93 @@ class CdnAsyncClient extends Client
     }
 
     /**
+     * 查询刷新预热URL记录
+     *
+     * 查询刷新预热URL记录。如需此接口，请提交工单开通
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showUrlTaskInfoAsync($request)
+    {
+        return $this->showUrlTaskInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function showUrlTaskInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/cdn/contentgateway/url-tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['url'] !== null) {
+            $queryParams['url'] = $localVarParams['url'];
+        }
+        if ($localVarParams['taskType'] !== null) {
+            $queryParams['task_type'] = $localVarParams['taskType'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['fileType'] !== null) {
+            $queryParams['file_type'] = $localVarParams['fileType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowUrlTaskInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowUrlTaskInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 设置IP黑白名单
      *
      * 设置域名的IP黑白名单。

@@ -20,8 +20,8 @@ class QuotaSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  精英服务商ID。
-    * quotaId  分配给精英服务商的代金券额度ID。
+    * id  云经销商ID。
+    * quotaId  分配给云经销商的代金券额度ID。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class QuotaSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  精英服务商ID。
-    * quotaId  分配给精英服务商的代金券额度ID。
+    * id  云经销商ID。
+    * quotaId  分配给云经销商的代金券额度ID。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class QuotaSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  精英服务商ID。
-    * quotaId  分配给精英服务商的代金券额度ID。
+    * id  云经销商ID。
+    * quotaId  分配给云经销商的代金券额度ID。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class QuotaSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  精英服务商ID。
-    * quotaId  分配给精英服务商的代金券额度ID。
+    * id  云经销商ID。
+    * quotaId  分配给云经销商的代金券额度ID。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class QuotaSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  精英服务商ID。
-    * quotaId  分配给精英服务商的代金券额度ID。
+    * id  云经销商ID。
+    * quotaId  分配给云经销商的代金券额度ID。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class QuotaSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  精英服务商ID。
+    *  云经销商ID。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class QuotaSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 精英服务商ID。
+    * @param string $id 云经销商ID。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class QuotaSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaId
-    *  分配给精英服务商的代金券额度ID。
+    *  分配给云经销商的代金券额度ID。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class QuotaSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets quotaId
     *
-    * @param string $quotaId 分配给精英服务商的代金券额度ID。
+    * @param string $quotaId 分配给云经销商的代金券额度ID。
     *
     * @return $this
     */

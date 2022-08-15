@@ -21,7 +21,7 @@ class CouponMaxUseQuantity implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * couponType  优惠券类型。 1：代金券2：折扣券3：产品券4：现金券
-    * couponGroup  优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+    * couponGroup  优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
     * useQuantityValue  优惠券使用数量。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class CouponMaxUseQuantity implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * couponType  优惠券类型。 1：代金券2：折扣券3：产品券4：现金券
-    * couponGroup  优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+    * couponGroup  优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
     * useQuantityValue  优惠券使用数量。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class CouponMaxUseQuantity implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * couponType  优惠券类型。 1：代金券2：折扣券3：产品券4：现金券
-    * couponGroup  优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+    * couponGroup  优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
     * useQuantityValue  优惠券使用数量。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class CouponMaxUseQuantity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * couponType  优惠券类型。 1：代金券2：折扣券3：产品券4：现金券
-    * couponGroup  优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+    * couponGroup  优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
     * useQuantityValue  优惠券使用数量。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CouponMaxUseQuantity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * couponType  优惠券类型。 1：代金券2：折扣券3：产品券4：现金券
-    * couponGroup  优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+    * couponGroup  优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
     * useQuantityValue  优惠券使用数量。
     *
     * @var string[]
@@ -220,7 +220,7 @@ class CouponMaxUseQuantity implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponGroup
-    *  优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+    *  优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class CouponMaxUseQuantity implements ModelInterface, ArrayAccess
     /**
     * Sets couponGroup
     *
-    * @param int|null $couponGroup 优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+    * @param int|null $couponGroup 优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
     *
     * @return $this
     */

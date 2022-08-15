@@ -26,7 +26,7 @@ class ListPartnerAccountChangeRecordsRequest implements ModelInterface, ArrayAcc
     * tradeTimeEnd  查询收支明细的结束日期。 说明： 东八区时间，格式为YYYY-MM-DD，如“2017-12-21”。默认值为当前日期。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量，默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 说明： 华为云伙伴能力中心（一级经销商）查询精英服务商（二级经销商）的收支明细时，需携带此参数；否则只能查询自身的收支明细。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。  说明： 华为云总经销商（一级经销商）查询云经销商（二级经销商）的收支明细时，需携带此参数；除此之外，此参数不作处理。否则只能查询自身的收支明细。
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class ListPartnerAccountChangeRecordsRequest implements ModelInterface, ArrayAcc
     * tradeTimeEnd  查询收支明细的结束日期。 说明： 东八区时间，格式为YYYY-MM-DD，如“2017-12-21”。默认值为当前日期。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量，默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 说明： 华为云伙伴能力中心（一级经销商）查询精英服务商（二级经销商）的收支明细时，需携带此参数；否则只能查询自身的收支明细。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。  说明： 华为云总经销商（一级经销商）查询云经销商（二级经销商）的收支明细时，需携带此参数；除此之外，此参数不作处理。否则只能查询自身的收支明细。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListPartnerAccountChangeRecordsRequest implements ModelInterface, ArrayAcc
     * tradeTimeEnd  查询收支明细的结束日期。 说明： 东八区时间，格式为YYYY-MM-DD，如“2017-12-21”。默认值为当前日期。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量，默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 说明： 华为云伙伴能力中心（一级经销商）查询精英服务商（二级经销商）的收支明细时，需携带此参数；否则只能查询自身的收支明细。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。  说明： 华为云总经销商（一级经销商）查询云经销商（二级经销商）的收支明细时，需携带此参数；除此之外，此参数不作处理。否则只能查询自身的收支明细。
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class ListPartnerAccountChangeRecordsRequest implements ModelInterface, ArrayAcc
     * tradeTimeEnd  查询收支明细的结束日期。 说明： 东八区时间，格式为YYYY-MM-DD，如“2017-12-21”。默认值为当前日期。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量，默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 说明： 华为云伙伴能力中心（一级经销商）查询精英服务商（二级经销商）的收支明细时，需携带此参数；否则只能查询自身的收支明细。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。  说明： 华为云总经销商（一级经销商）查询云经销商（二级经销商）的收支明细时，需携带此参数；除此之外，此参数不作处理。否则只能查询自身的收支明细。
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class ListPartnerAccountChangeRecordsRequest implements ModelInterface, ArrayAcc
     * tradeTimeEnd  查询收支明细的结束日期。 说明： 东八区时间，格式为YYYY-MM-DD，如“2017-12-21”。默认值为当前日期。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量，默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 说明： 华为云伙伴能力中心（一级经销商）查询精英服务商（二级经销商）的收支明细时，需携带此参数；否则只能查询自身的收支明细。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。  说明： 华为云总经销商（一级经销商）查询云经销商（二级经销商）的收支明细时，需携带此参数；除此之外，此参数不作处理。否则只能查询自身的收支明细。
     *
     * @var string[]
     */
@@ -399,7 +399,7 @@ class ListPartnerAccountChangeRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets indirectPartnerId
-    *  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 说明： 华为云伙伴能力中心（一级经销商）查询精英服务商（二级经销商）的收支明细时，需携带此参数；否则只能查询自身的收支明细。
+    *  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。  说明： 华为云总经销商（一级经销商）查询云经销商（二级经销商）的收支明细时，需携带此参数；除此之外，此参数不作处理。否则只能查询自身的收支明细。
     *
     * @return string|null
     */
@@ -411,7 +411,7 @@ class ListPartnerAccountChangeRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets indirectPartnerId
     *
-    * @param string|null $indirectPartnerId 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 说明： 华为云伙伴能力中心（一级经销商）查询精英服务商（二级经销商）的收支明细时，需携带此参数；否则只能查询自身的收支明细。
+    * @param string|null $indirectPartnerId 云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。  说明： 华为云总经销商（一级经销商）查询云经销商（二级经销商）的收支明细时，需携带此参数；除此之外，此参数不作处理。否则只能查询自身的收支明细。
     *
     * @return $this
     */

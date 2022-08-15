@@ -27,8 +27,8 @@ class CreatePartnerCouponsReq implements ModelInterface, ArrayAccess
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * cloudServiceTypes  允许使用的云服务列表，您可以调用查询云服务类型列表接口获取。 多个云服务产品以“,”隔开，最多支持10个。 默认：空（继承额度上的限制）  说明： 如果额度上有限制云服务类型列表，则优惠券上的限制不能超过额度的限制。如果额度上没有限制，则优惠券上可以随意指定云服务类型。
     * productIds  允许使用的产品列表。 多个产品以“,”隔开，最多支持10个。 默认：空（继承额度上的限制）  说明： 如果额度上有限制产品列表，则优惠券上的限制不能超过额度的限制。如果额度上没有限制，则优惠券上可以随意指定产品ID。 产品ID需要合作伙伴通过线下获得。
-    * memo  发券时的备注信息。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商给子客户发放优惠券时，需要携带该参数。
+    * memo  发券时的备注信息。 此参数不携带或携带值为null时，不赋值；携带值为空串时，赋值空串。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。云经销商给子客户发放优惠券时，需要携带该参数。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -53,8 +53,8 @@ class CreatePartnerCouponsReq implements ModelInterface, ArrayAccess
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * cloudServiceTypes  允许使用的云服务列表，您可以调用查询云服务类型列表接口获取。 多个云服务产品以“,”隔开，最多支持10个。 默认：空（继承额度上的限制）  说明： 如果额度上有限制云服务类型列表，则优惠券上的限制不能超过额度的限制。如果额度上没有限制，则优惠券上可以随意指定云服务类型。
     * productIds  允许使用的产品列表。 多个产品以“,”隔开，最多支持10个。 默认：空（继承额度上的限制）  说明： 如果额度上有限制产品列表，则优惠券上的限制不能超过额度的限制。如果额度上没有限制，则优惠券上可以随意指定产品ID。 产品ID需要合作伙伴通过线下获得。
-    * memo  发券时的备注信息。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商给子客户发放优惠券时，需要携带该参数。
+    * memo  发券时的备注信息。 此参数不携带或携带值为null时，不赋值；携带值为空串时，赋值空串。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。云经销商给子客户发放优惠券时，需要携带该参数。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -100,8 +100,8 @@ class CreatePartnerCouponsReq implements ModelInterface, ArrayAccess
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * cloudServiceTypes  允许使用的云服务列表，您可以调用查询云服务类型列表接口获取。 多个云服务产品以“,”隔开，最多支持10个。 默认：空（继承额度上的限制）  说明： 如果额度上有限制云服务类型列表，则优惠券上的限制不能超过额度的限制。如果额度上没有限制，则优惠券上可以随意指定云服务类型。
     * productIds  允许使用的产品列表。 多个产品以“,”隔开，最多支持10个。 默认：空（继承额度上的限制）  说明： 如果额度上有限制产品列表，则优惠券上的限制不能超过额度的限制。如果额度上没有限制，则优惠券上可以随意指定产品ID。 产品ID需要合作伙伴通过线下获得。
-    * memo  发券时的备注信息。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商给子客户发放优惠券时，需要携带该参数。
+    * memo  发券时的备注信息。 此参数不携带或携带值为null时，不赋值；携带值为空串时，赋值空串。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。云经销商给子客户发放优惠券时，需要携带该参数。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -126,8 +126,8 @@ class CreatePartnerCouponsReq implements ModelInterface, ArrayAccess
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * cloudServiceTypes  允许使用的云服务列表，您可以调用查询云服务类型列表接口获取。 多个云服务产品以“,”隔开，最多支持10个。 默认：空（继承额度上的限制）  说明： 如果额度上有限制云服务类型列表，则优惠券上的限制不能超过额度的限制。如果额度上没有限制，则优惠券上可以随意指定云服务类型。
     * productIds  允许使用的产品列表。 多个产品以“,”隔开，最多支持10个。 默认：空（继承额度上的限制）  说明： 如果额度上有限制产品列表，则优惠券上的限制不能超过额度的限制。如果额度上没有限制，则优惠券上可以随意指定产品ID。 产品ID需要合作伙伴通过线下获得。
-    * memo  发券时的备注信息。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商给子客户发放优惠券时，需要携带该参数。
+    * memo  发券时的备注信息。 此参数不携带或携带值为null时，不赋值；携带值为空串时，赋值空串。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。云经销商给子客户发放优惠券时，需要携带该参数。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -152,8 +152,8 @@ class CreatePartnerCouponsReq implements ModelInterface, ArrayAccess
     * expireTime  失效时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。
     * cloudServiceTypes  允许使用的云服务列表，您可以调用查询云服务类型列表接口获取。 多个云服务产品以“,”隔开，最多支持10个。 默认：空（继承额度上的限制）  说明： 如果额度上有限制云服务类型列表，则优惠券上的限制不能超过额度的限制。如果额度上没有限制，则优惠券上可以随意指定云服务类型。
     * productIds  允许使用的产品列表。 多个产品以“,”隔开，最多支持10个。 默认：空（继承额度上的限制）  说明： 如果额度上有限制产品列表，则优惠券上的限制不能超过额度的限制。如果额度上没有限制，则优惠券上可以随意指定产品ID。 产品ID需要合作伙伴通过线下获得。
-    * memo  发券时的备注信息。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商给子客户发放优惠券时，需要携带该参数。
+    * memo  发券时的备注信息。 此参数不携带或携带值为null时，不赋值；携带值为空串时，赋值空串。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。云经销商给子客户发放优惠券时，需要携带该参数。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -475,7 +475,7 @@ class CreatePartnerCouponsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets memo
-    *  发券时的备注信息。
+    *  发券时的备注信息。 此参数不携带或携带值为null时，不赋值；携带值为空串时，赋值空串。
     *
     * @return string|null
     */
@@ -487,7 +487,7 @@ class CreatePartnerCouponsReq implements ModelInterface, ArrayAccess
     /**
     * Sets memo
     *
-    * @param string|null $memo 发券时的备注信息。
+    * @param string|null $memo 发券时的备注信息。 此参数不携带或携带值为null时，不赋值；携带值为空串时，赋值空串。
     *
     * @return $this
     */
@@ -499,7 +499,7 @@ class CreatePartnerCouponsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerId
-    *  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商给子客户发放优惠券时，需要携带该参数。
+    *  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。云经销商给子客户发放优惠券时，需要携带该参数。除此之外，此参数不做处理。
     *
     * @return string|null
     */
@@ -511,7 +511,7 @@ class CreatePartnerCouponsReq implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerId
     *
-    * @param string|null $indirectPartnerId 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。 精英服务商给子客户发放优惠券时，需要携带该参数。
+    * @param string|null $indirectPartnerId 云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。云经销商给子客户发放优惠券时，需要携带该参数。除此之外，此参数不做处理。
     *
     * @return $this
     */

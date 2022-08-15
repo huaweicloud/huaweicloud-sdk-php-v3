@@ -20,17 +20,17 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收
-    * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。
-    * quotaType  额度类型：0：代金券额度1：现金券额度
-    * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
-    * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。
-    * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。
-    * result  操作结果：0：成功-1：失败（非0的记录）
+    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为空或携带值为null时，作为筛选条件。
+    * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * quotaType  额度类型。0：代金券额度1：现金券额度此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。此参数不携带或携带值为空列表时，不作为筛选条件；携带值为空或携带值为null时，作为筛选条件。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为空串或携带值为空或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每页记录数。默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收
-    * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。
-    * quotaType  额度类型：0：代金券额度1：现金券额度
-    * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
-    * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。
-    * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。
-    * result  操作结果：0：成功-1：失败（非0的记录）
+    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为空或携带值为null时，作为筛选条件。
+    * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * quotaType  额度类型。0：代金券额度1：现金券额度此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。此参数不携带或携带值为空列表时，不作为筛选条件；携带值为空或携带值为null时，作为筛选条件。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为空串或携带值为空或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每页记录数。默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收
-    * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。
-    * quotaType  额度类型：0：代金券额度1：现金券额度
-    * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
-    * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。
-    * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。
-    * result  操作结果：0：成功-1：失败（非0的记录）
+    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为空或携带值为null时，作为筛选条件。
+    * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * quotaType  额度类型。0：代金券额度1：现金券额度此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。此参数不携带或携带值为空列表时，不作为筛选条件；携带值为空或携带值为null时，作为筛选条件。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为空串或携带值为空或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每页记录数。默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收
-    * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。
-    * quotaType  额度类型：0：代金券额度1：现金券额度
-    * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
-    * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。
-    * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。
-    * result  操作结果：0：成功-1：失败（非0的记录）
+    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为空或携带值为null时，作为筛选条件。
+    * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * quotaType  额度类型。0：代金券额度1：现金券额度此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。此参数不携带或携带值为空列表时，不作为筛选条件；携带值为空或携带值为null时，作为筛选条件。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为空串或携带值为空或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每页记录数。默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收
-    * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。
-    * quotaType  额度类型：0：代金券额度1：现金券额度
-    * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
-    * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。
-    * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。
-    * result  操作结果：0：成功-1：失败（非0的记录）
+    * operationTypes  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为空或携带值为null时，作为筛选条件。
+    * quotaId  额度ID。请从“查询优惠券额度”接口的响应参数中获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * quotaType  额度类型。0：代金券额度1：现金券额度此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
+    * couponIds  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。此参数不携带或携带值为空列表时，不作为筛选条件；携带值为空或携带值为null时，作为筛选条件。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
+    * operationTimeBegin  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * operationTimeEnd  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
+    * result  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为空串或携带值为空或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每页记录数。默认值为10。
-    * indirectPartnerId  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
+    * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
     *
     * @var string[]
     */
@@ -302,7 +302,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationTypes
-    *  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收
+    *  操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为空或携带值为null时，作为筛选条件。
     *
     * @return string[]|null
     */
@@ -314,7 +314,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Sets operationTypes
     *
-    * @param string[]|null $operationTypes 操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收
+    * @param string[]|null $operationTypes 操作类型。1：发放2：手动回收3：解绑自动回收4：过期回收5：退订回收6：退款充值撤销7：建立关联回收此参数不携带时，不作为筛选条件；携带值为空列表或携带值为空或携带值为null时，作为筛选条件。
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaId
-    *  额度ID。请从“查询优惠券额度”接口的响应参数中获取。
+    *  额度ID。请从“查询优惠券额度”接口的响应参数中获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     *
     * @return string|null
     */
@@ -338,7 +338,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Sets quotaId
     *
-    * @param string|null $quotaId 额度ID。请从“查询优惠券额度”接口的响应参数中获取。
+    * @param string|null $quotaId 额度ID。请从“查询优惠券额度”接口的响应参数中获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaType
-    *  额度类型：0：代金券额度1：现金券额度
+    *  额度类型。0：代金券额度1：现金券额度此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @return int|null
     */
@@ -362,7 +362,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Sets quotaType
     *
-    * @param int|null $quotaType 额度类型：0：代金券额度1：现金券额度
+    * @param int|null $quotaType 额度类型。0：代金券额度1：现金券额度此参数不携带或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @return $this
     */
@@ -374,7 +374,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponIds
-    *  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。
+    *  代金券ID列表。请从“发放优惠券”接口的响应参数中获取。此参数不携带或携带值为空列表时，不作为筛选条件；携带值为空或携带值为null时，作为筛选条件。
     *
     * @return string[]|null
     */
@@ -386,7 +386,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Sets couponIds
     *
-    * @param string[]|null $couponIds 代金券ID列表。请从“发放优惠券”接口的响应参数中获取。
+    * @param string[]|null $couponIds 代金券ID列表。请从“发放优惠券”接口的响应参数中获取。此参数不携带或携带值为空列表时，不作为筛选条件；携带值为空或携带值为null时，作为筛选条件。
     *
     * @return $this
     */
@@ -398,7 +398,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerId
-    *  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
+    *  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     *
     * @return string|null
     */
@@ -410,7 +410,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Sets customerId
     *
-    * @param string|null $customerId 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。
+    * @param string|null $customerId 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串或携带值为null时，作为筛选条件。
     *
     * @return $this
     */
@@ -422,7 +422,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationTimeBegin
-    *  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。
+    *  操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -434,7 +434,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Sets operationTimeBegin
     *
-    * @param string|null $operationTimeBegin 操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。
+    * @param string|null $operationTimeBegin 操作时间（开始）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间大于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -446,7 +446,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationTimeEnd
-    *  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。
+    *  操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -458,7 +458,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Sets operationTimeEnd
     *
-    * @param string|null $operationTimeEnd 操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。
+    * @param string|null $operationTimeEnd 操作时间（结束）。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。输入这个条件，会查询出操作时间小于这个时间的记录。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -470,7 +470,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  操作结果：0：成功-1：失败（非0的记录）
+    *  操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为空串或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -482,7 +482,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 操作结果：0：成功-1：失败（非0的记录）
+    * @param string|null $result 操作结果。0：成功-1：失败（非0的记录）此参数不携带或携带值为空串或携带值为空或携带值为null时，不作为筛选条件。
     *
     * @return $this
     */
@@ -542,7 +542,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets indirectPartnerId
-    *  精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
+    *  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
     *
     * @return string|null
     */
@@ -554,7 +554,7 @@ class ListPartnerCouponsRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Sets indirectPartnerId
     *
-    * @param string|null $indirectPartnerId 精英服务商ID。获取方法请参见[查询精英服务商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云伙伴能力中心（一级经销商）查询精英服务商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
+    * @param string|null $indirectPartnerId 云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商发放给子客户的优惠券发放记录时，需要携带该参数，否则只能查询发给自己子客户的优惠券发放记录。
     *
     * @return $this
     */

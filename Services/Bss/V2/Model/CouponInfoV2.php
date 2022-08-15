@@ -38,7 +38,7 @@ class CouponInfoV2 implements ModelInterface, ArrayAccess
     * balance  余额。
     * usedByOrderId  使用优惠券的订单ID。表示有订单正在使用这个优惠券，优惠券已被锁定，只有锁定优惠券的订单才能使用这个优惠券，其他订单不能使用该优惠券。
     * couponUsage  优惠券用途。
-    * couponGroup  优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+    * couponGroup  优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
     *
     * @var string[]
     */
@@ -84,7 +84,7 @@ class CouponInfoV2 implements ModelInterface, ArrayAccess
     * balance  余额。
     * usedByOrderId  使用优惠券的订单ID。表示有订单正在使用这个优惠券，优惠券已被锁定，只有锁定优惠券的订单才能使用这个优惠券，其他订单不能使用该优惠券。
     * couponUsage  优惠券用途。
-    * couponGroup  优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+    * couponGroup  优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
     *
     * @var string[]
     */
@@ -151,7 +151,7 @@ class CouponInfoV2 implements ModelInterface, ArrayAccess
     * balance  余额。
     * usedByOrderId  使用优惠券的订单ID。表示有订单正在使用这个优惠券，优惠券已被锁定，只有锁定优惠券的订单才能使用这个优惠券，其他订单不能使用该优惠券。
     * couponUsage  优惠券用途。
-    * couponGroup  优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+    * couponGroup  优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class CouponInfoV2 implements ModelInterface, ArrayAccess
     * balance  余额。
     * usedByOrderId  使用优惠券的订单ID。表示有订单正在使用这个优惠券，优惠券已被锁定，只有锁定优惠券的订单才能使用这个优惠券，其他订单不能使用该优惠券。
     * couponUsage  优惠券用途。
-    * couponGroup  优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+    * couponGroup  优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
     *
     * @var string[]
     */
@@ -243,7 +243,7 @@ class CouponInfoV2 implements ModelInterface, ArrayAccess
     * balance  余额。
     * usedByOrderId  使用优惠券的订单ID。表示有订单正在使用这个优惠券，优惠券已被锁定，只有锁定优惠券的订单才能使用这个优惠券，其他订单不能使用该优惠券。
     * couponUsage  优惠券用途。
-    * couponGroup  优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+    * couponGroup  优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
     *
     * @var string[]
     */
@@ -804,7 +804,7 @@ class CouponInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponGroup
-    *  优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+    *  优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
     *
     * @return int|null
     */
@@ -816,7 +816,7 @@ class CouponInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets couponGroup
     *
-    * @param int|null $couponGroup 优惠券分组。 1：云市场发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
+    * @param int|null $couponGroup 优惠券分组。 1：云商店发放的券2：华为云券-1024-专用代金券3：华为云券-使用限制-抵扣硬件的券0：华为云服务券（排除上述取值之外的券）
     *
     * @return $this
     */
