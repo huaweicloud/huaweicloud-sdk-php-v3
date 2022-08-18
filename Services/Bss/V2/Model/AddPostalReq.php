@@ -25,9 +25,9 @@ class AddPostalReq implements ModelInterface, ArrayAccess
     * city  市/区。例如：南京市。
     * district  区。例如：雨花台区。
     * address  邮寄详细地址。
-    * zipcode  邮寄地址所在邮编。
+    * zipcode  邮寄地址所在邮编。 此参数不携带或携带值为null时，不赋值。
     * mobilePhone  手机号码，不带国家码。
-    * isDefault  是否默认地址，默认为0。 1：默认地址0：非默认地址
+    * isDefault  是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
     *
     * @var string[]
     */
@@ -49,9 +49,9 @@ class AddPostalReq implements ModelInterface, ArrayAccess
     * city  市/区。例如：南京市。
     * district  区。例如：雨花台区。
     * address  邮寄详细地址。
-    * zipcode  邮寄地址所在邮编。
+    * zipcode  邮寄地址所在邮编。 此参数不携带或携带值为null时，不赋值。
     * mobilePhone  手机号码，不带国家码。
-    * isDefault  是否默认地址，默认为0。 1：默认地址0：非默认地址
+    * isDefault  是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
     *
     * @var string[]
     */
@@ -94,9 +94,9 @@ class AddPostalReq implements ModelInterface, ArrayAccess
     * city  市/区。例如：南京市。
     * district  区。例如：雨花台区。
     * address  邮寄详细地址。
-    * zipcode  邮寄地址所在邮编。
+    * zipcode  邮寄地址所在邮编。 此参数不携带或携带值为null时，不赋值。
     * mobilePhone  手机号码，不带国家码。
-    * isDefault  是否默认地址，默认为0。 1：默认地址0：非默认地址
+    * isDefault  是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
     *
     * @var string[]
     */
@@ -118,9 +118,9 @@ class AddPostalReq implements ModelInterface, ArrayAccess
     * city  市/区。例如：南京市。
     * district  区。例如：雨花台区。
     * address  邮寄详细地址。
-    * zipcode  邮寄地址所在邮编。
+    * zipcode  邮寄地址所在邮编。 此参数不携带或携带值为null时，不赋值。
     * mobilePhone  手机号码，不带国家码。
-    * isDefault  是否默认地址，默认为0。 1：默认地址0：非默认地址
+    * isDefault  是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
     *
     * @var string[]
     */
@@ -142,9 +142,9 @@ class AddPostalReq implements ModelInterface, ArrayAccess
     * city  市/区。例如：南京市。
     * district  区。例如：雨花台区。
     * address  邮寄详细地址。
-    * zipcode  邮寄地址所在邮编。
+    * zipcode  邮寄地址所在邮编。 此参数不携带或携带值为null时，不赋值。
     * mobilePhone  手机号码，不带国家码。
-    * isDefault  是否默认地址，默认为0。 1：默认地址0：非默认地址
+    * isDefault  是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
     *
     * @var string[]
     */
@@ -440,7 +440,7 @@ class AddPostalReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets zipcode
-    *  邮寄地址所在邮编。
+    *  邮寄地址所在邮编。 此参数不携带或携带值为null时，不赋值。
     *
     * @return string|null
     */
@@ -452,7 +452,7 @@ class AddPostalReq implements ModelInterface, ArrayAccess
     /**
     * Sets zipcode
     *
-    * @param string|null $zipcode 邮寄地址所在邮编。
+    * @param string|null $zipcode 邮寄地址所在邮编。 此参数不携带或携带值为null时，不赋值。
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class AddPostalReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDefault
-    *  是否默认地址，默认为0。 1：默认地址0：非默认地址
+    *  是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
     *
     * @return int|null
     */
@@ -500,7 +500,7 @@ class AddPostalReq implements ModelInterface, ArrayAccess
     /**
     * Sets isDefault
     *
-    * @param int|null $isDefault 是否默认地址，默认为0。 1：默认地址0：非默认地址
+    * @param int|null $isDefault 是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
     *
     * @return $this
     */

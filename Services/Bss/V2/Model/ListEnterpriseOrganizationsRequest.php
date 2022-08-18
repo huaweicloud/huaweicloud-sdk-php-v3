@@ -20,8 +20,8 @@ class ListEnterpriseOrganizationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recursiveQuery  是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。
-    * parentId  指定的节点ID。为空则从根节点查起。
+    * recursiveQuery  是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。此参数不携带或携带值为空时，不作为筛选条件。
+    * parentId  指定的节点ID。为空则从根节点查起。此参数不携带或携带值为空时，不作为筛选条件。 说明： 此参数须由纯数字组成。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListEnterpriseOrganizationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recursiveQuery  是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。
-    * parentId  指定的节点ID。为空则从根节点查起。
+    * recursiveQuery  是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。此参数不携带或携带值为空时，不作为筛选条件。
+    * parentId  指定的节点ID。为空则从根节点查起。此参数不携带或携带值为空时，不作为筛选条件。 说明： 此参数须由纯数字组成。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListEnterpriseOrganizationsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recursiveQuery  是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。
-    * parentId  指定的节点ID。为空则从根节点查起。
+    * recursiveQuery  是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。此参数不携带或携带值为空时，不作为筛选条件。
+    * parentId  指定的节点ID。为空则从根节点查起。此参数不携带或携带值为空时，不作为筛选条件。 说明： 此参数须由纯数字组成。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListEnterpriseOrganizationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recursiveQuery  是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。
-    * parentId  指定的节点ID。为空则从根节点查起。
+    * recursiveQuery  是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。此参数不携带或携带值为空时，不作为筛选条件。
+    * parentId  指定的节点ID。为空则从根节点查起。此参数不携带或携带值为空时，不作为筛选条件。 说明： 此参数须由纯数字组成。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListEnterpriseOrganizationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recursiveQuery  是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。
-    * parentId  指定的节点ID。为空则从根节点查起。
+    * recursiveQuery  是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。此参数不携带或携带值为空时，不作为筛选条件。
+    * parentId  指定的节点ID。为空则从根节点查起。此参数不携带或携带值为空时，不作为筛选条件。 说明： 此参数须由纯数字组成。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ListEnterpriseOrganizationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets recursiveQuery
-    *  是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。
+    *  是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return int|null
     */
@@ -203,7 +203,7 @@ class ListEnterpriseOrganizationsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets recursiveQuery
     *
-    * @param int|null $recursiveQuery 是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。
+    * @param int|null $recursiveQuery 是否递归查询。0：不递归（默认）1：递归如果不递归，只返回起始节点的直接子节点。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ListEnterpriseOrganizationsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
-    *  指定的节点ID。为空则从根节点查起。
+    *  指定的节点ID。为空则从根节点查起。此参数不携带或携带值为空时，不作为筛选条件。 说明： 此参数须由纯数字组成。
     *
     * @return string|null
     */
@@ -227,7 +227,7 @@ class ListEnterpriseOrganizationsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param string|null $parentId 指定的节点ID。为空则从根节点查起。
+    * @param string|null $parentId 指定的节点ID。为空则从根节点查起。此参数不携带或携带值为空时，不作为筛选条件。 说明： 此参数须由纯数字组成。
     *
     * @return $this
     */

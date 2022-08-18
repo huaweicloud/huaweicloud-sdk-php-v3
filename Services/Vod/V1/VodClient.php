@@ -958,6 +958,148 @@ class VodClient extends Client
     }
 
     /**
+     * 创建转码模板组集合
+     *
+     * 创建转码模板组集合
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createTemplateGroupCollection($request)
+    {
+        return $this->createTemplateGroupCollectionWithHttpInfo($request);
+    }
+
+    public function createTemplateGroupCollectionWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/asset/template-collection/transcodings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json', 'application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CreateTemplateGroupCollectionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CreateTemplateGroupCollectionRequest');
+    }
+
+    /**
+     * 创建自定义转码模板
+     *
+     * 创建自定义转码模板。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createTranscodeTemplate($request)
+    {
+        return $this->createTranscodeTemplateWithHttpInfo($request);
+    }
+
+    public function createTranscodeTemplateWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/asset/template/transcodings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json', 'application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CreateTranscodeTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CreateTranscodeTemplateRequest');
+    }
+
+    /**
      * 创建水印模板
      *
      * 创建水印模板。
@@ -1242,6 +1384,148 @@ class VodClient extends Client
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteTemplateGroupResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteTemplateGroupRequest');
+    }
+
+    /**
+     * 删除转码模板组集合
+     *
+     * 删除转码模板组集合
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTemplateGroupCollection($request)
+    {
+        return $this->deleteTemplateGroupCollectionWithHttpInfo($request);
+    }
+
+    public function deleteTemplateGroupCollectionWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/asset/template-collection/transcodings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupCollectionId'] !== null) {
+            $queryParams['group_collection_id'] = $localVarParams['groupCollectionId'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteTemplateGroupCollectionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteTemplateGroupCollectionRequest');
+    }
+
+    /**
+     * 删除自定义模板
+     *
+     * 删除自定义模板
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTranscodeTemplate($request)
+    {
+        return $this->deleteTranscodeTemplateWithHttpInfo($request);
+    }
+
+    public function deleteTranscodeTemplateWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/asset/template/transcodings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $queryParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteTranscodeTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteTranscodeTemplateRequest');
     }
 
     /**
@@ -1648,6 +1932,83 @@ class VodClient extends Client
     }
 
     /**
+     * 查询自定义模板组集合
+     *
+     * 查询转码模板组集合
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTemplateGroupCollection($request)
+    {
+        return $this->listTemplateGroupCollectionWithHttpInfo($request);
+    }
+
+    public function listTemplateGroupCollectionWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/asset/template-collection/transcodings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupCollectionId'] !== null) {
+            $queryParams['group_collection_id'] = $localVarParams['groupCollectionId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListTemplateGroupCollectionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListTemplateGroupCollectionRequest');
+    }
+
+    /**
      * 查询TopN媒资信息
      *
      * 查询指定域名在指定日期播放次数排名Top 100的媒资统计数据。
@@ -1719,6 +2080,89 @@ class VodClient extends Client
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListTopStatisticsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListTopStatisticsRequest');
+    }
+
+    /**
+     * 查询转码模板列表
+     *
+     * 查询转码模板列表
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTranscodeTemplate($request)
+    {
+        return $this->listTranscodeTemplateWithHttpInfo($request);
+    }
+
+    public function listTranscodeTemplateWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/asset/template/transcodings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $queryParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['isDefault'] !== null) {
+            $queryParams['is_default'] = $localVarParams['isDefault'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['queryString'] !== null) {
+            $queryParams['query_string'] = $localVarParams['queryString'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListTranscodeTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListTranscodeTemplateRequest');
     }
 
     /**
@@ -3013,6 +3457,148 @@ class VodClient extends Client
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateTemplateGroupResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateTemplateGroupRequest');
+    }
+
+    /**
+     * 修改转码模板组集合
+     *
+     * 修改转码模板组结合
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateTemplateGroupCollection($request)
+    {
+        return $this->updateTemplateGroupCollectionWithHttpInfo($request);
+    }
+
+    public function updateTemplateGroupCollectionWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/asset/template-collection/transcodings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json', 'application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateTemplateGroupCollectionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateTemplateGroupCollectionRequest');
+    }
+
+    /**
+     * 修改转码模板
+     *
+     * 修改转码模板
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateTranscodeTemplate($request)
+    {
+        return $this->updateTranscodeTemplateWithHttpInfo($request);
+    }
+
+    public function updateTranscodeTemplateWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/asset/template/transcodings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json', 'application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateTranscodeTemplateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateTranscodeTemplateRequest');
     }
 
     /**

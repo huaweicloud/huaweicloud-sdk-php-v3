@@ -20,7 +20,7 @@ class StatUsageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * statTime  统计时间点，格式为YYYY-MM-DDTHH:MM:SSZ，UTC时间。
+    * statTime  统计时间点，UTC时间，格式为YYYY-MM-DDTHH:MM:SSZ。
     * guaranteedBandWidth  保底带宽。  说明： 该字段为预留值，当前始终为空；当场景为95增强时才返回数值。
     * usage  用量。
     * measureId  单位，您可以调用查询度量单位列表接口获取。带宽和用量使用相同的计量单位。
@@ -36,7 +36,7 @@ class StatUsageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * statTime  统计时间点，格式为YYYY-MM-DDTHH:MM:SSZ，UTC时间。
+    * statTime  统计时间点，UTC时间，格式为YYYY-MM-DDTHH:MM:SSZ。
     * guaranteedBandWidth  保底带宽。  说明： 该字段为预留值，当前始终为空；当场景为95增强时才返回数值。
     * usage  用量。
     * measureId  单位，您可以调用查询度量单位列表接口获取。带宽和用量使用相同的计量单位。
@@ -73,7 +73,7 @@ class StatUsageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * statTime  统计时间点，格式为YYYY-MM-DDTHH:MM:SSZ，UTC时间。
+    * statTime  统计时间点，UTC时间，格式为YYYY-MM-DDTHH:MM:SSZ。
     * guaranteedBandWidth  保底带宽。  说明： 该字段为预留值，当前始终为空；当场景为95增强时才返回数值。
     * usage  用量。
     * measureId  单位，您可以调用查询度量单位列表接口获取。带宽和用量使用相同的计量单位。
@@ -89,7 +89,7 @@ class StatUsageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * statTime  统计时间点，格式为YYYY-MM-DDTHH:MM:SSZ，UTC时间。
+    * statTime  统计时间点，UTC时间，格式为YYYY-MM-DDTHH:MM:SSZ。
     * guaranteedBandWidth  保底带宽。  说明： 该字段为预留值，当前始终为空；当场景为95增强时才返回数值。
     * usage  用量。
     * measureId  单位，您可以调用查询度量单位列表接口获取。带宽和用量使用相同的计量单位。
@@ -105,7 +105,7 @@ class StatUsageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * statTime  统计时间点，格式为YYYY-MM-DDTHH:MM:SSZ，UTC时间。
+    * statTime  统计时间点，UTC时间，格式为YYYY-MM-DDTHH:MM:SSZ。
     * guaranteedBandWidth  保底带宽。  说明： 该字段为预留值，当前始终为空；当场景为95增强时才返回数值。
     * usage  用量。
     * measureId  单位，您可以调用查询度量单位列表接口获取。带宽和用量使用相同的计量单位。
@@ -207,7 +207,7 @@ class StatUsageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets statTime
-    *  统计时间点，格式为YYYY-MM-DDTHH:MM:SSZ，UTC时间。
+    *  统计时间点，UTC时间，格式为YYYY-MM-DDTHH:MM:SSZ。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class StatUsageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets statTime
     *
-    * @param string|null $statTime 统计时间点，格式为YYYY-MM-DDTHH:MM:SSZ，UTC时间。
+    * @param string|null $statTime 统计时间点，UTC时间，格式为YYYY-MM-DDTHH:MM:SSZ。
     *
     * @return $this
     */

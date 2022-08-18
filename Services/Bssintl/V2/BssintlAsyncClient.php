@@ -754,6 +754,75 @@ class BssintlAsyncClient extends Client
     }
 
     /**
+     * 查询成本数据
+     *
+     * 客户在自建平台查询成本分析数据。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCostsAsync($request)
+    {
+        return $this->listCostsAsyncWithHttpInfo($request);
+    }
+    
+    public function listCostsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v4/costs/cost-analysed-bills/query';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListCostsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListCostsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询客户按需资源列表
      *
      * 功能描述：客户在伙伴销售平台查询已开通的按需资源
@@ -1233,6 +1302,74 @@ class BssintlAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListFreeResourceUsagesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListFreeResourceUsagesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询云经销商列表
+     *
+     * 华为云总经销商（一级经销商）可以查询云经销商（二级经销商）列表。
+     * 
+     * 一级经销商在伙伴中心查询二级经销商列表的方式请参见[这里](https://support.huaweicloud.com/usermanual-bpconsole/dp_120210.html)。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listIndirectPartnersAsync($request)
+    {
+        return $this->listIndirectPartnersAsyncWithHttpInfo($request);
+    }
+    
+    public function listIndirectPartnersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/partners/indirect-partners/query';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListIndirectPartnersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListIndirectPartnersRequest',
             $asyncRequest = true);
     }
 
@@ -2737,6 +2874,9 @@ class BssintlAsyncClient extends Client
         }
         if ($localVarParams['customerId'] !== null) {
             $queryParams['customer_id'] = $localVarParams['customerId'];
+        }
+        if ($localVarParams['indirectPartnerId'] !== null) {
+            $queryParams['indirect_partner_id'] = $localVarParams['indirectPartnerId'];
         }
 
         if ($multipart) {

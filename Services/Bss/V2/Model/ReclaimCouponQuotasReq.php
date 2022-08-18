@@ -21,7 +21,7 @@ class ReclaimCouponQuotasReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * quotaIds  被回收的云经销商的代金券额度ID。获取方法请参见查询优惠券额度。
-    * remark  回收时的备注。
+    * remark  回收时的备注。 此参数不携带或携带值为null时，不赋值；携带值为空串时，赋值空串。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ReclaimCouponQuotasReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * quotaIds  被回收的云经销商的代金券额度ID。获取方法请参见查询优惠券额度。
-    * remark  回收时的备注。
+    * remark  回收时的备注。 此参数不携带或携带值为null时，不赋值；携带值为空串时，赋值空串。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ReclaimCouponQuotasReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * quotaIds  被回收的云经销商的代金券额度ID。获取方法请参见查询优惠券额度。
-    * remark  回收时的备注。
+    * remark  回收时的备注。 此参数不携带或携带值为null时，不赋值；携带值为空串时，赋值空串。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ReclaimCouponQuotasReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * quotaIds  被回收的云经销商的代金券额度ID。获取方法请参见查询优惠券额度。
-    * remark  回收时的备注。
+    * remark  回收时的备注。 此参数不携带或携带值为null时，不赋值；携带值为空串时，赋值空串。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ReclaimCouponQuotasReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * quotaIds  被回收的云经销商的代金券额度ID。获取方法请参见查询优惠券额度。
-    * remark  回收时的备注。
+    * remark  回收时的备注。 此参数不携带或携带值为null时，不赋值；携带值为空串时，赋值空串。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class ReclaimCouponQuotasReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets remark
-    *  回收时的备注。
+    *  回收时的备注。 此参数不携带或携带值为null时，不赋值；携带值为空串时，赋值空串。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class ReclaimCouponQuotasReq implements ModelInterface, ArrayAccess
     /**
     * Sets remark
     *
-    * @param string|null $remark 回收时的备注。
+    * @param string|null $remark 回收时的备注。 此参数不携带或携带值为null时，不赋值；携带值为空串时，赋值空串。
     *
     * @return $this
     */

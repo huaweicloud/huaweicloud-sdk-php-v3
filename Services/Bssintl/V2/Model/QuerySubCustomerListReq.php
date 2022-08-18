@@ -28,6 +28,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售3：转售
     * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             'label' => 'string',
             'associationType' => 'string',
             'associatedOnBegin' => 'string',
-            'associatedOnEnd' => 'string'
+            'associatedOnEnd' => 'string',
+            'indirectPartnerId' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售3：转售
     * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
         'label' => null,
         'associationType' => null,
         'associatedOnBegin' => null,
-        'associatedOnEnd' => null
+        'associatedOnEnd' => null,
+        'indirectPartnerId' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售3：转售
     * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             'label' => 'label',
             'associationType' => 'association_type',
             'associatedOnBegin' => 'associated_on_begin',
-            'associatedOnEnd' => 'associated_on_end'
+            'associatedOnEnd' => 'associated_on_end',
+            'indirectPartnerId' => 'indirect_partner_id'
     ];
 
     /**
@@ -121,6 +127,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售3：转售
     * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             'label' => 'setLabel',
             'associationType' => 'setAssociationType',
             'associatedOnBegin' => 'setAssociatedOnBegin',
-            'associatedOnEnd' => 'setAssociatedOnEnd'
+            'associatedOnEnd' => 'setAssociatedOnEnd',
+            'indirectPartnerId' => 'setIndirectPartnerId'
     ];
 
     /**
@@ -145,6 +153,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售3：转售
     * associatedOnBegin  关联时间区间段开始，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
     * associatedOnEnd  关联时间区间段结束，UTC时间。 格式：YYYY-MM-DD'T'hh:mm:ss'Z'，例如“2019-05-06T08:05:01Z”。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             'label' => 'getLabel',
             'associationType' => 'getAssociationType',
             'associatedOnBegin' => 'getAssociatedOnBegin',
-            'associatedOnEnd' => 'getAssociatedOnEnd'
+            'associatedOnEnd' => 'getAssociatedOnEnd',
+            'indirectPartnerId' => 'getIndirectPartnerId'
     ];
 
     /**
@@ -225,6 +235,7 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
         $this->container['associationType'] = isset($data['associationType']) ? $data['associationType'] : null;
         $this->container['associatedOnBegin'] = isset($data['associatedOnBegin']) ? $data['associatedOnBegin'] : null;
         $this->container['associatedOnEnd'] = isset($data['associatedOnEnd']) ? $data['associatedOnEnd'] : null;
+        $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 
     /**
@@ -282,6 +293,12 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['associatedOnEnd']) && (mb_strlen($this->container['associatedOnEnd']) < 0)) {
                 $invalidProperties[] = "invalid value for 'associatedOnEnd', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -486,6 +503,30 @@ class QuerySubCustomerListReq implements ModelInterface, ArrayAccess
     public function setAssociatedOnEnd($associatedOnEnd)
     {
         $this->container['associatedOnEnd'] = $associatedOnEnd;
+        return $this;
+    }
+
+    /**
+    * Gets indirectPartnerId
+    *  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    *
+    * @return string|null
+    */
+    public function getIndirectPartnerId()
+    {
+        return $this->container['indirectPartnerId'];
+    }
+
+    /**
+    * Sets indirectPartnerId
+    *
+    * @param string|null $indirectPartnerId 云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    *
+    * @return $this
+    */
+    public function setIndirectPartnerId($indirectPartnerId)
+    {
+        $this->container['indirectPartnerId'] = $indirectPartnerId;
         return $this;
     }
 

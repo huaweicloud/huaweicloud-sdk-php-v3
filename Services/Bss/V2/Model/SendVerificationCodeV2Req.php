@@ -21,11 +21,11 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * receiverType  发送验证码的类型： 1：发送短信验证码
-    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
-    * lang  根据该参数的取值选择发送短信验证码的语言。 zh-cn：中文en-us：英文
-    * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 不填写默认为29。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
+    * lang  根据该参数的取值选择发送短信验证码的语言。此参数默认值为“zh-cn：中文”。 zh-cn：中文en-us：英文
+    * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 此参数不携带或携带值为null时，默认值为“29：注册场景”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 当scene=18时此参数必填；除此之外此参数非必填，不携带或携带值为null时均不做处理。
     *
     * @var string[]
     */
@@ -41,11 +41,11 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * receiverType  发送验证码的类型： 1：发送短信验证码
-    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
-    * lang  根据该参数的取值选择发送短信验证码的语言。 zh-cn：中文en-us：英文
-    * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 不填写默认为29。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
+    * lang  根据该参数的取值选择发送短信验证码的语言。此参数默认值为“zh-cn：中文”。 zh-cn：中文en-us：英文
+    * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 此参数不携带或携带值为null时，默认值为“29：注册场景”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 当scene=18时此参数必填；除此之外此参数非必填，不携带或携带值为null时均不做处理。
     *
     * @var string[]
     */
@@ -82,11 +82,11 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * receiverType  发送验证码的类型： 1：发送短信验证码
-    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
-    * lang  根据该参数的取值选择发送短信验证码的语言。 zh-cn：中文en-us：英文
-    * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 不填写默认为29。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
+    * lang  根据该参数的取值选择发送短信验证码的语言。此参数默认值为“zh-cn：中文”。 zh-cn：中文en-us：英文
+    * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 此参数不携带或携带值为null时，默认值为“29：注册场景”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 当scene=18时此参数必填；除此之外此参数非必填，不携带或携带值为null时均不做处理。
     *
     * @var string[]
     */
@@ -102,11 +102,11 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * receiverType  发送验证码的类型： 1：发送短信验证码
-    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
-    * lang  根据该参数的取值选择发送短信验证码的语言。 zh-cn：中文en-us：英文
-    * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 不填写默认为29。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
+    * lang  根据该参数的取值选择发送短信验证码的语言。此参数默认值为“zh-cn：中文”。 zh-cn：中文en-us：英文
+    * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 此参数不携带或携带值为null时，默认值为“29：注册场景”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 当scene=18时此参数必填；除此之外此参数非必填，不携带或携带值为null时均不做处理。
     *
     * @var string[]
     */
@@ -122,11 +122,11 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * receiverType  发送验证码的类型： 1：发送短信验证码
-    * timeout  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
-    * lang  根据该参数的取值选择发送短信验证码的语言。 zh-cn：中文en-us：英文
-    * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 不填写默认为29。
-    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
+    * lang  根据该参数的取值选择发送短信验证码的语言。此参数默认值为“zh-cn：中文”。 zh-cn：中文en-us：英文
+    * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 此参数不携带或携带值为null时，默认值为“29：注册场景”。
+    * customerId  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 当scene=18时此参数必填；除此之外此参数非必填，不携带或携带值为null时均不做处理。
     *
     * @var string[]
     */
@@ -295,7 +295,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeout
-    *  发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    *  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
     *
     * @return int|null
     */
@@ -307,7 +307,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets timeout
     *
-    * @param int|null $timeout 发送验证码的超时时间。 如果不填的话，采用系统默认超时时间5分钟。 单位：分钟
+    * @param int|null $timeout 发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets lang
-    *  根据该参数的取值选择发送短信验证码的语言。 zh-cn：中文en-us：英文
+    *  根据该参数的取值选择发送短信验证码的语言。此参数默认值为“zh-cn：中文”。 zh-cn：中文en-us：英文
     *
     * @return string|null
     */
@@ -355,7 +355,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets lang
     *
-    * @param string|null $lang 根据该参数的取值选择发送短信验证码的语言。 zh-cn：中文en-us：英文
+    * @param string|null $lang 根据该参数的取值选择发送短信验证码的语言。此参数默认值为“zh-cn：中文”。 zh-cn：中文en-us：英文
     *
     * @return $this
     */
@@ -367,7 +367,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets scene
-    *  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 不填写默认为29。
+    *  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 此参数不携带或携带值为null时，默认值为“29：注册场景”。
     *
     * @return int|null
     */
@@ -379,7 +379,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets scene
     *
-    * @param int|null $scene 验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 不填写默认为29。
+    * @param int|null $scene 验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 此参数不携带或携带值为null时，默认值为“29：注册场景”。
     *
     * @return $this
     */
@@ -391,7 +391,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerId
-    *  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
+    *  客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 当scene=18时此参数必填；除此之外此参数非必填，不携带或携带值为null时均不做处理。
     *
     * @return string|null
     */
@@ -403,7 +403,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets customerId
     *
-    * @param string|null $customerId 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 如果scene=18的时候必填。
+    * @param string|null $customerId 客户账号ID。您可以调用[查询客户列表](https://support.huaweicloud.com/api-bpconsole/mc_00021.html)接口获取customer_id。 当scene=18时此参数必填；除此之外此参数非必填，不携带或携带值为null时均不做处理。
     *
     * @return $this
     */

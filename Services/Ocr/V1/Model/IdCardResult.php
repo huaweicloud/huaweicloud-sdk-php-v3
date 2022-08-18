@@ -31,6 +31,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'validFrom' => 'string',
             'validTo' => 'string',
             'verificationResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\IdcardVerificationResult',
-            'textLocation' => 'object'
+            'textLocation' => 'object',
+            'detectReproduceResult' => 'bool'
     ];
 
     /**
@@ -61,6 +63,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
         'validFrom' => null,
         'validTo' => null,
         'verificationResult' => null,
-        'textLocation' => null
+        'textLocation' => null,
+        'detectReproduceResult' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'validFrom' => 'valid_from',
             'validTo' => 'valid_to',
             'verificationResult' => 'verification_result',
-            'textLocation' => 'text_location'
+            'textLocation' => 'text_location',
+            'detectReproduceResult' => 'detect_reproduce_result'
     ];
 
     /**
@@ -142,6 +148,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'validFrom' => 'setValidFrom',
             'validTo' => 'setValidTo',
             'verificationResult' => 'setVerificationResult',
-            'textLocation' => 'setTextLocation'
+            'textLocation' => 'setTextLocation',
+            'detectReproduceResult' => 'setDetectReproduceResult'
     ];
 
     /**
@@ -172,6 +180,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
+    * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'validFrom' => 'getValidFrom',
             'validTo' => 'getValidTo',
             'verificationResult' => 'getVerificationResult',
-            'textLocation' => 'getTextLocation'
+            'textLocation' => 'getTextLocation',
+            'detectReproduceResult' => 'getDetectReproduceResult'
     ];
 
     /**
@@ -258,6 +268,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
         $this->container['validTo'] = isset($data['validTo']) ? $data['validTo'] : null;
         $this->container['verificationResult'] = isset($data['verificationResult']) ? $data['verificationResult'] : null;
         $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
+        $this->container['detectReproduceResult'] = isset($data['detectReproduceResult']) ? $data['detectReproduceResult'] : null;
     }
 
     /**
@@ -543,6 +554,30 @@ class IdCardResult implements ModelInterface, ArrayAccess
     public function setTextLocation($textLocation)
     {
         $this->container['textLocation'] = $textLocation;
+        return $this;
+    }
+
+    /**
+    * Gets detectReproduceResult
+    *  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
+    *
+    * @return bool|null
+    */
+    public function getDetectReproduceResult()
+    {
+        return $this->container['detectReproduceResult'];
+    }
+
+    /**
+    * Sets detectReproduceResult
+    *
+    * @param bool|null $detectReproduceResult 判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
+    *
+    * @return $this
+    */
+    public function setDetectReproduceResult($detectReproduceResult)
+    {
+        $this->container['detectReproduceResult'] = $detectReproduceResult;
         return $this;
     }
 

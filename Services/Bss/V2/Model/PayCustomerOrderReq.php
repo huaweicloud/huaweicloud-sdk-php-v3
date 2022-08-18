@@ -21,7 +21,7 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * orderId  订单编号。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值或调用“续订包年/包月资源”接口时响应消息“order_ids”中的订单ID。
-    * couponInfos  优惠券ID列表，目前仅支持传递一个优惠券ID。 请从“查询订单可用优惠券”接口的响应参数中获取。 具体参见表1。
+    * couponInfos  优惠券ID列表，目前支持传递最多三个优惠券ID。 请从“查询订单可用优惠券”接口的响应参数中获取。 具体参见表1。
     * discountInfos  折扣ID列表，目前仅支持传递一个折扣ID。 请从“查询订单可用折扣”接口的响应参数中获取。 具体参见表2。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * orderId  订单编号。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值或调用“续订包年/包月资源”接口时响应消息“order_ids”中的订单ID。
-    * couponInfos  优惠券ID列表，目前仅支持传递一个优惠券ID。 请从“查询订单可用优惠券”接口的响应参数中获取。 具体参见表1。
+    * couponInfos  优惠券ID列表，目前支持传递最多三个优惠券ID。 请从“查询订单可用优惠券”接口的响应参数中获取。 具体参见表1。
     * discountInfos  折扣ID列表，目前仅支持传递一个折扣ID。 请从“查询订单可用折扣”接口的响应参数中获取。 具体参见表2。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * orderId  订单编号。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值或调用“续订包年/包月资源”接口时响应消息“order_ids”中的订单ID。
-    * couponInfos  优惠券ID列表，目前仅支持传递一个优惠券ID。 请从“查询订单可用优惠券”接口的响应参数中获取。 具体参见表1。
+    * couponInfos  优惠券ID列表，目前支持传递最多三个优惠券ID。 请从“查询订单可用优惠券”接口的响应参数中获取。 具体参见表1。
     * discountInfos  折扣ID列表，目前仅支持传递一个折扣ID。 请从“查询订单可用折扣”接口的响应参数中获取。 具体参见表2。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * orderId  订单编号。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值或调用“续订包年/包月资源”接口时响应消息“order_ids”中的订单ID。
-    * couponInfos  优惠券ID列表，目前仅支持传递一个优惠券ID。 请从“查询订单可用优惠券”接口的响应参数中获取。 具体参见表1。
+    * couponInfos  优惠券ID列表，目前支持传递最多三个优惠券ID。 请从“查询订单可用优惠券”接口的响应参数中获取。 具体参见表1。
     * discountInfos  折扣ID列表，目前仅支持传递一个折扣ID。 请从“查询订单可用折扣”接口的响应参数中获取。 具体参见表2。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * orderId  订单编号。 取值为调用“查询订单列表”接口时响应消息中的“order_id”字段的值或调用“续订包年/包月资源”接口时响应消息“order_ids”中的订单ID。
-    * couponInfos  优惠券ID列表，目前仅支持传递一个优惠券ID。 请从“查询订单可用优惠券”接口的响应参数中获取。 具体参见表1。
+    * couponInfos  优惠券ID列表，目前支持传递最多三个优惠券ID。 请从“查询订单可用优惠券”接口的响应参数中获取。 具体参见表1。
     * discountInfos  折扣ID列表，目前仅支持传递一个折扣ID。 请从“查询订单可用折扣”接口的响应参数中获取。 具体参见表2。
     *
     * @var string[]
@@ -229,7 +229,7 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets couponInfos
-    *  优惠券ID列表，目前仅支持传递一个优惠券ID。 请从“查询订单可用优惠券”接口的响应参数中获取。 具体参见表1。
+    *  优惠券ID列表，目前支持传递最多三个优惠券ID。 请从“查询订单可用优惠券”接口的响应参数中获取。 具体参见表1。
     *
     * @return \HuaweiCloud\SDK\Bss\V2\Model\CouponSimpleInfoOrderPay[]|null
     */
@@ -241,7 +241,7 @@ class PayCustomerOrderReq implements ModelInterface, ArrayAccess
     /**
     * Sets couponInfos
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\CouponSimpleInfoOrderPay[]|null $couponInfos 优惠券ID列表，目前仅支持传递一个优惠券ID。 请从“查询订单可用优惠券”接口的响应参数中获取。 具体参见表1。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\CouponSimpleInfoOrderPay[]|null $couponInfos 优惠券ID列表，目前支持传递最多三个优惠券ID。 请从“查询订单可用优惠券”接口的响应参数中获取。 具体参见表1。
     *
     * @return $this
     */

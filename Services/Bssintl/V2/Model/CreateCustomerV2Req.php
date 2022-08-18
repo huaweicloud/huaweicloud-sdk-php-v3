@@ -28,6 +28,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见[如何获取xaccountType的取值](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/bpconsole_apifaq_00002.html)。
     * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含邮箱。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
     * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
     * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
@@ -41,6 +42,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
             'xaccountType' => 'string',
             'password' => 'string',
             'isCloseMarketMs' => 'string',
+            'indirectPartnerId' => 'string',
             'includeAssociationResult' => 'bool'
     ];
 
@@ -54,6 +56,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见[如何获取xaccountType的取值](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/bpconsole_apifaq_00002.html)。
     * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含邮箱。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
     * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
     * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
@@ -67,6 +70,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
         'xaccountType' => null,
         'password' => null,
         'isCloseMarketMs' => null,
+        'indirectPartnerId' => null,
         'includeAssociationResult' => null
     ];
 
@@ -101,6 +105,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见[如何获取xaccountType的取值](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/bpconsole_apifaq_00002.html)。
     * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含邮箱。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
     * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
     * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
@@ -114,6 +119,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
             'xaccountType' => 'xaccount_type',
             'password' => 'password',
             'isCloseMarketMs' => 'is_close_market_ms',
+            'indirectPartnerId' => 'indirect_partner_id',
             'includeAssociationResult' => 'include_association_result'
     ];
 
@@ -127,6 +133,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见[如何获取xaccountType的取值](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/bpconsole_apifaq_00002.html)。
     * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含邮箱。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
     * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
     * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
@@ -140,6 +147,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
             'xaccountType' => 'setXaccountType',
             'password' => 'setPassword',
             'isCloseMarketMs' => 'setIsCloseMarketMs',
+            'indirectPartnerId' => 'setIndirectPartnerId',
             'includeAssociationResult' => 'setIncludeAssociationResult'
     ];
 
@@ -153,6 +161,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * xaccountType  华为分给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见[如何获取xaccountType的取值](https://support.huaweicloud.com/intl/zh-cn/api-bpconsole/bpconsole_apifaq_00002.html)。
     * password  密码规则如下： 至少包含以下四种字符中的两种： 大写字母、小写字母、数字、特殊字符；不能和账号名或倒序的账号名相同；不能包含邮箱。 如果为空，用户没有密码，则不能直接在华为云登录，只能通过伙伴系统SSO方式跳转到华为云。
     * isCloseMarketMs  是否关闭营销消息的发送： true：关闭false：不关闭（默认）
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
     * includeAssociationResult  是否返回子客户的关联结果。 true：返回子客户和伙伴的关联结果false：不返回子客户和伙伴的关联结果 默认值为false。
     *
     * @var string[]
@@ -166,6 +175,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
             'xaccountType' => 'getXaccountType',
             'password' => 'getPassword',
             'isCloseMarketMs' => 'getIsCloseMarketMs',
+            'indirectPartnerId' => 'getIndirectPartnerId',
             'includeAssociationResult' => 'getIncludeAssociationResult'
     ];
 
@@ -235,6 +245,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
         $this->container['xaccountType'] = isset($data['xaccountType']) ? $data['xaccountType'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['isCloseMarketMs'] = isset($data['isCloseMarketMs']) ? $data['isCloseMarketMs'] : 'false';
+        $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
         $this->container['includeAssociationResult'] = isset($data['includeAssociationResult']) ? $data['includeAssociationResult'] : null;
     }
 
@@ -299,6 +310,12 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['isCloseMarketMs']) && (mb_strlen($this->container['isCloseMarketMs']) < 0)) {
                 $invalidProperties[] = "invalid value for 'isCloseMarketMs', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -503,6 +520,30 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     public function setIsCloseMarketMs($isCloseMarketMs)
     {
         $this->container['isCloseMarketMs'] = $isCloseMarketMs;
+        return $this;
+    }
+
+    /**
+    * Gets indirectPartnerId
+    *  云经销商ID。获取方法请参见查询云经销商列表。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
+    *
+    * @return string|null
+    */
+    public function getIndirectPartnerId()
+    {
+        return $this->container['indirectPartnerId'];
+    }
+
+    /**
+    * Sets indirectPartnerId
+    *
+    * @param string|null $indirectPartnerId 云经销商ID。获取方法请参见查询云经销商列表。 如果需要创建云经销商的子客户，必须携带该字段。除此之外，此参数不做处理。
+    *
+    * @return $this
+    */
+    public function setIndirectPartnerId($indirectPartnerId)
+    {
+        $this->container['indirectPartnerId'] = $indirectPartnerId;
         return $this;
     }
 

@@ -22,10 +22,10 @@ class ListCouponQuotasRecordsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。为空表示查询所有的代金券额度发放回收记录。不为空表示仅查询与该云经销商相关的代金券额度发放回收记录。默认查询所有云经销商的代金券额度发放回收记录。
     * quotaId  云经销商的代金券额度ID。获取方法请参见[查询优惠券额度](https://support.huaweicloud.com/api-bpconsole/mp_02003.html)。即华为云总经销商给云经销商发放代金券额度时，产生的云经销商的代金券额度ID，或者从云经销商回收代金券额度时，云经销商的代金券额度ID。此参数不携带或携带值为空时，不作为筛选条件。
-    * operationTimeBegin  查询条件：操作起始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
-    * operationTimeEnd  查询条件：操作截止时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * operationTimeBegin  查询条件：操作起始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * operationTimeEnd  查询条件：操作截止时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     * parentQuotaId  父额度ID。这即华为云总经销商给云经销商发放代金券额度时，华为云总经销商的额度ID，或者从云经销商回收代金券额度时，回收的华为云总经销商的额度ID。此参数不携带或携带值为空时，不作为筛选条件。
-    * operationType  操作类型。10：发放额度11：回收额度
+    * operationType  操作类型。10：发放额度11：回收额度此参数不携带或携带值为空或携带值为空串时，不作为筛选条件。
     * offset  偏移量，从0开始，默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数目。默认值为10。
     *
@@ -46,10 +46,10 @@ class ListCouponQuotasRecordsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。为空表示查询所有的代金券额度发放回收记录。不为空表示仅查询与该云经销商相关的代金券额度发放回收记录。默认查询所有云经销商的代金券额度发放回收记录。
     * quotaId  云经销商的代金券额度ID。获取方法请参见[查询优惠券额度](https://support.huaweicloud.com/api-bpconsole/mp_02003.html)。即华为云总经销商给云经销商发放代金券额度时，产生的云经销商的代金券额度ID，或者从云经销商回收代金券额度时，云经销商的代金券额度ID。此参数不携带或携带值为空时，不作为筛选条件。
-    * operationTimeBegin  查询条件：操作起始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
-    * operationTimeEnd  查询条件：操作截止时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * operationTimeBegin  查询条件：操作起始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * operationTimeEnd  查询条件：操作截止时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     * parentQuotaId  父额度ID。这即华为云总经销商给云经销商发放代金券额度时，华为云总经销商的额度ID，或者从云经销商回收代金券额度时，回收的华为云总经销商的额度ID。此参数不携带或携带值为空时，不作为筛选条件。
-    * operationType  操作类型。10：发放额度11：回收额度
+    * operationType  操作类型。10：发放额度11：回收额度此参数不携带或携带值为空或携带值为空串时，不作为筛选条件。
     * offset  偏移量，从0开始，默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数目。默认值为10。
     *
@@ -91,10 +91,10 @@ class ListCouponQuotasRecordsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。为空表示查询所有的代金券额度发放回收记录。不为空表示仅查询与该云经销商相关的代金券额度发放回收记录。默认查询所有云经销商的代金券额度发放回收记录。
     * quotaId  云经销商的代金券额度ID。获取方法请参见[查询优惠券额度](https://support.huaweicloud.com/api-bpconsole/mp_02003.html)。即华为云总经销商给云经销商发放代金券额度时，产生的云经销商的代金券额度ID，或者从云经销商回收代金券额度时，云经销商的代金券额度ID。此参数不携带或携带值为空时，不作为筛选条件。
-    * operationTimeBegin  查询条件：操作起始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
-    * operationTimeEnd  查询条件：操作截止时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * operationTimeBegin  查询条件：操作起始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * operationTimeEnd  查询条件：操作截止时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     * parentQuotaId  父额度ID。这即华为云总经销商给云经销商发放代金券额度时，华为云总经销商的额度ID，或者从云经销商回收代金券额度时，回收的华为云总经销商的额度ID。此参数不携带或携带值为空时，不作为筛选条件。
-    * operationType  操作类型。10：发放额度11：回收额度
+    * operationType  操作类型。10：发放额度11：回收额度此参数不携带或携带值为空或携带值为空串时，不作为筛选条件。
     * offset  偏移量，从0开始，默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数目。默认值为10。
     *
@@ -115,10 +115,10 @@ class ListCouponQuotasRecordsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。为空表示查询所有的代金券额度发放回收记录。不为空表示仅查询与该云经销商相关的代金券额度发放回收记录。默认查询所有云经销商的代金券额度发放回收记录。
     * quotaId  云经销商的代金券额度ID。获取方法请参见[查询优惠券额度](https://support.huaweicloud.com/api-bpconsole/mp_02003.html)。即华为云总经销商给云经销商发放代金券额度时，产生的云经销商的代金券额度ID，或者从云经销商回收代金券额度时，云经销商的代金券额度ID。此参数不携带或携带值为空时，不作为筛选条件。
-    * operationTimeBegin  查询条件：操作起始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
-    * operationTimeEnd  查询条件：操作截止时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * operationTimeBegin  查询条件：操作起始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * operationTimeEnd  查询条件：操作截止时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     * parentQuotaId  父额度ID。这即华为云总经销商给云经销商发放代金券额度时，华为云总经销商的额度ID，或者从云经销商回收代金券额度时，回收的华为云总经销商的额度ID。此参数不携带或携带值为空时，不作为筛选条件。
-    * operationType  操作类型。10：发放额度11：回收额度
+    * operationType  操作类型。10：发放额度11：回收额度此参数不携带或携带值为空或携带值为空串时，不作为筛选条件。
     * offset  偏移量，从0开始，默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数目。默认值为10。
     *
@@ -139,10 +139,10 @@ class ListCouponQuotasRecordsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。为空表示查询所有的代金券额度发放回收记录。不为空表示仅查询与该云经销商相关的代金券额度发放回收记录。默认查询所有云经销商的代金券额度发放回收记录。
     * quotaId  云经销商的代金券额度ID。获取方法请参见[查询优惠券额度](https://support.huaweicloud.com/api-bpconsole/mp_02003.html)。即华为云总经销商给云经销商发放代金券额度时，产生的云经销商的代金券额度ID，或者从云经销商回收代金券额度时，云经销商的代金券额度ID。此参数不携带或携带值为空时，不作为筛选条件。
-    * operationTimeBegin  查询条件：操作起始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
-    * operationTimeEnd  查询条件：操作截止时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * operationTimeBegin  查询条件：操作起始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * operationTimeEnd  查询条件：操作截止时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     * parentQuotaId  父额度ID。这即华为云总经销商给云经销商发放代金券额度时，华为云总经销商的额度ID，或者从云经销商回收代金券额度时，回收的华为云总经销商的额度ID。此参数不携带或携带值为空时，不作为筛选条件。
-    * operationType  操作类型。10：发放额度11：回收额度
+    * operationType  操作类型。10：发放额度11：回收额度此参数不携带或携带值为空或携带值为空串时，不作为筛选条件。
     * offset  偏移量，从0开始，默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数目。默认值为10。
     *
@@ -311,7 +311,7 @@ class ListCouponQuotasRecordsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationTimeBegin
-    *  查询条件：操作起始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    *  查询条件：操作起始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -323,7 +323,7 @@ class ListCouponQuotasRecordsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets operationTimeBegin
     *
-    * @param string|null $operationTimeBegin 查询条件：操作起始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * @param string|null $operationTimeBegin 查询条件：操作起始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -335,7 +335,7 @@ class ListCouponQuotasRecordsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationTimeEnd
-    *  查询条件：操作截止时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    *  查询条件：操作截止时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -347,7 +347,7 @@ class ListCouponQuotasRecordsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets operationTimeEnd
     *
-    * @param string|null $operationTimeEnd 查询条件：操作截止时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * @param string|null $operationTimeEnd 查询条件：操作截止时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -383,7 +383,7 @@ class ListCouponQuotasRecordsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationType
-    *  操作类型。10：发放额度11：回收额度
+    *  操作类型。10：发放额度11：回收额度此参数不携带或携带值为空或携带值为空串时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -395,7 +395,7 @@ class ListCouponQuotasRecordsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets operationType
     *
-    * @param string|null $operationType 操作类型。10：发放额度11：回收额度
+    * @param string|null $operationType 操作类型。10：发放额度11：回收额度此参数不携带或携带值为空或携带值为空串时，不作为筛选条件。
     *
     * @return $this
     */

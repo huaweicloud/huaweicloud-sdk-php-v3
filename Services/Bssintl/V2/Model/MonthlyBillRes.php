@@ -20,8 +20,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cycle  资源详单数据所在账期，格式为YYYY-MM。 例如2020-01。
-    * billDate  消费日期，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
+    * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
+    * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
@@ -88,8 +88,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cycle  资源详单数据所在账期，格式为YYYY-MM。 例如2020-01。
-    * billDate  消费日期，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
+    * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
+    * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
@@ -177,8 +177,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cycle  资源详单数据所在账期，格式为YYYY-MM。 例如2020-01。
-    * billDate  消费日期，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
+    * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
+    * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
@@ -245,8 +245,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cycle  资源详单数据所在账期，格式为YYYY-MM。 例如2020-01。
-    * billDate  消费日期，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
+    * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
+    * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
@@ -313,8 +313,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cycle  资源详单数据所在账期，格式为YYYY-MM。 例如2020-01。
-    * billDate  消费日期，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
+    * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
+    * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
@@ -517,7 +517,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets cycle
-    *  资源详单数据所在账期，格式为YYYY-MM。 例如2020-01。
+    *  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
     *
     * @return string|null
     */
@@ -529,7 +529,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets cycle
     *
-    * @param string|null $cycle 资源详单数据所在账期，格式为YYYY-MM。 例如2020-01。
+    * @param string|null $cycle 资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
     *
     * @return $this
     */
@@ -541,7 +541,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets billDate
-    *  消费日期，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
+    *  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
     *
     * @return string|null
     */
@@ -553,7 +553,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets billDate
     *
-    * @param string|null $billDate 消费日期，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
+    * @param string|null $billDate 消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
     *
     * @return $this
     */

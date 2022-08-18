@@ -21,21 +21,25 @@ class ShowSubCustomerBudgetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'customerId' => 'string'
+            'customerId' => 'string',
+            'indirectPartnerId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'customerId' => null
+        'customerId' => null,
+        'indirectPartnerId' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ShowSubCustomerBudgetRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'customerId' => 'customer_id'
+            'customerId' => 'customer_id',
+            'indirectPartnerId' => 'indirect_partner_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $setters = [
-            'customerId' => 'setCustomerId'
+            'customerId' => 'setCustomerId',
+            'indirectPartnerId' => 'setIndirectPartnerId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $getters = [
-            'customerId' => 'getCustomerId'
+            'customerId' => 'getCustomerId',
+            'indirectPartnerId' => 'getIndirectPartnerId'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ShowSubCustomerBudgetRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
+        $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class ShowSubCustomerBudgetRequest implements ModelInterface, ArrayAccess
     public function setCustomerId($customerId)
     {
         $this->container['customerId'] = $customerId;
+        return $this;
+    }
+
+    /**
+    * Gets indirectPartnerId
+    *  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    *
+    * @return string|null
+    */
+    public function getIndirectPartnerId()
+    {
+        return $this->container['indirectPartnerId'];
+    }
+
+    /**
+    * Sets indirectPartnerId
+    *
+    * @param string|null $indirectPartnerId 云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    *
+    * @return $this
+    */
+    public function setIndirectPartnerId($indirectPartnerId)
+    {
+        $this->container['indirectPartnerId'] = $indirectPartnerId;
         return $this;
     }
 

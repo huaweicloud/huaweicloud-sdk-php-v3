@@ -22,24 +22,28 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'customerIds' => 'string[]',
-            'reason' => 'string'
+            'reason' => 'string',
+            'indirectPartnerId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'customerIds' => null,
-        'reason' => null
+        'reason' => null,
+        'indirectPartnerId' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'customerIds' => 'customer_ids',
-            'reason' => 'reason'
+            'reason' => 'reason',
+            'indirectPartnerId' => 'indirect_partner_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $setters = [
             'customerIds' => 'setCustomerIds',
-            'reason' => 'setReason'
+            'reason' => 'setReason',
+            'indirectPartnerId' => 'setIndirectPartnerId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $getters = [
             'customerIds' => 'getCustomerIds',
-            'reason' => 'getReason'
+            'reason' => 'getReason',
+            'indirectPartnerId' => 'getIndirectPartnerId'
     ];
 
     /**
@@ -159,6 +169,7 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     {
         $this->container['customerIds'] = isset($data['customerIds']) ? $data['customerIds'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
+        $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 
     /**
@@ -180,6 +191,12 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['reason']) < 1)) {
                 $invalidProperties[] = "invalid value for 'reason', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -240,6 +257,30 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     public function setReason($reason)
     {
         $this->container['reason'] = $reason;
+        return $this;
+    }
+
+    /**
+    * Gets indirectPartnerId
+    *  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    *
+    * @return string|null
+    */
+    public function getIndirectPartnerId()
+    {
+        return $this->container['indirectPartnerId'];
+    }
+
+    /**
+    * Sets indirectPartnerId
+    *
+    * @param string|null $indirectPartnerId 云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    *
+    * @return $this
+    */
+    public function setIndirectPartnerId($indirectPartnerId)
+    {
+        $this->container['indirectPartnerId'] = $indirectPartnerId;
         return $this;
     }
 

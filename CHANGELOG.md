@@ -1,3 +1,56 @@
+# 3.0.57-rc 2022-08-18
+
+### HuaweiCloud SDK BSSINTL
+
+- _Features_
+  - Support the interfaces `ListIndirectPartners`, `ListCosts`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `indirect_partner_id` to the interface `ListSubCustomers`
+  - Add the request parameter `indirect_partner_id` to the interface `CreateSubCustomer`
+  - Add the request parameter `indirect_partner_id` to the interface `ShowSubCustomerBudget`
+  - Add the request parameter `indirect_partner_id` to the interface `UpdateSubCustomerBudget`
+  - Add the request parameter `indirect_partner_id` to the interface `FreezeSubCustomers`
+  - Add the request parameter `indirect_partner_id` to the interface `UnfreezeSubCustomers`
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - Support the interface `ListServersByTag`
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `destination_type` changed to required of the interface `NovaCreateServers`
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `RecognizeIdCard`:
+    - Add the request parameter `detect_reproduce`
+    - Add the response parameter `detect_reproduce_result`
+
+### HuaweiCloud SDK VOD
+
+- _Features_
+  - Support the following interfaces：
+    - `ListTranscodeTemplate`
+    - `UpdateTranscodeTemplate`
+    - `CreateTranscodeTemplate`
+    - `DeleteTranscodeTemplate`
+    - `ListTemplateGroupCollection`
+    - `UpdateTemplateGroupCollection`
+    - `CreateTemplateGroupCollection`
+    - `DeleteTemplateGroupCollection`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
 # 3.0.56-rc 2022-08-11
 
 ### HuaweiCloud SDK BSS

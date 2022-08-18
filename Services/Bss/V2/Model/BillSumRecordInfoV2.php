@@ -20,7 +20,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * billCycle  消费汇总数据所在账期，格式：YYYY-MM。
+    * billCycle  消费汇总数据所在账期，东八区时间，格式：YYYY-MM。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
@@ -68,7 +68,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * billCycle  消费汇总数据所在账期，格式：YYYY-MM。
+    * billCycle  消费汇总数据所在账期，东八区时间，格式：YYYY-MM。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
@@ -137,7 +137,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * billCycle  消费汇总数据所在账期，格式：YYYY-MM。
+    * billCycle  消费汇总数据所在账期，东八区时间，格式：YYYY-MM。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
@@ -185,7 +185,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * billCycle  消费汇总数据所在账期，格式：YYYY-MM。
+    * billCycle  消费汇总数据所在账期，东八区时间，格式：YYYY-MM。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
@@ -233,7 +233,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * billCycle  消费汇总数据所在账期，格式：YYYY-MM。
+    * billCycle  消费汇总数据所在账期，东八区时间，格式：YYYY-MM。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用查询资源类型列表接口获取。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
@@ -383,7 +383,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets billCycle
-    *  消费汇总数据所在账期，格式：YYYY-MM。
+    *  消费汇总数据所在账期，东八区时间，格式：YYYY-MM。
     *
     * @return string|null
     */
@@ -395,7 +395,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets billCycle
     *
-    * @param string|null $billCycle 消费汇总数据所在账期，格式：YYYY-MM。
+    * @param string|null $billCycle 消费汇总数据所在账期，东八区时间，格式：YYYY-MM。
     *
     * @return $this
     */

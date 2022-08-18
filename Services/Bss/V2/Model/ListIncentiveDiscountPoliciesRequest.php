@@ -21,7 +21,7 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * time  查询策略的指定时间。东八区时间，格式：YYYY-MM。 说明： 实际查询结果为指定时间所在月最后一天23:59:59的策略情况。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量，默认值为10。
     *
@@ -37,7 +37,7 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * time  查询策略的指定时间。东八区时间，格式：YYYY-MM。 说明： 实际查询结果为指定时间所在月最后一天23:59:59的策略情况。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量，默认值为10。
     *
@@ -74,7 +74,7 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * time  查询策略的指定时间。东八区时间，格式：YYYY-MM。 说明： 实际查询结果为指定时间所在月最后一天23:59:59的策略情况。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量，默认值为10。
     *
@@ -90,7 +90,7 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * time  查询策略的指定时间。东八区时间，格式：YYYY-MM。 说明： 实际查询结果为指定时间所在月最后一天23:59:59的策略情况。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量，默认值为10。
     *
@@ -106,7 +106,7 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * time  查询策略的指定时间。东八区时间，格式：YYYY-MM。 说明： 实际查询结果为指定时间所在月最后一天23:59:59的策略情况。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量，默认值为10。
     *
@@ -246,7 +246,7 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets serviceTypeCode
-    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     *
     * @return string|null
     */
@@ -258,7 +258,7 @@ class ListIncentiveDiscountPoliciesRequest implements ModelInterface, ArrayAcces
     /**
     * Sets serviceTypeCode
     *
-    * @param string|null $serviceTypeCode 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。
+    * @param string|null $serviceTypeCode 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     *
     * @return $this
     */

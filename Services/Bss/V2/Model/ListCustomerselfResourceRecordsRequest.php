@@ -21,21 +21,21 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  语言：中文：zh_CN 英文：en_US。缺省为zh_CN
-    * cycle  查询的资源消费记录所在账期，格式：YYYY-MM。
-    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
-    * region  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
-    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * cycle  查询的资源消费记录所在账期，东八区时间，格式：YYYY-MM。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * region  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例 此参数不携带时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
-    * resourceId  资源ID。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
-    * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含
-    * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户默认为all，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
-    * subCustomerId  企业子账号ID。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
-    * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。
-    * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
-    * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含 此参数不携带或携带值为空时，不作为筛选条件。
+    * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空时，默认值为“all”，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
+    * subCustomerId  企业子账号ID。此参数携带值为空串时，不作为筛选条件。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
+    * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * billDateBegin  查询的资源消费记录的开始日期，东八区时间，格式为YYYY-MM-DD。此参数不携带或携带值为空或携带值为空串时，默认值取cycle月份的第一天。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * billDateEnd  查询的资源消费记录的结束日期，东八区时间，格式为YYYY-MM-DD。此参数不携带或携带值为空或携带值为空串时，默认值取cycle月份的最后一天。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     *
     * @var string[]
     */
@@ -61,21 +61,21 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  语言：中文：zh_CN 英文：en_US。缺省为zh_CN
-    * cycle  查询的资源消费记录所在账期，格式：YYYY-MM。
-    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
-    * region  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
-    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * cycle  查询的资源消费记录所在账期，东八区时间，格式：YYYY-MM。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * region  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例 此参数不携带时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
-    * resourceId  资源ID。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
-    * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含
-    * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户默认为all，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
-    * subCustomerId  企业子账号ID。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
-    * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。
-    * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
-    * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含 此参数不携带或携带值为空时，不作为筛选条件。
+    * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空时，默认值为“all”，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
+    * subCustomerId  企业子账号ID。此参数携带值为空串时，不作为筛选条件。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
+    * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * billDateBegin  查询的资源消费记录的开始日期，东八区时间，格式为YYYY-MM-DD。此参数不携带或携带值为空或携带值为空串时，默认值取cycle月份的第一天。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * billDateEnd  查询的资源消费记录的结束日期，东八区时间，格式为YYYY-MM-DD。此参数不携带或携带值为空或携带值为空串时，默认值取cycle月份的最后一天。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     *
     * @var string[]
     */
@@ -122,21 +122,21 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * xLanguage  语言：中文：zh_CN 英文：en_US。缺省为zh_CN
-    * cycle  查询的资源消费记录所在账期，格式：YYYY-MM。
-    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
-    * region  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
-    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * cycle  查询的资源消费记录所在账期，东八区时间，格式：YYYY-MM。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * region  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例 此参数不携带时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
-    * resourceId  资源ID。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
-    * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含
-    * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户默认为all，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
-    * subCustomerId  企业子账号ID。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
-    * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。
-    * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
-    * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含 此参数不携带或携带值为空时，不作为筛选条件。
+    * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空时，默认值为“all”，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
+    * subCustomerId  企业子账号ID。此参数携带值为空串时，不作为筛选条件。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
+    * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * billDateBegin  查询的资源消费记录的开始日期，东八区时间，格式为YYYY-MM-DD。此参数不携带或携带值为空或携带值为空串时，默认值取cycle月份的第一天。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * billDateEnd  查询的资源消费记录的结束日期，东八区时间，格式为YYYY-MM-DD。此参数不携带或携带值为空或携带值为空串时，默认值取cycle月份的最后一天。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     *
     * @var string[]
     */
@@ -162,21 +162,21 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  语言：中文：zh_CN 英文：en_US。缺省为zh_CN
-    * cycle  查询的资源消费记录所在账期，格式：YYYY-MM。
-    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
-    * region  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
-    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * cycle  查询的资源消费记录所在账期，东八区时间，格式：YYYY-MM。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * region  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例 此参数不携带时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
-    * resourceId  资源ID。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
-    * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含
-    * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户默认为all，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
-    * subCustomerId  企业子账号ID。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
-    * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。
-    * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
-    * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含 此参数不携带或携带值为空时，不作为筛选条件。
+    * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空时，默认值为“all”，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
+    * subCustomerId  企业子账号ID。此参数携带值为空串时，不作为筛选条件。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
+    * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * billDateBegin  查询的资源消费记录的开始日期，东八区时间，格式为YYYY-MM-DD。此参数不携带或携带值为空或携带值为空串时，默认值取cycle月份的第一天。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * billDateEnd  查询的资源消费记录的结束日期，东八区时间，格式为YYYY-MM-DD。此参数不携带或携带值为空或携带值为空串时，默认值取cycle月份的最后一天。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     *
     * @var string[]
     */
@@ -202,21 +202,21 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  语言：中文：zh_CN 英文：en_US。缺省为zh_CN
-    * cycle  查询的资源消费记录所在账期，格式：YYYY-MM。
-    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
-    * region  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
-    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * cycle  查询的资源消费记录所在账期，东八区时间，格式：YYYY-MM。
+    * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * region  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例 此参数不携带时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
-    * resourceId  资源ID。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
-    * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含
-    * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户默认为all，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
-    * subCustomerId  企业子账号ID。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
-    * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。
-    * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
-    * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含 此参数不携带或携带值为空时，不作为筛选条件。
+    * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空时，默认值为“all”，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
+    * subCustomerId  企业子账号ID。此参数携带值为空串时，不作为筛选条件。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
+    * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * billDateBegin  查询的资源消费记录的开始日期，东八区时间，格式为YYYY-MM-DD。此参数不携带或携带值为空或携带值为空串时，默认值取cycle月份的第一天。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * billDateEnd  查询的资源消费记录的结束日期，东八区时间，格式为YYYY-MM-DD。此参数不携带或携带值为空或携带值为空串时，默认值取cycle月份的最后一天。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     *
     * @var string[]
     */
@@ -390,7 +390,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets cycle
-    *  查询的资源消费记录所在账期，格式：YYYY-MM。
+    *  查询的资源消费记录所在账期，东八区时间，格式：YYYY-MM。
     *
     * @return string
     */
@@ -402,7 +402,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets cycle
     *
-    * @param string $cycle 查询的资源消费记录所在账期，格式：YYYY-MM。
+    * @param string $cycle 查询的资源消费记录所在账期，东八区时间，格式：YYYY-MM。
     *
     * @return $this
     */
@@ -414,7 +414,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets cloudServiceType
-    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
+    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     *
     * @return string|null
     */
@@ -426,7 +426,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets cloudServiceType
     *
-    * @param string|null $cloudServiceType 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
+    * @param string|null $cloudServiceType 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     *
     * @return $this
     */
@@ -438,7 +438,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets region
-    *  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
+    *  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     *
     * @return string|null
     */
@@ -450,7 +450,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets region
     *
-    * @param string|null $region 云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。
+    * @param string|null $region 云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     *
     * @return $this
     */
@@ -462,7 +462,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets chargeMode
-    *  计费模式。1：包年/包月3：按需10：预留实例
+    *  计费模式。1：包年/包月3：按需10：预留实例 此参数不携带时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -474,7 +474,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode 计费模式。1：包年/包月3：按需10：预留实例
+    * @param string|null $chargeMode 计费模式。1：包年/包月3：按需10：预留实例 此参数不携带时，不作为筛选条件。
     *
     * @return $this
     */
@@ -486,7 +486,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets billType
-    *  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    *  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return int|null
     */
@@ -498,7 +498,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets billType
     *
-    * @param int|null $billType 账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * @param int|null $billType 账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -558,7 +558,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets resourceId
-    *  资源ID。
+    *  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     *
     * @return string|null
     */
@@ -570,7 +570,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 资源ID。
+    * @param string|null $resourceId 资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     *
     * @return $this
     */
@@ -582,7 +582,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
+    *  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     *
     * @return string|null
     */
@@ -594,7 +594,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
+    * @param string|null $enterpriseProjectId 企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     *
     * @return $this
     */
@@ -606,7 +606,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets includeZeroRecord
-    *  返回是否包含应付金额为0的记录。true：包含false：不包含
+    *  返回是否包含应付金额为0的记录。true：包含false：不包含 此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return bool|null
     */
@@ -618,7 +618,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets includeZeroRecord
     *
-    * @param bool|null $includeZeroRecord 返回是否包含应付金额为0的记录。true：包含false：不包含
+    * @param bool|null $includeZeroRecord 返回是否包含应付金额为0的记录。true：包含false：不包含 此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -630,7 +630,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets method
-    *  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户默认为all，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
+    *  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空时，默认值为“all”，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
     *
     * @return string|null
     */
@@ -642,7 +642,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets method
     *
-    * @param string|null $method 查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户默认为all，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
+    * @param string|null $method 查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空时，默认值为“all”，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
     *
     * @return $this
     */
@@ -654,7 +654,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets subCustomerId
-    *  企业子账号ID。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
+    *  企业子账号ID。此参数携带值为空串时，不作为筛选条件。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
     *
     * @return string|null
     */
@@ -666,7 +666,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets subCustomerId
     *
-    * @param string|null $subCustomerId 企业子账号ID。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
+    * @param string|null $subCustomerId 企业子账号ID。此参数携带值为空串时，不作为筛选条件。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
     *
     * @return $this
     */
@@ -678,7 +678,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets tradeId
-    *  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。
+    *  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     *
     * @return string|null
     */
@@ -690,7 +690,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets tradeId
     *
-    * @param string|null $tradeId 订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。
+    * @param string|null $tradeId 订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     *
     * @return $this
     */
@@ -702,7 +702,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets billDateBegin
-    *  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    *  查询的资源消费记录的开始日期，东八区时间，格式为YYYY-MM-DD。此参数不携带或携带值为空或携带值为空串时，默认值取cycle月份的第一天。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     *
     * @return string|null
     */
@@ -714,7 +714,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets billDateBegin
     *
-    * @param string|null $billDateBegin 查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * @param string|null $billDateBegin 查询的资源消费记录的开始日期，东八区时间，格式为YYYY-MM-DD。此参数不携带或携带值为空或携带值为空串时，默认值取cycle月份的第一天。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     *
     * @return $this
     */
@@ -726,7 +726,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets billDateEnd
-    *  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    *  查询的资源消费记录的结束日期，东八区时间，格式为YYYY-MM-DD。此参数不携带或携带值为空或携带值为空串时，默认值取cycle月份的最后一天。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     *
     * @return string|null
     */
@@ -738,7 +738,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets billDateEnd
     *
-    * @param string|null $billDateEnd 查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * @param string|null $billDateEnd 查询的资源消费记录的结束日期，东八区时间，格式为YYYY-MM-DD。此参数不携带或携带值为空或携带值为空串时，默认值取cycle月份的最后一天。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     *
     * @return $this
     */

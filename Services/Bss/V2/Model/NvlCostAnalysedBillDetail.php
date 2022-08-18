@@ -20,8 +20,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sharedMonth  查询分摊成本的月份。 格式为YYYY-MM，按照东八区截取。
-    * billCycle  账期。 格式：YYYY-MM。按照东八区截取。
+    * sharedMonth  查询分摊成本的月份。 格式为YYYY-MM，按照东八区时间截取。
+    * billCycle  账期。 格式：YYYY-MM。按照东八区时间截取。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID。如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
@@ -120,8 +120,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sharedMonth  查询分摊成本的月份。 格式为YYYY-MM，按照东八区截取。
-    * billCycle  账期。 格式：YYYY-MM。按照东八区截取。
+    * sharedMonth  查询分摊成本的月份。 格式为YYYY-MM，按照东八区时间截取。
+    * billCycle  账期。 格式：YYYY-MM。按照东八区时间截取。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID。如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
@@ -241,8 +241,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sharedMonth  查询分摊成本的月份。 格式为YYYY-MM，按照东八区截取。
-    * billCycle  账期。 格式：YYYY-MM。按照东八区截取。
+    * sharedMonth  查询分摊成本的月份。 格式为YYYY-MM，按照东八区时间截取。
+    * billCycle  账期。 格式：YYYY-MM。按照东八区时间截取。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID。如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
@@ -341,8 +341,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sharedMonth  查询分摊成本的月份。 格式为YYYY-MM，按照东八区截取。
-    * billCycle  账期。 格式：YYYY-MM。按照东八区截取。
+    * sharedMonth  查询分摊成本的月份。 格式为YYYY-MM，按照东八区时间截取。
+    * billCycle  账期。 格式：YYYY-MM。按照东八区时间截取。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID。如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
@@ -441,8 +441,8 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sharedMonth  查询分摊成本的月份。 格式为YYYY-MM，按照东八区截取。
-    * billCycle  账期。 格式：YYYY-MM。按照东八区截取。
+    * sharedMonth  查询分摊成本的月份。 格式为YYYY-MM，按照东八区时间截取。
+    * billCycle  账期。 格式：YYYY-MM。按照东八区时间截取。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID。如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
@@ -669,7 +669,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets sharedMonth
-    *  查询分摊成本的月份。 格式为YYYY-MM，按照东八区截取。
+    *  查询分摊成本的月份。 格式为YYYY-MM，按照东八区时间截取。
     *
     * @return string|null
     */
@@ -681,7 +681,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets sharedMonth
     *
-    * @param string|null $sharedMonth 查询分摊成本的月份。 格式为YYYY-MM，按照东八区截取。
+    * @param string|null $sharedMonth 查询分摊成本的月份。 格式为YYYY-MM，按照东八区时间截取。
     *
     * @return $this
     */
@@ -693,7 +693,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets billCycle
-    *  账期。 格式：YYYY-MM。按照东八区截取。
+    *  账期。 格式：YYYY-MM。按照东八区时间截取。
     *
     * @return string|null
     */
@@ -705,7 +705,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets billCycle
     *
-    * @param string|null $billCycle 账期。 格式：YYYY-MM。按照东八区截取。
+    * @param string|null $billCycle 账期。 格式：YYYY-MM。按照东八区时间截取。
     *
     * @return $this
     */

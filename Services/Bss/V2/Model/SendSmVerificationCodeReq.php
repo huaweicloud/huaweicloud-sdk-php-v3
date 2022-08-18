@@ -21,8 +21,8 @@ class SendSmVerificationCodeReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * mobilePhone  接受短信验证码的手机号码。
-    * timeout  超时时间，不指定时默认为10分钟。 单位：分钟
-    * language  发送的短信的语言。 zh-cn: 中文en-us: 英语 不设置默认为偏好设置的默认语言。
+    * timeout  超时时间，默认值为10分钟。 单位：分钟
+    * language  发送的短信的语言。 zh-cn: 中文en-us: 英语 默认为偏好设置的默认语言。
     * smTemplateArgs  短信发送模板中的变量，具体参见表1。
     *
     * @var string[]
@@ -37,8 +37,8 @@ class SendSmVerificationCodeReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * mobilePhone  接受短信验证码的手机号码。
-    * timeout  超时时间，不指定时默认为10分钟。 单位：分钟
-    * language  发送的短信的语言。 zh-cn: 中文en-us: 英语 不设置默认为偏好设置的默认语言。
+    * timeout  超时时间，默认值为10分钟。 单位：分钟
+    * language  发送的短信的语言。 zh-cn: 中文en-us: 英语 默认为偏好设置的默认语言。
     * smTemplateArgs  短信发送模板中的变量，具体参见表1。
     *
     * @var string[]
@@ -74,8 +74,8 @@ class SendSmVerificationCodeReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * mobilePhone  接受短信验证码的手机号码。
-    * timeout  超时时间，不指定时默认为10分钟。 单位：分钟
-    * language  发送的短信的语言。 zh-cn: 中文en-us: 英语 不设置默认为偏好设置的默认语言。
+    * timeout  超时时间，默认值为10分钟。 单位：分钟
+    * language  发送的短信的语言。 zh-cn: 中文en-us: 英语 默认为偏好设置的默认语言。
     * smTemplateArgs  短信发送模板中的变量，具体参见表1。
     *
     * @var string[]
@@ -90,8 +90,8 @@ class SendSmVerificationCodeReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * mobilePhone  接受短信验证码的手机号码。
-    * timeout  超时时间，不指定时默认为10分钟。 单位：分钟
-    * language  发送的短信的语言。 zh-cn: 中文en-us: 英语 不设置默认为偏好设置的默认语言。
+    * timeout  超时时间，默认值为10分钟。 单位：分钟
+    * language  发送的短信的语言。 zh-cn: 中文en-us: 英语 默认为偏好设置的默认语言。
     * smTemplateArgs  短信发送模板中的变量，具体参见表1。
     *
     * @var string[]
@@ -106,8 +106,8 @@ class SendSmVerificationCodeReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * mobilePhone  接受短信验证码的手机号码。
-    * timeout  超时时间，不指定时默认为10分钟。 单位：分钟
-    * language  发送的短信的语言。 zh-cn: 中文en-us: 英语 不设置默认为偏好设置的默认语言。
+    * timeout  超时时间，默认值为10分钟。 单位：分钟
+    * language  发送的短信的语言。 zh-cn: 中文en-us: 英语 默认为偏好设置的默认语言。
     * smTemplateArgs  短信发送模板中的变量，具体参见表1。
     *
     * @var string[]
@@ -252,7 +252,7 @@ class SendSmVerificationCodeReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeout
-    *  超时时间，不指定时默认为10分钟。 单位：分钟
+    *  超时时间，默认值为10分钟。 单位：分钟
     *
     * @return int|null
     */
@@ -264,7 +264,7 @@ class SendSmVerificationCodeReq implements ModelInterface, ArrayAccess
     /**
     * Sets timeout
     *
-    * @param int|null $timeout 超时时间，不指定时默认为10分钟。 单位：分钟
+    * @param int|null $timeout 超时时间，默认值为10分钟。 单位：分钟
     *
     * @return $this
     */
@@ -276,7 +276,7 @@ class SendSmVerificationCodeReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  发送的短信的语言。 zh-cn: 中文en-us: 英语 不设置默认为偏好设置的默认语言。
+    *  发送的短信的语言。 zh-cn: 中文en-us: 英语 默认为偏好设置的默认语言。
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class SendSmVerificationCodeReq implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 发送的短信的语言。 zh-cn: 中文en-us: 英语 不设置默认为偏好设置的默认语言。
+    * @param string|null $language 发送的短信的语言。 zh-cn: 中文en-us: 英语 默认为偏好设置的默认语言。
     *
     * @return $this
     */

@@ -23,13 +23,15 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'customerId' => 'string',
             'budgetAmount' => 'double',
-            'cancelPartnerFrozen' => 'string'
+            'cancelPartnerFrozen' => 'string',
+            'indirectPartnerId' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'customerId' => null,
         'budgetAmount' => 'double',
-        'cancelPartnerFrozen' => null
+        'cancelPartnerFrozen' => null,
+        'indirectPartnerId' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'customerId' => 'customer_id',
             'budgetAmount' => 'budget_amount',
-            'cancelPartnerFrozen' => 'cancel_partner_frozen'
+            'cancelPartnerFrozen' => 'cancel_partner_frozen',
+            'indirectPartnerId' => 'indirect_partner_id'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $setters = [
             'customerId' => 'setCustomerId',
             'budgetAmount' => 'setBudgetAmount',
-            'cancelPartnerFrozen' => 'setCancelPartnerFrozen'
+            'cancelPartnerFrozen' => 'setCancelPartnerFrozen',
+            'indirectPartnerId' => 'setIndirectPartnerId'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
+    * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
     *
     * @var string[]
     */
     protected static $getters = [
             'customerId' => 'getCustomerId',
             'budgetAmount' => 'getBudgetAmount',
-            'cancelPartnerFrozen' => 'getCancelPartnerFrozen'
+            'cancelPartnerFrozen' => 'getCancelPartnerFrozen',
+            'indirectPartnerId' => 'getIndirectPartnerId'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
         $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
         $this->container['budgetAmount'] = isset($data['budgetAmount']) ? $data['budgetAmount'] : null;
         $this->container['cancelPartnerFrozen'] = isset($data['cancelPartnerFrozen']) ? $data['cancelPartnerFrozen'] : null;
+        $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 
     /**
@@ -203,6 +214,12 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['cancelPartnerFrozen']) && (mb_strlen($this->container['cancelPartnerFrozen']) < 0)) {
                 $invalidProperties[] = "invalid value for 'cancelPartnerFrozen', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -287,6 +304,30 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     public function setCancelPartnerFrozen($cancelPartnerFrozen)
     {
         $this->container['cancelPartnerFrozen'] = $cancelPartnerFrozen;
+        return $this;
+    }
+
+    /**
+    * Gets indirectPartnerId
+    *  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    *
+    * @return string|null
+    */
+    public function getIndirectPartnerId()
+    {
+        return $this->container['indirectPartnerId'];
+    }
+
+    /**
+    * Sets indirectPartnerId
+    *
+    * @param string|null $indirectPartnerId 云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    *
+    * @return $this
+    */
+    public function setIndirectPartnerId($indirectPartnerId)
+    {
+        $this->container['indirectPartnerId'] = $indirectPartnerId;
         return $this;
     }
 

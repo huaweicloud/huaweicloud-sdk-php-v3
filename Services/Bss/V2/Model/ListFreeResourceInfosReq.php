@@ -20,12 +20,12 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
-    * orderId  订单ID。
-    * productId  产品ID，即资源包ID。
-    * productName  产品名称，即资源包名称。
-    * enterpriseProjectId  企业项目ID。
-    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
+    * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * orderId  订单ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * productId  产品ID，即资源包ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * productName  产品名称，即资源包名称。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * enterpriseProjectId  企业项目ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始，默认为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的记录数，默认为10。
     *
@@ -44,12 +44,12 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
-    * orderId  订单ID。
-    * productId  产品ID，即资源包ID。
-    * productName  产品名称，即资源包名称。
-    * enterpriseProjectId  企业项目ID。
-    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
+    * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * orderId  订单ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * productId  产品ID，即资源包ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * productName  产品名称，即资源包名称。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * enterpriseProjectId  企业项目ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始，默认为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的记录数，默认为10。
     *
@@ -89,12 +89,12 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
-    * orderId  订单ID。
-    * productId  产品ID，即资源包ID。
-    * productName  产品名称，即资源包名称。
-    * enterpriseProjectId  企业项目ID。
-    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
+    * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * orderId  订单ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * productId  产品ID，即资源包ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * productName  产品名称，即资源包名称。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * enterpriseProjectId  企业项目ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始，默认为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的记录数，默认为10。
     *
@@ -113,12 +113,12 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
-    * orderId  订单ID。
-    * productId  产品ID，即资源包ID。
-    * productName  产品名称，即资源包名称。
-    * enterpriseProjectId  企业项目ID。
-    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
+    * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * orderId  订单ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * productId  产品ID，即资源包ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * productName  产品名称，即资源包名称。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * enterpriseProjectId  企业项目ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始，默认为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的记录数，默认为10。
     *
@@ -137,12 +137,12 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
-    * orderId  订单ID。
-    * productId  产品ID，即资源包ID。
-    * productName  产品名称，即资源包名称。
-    * enterpriseProjectId  企业项目ID。
-    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
+    * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * orderId  订单ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * productId  产品ID，即资源包ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * productName  产品名称，即资源包名称。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * enterpriseProjectId  企业项目ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
+    * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始，默认为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的记录数，默认为10。
     *
@@ -299,7 +299,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionCode
-    *  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    *  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
     /**
     * Sets regionCode
     *
-    * @param string|null $regionCode 云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
+    * @param string|null $regionCode 云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单ID。
+    *  订单ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单ID。
+    * @param string|null $orderId 订单ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  产品ID，即资源包ID。
+    *  产品ID，即资源包ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId 产品ID，即资源包ID。
+    * @param string|null $productId 产品ID，即资源包ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets productName
-    *  产品名称，即资源包名称。
+    *  产品名称，即资源包名称。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
     /**
     * Sets productName
     *
-    * @param string|null $productName 产品名称，即资源包名称。
+    * @param string|null $productName 产品名称，即资源包名称。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID。
+    *  企业项目ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -407,7 +407,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID。
+    * @param string|null $enterpriseProjectId 企业项目ID。 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
+    *  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     *
     * @return int|null
     */
@@ -431,7 +431,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 状态： 0：未生效1：生效中2：已用完3：已失效4：已退订
+    * @param int|null $status 状态： 0：未生效1：生效中2：已用完3：已失效4：已退订 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     *
     * @return $this
     */

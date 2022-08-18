@@ -2166,6 +2166,71 @@ class EcsClient extends Client
     }
 
     /**
+     * 按标签查询云服务器列表
+     *
+     * 使用标签过滤弹性云服务器，并返回云服务器使用的所有标签和资源列表。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listServersByTag($request)
+    {
+        return $this->listServersByTagWithHttpInfo($request);
+    }
+
+    public function listServersByTagWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/cloudservers/resource_instances/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServersByTagResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServersByTagRequest');
+    }
+
+    /**
      * 查询云服务器详情列表
      *
      * 根据用户请求条件从数据库筛选、查询所有的弹性云服务器，并关联相关表获取到弹性云服务器的详细信息。

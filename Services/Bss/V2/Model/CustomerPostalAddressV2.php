@@ -30,7 +30,7 @@ class CustomerPostalAddressV2 implements ModelInterface, ArrayAccess
     * zipcode  邮编。
     * areacode  国家码。例如： 中国：0086
     * mobilePhone  手机号码，不带国家码。
-    * isDefault  是否默认地址，默认为0。 1：默认地址0：非默认地址
+    * isDefault  是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
     *
     * @var string[]
     */
@@ -60,7 +60,7 @@ class CustomerPostalAddressV2 implements ModelInterface, ArrayAccess
     * zipcode  邮编。
     * areacode  国家码。例如： 中国：0086
     * mobilePhone  手机号码，不带国家码。
-    * isDefault  是否默认地址，默认为0。 1：默认地址0：非默认地址
+    * isDefault  是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
     *
     * @var string[]
     */
@@ -111,7 +111,7 @@ class CustomerPostalAddressV2 implements ModelInterface, ArrayAccess
     * zipcode  邮编。
     * areacode  国家码。例如： 中国：0086
     * mobilePhone  手机号码，不带国家码。
-    * isDefault  是否默认地址，默认为0。 1：默认地址0：非默认地址
+    * isDefault  是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class CustomerPostalAddressV2 implements ModelInterface, ArrayAccess
     * zipcode  邮编。
     * areacode  国家码。例如： 中国：0086
     * mobilePhone  手机号码，不带国家码。
-    * isDefault  是否默认地址，默认为0。 1：默认地址0：非默认地址
+    * isDefault  是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
     *
     * @var string[]
     */
@@ -171,7 +171,7 @@ class CustomerPostalAddressV2 implements ModelInterface, ArrayAccess
     * zipcode  邮编。
     * areacode  国家码。例如： 中国：0086
     * mobilePhone  手机号码，不带国家码。
-    * isDefault  是否默认地址，默认为0。 1：默认地址0：非默认地址
+    * isDefault  是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
     *
     * @var string[]
     */
@@ -524,7 +524,7 @@ class CustomerPostalAddressV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDefault
-    *  是否默认地址，默认为0。 1：默认地址0：非默认地址
+    *  是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
     *
     * @return int|null
     */
@@ -536,7 +536,7 @@ class CustomerPostalAddressV2 implements ModelInterface, ArrayAccess
     /**
     * Sets isDefault
     *
-    * @param int|null $isDefault 是否默认地址，默认为0。 1：默认地址0：非默认地址
+    * @param int|null $isDefault 是否默认地址，默认值为“0：非默认地址”。 1：默认地址0：非默认地址
     *
     * @return $this
     */
