@@ -1,0 +1,30 @@
+{
+  "name": "huaweicloud/huaweicloud-sdk-moderation",
+  "description": "HUAWEICLOUD SDK Moderation",
+  "keywords": [
+    "php",
+    "sdk",
+    "rest",
+    "api",
+    "moderation"
+  ],
+  "version": "3.0.56-rc",
+   "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "baijunyao",
+      "email": "baijunyao@baijunyao.com",
+      "homepage": "https://sdkcenter.developer.huaweicloud.com/?language=PHP"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "huaweicloud/huaweicloud-sdk-core": "3.0.56-rc"
+  },
+  "autoload": {
+    "psr-4": {
+      "HuaweiCloud\\SDK\\Moderation\\V2\\": "V2/"
+    }
+  }
+}
