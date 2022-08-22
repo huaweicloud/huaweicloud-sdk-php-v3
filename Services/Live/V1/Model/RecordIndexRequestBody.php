@@ -55,7 +55,7 @@ class RecordIndexRequestBody implements ModelInterface, ArrayAccess
         'stream' => null,
         'startTime' => 'date-time',
         'endTime' => 'date-time',
-        'object' => 'uri'
+        'object' => null
     ];
 
     /**

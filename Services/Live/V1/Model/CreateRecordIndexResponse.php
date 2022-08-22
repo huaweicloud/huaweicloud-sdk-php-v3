@@ -83,7 +83,7 @@ class CreateRecordIndexResponse implements ModelInterface, ArrayAccess
         'height' => 'int32',
         'location' => null,
         'bucket' => null,
-        'object' => 'uri',
+        'object' => null,
         'xRequestId' => null
     ];
 
