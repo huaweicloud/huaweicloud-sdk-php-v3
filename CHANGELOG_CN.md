@@ -1,3 +1,34 @@
+# 3.0.59-rc 2022-08-25
+
+### HuaweiCloud SDK Core
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 解决了部分错误码无法解析的问题
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK OCR
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`RecognizeWebImage`:
+    - 新增请求参数 `detect_font`
+    - 新增响应参数 `font_list`、`font_scores`
+
+### HuaweiCloud SDK VOD
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`CheckMd5Duplication`请求参数`size`类型调整 `int32` -> `int64`
+
 # 3.0.58-rc 2022-08-22
 
 ### HuaweiCloud SDK Live

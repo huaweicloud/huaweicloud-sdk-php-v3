@@ -20,9 +20,9 @@ class TimeCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * timeMeasureId  |参数名称：时间单位1：天2：月| |参数的约束及描述：时间单位1：天2：月|
-    * beginTime  |参数名称：查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM| |参数约束及描述：查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM|
-    * endTime  |参数名称：查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM| |参数约束及描述：查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM|
+    * timeMeasureId  时间单位。1：天2：月
+    * beginTime  查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM
+    * endTime  查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class TimeCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * timeMeasureId  |参数名称：时间单位1：天2：月| |参数的约束及描述：时间单位1：天2：月|
-    * beginTime  |参数名称：查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM| |参数约束及描述：查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM|
-    * endTime  |参数名称：查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM| |参数约束及描述：查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM|
+    * timeMeasureId  时间单位。1：天2：月
+    * beginTime  查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM
+    * endTime  查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class TimeCondition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * timeMeasureId  |参数名称：时间单位1：天2：月| |参数的约束及描述：时间单位1：天2：月|
-    * beginTime  |参数名称：查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM| |参数约束及描述：查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM|
-    * endTime  |参数名称：查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM| |参数约束及描述：查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM|
+    * timeMeasureId  时间单位。1：天2：月
+    * beginTime  查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM
+    * endTime  查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class TimeCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * timeMeasureId  |参数名称：时间单位1：天2：月| |参数的约束及描述：时间单位1：天2：月|
-    * beginTime  |参数名称：查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM| |参数约束及描述：查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM|
-    * endTime  |参数名称：查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM| |参数约束及描述：查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM|
+    * timeMeasureId  时间单位。1：天2：月
+    * beginTime  查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM
+    * endTime  查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class TimeCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * timeMeasureId  |参数名称：时间单位1：天2：月| |参数的约束及描述：时间单位1：天2：月|
-    * beginTime  |参数名称：查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM| |参数约束及描述：查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM|
-    * endTime  |参数名称：查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM| |参数约束及描述：查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM|
+    * timeMeasureId  时间单位。1：天2：月
+    * beginTime  查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM
+    * endTime  查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM
     *
     * @var string[]
     */
@@ -223,7 +223,7 @@ class TimeCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeMeasureId
-    *  |参数名称：时间单位1：天2：月| |参数的约束及描述：时间单位1：天2：月|
+    *  时间单位。1：天2：月
     *
     * @return int
     */
@@ -235,7 +235,7 @@ class TimeCondition implements ModelInterface, ArrayAccess
     /**
     * Sets timeMeasureId
     *
-    * @param int $timeMeasureId |参数名称：时间单位1：天2：月| |参数的约束及描述：时间单位1：天2：月|
+    * @param int $timeMeasureId 时间单位。1：天2：月
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class TimeCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
-    *  |参数名称：查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM| |参数约束及描述：查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM|
+    *  查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM
     *
     * @return string
     */
@@ -259,7 +259,7 @@ class TimeCondition implements ModelInterface, ArrayAccess
     /**
     * Sets beginTime
     *
-    * @param string $beginTime |参数名称：查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM| |参数约束及描述：查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM|
+    * @param string $beginTime 查询开始时间，必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM
     *
     * @return $this
     */
@@ -271,7 +271,7 @@ class TimeCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  |参数名称：查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM| |参数约束及描述：查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM|
+    *  查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM
     *
     * @return string
     */
@@ -283,7 +283,7 @@ class TimeCondition implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string $endTime |参数名称：查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM| |参数约束及描述：查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM|
+    * @param string $endTime 查询结束时间：必须是日期格式。当time_measure_id值为1或为空时，格式为YYYY-MM-DD当time_measure_id值为2时，格式为YYYY-MM
     *
     * @return $this
     */

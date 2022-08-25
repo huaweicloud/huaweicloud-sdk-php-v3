@@ -222,12 +222,18 @@ class HttpClient
                     $responseBodyArr['code'], $responseBodyArr['message']);
             } else {
                 foreach ($responseBodyArr as $key => $value) {
-                    if (is_array($responseBodyArr[$key]) and
-                        isset($responseBodyArr[$key]['code']) and
+                    if (!is_array($responseBodyArr[$key])) {
+                        return;
+                    }
+                    if (isset($responseBodyArr[$key]['code']) and
                         isset($responseBodyArr[$key]['message'])) {
                         $sdkError = new SdkErrorMessage($requestId,
                             $responseBodyArr[$key]['code'],
                             $responseBodyArr[$key]['message']);
+                    } else {
+                        $sdkError = new SdkErrorMessage($requestId,
+                            $responseBodyArr[$key]['error_code'],
+                            $responseBodyArr[$key]['error_msg']);
                     }
                 }
             }

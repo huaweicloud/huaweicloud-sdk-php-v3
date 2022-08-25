@@ -21,12 +21,12 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * timeCondition  timeCondition
-    * groupby  |参数名称：查询维度，具体请参见表 GroupBy。| |参数约束以及描述：查询维度，具体请参见表 GroupBy。|
-    * costType  |参数名称：成本类型UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本| |参数约束及描述：成本类型UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本|
-    * amountType  |参数名称：展示的金额类型PAYMENT_AMOUNT：应付NET_AMOUNT：实付| |参数约束及描述：展示的金额类型PAYMENT_AMOUNT：应付NET_AMOUNT：实付|
-    * offset  |参数名称：偏移量| |参数的约束及描述：从0开始，默认为0|
-    * limit  |参数名称：每次查询的记录数| |参数的约束及描述：默认为10|
-    * filters  |参数名称：过滤条件，具体请参见表 过滤条件。| |参数约束以及描述：此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件。|
+    * groupby  查询维度，具体请参见表 GroupBy。
+    * costType  成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
+    * amountType  展示的金额类型。PAYMENT_AMOUNT：应付NET_AMOUNT：实付
+    * offset  偏移量。从0开始，默认为0
+    * limit  每次查询的记录数，默认为10
+    * filters  过滤条件，具体请参见表 过滤条件。此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件。
     *
     * @var string[]
     */
@@ -43,12 +43,12 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * timeCondition  timeCondition
-    * groupby  |参数名称：查询维度，具体请参见表 GroupBy。| |参数约束以及描述：查询维度，具体请参见表 GroupBy。|
-    * costType  |参数名称：成本类型UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本| |参数约束及描述：成本类型UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本|
-    * amountType  |参数名称：展示的金额类型PAYMENT_AMOUNT：应付NET_AMOUNT：实付| |参数约束及描述：展示的金额类型PAYMENT_AMOUNT：应付NET_AMOUNT：实付|
-    * offset  |参数名称：偏移量| |参数的约束及描述：从0开始，默认为0|
-    * limit  |参数名称：每次查询的记录数| |参数的约束及描述：默认为10|
-    * filters  |参数名称：过滤条件，具体请参见表 过滤条件。| |参数约束以及描述：此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件。|
+    * groupby  查询维度，具体请参见表 GroupBy。
+    * costType  成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
+    * amountType  展示的金额类型。PAYMENT_AMOUNT：应付NET_AMOUNT：实付
+    * offset  偏移量。从0开始，默认为0
+    * limit  每次查询的记录数，默认为10
+    * filters  过滤条件，具体请参见表 过滤条件。此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件。
     *
     * @var string[]
     */
@@ -86,12 +86,12 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * timeCondition  timeCondition
-    * groupby  |参数名称：查询维度，具体请参见表 GroupBy。| |参数约束以及描述：查询维度，具体请参见表 GroupBy。|
-    * costType  |参数名称：成本类型UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本| |参数约束及描述：成本类型UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本|
-    * amountType  |参数名称：展示的金额类型PAYMENT_AMOUNT：应付NET_AMOUNT：实付| |参数约束及描述：展示的金额类型PAYMENT_AMOUNT：应付NET_AMOUNT：实付|
-    * offset  |参数名称：偏移量| |参数的约束及描述：从0开始，默认为0|
-    * limit  |参数名称：每次查询的记录数| |参数的约束及描述：默认为10|
-    * filters  |参数名称：过滤条件，具体请参见表 过滤条件。| |参数约束以及描述：此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件。|
+    * groupby  查询维度，具体请参见表 GroupBy。
+    * costType  成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
+    * amountType  展示的金额类型。PAYMENT_AMOUNT：应付NET_AMOUNT：实付
+    * offset  偏移量。从0开始，默认为0
+    * limit  每次查询的记录数，默认为10
+    * filters  过滤条件，具体请参见表 过滤条件。此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件。
     *
     * @var string[]
     */
@@ -108,12 +108,12 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * timeCondition  timeCondition
-    * groupby  |参数名称：查询维度，具体请参见表 GroupBy。| |参数约束以及描述：查询维度，具体请参见表 GroupBy。|
-    * costType  |参数名称：成本类型UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本| |参数约束及描述：成本类型UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本|
-    * amountType  |参数名称：展示的金额类型PAYMENT_AMOUNT：应付NET_AMOUNT：实付| |参数约束及描述：展示的金额类型PAYMENT_AMOUNT：应付NET_AMOUNT：实付|
-    * offset  |参数名称：偏移量| |参数的约束及描述：从0开始，默认为0|
-    * limit  |参数名称：每次查询的记录数| |参数的约束及描述：默认为10|
-    * filters  |参数名称：过滤条件，具体请参见表 过滤条件。| |参数约束以及描述：此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件。|
+    * groupby  查询维度，具体请参见表 GroupBy。
+    * costType  成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
+    * amountType  展示的金额类型。PAYMENT_AMOUNT：应付NET_AMOUNT：实付
+    * offset  偏移量。从0开始，默认为0
+    * limit  每次查询的记录数，默认为10
+    * filters  过滤条件，具体请参见表 过滤条件。此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件。
     *
     * @var string[]
     */
@@ -130,12 +130,12 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * timeCondition  timeCondition
-    * groupby  |参数名称：查询维度，具体请参见表 GroupBy。| |参数约束以及描述：查询维度，具体请参见表 GroupBy。|
-    * costType  |参数名称：成本类型UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本| |参数约束及描述：成本类型UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本|
-    * amountType  |参数名称：展示的金额类型PAYMENT_AMOUNT：应付NET_AMOUNT：实付| |参数约束及描述：展示的金额类型PAYMENT_AMOUNT：应付NET_AMOUNT：实付|
-    * offset  |参数名称：偏移量| |参数的约束及描述：从0开始，默认为0|
-    * limit  |参数名称：每次查询的记录数| |参数的约束及描述：默认为10|
-    * filters  |参数名称：过滤条件，具体请参见表 过滤条件。| |参数约束以及描述：此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件。|
+    * groupby  查询维度，具体请参见表 GroupBy。
+    * costType  成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
+    * amountType  展示的金额类型。PAYMENT_AMOUNT：应付NET_AMOUNT：实付
+    * offset  偏移量。从0开始，默认为0
+    * limit  每次查询的记录数，默认为10
+    * filters  过滤条件，具体请参见表 过滤条件。此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件。
     *
     * @var string[]
     */
@@ -300,7 +300,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupby
-    *  |参数名称：查询维度，具体请参见表 GroupBy。| |参数约束以及描述：查询维度，具体请参见表 GroupBy。|
+    *  查询维度，具体请参见表 GroupBy。
     *
     * @return \HuaweiCloud\SDK\Bss\V2\Model\GroupBy[]
     */
@@ -312,7 +312,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     /**
     * Sets groupby
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\GroupBy[] $groupby |参数名称：查询维度，具体请参见表 GroupBy。| |参数约束以及描述：查询维度，具体请参见表 GroupBy。|
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\GroupBy[] $groupby 查询维度，具体请参见表 GroupBy。
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets costType
-    *  |参数名称：成本类型UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本| |参数约束及描述：成本类型UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本|
+    *  成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
     *
     * @return string
     */
@@ -336,7 +336,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     /**
     * Sets costType
     *
-    * @param string $costType |参数名称：成本类型UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本| |参数约束及描述：成本类型UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本|
+    * @param string $costType 成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets amountType
-    *  |参数名称：展示的金额类型PAYMENT_AMOUNT：应付NET_AMOUNT：实付| |参数约束及描述：展示的金额类型PAYMENT_AMOUNT：应付NET_AMOUNT：实付|
+    *  展示的金额类型。PAYMENT_AMOUNT：应付NET_AMOUNT：实付
     *
     * @return string
     */
@@ -360,7 +360,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     /**
     * Sets amountType
     *
-    * @param string $amountType |参数名称：展示的金额类型PAYMENT_AMOUNT：应付NET_AMOUNT：实付| |参数约束及描述：展示的金额类型PAYMENT_AMOUNT：应付NET_AMOUNT：实付|
+    * @param string $amountType 展示的金额类型。PAYMENT_AMOUNT：应付NET_AMOUNT：实付
     *
     * @return $this
     */
@@ -372,7 +372,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  |参数名称：偏移量| |参数的约束及描述：从0开始，默认为0|
+    *  偏移量。从0开始，默认为0
     *
     * @return int|null
     */
@@ -384,7 +384,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset |参数名称：偏移量| |参数的约束及描述：从0开始，默认为0|
+    * @param int|null $offset 偏移量。从0开始，默认为0
     *
     * @return $this
     */
@@ -396,7 +396,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  |参数名称：每次查询的记录数| |参数的约束及描述：默认为10|
+    *  每次查询的记录数，默认为10
     *
     * @return int|null
     */
@@ -408,7 +408,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit |参数名称：每次查询的记录数| |参数的约束及描述：默认为10|
+    * @param int|null $limit 每次查询的记录数，默认为10
     *
     * @return $this
     */
@@ -420,7 +420,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets filters
-    *  |参数名称：过滤条件，具体请参见表 过滤条件。| |参数约束以及描述：此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件。|
+    *  过滤条件，具体请参见表 过滤条件。此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件。
     *
     * @return \HuaweiCloud\SDK\Bss\V2\Model\FilterV2[]|null
     */
@@ -432,7 +432,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     /**
     * Sets filters
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\FilterV2[]|null $filters |参数名称：过滤条件，具体请参见表 过滤条件。| |参数约束以及描述：此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件。|
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\FilterV2[]|null $filters 过滤条件，具体请参见表 过滤条件。此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件。
     *
     * @return $this
     */

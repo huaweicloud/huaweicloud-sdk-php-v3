@@ -20,7 +20,7 @@ class FilterV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operator  |参数名称：运算符| |参数的约束及描述：0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。|
+    * operator  运算符。0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。
     * filterFactor  filterFactor
     *
     * @var string[]
@@ -32,7 +32,7 @@ class FilterV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operator  |参数名称：运算符| |参数的约束及描述：0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。|
+    * operator  运算符。0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。
     * filterFactor  filterFactor
     *
     * @var string[]
@@ -65,7 +65,7 @@ class FilterV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operator  |参数名称：运算符| |参数的约束及描述：0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。|
+    * operator  运算符。0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。
     * filterFactor  filterFactor
     *
     * @var string[]
@@ -77,7 +77,7 @@ class FilterV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operator  |参数名称：运算符| |参数的约束及描述：0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。|
+    * operator  运算符。0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。
     * filterFactor  filterFactor
     *
     * @var string[]
@@ -89,7 +89,7 @@ class FilterV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operator  |参数名称：运算符| |参数的约束及描述：0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。|
+    * operator  运算符。0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。
     * filterFactor  filterFactor
     *
     * @var string[]
@@ -191,7 +191,7 @@ class FilterV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets operator
-    *  |参数名称：运算符| |参数的约束及描述：0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。|
+    *  运算符。0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。
     *
     * @return int|null
     */
@@ -203,7 +203,7 @@ class FilterV2 implements ModelInterface, ArrayAccess
     /**
     * Sets operator
     *
-    * @param int|null $operator |参数名称：运算符| |参数的约束及描述：0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。|
+    * @param int|null $operator 运算符。0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。
     *
     * @return $this
     */

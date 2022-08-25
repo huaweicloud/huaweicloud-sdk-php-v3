@@ -24,6 +24,7 @@ class WebImageRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * detectDirection  图片朝向检测开关，可选值包括：  - true：检测图片朝向;  - false：不检测图片朝向。  > 说明：  - 支持任意角度的图片朝向检测。未传入该参数时默认为false，即不检测图片朝向。
     * extractType  结构化数据提取参数列表，目前只支持联系人信息、图像宽高，其入参值分别为\"contact_info\"，\"image_size\"，若该字段为空列表或缺失该字段，默认不提取。
+    * detectFont  为Boolean类型，若不传该字段，默认不检测切片字体，为True时，将检测切片的字体类型，并返回最相似的5种字体名称。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class WebImageRequestBody implements ModelInterface, ArrayAccess
             'image' => 'string',
             'url' => 'string',
             'detectDirection' => 'bool',
-            'extractType' => 'string[]'
+            'extractType' => 'string[]',
+            'detectFont' => 'bool'
     ];
 
     /**
@@ -40,6 +42,7 @@ class WebImageRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * detectDirection  图片朝向检测开关，可选值包括：  - true：检测图片朝向;  - false：不检测图片朝向。  > 说明：  - 支持任意角度的图片朝向检测。未传入该参数时默认为false，即不检测图片朝向。
     * extractType  结构化数据提取参数列表，目前只支持联系人信息、图像宽高，其入参值分别为\"contact_info\"，\"image_size\"，若该字段为空列表或缺失该字段，默认不提取。
+    * detectFont  为Boolean类型，若不传该字段，默认不检测切片字体，为True时，将检测切片的字体类型，并返回最相似的5种字体名称。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class WebImageRequestBody implements ModelInterface, ArrayAccess
         'image' => null,
         'url' => null,
         'detectDirection' => null,
-        'extractType' => null
+        'extractType' => null,
+        'detectFont' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class WebImageRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * detectDirection  图片朝向检测开关，可选值包括：  - true：检测图片朝向;  - false：不检测图片朝向。  > 说明：  - 支持任意角度的图片朝向检测。未传入该参数时默认为false，即不检测图片朝向。
     * extractType  结构化数据提取参数列表，目前只支持联系人信息、图像宽高，其入参值分别为\"contact_info\"，\"image_size\"，若该字段为空列表或缺失该字段，默认不提取。
+    * detectFont  为Boolean类型，若不传该字段，默认不检测切片字体，为True时，将检测切片的字体类型，并返回最相似的5种字体名称。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class WebImageRequestBody implements ModelInterface, ArrayAccess
             'image' => 'image',
             'url' => 'url',
             'detectDirection' => 'detect_direction',
-            'extractType' => 'extract_type'
+            'extractType' => 'extract_type',
+            'detectFont' => 'detect_font'
     ];
 
     /**
@@ -93,6 +99,7 @@ class WebImageRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * detectDirection  图片朝向检测开关，可选值包括：  - true：检测图片朝向;  - false：不检测图片朝向。  > 说明：  - 支持任意角度的图片朝向检测。未传入该参数时默认为false，即不检测图片朝向。
     * extractType  结构化数据提取参数列表，目前只支持联系人信息、图像宽高，其入参值分别为\"contact_info\"，\"image_size\"，若该字段为空列表或缺失该字段，默认不提取。
+    * detectFont  为Boolean类型，若不传该字段，默认不检测切片字体，为True时，将检测切片的字体类型，并返回最相似的5种字体名称。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class WebImageRequestBody implements ModelInterface, ArrayAccess
             'image' => 'setImage',
             'url' => 'setUrl',
             'detectDirection' => 'setDetectDirection',
-            'extractType' => 'setExtractType'
+            'extractType' => 'setExtractType',
+            'detectFont' => 'setDetectFont'
     ];
 
     /**
@@ -109,6 +117,7 @@ class WebImageRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * detectDirection  图片朝向检测开关，可选值包括：  - true：检测图片朝向;  - false：不检测图片朝向。  > 说明：  - 支持任意角度的图片朝向检测。未传入该参数时默认为false，即不检测图片朝向。
     * extractType  结构化数据提取参数列表，目前只支持联系人信息、图像宽高，其入参值分别为\"contact_info\"，\"image_size\"，若该字段为空列表或缺失该字段，默认不提取。
+    * detectFont  为Boolean类型，若不传该字段，默认不检测切片字体，为True时，将检测切片的字体类型，并返回最相似的5种字体名称。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class WebImageRequestBody implements ModelInterface, ArrayAccess
             'image' => 'getImage',
             'url' => 'getUrl',
             'detectDirection' => 'getDetectDirection',
-            'extractType' => 'getExtractType'
+            'extractType' => 'getExtractType',
+            'detectFont' => 'getDetectFont'
     ];
 
     /**
@@ -181,6 +191,7 @@ class WebImageRequestBody implements ModelInterface, ArrayAccess
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['detectDirection'] = isset($data['detectDirection']) ? $data['detectDirection'] : null;
         $this->container['extractType'] = isset($data['extractType']) ? $data['extractType'] : null;
+        $this->container['detectFont'] = isset($data['detectFont']) ? $data['detectFont'] : null;
     }
 
     /**
@@ -298,6 +309,30 @@ class WebImageRequestBody implements ModelInterface, ArrayAccess
     public function setExtractType($extractType)
     {
         $this->container['extractType'] = $extractType;
+        return $this;
+    }
+
+    /**
+    * Gets detectFont
+    *  为Boolean类型，若不传该字段，默认不检测切片字体，为True时，将检测切片的字体类型，并返回最相似的5种字体名称。
+    *
+    * @return bool|null
+    */
+    public function getDetectFont()
+    {
+        return $this->container['detectFont'];
+    }
+
+    /**
+    * Sets detectFont
+    *
+    * @param bool|null $detectFont 为Boolean类型，若不传该字段，默认不检测切片字体，为True时，将检测切片的字体类型，并返回最相似的5种字体名称。
+    *
+    * @return $this
+    */
+    public function setDetectFont($detectFont)
+    {
+        $this->container['detectFont'] = $detectFont;
         return $this;
     }
 

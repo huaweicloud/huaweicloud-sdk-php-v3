@@ -1,3 +1,34 @@
+# 3.0.59-rc 2022-08-25
+
+### HuaweiCloud SDK Core
+
+- _Features_
+  - None
+- _Bug Fix_
+  - Fix the problem that some error codes could not be parsed
+- _Change_
+  - None
+
+### HuaweiCloud SDK OCR
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `RecognizeWebImage`:
+    - Add the request parameter `detect_font`
+    - Add the response parameters `font_list`, `font_scores`
+
+### HuaweiCloud SDK VOD
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `int32` -> `int64` of the request parameter `size` of the interface `CheckMd5Duplication`
+
 # 3.0.58-rc 2022-08-22
 
 ### HuaweiCloud SDK Live

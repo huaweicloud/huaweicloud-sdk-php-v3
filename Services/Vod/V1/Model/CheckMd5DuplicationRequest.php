@@ -46,7 +46,7 @@ class CheckMd5DuplicationRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'authorization' => null,
         'xSdkDate' => null,
-        'size' => 'int32',
+        'size' => 'int64',
         'md5' => null
     ];
 

@@ -21,7 +21,7 @@ class ListCostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * currency  货币。 USD：美元
+    * currency  货币。 CNY：人民币
     * totalCount  总条数。
     * costData  按天或按月的明细金额。
     *
@@ -35,7 +35,7 @@ class ListCostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * currency  货币。 USD：美元
+    * currency  货币。 CNY：人民币
     * totalCount  总条数。
     * costData  按天或按月的明细金额。
     *
@@ -70,7 +70,7 @@ class ListCostsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * currency  货币。 USD：美元
+    * currency  货币。 CNY：人民币
     * totalCount  总条数。
     * costData  按天或按月的明细金额。
     *
@@ -84,7 +84,7 @@ class ListCostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * currency  货币。 USD：美元
+    * currency  货币。 CNY：人民币
     * totalCount  总条数。
     * costData  按天或按月的明细金额。
     *
@@ -98,7 +98,7 @@ class ListCostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * currency  货币。 USD：美元
+    * currency  货币。 CNY：人民币
     * totalCount  总条数。
     * costData  按天或按月的明细金额。
     *
@@ -197,7 +197,7 @@ class ListCostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets currency
-    *  货币。 USD：美元
+    *  货币。 CNY：人民币
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ListCostsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets currency
     *
-    * @param string|null $currency 货币。 USD：美元
+    * @param string|null $currency 货币。 CNY：人民币
     *
     * @return $this
     */

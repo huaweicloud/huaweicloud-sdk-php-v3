@@ -34,6 +34,8 @@ class WebImageWordsBlockList implements ModelInterface, ArrayAccess
     * city  传入contact_info时的返回，市。
     * district  传入contact_info时的返回，县区。
     * detailAddress  传入contact_info时的返回，详细地址（不含省市区）。
+    * fontList  文字块所属字体类型，列表形式，表示与文字块的文字最接近的字体类型。
+    * fontScores  文字块所属字体类型的概率，列表形式，与font_list一一对应，表示文字块的文字属于某种字体类型的概率。
     *
     * @var string[]
     */
@@ -51,7 +53,9 @@ class WebImageWordsBlockList implements ModelInterface, ArrayAccess
             'province' => 'string',
             'city' => 'string',
             'district' => 'string',
-            'detailAddress' => 'string'
+            'detailAddress' => 'string',
+            'fontList' => 'string[]',
+            'fontScores' => 'float[]'
     ];
 
     /**
@@ -70,6 +74,8 @@ class WebImageWordsBlockList implements ModelInterface, ArrayAccess
     * city  传入contact_info时的返回，市。
     * district  传入contact_info时的返回，县区。
     * detailAddress  传入contact_info时的返回，详细地址（不含省市区）。
+    * fontList  文字块所属字体类型，列表形式，表示与文字块的文字最接近的字体类型。
+    * fontScores  文字块所属字体类型的概率，列表形式，与font_list一一对应，表示文字块的文字属于某种字体类型的概率。
     *
     * @var string[]
     */
@@ -87,7 +93,9 @@ class WebImageWordsBlockList implements ModelInterface, ArrayAccess
         'province' => null,
         'city' => null,
         'district' => null,
-        'detailAddress' => null
+        'detailAddress' => null,
+        'fontList' => null,
+        'fontScores' => 'float'
     ];
 
     /**
@@ -127,6 +135,8 @@ class WebImageWordsBlockList implements ModelInterface, ArrayAccess
     * city  传入contact_info时的返回，市。
     * district  传入contact_info时的返回，县区。
     * detailAddress  传入contact_info时的返回，详细地址（不含省市区）。
+    * fontList  文字块所属字体类型，列表形式，表示与文字块的文字最接近的字体类型。
+    * fontScores  文字块所属字体类型的概率，列表形式，与font_list一一对应，表示文字块的文字属于某种字体类型的概率。
     *
     * @var string[]
     */
@@ -144,7 +154,9 @@ class WebImageWordsBlockList implements ModelInterface, ArrayAccess
             'province' => 'province',
             'city' => 'city',
             'district' => 'district',
-            'detailAddress' => 'detail_address'
+            'detailAddress' => 'detail_address',
+            'fontList' => 'font_list',
+            'fontScores' => 'font_scores'
     ];
 
     /**
@@ -163,6 +175,8 @@ class WebImageWordsBlockList implements ModelInterface, ArrayAccess
     * city  传入contact_info时的返回，市。
     * district  传入contact_info时的返回，县区。
     * detailAddress  传入contact_info时的返回，详细地址（不含省市区）。
+    * fontList  文字块所属字体类型，列表形式，表示与文字块的文字最接近的字体类型。
+    * fontScores  文字块所属字体类型的概率，列表形式，与font_list一一对应，表示文字块的文字属于某种字体类型的概率。
     *
     * @var string[]
     */
@@ -180,7 +194,9 @@ class WebImageWordsBlockList implements ModelInterface, ArrayAccess
             'province' => 'setProvince',
             'city' => 'setCity',
             'district' => 'setDistrict',
-            'detailAddress' => 'setDetailAddress'
+            'detailAddress' => 'setDetailAddress',
+            'fontList' => 'setFontList',
+            'fontScores' => 'setFontScores'
     ];
 
     /**
@@ -199,6 +215,8 @@ class WebImageWordsBlockList implements ModelInterface, ArrayAccess
     * city  传入contact_info时的返回，市。
     * district  传入contact_info时的返回，县区。
     * detailAddress  传入contact_info时的返回，详细地址（不含省市区）。
+    * fontList  文字块所属字体类型，列表形式，表示与文字块的文字最接近的字体类型。
+    * fontScores  文字块所属字体类型的概率，列表形式，与font_list一一对应，表示文字块的文字属于某种字体类型的概率。
     *
     * @var string[]
     */
@@ -216,7 +234,9 @@ class WebImageWordsBlockList implements ModelInterface, ArrayAccess
             'province' => 'getProvince',
             'city' => 'getCity',
             'district' => 'getDistrict',
-            'detailAddress' => 'getDetailAddress'
+            'detailAddress' => 'getDetailAddress',
+            'fontList' => 'getFontList',
+            'fontScores' => 'getFontScores'
     ];
 
     /**
@@ -291,6 +311,8 @@ class WebImageWordsBlockList implements ModelInterface, ArrayAccess
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
         $this->container['district'] = isset($data['district']) ? $data['district'] : null;
         $this->container['detailAddress'] = isset($data['detailAddress']) ? $data['detailAddress'] : null;
+        $this->container['fontList'] = isset($data['fontList']) ? $data['fontList'] : null;
+        $this->container['fontScores'] = isset($data['fontScores']) ? $data['fontScores'] : null;
     }
 
     /**
@@ -648,6 +670,54 @@ class WebImageWordsBlockList implements ModelInterface, ArrayAccess
     public function setDetailAddress($detailAddress)
     {
         $this->container['detailAddress'] = $detailAddress;
+        return $this;
+    }
+
+    /**
+    * Gets fontList
+    *  文字块所属字体类型，列表形式，表示与文字块的文字最接近的字体类型。
+    *
+    * @return string[]|null
+    */
+    public function getFontList()
+    {
+        return $this->container['fontList'];
+    }
+
+    /**
+    * Sets fontList
+    *
+    * @param string[]|null $fontList 文字块所属字体类型，列表形式，表示与文字块的文字最接近的字体类型。
+    *
+    * @return $this
+    */
+    public function setFontList($fontList)
+    {
+        $this->container['fontList'] = $fontList;
+        return $this;
+    }
+
+    /**
+    * Gets fontScores
+    *  文字块所属字体类型的概率，列表形式，与font_list一一对应，表示文字块的文字属于某种字体类型的概率。
+    *
+    * @return float[]|null
+    */
+    public function getFontScores()
+    {
+        return $this->container['fontScores'];
+    }
+
+    /**
+    * Sets fontScores
+    *
+    * @param float[]|null $fontScores 文字块所属字体类型的概率，列表形式，与font_list一一对应，表示文字块的文字属于某种字体类型的概率。
+    *
+    * @return $this
+    */
+    public function setFontScores($fontScores)
+    {
+        $this->container['fontScores'] = $fontScores;
         return $this;
     }
 

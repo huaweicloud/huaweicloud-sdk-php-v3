@@ -20,8 +20,8 @@ class FilterFactor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  |参数名称：维度分组条件| |参数约束及描述：维度分组条件|
-    * value  |参数名称：过滤器值| |参数约束及描述：过滤器值|
+    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本单元
+    * value  过滤器值
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class FilterFactor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  |参数名称：维度分组条件| |参数约束及描述：维度分组条件|
-    * value  |参数名称：过滤器值| |参数约束及描述：过滤器值|
+    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本单元
+    * value  过滤器值
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class FilterFactor implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  |参数名称：维度分组条件| |参数约束及描述：维度分组条件|
-    * value  |参数名称：过滤器值| |参数约束及描述：过滤器值|
+    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本单元
+    * value  过滤器值
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class FilterFactor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  |参数名称：维度分组条件| |参数约束及描述：维度分组条件|
-    * value  |参数名称：过滤器值| |参数约束及描述：过滤器值|
+    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本单元
+    * value  过滤器值
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class FilterFactor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  |参数名称：维度分组条件| |参数约束及描述：维度分组条件|
-    * value  |参数名称：过滤器值| |参数约束及描述：过滤器值|
+    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本单元
+    * value  过滤器值
     *
     * @var string[]
     */
@@ -169,12 +169,18 @@ class FilterFactor implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) > 256)) {
+        if ($this->container['key'] === null) {
+            $invalidProperties[] = "'key' can't be null";
+        }
+            if ((mb_strlen($this->container['key']) > 256)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) < 1)) {
+            if ((mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
             }
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -191,9 +197,9 @@ class FilterFactor implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  |参数名称：维度分组条件| |参数约束及描述：维度分组条件|
+    *  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本单元
     *
-    * @return string|null
+    * @return string
     */
     public function getKey()
     {
@@ -203,7 +209,7 @@ class FilterFactor implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key |参数名称：维度分组条件| |参数约束及描述：维度分组条件|
+    * @param string $key 维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本单元
     *
     * @return $this
     */
@@ -215,9 +221,9 @@ class FilterFactor implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  |参数名称：过滤器值| |参数约束及描述：过滤器值|
+    *  过滤器值
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getValue()
     {
@@ -227,7 +233,7 @@ class FilterFactor implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string[]|null $value |参数名称：过滤器值| |参数约束及描述：过滤器值|
+    * @param string[] $value 过滤器值
     *
     * @return $this
     */
