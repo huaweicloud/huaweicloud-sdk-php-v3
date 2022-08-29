@@ -23,6 +23,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
     * adminPass  如果需要使用密码方式登录云服务器，可使用adminPass字段指定云服务器管理员帐户初始登录密码。其中，Linux管理员帐户为root，Windows管理员帐户为Administrator。具体使用方法请参见接口描述信息（设置登录鉴权方式）。  密码复杂度要求：   - 长度为8-26位。  - 密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?）中的三种。 - 密码不能包含用户名或用户名的逆序。  - Windows系统密码不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。
     * availabilityZone  待创建云服务器所在的可用分区，需要指定可用分区（AZ）的名称。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * batchCreateInMultiAz  是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
     * count  创建云服务器数量。  约束：  - 不传该字段时默认取值为1。 - 租户的配额足够时，最大值为500。
     * dataVolumes  云服务器对应数据盘相关配置。每一个数据结构代表一块待创建的数据盘。 约束：目前新创建的弹性云服务器最多可挂载23块数据盘。
     * extendparam  extendparam
@@ -49,6 +50,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'autoTerminateTime' => 'string',
             'adminPass' => 'string',
             'availabilityZone' => 'string',
+            'batchCreateInMultiAz' => 'bool',
             'count' => 'int',
             'dataVolumes' => '\HuaweiCloud\SDK\Ecs\V2\Model\PostPaidServerDataVolume[]',
             'extendparam' => '\HuaweiCloud\SDK\Ecs\V2\Model\PostPaidServerExtendParam',
@@ -75,6 +77,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
     * adminPass  如果需要使用密码方式登录云服务器，可使用adminPass字段指定云服务器管理员帐户初始登录密码。其中，Linux管理员帐户为root，Windows管理员帐户为Administrator。具体使用方法请参见接口描述信息（设置登录鉴权方式）。  密码复杂度要求：   - 长度为8-26位。  - 密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?）中的三种。 - 密码不能包含用户名或用户名的逆序。  - Windows系统密码不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。
     * availabilityZone  待创建云服务器所在的可用分区，需要指定可用分区（AZ）的名称。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * batchCreateInMultiAz  是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
     * count  创建云服务器数量。  约束：  - 不传该字段时默认取值为1。 - 租户的配额足够时，最大值为500。
     * dataVolumes  云服务器对应数据盘相关配置。每一个数据结构代表一块待创建的数据盘。 约束：目前新创建的弹性云服务器最多可挂载23块数据盘。
     * extendparam  extendparam
@@ -101,6 +104,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
         'autoTerminateTime' => null,
         'adminPass' => null,
         'availabilityZone' => null,
+        'batchCreateInMultiAz' => null,
         'count' => 'int32',
         'dataVolumes' => null,
         'extendparam' => null,
@@ -148,6 +152,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
     * adminPass  如果需要使用密码方式登录云服务器，可使用adminPass字段指定云服务器管理员帐户初始登录密码。其中，Linux管理员帐户为root，Windows管理员帐户为Administrator。具体使用方法请参见接口描述信息（设置登录鉴权方式）。  密码复杂度要求：   - 长度为8-26位。  - 密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?）中的三种。 - 密码不能包含用户名或用户名的逆序。  - Windows系统密码不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。
     * availabilityZone  待创建云服务器所在的可用分区，需要指定可用分区（AZ）的名称。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * batchCreateInMultiAz  是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
     * count  创建云服务器数量。  约束：  - 不传该字段时默认取值为1。 - 租户的配额足够时，最大值为500。
     * dataVolumes  云服务器对应数据盘相关配置。每一个数据结构代表一块待创建的数据盘。 约束：目前新创建的弹性云服务器最多可挂载23块数据盘。
     * extendparam  extendparam
@@ -174,6 +179,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'autoTerminateTime' => 'auto_terminate_time',
             'adminPass' => 'adminPass',
             'availabilityZone' => 'availability_zone',
+            'batchCreateInMultiAz' => 'batch_create_in_multi_az',
             'count' => 'count',
             'dataVolumes' => 'data_volumes',
             'extendparam' => 'extendparam',
@@ -200,6 +206,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
     * adminPass  如果需要使用密码方式登录云服务器，可使用adminPass字段指定云服务器管理员帐户初始登录密码。其中，Linux管理员帐户为root，Windows管理员帐户为Administrator。具体使用方法请参见接口描述信息（设置登录鉴权方式）。  密码复杂度要求：   - 长度为8-26位。  - 密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?）中的三种。 - 密码不能包含用户名或用户名的逆序。  - Windows系统密码不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。
     * availabilityZone  待创建云服务器所在的可用分区，需要指定可用分区（AZ）的名称。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * batchCreateInMultiAz  是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
     * count  创建云服务器数量。  约束：  - 不传该字段时默认取值为1。 - 租户的配额足够时，最大值为500。
     * dataVolumes  云服务器对应数据盘相关配置。每一个数据结构代表一块待创建的数据盘。 约束：目前新创建的弹性云服务器最多可挂载23块数据盘。
     * extendparam  extendparam
@@ -226,6 +233,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'autoTerminateTime' => 'setAutoTerminateTime',
             'adminPass' => 'setAdminPass',
             'availabilityZone' => 'setAvailabilityZone',
+            'batchCreateInMultiAz' => 'setBatchCreateInMultiAz',
             'count' => 'setCount',
             'dataVolumes' => 'setDataVolumes',
             'extendparam' => 'setExtendparam',
@@ -252,6 +260,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * autoTerminateTime  弹性云服务器自动释放时间。  时间格式例如：2020-01-19T03:30:52Z
     * adminPass  如果需要使用密码方式登录云服务器，可使用adminPass字段指定云服务器管理员帐户初始登录密码。其中，Linux管理员帐户为root，Windows管理员帐户为Administrator。具体使用方法请参见接口描述信息（设置登录鉴权方式）。  密码复杂度要求：   - 长度为8-26位。  - 密码至少必须包含大写字母、小写字母、数字和特殊字符（!@$%^-_=+[{}]:,./?）中的三种。 - 密码不能包含用户名或用户名的逆序。  - Windows系统密码不能包含用户名或用户名的逆序，不能包含用户名中超过两个连续字符的部分。
     * availabilityZone  待创建云服务器所在的可用分区，需要指定可用分区（AZ）的名称。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * batchCreateInMultiAz  是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
     * count  创建云服务器数量。  约束：  - 不传该字段时默认取值为1。 - 租户的配额足够时，最大值为500。
     * dataVolumes  云服务器对应数据盘相关配置。每一个数据结构代表一块待创建的数据盘。 约束：目前新创建的弹性云服务器最多可挂载23块数据盘。
     * extendparam  extendparam
@@ -278,6 +287,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'autoTerminateTime' => 'getAutoTerminateTime',
             'adminPass' => 'getAdminPass',
             'availabilityZone' => 'getAvailabilityZone',
+            'batchCreateInMultiAz' => 'getBatchCreateInMultiAz',
             'count' => 'getCount',
             'dataVolumes' => 'getDataVolumes',
             'extendparam' => 'getExtendparam',
@@ -360,6 +370,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
         $this->container['autoTerminateTime'] = isset($data['autoTerminateTime']) ? $data['autoTerminateTime'] : null;
         $this->container['adminPass'] = isset($data['adminPass']) ? $data['adminPass'] : null;
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
+        $this->container['batchCreateInMultiAz'] = isset($data['batchCreateInMultiAz']) ? $data['batchCreateInMultiAz'] : false;
         $this->container['count'] = isset($data['count']) ? $data['count'] : 1;
         $this->container['dataVolumes'] = isset($data['dataVolumes']) ? $data['dataVolumes'] : null;
         $this->container['extendparam'] = isset($data['extendparam']) ? $data['extendparam'] : null;
@@ -517,6 +528,30 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     public function setAvailabilityZone($availabilityZone)
     {
         $this->container['availabilityZone'] = $availabilityZone;
+        return $this;
+    }
+
+    /**
+    * Gets batchCreateInMultiAz
+    *  是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
+    *
+    * @return bool|null
+    */
+    public function getBatchCreateInMultiAz()
+    {
+        return $this->container['batchCreateInMultiAz'];
+    }
+
+    /**
+    * Sets batchCreateInMultiAz
+    *
+    * @param bool|null $batchCreateInMultiAz 是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
+    *
+    * @return $this
+    */
+    public function setBatchCreateInMultiAz($batchCreateInMultiAz)
+    {
+        $this->container['batchCreateInMultiAz'] = $batchCreateInMultiAz;
         return $this;
     }
 
