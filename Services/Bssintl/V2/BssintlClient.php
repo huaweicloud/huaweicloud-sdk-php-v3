@@ -948,6 +948,9 @@ class BssintlClient extends Client
         if ($localVarParams['paymentTimeEnd'] !== null) {
             $queryParams['payment_time_end'] = $localVarParams['paymentTimeEnd'];
         }
+        if ($localVarParams['indirectPartnerId'] !== null) {
+            $queryParams['indirect_partner_id'] = $localVarParams['indirectPartnerId'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -2635,6 +2638,9 @@ class BssintlClient extends Client
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['indirectPartnerId'] !== null) {
+            $queryParams['indirect_partner_id'] = $localVarParams['indirectPartnerId'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];

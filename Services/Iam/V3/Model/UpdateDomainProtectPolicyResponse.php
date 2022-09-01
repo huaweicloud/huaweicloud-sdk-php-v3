@@ -26,7 +26,7 @@ class UpdateDomainProtectPolicyResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'protectPolicy' => '\HuaweiCloud\SDK\Iam\V3\Model\ProtectPolicyResult'
+            'protectPolicy' => '\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainProtectPolicyResponseBodyProtectPolicy'
     ];
 
     /**
@@ -177,7 +177,7 @@ class UpdateDomainProtectPolicyResponse implements ModelInterface, ArrayAccess
     * Gets protectPolicy
     *  protectPolicy
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\ProtectPolicyResult|null
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainProtectPolicyResponseBodyProtectPolicy|null
     */
     public function getProtectPolicy()
     {
@@ -187,7 +187,7 @@ class UpdateDomainProtectPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protectPolicy
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\ProtectPolicyResult|null $protectPolicy protectPolicy
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainProtectPolicyResponseBodyProtectPolicy|null $protectPolicy protectPolicy
     *
     * @return $this
     */

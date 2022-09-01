@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AclPolicyOption implements ModelInterface, ArrayAccess
+class RulesLocal implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,34 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'AclPolicyOption';
+    protected static $openAPIModelName = 'RulesLocal';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * allowAddressNetmasks  允许访问的IP地址或网段。
-    * allowIpRanges  允许访问的IP地址区间。
+    * user  user
+    * group  group
+    * groups  groups
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'allowAddressNetmasks' => '\HuaweiCloud\SDK\Iam\V3\Model\AllowAddressNetmasksOption[]',
-            'allowIpRanges' => '\HuaweiCloud\SDK\Iam\V3\Model\AllowIpRangesOption[]'
+            'user' => '\HuaweiCloud\SDK\Iam\V3\Model\RulesLocalUser',
+            'group' => '\HuaweiCloud\SDK\Iam\V3\Model\RulesLocalGroup',
+            'groups' => '\HuaweiCloud\SDK\Iam\V3\Model\RulesLocalGroups'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * allowAddressNetmasks  允许访问的IP地址或网段。
-    * allowIpRanges  允许访问的IP地址区间。
+    * user  user
+    * group  group
+    * groups  groups
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'allowAddressNetmasks' => null,
-        'allowIpRanges' => null
+        'user' => null,
+        'group' => null,
+        'groups' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * allowAddressNetmasks  允许访问的IP地址或网段。
-    * allowIpRanges  允许访问的IP地址区间。
+    * user  user
+    * group  group
+    * groups  groups
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'allowAddressNetmasks' => 'allow_address_netmasks',
-            'allowIpRanges' => 'allow_ip_ranges'
+            'user' => 'user',
+            'group' => 'group',
+            'groups' => 'groups'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * allowAddressNetmasks  允许访问的IP地址或网段。
-    * allowIpRanges  允许访问的IP地址区间。
+    * user  user
+    * group  group
+    * groups  groups
     *
     * @var string[]
     */
     protected static $setters = [
-            'allowAddressNetmasks' => 'setAllowAddressNetmasks',
-            'allowIpRanges' => 'setAllowIpRanges'
+            'user' => 'setUser',
+            'group' => 'setGroup',
+            'groups' => 'setGroups'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * allowAddressNetmasks  允许访问的IP地址或网段。
-    * allowIpRanges  允许访问的IP地址区间。
+    * user  user
+    * group  group
+    * groups  groups
     *
     * @var string[]
     */
     protected static $getters = [
-            'allowAddressNetmasks' => 'getAllowAddressNetmasks',
-            'allowIpRanges' => 'getAllowIpRanges'
+            'user' => 'getUser',
+            'group' => 'getGroup',
+            'groups' => 'getGroups'
     ];
 
     /**
@@ -157,8 +167,9 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['allowAddressNetmasks'] = isset($data['allowAddressNetmasks']) ? $data['allowAddressNetmasks'] : null;
-        $this->container['allowIpRanges'] = isset($data['allowIpRanges']) ? $data['allowIpRanges'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
+        $this->container['group'] = isset($data['group']) ? $data['group'] : null;
+        $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
     }
 
     /**
@@ -184,50 +195,74 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets allowAddressNetmasks
-    *  允许访问的IP地址或网段。
+    * Gets user
+    *  user
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowAddressNetmasksOption[]|null
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\RulesLocalUser|null
     */
-    public function getAllowAddressNetmasks()
+    public function getUser()
     {
-        return $this->container['allowAddressNetmasks'];
+        return $this->container['user'];
     }
 
     /**
-    * Sets allowAddressNetmasks
+    * Sets user
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\AllowAddressNetmasksOption[]|null $allowAddressNetmasks 允许访问的IP地址或网段。
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\RulesLocalUser|null $user user
     *
     * @return $this
     */
-    public function setAllowAddressNetmasks($allowAddressNetmasks)
+    public function setUser($user)
     {
-        $this->container['allowAddressNetmasks'] = $allowAddressNetmasks;
+        $this->container['user'] = $user;
         return $this;
     }
 
     /**
-    * Gets allowIpRanges
-    *  允许访问的IP地址区间。
+    * Gets group
+    *  group
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowIpRangesOption[]|null
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\RulesLocalGroup|null
     */
-    public function getAllowIpRanges()
+    public function getGroup()
     {
-        return $this->container['allowIpRanges'];
+        return $this->container['group'];
     }
 
     /**
-    * Sets allowIpRanges
+    * Sets group
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\AllowIpRangesOption[]|null $allowIpRanges 允许访问的IP地址区间。
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\RulesLocalGroup|null $group group
     *
     * @return $this
     */
-    public function setAllowIpRanges($allowIpRanges)
+    public function setGroup($group)
     {
-        $this->container['allowIpRanges'] = $allowIpRanges;
+        $this->container['group'] = $group;
+        return $this;
+    }
+
+    /**
+    * Gets groups
+    *  groups
+    *
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\RulesLocalGroups|null
+    */
+    public function getGroups()
+    {
+        return $this->container['groups'];
+    }
+
+    /**
+    * Sets groups
+    *
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\RulesLocalGroups|null $groups groups
+    *
+    * @return $this
+    */
+    public function setGroups($groups)
+    {
+        $this->container['groups'] = $groups;
         return $this;
     }
 

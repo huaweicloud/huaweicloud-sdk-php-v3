@@ -21,7 +21,7 @@ class ShowDomainQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-    * type  查询配额的类型，取值范围为：user, group, idp, agency, policy, assigment_group_mp, assigment_agency_mp, assigment_group_ep, assigment_user_ep。
+    * type  查询配额的类型，取值范围为：user, group, idp, agency, policy, assigment_group_mp, assigment_agency_mp, assigment_group_ep, assigment_user_ep, mapping。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ShowDomainQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-    * type  查询配额的类型，取值范围为：user, group, idp, agency, policy, assigment_group_mp, assigment_agency_mp, assigment_group_ep, assigment_user_ep。
+    * type  查询配额的类型，取值范围为：user, group, idp, agency, policy, assigment_group_mp, assigment_agency_mp, assigment_group_ep, assigment_user_ep, mapping。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowDomainQuotaRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-    * type  查询配额的类型，取值范围为：user, group, idp, agency, policy, assigment_group_mp, assigment_agency_mp, assigment_group_ep, assigment_user_ep。
+    * type  查询配额的类型，取值范围为：user, group, idp, agency, policy, assigment_group_mp, assigment_agency_mp, assigment_group_ep, assigment_user_ep, mapping。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ShowDomainQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-    * type  查询配额的类型，取值范围为：user, group, idp, agency, policy, assigment_group_mp, assigment_agency_mp, assigment_group_ep, assigment_user_ep。
+    * type  查询配额的类型，取值范围为：user, group, idp, agency, policy, assigment_group_mp, assigment_agency_mp, assigment_group_ep, assigment_user_ep, mapping。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ShowDomainQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domainId  待查询的账号ID，获取方式请参见：[获取账号、IAM用户、项目、用户组、委托的名称和ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
-    * type  查询配额的类型，取值范围为：user, group, idp, agency, policy, assigment_group_mp, assigment_agency_mp, assigment_group_ep, assigment_user_ep。
+    * type  查询配额的类型，取值范围为：user, group, idp, agency, policy, assigment_group_mp, assigment_agency_mp, assigment_group_ep, assigment_user_ep, mapping。
     *
     * @var string[]
     */
@@ -148,6 +148,7 @@ class ShowDomainQuotaRequest implements ModelInterface, ArrayAccess
     const TYPE_ASSIGMENT_AGENCY_MP = 'assigment_agency_mp';
     const TYPE_ASSIGMENT_GROUP_EP = 'assigment_group_ep';
     const TYPE_ASSIGMENT_USER_EP = 'assigment_user_ep';
+    const TYPE_MAPPING = 'mapping';
     
 
     /**
@@ -167,6 +168,7 @@ class ShowDomainQuotaRequest implements ModelInterface, ArrayAccess
             self::TYPE_ASSIGMENT_AGENCY_MP,
             self::TYPE_ASSIGMENT_GROUP_EP,
             self::TYPE_ASSIGMENT_USER_EP,
+            self::TYPE_MAPPING,
         ];
     }
 
@@ -249,7 +251,7 @@ class ShowDomainQuotaRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  查询配额的类型，取值范围为：user, group, idp, agency, policy, assigment_group_mp, assigment_agency_mp, assigment_group_ep, assigment_user_ep。
+    *  查询配额的类型，取值范围为：user, group, idp, agency, policy, assigment_group_mp, assigment_agency_mp, assigment_group_ep, assigment_user_ep, mapping。
     *
     * @return string|null
     */
@@ -261,7 +263,7 @@ class ShowDomainQuotaRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 查询配额的类型，取值范围为：user, group, idp, agency, policy, assigment_group_mp, assigment_agency_mp, assigment_group_ep, assigment_user_ep。
+    * @param string|null $type 查询配额的类型，取值范围为：user, group, idp, agency, policy, assigment_group_mp, assigment_agency_mp, assigment_group_ep, assigment_user_ep, mapping。
     *
     * @return $this
     */

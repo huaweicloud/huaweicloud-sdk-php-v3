@@ -26,7 +26,7 @@ class MappingRules implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'local' => 'map[string,\HuaweiCloud\SDK\Iam\V3\Model\RulesLocalAdditional][]',
+            'local' => '\HuaweiCloud\SDK\Iam\V3\Model\RulesLocal[]',
             'remote' => '\HuaweiCloud\SDK\Iam\V3\Model\RulesRemote[]'
     ];
 
@@ -193,7 +193,7 @@ class MappingRules implements ModelInterface, ArrayAccess
     * Gets local
     *  表示联邦用户在本系统中的用户信息。 user：联邦用户在本系统中的用户名称。group：联邦用户在本系统中所属用户组。
     *
-    * @return map[string,\HuaweiCloud\SDK\Iam\V3\Model\RulesLocalAdditional][]
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\RulesLocal[]
     */
     public function getLocal()
     {
@@ -203,7 +203,7 @@ class MappingRules implements ModelInterface, ArrayAccess
     /**
     * Sets local
     *
-    * @param map[string,\HuaweiCloud\SDK\Iam\V3\Model\RulesLocalAdditional][] $local 表示联邦用户在本系统中的用户信息。 user：联邦用户在本系统中的用户名称。group：联邦用户在本系统中所属用户组。
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\RulesLocal[] $local 表示联邦用户在本系统中的用户信息。 user：联邦用户在本系统中的用户名称。group：联邦用户在本系统中所属用户组。
     *
     * @return $this
     */

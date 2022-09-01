@@ -29,6 +29,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
     * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
+    * indirectPartnerId  云经销商ID。如果需要查询云经销商子客户的按需资源列表，必须携带该字段，除此之外，此参数不做处理。否则只能查询自己的子客户按需资源。
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
             'effectiveTimeEnd' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'status' => 'int'
+            'status' => 'int',
+            'indirectPartnerId' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
     * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
+    * indirectPartnerId  云经销商ID。如果需要查询云经销商子客户的按需资源列表，必须携带该字段，除此之外，此参数不做处理。否则只能查询自己的子客户按需资源。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
         'effectiveTimeEnd' => null,
         'offset' => 'int32',
         'limit' => 'int32',
-        'status' => 'int32'
+        'status' => 'int32',
+        'indirectPartnerId' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
     * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
+    * indirectPartnerId  云经销商ID。如果需要查询云经销商子客户的按需资源列表，必须携带该字段，除此之外，此参数不做处理。否则只能查询自己的子客户按需资源。
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
             'effectiveTimeEnd' => 'effective_time_end',
             'offset' => 'offset',
             'limit' => 'limit',
-            'status' => 'status'
+            'status' => 'status',
+            'indirectPartnerId' => 'indirect_partner_id'
     ];
 
     /**
@@ -128,6 +134,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
     * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
+    * indirectPartnerId  云经销商ID。如果需要查询云经销商子客户的按需资源列表，必须携带该字段，除此之外，此参数不做处理。否则只能查询自己的子客户按需资源。
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
             'effectiveTimeEnd' => 'setEffectiveTimeEnd',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'indirectPartnerId' => 'setIndirectPartnerId'
     ];
 
     /**
@@ -154,6 +162,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     * offset  偏移量，从0开始。默认值为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  一次查询的条数，默认值为10。
     * status  资源状态： 1：正常（已开通）2：宽限期3：冻结中4：变更中5：正在关闭6：已关闭
+    * indirectPartnerId  云经销商ID。如果需要查询云经销商子客户的按需资源列表，必须携带该字段，除此之外，此参数不做处理。否则只能查询自己的子客户按需资源。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
             'effectiveTimeEnd' => 'getEffectiveTimeEnd',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'indirectPartnerId' => 'getIndirectPartnerId'
     ];
 
     /**
@@ -236,6 +246,7 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 
     /**
@@ -296,6 +307,12 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['status']) && ($this->container['status'] < 1)) {
                 $invalidProperties[] = "invalid value for 'status', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -524,6 +541,30 @@ class QueryCustomerOnDemandResourcesReq implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets indirectPartnerId
+    *  云经销商ID。如果需要查询云经销商子客户的按需资源列表，必须携带该字段，除此之外，此参数不做处理。否则只能查询自己的子客户按需资源。
+    *
+    * @return string|null
+    */
+    public function getIndirectPartnerId()
+    {
+        return $this->container['indirectPartnerId'];
+    }
+
+    /**
+    * Sets indirectPartnerId
+    *
+    * @param string|null $indirectPartnerId 云经销商ID。如果需要查询云经销商子客户的按需资源列表，必须携带该字段，除此之外，此参数不做处理。否则只能查询自己的子客户按需资源。
+    *
+    * @return $this
+    */
+    public function setIndirectPartnerId($indirectPartnerId)
+    {
+        $this->container['indirectPartnerId'] = $indirectPartnerId;
         return $this;
     }
 

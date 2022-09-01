@@ -169,12 +169,6 @@ class AclPolicyResult implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['allowAddressNetmasks'] === null) {
-            $invalidProperties[] = "'allowAddressNetmasks' can't be null";
-        }
-        if ($this->container['allowIpRanges'] === null) {
-            $invalidProperties[] = "'allowIpRanges' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -193,7 +187,7 @@ class AclPolicyResult implements ModelInterface, ArrayAccess
     * Gets allowAddressNetmasks
     *  允许访问的IP地址或网段。
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowAddressNetmasksResult[]
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowAddressNetmasksResult[]|null
     */
     public function getAllowAddressNetmasks()
     {
@@ -203,7 +197,7 @@ class AclPolicyResult implements ModelInterface, ArrayAccess
     /**
     * Sets allowAddressNetmasks
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\AllowAddressNetmasksResult[] $allowAddressNetmasks 允许访问的IP地址或网段。
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\AllowAddressNetmasksResult[]|null $allowAddressNetmasks 允许访问的IP地址或网段。
     *
     * @return $this
     */
@@ -217,7 +211,7 @@ class AclPolicyResult implements ModelInterface, ArrayAccess
     * Gets allowIpRanges
     *  允许访问的IP地址区间。
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowIpRangesResult[]
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowIpRangesResult[]|null
     */
     public function getAllowIpRanges()
     {
@@ -227,7 +221,7 @@ class AclPolicyResult implements ModelInterface, ArrayAccess
     /**
     * Sets allowIpRanges
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\AllowIpRangesResult[] $allowIpRanges 允许访问的IP地址区间。
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\AllowIpRangesResult[]|null $allowIpRanges 允许访问的IP地址区间。
     *
     * @return $this
     */

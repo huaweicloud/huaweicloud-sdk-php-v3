@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class RulesLocalAdditional implements ModelInterface, ArrayAccess
+class RulesLocalUser implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,11 +16,11 @@ class RulesLocalAdditional implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'RulesLocalAdditional';
+    protected static $openAPIModelName = 'RulesLocal_user';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  user：联邦用户在本系统中的用户名称。 ``` \"user\":{\"name\":\"{0}\"} ```  group：联邦用户在本系统中所属用户组。 ``` \"group\":{\"name\":\"0cd5e9\"} ```
+    * name  联邦用户在本系统中的用户名称
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class RulesLocalAdditional implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  user：联邦用户在本系统中的用户名称。 ``` \"user\":{\"name\":\"{0}\"} ```  group：联邦用户在本系统中所属用户组。 ``` \"group\":{\"name\":\"0cd5e9\"} ```
+    * name  联邦用户在本系统中的用户名称
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class RulesLocalAdditional implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  user：联邦用户在本系统中的用户名称。 ``` \"user\":{\"name\":\"{0}\"} ```  group：联邦用户在本系统中所属用户组。 ``` \"group\":{\"name\":\"0cd5e9\"} ```
+    * name  联邦用户在本系统中的用户名称
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class RulesLocalAdditional implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  user：联邦用户在本系统中的用户名称。 ``` \"user\":{\"name\":\"{0}\"} ```  group：联邦用户在本系统中所属用户组。 ``` \"group\":{\"name\":\"0cd5e9\"} ```
+    * name  联邦用户在本系统中的用户名称
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class RulesLocalAdditional implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  user：联邦用户在本系统中的用户名称。 ``` \"user\":{\"name\":\"{0}\"} ```  group：联邦用户在本系统中所属用户组。 ``` \"group\":{\"name\":\"0cd5e9\"} ```
+    * name  联邦用户在本系统中的用户名称
     *
     * @var string[]
     */
@@ -158,6 +158,9 @@ class RulesLocalAdditional implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -174,9 +177,9 @@ class RulesLocalAdditional implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  user：联邦用户在本系统中的用户名称。 ``` \"user\":{\"name\":\"{0}\"} ```  group：联邦用户在本系统中所属用户组。 ``` \"group\":{\"name\":\"0cd5e9\"} ```
+    *  联邦用户在本系统中的用户名称
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -186,7 +189,7 @@ class RulesLocalAdditional implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name user：联邦用户在本系统中的用户名称。 ``` \"user\":{\"name\":\"{0}\"} ```  group：联邦用户在本系统中所属用户组。 ``` \"group\":{\"name\":\"0cd5e9\"} ```
+    * @param string $name 联邦用户在本系统中的用户名称
     *
     * @return $this
     */

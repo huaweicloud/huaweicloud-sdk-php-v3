@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ProtectPolicyOption implements ModelInterface, ArrayAccess
+class ShowDomainProtectPolicyResponseBodyProtectPolicy implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,12 +16,12 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ProtectPolicyOption';
+    protected static $openAPIModelName = 'ShowDomainProtectPolicyResponseBody_protect_policy';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
     * allowUser  allowUser
+    * operationProtection  是否开启操作保护，取值范围true或false。
     * mobile  操作保护验证指定手机号码。示例：0086-123456789。
     * adminCheck  是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
     * email  操作保护验证指定邮件地址。示例：example@email.com。
@@ -30,8 +30,8 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'operationProtection' => 'bool',
             'allowUser' => '\HuaweiCloud\SDK\Iam\V3\Model\AllowUserBody',
+            'operationProtection' => 'bool',
             'mobile' => 'string',
             'adminCheck' => 'string',
             'email' => 'string',
@@ -40,8 +40,8 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
     * allowUser  allowUser
+    * operationProtection  是否开启操作保护，取值范围true或false。
     * mobile  操作保护验证指定手机号码。示例：0086-123456789。
     * adminCheck  是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
     * email  操作保护验证指定邮件地址。示例：example@email.com。
@@ -50,8 +50,8 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'operationProtection' => null,
         'allowUser' => null,
+        'operationProtection' => null,
         'mobile' => null,
         'adminCheck' => null,
         'email' => null,
@@ -81,8 +81,8 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
     * allowUser  allowUser
+    * operationProtection  是否开启操作保护，取值范围true或false。
     * mobile  操作保护验证指定手机号码。示例：0086-123456789。
     * adminCheck  是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
     * email  操作保护验证指定邮件地址。示例：example@email.com。
@@ -91,8 +91,8 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'operationProtection' => 'operation_protection',
             'allowUser' => 'allow_user',
+            'operationProtection' => 'operation_protection',
             'mobile' => 'mobile',
             'adminCheck' => 'admin_check',
             'email' => 'email',
@@ -101,8 +101,8 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
     * allowUser  allowUser
+    * operationProtection  是否开启操作保护，取值范围true或false。
     * mobile  操作保护验证指定手机号码。示例：0086-123456789。
     * adminCheck  是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
     * email  操作保护验证指定邮件地址。示例：example@email.com。
@@ -111,8 +111,8 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'operationProtection' => 'setOperationProtection',
             'allowUser' => 'setAllowUser',
+            'operationProtection' => 'setOperationProtection',
             'mobile' => 'setMobile',
             'adminCheck' => 'setAdminCheck',
             'email' => 'setEmail',
@@ -121,8 +121,8 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
     * allowUser  allowUser
+    * operationProtection  是否开启操作保护，取值范围true或false。
     * mobile  操作保护验证指定手机号码。示例：0086-123456789。
     * adminCheck  是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
     * email  操作保护验证指定邮件地址。示例：example@email.com。
@@ -131,8 +131,8 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'operationProtection' => 'getOperationProtection',
             'allowUser' => 'getAllowUser',
+            'operationProtection' => 'getOperationProtection',
             'mobile' => 'getMobile',
             'adminCheck' => 'getAdminCheck',
             'email' => 'getEmail',
@@ -197,8 +197,8 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['operationProtection'] = isset($data['operationProtection']) ? $data['operationProtection'] : null;
         $this->container['allowUser'] = isset($data['allowUser']) ? $data['allowUser'] : null;
+        $this->container['operationProtection'] = isset($data['operationProtection']) ? $data['operationProtection'] : null;
         $this->container['mobile'] = isset($data['mobile']) ? $data['mobile'] : null;
         $this->container['adminCheck'] = isset($data['adminCheck']) ? $data['adminCheck'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
@@ -213,8 +213,23 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['allowUser'] === null) {
+            $invalidProperties[] = "'allowUser' can't be null";
+        }
         if ($this->container['operationProtection'] === null) {
             $invalidProperties[] = "'operationProtection' can't be null";
+        }
+        if ($this->container['mobile'] === null) {
+            $invalidProperties[] = "'mobile' can't be null";
+        }
+        if ($this->container['adminCheck'] === null) {
+            $invalidProperties[] = "'adminCheck' can't be null";
+        }
+        if ($this->container['email'] === null) {
+            $invalidProperties[] = "'email' can't be null";
+        }
+        if ($this->container['scene'] === null) {
+            $invalidProperties[] = "'scene' can't be null";
         }
         return $invalidProperties;
     }
@@ -231,8 +246,32 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets allowUser
+    *  allowUser
+    *
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowUserBody
+    */
+    public function getAllowUser()
+    {
+        return $this->container['allowUser'];
+    }
+
+    /**
+    * Sets allowUser
+    *
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\AllowUserBody $allowUser allowUser
+    *
+    * @return $this
+    */
+    public function setAllowUser($allowUser)
+    {
+        $this->container['allowUser'] = $allowUser;
+        return $this;
+    }
+
+    /**
     * Gets operationProtection
-    *  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
+    *  是否开启操作保护，取值范围true或false。
     *
     * @return bool
     */
@@ -244,7 +283,7 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets operationProtection
     *
-    * @param bool $operationProtection 是否开启操作保护，开启为\"true\"，未开启为\"false\"。
+    * @param bool $operationProtection 是否开启操作保护，取值范围true或false。
     *
     * @return $this
     */
@@ -255,34 +294,10 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets allowUser
-    *  allowUser
-    *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowUserBody|null
-    */
-    public function getAllowUser()
-    {
-        return $this->container['allowUser'];
-    }
-
-    /**
-    * Sets allowUser
-    *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\AllowUserBody|null $allowUser allowUser
-    *
-    * @return $this
-    */
-    public function setAllowUser($allowUser)
-    {
-        $this->container['allowUser'] = $allowUser;
-        return $this;
-    }
-
-    /**
     * Gets mobile
     *  操作保护验证指定手机号码。示例：0086-123456789。
     *
-    * @return string|null
+    * @return string
     */
     public function getMobile()
     {
@@ -292,7 +307,7 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets mobile
     *
-    * @param string|null $mobile 操作保护验证指定手机号码。示例：0086-123456789。
+    * @param string $mobile 操作保护验证指定手机号码。示例：0086-123456789。
     *
     * @return $this
     */
@@ -306,7 +321,7 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     * Gets adminCheck
     *  是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
     *
-    * @return string|null
+    * @return string
     */
     public function getAdminCheck()
     {
@@ -316,7 +331,7 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets adminCheck
     *
-    * @param string|null $adminCheck 是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
+    * @param string $adminCheck 是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
     *
     * @return $this
     */
@@ -330,7 +345,7 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     * Gets email
     *  操作保护验证指定邮件地址。示例：example@email.com。
     *
-    * @return string|null
+    * @return string
     */
     public function getEmail()
     {
@@ -340,7 +355,7 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 操作保护验证指定邮件地址。示例：example@email.com。
+    * @param string $email 操作保护验证指定邮件地址。示例：example@email.com。
     *
     * @return $this
     */
@@ -354,7 +369,7 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     * Gets scene
     *  操作保护指定人员验证方式，admin_check为on时，必须填写。包括mobile、email。
     *
-    * @return string|null
+    * @return string
     */
     public function getScene()
     {
@@ -364,7 +379,7 @@ class ProtectPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets scene
     *
-    * @param string|null $scene 操作保护指定人员验证方式，admin_check为on时，必须填写。包括mobile、email。
+    * @param string $scene 操作保护指定人员验证方式，admin_check为on时，必须填写。包括mobile、email。
     *
     * @return $this
     */

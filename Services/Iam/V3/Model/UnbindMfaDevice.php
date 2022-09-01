@@ -21,7 +21,7 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * userId  待解绑MFA设备的IAM用户ID。
-    * authenticationCode  • 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。 • IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
+    * authenticationCode  管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
     * serialNumber  MFA设备序列号。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * userId  待解绑MFA设备的IAM用户ID。
-    * authenticationCode  • 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。 • IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
+    * authenticationCode  管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
     * serialNumber  MFA设备序列号。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * userId  待解绑MFA设备的IAM用户ID。
-    * authenticationCode  • 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。 • IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
+    * authenticationCode  管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
     * serialNumber  MFA设备序列号。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * userId  待解绑MFA设备的IAM用户ID。
-    * authenticationCode  • 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。 • IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
+    * authenticationCode  管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
     * serialNumber  MFA设备序列号。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * userId  待解绑MFA设备的IAM用户ID。
-    * authenticationCode  • 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。 • IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
+    * authenticationCode  管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
     * serialNumber  MFA设备序列号。
     *
     * @var string[]
@@ -229,7 +229,7 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets authenticationCode
-    *  • 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。 • IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
+    *  管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class UnbindMfaDevice implements ModelInterface, ArrayAccess
     /**
     * Sets authenticationCode
     *
-    * @param string $authenticationCode • 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。 • IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
+    * @param string $authenticationCode 管理员为IAM用户解绑MFA设备：填写6位任意验证码，不做校验。IAM用户为自己解绑MFA设备：填写虚拟MFA验证码。
     *
     * @return $this
     */

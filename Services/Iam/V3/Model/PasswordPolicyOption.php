@@ -224,31 +224,10 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['maximumConsecutiveIdenticalChars'] === null) {
-            $invalidProperties[] = "'maximumConsecutiveIdenticalChars' can't be null";
-        }
-        if ($this->container['minimumPasswordAge'] === null) {
-            $invalidProperties[] = "'minimumPasswordAge' can't be null";
-        }
-        if ($this->container['minimumPasswordLength'] === null) {
-            $invalidProperties[] = "'minimumPasswordLength' can't be null";
-        }
-        if ($this->container['numberOfRecentPasswordsDisallowed'] === null) {
-            $invalidProperties[] = "'numberOfRecentPasswordsDisallowed' can't be null";
-        }
-        if ($this->container['passwordNotUsernameOrInvert'] === null) {
-            $invalidProperties[] = "'passwordNotUsernameOrInvert' can't be null";
-        }
-        if ($this->container['passwordValidityPeriod'] === null) {
-            $invalidProperties[] = "'passwordValidityPeriod' can't be null";
-        }
-        if ($this->container['passwordCharCombination'] === null) {
-            $invalidProperties[] = "'passwordCharCombination' can't be null";
-        }
-            if (($this->container['passwordCharCombination'] > 4)) {
+            if (!is_null($this->container['passwordCharCombination']) && ($this->container['passwordCharCombination'] > 4)) {
                 $invalidProperties[] = "invalid value for 'passwordCharCombination', must be smaller than or equal to 4.";
             }
-            if (($this->container['passwordCharCombination'] < 2)) {
+            if (!is_null($this->container['passwordCharCombination']) && ($this->container['passwordCharCombination'] < 2)) {
                 $invalidProperties[] = "invalid value for 'passwordCharCombination', must be bigger than or equal to 2.";
             }
         return $invalidProperties;
@@ -269,7 +248,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     * Gets maximumConsecutiveIdenticalChars
     *  同一字符连续出现的最大次数，取值范围[0,32]。
     *
-    * @return int
+    * @return int|null
     */
     public function getMaximumConsecutiveIdenticalChars()
     {
@@ -279,7 +258,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets maximumConsecutiveIdenticalChars
     *
-    * @param int $maximumConsecutiveIdenticalChars 同一字符连续出现的最大次数，取值范围[0,32]。
+    * @param int|null $maximumConsecutiveIdenticalChars 同一字符连续出现的最大次数，取值范围[0,32]。
     *
     * @return $this
     */
@@ -293,7 +272,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     * Gets minimumPasswordAge
     *  密码最短使用时间(分钟)，取值范围[0,1440]。
     *
-    * @return int
+    * @return int|null
     */
     public function getMinimumPasswordAge()
     {
@@ -303,7 +282,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets minimumPasswordAge
     *
-    * @param int $minimumPasswordAge 密码最短使用时间(分钟)，取值范围[0,1440]。
+    * @param int|null $minimumPasswordAge 密码最短使用时间(分钟)，取值范围[0,1440]。
     *
     * @return $this
     */
@@ -317,7 +296,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     * Gets minimumPasswordLength
     *  密码最小字符数，取值范围[6,32]。
     *
-    * @return int
+    * @return int|null
     */
     public function getMinimumPasswordLength()
     {
@@ -327,7 +306,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets minimumPasswordLength
     *
-    * @param int $minimumPasswordLength 密码最小字符数，取值范围[6,32]。
+    * @param int|null $minimumPasswordLength 密码最小字符数，取值范围[6,32]。
     *
     * @return $this
     */
@@ -341,7 +320,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     * Gets numberOfRecentPasswordsDisallowed
     *  密码不能与历史密码重复次数，取值范围[0,10]。
     *
-    * @return int
+    * @return int|null
     */
     public function getNumberOfRecentPasswordsDisallowed()
     {
@@ -351,7 +330,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets numberOfRecentPasswordsDisallowed
     *
-    * @param int $numberOfRecentPasswordsDisallowed 密码不能与历史密码重复次数，取值范围[0,10]。
+    * @param int|null $numberOfRecentPasswordsDisallowed 密码不能与历史密码重复次数，取值范围[0,10]。
     *
     * @return $this
     */
@@ -365,7 +344,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     * Gets passwordNotUsernameOrInvert
     *  密码是否可以是用户名或用户名的反序。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getPasswordNotUsernameOrInvert()
     {
@@ -375,7 +354,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets passwordNotUsernameOrInvert
     *
-    * @param bool $passwordNotUsernameOrInvert 密码是否可以是用户名或用户名的反序。
+    * @param bool|null $passwordNotUsernameOrInvert 密码是否可以是用户名或用户名的反序。
     *
     * @return $this
     */
@@ -389,7 +368,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     * Gets passwordValidityPeriod
     *  密码有效期（天），取值范围[0,180]，设置0表示关闭该策略。
     *
-    * @return int
+    * @return int|null
     */
     public function getPasswordValidityPeriod()
     {
@@ -399,7 +378,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets passwordValidityPeriod
     *
-    * @param int $passwordValidityPeriod 密码有效期（天），取值范围[0,180]，设置0表示关闭该策略。
+    * @param int|null $passwordValidityPeriod 密码有效期（天），取值范围[0,180]，设置0表示关闭该策略。
     *
     * @return $this
     */
@@ -413,7 +392,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     * Gets passwordCharCombination
     *  至少包含字符种类的个数，取值区间[2,4]。
     *
-    * @return int
+    * @return int|null
     */
     public function getPasswordCharCombination()
     {
@@ -423,7 +402,7 @@ class PasswordPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets passwordCharCombination
     *
-    * @param int $passwordCharCombination 至少包含字符种类的个数，取值区间[2,4]。
+    * @param int|null $passwordCharCombination 至少包含字符种类的个数，取值区间[2,4]。
     *
     * @return $this
     */

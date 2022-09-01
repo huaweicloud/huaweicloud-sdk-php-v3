@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ProtectPolicyResult implements ModelInterface, ArrayAccess
+class UpdateDomainProtectPolicyResponseBodyProtectPolicy implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,38 @@ class ProtectPolicyResult implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ProtectPolicyResult';
+    protected static $openAPIModelName = 'UpdateDomainProtectPolicyResponseBody_protect_policy';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
+    * allowUser  allowUser
+    * operationProtection  是否开启操作保护，取值范围true或false。
+    * adminCheck  是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
+    * scene  操作保护指定人员验证方式，admin_check为on时，必须填写。包括mobile、email。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'operationProtection' => 'bool'
+            'allowUser' => '\HuaweiCloud\SDK\Iam\V3\Model\AllowUserBody',
+            'operationProtection' => 'bool',
+            'adminCheck' => 'string',
+            'scene' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
+    * allowUser  allowUser
+    * operationProtection  是否开启操作保护，取值范围true或false。
+    * adminCheck  是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
+    * scene  操作保护指定人员验证方式，admin_check为on时，必须填写。包括mobile、email。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'operationProtection' => null
+        'allowUser' => null,
+        'operationProtection' => null,
+        'adminCheck' => null,
+        'scene' => null
     ];
 
     /**
@@ -61,32 +73,50 @@ class ProtectPolicyResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
+    * allowUser  allowUser
+    * operationProtection  是否开启操作保护，取值范围true或false。
+    * adminCheck  是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
+    * scene  操作保护指定人员验证方式，admin_check为on时，必须填写。包括mobile、email。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'operationProtection' => 'operation_protection'
+            'allowUser' => 'allow_user',
+            'operationProtection' => 'operation_protection',
+            'adminCheck' => 'admin_check',
+            'scene' => 'scene'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
+    * allowUser  allowUser
+    * operationProtection  是否开启操作保护，取值范围true或false。
+    * adminCheck  是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
+    * scene  操作保护指定人员验证方式，admin_check为on时，必须填写。包括mobile、email。
     *
     * @var string[]
     */
     protected static $setters = [
-            'operationProtection' => 'setOperationProtection'
+            'allowUser' => 'setAllowUser',
+            'operationProtection' => 'setOperationProtection',
+            'adminCheck' => 'setAdminCheck',
+            'scene' => 'setScene'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operationProtection  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
+    * allowUser  allowUser
+    * operationProtection  是否开启操作保护，取值范围true或false。
+    * adminCheck  是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
+    * scene  操作保护指定人员验证方式，admin_check为on时，必须填写。包括mobile、email。
     *
     * @var string[]
     */
     protected static $getters = [
-            'operationProtection' => 'getOperationProtection'
+            'allowUser' => 'getAllowUser',
+            'operationProtection' => 'getOperationProtection',
+            'adminCheck' => 'getAdminCheck',
+            'scene' => 'getScene'
     ];
 
     /**
@@ -147,7 +177,10 @@ class ProtectPolicyResult implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['allowUser'] = isset($data['allowUser']) ? $data['allowUser'] : null;
         $this->container['operationProtection'] = isset($data['operationProtection']) ? $data['operationProtection'] : null;
+        $this->container['adminCheck'] = isset($data['adminCheck']) ? $data['adminCheck'] : null;
+        $this->container['scene'] = isset($data['scene']) ? $data['scene'] : null;
     }
 
     /**
@@ -158,8 +191,17 @@ class ProtectPolicyResult implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['allowUser'] === null) {
+            $invalidProperties[] = "'allowUser' can't be null";
+        }
         if ($this->container['operationProtection'] === null) {
             $invalidProperties[] = "'operationProtection' can't be null";
+        }
+        if ($this->container['adminCheck'] === null) {
+            $invalidProperties[] = "'adminCheck' can't be null";
+        }
+        if ($this->container['scene'] === null) {
+            $invalidProperties[] = "'scene' can't be null";
         }
         return $invalidProperties;
     }
@@ -176,8 +218,32 @@ class ProtectPolicyResult implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets allowUser
+    *  allowUser
+    *
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowUserBody
+    */
+    public function getAllowUser()
+    {
+        return $this->container['allowUser'];
+    }
+
+    /**
+    * Sets allowUser
+    *
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\AllowUserBody $allowUser allowUser
+    *
+    * @return $this
+    */
+    public function setAllowUser($allowUser)
+    {
+        $this->container['allowUser'] = $allowUser;
+        return $this;
+    }
+
+    /**
     * Gets operationProtection
-    *  是否开启操作保护，开启为\"true\"，未开启为\"false\"。
+    *  是否开启操作保护，取值范围true或false。
     *
     * @return bool
     */
@@ -189,13 +255,61 @@ class ProtectPolicyResult implements ModelInterface, ArrayAccess
     /**
     * Sets operationProtection
     *
-    * @param bool $operationProtection 是否开启操作保护，开启为\"true\"，未开启为\"false\"。
+    * @param bool $operationProtection 是否开启操作保护，取值范围true或false。
     *
     * @return $this
     */
     public function setOperationProtection($operationProtection)
     {
         $this->container['operationProtection'] = $operationProtection;
+        return $this;
+    }
+
+    /**
+    * Gets adminCheck
+    *  是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
+    *
+    * @return string
+    */
+    public function getAdminCheck()
+    {
+        return $this->container['adminCheck'];
+    }
+
+    /**
+    * Sets adminCheck
+    *
+    * @param string $adminCheck 是否指定人员验证。on为指定人员验证，必须填写scene参数。off为操作员验证。
+    *
+    * @return $this
+    */
+    public function setAdminCheck($adminCheck)
+    {
+        $this->container['adminCheck'] = $adminCheck;
+        return $this;
+    }
+
+    /**
+    * Gets scene
+    *  操作保护指定人员验证方式，admin_check为on时，必须填写。包括mobile、email。
+    *
+    * @return string
+    */
+    public function getScene()
+    {
+        return $this->container['scene'];
+    }
+
+    /**
+    * Sets scene
+    *
+    * @param string $scene 操作保护指定人员验证方式，admin_check为on时，必须填写。包括mobile、email。
+    *
+    * @return $this
+    */
+    public function setScene($scene)
+    {
+        $this->container['scene'] = $scene;
         return $this;
     }
 

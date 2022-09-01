@@ -26,7 +26,7 @@ class ShowDomainProtectPolicyResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'protectPolicy' => '\HuaweiCloud\SDK\Iam\V3\Model\ProtectPolicyResult'
+            'protectPolicy' => '\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainProtectPolicyResponseBodyProtectPolicy'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ShowDomainProtectPolicyResponse implements ModelInterface, ArrayAccess
     * Gets protectPolicy
     *  protectPolicy
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\ProtectPolicyResult|null
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\ShowDomainProtectPolicyResponseBodyProtectPolicy|null
     */
     public function getProtectPolicy()
     {
@@ -187,7 +187,7 @@ class ShowDomainProtectPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protectPolicy
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\ProtectPolicyResult|null $protectPolicy protectPolicy
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\ShowDomainProtectPolicyResponseBodyProtectPolicy|null $protectPolicy protectPolicy
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  设备名称。
+    * name  设备名称。 最小长度：1 最大长度：64
     * userId  创建MFA设备的IAM用户ID。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  设备名称。
+    * name  设备名称。 最小长度：1 最大长度：64
     * userId  创建MFA设备的IAM用户ID。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  设备名称。
+    * name  设备名称。 最小长度：1 最大长度：64
     * userId  创建MFA设备的IAM用户ID。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  设备名称。
+    * name  设备名称。 最小长度：1 最大长度：64
     * userId  创建MFA设备的IAM用户ID。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  设备名称。
+    * name  设备名称。 最小长度：1 最大长度：64
     * userId  创建MFA设备的IAM用户ID。
     *
     * @var string[]
@@ -197,7 +197,7 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  设备名称。
+    *  设备名称。 最小长度：1 最大长度：64
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class CreateMfaDevice implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 设备名称。
+    * @param string $name 设备名称。 最小长度：1 最大长度：64
     *
     * @return $this
     */

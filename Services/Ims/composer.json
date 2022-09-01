@@ -8,7 +8,7 @@
     "api",
     "ims"
   ],
-  "version": "3.0.60",
+  "version": "3.0.61",
    "type": "library",
   "license": "Apache-2.0",
   "authors": [
@@ -20,7 +20,7 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "huaweicloud/huaweicloud-sdk-core": "3.0.60"
+    "huaweicloud/huaweicloud-sdk-core": "3.0.61"
   },
   "autoload": {
     "psr-4": {

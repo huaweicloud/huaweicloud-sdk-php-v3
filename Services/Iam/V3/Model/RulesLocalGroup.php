@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AclPolicyOption implements ModelInterface, ArrayAccess
+class RulesLocalGroup implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'AclPolicyOption';
+    protected static $openAPIModelName = 'RulesLocal_group';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * allowAddressNetmasks  允许访问的IP地址或网段。
-    * allowIpRanges  允许访问的IP地址区间。
+    * name  联邦用户在本系统中所属用户组
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'allowAddressNetmasks' => '\HuaweiCloud\SDK\Iam\V3\Model\AllowAddressNetmasksOption[]',
-            'allowIpRanges' => '\HuaweiCloud\SDK\Iam\V3\Model\AllowIpRangesOption[]'
+            'name' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * allowAddressNetmasks  允许访问的IP地址或网段。
-    * allowIpRanges  允许访问的IP地址区间。
+    * name  联邦用户在本系统中所属用户组
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'allowAddressNetmasks' => null,
-        'allowIpRanges' => null
+        'name' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * allowAddressNetmasks  允许访问的IP地址或网段。
-    * allowIpRanges  允许访问的IP地址区间。
+    * name  联邦用户在本系统中所属用户组
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'allowAddressNetmasks' => 'allow_address_netmasks',
-            'allowIpRanges' => 'allow_ip_ranges'
+            'name' => 'name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * allowAddressNetmasks  允许访问的IP地址或网段。
-    * allowIpRanges  允许访问的IP地址区间。
+    * name  联邦用户在本系统中所属用户组
     *
     * @var string[]
     */
     protected static $setters = [
-            'allowAddressNetmasks' => 'setAllowAddressNetmasks',
-            'allowIpRanges' => 'setAllowIpRanges'
+            'name' => 'setName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * allowAddressNetmasks  允许访问的IP地址或网段。
-    * allowIpRanges  允许访问的IP地址区间。
+    * name  联邦用户在本系统中所属用户组
     *
     * @var string[]
     */
     protected static $getters = [
-            'allowAddressNetmasks' => 'getAllowAddressNetmasks',
-            'allowIpRanges' => 'getAllowIpRanges'
+            'name' => 'getName'
     ];
 
     /**
@@ -157,8 +147,7 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['allowAddressNetmasks'] = isset($data['allowAddressNetmasks']) ? $data['allowAddressNetmasks'] : null;
-        $this->container['allowIpRanges'] = isset($data['allowIpRanges']) ? $data['allowIpRanges'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -169,6 +158,9 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -184,50 +176,26 @@ class AclPolicyOption implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets allowAddressNetmasks
-    *  允许访问的IP地址或网段。
+    * Gets name
+    *  联邦用户在本系统中所属用户组
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowAddressNetmasksOption[]|null
+    * @return string
     */
-    public function getAllowAddressNetmasks()
+    public function getName()
     {
-        return $this->container['allowAddressNetmasks'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets allowAddressNetmasks
+    * Sets name
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\AllowAddressNetmasksOption[]|null $allowAddressNetmasks 允许访问的IP地址或网段。
+    * @param string $name 联邦用户在本系统中所属用户组
     *
     * @return $this
     */
-    public function setAllowAddressNetmasks($allowAddressNetmasks)
+    public function setName($name)
     {
-        $this->container['allowAddressNetmasks'] = $allowAddressNetmasks;
-        return $this;
-    }
-
-    /**
-    * Gets allowIpRanges
-    *  允许访问的IP地址区间。
-    *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\AllowIpRangesOption[]|null
-    */
-    public function getAllowIpRanges()
-    {
-        return $this->container['allowIpRanges'];
-    }
-
-    /**
-    * Sets allowIpRanges
-    *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\AllowIpRangesOption[]|null $allowIpRanges 允许访问的IP地址区间。
-    *
-    * @return $this
-    */
-    public function setAllowIpRanges($allowIpRanges)
-    {
-        $this->container['allowIpRanges'] = $allowIpRanges;
+        $this->container['name'] = $name;
         return $this;
     }
 

@@ -32,6 +32,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。
     * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * indirectPartnerId  云经销商ID。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单列表。
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'orderBy' => 'string',
             'paymentTimeBegin' => 'string',
-            'paymentTimeEnd' => 'string'
+            'paymentTimeEnd' => 'string',
+            'indirectPartnerId' => 'string'
     ];
 
     /**
@@ -64,6 +66,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。
     * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * indirectPartnerId  云经销商ID。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单列表。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'orderBy' => null,
         'paymentTimeBegin' => null,
-        'paymentTimeEnd' => null
+        'paymentTimeEnd' => null,
+        'indirectPartnerId' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。
     * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * indirectPartnerId  云经销商ID。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单列表。
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'orderBy' => 'order_by',
             'paymentTimeBegin' => 'payment_time_begin',
-            'paymentTimeEnd' => 'payment_time_end'
+            'paymentTimeEnd' => 'payment_time_end',
+            'indirectPartnerId' => 'indirect_partner_id'
     ];
 
     /**
@@ -149,6 +155,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。
     * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * indirectPartnerId  云经销商ID。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单列表。
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'orderBy' => 'setOrderBy',
             'paymentTimeBegin' => 'setPaymentTimeBegin',
-            'paymentTimeEnd' => 'setPaymentTimeEnd'
+            'paymentTimeEnd' => 'setPaymentTimeEnd',
+            'indirectPartnerId' => 'setIndirectPartnerId'
     ];
 
     /**
@@ -181,6 +189,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。
     * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
+    * indirectPartnerId  云经销商ID。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单列表。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'orderBy' => 'getOrderBy',
             'paymentTimeBegin' => 'getPaymentTimeBegin',
-            'paymentTimeEnd' => 'getPaymentTimeEnd'
+            'paymentTimeEnd' => 'getPaymentTimeEnd',
+            'indirectPartnerId' => 'getIndirectPartnerId'
     ];
 
     /**
@@ -269,6 +279,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
         $this->container['orderBy'] = isset($data['orderBy']) ? $data['orderBy'] : null;
         $this->container['paymentTimeBegin'] = isset($data['paymentTimeBegin']) ? $data['paymentTimeBegin'] : null;
         $this->container['paymentTimeEnd'] = isset($data['paymentTimeEnd']) ? $data['paymentTimeEnd'] : null;
+        $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
     }
 
     /**
@@ -596,6 +607,30 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     public function setPaymentTimeEnd($paymentTimeEnd)
     {
         $this->container['paymentTimeEnd'] = $paymentTimeEnd;
+        return $this;
+    }
+
+    /**
+    * Gets indirectPartnerId
+    *  云经销商ID。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单列表。
+    *
+    * @return string|null
+    */
+    public function getIndirectPartnerId()
+    {
+        return $this->container['indirectPartnerId'];
+    }
+
+    /**
+    * Sets indirectPartnerId
+    *
+    * @param string|null $indirectPartnerId 云经销商ID。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单列表。
+    *
+    * @return $this
+    */
+    public function setIndirectPartnerId($indirectPartnerId)
+    {
+        $this->container['indirectPartnerId'] = $indirectPartnerId;
         return $this;
     }
 

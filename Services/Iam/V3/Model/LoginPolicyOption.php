@@ -224,27 +224,6 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['accountValidityPeriod'] === null) {
-            $invalidProperties[] = "'accountValidityPeriod' can't be null";
-        }
-        if ($this->container['customInfoForLogin'] === null) {
-            $invalidProperties[] = "'customInfoForLogin' can't be null";
-        }
-        if ($this->container['lockoutDuration'] === null) {
-            $invalidProperties[] = "'lockoutDuration' can't be null";
-        }
-        if ($this->container['loginFailedTimes'] === null) {
-            $invalidProperties[] = "'loginFailedTimes' can't be null";
-        }
-        if ($this->container['periodWithLoginFailures'] === null) {
-            $invalidProperties[] = "'periodWithLoginFailures' can't be null";
-        }
-        if ($this->container['sessionTimeout'] === null) {
-            $invalidProperties[] = "'sessionTimeout' can't be null";
-        }
-        if ($this->container['showRecentLoginInfo'] === null) {
-            $invalidProperties[] = "'showRecentLoginInfo' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -263,7 +242,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     * Gets accountValidityPeriod
     *  账号在该值设置的有效期内未使用，则被停用。
     *
-    * @return int
+    * @return int|null
     */
     public function getAccountValidityPeriod()
     {
@@ -273,7 +252,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets accountValidityPeriod
     *
-    * @param int $accountValidityPeriod 账号在该值设置的有效期内未使用，则被停用。
+    * @param int|null $accountValidityPeriod 账号在该值设置的有效期内未使用，则被停用。
     *
     * @return $this
     */
@@ -287,7 +266,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     * Gets customInfoForLogin
     *  登录提示信息。
     *
-    * @return string
+    * @return string|null
     */
     public function getCustomInfoForLogin()
     {
@@ -297,7 +276,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets customInfoForLogin
     *
-    * @param string $customInfoForLogin 登录提示信息。
+    * @param string|null $customInfoForLogin 登录提示信息。
     *
     * @return $this
     */
@@ -311,7 +290,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     * Gets lockoutDuration
     *  帐号锁定时长（分钟），取值范围[15,30]。
     *
-    * @return int
+    * @return int|null
     */
     public function getLockoutDuration()
     {
@@ -321,7 +300,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets lockoutDuration
     *
-    * @param int $lockoutDuration 帐号锁定时长（分钟），取值范围[15,30]。
+    * @param int|null $lockoutDuration 帐号锁定时长（分钟），取值范围[15,30]。
     *
     * @return $this
     */
@@ -335,7 +314,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     * Gets loginFailedTimes
     *  限定时间内登录失败次数，取值范围[3,10]。
     *
-    * @return int
+    * @return int|null
     */
     public function getLoginFailedTimes()
     {
@@ -345,7 +324,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets loginFailedTimes
     *
-    * @param int $loginFailedTimes 限定时间内登录失败次数，取值范围[3,10]。
+    * @param int|null $loginFailedTimes 限定时间内登录失败次数，取值范围[3,10]。
     *
     * @return $this
     */
@@ -359,7 +338,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     * Gets periodWithLoginFailures
     *  限定时间长度（分钟），取值范围[15,60]。
     *
-    * @return int
+    * @return int|null
     */
     public function getPeriodWithLoginFailures()
     {
@@ -369,7 +348,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets periodWithLoginFailures
     *
-    * @param int $periodWithLoginFailures 限定时间长度（分钟），取值范围[15,60]。
+    * @param int|null $periodWithLoginFailures 限定时间长度（分钟），取值范围[15,60]。
     *
     * @return $this
     */
@@ -383,7 +362,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     * Gets sessionTimeout
     *  登录会话失效时间，取值范围[15,1440]。
     *
-    * @return int
+    * @return int|null
     */
     public function getSessionTimeout()
     {
@@ -393,7 +372,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets sessionTimeout
     *
-    * @param int $sessionTimeout 登录会话失效时间，取值范围[15,1440]。
+    * @param int|null $sessionTimeout 登录会话失效时间，取值范围[15,1440]。
     *
     * @return $this
     */
@@ -407,7 +386,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     * Gets showRecentLoginInfo
     *  显示最近一次的登录信息。取值范围true或false。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getShowRecentLoginInfo()
     {
@@ -417,7 +396,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets showRecentLoginInfo
     *
-    * @param bool $showRecentLoginInfo 显示最近一次的登录信息。取值范围true或false。
+    * @param bool|null $showRecentLoginInfo 显示最近一次的登录信息。取值范围true或false。
     *
     * @return $this
     */
