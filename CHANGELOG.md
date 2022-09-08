@@ -1,3 +1,43 @@
+# 3.1.1 2022-09-08
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameters `root_resource_id`, `parent_resource_id`, `trade_id`, `product_spec_desc` to the interface `ListCustomerselfResourceRecordDetails`
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - Support the interfaces `ShowTags`, `CreateTags`, `BatchDeleteTags`
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `ShowUrlTaskInfo`:
+    - Add the response parameter `result`
+    - Remove the response parameter `results`
+  - Add the response parameter `error_code_cache` to the interface `ShowDomainFullConfig`
+  - Add the request parameter `error_code_cache` to the interface `UpdateDomainFullConfig`
+
+### HuaweiCloud SDK EVS
+
+- _Features_
+  - Support the following interfaces：
+    - `ShowVersion`
+    - `ListVersions`
+    - `CinderShowVolumeTransfer`
+    - `CinderDeleteVolumeTransfer`
+    - `CinderListVolumeTransfers`
+    - `CinderCreateVolumeTransfer`
+    - `CinderAcceptVolumeTransfer`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
 # 3.0.61 2022-09-01
 
 ### HuaweiCloud SDK BSSINTL

@@ -30,6 +30,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
     * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
+    * errorCodeCache  errorCodeCache
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'forceRedirect' => '\HuaweiCloud\SDK\Cdn\V1\Model\ForceRedirectConfig',
             'compress' => '\HuaweiCloud\SDK\Cdn\V1\Model\Compress',
             'cacheUrlParameterFilter' => '\HuaweiCloud\SDK\Cdn\V1\Model\CacheUrlParameterFilter',
-            'ipv6Accelerate' => 'int'
+            'ipv6Accelerate' => 'int',
+            'errorCodeCache' => '\HuaweiCloud\SDK\Cdn\V1\Model\ErrorCodeCache'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
     * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
+    * errorCodeCache  errorCodeCache
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
         'forceRedirect' => null,
         'compress' => null,
         'cacheUrlParameterFilter' => null,
-        'ipv6Accelerate' => 'int32'
+        'ipv6Accelerate' => 'int32',
+        'errorCodeCache' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
     * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
+    * errorCodeCache  errorCodeCache
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'forceRedirect' => 'force_redirect',
             'compress' => 'compress',
             'cacheUrlParameterFilter' => 'cache_url_parameter_filter',
-            'ipv6Accelerate' => 'ipv6_accelerate'
+            'ipv6Accelerate' => 'ipv6_accelerate',
+            'errorCodeCache' => 'error_code_cache'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
     * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
+    * errorCodeCache  errorCodeCache
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'forceRedirect' => 'setForceRedirect',
             'compress' => 'setCompress',
             'cacheUrlParameterFilter' => 'setCacheUrlParameterFilter',
-            'ipv6Accelerate' => 'setIpv6Accelerate'
+            'ipv6Accelerate' => 'setIpv6Accelerate',
+            'errorCodeCache' => 'setErrorCodeCache'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
     * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
+    * errorCodeCache  errorCodeCache
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'forceRedirect' => 'getForceRedirect',
             'compress' => 'getCompress',
             'cacheUrlParameterFilter' => 'getCacheUrlParameterFilter',
-            'ipv6Accelerate' => 'getIpv6Accelerate'
+            'ipv6Accelerate' => 'getIpv6Accelerate',
+            'errorCodeCache' => 'getErrorCodeCache'
     ];
 
     /**
@@ -247,6 +257,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
         $this->container['compress'] = isset($data['compress']) ? $data['compress'] : null;
         $this->container['cacheUrlParameterFilter'] = isset($data['cacheUrlParameterFilter']) ? $data['cacheUrlParameterFilter'] : null;
         $this->container['ipv6Accelerate'] = isset($data['ipv6Accelerate']) ? $data['ipv6Accelerate'] : null;
+        $this->container['errorCodeCache'] = isset($data['errorCodeCache']) ? $data['errorCodeCache'] : null;
     }
 
     /**
@@ -508,6 +519,30 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     public function setIpv6Accelerate($ipv6Accelerate)
     {
         $this->container['ipv6Accelerate'] = $ipv6Accelerate;
+        return $this;
+    }
+
+    /**
+    * Gets errorCodeCache
+    *  errorCodeCache
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V1\Model\ErrorCodeCache|null
+    */
+    public function getErrorCodeCache()
+    {
+        return $this->container['errorCodeCache'];
+    }
+
+    /**
+    * Sets errorCodeCache
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\ErrorCodeCache|null $errorCodeCache errorCodeCache
+    *
+    * @return $this
+    */
+    public function setErrorCodeCache($errorCodeCache)
+    {
+        $this->container['errorCodeCache'] = $errorCodeCache;
         return $this;
     }
 

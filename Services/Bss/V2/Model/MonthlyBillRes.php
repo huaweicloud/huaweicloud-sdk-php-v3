@@ -50,6 +50,10 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * discountAmount  对应官网价折扣金额。
     * measureId  金额单位。 1：元
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
+    * rootResourceId  根资源标识。
+    * parentResourceId  父资源标识。
+    * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
+    * productSpecDesc  产品的规格描述。
     *
     * @var string[]
     */
@@ -83,7 +87,11 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'officialAmount' => 'double',
             'discountAmount' => 'double',
             'measureId' => 'int',
-            'periodType' => 'int'
+            'periodType' => 'int',
+            'rootResourceId' => 'string',
+            'parentResourceId' => 'string',
+            'tradeId' => 'string',
+            'productSpecDesc' => 'string'
     ];
 
     /**
@@ -118,6 +126,10 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * discountAmount  对应官网价折扣金额。
     * measureId  金额单位。 1：元
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
+    * rootResourceId  根资源标识。
+    * parentResourceId  父资源标识。
+    * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
+    * productSpecDesc  产品的规格描述。
     *
     * @var string[]
     */
@@ -151,7 +163,11 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         'officialAmount' => 'double',
         'discountAmount' => 'double',
         'measureId' => 'int32',
-        'periodType' => 'int32'
+        'periodType' => 'int32',
+        'rootResourceId' => null,
+        'parentResourceId' => null,
+        'tradeId' => null,
+        'productSpecDesc' => null
     ];
 
     /**
@@ -207,6 +223,10 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * discountAmount  对应官网价折扣金额。
     * measureId  金额单位。 1：元
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
+    * rootResourceId  根资源标识。
+    * parentResourceId  父资源标识。
+    * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
+    * productSpecDesc  产品的规格描述。
     *
     * @var string[]
     */
@@ -240,7 +260,11 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'officialAmount' => 'official_amount',
             'discountAmount' => 'discount_amount',
             'measureId' => 'measure_id',
-            'periodType' => 'period_type'
+            'periodType' => 'period_type',
+            'rootResourceId' => 'root_resource_id',
+            'parentResourceId' => 'parent_resource_id',
+            'tradeId' => 'trade_id',
+            'productSpecDesc' => 'product_spec_desc'
     ];
 
     /**
@@ -275,6 +299,10 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * discountAmount  对应官网价折扣金额。
     * measureId  金额单位。 1：元
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
+    * rootResourceId  根资源标识。
+    * parentResourceId  父资源标识。
+    * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
+    * productSpecDesc  产品的规格描述。
     *
     * @var string[]
     */
@@ -308,7 +336,11 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'officialAmount' => 'setOfficialAmount',
             'discountAmount' => 'setDiscountAmount',
             'measureId' => 'setMeasureId',
-            'periodType' => 'setPeriodType'
+            'periodType' => 'setPeriodType',
+            'rootResourceId' => 'setRootResourceId',
+            'parentResourceId' => 'setParentResourceId',
+            'tradeId' => 'setTradeId',
+            'productSpecDesc' => 'setProductSpecDesc'
     ];
 
     /**
@@ -343,6 +375,10 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * discountAmount  对应官网价折扣金额。
     * measureId  金额单位。 1：元
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
+    * rootResourceId  根资源标识。
+    * parentResourceId  父资源标识。
+    * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
+    * productSpecDesc  产品的规格描述。
     *
     * @var string[]
     */
@@ -376,7 +412,11 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'officialAmount' => 'getOfficialAmount',
             'discountAmount' => 'getDiscountAmount',
             'measureId' => 'getMeasureId',
-            'periodType' => 'getPeriodType'
+            'periodType' => 'getPeriodType',
+            'rootResourceId' => 'getRootResourceId',
+            'parentResourceId' => 'getParentResourceId',
+            'tradeId' => 'getTradeId',
+            'productSpecDesc' => 'getProductSpecDesc'
     ];
 
     /**
@@ -467,6 +507,10 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         $this->container['discountAmount'] = isset($data['discountAmount']) ? $data['discountAmount'] : null;
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
         $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
+        $this->container['rootResourceId'] = isset($data['rootResourceId']) ? $data['rootResourceId'] : null;
+        $this->container['parentResourceId'] = isset($data['parentResourceId']) ? $data['parentResourceId'] : null;
+        $this->container['tradeId'] = isset($data['tradeId']) ? $data['tradeId'] : null;
+        $this->container['productSpecDesc'] = isset($data['productSpecDesc']) ? $data['productSpecDesc'] : null;
     }
 
     /**
@@ -1232,6 +1276,102 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     public function setPeriodType($periodType)
     {
         $this->container['periodType'] = $periodType;
+        return $this;
+    }
+
+    /**
+    * Gets rootResourceId
+    *  根资源标识。
+    *
+    * @return string|null
+    */
+    public function getRootResourceId()
+    {
+        return $this->container['rootResourceId'];
+    }
+
+    /**
+    * Sets rootResourceId
+    *
+    * @param string|null $rootResourceId 根资源标识。
+    *
+    * @return $this
+    */
+    public function setRootResourceId($rootResourceId)
+    {
+        $this->container['rootResourceId'] = $rootResourceId;
+        return $this;
+    }
+
+    /**
+    * Gets parentResourceId
+    *  父资源标识。
+    *
+    * @return string|null
+    */
+    public function getParentResourceId()
+    {
+        return $this->container['parentResourceId'];
+    }
+
+    /**
+    * Sets parentResourceId
+    *
+    * @param string|null $parentResourceId 父资源标识。
+    *
+    * @return $this
+    */
+    public function setParentResourceId($parentResourceId)
+    {
+        $this->container['parentResourceId'] = $parentResourceId;
+        return $this;
+    }
+
+    /**
+    * Gets tradeId
+    *  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
+    *
+    * @return string|null
+    */
+    public function getTradeId()
+    {
+        return $this->container['tradeId'];
+    }
+
+    /**
+    * Sets tradeId
+    *
+    * @param string|null $tradeId 订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
+    *
+    * @return $this
+    */
+    public function setTradeId($tradeId)
+    {
+        $this->container['tradeId'] = $tradeId;
+        return $this;
+    }
+
+    /**
+    * Gets productSpecDesc
+    *  产品的规格描述。
+    *
+    * @return string|null
+    */
+    public function getProductSpecDesc()
+    {
+        return $this->container['productSpecDesc'];
+    }
+
+    /**
+    * Sets productSpecDesc
+    *
+    * @param string|null $productSpecDesc 产品的规格描述。
+    *
+    * @return $this
+    */
+    public function setProductSpecDesc($productSpecDesc)
+    {
+        $this->container['productSpecDesc'] = $productSpecDesc;
         return $this;
     }
 

@@ -1,0 +1,30 @@
+{
+  "name": "huaweicloud/huaweicloud-sdk-er",
+  "description": "HUAWEICLOUD SDK ER",
+  "keywords": [
+    "php",
+    "sdk",
+    "rest",
+    "api",
+    "er"
+  ],
+  "version": "3.1.1",
+   "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "HuaweiCloud_SDK",
+      "email": "hwcloudsdk@huawei.com",
+      "homepage": "https://sdkcenter.developer.huaweicloud.com/?language=PHP"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "huaweicloud/huaweicloud-sdk-core": "3.1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "HuaweiCloud\\SDK\\Er\\V3\\": "V3/"
+    }
+  }
+}

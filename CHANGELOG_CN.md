@@ -1,3 +1,43 @@
+# 3.1.1 2022-09-08
+
+### HuaweiCloud SDK BSS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListCustomerselfResourceRecordDetails`新增响应参数 `root_resource_id`、`parent_resource_id`、`trade_id`、`product_spec_desc`
+
+### HuaweiCloud SDK CDN
+
+- _新增特性_
+  - 支持接口`ShowTags`、`CreateTags`、`BatchDeleteTags`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ShowUrlTaskInfo`:
+    - 新增响应参数 `result`
+    - 移除响应参数 `results`
+  - 接口`ShowDomainFullConfig`新增响应参数 `error_code_cache`
+  - 接口`UpdateDomainFullConfig`新增请求参数 `error_code_cache`
+
+### HuaweiCloud SDK EVS
+
+- _新增特性_
+  - 支持以下接口：
+    - `ShowVersion`
+    - `ListVersions`
+    - `CinderShowVolumeTransfer`
+    - `CinderDeleteVolumeTransfer`
+    - `CinderListVolumeTransfers`
+    - `CinderCreateVolumeTransfer`
+    - `CinderAcceptVolumeTransfer`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
 # 3.0.61 2022-09-01
 
 ### HuaweiCloud SDK BSSINTL

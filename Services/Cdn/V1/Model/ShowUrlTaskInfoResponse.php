@@ -23,7 +23,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * total  查询结果总数
     * count  查询当前页总数
-    * results  url信息
+    * result  url信息
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -31,7 +31,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'total' => 'int',
             'count' => 'int',
-            'results' => '\HuaweiCloud\SDK\Cdn\V1\Model\Urls[]',
+            'result' => '\HuaweiCloud\SDK\Cdn\V1\Model\Urls[]',
             'xRequestId' => 'string'
     ];
 
@@ -39,7 +39,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * total  查询结果总数
     * count  查询当前页总数
-    * results  url信息
+    * result  url信息
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -47,7 +47,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'total' => null,
         'count' => null,
-        'results' => null,
+        'result' => null,
         'xRequestId' => null
     ];
 
@@ -76,7 +76,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * total  查询结果总数
     * count  查询当前页总数
-    * results  url信息
+    * result  url信息
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'total' => 'total',
             'count' => 'count',
-            'results' => 'results',
+            'result' => 'result',
             'xRequestId' => 'X-request-id'
     ];
 
@@ -92,7 +92,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * total  查询结果总数
     * count  查询当前页总数
-    * results  url信息
+    * result  url信息
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -100,7 +100,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'total' => 'setTotal',
             'count' => 'setCount',
-            'results' => 'setResults',
+            'result' => 'setResult',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -108,7 +108,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * total  查询结果总数
     * count  查询当前页总数
-    * results  url信息
+    * result  url信息
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -116,7 +116,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'total' => 'getTotal',
             'count' => 'getCount',
-            'results' => 'getResults',
+            'result' => 'getResult',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -180,7 +180,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     {
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
-        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -255,26 +255,26 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets results
+    * Gets result
     *  url信息
     *
     * @return \HuaweiCloud\SDK\Cdn\V1\Model\Urls[]|null
     */
-    public function getResults()
+    public function getResult()
     {
-        return $this->container['results'];
+        return $this->container['result'];
     }
 
     /**
-    * Sets results
+    * Sets result
     *
-    * @param \HuaweiCloud\SDK\Cdn\V1\Model\Urls[]|null $results url信息
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\Urls[]|null $result url信息
     *
     * @return $this
     */
-    public function setResults($results)
+    public function setResult($result)
     {
-        $this->container['results'] = $results;
+        $this->container['result'] = $result;
         return $this;
     }
 
