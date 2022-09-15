@@ -1,12 +1,12 @@
 <?php
-namespace HuaweiCloud\SDK\Live\V2\Region;
+namespace HuaweiCloud\SDK\Er\V3\Region;
 
 use HuaweiCloud\SDK\Core\Region\Region;
 use InvalidArgumentException;
 
-class LiveRegion {
+class ErRegion {
 
-    public static $REGION = array("https://live.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://live.cn-north-1.myhuaweicloud.com"=>"cn-north-1","https://live.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://live.ap-southeast-2.myhuaweicloud.com"=>"ap-southeast-2","https://live.ap-southeast-3.myhuaweicloud.com"=>"ap-southeast-3",);
+    public static $REGION = array("https://er.cn-south-1.myhuaweicloud.com"=>"cn-south-1",);
 
     public static function valueOf($regionId)
     {

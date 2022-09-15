@@ -164,8 +164,8 @@ class ShowApiInfoRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['version']) > 36)) {
                 $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['version']) < 32)) {
-                $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['version']) < 1)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }

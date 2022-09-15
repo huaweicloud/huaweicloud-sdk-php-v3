@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class DnsRegion {
 
-    public static $REGION = array("https://dns.cn-east-2.myhuaweicloud.com"=>"cn-east-2","https://dns.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://dns.cn-north-1.myhuaweicloud.com"=>"cn-north-1","https://dns.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://dns.cn-south-1.myhuaweicloud.com"=>"cn-south-1","https://dns.cn-southwest-2.myhuaweicloud.com"=>"cn-southwest-2","https://dns.af-south-1.myhuaweicloud.com"=>"af-south-1","https://dns.ap-southeast-1.myhuaweicloud.com"=>"ap-southeast-1","https://dns.ap-southeast-2.myhuaweicloud.com"=>"ap-southeast-2","https://dns.ap-southeast-3.myhuaweicloud.com"=>"ap-southeast-3",);
+    public static $REGION = array("https://dns.cn-east-2.myhuaweicloud.com"=>"cn-east-2","https://dns.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://dns.cn-north-1.myhuaweicloud.com"=>"cn-north-1","https://dns.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://dns.cn-south-1.myhuaweicloud.com"=>"cn-south-1","https://dns.cn-southwest-2.myhuaweicloud.com"=>"cn-southwest-2","https://dns.af-south-1.myhuaweicloud.com"=>"af-south-1","https://dns.ap-southeast-1.myhuaweicloud.com"=>"ap-southeast-1","https://dns.ap-southeast-2.myhuaweicloud.com"=>"ap-southeast-2","https://dns.ap-southeast-3.myhuaweicloud.com"=>"ap-southeast-3","https://dns.sa-brazil-1.myhuaweicloud.com"=>"sa-brazil-1","https://dns.la-south-2.myhuaweicloud.com"=>"la-south-2","https://dns.la-north-2.myhuaweicloud.com"=>"la-north-2","https://dns.na-mexico-1.myhuaweicloud.com"=>"na-mexico-1","https://dns.cn-north-9.myhuaweicloud.com"=>"cn-north-9",);
 
     public static function valueOf($regionId)
     {
