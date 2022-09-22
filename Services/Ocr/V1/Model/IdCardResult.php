@@ -32,6 +32,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
+    * detectCopyResult  判断身份证图像是黑白复印件还是原件，“true”表示是复印件，“false”表示是原件。仅在输入参数detect_copy为true时，返回该字段。
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'validTo' => 'string',
             'verificationResult' => '\HuaweiCloud\SDK\Ocr\V1\Model\IdcardVerificationResult',
             'textLocation' => 'object',
-            'detectReproduceResult' => 'bool'
+            'detectReproduceResult' => 'bool',
+            'detectCopyResult' => 'bool'
     ];
 
     /**
@@ -64,6 +66,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
+    * detectCopyResult  判断身份证图像是黑白复印件还是原件，“true”表示是复印件，“false”表示是原件。仅在输入参数detect_copy为true时，返回该字段。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
         'validTo' => null,
         'verificationResult' => null,
         'textLocation' => null,
-        'detectReproduceResult' => null
+        'detectReproduceResult' => null,
+        'detectCopyResult' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
+    * detectCopyResult  判断身份证图像是黑白复印件还是原件，“true”表示是复印件，“false”表示是原件。仅在输入参数detect_copy为true时，返回该字段。
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'validTo' => 'valid_to',
             'verificationResult' => 'verification_result',
             'textLocation' => 'text_location',
-            'detectReproduceResult' => 'detect_reproduce_result'
+            'detectReproduceResult' => 'detect_reproduce_result',
+            'detectCopyResult' => 'detect_copy_result'
     ];
 
     /**
@@ -149,6 +155,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
+    * detectCopyResult  判断身份证图像是黑白复印件还是原件，“true”表示是复印件，“false”表示是原件。仅在输入参数detect_copy为true时，返回该字段。
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'validTo' => 'setValidTo',
             'verificationResult' => 'setVerificationResult',
             'textLocation' => 'setTextLocation',
-            'detectReproduceResult' => 'setDetectReproduceResult'
+            'detectReproduceResult' => 'setDetectReproduceResult',
+            'detectCopyResult' => 'setDetectCopyResult'
     ];
 
     /**
@@ -181,6 +189,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
+    * detectCopyResult  判断身份证图像是黑白复印件还是原件，“true”表示是复印件，“false”表示是原件。仅在输入参数detect_copy为true时，返回该字段。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class IdCardResult implements ModelInterface, ArrayAccess
             'validTo' => 'getValidTo',
             'verificationResult' => 'getVerificationResult',
             'textLocation' => 'getTextLocation',
-            'detectReproduceResult' => 'getDetectReproduceResult'
+            'detectReproduceResult' => 'getDetectReproduceResult',
+            'detectCopyResult' => 'getDetectCopyResult'
     ];
 
     /**
@@ -269,6 +279,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
         $this->container['verificationResult'] = isset($data['verificationResult']) ? $data['verificationResult'] : null;
         $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
         $this->container['detectReproduceResult'] = isset($data['detectReproduceResult']) ? $data['detectReproduceResult'] : null;
+        $this->container['detectCopyResult'] = isset($data['detectCopyResult']) ? $data['detectCopyResult'] : null;
     }
 
     /**
@@ -578,6 +589,30 @@ class IdCardResult implements ModelInterface, ArrayAccess
     public function setDetectReproduceResult($detectReproduceResult)
     {
         $this->container['detectReproduceResult'] = $detectReproduceResult;
+        return $this;
+    }
+
+    /**
+    * Gets detectCopyResult
+    *  判断身份证图像是黑白复印件还是原件，“true”表示是复印件，“false”表示是原件。仅在输入参数detect_copy为true时，返回该字段。
+    *
+    * @return bool|null
+    */
+    public function getDetectCopyResult()
+    {
+        return $this->container['detectCopyResult'];
+    }
+
+    /**
+    * Sets detectCopyResult
+    *
+    * @param bool|null $detectCopyResult 判断身份证图像是黑白复印件还是原件，“true”表示是复印件，“false”表示是原件。仅在输入参数detect_copy为true时，返回该字段。
+    *
+    * @return $this
+    */
+    public function setDetectCopyResult($detectCopyResult)
+    {
+        $this->container['detectCopyResult'] = $detectCopyResult;
         return $this;
     }
 

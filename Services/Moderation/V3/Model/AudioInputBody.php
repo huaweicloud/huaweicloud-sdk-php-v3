@@ -158,6 +158,9 @@ class AudioInputBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['url'] === null) {
+            $invalidProperties[] = "'url' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class AudioInputBody implements ModelInterface, ArrayAccess
     * Gets url
     *  音频url地址。
     *
-    * @return string|null
+    * @return string
     */
     public function getUrl()
     {
@@ -186,7 +189,7 @@ class AudioInputBody implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string|null $url 音频url地址。
+    * @param string $url 音频url地址。
     *
     * @return $this
     */

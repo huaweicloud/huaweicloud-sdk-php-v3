@@ -26,6 +26,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * returnVerification  返回校验身份证号等信息的开关，默认false，可选值如下所示：  - true：返回校验信息  - false：不返回校验信息
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否经过翻拍  - false：不返回身份证图像是否经过翻拍
+    * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否是复印件  - false : 不返回身份证图像是否是复印件
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'side' => 'string',
             'returnVerification' => 'bool',
             'returnTextLocation' => 'bool',
-            'detectReproduce' => 'bool'
+            'detectReproduce' => 'bool',
+            'detectCopy' => 'bool'
     ];
 
     /**
@@ -46,6 +48,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * returnVerification  返回校验身份证号等信息的开关，默认false，可选值如下所示：  - true：返回校验信息  - false：不返回校验信息
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否经过翻拍  - false：不返回身份证图像是否经过翻拍
+    * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否是复印件  - false : 不返回身份证图像是否是复印件
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
         'side' => null,
         'returnVerification' => null,
         'returnTextLocation' => null,
-        'detectReproduce' => null
+        'detectReproduce' => null,
+        'detectCopy' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * returnVerification  返回校验身份证号等信息的开关，默认false，可选值如下所示：  - true：返回校验信息  - false：不返回校验信息
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否经过翻拍  - false：不返回身份证图像是否经过翻拍
+    * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否是复印件  - false : 不返回身份证图像是否是复印件
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'side' => 'side',
             'returnVerification' => 'return_verification',
             'returnTextLocation' => 'return_text_location',
-            'detectReproduce' => 'detect_reproduce'
+            'detectReproduce' => 'detect_reproduce',
+            'detectCopy' => 'detect_copy'
     ];
 
     /**
@@ -107,6 +113,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * returnVerification  返回校验身份证号等信息的开关，默认false，可选值如下所示：  - true：返回校验信息  - false：不返回校验信息
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否经过翻拍  - false：不返回身份证图像是否经过翻拍
+    * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否是复印件  - false : 不返回身份证图像是否是复印件
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'side' => 'setSide',
             'returnVerification' => 'setReturnVerification',
             'returnTextLocation' => 'setReturnTextLocation',
-            'detectReproduce' => 'setDetectReproduce'
+            'detectReproduce' => 'setDetectReproduce',
+            'detectCopy' => 'setDetectCopy'
     ];
 
     /**
@@ -127,6 +135,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     * returnVerification  返回校验身份证号等信息的开关，默认false，可选值如下所示：  - true：返回校验信息  - false：不返回校验信息
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括：  - true：返回各个文字块区域  - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     * detectReproduce  返回判断身份证图像是否经过翻拍的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否经过翻拍  - false：不返回身份证图像是否经过翻拍
+    * detectCopy  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否是复印件  - false : 不返回身份证图像是否是复印件
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
             'side' => 'getSide',
             'returnVerification' => 'getReturnVerification',
             'returnTextLocation' => 'getReturnTextLocation',
-            'detectReproduce' => 'getDetectReproduce'
+            'detectReproduce' => 'getDetectReproduce',
+            'detectCopy' => 'getDetectCopy'
     ];
 
     /**
@@ -203,6 +213,7 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
         $this->container['returnVerification'] = isset($data['returnVerification']) ? $data['returnVerification'] : null;
         $this->container['returnTextLocation'] = isset($data['returnTextLocation']) ? $data['returnTextLocation'] : null;
         $this->container['detectReproduce'] = isset($data['detectReproduce']) ? $data['detectReproduce'] : null;
+        $this->container['detectCopy'] = isset($data['detectCopy']) ? $data['detectCopy'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class IdCardRequestBody implements ModelInterface, ArrayAccess
     public function setDetectReproduce($detectReproduce)
     {
         $this->container['detectReproduce'] = $detectReproduce;
+        return $this;
+    }
+
+    /**
+    * Gets detectCopy
+    *  返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否是复印件  - false : 不返回身份证图像是否是复印件
+    *
+    * @return bool|null
+    */
+    public function getDetectCopy()
+    {
+        return $this->container['detectCopy'];
+    }
+
+    /**
+    * Sets detectCopy
+    *
+    * @param bool|null $detectCopy 返回判断身份证图像是否是黑白复印件的开关，默认false，可选值如下所示：  - true ：返回身份证图像是否是复印件  - false : 不返回身份证图像是否是复印件
+    *
+    * @return $this
+    */
+    public function setDetectCopy($detectCopy)
+    {
+        $this->container['detectCopy'] = $detectCopy;
         return $this;
     }
 

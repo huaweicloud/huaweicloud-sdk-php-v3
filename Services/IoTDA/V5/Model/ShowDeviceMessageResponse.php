@@ -28,6 +28,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
     * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
     * topic  消息topic
     * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
+    * errorInfo  errorInfo
     * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * finishedTime  消息结束时间, \"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串，包含消息转换到DELIVERED和TIMEOUT两个状态的时间。
     *
@@ -41,6 +42,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
             'payloadFormat' => 'string',
             'topic' => 'string',
             'status' => 'string',
+            'errorInfo' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ErrorInfoDTO',
             'createdTime' => 'string',
             'finishedTime' => 'string'
     ];
@@ -54,6 +56,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
     * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
     * topic  消息topic
     * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
+    * errorInfo  errorInfo
     * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * finishedTime  消息结束时间, \"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串，包含消息转换到DELIVERED和TIMEOUT两个状态的时间。
     *
@@ -67,6 +70,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
         'payloadFormat' => null,
         'topic' => null,
         'status' => null,
+        'errorInfo' => null,
         'createdTime' => null,
         'finishedTime' => null
     ];
@@ -101,6 +105,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
     * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
     * topic  消息topic
     * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
+    * errorInfo  errorInfo
     * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * finishedTime  消息结束时间, \"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串，包含消息转换到DELIVERED和TIMEOUT两个状态的时间。
     *
@@ -114,6 +119,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
             'payloadFormat' => 'payload_format',
             'topic' => 'topic',
             'status' => 'status',
+            'errorInfo' => 'error_info',
             'createdTime' => 'created_time',
             'finishedTime' => 'finished_time'
     ];
@@ -127,6 +133,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
     * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
     * topic  消息topic
     * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
+    * errorInfo  errorInfo
     * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * finishedTime  消息结束时间, \"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串，包含消息转换到DELIVERED和TIMEOUT两个状态的时间。
     *
@@ -140,6 +147,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
             'payloadFormat' => 'setPayloadFormat',
             'topic' => 'setTopic',
             'status' => 'setStatus',
+            'errorInfo' => 'setErrorInfo',
             'createdTime' => 'setCreatedTime',
             'finishedTime' => 'setFinishedTime'
     ];
@@ -153,6 +161,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
     * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
     * topic  消息topic
     * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
+    * errorInfo  errorInfo
     * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * finishedTime  消息结束时间, \"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串，包含消息转换到DELIVERED和TIMEOUT两个状态的时间。
     *
@@ -166,6 +175,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
             'payloadFormat' => 'getPayloadFormat',
             'topic' => 'getTopic',
             'status' => 'getStatus',
+            'errorInfo' => 'getErrorInfo',
             'createdTime' => 'getCreatedTime',
             'finishedTime' => 'getFinishedTime'
     ];
@@ -235,6 +245,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
         $this->container['payloadFormat'] = isset($data['payloadFormat']) ? $data['payloadFormat'] : null;
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
         $this->container['createdTime'] = isset($data['createdTime']) ? $data['createdTime'] : null;
         $this->container['finishedTime'] = isset($data['finishedTime']) ? $data['finishedTime'] : null;
     }
@@ -426,6 +437,30 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets errorInfo
+    *  errorInfo
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ErrorInfoDTO|null
+    */
+    public function getErrorInfo()
+    {
+        return $this->container['errorInfo'];
+    }
+
+    /**
+    * Sets errorInfo
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ErrorInfoDTO|null $errorInfo errorInfo
+    *
+    * @return $this
+    */
+    public function setErrorInfo($errorInfo)
+    {
+        $this->container['errorInfo'] = $errorInfo;
         return $this;
     }
 

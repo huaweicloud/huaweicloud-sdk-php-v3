@@ -20,8 +20,8 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * id  优惠券ID。
+    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * id  优惠券ID。
+    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * id  优惠券ID。
+    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * id  优惠券ID。
+    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * id  优惠券ID。
+    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  折扣ID。
+    *  优惠券ID。
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 折扣ID。
+    * @param string $id 优惠券ID。
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    *  折扣类型：300:折扣券 301:促销代金券 302:促销现金券
     *
     * @return int
     */
@@ -239,7 +239,7 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int $type 折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * @param int $type 折扣类型：300:折扣券 301:促销代金券 302:促销现金券
     *
     * @return $this
     */

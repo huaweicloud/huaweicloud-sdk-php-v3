@@ -186,8 +186,8 @@ class ListPropertiesRequest implements ModelInterface, ArrayAccess
             if (!preg_match("/^[a-zA-Z0-9_-]{1,128}$/", $this->container['deviceId'])) {
                 $invalidProperties[] = "invalid value for 'deviceId', must be conform to the pattern /^[a-zA-Z0-9_-]{1,128}$/.";
             }
-            if (!is_null($this->container['instanceId']) && !preg_match("/^[a-f0-9-]{36}$/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-f0-9-]{36}$/.";
+            if (!is_null($this->container['instanceId']) && !preg_match("/[0-9a-f-]{1,36}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[0-9a-f-]{1,36}/.";
             }
         if ($this->container['serviceId'] === null) {
             $invalidProperties[] = "'serviceId' can't be null";

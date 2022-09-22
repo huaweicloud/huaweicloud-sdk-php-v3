@@ -253,6 +253,9 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['categories'] === null) {
+            $invalidProperties[] = "'categories' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -319,7 +322,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     * Gets categories
     *  需要检测的风险类型，若未传或者传参为空，则表示全场景审核。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getCategories()
     {
@@ -329,7 +332,7 @@ class AudioCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets categories
     *
-    * @param string[]|null $categories 需要检测的风险类型，若未传或者传参为空，则表示全场景审核。
+    * @param string[] $categories 需要检测的风险类型，若未传或者传参为空，则表示全场景审核。
     *
     * @return $this
     */

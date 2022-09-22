@@ -24,6 +24,7 @@ class CreatePublicipOption implements ModelInterface, ArrayAccess
     * type  功能说明：弹性公网IP的类型  取值范围：5_telcom（电信），5_union（联通），5_bgp（全动态BGP），5_sbgp（静态BGP），5_ipv6  东北-大连：5_telcom、5_union  华南-广州：5_bgp、5_sbgp  华东-上海二：5_bgp、5_sbgp  华北-北京一：5_bgp、5_sbgp、5_ipv6  亚太-香港：5_bgp  亚太-曼谷：5_bgp  亚太-新加坡：5_bgp  非洲-约翰内斯堡：5_bgp  西南-贵阳一：5_bgp、5_sbgp  华北-北京四：5_bgp、5_sbgp  约束：必须是系统具体支持的类型。  publicip_id为IPv4端口，所以\"publicip_type\"字段未给定时，默认为5_bgp。
     * ipVersion  功能说明：弹性IP弹性公网IP的版本  取值范围：4、6，分别表示创建ipv4和ipv6  约束：必须是系统具体支持的类型  不填或空字符串时，默认创建ipv4
     * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * portId  功能说明：端口id  约束：必须是存在的端口id，如果该端口不存在或端口已绑定EIP则会提示出错。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class CreatePublicipOption implements ModelInterface, ArrayAccess
             'ipAddress' => 'string',
             'type' => 'string',
             'ipVersion' => 'int',
-            'alias' => 'string'
+            'alias' => 'string',
+            'portId' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class CreatePublicipOption implements ModelInterface, ArrayAccess
     * type  功能说明：弹性公网IP的类型  取值范围：5_telcom（电信），5_union（联通），5_bgp（全动态BGP），5_sbgp（静态BGP），5_ipv6  东北-大连：5_telcom、5_union  华南-广州：5_bgp、5_sbgp  华东-上海二：5_bgp、5_sbgp  华北-北京一：5_bgp、5_sbgp、5_ipv6  亚太-香港：5_bgp  亚太-曼谷：5_bgp  亚太-新加坡：5_bgp  非洲-约翰内斯堡：5_bgp  西南-贵阳一：5_bgp、5_sbgp  华北-北京四：5_bgp、5_sbgp  约束：必须是系统具体支持的类型。  publicip_id为IPv4端口，所以\"publicip_type\"字段未给定时，默认为5_bgp。
     * ipVersion  功能说明：弹性IP弹性公网IP的版本  取值范围：4、6，分别表示创建ipv4和ipv6  约束：必须是系统具体支持的类型  不填或空字符串时，默认创建ipv4
     * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * portId  功能说明：端口id  约束：必须是存在的端口id，如果该端口不存在或端口已绑定EIP则会提示出错。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class CreatePublicipOption implements ModelInterface, ArrayAccess
         'ipAddress' => null,
         'type' => null,
         'ipVersion' => 'int32',
-        'alias' => null
+        'alias' => null,
+        'portId' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class CreatePublicipOption implements ModelInterface, ArrayAccess
     * type  功能说明：弹性公网IP的类型  取值范围：5_telcom（电信），5_union（联通），5_bgp（全动态BGP），5_sbgp（静态BGP），5_ipv6  东北-大连：5_telcom、5_union  华南-广州：5_bgp、5_sbgp  华东-上海二：5_bgp、5_sbgp  华北-北京一：5_bgp、5_sbgp、5_ipv6  亚太-香港：5_bgp  亚太-曼谷：5_bgp  亚太-新加坡：5_bgp  非洲-约翰内斯堡：5_bgp  西南-贵阳一：5_bgp、5_sbgp  华北-北京四：5_bgp、5_sbgp  约束：必须是系统具体支持的类型。  publicip_id为IPv4端口，所以\"publicip_type\"字段未给定时，默认为5_bgp。
     * ipVersion  功能说明：弹性IP弹性公网IP的版本  取值范围：4、6，分别表示创建ipv4和ipv6  约束：必须是系统具体支持的类型  不填或空字符串时，默认创建ipv4
     * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * portId  功能说明：端口id  约束：必须是存在的端口id，如果该端口不存在或端口已绑定EIP则会提示出错。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class CreatePublicipOption implements ModelInterface, ArrayAccess
             'ipAddress' => 'ip_address',
             'type' => 'type',
             'ipVersion' => 'ip_version',
-            'alias' => 'alias'
+            'alias' => 'alias',
+            'portId' => 'port_id'
     ];
 
     /**
@@ -93,6 +99,7 @@ class CreatePublicipOption implements ModelInterface, ArrayAccess
     * type  功能说明：弹性公网IP的类型  取值范围：5_telcom（电信），5_union（联通），5_bgp（全动态BGP），5_sbgp（静态BGP），5_ipv6  东北-大连：5_telcom、5_union  华南-广州：5_bgp、5_sbgp  华东-上海二：5_bgp、5_sbgp  华北-北京一：5_bgp、5_sbgp、5_ipv6  亚太-香港：5_bgp  亚太-曼谷：5_bgp  亚太-新加坡：5_bgp  非洲-约翰内斯堡：5_bgp  西南-贵阳一：5_bgp、5_sbgp  华北-北京四：5_bgp、5_sbgp  约束：必须是系统具体支持的类型。  publicip_id为IPv4端口，所以\"publicip_type\"字段未给定时，默认为5_bgp。
     * ipVersion  功能说明：弹性IP弹性公网IP的版本  取值范围：4、6，分别表示创建ipv4和ipv6  约束：必须是系统具体支持的类型  不填或空字符串时，默认创建ipv4
     * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * portId  功能说明：端口id  约束：必须是存在的端口id，如果该端口不存在或端口已绑定EIP则会提示出错。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class CreatePublicipOption implements ModelInterface, ArrayAccess
             'ipAddress' => 'setIpAddress',
             'type' => 'setType',
             'ipVersion' => 'setIpVersion',
-            'alias' => 'setAlias'
+            'alias' => 'setAlias',
+            'portId' => 'setPortId'
     ];
 
     /**
@@ -109,6 +117,7 @@ class CreatePublicipOption implements ModelInterface, ArrayAccess
     * type  功能说明：弹性公网IP的类型  取值范围：5_telcom（电信），5_union（联通），5_bgp（全动态BGP），5_sbgp（静态BGP），5_ipv6  东北-大连：5_telcom、5_union  华南-广州：5_bgp、5_sbgp  华东-上海二：5_bgp、5_sbgp  华北-北京一：5_bgp、5_sbgp、5_ipv6  亚太-香港：5_bgp  亚太-曼谷：5_bgp  亚太-新加坡：5_bgp  非洲-约翰内斯堡：5_bgp  西南-贵阳一：5_bgp、5_sbgp  华北-北京四：5_bgp、5_sbgp  约束：必须是系统具体支持的类型。  publicip_id为IPv4端口，所以\"publicip_type\"字段未给定时，默认为5_bgp。
     * ipVersion  功能说明：弹性IP弹性公网IP的版本  取值范围：4、6，分别表示创建ipv4和ipv6  约束：必须是系统具体支持的类型  不填或空字符串时，默认创建ipv4
     * alias  功能说明：弹性公网IP名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * portId  功能说明：端口id  约束：必须是存在的端口id，如果该端口不存在或端口已绑定EIP则会提示出错。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class CreatePublicipOption implements ModelInterface, ArrayAccess
             'ipAddress' => 'getIpAddress',
             'type' => 'getType',
             'ipVersion' => 'getIpVersion',
-            'alias' => 'getAlias'
+            'alias' => 'getAlias',
+            'portId' => 'getPortId'
     ];
 
     /**
@@ -196,6 +206,7 @@ class CreatePublicipOption implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : self::IP_VERSION_4;
         $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
+        $this->container['portId'] = isset($data['portId']) ? $data['portId'] : null;
     }
 
     /**
@@ -222,6 +233,9 @@ class CreatePublicipOption implements ModelInterface, ArrayAccess
 
             if (!is_null($this->container['alias']) && (mb_strlen($this->container['alias']) > 64)) {
                 $invalidProperties[] = "invalid value for 'alias', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['portId']) && (mb_strlen($this->container['portId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'portId', the character length must be smaller than or equal to 36.";
             }
         return $invalidProperties;
     }
@@ -330,6 +344,30 @@ class CreatePublicipOption implements ModelInterface, ArrayAccess
     public function setAlias($alias)
     {
         $this->container['alias'] = $alias;
+        return $this;
+    }
+
+    /**
+    * Gets portId
+    *  功能说明：端口id  约束：必须是存在的端口id，如果该端口不存在或端口已绑定EIP则会提示出错。
+    *
+    * @return string|null
+    */
+    public function getPortId()
+    {
+        return $this->container['portId'];
+    }
+
+    /**
+    * Sets portId
+    *
+    * @param string|null $portId 功能说明：端口id  约束：必须是存在的端口id，如果该端口不存在或端口已绑定EIP则会提示出错。
+    *
+    * @return $this
+    */
+    public function setPortId($portId)
+    {
+        $this->container['portId'] = $portId;
         return $this;
     }
 

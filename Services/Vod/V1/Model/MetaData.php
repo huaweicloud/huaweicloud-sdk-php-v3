@@ -20,6 +20,7 @@ class MetaData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
     * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向上取整。
     * videoSize  视频文件大小。  单位：字节。
@@ -33,6 +34,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'packType' => 'string',
             'codec' => 'string',
             'duration' => 'int',
             'videoSize' => 'int',
@@ -46,6 +48,7 @@ class MetaData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
     * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向上取整。
     * videoSize  视频文件大小。  单位：字节。
@@ -59,6 +62,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'packType' => null,
         'codec' => null,
         'duration' => 'int64',
         'videoSize' => 'int64',
@@ -93,6 +97,7 @@ class MetaData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
     * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向上取整。
     * videoSize  视频文件大小。  单位：字节。
@@ -106,6 +111,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'packType' => 'pack_type',
             'codec' => 'codec',
             'duration' => 'duration',
             'videoSize' => 'video_size',
@@ -119,6 +125,7 @@ class MetaData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
     * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向上取整。
     * videoSize  视频文件大小。  单位：字节。
@@ -132,6 +139,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'packType' => 'setPackType',
             'codec' => 'setCodec',
             'duration' => 'setDuration',
             'videoSize' => 'setVideoSize',
@@ -145,6 +153,7 @@ class MetaData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
     * duration  视频时长。  若视频的原时长为非整数，则该字段值为原时长的向上取整。
     * videoSize  视频文件大小。  单位：字节。
@@ -158,6 +167,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'packType' => 'getPackType',
             'codec' => 'getCodec',
             'duration' => 'getDuration',
             'videoSize' => 'getVideoSize',
@@ -209,6 +219,33 @@ class MetaData implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PACK_TYPE_MP4 = 'MP4';
+    const PACK_TYPE_TS = 'TS';
+    const PACK_TYPE_MOV = 'MOV';
+    const PACK_TYPE_MXF = 'MXF';
+    const PACK_TYPE_MPG = 'MPG';
+    const PACK_TYPE_FLV = 'FLV';
+    const PACK_TYPE_WMV = 'WMV';
+    const PACK_TYPE_MP3 = 'MP3';
+    const PACK_TYPE_WMA = 'WMA';
+    const PACK_TYPE_APE = 'APE';
+    const PACK_TYPE_FLAC = 'FLAC';
+    const PACK_TYPE_AAC = 'AAC';
+    const PACK_TYPE_AC3 = 'AC3';
+    const PACK_TYPE_MMF = 'MMF';
+    const PACK_TYPE_AMR = 'AMR';
+    const PACK_TYPE_M4_A = 'M4A';
+    const PACK_TYPE_M4_R = 'M4R';
+    const PACK_TYPE_OGG = 'OGG';
+    const PACK_TYPE_WAV = 'WAV';
+    const PACK_TYPE_WV = 'WV';
+    const PACK_TYPE_MP2 = 'MP2';
+    const PACK_TYPE_AVI = 'AVI';
+    const PACK_TYPE_F4_V = 'F4V';
+    const PACK_TYPE_M4_V = 'M4V';
+    const PACK_TYPE_MPEG = 'MPEG';
+    const PACK_TYPE_HLS = 'HLS';
+    const PACK_TYPE_DASH = 'DASH';
     const CODEC_MPEG_2 = 'MPEG-2';
     const CODEC_MPEG_4 = 'MPEG-4';
     const CODEC_H_264 = 'H.264';
@@ -230,6 +267,44 @@ class MetaData implements ModelInterface, ArrayAccess
     const CODEC_HEAAC = 'HEAAC';
     const CODEC_UNKNOWN = 'UNKNOWN';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPackTypeAllowableValues()
+    {
+        return [
+            self::PACK_TYPE_MP4,
+            self::PACK_TYPE_TS,
+            self::PACK_TYPE_MOV,
+            self::PACK_TYPE_MXF,
+            self::PACK_TYPE_MPG,
+            self::PACK_TYPE_FLV,
+            self::PACK_TYPE_WMV,
+            self::PACK_TYPE_MP3,
+            self::PACK_TYPE_WMA,
+            self::PACK_TYPE_APE,
+            self::PACK_TYPE_FLAC,
+            self::PACK_TYPE_AAC,
+            self::PACK_TYPE_AC3,
+            self::PACK_TYPE_MMF,
+            self::PACK_TYPE_AMR,
+            self::PACK_TYPE_M4_A,
+            self::PACK_TYPE_M4_R,
+            self::PACK_TYPE_OGG,
+            self::PACK_TYPE_WAV,
+            self::PACK_TYPE_WV,
+            self::PACK_TYPE_MP2,
+            self::PACK_TYPE_AVI,
+            self::PACK_TYPE_F4_V,
+            self::PACK_TYPE_M4_V,
+            self::PACK_TYPE_MPEG,
+            self::PACK_TYPE_HLS,
+            self::PACK_TYPE_DASH,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -278,6 +353,7 @@ class MetaData implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['packType'] = isset($data['packType']) ? $data['packType'] : null;
         $this->container['codec'] = isset($data['codec']) ? $data['codec'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['videoSize'] = isset($data['videoSize']) ? $data['videoSize'] : null;
@@ -297,6 +373,14 @@ class MetaData implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getPackTypeAllowableValues();
+                if (!is_null($this->container['packType']) && !in_array($this->container['packType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'packType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getCodecAllowableValues();
                 if (!is_null($this->container['codec']) && !in_array($this->container['codec'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -317,6 +401,30 @@ class MetaData implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets packType
+    *  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
+    *
+    * @return string|null
+    */
+    public function getPackType()
+    {
+        return $this->container['packType'];
+    }
+
+    /**
+    * Sets packType
+    *
+    * @param string|null $packType 视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
+    *
+    * @return $this
+    */
+    public function setPackType($packType)
+    {
+        $this->container['packType'] = $packType;
+        return $this;
     }
 
     /**
