@@ -26,7 +26,7 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
     * faceLocation  faceLocation
     * qrLocation  qrLocation
     * qrContent  图片中二维码指向的链接，当请求参数categories中包含image_text时存在。
-    * segments  segments
+    * segments  image_text场景下命中的文本片段。
     * label  识别的详细标签。
     *
     * @var string[]
@@ -38,7 +38,7 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
             'faceLocation' => '\HuaweiCloud\SDK\Moderation\V3\Model\FaceLocationDetail',
             'qrLocation' => '\HuaweiCloud\SDK\Moderation\V3\Model\QRLocationDetail',
             'qrContent' => 'string',
-            'segments' => '\HuaweiCloud\SDK\Moderation\V3\Model\OCRTextDetail',
+            'segments' => '\HuaweiCloud\SDK\Moderation\V3\Model\OCRTextDetail[]',
             'label' => 'string'
     ];
 
@@ -50,7 +50,7 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
     * faceLocation  faceLocation
     * qrLocation  qrLocation
     * qrContent  图片中二维码指向的链接，当请求参数categories中包含image_text时存在。
-    * segments  segments
+    * segments  image_text场景下命中的文本片段。
     * label  识别的详细标签。
     *
     * @var string[]
@@ -95,7 +95,7 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
     * faceLocation  faceLocation
     * qrLocation  qrLocation
     * qrContent  图片中二维码指向的链接，当请求参数categories中包含image_text时存在。
-    * segments  segments
+    * segments  image_text场景下命中的文本片段。
     * label  识别的详细标签。
     *
     * @var string[]
@@ -119,7 +119,7 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
     * faceLocation  faceLocation
     * qrLocation  qrLocation
     * qrContent  图片中二维码指向的链接，当请求参数categories中包含image_text时存在。
-    * segments  segments
+    * segments  image_text场景下命中的文本片段。
     * label  识别的详细标签。
     *
     * @var string[]
@@ -143,7 +143,7 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
     * faceLocation  faceLocation
     * qrLocation  qrLocation
     * qrContent  图片中二维码指向的链接，当请求参数categories中包含image_text时存在。
-    * segments  segments
+    * segments  image_text场景下命中的文本片段。
     * label  识别的详细标签。
     *
     * @var string[]
@@ -404,9 +404,9 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets segments
-    *  segments
+    *  image_text场景下命中的文本片段。
     *
-    * @return \HuaweiCloud\SDK\Moderation\V3\Model\OCRTextDetail|null
+    * @return \HuaweiCloud\SDK\Moderation\V3\Model\OCRTextDetail[]|null
     */
     public function getSegments()
     {
@@ -416,7 +416,7 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
     /**
     * Sets segments
     *
-    * @param \HuaweiCloud\SDK\Moderation\V3\Model\OCRTextDetail|null $segments segments
+    * @param \HuaweiCloud\SDK\Moderation\V3\Model\OCRTextDetail[]|null $segments image_text场景下命中的文本片段。
     *
     * @return $this
     */

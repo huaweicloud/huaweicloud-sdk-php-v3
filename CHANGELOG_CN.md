@@ -1,3 +1,14 @@
+# 3.1.4 2022-09-26
+
+### HuaweiCloud SDK Moderation
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 修复接口`CheckImageModeration`响应参数类型错误的问题
+- _特性变更_
+  - 无
+
 # 3.1.3 2022-09-22
 
 ### HuaweiCloud SDK EIP

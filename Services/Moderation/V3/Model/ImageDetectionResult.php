@@ -22,7 +22,7 @@ class ImageDetectionResult implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * suggestion  审核结果是否通过。  block：包含敏感信息，不通过  pass：不包含敏感信息，通过  review：需要人工复检
     * category  检测结果的一级标签。 支持category列表如下： politics: 涉政 terrorism: 暴恐 porn: 色情 image_text: 图文审核
-    * details  details
+    * details  检测详情
     * ocrText  图文审核检测出的文本，只有在category参数配置image_text且检测出文本时展示该字段。
     *
     * @var string[]
@@ -30,7 +30,7 @@ class ImageDetectionResult implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'suggestion' => 'string',
             'category' => 'string',
-            'details' => '\HuaweiCloud\SDK\Moderation\V3\Model\ImageDetectionResultDetail',
+            'details' => '\HuaweiCloud\SDK\Moderation\V3\Model\ImageDetectionResultDetail[]',
             'ocrText' => 'string'
     ];
 
@@ -38,7 +38,7 @@ class ImageDetectionResult implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * suggestion  审核结果是否通过。  block：包含敏感信息，不通过  pass：不包含敏感信息，通过  review：需要人工复检
     * category  检测结果的一级标签。 支持category列表如下： politics: 涉政 terrorism: 暴恐 porn: 色情 image_text: 图文审核
-    * details  details
+    * details  检测详情
     * ocrText  图文审核检测出的文本，只有在category参数配置image_text且检测出文本时展示该字段。
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ImageDetectionResult implements ModelInterface, ArrayAccess
     * and the value is the original name
     * suggestion  审核结果是否通过。  block：包含敏感信息，不通过  pass：不包含敏感信息，通过  review：需要人工复检
     * category  检测结果的一级标签。 支持category列表如下： politics: 涉政 terrorism: 暴恐 porn: 色情 image_text: 图文审核
-    * details  details
+    * details  检测详情
     * ocrText  图文审核检测出的文本，只有在category参数配置image_text且检测出文本时展示该字段。
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ImageDetectionResult implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * suggestion  审核结果是否通过。  block：包含敏感信息，不通过  pass：不包含敏感信息，通过  review：需要人工复检
     * category  检测结果的一级标签。 支持category列表如下： politics: 涉政 terrorism: 暴恐 porn: 色情 image_text: 图文审核
-    * details  details
+    * details  检测详情
     * ocrText  图文审核检测出的文本，只有在category参数配置image_text且检测出文本时展示该字段。
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ImageDetectionResult implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * suggestion  审核结果是否通过。  block：包含敏感信息，不通过  pass：不包含敏感信息，通过  review：需要人工复检
     * category  检测结果的一级标签。 支持category列表如下： politics: 涉政 terrorism: 暴恐 porn: 色情 image_text: 图文审核
-    * details  details
+    * details  检测详情
     * ocrText  图文审核检测出的文本，只有在category参数配置image_text且检测出文本时展示该字段。
     *
     * @var string[]
@@ -255,9 +255,9 @@ class ImageDetectionResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets details
-    *  details
+    *  检测详情
     *
-    * @return \HuaweiCloud\SDK\Moderation\V3\Model\ImageDetectionResultDetail|null
+    * @return \HuaweiCloud\SDK\Moderation\V3\Model\ImageDetectionResultDetail[]|null
     */
     public function getDetails()
     {
@@ -267,7 +267,7 @@ class ImageDetectionResult implements ModelInterface, ArrayAccess
     /**
     * Sets details
     *
-    * @param \HuaweiCloud\SDK\Moderation\V3\Model\ImageDetectionResultDetail|null $details details
+    * @param \HuaweiCloud\SDK\Moderation\V3\Model\ImageDetectionResultDetail[]|null $details 检测详情
     *
     * @return $this
     */

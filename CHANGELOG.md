@@ -1,3 +1,14 @@
+# 3.1.4 2022-09-26
+
+### HuaweiCloud SDK Moderation
+
+- _Features_
+  - None
+- _Bug Fix_
+  - Fix the problem that the response parameters' type of the interface `CheckImageModeration` is incorrect
+- _Change_
+  - None
+
 # 3.1.3 2022-09-22
 
 ### HuaweiCloud SDK EIP
