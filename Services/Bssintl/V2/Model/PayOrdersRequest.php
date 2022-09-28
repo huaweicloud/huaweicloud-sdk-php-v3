@@ -25,7 +25,7 @@ class PayOrdersRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Bssintl\V2\Model\PayCustomerOrderReq'
+            'body' => '\HuaweiCloud\SDK\Bssintl\V2\Model\PayCustomerOrderV3Req'
     ];
 
     /**
@@ -176,7 +176,7 @@ class PayOrdersRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\PayCustomerOrderReq|null
+    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\PayCustomerOrderV3Req|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class PayOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\PayCustomerOrderReq|null $body body
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\PayCustomerOrderV3Req|null $body body
     *
     * @return $this
     */

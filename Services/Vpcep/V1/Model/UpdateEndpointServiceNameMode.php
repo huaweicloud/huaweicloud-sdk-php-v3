@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Bss\V2\Model;
+namespace HuaweiCloud\SDK\Vpcep\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
+class UpdateEndpointServiceNameMode implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CouponSimpleInfoOrderPay';
+    protected static $openAPIModelName = 'UpdateEndpointServiceNameMode';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  优惠券ID。
-    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券
+    * endpointServiceName  终端节点服务名称
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'type' => 'int'
+            'endpointServiceName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  优惠券ID。
-    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券
+    * endpointServiceName  终端节点服务名称
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'type' => 'int32'
+        'endpointServiceName' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  优惠券ID。
-    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券
+    * endpointServiceName  终端节点服务名称
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'type' => 'type'
+            'endpointServiceName' => 'endpoint_service_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  优惠券ID。
-    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券
+    * endpointServiceName  终端节点服务名称
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'type' => 'setType'
+            'endpointServiceName' => 'setEndpointServiceName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  优惠券ID。
-    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券
+    * endpointServiceName  终端节点服务名称
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'type' => 'getType'
+            'endpointServiceName' => 'getEndpointServiceName'
     ];
 
     /**
@@ -157,8 +147,7 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['endpointServiceName'] = isset($data['endpointServiceName']) ? $data['endpointServiceName'] : null;
     }
 
     /**
@@ -169,23 +158,11 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-            if ((mb_strlen($this->container['id']) > 64)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['endpointServiceName']) && (mb_strlen($this->container['endpointServiceName']) > 16)) {
+                $invalidProperties[] = "invalid value for 'endpointServiceName', the character length must be smaller than or equal to 16.";
             }
-            if ((mb_strlen($this->container['id']) < 0)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-            if (($this->container['type'] > 303)) {
-                $invalidProperties[] = "invalid value for 'type', must be smaller than or equal to 303.";
-            }
-            if (($this->container['type'] < 300)) {
-                $invalidProperties[] = "invalid value for 'type', must be bigger than or equal to 300.";
+            if (!is_null($this->container['endpointServiceName']) && (mb_strlen($this->container['endpointServiceName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'endpointServiceName', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -202,50 +179,26 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  优惠券ID。
+    * Gets endpointServiceName
+    *  终端节点服务名称
     *
-    * @return string
+    * @return string|null
     */
-    public function getId()
+    public function getEndpointServiceName()
     {
-        return $this->container['id'];
+        return $this->container['endpointServiceName'];
     }
 
     /**
-    * Sets id
+    * Sets endpointServiceName
     *
-    * @param string $id 优惠券ID。
+    * @param string|null $endpointServiceName 终端节点服务名称
     *
     * @return $this
     */
-    public function setId($id)
+    public function setEndpointServiceName($endpointServiceName)
     {
-        $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
-    * Gets type
-    *  折扣类型：300:折扣券 301:促销代金券 302:促销现金券
-    *
-    * @return int
-    */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-    * Sets type
-    *
-    * @param int $type 折扣类型：300:折扣券 301:促销代金券 302:促销现金券
-    *
-    * @return $this
-    */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
+        $this->container['endpointServiceName'] = $endpointServiceName;
         return $this;
     }
 

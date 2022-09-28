@@ -2378,7 +2378,7 @@ class BssintlAsyncClient extends Client
     /**
      * 支付包年/包月产品订单
      *
-     * 功能描述：客户可以对待支付状态的包年/包月产品订单进行支付
+     * 客户可以对待支付状态的包年/包月产品订单进行支付
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -2393,7 +2393,7 @@ class BssintlAsyncClient extends Client
     
     public function payOrdersAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/orders/customer-orders/pay';
+        $resourcePath = '/v3/orders/customer-orders/pay';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

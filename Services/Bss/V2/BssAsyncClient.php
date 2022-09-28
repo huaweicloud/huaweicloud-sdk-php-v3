@@ -4733,7 +4733,7 @@ class BssAsyncClient extends Client
     
     public function payOrdersAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v2/orders/customer-orders/pay';
+        $resourcePath = '/v3/orders/customer-orders/pay';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

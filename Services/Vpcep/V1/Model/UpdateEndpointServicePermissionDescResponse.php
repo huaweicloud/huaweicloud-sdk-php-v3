@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Bssintl\V2\Model;
+namespace HuaweiCloud\SDK\Vpcep\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
+class UpdateEndpointServicePermissionDescResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,26 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CouponSimpleInfoOrderPay';
+    protected static $openAPIModelName = 'UpdateEndpointServicePermissionDescResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * permissions  permissions
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'type' => 'int'
+            'permissions' => '\HuaweiCloud\SDK\Vpcep\V1\Model\EpsPermission[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * permissions  permissions
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'type' => 'int32'
+        'permissions' => null
     ];
 
     /**
@@ -65,38 +62,32 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * permissions  permissions
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'type' => 'type'
+            'permissions' => 'permissions'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * permissions  permissions
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'type' => 'setType'
+            'permissions' => 'setPermissions'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * permissions  permissions
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'type' => 'getType'
+            'permissions' => 'getPermissions'
     ];
 
     /**
@@ -157,8 +148,7 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['permissions'] = isset($data['permissions']) ? $data['permissions'] : null;
     }
 
     /**
@@ -169,24 +159,6 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-            if ((mb_strlen($this->container['id']) > 64)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['id']) < 0)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-            if (($this->container['type'] > 303)) {
-                $invalidProperties[] = "invalid value for 'type', must be smaller than or equal to 303.";
-            }
-            if (($this->container['type'] < 300)) {
-                $invalidProperties[] = "invalid value for 'type', must be bigger than or equal to 300.";
-            }
         return $invalidProperties;
     }
 
@@ -202,50 +174,26 @@ class CouponSimpleInfoOrderPay implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  折扣ID。
+    * Gets permissions
+    *  permissions
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\EpsPermission[]|null
     */
-    public function getId()
+    public function getPermissions()
     {
-        return $this->container['id'];
+        return $this->container['permissions'];
     }
 
     /**
-    * Sets id
+    * Sets permissions
     *
-    * @param string $id 折扣ID。
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\EpsPermission[]|null $permissions permissions
     *
     * @return $this
     */
-    public function setId($id)
+    public function setPermissions($permissions)
     {
-        $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
-    * Gets type
-    *  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
-    *
-    * @return int
-    */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-    * Sets type
-    *
-    * @param int $type 折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
-    *
-    * @return $this
-    */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
+        $this->container['permissions'] = $permissions;
         return $this;
     }
 

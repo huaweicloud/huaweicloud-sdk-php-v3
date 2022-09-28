@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Bss\V2\Model;
+namespace HuaweiCloud\SDK\Vpcep\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DiscountSimpleInfo implements ModelInterface, ArrayAccess
+class UpdateEndpointRoutetableRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class DiscountSimpleInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DiscountSimpleInfo';
+    protected static $openAPIModelName = 'UpdateEndpointRoutetableRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * routetables  路由表ID列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'type' => 'int'
+            'routetables' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * routetables  路由表ID列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'type' => 'int32'
+        'routetables' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class DiscountSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * routetables  路由表ID列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'type' => 'type'
+            'routetables' => 'routetables'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * routetables  路由表ID列表。
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'type' => 'setType'
+            'routetables' => 'setRoutetables'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * routetables  路由表ID列表。
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'type' => 'getType'
+            'routetables' => 'getRoutetables'
     ];
 
     /**
@@ -157,8 +147,7 @@ class DiscountSimpleInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['routetables'] = isset($data['routetables']) ? $data['routetables'] : null;
     }
 
     /**
@@ -169,24 +158,9 @@ class DiscountSimpleInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
+        if ($this->container['routetables'] === null) {
+            $invalidProperties[] = "'routetables' can't be null";
         }
-            if ((mb_strlen($this->container['id']) > 64)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['id']) < 0)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-            if (($this->container['type'] > 609)) {
-                $invalidProperties[] = "invalid value for 'type', must be smaller than or equal to 609.";
-            }
-            if (($this->container['type'] < 0)) {
-                $invalidProperties[] = "invalid value for 'type', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -202,50 +176,26 @@ class DiscountSimpleInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  折扣ID。
+    * Gets routetables
+    *  路由表ID列表。
     *
-    * @return string
+    * @return string[]
     */
-    public function getId()
+    public function getRoutetables()
     {
-        return $this->container['id'];
+        return $this->container['routetables'];
     }
 
     /**
-    * Sets id
+    * Sets routetables
     *
-    * @param string $id 折扣ID。
+    * @param string[] $routetables 路由表ID列表。
     *
     * @return $this
     */
-    public function setId($id)
+    public function setRoutetables($routetables)
     {
-        $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
-    * Gets type
-    *  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
-    *
-    * @return int
-    */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-    * Sets type
-    *
-    * @param int $type 折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
-    *
-    * @return $this
-    */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
+        $this->container['routetables'] = $routetables;
         return $this;
     }
 

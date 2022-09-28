@@ -22,6 +22,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * domain  推流域名
     * appName  应用名称。 默认为“live”，若您需要自定义应用名称，请先提交工单申请。
+    * transType  转码流触发模式。 - play：拉流触发转码。 - publish：推流触发转码。 默认为play
     * qualityInfo  视频质量信息
     *
     * @var string[]
@@ -29,6 +30,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'domain' => 'string',
             'appName' => 'string',
+            'transType' => 'string',
             'qualityInfo' => '\HuaweiCloud\SDK\Live\V1\Model\QualityInfo[]'
     ];
 
@@ -36,6 +38,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * domain  推流域名
     * appName  应用名称。 默认为“live”，若您需要自定义应用名称，请先提交工单申请。
+    * transType  转码流触发模式。 - play：拉流触发转码。 - publish：推流触发转码。 默认为play
     * qualityInfo  视频质量信息
     *
     * @var string[]
@@ -43,6 +46,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'domain' => null,
         'appName' => null,
+        'transType' => null,
         'qualityInfo' => null
     ];
 
@@ -71,6 +75,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     * and the value is the original name
     * domain  推流域名
     * appName  应用名称。 默认为“live”，若您需要自定义应用名称，请先提交工单申请。
+    * transType  转码流触发模式。 - play：拉流触发转码。 - publish：推流触发转码。 默认为play
     * qualityInfo  视频质量信息
     *
     * @var string[]
@@ -78,6 +83,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'domain' => 'domain',
             'appName' => 'app_name',
+            'transType' => 'trans_type',
             'qualityInfo' => 'quality_info'
     ];
 
@@ -85,6 +91,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * domain  推流域名
     * appName  应用名称。 默认为“live”，若您需要自定义应用名称，请先提交工单申请。
+    * transType  转码流触发模式。 - play：拉流触发转码。 - publish：推流触发转码。 默认为play
     * qualityInfo  视频质量信息
     *
     * @var string[]
@@ -92,6 +99,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     protected static $setters = [
             'domain' => 'setDomain',
             'appName' => 'setAppName',
+            'transType' => 'setTransType',
             'qualityInfo' => 'setQualityInfo'
     ];
 
@@ -99,6 +107,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * domain  推流域名
     * appName  应用名称。 默认为“live”，若您需要自定义应用名称，请先提交工单申请。
+    * transType  转码流触发模式。 - play：拉流触发转码。 - publish：推流触发转码。 默认为play
     * qualityInfo  视频质量信息
     *
     * @var string[]
@@ -106,6 +115,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     protected static $getters = [
             'domain' => 'getDomain',
             'appName' => 'getAppName',
+            'transType' => 'getTransType',
             'qualityInfo' => 'getQualityInfo'
     ];
 
@@ -149,7 +159,22 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TRANS_TYPE_PLAY = 'play';
+    const TRANS_TYPE_PUBLISH = 'publish';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTransTypeAllowableValues()
+    {
+        return [
+            self::TRANS_TYPE_PLAY,
+            self::TRANS_TYPE_PUBLISH,
+        ];
+    }
 
 
     /**
@@ -169,6 +194,7 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     {
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
+        $this->container['transType'] = isset($data['transType']) ? $data['transType'] : 'play';
         $this->container['qualityInfo'] = isset($data['qualityInfo']) ? $data['qualityInfo'] : null;
     }
 
@@ -198,6 +224,14 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['appName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'appName', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getTransTypeAllowableValues();
+                if (!is_null($this->container['transType']) && !in_array($this->container['transType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'transType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['qualityInfo'] === null) {
             $invalidProperties[] = "'qualityInfo' can't be null";
         }
@@ -260,6 +294,30 @@ class StreamTranscodingTemplate implements ModelInterface, ArrayAccess
     public function setAppName($appName)
     {
         $this->container['appName'] = $appName;
+        return $this;
+    }
+
+    /**
+    * Gets transType
+    *  转码流触发模式。 - play：拉流触发转码。 - publish：推流触发转码。 默认为play
+    *
+    * @return string|null
+    */
+    public function getTransType()
+    {
+        return $this->container['transType'];
+    }
+
+    /**
+    * Sets transType
+    *
+    * @param string|null $transType 转码流触发模式。 - play：拉流触发转码。 - publish：推流触发转码。 默认为play
+    *
+    * @return $this
+    */
+    public function setTransType($transType)
+    {
+        $this->container['transType'] = $transType;
         return $this;
     }
 

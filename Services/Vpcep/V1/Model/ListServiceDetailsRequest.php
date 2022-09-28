@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Bssintl\V2\Model;
+namespace HuaweiCloud\SDK\Vpcep\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DiscountSimpleInfo implements ModelInterface, ArrayAccess
+class ListServiceDetailsRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class DiscountSimpleInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DiscountSimpleInfo';
+    protected static $openAPIModelName = 'ListServiceDetailsRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * projectId  项目ID。
+    * vpcEndpointServiceId  终端节点服务的ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'type' => 'int'
+            'projectId' => 'string',
+            'vpcEndpointServiceId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * projectId  项目ID。
+    * vpcEndpointServiceId  终端节点服务的ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'type' => 'int32'
+        'projectId' => null,
+        'vpcEndpointServiceId' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class DiscountSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * projectId  项目ID。
+    * vpcEndpointServiceId  终端节点服务的ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'type' => 'type'
+            'projectId' => 'project_id',
+            'vpcEndpointServiceId' => 'vpc_endpoint_service_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * projectId  项目ID。
+    * vpcEndpointServiceId  终端节点服务的ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'type' => 'setType'
+            'projectId' => 'setProjectId',
+            'vpcEndpointServiceId' => 'setVpcEndpointServiceId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  折扣ID。
-    * type  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * projectId  项目ID。
+    * vpcEndpointServiceId  终端节点服务的ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'type' => 'getType'
+            'projectId' => 'getProjectId',
+            'vpcEndpointServiceId' => 'getVpcEndpointServiceId'
     ];
 
     /**
@@ -157,8 +157,8 @@ class DiscountSimpleInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['vpcEndpointServiceId'] = isset($data['vpcEndpointServiceId']) ? $data['vpcEndpointServiceId'] : null;
     }
 
     /**
@@ -169,23 +169,23 @@ class DiscountSimpleInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
         }
-            if ((mb_strlen($this->container['id']) > 64)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 64.";
+            if ((mb_strlen($this->container['projectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['id']) < 0)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
+        if ($this->container['vpcEndpointServiceId'] === null) {
+            $invalidProperties[] = "'vpcEndpointServiceId' can't be null";
         }
-            if (($this->container['type'] > 609)) {
-                $invalidProperties[] = "invalid value for 'type', must be smaller than or equal to 609.";
+            if ((mb_strlen($this->container['vpcEndpointServiceId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'vpcEndpointServiceId', the character length must be smaller than or equal to 64.";
             }
-            if (($this->container['type'] < 0)) {
-                $invalidProperties[] = "invalid value for 'type', must be bigger than or equal to 0.";
+            if ((mb_strlen($this->container['vpcEndpointServiceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'vpcEndpointServiceId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -202,50 +202,50 @@ class DiscountSimpleInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  折扣ID。
+    * Gets projectId
+    *  项目ID。
     *
     * @return string
     */
-    public function getId()
+    public function getProjectId()
     {
-        return $this->container['id'];
+        return $this->container['projectId'];
     }
 
     /**
-    * Sets id
+    * Sets projectId
     *
-    * @param string $id 折扣ID。
+    * @param string $projectId 项目ID。
     *
     * @return $this
     */
-    public function setId($id)
+    public function setProjectId($projectId)
     {
-        $this->container['id'] = $id;
+        $this->container['projectId'] = $projectId;
         return $this;
     }
 
     /**
-    * Gets type
-    *  折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * Gets vpcEndpointServiceId
+    *  终端节点服务的ID。
     *
-    * @return int
+    * @return string
     */
-    public function getType()
+    public function getVpcEndpointServiceId()
     {
-        return $this->container['type'];
+        return $this->container['vpcEndpointServiceId'];
     }
 
     /**
-    * Sets type
+    * Sets vpcEndpointServiceId
     *
-    * @param int $type 折扣类型： 0：促销折扣 1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣 说明： 订单支付时，如果包含609折扣（订单调价折扣），则必须使用，不能再更换折扣类型。
+    * @param string $vpcEndpointServiceId 终端节点服务的ID。
     *
     * @return $this
     */
-    public function setType($type)
+    public function setVpcEndpointServiceId($vpcEndpointServiceId)
     {
-        $this->container['type'] = $type;
+        $this->container['vpcEndpointServiceId'] = $vpcEndpointServiceId;
         return $this;
     }
 

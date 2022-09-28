@@ -374,22 +374,16 @@ class QualityInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['width'] === null) {
-            $invalidProperties[] = "'width' can't be null";
-        }
-            if (($this->container['width'] > 3840)) {
+            if (!is_null($this->container['width']) && ($this->container['width'] > 3840)) {
                 $invalidProperties[] = "invalid value for 'width', must be smaller than or equal to 3840.";
             }
-            if (($this->container['width'] < 32)) {
+            if (!is_null($this->container['width']) && ($this->container['width'] < 32)) {
                 $invalidProperties[] = "invalid value for 'width', must be bigger than or equal to 32.";
             }
-        if ($this->container['height'] === null) {
-            $invalidProperties[] = "'height' can't be null";
-        }
-            if (($this->container['height'] > 3840)) {
+            if (!is_null($this->container['height']) && ($this->container['height'] > 3840)) {
                 $invalidProperties[] = "invalid value for 'height', must be smaller than or equal to 3840.";
             }
-            if (($this->container['height'] < 32)) {
+            if (!is_null($this->container['height']) && ($this->container['height'] < 32)) {
                 $invalidProperties[] = "invalid value for 'height', must be bigger than or equal to 32.";
             }
         if ($this->container['bitrate'] === null) {
@@ -565,7 +559,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     * Gets width
     *  视频宽度（单位：像素） - H264   取值范围：32-3840，必须为2的倍数 。 - H265   取值范围：320-3840 ，必须为4的倍数。
     *
-    * @return int
+    * @return int|null
     */
     public function getWidth()
     {
@@ -575,7 +569,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Sets width
     *
-    * @param int $width 视频宽度（单位：像素） - H264   取值范围：32-3840，必须为2的倍数 。 - H265   取值范围：320-3840 ，必须为4的倍数。
+    * @param int|null $width 视频宽度（单位：像素） - H264   取值范围：32-3840，必须为2的倍数 。 - H265   取值范围：320-3840 ，必须为4的倍数。
     *
     * @return $this
     */
@@ -589,7 +583,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     * Gets height
     *  视频高度（单位：像素） - H264   取值范围：32-2160，必须为2的倍数。 - H265   取值范围：240-2160，必须为4的倍数。
     *
-    * @return int
+    * @return int|null
     */
     public function getHeight()
     {
@@ -599,7 +593,7 @@ class QualityInfo implements ModelInterface, ArrayAccess
     /**
     * Sets height
     *
-    * @param int $height 视频高度（单位：像素） - H264   取值范围：32-2160，必须为2的倍数。 - H265   取值范围：240-2160，必须为4的倍数。
+    * @param int|null $height 视频高度（单位：像素） - H264   取值范围：32-2160，必须为2的倍数。 - H265   取值范围：240-2160，必须为4的倍数。
     *
     * @return $this
     */

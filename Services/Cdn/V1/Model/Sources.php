@@ -20,6 +20,7 @@ class Sources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
     * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
     * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
@@ -28,6 +29,7 @@ class Sources implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'domainId' => 'string',
             'ipOrDomain' => 'string',
             'originType' => 'string',
             'activeStandby' => 'int',
@@ -36,6 +38,7 @@ class Sources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
     * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
     * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
@@ -44,6 +47,7 @@ class Sources implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'domainId' => null,
         'ipOrDomain' => null,
         'originType' => null,
         'activeStandby' => null,
@@ -73,6 +77,7 @@ class Sources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
     * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
     * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
@@ -81,6 +86,7 @@ class Sources implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'domainId' => 'domain_id',
             'ipOrDomain' => 'ip_or_domain',
             'originType' => 'origin_type',
             'activeStandby' => 'active_standby',
@@ -89,6 +95,7 @@ class Sources implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
     * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
     * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
@@ -97,6 +104,7 @@ class Sources implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'domainId' => 'setDomainId',
             'ipOrDomain' => 'setIpOrDomain',
             'originType' => 'setOriginType',
             'activeStandby' => 'setActiveStandby',
@@ -105,6 +113,7 @@ class Sources implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
     * originType  源站类型取值：ipaddr、 domain、obs_bucket，分别表示：源站IP、源站域名、OBS桶访问域名。
     * activeStandby  主备状态（1代表主站；0代表备站）,主源站必须存在，备源站可选，OBS桶不能有备源站。
@@ -113,6 +122,7 @@ class Sources implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'domainId' => 'getDomainId',
             'ipOrDomain' => 'getIpOrDomain',
             'originType' => 'getOriginType',
             'activeStandby' => 'getActiveStandby',
@@ -194,6 +204,7 @@ class Sources implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['ipOrDomain'] = isset($data['ipOrDomain']) ? $data['ipOrDomain'] : null;
         $this->container['originType'] = isset($data['originType']) ? $data['originType'] : null;
         $this->container['activeStandby'] = isset($data['activeStandby']) ? $data['activeStandby'] : null;
@@ -237,6 +248,30 @@ class Sources implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets domainId
+    *  加速域名id。
+    *
+    * @return string|null
+    */
+    public function getDomainId()
+    {
+        return $this->container['domainId'];
+    }
+
+    /**
+    * Sets domainId
+    *
+    * @param string|null $domainId 加速域名id。
+    *
+    * @return $this
+    */
+    public function setDomainId($domainId)
+    {
+        $this->container['domainId'] = $domainId;
+        return $this;
     }
 
     /**
