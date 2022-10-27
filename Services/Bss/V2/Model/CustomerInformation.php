@@ -30,7 +30,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
     * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
     * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
-    * isFrozen  是否冻结： 0：否1：是
+    * isFrozen  是否冻结： 0：否1：客户账号冻结2：客户账号和资源冻结 该字段预留。
     * accountManagers  该客户对应的客户经理信息，目前只支持1个，具体参见表2。
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
     * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
@@ -68,7 +68,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
     * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
     * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
-    * isFrozen  是否冻结： 0：否1：是
+    * isFrozen  是否冻结： 0：否1：客户账号冻结2：客户账号和资源冻结 该字段预留。
     * accountManagers  该客户对应的客户经理信息，目前只支持1个，具体参见表2。
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
     * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
@@ -127,7 +127,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
     * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
     * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
-    * isFrozen  是否冻结： 0：否1：是
+    * isFrozen  是否冻结： 0：否1：客户账号冻结2：客户账号和资源冻结 该字段预留。
     * accountManagers  该客户对应的客户经理信息，目前只支持1个，具体参见表2。
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
     * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
@@ -165,7 +165,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
     * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
     * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
-    * isFrozen  是否冻结： 0：否1：是
+    * isFrozen  是否冻结： 0：否1：客户账号冻结2：客户账号和资源冻结 该字段预留。
     * accountManagers  该客户对应的客户经理信息，目前只支持1个，具体参见表2。
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
     * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
@@ -203,7 +203,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
     * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
     * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
-    * isFrozen  是否冻结： 0：否1：是
+    * isFrozen  是否冻结： 0：否1：客户账号冻结2：客户账号和资源冻结 该字段预留。
     * accountManagers  该客户对应的客户经理信息，目前只支持1个，具体参见表2。
     * xaccountId  伙伴销售平台的用户唯一标识，该标识的具体值由伙伴分配。
     * xaccountType  华为分配给合作伙伴的平台标识。 该标识的具体值由华为分配。获取方法请参见如何获取xaccountType的取值。
@@ -574,7 +574,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets isFrozen
-    *  是否冻结： 0：否1：是
+    *  是否冻结： 0：否1：客户账号冻结2：客户账号和资源冻结 该字段预留。
     *
     * @return int|null
     */
@@ -586,7 +586,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets isFrozen
     *
-    * @param int|null $isFrozen 是否冻结： 0：否1：是
+    * @param int|null $isFrozen 是否冻结： 0：否1：客户账号冻结2：客户账号和资源冻结 该字段预留。
     *
     * @return $this
     */

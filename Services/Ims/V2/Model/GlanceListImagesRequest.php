@@ -20,7 +20,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
     * osBit  操作系统位数，一般取值为32或者64
     * osType  镜像系统类型，取值为Linux，Windows，Other
@@ -92,7 +92,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
     * osBit  操作系统位数，一般取值为32或者64
     * osType  镜像系统类型，取值为Linux，Windows，Other
@@ -185,7 +185,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
     * osBit  操作系统位数，一般取值为32或者64
     * osType  镜像系统类型，取值为Linux，Windows，Other
@@ -257,7 +257,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
     * osBit  操作系统位数，一般取值为32或者64
     * osType  镜像系统类型，取值为Linux，Windows，Other
@@ -329,7 +329,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * isregistered  镜像是否是受保护，取值为true/false。一般查询公共镜像时候取值为true，查询私有镜像可以不指定。
     * osBit  操作系统位数，一般取值为32或者64
     * osType  镜像系统类型，取值为Linux，Windows，Other
@@ -442,6 +442,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     const IMAGETYPE_GOLD = 'gold';
     const IMAGETYPE__PRIVATE = 'private';
     const IMAGETYPE_SHARED = 'shared';
+    const IMAGETYPE_MARKET = 'market';
     const OS_BIT__32 = '32';
     const OS_BIT__64 = '64';
     const OS_TYPE_LINUX = 'Linux';
@@ -484,6 +485,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
             self::IMAGETYPE_GOLD,
             self::IMAGETYPE__PRIVATE,
             self::IMAGETYPE_SHARED,
+            self::IMAGETYPE_MARKET,
         ];
     }
 
@@ -718,7 +720,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imagetype
-    *  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    *  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     *
     * @return string|null
     */
@@ -730,7 +732,7 @@ class GlanceListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imagetype
     *
-    * @param string|null $imagetype 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * @param string|null $imagetype 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     *
     * @return $this
     */

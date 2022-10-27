@@ -22,8 +22,8 @@ class ListCountiesRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  语言。zh_CN：中文en_us：英文缺省为zh_CN。
     * cityCode  城市的编码。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  每次查询的数量，最大1000。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为null时，取默认值0；不支持携带值为空。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，最大1000。默认值为10。此参数不携带，取默认值10；不支持携带值为空和携带值为null。
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class ListCountiesRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  语言。zh_CN：中文en_us：英文缺省为zh_CN。
     * cityCode  城市的编码。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  每次查询的数量，最大1000。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为null时，取默认值0；不支持携带值为空。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，最大1000。默认值为10。此参数不携带，取默认值10；不支持携带值为空和携带值为null。
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class ListCountiesRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xLanguage  语言。zh_CN：中文en_us：英文缺省为zh_CN。
     * cityCode  城市的编码。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  每次查询的数量，最大1000。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为null时，取默认值0；不支持携带值为空。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，最大1000。默认值为10。此参数不携带，取默认值10；不支持携带值为空和携带值为null。
     *
     * @var string[]
     */
@@ -91,8 +91,8 @@ class ListCountiesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  语言。zh_CN：中文en_us：英文缺省为zh_CN。
     * cityCode  城市的编码。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  每次查询的数量，最大1000。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为null时，取默认值0；不支持携带值为空。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，最大1000。默认值为10。此参数不携带，取默认值10；不支持携带值为空和携带值为null。
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class ListCountiesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  语言。zh_CN：中文en_us：英文缺省为zh_CN。
     * cityCode  城市的编码。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * limit  每次查询的数量，最大1000。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为null时，取默认值0；不支持携带值为空。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每次查询的数量，最大1000。默认值为10。此参数不携带，取默认值10；不支持携带值为空和携带值为null。
     *
     * @var string[]
     */
@@ -270,7 +270,7 @@ class ListCountiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    *  偏移量，从0开始。默认值为0。此参数不携带或携带值为null时，取默认值0；不支持携带值为空。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return int|null
     */
@@ -282,7 +282,7 @@ class ListCountiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * @param int|null $offset 偏移量，从0开始。默认值为0。此参数不携带或携带值为null时，取默认值0；不支持携带值为空。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return $this
     */
@@ -294,7 +294,7 @@ class ListCountiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每次查询的数量，最大1000。
+    *  每次查询的数量，最大1000。默认值为10。此参数不携带，取默认值10；不支持携带值为空和携带值为null。
     *
     * @return int|null
     */
@@ -306,7 +306,7 @@ class ListCountiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每次查询的数量，最大1000。
+    * @param int|null $limit 每次查询的数量，最大1000。默认值为10。此参数不携带，取默认值10；不支持携带值为空和携带值为null。
     *
     * @return $this
     */

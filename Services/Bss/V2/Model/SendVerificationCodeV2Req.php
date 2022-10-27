@@ -21,7 +21,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * receiverType  发送验证码的类型： 1：发送短信验证码
-    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
+    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间10分钟。 此参数值超过60时，取默认值5分钟。 单位：分钟。
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
     * lang  根据该参数的取值选择发送短信验证码的语言。此参数默认值为“zh-cn：中文”。 zh-cn：中文en-us：英文
     * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 此参数不携带或携带值为null时，默认值为“29：注册场景”。
@@ -41,7 +41,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * receiverType  发送验证码的类型： 1：发送短信验证码
-    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
+    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间10分钟。 此参数值超过60时，取默认值5分钟。 单位：分钟。
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
     * lang  根据该参数的取值选择发送短信验证码的语言。此参数默认值为“zh-cn：中文”。 zh-cn：中文en-us：英文
     * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 此参数不携带或携带值为null时，默认值为“29：注册场景”。
@@ -82,7 +82,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * receiverType  发送验证码的类型： 1：发送短信验证码
-    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
+    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间10分钟。 此参数值超过60时，取默认值5分钟。 单位：分钟。
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
     * lang  根据该参数的取值选择发送短信验证码的语言。此参数默认值为“zh-cn：中文”。 zh-cn：中文en-us：英文
     * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 此参数不携带或携带值为null时，默认值为“29：注册场景”。
@@ -102,7 +102,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * receiverType  发送验证码的类型： 1：发送短信验证码
-    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
+    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间10分钟。 此参数值超过60时，取默认值5分钟。 单位：分钟。
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
     * lang  根据该参数的取值选择发送短信验证码的语言。此参数默认值为“zh-cn：中文”。 zh-cn：中文en-us：英文
     * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 此参数不携带或携带值为null时，默认值为“29：注册场景”。
@@ -122,7 +122,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * receiverType  发送验证码的类型： 1：发送短信验证码
-    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
+    * timeout  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间10分钟。 此参数值超过60时，取默认值5分钟。 单位：分钟。
     * mobilePhone  指定发送验证码的手机号。 目前系统只支持中国手机号。 示例：13XXXXXXXXX
     * lang  根据该参数的取值选择发送短信验证码的语言。此参数默认值为“zh-cn：中文”。 zh-cn：中文en-us：英文
     * scene  验证码使用的场景，目前支持如下场景： 29：注册场景18：个人银行卡实名认证场景 此参数不携带或携带值为null时，默认值为“29：注册场景”。
@@ -295,7 +295,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeout
-    *  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
+    *  发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间10分钟。 此参数值超过60时，取默认值5分钟。 单位：分钟。
     *
     * @return int|null
     */
@@ -307,7 +307,7 @@ class SendVerificationCodeV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets timeout
     *
-    * @param int|null $timeout 发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间5分钟。 单位：分钟。
+    * @param int|null $timeout 发送验证码的超时时间。 此参数不携带或携带值为null时，采用系统默认超时时间10分钟。 此参数值超过60时，取默认值5分钟。 单位：分钟。
     *
     * @return $this
     */

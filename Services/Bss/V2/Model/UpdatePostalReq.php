@@ -22,9 +22,9 @@ class UpdatePostalReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * addressId  地址ID，地址的唯一索引。
     * recipient  收件人姓名。 此参数不携带或携带值为null时，取值不更新。
-    * province  省/自治区/直辖市。例如：江苏省。 此参数不携带或携带值为null时，取值不更新。
-    * city  市/区。例如：南京市。 此参数不携带或携带值为null时，取值不更新。
-    * district  区。例如：雨花区。 此参数不携带或携带值为null时，取值不更新。
+    * province  省/自治区/直辖市。例如：江苏省。 该参数携带并赋值时，city、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
+    * city  市/区。例如：南京市。 该参数携带并赋值时，province、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
+    * district  区。例如：雨花区。 该参数携带并赋值时，province、city参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
     * address  邮寄详细地址。 此参数不携带或携带值为null时，取值不更新。
     * zipcode  邮寄地址所在邮编。 此参数不携带或携带值为null时，取值不更新。
     * mobilePhone  手机号码，不带国家码。 此参数不携带或携带值为null时，取值不更新。
@@ -48,9 +48,9 @@ class UpdatePostalReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * addressId  地址ID，地址的唯一索引。
     * recipient  收件人姓名。 此参数不携带或携带值为null时，取值不更新。
-    * province  省/自治区/直辖市。例如：江苏省。 此参数不携带或携带值为null时，取值不更新。
-    * city  市/区。例如：南京市。 此参数不携带或携带值为null时，取值不更新。
-    * district  区。例如：雨花区。 此参数不携带或携带值为null时，取值不更新。
+    * province  省/自治区/直辖市。例如：江苏省。 该参数携带并赋值时，city、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
+    * city  市/区。例如：南京市。 该参数携带并赋值时，province、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
+    * district  区。例如：雨花区。 该参数携带并赋值时，province、city参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
     * address  邮寄详细地址。 此参数不携带或携带值为null时，取值不更新。
     * zipcode  邮寄地址所在邮编。 此参数不携带或携带值为null时，取值不更新。
     * mobilePhone  手机号码，不带国家码。 此参数不携带或携带值为null时，取值不更新。
@@ -95,9 +95,9 @@ class UpdatePostalReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * addressId  地址ID，地址的唯一索引。
     * recipient  收件人姓名。 此参数不携带或携带值为null时，取值不更新。
-    * province  省/自治区/直辖市。例如：江苏省。 此参数不携带或携带值为null时，取值不更新。
-    * city  市/区。例如：南京市。 此参数不携带或携带值为null时，取值不更新。
-    * district  区。例如：雨花区。 此参数不携带或携带值为null时，取值不更新。
+    * province  省/自治区/直辖市。例如：江苏省。 该参数携带并赋值时，city、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
+    * city  市/区。例如：南京市。 该参数携带并赋值时，province、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
+    * district  区。例如：雨花区。 该参数携带并赋值时，province、city参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
     * address  邮寄详细地址。 此参数不携带或携带值为null时，取值不更新。
     * zipcode  邮寄地址所在邮编。 此参数不携带或携带值为null时，取值不更新。
     * mobilePhone  手机号码，不带国家码。 此参数不携带或携带值为null时，取值不更新。
@@ -121,9 +121,9 @@ class UpdatePostalReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * addressId  地址ID，地址的唯一索引。
     * recipient  收件人姓名。 此参数不携带或携带值为null时，取值不更新。
-    * province  省/自治区/直辖市。例如：江苏省。 此参数不携带或携带值为null时，取值不更新。
-    * city  市/区。例如：南京市。 此参数不携带或携带值为null时，取值不更新。
-    * district  区。例如：雨花区。 此参数不携带或携带值为null时，取值不更新。
+    * province  省/自治区/直辖市。例如：江苏省。 该参数携带并赋值时，city、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
+    * city  市/区。例如：南京市。 该参数携带并赋值时，province、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
+    * district  区。例如：雨花区。 该参数携带并赋值时，province、city参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
     * address  邮寄详细地址。 此参数不携带或携带值为null时，取值不更新。
     * zipcode  邮寄地址所在邮编。 此参数不携带或携带值为null时，取值不更新。
     * mobilePhone  手机号码，不带国家码。 此参数不携带或携带值为null时，取值不更新。
@@ -147,9 +147,9 @@ class UpdatePostalReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * addressId  地址ID，地址的唯一索引。
     * recipient  收件人姓名。 此参数不携带或携带值为null时，取值不更新。
-    * province  省/自治区/直辖市。例如：江苏省。 此参数不携带或携带值为null时，取值不更新。
-    * city  市/区。例如：南京市。 此参数不携带或携带值为null时，取值不更新。
-    * district  区。例如：雨花区。 此参数不携带或携带值为null时，取值不更新。
+    * province  省/自治区/直辖市。例如：江苏省。 该参数携带并赋值时，city、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
+    * city  市/区。例如：南京市。 该参数携带并赋值时，province、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
+    * district  区。例如：雨花区。 该参数携带并赋值时，province、city参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
     * address  邮寄详细地址。 此参数不携带或携带值为null时，取值不更新。
     * zipcode  邮寄地址所在邮编。 此参数不携带或携带值为null时，取值不更新。
     * mobilePhone  手机号码，不带国家码。 此参数不携带或携带值为null时，取值不更新。
@@ -370,7 +370,7 @@ class UpdatePostalReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets province
-    *  省/自治区/直辖市。例如：江苏省。 此参数不携带或携带值为null时，取值不更新。
+    *  省/自治区/直辖市。例如：江苏省。 该参数携带并赋值时，city、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
     *
     * @return string|null
     */
@@ -382,7 +382,7 @@ class UpdatePostalReq implements ModelInterface, ArrayAccess
     /**
     * Sets province
     *
-    * @param string|null $province 省/自治区/直辖市。例如：江苏省。 此参数不携带或携带值为null时，取值不更新。
+    * @param string|null $province 省/自治区/直辖市。例如：江苏省。 该参数携带并赋值时，city、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
     *
     * @return $this
     */
@@ -394,7 +394,7 @@ class UpdatePostalReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets city
-    *  市/区。例如：南京市。 此参数不携带或携带值为null时，取值不更新。
+    *  市/区。例如：南京市。 该参数携带并赋值时，province、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
     *
     * @return string|null
     */
@@ -406,7 +406,7 @@ class UpdatePostalReq implements ModelInterface, ArrayAccess
     /**
     * Sets city
     *
-    * @param string|null $city 市/区。例如：南京市。 此参数不携带或携带值为null时，取值不更新。
+    * @param string|null $city 市/区。例如：南京市。 该参数携带并赋值时，province、district参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
     *
     * @return $this
     */
@@ -418,7 +418,7 @@ class UpdatePostalReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets district
-    *  区。例如：雨花区。 此参数不携带或携带值为null时，取值不更新。
+    *  区。例如：雨花区。 该参数携带并赋值时，province、city参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
     *
     * @return string|null
     */
@@ -430,7 +430,7 @@ class UpdatePostalReq implements ModelInterface, ArrayAccess
     /**
     * Sets district
     *
-    * @param string|null $district 区。例如：雨花区。 此参数不携带或携带值为null时，取值不更新。
+    * @param string|null $district 区。例如：雨花区。 该参数携带并赋值时，province、city参数也必须赋值。 此参数不携带或携带值为null时，取值不更新。
     *
     * @return $this
     */

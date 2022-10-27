@@ -20,7 +20,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
     * isregistered  镜像是否可用，取值为true，扩展接口会默认为true，普通用户只能查询取值为true的镜像。
     * osBit  操作系统位数，一般取值为32或者64。
     * osType  镜像系统类型，取值为Linux，Windows，Other。
@@ -102,7 +102,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
     * isregistered  镜像是否可用，取值为true，扩展接口会默认为true，普通用户只能查询取值为true的镜像。
     * osBit  操作系统位数，一般取值为32或者64。
     * osType  镜像系统类型，取值为Linux，Windows，Other。
@@ -205,7 +205,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
     * isregistered  镜像是否可用，取值为true，扩展接口会默认为true，普通用户只能查询取值为true的镜像。
     * osBit  操作系统位数，一般取值为32或者64。
     * osType  镜像系统类型，取值为Linux，Windows，Other。
@@ -287,7 +287,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
     * isregistered  镜像是否可用，取值为true，扩展接口会默认为true，普通用户只能查询取值为true的镜像。
     * osBit  操作系统位数，一般取值为32或者64。
     * osType  镜像系统类型，取值为Linux，Windows，Other。
@@ -369,7 +369,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
     * isregistered  镜像是否可用，取值为true，扩展接口会默认为true，普通用户只能查询取值为true的镜像。
     * osBit  操作系统位数，一般取值为32或者64。
     * osType  镜像系统类型，取值为Linux，Windows，Other。
@@ -925,7 +925,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imagetype
-    *  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+    *  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
     *
     * @return string|null
     */
@@ -937,7 +937,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imagetype
     *
-    * @param string|null $imagetype 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+    * @param string|null $imagetype 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
     *
     * @return $this
     */

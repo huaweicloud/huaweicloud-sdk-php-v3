@@ -23,8 +23,8 @@ class RetrieveAmountInfoV2 implements ModelInterface, ArrayAccess
     * availRetrieveAmount  可回收的金额。
     * measureId  金额单位。 1：元
     * currency  币种。 CNY：人民币
-    * amount  账户余额（仅balance_type=信用账户时才有这个字段）。
-    * creditAmount  信用额度（仅balance_type=信用账户时才有这个字段）。
+    * amount  账户余额（仅balance_type=信用账户时这个字段才有值）。
+    * creditAmount  信用额度（仅balance_type=信用账户时这个字段才有值）。
     * expireTime  信用额度过期时间。 UTC时间，格式为：2016-03-28T14:45:38Z。 如果查询信用账户可回收余额的查询结果没有失效时间，表示永久有效。
     *
     * @var string[]
@@ -43,8 +43,8 @@ class RetrieveAmountInfoV2 implements ModelInterface, ArrayAccess
     * availRetrieveAmount  可回收的金额。
     * measureId  金额单位。 1：元
     * currency  币种。 CNY：人民币
-    * amount  账户余额（仅balance_type=信用账户时才有这个字段）。
-    * creditAmount  信用额度（仅balance_type=信用账户时才有这个字段）。
+    * amount  账户余额（仅balance_type=信用账户时这个字段才有值）。
+    * creditAmount  信用额度（仅balance_type=信用账户时这个字段才有值）。
     * expireTime  信用额度过期时间。 UTC时间，格式为：2016-03-28T14:45:38Z。 如果查询信用账户可回收余额的查询结果没有失效时间，表示永久有效。
     *
     * @var string[]
@@ -84,8 +84,8 @@ class RetrieveAmountInfoV2 implements ModelInterface, ArrayAccess
     * availRetrieveAmount  可回收的金额。
     * measureId  金额单位。 1：元
     * currency  币种。 CNY：人民币
-    * amount  账户余额（仅balance_type=信用账户时才有这个字段）。
-    * creditAmount  信用额度（仅balance_type=信用账户时才有这个字段）。
+    * amount  账户余额（仅balance_type=信用账户时这个字段才有值）。
+    * creditAmount  信用额度（仅balance_type=信用账户时这个字段才有值）。
     * expireTime  信用额度过期时间。 UTC时间，格式为：2016-03-28T14:45:38Z。 如果查询信用账户可回收余额的查询结果没有失效时间，表示永久有效。
     *
     * @var string[]
@@ -104,8 +104,8 @@ class RetrieveAmountInfoV2 implements ModelInterface, ArrayAccess
     * availRetrieveAmount  可回收的金额。
     * measureId  金额单位。 1：元
     * currency  币种。 CNY：人民币
-    * amount  账户余额（仅balance_type=信用账户时才有这个字段）。
-    * creditAmount  信用额度（仅balance_type=信用账户时才有这个字段）。
+    * amount  账户余额（仅balance_type=信用账户时这个字段才有值）。
+    * creditAmount  信用额度（仅balance_type=信用账户时这个字段才有值）。
     * expireTime  信用额度过期时间。 UTC时间，格式为：2016-03-28T14:45:38Z。 如果查询信用账户可回收余额的查询结果没有失效时间，表示永久有效。
     *
     * @var string[]
@@ -124,8 +124,8 @@ class RetrieveAmountInfoV2 implements ModelInterface, ArrayAccess
     * availRetrieveAmount  可回收的金额。
     * measureId  金额单位。 1：元
     * currency  币种。 CNY：人民币
-    * amount  账户余额（仅balance_type=信用账户时才有这个字段）。
-    * creditAmount  信用额度（仅balance_type=信用账户时才有这个字段）。
+    * amount  账户余额（仅balance_type=信用账户时这个字段才有值）。
+    * creditAmount  信用额度（仅balance_type=信用账户时这个字段才有值）。
     * expireTime  信用额度过期时间。 UTC时间，格式为：2016-03-28T14:45:38Z。 如果查询信用账户可回收余额的查询结果没有失效时间，表示永久有效。
     *
     * @var string[]
@@ -301,7 +301,7 @@ class RetrieveAmountInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets amount
-    *  账户余额（仅balance_type=信用账户时才有这个字段）。
+    *  账户余额（仅balance_type=信用账户时这个字段才有值）。
     *
     * @return double|null
     */
@@ -313,7 +313,7 @@ class RetrieveAmountInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double|null $amount 账户余额（仅balance_type=信用账户时才有这个字段）。
+    * @param double|null $amount 账户余额（仅balance_type=信用账户时这个字段才有值）。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class RetrieveAmountInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets creditAmount
-    *  信用额度（仅balance_type=信用账户时才有这个字段）。
+    *  信用额度（仅balance_type=信用账户时这个字段才有值）。
     *
     * @return double|null
     */
@@ -337,7 +337,7 @@ class RetrieveAmountInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets creditAmount
     *
-    * @param double|null $creditAmount 信用额度（仅balance_type=信用账户时才有这个字段）。
+    * @param double|null $creditAmount 信用额度（仅balance_type=信用账户时这个字段才有值）。
     *
     * @return $this
     */

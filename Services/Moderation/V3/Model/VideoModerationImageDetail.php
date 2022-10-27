@@ -32,7 +32,7 @@ class VideoModerationImageDetail implements ModelInterface, ArrayAccess
             'suggestion' => 'string',
             'category' => 'string',
             'ocrText' => 'string',
-            'time' => 'int',
+            'time' => 'float',
             'detail' => '\HuaweiCloud\SDK\Moderation\V3\Model\VideoModerationImageDetailList[]'
     ];
 
@@ -50,7 +50,7 @@ class VideoModerationImageDetail implements ModelInterface, ArrayAccess
         'suggestion' => null,
         'category' => null,
         'ocrText' => null,
-        'time' => 'int32',
+        'time' => 'float',
         'detail' => null
     ];
 
@@ -342,7 +342,7 @@ class VideoModerationImageDetail implements ModelInterface, ArrayAccess
     * Gets time
     *  截帧在视频文件中的时间，单位为秒
     *
-    * @return int|null
+    * @return float|null
     */
     public function getTime()
     {
@@ -352,7 +352,7 @@ class VideoModerationImageDetail implements ModelInterface, ArrayAccess
     /**
     * Sets time
     *
-    * @param int|null $time 截帧在视频文件中的时间，单位为秒
+    * @param float|null $time 截帧在视频文件中的时间，单位为秒
     *
     * @return $this
     */

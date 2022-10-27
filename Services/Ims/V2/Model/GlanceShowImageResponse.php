@@ -26,7 +26,7 @@ class GlanceShowImageResponse implements ModelInterface, ArrayAccess
     * description  镜像描述信息。
     * imageSize  镜像文件的大小，单位为字节。目前取值为大于0的字符串。
     * imageSourceType  镜像后端存储类型，目前只支持uds
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”。
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
     * osBit  操作系统位数，一般取值为“32”或者“64”。
@@ -154,7 +154,7 @@ class GlanceShowImageResponse implements ModelInterface, ArrayAccess
     * description  镜像描述信息。
     * imageSize  镜像文件的大小，单位为字节。目前取值为大于0的字符串。
     * imageSourceType  镜像后端存储类型，目前只支持uds
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”。
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
     * osBit  操作系统位数，一般取值为“32”或者“64”。
@@ -303,7 +303,7 @@ class GlanceShowImageResponse implements ModelInterface, ArrayAccess
     * description  镜像描述信息。
     * imageSize  镜像文件的大小，单位为字节。目前取值为大于0的字符串。
     * imageSourceType  镜像后端存储类型，目前只支持uds
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”。
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
     * osBit  操作系统位数，一般取值为“32”或者“64”。
@@ -431,7 +431,7 @@ class GlanceShowImageResponse implements ModelInterface, ArrayAccess
     * description  镜像描述信息。
     * imageSize  镜像文件的大小，单位为字节。目前取值为大于0的字符串。
     * imageSourceType  镜像后端存储类型，目前只支持uds
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”。
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
     * osBit  操作系统位数，一般取值为“32”或者“64”。
@@ -559,7 +559,7 @@ class GlanceShowImageResponse implements ModelInterface, ArrayAccess
     * description  镜像描述信息。
     * imageSize  镜像文件的大小，单位为字节。目前取值为大于0的字符串。
     * imageSourceType  镜像后端存储类型，目前只支持uds
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”。
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空。
     * osBit  操作系统位数，一般取值为“32”或者“64”。
@@ -725,6 +725,7 @@ class GlanceShowImageResponse implements ModelInterface, ArrayAccess
     const IMAGETYPE_GOLD = 'gold';
     const IMAGETYPE__PRIVATE = 'private';
     const IMAGETYPE_SHARED = 'shared';
+    const IMAGETYPE_MARKET = 'market';
     const ISREGISTERED_TRUE = 'true';
     const ISREGISTERED_FALSE = 'false';
     const OS_BIT__32 = '32';
@@ -794,6 +795,7 @@ class GlanceShowImageResponse implements ModelInterface, ArrayAccess
             self::IMAGETYPE_GOLD,
             self::IMAGETYPE__PRIVATE,
             self::IMAGETYPE_SHARED,
+            self::IMAGETYPE_MARKET,
         ];
     }
 
@@ -1306,7 +1308,7 @@ class GlanceShowImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets imagetype
-    *  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    *  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     *
     * @return string|null
     */
@@ -1318,7 +1320,7 @@ class GlanceShowImageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets imagetype
     *
-    * @param string|null $imagetype 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * @param string|null $imagetype 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     *
     * @return $this
     */

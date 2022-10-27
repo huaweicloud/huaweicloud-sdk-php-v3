@@ -1104,6 +1104,9 @@ class EcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xClientToken'] !== null) {
+            $headerParams['x_client_token'] = $localVarParams['xClientToken'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1259,6 +1262,9 @@ class EcsAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xClientToken'] !== null) {
+            $headerParams['x_client_token'] = $localVarParams['xClientToken'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];

@@ -21,7 +21,7 @@ class ListCustomersBalancesDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * customerBalances  账户余额列表。只有成功的时候才返回。 具体请参见表2。
+    * customerBalances  账户余额列表。只有成功的时候才返回。 此列表不包含非代售类子客户的数据。批量查询客户余额时，若入参携带了非代售类子客户，会被过滤。 具体请参见表2。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListCustomersBalancesDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * customerBalances  账户余额列表。只有成功的时候才返回。 具体请参见表2。
+    * customerBalances  账户余额列表。只有成功的时候才返回。 此列表不包含非代售类子客户的数据。批量查询客户余额时，若入参携带了非代售类子客户，会被过滤。 具体请参见表2。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListCustomersBalancesDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * customerBalances  账户余额列表。只有成功的时候才返回。 具体请参见表2。
+    * customerBalances  账户余额列表。只有成功的时候才返回。 此列表不包含非代售类子客户的数据。批量查询客户余额时，若入参携带了非代售类子客户，会被过滤。 具体请参见表2。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListCustomersBalancesDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * customerBalances  账户余额列表。只有成功的时候才返回。 具体请参见表2。
+    * customerBalances  账户余额列表。只有成功的时候才返回。 此列表不包含非代售类子客户的数据。批量查询客户余额时，若入参携带了非代售类子客户，会被过滤。 具体请参见表2。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListCustomersBalancesDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * customerBalances  账户余额列表。只有成功的时候才返回。 具体请参见表2。
+    * customerBalances  账户余额列表。只有成功的时候才返回。 此列表不包含非代售类子客户的数据。批量查询客户余额时，若入参携带了非代售类子客户，会被过滤。 具体请参见表2。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListCustomersBalancesDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets customerBalances
-    *  账户余额列表。只有成功的时候才返回。 具体请参见表2。
+    *  账户余额列表。只有成功的时候才返回。 此列表不包含非代售类子客户的数据。批量查询客户余额时，若入参携带了非代售类子客户，会被过滤。 具体请参见表2。
     *
     * @return \HuaweiCloud\SDK\Bss\V2\Model\CustomerBalancesV2[]|null
     */
@@ -187,7 +187,7 @@ class ListCustomersBalancesDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets customerBalances
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\CustomerBalancesV2[]|null $customerBalances 账户余额列表。只有成功的时候才返回。 具体请参见表2。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\CustomerBalancesV2[]|null $customerBalances 账户余额列表。只有成功的时候才返回。 此列表不包含非代售类子客户的数据。批量查询客户余额时，若入参携带了非代售类子客户，会被过滤。 具体请参见表2。
     *
     * @return $this
     */

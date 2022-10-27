@@ -20,8 +20,8 @@ class ErrorInfoDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  **参数说明**：异常信息错误码，包含IOTDA.014016和IOTDA.014112。IOTDA.014016表示设备不在线；IOTDA.014112表示设备没有订阅topic
-    * errorMsg  **参数说明**：异常信息说明，包含设备不在线和设备没有订阅topic说明
+    * errorCode  **参数说明**：异常信息错误码，包含IOTDA.014016和IOTDA.014112。IOTDA.014016表示设备不在线；IOTDA.014112表示设备没有订阅topic。
+    * errorMsg  **参数说明**：异常信息说明，包含设备不在线和设备没有订阅topic说明。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ErrorInfoDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  **参数说明**：异常信息错误码，包含IOTDA.014016和IOTDA.014112。IOTDA.014016表示设备不在线；IOTDA.014112表示设备没有订阅topic
-    * errorMsg  **参数说明**：异常信息说明，包含设备不在线和设备没有订阅topic说明
+    * errorCode  **参数说明**：异常信息错误码，包含IOTDA.014016和IOTDA.014112。IOTDA.014016表示设备不在线；IOTDA.014112表示设备没有订阅topic。
+    * errorMsg  **参数说明**：异常信息说明，包含设备不在线和设备没有订阅topic说明。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ErrorInfoDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  **参数说明**：异常信息错误码，包含IOTDA.014016和IOTDA.014112。IOTDA.014016表示设备不在线；IOTDA.014112表示设备没有订阅topic
-    * errorMsg  **参数说明**：异常信息说明，包含设备不在线和设备没有订阅topic说明
+    * errorCode  **参数说明**：异常信息错误码，包含IOTDA.014016和IOTDA.014112。IOTDA.014016表示设备不在线；IOTDA.014112表示设备没有订阅topic。
+    * errorMsg  **参数说明**：异常信息说明，包含设备不在线和设备没有订阅topic说明。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ErrorInfoDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  **参数说明**：异常信息错误码，包含IOTDA.014016和IOTDA.014112。IOTDA.014016表示设备不在线；IOTDA.014112表示设备没有订阅topic
-    * errorMsg  **参数说明**：异常信息说明，包含设备不在线和设备没有订阅topic说明
+    * errorCode  **参数说明**：异常信息错误码，包含IOTDA.014016和IOTDA.014112。IOTDA.014016表示设备不在线；IOTDA.014112表示设备没有订阅topic。
+    * errorMsg  **参数说明**：异常信息说明，包含设备不在线和设备没有订阅topic说明。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ErrorInfoDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  **参数说明**：异常信息错误码，包含IOTDA.014016和IOTDA.014112。IOTDA.014016表示设备不在线；IOTDA.014112表示设备没有订阅topic
-    * errorMsg  **参数说明**：异常信息说明，包含设备不在线和设备没有订阅topic说明
+    * errorCode  **参数说明**：异常信息错误码，包含IOTDA.014016和IOTDA.014112。IOTDA.014016表示设备不在线；IOTDA.014112表示设备没有订阅topic。
+    * errorMsg  **参数说明**：异常信息说明，包含设备不在线和设备没有订阅topic说明。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ErrorInfoDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  **参数说明**：异常信息错误码，包含IOTDA.014016和IOTDA.014112。IOTDA.014016表示设备不在线；IOTDA.014112表示设备没有订阅topic
+    *  **参数说明**：异常信息错误码，包含IOTDA.014016和IOTDA.014112。IOTDA.014016表示设备不在线；IOTDA.014112表示设备没有订阅topic。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ErrorInfoDTO implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string|null $errorCode **参数说明**：异常信息错误码，包含IOTDA.014016和IOTDA.014112。IOTDA.014016表示设备不在线；IOTDA.014112表示设备没有订阅topic
+    * @param string|null $errorCode **参数说明**：异常信息错误码，包含IOTDA.014016和IOTDA.014112。IOTDA.014016表示设备不在线；IOTDA.014112表示设备没有订阅topic。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ErrorInfoDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  **参数说明**：异常信息说明，包含设备不在线和设备没有订阅topic说明
+    *  **参数说明**：异常信息说明，包含设备不在线和设备没有订阅topic说明。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class ErrorInfoDTO implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string|null $errorMsg **参数说明**：异常信息说明，包含设备不在线和设备没有订阅topic说明
+    * @param string|null $errorMsg **参数说明**：异常信息说明，包含设备不在线和设备没有订阅topic说明。
     *
     * @return $this
     */

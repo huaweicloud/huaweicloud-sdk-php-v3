@@ -1,3 +1,62 @@
+# 3.1.6 2022-10-27
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `int32` -> `int64` of the response parameter `id` of the interface `ShowUrlTaskInfo`
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameters `X-Client-Token`, `batch_create_in_multi_az` to the interface `CreateServers`
+  - Add the request parameter `X-Client-Token` to the interface `CreatePostPaidServers`
+
+### HuaweiCloud SDK IMS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the enum values `market` to the request parameter `__imagetype` to the interface `ListTags`
+  - Changes of the interface `GlanceListImages`:
+    - Add the enum values `market` to the request parameter `__imagetype`
+    - Add the enum values `market` to the response parameter `__imagetype`
+  - Add the enum values `market` to the response parameter `__imagetype` to the interface `GlanceShowImage`
+  - Add the enum values `market` to the response parameter `__imagetype` to the interface `GlanceUpdateImage`
+
+### HuaweiCloud SDK IoTDA
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `properties` to the interface `CreateMessage`
+  - Add the response parameter `properties` to the interface `ListDeviceMessages`
+  - Add the response parameter `properties` to the interface `ShowDeviceMessage`
+
+### HuaweiCloud SDK Moderation
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `float` -> `integer` of the request parameter `frame_interval` of the interface `RunCreateVideoModerationJob`
+  - Modify the type `float` -> `integer` of the response parameters `start_time`, `end_time` of the interface `RunQueryAudioModerationJob`
+  - Changes of the interface `RunQueryVideoModerationJob`:
+    - Modify the type `integer` -> `float` of the response parameter `time`
+    - Modify the type `integer` -> `float` of the response parameters `start_time`, `end_time`
+
 # 3.1.5 2022-09-28
 
 ### HuaweiCloud SDK CDN

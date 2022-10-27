@@ -1,0 +1,30 @@
+{
+  "name": "huaweicloud/huaweicloud-sdk-eps",
+  "description": "HUAWEICLOUD SDK EPS",
+  "keywords": [
+    "php",
+    "sdk",
+    "rest",
+    "api",
+    "eps"
+  ],
+  "version": "3.1.6",
+   "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "HuaweiCloud_SDK",
+      "email": "hwcloudsdk@huawei.com",
+      "homepage": "https://sdkcenter.developer.huaweicloud.com/?language=PHP"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "huaweicloud/huaweicloud-sdk-core": "3.1.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "HuaweiCloud\\SDK\\Eps\\V3\\": "V3/"
+    }
+  }
+}

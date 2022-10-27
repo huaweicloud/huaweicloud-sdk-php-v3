@@ -23,6 +23,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
     * messageId  **参数说明**：消息id，由用户生成（推荐使用UUID），同一个设备下唯一， 如果用户填写的id在设备下不唯一， 则接口返回错误。 **取值范围**：长度不超过100，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * name  **参数说明**：消息名称。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     * message  **参数说明**：消息内容，支持string和json格式。
+    * properties  properties
     * encoding  **参数说明**：消息内容编码格式。默认值none。 **取值范围**： - none  - base64：只能通过topic_full_name字段自定义的topic发送消息,否则会发送失败。
     * payloadFormat  **参数说明**：有效负载格式，在消息内容编码格式为none时有效。默认值standard（平台封装的标准格式）。 **取值范围**： - standard  - raw：时直接将消息内容作为有效负载下发， 注意： 取值为raw时，只能通过topic_full_name字段自定义的topic发送消息，否则会发送失败。
     * topic  **参数说明**：消息下行到设备的topic, 可选， 仅适用于MQTT协议接入的设备。 用户只能填写在租户产品界面配置的topic, 否则会校验不通过。 平台给消息topic添加的前缀为$oc/devices/{device_id}/user/， 用户可以在前缀的基础上增加自定义部分， 如增加messageDown，则平台拼接前缀后完整的topic为 $oc/devices/{device_id}/user/messageDown，其中device_id以实际设备的网关id替代。 如果用户指定该topic，消息会通过该topic下行到设备，如果用户不指定， 则消息通过系统默认的topic下行到设备,系统默认的topic格式为： $oc/devices/{device_id}/sys/messages/down。此字段与topic_full_name字段只可填写一个。
@@ -34,6 +35,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
             'messageId' => 'string',
             'name' => 'string',
             'message' => 'object',
+            'properties' => '\HuaweiCloud\SDK\IoTDA\V5\Model\PropertiesDTO',
             'encoding' => 'string',
             'payloadFormat' => 'string',
             'topic' => 'string',
@@ -45,6 +47,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
     * messageId  **参数说明**：消息id，由用户生成（推荐使用UUID），同一个设备下唯一， 如果用户填写的id在设备下不唯一， 则接口返回错误。 **取值范围**：长度不超过100，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * name  **参数说明**：消息名称。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     * message  **参数说明**：消息内容，支持string和json格式。
+    * properties  properties
     * encoding  **参数说明**：消息内容编码格式。默认值none。 **取值范围**： - none  - base64：只能通过topic_full_name字段自定义的topic发送消息,否则会发送失败。
     * payloadFormat  **参数说明**：有效负载格式，在消息内容编码格式为none时有效。默认值standard（平台封装的标准格式）。 **取值范围**： - standard  - raw：时直接将消息内容作为有效负载下发， 注意： 取值为raw时，只能通过topic_full_name字段自定义的topic发送消息，否则会发送失败。
     * topic  **参数说明**：消息下行到设备的topic, 可选， 仅适用于MQTT协议接入的设备。 用户只能填写在租户产品界面配置的topic, 否则会校验不通过。 平台给消息topic添加的前缀为$oc/devices/{device_id}/user/， 用户可以在前缀的基础上增加自定义部分， 如增加messageDown，则平台拼接前缀后完整的topic为 $oc/devices/{device_id}/user/messageDown，其中device_id以实际设备的网关id替代。 如果用户指定该topic，消息会通过该topic下行到设备，如果用户不指定， 则消息通过系统默认的topic下行到设备,系统默认的topic格式为： $oc/devices/{device_id}/sys/messages/down。此字段与topic_full_name字段只可填写一个。
@@ -56,6 +59,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
         'messageId' => null,
         'name' => null,
         'message' => null,
+        'properties' => null,
         'encoding' => null,
         'payloadFormat' => null,
         'topic' => null,
@@ -88,6 +92,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
     * messageId  **参数说明**：消息id，由用户生成（推荐使用UUID），同一个设备下唯一， 如果用户填写的id在设备下不唯一， 则接口返回错误。 **取值范围**：长度不超过100，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * name  **参数说明**：消息名称。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     * message  **参数说明**：消息内容，支持string和json格式。
+    * properties  properties
     * encoding  **参数说明**：消息内容编码格式。默认值none。 **取值范围**： - none  - base64：只能通过topic_full_name字段自定义的topic发送消息,否则会发送失败。
     * payloadFormat  **参数说明**：有效负载格式，在消息内容编码格式为none时有效。默认值standard（平台封装的标准格式）。 **取值范围**： - standard  - raw：时直接将消息内容作为有效负载下发， 注意： 取值为raw时，只能通过topic_full_name字段自定义的topic发送消息，否则会发送失败。
     * topic  **参数说明**：消息下行到设备的topic, 可选， 仅适用于MQTT协议接入的设备。 用户只能填写在租户产品界面配置的topic, 否则会校验不通过。 平台给消息topic添加的前缀为$oc/devices/{device_id}/user/， 用户可以在前缀的基础上增加自定义部分， 如增加messageDown，则平台拼接前缀后完整的topic为 $oc/devices/{device_id}/user/messageDown，其中device_id以实际设备的网关id替代。 如果用户指定该topic，消息会通过该topic下行到设备，如果用户不指定， 则消息通过系统默认的topic下行到设备,系统默认的topic格式为： $oc/devices/{device_id}/sys/messages/down。此字段与topic_full_name字段只可填写一个。
@@ -99,6 +104,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
             'messageId' => 'message_id',
             'name' => 'name',
             'message' => 'message',
+            'properties' => 'properties',
             'encoding' => 'encoding',
             'payloadFormat' => 'payload_format',
             'topic' => 'topic',
@@ -110,6 +116,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
     * messageId  **参数说明**：消息id，由用户生成（推荐使用UUID），同一个设备下唯一， 如果用户填写的id在设备下不唯一， 则接口返回错误。 **取值范围**：长度不超过100，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * name  **参数说明**：消息名称。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     * message  **参数说明**：消息内容，支持string和json格式。
+    * properties  properties
     * encoding  **参数说明**：消息内容编码格式。默认值none。 **取值范围**： - none  - base64：只能通过topic_full_name字段自定义的topic发送消息,否则会发送失败。
     * payloadFormat  **参数说明**：有效负载格式，在消息内容编码格式为none时有效。默认值standard（平台封装的标准格式）。 **取值范围**： - standard  - raw：时直接将消息内容作为有效负载下发， 注意： 取值为raw时，只能通过topic_full_name字段自定义的topic发送消息，否则会发送失败。
     * topic  **参数说明**：消息下行到设备的topic, 可选， 仅适用于MQTT协议接入的设备。 用户只能填写在租户产品界面配置的topic, 否则会校验不通过。 平台给消息topic添加的前缀为$oc/devices/{device_id}/user/， 用户可以在前缀的基础上增加自定义部分， 如增加messageDown，则平台拼接前缀后完整的topic为 $oc/devices/{device_id}/user/messageDown，其中device_id以实际设备的网关id替代。 如果用户指定该topic，消息会通过该topic下行到设备，如果用户不指定， 则消息通过系统默认的topic下行到设备,系统默认的topic格式为： $oc/devices/{device_id}/sys/messages/down。此字段与topic_full_name字段只可填写一个。
@@ -121,6 +128,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
             'messageId' => 'setMessageId',
             'name' => 'setName',
             'message' => 'setMessage',
+            'properties' => 'setProperties',
             'encoding' => 'setEncoding',
             'payloadFormat' => 'setPayloadFormat',
             'topic' => 'setTopic',
@@ -132,6 +140,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
     * messageId  **参数说明**：消息id，由用户生成（推荐使用UUID），同一个设备下唯一， 如果用户填写的id在设备下不唯一， 则接口返回错误。 **取值范围**：长度不超过100，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * name  **参数说明**：消息名称。 **取值范围**：长度不超过128，只允许中文、字母、数字、以及_?'#().,&%@!-等字符的组合。
     * message  **参数说明**：消息内容，支持string和json格式。
+    * properties  properties
     * encoding  **参数说明**：消息内容编码格式。默认值none。 **取值范围**： - none  - base64：只能通过topic_full_name字段自定义的topic发送消息,否则会发送失败。
     * payloadFormat  **参数说明**：有效负载格式，在消息内容编码格式为none时有效。默认值standard（平台封装的标准格式）。 **取值范围**： - standard  - raw：时直接将消息内容作为有效负载下发， 注意： 取值为raw时，只能通过topic_full_name字段自定义的topic发送消息，否则会发送失败。
     * topic  **参数说明**：消息下行到设备的topic, 可选， 仅适用于MQTT协议接入的设备。 用户只能填写在租户产品界面配置的topic, 否则会校验不通过。 平台给消息topic添加的前缀为$oc/devices/{device_id}/user/， 用户可以在前缀的基础上增加自定义部分， 如增加messageDown，则平台拼接前缀后完整的topic为 $oc/devices/{device_id}/user/messageDown，其中device_id以实际设备的网关id替代。 如果用户指定该topic，消息会通过该topic下行到设备，如果用户不指定， 则消息通过系统默认的topic下行到设备,系统默认的topic格式为： $oc/devices/{device_id}/sys/messages/down。此字段与topic_full_name字段只可填写一个。
@@ -143,6 +152,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
             'messageId' => 'getMessageId',
             'name' => 'getName',
             'message' => 'getMessage',
+            'properties' => 'getProperties',
             'encoding' => 'getEncoding',
             'payloadFormat' => 'getPayloadFormat',
             'topic' => 'getTopic',
@@ -210,6 +220,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
         $this->container['messageId'] = isset($data['messageId']) ? $data['messageId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
         $this->container['encoding'] = isset($data['encoding']) ? $data['encoding'] : 'none';
         $this->container['payloadFormat'] = isset($data['payloadFormat']) ? $data['payloadFormat'] : 'standard';
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
@@ -245,8 +256,8 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['payloadFormat']) && !preg_match("/(standard|raw)/", $this->container['payloadFormat'])) {
                 $invalidProperties[] = "invalid value for 'payloadFormat', must be conform to the pattern /(standard|raw)/.";
             }
-            if (!is_null($this->container['topic']) && (mb_strlen($this->container['topic']) > 64)) {
-                $invalidProperties[] = "invalid value for 'topic', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['topic']) && (mb_strlen($this->container['topic']) > 128)) {
+                $invalidProperties[] = "invalid value for 'topic', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['topicFullName']) && (mb_strlen($this->container['topicFullName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'topicFullName', the character length must be smaller than or equal to 128.";
@@ -337,6 +348,30 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
     public function setMessage($message)
     {
         $this->container['message'] = $message;
+        return $this;
+    }
+
+    /**
+    * Gets properties
+    *  properties
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\PropertiesDTO|null
+    */
+    public function getProperties()
+    {
+        return $this->container['properties'];
+    }
+
+    /**
+    * Sets properties
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\PropertiesDTO|null $properties properties
+    *
+    * @return $this
+    */
+    public function setProperties($properties)
+    {
+        $this->container['properties'] = $properties;
         return $this;
     }
 

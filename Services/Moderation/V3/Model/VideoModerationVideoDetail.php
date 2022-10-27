@@ -33,8 +33,8 @@ class VideoModerationVideoDetail implements ModelInterface, ArrayAccess
             'suggestion' => 'string',
             'label' => 'string',
             'audioText' => 'string',
-            'endTime' => 'int',
-            'startTime' => 'int',
+            'endTime' => 'float',
+            'startTime' => 'float',
             'detail' => '\HuaweiCloud\SDK\Moderation\V3\Model\VideoModerationAudioDetailList[]'
     ];
 
@@ -53,8 +53,8 @@ class VideoModerationVideoDetail implements ModelInterface, ArrayAccess
         'suggestion' => null,
         'label' => null,
         'audioText' => null,
-        'endTime' => 'int32',
-        'startTime' => 'int32',
+        'endTime' => 'float',
+        'startTime' => 'float',
         'detail' => null
     ];
 
@@ -326,7 +326,7 @@ class VideoModerationVideoDetail implements ModelInterface, ArrayAccess
     * Gets endTime
     *  音频片段结束时间
     *
-    * @return int|null
+    * @return float|null
     */
     public function getEndTime()
     {
@@ -336,7 +336,7 @@ class VideoModerationVideoDetail implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int|null $endTime 音频片段结束时间
+    * @param float|null $endTime 音频片段结束时间
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class VideoModerationVideoDetail implements ModelInterface, ArrayAccess
     * Gets startTime
     *  音频片段开始时间
     *
-    * @return int|null
+    * @return float|null
     */
     public function getStartTime()
     {
@@ -360,7 +360,7 @@ class VideoModerationVideoDetail implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 音频片段开始时间
+    * @param float|null $startTime 音频片段开始时间
     *
     * @return $this
     */

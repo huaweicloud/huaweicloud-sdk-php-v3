@@ -36,6 +36,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * dataVolumes  云服务器对应数据盘相关配置。每一个数据结构代表一块待创建的数据盘。   约束：目前新创建的弹性云服务器最多可挂载23块数据盘。
     * securityGroups  云服务器对应安全组信息。  约束：当该值指定为空时，默认给云服务器绑定default安全组。
     * availabilityZone  待创建云服务器所在的可用分区，需要指定可用分区（AZ）的名称。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * batchCreateInMultiAz  是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
     * extendparam  extendparam
     * metadata  用户自定义字段键值对。  > 说明： >  > - 最多可注入10对键值（Key/Value）。 > - 主键（Key）只能由大写字母（A-Z）、小写字母（a-z）、数字（0-9）、中划线（-）、下划线（_）、冒号（:）和小数点（.）组成，长度为[1-255]个字符。 > - 值（value）最大长度为255个字符。  系统预留字段  1. op_svc_userid : 用户ID      当extendparam结构中的chargingMode为prePaid（即创建包年包月付费的云服务器），且使用SSH秘钥方式登录云服务器时，该字段为必选字段。  2. agency_name  :  委托的名称   委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。  > 说明： >  > 委托获取、更新请参考如下步骤： >  > 1. 使用IAM服务提供的[查询委托列表](https://support.huaweicloud.com/api-iam/zh-cn_topic_0079467614.html)接口，获取有效可用的委托名称。 > 2. 使用[更新云服务器元数](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0025560298.html)据接口，更新metadata中agency_name字段为新的委托名称。
     * osschedulerHints  osschedulerHints
@@ -62,6 +63,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
             'dataVolumes' => '\HuaweiCloud\SDK\Ecs\V2\Model\PrePaidServerDataVolume[]',
             'securityGroups' => '\HuaweiCloud\SDK\Ecs\V2\Model\PrePaidServerSecurityGroup[]',
             'availabilityZone' => 'string',
+            'batchCreateInMultiAz' => 'bool',
             'extendparam' => '\HuaweiCloud\SDK\Ecs\V2\Model\PrePaidServerExtendParam',
             'metadata' => 'map[string,string]',
             'osschedulerHints' => '\HuaweiCloud\SDK\Ecs\V2\Model\PrePaidServerSchedulerHints',
@@ -88,6 +90,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * dataVolumes  云服务器对应数据盘相关配置。每一个数据结构代表一块待创建的数据盘。   约束：目前新创建的弹性云服务器最多可挂载23块数据盘。
     * securityGroups  云服务器对应安全组信息。  约束：当该值指定为空时，默认给云服务器绑定default安全组。
     * availabilityZone  待创建云服务器所在的可用分区，需要指定可用分区（AZ）的名称。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * batchCreateInMultiAz  是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
     * extendparam  extendparam
     * metadata  用户自定义字段键值对。  > 说明： >  > - 最多可注入10对键值（Key/Value）。 > - 主键（Key）只能由大写字母（A-Z）、小写字母（a-z）、数字（0-9）、中划线（-）、下划线（_）、冒号（:）和小数点（.）组成，长度为[1-255]个字符。 > - 值（value）最大长度为255个字符。  系统预留字段  1. op_svc_userid : 用户ID      当extendparam结构中的chargingMode为prePaid（即创建包年包月付费的云服务器），且使用SSH秘钥方式登录云服务器时，该字段为必选字段。  2. agency_name  :  委托的名称   委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。  > 说明： >  > 委托获取、更新请参考如下步骤： >  > 1. 使用IAM服务提供的[查询委托列表](https://support.huaweicloud.com/api-iam/zh-cn_topic_0079467614.html)接口，获取有效可用的委托名称。 > 2. 使用[更新云服务器元数](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0025560298.html)据接口，更新metadata中agency_name字段为新的委托名称。
     * osschedulerHints  osschedulerHints
@@ -114,6 +117,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
         'dataVolumes' => null,
         'securityGroups' => null,
         'availabilityZone' => null,
+        'batchCreateInMultiAz' => null,
         'extendparam' => null,
         'metadata' => null,
         'osschedulerHints' => null,
@@ -161,6 +165,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * dataVolumes  云服务器对应数据盘相关配置。每一个数据结构代表一块待创建的数据盘。   约束：目前新创建的弹性云服务器最多可挂载23块数据盘。
     * securityGroups  云服务器对应安全组信息。  约束：当该值指定为空时，默认给云服务器绑定default安全组。
     * availabilityZone  待创建云服务器所在的可用分区，需要指定可用分区（AZ）的名称。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * batchCreateInMultiAz  是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
     * extendparam  extendparam
     * metadata  用户自定义字段键值对。  > 说明： >  > - 最多可注入10对键值（Key/Value）。 > - 主键（Key）只能由大写字母（A-Z）、小写字母（a-z）、数字（0-9）、中划线（-）、下划线（_）、冒号（:）和小数点（.）组成，长度为[1-255]个字符。 > - 值（value）最大长度为255个字符。  系统预留字段  1. op_svc_userid : 用户ID      当extendparam结构中的chargingMode为prePaid（即创建包年包月付费的云服务器），且使用SSH秘钥方式登录云服务器时，该字段为必选字段。  2. agency_name  :  委托的名称   委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。  > 说明： >  > 委托获取、更新请参考如下步骤： >  > 1. 使用IAM服务提供的[查询委托列表](https://support.huaweicloud.com/api-iam/zh-cn_topic_0079467614.html)接口，获取有效可用的委托名称。 > 2. 使用[更新云服务器元数](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0025560298.html)据接口，更新metadata中agency_name字段为新的委托名称。
     * osschedulerHints  osschedulerHints
@@ -187,6 +192,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
             'dataVolumes' => 'data_volumes',
             'securityGroups' => 'security_groups',
             'availabilityZone' => 'availability_zone',
+            'batchCreateInMultiAz' => 'batch_create_in_multi_az',
             'extendparam' => 'extendparam',
             'metadata' => 'metadata',
             'osschedulerHints' => 'os:scheduler_hints',
@@ -213,6 +219,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * dataVolumes  云服务器对应数据盘相关配置。每一个数据结构代表一块待创建的数据盘。   约束：目前新创建的弹性云服务器最多可挂载23块数据盘。
     * securityGroups  云服务器对应安全组信息。  约束：当该值指定为空时，默认给云服务器绑定default安全组。
     * availabilityZone  待创建云服务器所在的可用分区，需要指定可用分区（AZ）的名称。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * batchCreateInMultiAz  是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
     * extendparam  extendparam
     * metadata  用户自定义字段键值对。  > 说明： >  > - 最多可注入10对键值（Key/Value）。 > - 主键（Key）只能由大写字母（A-Z）、小写字母（a-z）、数字（0-9）、中划线（-）、下划线（_）、冒号（:）和小数点（.）组成，长度为[1-255]个字符。 > - 值（value）最大长度为255个字符。  系统预留字段  1. op_svc_userid : 用户ID      当extendparam结构中的chargingMode为prePaid（即创建包年包月付费的云服务器），且使用SSH秘钥方式登录云服务器时，该字段为必选字段。  2. agency_name  :  委托的名称   委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。  > 说明： >  > 委托获取、更新请参考如下步骤： >  > 1. 使用IAM服务提供的[查询委托列表](https://support.huaweicloud.com/api-iam/zh-cn_topic_0079467614.html)接口，获取有效可用的委托名称。 > 2. 使用[更新云服务器元数](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0025560298.html)据接口，更新metadata中agency_name字段为新的委托名称。
     * osschedulerHints  osschedulerHints
@@ -239,6 +246,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
             'dataVolumes' => 'setDataVolumes',
             'securityGroups' => 'setSecurityGroups',
             'availabilityZone' => 'setAvailabilityZone',
+            'batchCreateInMultiAz' => 'setBatchCreateInMultiAz',
             'extendparam' => 'setExtendparam',
             'metadata' => 'setMetadata',
             'osschedulerHints' => 'setOsschedulerHints',
@@ -265,6 +273,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * dataVolumes  云服务器对应数据盘相关配置。每一个数据结构代表一块待创建的数据盘。   约束：目前新创建的弹性云服务器最多可挂载23块数据盘。
     * securityGroups  云服务器对应安全组信息。  约束：当该值指定为空时，默认给云服务器绑定default安全组。
     * availabilityZone  待创建云服务器所在的可用分区，需要指定可用分区（AZ）的名称。  可通过接口 [查询可用区列表接口](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=ECS&api=NovaListAvailabilityZones) 获取，也可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * batchCreateInMultiAz  是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
     * extendparam  extendparam
     * metadata  用户自定义字段键值对。  > 说明： >  > - 最多可注入10对键值（Key/Value）。 > - 主键（Key）只能由大写字母（A-Z）、小写字母（a-z）、数字（0-9）、中划线（-）、下划线（_）、冒号（:）和小数点（.）组成，长度为[1-255]个字符。 > - 值（value）最大长度为255个字符。  系统预留字段  1. op_svc_userid : 用户ID      当extendparam结构中的chargingMode为prePaid（即创建包年包月付费的云服务器），且使用SSH秘钥方式登录云服务器时，该字段为必选字段。  2. agency_name  :  委托的名称   委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。  > 说明： >  > 委托获取、更新请参考如下步骤： >  > 1. 使用IAM服务提供的[查询委托列表](https://support.huaweicloud.com/api-iam/zh-cn_topic_0079467614.html)接口，获取有效可用的委托名称。 > 2. 使用[更新云服务器元数](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0025560298.html)据接口，更新metadata中agency_name字段为新的委托名称。
     * osschedulerHints  osschedulerHints
@@ -291,6 +300,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
             'dataVolumes' => 'getDataVolumes',
             'securityGroups' => 'getSecurityGroups',
             'availabilityZone' => 'getAvailabilityZone',
+            'batchCreateInMultiAz' => 'getBatchCreateInMultiAz',
             'extendparam' => 'getExtendparam',
             'metadata' => 'getMetadata',
             'osschedulerHints' => 'getOsschedulerHints',
@@ -373,6 +383,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
         $this->container['dataVolumes'] = isset($data['dataVolumes']) ? $data['dataVolumes'] : null;
         $this->container['securityGroups'] = isset($data['securityGroups']) ? $data['securityGroups'] : null;
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
+        $this->container['batchCreateInMultiAz'] = isset($data['batchCreateInMultiAz']) ? $data['batchCreateInMultiAz'] : false;
         $this->container['extendparam'] = isset($data['extendparam']) ? $data['extendparam'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
         $this->container['osschedulerHints'] = isset($data['osschedulerHints']) ? $data['osschedulerHints'] : null;
@@ -832,6 +843,30 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     public function setAvailabilityZone($availabilityZone)
     {
         $this->container['availabilityZone'] = $availabilityZone;
+        return $this;
+    }
+
+    /**
+    * Gets batchCreateInMultiAz
+    *  是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
+    *
+    * @return bool|null
+    */
+    public function getBatchCreateInMultiAz()
+    {
+        return $this->container['batchCreateInMultiAz'];
+    }
+
+    /**
+    * Sets batchCreateInMultiAz
+    *
+    * @param bool|null $batchCreateInMultiAz 是否支持随机多AZ部署。  - “true”：批量创建的ecs部署在多个AZ上 - “false”：批量创建的ecs部署在单个AZ上  > 说明： >  > 当availability_zone为空时该字段生效。
+    *
+    * @return $this
+    */
+    public function setBatchCreateInMultiAz($batchCreateInMultiAz)
+    {
+        $this->container['batchCreateInMultiAz'] = $batchCreateInMultiAz;
         return $this;
     }
 

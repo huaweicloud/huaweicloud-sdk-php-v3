@@ -22,7 +22,7 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
-    * limit  每次查询的数量，默认值为10。
+    * limit  每次查询的数量，默认值为10。此参数不支持携带值为空。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
@@ -38,7 +38,7 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
-    * limit  每次查询的数量，默认值为10。
+    * limit  每次查询的数量，默认值为10。此参数不支持携带值为空。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
-    * limit  每次查询的数量，默认值为10。
+    * limit  每次查询的数量，默认值为10。此参数不支持携带值为空。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
-    * limit  每次查询的数量，默认值为10。
+    * limit  每次查询的数量，默认值为10。此参数不支持携带值为空。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  语言。中文：zh_CN英文：en_US缺省为zh_CN。
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。
-    * limit  每次查询的数量，默认值为10。
+    * limit  每次查询的数量，默认值为10。此参数不支持携带值为空。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @var string[]
@@ -270,7 +270,7 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每次查询的数量，默认值为10。
+    *  每次查询的数量，默认值为10。此参数不支持携带值为空。
     *
     * @return int|null
     */
@@ -282,7 +282,7 @@ class ListServiceResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每次查询的数量，默认值为10。
+    * @param int|null $limit 每次查询的数量，默认值为10。此参数不支持携带值为空。
     *
     * @return $this
     */

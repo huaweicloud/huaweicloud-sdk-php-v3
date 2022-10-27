@@ -25,7 +25,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
     * imageSize  镜像文件的大小，单位为字节
     * imageSourceType  镜像后端存储类型，目前只支持uds
-    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
     * osBit  操作系统位数，一般取值为“32”或者“64”
@@ -151,7 +151,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
     * imageSize  镜像文件的大小，单位为字节
     * imageSourceType  镜像后端存储类型，目前只支持uds
-    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
     * osBit  操作系统位数，一般取值为“32”或者“64”
@@ -298,7 +298,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
     * imageSize  镜像文件的大小，单位为字节
     * imageSourceType  镜像后端存储类型，目前只支持uds
-    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
     * osBit  操作系统位数，一般取值为“32”或者“64”
@@ -424,7 +424,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
     * imageSize  镜像文件的大小，单位为字节
     * imageSourceType  镜像后端存储类型，目前只支持uds
-    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
     * osBit  操作系统位数，一般取值为“32”或者“64”
@@ -550,7 +550,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     * description  镜像描述信息。 支持字母、数字、中文等，不支持回车、<、 >，长度不能超过1024个字符。
     * imageSize  镜像文件的大小，单位为字节
     * imageSourceType  镜像后端存储类型，目前只支持uds
-    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
     * isregistered  是否是注册过的镜像，取值为“true”或者“false”
     * originalimagename  父镜像ID。公共镜像或通过文件创建的私有镜像，取值为空
     * osBit  操作系统位数，一般取值为“32”或者“64”
@@ -1318,7 +1318,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imagetype
-    *  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+    *  镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
     *
     * @return string
     */
@@ -1330,7 +1330,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imagetype
     *
-    * @param string $imagetype 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared
+    * @param string $imagetype 镜像类型，目前支持以下类型： 公共镜像：gold 私有镜像：private 共享镜像：shared 市场镜像：market
     *
     * @return $this
     */

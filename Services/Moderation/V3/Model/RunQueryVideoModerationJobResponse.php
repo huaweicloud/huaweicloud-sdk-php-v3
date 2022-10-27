@@ -25,7 +25,7 @@ class RunQueryVideoModerationJobResponse implements ModelInterface, ArrayAccess
     * jobId  作业id
     * status  作业状态，可取值有：  running: 正在运行 succeeded: 运行成功  failed: 运行失败
     * requestParams  requestParams
-    * craeteTime  作业创建时间
+    * createTime  作业创建时间
     * updateTime  作业更新时间
     * result  result
     *
@@ -36,7 +36,7 @@ class RunQueryVideoModerationJobResponse implements ModelInterface, ArrayAccess
             'jobId' => 'string',
             'status' => 'string',
             'requestParams' => '\HuaweiCloud\SDK\Moderation\V3\Model\VideoModerationResultRequestParams',
-            'craeteTime' => 'string',
+            'createTime' => 'string',
             'updateTime' => 'string',
             'result' => '\HuaweiCloud\SDK\Moderation\V3\Model\VideoModerationResultResult'
     ];
@@ -47,7 +47,7 @@ class RunQueryVideoModerationJobResponse implements ModelInterface, ArrayAccess
     * jobId  作业id
     * status  作业状态，可取值有：  running: 正在运行 succeeded: 运行成功  failed: 运行失败
     * requestParams  requestParams
-    * craeteTime  作业创建时间
+    * createTime  作业创建时间
     * updateTime  作业更新时间
     * result  result
     *
@@ -58,7 +58,7 @@ class RunQueryVideoModerationJobResponse implements ModelInterface, ArrayAccess
         'jobId' => null,
         'status' => null,
         'requestParams' => null,
-        'craeteTime' => null,
+        'createTime' => null,
         'updateTime' => null,
         'result' => null
     ];
@@ -90,7 +90,7 @@ class RunQueryVideoModerationJobResponse implements ModelInterface, ArrayAccess
     * jobId  作业id
     * status  作业状态，可取值有：  running: 正在运行 succeeded: 运行成功  failed: 运行失败
     * requestParams  requestParams
-    * craeteTime  作业创建时间
+    * createTime  作业创建时间
     * updateTime  作业更新时间
     * result  result
     *
@@ -101,7 +101,7 @@ class RunQueryVideoModerationJobResponse implements ModelInterface, ArrayAccess
             'jobId' => 'job_id',
             'status' => 'status',
             'requestParams' => 'request_params',
-            'craeteTime' => 'craete_time',
+            'createTime' => 'create_time',
             'updateTime' => 'update_time',
             'result' => 'result'
     ];
@@ -112,7 +112,7 @@ class RunQueryVideoModerationJobResponse implements ModelInterface, ArrayAccess
     * jobId  作业id
     * status  作业状态，可取值有：  running: 正在运行 succeeded: 运行成功  failed: 运行失败
     * requestParams  requestParams
-    * craeteTime  作业创建时间
+    * createTime  作业创建时间
     * updateTime  作业更新时间
     * result  result
     *
@@ -123,7 +123,7 @@ class RunQueryVideoModerationJobResponse implements ModelInterface, ArrayAccess
             'jobId' => 'setJobId',
             'status' => 'setStatus',
             'requestParams' => 'setRequestParams',
-            'craeteTime' => 'setCraeteTime',
+            'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
             'result' => 'setResult'
     ];
@@ -134,7 +134,7 @@ class RunQueryVideoModerationJobResponse implements ModelInterface, ArrayAccess
     * jobId  作业id
     * status  作业状态，可取值有：  running: 正在运行 succeeded: 运行成功  failed: 运行失败
     * requestParams  requestParams
-    * craeteTime  作业创建时间
+    * createTime  作业创建时间
     * updateTime  作业更新时间
     * result  result
     *
@@ -145,7 +145,7 @@ class RunQueryVideoModerationJobResponse implements ModelInterface, ArrayAccess
             'jobId' => 'getJobId',
             'status' => 'getStatus',
             'requestParams' => 'getRequestParams',
-            'craeteTime' => 'getCraeteTime',
+            'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
             'result' => 'getResult'
     ];
@@ -229,7 +229,7 @@ class RunQueryVideoModerationJobResponse implements ModelInterface, ArrayAccess
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['requestParams'] = isset($data['requestParams']) ? $data['requestParams'] : null;
-        $this->container['craeteTime'] = isset($data['craeteTime']) ? $data['craeteTime'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
@@ -361,26 +361,26 @@ class RunQueryVideoModerationJobResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets craeteTime
+    * Gets createTime
     *  作业创建时间
     *
     * @return string|null
     */
-    public function getCraeteTime()
+    public function getCreateTime()
     {
-        return $this->container['craeteTime'];
+        return $this->container['createTime'];
     }
 
     /**
-    * Sets craeteTime
+    * Sets createTime
     *
-    * @param string|null $craeteTime 作业创建时间
+    * @param string|null $createTime 作业创建时间
     *
     * @return $this
     */
-    public function setCraeteTime($craeteTime)
+    public function setCreateTime($createTime)
     {
-        $this->container['craeteTime'] = $craeteTime;
+        $this->container['createTime'] = $createTime;
         return $this;
     }
 

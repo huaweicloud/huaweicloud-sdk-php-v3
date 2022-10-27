@@ -21,25 +21,25 @@ class VideoCreateRequestData implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * url  视频url地址
-    * frameInterval  截帧频率间隔，单位为秒，取值范围为0.5~60s；若不传递默认5s截帧一次
+    * frameInterval  截帧频率间隔，单位为秒，取值范围为1~60s；若不传递默认5s截帧一次
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'url' => 'string',
-            'frameInterval' => 'float'
+            'frameInterval' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * url  视频url地址
-    * frameInterval  截帧频率间隔，单位为秒，取值范围为0.5~60s；若不传递默认5s截帧一次
+    * frameInterval  截帧频率间隔，单位为秒，取值范围为1~60s；若不传递默认5s截帧一次
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'url' => null,
-        'frameInterval' => 'float'
+        'frameInterval' => 'int32'
     ];
 
     /**
@@ -66,7 +66,7 @@ class VideoCreateRequestData implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * url  视频url地址
-    * frameInterval  截帧频率间隔，单位为秒，取值范围为0.5~60s；若不传递默认5s截帧一次
+    * frameInterval  截帧频率间隔，单位为秒，取值范围为1~60s；若不传递默认5s截帧一次
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class VideoCreateRequestData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * url  视频url地址
-    * frameInterval  截帧频率间隔，单位为秒，取值范围为0.5~60s；若不传递默认5s截帧一次
+    * frameInterval  截帧频率间隔，单位为秒，取值范围为1~60s；若不传递默认5s截帧一次
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class VideoCreateRequestData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * url  视频url地址
-    * frameInterval  截帧频率间隔，单位为秒，取值范围为0.5~60s；若不传递默认5s截帧一次
+    * frameInterval  截帧频率间隔，单位为秒，取值范围为1~60s；若不传递默认5s截帧一次
     *
     * @var string[]
     */
@@ -212,9 +212,9 @@ class VideoCreateRequestData implements ModelInterface, ArrayAccess
 
     /**
     * Gets frameInterval
-    *  截帧频率间隔，单位为秒，取值范围为0.5~60s；若不传递默认5s截帧一次
+    *  截帧频率间隔，单位为秒，取值范围为1~60s；若不传递默认5s截帧一次
     *
-    * @return float|null
+    * @return int|null
     */
     public function getFrameInterval()
     {
@@ -224,7 +224,7 @@ class VideoCreateRequestData implements ModelInterface, ArrayAccess
     /**
     * Sets frameInterval
     *
-    * @param float|null $frameInterval 截帧频率间隔，单位为秒，取值范围为0.5~60s；若不传递默认5s截帧一次
+    * @param int|null $frameInterval 截帧频率间隔，单位为秒，取值范围为1~60s；若不传递默认5s截帧一次
     *
     * @return $this
     */

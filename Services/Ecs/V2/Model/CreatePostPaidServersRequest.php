@@ -20,21 +20,25 @@ class CreatePostPaidServersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * xClientToken  保证客户端请求幂等性的标识
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'xClientToken' => 'string',
             'body' => '\HuaweiCloud\SDK\Ecs\V2\Model\CreatePostPaidServersRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * xClientToken  保证客户端请求幂等性的标识
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'xClientToken' => null,
         'body' => null
     ];
 
@@ -61,31 +65,37 @@ class CreatePostPaidServersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * xClientToken  保证客户端请求幂等性的标识
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'xClientToken' => 'X-Client-Token',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * xClientToken  保证客户端请求幂等性的标识
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'xClientToken' => 'setXClientToken',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * xClientToken  保证客户端请求幂等性的标识
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'xClientToken' => 'getXClientToken',
             'body' => 'getBody'
     ];
 
@@ -147,6 +157,7 @@ class CreatePostPaidServersRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['xClientToken'] = isset($data['xClientToken']) ? $data['xClientToken'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -170,6 +181,30 @@ class CreatePostPaidServersRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets xClientToken
+    *  保证客户端请求幂等性的标识
+    *
+    * @return string|null
+    */
+    public function getXClientToken()
+    {
+        return $this->container['xClientToken'];
+    }
+
+    /**
+    * Sets xClientToken
+    *
+    * @param string|null $xClientToken 保证客户端请求幂等性的标识
+    *
+    * @return $this
+    */
+    public function setXClientToken($xClientToken)
+    {
+        $this->container['xClientToken'] = $xClientToken;
+        return $this;
     }
 
     /**

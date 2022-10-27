@@ -22,7 +22,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * limit  用于分页，表示查询几条记录，取值为整数，默认为所有。
     * page  页码，表示需要查询第几页的数据。默认值为1。
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * id  镜像ID。
     * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
     * name  镜像名称。
@@ -60,7 +60,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * limit  用于分页，表示查询几条记录，取值为整数，默认为所有。
     * page  页码，表示需要查询第几页的数据。默认值为1。
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * id  镜像ID。
     * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
     * name  镜像名称。
@@ -119,7 +119,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * limit  用于分页，表示查询几条记录，取值为整数，默认为所有。
     * page  页码，表示需要查询第几页的数据。默认值为1。
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * id  镜像ID。
     * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
     * name  镜像名称。
@@ -157,7 +157,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * limit  用于分页，表示查询几条记录，取值为整数，默认为所有。
     * page  页码，表示需要查询第几页的数据。默认值为1。
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * id  镜像ID。
     * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
     * name  镜像名称。
@@ -195,7 +195,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * limit  用于分页，表示查询几条记录，取值为整数，默认为所有。
     * page  页码，表示需要查询第几页的数据。默认值为1。
-    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * imagetype  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     * id  镜像ID。
     * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
     * name  镜像名称。
@@ -272,6 +272,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     const IMAGETYPE_GOLD = 'gold';
     const IMAGETYPE__PRIVATE = 'private';
     const IMAGETYPE_SHARED = 'shared';
+    const IMAGETYPE_MARKET = 'market';
     const STATUS_QUEUED = 'queued';
     const STATUS_SAVING = 'saving';
     const STATUS_DELETED = 'deleted';
@@ -301,6 +302,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
             self::IMAGETYPE_GOLD,
             self::IMAGETYPE__PRIVATE,
             self::IMAGETYPE_SHARED,
+            self::IMAGETYPE_MARKET,
         ];
     }
 
@@ -528,7 +530,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imagetype
-    *  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    *  镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     *
     * @return string|null
     */
@@ -540,7 +542,7 @@ class ListTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imagetype
     *
-    * @param string|null $imagetype 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared
+    * @param string|null $imagetype 镜像类型，目前支持以下类型：公共镜像：gold私有镜像：private共享镜像：shared 市场镜像：market
     *
     * @return $this
     */

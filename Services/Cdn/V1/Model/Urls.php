@@ -56,7 +56,7 @@ class Urls implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
+        'id' => 'int64',
         'url' => null,
         'status' => null,
         'type' => null,

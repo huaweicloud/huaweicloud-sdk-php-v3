@@ -27,6 +27,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
     * encoding  消息内容编码格式，取值范围none|base64,默认值none, base64格式仅支持透传。
     * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
     * topic  消息topic
+    * properties  properties
     * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
     * errorInfo  errorInfo
     * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
@@ -41,6 +42,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
             'encoding' => 'string',
             'payloadFormat' => 'string',
             'topic' => 'string',
+            'properties' => '\HuaweiCloud\SDK\IoTDA\V5\Model\PropertiesDTO',
             'status' => 'string',
             'errorInfo' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ErrorInfoDTO',
             'createdTime' => 'string',
@@ -55,6 +57,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
     * encoding  消息内容编码格式，取值范围none|base64,默认值none, base64格式仅支持透传。
     * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
     * topic  消息topic
+    * properties  properties
     * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
     * errorInfo  errorInfo
     * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
@@ -69,6 +72,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
         'encoding' => null,
         'payloadFormat' => null,
         'topic' => null,
+        'properties' => null,
         'status' => null,
         'errorInfo' => null,
         'createdTime' => null,
@@ -104,6 +108,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
     * encoding  消息内容编码格式，取值范围none|base64,默认值none, base64格式仅支持透传。
     * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
     * topic  消息topic
+    * properties  properties
     * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
     * errorInfo  errorInfo
     * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
@@ -118,6 +123,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
             'encoding' => 'encoding',
             'payloadFormat' => 'payload_format',
             'topic' => 'topic',
+            'properties' => 'properties',
             'status' => 'status',
             'errorInfo' => 'error_info',
             'createdTime' => 'created_time',
@@ -132,6 +138,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
     * encoding  消息内容编码格式，取值范围none|base64,默认值none, base64格式仅支持透传。
     * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
     * topic  消息topic
+    * properties  properties
     * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
     * errorInfo  errorInfo
     * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
@@ -146,6 +153,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
             'encoding' => 'setEncoding',
             'payloadFormat' => 'setPayloadFormat',
             'topic' => 'setTopic',
+            'properties' => 'setProperties',
             'status' => 'setStatus',
             'errorInfo' => 'setErrorInfo',
             'createdTime' => 'setCreatedTime',
@@ -160,6 +168,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
     * encoding  消息内容编码格式，取值范围none|base64,默认值none, base64格式仅支持透传。
     * payloadFormat  有效负载格式，在消息内容编码格式为none时有效，取值范围standard|raw，默认值standard（平台封装的标准格式），取值为raw时直接将消息内容作为有效负载下发。
     * topic  消息topic
+    * properties  properties
     * status  消息状态，包含PENDING，DELIVERED，FAILED和TIMEOUT，PENDING指设备不在线，消息被缓存起来，等设备上线之后下发； DELIVERED指消息发送成功；FAILED消息发送失败；TIMEOUT指消息在平台默认时间内（1天）还没有下发送给设备，则平台会将消息设置为超时，状态为TIMEOUT。
     * errorInfo  errorInfo
     * createdTime  消息的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
@@ -174,6 +183,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
             'encoding' => 'getEncoding',
             'payloadFormat' => 'getPayloadFormat',
             'topic' => 'getTopic',
+            'properties' => 'getProperties',
             'status' => 'getStatus',
             'errorInfo' => 'getErrorInfo',
             'createdTime' => 'getCreatedTime',
@@ -244,6 +254,7 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
         $this->container['encoding'] = isset($data['encoding']) ? $data['encoding'] : null;
         $this->container['payloadFormat'] = isset($data['payloadFormat']) ? $data['payloadFormat'] : null;
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
+        $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
         $this->container['createdTime'] = isset($data['createdTime']) ? $data['createdTime'] : null;
@@ -413,6 +424,30 @@ class ShowDeviceMessageResponse implements ModelInterface, ArrayAccess
     public function setTopic($topic)
     {
         $this->container['topic'] = $topic;
+        return $this;
+    }
+
+    /**
+    * Gets properties
+    *  properties
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\PropertiesDTO|null
+    */
+    public function getProperties()
+    {
+        return $this->container['properties'];
+    }
+
+    /**
+    * Sets properties
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\PropertiesDTO|null $properties properties
+    *
+    * @return $this
+    */
+    public function setProperties($properties)
+    {
+        $this->container['properties'] = $properties;
         return $this;
     }
 
