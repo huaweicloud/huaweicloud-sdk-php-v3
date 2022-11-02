@@ -61,8 +61,8 @@ class Urls implements ModelInterface, ArrayAccess
         'status' => null,
         'type' => null,
         'taskId' => 'int64',
-        'modifyTime' => null,
-        'createTime' => null,
+        'modifyTime' => 'int64',
+        'createTime' => 'int64',
         'fileType' => null
     ];
 

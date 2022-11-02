@@ -56,8 +56,8 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'startTime' => null,
-        'endTime' => null,
+        'startTime' => 'int64',
+        'endTime' => 'int64',
         'offset' => null,
         'limit' => null,
         'url' => null,

@@ -1,3 +1,25 @@
+# 3.1.7 2022-11-02
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `ShowUrlTaskInfo`:
+    - Modify the type `int32` -> `int64` of the response parameter `modify_time`
+    - Modify the type `int32` -> `int64` of the response parameter `create_time`
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - Support the interfaces `UpdateServerBlockDevice`, `RegisterServerMonitor`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
 # 3.1.6 2022-10-27
 
 ### HuaweiCloud SDK CDN

@@ -1,3 +1,25 @@
+# 3.1.7 2022-11-02
+
+### HuaweiCloud SDK CDN
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ShowUrlTaskInfo`:
+    - 响应参数`modify_time`类型调整 `int32` -> `int64`
+    - 响应参数`create_time`类型调整 `int32` -> `int64`
+
+### HuaweiCloud SDK ECS
+
+- _新增特性_
+  - 支持接口`UpdateServerBlockDevice`、`RegisterServerMonitor`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
 # 3.1.6 2022-10-27
 
 ### HuaweiCloud SDK CDN
