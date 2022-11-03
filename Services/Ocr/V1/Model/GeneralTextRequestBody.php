@@ -24,6 +24,7 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * detectDirection  图片朝向检测开关，可选值包括：  - true：检测图片朝向;  - false：不检测图片朝向。  > 说明：  - 支持任意角度的图片朝向检测。未传入该参数时默认为false，即不检测图片朝向。
     * quickMode  快速模式开关，针对单行文字图片（要求图片只包含一行文字，且文字区域占比超过50%），打开时可以更快返回识别。可选值包括：  - true：打开快速模式；  - false：关闭快速模式。  > 说明：  - 未传入该参数时默认为false，即关闭快速模式。
+    * characterMode  单字符模式开关。可选值包括： - true：打开单字符模式 - false：关闭单字符模式  未传入该参数时默认为false，即不返回单个文本行的单字符信息。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
             'image' => 'string',
             'url' => 'string',
             'detectDirection' => 'bool',
-            'quickMode' => 'bool'
+            'quickMode' => 'bool',
+            'characterMode' => 'bool'
     ];
 
     /**
@@ -40,6 +42,7 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * detectDirection  图片朝向检测开关，可选值包括：  - true：检测图片朝向;  - false：不检测图片朝向。  > 说明：  - 支持任意角度的图片朝向检测。未传入该参数时默认为false，即不检测图片朝向。
     * quickMode  快速模式开关，针对单行文字图片（要求图片只包含一行文字，且文字区域占比超过50%），打开时可以更快返回识别。可选值包括：  - true：打开快速模式；  - false：关闭快速模式。  > 说明：  - 未传入该参数时默认为false，即关闭快速模式。
+    * characterMode  单字符模式开关。可选值包括： - true：打开单字符模式 - false：关闭单字符模式  未传入该参数时默认为false，即不返回单个文本行的单字符信息。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
         'image' => null,
         'url' => null,
         'detectDirection' => null,
-        'quickMode' => null
+        'quickMode' => null,
+        'characterMode' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * detectDirection  图片朝向检测开关，可选值包括：  - true：检测图片朝向;  - false：不检测图片朝向。  > 说明：  - 支持任意角度的图片朝向检测。未传入该参数时默认为false，即不检测图片朝向。
     * quickMode  快速模式开关，针对单行文字图片（要求图片只包含一行文字，且文字区域占比超过50%），打开时可以更快返回识别。可选值包括：  - true：打开快速模式；  - false：关闭快速模式。  > 说明：  - 未传入该参数时默认为false，即关闭快速模式。
+    * characterMode  单字符模式开关。可选值包括： - true：打开单字符模式 - false：关闭单字符模式  未传入该参数时默认为false，即不返回单个文本行的单字符信息。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
             'image' => 'image',
             'url' => 'url',
             'detectDirection' => 'detect_direction',
-            'quickMode' => 'quick_mode'
+            'quickMode' => 'quick_mode',
+            'characterMode' => 'character_mode'
     ];
 
     /**
@@ -93,6 +99,7 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * detectDirection  图片朝向检测开关，可选值包括：  - true：检测图片朝向;  - false：不检测图片朝向。  > 说明：  - 支持任意角度的图片朝向检测。未传入该参数时默认为false，即不检测图片朝向。
     * quickMode  快速模式开关，针对单行文字图片（要求图片只包含一行文字，且文字区域占比超过50%），打开时可以更快返回识别。可选值包括：  - true：打开快速模式；  - false：关闭快速模式。  > 说明：  - 未传入该参数时默认为false，即关闭快速模式。
+    * characterMode  单字符模式开关。可选值包括： - true：打开单字符模式 - false：关闭单字符模式  未传入该参数时默认为false，即不返回单个文本行的单字符信息。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
             'image' => 'setImage',
             'url' => 'setUrl',
             'detectDirection' => 'setDetectDirection',
-            'quickMode' => 'setQuickMode'
+            'quickMode' => 'setQuickMode',
+            'characterMode' => 'setCharacterMode'
     ];
 
     /**
@@ -109,6 +117,7 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
     * url  与image二选一  图片的URL路径，目前支持：  - 公网http/https url  - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/api-ocr/ocr_03_0132.html)。  > 说明：  - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。  - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据。
     * detectDirection  图片朝向检测开关，可选值包括：  - true：检测图片朝向;  - false：不检测图片朝向。  > 说明：  - 支持任意角度的图片朝向检测。未传入该参数时默认为false，即不检测图片朝向。
     * quickMode  快速模式开关，针对单行文字图片（要求图片只包含一行文字，且文字区域占比超过50%），打开时可以更快返回识别。可选值包括：  - true：打开快速模式；  - false：关闭快速模式。  > 说明：  - 未传入该参数时默认为false，即关闭快速模式。
+    * characterMode  单字符模式开关。可选值包括： - true：打开单字符模式 - false：关闭单字符模式  未传入该参数时默认为false，即不返回单个文本行的单字符信息。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
             'image' => 'getImage',
             'url' => 'getUrl',
             'detectDirection' => 'getDetectDirection',
-            'quickMode' => 'getQuickMode'
+            'quickMode' => 'getQuickMode',
+            'characterMode' => 'getCharacterMode'
     ];
 
     /**
@@ -181,6 +191,7 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['detectDirection'] = isset($data['detectDirection']) ? $data['detectDirection'] : null;
         $this->container['quickMode'] = isset($data['quickMode']) ? $data['quickMode'] : null;
+        $this->container['characterMode'] = isset($data['characterMode']) ? $data['characterMode'] : null;
     }
 
     /**
@@ -298,6 +309,30 @@ class GeneralTextRequestBody implements ModelInterface, ArrayAccess
     public function setQuickMode($quickMode)
     {
         $this->container['quickMode'] = $quickMode;
+        return $this;
+    }
+
+    /**
+    * Gets characterMode
+    *  单字符模式开关。可选值包括： - true：打开单字符模式 - false：关闭单字符模式  未传入该参数时默认为false，即不返回单个文本行的单字符信息。
+    *
+    * @return bool|null
+    */
+    public function getCharacterMode()
+    {
+        return $this->container['characterMode'];
+    }
+
+    /**
+    * Sets characterMode
+    *
+    * @param bool|null $characterMode 单字符模式开关。可选值包括： - true：打开单字符模式 - false：关闭单字符模式  未传入该参数时默认为false，即不返回单个文本行的单字符信息。
+    *
+    * @return $this
+    */
+    public function setCharacterMode($characterMode)
+    {
+        $this->container['characterMode'] = $characterMode;
         return $this;
     }
 

@@ -289,9 +289,6 @@ class NovaServerBlockDeviceMapping implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['destinationType'] === null) {
-            $invalidProperties[] = "'destinationType' can't be null";
-        }
             $allowedValues = $this->getDestinationTypeAllowableValues();
                 if (!is_null($this->container['destinationType']) && !in_array($this->container['destinationType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -342,7 +339,7 @@ class NovaServerBlockDeviceMapping implements ModelInterface, ArrayAccess
     * Gets destinationType
     *  卷设备的目标类型，当前仅支持volume类型。  - volume：卷。 - local：本地文件，当前不支持该类型。
     *
-    * @return string
+    * @return string|null
     */
     public function getDestinationType()
     {
@@ -352,7 +349,7 @@ class NovaServerBlockDeviceMapping implements ModelInterface, ArrayAccess
     /**
     * Sets destinationType
     *
-    * @param string $destinationType 卷设备的目标类型，当前仅支持volume类型。  - volume：卷。 - local：本地文件，当前不支持该类型。
+    * @param string|null $destinationType 卷设备的目标类型，当前仅支持volume类型。  - volume：卷。 - local：本地文件，当前不支持该类型。
     *
     * @return $this
     */

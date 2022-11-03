@@ -20,6 +20,7 @@ class MigrateResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * regionId  资源所属RegionID。迁移OBS服务资源时为必选项。
     * projectId  项目ID。resource_type为region级别服务时为必选项。
     * resourceId  资源ID
     * resourceType  资源类型
@@ -28,6 +29,7 @@ class MigrateResource implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'regionId' => 'string',
             'projectId' => 'string',
             'resourceId' => 'string',
             'resourceType' => 'string',
@@ -36,6 +38,7 @@ class MigrateResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * regionId  资源所属RegionID。迁移OBS服务资源时为必选项。
     * projectId  项目ID。resource_type为region级别服务时为必选项。
     * resourceId  资源ID
     * resourceType  资源类型
@@ -44,6 +47,7 @@ class MigrateResource implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'regionId' => null,
         'projectId' => null,
         'resourceId' => null,
         'resourceType' => null,
@@ -73,6 +77,7 @@ class MigrateResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * regionId  资源所属RegionID。迁移OBS服务资源时为必选项。
     * projectId  项目ID。resource_type为region级别服务时为必选项。
     * resourceId  资源ID
     * resourceType  资源类型
@@ -81,6 +86,7 @@ class MigrateResource implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'regionId' => 'region_id',
             'projectId' => 'project_id',
             'resourceId' => 'resource_id',
             'resourceType' => 'resource_type',
@@ -89,6 +95,7 @@ class MigrateResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * regionId  资源所属RegionID。迁移OBS服务资源时为必选项。
     * projectId  项目ID。resource_type为region级别服务时为必选项。
     * resourceId  资源ID
     * resourceType  资源类型
@@ -97,6 +104,7 @@ class MigrateResource implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'regionId' => 'setRegionId',
             'projectId' => 'setProjectId',
             'resourceId' => 'setResourceId',
             'resourceType' => 'setResourceType',
@@ -105,6 +113,7 @@ class MigrateResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * regionId  资源所属RegionID。迁移OBS服务资源时为必选项。
     * projectId  项目ID。resource_type为region级别服务时为必选项。
     * resourceId  资源ID
     * resourceType  资源类型
@@ -113,6 +122,7 @@ class MigrateResource implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'regionId' => 'getRegionId',
             'projectId' => 'getProjectId',
             'resourceId' => 'getResourceId',
             'resourceType' => 'getResourceType',
@@ -177,6 +187,7 @@ class MigrateResource implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
@@ -209,6 +220,30 @@ class MigrateResource implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets regionId
+    *  资源所属RegionID。迁移OBS服务资源时为必选项。
+    *
+    * @return string|null
+    */
+    public function getRegionId()
+    {
+        return $this->container['regionId'];
+    }
+
+    /**
+    * Sets regionId
+    *
+    * @param string|null $regionId 资源所属RegionID。迁移OBS服务资源时为必选项。
+    *
+    * @return $this
+    */
+    public function setRegionId($regionId)
+    {
+        $this->container['regionId'] = $regionId;
+        return $this;
     }
 
     /**

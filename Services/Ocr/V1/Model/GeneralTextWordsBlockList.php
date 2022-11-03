@@ -22,24 +22,32 @@ class GeneralTextWordsBlockList implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * words  文字块识别结果。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * confidence  文字块识别结果的置信度。
+    * charList  文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'words' => 'string',
-            'location' => 'int[][]'
+            'location' => 'int[][]',
+            'confidence' => 'float',
+            'charList' => '\HuaweiCloud\SDK\Ocr\V1\Model\GeneralTextCharList[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * words  文字块识别结果。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * confidence  文字块识别结果的置信度。
+    * charList  文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'words' => null,
-        'location' => 'int32'
+        'location' => 'int32',
+        'confidence' => 'float',
+        'charList' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class GeneralTextWordsBlockList implements ModelInterface, ArrayAccess
     * and the value is the original name
     * words  文字块识别结果。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * confidence  文字块识别结果的置信度。
+    * charList  文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'words' => 'words',
-            'location' => 'location'
+            'location' => 'location',
+            'confidence' => 'confidence',
+            'charList' => 'char_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * words  文字块识别结果。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * confidence  文字块识别结果的置信度。
+    * charList  文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
     *
     * @var string[]
     */
     protected static $setters = [
             'words' => 'setWords',
-            'location' => 'setLocation'
+            'location' => 'setLocation',
+            'confidence' => 'setConfidence',
+            'charList' => 'setCharList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * words  文字块识别结果。
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * confidence  文字块识别结果的置信度。
+    * charList  文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
     *
     * @var string[]
     */
     protected static $getters = [
             'words' => 'getWords',
-            'location' => 'getLocation'
+            'location' => 'getLocation',
+            'confidence' => 'getConfidence',
+            'charList' => 'getCharList'
     ];
 
     /**
@@ -159,6 +179,8 @@ class GeneralTextWordsBlockList implements ModelInterface, ArrayAccess
     {
         $this->container['words'] = isset($data['words']) ? $data['words'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
+        $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
+        $this->container['charList'] = isset($data['charList']) ? $data['charList'] : null;
     }
 
     /**
@@ -174,6 +196,12 @@ class GeneralTextWordsBlockList implements ModelInterface, ArrayAccess
         }
         if ($this->container['location'] === null) {
             $invalidProperties[] = "'location' can't be null";
+        }
+        if ($this->container['confidence'] === null) {
+            $invalidProperties[] = "'confidence' can't be null";
+        }
+        if ($this->container['charList'] === null) {
+            $invalidProperties[] = "'charList' can't be null";
         }
         return $invalidProperties;
     }
@@ -234,6 +262,54 @@ class GeneralTextWordsBlockList implements ModelInterface, ArrayAccess
     public function setLocation($location)
     {
         $this->container['location'] = $location;
+        return $this;
+    }
+
+    /**
+    * Gets confidence
+    *  文字块识别结果的置信度。
+    *
+    * @return float
+    */
+    public function getConfidence()
+    {
+        return $this->container['confidence'];
+    }
+
+    /**
+    * Sets confidence
+    *
+    * @param float $confidence 文字块识别结果的置信度。
+    *
+    * @return $this
+    */
+    public function setConfidence($confidence)
+    {
+        $this->container['confidence'] = $confidence;
+        return $this;
+    }
+
+    /**
+    * Gets charList
+    *  文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\GeneralTextCharList[]
+    */
+    public function getCharList()
+    {
+        return $this->container['charList'];
+    }
+
+    /**
+    * Sets charList
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\GeneralTextCharList[] $charList 文字块对应的单字符识别列表，输出顺序从左到右，先上后下。
+    *
+    * @return $this
+    */
+    public function setCharList($charList)
+    {
+        $this->container['charList'] = $charList;
         return $this;
     }
 

@@ -40,6 +40,7 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
     * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
             'confidence' => '\HuaweiCloud\SDK\Ocr\V1\Model\ThailandIdcardConfidence',
             'portraitImage' => 'string',
             'portraitLocation' => 'int[][]',
-            'idcardType' => 'string'
+            'idcardType' => 'string',
+            'textLocation' => 'object'
     ];
 
     /**
@@ -88,6 +90,7 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
     * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
         'confidence' => null,
         'portraitImage' => null,
         'portraitLocation' => 'int32',
-        'idcardType' => null
+        'idcardType' => null,
+        'textLocation' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
     * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
             'confidence' => 'confidence',
             'portraitImage' => 'portrait_image',
             'portraitLocation' => 'portrait_location',
-            'idcardType' => 'idcard_type'
+            'idcardType' => 'idcard_type',
+            'textLocation' => 'text_location'
     ];
 
     /**
@@ -205,6 +211,7 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
     * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
             'confidence' => 'setConfidence',
             'portraitImage' => 'setPortraitImage',
             'portraitLocation' => 'setPortraitLocation',
-            'idcardType' => 'setIdcardType'
+            'idcardType' => 'setIdcardType',
+            'textLocation' => 'setTextLocation'
     ];
 
     /**
@@ -253,6 +261,7 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
     * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
             'confidence' => 'getConfidence',
             'portraitImage' => 'getPortraitImage',
             'portraitLocation' => 'getPortraitLocation',
-            'idcardType' => 'getIdcardType'
+            'idcardType' => 'getIdcardType',
+            'textLocation' => 'getTextLocation'
     ];
 
     /**
@@ -357,6 +367,7 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
         $this->container['portraitImage'] = isset($data['portraitImage']) ? $data['portraitImage'] : null;
         $this->container['portraitLocation'] = isset($data['portraitLocation']) ? $data['portraitLocation'] : null;
         $this->container['idcardType'] = isset($data['idcardType']) ? $data['idcardType'] : null;
+        $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
     }
 
     /**
@@ -858,6 +869,30 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     public function setIdcardType($idcardType)
     {
         $this->container['idcardType'] = $idcardType;
+        return $this;
+    }
+
+    /**
+    * Gets textLocation
+    *  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    *
+    * @return object|null
+    */
+    public function getTextLocation()
+    {
+        return $this->container['textLocation'];
+    }
+
+    /**
+    * Sets textLocation
+    *
+    * @param object|null $textLocation 对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    *
+    * @return $this
+    */
+    public function setTextLocation($textLocation)
+    {
+        $this->container['textLocation'] = $textLocation;
         return $this;
     }
 

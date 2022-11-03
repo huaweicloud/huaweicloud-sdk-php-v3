@@ -27,7 +27,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售2：代售
     * label  标签。
     * telephone  客户电话号码。
-    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
+    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证
     * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
     * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
     * isFrozen  是否冻结： 0：否1：客户账号冻结2：客户账号和资源冻结 该字段预留。
@@ -65,7 +65,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售2：代售
     * label  标签。
     * telephone  客户电话号码。
-    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
+    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证
     * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
     * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
     * isFrozen  是否冻结： 0：否1：客户账号冻结2：客户账号和资源冻结 该字段预留。
@@ -124,7 +124,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售2：代售
     * label  标签。
     * telephone  客户电话号码。
-    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
+    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证
     * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
     * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
     * isFrozen  是否冻结： 0：否1：客户账号冻结2：客户账号和资源冻结 该字段预留。
@@ -162,7 +162,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售2：代售
     * label  标签。
     * telephone  客户电话号码。
-    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
+    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证
     * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
     * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
     * isFrozen  是否冻结： 0：否1：客户账号冻结2：客户账号和资源冻结 该字段预留。
@@ -200,7 +200,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * associationType  关联类型： 1：顾问销售2：代售
     * label  标签。
     * telephone  客户电话号码。
-    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
+    * verifiedStatus  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证
     * countryCode  国家码，电话号码的国家码前缀。 例如：中国 0086。
     * customerType  客户类型： -1：无类型0：个人1：企业 客户刚注册的时候，没有具体的客户类型，为“-1：无类型”，客户可以在账号中心通过设置客户类型或者在实名认证的时候，选择对应的企业/个人实名认证来决定自己的类型。
     * isFrozen  是否冻结： 0：否1：客户账号冻结2：客户账号和资源冻结 该字段预留。
@@ -502,7 +502,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets verifiedStatus
-    *  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
+    *  实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证
     *
     * @return string|null
     */
@@ -514,7 +514,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets verifiedStatus
     *
-    * @param string|null $verifiedStatus 实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证3：实名认证失败
+    * @param string|null $verifiedStatus 实名认证状态： -1：未实名认证0：实名认证审核中1：实名认证不通过2：已实名认证
     *
     * @return $this
     */

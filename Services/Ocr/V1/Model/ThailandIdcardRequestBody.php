@@ -26,6 +26,7 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括： - true：返回各个文字块区域 - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
             'side' => 'string',
             'returnPortraitImage' => 'bool',
             'returnPortraitLocation' => 'bool',
-            'returnIdcardType' => 'bool'
+            'returnIdcardType' => 'bool',
+            'returnTextLocation' => 'bool'
     ];
 
     /**
@@ -46,6 +48,7 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括： - true：返回各个文字块区域 - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
         'side' => null,
         'returnPortraitImage' => null,
         'returnPortraitLocation' => null,
-        'returnIdcardType' => null
+        'returnIdcardType' => null,
+        'returnTextLocation' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括： - true：返回各个文字块区域 - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
             'side' => 'side',
             'returnPortraitImage' => 'return_portrait_image',
             'returnPortraitLocation' => 'return_portrait_location',
-            'returnIdcardType' => 'return_idcard_type'
+            'returnIdcardType' => 'return_idcard_type',
+            'returnTextLocation' => 'return_text_location'
     ];
 
     /**
@@ -107,6 +113,7 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括： - true：返回各个文字块区域 - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
             'side' => 'setSide',
             'returnPortraitImage' => 'setReturnPortraitImage',
             'returnPortraitLocation' => 'setReturnPortraitLocation',
-            'returnIdcardType' => 'setReturnIdcardType'
+            'returnIdcardType' => 'setReturnIdcardType',
+            'returnTextLocation' => 'setReturnTextLocation'
     ];
 
     /**
@@ -127,6 +135,7 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * returnTextLocation  识别到的文字块的区域位置信息。可选值包括： - true：返回各个文字块区域 - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
             'side' => 'getSide',
             'returnPortraitImage' => 'getReturnPortraitImage',
             'returnPortraitLocation' => 'getReturnPortraitLocation',
-            'returnIdcardType' => 'getReturnIdcardType'
+            'returnIdcardType' => 'getReturnIdcardType',
+            'returnTextLocation' => 'getReturnTextLocation'
     ];
 
     /**
@@ -203,6 +213,7 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
         $this->container['returnPortraitImage'] = isset($data['returnPortraitImage']) ? $data['returnPortraitImage'] : null;
         $this->container['returnPortraitLocation'] = isset($data['returnPortraitLocation']) ? $data['returnPortraitLocation'] : null;
         $this->container['returnIdcardType'] = isset($data['returnIdcardType']) ? $data['returnIdcardType'] : null;
+        $this->container['returnTextLocation'] = isset($data['returnTextLocation']) ? $data['returnTextLocation'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
     public function setReturnIdcardType($returnIdcardType)
     {
         $this->container['returnIdcardType'] = $returnIdcardType;
+        return $this;
+    }
+
+    /**
+    * Gets returnTextLocation
+    *  识别到的文字块的区域位置信息。可选值包括： - true：返回各个文字块区域 - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    *
+    * @return bool|null
+    */
+    public function getReturnTextLocation()
+    {
+        return $this->container['returnTextLocation'];
+    }
+
+    /**
+    * Sets returnTextLocation
+    *
+    * @param bool|null $returnTextLocation 识别到的文字块的区域位置信息。可选值包括： - true：返回各个文字块区域 - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
+    *
+    * @return $this
+    */
+    public function setReturnTextLocation($returnTextLocation)
+    {
+        $this->container['returnTextLocation'] = $returnTextLocation;
         return $this;
     }
 
