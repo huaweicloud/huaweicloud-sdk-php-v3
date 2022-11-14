@@ -21,30 +21,30 @@ class ListIpGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cloudTotal  该用户总的Ip地址组数量，包含本地与共享地址组
     * total  该用户当前企业项目下Ip地址组数量，只包含本地地址组
     * items  地址组信息列表
+    * cloudTotal  该用户总的Ip地址组数量，包含本地与共享地址组
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'cloudTotal' => 'int',
             'total' => 'int',
-            'items' => '\HuaweiCloud\SDK\Waf\V1\Model\IpGroupBody[]'
+            'items' => '\HuaweiCloud\SDK\Waf\V1\Model\IpGroupBody[]',
+            'cloudTotal' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cloudTotal  该用户总的Ip地址组数量，包含本地与共享地址组
     * total  该用户当前企业项目下Ip地址组数量，只包含本地地址组
     * items  地址组信息列表
+    * cloudTotal  该用户总的Ip地址组数量，包含本地与共享地址组
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'cloudTotal' => null,
         'total' => null,
-        'items' => null
+        'items' => null,
+        'cloudTotal' => null
     ];
 
     /**
@@ -70,44 +70,44 @@ class ListIpGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cloudTotal  该用户总的Ip地址组数量，包含本地与共享地址组
     * total  该用户当前企业项目下Ip地址组数量，只包含本地地址组
     * items  地址组信息列表
+    * cloudTotal  该用户总的Ip地址组数量，包含本地与共享地址组
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'cloudTotal' => 'cloudTotal',
             'total' => 'total',
-            'items' => 'items'
+            'items' => 'items',
+            'cloudTotal' => 'cloudTotal'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cloudTotal  该用户总的Ip地址组数量，包含本地与共享地址组
     * total  该用户当前企业项目下Ip地址组数量，只包含本地地址组
     * items  地址组信息列表
+    * cloudTotal  该用户总的Ip地址组数量，包含本地与共享地址组
     *
     * @var string[]
     */
     protected static $setters = [
-            'cloudTotal' => 'setCloudTotal',
             'total' => 'setTotal',
-            'items' => 'setItems'
+            'items' => 'setItems',
+            'cloudTotal' => 'setCloudTotal'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cloudTotal  该用户总的Ip地址组数量，包含本地与共享地址组
     * total  该用户当前企业项目下Ip地址组数量，只包含本地地址组
     * items  地址组信息列表
+    * cloudTotal  该用户总的Ip地址组数量，包含本地与共享地址组
     *
     * @var string[]
     */
     protected static $getters = [
-            'cloudTotal' => 'getCloudTotal',
             'total' => 'getTotal',
-            'items' => 'getItems'
+            'items' => 'getItems',
+            'cloudTotal' => 'getCloudTotal'
     ];
 
     /**
@@ -168,9 +168,9 @@ class ListIpGroupResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['cloudTotal'] = isset($data['cloudTotal']) ? $data['cloudTotal'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['cloudTotal'] = isset($data['cloudTotal']) ? $data['cloudTotal'] : null;
     }
 
     /**
@@ -193,30 +193,6 @@ class ListIpGroupResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets cloudTotal
-    *  该用户总的Ip地址组数量，包含本地与共享地址组
-    *
-    * @return int|null
-    */
-    public function getCloudTotal()
-    {
-        return $this->container['cloudTotal'];
-    }
-
-    /**
-    * Sets cloudTotal
-    *
-    * @param int|null $cloudTotal 该用户总的Ip地址组数量，包含本地与共享地址组
-    *
-    * @return $this
-    */
-    public function setCloudTotal($cloudTotal)
-    {
-        $this->container['cloudTotal'] = $cloudTotal;
-        return $this;
     }
 
     /**
@@ -264,6 +240,30 @@ class ListIpGroupResponse implements ModelInterface, ArrayAccess
     public function setItems($items)
     {
         $this->container['items'] = $items;
+        return $this;
+    }
+
+    /**
+    * Gets cloudTotal
+    *  该用户总的Ip地址组数量，包含本地与共享地址组
+    *
+    * @return int|null
+    */
+    public function getCloudTotal()
+    {
+        return $this->container['cloudTotal'];
+    }
+
+    /**
+    * Sets cloudTotal
+    *
+    * @param int|null $cloudTotal 该用户总的Ip地址组数量，包含本地与共享地址组
+    *
+    * @return $this
+    */
+    public function setCloudTotal($cloudTotal)
+    {
+        $this->container['cloudTotal'] = $cloudTotal;
         return $this;
     }
 

@@ -24,7 +24,7 @@ class ShowCertificatesHttpsInfoRequest implements ModelInterface, ArrayAccess
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
     * domainName  加速域名。
     * userDomainId  域名所属用户的domain_id。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class ShowCertificatesHttpsInfoRequest implements ModelInterface, ArrayAccess
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
     * domainName  加速域名。
     * userDomainId  域名所属用户的domain_id。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowCertificatesHttpsInfoRequest implements ModelInterface, ArrayAccess
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
     * domainName  加速域名。
     * userDomainId  域名所属用户的domain_id。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ShowCertificatesHttpsInfoRequest implements ModelInterface, ArrayAccess
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
     * domainName  加速域名。
     * userDomainId  域名所属用户的domain_id。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class ShowCertificatesHttpsInfoRequest implements ModelInterface, ArrayAccess
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
     * domainName  加速域名。
     * userDomainId  域名所属用户的domain_id。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -314,7 +314,7 @@ class ShowCertificatesHttpsInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
+    *  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class ShowCertificatesHttpsInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
+    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @return $this
     */

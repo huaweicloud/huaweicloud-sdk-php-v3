@@ -22,29 +22,33 @@ class ShowLtsInfoConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  lts配置信息id，每个企业项目对应唯一id
-    * enabale  是否开启全量日志   - false: 不开启   - true: 开启
+    * enabled  是否开启全量日志   - false: 不开启   - true: 开启
     * ltsIdInfo  ltsIdInfo
+    * enabale  该参数废弃，请忽略
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
-            'enabale' => 'bool',
-            'ltsIdInfo' => '\HuaweiCloud\SDK\Waf\V1\Model\LtsIdInfo'
+            'enabled' => 'bool',
+            'ltsIdInfo' => '\HuaweiCloud\SDK\Waf\V1\Model\LtsIdInfo',
+            'enabale' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  lts配置信息id，每个企业项目对应唯一id
-    * enabale  是否开启全量日志   - false: 不开启   - true: 开启
+    * enabled  是否开启全量日志   - false: 不开启   - true: 开启
     * ltsIdInfo  ltsIdInfo
+    * enabale  该参数废弃，请忽略
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
-        'enabale' => null,
-        'ltsIdInfo' => null
+        'enabled' => null,
+        'ltsIdInfo' => null,
+        'enabale' => null
     ];
 
     /**
@@ -71,43 +75,49 @@ class ShowLtsInfoConfigResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  lts配置信息id，每个企业项目对应唯一id
-    * enabale  是否开启全量日志   - false: 不开启   - true: 开启
+    * enabled  是否开启全量日志   - false: 不开启   - true: 开启
     * ltsIdInfo  ltsIdInfo
+    * enabale  该参数废弃，请忽略
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
-            'enabale' => 'enabale',
-            'ltsIdInfo' => 'ltsIdInfo'
+            'enabled' => 'enabled',
+            'ltsIdInfo' => 'ltsIdInfo',
+            'enabale' => 'enabale'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  lts配置信息id，每个企业项目对应唯一id
-    * enabale  是否开启全量日志   - false: 不开启   - true: 开启
+    * enabled  是否开启全量日志   - false: 不开启   - true: 开启
     * ltsIdInfo  ltsIdInfo
+    * enabale  该参数废弃，请忽略
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
-            'enabale' => 'setEnabale',
-            'ltsIdInfo' => 'setLtsIdInfo'
+            'enabled' => 'setEnabled',
+            'ltsIdInfo' => 'setLtsIdInfo',
+            'enabale' => 'setEnabale'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  lts配置信息id，每个企业项目对应唯一id
-    * enabale  是否开启全量日志   - false: 不开启   - true: 开启
+    * enabled  是否开启全量日志   - false: 不开启   - true: 开启
     * ltsIdInfo  ltsIdInfo
+    * enabale  该参数废弃，请忽略
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
-            'enabale' => 'getEnabale',
-            'ltsIdInfo' => 'getLtsIdInfo'
+            'enabled' => 'getEnabled',
+            'ltsIdInfo' => 'getLtsIdInfo',
+            'enabale' => 'getEnabale'
     ];
 
     /**
@@ -169,8 +179,9 @@ class ShowLtsInfoConfigResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['enabale'] = isset($data['enabale']) ? $data['enabale'] : null;
+        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
         $this->container['ltsIdInfo'] = isset($data['ltsIdInfo']) ? $data['ltsIdInfo'] : null;
+        $this->container['enabale'] = isset($data['enabale']) ? $data['enabale'] : null;
     }
 
     /**
@@ -220,26 +231,26 @@ class ShowLtsInfoConfigResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets enabale
+    * Gets enabled
     *  是否开启全量日志   - false: 不开启   - true: 开启
     *
     * @return bool|null
     */
-    public function getEnabale()
+    public function getEnabled()
     {
-        return $this->container['enabale'];
+        return $this->container['enabled'];
     }
 
     /**
-    * Sets enabale
+    * Sets enabled
     *
-    * @param bool|null $enabale 是否开启全量日志   - false: 不开启   - true: 开启
+    * @param bool|null $enabled 是否开启全量日志   - false: 不开启   - true: 开启
     *
     * @return $this
     */
-    public function setEnabale($enabale)
+    public function setEnabled($enabled)
     {
-        $this->container['enabale'] = $enabale;
+        $this->container['enabled'] = $enabled;
         return $this;
     }
 
@@ -264,6 +275,30 @@ class ShowLtsInfoConfigResponse implements ModelInterface, ArrayAccess
     public function setLtsIdInfo($ltsIdInfo)
     {
         $this->container['ltsIdInfo'] = $ltsIdInfo;
+        return $this;
+    }
+
+    /**
+    * Gets enabale
+    *  该参数废弃，请忽略
+    *
+    * @return bool|null
+    */
+    public function getEnabale()
+    {
+        return $this->container['enabale'];
+    }
+
+    /**
+    * Sets enabale
+    *
+    * @param bool|null $enabale 该参数废弃，请忽略
+    *
+    * @return $this
+    */
+    public function setEnabale($enabale)
+    {
+        $this->container['enabale'] = $enabale;
         return $this;
     }
 

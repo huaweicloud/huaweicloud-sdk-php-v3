@@ -20,28 +20,24 @@ class DeleteDomainMappingRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * pullDomain  直播播放域名
     * pushDomain  直播推流域名
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'specifyProject' => 'string',
             'pullDomain' => 'string',
             'pushDomain' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * pullDomain  直播播放域名
     * pushDomain  直播推流域名
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'specifyProject' => null,
         'pullDomain' => null,
         'pushDomain' => null
     ];
@@ -69,42 +65,36 @@ class DeleteDomainMappingRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * pullDomain  直播播放域名
     * pushDomain  直播推流域名
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'specifyProject' => 'specify_project',
             'pullDomain' => 'pull_domain',
             'pushDomain' => 'push_domain'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * pullDomain  直播播放域名
     * pushDomain  直播推流域名
     *
     * @var string[]
     */
     protected static $setters = [
-            'specifyProject' => 'setSpecifyProject',
             'pullDomain' => 'setPullDomain',
             'pushDomain' => 'setPushDomain'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * pullDomain  直播播放域名
     * pushDomain  直播推流域名
     *
     * @var string[]
     */
     protected static $getters = [
-            'specifyProject' => 'getSpecifyProject',
             'pullDomain' => 'getPullDomain',
             'pushDomain' => 'getPushDomain'
     ];
@@ -167,7 +157,6 @@ class DeleteDomainMappingRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['specifyProject'] = isset($data['specifyProject']) ? $data['specifyProject'] : null;
         $this->container['pullDomain'] = isset($data['pullDomain']) ? $data['pullDomain'] : null;
         $this->container['pushDomain'] = isset($data['pushDomain']) ? $data['pushDomain'] : null;
     }
@@ -180,12 +169,6 @@ class DeleteDomainMappingRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['specifyProject']) && (mb_strlen($this->container['specifyProject']) > 64)) {
-                $invalidProperties[] = "invalid value for 'specifyProject', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['specifyProject']) && (mb_strlen($this->container['specifyProject']) < 1)) {
-                $invalidProperties[] = "invalid value for 'specifyProject', the character length must be bigger than or equal to 1.";
-            }
         if ($this->container['pullDomain'] === null) {
             $invalidProperties[] = "'pullDomain' can't be null";
         }
@@ -216,30 +199,6 @@ class DeleteDomainMappingRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets specifyProject
-    *  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
-    *
-    * @return string|null
-    */
-    public function getSpecifyProject()
-    {
-        return $this->container['specifyProject'];
-    }
-
-    /**
-    * Sets specifyProject
-    *
-    * @param string|null $specifyProject op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
-    *
-    * @return $this
-    */
-    public function setSpecifyProject($specifyProject)
-    {
-        $this->container['specifyProject'] = $specifyProject;
-        return $this;
     }
 
     /**

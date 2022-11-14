@@ -28,7 +28,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'effect' => 'string',
-            'action' => 'string',
+            'action' => 'string[]',
             'resource' => 'string[]'
     ];
 
@@ -231,7 +231,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     * Gets action
     *  obs访问权限
     *
-    * @return string
+    * @return string[]
     */
     public function getAction()
     {
@@ -241,7 +241,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action obs访问权限
+    * @param string[] $action obs访问权限
     *
     * @return $this
     */

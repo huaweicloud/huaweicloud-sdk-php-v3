@@ -29,7 +29,7 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
     *
     * @var string[]
     */
@@ -134,7 +134,7 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * relatedDomain  播放域名关联的推流域名（只有domain_type为pull的时候有效）
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
     *
     * @var string[]
     */
@@ -235,7 +235,6 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     const STATUS_CONFIGURING = 'configuring';
     const SERVICE_AREA_MAINLAND_CHINA = 'mainland_china';
     const SERVICE_AREA_OUTSIDE_MAINLAND_CHINA = 'outside_mainland_china';
-    const SERVICE_AREA__GLOBAL = 'global';
     
 
     /**
@@ -295,7 +294,6 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
         return [
             self::SERVICE_AREA_MAINLAND_CHINA,
             self::SERVICE_AREA_OUTSIDE_MAINLAND_CHINA,
-            self::SERVICE_AREA__GLOBAL,
         ];
     }
 
@@ -641,7 +639,7 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceArea
-    *  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    *  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
     *
     * @return string|null
     */
@@ -653,7 +651,7 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     /**
     * Sets serviceArea
     *
-    * @param string|null $serviceArea 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    * @param string|null $serviceArea 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
     *
     * @return $this
     */

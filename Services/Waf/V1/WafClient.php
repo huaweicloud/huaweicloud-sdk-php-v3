@@ -2720,6 +2720,74 @@ class WafClient extends Client
     }
 
     /**
+     * 查询告警通知配置
+     *
+     * 查询告警通知配置
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listNoticeConfigs($request)
+    {
+        return $this->listNoticeConfigsWithHttpInfo($request);
+    }
+
+    public function listNoticeConfigsWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/waf/alerts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListNoticeConfigsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListNoticeConfigsRequest');
+    }
+
+    /**
      * 查询安全总览分类统计top信息
      *
      * 查询安全总览分类统计TOP信息，包含受攻击域名 、攻击源ip、受攻击URL、攻击来源区域、攻击事件分布。需要注意的是，安全总览相关的接口，暂时不能支持任意时间的查询。只能支持 console上显示的 昨天，今天，3天，7天和30天 数据查询。
@@ -3526,6 +3594,80 @@ class WafClient extends Client
     }
 
     /**
+     * 按企业项目迁移防护域名
+     *
+     * 按企业项目迁移防护域名，仅专业版与独享版支持该功能
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function migrateCompositeHosts($request)
+    {
+        return $this->migrateCompositeHostsWithHttpInfo($request);
+    }
+
+    public function migrateCompositeHostsWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/composite-waf/hosts/migration';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['targetEnterpriseProjectId'] !== null) {
+            $queryParams['target_enterprise_project_id'] = $localVarParams['targetEnterpriseProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\MigrateCompositeHostsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\MigrateCompositeHostsRequest');
+    }
+
+    /**
      * 重命名WAF独享引擎
      *
      * 重命名WAF独享引擎
@@ -4301,6 +4443,145 @@ class WafClient extends Client
     }
 
     /**
+     * 查询WAF回源Ip信息
+     *
+     * 查询WAF回源Ip信息
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSourceIp($request)
+    {
+        return $this->showSourceIpWithHttpInfo($request);
+    }
+
+    public function showSourceIpWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/waf/config/source-ip';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ShowSourceIpResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ShowSourceIpRequest');
+    }
+
+    /**
+     * 更新告警通知配置
+     *
+     * 更新告警通知配置
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAlertNoticeConfig($request)
+    {
+        return $this->updateAlertNoticeConfigWithHttpInfo($request);
+    }
+
+    public function updateAlertNoticeConfigWithHttpInfo($request)
+    {
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/waf/alert/{alert_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['alertId'] !== null) {
+            $pathParams['alert_id'] = $localVarParams['alertId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateAlertNoticeConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateAlertNoticeConfigRequest');
+    }
+
+    /**
      * 修改证书
      *
      * 修改证书
@@ -4676,7 +4957,7 @@ class WafClient extends Client
     /**
      * 配置全量日志lts
      *
-     * 配置全量日志lts，该接口可用来开启与关闭wa全量日志以及配置日志组和日志流。日志组id和日志流id可前往云日志服务获取。配置的日志流id要属于所配置的日志组。
+     * 配置全量日志lts，该接口可用来开启与关闭waf全量日志以及配置日志组和日志流。日志组id和日志流id可前往云日志服务获取。配置的日志流id要属于所配置的日志组。
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.

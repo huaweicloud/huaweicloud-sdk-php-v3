@@ -29,7 +29,7 @@ class LtsIdInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'ltsGroupId' => 'string',
             'ltsAccessStreamId' => 'string',
-            'ltsAttackStreamId' => 'object'
+            'ltsAttackStreamId' => 'string'
     ];
 
     /**
@@ -246,7 +246,7 @@ class LtsIdInfo implements ModelInterface, ArrayAccess
     * Gets ltsAttackStreamId
     *  攻击日志流id
     *
-    * @return object|null
+    * @return string|null
     */
     public function getLtsAttackStreamId()
     {
@@ -256,7 +256,7 @@ class LtsIdInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ltsAttackStreamId
     *
-    * @param object|null $ltsAttackStreamId 攻击日志流id
+    * @param string|null $ltsAttackStreamId 攻击日志流id
     *
     * @return $this
     */

@@ -40,7 +40,7 @@ class Domains implements ModelInterface, ArrayAccess
     * originStatus  是否暂停源站回源。
     * bannedReason  域名禁用原因
     * lockedReason  域名锁定原因
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class Domains implements ModelInterface, ArrayAccess
     * originStatus  是否暂停源站回源。
     * bannedReason  域名禁用原因
     * lockedReason  域名锁定原因
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -161,7 +161,7 @@ class Domains implements ModelInterface, ArrayAccess
     * originStatus  是否暂停源站回源。
     * bannedReason  域名禁用原因
     * lockedReason  域名锁定原因
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -211,7 +211,7 @@ class Domains implements ModelInterface, ArrayAccess
     * originStatus  是否暂停源站回源。
     * bannedReason  域名禁用原因
     * lockedReason  域名锁定原因
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -261,7 +261,7 @@ class Domains implements ModelInterface, ArrayAccess
     * originStatus  是否暂停源站回源。
     * bannedReason  域名禁用原因
     * lockedReason  域名锁定原因
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -899,7 +899,7 @@ class Domains implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    *  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @return string|null
     */
@@ -911,7 +911,7 @@ class Domains implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子账号调用接口时，该参数必传。
+    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @return $this
     */

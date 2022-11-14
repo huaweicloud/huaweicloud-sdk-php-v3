@@ -24,7 +24,7 @@ class DomainBody implements ModelInterface, ArrayAccess
     * businessType  域名业务类型，若为web，则表示类型为网页加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示业务类型为全站加速。
     * sources  源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
     * serviceArea  域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class DomainBody implements ModelInterface, ArrayAccess
     * businessType  域名业务类型，若为web，则表示类型为网页加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示业务类型为全站加速。
     * sources  源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
     * serviceArea  域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DomainBody implements ModelInterface, ArrayAccess
     * businessType  域名业务类型，若为web，则表示类型为网页加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示业务类型为全站加速。
     * sources  源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
     * serviceArea  域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class DomainBody implements ModelInterface, ArrayAccess
     * businessType  域名业务类型，若为web，则表示类型为网页加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示业务类型为全站加速。
     * sources  源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
     * serviceArea  域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class DomainBody implements ModelInterface, ArrayAccess
     * businessType  域名业务类型，若为web，则表示类型为网页加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示业务类型为全站加速。
     * sources  源站域名或源站IP，源站为IP类型时，仅支持IPv4，如需传入多个源站IP，以多个源站对象传入，除IP其他参数请保持一致，主源站最多支持15个源站IP对象，备源站最多支持15个源站IP对象；源站为域名类型时仅支持1个源站对象。不支持IP源站和域名源站混用。
     * serviceArea  域名服务范围，若为mainland_china，则表示服务范围为中国大陆；若为outside_mainland_china，则表示服务范围为中国大陆境外；若为global，则表示服务范围为全球。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -381,7 +381,7 @@ class DomainBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子账号调用接口时，该参数必传。
+    *  当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @return string|null
     */
@@ -393,7 +393,7 @@ class DomainBody implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子账号调用接口时，该参数必传。
+    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示添加加速域名到该企业项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @return $this
     */

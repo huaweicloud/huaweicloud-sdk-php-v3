@@ -31,8 +31,8 @@ class RenameInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态 \\n - 0：正常计费 \\n - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务 \\n - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态 \\ n - 0：创建中 \\n - 1：运行中 \\n - 2：删除中 \\n - 3：已删除 \\n - 4：创建失败 \\n - 5：已冻结 \\n - 6：异常 \\n - 7：更新中 \\n - 8：更新失败
+    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
+    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
     * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
@@ -79,8 +79,8 @@ class RenameInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态 \\n - 0：正常计费 \\n - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务 \\n - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态 \\ n - 0：创建中 \\n - 1：运行中 \\n - 2：删除中 \\n - 3：已删除 \\n - 4：创建失败 \\n - 5：已冻结 \\n - 6：异常 \\n - 7：更新中 \\n - 8：更新失败
+    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
+    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
     * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
@@ -148,8 +148,8 @@ class RenameInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态 \\n - 0：正常计费 \\n - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务 \\n - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态 \\ n - 0：创建中 \\n - 1：运行中 \\n - 2：删除中 \\n - 3：已删除 \\n - 4：创建失败 \\n - 5：已冻结 \\n - 6：异常 \\n - 7：更新中 \\n - 8：更新失败
+    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
+    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
     * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
@@ -196,8 +196,8 @@ class RenameInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态 \\n - 0：正常计费 \\n - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务 \\n - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态 \\ n - 0：创建中 \\n - 1：运行中 \\n - 2：删除中 \\n - 3：已删除 \\n - 4：创建失败 \\n - 5：已冻结 \\n - 6：异常 \\n - 7：更新中 \\n - 8：更新失败
+    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
+    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
     * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
@@ -244,8 +244,8 @@ class RenameInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态 \\n - 0：正常计费 \\n - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务 \\n - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态 \\ n - 0：创建中 \\n - 1：运行中 \\n - 2：删除中 \\n - 3：已删除 \\n - 4：创建失败 \\n - 5：已冻结 \\n - 6：异常 \\n - 7：更新中 \\n - 8：更新失败
+    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
+    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
     * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
@@ -624,7 +624,7 @@ class RenameInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  独享引擎计费状态 \\n - 0：正常计费 \\n - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务 \\n - 2：终止，资源和数据将清除
+    *  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
     *
     * @return int|null
     */
@@ -636,7 +636,7 @@ class RenameInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 独享引擎计费状态 \\n - 0：正常计费 \\n - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务 \\n - 2：终止，资源和数据将清除
+    * @param int|null $status 独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
     *
     * @return $this
     */
@@ -648,7 +648,7 @@ class RenameInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets runStatus
-    *  独享引擎运行状态 \\ n - 0：创建中 \\n - 1：运行中 \\n - 2：删除中 \\n - 3：已删除 \\n - 4：创建失败 \\n - 5：已冻结 \\n - 6：异常 \\n - 7：更新中 \\n - 8：更新失败
+    *  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
     *
     * @return int|null
     */
@@ -660,7 +660,7 @@ class RenameInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets runStatus
     *
-    * @param int|null $runStatus 独享引擎运行状态 \\ n - 0：创建中 \\n - 1：运行中 \\n - 2：删除中 \\n - 3：已删除 \\n - 4：创建失败 \\n - 5：已冻结 \\n - 6：异常 \\n - 7：更新中 \\n - 8：更新失败
+    * @param int|null $runStatus 独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
     *
     * @return $this
     */

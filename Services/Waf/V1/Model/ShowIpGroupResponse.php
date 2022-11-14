@@ -27,6 +27,7 @@ class ShowIpGroupResponse implements ModelInterface, ArrayAccess
     * size  地址组长度
     * rules  ip地址组绑定的规则列表
     * shareInfo  shareInfo
+    * description  地址组描述
     *
     * @var string[]
     */
@@ -36,7 +37,8 @@ class ShowIpGroupResponse implements ModelInterface, ArrayAccess
             'ips' => 'string',
             'size' => 'int',
             'rules' => '\HuaweiCloud\SDK\Waf\V1\Model\RuleInfo[]',
-            'shareInfo' => '\HuaweiCloud\SDK\Waf\V1\Model\ShareInfo'
+            'shareInfo' => '\HuaweiCloud\SDK\Waf\V1\Model\ShareInfo',
+            'description' => 'string'
     ];
 
     /**
@@ -47,6 +49,7 @@ class ShowIpGroupResponse implements ModelInterface, ArrayAccess
     * size  地址组长度
     * rules  ip地址组绑定的规则列表
     * shareInfo  shareInfo
+    * description  地址组描述
     *
     * @var string[]
     */
@@ -56,7 +59,8 @@ class ShowIpGroupResponse implements ModelInterface, ArrayAccess
         'ips' => null,
         'size' => null,
         'rules' => null,
-        'shareInfo' => null
+        'shareInfo' => null,
+        'description' => null
     ];
 
     /**
@@ -88,6 +92,7 @@ class ShowIpGroupResponse implements ModelInterface, ArrayAccess
     * size  地址组长度
     * rules  ip地址组绑定的规则列表
     * shareInfo  shareInfo
+    * description  地址组描述
     *
     * @var string[]
     */
@@ -97,7 +102,8 @@ class ShowIpGroupResponse implements ModelInterface, ArrayAccess
             'ips' => 'ips',
             'size' => 'size',
             'rules' => 'rules',
-            'shareInfo' => 'share_info'
+            'shareInfo' => 'share_info',
+            'description' => 'description'
     ];
 
     /**
@@ -108,6 +114,7 @@ class ShowIpGroupResponse implements ModelInterface, ArrayAccess
     * size  地址组长度
     * rules  ip地址组绑定的规则列表
     * shareInfo  shareInfo
+    * description  地址组描述
     *
     * @var string[]
     */
@@ -117,7 +124,8 @@ class ShowIpGroupResponse implements ModelInterface, ArrayAccess
             'ips' => 'setIps',
             'size' => 'setSize',
             'rules' => 'setRules',
-            'shareInfo' => 'setShareInfo'
+            'shareInfo' => 'setShareInfo',
+            'description' => 'setDescription'
     ];
 
     /**
@@ -128,6 +136,7 @@ class ShowIpGroupResponse implements ModelInterface, ArrayAccess
     * size  地址组长度
     * rules  ip地址组绑定的规则列表
     * shareInfo  shareInfo
+    * description  地址组描述
     *
     * @var string[]
     */
@@ -137,7 +146,8 @@ class ShowIpGroupResponse implements ModelInterface, ArrayAccess
             'ips' => 'getIps',
             'size' => 'getSize',
             'rules' => 'getRules',
-            'shareInfo' => 'getShareInfo'
+            'shareInfo' => 'getShareInfo',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -204,6 +214,7 @@ class ShowIpGroupResponse implements ModelInterface, ArrayAccess
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
         $this->container['shareInfo'] = isset($data['shareInfo']) ? $data['shareInfo'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -369,6 +380,30 @@ class ShowIpGroupResponse implements ModelInterface, ArrayAccess
     public function setShareInfo($shareInfo)
     {
         $this->container['shareInfo'] = $shareInfo;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  地址组描述
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 地址组描述
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

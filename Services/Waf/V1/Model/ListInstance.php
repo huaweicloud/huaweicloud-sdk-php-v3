@@ -30,8 +30,8 @@ class ListInstance implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态 \\n - 0：正常计费 \\n - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务 \\n - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态 \\ n - 0：创建中 \\n - 1：运行中 \\n - 2：删除中 \\n - 3：已删除 \\n - 4：创建失败 \\n - 5：已冻结 \\n - 6：异常 \\n - 7：更新中 \\n - 8：更新失败
+    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
+    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
     * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
@@ -41,6 +41,7 @@ class ListInstance implements ModelInterface, ArrayAccess
     * hosts  独享引擎防护的域名
     * serverId  独享引擎ECS ID
     * createTime  引擎实例创建时间
+    * instanceName  独享引擎实例名称
     *
     * @var string[]
     */
@@ -65,7 +66,8 @@ class ListInstance implements ModelInterface, ArrayAccess
             'specification' => 'string',
             'hosts' => '\HuaweiCloud\SDK\Waf\V1\Model\IdHostnameEntry[]',
             'serverId' => 'string',
-            'createTime' => 'int'
+            'createTime' => 'int',
+            'instanceName' => 'string'
     ];
 
     /**
@@ -80,8 +82,8 @@ class ListInstance implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态 \\n - 0：正常计费 \\n - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务 \\n - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态 \\ n - 0：创建中 \\n - 1：运行中 \\n - 2：删除中 \\n - 3：已删除 \\n - 4：创建失败 \\n - 5：已冻结 \\n - 6：异常 \\n - 7：更新中 \\n - 8：更新失败
+    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
+    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
     * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
@@ -91,6 +93,7 @@ class ListInstance implements ModelInterface, ArrayAccess
     * hosts  独享引擎防护的域名
     * serverId  独享引擎ECS ID
     * createTime  引擎实例创建时间
+    * instanceName  独享引擎实例名称
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class ListInstance implements ModelInterface, ArrayAccess
         'specification' => null,
         'hosts' => null,
         'serverId' => null,
-        'createTime' => 'int64'
+        'createTime' => 'int64',
+        'instanceName' => null
     ];
 
     /**
@@ -151,8 +155,8 @@ class ListInstance implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态 \\n - 0：正常计费 \\n - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务 \\n - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态 \\ n - 0：创建中 \\n - 1：运行中 \\n - 2：删除中 \\n - 3：已删除 \\n - 4：创建失败 \\n - 5：已冻结 \\n - 6：异常 \\n - 7：更新中 \\n - 8：更新失败
+    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
+    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
     * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
@@ -162,6 +166,7 @@ class ListInstance implements ModelInterface, ArrayAccess
     * hosts  独享引擎防护的域名
     * serverId  独享引擎ECS ID
     * createTime  引擎实例创建时间
+    * instanceName  独享引擎实例名称
     *
     * @var string[]
     */
@@ -186,7 +191,8 @@ class ListInstance implements ModelInterface, ArrayAccess
             'specification' => 'specification',
             'hosts' => 'hosts',
             'serverId' => 'serverId',
-            'createTime' => 'create_time'
+            'createTime' => 'create_time',
+            'instanceName' => 'instance_name'
     ];
 
     /**
@@ -201,8 +207,8 @@ class ListInstance implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态 \\n - 0：正常计费 \\n - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务 \\n - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态 \\ n - 0：创建中 \\n - 1：运行中 \\n - 2：删除中 \\n - 3：已删除 \\n - 4：创建失败 \\n - 5：已冻结 \\n - 6：异常 \\n - 7：更新中 \\n - 8：更新失败
+    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
+    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
     * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
@@ -212,6 +218,7 @@ class ListInstance implements ModelInterface, ArrayAccess
     * hosts  独享引擎防护的域名
     * serverId  独享引擎ECS ID
     * createTime  引擎实例创建时间
+    * instanceName  独享引擎实例名称
     *
     * @var string[]
     */
@@ -236,7 +243,8 @@ class ListInstance implements ModelInterface, ArrayAccess
             'specification' => 'setSpecification',
             'hosts' => 'setHosts',
             'serverId' => 'setServerId',
-            'createTime' => 'setCreateTime'
+            'createTime' => 'setCreateTime',
+            'instanceName' => 'setInstanceName'
     ];
 
     /**
@@ -251,8 +259,8 @@ class ListInstance implements ModelInterface, ArrayAccess
     * subnetId  独享引擎实例所在VPC的子网ID
     * serviceIp  独享引擎实例的业务面IP
     * securityGroupIds  独享引擎绑定的安全组
-    * status  独享引擎计费状态 \\n - 0：正常计费 \\n - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务 \\n - 2：终止，资源和数据将清除
-    * runStatus  独享引擎运行状态 \\ n - 0：创建中 \\n - 1：运行中 \\n - 2：删除中 \\n - 3：已删除 \\n - 4：创建失败 \\n - 5：已冻结 \\n - 6：异常 \\n - 7：更新中 \\n - 8：更新失败
+    * status  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
+    * runStatus  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
     * accessStatus  独享引擎接入状态（0：未接入，1：已接入）
     * upgradable  独享引擎是否可升级（0：不可升级，1：可升级）
     * cloudServiceType  云服务代码。 仅作为标记，用户可忽略。
@@ -262,6 +270,7 @@ class ListInstance implements ModelInterface, ArrayAccess
     * hosts  独享引擎防护的域名
     * serverId  独享引擎ECS ID
     * createTime  引擎实例创建时间
+    * instanceName  独享引擎实例名称
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class ListInstance implements ModelInterface, ArrayAccess
             'specification' => 'getSpecification',
             'hosts' => 'getHosts',
             'serverId' => 'getServerId',
-            'createTime' => 'getCreateTime'
+            'createTime' => 'getCreateTime',
+            'instanceName' => 'getInstanceName'
     ];
 
     /**
@@ -368,6 +378,7 @@ class ListInstance implements ModelInterface, ArrayAccess
         $this->container['hosts'] = isset($data['hosts']) ? $data['hosts'] : null;
         $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
     }
 
     /**
@@ -634,7 +645,7 @@ class ListInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  独享引擎计费状态 \\n - 0：正常计费 \\n - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务 \\n - 2：终止，资源和数据将清除
+    *  独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
     *
     * @return int|null
     */
@@ -646,7 +657,7 @@ class ListInstance implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 独享引擎计费状态 \\n - 0：正常计费 \\n - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务 \\n - 2：终止，资源和数据将清除
+    * @param int|null $status 独享引擎计费状态   - 0：正常计费   - 1：冻结,资源和数据会保留，但租户无法再正常使用云服务   - 2：终止，资源和数据将清除
     *
     * @return $this
     */
@@ -658,7 +669,7 @@ class ListInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets runStatus
-    *  独享引擎运行状态 \\ n - 0：创建中 \\n - 1：运行中 \\n - 2：删除中 \\n - 3：已删除 \\n - 4：创建失败 \\n - 5：已冻结 \\n - 6：异常 \\n - 7：更新中 \\n - 8：更新失败
+    *  独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
     *
     * @return int|null
     */
@@ -670,7 +681,7 @@ class ListInstance implements ModelInterface, ArrayAccess
     /**
     * Sets runStatus
     *
-    * @param int|null $runStatus 独享引擎运行状态 \\ n - 0：创建中 \\n - 1：运行中 \\n - 2：删除中 \\n - 3：已删除 \\n - 4：创建失败 \\n - 5：已冻结 \\n - 6：异常 \\n - 7：更新中 \\n - 8：更新失败
+    * @param int|null $runStatus 独享引擎运行状态   - 0：创建中   - 1：运行中   - 2：删除中   - 3：已删除   - 4：创建失败   - 5：已冻结   - 6：异常   - 7：更新中   - 8：更新失败
     *
     * @return $this
     */
@@ -893,6 +904,30 @@ class ListInstance implements ModelInterface, ArrayAccess
     public function setCreateTime($createTime)
     {
         $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets instanceName
+    *  独享引擎实例名称
+    *
+    * @return string|null
+    */
+    public function getInstanceName()
+    {
+        return $this->container['instanceName'];
+    }
+
+    /**
+    * Sets instanceName
+    *
+    * @param string|null $instanceName 独享引擎实例名称
+    *
+    * @return $this
+    */
+    public function setInstanceName($instanceName)
+    {
+        $this->container['instanceName'] = $instanceName;
         return $this;
     }
 

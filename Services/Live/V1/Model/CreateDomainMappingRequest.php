@@ -20,25 +20,21 @@ class CreateDomainMappingRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'specifyProject' => 'string',
             'body' => '\HuaweiCloud\SDK\Live\V1\Model\DomainMapping'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'specifyProject' => null,
         'body' => null
     ];
 
@@ -65,37 +61,31 @@ class CreateDomainMappingRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'specifyProject' => 'specify_project',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'specifyProject' => 'setSpecifyProject',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'specifyProject' => 'getSpecifyProject',
             'body' => 'getBody'
     ];
 
@@ -157,7 +147,6 @@ class CreateDomainMappingRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['specifyProject'] = isset($data['specifyProject']) ? $data['specifyProject'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -169,12 +158,6 @@ class CreateDomainMappingRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['specifyProject']) && (mb_strlen($this->container['specifyProject']) > 64)) {
-                $invalidProperties[] = "invalid value for 'specifyProject', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['specifyProject']) && (mb_strlen($this->container['specifyProject']) < 1)) {
-                $invalidProperties[] = "invalid value for 'specifyProject', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -187,30 +170,6 @@ class CreateDomainMappingRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets specifyProject
-    *  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
-    *
-    * @return string|null
-    */
-    public function getSpecifyProject()
-    {
-        return $this->container['specifyProject'];
-    }
-
-    /**
-    * Sets specifyProject
-    *
-    * @param string|null $specifyProject op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
-    *
-    * @return $this
-    */
-    public function setSpecifyProject($specifyProject)
-    {
-        $this->container['specifyProject'] = $specifyProject;
-        return $this;
     }
 
     /**

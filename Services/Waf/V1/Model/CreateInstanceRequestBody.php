@@ -25,13 +25,13 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * availableZone  需要创建独享引擎的可用区，例如：北京四可用区1（cn-north-4a）
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
-    * specification  独享引擎版本规格，枚举值（企业版：waf.instance.enterprise，专业版：waf.instance.professional）
+    * specification  独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
     * cpuFlavor  独享引擎ECS规格，实例规格企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格（通过调用ECS的ListFlavors接口获取应8U16G的ecs和2U4G的ecs对应规格id）
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
-    * resTenant  是否为资源租户类   - true: 资源租户类   -false: 普通租户类
+    * resTenant  是否为资源租户类   - true: 资源租户类   - false: 普通租户类
     *
     * @var string[]
     */
@@ -57,13 +57,13 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * availableZone  需要创建独享引擎的可用区，例如：北京四可用区1（cn-north-4a）
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
-    * specification  独享引擎版本规格，枚举值（企业版：waf.instance.enterprise，专业版：waf.instance.professional）
+    * specification  独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
     * cpuFlavor  独享引擎ECS规格，实例规格企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格（通过调用ECS的ListFlavors接口获取应8U16G的ecs和2U4G的ecs对应规格id）
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
-    * resTenant  是否为资源租户类   - true: 资源租户类   -false: 普通租户类
+    * resTenant  是否为资源租户类   - true: 资源租户类   - false: 普通租户类
     *
     * @var string[]
     */
@@ -110,13 +110,13 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * availableZone  需要创建独享引擎的可用区，例如：北京四可用区1（cn-north-4a）
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
-    * specification  独享引擎版本规格，枚举值（企业版：waf.instance.enterprise，专业版：waf.instance.professional）
+    * specification  独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
     * cpuFlavor  独享引擎ECS规格，实例规格企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格（通过调用ECS的ListFlavors接口获取应8U16G的ecs和2U4G的ecs对应规格id）
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
-    * resTenant  是否为资源租户类   - true: 资源租户类   -false: 普通租户类
+    * resTenant  是否为资源租户类   - true: 资源租户类   - false: 普通租户类
     *
     * @var string[]
     */
@@ -142,13 +142,13 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * availableZone  需要创建独享引擎的可用区，例如：北京四可用区1（cn-north-4a）
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
-    * specification  独享引擎版本规格，枚举值（企业版：waf.instance.enterprise，专业版：waf.instance.professional）
+    * specification  独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
     * cpuFlavor  独享引擎ECS规格，实例规格企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格（通过调用ECS的ListFlavors接口获取应8U16G的ecs和2U4G的ecs对应规格id）
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
-    * resTenant  是否为资源租户类   - true: 资源租户类   -false: 普通租户类
+    * resTenant  是否为资源租户类   - true: 资源租户类   - false: 普通租户类
     *
     * @var string[]
     */
@@ -174,13 +174,13 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * availableZone  需要创建独享引擎的可用区，例如：北京四可用区1（cn-north-4a）
     * arch  独享引擎CPU架构，例如：x86与arm
     * instancename  独享引擎名称前缀
-    * specification  独享引擎版本规格，枚举值（企业版：waf.instance.enterprise，专业版：waf.instance.professional）
+    * specification  独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
     * cpuFlavor  独享引擎ECS规格，实例规格企业版对应8U16G的ecs规格，专业版对应2U4G的ecs规格（通过调用ECS的ListFlavors接口获取应8U16G的ecs和2U4G的ecs对应规格id）
     * vpcId  独享引擎所在VPC的ID（通过调用虚拟私有云ListVpcs接口获取所有的VPC列表查询VPC的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
-    * resTenant  是否为资源租户类   - true: 资源租户类   -false: 普通租户类
+    * resTenant  是否为资源租户类   - true: 资源租户类   - false: 普通租户类
     *
     * @var string[]
     */
@@ -448,7 +448,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets specification
-    *  独享引擎版本规格，枚举值（企业版：waf.instance.enterprise，专业版：waf.instance.professional）
+    *  独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
     *
     * @return string
     */
@@ -460,7 +460,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets specification
     *
-    * @param string $specification 独享引擎版本规格，枚举值（企业版：waf.instance.enterprise，专业版：waf.instance.professional）
+    * @param string $specification 独享引擎版本规格   - 企业版：waf.instance.enterprise   - 专业版：waf.instance.professional
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resTenant
-    *  是否为资源租户类   - true: 资源租户类   -false: 普通租户类
+    *  是否为资源租户类   - true: 资源租户类   - false: 普通租户类
     *
     * @return bool
     */
@@ -604,7 +604,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets resTenant
     *
-    * @param bool $resTenant 是否为资源租户类   - true: 资源租户类   -false: 普通租户类
+    * @param bool $resTenant 是否为资源租户类   - true: 资源租户类   - false: 普通租户类
     *
     * @return $this
     */

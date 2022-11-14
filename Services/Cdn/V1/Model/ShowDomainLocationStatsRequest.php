@@ -30,7 +30,7 @@ class ShowDomainLocationStatsRequest implements ModelInterface, ArrayAccess
     * country  国家编码，多个以英文逗号分隔，all表示全部，取值见附录。
     * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录。
     * isp  运营商编码，多个以英文逗号分隔，all表示全部，取值见附录。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -60,7 +60,7 @@ class ShowDomainLocationStatsRequest implements ModelInterface, ArrayAccess
     * country  国家编码，多个以英文逗号分隔，all表示全部，取值见附录。
     * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录。
     * isp  运营商编码，多个以英文逗号分隔，all表示全部，取值见附录。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -111,7 +111,7 @@ class ShowDomainLocationStatsRequest implements ModelInterface, ArrayAccess
     * country  国家编码，多个以英文逗号分隔，all表示全部，取值见附录。
     * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录。
     * isp  运营商编码，多个以英文逗号分隔，all表示全部，取值见附录。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class ShowDomainLocationStatsRequest implements ModelInterface, ArrayAccess
     * country  国家编码，多个以英文逗号分隔，all表示全部，取值见附录。
     * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录。
     * isp  运营商编码，多个以英文逗号分隔，all表示全部，取值见附录。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -171,7 +171,7 @@ class ShowDomainLocationStatsRequest implements ModelInterface, ArrayAccess
     * country  国家编码，多个以英文逗号分隔，all表示全部，取值见附录。
     * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录。
     * isp  运营商编码，多个以英文逗号分隔，all表示全部，取值见附录。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
+    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -605,7 +605,7 @@ class ShowDomainLocationStatsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
+    *  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @return string|null
     */
@@ -617,7 +617,7 @@ class ShowDomainLocationStatsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子账号调用接口时，该参数必传。
+    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @return $this
     */

@@ -1,3 +1,50 @@
+# 3.1.9 2022-11-14
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Remove the request parameter `specify_project` from the interface `ListStreamForbidden`
+  - Remove the request parameter `specify_project` from the interface `DeleteStreamForbidden`
+  - Remove the request parameter `specify_project` from the interface `UpdateStreamForbidden`
+  - Remove the request parameter `specify_project` from the interface `CreateStreamForbidden`
+  - Remove the enum values `global` from the response parameter `service_area` from the interface `ShowDomain`
+  - Remove the enum values `global` from the response parameter `service_area` from the interface `UpdateDomain`
+  - Remove the enum values `global` from the request parameter `service_area` from the interface `CreateDomain`
+  - Remove the request parameter `specify_project` from the interface `DeleteDomainMapping`
+  - Remove the request parameter `specify_project` from the interface `CreateDomainMapping`
+
+### HuaweiCloud SDK VPCEP
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Modify the type `string` -> `array` of the response parameter `Action` of the interface `ListEndpoints`
+  - Modify the type `string` -> `array` of the response parameter `Action` of the interface `DeleteEndpointPolicy`
+  - Changes of the interface `UpdateEndpointPolicy`:
+    - Modify the type `string` -> `array` of the request parameter `Action`
+    - Modify the type `string` -> `array` of the response parameter `Action`
+
+### HuaweiCloud SDK WAF
+
+- _Features_
+  - Support the interfaces `MigrateCompositeHosts`, `ShowSourceIp`, `ListNoticeConfigs`, `UpdateAlertNoticeConfig`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the response parameter `instance_name` to the interface `ListInstance`
+  - Add the response parameters `enabled`, `ltsAttackStreamID` to the interface `ShowLtsInfoConfig`
+  - Changes of the interface `UpdateLtsInfoConfig`:
+    - Add the request parameters `enabled`, `ltsAttackStreamID`
+    - Add the response parameters `enabled`, `ltsAttackStreamID`
+    - The request parameter `enabale` changed to not required
+  - Add the response parameter `description` to the interface `ShowIpGroup`
+
 # 3.1.8 2022-11-03
 
 ### HuaweiCloud SDK GA

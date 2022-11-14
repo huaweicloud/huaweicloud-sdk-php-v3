@@ -123,9 +123,6 @@ class LiveClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['specifyProject'] !== null) {
-            $queryParams['specify_project'] = $localVarParams['specifyProject'];
-        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -386,9 +383,6 @@ class LiveClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['specifyProject'] !== null) {
-            $queryParams['specify_project'] = $localVarParams['specifyProject'];
-        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -583,9 +577,6 @@ class LiveClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['specifyProject'] !== null) {
-            $queryParams['specify_project'] = $localVarParams['specifyProject'];
         }
         if ($localVarParams['pullDomain'] !== null) {
             $queryParams['pull_domain'] = $localVarParams['pullDomain'];
@@ -784,9 +775,6 @@ class LiveClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['specifyProject'] !== null) {
-            $queryParams['specify_project'] = $localVarParams['specifyProject'];
         }
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
@@ -1314,9 +1302,6 @@ class LiveClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['specifyProject'] !== null) {
-            $queryParams['specify_project'] = $localVarParams['specifyProject'];
         }
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
@@ -1932,9 +1917,6 @@ class LiveClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['specifyProject'] !== null) {
-            $queryParams['specify_project'] = $localVarParams['specifyProject'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];

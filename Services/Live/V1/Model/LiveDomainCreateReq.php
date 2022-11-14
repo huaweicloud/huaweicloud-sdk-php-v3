@@ -23,7 +23,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domain  直播域名
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
-    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
     *
     * @var string[]
     */
@@ -163,7 +163,6 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     const DOMAIN_TYPE_PUSH = 'push';
     const SERVICE_AREA_MAINLAND_CHINA = 'mainland_china';
     const SERVICE_AREA_OUTSIDE_MAINLAND_CHINA = 'outside_mainland_china';
-    const SERVICE_AREA__GLOBAL = 'global';
     
 
     /**
@@ -189,7 +188,6 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
         return [
             self::SERVICE_AREA_MAINLAND_CHINA,
             self::SERVICE_AREA_OUTSIDE_MAINLAND_CHINA,
-            self::SERVICE_AREA__GLOBAL,
         ];
     }
 
@@ -348,7 +346,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceArea
-    *  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    *  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
     *
     * @return string|null
     */
@@ -360,7 +358,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets serviceArea
     *
-    * @param string|null $serviceArea 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域 - global表示全球区域
+    * @param string|null $serviceArea 域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
     *
     * @return $this
     */

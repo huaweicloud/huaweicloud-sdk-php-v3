@@ -20,7 +20,6 @@ class DeleteStreamForbiddenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * domain  推流域名
     * appName  RTMP应用名称
     * streamName  流名称
@@ -28,7 +27,6 @@ class DeleteStreamForbiddenRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'specifyProject' => 'string',
             'domain' => 'string',
             'appName' => 'string',
             'streamName' => 'string'
@@ -36,7 +34,6 @@ class DeleteStreamForbiddenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * domain  推流域名
     * appName  RTMP应用名称
     * streamName  流名称
@@ -44,7 +41,6 @@ class DeleteStreamForbiddenRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'specifyProject' => null,
         'domain' => null,
         'appName' => null,
         'streamName' => null
@@ -73,7 +69,6 @@ class DeleteStreamForbiddenRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * domain  推流域名
     * appName  RTMP应用名称
     * streamName  流名称
@@ -81,7 +76,6 @@ class DeleteStreamForbiddenRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'specifyProject' => 'specify_project',
             'domain' => 'domain',
             'appName' => 'app_name',
             'streamName' => 'stream_name'
@@ -89,7 +83,6 @@ class DeleteStreamForbiddenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * domain  推流域名
     * appName  RTMP应用名称
     * streamName  流名称
@@ -97,7 +90,6 @@ class DeleteStreamForbiddenRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'specifyProject' => 'setSpecifyProject',
             'domain' => 'setDomain',
             'appName' => 'setAppName',
             'streamName' => 'setStreamName'
@@ -105,7 +97,6 @@ class DeleteStreamForbiddenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * specifyProject  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
     * domain  推流域名
     * appName  RTMP应用名称
     * streamName  流名称
@@ -113,7 +104,6 @@ class DeleteStreamForbiddenRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'specifyProject' => 'getSpecifyProject',
             'domain' => 'getDomain',
             'appName' => 'getAppName',
             'streamName' => 'getStreamName'
@@ -177,7 +167,6 @@ class DeleteStreamForbiddenRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['specifyProject'] = isset($data['specifyProject']) ? $data['specifyProject'] : null;
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
         $this->container['streamName'] = isset($data['streamName']) ? $data['streamName'] : null;
@@ -191,12 +180,6 @@ class DeleteStreamForbiddenRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['specifyProject']) && (mb_strlen($this->container['specifyProject']) > 64)) {
-                $invalidProperties[] = "invalid value for 'specifyProject', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['specifyProject']) && (mb_strlen($this->container['specifyProject']) < 1)) {
-                $invalidProperties[] = "invalid value for 'specifyProject', the character length must be bigger than or equal to 1.";
-            }
         if ($this->container['domain'] === null) {
             $invalidProperties[] = "'domain' can't be null";
         }
@@ -236,30 +219,6 @@ class DeleteStreamForbiddenRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets specifyProject
-    *  op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
-    *
-    * @return string|null
-    */
-    public function getSpecifyProject()
-    {
-        return $this->container['specifyProject'];
-    }
-
-    /**
-    * Sets specifyProject
-    *
-    * @param string|null $specifyProject op账号需要携带的特定project_id，当使用op账号时该值为所操作租户的project_id
-    *
-    * @return $this
-    */
-    public function setSpecifyProject($specifyProject)
-    {
-        $this->container['specifyProject'] = $specifyProject;
-        return $this;
     }
 
     /**
