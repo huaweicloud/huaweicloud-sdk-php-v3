@@ -217,10 +217,13 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
             if (!is_null($this->container['displayName']) && (mb_strlen($this->container['displayName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'displayName', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['subCustomerAssociationType']) && ($this->container['subCustomerAssociationType'] > 1)) {
+        if ($this->container['subCustomerAssociationType'] === null) {
+            $invalidProperties[] = "'subCustomerAssociationType' can't be null";
+        }
+            if (($this->container['subCustomerAssociationType'] > 1)) {
                 $invalidProperties[] = "invalid value for 'subCustomerAssociationType', must be smaller than or equal to 1.";
             }
-            if (!is_null($this->container['subCustomerAssociationType']) && ($this->container['subCustomerAssociationType'] < -1)) {
+            if (($this->container['subCustomerAssociationType'] < -1)) {
                 $invalidProperties[] = "invalid value for 'subCustomerAssociationType', must be bigger than or equal to -1.";
             }
         if ($this->container['newSubCustomer'] === null) {
@@ -292,7 +295,7 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
     * Gets subCustomerAssociationType
     *  子账号关联类型：1：同一法人。 关联类型目前只能是同一法人。
     *
-    * @return int|null
+    * @return int
     */
     public function getSubCustomerAssociationType()
     {
@@ -302,7 +305,7 @@ class CreateSubCustomerReqV2 implements ModelInterface, ArrayAccess
     /**
     * Sets subCustomerAssociationType
     *
-    * @param int|null $subCustomerAssociationType 子账号关联类型：1：同一法人。 关联类型目前只能是同一法人。
+    * @param int $subCustomerAssociationType 子账号关联类型：1：同一法人。 关联类型目前只能是同一法人。
     *
     * @return $this
     */

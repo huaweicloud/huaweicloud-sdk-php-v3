@@ -43,7 +43,6 @@ class IoTDAClient extends Client
 
     public function createAccessCodeWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/auth/accesscode';
         $formParams = [];
         $queryParams = [];
@@ -59,7 +58,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -89,7 +88,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateAccessCodeResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateAccessCodeRequest');
     }
 
@@ -111,7 +109,6 @@ class IoTDAClient extends Client
 
     public function addQueueWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/amqp-queues';
         $formParams = [];
         $queryParams = [];
@@ -127,7 +124,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -157,7 +154,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\AddQueueResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\AddQueueRequest');
     }
 
@@ -179,7 +175,6 @@ class IoTDAClient extends Client
 
     public function batchShowQueueWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/amqp-queues';
         $formParams = [];
         $queryParams = [];
@@ -207,7 +202,7 @@ class IoTDAClient extends Client
             $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -234,7 +229,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\BatchShowQueueResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\BatchShowQueueRequest');
     }
 
@@ -256,7 +250,6 @@ class IoTDAClient extends Client
 
     public function deleteQueueWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/amqp-queues/{queue_id}';
         $formParams = [];
         $queryParams = [];
@@ -272,7 +265,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['queueId'] !== null) {
             $pathParams['queue_id'] = $localVarParams['queueId'];
@@ -302,7 +295,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteQueueResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteQueueRequest');
     }
 
@@ -324,7 +316,6 @@ class IoTDAClient extends Client
 
     public function showQueueWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/amqp-queues/{queue_id}';
         $formParams = [];
         $queryParams = [];
@@ -340,7 +331,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['queueId'] !== null) {
             $pathParams['queue_id'] = $localVarParams['queueId'];
@@ -370,7 +361,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowQueueResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowQueueRequest');
     }
 
@@ -392,7 +382,6 @@ class IoTDAClient extends Client
 
     public function addApplicationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/apps';
         $formParams = [];
         $queryParams = [];
@@ -408,7 +397,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -438,7 +427,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\AddApplicationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\AddApplicationRequest');
     }
 
@@ -460,7 +448,6 @@ class IoTDAClient extends Client
 
     public function deleteApplicationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/apps/{app_id}';
         $formParams = [];
         $queryParams = [];
@@ -476,7 +463,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['appId'] !== null) {
             $pathParams['app_id'] = $localVarParams['appId'];
@@ -506,7 +493,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteApplicationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteApplicationRequest');
     }
 
@@ -528,7 +514,6 @@ class IoTDAClient extends Client
 
     public function showApplicationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/apps/{app_id}';
         $formParams = [];
         $queryParams = [];
@@ -544,7 +529,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['appId'] !== null) {
             $pathParams['app_id'] = $localVarParams['appId'];
@@ -574,7 +559,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowApplicationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowApplicationRequest');
     }
 
@@ -596,7 +580,6 @@ class IoTDAClient extends Client
 
     public function showApplicationsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/apps';
         $formParams = [];
         $queryParams = [];
@@ -615,7 +598,7 @@ class IoTDAClient extends Client
             $queryParams['default_app'] = $localVarParams['defaultApp'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -642,14 +625,13 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowApplicationsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowApplicationsRequest');
     }
 
     /**
      * 下发异步设备命令
      *
-     * 设备的产品模型中定义了物联网平台可向设备下发的命令，应用服务器可调用此接口向指定设备下发异步命令，以实现对设备的控制。平台负责将命令发送给设备，并将设备执行命令结果异步通知应用服务器。 命令执行结果支持灵活的数据流转，应用服务器通过调用物联网平台的创建规则触发条件（Resource:device.command.status，Event:update）、创建规则动作并激活规则后，当命令状态变更时，物联网平台会根据规则将结果发送到规则指定的服务器，如用户自定义的HTTP服务器，AMQP服务器，以及华为云的其他储存服务器等, 详情参考[设备命令状态变更通知](https://support.huaweicloud.com/api-iothub/iot_06_v5_01212.html)。
+     * 设备的产品模型中定义了物联网平台可向设备下发的命令，应用服务器可调用此接口向指定设备下发异步命令，以实现对设备的控制。平台负责将命令发送给设备，并将设备执行命令结果异步通知应用服务器。 命令执行结果支持灵活的数据流转，应用服务器通过调用物联网平台的创建规则触发条件（Resource:device.command.status，Event:update）、创建规则动作并激活规则后，当命令状态变更时，物联网平台会根据规则将结果发送到规则指定的服务器，如用户自定义的HTTP服务器，AMQP服务器，以及华为云的其他储存服务器等, 详情参考[[设备命令状态变更通知](https://support.huaweicloud.com/api-iothub/iot_06_v5_01212.html)](tag:hws)[[设备命令状态变更通知](https://support.huaweicloud.com/intl/zh-cn/api-iothub/iot_06_v5_01212.html)](tag:hws_hk)。
      * 注意：此接口适用于NB设备异步命令下发，暂不支持其他协议类型设备命令下发。
      * 
      * 详细说明请参考华为云API Explorer。
@@ -665,7 +647,6 @@ class IoTDAClient extends Client
 
     public function createAsyncCommandWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/async-commands';
         $formParams = [];
         $queryParams = [];
@@ -681,7 +662,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -714,7 +695,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateAsyncCommandResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateAsyncCommandRequest');
     }
 
@@ -736,7 +716,6 @@ class IoTDAClient extends Client
 
     public function showAsyncDeviceCommandWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/async-commands/{command_id}';
         $formParams = [];
         $queryParams = [];
@@ -752,7 +731,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -785,7 +764,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowAsyncDeviceCommandResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowAsyncDeviceCommandRequest');
     }
 
@@ -807,7 +785,6 @@ class IoTDAClient extends Client
 
     public function createBatchTaskWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/batchtasks';
         $formParams = [];
         $queryParams = [];
@@ -823,7 +800,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -853,7 +830,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateBatchTaskResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateBatchTaskRequest');
     }
 
@@ -875,7 +851,6 @@ class IoTDAClient extends Client
 
     public function listBatchTasksWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/batchtasks';
         $formParams = [];
         $queryParams = [];
@@ -909,7 +884,7 @@ class IoTDAClient extends Client
             $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -936,7 +911,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListBatchTasksResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListBatchTasksRequest');
     }
 
@@ -958,7 +932,6 @@ class IoTDAClient extends Client
 
     public function showBatchTaskWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/batchtasks/{task_id}';
         $formParams = [];
         $queryParams = [];
@@ -983,7 +956,7 @@ class IoTDAClient extends Client
             $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['taskId'] !== null) {
             $pathParams['task_id'] = $localVarParams['taskId'];
@@ -1013,7 +986,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowBatchTaskResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowBatchTaskRequest');
     }
 
@@ -1035,7 +1007,6 @@ class IoTDAClient extends Client
 
     public function deleteBatchTaskFileWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/batchtask-files/{file_id}';
         $formParams = [];
         $queryParams = [];
@@ -1051,7 +1022,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['fileId'] !== null) {
             $pathParams['file_id'] = $localVarParams['fileId'];
@@ -1081,7 +1052,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteBatchTaskFileResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteBatchTaskFileRequest');
     }
 
@@ -1103,7 +1073,6 @@ class IoTDAClient extends Client
 
     public function listBatchTaskFilesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/batchtask-files';
         $formParams = [];
         $queryParams = [];
@@ -1119,7 +1088,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1146,14 +1115,13 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListBatchTaskFilesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListBatchTaskFilesRequest');
     }
 
     /**
      * 上传设备CA证书
      *
-     * 应用服务器可调用此接口在物联网平台上传设备的CA证书
+     * 应用服务器可调用此接口在物联网平台上传设备CA证书
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -1168,7 +1136,6 @@ class IoTDAClient extends Client
 
     public function addCertificateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/certificates';
         $formParams = [];
         $queryParams = [];
@@ -1183,8 +1150,14 @@ class IoTDAClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['spAuthToken'] !== null) {
+            $headerParams[$arr['spAuthToken']] = $localVarParams['spAuthToken'];
+        }
+        if ($localVarParams['stageAuthToken'] !== null) {
+            $headerParams[$arr['stageAuthToken']] = $localVarParams['stageAuthToken'];
+        }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1214,7 +1187,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\AddCertificateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\AddCertificateRequest');
     }
 
@@ -1236,7 +1208,6 @@ class IoTDAClient extends Client
 
     public function checkCertificateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/certificates/{certificate_id}/action';
         $formParams = [];
         $queryParams = [];
@@ -1254,8 +1225,14 @@ class IoTDAClient extends Client
         if ($localVarParams['actionId'] !== null) {
             $queryParams['action_id'] = $localVarParams['actionId'];
         }
+        if ($localVarParams['spAuthToken'] !== null) {
+            $headerParams[$arr['spAuthToken']] = $localVarParams['spAuthToken'];
+        }
+        if ($localVarParams['stageAuthToken'] !== null) {
+            $headerParams[$arr['stageAuthToken']] = $localVarParams['stageAuthToken'];
+        }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['certificateId'] !== null) {
             $pathParams['certificate_id'] = $localVarParams['certificateId'];
@@ -1288,14 +1265,13 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CheckCertificateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CheckCertificateRequest');
     }
 
     /**
      * 删除设备CA证书
      *
-     * 应用服务器可调用此接口在物联网平台删除设备的CA证书
+     * 应用服务器可调用此接口在物联网平台删除设备CA证书
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -1310,7 +1286,6 @@ class IoTDAClient extends Client
 
     public function deleteCertificateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/certificates/{certificate_id}';
         $formParams = [];
         $queryParams = [];
@@ -1325,8 +1300,14 @@ class IoTDAClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['spAuthToken'] !== null) {
+            $headerParams[$arr['spAuthToken']] = $localVarParams['spAuthToken'];
+        }
+        if ($localVarParams['stageAuthToken'] !== null) {
+            $headerParams[$arr['stageAuthToken']] = $localVarParams['stageAuthToken'];
+        }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['certificateId'] !== null) {
             $pathParams['certificate_id'] = $localVarParams['certificateId'];
@@ -1356,14 +1337,13 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteCertificateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteCertificateRequest');
     }
 
     /**
      * 获取设备CA证书列表
      *
-     * 应用服务器可调用此接口在物联网平台获取设备的CA证书列表
+     * 应用服务器可调用此接口在物联网平台获取设备CA证书列表
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -1378,7 +1358,6 @@ class IoTDAClient extends Client
 
     public function listCertificatesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/certificates';
         $formParams = [];
         $queryParams = [];
@@ -1405,8 +1384,14 @@ class IoTDAClient extends Client
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
         }
+        if ($localVarParams['spAuthToken'] !== null) {
+            $headerParams[$arr['spAuthToken']] = $localVarParams['spAuthToken'];
+        }
+        if ($localVarParams['stageAuthToken'] !== null) {
+            $headerParams[$arr['stageAuthToken']] = $localVarParams['stageAuthToken'];
+        }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1433,7 +1418,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListCertificatesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListCertificatesRequest');
     }
 
@@ -1456,7 +1440,6 @@ class IoTDAClient extends Client
 
     public function createCommandWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/commands';
         $formParams = [];
         $queryParams = [];
@@ -1472,7 +1455,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -1505,7 +1488,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateCommandResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateCommandRequest');
     }
 
@@ -1527,7 +1509,6 @@ class IoTDAClient extends Client
 
     public function addDeviceGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/device-group';
         $formParams = [];
         $queryParams = [];
@@ -1543,7 +1524,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1573,7 +1554,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\AddDeviceGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\AddDeviceGroupRequest');
     }
 
@@ -1595,7 +1575,6 @@ class IoTDAClient extends Client
 
     public function createOrDeleteDeviceInGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/device-group/{group_id}/action';
         $formParams = [];
         $queryParams = [];
@@ -1617,7 +1596,7 @@ class IoTDAClient extends Client
             $queryParams['device_id'] = $localVarParams['deviceId'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
@@ -1647,7 +1626,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateOrDeleteDeviceInGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateOrDeleteDeviceInGroupRequest');
     }
 
@@ -1669,7 +1647,6 @@ class IoTDAClient extends Client
 
     public function deleteDeviceGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/device-group/{group_id}';
         $formParams = [];
         $queryParams = [];
@@ -1685,7 +1662,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
@@ -1715,7 +1692,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteDeviceGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteDeviceGroupRequest');
     }
 
@@ -1737,7 +1713,6 @@ class IoTDAClient extends Client
 
     public function listDeviceGroupsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/device-group';
         $formParams = [];
         $queryParams = [];
@@ -1768,7 +1743,7 @@ class IoTDAClient extends Client
             $queryParams['app_id'] = $localVarParams['appId'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1795,7 +1770,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDeviceGroupsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDeviceGroupsRequest');
     }
 
@@ -1817,7 +1791,6 @@ class IoTDAClient extends Client
 
     public function showDeviceGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/device-group/{group_id}';
         $formParams = [];
         $queryParams = [];
@@ -1833,7 +1806,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
@@ -1863,7 +1836,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDeviceGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDeviceGroupRequest');
     }
 
@@ -1885,7 +1857,6 @@ class IoTDAClient extends Client
 
     public function showDevicesInGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/device-group/{group_id}/devices';
         $formParams = [];
         $queryParams = [];
@@ -1910,7 +1881,7 @@ class IoTDAClient extends Client
             $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
@@ -1940,7 +1911,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDevicesInGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDevicesInGroupRequest');
     }
 
@@ -1962,7 +1932,6 @@ class IoTDAClient extends Client
 
     public function updateDeviceGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/device-group/{group_id}';
         $formParams = [];
         $queryParams = [];
@@ -1978,7 +1947,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['groupId'] !== null) {
             $pathParams['group_id'] = $localVarParams['groupId'];
@@ -2011,7 +1980,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDeviceGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDeviceGroupRequest');
     }
 
@@ -2037,7 +2005,6 @@ class IoTDAClient extends Client
 
     public function addDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices';
         $formParams = [];
         $queryParams = [];
@@ -2053,7 +2020,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2083,7 +2050,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\AddDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\AddDeviceRequest');
     }
 
@@ -2105,7 +2071,6 @@ class IoTDAClient extends Client
 
     public function deleteDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}';
         $formParams = [];
         $queryParams = [];
@@ -2121,7 +2086,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -2151,7 +2116,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteDeviceRequest');
     }
 
@@ -2173,7 +2137,6 @@ class IoTDAClient extends Client
 
     public function freezeDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/freeze';
         $formParams = [];
         $queryParams = [];
@@ -2189,7 +2152,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -2219,7 +2182,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\FreezeDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\FreezeDeviceRequest');
     }
 
@@ -2241,7 +2203,6 @@ class IoTDAClient extends Client
 
     public function listDevicesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices';
         $formParams = [];
         $queryParams = [];
@@ -2290,7 +2251,7 @@ class IoTDAClient extends Client
             $queryParams['app_id'] = $localVarParams['appId'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2317,7 +2278,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDevicesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDevicesRequest');
     }
 
@@ -2339,7 +2299,6 @@ class IoTDAClient extends Client
 
     public function resetDeviceSecretWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/action';
         $formParams = [];
         $queryParams = [];
@@ -2358,7 +2317,7 @@ class IoTDAClient extends Client
             $queryParams['action_id'] = $localVarParams['actionId'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -2391,7 +2350,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ResetDeviceSecretResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ResetDeviceSecretRequest');
     }
 
@@ -2413,7 +2371,6 @@ class IoTDAClient extends Client
 
     public function resetFingerprintWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/reset-fingerprint';
         $formParams = [];
         $queryParams = [];
@@ -2429,7 +2386,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -2462,7 +2419,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ResetFingerprintResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ResetFingerprintRequest');
     }
 
@@ -2484,7 +2440,6 @@ class IoTDAClient extends Client
 
     public function showDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}';
         $formParams = [];
         $queryParams = [];
@@ -2500,7 +2455,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -2530,7 +2485,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDeviceRequest');
     }
 
@@ -2552,7 +2506,6 @@ class IoTDAClient extends Client
 
     public function unfreezeDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/unfreeze';
         $formParams = [];
         $queryParams = [];
@@ -2568,7 +2521,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -2598,7 +2551,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UnfreezeDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UnfreezeDeviceRequest');
     }
 
@@ -2620,7 +2572,6 @@ class IoTDAClient extends Client
 
     public function updateDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}';
         $formParams = [];
         $queryParams = [];
@@ -2636,7 +2587,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -2669,7 +2620,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDeviceRequest');
     }
 
@@ -2701,7 +2651,6 @@ class IoTDAClient extends Client
 
     public function showDeviceShadowWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/shadow';
         $formParams = [];
         $queryParams = [];
@@ -2717,7 +2666,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -2747,7 +2696,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDeviceShadowResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDeviceShadowRequest');
     }
 
@@ -2779,7 +2727,6 @@ class IoTDAClient extends Client
 
     public function updateDeviceShadowDesiredDataWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/shadow';
         $formParams = [];
         $queryParams = [];
@@ -2795,7 +2742,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -2828,14 +2775,13 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDeviceShadowDesiredDataResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateDeviceShadowDesiredDataRequest');
     }
 
     /**
      * 下发设备消息
      *
-     * 物联网平台可向设备下发消息，应用服务器可调用此接口向指定设备下发消息，以实现对设备的控制。应用将消息下发给平台后，平台返回应用响应结果，平台再将消息发送给设备。平台返回应用响应结果不一定是设备接收结果，建议用户应用通过订阅[设备消息状态变更通知](https://support.huaweicloud.com/api-iothub/iot_06_v5_01203.html)，订阅后平台会将设备接收结果推送给订阅的应用。
+     * 物联网平台可向设备下发消息，应用服务器可调用此接口向指定设备下发消息，以实现对设备的控制。应用将消息下发给平台后，平台返回应用响应结果，平台再将消息发送给设备。平台返回应用响应结果不一定是设备接收结果，建议用户应用通过订阅[[设备消息状态变更通知](https://support.huaweicloud.com/api-iothub/iot_06_v5_01203.html)](tag:hws)[[设备消息状态变更通知](https://support.huaweicloud.com/intl/zh-cn/api-iothub/iot_06_v5_01203.html)](tag:hws_hk)，订阅后平台会将设备接收结果推送给订阅的应用。
      * 注意：此接口适用于MQTT设备消息下发，暂不支持其他协议接入的设备消息下发。
      * 
      * 详细说明请参考华为云API Explorer。
@@ -2851,7 +2797,6 @@ class IoTDAClient extends Client
 
     public function createMessageWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/messages';
         $formParams = [];
         $queryParams = [];
@@ -2867,7 +2812,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -2900,7 +2845,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateMessageResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateMessageRequest');
     }
 
@@ -2922,7 +2866,6 @@ class IoTDAClient extends Client
 
     public function listDeviceMessagesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/messages';
         $formParams = [];
         $queryParams = [];
@@ -2938,7 +2881,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -2968,7 +2911,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDeviceMessagesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListDeviceMessagesRequest');
     }
 
@@ -2990,7 +2932,6 @@ class IoTDAClient extends Client
 
     public function showDeviceMessageWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/messages/{message_id}';
         $formParams = [];
         $queryParams = [];
@@ -3006,7 +2947,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -3039,7 +2980,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDeviceMessageResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowDeviceMessageRequest');
     }
 
@@ -3061,7 +3001,6 @@ class IoTDAClient extends Client
 
     public function createProductWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/products';
         $formParams = [];
         $queryParams = [];
@@ -3077,7 +3016,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3107,7 +3046,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateProductResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateProductRequest');
     }
 
@@ -3129,7 +3067,6 @@ class IoTDAClient extends Client
 
     public function deleteProductWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/products/{product_id}';
         $formParams = [];
         $queryParams = [];
@@ -3148,7 +3085,7 @@ class IoTDAClient extends Client
             $queryParams['app_id'] = $localVarParams['appId'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['productId'] !== null) {
             $pathParams['product_id'] = $localVarParams['productId'];
@@ -3178,7 +3115,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteProductResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteProductRequest');
     }
 
@@ -3200,7 +3136,6 @@ class IoTDAClient extends Client
 
     public function listProductsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/products';
         $formParams = [];
         $queryParams = [];
@@ -3228,7 +3163,7 @@ class IoTDAClient extends Client
             $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3255,7 +3190,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListProductsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListProductsRequest');
     }
 
@@ -3277,7 +3211,6 @@ class IoTDAClient extends Client
 
     public function showProductWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/products/{product_id}';
         $formParams = [];
         $queryParams = [];
@@ -3296,7 +3229,7 @@ class IoTDAClient extends Client
             $queryParams['app_id'] = $localVarParams['appId'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['productId'] !== null) {
             $pathParams['product_id'] = $localVarParams['productId'];
@@ -3326,7 +3259,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowProductResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowProductRequest');
     }
 
@@ -3348,7 +3280,6 @@ class IoTDAClient extends Client
 
     public function updateProductWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/products/{product_id}';
         $formParams = [];
         $queryParams = [];
@@ -3364,7 +3295,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['productId'] !== null) {
             $pathParams['product_id'] = $localVarParams['productId'];
@@ -3397,7 +3328,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateProductResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateProductRequest');
     }
 
@@ -3420,7 +3350,6 @@ class IoTDAClient extends Client
 
     public function listPropertiesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/properties';
         $formParams = [];
         $queryParams = [];
@@ -3439,7 +3368,7 @@ class IoTDAClient extends Client
             $queryParams['service_id'] = $localVarParams['serviceId'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -3469,7 +3398,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListPropertiesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListPropertiesRequest');
     }
 
@@ -3492,7 +3420,6 @@ class IoTDAClient extends Client
 
     public function updatePropertiesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/devices/{device_id}/properties';
         $formParams = [];
         $queryParams = [];
@@ -3508,7 +3435,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['deviceId'] !== null) {
             $pathParams['device_id'] = $localVarParams['deviceId'];
@@ -3541,7 +3468,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdatePropertiesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdatePropertiesRequest');
     }
 
@@ -3563,7 +3489,6 @@ class IoTDAClient extends Client
 
     public function createRoutingRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/routing-rule/rules';
         $formParams = [];
         $queryParams = [];
@@ -3579,7 +3504,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3609,7 +3534,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateRoutingRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateRoutingRuleRequest');
     }
 
@@ -3631,7 +3555,6 @@ class IoTDAClient extends Client
 
     public function createRuleActionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/routing-rule/actions';
         $formParams = [];
         $queryParams = [];
@@ -3647,7 +3570,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3677,7 +3600,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateRuleActionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateRuleActionRequest');
     }
 
@@ -3699,7 +3621,6 @@ class IoTDAClient extends Client
 
     public function deleteRoutingRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/routing-rule/rules/{rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -3715,7 +3636,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['ruleId'] !== null) {
             $pathParams['rule_id'] = $localVarParams['ruleId'];
@@ -3745,7 +3666,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteRoutingRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteRoutingRuleRequest');
     }
 
@@ -3767,7 +3687,6 @@ class IoTDAClient extends Client
 
     public function deleteRuleActionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/routing-rule/actions/{action_id}';
         $formParams = [];
         $queryParams = [];
@@ -3783,7 +3702,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['actionId'] !== null) {
             $pathParams['action_id'] = $localVarParams['actionId'];
@@ -3813,7 +3732,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteRuleActionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteRuleActionRequest');
     }
 
@@ -3835,7 +3753,6 @@ class IoTDAClient extends Client
 
     public function listRoutingRulesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/routing-rule/rules';
         $formParams = [];
         $queryParams = [];
@@ -3875,7 +3792,7 @@ class IoTDAClient extends Client
             $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3902,7 +3819,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListRoutingRulesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListRoutingRulesRequest');
     }
 
@@ -3924,7 +3840,6 @@ class IoTDAClient extends Client
 
     public function listRuleActionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/routing-rule/actions';
         $formParams = [];
         $queryParams = [];
@@ -3961,7 +3876,7 @@ class IoTDAClient extends Client
             $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3988,7 +3903,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListRuleActionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListRuleActionsRequest');
     }
 
@@ -4010,7 +3924,6 @@ class IoTDAClient extends Client
 
     public function showRoutingRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/routing-rule/rules/{rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -4026,7 +3939,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['ruleId'] !== null) {
             $pathParams['rule_id'] = $localVarParams['ruleId'];
@@ -4056,7 +3969,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowRoutingRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowRoutingRuleRequest');
     }
 
@@ -4078,7 +3990,6 @@ class IoTDAClient extends Client
 
     public function showRuleActionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/routing-rule/actions/{action_id}';
         $formParams = [];
         $queryParams = [];
@@ -4094,7 +4005,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['actionId'] !== null) {
             $pathParams['action_id'] = $localVarParams['actionId'];
@@ -4124,7 +4035,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowRuleActionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowRuleActionRequest');
     }
 
@@ -4146,7 +4056,6 @@ class IoTDAClient extends Client
 
     public function updateRoutingRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/routing-rule/rules/{rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -4162,7 +4071,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['ruleId'] !== null) {
             $pathParams['rule_id'] = $localVarParams['ruleId'];
@@ -4195,7 +4104,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateRoutingRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateRoutingRuleRequest');
     }
 
@@ -4217,7 +4125,6 @@ class IoTDAClient extends Client
 
     public function updateRuleActionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/routing-rule/actions/{action_id}';
         $formParams = [];
         $queryParams = [];
@@ -4233,7 +4140,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['actionId'] !== null) {
             $pathParams['action_id'] = $localVarParams['actionId'];
@@ -4266,7 +4173,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateRuleActionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateRuleActionRequest');
     }
 
@@ -4288,7 +4194,6 @@ class IoTDAClient extends Client
 
     public function changeRuleStatusWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/rules/{rule_id}/status';
         $formParams = [];
         $queryParams = [];
@@ -4304,7 +4209,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['ruleId'] !== null) {
             $pathParams['rule_id'] = $localVarParams['ruleId'];
@@ -4337,7 +4242,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ChangeRuleStatusResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ChangeRuleStatusRequest');
     }
 
@@ -4359,7 +4263,6 @@ class IoTDAClient extends Client
 
     public function createRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/rules';
         $formParams = [];
         $queryParams = [];
@@ -4375,7 +4278,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -4405,7 +4308,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateRuleRequest');
     }
 
@@ -4427,7 +4329,6 @@ class IoTDAClient extends Client
 
     public function deleteRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/rules/{rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -4443,7 +4344,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['ruleId'] !== null) {
             $pathParams['rule_id'] = $localVarParams['ruleId'];
@@ -4473,7 +4374,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteRuleRequest');
     }
 
@@ -4495,7 +4395,6 @@ class IoTDAClient extends Client
 
     public function listRulesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/rules';
         $formParams = [];
         $queryParams = [];
@@ -4526,7 +4425,7 @@ class IoTDAClient extends Client
             $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4553,7 +4452,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListRulesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListRulesRequest');
     }
 
@@ -4575,7 +4473,6 @@ class IoTDAClient extends Client
 
     public function showRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/rules/{rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -4591,7 +4488,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['ruleId'] !== null) {
             $pathParams['rule_id'] = $localVarParams['ruleId'];
@@ -4621,7 +4518,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowRuleRequest');
     }
 
@@ -4643,7 +4539,6 @@ class IoTDAClient extends Client
 
     public function updateRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/rules/{rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -4659,7 +4554,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['ruleId'] !== null) {
             $pathParams['rule_id'] = $localVarParams['ruleId'];
@@ -4692,7 +4587,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UpdateRuleRequest');
     }
 
@@ -4714,7 +4608,6 @@ class IoTDAClient extends Client
 
     public function listResourcesByTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/tags/query-resources';
         $formParams = [];
         $queryParams = [];
@@ -4739,7 +4632,7 @@ class IoTDAClient extends Client
             $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -4769,7 +4662,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListResourcesByTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListResourcesByTagsRequest');
     }
 
@@ -4791,7 +4683,6 @@ class IoTDAClient extends Client
 
     public function tagDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/tags/bind-resource';
         $formParams = [];
         $queryParams = [];
@@ -4807,7 +4698,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -4837,7 +4728,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\TagDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\TagDeviceRequest');
     }
 
@@ -4859,7 +4749,6 @@ class IoTDAClient extends Client
 
     public function untagDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v5/iot/{project_id}/tags/unbind-resource';
         $formParams = [];
         $queryParams = [];
@@ -4875,7 +4764,7 @@ class IoTDAClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['instanceId'] !== null) {
-            $headerParams['instance_id'] = $localVarParams['instanceId'];
+            $headerParams[$arr['instanceId']] = $localVarParams['instanceId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -4905,7 +4794,6 @@ class IoTDAClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\UntagDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\UntagDeviceRequest');
     }
 
@@ -4919,7 +4807,6 @@ class IoTDAClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -4932,7 +4819,6 @@ class IoTDAClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

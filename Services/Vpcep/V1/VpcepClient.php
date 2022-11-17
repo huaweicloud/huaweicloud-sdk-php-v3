@@ -44,7 +44,6 @@ class VpcepClient extends Client
 
     public function acceptOrRejectEndpointWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/connections/action';
         $formParams = [];
         $queryParams = [];
@@ -93,7 +92,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\AcceptOrRejectEndpointResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\AcceptOrRejectEndpointRequest');
     }
 
@@ -118,7 +116,6 @@ class VpcepClient extends Client
 
     public function addOrRemoveServicePermissionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/permissions/action';
         $formParams = [];
         $queryParams = [];
@@ -167,7 +164,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\AddOrRemoveServicePermissionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\AddOrRemoveServicePermissionsRequest');
     }
 
@@ -192,7 +188,6 @@ class VpcepClient extends Client
 
     public function batchAddEndpointServicePermissionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/permissions/batch-create';
         $formParams = [];
         $queryParams = [];
@@ -241,7 +236,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddEndpointServicePermissionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddEndpointServicePermissionsRequest');
     }
 
@@ -264,7 +258,6 @@ class VpcepClient extends Client
 
     public function batchRemoveEndpointServicePermissionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/permissions/batch-delete';
         $formParams = [];
         $queryParams = [];
@@ -313,7 +306,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\BatchRemoveEndpointServicePermissionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\BatchRemoveEndpointServicePermissionsRequest');
     }
 
@@ -336,7 +328,6 @@ class VpcepClient extends Client
 
     public function createEndpointWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoints';
         $formParams = [];
         $queryParams = [];
@@ -382,7 +373,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\CreateEndpointResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\CreateEndpointRequest');
     }
 
@@ -409,7 +399,6 @@ class VpcepClient extends Client
 
     public function createEndpointServiceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services';
         $formParams = [];
         $queryParams = [];
@@ -455,7 +444,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\CreateEndpointServiceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\CreateEndpointServiceRequest');
     }
 
@@ -478,7 +466,6 @@ class VpcepClient extends Client
 
     public function deleteEndpointWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoints/{vpc_endpoint_id}';
         $formParams = [];
         $queryParams = [];
@@ -524,7 +511,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\DeleteEndpointResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\DeleteEndpointRequest');
     }
 
@@ -547,7 +533,6 @@ class VpcepClient extends Client
 
     public function deleteEndpointPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoints/{vpc_endpoint_id}/policy';
         $formParams = [];
         $queryParams = [];
@@ -593,7 +578,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\DeleteEndpointPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\DeleteEndpointPolicyRequest');
     }
 
@@ -616,7 +600,6 @@ class VpcepClient extends Client
 
     public function deleteEndpointServiceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}';
         $formParams = [];
         $queryParams = [];
@@ -662,7 +645,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\DeleteEndpointServiceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\DeleteEndpointServiceRequest');
     }
 
@@ -685,7 +667,6 @@ class VpcepClient extends Client
 
     public function listEndpointInfoDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoints/{vpc_endpoint_id}';
         $formParams = [];
         $queryParams = [];
@@ -731,7 +712,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListEndpointInfoDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListEndpointInfoDetailsRequest');
     }
 
@@ -754,7 +734,6 @@ class VpcepClient extends Client
 
     public function listEndpointServiceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services';
         $formParams = [];
         $queryParams = [];
@@ -821,7 +800,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListEndpointServiceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListEndpointServiceRequest');
     }
 
@@ -844,7 +822,6 @@ class VpcepClient extends Client
 
     public function listEndpointsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoints';
         $formParams = [];
         $queryParams = [];
@@ -911,7 +888,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListEndpointsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListEndpointsRequest');
     }
 
@@ -934,7 +910,6 @@ class VpcepClient extends Client
 
     public function listQuotaDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/quotas';
         $formParams = [];
         $queryParams = [];
@@ -980,7 +955,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListQuotaDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListQuotaDetailsRequest');
     }
 
@@ -1003,7 +977,6 @@ class VpcepClient extends Client
 
     public function listServiceConnectionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/connections';
         $formParams = [];
         $queryParams = [];
@@ -1070,7 +1043,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListServiceConnectionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListServiceConnectionsRequest');
     }
 
@@ -1093,7 +1065,6 @@ class VpcepClient extends Client
 
     public function listServiceDescribeDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services/describe';
         $formParams = [];
         $queryParams = [];
@@ -1142,7 +1113,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListServiceDescribeDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListServiceDescribeDetailsRequest');
     }
 
@@ -1165,7 +1135,6 @@ class VpcepClient extends Client
 
     public function listServiceDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}';
         $formParams = [];
         $queryParams = [];
@@ -1211,7 +1180,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListServiceDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListServiceDetailsRequest');
     }
 
@@ -1236,7 +1204,6 @@ class VpcepClient extends Client
 
     public function listServicePermissionsDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/permissions';
         $formParams = [];
         $queryParams = [];
@@ -1297,7 +1264,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListServicePermissionsDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListServicePermissionsDetailsRequest');
     }
 
@@ -1321,7 +1287,6 @@ class VpcepClient extends Client
 
     public function listServicePublicDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services/public';
         $formParams = [];
         $queryParams = [];
@@ -1382,7 +1347,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListServicePublicDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListServicePublicDetailsRequest');
     }
 
@@ -1405,7 +1369,6 @@ class VpcepClient extends Client
 
     public function listSpecifiedVersionDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/{version}';
         $formParams = [];
         $queryParams = [];
@@ -1448,7 +1411,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListSpecifiedVersionDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListSpecifiedVersionDetailsRequest');
     }
 
@@ -1471,7 +1433,6 @@ class VpcepClient extends Client
 
     public function listVersionDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/';
         $formParams = [];
         $queryParams = [];
@@ -1511,7 +1472,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListVersionDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListVersionDetailsRequest');
     }
 
@@ -1534,7 +1494,6 @@ class VpcepClient extends Client
 
     public function updateEndpointConnectionsDescWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/connections/description';
         $formParams = [];
         $queryParams = [];
@@ -1583,7 +1542,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointConnectionsDescResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointConnectionsDescRequest');
     }
 
@@ -1606,7 +1564,6 @@ class VpcepClient extends Client
 
     public function updateEndpointPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoints/{vpc_endpoint_id}/policy';
         $formParams = [];
         $queryParams = [];
@@ -1655,7 +1612,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointPolicyRequest');
     }
 
@@ -1678,7 +1634,6 @@ class VpcepClient extends Client
 
     public function updateEndpointRoutetableWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoints/{vpc_endpoint_id}/routetables';
         $formParams = [];
         $queryParams = [];
@@ -1727,7 +1682,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointRoutetableResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointRoutetableRequest');
     }
 
@@ -1750,7 +1704,6 @@ class VpcepClient extends Client
 
     public function updateEndpointServiceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}';
         $formParams = [];
         $queryParams = [];
@@ -1799,7 +1752,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServiceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServiceRequest');
     }
 
@@ -1822,7 +1774,6 @@ class VpcepClient extends Client
 
     public function updateEndpointServiceNameWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/name';
         $formParams = [];
         $queryParams = [];
@@ -1871,7 +1822,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServiceNameResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServiceNameRequest');
     }
 
@@ -1894,7 +1844,6 @@ class VpcepClient extends Client
 
     public function updateEndpointServicePermissionDescWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/permissions/{permission_id}';
         $formParams = [];
         $queryParams = [];
@@ -1946,7 +1895,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServicePermissionDescResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointServicePermissionDescRequest');
     }
 
@@ -1969,7 +1917,6 @@ class VpcepClient extends Client
 
     public function updateEndpointWhiteWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/vpc-endpoints/{vpc_endpoint_id}';
         $formParams = [];
         $queryParams = [];
@@ -2018,7 +1965,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointWhiteResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\UpdateEndpointWhiteRequest');
     }
 
@@ -2042,7 +1988,6 @@ class VpcepClient extends Client
 
     public function batchAddOrRemoveResourceInstanceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/{resource_type}/{resource_id}/tags/action';
         $formParams = [];
         $queryParams = [];
@@ -2094,7 +2039,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddOrRemoveResourceInstanceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\BatchAddOrRemoveResourceInstanceRequest');
     }
 
@@ -2117,7 +2061,6 @@ class VpcepClient extends Client
 
     public function listQueryProjectResourceTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/{resource_type}/tags';
         $formParams = [];
         $queryParams = [];
@@ -2163,7 +2106,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListQueryProjectResourceTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListQueryProjectResourceTagsRequest');
     }
 
@@ -2186,7 +2128,6 @@ class VpcepClient extends Client
 
     public function listResourceInstancesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/{resource_type}/resource_instances/action';
         $formParams = [];
         $queryParams = [];
@@ -2235,7 +2176,6 @@ class VpcepClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListResourceInstancesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpcep\V1\Model\ListResourceInstancesRequest');
     }
 
@@ -2249,7 +2189,6 @@ class VpcepClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -2262,7 +2201,6 @@ class VpcepClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

@@ -43,7 +43,6 @@ class VodClient extends Client
 
     public function cancelAssetTranscodeTaskWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/process';
         $formParams = [];
         $queryParams = [];
@@ -62,10 +61,10 @@ class VodClient extends Client
             $queryParams['asset_id'] = $localVarParams['assetId'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -92,7 +91,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CancelAssetTranscodeTaskResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CancelAssetTranscodeTaskRequest');
     }
 
@@ -114,7 +112,6 @@ class VodClient extends Client
 
     public function cancelExtractAudioTaskWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/extract_audio';
         $formParams = [];
         $queryParams = [];
@@ -133,10 +130,10 @@ class VodClient extends Client
             $queryParams['asset_id'] = $localVarParams['assetId'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -163,7 +160,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CancelExtractAudioTaskResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CancelExtractAudioTaskRequest');
     }
 
@@ -185,7 +181,6 @@ class VodClient extends Client
 
     public function checkMd5DuplicationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/duplication';
         $formParams = [];
         $queryParams = [];
@@ -207,10 +202,10 @@ class VodClient extends Client
             $queryParams['md5'] = $localVarParams['md5'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -237,7 +232,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CheckMd5DuplicationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CheckMd5DuplicationRequest');
     }
 
@@ -259,7 +253,6 @@ class VodClient extends Client
 
     public function confirmAssetUploadWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/status/uploaded';
         $formParams = [];
         $queryParams = [];
@@ -275,10 +268,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -308,7 +301,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ConfirmAssetUploadResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ConfirmAssetUploadRequest');
     }
 
@@ -330,7 +322,6 @@ class VodClient extends Client
 
     public function confirmImageUploadWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/watermark/status/uploaded';
         $formParams = [];
         $queryParams = [];
@@ -346,10 +337,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -379,7 +370,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ConfirmImageUploadResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ConfirmImageUploadRequest');
     }
 
@@ -405,7 +395,6 @@ class VodClient extends Client
 
     public function createAssetByFileUploadWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset';
         $formParams = [];
         $queryParams = [];
@@ -421,10 +410,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -454,7 +443,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CreateAssetByFileUploadResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CreateAssetByFileUploadRequest');
     }
 
@@ -476,7 +464,6 @@ class VodClient extends Client
 
     public function createAssetCategoryWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/category';
         $formParams = [];
         $queryParams = [];
@@ -492,10 +479,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -525,7 +512,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CreateAssetCategoryResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CreateAssetCategoryRequest');
     }
 
@@ -547,7 +533,6 @@ class VodClient extends Client
 
     public function createAssetProcessTaskWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/process';
         $formParams = [];
         $queryParams = [];
@@ -563,10 +548,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -596,7 +581,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CreateAssetProcessTaskResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CreateAssetProcessTaskRequest');
     }
 
@@ -618,7 +602,6 @@ class VodClient extends Client
 
     public function createAssetReviewTaskWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/review';
         $formParams = [];
         $queryParams = [];
@@ -634,10 +617,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -667,7 +650,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CreateAssetReviewTaskResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CreateAssetReviewTaskRequest');
     }
 
@@ -689,7 +671,6 @@ class VodClient extends Client
 
     public function createExtractAudioTaskWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/extract_audio';
         $formParams = [];
         $queryParams = [];
@@ -705,10 +686,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -738,7 +719,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CreateExtractAudioTaskResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CreateExtractAudioTaskRequest');
     }
 
@@ -760,7 +740,6 @@ class VodClient extends Client
 
     public function createPreheatingAssetWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/preheating';
         $formParams = [];
         $queryParams = [];
@@ -776,10 +755,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -809,7 +788,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CreatePreheatingAssetResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CreatePreheatingAssetRequest');
     }
 
@@ -833,7 +811,6 @@ class VodClient extends Client
 
     public function createTakeOverTaskWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/obs/host/stock/task';
         $formParams = [];
         $queryParams = [];
@@ -849,10 +826,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -882,7 +859,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CreateTakeOverTaskResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CreateTakeOverTaskRequest');
     }
 
@@ -904,7 +880,6 @@ class VodClient extends Client
 
     public function createTemplateGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/template_group/transcodings';
         $formParams = [];
         $queryParams = [];
@@ -920,10 +895,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -953,7 +928,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CreateTemplateGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CreateTemplateGroupRequest');
     }
 
@@ -975,7 +949,6 @@ class VodClient extends Client
 
     public function createTemplateGroupCollectionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/template-collection/transcodings';
         $formParams = [];
         $queryParams = [];
@@ -991,10 +964,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1024,7 +997,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CreateTemplateGroupCollectionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CreateTemplateGroupCollectionRequest');
     }
 
@@ -1046,7 +1018,6 @@ class VodClient extends Client
 
     public function createTranscodeTemplateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/asset/template/transcodings';
         $formParams = [];
         $queryParams = [];
@@ -1062,10 +1033,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1095,7 +1066,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CreateTranscodeTemplateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CreateTranscodeTemplateRequest');
     }
 
@@ -1117,7 +1087,6 @@ class VodClient extends Client
 
     public function createWatermarkTemplateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/template/watermark';
         $formParams = [];
         $queryParams = [];
@@ -1133,10 +1102,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1166,7 +1135,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CreateWatermarkTemplateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CreateWatermarkTemplateRequest');
     }
 
@@ -1188,7 +1156,6 @@ class VodClient extends Client
 
     public function deleteAssetCategoryWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/category';
         $formParams = [];
         $queryParams = [];
@@ -1207,10 +1174,10 @@ class VodClient extends Client
             $queryParams['id'] = $localVarParams['id'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1237,7 +1204,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteAssetCategoryResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteAssetCategoryRequest');
     }
 
@@ -1259,7 +1225,6 @@ class VodClient extends Client
 
     public function deleteAssetsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset';
         $formParams = [];
         $queryParams = [];
@@ -1281,10 +1246,10 @@ class VodClient extends Client
             $queryParams['delete_type'] = $localVarParams['deleteType'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1311,7 +1276,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteAssetsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteAssetsRequest');
     }
 
@@ -1333,7 +1297,6 @@ class VodClient extends Client
 
     public function deleteTemplateGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/template_group/transcodings';
         $formParams = [];
         $queryParams = [];
@@ -1352,10 +1315,10 @@ class VodClient extends Client
             $queryParams['group_id'] = $localVarParams['groupId'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1382,7 +1345,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteTemplateGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteTemplateGroupRequest');
     }
 
@@ -1404,7 +1366,6 @@ class VodClient extends Client
 
     public function deleteTemplateGroupCollectionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/template-collection/transcodings';
         $formParams = [];
         $queryParams = [];
@@ -1423,10 +1384,10 @@ class VodClient extends Client
             $queryParams['group_collection_id'] = $localVarParams['groupCollectionId'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1453,7 +1414,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteTemplateGroupCollectionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteTemplateGroupCollectionRequest');
     }
 
@@ -1475,7 +1435,6 @@ class VodClient extends Client
 
     public function deleteTranscodeTemplateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/asset/template/transcodings';
         $formParams = [];
         $queryParams = [];
@@ -1494,10 +1453,10 @@ class VodClient extends Client
             $queryParams['group_id'] = $localVarParams['groupId'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1524,7 +1483,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteTranscodeTemplateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteTranscodeTemplateRequest');
     }
 
@@ -1546,7 +1504,6 @@ class VodClient extends Client
 
     public function deleteWatermarkTemplateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/template/watermark';
         $formParams = [];
         $queryParams = [];
@@ -1565,10 +1522,10 @@ class VodClient extends Client
             $queryParams['id'] = $localVarParams['id'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1595,7 +1552,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteWatermarkTemplateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteWatermarkTemplateRequest');
     }
 
@@ -1617,7 +1573,6 @@ class VodClient extends Client
 
     public function listAssetCategoryWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/category';
         $formParams = [];
         $queryParams = [];
@@ -1636,10 +1591,10 @@ class VodClient extends Client
             $queryParams['id'] = $localVarParams['id'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1666,7 +1621,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListAssetCategoryResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListAssetCategoryRequest');
     }
 
@@ -1688,7 +1642,6 @@ class VodClient extends Client
 
     public function listAssetListWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/list';
         $formParams = [];
         $queryParams = [];
@@ -1737,10 +1690,10 @@ class VodClient extends Client
             $queryParams['order'] = $localVarParams['order'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1767,7 +1720,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListAssetListResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListAssetListRequest');
     }
 
@@ -1789,7 +1741,6 @@ class VodClient extends Client
 
     public function listDomainLogsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/vod/cdn/logs';
         $formParams = [];
         $queryParams = [];
@@ -1817,10 +1768,10 @@ class VodClient extends Client
             $queryParams['page_number'] = $localVarParams['pageNumber'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1847,7 +1798,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListDomainLogsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListDomainLogsRequest');
     }
 
@@ -1869,7 +1819,6 @@ class VodClient extends Client
 
     public function listTemplateGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/template_group/transcodings';
         $formParams = [];
         $queryParams = [];
@@ -1897,10 +1846,10 @@ class VodClient extends Client
             $queryParams['size'] = $localVarParams['size'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1927,7 +1876,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListTemplateGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListTemplateGroupRequest');
     }
 
@@ -1949,7 +1897,6 @@ class VodClient extends Client
 
     public function listTemplateGroupCollectionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/template-collection/transcodings';
         $formParams = [];
         $queryParams = [];
@@ -1974,10 +1921,10 @@ class VodClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2004,7 +1951,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListTemplateGroupCollectionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListTemplateGroupCollectionRequest');
     }
 
@@ -2026,7 +1972,6 @@ class VodClient extends Client
 
     public function listTopStatisticsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/top-statistics';
         $formParams = [];
         $queryParams = [];
@@ -2048,10 +1993,10 @@ class VodClient extends Client
             $queryParams['date'] = $localVarParams['date'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2078,7 +2023,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListTopStatisticsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListTopStatisticsRequest');
     }
 
@@ -2100,7 +2044,6 @@ class VodClient extends Client
 
     public function listTranscodeTemplateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/asset/template/transcodings';
         $formParams = [];
         $queryParams = [];
@@ -2131,10 +2074,10 @@ class VodClient extends Client
             $queryParams['query_string'] = $localVarParams['queryString'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2161,7 +2104,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListTranscodeTemplateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListTranscodeTemplateRequest');
     }
 
@@ -2183,7 +2125,6 @@ class VodClient extends Client
 
     public function listWatermarkTemplateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/template/watermark';
         $formParams = [];
         $queryParams = [];
@@ -2208,10 +2149,10 @@ class VodClient extends Client
             $queryParams['size'] = $localVarParams['size'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2238,7 +2179,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListWatermarkTemplateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListWatermarkTemplateRequest');
     }
 
@@ -2260,7 +2200,6 @@ class VodClient extends Client
 
     public function publishAssetFromObsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/reproduction';
         $formParams = [];
         $queryParams = [];
@@ -2276,10 +2215,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2309,7 +2248,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\PublishAssetFromObsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\PublishAssetFromObsRequest');
     }
 
@@ -2331,7 +2269,6 @@ class VodClient extends Client
 
     public function publishAssetsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/status/publish';
         $formParams = [];
         $queryParams = [];
@@ -2347,10 +2284,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2380,7 +2317,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\PublishAssetsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\PublishAssetsRequest');
     }
 
@@ -2402,7 +2338,6 @@ class VodClient extends Client
 
     public function showAssetCipherWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/ciphers';
         $formParams = [];
         $queryParams = [];
@@ -2421,10 +2356,10 @@ class VodClient extends Client
             $queryParams['asset_id'] = $localVarParams['assetId'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2451,7 +2386,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ShowAssetCipherResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ShowAssetCipherRequest');
     }
 
@@ -2473,7 +2407,6 @@ class VodClient extends Client
 
     public function showAssetDetailWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/details';
         $formParams = [];
         $queryParams = [];
@@ -2495,10 +2428,10 @@ class VodClient extends Client
             $queryParams['categories'] = $localVarParams['categories'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2525,7 +2458,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ShowAssetDetailResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ShowAssetDetailRequest');
     }
 
@@ -2547,7 +2479,6 @@ class VodClient extends Client
 
     public function showAssetMetaWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/info';
         $formParams = [];
         $queryParams = [];
@@ -2596,10 +2527,10 @@ class VodClient extends Client
             $queryParams['size'] = $localVarParams['size'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2626,7 +2557,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ShowAssetMetaResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ShowAssetMetaRequest');
     }
 
@@ -2654,7 +2584,6 @@ class VodClient extends Client
 
     public function showAssetTempAuthorityWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.1/{project_id}/asset/authority';
         $formParams = [];
         $queryParams = [];
@@ -2691,10 +2620,10 @@ class VodClient extends Client
             $queryParams['part_number'] = $localVarParams['partNumber'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2721,7 +2650,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ShowAssetTempAuthorityResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ShowAssetTempAuthorityRequest');
     }
 
@@ -2743,7 +2671,6 @@ class VodClient extends Client
 
     public function showCdnStatisticsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/cdn-statistics';
         $formParams = [];
         $queryParams = [];
@@ -2774,10 +2701,10 @@ class VodClient extends Client
             $queryParams['interval'] = $localVarParams['interval'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2804,7 +2731,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ShowCdnStatisticsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ShowCdnStatisticsRequest');
     }
 
@@ -2826,7 +2752,6 @@ class VodClient extends Client
 
     public function showPreheatingAssetWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/preheating';
         $formParams = [];
         $queryParams = [];
@@ -2845,10 +2770,10 @@ class VodClient extends Client
             $queryParams['task_id'] = $localVarParams['taskId'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2875,7 +2800,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ShowPreheatingAssetResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ShowPreheatingAssetRequest');
     }
 
@@ -2897,7 +2821,6 @@ class VodClient extends Client
 
     public function showVodStatisticsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/vod-statistics';
         $formParams = [];
         $queryParams = [];
@@ -2922,10 +2845,10 @@ class VodClient extends Client
             $queryParams['interval'] = $localVarParams['interval'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2952,7 +2875,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ShowVodStatisticsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ShowVodStatisticsRequest');
     }
 
@@ -2974,7 +2896,6 @@ class VodClient extends Client
 
     public function unpublishAssetsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/status/unpublish';
         $formParams = [];
         $queryParams = [];
@@ -2990,10 +2911,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3023,7 +2944,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UnpublishAssetsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UnpublishAssetsRequest');
     }
 
@@ -3051,7 +2971,6 @@ class VodClient extends Client
 
     public function updateAssetWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset';
         $formParams = [];
         $queryParams = [];
@@ -3067,10 +2986,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3100,7 +3019,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateAssetResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateAssetRequest');
     }
 
@@ -3122,7 +3040,6 @@ class VodClient extends Client
 
     public function updateAssetCategoryWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/category';
         $formParams = [];
         $queryParams = [];
@@ -3138,10 +3055,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3171,7 +3088,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateAssetCategoryResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateAssetCategoryRequest');
     }
 
@@ -3193,7 +3109,6 @@ class VodClient extends Client
 
     public function updateAssetMetaWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/info';
         $formParams = [];
         $queryParams = [];
@@ -3209,10 +3124,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3242,7 +3157,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateAssetMetaResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateAssetMetaRequest');
     }
 
@@ -3264,7 +3178,6 @@ class VodClient extends Client
 
     public function updateBucketAuthorizedWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/authority';
         $formParams = [];
         $queryParams = [];
@@ -3280,10 +3193,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3313,7 +3226,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateBucketAuthorizedResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateBucketAuthorizedRequest');
     }
 
@@ -3335,7 +3247,6 @@ class VodClient extends Client
 
     public function updateCoverByThumbnailWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/cover';
         $formParams = [];
         $queryParams = [];
@@ -3351,10 +3262,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3384,7 +3295,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateCoverByThumbnailResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateCoverByThumbnailRequest');
     }
 
@@ -3406,7 +3316,6 @@ class VodClient extends Client
 
     public function updateTemplateGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/template_group/transcodings';
         $formParams = [];
         $queryParams = [];
@@ -3422,10 +3331,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3455,7 +3364,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateTemplateGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateTemplateGroupRequest');
     }
 
@@ -3477,7 +3385,6 @@ class VodClient extends Client
 
     public function updateTemplateGroupCollectionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/template-collection/transcodings';
         $formParams = [];
         $queryParams = [];
@@ -3493,10 +3400,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3526,7 +3433,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateTemplateGroupCollectionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateTemplateGroupCollectionRequest');
     }
 
@@ -3548,7 +3454,6 @@ class VodClient extends Client
 
     public function updateTranscodeTemplateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/asset/template/transcodings';
         $formParams = [];
         $queryParams = [];
@@ -3564,10 +3469,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3597,7 +3502,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateTranscodeTemplateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateTranscodeTemplateRequest');
     }
 
@@ -3619,7 +3523,6 @@ class VodClient extends Client
 
     public function updateWatermarkTemplateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/template/watermark';
         $formParams = [];
         $queryParams = [];
@@ -3635,10 +3538,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3668,7 +3571,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateWatermarkTemplateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateWatermarkTemplateRequest');
     }
 
@@ -3690,7 +3592,6 @@ class VodClient extends Client
 
     public function uploadMetaDataByUrlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/upload_by_url';
         $formParams = [];
         $queryParams = [];
@@ -3706,10 +3607,10 @@ class VodClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3739,7 +3640,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UploadMetaDataByUrlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UploadMetaDataByUrlRequest');
     }
 
@@ -3761,7 +3661,6 @@ class VodClient extends Client
 
     public function listTakeOverTaskWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/obs/host/stock/task';
         $formParams = [];
         $queryParams = [];
@@ -3789,10 +3688,10 @@ class VodClient extends Client
             $queryParams['size'] = $localVarParams['size'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3819,7 +3718,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListTakeOverTaskResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListTakeOverTaskRequest');
     }
 
@@ -3841,7 +3739,6 @@ class VodClient extends Client
 
     public function showTakeOverAssetDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/obs/host/task/details';
         $formParams = [];
         $queryParams = [];
@@ -3863,10 +3760,10 @@ class VodClient extends Client
             $queryParams['source_object'] = $localVarParams['sourceObject'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3893,7 +3790,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ShowTakeOverAssetDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ShowTakeOverAssetDetailsRequest');
     }
 
@@ -3915,7 +3811,6 @@ class VodClient extends Client
 
     public function showTakeOverTaskDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{project_id}/asset/obs/host/stock/task/details';
         $formParams = [];
         $queryParams = [];
@@ -3940,10 +3835,10 @@ class VodClient extends Client
             $queryParams['size'] = $localVarParams['size'];
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3970,7 +3865,6 @@ class VodClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ShowTakeOverTaskDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ShowTakeOverTaskDetailsRequest');
     }
 
@@ -3984,7 +3878,6 @@ class VodClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -3997,7 +3890,6 @@ class VodClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

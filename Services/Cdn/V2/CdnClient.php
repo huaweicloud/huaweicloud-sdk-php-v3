@@ -53,7 +53,6 @@ class CdnClient extends Client
 
     public function downloadRegionCarrierExcelWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/statistics/region-carrier-excel';
         $formParams = [];
         $queryParams = [];
@@ -123,7 +122,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\DownloadRegionCarrierExcelResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\DownloadRegionCarrierExcelRequest');
     }
 
@@ -155,7 +153,6 @@ class CdnClient extends Client
 
     public function downloadStatisticsExcelWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/statistics/statistics-excel';
         $formParams = [];
         $queryParams = [];
@@ -219,7 +216,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\DownloadStatisticsExcelResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\DownloadStatisticsExcelRequest');
     }
 
@@ -249,7 +245,6 @@ class CdnClient extends Client
 
     public function setChargeModesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/charge/charge-modes';
         $formParams = [];
         $queryParams = [];
@@ -292,7 +287,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\SetChargeModesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\SetChargeModesRequest');
     }
 
@@ -326,7 +320,6 @@ class CdnClient extends Client
 
     public function showBandwidthCalcWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/statistics/bandwidth-calc';
         $formParams = [];
         $queryParams = [];
@@ -384,7 +377,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowBandwidthCalcResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowBandwidthCalcRequest');
     }
 
@@ -414,7 +406,6 @@ class CdnClient extends Client
 
     public function showChargeModesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/charge/charge-modes';
         $formParams = [];
         $queryParams = [];
@@ -463,7 +454,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowChargeModesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowChargeModesRequest');
     }
 
@@ -498,7 +488,6 @@ class CdnClient extends Client
 
     public function showDomainLocationStatsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/statistics/domain-location-stats';
         $formParams = [];
         $queryParams = [];
@@ -571,7 +560,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowDomainLocationStatsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowDomainLocationStatsRequest');
     }
 
@@ -606,7 +594,6 @@ class CdnClient extends Client
 
     public function showDomainStatsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/statistics/domain-stats';
         $formParams = [];
         $queryParams = [];
@@ -673,7 +660,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowDomainStatsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowDomainStatsRequest');
     }
 
@@ -707,7 +693,6 @@ class CdnClient extends Client
 
     public function showTopDomainNamesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cdn/statistics/top-domain-names';
         $formParams = [];
         $queryParams = [];
@@ -765,7 +750,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowTopDomainNamesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowTopDomainNamesRequest');
     }
 
@@ -799,7 +783,6 @@ class CdnClient extends Client
 
     public function showTopUrlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/statistics/top-url';
         $formParams = [];
         $queryParams = [];
@@ -857,7 +840,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowTopUrlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowTopUrlRequest');
     }
 
@@ -871,7 +853,6 @@ class CdnClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -884,7 +865,6 @@ class CdnClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

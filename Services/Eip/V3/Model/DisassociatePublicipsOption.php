@@ -141,6 +141,7 @@ class DisassociatePublicipsOption implements ModelInterface, ArrayAccess
     }
     const ASSOCIATE_INSTANCE_TYPE_PORT = 'PORT';
     const ASSOCIATE_INSTANCE_TYPE_NATGW = 'NATGW';
+    const ASSOCIATE_INSTANCE_TYPE_VPN = 'VPN';
     const ASSOCIATE_INSTANCE_TYPE_ELB = 'ELB';
     const ASSOCIATE_INSTANCE_TYPE_EMPTY = '';
     
@@ -155,6 +156,7 @@ class DisassociatePublicipsOption implements ModelInterface, ArrayAccess
         return [
             self::ASSOCIATE_INSTANCE_TYPE_PORT,
             self::ASSOCIATE_INSTANCE_TYPE_NATGW,
+            self::ASSOCIATE_INSTANCE_TYPE_VPN,
             self::ASSOCIATE_INSTANCE_TYPE_ELB,
             self::ASSOCIATE_INSTANCE_TYPE_EMPTY,
         ];

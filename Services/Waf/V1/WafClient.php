@@ -43,7 +43,6 @@ class WafClient extends Client
 
     public function applyCertificateToHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/certificate/{certificate_id}/apply-to-hosts';
         $formParams = [];
         $queryParams = [];
@@ -62,7 +61,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['certificateId'] !== null) {
             $pathParams['certificate_id'] = $localVarParams['certificateId'];
@@ -95,7 +94,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ApplyCertificateToHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ApplyCertificateToHostRequest');
     }
 
@@ -117,7 +115,6 @@ class WafClient extends Client
 
     public function createAntiTamperRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/antitamper';
         $formParams = [];
         $queryParams = [];
@@ -136,7 +133,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -169,7 +166,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CreateAntiTamperRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CreateAntiTamperRuleRequest');
     }
 
@@ -191,7 +187,6 @@ class WafClient extends Client
 
     public function createCertificateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/certificate';
         $formParams = [];
         $queryParams = [];
@@ -210,7 +205,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -240,7 +235,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CreateCertificateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CreateCertificateRequest');
     }
 
@@ -262,7 +256,6 @@ class WafClient extends Client
 
     public function createGeoipRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/geoip';
         $formParams = [];
         $queryParams = [];
@@ -281,7 +274,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -314,7 +307,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CreateGeoipRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CreateGeoipRuleRequest');
     }
 
@@ -336,7 +328,6 @@ class WafClient extends Client
 
     public function createHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/instance';
         $formParams = [];
         $queryParams = [];
@@ -355,7 +346,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -385,7 +376,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CreateHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CreateHostRequest');
     }
 
@@ -407,7 +397,6 @@ class WafClient extends Client
 
     public function createIgnoreRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/ignore';
         $formParams = [];
         $queryParams = [];
@@ -426,7 +415,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -459,7 +448,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CreateIgnoreRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CreateIgnoreRuleRequest');
     }
 
@@ -481,7 +469,6 @@ class WafClient extends Client
 
     public function createInstanceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/premium-waf/instance';
         $formParams = [];
         $queryParams = [];
@@ -500,7 +487,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -530,7 +517,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CreateInstanceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CreateInstanceRequest');
     }
 
@@ -552,7 +538,6 @@ class WafClient extends Client
 
     public function createIpGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/ip-groups';
         $formParams = [];
         $queryParams = [];
@@ -571,7 +556,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -601,7 +586,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CreateIpGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CreateIpGroupRequest');
     }
 
@@ -623,7 +607,6 @@ class WafClient extends Client
 
     public function createPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy';
         $formParams = [];
         $queryParams = [];
@@ -642,7 +625,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -672,7 +655,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CreatePolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CreatePolicyRequest');
     }
 
@@ -694,7 +676,6 @@ class WafClient extends Client
 
     public function createPremiumHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/premium-waf/host';
         $formParams = [];
         $queryParams = [];
@@ -713,7 +694,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -743,7 +724,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CreatePremiumHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CreatePremiumHostRequest');
     }
 
@@ -765,7 +745,6 @@ class WafClient extends Client
 
     public function createPrivacyRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/privacy';
         $formParams = [];
         $queryParams = [];
@@ -784,7 +763,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -817,7 +796,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CreatePrivacyRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CreatePrivacyRuleRequest');
     }
 
@@ -839,7 +817,6 @@ class WafClient extends Client
 
     public function createValueListWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/valuelist';
         $formParams = [];
         $queryParams = [];
@@ -858,7 +835,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -888,7 +865,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CreateValueListResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CreateValueListRequest');
     }
 
@@ -910,7 +886,6 @@ class WafClient extends Client
 
     public function createWhiteblackipRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/whiteblackip';
         $formParams = [];
         $queryParams = [];
@@ -929,7 +904,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -962,7 +937,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CreateWhiteblackipRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CreateWhiteblackipRuleRequest');
     }
 
@@ -984,7 +958,6 @@ class WafClient extends Client
 
     public function deleteAntitamperRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/antitamper/{rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -1003,7 +976,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -1036,7 +1009,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteAntitamperRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteAntitamperRuleRequest');
     }
 
@@ -1058,7 +1030,6 @@ class WafClient extends Client
 
     public function deleteCertificateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/certificate/{certificate_id}';
         $formParams = [];
         $queryParams = [];
@@ -1077,7 +1048,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['certificateId'] !== null) {
             $pathParams['certificate_id'] = $localVarParams['certificateId'];
@@ -1107,7 +1078,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteCertificateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteCertificateRequest');
     }
 
@@ -1129,7 +1099,6 @@ class WafClient extends Client
 
     public function deleteGeoipRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/geoip/{rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -1148,7 +1117,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -1181,7 +1150,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteGeoipRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteGeoipRuleRequest');
     }
 
@@ -1203,7 +1171,6 @@ class WafClient extends Client
 
     public function deleteHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/instance/{instance_id}';
         $formParams = [];
         $queryParams = [];
@@ -1222,7 +1189,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -1252,7 +1219,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteHostRequest');
     }
 
@@ -1274,7 +1240,6 @@ class WafClient extends Client
 
     public function deleteIgnoreRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/ignore/{rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -1293,7 +1258,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -1326,7 +1291,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteIgnoreRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteIgnoreRuleRequest');
     }
 
@@ -1348,7 +1312,6 @@ class WafClient extends Client
 
     public function deleteInstanceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/premium-waf/instance/{instance_id}';
         $formParams = [];
         $queryParams = [];
@@ -1367,7 +1330,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -1397,7 +1360,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteInstanceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteInstanceRequest');
     }
 
@@ -1419,7 +1381,6 @@ class WafClient extends Client
 
     public function deleteIpGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/ip-group/{id}';
         $formParams = [];
         $queryParams = [];
@@ -1438,7 +1399,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
@@ -1468,7 +1429,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteIpGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteIpGroupRequest');
     }
 
@@ -1490,7 +1450,6 @@ class WafClient extends Client
 
     public function deletePolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}';
         $formParams = [];
         $queryParams = [];
@@ -1509,7 +1468,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -1539,7 +1498,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\DeletePolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\DeletePolicyRequest');
     }
 
@@ -1561,7 +1519,6 @@ class WafClient extends Client
 
     public function deletePremiumHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/premium-waf/host/{host_id}';
         $formParams = [];
         $queryParams = [];
@@ -1583,7 +1540,7 @@ class WafClient extends Client
             $queryParams['keep_policy'] = $localVarParams['keepPolicy'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['hostId'] !== null) {
             $pathParams['host_id'] = $localVarParams['hostId'];
@@ -1613,7 +1570,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\DeletePremiumHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\DeletePremiumHostRequest');
     }
 
@@ -1635,7 +1591,6 @@ class WafClient extends Client
 
     public function deletePrivacyRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/privacy/{rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -1654,7 +1609,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -1687,7 +1642,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\DeletePrivacyRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\DeletePrivacyRuleRequest');
     }
 
@@ -1709,7 +1663,6 @@ class WafClient extends Client
 
     public function deleteValueListWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/valuelist/{valuelistid}';
         $formParams = [];
         $queryParams = [];
@@ -1728,7 +1681,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['valuelistid'] !== null) {
             $pathParams['valuelistid'] = $localVarParams['valuelistid'];
@@ -1758,7 +1711,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteValueListResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteValueListRequest');
     }
 
@@ -1780,7 +1732,6 @@ class WafClient extends Client
 
     public function deleteWhiteBlackIpRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/whiteblackip/{rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -1799,7 +1750,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -1832,7 +1783,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteWhiteBlackIpRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteWhiteBlackIpRuleRequest');
     }
 
@@ -1854,7 +1804,6 @@ class WafClient extends Client
 
     public function listAntitamperRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/antitamper';
         $formParams = [];
         $queryParams = [];
@@ -1879,7 +1828,7 @@ class WafClient extends Client
             $queryParams['pagesize'] = $localVarParams['pagesize'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -1909,7 +1858,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListAntitamperRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListAntitamperRuleRequest');
     }
 
@@ -1931,7 +1879,6 @@ class WafClient extends Client
 
     public function listBandwidthTimelineWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/overviews/bandwidth/timeline';
         $formParams = [];
         $queryParams = [];
@@ -1965,7 +1912,7 @@ class WafClient extends Client
             $queryParams['group_by'] = $localVarParams['groupBy'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1992,7 +1939,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListBandwidthTimelineResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListBandwidthTimelineRequest');
     }
 
@@ -2014,7 +1960,6 @@ class WafClient extends Client
 
     public function listCertificatesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/certificate';
         $formParams = [];
         $queryParams = [];
@@ -2048,7 +1993,7 @@ class WafClient extends Client
             $queryParams['exp_status'] = $localVarParams['expStatus'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2075,7 +2020,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListCertificatesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListCertificatesRequest');
     }
 
@@ -2097,7 +2041,6 @@ class WafClient extends Client
 
     public function listCompositeHostsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/composite-waf/host';
         $formParams = [];
         $queryParams = [];
@@ -2137,7 +2080,7 @@ class WafClient extends Client
             $queryParams['is_https'] = $localVarParams['isHttps'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2164,7 +2107,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListCompositeHostsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListCompositeHostsRequest');
     }
 
@@ -2186,7 +2128,6 @@ class WafClient extends Client
 
     public function listEventWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/event';
         $formParams = [];
         $queryParams = [];
@@ -2226,7 +2167,7 @@ class WafClient extends Client
             $queryParams['pagesize'] = $localVarParams['pagesize'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2253,7 +2194,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListEventResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListEventRequest');
     }
 
@@ -2275,7 +2215,6 @@ class WafClient extends Client
 
     public function listGeoipRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/geoip';
         $formParams = [];
         $queryParams = [];
@@ -2300,7 +2239,7 @@ class WafClient extends Client
             $queryParams['pagesize'] = $localVarParams['pagesize'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -2330,7 +2269,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListGeoipRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListGeoipRuleRequest');
     }
 
@@ -2352,7 +2290,6 @@ class WafClient extends Client
 
     public function listHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/instance';
         $formParams = [];
         $queryParams = [];
@@ -2383,7 +2320,7 @@ class WafClient extends Client
             $queryParams['policyname'] = $localVarParams['policyname'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2410,7 +2347,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListHostRequest');
     }
 
@@ -2432,7 +2368,6 @@ class WafClient extends Client
 
     public function listHostRouteWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/instance/{instance_id}/route';
         $formParams = [];
         $queryParams = [];
@@ -2451,7 +2386,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -2481,7 +2416,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListHostRouteResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListHostRouteRequest');
     }
 
@@ -2503,7 +2437,6 @@ class WafClient extends Client
 
     public function listIgnoreRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/ignore';
         $formParams = [];
         $queryParams = [];
@@ -2528,7 +2461,7 @@ class WafClient extends Client
             $queryParams['pagesize'] = $localVarParams['pagesize'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -2558,7 +2491,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListIgnoreRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListIgnoreRuleRequest');
     }
 
@@ -2580,7 +2512,6 @@ class WafClient extends Client
 
     public function listInstanceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/premium-waf/instance';
         $formParams = [];
         $queryParams = [];
@@ -2608,7 +2539,7 @@ class WafClient extends Client
             $queryParams['instancename'] = $localVarParams['instancename'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2635,7 +2566,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListInstanceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListInstanceRequest');
     }
 
@@ -2657,7 +2587,6 @@ class WafClient extends Client
 
     public function listIpGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/ip-groups';
         $formParams = [];
         $queryParams = [];
@@ -2688,7 +2617,7 @@ class WafClient extends Client
             $queryParams['ip'] = $localVarParams['ip'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2715,7 +2644,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListIpGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListIpGroupRequest');
     }
 
@@ -2737,7 +2665,6 @@ class WafClient extends Client
 
     public function listNoticeConfigsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/waf/alerts';
         $formParams = [];
         $queryParams = [];
@@ -2756,7 +2683,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2783,7 +2710,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListNoticeConfigsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListNoticeConfigsRequest');
     }
 
@@ -2805,7 +2731,6 @@ class WafClient extends Client
 
     public function listOverviewsClassificationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/overviews/classification';
         $formParams = [];
         $queryParams = [];
@@ -2839,7 +2764,7 @@ class WafClient extends Client
             $queryParams['instances'] = $localVarParams['instances'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2866,7 +2791,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListOverviewsClassificationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListOverviewsClassificationRequest');
     }
 
@@ -2888,7 +2812,6 @@ class WafClient extends Client
 
     public function listPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy';
         $formParams = [];
         $queryParams = [];
@@ -2916,7 +2839,7 @@ class WafClient extends Client
             $queryParams['name'] = $localVarParams['name'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2943,7 +2866,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListPolicyRequest');
     }
 
@@ -2965,7 +2887,6 @@ class WafClient extends Client
 
     public function listPremiumHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/premium-waf/host';
         $formParams = [];
         $queryParams = [];
@@ -2999,7 +2920,7 @@ class WafClient extends Client
             $queryParams['protect_status'] = $localVarParams['protectStatus'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3026,7 +2947,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListPremiumHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListPremiumHostRequest');
     }
 
@@ -3048,7 +2968,6 @@ class WafClient extends Client
 
     public function listPrivacyRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/privacy';
         $formParams = [];
         $queryParams = [];
@@ -3073,7 +2992,7 @@ class WafClient extends Client
             $queryParams['pagesize'] = $localVarParams['pagesize'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -3103,7 +3022,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListPrivacyRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListPrivacyRuleRequest');
     }
 
@@ -3125,7 +3043,6 @@ class WafClient extends Client
 
     public function listQpsTimelineWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/overviews/qps/timeline';
         $formParams = [];
         $queryParams = [];
@@ -3159,7 +3076,7 @@ class WafClient extends Client
             $queryParams['group_by'] = $localVarParams['groupBy'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3186,7 +3103,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListQpsTimelineResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListQpsTimelineRequest');
     }
 
@@ -3208,7 +3124,6 @@ class WafClient extends Client
 
     public function listRequestTimelineWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/overviews/request/timeline';
         $formParams = [];
         $queryParams = [];
@@ -3242,7 +3157,7 @@ class WafClient extends Client
             $queryParams['group_by'] = $localVarParams['groupBy'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3269,7 +3184,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListRequestTimelineResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListRequestTimelineRequest');
     }
 
@@ -3291,7 +3205,6 @@ class WafClient extends Client
 
     public function listStatisticsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/overviews/statistics';
         $formParams = [];
         $queryParams = [];
@@ -3322,7 +3235,7 @@ class WafClient extends Client
             $queryParams['instances'] = $localVarParams['instances'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3349,7 +3262,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListStatisticsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListStatisticsRequest');
     }
 
@@ -3371,7 +3283,6 @@ class WafClient extends Client
 
     public function listTopAbnormalWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/overviews/abnormal';
         $formParams = [];
         $queryParams = [];
@@ -3408,7 +3319,7 @@ class WafClient extends Client
             $queryParams['instances'] = $localVarParams['instances'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3435,7 +3346,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListTopAbnormalResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListTopAbnormalRequest');
     }
 
@@ -3457,7 +3367,6 @@ class WafClient extends Client
 
     public function listValueListWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/valuelist';
         $formParams = [];
         $queryParams = [];
@@ -3482,7 +3391,7 @@ class WafClient extends Client
             $queryParams['name'] = $localVarParams['name'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3509,7 +3418,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListValueListResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListValueListRequest');
     }
 
@@ -3531,7 +3439,6 @@ class WafClient extends Client
 
     public function listWhiteblackipRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/whiteblackip';
         $formParams = [];
         $queryParams = [];
@@ -3559,7 +3466,7 @@ class WafClient extends Client
             $queryParams['name'] = $localVarParams['name'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -3589,7 +3496,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ListWhiteblackipRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ListWhiteblackipRuleRequest');
     }
 
@@ -3611,7 +3517,6 @@ class WafClient extends Client
 
     public function migrateCompositeHostsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/composite-waf/hosts/migration';
         $formParams = [];
         $queryParams = [];
@@ -3633,7 +3538,7 @@ class WafClient extends Client
             $queryParams['target_enterprise_project_id'] = $localVarParams['targetEnterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -3663,7 +3568,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\MigrateCompositeHostsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\MigrateCompositeHostsRequest');
     }
 
@@ -3685,7 +3589,6 @@ class WafClient extends Client
 
     public function renameInstanceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/premium-waf/instance/{instance_id}';
         $formParams = [];
         $queryParams = [];
@@ -3704,7 +3607,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -3737,7 +3640,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\RenameInstanceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\RenameInstanceRequest');
     }
 
@@ -3759,7 +3661,6 @@ class WafClient extends Client
 
     public function showCertificateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/certificate/{certificate_id}';
         $formParams = [];
         $queryParams = [];
@@ -3778,7 +3679,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['certificateId'] !== null) {
             $pathParams['certificate_id'] = $localVarParams['certificateId'];
@@ -3808,7 +3709,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ShowCertificateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ShowCertificateRequest');
     }
 
@@ -3830,7 +3730,6 @@ class WafClient extends Client
 
     public function showCompositeHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/composite-waf/host/{host_id}';
         $formParams = [];
         $queryParams = [];
@@ -3849,7 +3748,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['hostId'] !== null) {
             $pathParams['host_id'] = $localVarParams['hostId'];
@@ -3879,7 +3778,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ShowCompositeHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ShowCompositeHostRequest');
     }
 
@@ -3901,7 +3799,6 @@ class WafClient extends Client
 
     public function showConsoleConfigWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/config/console';
         $formParams = [];
         $queryParams = [];
@@ -3917,7 +3814,7 @@ class WafClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3944,7 +3841,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ShowConsoleConfigResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ShowConsoleConfigRequest');
     }
 
@@ -3966,7 +3862,6 @@ class WafClient extends Client
 
     public function showEventWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/event/{eventid}';
         $formParams = [];
         $queryParams = [];
@@ -3985,7 +3880,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['eventid'] !== null) {
             $pathParams['eventid'] = $localVarParams['eventid'];
@@ -4015,7 +3910,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ShowEventResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ShowEventRequest');
     }
 
@@ -4037,7 +3931,6 @@ class WafClient extends Client
 
     public function showHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/instance/{instance_id}';
         $formParams = [];
         $queryParams = [];
@@ -4056,7 +3949,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -4086,7 +3979,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ShowHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ShowHostRequest');
     }
 
@@ -4108,7 +4000,6 @@ class WafClient extends Client
 
     public function showInstanceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/premium-waf/instance/{instance_id}';
         $formParams = [];
         $queryParams = [];
@@ -4127,7 +4018,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -4157,7 +4048,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ShowInstanceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ShowInstanceRequest');
     }
 
@@ -4179,7 +4069,6 @@ class WafClient extends Client
 
     public function showIpGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/ip-group/{id}';
         $formParams = [];
         $queryParams = [];
@@ -4198,7 +4087,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
@@ -4228,7 +4117,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ShowIpGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ShowIpGroupRequest');
     }
 
@@ -4250,7 +4138,6 @@ class WafClient extends Client
 
     public function showLtsInfoConfigWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/config/lts';
         $formParams = [];
         $queryParams = [];
@@ -4269,7 +4156,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4296,7 +4183,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ShowLtsInfoConfigResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ShowLtsInfoConfigRequest');
     }
 
@@ -4318,7 +4204,6 @@ class WafClient extends Client
 
     public function showPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}';
         $formParams = [];
         $queryParams = [];
@@ -4337,7 +4222,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -4367,7 +4252,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ShowPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ShowPolicyRequest');
     }
 
@@ -4389,7 +4273,6 @@ class WafClient extends Client
 
     public function showPremiumHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/premium-waf/host/{host_id}';
         $formParams = [];
         $queryParams = [];
@@ -4408,7 +4291,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['hostId'] !== null) {
             $pathParams['host_id'] = $localVarParams['hostId'];
@@ -4438,7 +4321,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ShowPremiumHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ShowPremiumHostRequest');
     }
 
@@ -4460,7 +4342,6 @@ class WafClient extends Client
 
     public function showSourceIpWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/config/source-ip';
         $formParams = [];
         $queryParams = [];
@@ -4476,7 +4357,7 @@ class WafClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4503,7 +4384,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\ShowSourceIpResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\ShowSourceIpRequest');
     }
 
@@ -4525,7 +4405,6 @@ class WafClient extends Client
 
     public function updateAlertNoticeConfigWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/waf/alert/{alert_id}';
         $formParams = [];
         $queryParams = [];
@@ -4541,10 +4420,10 @@ class WafClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['xLanguage'] !== null) {
-            $headerParams['x_language'] = $localVarParams['xLanguage'];
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($localVarParams['alertId'] !== null) {
             $pathParams['alert_id'] = $localVarParams['alertId'];
@@ -4577,7 +4456,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateAlertNoticeConfigResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateAlertNoticeConfigRequest');
     }
 
@@ -4599,7 +4477,6 @@ class WafClient extends Client
 
     public function updateCertificateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/certificate/{certificate_id}';
         $formParams = [];
         $queryParams = [];
@@ -4618,7 +4495,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['certificateId'] !== null) {
             $pathParams['certificate_id'] = $localVarParams['certificateId'];
@@ -4651,7 +4528,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateCertificateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateCertificateRequest');
     }
 
@@ -4673,7 +4549,6 @@ class WafClient extends Client
 
     public function updateGeoipRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/geoip/{rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -4692,7 +4567,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -4728,7 +4603,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateGeoipRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateGeoipRuleRequest');
     }
 
@@ -4750,7 +4624,6 @@ class WafClient extends Client
 
     public function updateHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/instance/{instance_id}';
         $formParams = [];
         $queryParams = [];
@@ -4769,7 +4642,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -4802,7 +4675,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateHostRequest');
     }
 
@@ -4824,7 +4696,6 @@ class WafClient extends Client
 
     public function updateHostProtectStatusWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/instance/{instance_id}/protect-status';
         $formParams = [];
         $queryParams = [];
@@ -4843,7 +4714,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -4876,7 +4747,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateHostProtectStatusResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateHostProtectStatusRequest');
     }
 
@@ -4898,7 +4768,6 @@ class WafClient extends Client
 
     public function updateIpGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/ip-group/{id}';
         $formParams = [];
         $queryParams = [];
@@ -4917,7 +4786,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
@@ -4950,7 +4819,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateIpGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateIpGroupRequest');
     }
 
@@ -4972,7 +4840,6 @@ class WafClient extends Client
 
     public function updateLtsInfoConfigWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/config/lts/{ltsconfig_id}';
         $formParams = [];
         $queryParams = [];
@@ -4991,7 +4858,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['ltsconfigId'] !== null) {
             $pathParams['ltsconfig_id'] = $localVarParams['ltsconfigId'];
@@ -5024,7 +4891,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateLtsInfoConfigResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateLtsInfoConfigRequest');
     }
 
@@ -5046,7 +4912,6 @@ class WafClient extends Client
 
     public function updatePolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}';
         $formParams = [];
         $queryParams = [];
@@ -5065,7 +4930,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -5098,7 +4963,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdatePolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdatePolicyRequest');
     }
 
@@ -5120,7 +4984,6 @@ class WafClient extends Client
 
     public function updatePolicyProtectHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}';
         $formParams = [];
         $queryParams = [];
@@ -5142,7 +5005,7 @@ class WafClient extends Client
             $queryParams['hosts'] = $localVarParams['hosts'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -5172,7 +5035,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdatePolicyProtectHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdatePolicyProtectHostRequest');
     }
 
@@ -5194,7 +5056,6 @@ class WafClient extends Client
 
     public function updatePolicyRuleStatusWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/{ruletype}/{rule_id}/status';
         $formParams = [];
         $queryParams = [];
@@ -5213,7 +5074,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -5252,7 +5113,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdatePolicyRuleStatusResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdatePolicyRuleStatusRequest');
     }
 
@@ -5274,7 +5134,6 @@ class WafClient extends Client
 
     public function updatePremiumHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/premium-waf/host/{host_id}';
         $formParams = [];
         $queryParams = [];
@@ -5293,7 +5152,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['hostId'] !== null) {
             $pathParams['host_id'] = $localVarParams['hostId'];
@@ -5326,7 +5185,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdatePremiumHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdatePremiumHostRequest');
     }
 
@@ -5348,7 +5206,6 @@ class WafClient extends Client
 
     public function updatePremiumHostProtectStatusWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/premium-waf/host/{host_id}/protect-status';
         $formParams = [];
         $queryParams = [];
@@ -5367,7 +5224,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['hostId'] !== null) {
             $pathParams['host_id'] = $localVarParams['hostId'];
@@ -5400,7 +5257,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdatePremiumHostProtectStatusResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdatePremiumHostProtectStatusRequest');
     }
 
@@ -5422,7 +5278,6 @@ class WafClient extends Client
 
     public function updatePrivacyRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/privacy/{rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -5441,7 +5296,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -5477,7 +5332,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdatePrivacyRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdatePrivacyRuleRequest');
     }
 
@@ -5499,7 +5353,6 @@ class WafClient extends Client
 
     public function updateValueListWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/valuelist/{valuelistid}';
         $formParams = [];
         $queryParams = [];
@@ -5518,7 +5371,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['valuelistid'] !== null) {
             $pathParams['valuelistid'] = $localVarParams['valuelistid'];
@@ -5551,7 +5404,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateValueListResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateValueListRequest');
     }
 
@@ -5573,7 +5425,6 @@ class WafClient extends Client
 
     public function updateWhiteblackipRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/waf/policy/{policy_id}/whiteblackip/{rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -5592,7 +5443,7 @@ class WafClient extends Client
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['contentType'] !== null) {
-            $headerParams['content_type'] = $localVarParams['contentType'];
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }
         if ($localVarParams['policyId'] !== null) {
             $pathParams['policy_id'] = $localVarParams['policyId'];
@@ -5628,7 +5479,6 @@ class WafClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateWhiteblackipRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\UpdateWhiteblackipRuleRequest');
     }
 
@@ -5642,7 +5492,6 @@ class WafClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -5655,7 +5504,6 @@ class WafClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

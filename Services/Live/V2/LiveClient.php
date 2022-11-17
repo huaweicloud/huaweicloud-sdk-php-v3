@@ -47,7 +47,6 @@ class LiveClient extends Client
 
     public function listAreaDetailWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/area/detail';
         $formParams = [];
         $queryParams = [];
@@ -117,7 +116,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListAreaDetailResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListAreaDetailRequest');
     }
 
@@ -139,7 +137,6 @@ class LiveClient extends Client
 
     public function listBandwidthDetailWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/bandwidth/detail';
         $formParams = [];
         $queryParams = [];
@@ -209,7 +206,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListBandwidthDetailResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListBandwidthDetailRequest');
     }
 
@@ -231,7 +227,6 @@ class LiveClient extends Client
 
     public function listDomainBandwidthPeakWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/bandwidth/peak';
         $formParams = [];
         $queryParams = [];
@@ -295,7 +290,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListDomainBandwidthPeakResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListDomainBandwidthPeakRequest');
     }
 
@@ -317,7 +311,6 @@ class LiveClient extends Client
 
     public function listDomainTrafficDetailWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/traffic/detail';
         $formParams = [];
         $queryParams = [];
@@ -384,7 +377,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListDomainTrafficDetailResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListDomainTrafficDetailRequest');
     }
 
@@ -406,7 +398,6 @@ class LiveClient extends Client
 
     public function listDomainTrafficSummaryWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/traffic/summary';
         $formParams = [];
         $queryParams = [];
@@ -470,7 +461,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListDomainTrafficSummaryResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListDomainTrafficSummaryRequest');
     }
 
@@ -496,7 +486,6 @@ class LiveClient extends Client
 
     public function listHistoryStreamsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/history/streams';
         $formParams = [];
         $queryParams = [];
@@ -557,7 +546,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListHistoryStreamsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListHistoryStreamsRequest');
     }
 
@@ -579,7 +567,6 @@ class LiveClient extends Client
 
     public function listQueryHttpCodeWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/httpcodes';
         $formParams = [];
         $queryParams = [];
@@ -637,7 +624,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListQueryHttpCodeResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListQueryHttpCodeRequest');
     }
 
@@ -659,7 +645,6 @@ class LiveClient extends Client
 
     public function listRecordDataWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/record';
         $formParams = [];
         $queryParams = [];
@@ -708,7 +693,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListRecordDataResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListRecordDataRequest');
     }
 
@@ -730,7 +714,6 @@ class LiveClient extends Client
 
     public function listSnapshotDataWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/snapshot';
         $formParams = [];
         $queryParams = [];
@@ -779,7 +762,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListSnapshotDataResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListSnapshotDataRequest');
     }
 
@@ -801,7 +783,6 @@ class LiveClient extends Client
 
     public function listTranscodeDataWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/transcode';
         $formParams = [];
         $queryParams = [];
@@ -853,7 +834,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListTranscodeDataResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListTranscodeDataRequest');
     }
 
@@ -875,7 +855,6 @@ class LiveClient extends Client
 
     public function listUsersOfStreamWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/user';
         $formParams = [];
         $queryParams = [];
@@ -945,7 +924,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListUsersOfStreamResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListUsersOfStreamRequest');
     }
 
@@ -967,7 +945,6 @@ class LiveClient extends Client
 
     public function showStreamCountWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/stream-count';
         $formParams = [];
         $queryParams = [];
@@ -1016,7 +993,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ShowStreamCountResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ShowStreamCountRequest');
     }
 
@@ -1039,7 +1015,6 @@ class LiveClient extends Client
 
     public function showStreamPortraitWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/stream-portraits';
         $formParams = [];
         $queryParams = [];
@@ -1088,7 +1063,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ShowStreamPortraitResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ShowStreamPortraitRequest');
     }
 
@@ -1110,7 +1084,6 @@ class LiveClient extends Client
 
     public function showUpBandwidthWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/up-bandwidth/detail';
         $formParams = [];
         $queryParams = [];
@@ -1174,7 +1147,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ShowUpBandwidthResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ShowUpBandwidthRequest');
     }
 
@@ -1200,7 +1172,6 @@ class LiveClient extends Client
 
     public function listSingleStreamBitrateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/stream/bitrate';
         $formParams = [];
         $queryParams = [];
@@ -1255,7 +1226,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListSingleStreamBitrateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListSingleStreamBitrateRequest');
     }
 
@@ -1281,7 +1251,6 @@ class LiveClient extends Client
 
     public function listSingleStreamDetailWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/stream-detail';
         $formParams = [];
         $queryParams = [];
@@ -1336,7 +1305,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListSingleStreamDetailResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListSingleStreamDetailRequest');
     }
 
@@ -1362,7 +1330,6 @@ class LiveClient extends Client
 
     public function listSingleStreamFramerateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/stats/stream/framerate';
         $formParams = [];
         $queryParams = [];
@@ -1417,7 +1384,6 @@ class LiveClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListSingleStreamFramerateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListSingleStreamFramerateRequest');
     }
 
@@ -1431,7 +1397,6 @@ class LiveClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -1444,7 +1409,6 @@ class LiveClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

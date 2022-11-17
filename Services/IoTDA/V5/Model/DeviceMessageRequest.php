@@ -28,6 +28,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
     * payloadFormat  **参数说明**：有效负载格式，在消息内容编码格式为none时有效。默认值standard（平台封装的标准格式）。 **取值范围**： - standard  - raw：时直接将消息内容作为有效负载下发， 注意： 取值为raw时，只能通过topic_full_name字段自定义的topic发送消息，否则会发送失败。
     * topic  **参数说明**：消息下行到设备的topic, 可选， 仅适用于MQTT协议接入的设备。 用户只能填写在租户产品界面配置的topic, 否则会校验不通过。 平台给消息topic添加的前缀为$oc/devices/{device_id}/user/， 用户可以在前缀的基础上增加自定义部分， 如增加messageDown，则平台拼接前缀后完整的topic为 $oc/devices/{device_id}/user/messageDown，其中device_id以实际设备的网关id替代。 如果用户指定该topic，消息会通过该topic下行到设备，如果用户不指定， 则消息通过系统默认的topic下行到设备,系统默认的topic格式为： $oc/devices/{device_id}/sys/messages/down。此字段与topic_full_name字段只可填写一个。
     * topicFullName  **参数说明**：消息下行到设备的完整topic名称, 可选。用户需要下发用户自定义的topic给设备时，可以使用该参数指定完整的topic名称，物联网平台不校验该topic是否在平台定义，直接透传给设备。设备需要提前订阅该topic。此字段与topic字段只可填写一个。
+    * ttl  **参数说明**：下发消息在平台缓存的老化时间，时间单位是分钟，默认值1440；ttl参数数值必须是5的倍数，即以5分钟为粒度；指定为0时表示不缓存消息，最大缓存时间1440分钟，即缓存一天
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
             'encoding' => 'string',
             'payloadFormat' => 'string',
             'topic' => 'string',
-            'topicFullName' => 'string'
+            'topicFullName' => 'string',
+            'ttl' => 'int'
     ];
 
     /**
@@ -52,6 +54,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
     * payloadFormat  **参数说明**：有效负载格式，在消息内容编码格式为none时有效。默认值standard（平台封装的标准格式）。 **取值范围**： - standard  - raw：时直接将消息内容作为有效负载下发， 注意： 取值为raw时，只能通过topic_full_name字段自定义的topic发送消息，否则会发送失败。
     * topic  **参数说明**：消息下行到设备的topic, 可选， 仅适用于MQTT协议接入的设备。 用户只能填写在租户产品界面配置的topic, 否则会校验不通过。 平台给消息topic添加的前缀为$oc/devices/{device_id}/user/， 用户可以在前缀的基础上增加自定义部分， 如增加messageDown，则平台拼接前缀后完整的topic为 $oc/devices/{device_id}/user/messageDown，其中device_id以实际设备的网关id替代。 如果用户指定该topic，消息会通过该topic下行到设备，如果用户不指定， 则消息通过系统默认的topic下行到设备,系统默认的topic格式为： $oc/devices/{device_id}/sys/messages/down。此字段与topic_full_name字段只可填写一个。
     * topicFullName  **参数说明**：消息下行到设备的完整topic名称, 可选。用户需要下发用户自定义的topic给设备时，可以使用该参数指定完整的topic名称，物联网平台不校验该topic是否在平台定义，直接透传给设备。设备需要提前订阅该topic。此字段与topic字段只可填写一个。
+    * ttl  **参数说明**：下发消息在平台缓存的老化时间，时间单位是分钟，默认值1440；ttl参数数值必须是5的倍数，即以5分钟为粒度；指定为0时表示不缓存消息，最大缓存时间1440分钟，即缓存一天
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
         'encoding' => null,
         'payloadFormat' => null,
         'topic' => null,
-        'topicFullName' => null
+        'topicFullName' => null,
+        'ttl' => 'int32'
     ];
 
     /**
@@ -97,6 +101,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
     * payloadFormat  **参数说明**：有效负载格式，在消息内容编码格式为none时有效。默认值standard（平台封装的标准格式）。 **取值范围**： - standard  - raw：时直接将消息内容作为有效负载下发， 注意： 取值为raw时，只能通过topic_full_name字段自定义的topic发送消息，否则会发送失败。
     * topic  **参数说明**：消息下行到设备的topic, 可选， 仅适用于MQTT协议接入的设备。 用户只能填写在租户产品界面配置的topic, 否则会校验不通过。 平台给消息topic添加的前缀为$oc/devices/{device_id}/user/， 用户可以在前缀的基础上增加自定义部分， 如增加messageDown，则平台拼接前缀后完整的topic为 $oc/devices/{device_id}/user/messageDown，其中device_id以实际设备的网关id替代。 如果用户指定该topic，消息会通过该topic下行到设备，如果用户不指定， 则消息通过系统默认的topic下行到设备,系统默认的topic格式为： $oc/devices/{device_id}/sys/messages/down。此字段与topic_full_name字段只可填写一个。
     * topicFullName  **参数说明**：消息下行到设备的完整topic名称, 可选。用户需要下发用户自定义的topic给设备时，可以使用该参数指定完整的topic名称，物联网平台不校验该topic是否在平台定义，直接透传给设备。设备需要提前订阅该topic。此字段与topic字段只可填写一个。
+    * ttl  **参数说明**：下发消息在平台缓存的老化时间，时间单位是分钟，默认值1440；ttl参数数值必须是5的倍数，即以5分钟为粒度；指定为0时表示不缓存消息，最大缓存时间1440分钟，即缓存一天
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
             'encoding' => 'encoding',
             'payloadFormat' => 'payload_format',
             'topic' => 'topic',
-            'topicFullName' => 'topic_full_name'
+            'topicFullName' => 'topic_full_name',
+            'ttl' => 'ttl'
     ];
 
     /**
@@ -121,6 +127,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
     * payloadFormat  **参数说明**：有效负载格式，在消息内容编码格式为none时有效。默认值standard（平台封装的标准格式）。 **取值范围**： - standard  - raw：时直接将消息内容作为有效负载下发， 注意： 取值为raw时，只能通过topic_full_name字段自定义的topic发送消息，否则会发送失败。
     * topic  **参数说明**：消息下行到设备的topic, 可选， 仅适用于MQTT协议接入的设备。 用户只能填写在租户产品界面配置的topic, 否则会校验不通过。 平台给消息topic添加的前缀为$oc/devices/{device_id}/user/， 用户可以在前缀的基础上增加自定义部分， 如增加messageDown，则平台拼接前缀后完整的topic为 $oc/devices/{device_id}/user/messageDown，其中device_id以实际设备的网关id替代。 如果用户指定该topic，消息会通过该topic下行到设备，如果用户不指定， 则消息通过系统默认的topic下行到设备,系统默认的topic格式为： $oc/devices/{device_id}/sys/messages/down。此字段与topic_full_name字段只可填写一个。
     * topicFullName  **参数说明**：消息下行到设备的完整topic名称, 可选。用户需要下发用户自定义的topic给设备时，可以使用该参数指定完整的topic名称，物联网平台不校验该topic是否在平台定义，直接透传给设备。设备需要提前订阅该topic。此字段与topic字段只可填写一个。
+    * ttl  **参数说明**：下发消息在平台缓存的老化时间，时间单位是分钟，默认值1440；ttl参数数值必须是5的倍数，即以5分钟为粒度；指定为0时表示不缓存消息，最大缓存时间1440分钟，即缓存一天
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
             'encoding' => 'setEncoding',
             'payloadFormat' => 'setPayloadFormat',
             'topic' => 'setTopic',
-            'topicFullName' => 'setTopicFullName'
+            'topicFullName' => 'setTopicFullName',
+            'ttl' => 'setTtl'
     ];
 
     /**
@@ -145,6 +153,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
     * payloadFormat  **参数说明**：有效负载格式，在消息内容编码格式为none时有效。默认值standard（平台封装的标准格式）。 **取值范围**： - standard  - raw：时直接将消息内容作为有效负载下发， 注意： 取值为raw时，只能通过topic_full_name字段自定义的topic发送消息，否则会发送失败。
     * topic  **参数说明**：消息下行到设备的topic, 可选， 仅适用于MQTT协议接入的设备。 用户只能填写在租户产品界面配置的topic, 否则会校验不通过。 平台给消息topic添加的前缀为$oc/devices/{device_id}/user/， 用户可以在前缀的基础上增加自定义部分， 如增加messageDown，则平台拼接前缀后完整的topic为 $oc/devices/{device_id}/user/messageDown，其中device_id以实际设备的网关id替代。 如果用户指定该topic，消息会通过该topic下行到设备，如果用户不指定， 则消息通过系统默认的topic下行到设备,系统默认的topic格式为： $oc/devices/{device_id}/sys/messages/down。此字段与topic_full_name字段只可填写一个。
     * topicFullName  **参数说明**：消息下行到设备的完整topic名称, 可选。用户需要下发用户自定义的topic给设备时，可以使用该参数指定完整的topic名称，物联网平台不校验该topic是否在平台定义，直接透传给设备。设备需要提前订阅该topic。此字段与topic字段只可填写一个。
+    * ttl  **参数说明**：下发消息在平台缓存的老化时间，时间单位是分钟，默认值1440；ttl参数数值必须是5的倍数，即以5分钟为粒度；指定为0时表示不缓存消息，最大缓存时间1440分钟，即缓存一天
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
             'encoding' => 'getEncoding',
             'payloadFormat' => 'getPayloadFormat',
             'topic' => 'getTopic',
-            'topicFullName' => 'getTopicFullName'
+            'topicFullName' => 'getTopicFullName',
+            'ttl' => 'getTtl'
     ];
 
     /**
@@ -225,6 +235,7 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
         $this->container['payloadFormat'] = isset($data['payloadFormat']) ? $data['payloadFormat'] : 'standard';
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
         $this->container['topicFullName'] = isset($data['topicFullName']) ? $data['topicFullName'] : null;
+        $this->container['ttl'] = isset($data['ttl']) ? $data['ttl'] : 1440;
     }
 
     /**
@@ -264,6 +275,12 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['topicFullName']) && !preg_match("/^([$\/]?[a-zA-Z0-9(),\\-.:=@;_!*'%?+]*)([a-zA-Z0-9(),\\-.:=@;_!*'%?+]+\/)*([a-zA-Z0-9(),\\-.:=@;_!*'%?+]*|#)$/", $this->container['topicFullName'])) {
                 $invalidProperties[] = "invalid value for 'topicFullName', must be conform to the pattern /^([$\/]?[a-zA-Z0-9(),\\-.:=@;_!*'%?+]*)([a-zA-Z0-9(),\\-.:=@;_!*'%?+]+\/)*([a-zA-Z0-9(),\\-.:=@;_!*'%?+]*|#)$/.";
+            }
+            if (!is_null($this->container['ttl']) && ($this->container['ttl'] > 1440)) {
+                $invalidProperties[] = "invalid value for 'ttl', must be smaller than or equal to 1440.";
+            }
+            if (!is_null($this->container['ttl']) && ($this->container['ttl'] < 0)) {
+                $invalidProperties[] = "invalid value for 'ttl', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -468,6 +485,30 @@ class DeviceMessageRequest implements ModelInterface, ArrayAccess
     public function setTopicFullName($topicFullName)
     {
         $this->container['topicFullName'] = $topicFullName;
+        return $this;
+    }
+
+    /**
+    * Gets ttl
+    *  **参数说明**：下发消息在平台缓存的老化时间，时间单位是分钟，默认值1440；ttl参数数值必须是5的倍数，即以5分钟为粒度；指定为0时表示不缓存消息，最大缓存时间1440分钟，即缓存一天
+    *
+    * @return int|null
+    */
+    public function getTtl()
+    {
+        return $this->container['ttl'];
+    }
+
+    /**
+    * Sets ttl
+    *
+    * @param int|null $ttl **参数说明**：下发消息在平台缓存的老化时间，时间单位是分钟，默认值1440；ttl参数数值必须是5的倍数，即以5分钟为粒度；指定为0时表示不缓存消息，最大缓存时间1440分钟，即缓存一天
+    *
+    * @return $this
+    */
+    public function setTtl($ttl)
+    {
+        $this->container['ttl'] = $ttl;
         return $this;
     }
 

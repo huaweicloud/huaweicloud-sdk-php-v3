@@ -21,17 +21,17 @@ class RecognizeIdDocumentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  调用成功时表示调用结果。  调用失败时此字段为空。
+    * result  result
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'result' => 'object'
+            'result' => '\HuaweiCloud\SDK\Ocr\V1\Model\IdDocumentItem'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  调用成功时表示调用结果。  调用失败时此字段为空。
+    * result  result
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class RecognizeIdDocumentResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  调用成功时表示调用结果。  调用失败时此字段为空。
+    * result  result
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class RecognizeIdDocumentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  调用成功时表示调用结果。  调用失败时此字段为空。
+    * result  result
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class RecognizeIdDocumentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  调用成功时表示调用结果。  调用失败时此字段为空。
+    * result  result
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class RecognizeIdDocumentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  调用成功时表示调用结果。  调用失败时此字段为空。
+    *  result
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\IdDocumentItem|null
     */
     public function getResult()
     {
@@ -187,7 +187,7 @@ class RecognizeIdDocumentResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param object|null $result 调用成功时表示调用结果。  调用失败时此字段为空。
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\IdDocumentItem|null $result result
     *
     * @return $this
     */

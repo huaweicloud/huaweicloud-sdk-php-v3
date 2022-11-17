@@ -129,7 +129,20 @@ class RegisterServerMonitorRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const MONITOR_METRICS_EMPTY = '';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getMonitorMetricsAllowableValues()
+    {
+        return [
+            self::MONITOR_METRICS_EMPTY,
+        ];
+    }
 
 
     /**
@@ -147,7 +160,7 @@ class RegisterServerMonitorRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['monitorMetrics'] = isset($data['monitorMetrics']) ? $data['monitorMetrics'] : null;
+        $this->container['monitorMetrics'] = isset($data['monitorMetrics']) ? $data['monitorMetrics'] : '';
     }
 
     /**
@@ -161,6 +174,14 @@ class RegisterServerMonitorRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['monitorMetrics'] === null) {
             $invalidProperties[] = "'monitorMetrics' can't be null";
         }
+            $allowedValues = $this->getMonitorMetricsAllowableValues();
+                if (!is_null($this->container['monitorMetrics']) && !in_array($this->container['monitorMetrics'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'monitorMetrics', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 

@@ -212,6 +212,9 @@ class SendSmVerificationCodeReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['language']) && (mb_strlen($this->container['language']) < 0)) {
                 $invalidProperties[] = "invalid value for 'language', the character length must be bigger than or equal to 0.";
             }
+        if ($this->container['smTemplateArgs'] === null) {
+            $invalidProperties[] = "'smTemplateArgs' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -302,7 +305,7 @@ class SendSmVerificationCodeReq implements ModelInterface, ArrayAccess
     * Gets smTemplateArgs
     *  短信发送模板中的变量，具体参见表1。
     *
-    * @return \HuaweiCloud\SDK\Bss\V2\Model\TemplateArgs[]|null
+    * @return \HuaweiCloud\SDK\Bss\V2\Model\TemplateArgs[]
     */
     public function getSmTemplateArgs()
     {
@@ -312,7 +315,7 @@ class SendSmVerificationCodeReq implements ModelInterface, ArrayAccess
     /**
     * Sets smTemplateArgs
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\TemplateArgs[]|null $smTemplateArgs 短信发送模板中的变量，具体参见表1。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\TemplateArgs[] $smTemplateArgs 短信发送模板中的变量，具体参见表1。
     *
     * @return $this
     */

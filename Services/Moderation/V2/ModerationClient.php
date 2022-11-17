@@ -44,7 +44,6 @@ class ModerationClient extends Client
 
     public function runCheckResultWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/moderation/image/batch';
         $formParams = [];
         $queryParams = [];
@@ -87,7 +86,6 @@ class ModerationClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V2\Model\RunCheckResultResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Moderation\V2\Model\RunCheckResultRequest');
     }
 
@@ -109,7 +107,6 @@ class ModerationClient extends Client
 
     public function runCheckTaskJobsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/moderation/image/batch/jobs';
         $formParams = [];
         $queryParams = [];
@@ -158,7 +155,6 @@ class ModerationClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V2\Model\RunCheckTaskJobsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Moderation\V2\Model\RunCheckTaskJobsRequest');
     }
 
@@ -180,7 +176,6 @@ class ModerationClient extends Client
 
     public function runImageBatchModerationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/moderation/image/batch';
         $formParams = [];
         $queryParams = [];
@@ -223,7 +218,6 @@ class ModerationClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V2\Model\RunImageBatchModerationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Moderation\V2\Model\RunImageBatchModerationRequest');
     }
 
@@ -245,7 +239,6 @@ class ModerationClient extends Client
 
     public function runImageModerationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/moderation/image';
         $formParams = [];
         $queryParams = [];
@@ -288,7 +281,6 @@ class ModerationClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V2\Model\RunImageModerationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Moderation\V2\Model\RunImageModerationRequest');
     }
 
@@ -310,7 +302,6 @@ class ModerationClient extends Client
 
     public function runModerationAudioWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/moderation/voice';
         $formParams = [];
         $queryParams = [];
@@ -353,7 +344,6 @@ class ModerationClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V2\Model\RunModerationAudioResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Moderation\V2\Model\RunModerationAudioRequest');
     }
 
@@ -375,7 +365,6 @@ class ModerationClient extends Client
 
     public function runTaskSumbitWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/moderation/image/batch/jobs';
         $formParams = [];
         $queryParams = [];
@@ -418,7 +407,6 @@ class ModerationClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V2\Model\RunTaskSumbitResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Moderation\V2\Model\RunTaskSumbitRequest');
     }
 
@@ -440,7 +428,6 @@ class ModerationClient extends Client
 
     public function runTextModerationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/moderation/text';
         $formParams = [];
         $queryParams = [];
@@ -483,7 +470,6 @@ class ModerationClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V2\Model\RunTextModerationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Moderation\V2\Model\RunTextModerationRequest');
     }
 
@@ -497,7 +483,6 @@ class ModerationClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -510,7 +495,6 @@ class ModerationClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

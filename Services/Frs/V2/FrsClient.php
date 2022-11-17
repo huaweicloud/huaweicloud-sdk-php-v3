@@ -43,7 +43,6 @@ class FrsClient extends Client
 
     public function addFacesByBase64WithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}/faces';
         $formParams = [];
         $queryParams = [];
@@ -89,7 +88,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\AddFacesByBase64Response',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\AddFacesByBase64Request');
     }
 
@@ -111,7 +109,6 @@ class FrsClient extends Client
 
     public function addFacesByFileWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}/faces';
         $formParams = [];
         $queryParams = [];
@@ -162,7 +159,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\AddFacesByFileResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\AddFacesByFileRequest');
     }
 
@@ -184,7 +180,6 @@ class FrsClient extends Client
 
     public function addFacesByUrlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}/faces';
         $formParams = [];
         $queryParams = [];
@@ -230,7 +225,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\AddFacesByUrlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\AddFacesByUrlRequest');
     }
 
@@ -252,7 +246,6 @@ class FrsClient extends Client
 
     public function batchDeleteFacesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}/faces/batch';
         $formParams = [];
         $queryParams = [];
@@ -298,7 +291,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\BatchDeleteFacesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\BatchDeleteFacesRequest');
     }
 
@@ -320,7 +312,6 @@ class FrsClient extends Client
 
     public function compareFaceByBase64WithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-compare';
         $formParams = [];
         $queryParams = [];
@@ -363,7 +354,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\CompareFaceByBase64Response',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\CompareFaceByBase64Request');
     }
 
@@ -385,7 +375,6 @@ class FrsClient extends Client
 
     public function compareFaceByFileWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-compare';
         $formParams = [];
         $queryParams = [];
@@ -433,7 +422,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\CompareFaceByFileResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\CompareFaceByFileRequest');
     }
 
@@ -455,7 +443,6 @@ class FrsClient extends Client
 
     public function compareFaceByUrlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-compare';
         $formParams = [];
         $queryParams = [];
@@ -498,7 +485,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\CompareFaceByUrlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\CompareFaceByUrlRequest');
     }
 
@@ -520,7 +506,6 @@ class FrsClient extends Client
 
     public function createFaceSetWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets';
         $formParams = [];
         $queryParams = [];
@@ -563,7 +548,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\CreateFaceSetResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\CreateFaceSetRequest');
     }
 
@@ -585,7 +569,6 @@ class FrsClient extends Client
 
     public function deleteFaceByExternalImageIdWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}/faces';
         $formParams = [];
         $queryParams = [];
@@ -631,7 +614,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DeleteFaceByExternalImageIdResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DeleteFaceByExternalImageIdRequest');
     }
 
@@ -653,7 +635,6 @@ class FrsClient extends Client
 
     public function deleteFaceByFaceIdWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}/faces';
         $formParams = [];
         $queryParams = [];
@@ -699,7 +680,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DeleteFaceByFaceIdResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DeleteFaceByFaceIdRequest');
     }
 
@@ -721,7 +701,6 @@ class FrsClient extends Client
 
     public function deleteFaceSetWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}';
         $formParams = [];
         $queryParams = [];
@@ -764,7 +743,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DeleteFaceSetResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DeleteFaceSetRequest');
     }
 
@@ -786,7 +764,6 @@ class FrsClient extends Client
 
     public function detectFaceByBase64WithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-detect';
         $formParams = [];
         $queryParams = [];
@@ -829,7 +806,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectFaceByBase64Response',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectFaceByBase64Request');
     }
 
@@ -851,7 +827,6 @@ class FrsClient extends Client
 
     public function detectFaceByBase64IntlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-detect';
         $formParams = [];
         $queryParams = [];
@@ -894,7 +869,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectFaceByBase64IntlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectFaceByBase64IntlRequest');
     }
 
@@ -916,7 +890,6 @@ class FrsClient extends Client
 
     public function detectFaceByFileWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-detect';
         $formParams = [];
         $queryParams = [];
@@ -964,7 +937,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectFaceByFileResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectFaceByFileRequest');
     }
 
@@ -986,7 +958,6 @@ class FrsClient extends Client
 
     public function detectFaceByFileIntlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-detect';
         $formParams = [];
         $queryParams = [];
@@ -1034,7 +1005,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectFaceByFileIntlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectFaceByFileIntlRequest');
     }
 
@@ -1056,7 +1026,6 @@ class FrsClient extends Client
 
     public function detectFaceByUrlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-detect';
         $formParams = [];
         $queryParams = [];
@@ -1099,7 +1068,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectFaceByUrlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectFaceByUrlRequest');
     }
 
@@ -1121,7 +1089,6 @@ class FrsClient extends Client
 
     public function detectFaceByUrlIntlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-detect';
         $formParams = [];
         $queryParams = [];
@@ -1164,7 +1131,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectFaceByUrlIntlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectFaceByUrlIntlRequest');
     }
 
@@ -1186,7 +1152,6 @@ class FrsClient extends Client
 
     public function detectLiveByBase64WithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/live-detect';
         $formParams = [];
         $queryParams = [];
@@ -1229,7 +1194,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveByBase64Response',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveByBase64Request');
     }
 
@@ -1251,7 +1215,6 @@ class FrsClient extends Client
 
     public function detectLiveByBase64IntlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/live-detect';
         $formParams = [];
         $queryParams = [];
@@ -1294,7 +1257,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveByBase64IntlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveByBase64IntlRequest');
     }
 
@@ -1316,7 +1278,6 @@ class FrsClient extends Client
 
     public function detectLiveByFileWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/live-detect';
         $formParams = [];
         $queryParams = [];
@@ -1364,7 +1325,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveByFileResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveByFileRequest');
     }
 
@@ -1386,7 +1346,6 @@ class FrsClient extends Client
 
     public function detectLiveByFileIntlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/live-detect';
         $formParams = [];
         $queryParams = [];
@@ -1434,7 +1393,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveByFileIntlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveByFileIntlRequest');
     }
 
@@ -1456,7 +1414,6 @@ class FrsClient extends Client
 
     public function detectLiveByUrlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/live-detect';
         $formParams = [];
         $queryParams = [];
@@ -1499,7 +1456,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveByUrlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveByUrlRequest');
     }
 
@@ -1521,7 +1477,6 @@ class FrsClient extends Client
 
     public function detectLiveByUrlIntlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/live-detect';
         $formParams = [];
         $queryParams = [];
@@ -1564,7 +1519,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveByUrlIntlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveByUrlIntlRequest');
     }
 
@@ -1586,7 +1540,6 @@ class FrsClient extends Client
 
     public function detectLiveFaceByBase64WithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/live-detect-face';
         $formParams = [];
         $queryParams = [];
@@ -1629,7 +1582,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveFaceByBase64Response',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveFaceByBase64Request');
     }
 
@@ -1651,7 +1603,6 @@ class FrsClient extends Client
 
     public function detectLiveFaceByFileWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/live-detect-face';
         $formParams = [];
         $queryParams = [];
@@ -1699,7 +1650,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveFaceByFileResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveFaceByFileRequest');
     }
 
@@ -1721,7 +1671,6 @@ class FrsClient extends Client
 
     public function detectLiveFaceByUrlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/live-detect-face';
         $formParams = [];
         $queryParams = [];
@@ -1764,7 +1713,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveFaceByUrlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\DetectLiveFaceByUrlRequest');
     }
 
@@ -1787,7 +1735,6 @@ class FrsClient extends Client
 
     public function searchFaceByBase64WithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}/search';
         $formParams = [];
         $queryParams = [];
@@ -1833,7 +1780,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\SearchFaceByBase64Response',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\SearchFaceByBase64Request');
     }
 
@@ -1856,7 +1802,6 @@ class FrsClient extends Client
 
     public function searchFaceByFaceIdWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}/search';
         $formParams = [];
         $queryParams = [];
@@ -1902,7 +1847,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\SearchFaceByFaceIdResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\SearchFaceByFaceIdRequest');
     }
 
@@ -1925,7 +1869,6 @@ class FrsClient extends Client
 
     public function searchFaceByFileWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}/search';
         $formParams = [];
         $queryParams = [];
@@ -1976,7 +1919,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\SearchFaceByFileResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\SearchFaceByFileRequest');
     }
 
@@ -1999,7 +1941,6 @@ class FrsClient extends Client
 
     public function searchFaceByUrlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}/search';
         $formParams = [];
         $queryParams = [];
@@ -2045,7 +1986,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\SearchFaceByUrlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\SearchFaceByUrlRequest');
     }
 
@@ -2067,7 +2007,6 @@ class FrsClient extends Client
 
     public function showAllFaceSetsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets';
         $formParams = [];
         $queryParams = [];
@@ -2107,7 +2046,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\ShowAllFaceSetsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\ShowAllFaceSetsRequest');
     }
 
@@ -2129,7 +2067,6 @@ class FrsClient extends Client
 
     public function showFaceSetWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}';
         $formParams = [];
         $queryParams = [];
@@ -2172,7 +2109,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\ShowFaceSetResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\ShowFaceSetRequest');
     }
 
@@ -2194,7 +2130,6 @@ class FrsClient extends Client
 
     public function showFacesByFaceIdWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}/faces';
         $formParams = [];
         $queryParams = [];
@@ -2240,7 +2175,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\ShowFacesByFaceIdResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\ShowFacesByFaceIdRequest');
     }
 
@@ -2262,7 +2196,6 @@ class FrsClient extends Client
 
     public function showFacesByLimitWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}/faces';
         $formParams = [];
         $queryParams = [];
@@ -2311,7 +2244,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\ShowFacesByLimitResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\ShowFacesByLimitRequest');
     }
 
@@ -2333,7 +2265,6 @@ class FrsClient extends Client
 
     public function updateFaceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/face-sets/{face_set_name}/faces';
         $formParams = [];
         $queryParams = [];
@@ -2379,7 +2310,6 @@ class FrsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Frs\V2\Model\UpdateFaceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Frs\V2\Model\UpdateFaceRequest');
     }
 
@@ -2393,7 +2323,6 @@ class FrsClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -2406,7 +2335,6 @@ class FrsClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

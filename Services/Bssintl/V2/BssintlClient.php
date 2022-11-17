@@ -43,7 +43,6 @@ class BssintlClient extends Client
 
     public function autoRenewalResourcesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/orders/subscriptions/resources/autorenew/{resource_id}';
         $formParams = [];
         $queryParams = [];
@@ -86,7 +85,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\AutoRenewalResourcesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\AutoRenewalResourcesRequest');
     }
 
@@ -108,7 +106,6 @@ class BssintlClient extends Client
 
     public function cancelAutoRenewalResourcesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/orders/subscriptions/resources/autorenew/{resource_id}';
         $formParams = [];
         $queryParams = [];
@@ -151,7 +148,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\CancelAutoRenewalResourcesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\CancelAutoRenewalResourcesRequest');
     }
 
@@ -173,7 +169,6 @@ class BssintlClient extends Client
 
     public function cancelCustomerOrderWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/orders/customer-orders/cancel';
         $formParams = [];
         $queryParams = [];
@@ -216,7 +211,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\CancelCustomerOrderResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\CancelCustomerOrderRequest');
     }
 
@@ -238,7 +232,6 @@ class BssintlClient extends Client
 
     public function cancelResourcesSubscriptionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/orders/subscriptions/resources/unsubscribe';
         $formParams = [];
         $queryParams = [];
@@ -281,7 +274,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\CancelResourcesSubscriptionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\CancelResourcesSubscriptionRequest');
     }
 
@@ -303,7 +295,6 @@ class BssintlClient extends Client
 
     public function changeEnterpriseRealnameAuthenticationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/customers/realname-auths/enterprise';
         $formParams = [];
         $queryParams = [];
@@ -346,7 +337,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ChangeEnterpriseRealnameAuthenticationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ChangeEnterpriseRealnameAuthenticationRequest');
     }
 
@@ -368,7 +358,6 @@ class BssintlClient extends Client
 
     public function checkUserIdentityWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/partners/sub-customers/users/check-identity';
         $formParams = [];
         $queryParams = [];
@@ -411,7 +400,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\CheckUserIdentityResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\CheckUserIdentityRequest');
     }
 
@@ -433,7 +421,6 @@ class BssintlClient extends Client
 
     public function createEnterpriseRealnameAuthenticationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/customers/realname-auths/enterprise';
         $formParams = [];
         $queryParams = [];
@@ -476,7 +463,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\CreateEnterpriseRealnameAuthenticationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\CreateEnterpriseRealnameAuthenticationRequest');
     }
 
@@ -498,7 +484,6 @@ class BssintlClient extends Client
 
     public function createPersonalRealnameAuthWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/customers/realname-auths/individual';
         $formParams = [];
         $queryParams = [];
@@ -541,7 +526,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\CreatePersonalRealnameAuthResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\CreatePersonalRealnameAuthRequest');
     }
 
@@ -563,7 +547,6 @@ class BssintlClient extends Client
 
     public function createSubCustomerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/partners/sub-customers';
         $formParams = [];
         $queryParams = [];
@@ -606,7 +589,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\CreateSubCustomerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\CreateSubCustomerRequest');
     }
 
@@ -628,7 +610,6 @@ class BssintlClient extends Client
 
     public function freezeSubCustomersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/partners/sub-customers/freeze';
         $formParams = [];
         $queryParams = [];
@@ -671,7 +652,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\FreezeSubCustomersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\FreezeSubCustomersRequest');
     }
 
@@ -693,7 +673,6 @@ class BssintlClient extends Client
 
     public function listConversionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/bases/conversions';
         $formParams = [];
         $queryParams = [];
@@ -712,7 +691,7 @@ class BssintlClient extends Client
             $queryParams['measure_type'] = $localVarParams['measureType'];
         }
         if ($localVarParams['xLanguage'] !== null) {
-            $headerParams['x_language'] = $localVarParams['xLanguage'];
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -739,7 +718,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListConversionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListConversionsRequest');
     }
 
@@ -761,7 +739,6 @@ class BssintlClient extends Client
 
     public function listCostsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v4/costs/cost-analysed-bills/query';
         $formParams = [];
         $queryParams = [];
@@ -777,7 +754,7 @@ class BssintlClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['xLanguage'] !== null) {
-            $headerParams['x_language'] = $localVarParams['xLanguage'];
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -807,7 +784,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListCostsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListCostsRequest');
     }
 
@@ -829,7 +805,6 @@ class BssintlClient extends Client
 
     public function listCustomerOnDemandResourcesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/partners/sub-customers/on-demand-resources/query';
         $formParams = [];
         $queryParams = [];
@@ -845,7 +820,7 @@ class BssintlClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['xLanguage'] !== null) {
-            $headerParams['x_language'] = $localVarParams['xLanguage'];
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -875,7 +850,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListCustomerOnDemandResourcesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListCustomerOnDemandResourcesRequest');
     }
 
@@ -897,7 +871,6 @@ class BssintlClient extends Client
 
     public function listCustomerOrdersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/orders/customer-orders';
         $formParams = [];
         $queryParams = [];
@@ -976,7 +949,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListCustomerOrdersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListCustomerOrdersRequest');
     }
 
@@ -998,7 +970,6 @@ class BssintlClient extends Client
 
     public function listCustomerselfResourceRecordDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/bills/customer-bills/res-records/query';
         $formParams = [];
         $queryParams = [];
@@ -1041,7 +1012,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListCustomerselfResourceRecordDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListCustomerselfResourceRecordDetailsRequest');
     }
 
@@ -1063,7 +1033,6 @@ class BssintlClient extends Client
 
     public function listCustomerselfResourceRecordsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/bills/customer-bills/res-fee-records';
         $formParams = [];
         $queryParams = [];
@@ -1124,7 +1093,7 @@ class BssintlClient extends Client
             $queryParams['bill_date_end'] = $localVarParams['billDateEnd'];
         }
         if ($localVarParams['xLanguage'] !== null) {
-            $headerParams['x_language'] = $localVarParams['xLanguage'];
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1151,7 +1120,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListCustomerselfResourceRecordsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListCustomerselfResourceRecordsRequest');
     }
 
@@ -1173,7 +1141,6 @@ class BssintlClient extends Client
 
     public function listFreeResourceInfosWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/payments/free-resources/query';
         $formParams = [];
         $queryParams = [];
@@ -1189,7 +1156,7 @@ class BssintlClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['xLanguage'] !== null) {
-            $headerParams['x_language'] = $localVarParams['xLanguage'];
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1219,7 +1186,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListFreeResourceInfosResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListFreeResourceInfosRequest');
     }
 
@@ -1241,7 +1207,6 @@ class BssintlClient extends Client
 
     public function listFreeResourceUsagesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/payments/free-resources/usages/details/query';
         $formParams = [];
         $queryParams = [];
@@ -1257,7 +1222,7 @@ class BssintlClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['xLanguage'] !== null) {
-            $headerParams['x_language'] = $localVarParams['xLanguage'];
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1287,7 +1252,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListFreeResourceUsagesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListFreeResourceUsagesRequest');
     }
 
@@ -1311,7 +1275,6 @@ class BssintlClient extends Client
 
     public function listIndirectPartnersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/partners/indirect-partners/query';
         $formParams = [];
         $queryParams = [];
@@ -1354,7 +1317,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListIndirectPartnersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListIndirectPartnersRequest');
     }
 
@@ -1376,7 +1338,6 @@ class BssintlClient extends Client
 
     public function listInvoicesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{domain_id}/payments/intl-invoices';
         $formParams = [];
         $queryParams = [];
@@ -1428,7 +1389,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListInvoicesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListInvoicesRequest');
     }
 
@@ -1450,7 +1410,6 @@ class BssintlClient extends Client
 
     public function listMeasureUnitsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/bases/measurements';
         $formParams = [];
         $queryParams = [];
@@ -1466,7 +1425,7 @@ class BssintlClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['xLanguage'] !== null) {
-            $headerParams['x_language'] = $localVarParams['xLanguage'];
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1493,7 +1452,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListMeasureUnitsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListMeasureUnitsRequest');
     }
 
@@ -1515,7 +1473,6 @@ class BssintlClient extends Client
 
     public function listMonthlyExpendituresWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/{domain_id}/customer/account-mgr/bill/monthly-sum';
         $formParams = [];
         $queryParams = [];
@@ -1567,7 +1524,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListMonthlyExpendituresResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListMonthlyExpendituresRequest');
     }
 
@@ -1589,7 +1545,6 @@ class BssintlClient extends Client
 
     public function listOnDemandResourceRatingsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/bills/ratings/on-demand-resources';
         $formParams = [];
         $queryParams = [];
@@ -1632,7 +1587,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListOnDemandResourceRatingsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListOnDemandResourceRatingsRequest');
     }
 
@@ -1654,7 +1608,6 @@ class BssintlClient extends Client
 
     public function listOrderDiscountsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/orders/customer-orders/order-discounts';
         $formParams = [];
         $queryParams = [];
@@ -1697,7 +1650,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListOrderDiscountsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListOrderDiscountsRequest');
     }
 
@@ -1719,7 +1671,6 @@ class BssintlClient extends Client
 
     public function listPayPerUseCustomerResourcesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/orders/suscriptions/resources/query';
         $formParams = [];
         $queryParams = [];
@@ -1762,7 +1713,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListPayPerUseCustomerResourcesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListPayPerUseCustomerResourcesRequest');
     }
 
@@ -1784,7 +1734,6 @@ class BssintlClient extends Client
 
     public function listPostpaidBillSumWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/bills/partner-bills/postpaid-bill-summary';
         $formParams = [];
         $queryParams = [];
@@ -1827,7 +1776,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListPostpaidBillSumResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListPostpaidBillSumRequest');
     }
 
@@ -1849,7 +1797,6 @@ class BssintlClient extends Client
 
     public function listRateOnPeriodDetailWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/bills/ratings/period-resources/subscribe-rate';
         $formParams = [];
         $queryParams = [];
@@ -1892,7 +1839,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListRateOnPeriodDetailResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListRateOnPeriodDetailRequest');
     }
 
@@ -1914,7 +1860,6 @@ class BssintlClient extends Client
 
     public function listResourceTypesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/products/resource-types';
         $formParams = [];
         $queryParams = [];
@@ -1936,7 +1881,7 @@ class BssintlClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['xLanguage'] !== null) {
-            $headerParams['x_language'] = $localVarParams['xLanguage'];
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1963,7 +1908,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListResourceTypesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListResourceTypesRequest');
     }
 
@@ -1985,7 +1929,6 @@ class BssintlClient extends Client
 
     public function listServiceResourcesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/products/service-resources';
         $formParams = [];
         $queryParams = [];
@@ -2010,7 +1953,7 @@ class BssintlClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['xLanguage'] !== null) {
-            $headerParams['x_language'] = $localVarParams['xLanguage'];
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2037,7 +1980,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListServiceResourcesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListServiceResourcesRequest');
     }
 
@@ -2059,7 +2001,6 @@ class BssintlClient extends Client
 
     public function listServiceTypesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/products/service-types';
         $formParams = [];
         $queryParams = [];
@@ -2081,7 +2022,7 @@ class BssintlClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['xLanguage'] !== null) {
-            $headerParams['x_language'] = $localVarParams['xLanguage'];
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2108,7 +2049,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListServiceTypesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListServiceTypesRequest');
     }
 
@@ -2130,7 +2070,6 @@ class BssintlClient extends Client
 
     public function listSubCustomerCouponsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/promotions/benefits/coupons';
         $formParams = [];
         $queryParams = [];
@@ -2200,7 +2139,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListSubCustomerCouponsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListSubCustomerCouponsRequest');
     }
 
@@ -2222,7 +2160,6 @@ class BssintlClient extends Client
 
     public function listSubCustomersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/partners/sub-customers/query';
         $formParams = [];
         $queryParams = [];
@@ -2265,7 +2202,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListSubCustomersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListSubCustomersRequest');
     }
 
@@ -2287,7 +2223,6 @@ class BssintlClient extends Client
 
     public function listUsageTypesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/products/usage-types';
         $formParams = [];
         $queryParams = [];
@@ -2312,7 +2247,7 @@ class BssintlClient extends Client
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['xLanguage'] !== null) {
-            $headerParams['x_language'] = $localVarParams['xLanguage'];
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2339,7 +2274,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListUsageTypesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListUsageTypesRequest');
     }
 
@@ -2361,7 +2295,6 @@ class BssintlClient extends Client
 
     public function payOrdersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/orders/customer-orders/pay';
         $formParams = [];
         $queryParams = [];
@@ -2404,7 +2337,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\PayOrdersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\PayOrdersRequest');
     }
 
@@ -2426,7 +2358,6 @@ class BssintlClient extends Client
 
     public function renewalResourcesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/orders/subscriptions/resources/renew';
         $formParams = [];
         $queryParams = [];
@@ -2469,7 +2400,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\RenewalResourcesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\RenewalResourcesRequest');
     }
 
@@ -2491,7 +2421,6 @@ class BssintlClient extends Client
 
     public function sendVerificationMessageCodeWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/bases/verificationcode/send';
         $formParams = [];
         $queryParams = [];
@@ -2534,7 +2463,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\SendVerificationMessageCodeResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\SendVerificationMessageCodeRequest');
     }
 
@@ -2556,7 +2484,6 @@ class BssintlClient extends Client
 
     public function showCustomerAccountBalancesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/accounts/customer-accounts/balances';
         $formParams = [];
         $queryParams = [];
@@ -2596,7 +2523,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowCustomerAccountBalancesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowCustomerAccountBalancesRequest');
     }
 
@@ -2618,7 +2544,6 @@ class BssintlClient extends Client
 
     public function showCustomerOrderDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/orders/customer-orders/details/{order_id}';
         $formParams = [];
         $queryParams = [];
@@ -2643,7 +2568,7 @@ class BssintlClient extends Client
             $queryParams['indirect_partner_id'] = $localVarParams['indirectPartnerId'];
         }
         if ($localVarParams['xLanguage'] !== null) {
-            $headerParams['x_language'] = $localVarParams['xLanguage'];
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
         if ($localVarParams['orderId'] !== null) {
             $pathParams['order_id'] = $localVarParams['orderId'];
@@ -2673,7 +2598,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowCustomerOrderDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowCustomerOrderDetailsRequest');
     }
 
@@ -2695,7 +2619,6 @@ class BssintlClient extends Client
 
     public function showRealnameAuthenticationReviewResultWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/customers/realname-auths/result';
         $formParams = [];
         $queryParams = [];
@@ -2738,7 +2661,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowRealnameAuthenticationReviewResultResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowRealnameAuthenticationReviewResultRequest');
     }
 
@@ -2760,7 +2682,6 @@ class BssintlClient extends Client
 
     public function showRefundOrderDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/orders/customer-orders/refund-orders';
         $formParams = [];
         $queryParams = [];
@@ -2803,7 +2724,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowRefundOrderDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowRefundOrderDetailsRequest');
     }
 
@@ -2825,7 +2745,6 @@ class BssintlClient extends Client
 
     public function showSubCustomerBudgetWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/partners/sub-customers/budget';
         $formParams = [];
         $queryParams = [];
@@ -2871,7 +2790,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowSubCustomerBudgetResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowSubCustomerBudgetRequest');
     }
 
@@ -2893,7 +2811,6 @@ class BssintlClient extends Client
 
     public function unfreezeSubCustomersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/partners/sub-customers/unfreeze';
         $formParams = [];
         $queryParams = [];
@@ -2936,7 +2853,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\UnfreezeSubCustomersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\UnfreezeSubCustomersRequest');
     }
 
@@ -2958,7 +2874,6 @@ class BssintlClient extends Client
 
     public function updatePeriodToOnDemandWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/orders/subscriptions/resources/to-on-demand';
         $formParams = [];
         $queryParams = [];
@@ -3001,7 +2916,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\UpdatePeriodToOnDemandResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\UpdatePeriodToOnDemandRequest');
     }
 
@@ -3023,7 +2937,6 @@ class BssintlClient extends Client
 
     public function updateSubCustomerBudgetWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/partners/sub-customers/budget';
         $formParams = [];
         $queryParams = [];
@@ -3066,7 +2979,6 @@ class BssintlClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\UpdateSubCustomerBudgetResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\UpdateSubCustomerBudgetRequest');
     }
 
@@ -3080,7 +2992,6 @@ class BssintlClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -3093,7 +3004,6 @@ class BssintlClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

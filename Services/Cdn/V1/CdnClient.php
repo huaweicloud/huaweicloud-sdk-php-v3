@@ -43,7 +43,6 @@ class CdnClient extends Client
 
     public function batchDeleteTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/configuration/tags/batch-delete';
         $formParams = [];
         $queryParams = [];
@@ -86,7 +85,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\BatchDeleteTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\BatchDeleteTagsRequest');
     }
 
@@ -108,7 +106,6 @@ class CdnClient extends Client
 
     public function createDomainWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains';
         $formParams = [];
         $queryParams = [];
@@ -151,7 +148,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\CreateDomainResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\CreateDomainRequest');
     }
 
@@ -173,7 +169,6 @@ class CdnClient extends Client
 
     public function createPreheatingTasksWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/content/preheating-tasks';
         $formParams = [];
         $queryParams = [];
@@ -219,7 +214,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\CreatePreheatingTasksResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\CreatePreheatingTasksRequest');
     }
 
@@ -241,7 +235,6 @@ class CdnClient extends Client
 
     public function createRefreshTasksWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/content/refresh-tasks';
         $formParams = [];
         $queryParams = [];
@@ -287,7 +280,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\CreateRefreshTasksResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\CreateRefreshTasksRequest');
     }
 
@@ -309,7 +301,6 @@ class CdnClient extends Client
 
     public function createTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/configuration/tags';
         $formParams = [];
         $queryParams = [];
@@ -352,7 +343,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\CreateTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\CreateTagsRequest');
     }
 
@@ -374,7 +364,6 @@ class CdnClient extends Client
 
     public function deleteDomainWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}';
         $formParams = [];
         $queryParams = [];
@@ -420,7 +409,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\DeleteDomainResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\DeleteDomainRequest');
     }
 
@@ -442,7 +430,6 @@ class CdnClient extends Client
 
     public function disableDomainWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/disable';
         $formParams = [];
         $queryParams = [];
@@ -488,7 +475,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\DisableDomainResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\DisableDomainRequest');
     }
 
@@ -510,7 +496,6 @@ class CdnClient extends Client
 
     public function enableDomainWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/enable';
         $formParams = [];
         $queryParams = [];
@@ -556,7 +541,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\EnableDomainResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\EnableDomainRequest');
     }
 
@@ -578,7 +562,6 @@ class CdnClient extends Client
 
     public function listDomainsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains';
         $formParams = [];
         $queryParams = [];
@@ -639,7 +622,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ListDomainsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ListDomainsRequest');
     }
 
@@ -661,7 +643,6 @@ class CdnClient extends Client
 
     public function showBlackWhiteListWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/ip-acl';
         $formParams = [];
         $queryParams = [];
@@ -707,7 +688,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowBlackWhiteListResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowBlackWhiteListRequest');
     }
 
@@ -729,7 +709,6 @@ class CdnClient extends Client
 
     public function showCacheRulesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/cache';
         $formParams = [];
         $queryParams = [];
@@ -775,7 +754,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowCacheRulesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowCacheRulesRequest');
     }
 
@@ -797,7 +775,6 @@ class CdnClient extends Client
 
     public function showCertificatesHttpsInfoWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/https-certificate-info';
         $formParams = [];
         $queryParams = [];
@@ -852,7 +829,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowCertificatesHttpsInfoResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowCertificatesHttpsInfoRequest');
     }
 
@@ -874,7 +850,6 @@ class CdnClient extends Client
 
     public function showDomainDetailWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/detail';
         $formParams = [];
         $queryParams = [];
@@ -920,7 +895,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowDomainDetailResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowDomainDetailRequest');
     }
 
@@ -942,7 +916,6 @@ class CdnClient extends Client
 
     public function showDomainFullConfigWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.1/cdn/configuration/domains/{domain_name}/configs';
         $formParams = [];
         $queryParams = [];
@@ -988,7 +961,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowDomainFullConfigResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowDomainFullConfigRequest');
     }
 
@@ -1018,7 +990,6 @@ class CdnClient extends Client
 
     public function showDomainItemDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/statistics/domain-item-details';
         $formParams = [];
         $queryParams = [];
@@ -1076,7 +1047,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowDomainItemDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowDomainItemDetailsRequest');
     }
 
@@ -1109,7 +1079,6 @@ class CdnClient extends Client
 
     public function showDomainItemLocationDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/statistics/domain-item-location-details';
         $formParams = [];
         $queryParams = [];
@@ -1170,7 +1139,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowDomainItemLocationDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowDomainItemLocationDetailsRequest');
     }
 
@@ -1198,7 +1166,6 @@ class CdnClient extends Client
 
     public function showDomainLocationStatsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/statistics/domain-location-stats';
         $formParams = [];
         $queryParams = [];
@@ -1271,7 +1238,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowDomainLocationStatsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowDomainLocationStatsRequest');
     }
 
@@ -1299,7 +1265,6 @@ class CdnClient extends Client
 
     public function showDomainStatsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/statistics/domain-stats';
         $formParams = [];
         $queryParams = [];
@@ -1366,7 +1331,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowDomainStatsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowDomainStatsRequest');
     }
 
@@ -1388,7 +1352,6 @@ class CdnClient extends Client
 
     public function showHistoryTaskDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/historytasks/{history_tasks_id}/detail';
         $formParams = [];
         $queryParams = [];
@@ -1449,7 +1412,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowHistoryTaskDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowHistoryTaskDetailsRequest');
     }
 
@@ -1471,7 +1433,6 @@ class CdnClient extends Client
 
     public function showHistoryTasksWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/historytasks';
         $formParams = [];
         $queryParams = [];
@@ -1538,7 +1499,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowHistoryTasksResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowHistoryTasksRequest');
     }
 
@@ -1560,7 +1520,6 @@ class CdnClient extends Client
 
     public function showHttpInfoWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/https-info';
         $formParams = [];
         $queryParams = [];
@@ -1606,7 +1565,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowHttpInfoResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowHttpInfoRequest');
     }
 
@@ -1628,7 +1586,6 @@ class CdnClient extends Client
 
     public function showIpInfoWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/ip-info';
         $formParams = [];
         $queryParams = [];
@@ -1674,7 +1631,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowIpInfoResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowIpInfoRequest');
     }
 
@@ -1696,7 +1652,6 @@ class CdnClient extends Client
 
     public function showLogsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/logs';
         $formParams = [];
         $queryParams = [];
@@ -1751,7 +1706,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowLogsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowLogsRequest');
     }
 
@@ -1773,7 +1727,6 @@ class CdnClient extends Client
 
     public function showOriginHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/originhost';
         $formParams = [];
         $queryParams = [];
@@ -1819,7 +1772,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowOriginHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowOriginHostRequest');
     }
 
@@ -1841,7 +1793,6 @@ class CdnClient extends Client
 
     public function showQuotaWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/quota';
         $formParams = [];
         $queryParams = [];
@@ -1881,7 +1832,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowQuotaResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowQuotaRequest');
     }
 
@@ -1903,7 +1853,6 @@ class CdnClient extends Client
 
     public function showReferWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/referer';
         $formParams = [];
         $queryParams = [];
@@ -1949,7 +1898,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowReferResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowReferRequest');
     }
 
@@ -1971,7 +1919,6 @@ class CdnClient extends Client
 
     public function showResponseHeaderWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/response-header';
         $formParams = [];
         $queryParams = [];
@@ -2017,7 +1964,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowResponseHeaderResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowResponseHeaderRequest');
     }
 
@@ -2039,7 +1985,6 @@ class CdnClient extends Client
 
     public function showTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/configuration/tags';
         $formParams = [];
         $queryParams = [];
@@ -2082,7 +2027,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowTagsRequest');
     }
 
@@ -2110,7 +2054,6 @@ class CdnClient extends Client
 
     public function showTopUrlWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/statistics/top-url';
         $formParams = [];
         $queryParams = [];
@@ -2168,7 +2111,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowTopUrlResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowTopUrlRequest');
     }
 
@@ -2190,7 +2132,6 @@ class CdnClient extends Client
 
     public function showUrlTaskInfoWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/contentgateway/url-tasks';
         $formParams = [];
         $queryParams = [];
@@ -2254,7 +2195,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowUrlTaskInfoResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\ShowUrlTaskInfoRequest');
     }
 
@@ -2276,7 +2216,6 @@ class CdnClient extends Client
 
     public function updateBlackWhiteListWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/ip-acl';
         $formParams = [];
         $queryParams = [];
@@ -2325,7 +2264,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateBlackWhiteListResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateBlackWhiteListRequest');
     }
 
@@ -2347,7 +2285,6 @@ class CdnClient extends Client
 
     public function updateCacheRulesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/cache';
         $formParams = [];
         $queryParams = [];
@@ -2396,7 +2333,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateCacheRulesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateCacheRulesRequest');
     }
 
@@ -2418,7 +2354,6 @@ class CdnClient extends Client
 
     public function updateDomainFullConfigWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.1/cdn/configuration/domains/{domain_name}/configs';
         $formParams = [];
         $queryParams = [];
@@ -2467,7 +2402,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateDomainFullConfigResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateDomainFullConfigRequest');
     }
 
@@ -2489,7 +2423,6 @@ class CdnClient extends Client
 
     public function updateDomainMultiCertificatesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/config-https-info';
         $formParams = [];
         $queryParams = [];
@@ -2535,7 +2468,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateDomainMultiCertificatesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateDomainMultiCertificatesRequest');
     }
 
@@ -2557,7 +2489,6 @@ class CdnClient extends Client
 
     public function updateDomainOriginWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/origin';
         $formParams = [];
         $queryParams = [];
@@ -2606,7 +2537,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateDomainOriginResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateDomainOriginRequest');
     }
 
@@ -2628,7 +2558,6 @@ class CdnClient extends Client
 
     public function updateFollow302SwitchWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/follow302-switch';
         $formParams = [];
         $queryParams = [];
@@ -2677,7 +2606,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateFollow302SwitchResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateFollow302SwitchRequest');
     }
 
@@ -2699,7 +2627,6 @@ class CdnClient extends Client
 
     public function updateHttpsInfoWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/https-info';
         $formParams = [];
         $queryParams = [];
@@ -2748,7 +2675,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateHttpsInfoResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateHttpsInfoRequest');
     }
 
@@ -2770,7 +2696,6 @@ class CdnClient extends Client
 
     public function updateOriginHostWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/originhost';
         $formParams = [];
         $queryParams = [];
@@ -2819,7 +2744,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateOriginHostResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateOriginHostRequest');
     }
 
@@ -2841,7 +2765,6 @@ class CdnClient extends Client
 
     public function updatePrivateBucketAccessWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/private-bucket-access';
         $formParams = [];
         $queryParams = [];
@@ -2890,7 +2813,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdatePrivateBucketAccessResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdatePrivateBucketAccessRequest');
     }
 
@@ -2914,7 +2836,6 @@ class CdnClient extends Client
 
     public function updateRangeSwitchWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/range-switch';
         $formParams = [];
         $queryParams = [];
@@ -2963,7 +2884,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateRangeSwitchResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateRangeSwitchRequest');
     }
 
@@ -2985,7 +2905,6 @@ class CdnClient extends Client
 
     public function updateReferWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/referer';
         $formParams = [];
         $queryParams = [];
@@ -3034,7 +2953,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateReferResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateReferRequest');
     }
 
@@ -3056,7 +2974,6 @@ class CdnClient extends Client
 
     public function updateResponseHeaderWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/cdn/domains/{domain_id}/response-header';
         $formParams = [];
         $queryParams = [];
@@ -3105,7 +3022,6 @@ class CdnClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateResponseHeaderResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V1\Model\UpdateResponseHeaderRequest');
     }
 
@@ -3119,7 +3035,6 @@ class CdnClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -3132,7 +3047,6 @@ class CdnClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

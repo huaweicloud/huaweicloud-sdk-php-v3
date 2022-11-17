@@ -43,7 +43,6 @@ class VpcClient extends Client
 
     public function batchCreateSubNetworkInterfaceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/sub-network-interfaces/batch-create';
         $formParams = [];
         $queryParams = [];
@@ -89,7 +88,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchCreateSubNetworkInterfaceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchCreateSubNetworkInterfaceRequest');
     }
 
@@ -111,7 +109,6 @@ class VpcClient extends Client
 
     public function createSecurityGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/security-groups';
         $formParams = [];
         $queryParams = [];
@@ -157,7 +154,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateSecurityGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateSecurityGroupRequest');
     }
 
@@ -179,7 +175,6 @@ class VpcClient extends Client
 
     public function createSecurityGroupRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/security-group-rules';
         $formParams = [];
         $queryParams = [];
@@ -225,7 +220,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateSecurityGroupRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateSecurityGroupRuleRequest');
     }
 
@@ -247,7 +241,6 @@ class VpcClient extends Client
 
     public function createSubNetworkInterfaceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/sub-network-interfaces';
         $formParams = [];
         $queryParams = [];
@@ -293,7 +286,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateSubNetworkInterfaceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateSubNetworkInterfaceRequest');
     }
 
@@ -315,7 +307,6 @@ class VpcClient extends Client
 
     public function deleteSecurityGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/security-groups/{security_group_id}';
         $formParams = [];
         $queryParams = [];
@@ -361,7 +352,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteSecurityGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteSecurityGroupRequest');
     }
 
@@ -383,7 +373,6 @@ class VpcClient extends Client
 
     public function deleteSecurityGroupRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/security-group-rules/{security_group_rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -429,7 +418,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteSecurityGroupRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteSecurityGroupRuleRequest');
     }
 
@@ -451,7 +439,6 @@ class VpcClient extends Client
 
     public function deleteSubNetworkInterfaceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/sub-network-interfaces/{sub_network_interface_id}';
         $formParams = [];
         $queryParams = [];
@@ -497,7 +484,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteSubNetworkInterfaceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteSubNetworkInterfaceRequest');
     }
 
@@ -519,7 +505,6 @@ class VpcClient extends Client
 
     public function listSecurityGroupRulesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/security-group-rules';
         $formParams = [];
         $queryParams = [];
@@ -589,7 +574,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSecurityGroupRulesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSecurityGroupRulesRequest');
     }
 
@@ -611,7 +595,6 @@ class VpcClient extends Client
 
     public function listSecurityGroupsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/security-groups';
         $formParams = [];
         $queryParams = [];
@@ -672,7 +655,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSecurityGroupsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSecurityGroupsRequest');
     }
 
@@ -694,7 +676,6 @@ class VpcClient extends Client
 
     public function listSubNetworkInterfacesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/sub-network-interfaces';
         $formParams = [];
         $queryParams = [];
@@ -764,7 +745,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSubNetworkInterfacesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSubNetworkInterfacesRequest');
     }
 
@@ -786,7 +766,6 @@ class VpcClient extends Client
 
     public function migrateSubNetworkInterfaceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/sub-network-interfaces/migrate';
         $formParams = [];
         $queryParams = [];
@@ -832,7 +811,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\MigrateSubNetworkInterfaceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\MigrateSubNetworkInterfaceRequest');
     }
 
@@ -854,7 +832,6 @@ class VpcClient extends Client
 
     public function showSecurityGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/security-groups/{security_group_id}';
         $formParams = [];
         $queryParams = [];
@@ -900,7 +877,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSecurityGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSecurityGroupRequest');
     }
 
@@ -922,7 +898,6 @@ class VpcClient extends Client
 
     public function showSecurityGroupRuleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/security-group-rules/{security_group_rule_id}';
         $formParams = [];
         $queryParams = [];
@@ -968,7 +943,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSecurityGroupRuleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSecurityGroupRuleRequest');
     }
 
@@ -990,7 +964,6 @@ class VpcClient extends Client
 
     public function showSubNetworkInterfaceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/sub-network-interfaces/{sub_network_interface_id}';
         $formParams = [];
         $queryParams = [];
@@ -1036,7 +1009,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSubNetworkInterfaceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSubNetworkInterfaceRequest');
     }
 
@@ -1058,7 +1030,6 @@ class VpcClient extends Client
 
     public function showSubNetworkInterfacesQuantityWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/sub-network-interfaces/count';
         $formParams = [];
         $queryParams = [];
@@ -1101,7 +1072,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSubNetworkInterfacesQuantityResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSubNetworkInterfacesQuantityRequest');
     }
 
@@ -1123,7 +1093,6 @@ class VpcClient extends Client
 
     public function updateSecurityGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/security-groups/{security_group_id}';
         $formParams = [];
         $queryParams = [];
@@ -1172,7 +1141,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateSecurityGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateSecurityGroupRequest');
     }
 
@@ -1194,7 +1162,6 @@ class VpcClient extends Client
 
     public function updateSubNetworkInterfaceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/sub-network-interfaces/{sub_network_interface_id}';
         $formParams = [];
         $queryParams = [];
@@ -1243,7 +1210,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateSubNetworkInterfaceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateSubNetworkInterfaceRequest');
     }
 
@@ -1265,7 +1231,6 @@ class VpcClient extends Client
 
     public function createAddressGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/address-groups';
         $formParams = [];
         $queryParams = [];
@@ -1311,7 +1276,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateAddressGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateAddressGroupRequest');
     }
 
@@ -1333,7 +1297,6 @@ class VpcClient extends Client
 
     public function deleteAddressGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/address-groups/{address_group_id}';
         $formParams = [];
         $queryParams = [];
@@ -1379,7 +1342,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteAddressGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteAddressGroupRequest');
     }
 
@@ -1401,7 +1363,6 @@ class VpcClient extends Client
 
     public function deleteIpAddressGroupForceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/address-groups/{address_group_id}/force';
         $formParams = [];
         $queryParams = [];
@@ -1447,7 +1408,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteIpAddressGroupForceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteIpAddressGroupForceRequest');
     }
 
@@ -1469,7 +1429,6 @@ class VpcClient extends Client
 
     public function listAddressGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/address-groups';
         $formParams = [];
         $queryParams = [];
@@ -1530,7 +1489,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListAddressGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListAddressGroupRequest');
     }
 
@@ -1552,7 +1510,6 @@ class VpcClient extends Client
 
     public function showAddressGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/address-groups/{address_group_id}';
         $formParams = [];
         $queryParams = [];
@@ -1598,7 +1555,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowAddressGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowAddressGroupRequest');
     }
 
@@ -1620,7 +1576,6 @@ class VpcClient extends Client
 
     public function updateAddressGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/address-groups/{address_group_id}';
         $formParams = [];
         $queryParams = [];
@@ -1669,7 +1624,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateAddressGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateAddressGroupRequest');
     }
 
@@ -1691,7 +1645,6 @@ class VpcClient extends Client
 
     public function addVpcExtendCidrWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/vpcs/{vpc_id}/add-extend-cidr';
         $formParams = [];
         $queryParams = [];
@@ -1740,7 +1693,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\AddVpcExtendCidrResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\AddVpcExtendCidrRequest');
     }
 
@@ -1762,7 +1714,6 @@ class VpcClient extends Client
 
     public function createVpcWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/vpcs';
         $formParams = [];
         $queryParams = [];
@@ -1808,7 +1759,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateVpcResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateVpcRequest');
     }
 
@@ -1830,7 +1780,6 @@ class VpcClient extends Client
 
     public function deleteVpcWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/vpcs/{vpc_id}';
         $formParams = [];
         $queryParams = [];
@@ -1876,7 +1825,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteVpcResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteVpcRequest');
     }
 
@@ -1898,7 +1846,6 @@ class VpcClient extends Client
 
     public function listVpcsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/vpcs';
         $formParams = [];
         $queryParams = [];
@@ -1959,7 +1906,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListVpcsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListVpcsRequest');
     }
 
@@ -1981,7 +1927,6 @@ class VpcClient extends Client
 
     public function removeVpcExtendCidrWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/vpcs/{vpc_id}/remove-extend-cidr';
         $formParams = [];
         $queryParams = [];
@@ -2030,7 +1975,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\RemoveVpcExtendCidrResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\RemoveVpcExtendCidrRequest');
     }
 
@@ -2052,7 +1996,6 @@ class VpcClient extends Client
 
     public function showVpcWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/vpcs/{vpc_id}';
         $formParams = [];
         $queryParams = [];
@@ -2098,7 +2041,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowVpcResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowVpcRequest');
     }
 
@@ -2120,7 +2062,6 @@ class VpcClient extends Client
 
     public function updateVpcWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/vpc/vpcs/{vpc_id}';
         $formParams = [];
         $queryParams = [];
@@ -2169,7 +2110,6 @@ class VpcClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateVpcResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateVpcRequest');
     }
 
@@ -2183,7 +2123,6 @@ class VpcClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -2196,7 +2135,6 @@ class VpcClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

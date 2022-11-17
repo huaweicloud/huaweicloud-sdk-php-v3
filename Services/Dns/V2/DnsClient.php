@@ -43,7 +43,6 @@ class DnsClient extends Client
 
     public function createCustomLineWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/customlines';
         $formParams = [];
         $queryParams = [];
@@ -86,7 +85,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateCustomLineResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateCustomLineRequest');
     }
 
@@ -108,7 +106,6 @@ class DnsClient extends Client
 
     public function deleteCustomLineWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/customlines/{line_id}';
         $formParams = [];
         $queryParams = [];
@@ -151,7 +148,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteCustomLineResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteCustomLineRequest');
     }
 
@@ -173,7 +169,6 @@ class DnsClient extends Client
 
     public function listApiVersionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/';
         $formParams = [];
         $queryParams = [];
@@ -213,7 +208,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListApiVersionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListApiVersionsRequest');
     }
 
@@ -235,7 +229,6 @@ class DnsClient extends Client
 
     public function listCustomLineWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/customlines';
         $formParams = [];
         $queryParams = [];
@@ -290,7 +283,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListCustomLineResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListCustomLineRequest');
     }
 
@@ -312,7 +304,6 @@ class DnsClient extends Client
 
     public function listNameServersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/nameservers';
         $formParams = [];
         $queryParams = [];
@@ -358,7 +349,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListNameServersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListNameServersRequest');
     }
 
@@ -380,7 +370,6 @@ class DnsClient extends Client
 
     public function showApiInfoWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/{version}';
         $formParams = [];
         $queryParams = [];
@@ -423,7 +412,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowApiInfoResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowApiInfoRequest');
     }
 
@@ -445,7 +433,6 @@ class DnsClient extends Client
 
     public function showDomainQuotaWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/quotamg/dns/quotas';
         $formParams = [];
         $queryParams = [];
@@ -488,7 +475,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowDomainQuotaResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowDomainQuotaRequest');
     }
 
@@ -510,7 +496,6 @@ class DnsClient extends Client
 
     public function updateCustomLineWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/customlines/{line_id}';
         $formParams = [];
         $queryParams = [];
@@ -556,7 +541,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\UpdateCustomLineResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\UpdateCustomLineRequest');
     }
 
@@ -578,7 +562,6 @@ class DnsClient extends Client
 
     public function createEipRecordSetWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/reverse/floatingips/{region}:{floatingip_id}';
         $formParams = [];
         $queryParams = [];
@@ -627,7 +610,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateEipRecordSetResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateEipRecordSetRequest');
     }
 
@@ -649,7 +631,6 @@ class DnsClient extends Client
 
     public function listPtrRecordsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/reverse/floatingips';
         $formParams = [];
         $queryParams = [];
@@ -707,7 +688,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListPtrRecordsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListPtrRecordsRequest');
     }
 
@@ -729,7 +709,6 @@ class DnsClient extends Client
 
     public function restorePtrRecordWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/reverse/floatingips/{region}:{floatingip_id}';
         $formParams = [];
         $queryParams = [];
@@ -778,7 +757,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\RestorePtrRecordResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\RestorePtrRecordRequest');
     }
 
@@ -800,7 +778,6 @@ class DnsClient extends Client
 
     public function showPtrRecordSetWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/reverse/floatingips/{region}:{floatingip_id}';
         $formParams = [];
         $queryParams = [];
@@ -846,7 +823,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowPtrRecordSetResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowPtrRecordSetRequest');
     }
 
@@ -868,7 +844,6 @@ class DnsClient extends Client
 
     public function updatePtrRecordWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/reverse/floatingips/{region}:{floatingip_id}';
         $formParams = [];
         $queryParams = [];
@@ -917,7 +892,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\UpdatePtrRecordResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\UpdatePtrRecordRequest');
     }
 
@@ -940,7 +914,6 @@ class DnsClient extends Client
 
     public function batchDeleteRecordSetWithLineWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/zones/{zone_id}/recordsets';
         $formParams = [];
         $queryParams = [];
@@ -986,7 +959,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRecordSetWithLineResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRecordSetWithLineRequest');
     }
 
@@ -1009,7 +981,6 @@ class DnsClient extends Client
 
     public function batchUpdateRecordSetWithLineWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/zones/{zone_id}/recordsets';
         $formParams = [];
         $queryParams = [];
@@ -1055,7 +1026,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchUpdateRecordSetWithLineRequest');
     }
 
@@ -1077,7 +1047,6 @@ class DnsClient extends Client
 
     public function createRecordSetWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}/recordsets';
         $formParams = [];
         $queryParams = [];
@@ -1123,7 +1092,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetRequest');
     }
 
@@ -1145,7 +1113,6 @@ class DnsClient extends Client
 
     public function createRecordSetWithBatchLinesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/zones/{zone_id}/recordsets/batch/lines';
         $formParams = [];
         $queryParams = [];
@@ -1191,7 +1158,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithBatchLinesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithBatchLinesRequest');
     }
 
@@ -1213,7 +1179,6 @@ class DnsClient extends Client
 
     public function createRecordSetWithLineWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/zones/{zone_id}/recordsets';
         $formParams = [];
         $queryParams = [];
@@ -1259,7 +1224,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithLineResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithLineRequest');
     }
 
@@ -1281,7 +1245,6 @@ class DnsClient extends Client
 
     public function deleteRecordSetWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}/recordsets/{recordset_id}';
         $formParams = [];
         $queryParams = [];
@@ -1327,7 +1290,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteRecordSetResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteRecordSetRequest');
     }
 
@@ -1349,7 +1311,6 @@ class DnsClient extends Client
 
     public function deleteRecordSetsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/zones/{zone_id}/recordsets/{recordset_id}';
         $formParams = [];
         $queryParams = [];
@@ -1395,7 +1356,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteRecordSetsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteRecordSetsRequest');
     }
 
@@ -1417,7 +1377,6 @@ class DnsClient extends Client
 
     public function listRecordSetsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/recordsets';
         $formParams = [];
         $queryParams = [];
@@ -1493,7 +1452,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListRecordSetsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListRecordSetsRequest');
     }
 
@@ -1515,7 +1473,6 @@ class DnsClient extends Client
 
     public function listRecordSetsByZoneWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}/recordsets';
         $formParams = [];
         $queryParams = [];
@@ -1588,7 +1545,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListRecordSetsByZoneResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListRecordSetsByZoneRequest');
     }
 
@@ -1610,7 +1566,6 @@ class DnsClient extends Client
 
     public function listRecordSetsWithLineWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/recordsets';
         $formParams = [];
         $queryParams = [];
@@ -1695,7 +1650,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListRecordSetsWithLineResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListRecordSetsWithLineRequest');
     }
 
@@ -1717,7 +1671,6 @@ class DnsClient extends Client
 
     public function setRecordSetsStatusWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/recordsets/{recordset_id}/statuses/set';
         $formParams = [];
         $queryParams = [];
@@ -1763,7 +1716,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\SetRecordSetsStatusResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\SetRecordSetsStatusRequest');
     }
 
@@ -1785,7 +1737,6 @@ class DnsClient extends Client
 
     public function showRecordSetWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}/recordsets/{recordset_id}';
         $formParams = [];
         $queryParams = [];
@@ -1831,7 +1782,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowRecordSetResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowRecordSetRequest');
     }
 
@@ -1853,7 +1803,6 @@ class DnsClient extends Client
 
     public function showRecordSetByZoneWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/zones/{zone_id}/recordsets';
         $formParams = [];
         $queryParams = [];
@@ -1932,7 +1881,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowRecordSetByZoneResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowRecordSetByZoneRequest');
     }
 
@@ -1954,7 +1902,6 @@ class DnsClient extends Client
 
     public function showRecordSetWithLineWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/zones/{zone_id}/recordsets/{recordset_id}';
         $formParams = [];
         $queryParams = [];
@@ -2000,7 +1947,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowRecordSetWithLineResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowRecordSetWithLineRequest');
     }
 
@@ -2022,7 +1968,6 @@ class DnsClient extends Client
 
     public function updateRecordSetWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}/recordsets/{recordset_id}';
         $formParams = [];
         $queryParams = [];
@@ -2071,7 +2016,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\UpdateRecordSetResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\UpdateRecordSetRequest');
     }
 
@@ -2093,7 +2037,6 @@ class DnsClient extends Client
 
     public function updateRecordSetsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/zones/{zone_id}/recordsets/{recordset_id}';
         $formParams = [];
         $queryParams = [];
@@ -2142,7 +2085,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\UpdateRecordSetsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\UpdateRecordSetsRequest');
     }
 
@@ -2164,7 +2106,6 @@ class DnsClient extends Client
 
     public function batchCreateTagWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/{resource_type}/{resource_id}/tags/action';
         $formParams = [];
         $queryParams = [];
@@ -2213,7 +2154,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchCreateTagResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchCreateTagRequest');
     }
 
@@ -2235,7 +2175,6 @@ class DnsClient extends Client
 
     public function createTagWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/{resource_type}/{resource_id}/tags';
         $formParams = [];
         $queryParams = [];
@@ -2284,7 +2223,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateTagResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateTagRequest');
     }
 
@@ -2306,7 +2244,6 @@ class DnsClient extends Client
 
     public function deleteTagWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/{resource_type}/{resource_id}/tags/{key}';
         $formParams = [];
         $queryParams = [];
@@ -2355,7 +2292,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteTagResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteTagRequest');
     }
 
@@ -2377,7 +2313,6 @@ class DnsClient extends Client
 
     public function listTagWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/{resource_type}/resource_instances/action';
         $formParams = [];
         $queryParams = [];
@@ -2423,7 +2358,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListTagResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListTagRequest');
     }
 
@@ -2445,7 +2379,6 @@ class DnsClient extends Client
 
     public function listTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/{resource_type}/tags';
         $formParams = [];
         $queryParams = [];
@@ -2488,7 +2421,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListTagsRequest');
     }
 
@@ -2510,7 +2442,6 @@ class DnsClient extends Client
 
     public function showResourceTagWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/{resource_type}/{resource_id}/tags';
         $formParams = [];
         $queryParams = [];
@@ -2556,7 +2487,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowResourceTagResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowResourceTagRequest');
     }
 
@@ -2578,7 +2508,6 @@ class DnsClient extends Client
 
     public function associateRouterWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}/associaterouter';
         $formParams = [];
         $queryParams = [];
@@ -2624,7 +2553,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\AssociateRouterResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\AssociateRouterRequest');
     }
 
@@ -2646,7 +2574,6 @@ class DnsClient extends Client
 
     public function createPrivateZoneWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones';
         $formParams = [];
         $queryParams = [];
@@ -2689,7 +2616,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreatePrivateZoneResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreatePrivateZoneRequest');
     }
 
@@ -2711,7 +2637,6 @@ class DnsClient extends Client
 
     public function createPublicZoneWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones';
         $formParams = [];
         $queryParams = [];
@@ -2754,7 +2679,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreatePublicZoneResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreatePublicZoneRequest');
     }
 
@@ -2776,7 +2700,6 @@ class DnsClient extends Client
 
     public function deletePrivateZoneWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}';
         $formParams = [];
         $queryParams = [];
@@ -2819,7 +2742,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DeletePrivateZoneResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DeletePrivateZoneRequest');
     }
 
@@ -2841,7 +2763,6 @@ class DnsClient extends Client
 
     public function deletePublicZoneWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}';
         $formParams = [];
         $queryParams = [];
@@ -2884,7 +2805,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DeletePublicZoneResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DeletePublicZoneRequest');
     }
 
@@ -2906,7 +2826,6 @@ class DnsClient extends Client
 
     public function disassociateRouterWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}/disassociaterouter';
         $formParams = [];
         $queryParams = [];
@@ -2952,7 +2871,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DisassociateRouterResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DisassociateRouterRequest');
     }
 
@@ -2974,7 +2892,6 @@ class DnsClient extends Client
 
     public function listPrivateZonesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones';
         $formParams = [];
         $queryParams = [];
@@ -3038,7 +2955,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListPrivateZonesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListPrivateZonesRequest');
     }
 
@@ -3060,7 +2976,6 @@ class DnsClient extends Client
 
     public function listPublicZonesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones';
         $formParams = [];
         $queryParams = [];
@@ -3124,7 +3039,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListPublicZonesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListPublicZonesRequest');
     }
 
@@ -3146,7 +3060,6 @@ class DnsClient extends Client
 
     public function showPrivateZoneWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}';
         $formParams = [];
         $queryParams = [];
@@ -3189,7 +3102,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowPrivateZoneResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowPrivateZoneRequest');
     }
 
@@ -3211,7 +3123,6 @@ class DnsClient extends Client
 
     public function showPrivateZoneNameServerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}/nameservers';
         $formParams = [];
         $queryParams = [];
@@ -3254,7 +3165,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowPrivateZoneNameServerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowPrivateZoneNameServerRequest');
     }
 
@@ -3276,7 +3186,6 @@ class DnsClient extends Client
 
     public function showPublicZoneWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}';
         $formParams = [];
         $queryParams = [];
@@ -3319,7 +3228,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowPublicZoneResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowPublicZoneRequest');
     }
 
@@ -3341,7 +3249,6 @@ class DnsClient extends Client
 
     public function showPublicZoneNameServerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}/nameservers';
         $formParams = [];
         $queryParams = [];
@@ -3384,7 +3291,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowPublicZoneNameServerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowPublicZoneNameServerRequest');
     }
 
@@ -3406,7 +3312,6 @@ class DnsClient extends Client
 
     public function updatePrivateZoneWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}';
         $formParams = [];
         $queryParams = [];
@@ -3452,7 +3357,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\UpdatePrivateZoneResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\UpdatePrivateZoneRequest');
     }
 
@@ -3474,7 +3378,6 @@ class DnsClient extends Client
 
     public function updatePublicZoneWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}';
         $formParams = [];
         $queryParams = [];
@@ -3520,7 +3423,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\UpdatePublicZoneResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\UpdatePublicZoneRequest');
     }
 
@@ -3542,7 +3444,6 @@ class DnsClient extends Client
 
     public function updatePublicZoneStatusWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/zones/{zone_id}/statuses';
         $formParams = [];
         $queryParams = [];
@@ -3588,7 +3489,6 @@ class DnsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\UpdatePublicZoneStatusResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\UpdatePublicZoneStatusRequest');
     }
 
@@ -3602,7 +3502,6 @@ class DnsClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -3615,7 +3514,6 @@ class DnsClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

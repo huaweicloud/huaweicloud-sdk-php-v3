@@ -43,7 +43,6 @@ class GaClient extends Client
 
     public function createAcceleratorWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/accelerators';
         $formParams = [];
         $queryParams = [];
@@ -86,7 +85,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\CreateAcceleratorResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\CreateAcceleratorRequest');
     }
 
@@ -108,7 +106,6 @@ class GaClient extends Client
 
     public function deleteAcceleratorWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/accelerators/{accelerator_id}';
         $formParams = [];
         $queryParams = [];
@@ -151,7 +148,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\DeleteAcceleratorResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\DeleteAcceleratorRequest');
     }
 
@@ -173,7 +169,6 @@ class GaClient extends Client
 
     public function listAcceleratorsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/accelerators';
         $formParams = [];
         $queryParams = [];
@@ -234,7 +229,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\ListAcceleratorsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\ListAcceleratorsRequest');
     }
 
@@ -256,7 +250,6 @@ class GaClient extends Client
 
     public function showAcceleratorWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/accelerators/{accelerator_id}';
         $formParams = [];
         $queryParams = [];
@@ -299,7 +292,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\ShowAcceleratorResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\ShowAcceleratorRequest');
     }
 
@@ -321,7 +313,6 @@ class GaClient extends Client
 
     public function updateAcceleratorWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/accelerators/{accelerator_id}';
         $formParams = [];
         $queryParams = [];
@@ -367,7 +358,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\UpdateAcceleratorResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\UpdateAcceleratorRequest');
     }
 
@@ -389,7 +379,6 @@ class GaClient extends Client
 
     public function createEndpointWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/endpoint-groups/{endpoint_group_id}/endpoints';
         $formParams = [];
         $queryParams = [];
@@ -435,7 +424,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\CreateEndpointResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\CreateEndpointRequest');
     }
 
@@ -457,7 +445,6 @@ class GaClient extends Client
 
     public function deleteEndpointWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/endpoint-groups/{endpoint_group_id}/endpoints/{endpoint_id}';
         $formParams = [];
         $queryParams = [];
@@ -503,7 +490,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\DeleteEndpointResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\DeleteEndpointRequest');
     }
 
@@ -525,7 +511,6 @@ class GaClient extends Client
 
     public function listEndpointsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/endpoint-groups/{endpoint_group_id}/endpoints';
         $formParams = [];
         $queryParams = [];
@@ -583,7 +568,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\ListEndpointsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\ListEndpointsRequest');
     }
 
@@ -605,7 +589,6 @@ class GaClient extends Client
 
     public function showEndpointWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/endpoint-groups/{endpoint_group_id}/endpoints/{endpoint_id}';
         $formParams = [];
         $queryParams = [];
@@ -651,7 +634,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\ShowEndpointResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\ShowEndpointRequest');
     }
 
@@ -673,7 +655,6 @@ class GaClient extends Client
 
     public function updateEndpointWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/endpoint-groups/{endpoint_group_id}/endpoints/{endpoint_id}';
         $formParams = [];
         $queryParams = [];
@@ -722,7 +703,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\UpdateEndpointResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\UpdateEndpointRequest');
     }
 
@@ -744,7 +724,6 @@ class GaClient extends Client
 
     public function createEndpointGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/endpoint-groups';
         $formParams = [];
         $queryParams = [];
@@ -787,7 +766,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\CreateEndpointGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\CreateEndpointGroupRequest');
     }
 
@@ -809,7 +787,6 @@ class GaClient extends Client
 
     public function deleteEndpointGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/endpoint-groups/{endpoint_group_id}';
         $formParams = [];
         $queryParams = [];
@@ -852,7 +829,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\DeleteEndpointGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\DeleteEndpointGroupRequest');
     }
 
@@ -874,7 +850,6 @@ class GaClient extends Client
 
     public function listEndpointGroupsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/endpoint-groups';
         $formParams = [];
         $queryParams = [];
@@ -935,7 +910,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\ListEndpointGroupsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\ListEndpointGroupsRequest');
     }
 
@@ -957,7 +931,6 @@ class GaClient extends Client
 
     public function showEndpointGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/endpoint-groups/{endpoint_group_id}';
         $formParams = [];
         $queryParams = [];
@@ -1000,7 +973,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\ShowEndpointGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\ShowEndpointGroupRequest');
     }
 
@@ -1022,7 +994,6 @@ class GaClient extends Client
 
     public function updateEndpointGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/endpoint-groups/{endpoint_group_id}';
         $formParams = [];
         $queryParams = [];
@@ -1068,7 +1039,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\UpdateEndpointGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\UpdateEndpointGroupRequest');
     }
 
@@ -1090,7 +1060,6 @@ class GaClient extends Client
 
     public function createHealthCheckWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/health-checks';
         $formParams = [];
         $queryParams = [];
@@ -1133,7 +1102,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\CreateHealthCheckResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\CreateHealthCheckRequest');
     }
 
@@ -1155,7 +1123,6 @@ class GaClient extends Client
 
     public function deleteHealthCheckWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/health-checks/{health_check_id}';
         $formParams = [];
         $queryParams = [];
@@ -1198,7 +1165,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\DeleteHealthCheckResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\DeleteHealthCheckRequest');
     }
 
@@ -1220,7 +1186,6 @@ class GaClient extends Client
 
     public function listHealthChecksWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/health-checks';
         $formParams = [];
         $queryParams = [];
@@ -1278,7 +1243,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\ListHealthChecksResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\ListHealthChecksRequest');
     }
 
@@ -1300,7 +1264,6 @@ class GaClient extends Client
 
     public function showHealthCheckWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/health-checks/{health_check_id}';
         $formParams = [];
         $queryParams = [];
@@ -1343,7 +1306,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\ShowHealthCheckResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\ShowHealthCheckRequest');
     }
 
@@ -1365,7 +1327,6 @@ class GaClient extends Client
 
     public function updateHealthCheckWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/health-checks/{health_check_id}';
         $formParams = [];
         $queryParams = [];
@@ -1411,7 +1372,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\UpdateHealthCheckResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\UpdateHealthCheckRequest');
     }
 
@@ -1433,7 +1393,6 @@ class GaClient extends Client
 
     public function createListenerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/listeners';
         $formParams = [];
         $queryParams = [];
@@ -1476,7 +1435,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\CreateListenerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\CreateListenerRequest');
     }
 
@@ -1498,7 +1456,6 @@ class GaClient extends Client
 
     public function deleteListenerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/listeners/{listener_id}';
         $formParams = [];
         $queryParams = [];
@@ -1541,7 +1498,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\DeleteListenerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\DeleteListenerRequest');
     }
 
@@ -1563,7 +1519,6 @@ class GaClient extends Client
 
     public function listListenersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/listeners';
         $formParams = [];
         $queryParams = [];
@@ -1624,7 +1579,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\ListListenersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\ListListenersRequest');
     }
 
@@ -1646,7 +1600,6 @@ class GaClient extends Client
 
     public function showListenerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/listeners/{listener_id}';
         $formParams = [];
         $queryParams = [];
@@ -1689,7 +1642,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\ShowListenerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\ShowListenerRequest');
     }
 
@@ -1711,7 +1663,6 @@ class GaClient extends Client
 
     public function updateListenerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/listeners/{listener_id}';
         $formParams = [];
         $queryParams = [];
@@ -1757,7 +1708,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\UpdateListenerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\UpdateListenerRequest');
     }
 
@@ -1779,7 +1729,6 @@ class GaClient extends Client
 
     public function listRegionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/regions';
         $formParams = [];
         $queryParams = [];
@@ -1819,7 +1768,6 @@ class GaClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\ListRegionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\ListRegionsRequest');
     }
 
@@ -1833,7 +1781,6 @@ class GaClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -1846,7 +1793,6 @@ class GaClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

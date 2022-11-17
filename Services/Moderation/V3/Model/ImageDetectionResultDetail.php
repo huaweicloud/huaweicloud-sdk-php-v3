@@ -21,7 +21,7 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * suggestion  审核结果是否通过。 block：包含敏感信息，不通过 review：需要人工复检
-    * category  检测结果的一级标签。 支持category列表如下： politics: 涉政 terrorism: 暴恐 porn: 色情 image_text: 图文审核
+    * category  检测结果的一级标签。 支持category列表如下： terrorism: 暴恐 porn: 色情 image_text: 图文审核
     * confidence  置信度，可选值在0-1之间，值越大，可信度越高。
     * faceLocation  faceLocation
     * qrLocation  qrLocation
@@ -45,7 +45,7 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * suggestion  审核结果是否通过。 block：包含敏感信息，不通过 review：需要人工复检
-    * category  检测结果的一级标签。 支持category列表如下： politics: 涉政 terrorism: 暴恐 porn: 色情 image_text: 图文审核
+    * category  检测结果的一级标签。 支持category列表如下： terrorism: 暴恐 porn: 色情 image_text: 图文审核
     * confidence  置信度，可选值在0-1之间，值越大，可信度越高。
     * faceLocation  faceLocation
     * qrLocation  qrLocation
@@ -90,7 +90,7 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * suggestion  审核结果是否通过。 block：包含敏感信息，不通过 review：需要人工复检
-    * category  检测结果的一级标签。 支持category列表如下： politics: 涉政 terrorism: 暴恐 porn: 色情 image_text: 图文审核
+    * category  检测结果的一级标签。 支持category列表如下： terrorism: 暴恐 porn: 色情 image_text: 图文审核
     * confidence  置信度，可选值在0-1之间，值越大，可信度越高。
     * faceLocation  faceLocation
     * qrLocation  qrLocation
@@ -114,7 +114,7 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * suggestion  审核结果是否通过。 block：包含敏感信息，不通过 review：需要人工复检
-    * category  检测结果的一级标签。 支持category列表如下： politics: 涉政 terrorism: 暴恐 porn: 色情 image_text: 图文审核
+    * category  检测结果的一级标签。 支持category列表如下： terrorism: 暴恐 porn: 色情 image_text: 图文审核
     * confidence  置信度，可选值在0-1之间，值越大，可信度越高。
     * faceLocation  faceLocation
     * qrLocation  qrLocation
@@ -138,7 +138,7 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * suggestion  审核结果是否通过。 block：包含敏感信息，不通过 review：需要人工复检
-    * category  检测结果的一级标签。 支持category列表如下： politics: 涉政 terrorism: 暴恐 porn: 色情 image_text: 图文审核
+    * category  检测结果的一级标签。 支持category列表如下： terrorism: 暴恐 porn: 色情 image_text: 图文审核
     * confidence  置信度，可选值在0-1之间，值越大，可信度越高。
     * faceLocation  faceLocation
     * qrLocation  qrLocation
@@ -284,7 +284,7 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  检测结果的一级标签。 支持category列表如下： politics: 涉政 terrorism: 暴恐 porn: 色情 image_text: 图文审核
+    *  检测结果的一级标签。 支持category列表如下： terrorism: 暴恐 porn: 色情 image_text: 图文审核
     *
     * @return string
     */
@@ -296,7 +296,7 @@ class ImageDetectionResultDetail implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string $category 检测结果的一级标签。 支持category列表如下： politics: 涉政 terrorism: 暴恐 porn: 色情 image_text: 图文审核
+    * @param string $category 检测结果的一级标签。 支持category列表如下： terrorism: 暴恐 porn: 色情 image_text: 图文审核
     *
     * @return $this
     */

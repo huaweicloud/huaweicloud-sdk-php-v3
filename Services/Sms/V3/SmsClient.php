@@ -43,7 +43,6 @@ class SmsClient extends Client
 
     public function checkNetAclWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks/{t_project_id}/networkacl/{t_network_id}/check';
         $formParams = [];
         $queryParams = [];
@@ -95,7 +94,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\CheckNetAclResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\CheckNetAclRequest');
     }
 
@@ -117,7 +115,6 @@ class SmsClient extends Client
 
     public function collectLogWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks/{task_id}/log';
         $formParams = [];
         $queryParams = [];
@@ -163,7 +160,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\CollectLogResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\CollectLogRequest');
     }
 
@@ -185,7 +181,6 @@ class SmsClient extends Client
 
     public function createMigprojectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/migprojects';
         $formParams = [];
         $queryParams = [];
@@ -228,7 +223,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\CreateMigprojectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\CreateMigprojectRequest');
     }
 
@@ -250,7 +244,6 @@ class SmsClient extends Client
 
     public function createTaskWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks';
         $formParams = [];
         $queryParams = [];
@@ -293,7 +286,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\CreateTaskResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\CreateTaskRequest');
     }
 
@@ -315,7 +307,6 @@ class SmsClient extends Client
 
     public function createTemplateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/vm/templates';
         $formParams = [];
         $queryParams = [];
@@ -358,7 +349,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\CreateTemplateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\CreateTemplateRequest');
     }
 
@@ -380,7 +370,6 @@ class SmsClient extends Client
 
     public function deleteMigprojectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/migprojects/{mig_project_id}';
         $formParams = [];
         $queryParams = [];
@@ -423,7 +412,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteMigprojectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteMigprojectRequest');
     }
 
@@ -445,7 +433,6 @@ class SmsClient extends Client
 
     public function deleteServerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/sources/{source_id}';
         $formParams = [];
         $queryParams = [];
@@ -488,7 +475,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteServerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteServerRequest');
     }
 
@@ -510,7 +496,6 @@ class SmsClient extends Client
 
     public function deleteServersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/sources/delete';
         $formParams = [];
         $queryParams = [];
@@ -553,7 +538,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteServersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteServersRequest');
     }
 
@@ -575,7 +559,6 @@ class SmsClient extends Client
 
     public function deleteTaskWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks/{task_id}';
         $formParams = [];
         $queryParams = [];
@@ -618,7 +601,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteTaskResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteTaskRequest');
     }
 
@@ -640,7 +622,6 @@ class SmsClient extends Client
 
     public function deleteTasksWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks/delete';
         $formParams = [];
         $queryParams = [];
@@ -683,7 +664,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteTasksResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteTasksRequest');
     }
 
@@ -705,7 +685,6 @@ class SmsClient extends Client
 
     public function deleteTemplateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/vm/templates/{id}';
         $formParams = [];
         $queryParams = [];
@@ -748,7 +727,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteTemplateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteTemplateRequest');
     }
 
@@ -770,7 +748,6 @@ class SmsClient extends Client
 
     public function deleteTemplatesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/vm/templates/delete';
         $formParams = [];
         $queryParams = [];
@@ -813,7 +790,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteTemplatesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\DeleteTemplatesRequest');
     }
 
@@ -835,7 +811,6 @@ class SmsClient extends Client
 
     public function listErrorServersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/errors';
         $formParams = [];
         $queryParams = [];
@@ -887,7 +862,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ListErrorServersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ListErrorServersRequest');
     }
 
@@ -909,7 +883,6 @@ class SmsClient extends Client
 
     public function listMigprojectsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/migprojects';
         $formParams = [];
         $queryParams = [];
@@ -955,7 +928,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ListMigprojectsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ListMigprojectsRequest');
     }
 
@@ -977,7 +949,6 @@ class SmsClient extends Client
 
     public function listServersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/sources';
         $formParams = [];
         $queryParams = [];
@@ -1047,7 +1018,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ListServersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ListServersRequest');
     }
 
@@ -1069,7 +1039,6 @@ class SmsClient extends Client
 
     public function listTasksWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks';
         $formParams = [];
         $queryParams = [];
@@ -1130,7 +1099,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ListTasksResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ListTasksRequest');
     }
 
@@ -1152,7 +1120,6 @@ class SmsClient extends Client
 
     public function listTemplatesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/vm/templates';
         $formParams = [];
         $queryParams = [];
@@ -1207,7 +1174,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ListTemplatesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ListTemplatesRequest');
     }
 
@@ -1229,7 +1195,6 @@ class SmsClient extends Client
 
     public function registerServerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/sources';
         $formParams = [];
         $queryParams = [];
@@ -1272,7 +1237,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\RegisterServerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\RegisterServerRequest');
     }
 
@@ -1294,7 +1258,6 @@ class SmsClient extends Client
 
     public function showCertKeyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks/{task_id}/certkey';
         $formParams = [];
         $queryParams = [];
@@ -1337,7 +1300,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowCertKeyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowCertKeyRequest');
     }
 
@@ -1359,7 +1321,6 @@ class SmsClient extends Client
 
     public function showCommandWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/sources/{server_id}/command';
         $formParams = [];
         $queryParams = [];
@@ -1402,7 +1363,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowCommandResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowCommandRequest');
     }
 
@@ -1424,7 +1384,6 @@ class SmsClient extends Client
 
     public function showMigprojectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/migprojects/{mig_project_id}';
         $formParams = [];
         $queryParams = [];
@@ -1467,7 +1426,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowMigprojectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowMigprojectRequest');
     }
 
@@ -1489,7 +1447,6 @@ class SmsClient extends Client
 
     public function showOverviewWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/sources/overview';
         $formParams = [];
         $queryParams = [];
@@ -1529,7 +1486,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowOverviewResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowOverviewRequest');
     }
 
@@ -1551,7 +1507,6 @@ class SmsClient extends Client
 
     public function showPassphraseWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks/{task_id}/passphrase';
         $formParams = [];
         $queryParams = [];
@@ -1594,7 +1549,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowPassphraseResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowPassphraseRequest');
     }
 
@@ -1616,7 +1570,6 @@ class SmsClient extends Client
 
     public function showServerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/sources/{source_id}';
         $formParams = [];
         $queryParams = [];
@@ -1659,7 +1612,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowServerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowServerRequest');
     }
 
@@ -1681,7 +1633,6 @@ class SmsClient extends Client
 
     public function showSha256WithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/sha256/{key}';
         $formParams = [];
         $queryParams = [];
@@ -1724,7 +1675,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowSha256Response',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowSha256Request');
     }
 
@@ -1746,7 +1696,6 @@ class SmsClient extends Client
 
     public function showTargetPasswordWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/vm/templates/{id}/target-password';
         $formParams = [];
         $queryParams = [];
@@ -1789,7 +1738,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowTargetPasswordResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowTargetPasswordRequest');
     }
 
@@ -1811,7 +1759,6 @@ class SmsClient extends Client
 
     public function showTaskWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks/{task_id}';
         $formParams = [];
         $queryParams = [];
@@ -1854,7 +1801,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowTaskResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowTaskRequest');
     }
 
@@ -1876,7 +1822,6 @@ class SmsClient extends Client
 
     public function showTemplateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/vm/templates/{id}';
         $formParams = [];
         $queryParams = [];
@@ -1919,7 +1864,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowTemplateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowTemplateRequest');
     }
 
@@ -1941,7 +1885,6 @@ class SmsClient extends Client
 
     public function showsSpeedLimitsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks/{task_id}/speed-limit';
         $formParams = [];
         $queryParams = [];
@@ -1984,7 +1927,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowsSpeedLimitsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowsSpeedLimitsRequest');
     }
 
@@ -2006,7 +1948,6 @@ class SmsClient extends Client
 
     public function unlockTargetEcsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks/{task_id}/unlock';
         $formParams = [];
         $queryParams = [];
@@ -2049,7 +1990,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UnlockTargetEcsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UnlockTargetEcsRequest');
     }
 
@@ -2071,7 +2011,6 @@ class SmsClient extends Client
 
     public function updateCommandResultWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/sources/{server_id}/command_result';
         $formParams = [];
         $queryParams = [];
@@ -2117,7 +2056,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateCommandResultResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateCommandResultRequest');
     }
 
@@ -2139,7 +2077,6 @@ class SmsClient extends Client
 
     public function updateCopyStateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/sources/{source_id}/changestate';
         $formParams = [];
         $queryParams = [];
@@ -2185,7 +2122,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateCopyStateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateCopyStateRequest');
     }
 
@@ -2207,7 +2143,6 @@ class SmsClient extends Client
 
     public function updateDefaultMigprojectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/migprojects/{mig_project_id}/default';
         $formParams = [];
         $queryParams = [];
@@ -2250,7 +2185,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateDefaultMigprojectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateDefaultMigprojectRequest');
     }
 
@@ -2272,7 +2206,6 @@ class SmsClient extends Client
 
     public function updateDiskInfoWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/sources/{source_id}/diskinfo';
         $formParams = [];
         $queryParams = [];
@@ -2318,7 +2251,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateDiskInfoResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateDiskInfoRequest');
     }
 
@@ -2340,7 +2272,6 @@ class SmsClient extends Client
 
     public function updateMigprojectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/migprojects/{mig_project_id}';
         $formParams = [];
         $queryParams = [];
@@ -2386,7 +2317,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateMigprojectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateMigprojectRequest');
     }
 
@@ -2408,7 +2338,6 @@ class SmsClient extends Client
 
     public function updateServerNameWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/sources/{source_id}';
         $formParams = [];
         $queryParams = [];
@@ -2454,7 +2383,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateServerNameResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateServerNameRequest');
     }
 
@@ -2476,7 +2404,6 @@ class SmsClient extends Client
 
     public function updateSpeedWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks/{task_id}/speed-limit';
         $formParams = [];
         $queryParams = [];
@@ -2522,7 +2449,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateSpeedResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateSpeedRequest');
     }
 
@@ -2544,7 +2470,6 @@ class SmsClient extends Client
 
     public function updateTaskWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks/{task_id}';
         $formParams = [];
         $queryParams = [];
@@ -2590,7 +2515,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateTaskResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateTaskRequest');
     }
 
@@ -2614,7 +2538,6 @@ class SmsClient extends Client
 
     public function updateTaskSpeedWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks/{task_id}/progress';
         $formParams = [];
         $queryParams = [];
@@ -2660,7 +2583,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateTaskSpeedResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateTaskSpeedRequest');
     }
 
@@ -2682,7 +2604,6 @@ class SmsClient extends Client
 
     public function updateTaskStatusWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/tasks/{task_id}/action';
         $formParams = [];
         $queryParams = [];
@@ -2728,7 +2649,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateTaskStatusResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateTaskStatusRequest');
     }
 
@@ -2750,7 +2670,6 @@ class SmsClient extends Client
 
     public function updateTemplateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/vm/templates/{id}';
         $formParams = [];
         $queryParams = [];
@@ -2796,7 +2715,6 @@ class SmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateTemplateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateTemplateRequest');
     }
 
@@ -2810,7 +2728,6 @@ class SmsClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -2823,7 +2740,6 @@ class SmsClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

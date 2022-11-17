@@ -236,8 +236,8 @@ class ServiceCapability implements ModelInterface, ArrayAccess
             if (!preg_match("/^[一-龥a-zA-Z0-9_?'#().,&%@!\\-$]{1,64}$/", $this->container['serviceType'])) {
                 $invalidProperties[] = "invalid value for 'serviceType', must be conform to the pattern /^[一-龥a-zA-Z0-9_?'#().,&%@!\\-$]{1,64}$/.";
             }
-            if (!is_null($this->container['description']) && !preg_match("/^[\\s一-龥a-zA-Z0-9_?'#().,;&%@!\\- ，、：；。\/]{1,128}$/", $this->container['description'])) {
-                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[\\s一-龥a-zA-Z0-9_?'#().,;&%@!\\- ，、：；。\/]{1,128}$/.";
+            if (!is_null($this->container['description']) && !preg_match("/^[\\s一-龥a-zA-Z0-9_?'#().,;&%@!\\- ，、：；。￥$！【】’‘“”（）？…~\/]{1,128}$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[\\s一-龥a-zA-Z0-9_?'#().,;&%@!\\- ，、：；。￥$！【】’‘“”（）？…~\/]{1,128}$/.";
             }
             if (!is_null($this->container['option']) && !preg_match("/(Master|Mandatory|Optional)/", $this->container['option'])) {
                 $invalidProperties[] = "invalid value for 'option', must be conform to the pattern /(Master|Mandatory|Optional)/.";

@@ -43,7 +43,6 @@ class EcsClient extends Client
 
     public function addServerGroupMemberWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/os-server-groups/{server_group_id}/action';
         $formParams = [];
         $queryParams = [];
@@ -89,7 +88,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\AddServerGroupMemberResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\AddServerGroupMemberRequest');
     }
 
@@ -117,7 +115,6 @@ class EcsClient extends Client
 
     public function associateServerVirtualIpWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/nics/{nic_id}';
         $formParams = [];
         $queryParams = [];
@@ -163,7 +160,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\AssociateServerVirtualIpResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\AssociateServerVirtualIpRequest');
     }
 
@@ -185,7 +181,6 @@ class EcsClient extends Client
 
     public function attachServerVolumeWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/attachvolume';
         $formParams = [];
         $queryParams = [];
@@ -231,7 +226,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\AttachServerVolumeResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\AttachServerVolumeRequest');
     }
 
@@ -253,7 +247,6 @@ class EcsClient extends Client
 
     public function batchAddServerNicsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/nics';
         $formParams = [];
         $queryParams = [];
@@ -299,7 +292,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchAddServerNicsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchAddServerNicsRequest');
     }
 
@@ -321,7 +313,6 @@ class EcsClient extends Client
 
     public function batchAttachSharableVolumesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/batchaction/attachvolumes/{volume_id}';
         $formParams = [];
         $queryParams = [];
@@ -367,7 +358,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchAttachSharableVolumesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchAttachSharableVolumesRequest');
     }
 
@@ -391,7 +381,6 @@ class EcsClient extends Client
 
     public function batchCreateServerTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/tags/action';
         $formParams = [];
         $queryParams = [];
@@ -437,7 +426,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchCreateServerTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchCreateServerTagsRequest');
     }
 
@@ -459,7 +447,6 @@ class EcsClient extends Client
 
     public function batchDeleteServerNicsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/nics/delete';
         $formParams = [];
         $queryParams = [];
@@ -505,7 +492,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchDeleteServerNicsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchDeleteServerNicsRequest');
     }
 
@@ -529,7 +515,6 @@ class EcsClient extends Client
 
     public function batchDeleteServerTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/tags/action';
         $formParams = [];
         $queryParams = [];
@@ -575,7 +560,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchDeleteServerTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchDeleteServerTagsRequest');
     }
 
@@ -597,7 +581,6 @@ class EcsClient extends Client
 
     public function batchRebootServersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/action';
         $formParams = [];
         $queryParams = [];
@@ -640,7 +623,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchRebootServersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchRebootServersRequest');
     }
 
@@ -662,7 +644,6 @@ class EcsClient extends Client
 
     public function batchResetServersPasswordWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/os-reset-passwords';
         $formParams = [];
         $queryParams = [];
@@ -705,7 +686,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchResetServersPasswordResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchResetServersPasswordRequest');
     }
 
@@ -727,7 +707,6 @@ class EcsClient extends Client
 
     public function batchStartServersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/action';
         $formParams = [];
         $queryParams = [];
@@ -770,7 +749,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchStartServersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchStartServersRequest');
     }
 
@@ -792,7 +770,6 @@ class EcsClient extends Client
 
     public function batchStopServersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/action';
         $formParams = [];
         $queryParams = [];
@@ -835,7 +812,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchStopServersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchStopServersRequest');
     }
 
@@ -858,7 +834,6 @@ class EcsClient extends Client
 
     public function batchUpdateServersNameWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/server-name';
         $formParams = [];
         $queryParams = [];
@@ -901,7 +876,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchUpdateServersNameResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\BatchUpdateServersNameRequest');
     }
 
@@ -925,7 +899,6 @@ class EcsClient extends Client
 
     public function changeServerOsWithCloudInitWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudservers/{server_id}/changeos';
         $formParams = [];
         $queryParams = [];
@@ -971,7 +944,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ChangeServerOsWithCloudInitResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ChangeServerOsWithCloudInitRequest');
     }
 
@@ -995,7 +967,6 @@ class EcsClient extends Client
 
     public function changeServerOsWithoutCloudInitWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/changeos';
         $formParams = [];
         $queryParams = [];
@@ -1041,7 +1012,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ChangeServerOsWithoutCloudInitResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ChangeServerOsWithoutCloudInitRequest');
     }
 
@@ -1076,7 +1046,6 @@ class EcsClient extends Client
 
     public function createPostPaidServersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers';
         $formParams = [];
         $queryParams = [];
@@ -1092,7 +1061,7 @@ class EcsClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['xClientToken'] !== null) {
-            $headerParams['x_client_token'] = $localVarParams['xClientToken'];
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1122,7 +1091,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\CreatePostPaidServersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\CreatePostPaidServersRequest');
     }
 
@@ -1146,7 +1114,6 @@ class EcsClient extends Client
 
     public function createServerGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/os-server-groups';
         $formParams = [];
         $queryParams = [];
@@ -1189,7 +1156,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\CreateServerGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\CreateServerGroupRequest');
     }
 
@@ -1233,7 +1199,6 @@ class EcsClient extends Client
 
     public function createServersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.1/{project_id}/cloudservers';
         $formParams = [];
         $queryParams = [];
@@ -1249,7 +1214,7 @@ class EcsClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['xClientToken'] !== null) {
-            $headerParams['x_client_token'] = $localVarParams['xClientToken'];
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1279,7 +1244,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\CreateServersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\CreateServersRequest');
     }
 
@@ -1303,7 +1267,6 @@ class EcsClient extends Client
 
     public function deleteServerGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/os-server-groups/{server_group_id}';
         $formParams = [];
         $queryParams = [];
@@ -1346,7 +1309,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\DeleteServerGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\DeleteServerGroupRequest');
     }
 
@@ -1368,7 +1330,6 @@ class EcsClient extends Client
 
     public function deleteServerGroupMemberWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/os-server-groups/{server_group_id}/action';
         $formParams = [];
         $queryParams = [];
@@ -1414,7 +1375,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\DeleteServerGroupMemberResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\DeleteServerGroupMemberRequest');
     }
 
@@ -1436,7 +1396,6 @@ class EcsClient extends Client
 
     public function deleteServerMetadataWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/metadata/{key}';
         $formParams = [];
         $queryParams = [];
@@ -1482,7 +1441,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\DeleteServerMetadataResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\DeleteServerMetadataRequest');
     }
 
@@ -1504,7 +1462,6 @@ class EcsClient extends Client
 
     public function deleteServerPasswordWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/os-server-password';
         $formParams = [];
         $queryParams = [];
@@ -1547,7 +1504,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\DeleteServerPasswordResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\DeleteServerPasswordRequest');
     }
 
@@ -1571,7 +1527,6 @@ class EcsClient extends Client
 
     public function deleteServersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/delete';
         $formParams = [];
         $queryParams = [];
@@ -1614,7 +1569,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\DeleteServersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\DeleteServersRequest');
     }
 
@@ -1636,7 +1590,6 @@ class EcsClient extends Client
 
     public function detachServerVolumeWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/detachvolume/{volume_id}';
         $formParams = [];
         $queryParams = [];
@@ -1685,7 +1638,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\DetachServerVolumeResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\DetachServerVolumeRequest');
     }
 
@@ -1709,7 +1661,6 @@ class EcsClient extends Client
 
     public function disassociateServerVirtualIpWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/nics/{nic_id}';
         $formParams = [];
         $queryParams = [];
@@ -1755,7 +1706,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\DisassociateServerVirtualIpResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\DisassociateServerVirtualIpRequest');
     }
 
@@ -1777,7 +1727,6 @@ class EcsClient extends Client
 
     public function listFlavorsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/flavors';
         $formParams = [];
         $queryParams = [];
@@ -1820,7 +1769,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListFlavorsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListFlavorsRequest');
     }
 
@@ -1842,7 +1790,6 @@ class EcsClient extends Client
 
     public function listResizeFlavorsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/resize_flavors';
         $formParams = [];
         $queryParams = [];
@@ -1903,7 +1850,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListResizeFlavorsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListResizeFlavorsRequest');
     }
 
@@ -1925,7 +1871,6 @@ class EcsClient extends Client
 
     public function listServerBlockDevicesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/block_device';
         $formParams = [];
         $queryParams = [];
@@ -1968,7 +1913,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServerBlockDevicesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServerBlockDevicesRequest');
     }
 
@@ -1992,7 +1936,6 @@ class EcsClient extends Client
 
     public function listServerGroupsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/os-server-groups';
         $formParams = [];
         $queryParams = [];
@@ -2038,7 +1981,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServerGroupsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServerGroupsRequest');
     }
 
@@ -2060,7 +2002,6 @@ class EcsClient extends Client
 
     public function listServerInterfacesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/os-interface';
         $formParams = [];
         $queryParams = [];
@@ -2103,7 +2044,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServerInterfacesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServerInterfacesRequest');
     }
 
@@ -2127,7 +2067,6 @@ class EcsClient extends Client
 
     public function listServerTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/tags';
         $formParams = [];
         $queryParams = [];
@@ -2167,7 +2106,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServerTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServerTagsRequest');
     }
 
@@ -2189,7 +2127,6 @@ class EcsClient extends Client
 
     public function listServersByTagWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/resource_instances/action';
         $formParams = [];
         $queryParams = [];
@@ -2232,7 +2169,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServersByTagResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServersByTagRequest');
     }
 
@@ -2256,7 +2192,6 @@ class EcsClient extends Client
 
     public function listServersDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/detail';
         $formParams = [];
         $queryParams = [];
@@ -2329,7 +2264,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServersDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListServersDetailsRequest');
     }
 
@@ -2353,7 +2287,6 @@ class EcsClient extends Client
 
     public function migrateServerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/migrate';
         $formParams = [];
         $queryParams = [];
@@ -2399,7 +2332,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\MigrateServerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\MigrateServerRequest');
     }
 
@@ -2423,7 +2355,6 @@ class EcsClient extends Client
 
     public function novaAssociateSecurityGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/{project_id}/servers/{server_id}/action';
         $formParams = [];
         $queryParams = [];
@@ -2469,7 +2400,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaAssociateSecurityGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaAssociateSecurityGroupRequest');
     }
 
@@ -2493,7 +2423,6 @@ class EcsClient extends Client
 
     public function novaCreateKeypairWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/{project_id}/os-keypairs';
         $formParams = [];
         $queryParams = [];
@@ -2509,7 +2438,7 @@ class EcsClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['openStackApiVersion'] !== null) {
-            $headerParams['open_stack_api_version'] = $localVarParams['openStackApiVersion'];
+            $headerParams[$arr['openStackApiVersion']] = $localVarParams['openStackApiVersion'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2539,7 +2468,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaCreateKeypairResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaCreateKeypairRequest');
     }
 
@@ -2565,7 +2493,6 @@ class EcsClient extends Client
 
     public function novaCreateServersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/{project_id}/servers';
         $formParams = [];
         $queryParams = [];
@@ -2581,7 +2508,7 @@ class EcsClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['openStackApiVersion'] !== null) {
-            $headerParams['open_stack_api_version'] = $localVarParams['openStackApiVersion'];
+            $headerParams[$arr['openStackApiVersion']] = $localVarParams['openStackApiVersion'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2611,7 +2538,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaCreateServersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaCreateServersRequest');
     }
 
@@ -2633,7 +2559,6 @@ class EcsClient extends Client
 
     public function novaDeleteKeypairWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/{project_id}/os-keypairs/{keypair_name}';
         $formParams = [];
         $queryParams = [];
@@ -2676,7 +2601,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaDeleteKeypairResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaDeleteKeypairRequest');
     }
 
@@ -2698,7 +2622,6 @@ class EcsClient extends Client
 
     public function novaDeleteServerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/{project_id}/servers/{server_id}';
         $formParams = [];
         $queryParams = [];
@@ -2741,7 +2664,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaDeleteServerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaDeleteServerRequest');
     }
 
@@ -2763,7 +2685,6 @@ class EcsClient extends Client
 
     public function novaDisassociateSecurityGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/{project_id}/servers/{server_id}/action';
         $formParams = [];
         $queryParams = [];
@@ -2809,7 +2730,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaDisassociateSecurityGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaDisassociateSecurityGroupRequest');
     }
 
@@ -2831,7 +2751,6 @@ class EcsClient extends Client
 
     public function novaListAvailabilityZonesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/{project_id}/os-availability-zone';
         $formParams = [];
         $queryParams = [];
@@ -2871,7 +2790,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaListAvailabilityZonesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaListAvailabilityZonesRequest');
     }
 
@@ -2893,7 +2811,6 @@ class EcsClient extends Client
 
     public function novaListKeypairsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/{project_id}/os-keypairs';
         $formParams = [];
         $queryParams = [];
@@ -2915,7 +2832,7 @@ class EcsClient extends Client
             $queryParams['marker'] = $localVarParams['marker'];
         }
         if ($localVarParams['openStackApiVersion'] !== null) {
-            $headerParams['open_stack_api_version'] = $localVarParams['openStackApiVersion'];
+            $headerParams[$arr['openStackApiVersion']] = $localVarParams['openStackApiVersion'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2942,7 +2859,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaListKeypairsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaListKeypairsRequest');
     }
 
@@ -2964,7 +2880,6 @@ class EcsClient extends Client
 
     public function novaListServerSecurityGroupsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/{project_id}/servers/{server_id}/os-security-groups';
         $formParams = [];
         $queryParams = [];
@@ -3007,7 +2922,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaListServerSecurityGroupsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaListServerSecurityGroupsRequest');
     }
 
@@ -3029,7 +2943,6 @@ class EcsClient extends Client
 
     public function novaListServersDetailsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/{project_id}/servers/detail';
         $formParams = [];
         $queryParams = [];
@@ -3081,7 +2994,7 @@ class EcsClient extends Client
             $queryParams['tags'] = $localVarParams['tags'];
         }
         if ($localVarParams['openStackApiVersion'] !== null) {
-            $headerParams['open_stack_api_version'] = $localVarParams['openStackApiVersion'];
+            $headerParams[$arr['openStackApiVersion']] = $localVarParams['openStackApiVersion'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3108,7 +3021,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaListServersDetailsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaListServersDetailsRequest');
     }
 
@@ -3130,7 +3042,6 @@ class EcsClient extends Client
 
     public function novaShowKeypairWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/{project_id}/os-keypairs/{keypair_name}';
         $formParams = [];
         $queryParams = [];
@@ -3146,7 +3057,7 @@ class EcsClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['openStackApiVersion'] !== null) {
-            $headerParams['open_stack_api_version'] = $localVarParams['openStackApiVersion'];
+            $headerParams[$arr['openStackApiVersion']] = $localVarParams['openStackApiVersion'];
         }
         if ($localVarParams['keypairName'] !== null) {
             $pathParams['keypair_name'] = $localVarParams['keypairName'];
@@ -3176,7 +3087,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaShowKeypairResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaShowKeypairRequest');
     }
 
@@ -3198,7 +3108,6 @@ class EcsClient extends Client
 
     public function novaShowServerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/{project_id}/servers/{server_id}';
         $formParams = [];
         $queryParams = [];
@@ -3214,7 +3123,7 @@ class EcsClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['openStackApiVersion'] !== null) {
-            $headerParams['open_stack_api_version'] = $localVarParams['openStackApiVersion'];
+            $headerParams[$arr['openStackApiVersion']] = $localVarParams['openStackApiVersion'];
         }
         if ($localVarParams['serverId'] !== null) {
             $pathParams['server_id'] = $localVarParams['serverId'];
@@ -3244,7 +3153,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaShowServerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaShowServerRequest');
     }
 
@@ -3266,7 +3174,6 @@ class EcsClient extends Client
 
     public function registerServerAutoRecoveryWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/autorecovery';
         $formParams = [];
         $queryParams = [];
@@ -3312,7 +3219,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\RegisterServerAutoRecoveryResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\RegisterServerAutoRecoveryRequest');
     }
 
@@ -3336,7 +3242,6 @@ class EcsClient extends Client
 
     public function registerServerMonitorWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/servers/{server_id}/action';
         $formParams = [];
         $queryParams = [];
@@ -3382,7 +3287,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\RegisterServerMonitorResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\RegisterServerMonitorRequest');
     }
 
@@ -3406,7 +3310,6 @@ class EcsClient extends Client
 
     public function reinstallServerWithCloudInitWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudservers/{server_id}/reinstallos';
         $formParams = [];
         $queryParams = [];
@@ -3452,7 +3355,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ReinstallServerWithCloudInitResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ReinstallServerWithCloudInitRequest');
     }
 
@@ -3476,7 +3378,6 @@ class EcsClient extends Client
 
     public function reinstallServerWithoutCloudInitWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/reinstallos';
         $formParams = [];
         $queryParams = [];
@@ -3522,7 +3423,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ReinstallServerWithoutCloudInitResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ReinstallServerWithoutCloudInitRequest');
     }
 
@@ -3544,7 +3444,6 @@ class EcsClient extends Client
 
     public function resetServerPasswordWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/os-reset-password';
         $formParams = [];
         $queryParams = [];
@@ -3590,7 +3489,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ResetServerPasswordResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ResetServerPasswordRequest');
     }
 
@@ -3616,7 +3514,6 @@ class EcsClient extends Client
 
     public function resizePostPaidServerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/resize';
         $formParams = [];
         $queryParams = [];
@@ -3662,7 +3559,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ResizePostPaidServerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ResizePostPaidServerRequest');
     }
 
@@ -3692,7 +3588,6 @@ class EcsClient extends Client
 
     public function resizeServerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.1/{project_id}/cloudservers/{server_id}/resize';
         $formParams = [];
         $queryParams = [];
@@ -3738,7 +3633,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ResizeServerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ResizeServerRequest');
     }
 
@@ -3760,7 +3654,6 @@ class EcsClient extends Client
 
     public function showResetPasswordFlagWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/os-resetpwd-flag';
         $formParams = [];
         $queryParams = [];
@@ -3803,7 +3696,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowResetPasswordFlagResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowResetPasswordFlagRequest');
     }
 
@@ -3827,7 +3719,6 @@ class EcsClient extends Client
 
     public function showServerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}';
         $formParams = [];
         $queryParams = [];
@@ -3870,7 +3761,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerRequest');
     }
 
@@ -3892,7 +3782,6 @@ class EcsClient extends Client
 
     public function showServerAutoRecoveryWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/autorecovery';
         $formParams = [];
         $queryParams = [];
@@ -3935,7 +3824,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerAutoRecoveryResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerAutoRecoveryRequest');
     }
 
@@ -3957,7 +3845,6 @@ class EcsClient extends Client
 
     public function showServerBlockDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/block_device/{volume_id}';
         $formParams = [];
         $queryParams = [];
@@ -4003,7 +3890,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerBlockDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerBlockDeviceRequest');
     }
 
@@ -4027,7 +3913,6 @@ class EcsClient extends Client
 
     public function showServerGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/os-server-groups/{server_group_id}';
         $formParams = [];
         $queryParams = [];
@@ -4070,7 +3955,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerGroupRequest');
     }
 
@@ -4092,7 +3976,6 @@ class EcsClient extends Client
 
     public function showServerLimitsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/limits';
         $formParams = [];
         $queryParams = [];
@@ -4132,7 +4015,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerLimitsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerLimitsRequest');
     }
 
@@ -4154,7 +4036,6 @@ class EcsClient extends Client
 
     public function showServerPasswordWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/os-server-password';
         $formParams = [];
         $queryParams = [];
@@ -4197,7 +4078,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerPasswordResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerPasswordRequest');
     }
 
@@ -4219,7 +4099,6 @@ class EcsClient extends Client
 
     public function showServerRemoteConsoleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/remote_console';
         $formParams = [];
         $queryParams = [];
@@ -4265,7 +4144,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerRemoteConsoleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerRemoteConsoleRequest');
     }
 
@@ -4289,7 +4167,6 @@ class EcsClient extends Client
 
     public function showServerTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/tags';
         $formParams = [];
         $queryParams = [];
@@ -4332,7 +4209,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowServerTagsRequest');
     }
 
@@ -4354,7 +4230,6 @@ class EcsClient extends Client
 
     public function updateServerWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}';
         $formParams = [];
         $queryParams = [];
@@ -4400,7 +4275,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerRequest');
     }
 
@@ -4424,7 +4298,6 @@ class EcsClient extends Client
 
     public function updateServerAutoTerminateTimeWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/actions/update-auto-terminate-time';
         $formParams = [];
         $queryParams = [];
@@ -4470,7 +4343,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerAutoTerminateTimeResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerAutoTerminateTimeRequest');
     }
 
@@ -4492,7 +4364,6 @@ class EcsClient extends Client
 
     public function updateServerBlockDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/block_device/{volume_id}';
         $formParams = [];
         $queryParams = [];
@@ -4541,7 +4412,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerBlockDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerBlockDeviceRequest');
     }
 
@@ -4569,7 +4439,6 @@ class EcsClient extends Client
 
     public function updateServerMetadataWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/metadata';
         $formParams = [];
         $queryParams = [];
@@ -4615,7 +4484,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerMetadataResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\UpdateServerMetadataRequest');
     }
 
@@ -4639,7 +4507,6 @@ class EcsClient extends Client
 
     public function showJobWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/jobs/{job_id}';
         $formParams = [];
         $queryParams = [];
@@ -4682,7 +4549,6 @@ class EcsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowJobResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ShowJobRequest');
     }
 
@@ -4696,7 +4562,6 @@ class EcsClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -4709,7 +4574,6 @@ class EcsClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

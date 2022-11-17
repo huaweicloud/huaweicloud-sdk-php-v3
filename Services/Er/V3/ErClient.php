@@ -43,7 +43,6 @@ class ErClient extends Client
 
     public function associateRouteTableWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/route-tables/{route_table_id}/associate';
         $formParams = [];
         $queryParams = [];
@@ -59,7 +58,7 @@ class ErClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['xClientToken'] !== null) {
-            $headerParams['x_client_token'] = $localVarParams['xClientToken'];
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
         }
         if ($localVarParams['erId'] !== null) {
             $pathParams['er_id'] = $localVarParams['erId'];
@@ -95,7 +94,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\AssociateRouteTableResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\AssociateRouteTableRequest');
     }
 
@@ -117,7 +115,6 @@ class ErClient extends Client
 
     public function disassociateRouteTableWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/route-tables/{route_table_id}/disassociate';
         $formParams = [];
         $queryParams = [];
@@ -166,7 +163,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\DisassociateRouteTableResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\DisassociateRouteTableRequest');
     }
 
@@ -188,7 +184,6 @@ class ErClient extends Client
 
     public function listAssociationsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/route-tables/{route_table_id}/associations';
         $formParams = [];
         $queryParams = [];
@@ -255,7 +250,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ListAssociationsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ListAssociationsRequest');
     }
 
@@ -280,7 +274,6 @@ class ErClient extends Client
 
     public function listAttachmentsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/attachments';
         $formParams = [];
         $queryParams = [];
@@ -344,7 +337,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ListAttachmentsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ListAttachmentsRequest');
     }
 
@@ -366,7 +358,6 @@ class ErClient extends Client
 
     public function showAttachmentWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/attachments/{attachment_id}';
         $formParams = [];
         $queryParams = [];
@@ -412,7 +403,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ShowAttachmentResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ShowAttachmentRequest');
     }
 
@@ -434,7 +424,6 @@ class ErClient extends Client
 
     public function updateAttachmentWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/attachments/{attachment_id}';
         $formParams = [];
         $queryParams = [];
@@ -483,7 +472,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\UpdateAttachmentResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\UpdateAttachmentRequest');
     }
 
@@ -505,7 +493,6 @@ class ErClient extends Client
 
     public function listAvailabilityZoneWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/availability-zones';
         $formParams = [];
         $queryParams = [];
@@ -548,7 +535,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ListAvailabilityZoneResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ListAvailabilityZoneRequest');
     }
 
@@ -570,7 +556,6 @@ class ErClient extends Client
 
     public function changeAvailabilityZoneWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/instances/{er_id}/change-availability-zone-ids';
         $formParams = [];
         $queryParams = [];
@@ -616,7 +601,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ChangeAvailabilityZoneResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ChangeAvailabilityZoneRequest');
     }
 
@@ -638,7 +622,6 @@ class ErClient extends Client
 
     public function createEnterpriseRouterWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/instances';
         $formParams = [];
         $queryParams = [];
@@ -654,7 +637,7 @@ class ErClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['xClientToken'] !== null) {
-            $headerParams['x_client_token'] = $localVarParams['xClientToken'];
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -684,7 +667,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\CreateEnterpriseRouterResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\CreateEnterpriseRouterRequest');
     }
 
@@ -707,7 +689,6 @@ class ErClient extends Client
 
     public function deleteEnterpriseRouterWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/instances/{er_id}';
         $formParams = [];
         $queryParams = [];
@@ -750,7 +731,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\DeleteEnterpriseRouterResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\DeleteEnterpriseRouterRequest');
     }
 
@@ -772,7 +752,6 @@ class ErClient extends Client
 
     public function listEnterpriseRoutersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/instances';
         $formParams = [];
         $queryParams = [];
@@ -836,7 +815,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ListEnterpriseRoutersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ListEnterpriseRoutersRequest');
     }
 
@@ -858,7 +836,6 @@ class ErClient extends Client
 
     public function showEnterpriseRouterWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/instances/{er_id}';
         $formParams = [];
         $queryParams = [];
@@ -901,7 +878,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ShowEnterpriseRouterResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ShowEnterpriseRouterRequest');
     }
 
@@ -923,7 +899,6 @@ class ErClient extends Client
 
     public function updateEnterpriseRouterWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/instances/{er_id}';
         $formParams = [];
         $queryParams = [];
@@ -969,7 +944,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\UpdateEnterpriseRouterResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\UpdateEnterpriseRouterRequest');
     }
 
@@ -991,7 +965,6 @@ class ErClient extends Client
 
     public function disablePropagationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/route-tables/{route_table_id}/disable-propagations';
         $formParams = [];
         $queryParams = [];
@@ -1040,7 +1013,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\DisablePropagationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\DisablePropagationRequest');
     }
 
@@ -1062,7 +1034,6 @@ class ErClient extends Client
 
     public function enablePropagationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/route-tables/{route_table_id}/enable-propagations';
         $formParams = [];
         $queryParams = [];
@@ -1078,7 +1049,7 @@ class ErClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['xClientToken'] !== null) {
-            $headerParams['x_client_token'] = $localVarParams['xClientToken'];
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
         }
         if ($localVarParams['erId'] !== null) {
             $pathParams['er_id'] = $localVarParams['erId'];
@@ -1114,7 +1085,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\EnablePropagationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\EnablePropagationRequest');
     }
 
@@ -1136,7 +1106,6 @@ class ErClient extends Client
 
     public function listPropagationsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/route-tables/{route_table_id}/propagations';
         $formParams = [];
         $queryParams = [];
@@ -1203,7 +1172,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ListPropagationsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ListPropagationsRequest');
     }
 
@@ -1225,7 +1193,6 @@ class ErClient extends Client
 
     public function createStaticRouteWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/route-tables/{route_table_id}/static-routes';
         $formParams = [];
         $queryParams = [];
@@ -1241,7 +1208,7 @@ class ErClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['xClientToken'] !== null) {
-            $headerParams['x_client_token'] = $localVarParams['xClientToken'];
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
         }
         if ($localVarParams['routeTableId'] !== null) {
             $pathParams['route_table_id'] = $localVarParams['routeTableId'];
@@ -1274,7 +1241,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\CreateStaticRouteResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\CreateStaticRouteRequest');
     }
 
@@ -1296,7 +1262,6 @@ class ErClient extends Client
 
     public function deleteStaticRouteWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/route-tables/{route_table_id}/static-routes/{route_id}';
         $formParams = [];
         $queryParams = [];
@@ -1342,7 +1307,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\DeleteStaticRouteResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\DeleteStaticRouteRequest');
     }
 
@@ -1364,7 +1328,6 @@ class ErClient extends Client
 
     public function listEffectiveRoutesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/route-tables/{route_table_id}/routes';
         $formParams = [];
         $queryParams = [];
@@ -1419,7 +1382,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ListEffectiveRoutesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ListEffectiveRoutesRequest');
     }
 
@@ -1441,7 +1403,6 @@ class ErClient extends Client
 
     public function listStaticRoutesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/route-tables/{route_table_id}/static-routes';
         $formParams = [];
         $queryParams = [];
@@ -1505,7 +1466,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ListStaticRoutesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ListStaticRoutesRequest');
     }
 
@@ -1527,7 +1487,6 @@ class ErClient extends Client
 
     public function showStaticRouteWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/route-tables/{route_table_id}/static-routes/{route_id}';
         $formParams = [];
         $queryParams = [];
@@ -1573,7 +1532,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ShowStaticRouteResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ShowStaticRouteRequest');
     }
 
@@ -1595,7 +1553,6 @@ class ErClient extends Client
 
     public function updateStaticRouteWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/route-tables/{route_table_id}/static-routes/{route_id}';
         $formParams = [];
         $queryParams = [];
@@ -1644,7 +1601,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\UpdateStaticRouteResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\UpdateStaticRouteRequest');
     }
 
@@ -1666,7 +1622,6 @@ class ErClient extends Client
 
     public function createRouteTableWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/route-tables';
         $formParams = [];
         $queryParams = [];
@@ -1682,7 +1637,7 @@ class ErClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['xClientToken'] !== null) {
-            $headerParams['x_client_token'] = $localVarParams['xClientToken'];
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
         }
         if ($localVarParams['erId'] !== null) {
             $pathParams['er_id'] = $localVarParams['erId'];
@@ -1715,7 +1670,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\CreateRouteTableResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\CreateRouteTableRequest');
     }
 
@@ -1737,7 +1691,6 @@ class ErClient extends Client
 
     public function deleteRouteTableWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/route-tables/{route_table_id}';
         $formParams = [];
         $queryParams = [];
@@ -1783,7 +1736,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\DeleteRouteTableResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\DeleteRouteTableRequest');
     }
 
@@ -1805,7 +1757,6 @@ class ErClient extends Client
 
     public function listRouteTablesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/route-tables';
         $formParams = [];
         $queryParams = [];
@@ -1869,7 +1820,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ListRouteTablesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ListRouteTablesRequest');
     }
 
@@ -1891,7 +1841,6 @@ class ErClient extends Client
 
     public function showRouteTableWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/route-tables/{route_table_id}';
         $formParams = [];
         $queryParams = [];
@@ -1937,7 +1886,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ShowRouteTableResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ShowRouteTableRequest');
     }
 
@@ -1959,7 +1907,6 @@ class ErClient extends Client
 
     public function updateRouteTableWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/route-tables/{route_table_id}';
         $formParams = [];
         $queryParams = [];
@@ -2008,7 +1955,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\UpdateRouteTableResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\UpdateRouteTableRequest');
     }
 
@@ -2030,7 +1976,6 @@ class ErClient extends Client
 
     public function createVpcAttachmentWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/vpc-attachments';
         $formParams = [];
         $queryParams = [];
@@ -2046,7 +1991,7 @@ class ErClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['xClientToken'] !== null) {
-            $headerParams['x_client_token'] = $localVarParams['xClientToken'];
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
         }
         if ($localVarParams['erId'] !== null) {
             $pathParams['er_id'] = $localVarParams['erId'];
@@ -2079,7 +2024,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\CreateVpcAttachmentResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\CreateVpcAttachmentRequest');
     }
 
@@ -2101,7 +2045,6 @@ class ErClient extends Client
 
     public function deleteVpcAttachmentWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/vpc-attachments/{vpc_attachment_id}';
         $formParams = [];
         $queryParams = [];
@@ -2147,7 +2090,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\DeleteVpcAttachmentResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\DeleteVpcAttachmentRequest');
     }
 
@@ -2172,7 +2114,6 @@ class ErClient extends Client
 
     public function listVpcAttachmentsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/vpc-attachments';
         $formParams = [];
         $queryParams = [];
@@ -2236,7 +2177,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ListVpcAttachmentsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ListVpcAttachmentsRequest');
     }
 
@@ -2258,7 +2198,6 @@ class ErClient extends Client
 
     public function showVpcAttachmentWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/vpc-attachments/{vpc_attachment_id}';
         $formParams = [];
         $queryParams = [];
@@ -2304,7 +2243,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\ShowVpcAttachmentResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\ShowVpcAttachmentRequest');
     }
 
@@ -2326,7 +2264,6 @@ class ErClient extends Client
 
     public function updateVpcAttachmentWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/enterprise-router/{er_id}/vpc-attachments/{vpc_attachment_id}';
         $formParams = [];
         $queryParams = [];
@@ -2375,7 +2312,6 @@ class ErClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Er\V3\Model\UpdateVpcAttachmentResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Er\V3\Model\UpdateVpcAttachmentRequest');
     }
 
@@ -2389,7 +2325,6 @@ class ErClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -2402,7 +2337,6 @@ class ErClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

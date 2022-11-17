@@ -20,7 +20,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - AMQP
+    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - [AMQP,MQTT]
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - AMQP
+    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - [AMQP,MQTT]
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - AMQP
+    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - [AMQP,MQTT]
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - AMQP
+    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - [AMQP,MQTT]
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - AMQP
+    * type  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - [AMQP,MQTT]
     *
     * @var string[]
     */
@@ -164,8 +164,8 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['type']) && !preg_match("/(AMQP)/", $this->container['type'])) {
-                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /(AMQP)/.";
+            if (!is_null($this->container['type']) && !preg_match("/(AMQP|MQTT)/", $this->container['type'])) {
+                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /(AMQP|MQTT)/.";
             }
         return $invalidProperties;
     }
@@ -183,7 +183,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - AMQP
+    *  **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - [AMQP,MQTT]
     *
     * @return string|null
     */
@@ -195,7 +195,7 @@ class CreateAccessCodeRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - AMQP
+    * @param string|null $type **参数说明**：接入凭证类型，默认为AMQP的接入凭证类型。 **取值范围**： - [AMQP,MQTT]
     *
     * @return $this
     */

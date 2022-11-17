@@ -376,6 +376,81 @@ class EpsAsyncClient extends Client
     }
 
     /**
+     * 查询企业项目支持的服务
+     *
+     * 查询企业项目支持的服务
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listProvidersAsync($request)
+    {
+        return $this->listProvidersAsyncWithHttpInfo($request);
+    }
+    
+    public function listProvidersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/enterprise-projects/providers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['locale'] !== null) {
+            $queryParams['locale'] = $localVarParams['locale'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['provider'] !== null) {
+            $queryParams['provider'] = $localVarParams['provider'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eps\V1\Model\ListProvidersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Eps\V1\Model\ListProvidersRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 迁移资源
      *
      * 迁移资源到目标企业项目。

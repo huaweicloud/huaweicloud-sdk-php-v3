@@ -21,7 +21,7 @@ class DailyTimerType implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * time  **参数说明**：规则触发的时间，格式：HH:MM。
-    * daysOfWeek  **参数说明**：星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。 **取值范围**：只允许数字和逗号的组合，数字不小于1不大于7，数量不超过7个，以逗号隔开
+    * daysOfWeek  **参数说明**：星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class DailyTimerType implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * time  **参数说明**：规则触发的时间，格式：HH:MM。
-    * daysOfWeek  **参数说明**：星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。 **取值范围**：只允许数字和逗号的组合，数字不小于1不大于7，数量不超过7个，以逗号隔开
+    * daysOfWeek  **参数说明**：星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class DailyTimerType implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * time  **参数说明**：规则触发的时间，格式：HH:MM。
-    * daysOfWeek  **参数说明**：星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。 **取值范围**：只允许数字和逗号的组合，数字不小于1不大于7，数量不超过7个，以逗号隔开
+    * daysOfWeek  **参数说明**：星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class DailyTimerType implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * time  **参数说明**：规则触发的时间，格式：HH:MM。
-    * daysOfWeek  **参数说明**：星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。 **取值范围**：只允许数字和逗号的组合，数字不小于1不大于7，数量不超过7个，以逗号隔开
+    * daysOfWeek  **参数说明**：星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class DailyTimerType implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * time  **参数说明**：规则触发的时间，格式：HH:MM。
-    * daysOfWeek  **参数说明**：星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。 **取值范围**：只允许数字和逗号的组合，数字不小于1不大于7，数量不超过7个，以逗号隔开
+    * daysOfWeek  **参数说明**：星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。
     *
     * @var string[]
     */
@@ -224,7 +224,7 @@ class DailyTimerType implements ModelInterface, ArrayAccess
 
     /**
     * Gets daysOfWeek
-    *  **参数说明**：星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。 **取值范围**：只允许数字和逗号的组合，数字不小于1不大于7，数量不超过7个，以逗号隔开
+    *  **参数说明**：星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。
     *
     * @return string|null
     */
@@ -236,7 +236,7 @@ class DailyTimerType implements ModelInterface, ArrayAccess
     /**
     * Sets daysOfWeek
     *
-    * @param string|null $daysOfWeek **参数说明**：星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。 **取值范围**：只允许数字和逗号的组合，数字不小于1不大于7，数量不超过7个，以逗号隔开
+    * @param string|null $daysOfWeek **参数说明**：星期列表，以逗号分隔。1代表周日，2代表周一，依次类推，默认为每天。
     *
     * @return $this
     */

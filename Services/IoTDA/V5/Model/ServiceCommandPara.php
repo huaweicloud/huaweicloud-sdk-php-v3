@@ -284,8 +284,8 @@ class ServiceCommandPara implements ModelInterface, ArrayAccess
             if (!is_null($this->container['unit']) && (mb_strlen($this->container['unit']) > 16)) {
                 $invalidProperties[] = "invalid value for 'unit', the character length must be smaller than or equal to 16.";
             }
-            if (!is_null($this->container['description']) && !preg_match("/^[\\s一-龥a-zA-Z0-9_?'#().,;&%@!\\- ，、：；。\/]{1,128}$/", $this->container['description'])) {
-                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[\\s一-龥a-zA-Z0-9_?'#().,;&%@!\\- ，、：；。\/]{1,128}$/.";
+            if (!is_null($this->container['description']) && !preg_match("/^[\\s一-龥a-zA-Z0-9_?'#().,;&%@!\\- ，、：；。￥$！【】’‘“”（）？…~\/]{1,128}$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[\\s一-龥a-zA-Z0-9_?'#().,;&%@!\\- ，、：；。￥$！【】’‘“”（）？…~\/]{1,128}$/.";
             }
         return $invalidProperties;
     }

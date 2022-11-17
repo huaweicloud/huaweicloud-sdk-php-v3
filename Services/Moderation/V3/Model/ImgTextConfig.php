@@ -20,8 +20,8 @@ class ImgTextConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * blackGlossaryNames  用户输入的console界面自定义的黑词库名，支持传入多个。
-    * whiteGlossaryNames  用户输入的console界面自定义的白词库名，支持传入多个。
+    * blackGlossaryNames  检测时使用的自定义黑名单词库列表。
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ImgTextConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * blackGlossaryNames  用户输入的console界面自定义的黑词库名，支持传入多个。
-    * whiteGlossaryNames  用户输入的console界面自定义的白词库名，支持传入多个。
+    * blackGlossaryNames  检测时使用的自定义黑名单词库列表。
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ImgTextConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * blackGlossaryNames  用户输入的console界面自定义的黑词库名，支持传入多个。
-    * whiteGlossaryNames  用户输入的console界面自定义的白词库名，支持传入多个。
+    * blackGlossaryNames  检测时使用的自定义黑名单词库列表。
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ImgTextConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * blackGlossaryNames  用户输入的console界面自定义的黑词库名，支持传入多个。
-    * whiteGlossaryNames  用户输入的console界面自定义的白词库名，支持传入多个。
+    * blackGlossaryNames  检测时使用的自定义黑名单词库列表。
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ImgTextConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * blackGlossaryNames  用户输入的console界面自定义的黑词库名，支持传入多个。
-    * whiteGlossaryNames  用户输入的console界面自定义的白词库名，支持传入多个。
+    * blackGlossaryNames  检测时使用的自定义黑名单词库列表。
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ImgTextConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets blackGlossaryNames
-    *  用户输入的console界面自定义的黑词库名，支持传入多个。
+    *  检测时使用的自定义黑名单词库列表。
     *
     * @return string[]|null
     */
@@ -197,7 +197,7 @@ class ImgTextConfig implements ModelInterface, ArrayAccess
     /**
     * Sets blackGlossaryNames
     *
-    * @param string[]|null $blackGlossaryNames 用户输入的console界面自定义的黑词库名，支持传入多个。
+    * @param string[]|null $blackGlossaryNames 检测时使用的自定义黑名单词库列表。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ImgTextConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets whiteGlossaryNames
-    *  用户输入的console界面自定义的白词库名，支持传入多个。
+    *  检测时使用的自定义白名单词库列表。
     *
     * @return string[]|null
     */
@@ -221,7 +221,7 @@ class ImgTextConfig implements ModelInterface, ArrayAccess
     /**
     * Sets whiteGlossaryNames
     *
-    * @param string[]|null $whiteGlossaryNames 用户输入的console界面自定义的白词库名，支持传入多个。
+    * @param string[]|null $whiteGlossaryNames 检测时使用的自定义白名单词库列表。
     *
     * @return $this
     */

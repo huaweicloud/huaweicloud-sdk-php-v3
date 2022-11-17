@@ -46,7 +46,6 @@ class EvsClient extends Client
 
     public function batchCreateVolumeTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudvolumes/{volume_id}/tags/action';
         $formParams = [];
         $queryParams = [];
@@ -92,7 +91,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\BatchCreateVolumeTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\BatchCreateVolumeTagsRequest');
     }
 
@@ -114,7 +112,6 @@ class EvsClient extends Client
 
     public function batchDeleteVolumeTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudvolumes/{volume_id}/tags/action';
         $formParams = [];
         $queryParams = [];
@@ -160,7 +157,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\BatchDeleteVolumeTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\BatchDeleteVolumeTagsRequest');
     }
 
@@ -182,7 +178,6 @@ class EvsClient extends Client
 
     public function cinderAcceptVolumeTransferWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/os-volume-transfer/{transfer_id}/accept';
         $formParams = [];
         $queryParams = [];
@@ -228,7 +223,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CinderAcceptVolumeTransferResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CinderAcceptVolumeTransferRequest');
     }
 
@@ -251,7 +245,6 @@ class EvsClient extends Client
 
     public function cinderCreateVolumeTransferWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/os-volume-transfer';
         $formParams = [];
         $queryParams = [];
@@ -294,7 +287,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CinderCreateVolumeTransferResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CinderCreateVolumeTransferRequest');
     }
 
@@ -316,7 +308,6 @@ class EvsClient extends Client
 
     public function cinderDeleteVolumeTransferWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/os-volume-transfer/{transfer_id}';
         $formParams = [];
         $queryParams = [];
@@ -359,7 +350,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CinderDeleteVolumeTransferResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CinderDeleteVolumeTransferRequest');
     }
 
@@ -381,7 +371,6 @@ class EvsClient extends Client
 
     public function cinderListAvailabilityZonesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/os-availability-zone';
         $formParams = [];
         $queryParams = [];
@@ -421,7 +410,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CinderListAvailabilityZonesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CinderListAvailabilityZonesRequest');
     }
 
@@ -443,7 +431,6 @@ class EvsClient extends Client
 
     public function cinderListQuotasWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/os-quota-sets/{target_project_id}';
         $formParams = [];
         $queryParams = [];
@@ -489,7 +476,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CinderListQuotasResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CinderListQuotasRequest');
     }
 
@@ -511,7 +497,6 @@ class EvsClient extends Client
 
     public function cinderListVolumeTransfersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/os-volume-transfer';
         $formParams = [];
         $queryParams = [];
@@ -557,7 +542,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CinderListVolumeTransfersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CinderListVolumeTransfersRequest');
     }
 
@@ -579,7 +563,6 @@ class EvsClient extends Client
 
     public function cinderListVolumeTypesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/types';
         $formParams = [];
         $queryParams = [];
@@ -619,7 +602,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CinderListVolumeTypesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CinderListVolumeTypesRequest');
     }
 
@@ -641,7 +623,6 @@ class EvsClient extends Client
 
     public function cinderShowVolumeTransferWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/os-volume-transfer/{transfer_id}';
         $formParams = [];
         $queryParams = [];
@@ -684,7 +665,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CinderShowVolumeTransferResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CinderShowVolumeTransferRequest');
     }
 
@@ -706,7 +686,6 @@ class EvsClient extends Client
 
     public function createSnapshotWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudsnapshots';
         $formParams = [];
         $queryParams = [];
@@ -749,7 +728,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CreateSnapshotResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CreateSnapshotRequest');
     }
 
@@ -776,7 +754,6 @@ class EvsClient extends Client
 
     public function createVolumeWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/{project_id}/cloudvolumes';
         $formParams = [];
         $queryParams = [];
@@ -819,7 +796,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CreateVolumeResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CreateVolumeRequest');
     }
 
@@ -841,7 +817,6 @@ class EvsClient extends Client
 
     public function deleteSnapshotWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudsnapshots/{snapshot_id}';
         $formParams = [];
         $queryParams = [];
@@ -884,7 +859,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\DeleteSnapshotResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\DeleteSnapshotRequest');
     }
 
@@ -906,7 +880,6 @@ class EvsClient extends Client
 
     public function deleteVolumeWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudvolumes/{volume_id}';
         $formParams = [];
         $queryParams = [];
@@ -949,7 +922,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\DeleteVolumeResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\DeleteVolumeRequest');
     }
 
@@ -971,7 +943,6 @@ class EvsClient extends Client
 
     public function listSnapshotsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudsnapshots/detail';
         $formParams = [];
         $queryParams = [];
@@ -1044,7 +1015,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ListSnapshotsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ListSnapshotsRequest');
     }
 
@@ -1066,7 +1036,6 @@ class EvsClient extends Client
 
     public function listVolumeTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudvolumes/tags';
         $formParams = [];
         $queryParams = [];
@@ -1106,7 +1075,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ListVolumeTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ListVolumeTagsRequest');
     }
 
@@ -1128,7 +1096,6 @@ class EvsClient extends Client
 
     public function listVolumesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudvolumes/detail';
         $formParams = [];
         $queryParams = [];
@@ -1222,7 +1189,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ListVolumesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ListVolumesRequest');
     }
 
@@ -1244,7 +1210,6 @@ class EvsClient extends Client
 
     public function listVolumesByTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudvolumes/resource_instances/action';
         $formParams = [];
         $queryParams = [];
@@ -1287,7 +1252,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ListVolumesByTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ListVolumesByTagsRequest');
     }
 
@@ -1314,7 +1278,6 @@ class EvsClient extends Client
 
     public function resizeVolumeWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.1/{project_id}/cloudvolumes/{volume_id}/action';
         $formParams = [];
         $queryParams = [];
@@ -1360,7 +1323,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ResizeVolumeResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ResizeVolumeRequest');
     }
 
@@ -1382,7 +1344,6 @@ class EvsClient extends Client
 
     public function rollbackSnapshotWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudsnapshots/{snapshot_id}/rollback';
         $formParams = [];
         $queryParams = [];
@@ -1428,7 +1389,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\RollbackSnapshotResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\RollbackSnapshotRequest');
     }
 
@@ -1451,7 +1411,6 @@ class EvsClient extends Client
 
     public function showJobWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/jobs/{job_id}';
         $formParams = [];
         $queryParams = [];
@@ -1494,7 +1453,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ShowJobResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ShowJobRequest');
     }
 
@@ -1516,7 +1474,6 @@ class EvsClient extends Client
 
     public function showSnapshotWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudsnapshots/{snapshot_id}';
         $formParams = [];
         $queryParams = [];
@@ -1559,7 +1516,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ShowSnapshotResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ShowSnapshotRequest');
     }
 
@@ -1581,7 +1537,6 @@ class EvsClient extends Client
 
     public function showVolumeWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudvolumes/{volume_id}';
         $formParams = [];
         $queryParams = [];
@@ -1624,7 +1579,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ShowVolumeResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ShowVolumeRequest');
     }
 
@@ -1646,7 +1600,6 @@ class EvsClient extends Client
 
     public function showVolumeTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudvolumes/{volume_id}/tags';
         $formParams = [];
         $queryParams = [];
@@ -1689,7 +1642,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ShowVolumeTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ShowVolumeTagsRequest');
     }
 
@@ -1711,7 +1663,6 @@ class EvsClient extends Client
 
     public function updateSnapshotWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudsnapshots/{snapshot_id}';
         $formParams = [];
         $queryParams = [];
@@ -1757,7 +1708,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\UpdateSnapshotResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\UpdateSnapshotRequest');
     }
 
@@ -1779,7 +1729,6 @@ class EvsClient extends Client
 
     public function updateVolumeWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/cloudvolumes/{volume_id}';
         $formParams = [];
         $queryParams = [];
@@ -1825,7 +1774,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\UpdateVolumeResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\UpdateVolumeRequest');
     }
 
@@ -1847,7 +1795,6 @@ class EvsClient extends Client
 
     public function listVersionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/';
         $formParams = [];
         $queryParams = [];
@@ -1887,7 +1834,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ListVersionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ListVersionsRequest');
     }
 
@@ -1909,7 +1855,6 @@ class EvsClient extends Client
 
     public function showVersionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/{version}';
         $formParams = [];
         $queryParams = [];
@@ -1952,7 +1897,6 @@ class EvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ShowVersionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ShowVersionRequest');
     }
 
@@ -1966,7 +1910,6 @@ class EvsClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -1979,7 +1922,6 @@ class EvsClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

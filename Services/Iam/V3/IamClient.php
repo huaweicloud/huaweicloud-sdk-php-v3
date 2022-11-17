@@ -45,7 +45,6 @@ class IamClient extends Client
 
     public function associateAgencyWithAllProjectsPermissionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}/inherited_to_projects';
         $formParams = [];
         $queryParams = [];
@@ -94,7 +93,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateAgencyWithAllProjectsPermissionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateAgencyWithAllProjectsPermissionRequest');
     }
 
@@ -118,7 +116,6 @@ class IamClient extends Client
 
     public function associateAgencyWithDomainPermissionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -167,7 +164,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateAgencyWithDomainPermissionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateAgencyWithDomainPermissionRequest');
     }
 
@@ -191,7 +187,6 @@ class IamClient extends Client
 
     public function associateAgencyWithProjectPermissionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/projects/{project_id}/agencies/{agency_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -240,7 +235,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateAgencyWithProjectPermissionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateAgencyWithProjectPermissionRequest');
     }
 
@@ -264,7 +258,6 @@ class IamClient extends Client
 
     public function associateRoleToGroupOnEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-PERMISSION/enterprise-projects/{enterprise_project_id}/groups/{group_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -313,7 +306,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateRoleToGroupOnEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateRoleToGroupOnEnterpriseProjectRequest');
     }
 
@@ -336,7 +328,6 @@ class IamClient extends Client
 
     public function associateRoleToUserOnEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-PERMISSION/enterprise-projects/{enterprise_project_id}/users/{user_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -385,7 +376,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateRoleToUserOnEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateRoleToUserOnEnterpriseProjectRequest');
     }
 
@@ -409,7 +399,6 @@ class IamClient extends Client
 
     public function checkAllProjectsPermissionForAgencyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}/inherited_to_projects';
         $formParams = [];
         $queryParams = [];
@@ -458,7 +447,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CheckAllProjectsPermissionForAgencyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CheckAllProjectsPermissionForAgencyRequest');
     }
 
@@ -482,7 +470,6 @@ class IamClient extends Client
 
     public function checkDomainPermissionForAgencyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -531,7 +518,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CheckDomainPermissionForAgencyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CheckDomainPermissionForAgencyRequest');
     }
 
@@ -555,7 +541,6 @@ class IamClient extends Client
 
     public function checkProjectPermissionForAgencyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/projects/{project_id}/agencies/{agency_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -604,7 +589,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CheckProjectPermissionForAgencyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CheckProjectPermissionForAgencyRequest');
     }
 
@@ -628,7 +612,6 @@ class IamClient extends Client
 
     public function createAgencyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/agencies';
         $formParams = [];
         $queryParams = [];
@@ -671,7 +654,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateAgencyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateAgencyRequest');
     }
 
@@ -695,7 +677,6 @@ class IamClient extends Client
 
     public function createAgencyCustomPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-ROLE/roles';
         $formParams = [];
         $queryParams = [];
@@ -738,7 +719,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateAgencyCustomPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateAgencyCustomPolicyRequest');
     }
 
@@ -762,7 +742,6 @@ class IamClient extends Client
 
     public function createCloudServiceCustomPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-ROLE/roles';
         $formParams = [];
         $queryParams = [];
@@ -805,7 +784,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateCloudServiceCustomPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateCloudServiceCustomPolicyRequest');
     }
 
@@ -831,7 +809,6 @@ class IamClient extends Client
 
     public function createLoginTokenWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AUTH/securitytoken/logintokens';
         $formParams = [];
         $queryParams = [];
@@ -874,7 +851,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateLoginTokenResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateLoginTokenRequest');
     }
 
@@ -900,7 +876,6 @@ class IamClient extends Client
 
     public function createMetadataWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3-ext/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}/metadata';
         $formParams = [];
         $queryParams = [];
@@ -949,7 +924,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMetadataResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMetadataRequest');
     }
 
@@ -971,7 +945,6 @@ class IamClient extends Client
 
     public function createOpenIdConnectConfigWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-FEDERATION/identity-providers/{idp_id}/openid-connect-config';
         $formParams = [];
         $queryParams = [];
@@ -1017,7 +990,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateOpenIdConnectConfigResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateOpenIdConnectConfigRequest');
     }
 
@@ -1039,7 +1011,6 @@ class IamClient extends Client
 
     public function createTokenWithIdTokenWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AUTH/id-token/tokens';
         $formParams = [];
         $queryParams = [];
@@ -1055,7 +1026,7 @@ class IamClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['xIdpId'] !== null) {
-            $headerParams['x_idp_id'] = $localVarParams['xIdpId'];
+            $headerParams[$arr['xIdpId']] = $localVarParams['xIdpId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1085,7 +1056,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateTokenWithIdTokenResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateTokenWithIdTokenRequest');
     }
 
@@ -1107,7 +1077,6 @@ class IamClient extends Client
 
     public function createUnscopedTokenWithIdTokenWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}/auth';
         $formParams = [];
         $queryParams = [];
@@ -1123,7 +1092,7 @@ class IamClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
         }
         if ($localVarParams['idpId'] !== null) {
             $pathParams['idp_id'] = $localVarParams['idpId'];
@@ -1156,7 +1125,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateUnscopedTokenWithIdTokenResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateUnscopedTokenWithIdTokenRequest');
     }
 
@@ -1180,7 +1148,6 @@ class IamClient extends Client
 
     public function deleteAgencyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/agencies/{agency_id}';
         $formParams = [];
         $queryParams = [];
@@ -1223,7 +1190,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteAgencyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteAgencyRequest');
     }
 
@@ -1247,7 +1213,6 @@ class IamClient extends Client
 
     public function deleteCustomPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-ROLE/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -1290,7 +1255,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteCustomPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteCustomPolicyRequest');
     }
 
@@ -1314,7 +1278,6 @@ class IamClient extends Client
 
     public function deleteDomainGroupInheritedRoleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/{role_id}/inherited_to_projects';
         $formParams = [];
         $queryParams = [];
@@ -1363,7 +1326,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteDomainGroupInheritedRoleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteDomainGroupInheritedRoleRequest');
     }
 
@@ -1387,7 +1349,6 @@ class IamClient extends Client
 
     public function keystoneAddUserToGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/groups/{group_id}/users/{user_id}';
         $formParams = [];
         $queryParams = [];
@@ -1433,7 +1394,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneAddUserToGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneAddUserToGroupRequest');
     }
 
@@ -1457,7 +1417,6 @@ class IamClient extends Client
 
     public function keystoneAssociateGroupWithDomainPermissionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/domains/{domain_id}/groups/{group_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -1506,7 +1465,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneAssociateGroupWithDomainPermissionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneAssociateGroupWithDomainPermissionRequest');
     }
 
@@ -1530,7 +1488,6 @@ class IamClient extends Client
 
     public function keystoneAssociateGroupWithProjectPermissionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/projects/{project_id}/groups/{group_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -1579,7 +1536,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneAssociateGroupWithProjectPermissionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneAssociateGroupWithProjectPermissionRequest');
     }
 
@@ -1603,7 +1559,6 @@ class IamClient extends Client
 
     public function keystoneCheckDomainPermissionForGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/domains/{domain_id}/groups/{group_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -1652,7 +1607,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCheckDomainPermissionForGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCheckDomainPermissionForGroupRequest');
     }
 
@@ -1676,7 +1630,6 @@ class IamClient extends Client
 
     public function keystoneCheckProjectPermissionForGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/projects/{project_id}/groups/{group_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -1725,7 +1678,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCheckProjectPermissionForGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCheckProjectPermissionForGroupRequest');
     }
 
@@ -1749,7 +1701,6 @@ class IamClient extends Client
 
     public function keystoneCheckUserInGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/groups/{group_id}/users/{user_id}';
         $formParams = [];
         $queryParams = [];
@@ -1795,7 +1746,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCheckUserInGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCheckUserInGroupRequest');
     }
 
@@ -1819,7 +1769,6 @@ class IamClient extends Client
 
     public function keystoneCheckroleForGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/{role_id}/inherited_to_projects';
         $formParams = [];
         $queryParams = [];
@@ -1868,7 +1817,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCheckroleForGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCheckroleForGroupRequest');
     }
 
@@ -1892,7 +1840,6 @@ class IamClient extends Client
 
     public function keystoneCreateGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/groups';
         $formParams = [];
         $queryParams = [];
@@ -1935,7 +1882,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateGroupRequest');
     }
 
@@ -1959,7 +1905,6 @@ class IamClient extends Client
 
     public function keystoneCreateIdentityProviderWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{id}';
         $formParams = [];
         $queryParams = [];
@@ -2005,7 +1950,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateIdentityProviderResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateIdentityProviderRequest');
     }
 
@@ -2029,7 +1973,6 @@ class IamClient extends Client
 
     public function keystoneCreateMappingWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/mappings/{id}';
         $formParams = [];
         $queryParams = [];
@@ -2075,7 +2018,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateMappingResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateMappingRequest');
     }
 
@@ -2099,7 +2041,6 @@ class IamClient extends Client
 
     public function keystoneCreateProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/projects';
         $formParams = [];
         $queryParams = [];
@@ -2142,7 +2083,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateProjectRequest');
     }
 
@@ -2166,7 +2106,6 @@ class IamClient extends Client
 
     public function keystoneCreateProtocolWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}';
         $formParams = [];
         $queryParams = [];
@@ -2215,7 +2154,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateProtocolResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateProtocolRequest');
     }
 
@@ -2239,7 +2177,6 @@ class IamClient extends Client
 
     public function keystoneCreateScopedTokenWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/auth/tokens';
         $formParams = [];
         $queryParams = [];
@@ -2282,7 +2219,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateScopedTokenResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateScopedTokenRequest');
     }
 
@@ -2306,7 +2242,6 @@ class IamClient extends Client
 
     public function keystoneDeleteGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/groups/{group_id}';
         $formParams = [];
         $queryParams = [];
@@ -2349,7 +2284,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteGroupRequest');
     }
 
@@ -2373,7 +2307,6 @@ class IamClient extends Client
 
     public function keystoneDeleteIdentityProviderWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{id}';
         $formParams = [];
         $queryParams = [];
@@ -2416,7 +2349,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteIdentityProviderResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteIdentityProviderRequest');
     }
 
@@ -2440,7 +2372,6 @@ class IamClient extends Client
 
     public function keystoneDeleteMappingWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/mappings/{id}';
         $formParams = [];
         $queryParams = [];
@@ -2483,7 +2414,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteMappingResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteMappingRequest');
     }
 
@@ -2507,7 +2437,6 @@ class IamClient extends Client
 
     public function keystoneDeleteProtocolWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}';
         $formParams = [];
         $queryParams = [];
@@ -2553,7 +2482,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteProtocolResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteProtocolRequest');
     }
 
@@ -2575,7 +2503,6 @@ class IamClient extends Client
 
     public function keystoneListAllProjectPermissionsForGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/inherited_to_projects';
         $formParams = [];
         $queryParams = [];
@@ -2621,7 +2548,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListAllProjectPermissionsForGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListAllProjectPermissionsForGroupRequest');
     }
 
@@ -2645,7 +2571,6 @@ class IamClient extends Client
 
     public function keystoneListAuthDomainsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/auth/domains';
         $formParams = [];
         $queryParams = [];
@@ -2685,7 +2610,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListAuthDomainsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListAuthDomainsRequest');
     }
 
@@ -2709,7 +2633,6 @@ class IamClient extends Client
 
     public function keystoneListAuthProjectsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/auth/projects';
         $formParams = [];
         $queryParams = [];
@@ -2749,7 +2672,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListAuthProjectsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListAuthProjectsRequest');
     }
 
@@ -2773,7 +2695,6 @@ class IamClient extends Client
 
     public function keystoneListDomainPermissionsForGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/domains/{domain_id}/groups/{group_id}/roles';
         $formParams = [];
         $queryParams = [];
@@ -2819,7 +2740,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListDomainPermissionsForGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListDomainPermissionsForGroupRequest');
     }
 
@@ -2843,7 +2763,6 @@ class IamClient extends Client
 
     public function keystoneListEndpointsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/endpoints';
         $formParams = [];
         $queryParams = [];
@@ -2889,7 +2808,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListEndpointsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListEndpointsRequest');
     }
 
@@ -2914,7 +2832,6 @@ class IamClient extends Client
 
     public function keystoneListFederationDomainsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/domains';
         $formParams = [];
         $queryParams = [];
@@ -2954,7 +2871,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListFederationDomainsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListFederationDomainsRequest');
     }
 
@@ -2978,7 +2894,6 @@ class IamClient extends Client
 
     public function keystoneListGroupsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/groups';
         $formParams = [];
         $queryParams = [];
@@ -3024,7 +2939,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListGroupsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListGroupsRequest');
     }
 
@@ -3048,7 +2962,6 @@ class IamClient extends Client
 
     public function keystoneListIdentityProvidersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers';
         $formParams = [];
         $queryParams = [];
@@ -3088,7 +3001,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListIdentityProvidersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListIdentityProvidersRequest');
     }
 
@@ -3112,7 +3024,6 @@ class IamClient extends Client
 
     public function keystoneListMappingsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/mappings';
         $formParams = [];
         $queryParams = [];
@@ -3152,7 +3063,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListMappingsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListMappingsRequest');
     }
 
@@ -3176,7 +3086,6 @@ class IamClient extends Client
 
     public function keystoneListPermissionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/roles';
         $formParams = [];
         $queryParams = [];
@@ -3240,7 +3149,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListPermissionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListPermissionsRequest');
     }
 
@@ -3264,7 +3172,6 @@ class IamClient extends Client
 
     public function keystoneListProjectPermissionsForGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/projects/{project_id}/groups/{group_id}/roles';
         $formParams = [];
         $queryParams = [];
@@ -3310,7 +3217,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListProjectPermissionsForGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListProjectPermissionsForGroupRequest');
     }
 
@@ -3334,7 +3240,6 @@ class IamClient extends Client
 
     public function keystoneListProjectsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/projects';
         $formParams = [];
         $queryParams = [];
@@ -3395,7 +3300,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListProjectsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListProjectsRequest');
     }
 
@@ -3419,7 +3323,6 @@ class IamClient extends Client
 
     public function keystoneListProjectsForUserWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/users/{user_id}/projects';
         $formParams = [];
         $queryParams = [];
@@ -3462,7 +3365,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListProjectsForUserResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListProjectsForUserRequest');
     }
 
@@ -3486,7 +3388,6 @@ class IamClient extends Client
 
     public function keystoneListProtocolsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{idp_id}/protocols';
         $formParams = [];
         $queryParams = [];
@@ -3529,7 +3430,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListProtocolsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListProtocolsRequest');
     }
 
@@ -3553,7 +3453,6 @@ class IamClient extends Client
 
     public function keystoneListRegionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/regions';
         $formParams = [];
         $queryParams = [];
@@ -3593,7 +3492,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListRegionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListRegionsRequest');
     }
 
@@ -3617,7 +3515,6 @@ class IamClient extends Client
 
     public function keystoneListServicesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/services';
         $formParams = [];
         $queryParams = [];
@@ -3660,7 +3557,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListServicesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListServicesRequest');
     }
 
@@ -3684,7 +3580,6 @@ class IamClient extends Client
 
     public function keystoneListUsersForGroupByAdminWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/groups/{group_id}/users';
         $formParams = [];
         $queryParams = [];
@@ -3727,7 +3622,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListUsersForGroupByAdminResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListUsersForGroupByAdminRequest');
     }
 
@@ -3751,7 +3645,6 @@ class IamClient extends Client
 
     public function keystoneListVersionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/';
         $formParams = [];
         $queryParams = [];
@@ -3791,7 +3684,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListVersionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListVersionsRequest');
     }
 
@@ -3815,7 +3707,6 @@ class IamClient extends Client
 
     public function keystoneRemoveDomainPermissionFromGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/domains/{domain_id}/groups/{group_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -3864,7 +3755,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneRemoveDomainPermissionFromGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneRemoveDomainPermissionFromGroupRequest');
     }
 
@@ -3888,7 +3778,6 @@ class IamClient extends Client
 
     public function keystoneRemoveProjectPermissionFromGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/projects/{project_id}/groups/{group_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -3937,7 +3826,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneRemoveProjectPermissionFromGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneRemoveProjectPermissionFromGroupRequest');
     }
 
@@ -3961,7 +3849,6 @@ class IamClient extends Client
 
     public function keystoneRemoveUserFromGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/groups/{group_id}/users/{user_id}';
         $formParams = [];
         $queryParams = [];
@@ -4007,7 +3894,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneRemoveUserFromGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneRemoveUserFromGroupRequest');
     }
 
@@ -4031,7 +3917,6 @@ class IamClient extends Client
 
     public function keystoneShowCatalogWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/auth/catalog';
         $formParams = [];
         $queryParams = [];
@@ -4071,7 +3956,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowCatalogResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowCatalogRequest');
     }
 
@@ -4095,7 +3979,6 @@ class IamClient extends Client
 
     public function keystoneShowEndpointWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/endpoints/{endpoint_id}';
         $formParams = [];
         $queryParams = [];
@@ -4138,7 +4021,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowEndpointResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowEndpointRequest');
     }
 
@@ -4162,7 +4044,6 @@ class IamClient extends Client
 
     public function keystoneShowGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/groups/{group_id}';
         $formParams = [];
         $queryParams = [];
@@ -4205,7 +4086,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowGroupRequest');
     }
 
@@ -4229,7 +4109,6 @@ class IamClient extends Client
 
     public function keystoneShowIdentityProviderWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{id}';
         $formParams = [];
         $queryParams = [];
@@ -4272,7 +4151,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowIdentityProviderResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowIdentityProviderRequest');
     }
 
@@ -4296,7 +4174,6 @@ class IamClient extends Client
 
     public function keystoneShowMappingWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/mappings/{id}';
         $formParams = [];
         $queryParams = [];
@@ -4339,7 +4216,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowMappingResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowMappingRequest');
     }
 
@@ -4363,7 +4239,6 @@ class IamClient extends Client
 
     public function keystoneShowPermissionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -4406,7 +4281,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowPermissionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowPermissionRequest');
     }
 
@@ -4430,7 +4304,6 @@ class IamClient extends Client
 
     public function keystoneShowProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/projects/{project_id}';
         $formParams = [];
         $queryParams = [];
@@ -4473,7 +4346,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowProjectRequest');
     }
 
@@ -4497,7 +4369,6 @@ class IamClient extends Client
 
     public function keystoneShowProtocolWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}';
         $formParams = [];
         $queryParams = [];
@@ -4543,7 +4414,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowProtocolResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowProtocolRequest');
     }
 
@@ -4567,7 +4437,6 @@ class IamClient extends Client
 
     public function keystoneShowRegionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/regions/{region_id}';
         $formParams = [];
         $queryParams = [];
@@ -4610,7 +4479,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowRegionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowRegionRequest');
     }
 
@@ -4634,7 +4502,6 @@ class IamClient extends Client
 
     public function keystoneShowSecurityComplianceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/domains/{domain_id}/config/security_compliance';
         $formParams = [];
         $queryParams = [];
@@ -4677,7 +4544,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowSecurityComplianceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowSecurityComplianceRequest');
     }
 
@@ -4701,7 +4567,6 @@ class IamClient extends Client
 
     public function keystoneShowSecurityComplianceByOptionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/domains/{domain_id}/config/security_compliance/{option}';
         $formParams = [];
         $queryParams = [];
@@ -4747,7 +4612,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowSecurityComplianceByOptionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowSecurityComplianceByOptionRequest');
     }
 
@@ -4771,7 +4635,6 @@ class IamClient extends Client
 
     public function keystoneShowServiceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/services/{service_id}';
         $formParams = [];
         $queryParams = [];
@@ -4814,7 +4677,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowServiceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowServiceRequest');
     }
 
@@ -4838,7 +4700,6 @@ class IamClient extends Client
 
     public function keystoneShowVersionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3';
         $formParams = [];
         $queryParams = [];
@@ -4878,7 +4739,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowVersionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowVersionRequest');
     }
 
@@ -4902,7 +4762,6 @@ class IamClient extends Client
 
     public function keystoneUpdateGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/groups/{group_id}';
         $formParams = [];
         $queryParams = [];
@@ -4948,7 +4807,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateGroupRequest');
     }
 
@@ -4972,7 +4830,6 @@ class IamClient extends Client
 
     public function keystoneUpdateIdentityProviderWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{id}';
         $formParams = [];
         $queryParams = [];
@@ -5018,7 +4875,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateIdentityProviderResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateIdentityProviderRequest');
     }
 
@@ -5042,7 +4898,6 @@ class IamClient extends Client
 
     public function keystoneUpdateMappingWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/mappings/{id}';
         $formParams = [];
         $queryParams = [];
@@ -5088,7 +4943,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateMappingResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateMappingRequest');
     }
 
@@ -5112,7 +4966,6 @@ class IamClient extends Client
 
     public function keystoneUpdateProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/projects/{project_id}';
         $formParams = [];
         $queryParams = [];
@@ -5158,7 +5011,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateProjectRequest');
     }
 
@@ -5182,7 +5034,6 @@ class IamClient extends Client
 
     public function keystoneUpdateProtocolWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}';
         $formParams = [];
         $queryParams = [];
@@ -5231,7 +5082,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateProtocolResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateProtocolRequest');
     }
 
@@ -5255,7 +5105,6 @@ class IamClient extends Client
 
     public function listAgenciesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/agencies';
         $formParams = [];
         $queryParams = [];
@@ -5304,7 +5153,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ListAgenciesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListAgenciesRequest');
     }
 
@@ -5328,7 +5176,6 @@ class IamClient extends Client
 
     public function listAllProjectsPermissionsForAgencyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/inherited_to_projects';
         $formParams = [];
         $queryParams = [];
@@ -5374,7 +5221,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ListAllProjectsPermissionsForAgencyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListAllProjectsPermissionsForAgencyRequest');
     }
 
@@ -5398,7 +5244,6 @@ class IamClient extends Client
 
     public function listCustomPoliciesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-ROLE/roles';
         $formParams = [];
         $queryParams = [];
@@ -5444,7 +5289,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ListCustomPoliciesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListCustomPoliciesRequest');
     }
 
@@ -5468,7 +5312,6 @@ class IamClient extends Client
 
     public function listDomainPermissionsForAgencyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles';
         $formParams = [];
         $queryParams = [];
@@ -5514,7 +5357,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ListDomainPermissionsForAgencyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListDomainPermissionsForAgencyRequest');
     }
 
@@ -5538,7 +5380,6 @@ class IamClient extends Client
 
     public function listEnterpriseProjectsForGroupWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-PERMISSION/groups/{group_id}/enterprise-projects';
         $formParams = [];
         $queryParams = [];
@@ -5581,7 +5422,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ListEnterpriseProjectsForGroupResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListEnterpriseProjectsForGroupRequest');
     }
 
@@ -5605,7 +5445,6 @@ class IamClient extends Client
 
     public function listEnterpriseProjectsForUserWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-PERMISSION/users/{user_id}/enterprise-projects';
         $formParams = [];
         $queryParams = [];
@@ -5648,7 +5487,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ListEnterpriseProjectsForUserResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListEnterpriseProjectsForUserRequest');
     }
 
@@ -5672,7 +5510,6 @@ class IamClient extends Client
 
     public function listGroupsForEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-PERMISSION/enterprise-projects/{enterprise_project_id}/groups';
         $formParams = [];
         $queryParams = [];
@@ -5715,7 +5552,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ListGroupsForEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListGroupsForEnterpriseProjectRequest');
     }
 
@@ -5739,7 +5575,6 @@ class IamClient extends Client
 
     public function listProjectPermissionsForAgencyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/projects/{project_id}/agencies/{agency_id}/roles';
         $formParams = [];
         $queryParams = [];
@@ -5785,7 +5620,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ListProjectPermissionsForAgencyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListProjectPermissionsForAgencyRequest');
     }
 
@@ -5809,7 +5643,6 @@ class IamClient extends Client
 
     public function listRolesForGroupOnEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-PERMISSION/enterprise-projects/{enterprise_project_id}/groups/{group_id}/roles';
         $formParams = [];
         $queryParams = [];
@@ -5855,7 +5688,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ListRolesForGroupOnEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListRolesForGroupOnEnterpriseProjectRequest');
     }
 
@@ -5878,7 +5710,6 @@ class IamClient extends Client
 
     public function listRolesForUserOnEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-PERMISSION/enterprise-projects/{enterprise_project_id}/users/{user_id}/roles';
         $formParams = [];
         $queryParams = [];
@@ -5924,7 +5755,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ListRolesForUserOnEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListRolesForUserOnEnterpriseProjectRequest');
     }
 
@@ -5947,7 +5777,6 @@ class IamClient extends Client
 
     public function listUsersForEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-PERMISSION/enterprise-projects/{enterprise_project_id}/users';
         $formParams = [];
         $queryParams = [];
@@ -5990,7 +5819,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ListUsersForEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListUsersForEnterpriseProjectRequest');
     }
 
@@ -6014,7 +5842,6 @@ class IamClient extends Client
 
     public function removeAllProjectsPermissionFromAgencyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-INHERIT/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}/inherited_to_projects';
         $formParams = [];
         $queryParams = [];
@@ -6063,7 +5890,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\RemoveAllProjectsPermissionFromAgencyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\RemoveAllProjectsPermissionFromAgencyRequest');
     }
 
@@ -6087,7 +5913,6 @@ class IamClient extends Client
 
     public function removeDomainPermissionFromAgencyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/domains/{domain_id}/agencies/{agency_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -6136,7 +5961,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\RemoveDomainPermissionFromAgencyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\RemoveDomainPermissionFromAgencyRequest');
     }
 
@@ -6160,7 +5984,6 @@ class IamClient extends Client
 
     public function removeProjectPermissionFromAgencyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/projects/{project_id}/agencies/{agency_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -6209,7 +6032,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\RemoveProjectPermissionFromAgencyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\RemoveProjectPermissionFromAgencyRequest');
     }
 
@@ -6233,7 +6055,6 @@ class IamClient extends Client
 
     public function revokeRoleFromGroupOnEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-PERMISSION/enterprise-projects/{enterprise_project_id}/groups/{group_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -6282,7 +6103,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\RevokeRoleFromGroupOnEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\RevokeRoleFromGroupOnEnterpriseProjectRequest');
     }
 
@@ -6305,7 +6125,6 @@ class IamClient extends Client
 
     public function revokeRoleFromUserOnEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-PERMISSION/enterprise-projects/{enterprise_project_id}/users/{user_id}/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -6354,7 +6173,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\RevokeRoleFromUserOnEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\RevokeRoleFromUserOnEnterpriseProjectRequest');
     }
 
@@ -6378,7 +6196,6 @@ class IamClient extends Client
 
     public function showAgencyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/agencies/{agency_id}';
         $formParams = [];
         $queryParams = [];
@@ -6421,7 +6238,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowAgencyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowAgencyRequest');
     }
 
@@ -6445,7 +6261,6 @@ class IamClient extends Client
 
     public function showCustomPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-ROLE/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -6488,7 +6303,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowCustomPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowCustomPolicyRequest');
     }
 
@@ -6512,7 +6326,6 @@ class IamClient extends Client
 
     public function showDomainApiAclPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/api-acl-policy';
         $formParams = [];
         $queryParams = [];
@@ -6555,7 +6368,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainApiAclPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainApiAclPolicyRequest');
     }
 
@@ -6579,7 +6391,6 @@ class IamClient extends Client
 
     public function showDomainConsoleAclPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/console-acl-policy';
         $formParams = [];
         $queryParams = [];
@@ -6622,7 +6433,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainConsoleAclPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainConsoleAclPolicyRequest');
     }
 
@@ -6646,7 +6456,6 @@ class IamClient extends Client
 
     public function showDomainLoginPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/login-policy';
         $formParams = [];
         $queryParams = [];
@@ -6689,7 +6498,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainLoginPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainLoginPolicyRequest');
     }
 
@@ -6713,7 +6521,6 @@ class IamClient extends Client
 
     public function showDomainPasswordPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/password-policy';
         $formParams = [];
         $queryParams = [];
@@ -6756,7 +6563,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainPasswordPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainPasswordPolicyRequest');
     }
 
@@ -6780,7 +6586,6 @@ class IamClient extends Client
 
     public function showDomainProtectPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/protect-policy';
         $formParams = [];
         $queryParams = [];
@@ -6823,7 +6628,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainProtectPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainProtectPolicyRequest');
     }
 
@@ -6847,7 +6651,6 @@ class IamClient extends Client
 
     public function showDomainQuotaWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-QUOTA/domains/{domain_id}';
         $formParams = [];
         $queryParams = [];
@@ -6893,7 +6696,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainQuotaResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainQuotaRequest');
     }
 
@@ -6916,7 +6718,6 @@ class IamClient extends Client
 
     public function showDomainRoleAssignmentsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-PERMISSION/role-assignments';
         $formParams = [];
         $queryParams = [];
@@ -6998,7 +6799,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainRoleAssignmentsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowDomainRoleAssignmentsRequest');
     }
 
@@ -7022,7 +6822,6 @@ class IamClient extends Client
 
     public function showMetadataWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3-ext/OS-FEDERATION/identity_providers/{idp_id}/protocols/{protocol_id}/metadata';
         $formParams = [];
         $queryParams = [];
@@ -7068,7 +6867,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowMetadataResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowMetadataRequest');
     }
 
@@ -7090,7 +6888,6 @@ class IamClient extends Client
 
     public function showOpenIdConnectConfigWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-FEDERATION/identity-providers/{idp_id}/openid-connect-config';
         $formParams = [];
         $queryParams = [];
@@ -7133,7 +6930,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowOpenIdConnectConfigResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowOpenIdConnectConfigRequest');
     }
 
@@ -7157,7 +6953,6 @@ class IamClient extends Client
 
     public function showProjectDetailsAndStatusWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3-ext/projects/{project_id}';
         $formParams = [];
         $queryParams = [];
@@ -7200,7 +6995,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowProjectDetailsAndStatusResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowProjectDetailsAndStatusRequest');
     }
 
@@ -7224,7 +7018,6 @@ class IamClient extends Client
 
     public function showProjectQuotaWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-QUOTA/projects/{project_id}';
         $formParams = [];
         $queryParams = [];
@@ -7267,7 +7060,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowProjectQuotaResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowProjectQuotaRequest');
     }
 
@@ -7291,7 +7083,6 @@ class IamClient extends Client
 
     public function updateAgencyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-AGENCY/agencies/{agency_id}';
         $formParams = [];
         $queryParams = [];
@@ -7337,7 +7128,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateAgencyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateAgencyRequest');
     }
 
@@ -7361,7 +7151,6 @@ class IamClient extends Client
 
     public function updateAgencyCustomPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-ROLE/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -7407,7 +7196,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateAgencyCustomPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateAgencyCustomPolicyRequest');
     }
 
@@ -7431,7 +7219,6 @@ class IamClient extends Client
 
     public function updateCloudServiceCustomPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-ROLE/roles/{role_id}';
         $formParams = [];
         $queryParams = [];
@@ -7477,7 +7264,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateCloudServiceCustomPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateCloudServiceCustomPolicyRequest');
     }
 
@@ -7501,7 +7287,6 @@ class IamClient extends Client
 
     public function updateDomainApiAclPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/api-acl-policy';
         $formParams = [];
         $queryParams = [];
@@ -7547,7 +7332,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainApiAclPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainApiAclPolicyRequest');
     }
 
@@ -7571,7 +7355,6 @@ class IamClient extends Client
 
     public function updateDomainConsoleAclPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/console-acl-policy';
         $formParams = [];
         $queryParams = [];
@@ -7617,7 +7400,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainConsoleAclPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainConsoleAclPolicyRequest');
     }
 
@@ -7641,7 +7423,6 @@ class IamClient extends Client
 
     public function updateDomainGroupInheritRoleWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/OS-INHERIT/domains/{domain_id}/groups/{group_id}/roles/{role_id}/inherited_to_projects';
         $formParams = [];
         $queryParams = [];
@@ -7690,7 +7471,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainGroupInheritRoleResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainGroupInheritRoleRequest');
     }
 
@@ -7714,7 +7494,6 @@ class IamClient extends Client
 
     public function updateDomainLoginPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/login-policy';
         $formParams = [];
         $queryParams = [];
@@ -7760,7 +7539,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainLoginPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainLoginPolicyRequest');
     }
 
@@ -7784,7 +7562,6 @@ class IamClient extends Client
 
     public function updateDomainPasswordPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/password-policy';
         $formParams = [];
         $queryParams = [];
@@ -7830,7 +7607,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainPasswordPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainPasswordPolicyRequest');
     }
 
@@ -7854,7 +7630,6 @@ class IamClient extends Client
 
     public function updateDomainProtectPolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-SECURITYPOLICY/domains/{domain_id}/protect-policy';
         $formParams = [];
         $queryParams = [];
@@ -7900,7 +7675,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainProtectPolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateDomainProtectPolicyRequest');
     }
 
@@ -7922,7 +7696,6 @@ class IamClient extends Client
 
     public function updateOpenIdConnectConfigWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-FEDERATION/identity-providers/{idp_id}/openid-connect-config';
         $formParams = [];
         $queryParams = [];
@@ -7968,7 +7741,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateOpenIdConnectConfigResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateOpenIdConnectConfigRequest');
     }
 
@@ -7992,7 +7764,6 @@ class IamClient extends Client
 
     public function updateProjectStatusWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3-ext/projects/{project_id}';
         $formParams = [];
         $queryParams = [];
@@ -8038,7 +7809,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateProjectStatusResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateProjectStatusRequest');
     }
 
@@ -8064,7 +7834,6 @@ class IamClient extends Client
 
     public function createPermanentAccessKeyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-CREDENTIAL/credentials';
         $formParams = [];
         $queryParams = [];
@@ -8107,7 +7876,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreatePermanentAccessKeyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreatePermanentAccessKeyRequest');
     }
 
@@ -8133,7 +7901,6 @@ class IamClient extends Client
 
     public function createTemporaryAccessKeyByAgencyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-CREDENTIAL/securitytokens';
         $formParams = [];
         $queryParams = [];
@@ -8176,7 +7943,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateTemporaryAccessKeyByAgencyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateTemporaryAccessKeyByAgencyRequest');
     }
 
@@ -8202,7 +7968,6 @@ class IamClient extends Client
 
     public function createTemporaryAccessKeyByTokenWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-CREDENTIAL/securitytokens';
         $formParams = [];
         $queryParams = [];
@@ -8245,7 +8010,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateTemporaryAccessKeyByTokenResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateTemporaryAccessKeyByTokenRequest');
     }
 
@@ -8269,7 +8033,6 @@ class IamClient extends Client
 
     public function deletePermanentAccessKeyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-CREDENTIAL/credentials/{access_key}';
         $formParams = [];
         $queryParams = [];
@@ -8312,7 +8075,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\DeletePermanentAccessKeyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeletePermanentAccessKeyRequest');
     }
 
@@ -8336,7 +8098,6 @@ class IamClient extends Client
 
     public function listPermanentAccessKeysWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-CREDENTIAL/credentials';
         $formParams = [];
         $queryParams = [];
@@ -8379,7 +8140,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ListPermanentAccessKeysResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListPermanentAccessKeysRequest');
     }
 
@@ -8403,7 +8163,6 @@ class IamClient extends Client
 
     public function showPermanentAccessKeyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-CREDENTIAL/credentials/{access_key}';
         $formParams = [];
         $queryParams = [];
@@ -8446,7 +8205,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowPermanentAccessKeyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowPermanentAccessKeyRequest');
     }
 
@@ -8470,7 +8228,6 @@ class IamClient extends Client
 
     public function updatePermanentAccessKeyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-CREDENTIAL/credentials/{access_key}';
         $formParams = [];
         $queryParams = [];
@@ -8516,7 +8273,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdatePermanentAccessKeyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdatePermanentAccessKeyRequest');
     }
 
@@ -8540,7 +8296,6 @@ class IamClient extends Client
 
     public function createBindingDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-MFA/mfa-devices/bind';
         $formParams = [];
         $queryParams = [];
@@ -8583,7 +8338,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateBindingDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateBindingDeviceRequest');
     }
 
@@ -8607,7 +8361,6 @@ class IamClient extends Client
 
     public function createMfaDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-MFA/virtual-mfa-devices';
         $formParams = [];
         $queryParams = [];
@@ -8650,7 +8403,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMfaDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMfaDeviceRequest');
     }
 
@@ -8674,7 +8426,6 @@ class IamClient extends Client
 
     public function createUserWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-USER/users';
         $formParams = [];
         $queryParams = [];
@@ -8717,7 +8468,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateUserResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateUserRequest');
     }
 
@@ -8741,7 +8491,6 @@ class IamClient extends Client
 
     public function deleteBindingDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-MFA/mfa-devices/unbind';
         $formParams = [];
         $queryParams = [];
@@ -8784,7 +8533,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteBindingDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteBindingDeviceRequest');
     }
 
@@ -8808,7 +8556,6 @@ class IamClient extends Client
 
     public function deleteMfaDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-MFA/virtual-mfa-devices';
         $formParams = [];
         $queryParams = [];
@@ -8854,7 +8601,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteMfaDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteMfaDeviceRequest');
     }
 
@@ -8878,7 +8624,6 @@ class IamClient extends Client
 
     public function keystoneCreateUserWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/users';
         $formParams = [];
         $queryParams = [];
@@ -8921,7 +8666,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateUserResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateUserRequest');
     }
 
@@ -8945,7 +8689,6 @@ class IamClient extends Client
 
     public function keystoneDeleteUserWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/users/{user_id}';
         $formParams = [];
         $queryParams = [];
@@ -8988,7 +8731,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteUserResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneDeleteUserRequest');
     }
 
@@ -9012,7 +8754,6 @@ class IamClient extends Client
 
     public function keystoneListGroupsForUserWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/users/{user_id}/groups';
         $formParams = [];
         $queryParams = [];
@@ -9055,7 +8796,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListGroupsForUserResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListGroupsForUserRequest');
     }
 
@@ -9079,7 +8819,6 @@ class IamClient extends Client
 
     public function keystoneListUsersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/users';
         $formParams = [];
         $queryParams = [];
@@ -9131,7 +8870,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListUsersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListUsersRequest');
     }
 
@@ -9155,7 +8893,6 @@ class IamClient extends Client
 
     public function keystoneShowUserWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/users/{user_id}';
         $formParams = [];
         $queryParams = [];
@@ -9198,7 +8935,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowUserResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneShowUserRequest');
     }
 
@@ -9222,7 +8958,6 @@ class IamClient extends Client
 
     public function keystoneUpdateUserByAdminWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/users/{user_id}';
         $formParams = [];
         $queryParams = [];
@@ -9268,7 +9003,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateUserByAdminResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateUserByAdminRequest');
     }
 
@@ -9292,7 +9026,6 @@ class IamClient extends Client
 
     public function keystoneUpdateUserPasswordWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/users/{user_id}/password';
         $formParams = [];
         $queryParams = [];
@@ -9338,7 +9071,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateUserPasswordResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneUpdateUserPasswordRequest');
     }
 
@@ -9362,7 +9094,6 @@ class IamClient extends Client
 
     public function listUserLoginProtectsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-USER/login-protects';
         $formParams = [];
         $queryParams = [];
@@ -9402,7 +9133,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ListUserLoginProtectsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListUserLoginProtectsRequest');
     }
 
@@ -9426,7 +9156,6 @@ class IamClient extends Client
 
     public function listUserMfaDevicesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-MFA/virtual-mfa-devices';
         $formParams = [];
         $queryParams = [];
@@ -9466,7 +9195,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ListUserMfaDevicesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ListUserMfaDevicesRequest');
     }
 
@@ -9490,7 +9218,6 @@ class IamClient extends Client
 
     public function showUserWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-USER/users/{user_id}';
         $formParams = [];
         $queryParams = [];
@@ -9533,7 +9260,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowUserResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowUserRequest');
     }
 
@@ -9557,7 +9283,6 @@ class IamClient extends Client
 
     public function showUserLoginProtectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-USER/users/{user_id}/login-protect';
         $formParams = [];
         $queryParams = [];
@@ -9600,7 +9325,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowUserLoginProtectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowUserLoginProtectRequest');
     }
 
@@ -9624,7 +9348,6 @@ class IamClient extends Client
 
     public function showUserMfaDeviceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-MFA/users/{user_id}/virtual-mfa-device';
         $formParams = [];
         $queryParams = [];
@@ -9667,7 +9390,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\ShowUserMfaDeviceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\ShowUserMfaDeviceRequest');
     }
 
@@ -9691,7 +9413,6 @@ class IamClient extends Client
 
     public function updateLoginProtectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-USER/users/{user_id}/login-protect';
         $formParams = [];
         $queryParams = [];
@@ -9737,7 +9458,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateLoginProtectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateLoginProtectRequest');
     }
 
@@ -9761,7 +9481,6 @@ class IamClient extends Client
 
     public function updateUserWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-USER/users/{user_id}';
         $formParams = [];
         $queryParams = [];
@@ -9807,7 +9526,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateUserResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateUserRequest');
     }
 
@@ -9831,7 +9549,6 @@ class IamClient extends Client
 
     public function updateUserInformationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3.0/OS-USER/users/{user_id}/info';
         $formParams = [];
         $queryParams = [];
@@ -9877,7 +9594,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateUserInformationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\UpdateUserInformationRequest');
     }
 
@@ -9907,7 +9623,6 @@ class IamClient extends Client
 
     public function keystoneCreateAgencyTokenWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/auth/tokens';
         $formParams = [];
         $queryParams = [];
@@ -9953,7 +9668,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateAgencyTokenResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateAgencyTokenRequest');
     }
 
@@ -9982,7 +9696,6 @@ class IamClient extends Client
 
     public function keystoneCreateUserTokenByPasswordWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/auth/tokens';
         $formParams = [];
         $queryParams = [];
@@ -10028,7 +9741,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateUserTokenByPasswordResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateUserTokenByPasswordRequest');
     }
 
@@ -10057,7 +9769,6 @@ class IamClient extends Client
 
     public function keystoneCreateUserTokenByPasswordAndMfaWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/auth/tokens';
         $formParams = [];
         $queryParams = [];
@@ -10103,7 +9814,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateUserTokenByPasswordAndMfaResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneCreateUserTokenByPasswordAndMfaRequest');
     }
 
@@ -10127,7 +9837,6 @@ class IamClient extends Client
 
     public function keystoneValidateTokenWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/auth/tokens';
         $formParams = [];
         $queryParams = [];
@@ -10146,7 +9855,7 @@ class IamClient extends Client
             $queryParams['nocatalog'] = $localVarParams['nocatalog'];
         }
         if ($localVarParams['xSubjectToken'] !== null) {
-            $headerParams['x_subject_token'] = $localVarParams['xSubjectToken'];
+            $headerParams[$arr['xSubjectToken']] = $localVarParams['xSubjectToken'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -10173,7 +9882,6 @@ class IamClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneValidateTokenResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneValidateTokenRequest');
     }
 
@@ -10187,7 +9895,6 @@ class IamClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -10200,7 +9907,6 @@ class IamClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

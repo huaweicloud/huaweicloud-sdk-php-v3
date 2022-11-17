@@ -20,24 +20,32 @@ class AddCertificateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
+    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'spAuthToken' => 'string',
+            'stageAuthToken' => 'string',
             'instanceId' => 'string',
             'body' => '\HuaweiCloud\SDK\IoTDA\V5\Model\CreateCertificateDTO'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
+    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'spAuthToken' => null,
+        'stageAuthToken' => null,
         'instanceId' => null,
         'body' => null
     ];
@@ -65,36 +73,48 @@ class AddCertificateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
+    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'spAuthToken' => 'Sp-Auth-Token',
+            'stageAuthToken' => 'Stage-Auth-Token',
             'instanceId' => 'Instance-Id',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
+    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'spAuthToken' => 'setSpAuthToken',
+            'stageAuthToken' => 'setStageAuthToken',
             'instanceId' => 'setInstanceId',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
+    * stageAuthToken  Stage用户的Token, 仅提供给IoStage服务使用
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'spAuthToken' => 'getSpAuthToken',
+            'stageAuthToken' => 'getStageAuthToken',
             'instanceId' => 'getInstanceId',
             'body' => 'getBody'
     ];
@@ -157,6 +177,8 @@ class AddCertificateRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['spAuthToken'] = isset($data['spAuthToken']) ? $data['spAuthToken'] : null;
+        $this->container['stageAuthToken'] = isset($data['stageAuthToken']) ? $data['stageAuthToken'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
@@ -169,8 +191,8 @@ class AddCertificateRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['instanceId']) && !preg_match("/^[a-f0-9-]{36}$/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-f0-9-]{36}$/.";
+            if (!is_null($this->container['instanceId']) && !preg_match("/[0-9a-f-]{1,36}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[0-9a-f-]{1,36}/.";
             }
         return $invalidProperties;
     }
@@ -187,8 +209,56 @@ class AddCertificateRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets spAuthToken
+    *  Sp用户Token。通过调用IoBPS服务获取SP用户Token
+    *
+    * @return string|null
+    */
+    public function getSpAuthToken()
+    {
+        return $this->container['spAuthToken'];
+    }
+
+    /**
+    * Sets spAuthToken
+    *
+    * @param string|null $spAuthToken Sp用户Token。通过调用IoBPS服务获取SP用户Token
+    *
+    * @return $this
+    */
+    public function setSpAuthToken($spAuthToken)
+    {
+        $this->container['spAuthToken'] = $spAuthToken;
+        return $this;
+    }
+
+    /**
+    * Gets stageAuthToken
+    *  Stage用户的Token, 仅提供给IoStage服务使用
+    *
+    * @return string|null
+    */
+    public function getStageAuthToken()
+    {
+        return $this->container['stageAuthToken'];
+    }
+
+    /**
+    * Sets stageAuthToken
+    *
+    * @param string|null $stageAuthToken Stage用户的Token, 仅提供给IoStage服务使用
+    *
+    * @return $this
+    */
+    public function setStageAuthToken($stageAuthToken)
+    {
+        $this->container['stageAuthToken'] = $stageAuthToken;
+        return $this;
+    }
+
+    /**
     * Gets instanceId
-    *  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    *  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return string|null
     */
@@ -200,7 +270,7 @@ class AddCertificateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * @param string|null $instanceId 实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return $this
     */

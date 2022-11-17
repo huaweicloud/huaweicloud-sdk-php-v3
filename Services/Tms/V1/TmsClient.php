@@ -43,7 +43,6 @@ class TmsClient extends Client
 
     public function createPredefineTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/predefine_tags/action';
         $formParams = [];
         $queryParams = [];
@@ -86,7 +85,6 @@ class TmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Tms\V1\Model\CreatePredefineTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Tms\V1\Model\CreatePredefineTagsRequest');
     }
 
@@ -108,7 +106,6 @@ class TmsClient extends Client
 
     public function deletePredefineTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/predefine_tags/action';
         $formParams = [];
         $queryParams = [];
@@ -151,7 +148,6 @@ class TmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Tms\V1\Model\DeletePredefineTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Tms\V1\Model\DeletePredefineTagsRequest');
     }
 
@@ -173,7 +169,6 @@ class TmsClient extends Client
 
     public function listApiVersionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/';
         $formParams = [];
         $queryParams = [];
@@ -213,7 +208,6 @@ class TmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Tms\V1\Model\ListApiVersionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Tms\V1\Model\ListApiVersionsRequest');
     }
 
@@ -235,7 +229,6 @@ class TmsClient extends Client
 
     public function listPredefineTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/predefine_tags';
         $formParams = [];
         $queryParams = [];
@@ -293,8 +286,79 @@ class TmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Tms\V1\Model\ListPredefineTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Tms\V1\Model\ListPredefineTagsRequest');
+    }
+
+    /**
+     * 查询标签管理支持的服务
+     *
+     * 查询标签管理支持的服务
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listProviders($request)
+    {
+        return $this->listProvidersWithHttpInfo($request);
+    }
+
+    public function listProvidersWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/tms/providers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['locale'] !== null) {
+            $queryParams['locale'] = $localVarParams['locale'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['provider'] !== null) {
+            $queryParams['provider'] = $localVarParams['provider'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Tms\V1\Model\ListProvidersResponse',
+            $requestType='\HuaweiCloud\SDK\Tms\V1\Model\ListProvidersRequest');
     }
 
     /**
@@ -315,7 +379,6 @@ class TmsClient extends Client
 
     public function showApiVersionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/{api_version}';
         $formParams = [];
         $queryParams = [];
@@ -358,7 +421,6 @@ class TmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Tms\V1\Model\ShowApiVersionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Tms\V1\Model\ShowApiVersionRequest');
     }
 
@@ -380,7 +442,6 @@ class TmsClient extends Client
 
     public function showTagQuotaWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/tms/quotas';
         $formParams = [];
         $queryParams = [];
@@ -420,7 +481,6 @@ class TmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Tms\V1\Model\ShowTagQuotaResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Tms\V1\Model\ShowTagQuotaRequest');
     }
 
@@ -442,7 +502,6 @@ class TmsClient extends Client
 
     public function updatePredefineTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/predefine_tags';
         $formParams = [];
         $queryParams = [];
@@ -485,7 +544,6 @@ class TmsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Tms\V1\Model\UpdatePredefineTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Tms\V1\Model\UpdatePredefineTagsRequest');
     }
 
@@ -499,7 +557,6 @@ class TmsClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -512,7 +569,6 @@ class TmsClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

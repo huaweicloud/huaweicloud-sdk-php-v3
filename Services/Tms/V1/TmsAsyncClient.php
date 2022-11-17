@@ -301,6 +301,81 @@ class TmsAsyncClient extends Client
     }
 
     /**
+     * 查询标签管理支持的服务
+     *
+     * 查询标签管理支持的服务
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listProvidersAsync($request)
+    {
+        return $this->listProvidersAsyncWithHttpInfo($request);
+    }
+    
+    public function listProvidersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/tms/providers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['locale'] !== null) {
+            $queryParams['locale'] = $localVarParams['locale'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['provider'] !== null) {
+            $queryParams['provider'] = $localVarParams['provider'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Tms\V1\Model\ListProvidersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Tms\V1\Model\ListProvidersRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询API版本号详情
      *
      * 查询指定的标签管理服务API版本号详情。

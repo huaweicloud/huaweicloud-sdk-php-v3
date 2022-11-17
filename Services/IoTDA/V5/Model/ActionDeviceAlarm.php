@@ -22,7 +22,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  **参数说明**：告警名称。
     * alarmStatus  **参数说明**：告警状态。 **取值范围**： - fault：上报告警。 - recovery：恢复告警。
-    * severity  **参数说明**：告警级别。 **取值范围**： - warning：警告。 - minor：一般。 - major：严重。 - critical：致命。
+    * severity  **参数说明**：告警级别。 **取值范围**：warning（警告）、minor（一般）、major（严重）和critical（致命）。
     * description  **参数说明**：告警的描述信息。
     *
     * @var string[]
@@ -38,7 +38,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  **参数说明**：告警名称。
     * alarmStatus  **参数说明**：告警状态。 **取值范围**： - fault：上报告警。 - recovery：恢复告警。
-    * severity  **参数说明**：告警级别。 **取值范围**： - warning：警告。 - minor：一般。 - major：严重。 - critical：致命。
+    * severity  **参数说明**：告警级别。 **取值范围**：warning（警告）、minor（一般）、major（严重）和critical（致命）。
     * description  **参数说明**：告警的描述信息。
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  **参数说明**：告警名称。
     * alarmStatus  **参数说明**：告警状态。 **取值范围**： - fault：上报告警。 - recovery：恢复告警。
-    * severity  **参数说明**：告警级别。 **取值范围**： - warning：警告。 - minor：一般。 - major：严重。 - critical：致命。
+    * severity  **参数说明**：告警级别。 **取值范围**：warning（警告）、minor（一般）、major（严重）和critical（致命）。
     * description  **参数说明**：告警的描述信息。
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  **参数说明**：告警名称。
     * alarmStatus  **参数说明**：告警状态。 **取值范围**： - fault：上报告警。 - recovery：恢复告警。
-    * severity  **参数说明**：告警级别。 **取值范围**： - warning：警告。 - minor：一般。 - major：严重。 - critical：致命。
+    * severity  **参数说明**：告警级别。 **取值范围**：warning（警告）、minor（一般）、major（严重）和critical（致命）。
     * description  **参数说明**：告警的描述信息。
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  **参数说明**：告警名称。
     * alarmStatus  **参数说明**：告警状态。 **取值范围**： - fault：上报告警。 - recovery：恢复告警。
-    * severity  **参数说明**：告警级别。 **取值范围**： - warning：警告。 - minor：一般。 - major：严重。 - critical：致命。
+    * severity  **参数说明**：告警级别。 **取值范围**：warning（警告）、minor（一般）、major（严重）和critical（致命）。
     * description  **参数说明**：告警的描述信息。
     *
     * @var string[]
@@ -276,7 +276,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  **参数说明**：告警级别。 **取值范围**： - warning：警告。 - minor：一般。 - major：严重。 - critical：致命。
+    *  **参数说明**：告警级别。 **取值范围**：warning（警告）、minor（一般）、major（严重）和critical（致命）。
     *
     * @return string
     */
@@ -288,7 +288,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string $severity **参数说明**：告警级别。 **取值范围**： - warning：警告。 - minor：一般。 - major：严重。 - critical：致命。
+    * @param string $severity **参数说明**：告警级别。 **取值范围**：warning（警告）、minor（一般）、major（严重）和critical（致命）。
     *
     * @return $this
     */

@@ -169,8 +169,14 @@ class CreateBatchTaskRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['instanceId']) && !preg_match("/^[a-f0-9-]{36}$/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-f0-9-]{36}$/.";
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['instanceId']) && !preg_match("/[a-f0-9-]{1,36}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-f0-9-]{1,36}/.";
             }
         return $invalidProperties;
     }

@@ -21,7 +21,7 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * certificateId  设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
+    * certificateId  CA证书ID，在上传CA证书时由平台分配的唯一标识。
     * cnName  CA证书CN名称。
     * owner  CA证书所有者。
     * status  CA证书验证状态。true代表证书已通过验证，可进行设备证书认证接入。false代表证书未通过验证。
@@ -45,7 +45,7 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * certificateId  设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
+    * certificateId  CA证书ID，在上传CA证书时由平台分配的唯一标识。
     * cnName  CA证书CN名称。
     * owner  CA证书所有者。
     * status  CA证书验证状态。true代表证书已通过验证，可进行设备证书认证接入。false代表证书未通过验证。
@@ -90,7 +90,7 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * certificateId  设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
+    * certificateId  CA证书ID，在上传CA证书时由平台分配的唯一标识。
     * cnName  CA证书CN名称。
     * owner  CA证书所有者。
     * status  CA证书验证状态。true代表证书已通过验证，可进行设备证书认证接入。false代表证书未通过验证。
@@ -114,7 +114,7 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * certificateId  设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
+    * certificateId  CA证书ID，在上传CA证书时由平台分配的唯一标识。
     * cnName  CA证书CN名称。
     * owner  CA证书所有者。
     * status  CA证书验证状态。true代表证书已通过验证，可进行设备证书认证接入。false代表证书未通过验证。
@@ -138,7 +138,7 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * certificateId  设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
+    * certificateId  CA证书ID，在上传CA证书时由平台分配的唯一标识。
     * cnName  CA证书CN名称。
     * owner  CA证书所有者。
     * status  CA证书验证状态。true代表证书已通过验证，可进行设备证书认证接入。false代表证书未通过验证。
@@ -252,7 +252,7 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateId
-    *  设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
+    *  CA证书ID，在上传CA证书时由平台分配的唯一标识。
     *
     * @return string|null
     */
@@ -264,7 +264,7 @@ class AddCertificateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets certificateId
     *
-    * @param string|null $certificateId 设备CA证书ID，在上传设备CA证书时由平台分配的唯一标识。
+    * @param string|null $certificateId CA证书ID，在上传CA证书时由平台分配的唯一标识。
     *
     * @return $this
     */

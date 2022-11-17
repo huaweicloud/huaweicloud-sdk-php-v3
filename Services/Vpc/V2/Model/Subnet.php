@@ -38,7 +38,7 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronNetworkId  对应网络（OpenStack Neutron接口）id
     * neutronSubnetId  对应子网（OpenStack Neutron接口）id
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
-    * extraDhcpOpts  子网配置的NTP地址
+    * extraDhcpOpts  子网配置的NTP地址或DHCP租约时间
     * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
     *
     * @var string[]
@@ -86,7 +86,7 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronNetworkId  对应网络（OpenStack Neutron接口）id
     * neutronSubnetId  对应子网（OpenStack Neutron接口）id
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
-    * extraDhcpOpts  子网配置的NTP地址
+    * extraDhcpOpts  子网配置的NTP地址或DHCP租约时间
     * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
     *
     * @var string[]
@@ -155,7 +155,7 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronNetworkId  对应网络（OpenStack Neutron接口）id
     * neutronSubnetId  对应子网（OpenStack Neutron接口）id
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
-    * extraDhcpOpts  子网配置的NTP地址
+    * extraDhcpOpts  子网配置的NTP地址或DHCP租约时间
     * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
     *
     * @var string[]
@@ -203,7 +203,7 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronNetworkId  对应网络（OpenStack Neutron接口）id
     * neutronSubnetId  对应子网（OpenStack Neutron接口）id
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
-    * extraDhcpOpts  子网配置的NTP地址
+    * extraDhcpOpts  子网配置的NTP地址或DHCP租约时间
     * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
     *
     * @var string[]
@@ -251,7 +251,7 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronNetworkId  对应网络（OpenStack Neutron接口）id
     * neutronSubnetId  对应子网（OpenStack Neutron接口）id
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
-    * extraDhcpOpts  子网配置的NTP地址
+    * extraDhcpOpts  子网配置的NTP地址或DHCP租约时间
     * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
     *
     * @var string[]
@@ -912,7 +912,7 @@ class Subnet implements ModelInterface, ArrayAccess
 
     /**
     * Gets extraDhcpOpts
-    *  子网配置的NTP地址
+    *  子网配置的NTP地址或DHCP租约时间
     *
     * @return \HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOption[]
     */
@@ -924,7 +924,7 @@ class Subnet implements ModelInterface, ArrayAccess
     /**
     * Sets extraDhcpOpts
     *
-    * @param \HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOption[] $extraDhcpOpts 子网配置的NTP地址
+    * @param \HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOption[] $extraDhcpOpts 子网配置的NTP地址或DHCP租约时间
     *
     * @return $this
     */

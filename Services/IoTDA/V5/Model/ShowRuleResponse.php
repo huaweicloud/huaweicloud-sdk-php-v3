@@ -26,9 +26,9 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     * description  规则的描述信息。
     * conditionGroup  conditionGroup
     * actions  规则的动作列表，单个规则最多支持设置10个动作。
-    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。
     * edgeNodeIds  归属边缘侧节点设备ID列表。
     * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
@@ -54,9 +54,9 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     * description  规则的描述信息。
     * conditionGroup  conditionGroup
     * actions  规则的动作列表，单个规则最多支持设置10个动作。
-    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。
     * edgeNodeIds  归属边缘侧节点设备ID列表。
     * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
@@ -103,9 +103,9 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     * description  规则的描述信息。
     * conditionGroup  conditionGroup
     * actions  规则的动作列表，单个规则最多支持设置10个动作。
-    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。
     * edgeNodeIds  归属边缘侧节点设备ID列表。
     * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
@@ -131,9 +131,9 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     * description  规则的描述信息。
     * conditionGroup  conditionGroup
     * actions  规则的动作列表，单个规则最多支持设置10个动作。
-    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。
     * edgeNodeIds  归属边缘侧节点设备ID列表。
     * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
@@ -159,9 +159,9 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     * description  规则的描述信息。
     * conditionGroup  conditionGroup
     * actions  规则的动作列表，单个规则最多支持设置10个动作。
-    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
-    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。
     * edgeNodeIds  归属边缘侧节点设备ID列表。
     * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
     *
@@ -415,7 +415,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleType
-    *  规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
+    *  规则的类型 - DEVICE_LINKAGE：设备联动。
     *
     * @return string|null
     */
@@ -427,7 +427,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ruleType
     *
-    * @param string|null $ruleType 规则的类型 - DEVICE_LINKAGE：设备联动。 - DATA_FORWARDING：数据转发。 - EDGE：边缘侧。
+    * @param string|null $ruleType 规则的类型 - DEVICE_LINKAGE：设备联动。
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    *  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。
     *
     * @return string|null
     */
@@ -475,7 +475,7 @@ class ShowRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)下。
+    * @param string|null $appId 资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。
     *
     * @return $this
     */

@@ -24,8 +24,8 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     * projectId  **参数说明**：SMN服务对应的projectId信息。
     * themeName  **参数说明**：SMN服务对应的主题名称。
     * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
-    * messageContent  **参数说明**：短信或邮件的内容。。
-    * messageTitle  **参数说明**：短信或邮件的主题。。
+    * messageContent  **参数说明**：短信或邮件的内容。
+    * messageTitle  **参数说明**：短信或邮件的主题。
     *
     * @var string[]
     */
@@ -44,8 +44,8 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     * projectId  **参数说明**：SMN服务对应的projectId信息。
     * themeName  **参数说明**：SMN服务对应的主题名称。
     * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
-    * messageContent  **参数说明**：短信或邮件的内容。。
-    * messageTitle  **参数说明**：短信或邮件的主题。。
+    * messageContent  **参数说明**：短信或邮件的内容。
+    * messageTitle  **参数说明**：短信或邮件的主题。
     *
     * @var string[]
     */
@@ -85,8 +85,8 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     * projectId  **参数说明**：SMN服务对应的projectId信息。
     * themeName  **参数说明**：SMN服务对应的主题名称。
     * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
-    * messageContent  **参数说明**：短信或邮件的内容。。
-    * messageTitle  **参数说明**：短信或邮件的主题。。
+    * messageContent  **参数说明**：短信或邮件的内容。
+    * messageTitle  **参数说明**：短信或邮件的主题。
     *
     * @var string[]
     */
@@ -105,8 +105,8 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     * projectId  **参数说明**：SMN服务对应的projectId信息。
     * themeName  **参数说明**：SMN服务对应的主题名称。
     * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
-    * messageContent  **参数说明**：短信或邮件的内容。。
-    * messageTitle  **参数说明**：短信或邮件的主题。。
+    * messageContent  **参数说明**：短信或邮件的内容。
+    * messageTitle  **参数说明**：短信或邮件的主题。
     *
     * @var string[]
     */
@@ -125,8 +125,8 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     * projectId  **参数说明**：SMN服务对应的projectId信息。
     * themeName  **参数说明**：SMN服务对应的主题名称。
     * topicUrn  **参数说明**：SMN服务对应的topic的主题URN。
-    * messageContent  **参数说明**：短信或邮件的内容。。
-    * messageTitle  **参数说明**：短信或邮件的主题。。
+    * messageContent  **参数说明**：短信或邮件的内容。
+    * messageTitle  **参数说明**：短信或邮件的主题。
     *
     * @var string[]
     */
@@ -358,7 +358,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageContent
-    *  **参数说明**：短信或邮件的内容。。
+    *  **参数说明**：短信或邮件的内容。
     *
     * @return string
     */
@@ -370,7 +370,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets messageContent
     *
-    * @param string $messageContent **参数说明**：短信或邮件的内容。。
+    * @param string $messageContent **参数说明**：短信或邮件的内容。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageTitle
-    *  **参数说明**：短信或邮件的主题。。
+    *  **参数说明**：短信或邮件的主题。
     *
     * @return string
     */
@@ -394,7 +394,7 @@ class ActionSmnForwarding implements ModelInterface, ArrayAccess
     /**
     * Sets messageTitle
     *
-    * @param string $messageTitle **参数说明**：短信或邮件的主题。。
+    * @param string $messageTitle **参数说明**：短信或邮件的主题。
     *
     * @return $this
     */

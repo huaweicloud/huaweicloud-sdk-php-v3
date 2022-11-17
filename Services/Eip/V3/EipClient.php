@@ -43,7 +43,6 @@ class EipClient extends Client
 
     public function listCommonPoolsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/eip/publicip-pools/common-pools';
         $formParams = [];
         $queryParams = [];
@@ -92,7 +91,6 @@ class EipClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ListCommonPoolsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ListCommonPoolsRequest');
     }
 
@@ -114,7 +112,6 @@ class EipClient extends Client
 
     public function listPublicBorderGroupsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/eip/public-border-groups';
         $formParams = [];
         $queryParams = [];
@@ -157,7 +154,6 @@ class EipClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ListPublicBorderGroupsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ListPublicBorderGroupsRequest');
     }
 
@@ -179,7 +175,6 @@ class EipClient extends Client
 
     public function listShareBandwidthTypesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/eip/share-bandwidth-types';
         $formParams = [];
         $queryParams = [];
@@ -246,7 +241,6 @@ class EipClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ListShareBandwidthTypesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ListShareBandwidthTypesRequest');
     }
 
@@ -268,7 +262,6 @@ class EipClient extends Client
 
     public function associatePublicipsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/eip/publicips/{publicip_id}/associate-instance';
         $formParams = [];
         $queryParams = [];
@@ -314,7 +307,6 @@ class EipClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V3\Model\AssociatePublicipsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eip\V3\Model\AssociatePublicipsRequest');
     }
 
@@ -336,7 +328,6 @@ class EipClient extends Client
 
     public function disassociatePublicipsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/eip/publicips/{publicip_id}/disassociate-instance';
         $formParams = [];
         $queryParams = [];
@@ -382,7 +373,6 @@ class EipClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V3\Model\DisassociatePublicipsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eip\V3\Model\DisassociatePublicipsRequest');
     }
 
@@ -404,7 +394,6 @@ class EipClient extends Client
 
     public function listPublicipPoolWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/eip/publicip-pools';
         $formParams = [];
         $queryParams = [];
@@ -480,7 +469,6 @@ class EipClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ListPublicipPoolResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ListPublicipPoolRequest');
     }
 
@@ -502,7 +490,6 @@ class EipClient extends Client
 
     public function listPublicipsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/eip/publicips';
         $formParams = [];
         $queryParams = [];
@@ -665,7 +652,6 @@ class EipClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ListPublicipsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ListPublicipsRequest');
     }
 
@@ -687,7 +673,6 @@ class EipClient extends Client
 
     public function showPublicipWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/eip/publicips/{publicip_id}';
         $formParams = [];
         $queryParams = [];
@@ -733,7 +718,6 @@ class EipClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ShowPublicipResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ShowPublicipRequest');
     }
 
@@ -755,7 +739,6 @@ class EipClient extends Client
 
     public function showPublicipPoolWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/eip/publicip-pools/{publicip_pool_id}';
         $formParams = [];
         $queryParams = [];
@@ -801,7 +784,6 @@ class EipClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ShowPublicipPoolResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ShowPublicipPoolRequest');
     }
 
@@ -815,7 +797,6 @@ class EipClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -828,7 +809,6 @@ class EipClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

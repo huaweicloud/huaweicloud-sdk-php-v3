@@ -43,7 +43,6 @@ class ImsClient extends Client
 
     public function addImageTagWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/images/{image_id}/tags';
         $formParams = [];
         $queryParams = [];
@@ -89,7 +88,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\AddImageTagResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\AddImageTagRequest');
     }
 
@@ -112,7 +110,6 @@ class ImsClient extends Client
 
     public function batchAddMembersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cloudimages/members';
         $formParams = [];
         $queryParams = [];
@@ -155,7 +152,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\BatchAddMembersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\BatchAddMembersRequest');
     }
 
@@ -177,7 +173,6 @@ class ImsClient extends Client
 
     public function batchAddOrDeleteTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/images/{image_id}/tags/action';
         $formParams = [];
         $queryParams = [];
@@ -223,7 +218,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\BatchAddOrDeleteTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\BatchAddOrDeleteTagsRequest');
     }
 
@@ -246,7 +240,6 @@ class ImsClient extends Client
 
     public function batchDeleteMembersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cloudimages/members';
         $formParams = [];
         $queryParams = [];
@@ -289,7 +282,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\BatchDeleteMembersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\BatchDeleteMembersRequest');
     }
 
@@ -312,7 +304,6 @@ class ImsClient extends Client
 
     public function batchUpdateMembersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cloudimages/members';
         $formParams = [];
         $queryParams = [];
@@ -355,7 +346,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\BatchUpdateMembersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\BatchUpdateMembersRequest');
     }
 
@@ -379,7 +369,6 @@ class ImsClient extends Client
 
     public function copyImageCrossRegionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cloudimages/{image_id}/cross_region_copy';
         $formParams = [];
         $queryParams = [];
@@ -425,7 +414,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\CopyImageCrossRegionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\CopyImageCrossRegionRequest');
     }
 
@@ -448,7 +436,6 @@ class ImsClient extends Client
 
     public function copyImageInRegionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cloudimages/{image_id}/copy';
         $formParams = [];
         $queryParams = [];
@@ -494,7 +481,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\CopyImageInRegionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\CopyImageInRegionRequest');
     }
 
@@ -516,7 +502,6 @@ class ImsClient extends Client
 
     public function createDataImageWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cloudimages/dataimages/action';
         $formParams = [];
         $queryParams = [];
@@ -559,7 +544,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\CreateDataImageResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\CreateDataImageRequest');
     }
 
@@ -592,7 +576,6 @@ class ImsClient extends Client
 
     public function createImageWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/cloudimages/action';
         $formParams = [];
         $queryParams = [];
@@ -635,7 +618,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\CreateImageResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\CreateImageRequest');
     }
 
@@ -657,7 +639,6 @@ class ImsClient extends Client
 
     public function createOrUpdateTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cloudimages/tags';
         $formParams = [];
         $queryParams = [];
@@ -700,7 +681,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\CreateOrUpdateTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\CreateOrUpdateTagsRequest');
     }
 
@@ -722,7 +702,6 @@ class ImsClient extends Client
 
     public function createWholeImageWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cloudimages/wholeimages/action';
         $formParams = [];
         $queryParams = [];
@@ -765,7 +744,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\CreateWholeImageResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\CreateWholeImageRequest');
     }
 
@@ -787,7 +765,6 @@ class ImsClient extends Client
 
     public function deleteImageTagWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/images/{image_id}/tags/{key}';
         $formParams = [];
         $queryParams = [];
@@ -833,7 +810,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\DeleteImageTagResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\DeleteImageTagRequest');
     }
 
@@ -855,7 +831,6 @@ class ImsClient extends Client
 
     public function exportImageWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cloudimages/{image_id}/file';
         $formParams = [];
         $queryParams = [];
@@ -901,7 +876,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ExportImageResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ExportImageRequest');
     }
 
@@ -925,7 +899,6 @@ class ImsClient extends Client
 
     public function importImageQuickWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/cloudimages/quickimport/action';
         $formParams = [];
         $queryParams = [];
@@ -968,7 +941,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ImportImageQuickResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ImportImageQuickRequest');
     }
 
@@ -990,7 +962,6 @@ class ImsClient extends Client
 
     public function listImageByTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/images/resource_instances/action';
         $formParams = [];
         $queryParams = [];
@@ -1033,7 +1004,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ListImageByTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ListImageByTagsRequest');
     }
 
@@ -1055,7 +1025,6 @@ class ImsClient extends Client
 
     public function listImageTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/images/{image_id}/tags';
         $formParams = [];
         $queryParams = [];
@@ -1098,7 +1067,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ListImageTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ListImageTagsRequest');
     }
 
@@ -1121,7 +1089,6 @@ class ImsClient extends Client
 
     public function listImagesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/cloudimages';
         $formParams = [];
         $queryParams = [];
@@ -1245,7 +1212,7 @@ class ImsClient extends Client
             $queryParams['architecture'] = $localVarParams['architecture'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
-            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1272,7 +1239,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ListImagesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ListImagesRequest');
     }
 
@@ -1294,7 +1260,6 @@ class ImsClient extends Client
 
     public function listImagesTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/images/tags';
         $formParams = [];
         $queryParams = [];
@@ -1334,7 +1299,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ListImagesTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ListImagesTagsRequest');
     }
 
@@ -1356,7 +1320,6 @@ class ImsClient extends Client
 
     public function listOsVersionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cloudimages/os_version';
         $formParams = [];
         $queryParams = [];
@@ -1399,7 +1362,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ListOsVersionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ListOsVersionsRequest');
     }
 
@@ -1421,7 +1383,6 @@ class ImsClient extends Client
 
     public function listTagsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cloudimages/tags';
         $formParams = [];
         $queryParams = [];
@@ -1506,7 +1467,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ListTagsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ListTagsRequest');
     }
 
@@ -1534,7 +1494,6 @@ class ImsClient extends Client
 
     public function registerImageWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cloudimages/{image_id}/upload';
         $formParams = [];
         $queryParams = [];
@@ -1580,7 +1539,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\RegisterImageResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\RegisterImageRequest');
     }
 
@@ -1602,7 +1560,6 @@ class ImsClient extends Client
 
     public function showImageQuotaWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cloudimages/quota';
         $formParams = [];
         $queryParams = [];
@@ -1642,7 +1599,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ShowImageQuotaResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ShowImageQuotaRequest');
     }
 
@@ -1664,7 +1620,6 @@ class ImsClient extends Client
 
     public function showJobWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/{project_id}/jobs/{job_id}';
         $formParams = [];
         $queryParams = [];
@@ -1707,7 +1662,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ShowJobResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ShowJobRequest');
     }
 
@@ -1729,7 +1683,6 @@ class ImsClient extends Client
 
     public function showJobProgressWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1/cloudimages/job/{job_id}';
         $formParams = [];
         $queryParams = [];
@@ -1772,7 +1725,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ShowJobProgressResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ShowJobProgressRequest');
     }
 
@@ -1794,7 +1746,6 @@ class ImsClient extends Client
 
     public function updateImageWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/cloudimages/{image_id}';
         $formParams = [];
         $queryParams = [];
@@ -1840,7 +1791,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\UpdateImageResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\UpdateImageRequest');
     }
 
@@ -1862,7 +1812,6 @@ class ImsClient extends Client
 
     public function listVersionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/';
         $formParams = [];
         $queryParams = [];
@@ -1902,7 +1851,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ListVersionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ListVersionsRequest');
     }
 
@@ -1924,7 +1872,6 @@ class ImsClient extends Client
 
     public function showVersionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/{version}';
         $formParams = [];
         $queryParams = [];
@@ -1967,7 +1914,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\ShowVersionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\ShowVersionRequest');
     }
 
@@ -1989,7 +1935,6 @@ class ImsClient extends Client
 
     public function glanceAddImageMemberWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/images/{image_id}/members';
         $formParams = [];
         $queryParams = [];
@@ -2035,7 +1980,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceAddImageMemberResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceAddImageMemberRequest');
     }
 
@@ -2057,7 +2001,6 @@ class ImsClient extends Client
 
     public function glanceCreateImageMetadataWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/images';
         $formParams = [];
         $queryParams = [];
@@ -2100,7 +2043,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceCreateImageMetadataResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceCreateImageMetadataRequest');
     }
 
@@ -2122,7 +2064,6 @@ class ImsClient extends Client
 
     public function glanceCreateTagWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/images/{image_id}/tags/{tag}';
         $formParams = [];
         $queryParams = [];
@@ -2168,7 +2109,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceCreateTagResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceCreateTagRequest');
     }
 
@@ -2190,7 +2130,6 @@ class ImsClient extends Client
 
     public function glanceDeleteImageWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/images/{image_id}';
         $formParams = [];
         $queryParams = [];
@@ -2236,7 +2175,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceDeleteImageResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceDeleteImageRequest');
     }
 
@@ -2258,7 +2196,6 @@ class ImsClient extends Client
 
     public function glanceDeleteImageMemberWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/images/{image_id}/members/{member_id}';
         $formParams = [];
         $queryParams = [];
@@ -2304,7 +2241,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceDeleteImageMemberResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceDeleteImageMemberRequest');
     }
 
@@ -2326,7 +2262,6 @@ class ImsClient extends Client
 
     public function glanceDeleteTagWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/images/{image_id}/tags/{tag}';
         $formParams = [];
         $queryParams = [];
@@ -2372,7 +2307,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceDeleteTagResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceDeleteTagRequest');
     }
 
@@ -2394,7 +2328,6 @@ class ImsClient extends Client
 
     public function glanceListImageMemberSchemasWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/schemas/members';
         $formParams = [];
         $queryParams = [];
@@ -2434,7 +2367,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceListImageMemberSchemasResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceListImageMemberSchemasRequest');
     }
 
@@ -2456,7 +2388,6 @@ class ImsClient extends Client
 
     public function glanceListImageMembersWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/images/{image_id}/members';
         $formParams = [];
         $queryParams = [];
@@ -2499,7 +2430,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceListImageMembersResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceListImageMembersRequest');
     }
 
@@ -2521,7 +2451,6 @@ class ImsClient extends Client
 
     public function glanceListImageSchemasWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/schemas/images';
         $formParams = [];
         $queryParams = [];
@@ -2561,7 +2490,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceListImageSchemasResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceListImageSchemasRequest');
     }
 
@@ -2587,7 +2515,6 @@ class ImsClient extends Client
 
     public function glanceListImagesWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/images';
         $formParams = [];
         $queryParams = [];
@@ -2723,7 +2650,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceListImagesResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceListImagesRequest');
     }
 
@@ -2745,7 +2671,6 @@ class ImsClient extends Client
 
     public function glanceShowImageWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/images/{image_id}';
         $formParams = [];
         $queryParams = [];
@@ -2788,7 +2713,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageRequest');
     }
 
@@ -2810,7 +2734,6 @@ class ImsClient extends Client
 
     public function glanceShowImageMemberWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/images/{image_id}/members/{member_id}';
         $formParams = [];
         $queryParams = [];
@@ -2856,7 +2779,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageMemberResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageMemberRequest');
     }
 
@@ -2878,7 +2800,6 @@ class ImsClient extends Client
 
     public function glanceShowImageMemberSchemasWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/schemas/member';
         $formParams = [];
         $queryParams = [];
@@ -2918,7 +2839,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageMemberSchemasResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageMemberSchemasRequest');
     }
 
@@ -2940,7 +2860,6 @@ class ImsClient extends Client
 
     public function glanceShowImageSchemasWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/schemas/image';
         $formParams = [];
         $queryParams = [];
@@ -2980,7 +2899,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageSchemasResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceShowImageSchemasRequest');
     }
 
@@ -3002,7 +2920,6 @@ class ImsClient extends Client
 
     public function glanceUpdateImageWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/images/{image_id}';
         $formParams = [];
         $queryParams = [];
@@ -3048,7 +2965,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceUpdateImageResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceUpdateImageRequest');
     }
 
@@ -3070,7 +2986,6 @@ class ImsClient extends Client
 
     public function glanceUpdateImageMemberWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/images/{image_id}/members/{member_id}';
         $formParams = [];
         $queryParams = [];
@@ -3119,7 +3034,6 @@ class ImsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceUpdateImageMemberResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ims\V2\Model\GlanceUpdateImageMemberRequest');
     }
 
@@ -3133,7 +3047,6 @@ class ImsClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -3146,7 +3059,6 @@ class ImsClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

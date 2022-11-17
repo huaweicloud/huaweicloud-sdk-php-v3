@@ -47,7 +47,6 @@ class OcrClient extends Client
 
     public function recognizeAutoClassificationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/auto-classification';
         $formParams = [];
         $queryParams = [];
@@ -61,6 +60,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -90,7 +92,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeAutoClassificationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeAutoClassificationRequest');
     }
 
@@ -116,7 +117,6 @@ class OcrClient extends Client
 
     public function recognizeBankcardWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/bankcard';
         $formParams = [];
         $queryParams = [];
@@ -130,6 +130,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -159,7 +162,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeBankcardResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeBankcardRequest');
     }
 
@@ -181,7 +183,6 @@ class OcrClient extends Client
 
     public function recognizeBusinessCardWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/business-card';
         $formParams = [];
         $queryParams = [];
@@ -195,6 +196,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -224,7 +228,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeBusinessCardResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeBusinessCardRequest');
     }
 
@@ -250,7 +253,6 @@ class OcrClient extends Client
 
     public function recognizeBusinessLicenseWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/business-license';
         $formParams = [];
         $queryParams = [];
@@ -264,6 +266,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -293,7 +298,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeBusinessLicenseResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeBusinessLicenseRequest');
     }
 
@@ -315,7 +319,6 @@ class OcrClient extends Client
 
     public function recognizeCambodianIdCardWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/cambodian-idcard';
         $formParams = [];
         $queryParams = [];
@@ -329,6 +332,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -358,7 +364,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeCambodianIdCardResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeCambodianIdCardRequest');
     }
 
@@ -380,7 +385,6 @@ class OcrClient extends Client
 
     public function recognizeChileIdCardWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/chile-id-card';
         $formParams = [];
         $queryParams = [];
@@ -394,6 +398,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -423,7 +430,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeChileIdCardResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeChileIdCardRequest');
     }
 
@@ -449,7 +455,6 @@ class OcrClient extends Client
 
     public function recognizeDriverLicenseWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/driver-license';
         $formParams = [];
         $queryParams = [];
@@ -463,6 +468,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -492,7 +500,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeDriverLicenseResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeDriverLicenseRequest');
     }
 
@@ -514,7 +521,6 @@ class OcrClient extends Client
 
     public function recognizeExitEntryPermitWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/exit-entry-permit';
         $formParams = [];
         $queryParams = [];
@@ -528,6 +534,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -557,7 +566,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeExitEntryPermitResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeExitEntryPermitRequest');
     }
 
@@ -579,7 +587,6 @@ class OcrClient extends Client
 
     public function recognizeFinancialStatementWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/financial-statement';
         $formParams = [];
         $queryParams = [];
@@ -593,6 +600,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -622,7 +632,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeFinancialStatementResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeFinancialStatementRequest');
     }
 
@@ -648,7 +657,6 @@ class OcrClient extends Client
 
     public function recognizeFlightItineraryWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/flight-itinerary';
         $formParams = [];
         $queryParams = [];
@@ -662,6 +670,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -691,7 +702,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeFlightItineraryResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeFlightItineraryRequest');
     }
 
@@ -713,7 +723,6 @@ class OcrClient extends Client
 
     public function recognizeGeneralTableWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/general-table';
         $formParams = [];
         $queryParams = [];
@@ -727,6 +736,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -756,7 +768,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeGeneralTableResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeGeneralTableRequest');
     }
 
@@ -778,7 +789,6 @@ class OcrClient extends Client
 
     public function recognizeGeneralTextWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/general-text';
         $formParams = [];
         $queryParams = [];
@@ -792,6 +802,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -821,7 +834,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeGeneralTextResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeGeneralTextRequest');
     }
 
@@ -843,7 +855,6 @@ class OcrClient extends Client
 
     public function recognizeHandwritingWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/handwriting';
         $formParams = [];
         $queryParams = [];
@@ -857,6 +868,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -886,7 +900,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeHandwritingResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeHandwritingRequest');
     }
 
@@ -908,7 +921,6 @@ class OcrClient extends Client
 
     public function recognizeHealthCodeWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/health-code';
         $formParams = [];
         $queryParams = [];
@@ -922,6 +934,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -951,7 +966,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeHealthCodeResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeHealthCodeRequest');
     }
 
@@ -973,7 +987,6 @@ class OcrClient extends Client
 
     public function recognizeHkIdCardWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/hk-id-card';
         $formParams = [];
         $queryParams = [];
@@ -987,6 +1000,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1016,7 +1032,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeHkIdCardResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeHkIdCardRequest');
     }
 
@@ -1044,7 +1059,6 @@ class OcrClient extends Client
 
     public function recognizeIdCardWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/id-card';
         $formParams = [];
         $queryParams = [];
@@ -1058,6 +1072,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1087,7 +1104,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeIdCardResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeIdCardRequest');
     }
 
@@ -1133,7 +1149,6 @@ class OcrClient extends Client
 
     public function recognizeIdDocumentWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/id-document';
         $formParams = [];
         $queryParams = [];
@@ -1147,6 +1162,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1176,7 +1194,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeIdDocumentResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeIdDocumentRequest');
     }
 
@@ -1198,7 +1215,6 @@ class OcrClient extends Client
 
     public function recognizeInsurancePolicyWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/insurance-policy';
         $formParams = [];
         $queryParams = [];
@@ -1212,6 +1228,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1241,7 +1260,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeInsurancePolicyResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeInsurancePolicyRequest');
     }
 
@@ -1263,7 +1281,6 @@ class OcrClient extends Client
 
     public function recognizeInvoiceVerificationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/invoice-verification';
         $formParams = [];
         $queryParams = [];
@@ -1277,6 +1294,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1306,7 +1326,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeInvoiceVerificationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeInvoiceVerificationRequest');
     }
 
@@ -1328,7 +1347,6 @@ class OcrClient extends Client
 
     public function recognizeLicensePlateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/license-plate';
         $formParams = [];
         $queryParams = [];
@@ -1342,6 +1360,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1371,7 +1392,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeLicensePlateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeLicensePlateRequest');
     }
 
@@ -1393,7 +1413,6 @@ class OcrClient extends Client
 
     public function recognizeMacaoIdCardWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/macao-id-card';
         $formParams = [];
         $queryParams = [];
@@ -1407,6 +1426,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1436,7 +1458,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeMacaoIdCardResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeMacaoIdCardRequest');
     }
 
@@ -1458,7 +1479,6 @@ class OcrClient extends Client
 
     public function recognizeMainlandTravelPermitWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/mainland-travel-permit';
         $formParams = [];
         $queryParams = [];
@@ -1472,6 +1492,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1501,7 +1524,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeMainlandTravelPermitResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeMainlandTravelPermitRequest');
     }
 
@@ -1529,7 +1551,6 @@ class OcrClient extends Client
 
     public function recognizeMvsInvoiceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/mvs-invoice';
         $formParams = [];
         $queryParams = [];
@@ -1543,6 +1564,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1572,7 +1596,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeMvsInvoiceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeMvsInvoiceRequest');
     }
 
@@ -1594,7 +1617,6 @@ class OcrClient extends Client
 
     public function recognizeMyanmarDriverLicenseWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/myanmar-driver-license';
         $formParams = [];
         $queryParams = [];
@@ -1608,6 +1630,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1637,7 +1662,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeMyanmarDriverLicenseResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeMyanmarDriverLicenseRequest');
     }
 
@@ -1659,7 +1683,6 @@ class OcrClient extends Client
 
     public function recognizeMyanmarIdcardWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/myanmar-id-card';
         $formParams = [];
         $queryParams = [];
@@ -1673,6 +1696,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1702,7 +1728,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeMyanmarIdcardResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeMyanmarIdcardRequest');
     }
 
@@ -1728,7 +1753,6 @@ class OcrClient extends Client
 
     public function recognizePassportWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/passport';
         $formParams = [];
         $queryParams = [];
@@ -1742,6 +1766,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1771,7 +1798,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizePassportResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizePassportRequest');
     }
 
@@ -1793,7 +1819,6 @@ class OcrClient extends Client
 
     public function recognizePcrTestRecordWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/pcr-test-record';
         $formParams = [];
         $queryParams = [];
@@ -1807,6 +1832,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1836,7 +1864,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizePcrTestRecordResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizePcrTestRecordRequest');
     }
 
@@ -1862,7 +1889,6 @@ class OcrClient extends Client
 
     public function recognizeQualificationCertificateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/transportation-qualification-certificate';
         $formParams = [];
         $queryParams = [];
@@ -1876,6 +1902,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1905,7 +1934,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeQualificationCertificateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeQualificationCertificateRequest');
     }
 
@@ -1931,7 +1959,6 @@ class OcrClient extends Client
 
     public function recognizeQuotaInvoiceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/quota-invoice';
         $formParams = [];
         $queryParams = [];
@@ -1945,6 +1972,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1974,7 +2004,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeQuotaInvoiceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeQuotaInvoiceRequest');
     }
 
@@ -2000,7 +2029,6 @@ class OcrClient extends Client
 
     public function recognizeTaxiInvoiceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/taxi-invoice';
         $formParams = [];
         $queryParams = [];
@@ -2014,6 +2042,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2043,7 +2074,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeTaxiInvoiceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeTaxiInvoiceRequest');
     }
 
@@ -2065,7 +2095,6 @@ class OcrClient extends Client
 
     public function recognizeThailandIdcardWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/thailand-id-card';
         $formParams = [];
         $queryParams = [];
@@ -2079,6 +2108,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2108,7 +2140,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeThailandIdcardResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeThailandIdcardRequest');
     }
 
@@ -2130,7 +2161,6 @@ class OcrClient extends Client
 
     public function recognizeThailandLicensePlateWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/thailand-license-plate';
         $formParams = [];
         $queryParams = [];
@@ -2144,6 +2174,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2173,7 +2206,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeThailandLicensePlateResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeThailandLicensePlateRequest');
     }
 
@@ -2199,7 +2231,6 @@ class OcrClient extends Client
 
     public function recognizeTollInvoiceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/toll-invoice';
         $formParams = [];
         $queryParams = [];
@@ -2213,6 +2244,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2242,7 +2276,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeTollInvoiceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeTollInvoiceRequest');
     }
 
@@ -2268,7 +2301,6 @@ class OcrClient extends Client
 
     public function recognizeTrainTicketWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/train-ticket';
         $formParams = [];
         $queryParams = [];
@@ -2282,6 +2314,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2311,7 +2346,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeTrainTicketResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeTrainTicketRequest');
     }
 
@@ -2335,7 +2369,6 @@ class OcrClient extends Client
 
     public function recognizeTransportationLicenseWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/transportation-license';
         $formParams = [];
         $queryParams = [];
@@ -2349,6 +2382,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2378,7 +2414,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeTransportationLicenseResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeTransportationLicenseRequest');
     }
 
@@ -2408,7 +2443,6 @@ class OcrClient extends Client
 
     public function recognizeVatInvoiceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/vat-invoice';
         $formParams = [];
         $queryParams = [];
@@ -2422,6 +2456,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2451,7 +2488,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeVatInvoiceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeVatInvoiceRequest');
     }
 
@@ -2477,7 +2513,6 @@ class OcrClient extends Client
 
     public function recognizeVehicleLicenseWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/vehicle-license';
         $formParams = [];
         $queryParams = [];
@@ -2491,6 +2526,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2520,7 +2558,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeVehicleLicenseResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeVehicleLicenseRequest');
     }
 
@@ -2542,7 +2579,6 @@ class OcrClient extends Client
 
     public function recognizeWaybillElectronicWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/waybill-electronic';
         $formParams = [];
         $queryParams = [];
@@ -2556,6 +2592,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2585,7 +2624,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeWaybillElectronicResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeWaybillElectronicRequest');
     }
 
@@ -2607,7 +2645,6 @@ class OcrClient extends Client
 
     public function recognizeWebImageWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/web-image';
         $formParams = [];
         $queryParams = [];
@@ -2621,6 +2658,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2650,7 +2690,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeWebImageResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeWebImageRequest');
     }
 
@@ -2672,7 +2711,6 @@ class OcrClient extends Client
 
     public function recognizeVinWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2/{project_id}/ocr/vin';
         $formParams = [];
         $queryParams = [];
@@ -2686,6 +2724,9 @@ class OcrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -2715,7 +2756,6 @@ class OcrClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeVinResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ocr\V1\Model\RecognizeVinRequest');
     }
 
@@ -2729,7 +2769,6 @@ class OcrClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -2742,7 +2781,6 @@ class OcrClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

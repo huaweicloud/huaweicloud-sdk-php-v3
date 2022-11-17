@@ -224,8 +224,14 @@ class ListBatchTasksRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['instanceId']) && !preg_match("/^[a-f0-9-]{36}$/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-f0-9-]{36}$/.";
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['instanceId']) && !preg_match("/[a-f0-9-]{1,36}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-f0-9-]{1,36}/.";
             }
             if (!is_null($this->container['appId']) && !preg_match("/^[a-zA-Z0-9_-]{1,36}$/", $this->container['appId'])) {
                 $invalidProperties[] = "invalid value for 'appId', must be conform to the pattern /^[a-zA-Z0-9_-]{1,36}$/.";
@@ -233,8 +239,8 @@ class ListBatchTasksRequest implements ModelInterface, ArrayAccess
         if ($this->container['taskType'] === null) {
             $invalidProperties[] = "'taskType' can't be null";
         }
-            if (!preg_match("/firmwareUpgrade|softwareUpgrade|createDevices|deleteDevices|freezeDevices|unfreezeDevices|createCommands|createAsyncCommands|sendEmails|sendSmss|updateDeviceShadows|createMessages/", $this->container['taskType'])) {
-                $invalidProperties[] = "invalid value for 'taskType', must be conform to the pattern /firmwareUpgrade|softwareUpgrade|createDevices|deleteDevices|freezeDevices|unfreezeDevices|createCommands|createAsyncCommands|sendEmails|sendSmss|updateDeviceShadows|createMessages/.";
+            if (!preg_match("/firmwareUpgrade|softwareUpgrade|createDevices|deleteDevices|freezeDevices|unfreezeDevices|createCommands|createAsyncCommands|sendEmails|sendSmss|updateDeviceShadows|createMessages|addDevicesToGroup/", $this->container['taskType'])) {
+                $invalidProperties[] = "invalid value for 'taskType', must be conform to the pattern /firmwareUpgrade|softwareUpgrade|createDevices|deleteDevices|freezeDevices|unfreezeDevices|createCommands|createAsyncCommands|sendEmails|sendSmss|updateDeviceShadows|createMessages|addDevicesToGroup/.";
             }
             if (!is_null($this->container['status']) && !preg_match("/Success|Fail|Processing|PartialSuccess|Stopped|Waitting|Initializing/", $this->container['status'])) {
                 $invalidProperties[] = "invalid value for 'status', must be conform to the pattern /Success|Fail|Processing|PartialSuccess|Stopped|Waitting|Initializing/.";

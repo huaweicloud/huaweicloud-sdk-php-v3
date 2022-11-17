@@ -43,7 +43,6 @@ class EpsClient extends Client
 
     public function createEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/enterprise-projects';
         $formParams = [];
         $queryParams = [];
@@ -86,7 +85,6 @@ class EpsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eps\V1\Model\CreateEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eps\V1\Model\CreateEnterpriseProjectRequest');
     }
 
@@ -108,7 +106,6 @@ class EpsClient extends Client
 
     public function disableEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/enterprise-projects/{enterprise_project_id}/action';
         $formParams = [];
         $queryParams = [];
@@ -154,7 +151,6 @@ class EpsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eps\V1\Model\DisableEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eps\V1\Model\DisableEnterpriseProjectRequest');
     }
 
@@ -176,7 +172,6 @@ class EpsClient extends Client
 
     public function enableEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/enterprise-projects/{enterprise_project_id}/action';
         $formParams = [];
         $queryParams = [];
@@ -222,7 +217,6 @@ class EpsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eps\V1\Model\EnableEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eps\V1\Model\EnableEnterpriseProjectRequest');
     }
 
@@ -244,7 +238,6 @@ class EpsClient extends Client
 
     public function listApiVersionsWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/';
         $formParams = [];
         $queryParams = [];
@@ -284,7 +277,6 @@ class EpsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eps\V1\Model\ListApiVersionsResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eps\V1\Model\ListApiVersionsRequest');
     }
 
@@ -306,7 +298,6 @@ class EpsClient extends Client
 
     public function listEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/enterprise-projects';
         $formParams = [];
         $queryParams = [];
@@ -367,8 +358,79 @@ class EpsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eps\V1\Model\ListEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eps\V1\Model\ListEnterpriseProjectRequest');
+    }
+
+    /**
+     * 查询企业项目支持的服务
+     *
+     * 查询企业项目支持的服务
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listProviders($request)
+    {
+        return $this->listProvidersWithHttpInfo($request);
+    }
+
+    public function listProvidersWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/enterprise-projects/providers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['locale'] !== null) {
+            $queryParams['locale'] = $localVarParams['locale'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['provider'] !== null) {
+            $queryParams['provider'] = $localVarParams['provider'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eps\V1\Model\ListProvidersResponse',
+            $requestType='\HuaweiCloud\SDK\Eps\V1\Model\ListProvidersRequest');
     }
 
     /**
@@ -389,7 +451,6 @@ class EpsClient extends Client
 
     public function migrateResourceWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/enterprise-projects/{enterprise_project_id}/resources-migrate';
         $formParams = [];
         $queryParams = [];
@@ -435,7 +496,6 @@ class EpsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eps\V1\Model\MigrateResourceResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eps\V1\Model\MigrateResourceRequest');
     }
 
@@ -457,7 +517,6 @@ class EpsClient extends Client
 
     public function showApiVersionWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/{api_version}';
         $formParams = [];
         $queryParams = [];
@@ -500,7 +559,6 @@ class EpsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eps\V1\Model\ShowApiVersionResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eps\V1\Model\ShowApiVersionRequest');
     }
 
@@ -522,7 +580,6 @@ class EpsClient extends Client
 
     public function showEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/enterprise-projects/{enterprise_project_id}';
         $formParams = [];
         $queryParams = [];
@@ -565,7 +622,6 @@ class EpsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eps\V1\Model\ShowEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eps\V1\Model\ShowEnterpriseProjectRequest');
     }
 
@@ -587,7 +643,6 @@ class EpsClient extends Client
 
     public function showEnterpriseProjectQuotaWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/enterprise-projects/quotas';
         $formParams = [];
         $queryParams = [];
@@ -627,7 +682,6 @@ class EpsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eps\V1\Model\ShowEnterpriseProjectQuotaResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eps\V1\Model\ShowEnterpriseProjectQuotaRequest');
     }
 
@@ -649,7 +703,6 @@ class EpsClient extends Client
 
     public function showResourceBindEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/enterprise-projects/{enterprise_project_id}/resources/filter';
         $formParams = [];
         $queryParams = [];
@@ -695,7 +748,6 @@ class EpsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eps\V1\Model\ShowResourceBindEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eps\V1\Model\ShowResourceBindEnterpriseProjectRequest');
     }
 
@@ -717,7 +769,6 @@ class EpsClient extends Client
 
     public function updateEnterpriseProjectWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v1.0/enterprise-projects/{enterprise_project_id}';
         $formParams = [];
         $queryParams = [];
@@ -763,7 +814,6 @@ class EpsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eps\V1\Model\UpdateEnterpriseProjectResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Eps\V1\Model\UpdateEnterpriseProjectRequest');
     }
 
@@ -777,7 +827,6 @@ class EpsClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -790,7 +839,6 @@ class EpsClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

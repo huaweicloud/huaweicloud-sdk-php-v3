@@ -1,0 +1,30 @@
+{
+  "name": "huaweicloud/huaweicloud-sdk-dcs",
+  "description": "HUAWEICLOUD SDK DCS",
+  "keywords": [
+    "php",
+    "sdk",
+    "rest",
+    "api",
+    "dcs"
+  ],
+  "version": "3.1.10",
+   "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "HuaweiCloud_SDK",
+      "email": "hwcloudsdk@huawei.com",
+      "homepage": "https://sdkcenter.developer.huaweicloud.com/?language=PHP"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "huaweicloud/huaweicloud-sdk-core": "3.1.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "HuaweiCloud\\SDK\\Dcs\\V3\\": "V3/"
+    }
+  }
+}

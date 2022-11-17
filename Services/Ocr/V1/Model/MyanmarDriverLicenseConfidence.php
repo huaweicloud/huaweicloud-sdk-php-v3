@@ -127,7 +127,7 @@ class MyanmarDriverLicenseConfidence implements ModelInterface, ArrayAccess
             'nameEn' => 'name_en',
             'nrcId' => 'nrc_id',
             'nrcIdEn' => 'nrc_id_en',
-            'birth' => 'Birth',
+            'birth' => 'birth',
             'birthEn' => 'birth_en',
             'bloodGroup' => 'blood_group',
             'bloodGroupEn' => 'blood_group_en',

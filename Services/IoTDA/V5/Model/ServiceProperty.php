@@ -312,8 +312,8 @@ class ServiceProperty implements ModelInterface, ArrayAccess
             if (!preg_match("/(RWE|RW|RE|WE|E|W|R)/", $this->container['method'])) {
                 $invalidProperties[] = "invalid value for 'method', must be conform to the pattern /(RWE|RW|RE|WE|E|W|R)/.";
             }
-            if (!is_null($this->container['description']) && !preg_match("/^[\\s一-龥a-zA-Z0-9_?'#().,;&%@!\\- ，、：；。\/]{1,128}$/", $this->container['description'])) {
-                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[\\s一-龥a-zA-Z0-9_?'#().,;&%@!\\- ，、：；。\/]{1,128}$/.";
+            if (!is_null($this->container['description']) && !preg_match("/^[\\s一-龥a-zA-Z0-9_?'#().,;&%@!\\- ，、：；。￥$！【】’‘“”（）？…~\/]{1,128}$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[\\s一-龥a-zA-Z0-9_?'#().,;&%@!\\- ，、：；。￥$！【】’‘“”（）？…~\/]{1,128}$/.";
             }
         return $invalidProperties;
     }

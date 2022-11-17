@@ -26,9 +26,9 @@ class ModerationClient extends Client
 
 
     /**
-     * 图片内容审核
+     * 图像内容审核
      *
-     * 分析并识别用户上传的图片是否有敏感内容（如色情、政治等），并将识别结果返回给用户
+     * 分析并识别用户上传的图像内容是否有敏感内容（如涉及暴恐元素、涉黄内容等），并将识别结果返回给用户。
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -43,7 +43,6 @@ class ModerationClient extends Client
 
     public function checkImageModerationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/moderation/image';
         $formParams = [];
         $queryParams = [];
@@ -86,7 +85,6 @@ class ModerationClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V3\Model\CheckImageModerationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Moderation\V3\Model\CheckImageModerationRequest');
     }
 
@@ -108,7 +106,6 @@ class ModerationClient extends Client
 
     public function runCreateAudioModerationJobWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/moderation/audio/jobs';
         $formParams = [];
         $queryParams = [];
@@ -151,7 +148,6 @@ class ModerationClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V3\Model\RunCreateAudioModerationJobResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Moderation\V3\Model\RunCreateAudioModerationJobRequest');
     }
 
@@ -173,7 +169,6 @@ class ModerationClient extends Client
 
     public function runCreateVideoModerationJobWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/moderation/video/jobs';
         $formParams = [];
         $queryParams = [];
@@ -216,7 +211,6 @@ class ModerationClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V3\Model\RunCreateVideoModerationJobResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Moderation\V3\Model\RunCreateVideoModerationJobRequest');
     }
 
@@ -237,7 +231,6 @@ class ModerationClient extends Client
 
     public function runQueryAudioModerationJobWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/moderation/audio/jobs/{job_id}';
         $formParams = [];
         $queryParams = [];
@@ -280,7 +273,6 @@ class ModerationClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V3\Model\RunQueryAudioModerationJobResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Moderation\V3\Model\RunQueryAudioModerationJobRequest');
     }
 
@@ -302,7 +294,6 @@ class ModerationClient extends Client
 
     public function runQueryVideoModerationJobWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/moderation/video/jobs/{job_id}';
         $formParams = [];
         $queryParams = [];
@@ -345,7 +336,6 @@ class ModerationClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V3\Model\RunQueryVideoModerationJobResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Moderation\V3\Model\RunQueryVideoModerationJobRequest');
     }
 
@@ -367,7 +357,6 @@ class ModerationClient extends Client
 
     public function runTextModerationWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v3/{project_id}/moderation/text';
         $formParams = [];
         $queryParams = [];
@@ -410,7 +399,6 @@ class ModerationClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Moderation\V3\Model\RunTextModerationResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Moderation\V3\Model\RunTextModerationRequest');
     }
 
@@ -424,7 +412,6 @@ class ModerationClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -437,7 +424,6 @@ class ModerationClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }

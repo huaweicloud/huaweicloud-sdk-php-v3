@@ -43,7 +43,6 @@ class IvsClient extends Client
 
     public function detectExtentionByIdCardImageWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.0/ivs-idcard-extention';
         $formParams = [];
         $queryParams = [];
@@ -86,7 +85,6 @@ class IvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ivs\V2\Model\DetectExtentionByIdCardImageResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ivs\V2\Model\DetectExtentionByIdCardImageRequest');
     }
 
@@ -108,7 +106,6 @@ class IvsClient extends Client
 
     public function detectExtentionByNameAndIdWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.0/ivs-idcard-extention';
         $formParams = [];
         $queryParams = [];
@@ -151,7 +148,6 @@ class IvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ivs\V2\Model\DetectExtentionByNameAndIdResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ivs\V2\Model\DetectExtentionByNameAndIdRequest');
     }
 
@@ -174,7 +170,6 @@ class IvsClient extends Client
 
     public function detectStandardByIdCardImageWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.0/ivs-standard';
         $formParams = [];
         $queryParams = [];
@@ -217,7 +212,6 @@ class IvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ivs\V2\Model\DetectStandardByIdCardImageResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ivs\V2\Model\DetectStandardByIdCardImageRequest');
     }
 
@@ -239,7 +233,6 @@ class IvsClient extends Client
 
     public function detectStandardByNameAndIdWithHttpInfo($request)
     {
-        $collection_formats = [];
         $resourcePath = '/v2.0/ivs-standard';
         $formParams = [];
         $queryParams = [];
@@ -282,7 +275,6 @@ class IvsClient extends Client
             $multipart = $multipart,
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ivs\V2\Model\DetectStandardByNameAndIdResponse',
-            $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ivs\V2\Model\DetectStandardByNameAndIdRequest');
     }
 
@@ -296,7 +288,6 @@ class IvsClient extends Client
         $multipart = null,
         $postParams = null,
         $responseType = null,
-        $collectionFormats = null,
         $requestType = null)
     {
     return $this->doHttpRequest(
@@ -309,7 +300,6 @@ class IvsClient extends Client
         $multipart,
         $postParams,
         $responseType,
-        $collectionFormats,
         $requestType);
     }
 }
