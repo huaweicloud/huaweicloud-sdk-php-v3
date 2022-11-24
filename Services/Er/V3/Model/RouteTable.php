@@ -27,7 +27,6 @@ class RouteTable implements ModelInterface, ArrayAccess
     * isDefaultPropagation  是否为默认传递路由表
     * state  路由表状态，支持的状态有pending | available | deleting | deleted | failed
     * tags  标签
-    * bgpOptions  bgpOptions
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -41,7 +40,6 @@ class RouteTable implements ModelInterface, ArrayAccess
             'isDefaultPropagation' => 'bool',
             'state' => 'string',
             'tags' => '\HuaweiCloud\SDK\Er\V3\Model\Tag[]',
-            'bgpOptions' => '\HuaweiCloud\SDK\Er\V3\Model\BgpOptions',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime'
     ];
@@ -55,7 +53,6 @@ class RouteTable implements ModelInterface, ArrayAccess
     * isDefaultPropagation  是否为默认传递路由表
     * state  路由表状态，支持的状态有pending | available | deleting | deleted | failed
     * tags  标签
-    * bgpOptions  bgpOptions
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -69,7 +66,6 @@ class RouteTable implements ModelInterface, ArrayAccess
         'isDefaultPropagation' => null,
         'state' => null,
         'tags' => null,
-        'bgpOptions' => null,
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time'
     ];
@@ -104,7 +100,6 @@ class RouteTable implements ModelInterface, ArrayAccess
     * isDefaultPropagation  是否为默认传递路由表
     * state  路由表状态，支持的状态有pending | available | deleting | deleted | failed
     * tags  标签
-    * bgpOptions  bgpOptions
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -118,7 +113,6 @@ class RouteTable implements ModelInterface, ArrayAccess
             'isDefaultPropagation' => 'is_default_propagation',
             'state' => 'state',
             'tags' => 'tags',
-            'bgpOptions' => 'bgp_options',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at'
     ];
@@ -132,7 +126,6 @@ class RouteTable implements ModelInterface, ArrayAccess
     * isDefaultPropagation  是否为默认传递路由表
     * state  路由表状态，支持的状态有pending | available | deleting | deleted | failed
     * tags  标签
-    * bgpOptions  bgpOptions
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -146,7 +139,6 @@ class RouteTable implements ModelInterface, ArrayAccess
             'isDefaultPropagation' => 'setIsDefaultPropagation',
             'state' => 'setState',
             'tags' => 'setTags',
-            'bgpOptions' => 'setBgpOptions',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt'
     ];
@@ -160,7 +152,6 @@ class RouteTable implements ModelInterface, ArrayAccess
     * isDefaultPropagation  是否为默认传递路由表
     * state  路由表状态，支持的状态有pending | available | deleting | deleted | failed
     * tags  标签
-    * bgpOptions  bgpOptions
     * createdAt  创建时间
     * updatedAt  更新时间
     *
@@ -174,7 +165,6 @@ class RouteTable implements ModelInterface, ArrayAccess
             'isDefaultPropagation' => 'getIsDefaultPropagation',
             'state' => 'getState',
             'tags' => 'getTags',
-            'bgpOptions' => 'getBgpOptions',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt'
     ];
@@ -244,7 +234,6 @@ class RouteTable implements ModelInterface, ArrayAccess
         $this->container['isDefaultPropagation'] = isset($data['isDefaultPropagation']) ? $data['isDefaultPropagation'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['bgpOptions'] = isset($data['bgpOptions']) ? $data['bgpOptions'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
     }
@@ -451,30 +440,6 @@ class RouteTable implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets bgpOptions
-    *  bgpOptions
-    *
-    * @return \HuaweiCloud\SDK\Er\V3\Model\BgpOptions|null
-    */
-    public function getBgpOptions()
-    {
-        return $this->container['bgpOptions'];
-    }
-
-    /**
-    * Sets bgpOptions
-    *
-    * @param \HuaweiCloud\SDK\Er\V3\Model\BgpOptions|null $bgpOptions bgpOptions
-    *
-    * @return $this
-    */
-    public function setBgpOptions($bgpOptions)
-    {
-        $this->container['bgpOptions'] = $bgpOptions;
         return $this;
     }
 

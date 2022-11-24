@@ -21,7 +21,7 @@ class Route implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  路由id
-    * type  路由表类型，只支持static和propagated
+    * type  路由类型
     * state  路由状态
     * isBlackhole  是否为黑洞路由
     * destination  路由目的地址
@@ -47,7 +47,7 @@ class Route implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  路由id
-    * type  路由表类型，只支持static和propagated
+    * type  路由类型
     * state  路由状态
     * isBlackhole  是否为黑洞路由
     * destination  路由目的地址
@@ -94,7 +94,7 @@ class Route implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  路由id
-    * type  路由表类型，只支持static和propagated
+    * type  路由类型
     * state  路由状态
     * isBlackhole  是否为黑洞路由
     * destination  路由目的地址
@@ -120,7 +120,7 @@ class Route implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  路由id
-    * type  路由表类型，只支持static和propagated
+    * type  路由类型
     * state  路由状态
     * isBlackhole  是否为黑洞路由
     * destination  路由目的地址
@@ -146,7 +146,7 @@ class Route implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  路由id
-    * type  路由表类型，只支持static和propagated
+    * type  路由类型
     * state  路由状态
     * isBlackhole  是否为黑洞路由
     * destination  路由目的地址
@@ -304,7 +304,7 @@ class Route implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  路由表类型，只支持static和propagated
+    *  路由类型
     *
     * @return string
     */
@@ -316,7 +316,7 @@ class Route implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 路由表类型，只支持static和propagated
+    * @param string $type 路由类型
     *
     * @return $this
     */

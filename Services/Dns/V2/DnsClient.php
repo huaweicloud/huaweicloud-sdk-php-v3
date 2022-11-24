@@ -26,6 +26,395 @@ class DnsClient extends Client
 
 
     /**
+     * 绑定ip地址。
+     *
+     * 绑定单个IP地址到终端节点
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function associateEndpointIpaddress($request)
+    {
+        return $this->associateEndpointIpaddressWithHttpInfo($request);
+    }
+
+    public function associateEndpointIpaddressWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/endpoint/{endpoint_id}/ipaddress';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['endpointId'] !== null) {
+            $pathParams['endpoint_id'] = $localVarParams['endpointId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\AssociateEndpointIpaddressResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\AssociateEndpointIpaddressRequest');
+    }
+
+    /**
+     * 批量删除PTR
+     *
+     * 批量删除PTR。本接口为原子操作，所有记录应全部删除成功或全部失败。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeletePtrRecords($request)
+    {
+        return $this->batchDeletePtrRecordsWithHttpInfo($request);
+    }
+
+    public function batchDeletePtrRecordsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/reverse/floatingips';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeletePtrRecordsResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeletePtrRecordsRequest');
+    }
+
+    /**
+     * 批量删除Record Set
+     *
+     * 批量删除Record Set。
+     * 响应结果中只包含本次实际删除的Record Set。
+     * 支持批量删除公网域名和内网域名的记录集。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteRecordSets($request)
+    {
+        return $this->batchDeleteRecordSetsWithHttpInfo($request);
+    }
+
+    public function batchDeleteRecordSetsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/recordsets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRecordSetsResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRecordSetsRequest');
+    }
+
+    /**
+     * 批量删除Zone
+     *
+     * 批量删除Zone。
+     * 本接口为原子操作，所有记录应全部删除成功或全部失败。
+     * 仅支持公网Zone、内网Zone。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteZones($request)
+    {
+        return $this->batchDeleteZonesWithHttpInfo($request);
+    }
+
+    public function batchDeleteZonesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/zones';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteZonesResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteZonesRequest');
+    }
+
+    /**
+     * 批量设置Record Set状态
+     *
+     * 批量设置Record Set状态。
+     * 响应结果中只包含本次实际更新的Record Set。
+     * 仅支持公网域名记录集。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchSetRecordSetsStatus($request)
+    {
+        return $this->batchSetRecordSetsStatusWithHttpInfo($request);
+    }
+
+    public function batchSetRecordSetsStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/recordsets/statuses';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchSetRecordSetsStatusResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchSetRecordSetsStatusRequest');
+    }
+
+    /**
+     * 批量设置Zone状态
+     *
+     * 批量设置Zone状态。
+     * 响应结果中只包含本次实际更新的Zone。
+     * 仅支持公网Zone。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchSetZonesStatus($request)
+    {
+        return $this->batchSetZonesStatusWithHttpInfo($request);
+    }
+
+    public function batchSetZonesStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/zones/statuses';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\BatchSetZonesStatusResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\BatchSetZonesStatusRequest');
+    }
+
+    /**
      * 创建单个自定义线路
      *
      * 创建单个自定义线路
@@ -89,6 +478,321 @@ class DnsClient extends Client
     }
 
     /**
+     * 创建终端节点。
+     *
+     * 创建单个终端节点。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createEndpoint($request)
+    {
+        return $this->createEndpointWithHttpInfo($request);
+    }
+
+    public function createEndpointWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/endpoint';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateEndpointResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateEndpointRequest');
+    }
+
+    /**
+     * 创建线路分组。
+     *
+     * 创建一个线路分组。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createLineGroup($request)
+    {
+        return $this->createLineGroupWithHttpInfo($request);
+    }
+
+    public function createLineGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/linegroups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateLineGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateLineGroupRequest');
+    }
+
+    /**
+     * 创建解析规则。
+     *
+     * 创建一个解析规则。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createResolveRule($request)
+    {
+        return $this->createResolveRuleWithHttpInfo($request);
+    }
+
+    public function createResolveRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/resolverrule';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateResolveRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateResolveRuleRequest');
+    }
+
+    /**
+     * 创建公网域名找回请求。
+     *
+     * 创建公网域名找回请求。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createRetrieval($request)
+    {
+        return $this->createRetrievalWithHttpInfo($request);
+    }
+
+    public function createRetrievalWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/retrieval';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRetrievalResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRetrievalRequest');
+    }
+
+    /**
+     * 请求立即验证域名找回。
+     *
+     * 请求服务器立即执行找回验证。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createRetrievalVerification($request)
+    {
+        return $this->createRetrievalVerificationWithHttpInfo($request);
+    }
+
+    public function createRetrievalVerificationWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/retrieval/verification/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRetrievalVerificationResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\CreateRetrievalVerificationRequest');
+    }
+
+    /**
      * 删除单个自定义线路
      *
      * 删除单个自定义线路
@@ -149,6 +853,261 @@ class DnsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteCustomLineResponse',
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteCustomLineRequest');
+    }
+
+    /**
+     * 删除终端节点。
+     *
+     * 删除终端节点。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteEndpoint($request)
+    {
+        return $this->deleteEndpointWithHttpInfo($request);
+    }
+
+    public function deleteEndpointWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/endpoint/{endpoint_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['endpointId'] !== null) {
+            $pathParams['endpoint_id'] = $localVarParams['endpointId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteEndpointResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteEndpointRequest');
+    }
+
+    /**
+     * 删除线路分组。
+     *
+     * 删除单个线路分组。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteLineGroup($request)
+    {
+        return $this->deleteLineGroupWithHttpInfo($request);
+    }
+
+    public function deleteLineGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/linegroups/{linegroup_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['linegroupId'] !== null) {
+            $pathParams['linegroup_id'] = $localVarParams['linegroupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteLineGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteLineGroupRequest');
+    }
+
+    /**
+     * 删除解析规则。
+     *
+     * 删除解析规则。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteResolveRule($request)
+    {
+        return $this->deleteResolveRuleWithHttpInfo($request);
+    }
+
+    public function deleteResolveRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/resolverrule/{resolverrule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resolverruleId'] !== null) {
+            $pathParams['resolverrule_id'] = $localVarParams['resolverruleId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteResolveRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteResolveRuleRequest');
+    }
+
+    /**
+     * 解关联ip地址。
+     *
+     * 解除endpoint绑定的IP。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disassociateEndpointIpaddress($request)
+    {
+        return $this->disassociateEndpointIpaddressWithHttpInfo($request);
+    }
+
+    public function disassociateEndpointIpaddressWithHttpInfo($request)
+    {
+        $resourcePath = 'v2.1/endpoint/{endpoint_id}/ipaddress/{ipaddress_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['endpointId'] !== null) {
+            $pathParams['endpoint_id'] = $localVarParams['endpointId'];
+        }
+        if ($localVarParams['ipaddressId'] !== null) {
+            $pathParams['ipaddress_id'] = $localVarParams['ipaddressId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DisassociateEndpointIpaddressResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DisassociateEndpointIpaddressRequest');
     }
 
     /**
@@ -287,6 +1246,276 @@ class DnsClient extends Client
     }
 
     /**
+     * 查询ip地址列表。
+     *
+     * 查询某个endpoint下的ip地址列表。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listEndpointIpaddresses($request)
+    {
+        return $this->listEndpointIpaddressesWithHttpInfo($request);
+    }
+
+    public function listEndpointIpaddressesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/endpoint/{endpoint_id}/ipaddress';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['endpointId'] !== null) {
+            $pathParams['endpoint_id'] = $localVarParams['endpointId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListEndpointIpaddressesResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListEndpointIpaddressesRequest');
+    }
+
+    /**
+     * 查询vpc信息。
+     *
+     * 查询vpc的终端节点信息。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listEndpointVpcs($request)
+    {
+        return $this->listEndpointVpcsWithHttpInfo($request);
+    }
+
+    public function listEndpointVpcsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/vpc';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListEndpointVpcsResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListEndpointVpcsRequest');
+    }
+
+    /**
+     * 查询终端节点列表。
+     *
+     * 查询终端节点列表。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listEndpoints($request)
+    {
+        return $this->listEndpointsWithHttpInfo($request);
+    }
+
+    public function listEndpointsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/endpoint';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['direction'] !== null) {
+            $queryParams['direction'] = $localVarParams['direction'];
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListEndpointsResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListEndpointsRequest');
+    }
+
+    /**
+     * 查询线路分组列表。
+     *
+     * 查询线路分组列表。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLineGroups($request)
+    {
+        return $this->listLineGroupsWithHttpInfo($request);
+    }
+
+    public function listLineGroupsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/linegroups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['lineId'] !== null) {
+            $queryParams['line_id'] = $localVarParams['lineId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListLineGroupsResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListLineGroupsRequest');
+    }
+
+    /**
      * 查询名称服务器列表
      *
      * 查询名称服务器列表
@@ -350,6 +1579,75 @@ class DnsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListNameServersResponse',
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListNameServersRequest');
+    }
+
+    /**
+     * 查询解析规则列表。
+     *
+     * 查询解析规则的列表。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listResoleRules($request)
+    {
+        return $this->listResoleRulesWithHttpInfo($request);
+    }
+
+    public function listResoleRulesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/resolverrule';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $queryParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListResoleRulesResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListResoleRulesRequest');
     }
 
     /**
@@ -479,6 +1777,321 @@ class DnsClient extends Client
     }
 
     /**
+     * 查询endpoint。
+     *
+     * 查询终端单个节点。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showEndpoint($request)
+    {
+        return $this->showEndpointWithHttpInfo($request);
+    }
+
+    public function showEndpointWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/endpoint/{endpoint_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['endpointId'] !== null) {
+            $pathParams['endpoint_id'] = $localVarParams['endpointId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowEndpointResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowEndpointRequest');
+    }
+
+    /**
+     * 查询线路分组。
+     *
+     * 查询线路分组。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showLineGroup($request)
+    {
+        return $this->showLineGroupWithHttpInfo($request);
+    }
+
+    public function showLineGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/linegroups/{linegroup_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['linegroupId'] !== null) {
+            $pathParams['linegroup_id'] = $localVarParams['linegroupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowLineGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowLineGroupRequest');
+    }
+
+    /**
+     * 查询单个解析规则。
+     *
+     * 查询单个解析规则。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showResoleRule($request)
+    {
+        return $this->showResoleRuleWithHttpInfo($request);
+    }
+
+    public function showResoleRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/resolverrule/{resolverrule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resolverruleId'] !== null) {
+            $pathParams['resolverrule_id'] = $localVarParams['resolverruleId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowResoleRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowResoleRuleRequest');
+    }
+
+    /**
+     * 查询域名找回。
+     *
+     * 查询域名找回请求。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRetrieval($request)
+    {
+        return $this->showRetrievalWithHttpInfo($request);
+    }
+
+    public function showRetrievalWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/retrieval';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowRetrievalResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowRetrievalRequest');
+    }
+
+    /**
+     * 查询域名找回结果。
+     *
+     * 查询域名找回结果。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRetrievalVerification($request)
+    {
+        return $this->showRetrievalVerificationWithHttpInfo($request);
+    }
+
+    public function showRetrievalVerificationWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/retrieval/verification/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ShowRetrievalVerificationResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ShowRetrievalVerificationRequest');
+    }
+
+    /**
      * 更新单个自定义线路
      *
      * 更新单个自定义线路
@@ -542,6 +2155,201 @@ class DnsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\UpdateCustomLineResponse',
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\UpdateCustomLineRequest');
+    }
+
+    /**
+     * 修改终端节点
+     *
+     * 修改终端节点
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateEndpoint($request)
+    {
+        return $this->updateEndpointWithHttpInfo($request);
+    }
+
+    public function updateEndpointWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/endpoint/{endpoint_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['endpointId'] !== null) {
+            $pathParams['endpoint_id'] = $localVarParams['endpointId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\UpdateEndpointResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\UpdateEndpointRequest');
+    }
+
+    /**
+     * 更新线路分组。
+     *
+     * 更新单个线路分组。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateLineGroups($request)
+    {
+        return $this->updateLineGroupsWithHttpInfo($request);
+    }
+
+    public function updateLineGroupsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/linegroups/{linegroup_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['linegroupId'] !== null) {
+            $pathParams['linegroup_id'] = $localVarParams['linegroupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\UpdateLineGroupsResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\UpdateLineGroupsRequest');
+    }
+
+    /**
+     * 修改解析规则。
+     *
+     * 修改一个解析规则。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateResolveRule($request)
+    {
+        return $this->updateResolveRuleWithHttpInfo($request);
+    }
+
+    public function updateResolveRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/resolverrule/{resolverrule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resolverruleId'] !== null) {
+            $pathParams['resolverrule_id'] = $localVarParams['resolverruleId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\UpdateResolveRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\UpdateResolveRuleRequest');
     }
 
     /**
@@ -893,6 +2701,72 @@ class DnsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\UpdatePtrRecordResponse',
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\UpdatePtrRecordRequest');
+    }
+
+    /**
+     * Record Set关联健康检查。
+     *
+     * Record Set关联健康检查。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function associateHealthCheck($request)
+    {
+        return $this->associateHealthCheckWithHttpInfo($request);
+    }
+
+    public function associateHealthCheckWithHttpInfo($request)
+    {
+        $resourcePath = ' /v2.1/recordsets/{recordset_id}/associatehealthcheck';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['recordsetId'] !== null) {
+            $pathParams['recordset_id'] = $localVarParams['recordsetId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\AssociateHealthCheckResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\AssociateHealthCheckRequest');
     }
 
     /**
@@ -1357,6 +3231,72 @@ class DnsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteRecordSetsResponse',
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DeleteRecordSetsRequest');
+    }
+
+    /**
+     * Record Set解关联健康检查。
+     *
+     * Record Set解关联健康检查。。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disassociateHealthCheck($request)
+    {
+        return $this->disassociateHealthCheckWithHttpInfo($request);
+    }
+
+    public function disassociateHealthCheckWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.1/recordsets/{recordset_id}/associatehealthcheck';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['recordsetId'] !== null) {
+            $pathParams['recordset_id'] = $localVarParams['recordsetId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DisassociateHealthCheckResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DisassociateHealthCheckRequest');
     }
 
     /**
@@ -3040,6 +4980,72 @@ class DnsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\ListPublicZonesResponse',
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\ListPublicZonesRequest');
+    }
+
+    /**
+     * 设置单个内网Zone的子域名递归解析代理
+     *
+     * 设置单个内网Zone的子域名递归解析代理
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setPrivateZoneProxyPattern($request)
+    {
+        return $this->setPrivateZoneProxyPatternWithHttpInfo($request);
+    }
+
+    public function setPrivateZoneProxyPatternWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/zones/{zone_id}/actions/set-proxy-pattern';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['zoneId'] !== null) {
+            $pathParams['zone_id'] = $localVarParams['zoneId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\SetPrivateZoneProxyPatternResponse',
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\SetPrivateZoneProxyPatternRequest');
     }
 
     /**

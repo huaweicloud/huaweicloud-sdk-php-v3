@@ -21,7 +21,7 @@ class RouteAttachment implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  连接关联的资源ID
-    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering|gdgw
+    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering
     * attachmentId  连接ID
     *
     * @var string[]
@@ -35,7 +35,7 @@ class RouteAttachment implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  连接关联的资源ID
-    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering|gdgw
+    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering
     * attachmentId  连接ID
     *
     * @var string[]
@@ -70,7 +70,7 @@ class RouteAttachment implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceId  连接关联的资源ID
-    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering|gdgw
+    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering
     * attachmentId  连接ID
     *
     * @var string[]
@@ -84,7 +84,7 @@ class RouteAttachment implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  连接关联的资源ID
-    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering|gdgw
+    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering
     * attachmentId  连接ID
     *
     * @var string[]
@@ -98,7 +98,7 @@ class RouteAttachment implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  连接关联的资源ID
-    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering|gdgw
+    * resourceType  连接关联的资源类型：vpc|vgw|vpn|peering
     * attachmentId  连接ID
     *
     * @var string[]
@@ -229,7 +229,7 @@ class RouteAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  连接关联的资源类型：vpc|vgw|vpn|peering|gdgw
+    *  连接关联的资源类型：vpc|vgw|vpn|peering
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class RouteAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 连接关联的资源类型：vpc|vgw|vpn|peering|gdgw
+    * @param string $resourceType 连接关联的资源类型：vpc|vgw|vpn|peering
     *
     * @return $this
     */

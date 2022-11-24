@@ -28,7 +28,8 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
     * city  城市
     * time  健康码或行程卡的更新时间
     * color  健康码或行程卡颜色。 健康码颜色可选值包括：  - \"green\"，绿码 - \"yellow\"，黄码 - \"red\"，红码 - \"gray\"，灰码  行程卡颜色可选值包括：  - \"green\"，绿码 - \"yellow\"，黄码 - \"red\"，红码
-    * vaccinationStatus  疫苗接种情况
+    * vaccinationStatus  疫苗接种情况，可选值包括：  - 未接种 - 接种中 - 无接种记录 - 已接种1针 - 已接种2针 - 已接种3针 - 已完成新冠疫苗接种
+    * testInterval  核酸检测间隔时长，可选值包括： - 24小时内 - 48小时内 - 72小时内 - 5天内 - 7天内 - 7天外
     * pcrTestResult  核酸检测结果，可选值包括： - \"positive\",即阳性 - \"negative\",即阴性 - \"unknown\",未知
     * pcrTestOrganization  核酸检测机构
     * pcrTestTime  核酸检测结果更新时间
@@ -50,6 +51,7 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
             'time' => 'string',
             'color' => 'string',
             'vaccinationStatus' => 'string',
+            'testInterval' => 'string',
             'pcrTestResult' => 'string',
             'pcrTestOrganization' => 'string',
             'pcrTestTime' => 'string',
@@ -70,7 +72,8 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
     * city  城市
     * time  健康码或行程卡的更新时间
     * color  健康码或行程卡颜色。 健康码颜色可选值包括：  - \"green\"，绿码 - \"yellow\"，黄码 - \"red\"，红码 - \"gray\"，灰码  行程卡颜色可选值包括：  - \"green\"，绿码 - \"yellow\"，黄码 - \"red\"，红码
-    * vaccinationStatus  疫苗接种情况
+    * vaccinationStatus  疫苗接种情况，可选值包括：  - 未接种 - 接种中 - 无接种记录 - 已接种1针 - 已接种2针 - 已接种3针 - 已完成新冠疫苗接种
+    * testInterval  核酸检测间隔时长，可选值包括： - 24小时内 - 48小时内 - 72小时内 - 5天内 - 7天内 - 7天外
     * pcrTestResult  核酸检测结果，可选值包括： - \"positive\",即阳性 - \"negative\",即阴性 - \"unknown\",未知
     * pcrTestOrganization  核酸检测机构
     * pcrTestTime  核酸检测结果更新时间
@@ -92,6 +95,7 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
         'time' => null,
         'color' => null,
         'vaccinationStatus' => null,
+        'testInterval' => null,
         'pcrTestResult' => null,
         'pcrTestOrganization' => null,
         'pcrTestTime' => null,
@@ -133,7 +137,8 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
     * city  城市
     * time  健康码或行程卡的更新时间
     * color  健康码或行程卡颜色。 健康码颜色可选值包括：  - \"green\"，绿码 - \"yellow\"，黄码 - \"red\"，红码 - \"gray\"，灰码  行程卡颜色可选值包括：  - \"green\"，绿码 - \"yellow\"，黄码 - \"red\"，红码
-    * vaccinationStatus  疫苗接种情况
+    * vaccinationStatus  疫苗接种情况，可选值包括：  - 未接种 - 接种中 - 无接种记录 - 已接种1针 - 已接种2针 - 已接种3针 - 已完成新冠疫苗接种
+    * testInterval  核酸检测间隔时长，可选值包括： - 24小时内 - 48小时内 - 72小时内 - 5天内 - 7天内 - 7天外
     * pcrTestResult  核酸检测结果，可选值包括： - \"positive\",即阳性 - \"negative\",即阴性 - \"unknown\",未知
     * pcrTestOrganization  核酸检测机构
     * pcrTestTime  核酸检测结果更新时间
@@ -155,6 +160,7 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
             'time' => 'time',
             'color' => 'color',
             'vaccinationStatus' => 'vaccination_status',
+            'testInterval' => 'test_interval',
             'pcrTestResult' => 'pcr_test_result',
             'pcrTestOrganization' => 'pcr_test_organization',
             'pcrTestTime' => 'pcr_test_time',
@@ -175,7 +181,8 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
     * city  城市
     * time  健康码或行程卡的更新时间
     * color  健康码或行程卡颜色。 健康码颜色可选值包括：  - \"green\"，绿码 - \"yellow\"，黄码 - \"red\"，红码 - \"gray\"，灰码  行程卡颜色可选值包括：  - \"green\"，绿码 - \"yellow\"，黄码 - \"red\"，红码
-    * vaccinationStatus  疫苗接种情况
+    * vaccinationStatus  疫苗接种情况，可选值包括：  - 未接种 - 接种中 - 无接种记录 - 已接种1针 - 已接种2针 - 已接种3针 - 已完成新冠疫苗接种
+    * testInterval  核酸检测间隔时长，可选值包括： - 24小时内 - 48小时内 - 72小时内 - 5天内 - 7天内 - 7天外
     * pcrTestResult  核酸检测结果，可选值包括： - \"positive\",即阳性 - \"negative\",即阴性 - \"unknown\",未知
     * pcrTestOrganization  核酸检测机构
     * pcrTestTime  核酸检测结果更新时间
@@ -197,6 +204,7 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
             'time' => 'setTime',
             'color' => 'setColor',
             'vaccinationStatus' => 'setVaccinationStatus',
+            'testInterval' => 'setTestInterval',
             'pcrTestResult' => 'setPcrTestResult',
             'pcrTestOrganization' => 'setPcrTestOrganization',
             'pcrTestTime' => 'setPcrTestTime',
@@ -217,7 +225,8 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
     * city  城市
     * time  健康码或行程卡的更新时间
     * color  健康码或行程卡颜色。 健康码颜色可选值包括：  - \"green\"，绿码 - \"yellow\"，黄码 - \"red\"，红码 - \"gray\"，灰码  行程卡颜色可选值包括：  - \"green\"，绿码 - \"yellow\"，黄码 - \"red\"，红码
-    * vaccinationStatus  疫苗接种情况
+    * vaccinationStatus  疫苗接种情况，可选值包括：  - 未接种 - 接种中 - 无接种记录 - 已接种1针 - 已接种2针 - 已接种3针 - 已完成新冠疫苗接种
+    * testInterval  核酸检测间隔时长，可选值包括： - 24小时内 - 48小时内 - 72小时内 - 5天内 - 7天内 - 7天外
     * pcrTestResult  核酸检测结果，可选值包括： - \"positive\",即阳性 - \"negative\",即阴性 - \"unknown\",未知
     * pcrTestOrganization  核酸检测机构
     * pcrTestTime  核酸检测结果更新时间
@@ -239,6 +248,7 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
             'time' => 'getTime',
             'color' => 'getColor',
             'vaccinationStatus' => 'getVaccinationStatus',
+            'testInterval' => 'getTestInterval',
             'pcrTestResult' => 'getPcrTestResult',
             'pcrTestOrganization' => 'getPcrTestOrganization',
             'pcrTestTime' => 'getPcrTestTime',
@@ -316,6 +326,7 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
         $this->container['color'] = isset($data['color']) ? $data['color'] : null;
         $this->container['vaccinationStatus'] = isset($data['vaccinationStatus']) ? $data['vaccinationStatus'] : null;
+        $this->container['testInterval'] = isset($data['testInterval']) ? $data['testInterval'] : null;
         $this->container['pcrTestResult'] = isset($data['pcrTestResult']) ? $data['pcrTestResult'] : null;
         $this->container['pcrTestOrganization'] = isset($data['pcrTestOrganization']) ? $data['pcrTestOrganization'] : null;
         $this->container['pcrTestTime'] = isset($data['pcrTestTime']) ? $data['pcrTestTime'] : null;
@@ -360,6 +371,9 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
         }
         if ($this->container['vaccinationStatus'] === null) {
             $invalidProperties[] = "'vaccinationStatus' can't be null";
+        }
+        if ($this->container['testInterval'] === null) {
+            $invalidProperties[] = "'testInterval' can't be null";
         }
         if ($this->container['pcrTestResult'] === null) {
             $invalidProperties[] = "'pcrTestResult' can't be null";
@@ -593,7 +607,7 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets vaccinationStatus
-    *  疫苗接种情况
+    *  疫苗接种情况，可选值包括：  - 未接种 - 接种中 - 无接种记录 - 已接种1针 - 已接种2针 - 已接种3针 - 已完成新冠疫苗接种
     *
     * @return string
     */
@@ -605,13 +619,37 @@ class HealthCodeResult implements ModelInterface, ArrayAccess
     /**
     * Sets vaccinationStatus
     *
-    * @param string $vaccinationStatus 疫苗接种情况
+    * @param string $vaccinationStatus 疫苗接种情况，可选值包括：  - 未接种 - 接种中 - 无接种记录 - 已接种1针 - 已接种2针 - 已接种3针 - 已完成新冠疫苗接种
     *
     * @return $this
     */
     public function setVaccinationStatus($vaccinationStatus)
     {
         $this->container['vaccinationStatus'] = $vaccinationStatus;
+        return $this;
+    }
+
+    /**
+    * Gets testInterval
+    *  核酸检测间隔时长，可选值包括： - 24小时内 - 48小时内 - 72小时内 - 5天内 - 7天内 - 7天外
+    *
+    * @return string
+    */
+    public function getTestInterval()
+    {
+        return $this->container['testInterval'];
+    }
+
+    /**
+    * Sets testInterval
+    *
+    * @param string $testInterval 核酸检测间隔时长，可选值包括： - 24小时内 - 48小时内 - 72小时内 - 5天内 - 7天内 - 7天外
+    *
+    * @return $this
+    */
+    public function setTestInterval($testInterval)
+    {
+        $this->container['testInterval'] = $testInterval;
         return $this;
     }
 

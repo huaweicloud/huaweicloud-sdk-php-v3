@@ -24,7 +24,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+    * resourceType  连接资源类型:vpc|vpn|vgw|peering
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+    * resourceType  连接资源类型:vpc|vpn|vgw|peering
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+    * resourceType  连接资源类型:vpc|vpn|vgw|peering
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+    * resourceType  连接资源类型:vpc|vpn|vgw|peering
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     * limit  每页返回的个数。 取值范围：0~2000。
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+    * resourceType  连接资源类型:vpc|vpn|vgw|peering
     *
     * @var string[]
     */
@@ -357,7 +357,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+    *  连接资源类型:vpc|vpn|vgw|peering
     *
     * @return string[]|null
     */
@@ -369,7 +369,7 @@ class ListEffectiveRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string[]|null $resourceType 连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+    * @param string[]|null $resourceType 连接资源类型:vpc|vpn|vgw|peering
     *
     * @return $this
     */

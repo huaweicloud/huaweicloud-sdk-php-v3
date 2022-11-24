@@ -192,8 +192,8 @@ class ApplyExecutionPlanRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['executionPlanId']) && (mb_strlen($this->container['executionPlanId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'executionPlanId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['executionPlanId']) && (mb_strlen($this->container['executionPlanId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'executionPlanId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['executionPlanId']) && (mb_strlen($this->container['executionPlanId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'executionPlanId', the character length must be bigger than or equal to 36.";
             }
             if (!is_null($this->container['executionPlanId']) && !preg_match("/^[a-z0-9]+[a-z0-9-]*$/", $this->container['executionPlanId'])) {
                 $invalidProperties[] = "invalid value for 'executionPlanId', must be conform to the pattern /^[a-z0-9]+[a-z0-9-]*$/.";

@@ -60,6 +60,12 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * accountManagerId  客户经理标识。
     * partnerId  关联的经销商ID。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * subServiceTypeCode  该字段为预留字段。
+    * subServiceTypeName  该字段为预留字段。
+    * subResourceTypeCode  该字段为预留字段。
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -103,7 +109,13 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'periodType' => 'int',
             'accountManagerId' => 'string',
             'partnerId' => 'string',
-            'regionName' => 'string'
+            'regionName' => 'string',
+            'subServiceTypeCode' => 'string',
+            'subServiceTypeName' => 'string',
+            'subResourceTypeCode' => 'string',
+            'subResourceTypeName' => 'string',
+            'subResourceId' => 'string',
+            'subResourceName' => 'string'
     ];
 
     /**
@@ -148,6 +160,12 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * accountManagerId  客户经理标识。
     * partnerId  关联的经销商ID。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * subServiceTypeCode  该字段为预留字段。
+    * subServiceTypeName  该字段为预留字段。
+    * subResourceTypeCode  该字段为预留字段。
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -191,7 +209,13 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
         'periodType' => 'int32',
         'accountManagerId' => null,
         'partnerId' => null,
-        'regionName' => null
+        'regionName' => null,
+        'subServiceTypeCode' => null,
+        'subServiceTypeName' => null,
+        'subResourceTypeCode' => null,
+        'subResourceTypeName' => null,
+        'subResourceId' => null,
+        'subResourceName' => null
     ];
 
     /**
@@ -257,6 +281,12 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * accountManagerId  客户经理标识。
     * partnerId  关联的经销商ID。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * subServiceTypeCode  该字段为预留字段。
+    * subServiceTypeName  该字段为预留字段。
+    * subResourceTypeCode  该字段为预留字段。
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -300,7 +330,13 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'periodType' => 'period_type',
             'accountManagerId' => 'account_manager_id',
             'partnerId' => 'partner_id',
-            'regionName' => 'region_name'
+            'regionName' => 'region_name',
+            'subServiceTypeCode' => 'sub_service_type_code',
+            'subServiceTypeName' => 'sub_service_type_name',
+            'subResourceTypeCode' => 'sub_resource_type_code',
+            'subResourceTypeName' => 'sub_resource_type_name',
+            'subResourceId' => 'sub_resource_id',
+            'subResourceName' => 'sub_resource_name'
     ];
 
     /**
@@ -345,6 +381,12 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * accountManagerId  客户经理标识。
     * partnerId  关联的经销商ID。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * subServiceTypeCode  该字段为预留字段。
+    * subServiceTypeName  该字段为预留字段。
+    * subResourceTypeCode  该字段为预留字段。
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -388,7 +430,13 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'periodType' => 'setPeriodType',
             'accountManagerId' => 'setAccountManagerId',
             'partnerId' => 'setPartnerId',
-            'regionName' => 'setRegionName'
+            'regionName' => 'setRegionName',
+            'subServiceTypeCode' => 'setSubServiceTypeCode',
+            'subServiceTypeName' => 'setSubServiceTypeName',
+            'subResourceTypeCode' => 'setSubResourceTypeCode',
+            'subResourceTypeName' => 'setSubResourceTypeName',
+            'subResourceId' => 'setSubResourceId',
+            'subResourceName' => 'setSubResourceName'
     ];
 
     /**
@@ -433,6 +481,12 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * accountManagerId  客户经理标识。
     * partnerId  关联的经销商ID。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
+    * subServiceTypeCode  该字段为预留字段。
+    * subServiceTypeName  该字段为预留字段。
+    * subResourceTypeCode  该字段为预留字段。
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -476,7 +530,13 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'periodType' => 'getPeriodType',
             'accountManagerId' => 'getAccountManagerId',
             'partnerId' => 'getPartnerId',
-            'regionName' => 'getRegionName'
+            'regionName' => 'getRegionName',
+            'subServiceTypeCode' => 'getSubServiceTypeCode',
+            'subServiceTypeName' => 'getSubServiceTypeName',
+            'subResourceTypeCode' => 'getSubResourceTypeCode',
+            'subResourceTypeName' => 'getSubResourceTypeName',
+            'subResourceId' => 'getSubResourceId',
+            'subResourceName' => 'getSubResourceName'
     ];
 
     /**
@@ -577,6 +637,12 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
         $this->container['accountManagerId'] = isset($data['accountManagerId']) ? $data['accountManagerId'] : null;
         $this->container['partnerId'] = isset($data['partnerId']) ? $data['partnerId'] : null;
         $this->container['regionName'] = isset($data['regionName']) ? $data['regionName'] : null;
+        $this->container['subServiceTypeCode'] = isset($data['subServiceTypeCode']) ? $data['subServiceTypeCode'] : null;
+        $this->container['subServiceTypeName'] = isset($data['subServiceTypeName']) ? $data['subServiceTypeName'] : null;
+        $this->container['subResourceTypeCode'] = isset($data['subResourceTypeCode']) ? $data['subResourceTypeCode'] : null;
+        $this->container['subResourceTypeName'] = isset($data['subResourceTypeName']) ? $data['subResourceTypeName'] : null;
+        $this->container['subResourceId'] = isset($data['subResourceId']) ? $data['subResourceId'] : null;
+        $this->container['subResourceName'] = isset($data['subResourceName']) ? $data['subResourceName'] : null;
     }
 
     /**
@@ -1558,6 +1624,150 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     public function setRegionName($regionName)
     {
         $this->container['regionName'] = $regionName;
+        return $this;
+    }
+
+    /**
+    * Gets subServiceTypeCode
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubServiceTypeCode()
+    {
+        return $this->container['subServiceTypeCode'];
+    }
+
+    /**
+    * Sets subServiceTypeCode
+    *
+    * @param string|null $subServiceTypeCode 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubServiceTypeCode($subServiceTypeCode)
+    {
+        $this->container['subServiceTypeCode'] = $subServiceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets subServiceTypeName
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubServiceTypeName()
+    {
+        return $this->container['subServiceTypeName'];
+    }
+
+    /**
+    * Sets subServiceTypeName
+    *
+    * @param string|null $subServiceTypeName 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubServiceTypeName($subServiceTypeName)
+    {
+        $this->container['subServiceTypeName'] = $subServiceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets subResourceTypeCode
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubResourceTypeCode()
+    {
+        return $this->container['subResourceTypeCode'];
+    }
+
+    /**
+    * Sets subResourceTypeCode
+    *
+    * @param string|null $subResourceTypeCode 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubResourceTypeCode($subResourceTypeCode)
+    {
+        $this->container['subResourceTypeCode'] = $subResourceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets subResourceTypeName
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubResourceTypeName()
+    {
+        return $this->container['subResourceTypeName'];
+    }
+
+    /**
+    * Sets subResourceTypeName
+    *
+    * @param string|null $subResourceTypeName 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubResourceTypeName($subResourceTypeName)
+    {
+        $this->container['subResourceTypeName'] = $subResourceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets subResourceId
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubResourceId()
+    {
+        return $this->container['subResourceId'];
+    }
+
+    /**
+    * Sets subResourceId
+    *
+    * @param string|null $subResourceId 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubResourceId($subResourceId)
+    {
+        $this->container['subResourceId'] = $subResourceId;
+        return $this;
+    }
+
+    /**
+    * Gets subResourceName
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubResourceName()
+    {
+        return $this->container['subResourceName'];
+    }
+
+    /**
+    * Sets subResourceName
+    *
+    * @param string|null $subResourceName 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubResourceName($subResourceName)
+    {
+        $this->container['subResourceName'] = $subResourceName;
         return $this;
     }
 

@@ -26,6 +26,69 @@ class CdnClient extends Client
 
 
     /**
+     * 批量域名复制
+     *
+     * 批量域名复制接口
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCopyDomain($request)
+    {
+        return $this->batchCopyDomainWithHttpInfo($request);
+    }
+
+    public function batchCopyDomainWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/cdn/configuration/domains/batch-copy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\BatchCopyDomainResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\BatchCopyDomainRequest');
+    }
+
+    /**
      * 下载区域运营商指标数据表格文件
      *
      * - 下载区域运营商指标数据表格文件。

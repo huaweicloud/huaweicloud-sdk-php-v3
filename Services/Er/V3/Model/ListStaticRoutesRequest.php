@@ -25,7 +25,7 @@ class ListStaticRoutesRequest implements ModelInterface, ArrayAccess
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
     * attachmentId  连接ID
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+    * resourceType  连接资源类型:vpc|vpn|vgw|peering
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -49,7 +49,7 @@ class ListStaticRoutesRequest implements ModelInterface, ArrayAccess
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
     * attachmentId  连接ID
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+    * resourceType  连接资源类型:vpc|vpn|vgw|peering
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -94,7 +94,7 @@ class ListStaticRoutesRequest implements ModelInterface, ArrayAccess
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
     * attachmentId  连接ID
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+    * resourceType  连接资源类型:vpc|vpn|vgw|peering
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -118,7 +118,7 @@ class ListStaticRoutesRequest implements ModelInterface, ArrayAccess
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
     * attachmentId  连接ID
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+    * resourceType  连接资源类型:vpc|vpn|vgw|peering
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -142,7 +142,7 @@ class ListStaticRoutesRequest implements ModelInterface, ArrayAccess
     * marker  上一页最后一条记录的企业路由器实例的id，为空时为查询第一页。 使用说明：必须与limit一起使用。
     * destination  路由目的地址
     * attachmentId  连接ID
-    * resourceType  连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+    * resourceType  连接资源类型:vpc|vpn|vgw|peering
     * sortKey  按关键字排序，默认按照id排序，可选值:id|name|state
     * sortDir  返回结果按照升序或降序排列，默认为asc,降序为desc
     *
@@ -429,7 +429,7 @@ class ListStaticRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+    *  连接资源类型:vpc|vpn|vgw|peering
     *
     * @return string[]|null
     */
@@ -441,7 +441,7 @@ class ListStaticRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string[]|null $resourceType 连接资源类型:vpc|vpn|vgw|peering|can|gdgw
+    * @param string[]|null $resourceType 连接资源类型:vpc|vpn|vgw|peering
     *
     * @return $this
     */

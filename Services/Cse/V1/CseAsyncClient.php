@@ -376,6 +376,78 @@ class CseAsyncClient extends Client
     }
 
     /**
+     * 对微服务引擎专享版进行重试
+     *
+     * 对微服务引擎专享版进行重试
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function retryEngineAsync($request)
+    {
+        return $this->retryEngineAsyncWithHttpInfo($request);
+    }
+    
+    public function retryEngineAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/enginemgr/engines/{engine_id}/actions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams['x_enterprise_project_id'] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($localVarParams['engineId'] !== null) {
+            $pathParams['engine_id'] = $localVarParams['engineId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\RetryEngineResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\RetryEngineRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询微服务引擎专享版详情
      *
      * 查询微服务引擎专享版详情
@@ -513,6 +585,78 @@ class CseAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cse\V1\Model\ShowEngineJobResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cse\V1\Model\ShowEngineJobRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 升级微服务引擎专享版
+     *
+     * 升级微服务引擎专享版
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function upgradeEngineAsync($request)
+    {
+        return $this->upgradeEngineAsyncWithHttpInfo($request);
+    }
+    
+    public function upgradeEngineAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/enginemgr/engines/{engine_id}/upgrade';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xEnterpriseProjectId'] !== null) {
+            $headerParams['x_enterprise_project_id'] = $localVarParams['xEnterpriseProjectId'];
+        }
+        if ($localVarParams['engineId'] !== null) {
+            $pathParams['engine_id'] = $localVarParams['engineId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cse\V1\Model\UpgradeEngineResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cse\V1\Model\UpgradeEngineRequest',
             $asyncRequest = true);
     }
 

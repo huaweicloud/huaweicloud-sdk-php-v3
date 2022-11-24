@@ -22,7 +22,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * timeCondition  timeCondition
     * groupby  查询维度，具体请参见表 GroupBy。
-    * costType  成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
+    * costType  成本类型。ORIGINAL_COST：原始成本AMORTIZED_COST：摊销成本
     * amountType  展示的金额类型。PAYMENT_AMOUNT：应付NET_AMOUNT：实付
     * offset  偏移量。从0开始，默认为0
     * limit  每次查询的记录数，默认为10
@@ -44,7 +44,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * timeCondition  timeCondition
     * groupby  查询维度，具体请参见表 GroupBy。
-    * costType  成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
+    * costType  成本类型。ORIGINAL_COST：原始成本AMORTIZED_COST：摊销成本
     * amountType  展示的金额类型。PAYMENT_AMOUNT：应付NET_AMOUNT：实付
     * offset  偏移量。从0开始，默认为0
     * limit  每次查询的记录数，默认为10
@@ -87,7 +87,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * timeCondition  timeCondition
     * groupby  查询维度，具体请参见表 GroupBy。
-    * costType  成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
+    * costType  成本类型。ORIGINAL_COST：原始成本AMORTIZED_COST：摊销成本
     * amountType  展示的金额类型。PAYMENT_AMOUNT：应付NET_AMOUNT：实付
     * offset  偏移量。从0开始，默认为0
     * limit  每次查询的记录数，默认为10
@@ -109,7 +109,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * timeCondition  timeCondition
     * groupby  查询维度，具体请参见表 GroupBy。
-    * costType  成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
+    * costType  成本类型。ORIGINAL_COST：原始成本AMORTIZED_COST：摊销成本
     * amountType  展示的金额类型。PAYMENT_AMOUNT：应付NET_AMOUNT：实付
     * offset  偏移量。从0开始，默认为0
     * limit  每次查询的记录数，默认为10
@@ -131,7 +131,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * timeCondition  timeCondition
     * groupby  查询维度，具体请参见表 GroupBy。
-    * costType  成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
+    * costType  成本类型。ORIGINAL_COST：原始成本AMORTIZED_COST：摊销成本
     * amountType  展示的金额类型。PAYMENT_AMOUNT：应付NET_AMOUNT：实付
     * offset  偏移量。从0开始，默认为0
     * limit  每次查询的记录数，默认为10
@@ -324,7 +324,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets costType
-    *  成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
+    *  成本类型。ORIGINAL_COST：原始成本AMORTIZED_COST：摊销成本
     *
     * @return string
     */
@@ -336,7 +336,7 @@ class ListCostsReq implements ModelInterface, ArrayAccess
     /**
     * Sets costType
     *
-    * @param string $costType 成本类型。UNBLENDED_COST：原始成本AMORTIZED_COST：摊销成本
+    * @param string $costType 成本类型。ORIGINAL_COST：原始成本AMORTIZED_COST：摊销成本
     *
     * @return $this
     */

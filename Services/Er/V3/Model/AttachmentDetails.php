@@ -30,7 +30,7 @@ class AttachmentDetails implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * erId  er id
     * resourceId  内部连接关联的资源ID
-    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - gdgw：下一代专线网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 - can：智能云接入网关
+    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     * resourceProjectId  资源所属项目ID
     * associated  表示此连接是否被关联
     * routeTableId  关联路由表id
@@ -66,7 +66,7 @@ class AttachmentDetails implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * erId  er id
     * resourceId  内部连接关联的资源ID
-    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - gdgw：下一代专线网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 - can：智能云接入网关
+    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     * resourceProjectId  资源所属项目ID
     * associated  表示此连接是否被关联
     * routeTableId  关联路由表id
@@ -123,7 +123,7 @@ class AttachmentDetails implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * erId  er id
     * resourceId  内部连接关联的资源ID
-    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - gdgw：下一代专线网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 - can：智能云接入网关
+    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     * resourceProjectId  资源所属项目ID
     * associated  表示此连接是否被关联
     * routeTableId  关联路由表id
@@ -159,7 +159,7 @@ class AttachmentDetails implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * erId  er id
     * resourceId  内部连接关联的资源ID
-    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - gdgw：下一代专线网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 - can：智能云接入网关
+    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     * resourceProjectId  资源所属项目ID
     * associated  表示此连接是否被关联
     * routeTableId  关联路由表id
@@ -195,7 +195,7 @@ class AttachmentDetails implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * erId  er id
     * resourceId  内部连接关联的资源ID
-    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - gdgw：下一代专线网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 - can：智能云接入网关
+    * resourceType  - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     * resourceProjectId  资源所属项目ID
     * associated  表示此连接是否被关联
     * routeTableId  关联路由表id
@@ -572,7 +572,7 @@ class AttachmentDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  - vgw：云专线的虚拟网关 - vpn：vpn网关 - gdgw：下一代专线网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 - can：智能云接入网关
+    *  - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     *
     * @return string
     */
@@ -584,7 +584,7 @@ class AttachmentDetails implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType - vgw：云专线的虚拟网关 - vpn：vpn网关 - gdgw：下一代专线网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接 - can：智能云接入网关
+    * @param string $resourceType - vgw：云专线的虚拟网关 - vpn：vpn网关 - peering：对等连接，通过云连接CC加载不同区域的企业路由器来创建“对等连接（Peering）”连接
     *
     * @return $this
     */

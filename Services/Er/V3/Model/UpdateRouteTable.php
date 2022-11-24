@@ -22,28 +22,24 @@ class UpdateRouteTable implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  路由器表名称
     * description  路由器表描述信息
-    * bgpOptions  bgpOptions
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'description' => 'string',
-            'bgpOptions' => '\HuaweiCloud\SDK\Er\V3\Model\BgpOptions'
+            'description' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  路由器表名称
     * description  路由器表描述信息
-    * bgpOptions  bgpOptions
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'description' => null,
-        'bgpOptions' => null
+        'description' => null
     ];
 
     /**
@@ -71,42 +67,36 @@ class UpdateRouteTable implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  路由器表名称
     * description  路由器表描述信息
-    * bgpOptions  bgpOptions
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'description' => 'description',
-            'bgpOptions' => 'bgp_options'
+            'description' => 'description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  路由器表名称
     * description  路由器表描述信息
-    * bgpOptions  bgpOptions
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'description' => 'setDescription',
-            'bgpOptions' => 'setBgpOptions'
+            'description' => 'setDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  路由器表名称
     * description  路由器表描述信息
-    * bgpOptions  bgpOptions
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'description' => 'getDescription',
-            'bgpOptions' => 'getBgpOptions'
+            'description' => 'getDescription'
     ];
 
     /**
@@ -169,7 +159,6 @@ class UpdateRouteTable implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['bgpOptions'] = isset($data['bgpOptions']) ? $data['bgpOptions'] : null;
     }
 
     /**
@@ -257,30 +246,6 @@ class UpdateRouteTable implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
-        return $this;
-    }
-
-    /**
-    * Gets bgpOptions
-    *  bgpOptions
-    *
-    * @return \HuaweiCloud\SDK\Er\V3\Model\BgpOptions|null
-    */
-    public function getBgpOptions()
-    {
-        return $this->container['bgpOptions'];
-    }
-
-    /**
-    * Sets bgpOptions
-    *
-    * @param \HuaweiCloud\SDK\Er\V3\Model\BgpOptions|null $bgpOptions bgpOptions
-    *
-    * @return $this
-    */
-    public function setBgpOptions($bgpOptions)
-    {
-        $this->container['bgpOptions'] = $bgpOptions;
         return $this;
     }
 

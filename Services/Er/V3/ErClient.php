@@ -169,7 +169,7 @@ class ErClient extends Client
     /**
      * 查询路由关联列表
      *
-     * 支持分页查询, 支持过滤查询：state, resource_type, attachment_id。支持单字段排序，排序字段有[id,created_at,updated_at]，不支持多字段排序。
+     * 查询路由关联列表。
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -256,10 +256,7 @@ class ErClient extends Client
     /**
      * 查询连接列表
      *
-     * 查询企业路由器实例下的连接列表：
-     * 1，支持过滤查询，过滤条件有state，resource_type，resource_id过滤条件可以重复和组合
-     * 2，支持分页查询，limit和marker组合实现分页查询
-     * 3，支持单字段排序，排序字段有[id,name,description,created_at,updated_at]，不支持多字段排序。
+     * 查询企业路由器实例下的连接列表。
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -673,8 +670,7 @@ class ErClient extends Client
     /**
      * 删除企业路由器
      *
-     * 1. 只能删除企业路由器实例和其创建的默认路由表，如果存在其他路由表和连接，那么需要先删除其他路由表、连接、关联、传播和路由条目等。
-     * 2. 企业路由器实例状态为available，deleting和failed的时候才能删除。
+     * 删除企业路由器。
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -735,9 +731,9 @@ class ErClient extends Client
     }
 
     /**
-     * 查询企业路由器实例列表
+     * 查询企业路由器列表
      *
-     * 分页查询使用的参数为marker、limit。marker和limit一起使用时才会生效，单独使用无效。支持单字段排序，排序字段有[id,name,description,created_at,updated_at]，不支持多字段排序。
+     * 查询企业路由器列表
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -884,7 +880,7 @@ class ErClient extends Client
     /**
      * 更新企业路由器
      *
-     * 除了name和description，其它信息只有在企业路由器实例状态为available的时候才能更新。
+     * 更新企业路由器基本信息。
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -1091,7 +1087,7 @@ class ErClient extends Client
     /**
      * 查询路由传播列表
      *
-     * 支持分页查询, 支持过滤查询：state, resource_type, attachment_id。支持单字段排序，排序字段有[id,created_at,updated_at]，不支持多字段排序。
+     * 查询路由传播列表。
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -1388,7 +1384,7 @@ class ErClient extends Client
     /**
      * 查询静态路由列表
      *
-     * 支持分页查询，支持过滤查询：destination，attachment_id, resource_type, type.支持单字段排序，排序字段有[id,destination,created_at,updated_at]，不支持多字段排序。
+     * 查询静态路由列表。
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -1470,9 +1466,9 @@ class ErClient extends Client
     }
 
     /**
-     * 查询路由详情
+     * 查询静态路由详情
      *
-     * 查询路由详情
+     * 查询静态路由详情
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -1536,9 +1532,9 @@ class ErClient extends Client
     }
 
     /**
-     * 修改路由
+     * 更新静态路由
      *
-     * 修改静态路由
+     * 更新静态路由
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -1742,7 +1738,7 @@ class ErClient extends Client
     /**
      * 查询路由表列表
      *
-     * 支持分页查询, 支持过滤查询：state, is_default_propagation_route_table, is_default_association_route_table。支持单字段排序，排序字段有[id,name,description,created_at,updated_at]，不支持多字段排序。
+     * 查询路由表列表。
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -1959,6 +1955,273 @@ class ErClient extends Client
     }
 
     /**
+     * 创建资源标签
+     *
+     * 为特定类型的资源创建标签。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createResourceTag($request)
+    {
+        return $this->createResourceTagWithHttpInfo($request);
+    }
+
+    public function createResourceTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/{resource_type}/{resource_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\CreateResourceTagResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\CreateResourceTagRequest');
+    }
+
+    /**
+     * 删除资源标签
+     *
+     * 删除特定类型资源的标签。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteResourceTag($request)
+    {
+        return $this->deleteResourceTagWithHttpInfo($request);
+    }
+
+    public function deleteResourceTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/{resource_type}/{resource_id}/tags/{key}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['key'] !== null) {
+            $pathParams['key'] = $localVarParams['key'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\DeleteResourceTagResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\DeleteResourceTagRequest');
+    }
+
+    /**
+     * 查询项目标签
+     *
+     * 查询特定类型资源的标签集合。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listProjectTags($request)
+    {
+        return $this->listProjectTagsWithHttpInfo($request);
+    }
+
+    public function listProjectTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/{resource_type}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\ListProjectTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\ListProjectTagsRequest');
+    }
+
+    /**
+     * 查询资源标签
+     *
+     * 查询特定类型资源的标签信息。
+     * 
+     * 详细说明请参考华为云API Explorer。
+     * Please refer to Huawei cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showResourceTag($request)
+    {
+        return $this->showResourceTagWithHttpInfo($request);
+    }
+
+    public function showResourceTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/{resource_type}/{resource_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Er\V3\Model\ShowResourceTagResponse',
+            $requestType='\HuaweiCloud\SDK\Er\V3\Model\ShowResourceTagRequest');
+    }
+
+    /**
      * 创建VPC连接
      *
      * 给ER实例创建VPC连接。
@@ -2030,7 +2293,7 @@ class ErClient extends Client
     /**
      * 删除VPC连接
      *
-     * VPC连接状态为available，deleting和failed的时候才能删除。
+     * 删除VPC连接。
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.
@@ -2096,10 +2359,7 @@ class ErClient extends Client
     /**
      * 查询VPC连接列表
      *
-     * 查询企业路由器实例下的VPC连接列表：
-     * 1，支持过滤查询，过滤条件有id，state，enterprise_project_id，vpc_id，过滤条件可以重复和组合
-     * 2，支持分页查询，limit和marker组合实现分页查询
-     * 3，支持单字段排序功能，排序字段有[id,name,description,created_at,updated_at]，不支持多字段排序。
+     * 查询企业路由器实例下的VPC连接列表。
      * 
      * 详细说明请参考华为云API Explorer。
      * Please refer to Huawei cloud API Explorer for details.

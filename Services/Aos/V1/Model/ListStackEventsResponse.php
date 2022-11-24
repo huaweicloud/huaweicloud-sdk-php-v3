@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Er\V3\Model;
+namespace HuaweiCloud\SDK\Aos\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BgpOptions implements ModelInterface, ArrayAccess
+class ListStackEventsResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,30 @@ class BgpOptions implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BgpOptions';
+    protected static $openAPIModelName = 'ListStackEventsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * loadBalancingAsPathIgnore  配置路由在形成负载分担时不比较路由的AS-Path属性
-    * loadBalancingAsPathRelax  配置路由在形成负载分担时不比较相同长度的AS-Path属性
+    * stackEvents  栈的更新状态
+    * nextMarker  当一页无法发回所有的细节，将返回next_marker，客户可以继续调用list-stack-events并给与next_marker来继续读取下页
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'loadBalancingAsPathIgnore' => 'bool',
-            'loadBalancingAsPathRelax' => 'bool'
+            'stackEvents' => '\HuaweiCloud\SDK\Aos\V1\Model\StackEventResponse[]',
+            'nextMarker' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * loadBalancingAsPathIgnore  配置路由在形成负载分担时不比较路由的AS-Path属性
-    * loadBalancingAsPathRelax  配置路由在形成负载分担时不比较相同长度的AS-Path属性
+    * stackEvents  栈的更新状态
+    * nextMarker  当一页无法发回所有的细节，将返回next_marker，客户可以继续调用list-stack-events并给与next_marker来继续读取下页
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'loadBalancingAsPathIgnore' => null,
-        'loadBalancingAsPathRelax' => null
+        'stackEvents' => null,
+        'nextMarker' => null
     ];
 
     /**
@@ -65,38 +66,38 @@ class BgpOptions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * loadBalancingAsPathIgnore  配置路由在形成负载分担时不比较路由的AS-Path属性
-    * loadBalancingAsPathRelax  配置路由在形成负载分担时不比较相同长度的AS-Path属性
+    * stackEvents  栈的更新状态
+    * nextMarker  当一页无法发回所有的细节，将返回next_marker，客户可以继续调用list-stack-events并给与next_marker来继续读取下页
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'loadBalancingAsPathIgnore' => 'load_balancing_as_path_ignore',
-            'loadBalancingAsPathRelax' => 'load_balancing_as_path_relax'
+            'stackEvents' => 'stack_events',
+            'nextMarker' => 'next_marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * loadBalancingAsPathIgnore  配置路由在形成负载分担时不比较路由的AS-Path属性
-    * loadBalancingAsPathRelax  配置路由在形成负载分担时不比较相同长度的AS-Path属性
+    * stackEvents  栈的更新状态
+    * nextMarker  当一页无法发回所有的细节，将返回next_marker，客户可以继续调用list-stack-events并给与next_marker来继续读取下页
     *
     * @var string[]
     */
     protected static $setters = [
-            'loadBalancingAsPathIgnore' => 'setLoadBalancingAsPathIgnore',
-            'loadBalancingAsPathRelax' => 'setLoadBalancingAsPathRelax'
+            'stackEvents' => 'setStackEvents',
+            'nextMarker' => 'setNextMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * loadBalancingAsPathIgnore  配置路由在形成负载分担时不比较路由的AS-Path属性
-    * loadBalancingAsPathRelax  配置路由在形成负载分担时不比较相同长度的AS-Path属性
+    * stackEvents  栈的更新状态
+    * nextMarker  当一页无法发回所有的细节，将返回next_marker，客户可以继续调用list-stack-events并给与next_marker来继续读取下页
     *
     * @var string[]
     */
     protected static $getters = [
-            'loadBalancingAsPathIgnore' => 'getLoadBalancingAsPathIgnore',
-            'loadBalancingAsPathRelax' => 'getLoadBalancingAsPathRelax'
+            'stackEvents' => 'getStackEvents',
+            'nextMarker' => 'getNextMarker'
     ];
 
     /**
@@ -157,8 +158,8 @@ class BgpOptions implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['loadBalancingAsPathIgnore'] = isset($data['loadBalancingAsPathIgnore']) ? $data['loadBalancingAsPathIgnore'] : null;
-        $this->container['loadBalancingAsPathRelax'] = isset($data['loadBalancingAsPathRelax']) ? $data['loadBalancingAsPathRelax'] : null;
+        $this->container['stackEvents'] = isset($data['stackEvents']) ? $data['stackEvents'] : null;
+        $this->container['nextMarker'] = isset($data['nextMarker']) ? $data['nextMarker'] : null;
     }
 
     /**
@@ -184,50 +185,50 @@ class BgpOptions implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets loadBalancingAsPathIgnore
-    *  配置路由在形成负载分担时不比较路由的AS-Path属性
+    * Gets stackEvents
+    *  栈的更新状态
     *
-    * @return bool|null
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\StackEventResponse[]|null
     */
-    public function getLoadBalancingAsPathIgnore()
+    public function getStackEvents()
     {
-        return $this->container['loadBalancingAsPathIgnore'];
+        return $this->container['stackEvents'];
     }
 
     /**
-    * Sets loadBalancingAsPathIgnore
+    * Sets stackEvents
     *
-    * @param bool|null $loadBalancingAsPathIgnore 配置路由在形成负载分担时不比较路由的AS-Path属性
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\StackEventResponse[]|null $stackEvents 栈的更新状态
     *
     * @return $this
     */
-    public function setLoadBalancingAsPathIgnore($loadBalancingAsPathIgnore)
+    public function setStackEvents($stackEvents)
     {
-        $this->container['loadBalancingAsPathIgnore'] = $loadBalancingAsPathIgnore;
+        $this->container['stackEvents'] = $stackEvents;
         return $this;
     }
 
     /**
-    * Gets loadBalancingAsPathRelax
-    *  配置路由在形成负载分担时不比较相同长度的AS-Path属性
+    * Gets nextMarker
+    *  当一页无法发回所有的细节，将返回next_marker，客户可以继续调用list-stack-events并给与next_marker来继续读取下页
     *
-    * @return bool|null
+    * @return string|null
     */
-    public function getLoadBalancingAsPathRelax()
+    public function getNextMarker()
     {
-        return $this->container['loadBalancingAsPathRelax'];
+        return $this->container['nextMarker'];
     }
 
     /**
-    * Sets loadBalancingAsPathRelax
+    * Sets nextMarker
     *
-    * @param bool|null $loadBalancingAsPathRelax 配置路由在形成负载分担时不比较相同长度的AS-Path属性
+    * @param string|null $nextMarker 当一页无法发回所有的细节，将返回next_marker，客户可以继续调用list-stack-events并给与next_marker来继续读取下页
     *
     * @return $this
     */
-    public function setLoadBalancingAsPathRelax($loadBalancingAsPathRelax)
+    public function setNextMarker($nextMarker)
     {
-        $this->container['loadBalancingAsPathRelax'] = $loadBalancingAsPathRelax;
+        $this->container['nextMarker'] = $nextMarker;
         return $this;
     }
 
