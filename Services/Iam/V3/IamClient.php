@@ -32,8 +32,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -103,8 +102,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -174,8 +172,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -245,8 +242,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -315,8 +311,7 @@ class IamClient extends Client
      * 基于用户为企业项目授权。
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -386,8 +381,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -457,8 +451,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -528,8 +521,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -599,8 +591,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -664,8 +655,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -729,8 +719,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -796,8 +785,7 @@ class IamClient extends Client
      * 
      * &gt; - logintoken的有效期为10分钟。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -863,8 +851,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -932,8 +919,7 @@ class IamClient extends Client
      *
      * 创建OpenId Connect身份提供商配置
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -998,8 +984,7 @@ class IamClient extends Client
      *
      * 获取联邦认证token(OpenId Connect Id token方式)
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1064,8 +1049,7 @@ class IamClient extends Client
      *
      * 获取联邦认证token(OpenId Connect Id token方式)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1135,8 +1119,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1200,8 +1183,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1265,8 +1247,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1336,8 +1317,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1404,8 +1384,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1475,8 +1454,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1546,8 +1524,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1617,8 +1594,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1688,8 +1664,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1756,8 +1731,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1827,8 +1801,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1892,8 +1865,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1960,8 +1932,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2028,8 +1999,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2093,8 +2063,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2164,8 +2133,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2229,8 +2197,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2294,8 +2261,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2359,8 +2325,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2424,8 +2389,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2490,8 +2454,7 @@ class IamClient extends Client
      *
      * 该接口可以用于管理员查询用户组所有项目服务权限列表。 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2558,8 +2521,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2620,8 +2582,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2682,8 +2643,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2750,8 +2710,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2819,8 +2778,7 @@ class IamClient extends Client
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * &gt; - 推荐使用[查询IAM用户可以访问的账号详情](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product&#x3D;IAM&amp;api&#x3D;KeystoneQueryAccessibleDomainDetailsToUser)，该接口可以返回相同的响应格式。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2881,8 +2839,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2949,8 +2906,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3011,8 +2967,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3073,8 +3028,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3159,8 +3113,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3227,8 +3180,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3310,8 +3262,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3375,8 +3326,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3440,8 +3390,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3502,8 +3451,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3567,8 +3515,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3632,8 +3579,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3694,8 +3640,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3765,8 +3710,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3836,8 +3780,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3904,8 +3847,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3966,8 +3908,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4031,8 +3972,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4096,8 +4036,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4161,8 +4100,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4226,8 +4164,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4291,8 +4228,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4356,8 +4292,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4424,8 +4359,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4489,8 +4423,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4554,8 +4487,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4622,8 +4554,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4687,8 +4618,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4749,8 +4679,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4817,8 +4746,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4885,8 +4813,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4953,8 +4880,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5021,8 +4947,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5092,8 +5017,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5163,8 +5087,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5231,8 +5154,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5299,8 +5221,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5367,8 +5288,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5432,8 +5352,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5497,8 +5416,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5562,8 +5480,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5630,8 +5547,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5697,8 +5613,7 @@ class IamClient extends Client
      * 该接口可用于查询企业项目直接关联用户的权限。
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5764,8 +5679,7 @@ class IamClient extends Client
      * 该接口可用于查询企业项目直接关联的用户。
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5829,8 +5743,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5900,8 +5813,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5971,8 +5883,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -6042,8 +5953,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -6112,8 +6022,7 @@ class IamClient extends Client
      * 删除企业项目直接关联用户的权限。
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -6183,8 +6092,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -6248,8 +6156,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -6313,8 +6220,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -6378,8 +6284,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -6443,8 +6348,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -6508,8 +6412,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -6573,8 +6476,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -6638,8 +6540,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -6705,8 +6606,7 @@ class IamClient extends Client
      * 该接口用于查询指定账号中的授权记录。
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -6809,8 +6709,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -6875,8 +6774,7 @@ class IamClient extends Client
      *
      * 查询OpenId Connect身份提供商配置
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -6940,8 +6838,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7005,8 +6902,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7070,8 +6966,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7138,8 +7033,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7206,8 +7100,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7274,8 +7167,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7342,8 +7234,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7410,8 +7301,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7481,8 +7371,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7549,8 +7438,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7617,8 +7505,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7683,8 +7570,7 @@ class IamClient extends Client
      *
      * 修改OpenId Connect身份提供商配置
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7751,8 +7637,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7821,8 +7706,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7888,8 +7772,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -7955,8 +7838,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8020,8 +7902,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8085,8 +7966,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8150,8 +8030,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8215,8 +8094,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8283,8 +8161,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8348,8 +8225,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8413,8 +8289,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8478,8 +8353,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8543,8 +8417,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8611,8 +8484,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8676,8 +8548,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8741,8 +8612,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8806,8 +8676,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8880,8 +8749,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -8945,8 +8813,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -9013,8 +8880,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -9081,8 +8947,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -9143,8 +9008,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -9205,8 +9069,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -9270,8 +9133,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -9335,8 +9197,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -9400,8 +9261,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -9468,8 +9328,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -9536,8 +9395,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -9610,8 +9468,7 @@ class IamClient extends Client
      * 
      * &gt; - token的有效期为24小时，建议进行缓存，避免频繁调用。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -9683,8 +9540,7 @@ class IamClient extends Client
      * &gt; - 通过Postman获取用户token示例请参见：[如何通过Postman获取用户token](https://support.huaweicloud.com/iam_faq/iam_01_034.html)。
      * &gt; - 如果需要获取具有Security Administrator权限的token，请参见：[IAM 常见问题](https://support.huaweicloud.com/iam_faq/iam_01_0608.html)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -9756,8 +9612,7 @@ class IamClient extends Client
      * &gt; - 通过Postman获取用户token示例请参见：[如何通过Postman获取用户token](https://support.huaweicloud.com/iam_faq/iam_01_034.html)。
      * &gt; - 如果需要获取具有Security Administrator权限的token，请参见：[IAM 常见问题](https://support.huaweicloud.com/iam_faq/iam_01_0608.html)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -9824,8 +9679,7 @@ class IamClient extends Client
      * 
      * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response

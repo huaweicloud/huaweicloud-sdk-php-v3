@@ -29,8 +29,7 @@ class GaAsyncClient extends Client
      *
      * 创建全球加速器
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -95,8 +94,7 @@ class GaAsyncClient extends Client
      *
      * 删除全球加速器。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -161,8 +159,7 @@ class GaAsyncClient extends Client
      *
      * 查询全球加速器列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -245,8 +242,7 @@ class GaAsyncClient extends Client
      *
      * 查询全球加速器详情
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -311,8 +307,7 @@ class GaAsyncClient extends Client
      *
      * 更新全球加速器
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -380,8 +375,7 @@ class GaAsyncClient extends Client
      *
      * 创建终端节点
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -449,8 +443,7 @@ class GaAsyncClient extends Client
      *
      * 删除终端节点
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -518,8 +511,7 @@ class GaAsyncClient extends Client
      *
      * 查询终端节点组下终端节点列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -599,8 +591,7 @@ class GaAsyncClient extends Client
      *
      * 查询终端节点详情
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -668,8 +659,7 @@ class GaAsyncClient extends Client
      *
      * 更新终端节点
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -740,8 +730,7 @@ class GaAsyncClient extends Client
      *
      * 创建终端节点组
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -806,8 +795,7 @@ class GaAsyncClient extends Client
      *
      * 删除终端节点组。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -872,8 +860,7 @@ class GaAsyncClient extends Client
      *
      * 查询终端节点组列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -956,8 +943,7 @@ class GaAsyncClient extends Client
      *
      * 查询终端节点组详情
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1022,8 +1008,7 @@ class GaAsyncClient extends Client
      *
      * 更新终端节点组
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1091,8 +1076,7 @@ class GaAsyncClient extends Client
      *
      * 创建健康检查
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1157,8 +1141,7 @@ class GaAsyncClient extends Client
      *
      * 删除健康检查
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1223,8 +1206,7 @@ class GaAsyncClient extends Client
      *
      * 查询健康检查列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1304,8 +1286,7 @@ class GaAsyncClient extends Client
      *
      * 查询健康检查详情
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1370,8 +1351,7 @@ class GaAsyncClient extends Client
      *
      * 更新健康检查
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1439,8 +1419,7 @@ class GaAsyncClient extends Client
      *
      * 创建监听器
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1505,8 +1484,7 @@ class GaAsyncClient extends Client
      *
      * 删除监听器
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1571,8 +1549,7 @@ class GaAsyncClient extends Client
      *
      * 查询监听器列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1655,8 +1632,7 @@ class GaAsyncClient extends Client
      *
      * 查询监听器详情
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1721,8 +1697,7 @@ class GaAsyncClient extends Client
      *
      * 更新监听器
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1790,8 +1765,7 @@ class GaAsyncClient extends Client
      *
      * 查询区域列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response

@@ -30,8 +30,7 @@ class CseClient extends Client
      *
      * 创建微服务引擎专享版。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -96,8 +95,7 @@ class CseClient extends Client
      *
      * 删除微服务引擎专享版。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -162,8 +160,7 @@ class CseClient extends Client
      *
      * 导出kie配置
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -237,8 +234,7 @@ class CseClient extends Client
      *
      * 查询微服务引擎列表。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -303,8 +299,7 @@ class CseClient extends Client
      *
      * 查询微服务引擎专享版的规格列表。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -366,8 +361,7 @@ class CseClient extends Client
      *
      * 对微服务引擎专享版进行重试
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -435,8 +429,7 @@ class CseClient extends Client
      *
      * 查询微服务引擎专享版详情
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -501,8 +494,7 @@ class CseClient extends Client
      *
      * 查询微服务引擎任务详情。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -570,8 +562,7 @@ class CseClient extends Client
      *
      * 升级微服务引擎专享版
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -639,8 +630,7 @@ class CseClient extends Client
      *
      * 导入kie配置
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response

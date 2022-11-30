@@ -21,25 +21,21 @@ class DisassociatePublicipsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * publicipId  弹性公网IP的ID
-    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'publicipId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Eip\V3\Model\DisassociatePublicipsRequestBody'
+            'publicipId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * publicipId  弹性公网IP的ID
-    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'publicipId' => null,
-        'body' => null
+        'publicipId' => null
     ];
 
     /**
@@ -66,37 +62,31 @@ class DisassociatePublicipsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * publicipId  弹性公网IP的ID
-    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'publicipId' => 'publicip_id',
-            'body' => 'body'
+            'publicipId' => 'publicip_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * publicipId  弹性公网IP的ID
-    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'publicipId' => 'setPublicipId',
-            'body' => 'setBody'
+            'publicipId' => 'setPublicipId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * publicipId  弹性公网IP的ID
-    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'publicipId' => 'getPublicipId',
-            'body' => 'getBody'
+            'publicipId' => 'getPublicipId'
     ];
 
     /**
@@ -158,7 +148,6 @@ class DisassociatePublicipsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['publicipId'] = isset($data['publicipId']) ? $data['publicipId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -213,30 +202,6 @@ class DisassociatePublicipsRequest implements ModelInterface, ArrayAccess
     public function setPublicipId($publicipId)
     {
         $this->container['publicipId'] = $publicipId;
-        return $this;
-    }
-
-    /**
-    * Gets body
-    *  body
-    *
-    * @return \HuaweiCloud\SDK\Eip\V3\Model\DisassociatePublicipsRequestBody|null
-    */
-    public function getBody()
-    {
-        return $this->container['body'];
-    }
-
-    /**
-    * Sets body
-    *
-    * @param \HuaweiCloud\SDK\Eip\V3\Model\DisassociatePublicipsRequestBody|null $body body
-    *
-    * @return $this
-    */
-    public function setBody($body)
-    {
-        $this->container['body'] = $body;
         return $this;
     }
 

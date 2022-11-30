@@ -30,8 +30,7 @@ class EipClient extends Client
      *
      * 查询公共池列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -99,8 +98,7 @@ class EipClient extends Client
      *
      * 查询公共池分组列表，包含名称和位置信息
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -162,8 +160,7 @@ class EipClient extends Client
      *
      * 查询指定租户下的共享带宽类型列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -249,8 +246,7 @@ class EipClient extends Client
      *
      * 绑定弹性公网IP
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -298,7 +294,7 @@ class EipClient extends Client
         );
 
         return $this->callApi(
-            $method='PUT',
+            $method='POST',
             $resourcePath,
             $pathParams,
             $queryParams,
@@ -315,8 +311,7 @@ class EipClient extends Client
      *
      * 解绑弹性公网IP
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -345,9 +340,6 @@ class EipClient extends Client
         if ($localVarParams['publicipId'] !== null) {
             $pathParams['publicip_id'] = $localVarParams['publicipId'];
         }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -355,7 +347,7 @@ class EipClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['*/*', 'application/json'],
-                ['application/json;charset=UTF-8']
+                []
             );
         }
         $headers = array_merge(
@@ -364,7 +356,7 @@ class EipClient extends Client
         );
 
         return $this->callApi(
-            $method='PUT',
+            $method='POST',
             $resourcePath,
             $pathParams,
             $queryParams,
@@ -381,8 +373,7 @@ class EipClient extends Client
      *
      * 全量查询公网IP池列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -477,8 +468,7 @@ class EipClient extends Client
      *
      * 查询弹性公网IP列表信息
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -660,8 +650,7 @@ class EipClient extends Client
      *
      * 查询弹性公网IP详情
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -726,8 +715,7 @@ class EipClient extends Client
      *
      * 查询公网IP池详情
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -785,6 +773,136 @@ class EipClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V3\Model\ShowPublicipPoolResponse',
             $requestType='\HuaweiCloud\SDK\Eip\V3\Model\ShowPublicipPoolRequest');
+    }
+
+    /**
+     * 绑定弹性公网IP
+     *
+     * 绑定弹性公网IP
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAssociatePublicip($request)
+    {
+        return $this->updateAssociatePublicipWithHttpInfo($request);
+    }
+
+    public function updateAssociatePublicipWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/eip/publicips/{publicip_id}/associate-instance';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['publicipId'] !== null) {
+            $pathParams['publicip_id'] = $localVarParams['publicipId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\UpdateAssociatePublicipResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\UpdateAssociatePublicipRequest');
+    }
+
+    /**
+     * 解绑弹性公网IP
+     *
+     * 解绑弹性公网IP
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDisassociatePublicip($request)
+    {
+        return $this->updateDisassociatePublicipWithHttpInfo($request);
+    }
+
+    public function updateDisassociatePublicipWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/eip/publicips/{publicip_id}/disassociate-instance';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['publicipId'] !== null) {
+            $pathParams['publicip_id'] = $localVarParams['publicipId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V3\Model\UpdateDisassociatePublicipResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V3\Model\UpdateDisassociatePublicipRequest');
     }
 
     protected function callApi(

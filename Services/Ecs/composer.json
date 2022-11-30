@@ -8,19 +8,19 @@
     "api",
     "ecs"
   ],
-  "version": "3.1.11",
+  "version": "3.1.12",
    "type": "library",
   "license": "Apache-2.0",
   "authors": [
     {
-      "name": "HuaweiCloud_SDK",
+      "name": "HUAWEICloud_SDK",
       "email": "hwcloudsdk@huawei.com",
-      "homepage": "https://sdkcenter.developer.huaweicloud.com/?language=PHP"
+      "homepage": "https://github.com/huaweicloud-sdk/huaweicloud-sdk-php"
     }
   ],
   "minimum-stability": "dev",
   "require": {
-    "huaweicloud/huaweicloud-sdk-core": "3.1.11"
+    "huaweicloud/huaweicloud-sdk-core": "3.1.12"
   },
   "autoload": {
     "psr-4": {

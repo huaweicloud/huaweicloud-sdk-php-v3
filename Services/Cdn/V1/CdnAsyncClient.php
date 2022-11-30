@@ -29,8 +29,7 @@ class CdnAsyncClient extends Client
      *
      * 用于删除资源标签
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -95,8 +94,7 @@ class CdnAsyncClient extends Client
      *
      * 创建加速域名。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -161,8 +159,7 @@ class CdnAsyncClient extends Client
      *
      * 创建预热任务。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -230,8 +227,7 @@ class CdnAsyncClient extends Client
      *
      * 创建刷新缓存任务。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -299,8 +295,7 @@ class CdnAsyncClient extends Client
      *
      * 用于创建资源标签
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -365,8 +360,7 @@ class CdnAsyncClient extends Client
      *
      * 删除加速域名。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -434,8 +428,7 @@ class CdnAsyncClient extends Client
      *
      * 停用加速域名。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -503,8 +496,7 @@ class CdnAsyncClient extends Client
      *
      * 启用加速域名。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -572,8 +564,7 @@ class CdnAsyncClient extends Client
      *
      * 查询加速域名信息
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -656,8 +647,7 @@ class CdnAsyncClient extends Client
      *
      * 查询域名已经设置的IP黑白名单。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -725,8 +715,7 @@ class CdnAsyncClient extends Client
      *
      * 查询缓存规则。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -794,8 +783,7 @@ class CdnAsyncClient extends Client
      *
      * 查询所有绑定HTTPS证书的域名信息
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -872,8 +860,7 @@ class CdnAsyncClient extends Client
      *
      * 查询加速域名详情。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -941,8 +928,7 @@ class CdnAsyncClient extends Client
      *
      * 查询域名配置接口，支持查询回源请求头、HTTP header配置、URL鉴权、证书、源站、回源协议、强制重定向、智能压缩、缓存URL参数、IPv6开关、状态码缓存时间、Range回源、User-Agent黑白名单、改写回源URL、自定义错误页面
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1018,8 +1004,7 @@ class CdnAsyncClient extends Client
      * - 如果传的是多个域名，则每个域名的数据分开返回。
      * - 支持同时查询多个指标，不超过10个。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1110,8 +1095,7 @@ class CdnAsyncClient extends Client
      * - 支持同时查询多个指标，不超过10个。
      * - 域名为海外加速场景不适用。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1200,8 +1184,7 @@ class CdnAsyncClient extends Client
      * - 流量类指标单位统一为Byte（字节）、带宽类指标单位统一为bit/s（比特/秒）、请求数类和状态码类指标单位统一为次数。用于查询指定域名、指定统计指标的区域运营商明细数据。
      * - 单租户调用频率：15次/s。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1302,8 +1285,7 @@ class CdnAsyncClient extends Client
      * - 流量类指标单位统一为Byte（字节）、带宽类指标单位统一为bit/s（比特/秒）、请求数类和状态码类指标单位统一为次数。用于查询指定域名、指定统计指标的明细数据。
      * - 单租户调用频率：15次/s。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1392,8 +1374,7 @@ class CdnAsyncClient extends Client
      *
      * 查询刷新预热任务详情。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1476,8 +1457,7 @@ class CdnAsyncClient extends Client
      *
      * 查询刷新预热任务。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1566,8 +1546,7 @@ class CdnAsyncClient extends Client
      *
      * 获取加速域名证书。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1635,8 +1614,7 @@ class CdnAsyncClient extends Client
      *
      * 查询IP归属信息。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1704,8 +1682,7 @@ class CdnAsyncClient extends Client
      *
      * 日志查询。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1782,8 +1759,7 @@ class CdnAsyncClient extends Client
      *
      * 查询回源HOST。回源HOST是CDN节点在回源过程中，在源站访问的站点域名，即http请求头中的host信息。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1851,8 +1827,7 @@ class CdnAsyncClient extends Client
      *
      * 查询当前用户域名、刷新文件、刷新目录和预热的配额
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1914,8 +1889,7 @@ class CdnAsyncClient extends Client
      *
      * 查询Referer过滤规则。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1983,8 +1957,7 @@ class CdnAsyncClient extends Client
      *
      * 列举header所有配置。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2052,8 +2025,7 @@ class CdnAsyncClient extends Client
      *
      * 用于查询资源标签列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2124,8 +2096,7 @@ class CdnAsyncClient extends Client
      * - 流量类指标单位统一为Byte（字节）、请求数类指标单位统一为次数。用于查询指定域名、指定统计指标的明细数据。
      * - 单租户调用频率：5次/s。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2205,8 +2176,7 @@ class CdnAsyncClient extends Client
      *
      * 查询刷新预热URL记录。如需此接口，请提交工单开通
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2292,8 +2262,7 @@ class CdnAsyncClient extends Client
      *
      * 设置域名的IP黑白名单。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2364,8 +2333,7 @@ class CdnAsyncClient extends Client
      *
      * 设置CDN节点上缓存资源的缓存策略。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2436,8 +2404,7 @@ class CdnAsyncClient extends Client
      *
      * 修改域名全量配置接口，支持配置回源请求头、HTTP header配置、URL鉴权、证书、源站、回源协议、强制重定向、智能压缩、缓存URL参数、IPv6、状态码缓存时间、Range回源、User-Agent黑白名单、改写回源URL、自定义错误页面
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2508,8 +2475,7 @@ class CdnAsyncClient extends Client
      *
      * 一个证书配置多个域名，设置域名强制https回源参数。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2577,8 +2543,7 @@ class CdnAsyncClient extends Client
      *
      * 修改源站信息。源站IP地址或域名都可以指引CDN节点回源到对应的源站服务器，源站域名不能与加速域名相同。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2649,8 +2614,7 @@ class CdnAsyncClient extends Client
      *
      * 开启此项配置后，当CDN节点回源请求源站返回301/302状态码时，CDN节点会先跳转到301/302对应地址获取资源并缓存后再返回给用户。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2721,8 +2685,7 @@ class CdnAsyncClient extends Client
      *
      * 设置加速域名HTTPS。通过配置加速域名的HTTPS证书，并将其部署在全网CDN节点，实现HTTPS安全加速。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2793,8 +2756,7 @@ class CdnAsyncClient extends Client
      *
      * 修改回源HOST。回源HOST是CDN节点在回源过程中，在源站访问的站点域名，即http请求头中的host信息。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2865,8 +2827,7 @@ class CdnAsyncClient extends Client
      *
      * 修改私有桶开启关闭状态。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2939,8 +2900,7 @@ class CdnAsyncClient extends Client
      * 
      * 开启Range回源前需要确认源站是否支持Range请求，若源站不支持Range请求，开启Range回源将导致资源无法缓存。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3011,8 +2971,7 @@ class CdnAsyncClient extends Client
      *
      * 设置Referer过滤规则。通过设置过滤策略，对访问者身份进行识别和过滤，实现限制访问来源的目的。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3083,8 +3042,7 @@ class CdnAsyncClient extends Client
      *
      * 新增/修改域名响应头配置。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response

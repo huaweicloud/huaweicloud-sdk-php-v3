@@ -29,8 +29,7 @@ class CdnAsyncClient extends Client
      *
      * 批量域名复制接口
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -105,8 +104,7 @@ class CdnAsyncClient extends Client
      * 
      * - 单租户调用频率：10次/min。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -208,8 +206,7 @@ class CdnAsyncClient extends Client
      * 
      * - 单租户调用频率：10次/min。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -303,8 +300,7 @@ class CdnAsyncClient extends Client
      * 
      * - 单租户调用频率：10次/min。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -381,8 +377,7 @@ class CdnAsyncClient extends Client
      * 
      * - 单租户调用频率：2次/s。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -470,8 +465,7 @@ class CdnAsyncClient extends Client
      * 
      * - 单租户调用频率：5次/s。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -555,8 +549,7 @@ class CdnAsyncClient extends Client
      * 
      * - 单租户调用频率：15次/s。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -664,8 +657,7 @@ class CdnAsyncClient extends Client
      * 
      * - 单租户调用频率：15次/s。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -766,8 +758,7 @@ class CdnAsyncClient extends Client
      * 
      * - 单租户调用频率：5次/s。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -859,8 +850,7 @@ class CdnAsyncClient extends Client
      * 
      * - 单租户调用频率：5次/s。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response

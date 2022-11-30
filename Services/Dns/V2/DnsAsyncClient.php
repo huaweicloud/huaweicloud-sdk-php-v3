@@ -29,8 +29,7 @@ class DnsAsyncClient extends Client
      *
      * 绑定单个IP地址到终端节点
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -98,8 +97,7 @@ class DnsAsyncClient extends Client
      *
      * 批量删除PTR。本接口为原子操作，所有记录应全部删除成功或全部失败。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -166,8 +164,7 @@ class DnsAsyncClient extends Client
      * 响应结果中只包含本次实际删除的Record Set。
      * 支持批量删除公网域名和内网域名的记录集。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -234,8 +231,7 @@ class DnsAsyncClient extends Client
      * 本接口为原子操作，所有记录应全部删除成功或全部失败。
      * 仅支持公网Zone、内网Zone。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -302,8 +298,7 @@ class DnsAsyncClient extends Client
      * 响应结果中只包含本次实际更新的Record Set。
      * 仅支持公网域名记录集。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -370,8 +365,7 @@ class DnsAsyncClient extends Client
      * 响应结果中只包含本次实际更新的Zone。
      * 仅支持公网Zone。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -436,8 +430,7 @@ class DnsAsyncClient extends Client
      *
      * 创建单个自定义线路
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -502,8 +495,7 @@ class DnsAsyncClient extends Client
      *
      * 创建单个终端节点。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -568,8 +560,7 @@ class DnsAsyncClient extends Client
      *
      * 创建一个线路分组。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -634,8 +625,7 @@ class DnsAsyncClient extends Client
      *
      * 创建一个解析规则。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -700,8 +690,7 @@ class DnsAsyncClient extends Client
      *
      * 创建公网域名找回请求。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -766,8 +755,7 @@ class DnsAsyncClient extends Client
      *
      * 请求服务器立即执行找回验证。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -832,8 +820,7 @@ class DnsAsyncClient extends Client
      *
      * 删除单个自定义线路
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -898,8 +885,7 @@ class DnsAsyncClient extends Client
      *
      * 删除终端节点。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -964,8 +950,7 @@ class DnsAsyncClient extends Client
      *
      * 删除单个线路分组。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1030,8 +1015,7 @@ class DnsAsyncClient extends Client
      *
      * 删除解析规则。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1096,8 +1080,7 @@ class DnsAsyncClient extends Client
      *
      * 解除endpoint绑定的IP。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1165,8 +1148,7 @@ class DnsAsyncClient extends Client
      *
      * 查询所有的云解析服务API版本号列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1228,8 +1210,7 @@ class DnsAsyncClient extends Client
      *
      * 查询自定义线路
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1306,8 +1287,7 @@ class DnsAsyncClient extends Client
      *
      * 查询某个endpoint下的ip地址列表。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1372,8 +1352,7 @@ class DnsAsyncClient extends Client
      *
      * 查询vpc的终端节点信息。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1438,8 +1417,7 @@ class DnsAsyncClient extends Client
      *
      * 查询终端节点列表。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1513,8 +1491,7 @@ class DnsAsyncClient extends Client
      *
      * 查询线路分组列表。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1588,8 +1565,7 @@ class DnsAsyncClient extends Client
      *
      * 查询名称服务器列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1657,8 +1633,7 @@ class DnsAsyncClient extends Client
      *
      * 查询解析规则的列表。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1729,8 +1704,7 @@ class DnsAsyncClient extends Client
      *
      * 查询指定的云解析服务API版本号
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1795,8 +1769,7 @@ class DnsAsyncClient extends Client
      *
      * 查询单租户在DNS服务下的资源配额，包括公网zone配额、内网zone配额、Record Set配额、PTR Record配额、入站终端节点配额、出站终端节点配额、自定义线路配额、线路分组配额等。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1861,8 +1834,7 @@ class DnsAsyncClient extends Client
      *
      * 查询终端单个节点。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1927,8 +1899,7 @@ class DnsAsyncClient extends Client
      *
      * 查询线路分组。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -1993,8 +1964,7 @@ class DnsAsyncClient extends Client
      *
      * 查询单个解析规则。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2059,8 +2029,7 @@ class DnsAsyncClient extends Client
      *
      * 查询域名找回请求。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2125,8 +2094,7 @@ class DnsAsyncClient extends Client
      *
      * 查询域名找回结果。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2191,8 +2159,7 @@ class DnsAsyncClient extends Client
      *
      * 更新单个自定义线路
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2260,8 +2227,7 @@ class DnsAsyncClient extends Client
      *
      * 修改终端节点
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2329,8 +2295,7 @@ class DnsAsyncClient extends Client
      *
      * 更新单个线路分组。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2395,8 +2360,7 @@ class DnsAsyncClient extends Client
      *
      * 修改一个解析规则。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2464,8 +2428,7 @@ class DnsAsyncClient extends Client
      *
      * 设置弹性IP的PTR记录
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2536,8 +2499,7 @@ class DnsAsyncClient extends Client
      *
      * 查询租户弹性IP的PTR记录列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2617,8 +2579,7 @@ class DnsAsyncClient extends Client
      *
      * 将弹性IP的PTR记录恢复为默认值
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2689,8 +2650,7 @@ class DnsAsyncClient extends Client
      *
      * 查询单个弹性IP的PTR记录
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2758,8 +2718,7 @@ class DnsAsyncClient extends Client
      *
      * 修改弹性IP的PTR记录
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2830,8 +2789,7 @@ class DnsAsyncClient extends Client
      *
      * Record Set关联健康检查。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2900,8 +2858,7 @@ class DnsAsyncClient extends Client
      * 批量删除某个Zone下的Record Set资源，当删除的资源不存在时，则默认删除成功。
      * 响应结果中只包含本次实际删除的资源。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -2970,8 +2927,7 @@ class DnsAsyncClient extends Client
      * 批量修改RecordSet。属于原子性操作，请求Record Set将全部完成修改，或不做任何修改。
      * 仅公网Zone支持。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3039,8 +2995,7 @@ class DnsAsyncClient extends Client
      *
      * 创建单个Record Set
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3108,8 +3063,7 @@ class DnsAsyncClient extends Client
      *
      * 批量线路创建RecordSet。属于原子性操作，如果存在一个参数校验不通过，则创建失败。仅公网Zone支持。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3177,8 +3131,7 @@ class DnsAsyncClient extends Client
      *
      * 创建单个Record Set，仅适用于公网DNS
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3246,8 +3199,7 @@ class DnsAsyncClient extends Client
      *
      * 删除单个Record Set
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3315,8 +3267,7 @@ class DnsAsyncClient extends Client
      *
      * 删除单个Record Set
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3384,8 +3335,7 @@ class DnsAsyncClient extends Client
      *
      * Record Set解关联健康检查。。
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3453,8 +3403,7 @@ class DnsAsyncClient extends Client
      *
      * 查询租户Record Set资源列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3552,8 +3501,7 @@ class DnsAsyncClient extends Client
      *
      * 查询单个Zone下Record Set列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3648,8 +3596,7 @@ class DnsAsyncClient extends Client
      *
      * 查询租户Record Set资源列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3756,8 +3703,7 @@ class DnsAsyncClient extends Client
      *
      * 设置Record Set状态
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3825,8 +3771,7 @@ class DnsAsyncClient extends Client
      *
      * 查询单个Record Set
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3894,8 +3839,7 @@ class DnsAsyncClient extends Client
      *
      * 查询单个Zone下Record Set列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -3996,8 +3940,7 @@ class DnsAsyncClient extends Client
      *
      * 查询单个Record Set，仅适用于公网DNS
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4065,8 +4008,7 @@ class DnsAsyncClient extends Client
      *
      * 修改单个Record Set
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4137,8 +4079,7 @@ class DnsAsyncClient extends Client
      *
      * 修改单个Record Set
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4209,8 +4150,7 @@ class DnsAsyncClient extends Client
      *
      * 为指定实例批量添加或删除标签
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4281,8 +4221,7 @@ class DnsAsyncClient extends Client
      *
      * 为指定实例添加标签
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4353,8 +4292,7 @@ class DnsAsyncClient extends Client
      *
      * 删除资源标签
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4425,8 +4363,7 @@ class DnsAsyncClient extends Client
      *
      * 使用标签查询资源实例
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4494,8 +4431,7 @@ class DnsAsyncClient extends Client
      *
      * 查询指定实例类型的所有标签集合
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4560,8 +4496,7 @@ class DnsAsyncClient extends Client
      *
      * 查询指定实例的标签信息
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4629,8 +4564,7 @@ class DnsAsyncClient extends Client
      *
      * 在内网Zone上关联VPC
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4698,8 +4632,7 @@ class DnsAsyncClient extends Client
      *
      * 创建单个内网Zone
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4764,8 +4697,7 @@ class DnsAsyncClient extends Client
      *
      * 创建单个公网Zone
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4830,8 +4762,7 @@ class DnsAsyncClient extends Client
      *
      * 删除单个内网Zone
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4896,8 +4827,7 @@ class DnsAsyncClient extends Client
      *
      * 删除单个公网Zone
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -4962,8 +4892,7 @@ class DnsAsyncClient extends Client
      *
      * 在内网Zone上解关联VPC
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5031,8 +4960,7 @@ class DnsAsyncClient extends Client
      *
      * 查询内网Zone的列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5118,8 +5046,7 @@ class DnsAsyncClient extends Client
      *
      * 查询公网Zone的列表
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5205,8 +5132,7 @@ class DnsAsyncClient extends Client
      *
      * 设置单个内网Zone的子域名递归解析代理
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5274,8 +5200,7 @@ class DnsAsyncClient extends Client
      *
      * 查询单个内网Zone
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5340,8 +5265,7 @@ class DnsAsyncClient extends Client
      *
      * 查询单个内网Zone的名称服务器
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5406,8 +5330,7 @@ class DnsAsyncClient extends Client
      *
      * 查询单个公网Zone
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5472,8 +5395,7 @@ class DnsAsyncClient extends Client
      *
      * 查询单个公网Zone的名称服务器
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5538,8 +5460,7 @@ class DnsAsyncClient extends Client
      *
      * 修改单个内网Zone
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5607,8 +5528,7 @@ class DnsAsyncClient extends Client
      *
      * 修改单个公网Zone
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
@@ -5676,8 +5596,7 @@ class DnsAsyncClient extends Client
      *
      * 设置单个公网Zone状态，支持暂停、启用Zone
      * 
-     * 详细说明请参考华为云API Explorer。
-     * Please refer to Huawei cloud API Explorer for details.
+     * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response

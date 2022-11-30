@@ -1,3 +1,14 @@
+# 3.1.12 2022-11-30
+
+### HuaweiCloud SDK EIP
+
+- _新增特性_
+  - 支持接口`DisassociatePublicips`、`AssociatePublicips`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
 # 3.1.11 2022-11-24
 
 ### HuaweiCloud SDK AS
