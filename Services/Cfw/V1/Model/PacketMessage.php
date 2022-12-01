@@ -7,9 +7,8 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
+class PacketMessage implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,34 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListServiceSetDetailsResponse';
+    protected static $openAPIModelName = 'PacketMessage';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  data
+    * hexIndex  16进制index
+    * hexs  16进制数列
+    * utf8String  utf_8字符串
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto'
+            'hexIndex' => 'string',
+            'hexs' => 'string[]',
+            'utf8String' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  data
+    * hexIndex  16进制index
+    * hexs  16进制数列
+    * utf8String  utf_8字符串
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'data' => null
+        'hexIndex' => null,
+        'hexs' => null,
+        'utf8String' => null
     ];
 
     /**
@@ -62,32 +69,44 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  data
+    * hexIndex  16进制index
+    * hexs  16进制数列
+    * utf8String  utf_8字符串
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'data' => 'data'
+            'hexIndex' => 'hex_index',
+            'hexs' => 'hexs',
+            'utf8String' => 'utf8_String'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  data
+    * hexIndex  16进制index
+    * hexs  16进制数列
+    * utf8String  utf_8字符串
     *
     * @var string[]
     */
     protected static $setters = [
-            'data' => 'setData'
+            'hexIndex' => 'setHexIndex',
+            'hexs' => 'setHexs',
+            'utf8String' => 'setUtf8String'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  data
+    * hexIndex  16进制index
+    * hexs  16进制数列
+    * utf8String  utf_8字符串
     *
     * @var string[]
     */
     protected static $getters = [
-            'data' => 'getData'
+            'hexIndex' => 'getHexIndex',
+            'hexs' => 'getHexs',
+            'utf8String' => 'getUtf8String'
     ];
 
     /**
@@ -148,7 +167,9 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['hexIndex'] = isset($data['hexIndex']) ? $data['hexIndex'] : null;
+        $this->container['hexs'] = isset($data['hexs']) ? $data['hexs'] : null;
+        $this->container['utf8String'] = isset($data['utf8String']) ? $data['utf8String'] : null;
     }
 
     /**
@@ -174,26 +195,74 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets data
-    *  data
+    * Gets hexIndex
+    *  16进制index
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto|null
+    * @return string|null
     */
-    public function getData()
+    public function getHexIndex()
     {
-        return $this->container['data'];
+        return $this->container['hexIndex'];
     }
 
     /**
-    * Sets data
+    * Sets hexIndex
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto|null $data data
+    * @param string|null $hexIndex 16进制index
     *
     * @return $this
     */
-    public function setData($data)
+    public function setHexIndex($hexIndex)
     {
-        $this->container['data'] = $data;
+        $this->container['hexIndex'] = $hexIndex;
+        return $this;
+    }
+
+    /**
+    * Gets hexs
+    *  16进制数列
+    *
+    * @return string[]|null
+    */
+    public function getHexs()
+    {
+        return $this->container['hexs'];
+    }
+
+    /**
+    * Sets hexs
+    *
+    * @param string[]|null $hexs 16进制数列
+    *
+    * @return $this
+    */
+    public function setHexs($hexs)
+    {
+        $this->container['hexs'] = $hexs;
+        return $this;
+    }
+
+    /**
+    * Gets utf8String
+    *  utf_8字符串
+    *
+    * @return string|null
+    */
+    public function getUtf8String()
+    {
+        return $this->container['utf8String'];
+    }
+
+    /**
+    * Sets utf8String
+    *
+    * @param string|null $utf8String utf_8字符串
+    *
+    * @return $this
+    */
+    public function setUtf8String($utf8String)
+    {
+        $this->container['utf8String'] = $utf8String;
         return $this;
     }
 

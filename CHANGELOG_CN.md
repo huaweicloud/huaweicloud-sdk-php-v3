@@ -1,3 +1,53 @@
+# 3.1.13 2022-12-01
+
+### HuaweiCloud SDK BSS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListCustomerselfResourceRecords`新增响应参数 `formula`
+
+### HuaweiCloud SDK BSSINTL
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListCustomerselfResourceRecords`新增响应参数 `formula`
+
+### HuaweiCloud SDK CFW
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListIpsSwitchStatusUsingGet`:
+    - 新增响应参数 `data`
+    - 移除响应参数 `object_id`、`basic_defense_status`、`virtual_patches_stauts`
+  - 接口`ListEastWestFirewall`:
+    - 新增响应参数 `protect_infos`
+    - 移除响应参数 `protected_infos`
+  - 接口`ListAttackLogs`请求参数`fw_instance_id`改为非必填
+  - 接口`UpdateRuleAclUsingPut`新增请求参数 `type`
+  - 接口`UpdateBlackWhiteListUsingPut`新增请求参数 `list_type`、`object_id`
+  - 接口`ListFirewallUsingGet`:
+    - 新增响应参数 `data`
+    - 移除响应参数 `fw_instance_id`、`resource_id`、`name`、`ha_type`、`charge_mode`、`service_type`、`engine_type`、`flavor`、`protect_objects`、`status`、`description`、`is_old_firewall_instance`、`support_ipv6`、`feature_toggle`
+  - 接口`ListServiceSetDetails`:
+    - 新增响应参数 `data`
+    - 移除响应参数 `id`、`name`、`description`
+  - 接口`CountEips`:
+    - 新增响应参数 `data`
+    - 移除响应参数 `object_id`、`eip_total`、`eip_protected`
+  - 接口`ListEipResources`:
+    - 新增响应参数 `data`
+    - 移除响应参数 `id`、`public_ip`、`status`、`public_ipv6`、`enterprise_project_id`、`device_id`、`device_name`、`device_owner`、`associate_instance_type`
+  - 接口`UpdateAddressSetInfoUsingPut`新增请求参数 `address_type`
+
 # 3.1.12 2022-11-30
 
 ### HuaweiCloud SDK EIP

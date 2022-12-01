@@ -20,7 +20,7 @@ class ChangeProtectStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * objectId  防护对象ID
+    * objectId  防护对象id
     * status  防护状态：0 开启，1 关闭
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ChangeProtectStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * objectId  防护对象ID
+    * objectId  防护对象id
     * status  防护状态：0 开启，1 关闭
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ChangeProtectStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * objectId  防护对象ID
+    * objectId  防护对象id
     * status  防护状态：0 开启，1 关闭
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ChangeProtectStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * objectId  防护对象ID
+    * objectId  防护对象id
     * status  防护状态：0 开启，1 关闭
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ChangeProtectStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * objectId  防护对象ID
+    * objectId  防护对象id
     * status  防护状态：0 开启，1 关闭
     *
     * @var string[]
@@ -217,7 +217,7 @@ class ChangeProtectStatusRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象ID
+    *  防护对象id
     *
     * @return string
     */
@@ -229,7 +229,7 @@ class ChangeProtectStatusRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string $objectId 防护对象ID
+    * @param string $objectId 防护对象id
     *
     * @return $this
     */

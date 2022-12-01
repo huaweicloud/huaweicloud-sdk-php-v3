@@ -7,9 +7,8 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
+class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,34 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListServiceSetDetailsResponse';
+    protected static $openAPIModelName = 'IpsSwitchResponseDTO';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  data
+    * objectId  object_id
+    * basicDefenseStatus  基础防御状态
+    * virtualPatchesStauts  虚拟补丁状态
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto'
+            'objectId' => 'string',
+            'basicDefenseStatus' => 'int',
+            'virtualPatchesStauts' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  data
+    * objectId  object_id
+    * basicDefenseStatus  基础防御状态
+    * virtualPatchesStauts  虚拟补丁状态
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'data' => null
+        'objectId' => null,
+        'basicDefenseStatus' => null,
+        'virtualPatchesStauts' => null
     ];
 
     /**
@@ -62,32 +69,44 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  data
+    * objectId  object_id
+    * basicDefenseStatus  基础防御状态
+    * virtualPatchesStauts  虚拟补丁状态
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'data' => 'data'
+            'objectId' => 'object_id',
+            'basicDefenseStatus' => 'basic_defense_status',
+            'virtualPatchesStauts' => 'virtual_patches_stauts'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  data
+    * objectId  object_id
+    * basicDefenseStatus  基础防御状态
+    * virtualPatchesStauts  虚拟补丁状态
     *
     * @var string[]
     */
     protected static $setters = [
-            'data' => 'setData'
+            'objectId' => 'setObjectId',
+            'basicDefenseStatus' => 'setBasicDefenseStatus',
+            'virtualPatchesStauts' => 'setVirtualPatchesStauts'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  data
+    * objectId  object_id
+    * basicDefenseStatus  基础防御状态
+    * virtualPatchesStauts  虚拟补丁状态
     *
     * @var string[]
     */
     protected static $getters = [
-            'data' => 'getData'
+            'objectId' => 'getObjectId',
+            'basicDefenseStatus' => 'getBasicDefenseStatus',
+            'virtualPatchesStauts' => 'getVirtualPatchesStauts'
     ];
 
     /**
@@ -148,7 +167,9 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
+        $this->container['basicDefenseStatus'] = isset($data['basicDefenseStatus']) ? $data['basicDefenseStatus'] : null;
+        $this->container['virtualPatchesStauts'] = isset($data['virtualPatchesStauts']) ? $data['virtualPatchesStauts'] : null;
     }
 
     /**
@@ -174,26 +195,74 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets data
-    *  data
+    * Gets objectId
+    *  object_id
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto|null
+    * @return string|null
     */
-    public function getData()
+    public function getObjectId()
     {
-        return $this->container['data'];
+        return $this->container['objectId'];
     }
 
     /**
-    * Sets data
+    * Sets objectId
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto|null $data data
+    * @param string|null $objectId object_id
     *
     * @return $this
     */
-    public function setData($data)
+    public function setObjectId($objectId)
     {
-        $this->container['data'] = $data;
+        $this->container['objectId'] = $objectId;
+        return $this;
+    }
+
+    /**
+    * Gets basicDefenseStatus
+    *  基础防御状态
+    *
+    * @return int|null
+    */
+    public function getBasicDefenseStatus()
+    {
+        return $this->container['basicDefenseStatus'];
+    }
+
+    /**
+    * Sets basicDefenseStatus
+    *
+    * @param int|null $basicDefenseStatus 基础防御状态
+    *
+    * @return $this
+    */
+    public function setBasicDefenseStatus($basicDefenseStatus)
+    {
+        $this->container['basicDefenseStatus'] = $basicDefenseStatus;
+        return $this;
+    }
+
+    /**
+    * Gets virtualPatchesStauts
+    *  虚拟补丁状态
+    *
+    * @return int|null
+    */
+    public function getVirtualPatchesStauts()
+    {
+        return $this->container['virtualPatchesStauts'];
+    }
+
+    /**
+    * Sets virtualPatchesStauts
+    *
+    * @param int|null $virtualPatchesStauts 虚拟补丁状态
+    *
+    * @return $this
+    */
+    public function setVirtualPatchesStauts($virtualPatchesStauts)
+    {
+        $this->container['virtualPatchesStauts'] = $virtualPatchesStauts;
         return $this;
     }
 

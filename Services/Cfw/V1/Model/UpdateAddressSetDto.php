@@ -22,24 +22,28 @@ class UpdateAddressSetDto implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  地址组名称
     * description  地址组描述
+    * addressType  地址类型0 ipv4,1 ipv6,2 domain
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'addressType' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  地址组名称
     * description  地址组描述
+    * addressType  地址类型0 ipv4,1 ipv6,2 domain
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'description' => null
+        'description' => null,
+        'addressType' => 'int32'
     ];
 
     /**
@@ -67,36 +71,42 @@ class UpdateAddressSetDto implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  地址组名称
     * description  地址组描述
+    * addressType  地址类型0 ipv4,1 ipv6,2 domain
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'description' => 'description'
+            'description' => 'description',
+            'addressType' => 'address_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  地址组名称
     * description  地址组描述
+    * addressType  地址类型0 ipv4,1 ipv6,2 domain
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'addressType' => 'setAddressType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  地址组名称
     * description  地址组描述
+    * addressType  地址类型0 ipv4,1 ipv6,2 domain
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'addressType' => 'getAddressType'
     ];
 
     /**
@@ -139,7 +149,24 @@ class UpdateAddressSetDto implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ADDRESS_TYPE_0 = 0;
+    const ADDRESS_TYPE_1 = 1;
+    const ADDRESS_TYPE_2 = 2;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAddressTypeAllowableValues()
+    {
+        return [
+            self::ADDRESS_TYPE_0,
+            self::ADDRESS_TYPE_1,
+            self::ADDRESS_TYPE_2,
+        ];
+    }
 
 
     /**
@@ -159,6 +186,7 @@ class UpdateAddressSetDto implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['addressType'] = isset($data['addressType']) ? $data['addressType'] : null;
     }
 
     /**
@@ -169,6 +197,14 @@ class UpdateAddressSetDto implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getAddressTypeAllowableValues();
+                if (!is_null($this->container['addressType']) && !in_array($this->container['addressType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'addressType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -228,6 +264,30 @@ class UpdateAddressSetDto implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets addressType
+    *  地址类型0 ipv4,1 ipv6,2 domain
+    *
+    * @return int|null
+    */
+    public function getAddressType()
+    {
+        return $this->container['addressType'];
+    }
+
+    /**
+    * Sets addressType
+    *
+    * @param int|null $addressType 地址类型0 ipv4,1 ipv6,2 domain
+    *
+    * @return $this
+    */
+    public function setAddressType($addressType)
+    {
+        $this->container['addressType'] = $addressType;
         return $this;
     }
 

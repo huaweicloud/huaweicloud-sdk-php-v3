@@ -405,18 +405,6 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['longConnectTime'] === null) {
-            $invalidProperties[] = "'longConnectTime' can't be null";
-        }
-        if ($this->container['longConnectTimeHour'] === null) {
-            $invalidProperties[] = "'longConnectTimeHour' can't be null";
-        }
-        if ($this->container['longConnectTimeMinute'] === null) {
-            $invalidProperties[] = "'longConnectTimeMinute' can't be null";
-        }
-        if ($this->container['longConnectTimeSecond'] === null) {
-            $invalidProperties[] = "'longConnectTimeSecond' can't be null";
-        }
         if ($this->container['longConnectEnable'] === null) {
             $invalidProperties[] = "'longConnectEnable' can't be null";
         }
@@ -583,7 +571,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * Gets longConnectTime
     *  长连接时长
     *
-    * @return int
+    * @return int|null
     */
     public function getLongConnectTime()
     {
@@ -593,7 +581,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectTime
     *
-    * @param int $longConnectTime 长连接时长
+    * @param int|null $longConnectTime 长连接时长
     *
     * @return $this
     */
@@ -607,7 +595,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * Gets longConnectTimeHour
     *  长连接时长小时
     *
-    * @return int
+    * @return int|null
     */
     public function getLongConnectTimeHour()
     {
@@ -617,7 +605,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectTimeHour
     *
-    * @param int $longConnectTimeHour 长连接时长小时
+    * @param int|null $longConnectTimeHour 长连接时长小时
     *
     * @return $this
     */
@@ -631,7 +619,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * Gets longConnectTimeMinute
     *  长连接时长分钟
     *
-    * @return int
+    * @return int|null
     */
     public function getLongConnectTimeMinute()
     {
@@ -641,7 +629,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectTimeMinute
     *
-    * @param int $longConnectTimeMinute 长连接时长分钟
+    * @param int|null $longConnectTimeMinute 长连接时长分钟
     *
     * @return $this
     */
@@ -655,7 +643,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * Gets longConnectTimeSecond
     *  长连接时长秒
     *
-    * @return int
+    * @return int|null
     */
     public function getLongConnectTimeSecond()
     {
@@ -665,7 +653,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectTimeSecond
     *
-    * @param int $longConnectTimeSecond 长连接时长秒
+    * @param int|null $longConnectTimeSecond 长连接时长秒
     *
     * @return $this
     */

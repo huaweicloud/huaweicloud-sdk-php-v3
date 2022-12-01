@@ -448,6 +448,9 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
         if ($this->container['limit'] === null) {
             $invalidProperties[] = "'limit' can't be null";
         }
+        if ($this->container['fwInstanceId'] === null) {
+            $invalidProperties[] = "'fwInstanceId' can't be null";
+        }
             $allowedValues = $this->getActionAllowableValues();
                 if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -794,7 +797,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * Gets fwInstanceId
     *  防火墙实例ID
     *
-    * @return string|null
+    * @return string
     */
     public function getFwInstanceId()
     {
@@ -804,7 +807,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string|null $fwInstanceId 防火墙实例ID
+    * @param string $fwInstanceId 防火墙实例ID
     *
     * @return $this
     */

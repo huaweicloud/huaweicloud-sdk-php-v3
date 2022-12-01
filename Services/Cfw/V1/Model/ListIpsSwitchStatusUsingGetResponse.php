@@ -21,30 +21,22 @@ class ListIpsSwitchStatusUsingGetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * objectId  object_id
-    * basicDefenseStatus  基础防御状态
-    * virtualPatchesStauts  虚拟补丁状态
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'objectId' => 'string',
-            'basicDefenseStatus' => 'int',
-            'virtualPatchesStauts' => 'int'
+            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\IpsSwitchResponseDTO'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * objectId  object_id
-    * basicDefenseStatus  基础防御状态
-    * virtualPatchesStauts  虚拟补丁状态
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'objectId' => null,
-        'basicDefenseStatus' => null,
-        'virtualPatchesStauts' => null
+        'data' => null
     ];
 
     /**
@@ -70,44 +62,32 @@ class ListIpsSwitchStatusUsingGetResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * objectId  object_id
-    * basicDefenseStatus  基础防御状态
-    * virtualPatchesStauts  虚拟补丁状态
+    * data  data
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'objectId' => 'object_id',
-            'basicDefenseStatus' => 'basic_defense_status',
-            'virtualPatchesStauts' => 'virtual_patches_stauts'
+            'data' => 'data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * objectId  object_id
-    * basicDefenseStatus  基础防御状态
-    * virtualPatchesStauts  虚拟补丁状态
+    * data  data
     *
     * @var string[]
     */
     protected static $setters = [
-            'objectId' => 'setObjectId',
-            'basicDefenseStatus' => 'setBasicDefenseStatus',
-            'virtualPatchesStauts' => 'setVirtualPatchesStauts'
+            'data' => 'setData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * objectId  object_id
-    * basicDefenseStatus  基础防御状态
-    * virtualPatchesStauts  虚拟补丁状态
+    * data  data
     *
     * @var string[]
     */
     protected static $getters = [
-            'objectId' => 'getObjectId',
-            'basicDefenseStatus' => 'getBasicDefenseStatus',
-            'virtualPatchesStauts' => 'getVirtualPatchesStauts'
+            'data' => 'getData'
     ];
 
     /**
@@ -168,9 +148,7 @@ class ListIpsSwitchStatusUsingGetResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
-        $this->container['basicDefenseStatus'] = isset($data['basicDefenseStatus']) ? $data['basicDefenseStatus'] : null;
-        $this->container['virtualPatchesStauts'] = isset($data['virtualPatchesStauts']) ? $data['virtualPatchesStauts'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -196,74 +174,26 @@ class ListIpsSwitchStatusUsingGetResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets objectId
-    *  object_id
+    * Gets data
+    *  data
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\IpsSwitchResponseDTO|null
     */
-    public function getObjectId()
+    public function getData()
     {
-        return $this->container['objectId'];
+        return $this->container['data'];
     }
 
     /**
-    * Sets objectId
+    * Sets data
     *
-    * @param string|null $objectId object_id
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IpsSwitchResponseDTO|null $data data
     *
     * @return $this
     */
-    public function setObjectId($objectId)
+    public function setData($data)
     {
-        $this->container['objectId'] = $objectId;
-        return $this;
-    }
-
-    /**
-    * Gets basicDefenseStatus
-    *  基础防御状态
-    *
-    * @return int|null
-    */
-    public function getBasicDefenseStatus()
-    {
-        return $this->container['basicDefenseStatus'];
-    }
-
-    /**
-    * Sets basicDefenseStatus
-    *
-    * @param int|null $basicDefenseStatus 基础防御状态
-    *
-    * @return $this
-    */
-    public function setBasicDefenseStatus($basicDefenseStatus)
-    {
-        $this->container['basicDefenseStatus'] = $basicDefenseStatus;
-        return $this;
-    }
-
-    /**
-    * Gets virtualPatchesStauts
-    *  虚拟补丁状态
-    *
-    * @return int|null
-    */
-    public function getVirtualPatchesStauts()
-    {
-        return $this->container['virtualPatchesStauts'];
-    }
-
-    /**
-    * Sets virtualPatchesStauts
-    *
-    * @param int|null $virtualPatchesStauts 虚拟补丁状态
-    *
-    * @return $this
-    */
-    public function setVirtualPatchesStauts($virtualPatchesStauts)
-    {
-        $this->container['virtualPatchesStauts'] = $virtualPatchesStauts;
+        $this->container['data'] = $data;
         return $this;
     }
 

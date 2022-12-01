@@ -38,6 +38,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * protocol  协议
     * packet  packet
     * app  应用协议
+    * packetMessages  攻击报文信息
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
             'dstPort' => 'int',
             'protocol' => 'string',
             'packet' => '\HuaweiCloud\SDK\Cfw\V1\Model\Packet',
-            'app' => 'string'
+            'app' => 'string',
+            'packetMessages' => '\HuaweiCloud\SDK\Cfw\V1\Model\PacketMessage[]'
     ];
 
     /**
@@ -82,6 +84,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * protocol  协议
     * packet  packet
     * app  应用协议
+    * packetMessages  攻击报文信息
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
         'dstPort' => 'int32',
         'protocol' => null,
         'packet' => null,
-        'app' => null
+        'app' => null,
+        'packetMessages' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * protocol  协议
     * packet  packet
     * app  应用协议
+    * packetMessages  攻击报文信息
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
             'dstPort' => 'dst_port',
             'protocol' => 'protocol',
             'packet' => 'packet',
-            'app' => 'app'
+            'app' => 'app',
+            'packetMessages' => 'packetMessages'
     ];
 
     /**
@@ -191,6 +197,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * protocol  协议
     * packet  packet
     * app  应用协议
+    * packetMessages  攻击报文信息
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
             'dstPort' => 'setDstPort',
             'protocol' => 'setProtocol',
             'packet' => 'setPacket',
-            'app' => 'setApp'
+            'app' => 'setApp',
+            'packetMessages' => 'setPacketMessages'
     ];
 
     /**
@@ -235,6 +243,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * protocol  协议
     * packet  packet
     * app  应用协议
+    * packetMessages  攻击报文信息
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
             'dstPort' => 'getDstPort',
             'protocol' => 'getProtocol',
             'packet' => 'getPacket',
-            'app' => 'getApp'
+            'app' => 'getApp',
+            'packetMessages' => 'getPacketMessages'
     ];
 
     /**
@@ -350,6 +360,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['packet'] = isset($data['packet']) ? $data['packet'] : null;
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
+        $this->container['packetMessages'] = isset($data['packetMessages']) ? $data['packetMessages'] : null;
     }
 
     /**
@@ -823,6 +834,30 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     public function setApp($app)
     {
         $this->container['app'] = $app;
+        return $this;
+    }
+
+    /**
+    * Gets packetMessages
+    *  攻击报文信息
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\PacketMessage[]|null
+    */
+    public function getPacketMessages()
+    {
+        return $this->container['packetMessages'];
+    }
+
+    /**
+    * Sets packetMessages
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\PacketMessage[]|null $packetMessages 攻击报文信息
+    *
+    * @return $this
+    */
+    public function setPacketMessages($packetMessages)
+    {
+        $this->container['packetMessages'] = $packetMessages;
         return $this;
     }
 

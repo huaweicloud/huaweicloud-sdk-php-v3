@@ -7,9 +7,8 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
+class EipCountRespData implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,34 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListServiceSetDetailsResponse';
+    protected static $openAPIModelName = 'EipCountRespData';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  data
+    * objectId  防护对象ID
+    * eipTotal  EIP总数
+    * eipProtected  EIP防护数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto'
+            'objectId' => 'string',
+            'eipTotal' => 'int',
+            'eipProtected' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  data
+    * objectId  防护对象ID
+    * eipTotal  EIP总数
+    * eipProtected  EIP防护数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'data' => null
+        'objectId' => null,
+        'eipTotal' => 'int32',
+        'eipProtected' => 'int32'
     ];
 
     /**
@@ -62,32 +69,44 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  data
+    * objectId  防护对象ID
+    * eipTotal  EIP总数
+    * eipProtected  EIP防护数
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'data' => 'data'
+            'objectId' => 'object_id',
+            'eipTotal' => 'eip_total',
+            'eipProtected' => 'eip_protected'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  data
+    * objectId  防护对象ID
+    * eipTotal  EIP总数
+    * eipProtected  EIP防护数
     *
     * @var string[]
     */
     protected static $setters = [
-            'data' => 'setData'
+            'objectId' => 'setObjectId',
+            'eipTotal' => 'setEipTotal',
+            'eipProtected' => 'setEipProtected'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  data
+    * objectId  防护对象ID
+    * eipTotal  EIP总数
+    * eipProtected  EIP防护数
     *
     * @var string[]
     */
     protected static $getters = [
-            'data' => 'getData'
+            'objectId' => 'getObjectId',
+            'eipTotal' => 'getEipTotal',
+            'eipProtected' => 'getEipProtected'
     ];
 
     /**
@@ -148,7 +167,9 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
+        $this->container['eipTotal'] = isset($data['eipTotal']) ? $data['eipTotal'] : 0;
+        $this->container['eipProtected'] = isset($data['eipProtected']) ? $data['eipProtected'] : 0;
     }
 
     /**
@@ -159,6 +180,21 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['objectId']) && (mb_strlen($this->container['objectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'objectId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['objectId']) && (mb_strlen($this->container['objectId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'objectId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['objectId']) && !preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['objectId'])) {
+                $invalidProperties[] = "invalid value for 'objectId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.";
+            }
+            if (!is_null($this->container['eipTotal']) && ($this->container['eipTotal'] < 0)) {
+                $invalidProperties[] = "invalid value for 'eipTotal', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['eipProtected']) && ($this->container['eipProtected'] < 0)) {
+                $invalidProperties[] = "invalid value for 'eipProtected', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -174,26 +210,74 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets data
-    *  data
+    * Gets objectId
+    *  防护对象ID
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto|null
+    * @return string|null
     */
-    public function getData()
+    public function getObjectId()
     {
-        return $this->container['data'];
+        return $this->container['objectId'];
     }
 
     /**
-    * Sets data
+    * Sets objectId
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto|null $data data
+    * @param string|null $objectId 防护对象ID
     *
     * @return $this
     */
-    public function setData($data)
+    public function setObjectId($objectId)
     {
-        $this->container['data'] = $data;
+        $this->container['objectId'] = $objectId;
+        return $this;
+    }
+
+    /**
+    * Gets eipTotal
+    *  EIP总数
+    *
+    * @return int|null
+    */
+    public function getEipTotal()
+    {
+        return $this->container['eipTotal'];
+    }
+
+    /**
+    * Sets eipTotal
+    *
+    * @param int|null $eipTotal EIP总数
+    *
+    * @return $this
+    */
+    public function setEipTotal($eipTotal)
+    {
+        $this->container['eipTotal'] = $eipTotal;
+        return $this;
+    }
+
+    /**
+    * Gets eipProtected
+    *  EIP防护数
+    *
+    * @return int|null
+    */
+    public function getEipProtected()
+    {
+        return $this->container['eipProtected'];
+    }
+
+    /**
+    * Sets eipProtected
+    *
+    * @param int|null $eipProtected EIP防护数
+    *
+    * @return $this
+    */
+    public function setEipProtected($eipProtected)
+    {
+        $this->container['eipProtected'] = $eipProtected;
         return $this;
     }
 

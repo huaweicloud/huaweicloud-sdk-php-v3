@@ -68,6 +68,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
+    * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
     *
     * @var string[]
     */
@@ -119,7 +120,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'bonusAmount' => 'double',
             'debtAmount' => 'double',
             'adjustmentAmount' => 'double',
-            'measureId' => 'int'
+            'measureId' => 'int',
+            'formula' => 'string'
     ];
 
     /**
@@ -172,6 +174,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
+    * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
     *
     * @var string[]
     */
@@ -223,7 +226,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         'bonusAmount' => 'double',
         'debtAmount' => 'double',
         'adjustmentAmount' => 'double',
-        'measureId' => 'int32'
+        'measureId' => 'int32',
+        'formula' => null
     ];
 
     /**
@@ -297,6 +301,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
+    * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
     *
     * @var string[]
     */
@@ -348,7 +353,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'bonusAmount' => 'bonus_amount',
             'debtAmount' => 'debt_amount',
             'adjustmentAmount' => 'adjustment_amount',
-            'measureId' => 'measure_id'
+            'measureId' => 'measure_id',
+            'formula' => 'formula'
     ];
 
     /**
@@ -401,6 +407,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
+    * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
     *
     * @var string[]
     */
@@ -452,7 +459,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'bonusAmount' => 'setBonusAmount',
             'debtAmount' => 'setDebtAmount',
             'adjustmentAmount' => 'setAdjustmentAmount',
-            'measureId' => 'setMeasureId'
+            'measureId' => 'setMeasureId',
+            'formula' => 'setFormula'
     ];
 
     /**
@@ -505,6 +513,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
+    * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
     *
     * @var string[]
     */
@@ -556,7 +565,8 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'bonusAmount' => 'getBonusAmount',
             'debtAmount' => 'getDebtAmount',
             'adjustmentAmount' => 'getAdjustmentAmount',
-            'measureId' => 'getMeasureId'
+            'measureId' => 'getMeasureId',
+            'formula' => 'getFormula'
     ];
 
     /**
@@ -665,6 +675,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         $this->container['debtAmount'] = isset($data['debtAmount']) ? $data['debtAmount'] : null;
         $this->container['adjustmentAmount'] = isset($data['adjustmentAmount']) ? $data['adjustmentAmount'] : null;
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
+        $this->container['formula'] = isset($data['formula']) ? $data['formula'] : null;
     }
 
     /**
@@ -1838,6 +1849,30 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     public function setMeasureId($measureId)
     {
         $this->container['measureId'] = $measureId;
+        return $this;
+    }
+
+    /**
+    * Gets formula
+    *  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
+    *
+    * @return string|null
+    */
+    public function getFormula()
+    {
+        return $this->container['formula'];
+    }
+
+    /**
+    * Sets formula
+    *
+    * @param string|null $formula 实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
+    *
+    * @return $this
+    */
+    public function setFormula($formula)
+    {
+        $this->container['formula'] = $formula;
         return $this;
     }
 

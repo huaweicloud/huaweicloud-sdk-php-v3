@@ -27,7 +27,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * firewallAssociatedSubnets  云防火墙关联子网信息
     * er  er
     * inspectionVpc  inspectionVpc
-    * protectedInfos  东西向防护资源信息
+    * protectInfos  东西向防护资源信息
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -42,7 +42,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'firewallAssociatedSubnets' => '\HuaweiCloud\SDK\Cfw\V1\Model\SubnetInfo[]',
             'er' => '\HuaweiCloud\SDK\Cfw\V1\Model\ErInstance',
             'inspectionVpc' => '\HuaweiCloud\SDK\Cfw\V1\Model\VpcDetail',
-            'protectedInfos' => '\HuaweiCloud\SDK\Cfw\V1\Model\EwProtectResourceInfo[]',
+            'protectInfos' => '\HuaweiCloud\SDK\Cfw\V1\Model\EwProtectResourceInfo[]',
             'total' => 'int',
             'offset' => 'int',
             'limit' => 'int'
@@ -57,7 +57,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * firewallAssociatedSubnets  云防火墙关联子网信息
     * er  er
     * inspectionVpc  inspectionVpc
-    * protectedInfos  东西向防护资源信息
+    * protectInfos  东西向防护资源信息
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -72,7 +72,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
         'firewallAssociatedSubnets' => null,
         'er' => null,
         'inspectionVpc' => null,
-        'protectedInfos' => null,
+        'protectInfos' => null,
         'total' => 'int32',
         'offset' => 'int32',
         'limit' => 'int32'
@@ -108,7 +108,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * firewallAssociatedSubnets  云防火墙关联子网信息
     * er  er
     * inspectionVpc  inspectionVpc
-    * protectedInfos  东西向防护资源信息
+    * protectInfos  东西向防护资源信息
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -123,7 +123,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'firewallAssociatedSubnets' => 'firewall_associated_subnets',
             'er' => 'er',
             'inspectionVpc' => 'inspection_vpc',
-            'protectedInfos' => 'protected_infos',
+            'protectInfos' => 'protect_infos',
             'total' => 'total',
             'offset' => 'offset',
             'limit' => 'limit'
@@ -138,7 +138,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * firewallAssociatedSubnets  云防火墙关联子网信息
     * er  er
     * inspectionVpc  inspectionVpc
-    * protectedInfos  东西向防护资源信息
+    * protectInfos  东西向防护资源信息
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -153,7 +153,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'firewallAssociatedSubnets' => 'setFirewallAssociatedSubnets',
             'er' => 'setEr',
             'inspectionVpc' => 'setInspectionVpc',
-            'protectedInfos' => 'setProtectedInfos',
+            'protectInfos' => 'setProtectInfos',
             'total' => 'setTotal',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
@@ -168,7 +168,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * firewallAssociatedSubnets  云防火墙关联子网信息
     * er  er
     * inspectionVpc  inspectionVpc
-    * protectedInfos  东西向防护资源信息
+    * protectInfos  东西向防护资源信息
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
@@ -183,7 +183,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'firewallAssociatedSubnets' => 'getFirewallAssociatedSubnets',
             'er' => 'getEr',
             'inspectionVpc' => 'getInspectionVpc',
-            'protectedInfos' => 'getProtectedInfos',
+            'protectInfos' => 'getProtectInfos',
             'total' => 'getTotal',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
@@ -254,7 +254,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
         $this->container['firewallAssociatedSubnets'] = isset($data['firewallAssociatedSubnets']) ? $data['firewallAssociatedSubnets'] : null;
         $this->container['er'] = isset($data['er']) ? $data['er'] : null;
         $this->container['inspectionVpc'] = isset($data['inspectionVpc']) ? $data['inspectionVpc'] : null;
-        $this->container['protectedInfos'] = isset($data['protectedInfos']) ? $data['protectedInfos'] : null;
+        $this->container['protectInfos'] = isset($data['protectInfos']) ? $data['protectInfos'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
@@ -451,26 +451,26 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets protectedInfos
+    * Gets protectInfos
     *  东西向防护资源信息
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\EwProtectResourceInfo[]|null
     */
-    public function getProtectedInfos()
+    public function getProtectInfos()
     {
-        return $this->container['protectedInfos'];
+        return $this->container['protectInfos'];
     }
 
     /**
-    * Sets protectedInfos
+    * Sets protectInfos
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\EwProtectResourceInfo[]|null $protectedInfos 东西向防护资源信息
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\EwProtectResourceInfo[]|null $protectInfos 东西向防护资源信息
     *
     * @return $this
     */
-    public function setProtectedInfos($protectedInfos)
+    public function setProtectInfos($protectInfos)
     {
-        $this->container['protectedInfos'] = $protectedInfos;
+        $this->container['protectInfos'] = $protectInfos;
         return $this;
     }
 

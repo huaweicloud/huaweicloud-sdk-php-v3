@@ -36,6 +36,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
+    * type  规则type，0：互联网规则，1：vpc规则，2nat规则
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'longConnectEnable' => 'int',
             'source' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto',
             'destination' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto',
-            'service' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDto'
+            'service' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDto',
+            'type' => 'int'
     ];
 
     /**
@@ -76,6 +78,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
+    * type  规则type，0：互联网规则，1：vpc规则，2nat规则
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
         'longConnectEnable' => 'int32',
         'source' => null,
         'destination' => null,
-        'service' => null
+        'service' => null,
+        'type' => 'int32'
     ];
 
     /**
@@ -137,6 +141,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
+    * type  规则type，0：互联网规则，1：vpc规则，2nat规则
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'longConnectEnable' => 'long_connect_enable',
             'source' => 'source',
             'destination' => 'destination',
-            'service' => 'service'
+            'service' => 'service',
+            'type' => 'type'
     ];
 
     /**
@@ -177,6 +183,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
+    * type  规则type，0：互联网规则，1：vpc规则，2nat规则
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'longConnectEnable' => 'setLongConnectEnable',
             'source' => 'setSource',
             'destination' => 'setDestination',
-            'service' => 'setService'
+            'service' => 'setService',
+            'type' => 'setType'
     ];
 
     /**
@@ -217,6 +225,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * source  source
     * destination  destination
     * service  service
+    * type  规则type，0：互联网规则，1：vpc规则，2nat规则
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'longConnectEnable' => 'getLongConnectEnable',
             'source' => 'getSource',
             'destination' => 'getDestination',
-            'service' => 'getService'
+            'service' => 'getService',
+            'type' => 'getType'
     ];
 
     /**
@@ -281,6 +291,9 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     }
     const DIRECTION_0 = 0;
     const DIRECTION_1 = 1;
+    const TYPE_0 = 0;
+    const TYPE_1 = 1;
+    const TYPE_2 = 2;
     
 
     /**
@@ -293,6 +306,20 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
         return [
             self::DIRECTION_0,
             self::DIRECTION_1,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_0,
+            self::TYPE_1,
+            self::TYPE_2,
         ];
     }
 
@@ -328,6 +355,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
         $this->container['service'] = isset($data['service']) ? $data['service'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -345,6 +373,14 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['direction']) && !in_array($this->container['direction'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'direction', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -744,6 +780,30 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     public function setService($service)
     {
         $this->container['service'] = $service;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  规则type，0：互联网规则，1：vpc规则，2nat规则
+    *
+    * @return int|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param int|null $type 规则type，0：互联网规则，1：vpc规则，2nat规则
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

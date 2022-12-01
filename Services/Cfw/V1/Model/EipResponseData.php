@@ -7,9 +7,8 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
+class EipResponseData implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,38 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListServiceSetDetailsResponse';
+    protected static $openAPIModelName = 'EipResponseData';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  data
+    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * total  总数
+    * records  eip资源记录
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto'
+            'limit' => 'int',
+            'offset' => 'int',
+            'total' => 'int',
+            'records' => '\HuaweiCloud\SDK\Cfw\V1\Model\EipResource[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  data
+    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * total  总数
+    * records  eip资源记录
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'data' => null
+        'limit' => null,
+        'offset' => null,
+        'total' => null,
+        'records' => null
     ];
 
     /**
@@ -62,32 +73,50 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  data
+    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * total  总数
+    * records  eip资源记录
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'data' => 'data'
+            'limit' => 'limit',
+            'offset' => 'offset',
+            'total' => 'total',
+            'records' => 'records'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  data
+    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * total  总数
+    * records  eip资源记录
     *
     * @var string[]
     */
     protected static $setters = [
-            'data' => 'setData'
+            'limit' => 'setLimit',
+            'offset' => 'setOffset',
+            'total' => 'setTotal',
+            'records' => 'setRecords'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  data
+    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * total  总数
+    * records  eip资源记录
     *
     * @var string[]
     */
     protected static $getters = [
-            'data' => 'getData'
+            'limit' => 'getLimit',
+            'offset' => 'getOffset',
+            'total' => 'getTotal',
+            'records' => 'getRecords'
     ];
 
     /**
@@ -148,7 +177,10 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['records'] = isset($data['records']) ? $data['records'] : null;
     }
 
     /**
@@ -174,26 +206,98 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets data
-    *  data
+    * Gets limit
+    *  每页显示个数
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto|null
+    * @return int|null
     */
-    public function getData()
+    public function getLimit()
     {
-        return $this->container['data'];
+        return $this->container['limit'];
     }
 
     /**
-    * Sets data
+    * Sets limit
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto|null $data data
+    * @param int|null $limit 每页显示个数
     *
     * @return $this
     */
-    public function setData($data)
+    public function setLimit($limit)
     {
-        $this->container['data'] = $data;
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets total
+    *  总数
+    *
+    * @return int|null
+    */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+    * Sets total
+    *
+    * @param int|null $total 总数
+    *
+    * @return $this
+    */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+        return $this;
+    }
+
+    /**
+    * Gets records
+    *  eip资源记录
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\EipResource[]|null
+    */
+    public function getRecords()
+    {
+        return $this->container['records'];
+    }
+
+    /**
+    * Sets records
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\EipResource[]|null $records eip资源记录
+    *
+    * @return $this
+    */
+    public function setRecords($records)
+    {
+        $this->container['records'] = $records;
         return $this;
     }
 

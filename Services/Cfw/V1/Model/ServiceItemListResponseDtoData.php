@@ -23,6 +23,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * total  记录的总数
+    * setId  服务组id
     * records  记录
     *
     * @var string[]
@@ -31,6 +32,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'limit' => 'int',
             'total' => 'int',
+            'setId' => 'string',
             'records' => '\HuaweiCloud\SDK\Cfw\V1\Model\ServiceItemListResponseDtoDataRecords[]'
     ];
 
@@ -39,6 +41,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * total  记录的总数
+    * setId  服务组id
     * records  记录
     *
     * @var string[]
@@ -47,6 +50,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
         'offset' => null,
         'limit' => null,
         'total' => null,
+        'setId' => null,
         'records' => null
     ];
 
@@ -76,6 +80,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * total  记录的总数
+    * setId  服务组id
     * records  记录
     *
     * @var string[]
@@ -84,6 +89,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'limit' => 'limit',
             'total' => 'total',
+            'setId' => 'set_id',
             'records' => 'records'
     ];
 
@@ -92,6 +98,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * total  记录的总数
+    * setId  服务组id
     * records  记录
     *
     * @var string[]
@@ -100,6 +107,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'total' => 'setTotal',
+            'setId' => 'setSetId',
             'records' => 'setRecords'
     ];
 
@@ -108,6 +116,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * total  记录的总数
+    * setId  服务组id
     * records  记录
     *
     * @var string[]
@@ -116,6 +125,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'total' => 'getTotal',
+            'setId' => 'getSetId',
             'records' => 'getRecords'
     ];
 
@@ -180,6 +190,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['setId'] = isset($data['setId']) ? $data['setId'] : null;
         $this->container['records'] = isset($data['records']) ? $data['records'] : null;
     }
 
@@ -274,6 +285,30 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
     public function setTotal($total)
     {
         $this->container['total'] = $total;
+        return $this;
+    }
+
+    /**
+    * Gets setId
+    *  服务组id
+    *
+    * @return string|null
+    */
+    public function getSetId()
+    {
+        return $this->container['setId'];
+    }
+
+    /**
+    * Sets setId
+    *
+    * @param string|null $setId 服务组id
+    *
+    * @return $this
+    */
+    public function setSetId($setId)
+    {
+        $this->container['setId'] = $setId;
         return $this;
     }
 

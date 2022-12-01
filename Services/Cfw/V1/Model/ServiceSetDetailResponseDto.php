@@ -7,9 +7,8 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
+class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,34 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListServiceSetDetailsResponse';
+    protected static $openAPIModelName = 'ServiceSetDetailResponseDto';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  data
+    * id  服务组id
+    * name  服务组名称
+    * description  服务组描述信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto'
+            'id' => 'string',
+            'name' => 'string',
+            'description' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  data
+    * id  服务组id
+    * name  服务组名称
+    * description  服务组描述信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'data' => null
+        'id' => null,
+        'name' => null,
+        'description' => null
     ];
 
     /**
@@ -62,32 +69,44 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  data
+    * id  服务组id
+    * name  服务组名称
+    * description  服务组描述信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'data' => 'data'
+            'id' => 'id',
+            'name' => 'name',
+            'description' => 'description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  data
+    * id  服务组id
+    * name  服务组名称
+    * description  服务组描述信息
     *
     * @var string[]
     */
     protected static $setters = [
-            'data' => 'setData'
+            'id' => 'setId',
+            'name' => 'setName',
+            'description' => 'setDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  data
+    * id  服务组id
+    * name  服务组名称
+    * description  服务组描述信息
     *
     * @var string[]
     */
     protected static $getters = [
-            'data' => 'getData'
+            'id' => 'getId',
+            'name' => 'getName',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -148,7 +167,9 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -159,6 +180,21 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 255)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
+            }
+            if ((mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -174,26 +210,74 @@ class ListServiceSetDetailsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets data
-    *  data
+    * Gets id
+    *  服务组id
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto|null
+    * @return string|null
     */
-    public function getData()
+    public function getId()
     {
-        return $this->container['data'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets data
+    * Sets id
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetDetailResponseDto|null $data data
+    * @param string|null $id 服务组id
     *
     * @return $this
     */
-    public function setData($data)
+    public function setId($id)
     {
-        $this->container['data'] = $data;
+        $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  服务组名称
+    *
+    * @return string
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string $name 服务组名称
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  服务组描述信息
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 服务组描述信息
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 
