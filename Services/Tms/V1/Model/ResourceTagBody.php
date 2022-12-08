@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Aos\V1\Model;
+namespace HuaweiCloud\SDK\Tms\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ExecutorPrimitiveTypeHolder implements ModelInterface, ArrayAccess
+class ResourceTagBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class ExecutorPrimitiveTypeHolder implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ExecutorPrimitiveTypeHolder';
+    protected static $openAPIModelName = 'ResourceTagBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * executor  执行操作者的名字，将用做未来的审计工作
+    * resourceId  资源ID
+    * resourceType  资源类型
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'executor' => 'string'
+            'resourceId' => 'string',
+            'resourceType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * executor  执行操作者的名字，将用做未来的审计工作
+    * resourceId  资源ID
+    * resourceType  资源类型
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'executor' => null
+        'resourceId' => null,
+        'resourceType' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class ExecutorPrimitiveTypeHolder implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * executor  执行操作者的名字，将用做未来的审计工作
+    * resourceId  资源ID
+    * resourceType  资源类型
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'executor' => 'executor'
+            'resourceId' => 'resource_id',
+            'resourceType' => 'resource_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * executor  执行操作者的名字，将用做未来的审计工作
+    * resourceId  资源ID
+    * resourceType  资源类型
     *
     * @var string[]
     */
     protected static $setters = [
-            'executor' => 'setExecutor'
+            'resourceId' => 'setResourceId',
+            'resourceType' => 'setResourceType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * executor  执行操作者的名字，将用做未来的审计工作
+    * resourceId  资源ID
+    * resourceType  资源类型
     *
     * @var string[]
     */
     protected static $getters = [
-            'executor' => 'getExecutor'
+            'resourceId' => 'getResourceId',
+            'resourceType' => 'getResourceType'
     ];
 
     /**
@@ -147,7 +157,8 @@ class ExecutorPrimitiveTypeHolder implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['executor'] = isset($data['executor']) ? $data['executor'] : null;
+        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
+        $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
     }
 
     /**
@@ -158,15 +169,12 @@ class ExecutorPrimitiveTypeHolder implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) > 32)) {
-                $invalidProperties[] = "invalid value for 'executor', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) < 1)) {
-                $invalidProperties[] = "invalid value for 'executor', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['executor']) && !preg_match("/^[A-Za-z0-9]+$/", $this->container['executor'])) {
-                $invalidProperties[] = "invalid value for 'executor', must be conform to the pattern /^[A-Za-z0-9]+$/.";
-            }
+        if ($this->container['resourceId'] === null) {
+            $invalidProperties[] = "'resourceId' can't be null";
+        }
+        if ($this->container['resourceType'] === null) {
+            $invalidProperties[] = "'resourceType' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -182,26 +190,50 @@ class ExecutorPrimitiveTypeHolder implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets executor
-    *  执行操作者的名字，将用做未来的审计工作
+    * Gets resourceId
+    *  资源ID
     *
-    * @return string|null
+    * @return string
     */
-    public function getExecutor()
+    public function getResourceId()
     {
-        return $this->container['executor'];
+        return $this->container['resourceId'];
     }
 
     /**
-    * Sets executor
+    * Sets resourceId
     *
-    * @param string|null $executor 执行操作者的名字，将用做未来的审计工作
+    * @param string $resourceId 资源ID
     *
     * @return $this
     */
-    public function setExecutor($executor)
+    public function setResourceId($resourceId)
     {
-        $this->container['executor'] = $executor;
+        $this->container['resourceId'] = $resourceId;
+        return $this;
+    }
+
+    /**
+    * Gets resourceType
+    *  资源类型
+    *
+    * @return string
+    */
+    public function getResourceType()
+    {
+        return $this->container['resourceType'];
+    }
+
+    /**
+    * Sets resourceType
+    *
+    * @param string $resourceType 资源类型
+    *
+    * @return $this
+    */
+    public function setResourceType($resourceType)
+    {
+        $this->container['resourceType'] = $resourceType;
         return $this;
     }
 

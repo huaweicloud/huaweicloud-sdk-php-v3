@@ -20,7 +20,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  堆栈输出的name，由用户自己在模板中定义
+    * name  资源栈输出的name，由用户自己在模板中定义
     * description  描述
     * type  输出的类型
     * value  输出的值(json字符串)
@@ -38,7 +38,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  堆栈输出的name，由用户自己在模板中定义
+    * name  资源栈输出的name，由用户自己在模板中定义
     * description  描述
     * type  输出的类型
     * value  输出的值(json字符串)
@@ -77,7 +77,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  堆栈输出的name，由用户自己在模板中定义
+    * name  资源栈输出的name，由用户自己在模板中定义
     * description  描述
     * type  输出的类型
     * value  输出的值(json字符串)
@@ -95,7 +95,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  堆栈输出的name，由用户自己在模板中定义
+    * name  资源栈输出的name，由用户自己在模板中定义
     * description  描述
     * type  输出的类型
     * value  输出的值(json字符串)
@@ -113,7 +113,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  堆栈输出的name，由用户自己在模板中定义
+    * name  资源栈输出的name，由用户自己在模板中定义
     * description  描述
     * type  输出的类型
     * value  输出的值(json字符串)
@@ -218,7 +218,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  堆栈输出的name，由用户自己在模板中定义
+    *  资源栈输出的name，由用户自己在模板中定义
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 堆栈输出的name，由用户自己在模板中定义
+    * @param string|null $name 资源栈输出的name，由用户自己在模板中定义
     *
     * @return $this
     */

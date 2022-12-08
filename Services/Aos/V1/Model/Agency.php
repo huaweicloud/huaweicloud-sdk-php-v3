@@ -21,7 +21,7 @@ class Agency implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * providerName  用户使用的provider的名字。如果用户给与的provider_name含有重复的值，则返回400
-    * agencyName  对应provider所使用的IAM委托名称名称，RF会使用此委托的权限去访问、创建对应provider的资源
+    * agencyName  对应provider所使用的IAM委托名称，资源编排服务会使用此委托的权限去访问、创建对应provider的资源
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class Agency implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * providerName  用户使用的provider的名字。如果用户给与的provider_name含有重复的值，则返回400
-    * agencyName  对应provider所使用的IAM委托名称名称，RF会使用此委托的权限去访问、创建对应provider的资源
+    * agencyName  对应provider所使用的IAM委托名称，资源编排服务会使用此委托的权限去访问、创建对应provider的资源
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class Agency implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * providerName  用户使用的provider的名字。如果用户给与的provider_name含有重复的值，则返回400
-    * agencyName  对应provider所使用的IAM委托名称名称，RF会使用此委托的权限去访问、创建对应provider的资源
+    * agencyName  对应provider所使用的IAM委托名称，资源编排服务会使用此委托的权限去访问、创建对应provider的资源
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class Agency implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * providerName  用户使用的provider的名字。如果用户给与的provider_name含有重复的值，则返回400
-    * agencyName  对应provider所使用的IAM委托名称名称，RF会使用此委托的权限去访问、创建对应provider的资源
+    * agencyName  对应provider所使用的IAM委托名称，资源编排服务会使用此委托的权限去访问、创建对应provider的资源
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class Agency implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * providerName  用户使用的provider的名字。如果用户给与的provider_name含有重复的值，则返回400
-    * agencyName  对应provider所使用的IAM委托名称名称，RF会使用此委托的权限去访问、创建对应provider的资源
+    * agencyName  对应provider所使用的IAM委托名称，资源编排服务会使用此委托的权限去访问、创建对应provider的资源
     *
     * @var string[]
     */
@@ -227,7 +227,7 @@ class Agency implements ModelInterface, ArrayAccess
 
     /**
     * Gets agencyName
-    *  对应provider所使用的IAM委托名称名称，RF会使用此委托的权限去访问、创建对应provider的资源
+    *  对应provider所使用的IAM委托名称，资源编排服务会使用此委托的权限去访问、创建对应provider的资源
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class Agency implements ModelInterface, ArrayAccess
     /**
     * Sets agencyName
     *
-    * @param string $agencyName 对应provider所使用的IAM委托名称名称，RF会使用此委托的权限去访问、创建对应provider的资源
+    * @param string $agencyName 对应provider所使用的IAM委托名称，资源编排服务会使用此委托的权限去访问、创建对应provider的资源
     *
     * @return $this
     */

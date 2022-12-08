@@ -241,7 +241,7 @@ class Client
         if (isset($pathParams)) {
             foreach ($pathParams as $k => $v) {
                 $resourcePath = str_replace(sprintf('{%s}', $k),
-                    urlencode(strval($v)), $resourcePath);
+                    strval($v), $resourcePath);
             }
         }
 

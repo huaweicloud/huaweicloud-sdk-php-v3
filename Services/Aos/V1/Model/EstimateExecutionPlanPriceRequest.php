@@ -23,8 +23,8 @@ class EstimateExecutionPlanPriceRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * executionPlanName  执行计划的名字。
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     * executionPlanId  执行计划ID(uuid)
     *
     * @var string[]
@@ -43,8 +43,8 @@ class EstimateExecutionPlanPriceRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * executionPlanName  执行计划的名字。
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     * executionPlanId  执行计划ID(uuid)
     *
     * @var string[]
@@ -84,8 +84,8 @@ class EstimateExecutionPlanPriceRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * executionPlanName  执行计划的名字。
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     * executionPlanId  执行计划ID(uuid)
     *
     * @var string[]
@@ -104,8 +104,8 @@ class EstimateExecutionPlanPriceRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * executionPlanName  执行计划的名字。
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     * executionPlanId  执行计划ID(uuid)
     *
     * @var string[]
@@ -124,8 +124,8 @@ class EstimateExecutionPlanPriceRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * executionPlanName  执行计划的名字。
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     * executionPlanId  执行计划ID(uuid)
     *
     * @var string[]
@@ -367,7 +367,7 @@ class EstimateExecutionPlanPriceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets executionPlanName
-    *  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
+    *  执行计划的名字。
     *
     * @return string
     */
@@ -379,7 +379,7 @@ class EstimateExecutionPlanPriceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets executionPlanName
     *
-    * @param string $executionPlanName 执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
+    * @param string $executionPlanName 执行计划的名字。
     *
     * @return $this
     */
@@ -391,7 +391,7 @@ class EstimateExecutionPlanPriceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets stackId
-    *  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    *  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @return string|null
     */
@@ -403,7 +403,7 @@ class EstimateExecutionPlanPriceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets stackId
     *
-    * @param string|null $stackId 用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * @param string|null $stackId 用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @return $this
     */

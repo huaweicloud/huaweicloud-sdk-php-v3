@@ -171,9 +171,86 @@ class AosClient extends Client
     }
 
     /**
-     * 删除堆栈
+     * 此命令用于删除已有的执行计划(execution plan)
      *
-     * 删除堆栈
+     * 此命令用于删除已有的执行计划(execution plan)
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteExecutionPlan($request)
+    {
+        return $this->deleteExecutionPlanWithHttpInfo($request);
+    }
+
+    public function deleteExecutionPlanWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/stacks/{stack_name}/execution-plans/{execution_plan_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['stackId'] !== null) {
+            $queryParams['stack_id'] = $localVarParams['stackId'];
+        }
+        if ($localVarParams['executionPlanId'] !== null) {
+            $queryParams['execution_plan_id'] = $localVarParams['executionPlanId'];
+        }
+        if ($localVarParams['clientRequestId'] !== null) {
+            $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['stackName'] !== null) {
+            $pathParams['stack_name'] = $localVarParams['stackName'];
+        }
+        if ($localVarParams['executionPlanName'] !== null) {
+            $pathParams['execution_plan_name'] = $localVarParams['executionPlanName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aos\V1\Model\DeleteExecutionPlanResponse',
+            $requestType='\HuaweiCloud\SDK\Aos\V1\Model\DeleteExecutionPlanRequest');
+    }
+
+    /**
+     * 删除资源栈
+     *
+     * 删除资源栈
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -203,9 +280,6 @@ class AosClient extends Client
         }
         if ($localVarParams['stackId'] !== null) {
             $queryParams['stack_id'] = $localVarParams['stackId'];
-        }
-        if ($localVarParams['executor'] !== null) {
-            $queryParams['executor'] = $localVarParams['executor'];
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
@@ -242,6 +316,83 @@ class AosClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Aos\V1\Model\DeleteStackResponse',
             $requestType='\HuaweiCloud\SDK\Aos\V1\Model\DeleteStackRequest');
+    }
+
+    /**
+     * 描述执行计划当前的状态，返回执行计划的元数据
+     *
+     * 描述执行计划当前的状态，返回执行计划的元数据
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function describeExecutionPlan($request)
+    {
+        return $this->describeExecutionPlanWithHttpInfo($request);
+    }
+
+    public function describeExecutionPlanWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/stacks/{stack_name}/execution-plans/{execution_plan_name}/metadata';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['stackId'] !== null) {
+            $queryParams['stack_id'] = $localVarParams['stackId'];
+        }
+        if ($localVarParams['executionPlanId'] !== null) {
+            $queryParams['execution_plan_id'] = $localVarParams['executionPlanId'];
+        }
+        if ($localVarParams['clientRequestId'] !== null) {
+            $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['stackName'] !== null) {
+            $pathParams['stack_name'] = $localVarParams['stackName'];
+        }
+        if ($localVarParams['executionPlanName'] !== null) {
+            $pathParams['execution_plan_name'] = $localVarParams['executionPlanName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aos\V1\Model\DescribeExecutionPlanResponse',
+            $requestType='\HuaweiCloud\SDK\Aos\V1\Model\DescribeExecutionPlanRequest');
     }
 
     /**
@@ -322,9 +473,157 @@ class AosClient extends Client
     }
 
     /**
-     * 获取堆栈模板
+     * 此接口用于获取执行计划的详细内容
      *
-     * 获取堆栈当前使用的模板
+     * 此接口用于获取执行计划的详细内容
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getExecutionPlan($request)
+    {
+        return $this->getExecutionPlanWithHttpInfo($request);
+    }
+
+    public function getExecutionPlanWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/stacks/{stack_name}/execution-plans/{execution_plan_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['stackId'] !== null) {
+            $queryParams['stack_id'] = $localVarParams['stackId'];
+        }
+        if ($localVarParams['executionPlanId'] !== null) {
+            $queryParams['execution_plan_id'] = $localVarParams['executionPlanId'];
+        }
+        if ($localVarParams['clientRequestId'] !== null) {
+            $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['stackName'] !== null) {
+            $pathParams['stack_name'] = $localVarParams['stackName'];
+        }
+        if ($localVarParams['executionPlanName'] !== null) {
+            $pathParams['execution_plan_name'] = $localVarParams['executionPlanName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aos\V1\Model\GetExecutionPlanResponse',
+            $requestType='\HuaweiCloud\SDK\Aos\V1\Model\GetExecutionPlanRequest');
+    }
+
+    /**
+     * 描述栈的状态，返回栈的元数据
+     *
+     * 描述栈的状态，返回栈的元数据
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getStackMetadata($request)
+    {
+        return $this->getStackMetadataWithHttpInfo($request);
+    }
+
+    public function getStackMetadataWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/stacks/{stack_name}/metadata';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['stackId'] !== null) {
+            $queryParams['stack_id'] = $localVarParams['stackId'];
+        }
+        if ($localVarParams['clientRequestId'] !== null) {
+            $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['stackName'] !== null) {
+            $pathParams['stack_name'] = $localVarParams['stackName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aos\V1\Model\GetStackMetadataResponse',
+            $requestType='\HuaweiCloud\SDK\Aos\V1\Model\GetStackMetadataRequest');
+    }
+
+    /**
+     * 获取资源栈模板
+     *
+     * 获取资源栈当前使用的模板
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -354,9 +653,6 @@ class AosClient extends Client
         }
         if ($localVarParams['stackId'] !== null) {
             $queryParams['stack_id'] = $localVarParams['stackId'];
-        }
-        if ($localVarParams['executor'] !== null) {
-            $queryParams['executor'] = $localVarParams['executor'];
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
@@ -425,9 +721,6 @@ class AosClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['executor'] !== null) {
-            $queryParams['executor'] = $localVarParams['executor'];
         }
         if ($localVarParams['stackId'] !== null) {
             $queryParams['stack_id'] = $localVarParams['stackId'];
@@ -506,15 +799,6 @@ class AosClient extends Client
         if ($localVarParams['deploymentId'] !== null) {
             $queryParams['deployment_id'] = $localVarParams['deploymentId'];
         }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['marker'] !== null) {
-            $queryParams['marker'] = $localVarParams['marker'];
-        }
-        if ($localVarParams['executor'] !== null) {
-            $queryParams['executor'] = $localVarParams['executor'];
-        }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
         }
@@ -553,9 +837,9 @@ class AosClient extends Client
     }
 
     /**
-     * 列举堆栈的输出
+     * 列举资源栈的输出
      *
-     * 列举堆栈的输出
+     * 列举资源栈的输出
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -585,15 +869,6 @@ class AosClient extends Client
         }
         if ($localVarParams['stackId'] !== null) {
             $queryParams['stack_id'] = $localVarParams['stackId'];
-        }
-        if ($localVarParams['executor'] !== null) {
-            $queryParams['executor'] = $localVarParams['executor'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['marker'] !== null) {
-            $queryParams['marker'] = $localVarParams['marker'];
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
@@ -633,9 +908,9 @@ class AosClient extends Client
     }
 
     /**
-     * 获取堆栈的资源列表
+     * 获取资源栈的资源列表
      *
-     * 获取堆栈的资源列表，可以获取整个栈从生成到当前时间点的所有状态
+     * 获取资源栈的资源列表，可以获取整个栈从生成到当前时间点的所有状态
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -665,9 +940,6 @@ class AosClient extends Client
         }
         if ($localVarParams['stackId'] !== null) {
             $queryParams['stack_id'] = $localVarParams['stackId'];
-        }
-        if ($localVarParams['executor'] !== null) {
-            $queryParams['executor'] = $localVarParams['executor'];
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
@@ -930,7 +1202,7 @@ class AosClient extends Client
      * 
      * * 此API为全量API，即用户每次部署都需要给予所想要使用的template、vars的全量
      * 
-     * * 当触发的部署失败时，如果堆栈开启了自动回滚，会触发自动回滚的流程，否则就会停留在部署失败时的状态
+     * * 当触发的部署失败时，如果资源栈开启了自动回滚，会触发自动回滚的流程，否则就会停留在部署失败时的状态
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -999,13 +1271,13 @@ class AosClient extends Client
     }
 
     /**
-     * 列举堆栈
+     * 列举资源栈
      *
-     * ListStacks 列举当前局点下用户所有的堆栈
+     * ListStacks 列举当前局点下用户所有的资源栈
      * 
      * * 默认按照生成时间排序，最早生成的在最前
-     * * 注意：目前暂时返回全量堆栈信息，即不支持分页
-     * * 如果没有任何堆栈，则返回空list
+     * * 注意：目前暂时返回全量资源栈信息，即不支持分页
+     * * 如果没有任何资源栈，则返回空list
      * 
      * ListStacks返回的只有摘要信息（具体摘要信息见ListStacksResponseBody），如果用户需要详细的资源栈元数据请调用GetStackMetadata
      * 
@@ -1034,9 +1306,6 @@ class AosClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['executor'] !== null) {
-            $queryParams['executor'] = $localVarParams['executor'];
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];

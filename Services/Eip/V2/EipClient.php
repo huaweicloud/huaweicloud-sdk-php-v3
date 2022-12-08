@@ -277,6 +277,65 @@ class EipClient extends Client
     }
 
     /**
+     * 查询带宽加油包列表
+     *
+     * 查询带宽加油包列表信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBandwidthPkg($request)
+    {
+        return $this->listBandwidthPkgWithHttpInfo($request);
+    }
+
+    public function listBandwidthPkgWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/bandwidthpkgs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V2\Model\ListBandwidthPkgResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ListBandwidthPkgRequest');
+    }
+
+    /**
      * 查询带宽列表
      *
      * 查询带宽列表。
@@ -732,6 +791,130 @@ class EipClient extends Client
     }
 
     /**
+     * 批量创建弹性公网IP
+     *
+     * 批量创建弹性公网IP
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreatePublicips($request)
+    {
+        return $this->batchCreatePublicipsWithHttpInfo($request);
+    }
+
+    public function batchCreatePublicipsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/batchpublicips';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V2\Model\BatchCreatePublicipsResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V2\Model\BatchCreatePublicipsRequest');
+    }
+
+    /**
+     * 批量删除弹性公网IP
+     *
+     * 批量删除弹性公网IP
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeletePublicIp($request)
+    {
+        return $this->batchDeletePublicIpWithHttpInfo($request);
+    }
+
+    public function batchDeletePublicIpWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/batchpublicips';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V2\Model\BatchDeletePublicIpResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V2\Model\BatchDeletePublicIpRequest');
+    }
+
+    /**
      * 批量删除弹性公网IP资源标签
      *
      * 为指定的弹性公网IP资源实例批量删除标签。
@@ -794,6 +977,186 @@ class EipClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V2\Model\BatchDeletePublicipTagsResponse',
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\BatchDeletePublicipTagsRequest');
+    }
+
+    /**
+     * 批量解绑弹性公网IP
+     *
+     * 批量解绑弹性公网IP
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDisassociatePublicips($request)
+    {
+        return $this->batchDisassociatePublicipsWithHttpInfo($request);
+    }
+
+    public function batchDisassociatePublicipsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/batchpublicips';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PATCH',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V2\Model\BatchDisassociatePublicipsResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V2\Model\BatchDisassociatePublicipsRequest');
+    }
+
+    /**
+     * 查询PublicIp数量
+     *
+     * 查询PublicIp数量
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function countPublicIp($request)
+    {
+        return $this->countPublicIpWithHttpInfo($request);
+    }
+
+    public function countPublicIpWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/elasticips';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V2\Model\CountPublicIpResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V2\Model\CountPublicIpRequest');
+    }
+
+    /**
+     * 查询PublicIp实例数
+     *
+     * 查询PublicIp实例数
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function countPublicIpInstance($request)
+    {
+        return $this->countPublicIpInstanceWithHttpInfo($request);
+    }
+
+    public function countPublicIpInstanceWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/publicip/instances';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V2\Model\CountPublicIpInstanceResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V2\Model\CountPublicIpInstanceRequest');
     }
 
     /**
@@ -1318,6 +1681,65 @@ class EipClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V2\Model\ListPublicipsByTagsResponse',
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ListPublicipsByTagsRequest');
+    }
+
+    /**
+     * 查询PublicIp类型
+     *
+     * 查询PublicIp类型
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showPublicIpType($request)
+    {
+        return $this->showPublicIpTypeWithHttpInfo($request);
+    }
+
+    public function showPublicIpTypeWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/publicip_types';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V2\Model\ShowPublicIpTypeResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ShowPublicIpTypeRequest');
     }
 
     /**

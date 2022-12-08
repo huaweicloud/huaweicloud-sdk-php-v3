@@ -20,30 +20,26 @@ class ApplyExecutionPlanRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * stackId  堆栈id
+    * stackId  资源栈id
     * executionPlanId  执行计划Id，在domain_id+region+project_id+stack_id下应唯一
-    * executor  执行操作者的名字，用于审计工作
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'stackId' => 'string',
-            'executionPlanId' => 'string',
-            'executor' => 'string'
+            'executionPlanId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * stackId  堆栈id
+    * stackId  资源栈id
     * executionPlanId  执行计划Id，在domain_id+region+project_id+stack_id下应唯一
-    * executor  执行操作者的名字，用于审计工作
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'stackId' => null,
-        'executionPlanId' => null,
-        'executor' => null
+        'executionPlanId' => null
     ];
 
     /**
@@ -69,44 +65,38 @@ class ApplyExecutionPlanRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * stackId  堆栈id
+    * stackId  资源栈id
     * executionPlanId  执行计划Id，在domain_id+region+project_id+stack_id下应唯一
-    * executor  执行操作者的名字，用于审计工作
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'stackId' => 'stack_id',
-            'executionPlanId' => 'execution_plan_id',
-            'executor' => 'executor'
+            'executionPlanId' => 'execution_plan_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * stackId  堆栈id
+    * stackId  资源栈id
     * executionPlanId  执行计划Id，在domain_id+region+project_id+stack_id下应唯一
-    * executor  执行操作者的名字，用于审计工作
     *
     * @var string[]
     */
     protected static $setters = [
             'stackId' => 'setStackId',
-            'executionPlanId' => 'setExecutionPlanId',
-            'executor' => 'setExecutor'
+            'executionPlanId' => 'setExecutionPlanId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * stackId  堆栈id
+    * stackId  资源栈id
     * executionPlanId  执行计划Id，在domain_id+region+project_id+stack_id下应唯一
-    * executor  执行操作者的名字，用于审计工作
     *
     * @var string[]
     */
     protected static $getters = [
             'stackId' => 'getStackId',
-            'executionPlanId' => 'getExecutionPlanId',
-            'executor' => 'getExecutor'
+            'executionPlanId' => 'getExecutionPlanId'
     ];
 
     /**
@@ -169,7 +159,6 @@ class ApplyExecutionPlanRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['stackId'] = isset($data['stackId']) ? $data['stackId'] : null;
         $this->container['executionPlanId'] = isset($data['executionPlanId']) ? $data['executionPlanId'] : null;
-        $this->container['executor'] = isset($data['executor']) ? $data['executor'] : null;
     }
 
     /**
@@ -198,15 +187,6 @@ class ApplyExecutionPlanRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['executionPlanId']) && !preg_match("/^[a-z0-9]+[a-z0-9-]*$/", $this->container['executionPlanId'])) {
                 $invalidProperties[] = "invalid value for 'executionPlanId', must be conform to the pattern /^[a-z0-9]+[a-z0-9-]*$/.";
             }
-            if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) > 32)) {
-                $invalidProperties[] = "invalid value for 'executor', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) < 1)) {
-                $invalidProperties[] = "invalid value for 'executor', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['executor']) && !preg_match("/^[A-Za-z0-9]+$/", $this->container['executor'])) {
-                $invalidProperties[] = "invalid value for 'executor', must be conform to the pattern /^[A-Za-z0-9]+$/.";
-            }
         return $invalidProperties;
     }
 
@@ -223,7 +203,7 @@ class ApplyExecutionPlanRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets stackId
-    *  堆栈id
+    *  资源栈id
     *
     * @return string|null
     */
@@ -235,7 +215,7 @@ class ApplyExecutionPlanRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets stackId
     *
-    * @param string|null $stackId 堆栈id
+    * @param string|null $stackId 资源栈id
     *
     * @return $this
     */
@@ -266,30 +246,6 @@ class ApplyExecutionPlanRequestBody implements ModelInterface, ArrayAccess
     public function setExecutionPlanId($executionPlanId)
     {
         $this->container['executionPlanId'] = $executionPlanId;
-        return $this;
-    }
-
-    /**
-    * Gets executor
-    *  执行操作者的名字，用于审计工作
-    *
-    * @return string|null
-    */
-    public function getExecutor()
-    {
-        return $this->container['executor'];
-    }
-
-    /**
-    * Sets executor
-    *
-    * @param string|null $executor 执行操作者的名字，用于审计工作
-    *
-    * @return $this
-    */
-    public function setExecutor($executor)
-    {
-        $this->container['executor'] = $executor;
         return $this;
     }
 

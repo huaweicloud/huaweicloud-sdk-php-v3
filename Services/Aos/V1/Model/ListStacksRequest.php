@@ -22,28 +22,24 @@ class ListStacksRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * executor  执行操作者的名字，将用做未来的审计工作。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clientRequestId' => 'string',
-            'projectId' => 'string',
-            'executor' => 'string'
+            'projectId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * executor  执行操作者的名字，将用做未来的审计工作。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clientRequestId' => null,
-        'projectId' => null,
-        'executor' => null
+        'projectId' => null
     ];
 
     /**
@@ -71,42 +67,36 @@ class ListStacksRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * executor  执行操作者的名字，将用做未来的审计工作。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clientRequestId' => 'Client-Request-Id',
-            'projectId' => 'project_id',
-            'executor' => 'executor'
+            'projectId' => 'project_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * executor  执行操作者的名字，将用做未来的审计工作。
     *
     * @var string[]
     */
     protected static $setters = [
             'clientRequestId' => 'setClientRequestId',
-            'projectId' => 'setProjectId',
-            'executor' => 'setExecutor'
+            'projectId' => 'setProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * executor  执行操作者的名字，将用做未来的审计工作。
     *
     * @var string[]
     */
     protected static $getters = [
             'clientRequestId' => 'getClientRequestId',
-            'projectId' => 'getProjectId',
-            'executor' => 'getExecutor'
+            'projectId' => 'getProjectId'
     ];
 
     /**
@@ -169,7 +159,6 @@ class ListStacksRequest implements ModelInterface, ArrayAccess
     {
         $this->container['clientRequestId'] = isset($data['clientRequestId']) ? $data['clientRequestId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['executor'] = isset($data['executor']) ? $data['executor'] : null;
     }
 
     /**
@@ -203,15 +192,6 @@ class ListStacksRequest implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^[A-Za-z0-9-]+$/", $this->container['projectId'])) {
                 $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /^[A-Za-z0-9-]+$/.";
-            }
-            if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) > 32)) {
-                $invalidProperties[] = "invalid value for 'executor', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) < 1)) {
-                $invalidProperties[] = "invalid value for 'executor', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['executor']) && !preg_match("/^[A-Za-z0-9]+$/", $this->container['executor'])) {
-                $invalidProperties[] = "invalid value for 'executor', must be conform to the pattern /^[A-Za-z0-9]+$/.";
             }
         return $invalidProperties;
     }
@@ -272,30 +252,6 @@ class ListStacksRequest implements ModelInterface, ArrayAccess
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
-        return $this;
-    }
-
-    /**
-    * Gets executor
-    *  执行操作者的名字，将用做未来的审计工作。
-    *
-    * @return string|null
-    */
-    public function getExecutor()
-    {
-        return $this->container['executor'];
-    }
-
-    /**
-    * Sets executor
-    *
-    * @param string|null $executor 执行操作者的名字，将用做未来的审计工作。
-    *
-    * @return $this
-    */
-    public function setExecutor($executor)
-    {
-        $this->container['executor'] = $executor;
         return $this;
     }
 

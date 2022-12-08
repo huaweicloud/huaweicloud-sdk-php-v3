@@ -26,7 +26,7 @@ class ListFirewallUsingGetResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\GetFirewallInstanceResponseData'
+            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\GetFirewallInstanceData'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ListFirewallUsingGetResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  data
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\GetFirewallInstanceResponseData|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\GetFirewallInstanceData|null
     */
     public function getData()
     {
@@ -187,7 +187,7 @@ class ListFirewallUsingGetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\GetFirewallInstanceResponseData|null $data data
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\GetFirewallInstanceData|null $data data
     *
     * @return $this
     */

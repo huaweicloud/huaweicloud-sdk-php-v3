@@ -24,10 +24,8 @@ class StackResource implements ModelInterface, ArrayAccess
     * physicalResourceName  资源的物理名称，资源提供服务在资源部署的时候给予
     * logicalResourceName  资源名，是用户在模板中定义的
     * logicalResourceType  资源的类型，是用户在模板中定义的
-    * resourceStatus  此次事件的类型 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `DELETION_SKIPPED`     - 跳过删除。未来我们将支持，用户可以从IaC中删除，但是不真的删除资源本身 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
+    * resourceStatus  此次事件的类型 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `DELETION_SKIPPED`     - 跳过删除。未来我们将支持，用户可以从资源编排服务中删除，但是不真的删除资源本身 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
     * statusMessage  如果是成功状态或执行中状态，则没有信息
-    * createTime  资源的生成时间
-    * updateTime  资源的更新时间
     *
     * @var string[]
     */
@@ -37,9 +35,7 @@ class StackResource implements ModelInterface, ArrayAccess
             'logicalResourceName' => 'string',
             'logicalResourceType' => 'string',
             'resourceStatus' => 'string',
-            'statusMessage' => 'string',
-            'createTime' => 'string',
-            'updateTime' => 'string'
+            'statusMessage' => 'string'
     ];
 
     /**
@@ -48,10 +44,8 @@ class StackResource implements ModelInterface, ArrayAccess
     * physicalResourceName  资源的物理名称，资源提供服务在资源部署的时候给予
     * logicalResourceName  资源名，是用户在模板中定义的
     * logicalResourceType  资源的类型，是用户在模板中定义的
-    * resourceStatus  此次事件的类型 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `DELETION_SKIPPED`     - 跳过删除。未来我们将支持，用户可以从IaC中删除，但是不真的删除资源本身 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
+    * resourceStatus  此次事件的类型 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `DELETION_SKIPPED`     - 跳过删除。未来我们将支持，用户可以从资源编排服务中删除，但是不真的删除资源本身 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
     * statusMessage  如果是成功状态或执行中状态，则没有信息
-    * createTime  资源的生成时间
-    * updateTime  资源的更新时间
     *
     * @var string[]
     */
@@ -61,9 +55,7 @@ class StackResource implements ModelInterface, ArrayAccess
         'logicalResourceName' => null,
         'logicalResourceType' => null,
         'resourceStatus' => null,
-        'statusMessage' => null,
-        'createTime' => null,
-        'updateTime' => null
+        'statusMessage' => null
     ];
 
     /**
@@ -93,10 +85,8 @@ class StackResource implements ModelInterface, ArrayAccess
     * physicalResourceName  资源的物理名称，资源提供服务在资源部署的时候给予
     * logicalResourceName  资源名，是用户在模板中定义的
     * logicalResourceType  资源的类型，是用户在模板中定义的
-    * resourceStatus  此次事件的类型 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `DELETION_SKIPPED`     - 跳过删除。未来我们将支持，用户可以从IaC中删除，但是不真的删除资源本身 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
+    * resourceStatus  此次事件的类型 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `DELETION_SKIPPED`     - 跳过删除。未来我们将支持，用户可以从资源编排服务中删除，但是不真的删除资源本身 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
     * statusMessage  如果是成功状态或执行中状态，则没有信息
-    * createTime  资源的生成时间
-    * updateTime  资源的更新时间
     *
     * @var string[]
     */
@@ -106,9 +96,7 @@ class StackResource implements ModelInterface, ArrayAccess
             'logicalResourceName' => 'logical_resource_name',
             'logicalResourceType' => 'logical_resource_type',
             'resourceStatus' => 'resource_status',
-            'statusMessage' => 'status_message',
-            'createTime' => 'create_time',
-            'updateTime' => 'update_time'
+            'statusMessage' => 'status_message'
     ];
 
     /**
@@ -117,10 +105,8 @@ class StackResource implements ModelInterface, ArrayAccess
     * physicalResourceName  资源的物理名称，资源提供服务在资源部署的时候给予
     * logicalResourceName  资源名，是用户在模板中定义的
     * logicalResourceType  资源的类型，是用户在模板中定义的
-    * resourceStatus  此次事件的类型 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `DELETION_SKIPPED`     - 跳过删除。未来我们将支持，用户可以从IaC中删除，但是不真的删除资源本身 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
+    * resourceStatus  此次事件的类型 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `DELETION_SKIPPED`     - 跳过删除。未来我们将支持，用户可以从资源编排服务中删除，但是不真的删除资源本身 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
     * statusMessage  如果是成功状态或执行中状态，则没有信息
-    * createTime  资源的生成时间
-    * updateTime  资源的更新时间
     *
     * @var string[]
     */
@@ -130,9 +116,7 @@ class StackResource implements ModelInterface, ArrayAccess
             'logicalResourceName' => 'setLogicalResourceName',
             'logicalResourceType' => 'setLogicalResourceType',
             'resourceStatus' => 'setResourceStatus',
-            'statusMessage' => 'setStatusMessage',
-            'createTime' => 'setCreateTime',
-            'updateTime' => 'setUpdateTime'
+            'statusMessage' => 'setStatusMessage'
     ];
 
     /**
@@ -141,10 +125,8 @@ class StackResource implements ModelInterface, ArrayAccess
     * physicalResourceName  资源的物理名称，资源提供服务在资源部署的时候给予
     * logicalResourceName  资源名，是用户在模板中定义的
     * logicalResourceType  资源的类型，是用户在模板中定义的
-    * resourceStatus  此次事件的类型 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `DELETION_SKIPPED`     - 跳过删除。未来我们将支持，用户可以从IaC中删除，但是不真的删除资源本身 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
+    * resourceStatus  此次事件的类型 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `DELETION_SKIPPED`     - 跳过删除。未来我们将支持，用户可以从资源编排服务中删除，但是不真的删除资源本身 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
     * statusMessage  如果是成功状态或执行中状态，则没有信息
-    * createTime  资源的生成时间
-    * updateTime  资源的更新时间
     *
     * @var string[]
     */
@@ -154,9 +136,7 @@ class StackResource implements ModelInterface, ArrayAccess
             'logicalResourceName' => 'getLogicalResourceName',
             'logicalResourceType' => 'getLogicalResourceType',
             'resourceStatus' => 'getResourceStatus',
-            'statusMessage' => 'getStatusMessage',
-            'createTime' => 'getCreateTime',
-            'updateTime' => 'getUpdateTime'
+            'statusMessage' => 'getStatusMessage'
     ];
 
     /**
@@ -254,8 +234,6 @@ class StackResource implements ModelInterface, ArrayAccess
         $this->container['logicalResourceType'] = isset($data['logicalResourceType']) ? $data['logicalResourceType'] : null;
         $this->container['resourceStatus'] = isset($data['resourceStatus']) ? $data['resourceStatus'] : null;
         $this->container['statusMessage'] = isset($data['statusMessage']) ? $data['statusMessage'] : null;
-        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
-        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }
 
     /**
@@ -386,7 +364,7 @@ class StackResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceStatus
-    *  此次事件的类型 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `DELETION_SKIPPED`     - 跳过删除。未来我们将支持，用户可以从IaC中删除，但是不真的删除资源本身 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
+    *  此次事件的类型 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `DELETION_SKIPPED`     - 跳过删除。未来我们将支持，用户可以从资源编排服务中删除，但是不真的删除资源本身 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
     *
     * @return string|null
     */
@@ -398,7 +376,7 @@ class StackResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceStatus
     *
-    * @param string|null $resourceStatus 此次事件的类型 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `DELETION_SKIPPED`     - 跳过删除。未来我们将支持，用户可以从IaC中删除，但是不真的删除资源本身 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
+    * @param string|null $resourceStatus 此次事件的类型 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `DELETION_SKIPPED`     - 跳过删除。未来我们将支持，用户可以从资源编排服务中删除，但是不真的删除资源本身 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
     *
     * @return $this
     */
@@ -429,54 +407,6 @@ class StackResource implements ModelInterface, ArrayAccess
     public function setStatusMessage($statusMessage)
     {
         $this->container['statusMessage'] = $statusMessage;
-        return $this;
-    }
-
-    /**
-    * Gets createTime
-    *  资源的生成时间
-    *
-    * @return string|null
-    */
-    public function getCreateTime()
-    {
-        return $this->container['createTime'];
-    }
-
-    /**
-    * Sets createTime
-    *
-    * @param string|null $createTime 资源的生成时间
-    *
-    * @return $this
-    */
-    public function setCreateTime($createTime)
-    {
-        $this->container['createTime'] = $createTime;
-        return $this;
-    }
-
-    /**
-    * Gets updateTime
-    *  资源的更新时间
-    *
-    * @return string|null
-    */
-    public function getUpdateTime()
-    {
-        return $this->container['updateTime'];
-    }
-
-    /**
-    * Sets updateTime
-    *
-    * @param string|null $updateTime 资源的更新时间
-    *
-    * @return $this
-    */
-    public function setUpdateTime($updateTime)
-    {
-        $this->container['updateTime'] = $updateTime;
         return $this;
     }
 

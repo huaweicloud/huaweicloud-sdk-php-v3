@@ -21,7 +21,7 @@ class ApplyExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * deploymentId  部署生成的唯一ID，由IAC生成
+    * deploymentId  部署生成的唯一ID，由资源编排服务生成
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ApplyExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * deploymentId  部署生成的唯一ID，由IAC生成
+    * deploymentId  部署生成的唯一ID，由资源编排服务生成
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ApplyExecutionPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * deploymentId  部署生成的唯一ID，由IAC生成
+    * deploymentId  部署生成的唯一ID，由资源编排服务生成
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ApplyExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * deploymentId  部署生成的唯一ID，由IAC生成
+    * deploymentId  部署生成的唯一ID，由资源编排服务生成
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ApplyExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * deploymentId  部署生成的唯一ID，由IAC生成
+    * deploymentId  部署生成的唯一ID，由资源编排服务生成
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ApplyExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deploymentId
-    *  部署生成的唯一ID，由IAC生成
+    *  部署生成的唯一ID，由资源编排服务生成
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class ApplyExecutionPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Sets deploymentId
     *
-    * @param string|null $deploymentId 部署生成的唯一ID，由IAC生成
+    * @param string|null $deploymentId 部署生成的唯一ID，由资源编排服务生成
     *
     * @return $this
     */

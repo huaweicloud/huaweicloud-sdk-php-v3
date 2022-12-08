@@ -22,7 +22,7 @@ class ExecutionPlan implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * stackId  栈的唯一Id,为uuid
     * stackName  栈的名字
-    * executionPlanId  执行计划的唯一Id，由IaC随机生成,为uuid
+    * executionPlanId  执行计划的唯一Id，由资源编排服务随机生成,为uuid
     * executionPlanName  执行计划的名字
     * description  执行计划的描述，此描述为用户在生成时指定
     * createTime  执行计划的生成时间
@@ -48,7 +48,7 @@ class ExecutionPlan implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * stackId  栈的唯一Id,为uuid
     * stackName  栈的名字
-    * executionPlanId  执行计划的唯一Id，由IaC随机生成,为uuid
+    * executionPlanId  执行计划的唯一Id，由资源编排服务随机生成,为uuid
     * executionPlanName  执行计划的名字
     * description  执行计划的描述，此描述为用户在生成时指定
     * createTime  执行计划的生成时间
@@ -95,7 +95,7 @@ class ExecutionPlan implements ModelInterface, ArrayAccess
     * and the value is the original name
     * stackId  栈的唯一Id,为uuid
     * stackName  栈的名字
-    * executionPlanId  执行计划的唯一Id，由IaC随机生成,为uuid
+    * executionPlanId  执行计划的唯一Id，由资源编排服务随机生成,为uuid
     * executionPlanName  执行计划的名字
     * description  执行计划的描述，此描述为用户在生成时指定
     * createTime  执行计划的生成时间
@@ -121,7 +121,7 @@ class ExecutionPlan implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * stackId  栈的唯一Id,为uuid
     * stackName  栈的名字
-    * executionPlanId  执行计划的唯一Id，由IaC随机生成,为uuid
+    * executionPlanId  执行计划的唯一Id，由资源编排服务随机生成,为uuid
     * executionPlanName  执行计划的名字
     * description  执行计划的描述，此描述为用户在生成时指定
     * createTime  执行计划的生成时间
@@ -147,7 +147,7 @@ class ExecutionPlan implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * stackId  栈的唯一Id,为uuid
     * stackName  栈的名字
-    * executionPlanId  执行计划的唯一Id，由IaC随机生成,为uuid
+    * executionPlanId  执行计划的唯一Id，由资源编排服务随机生成,为uuid
     * executionPlanName  执行计划的名字
     * description  执行计划的描述，此描述为用户在生成时指定
     * createTime  执行计划的生成时间
@@ -343,7 +343,7 @@ class ExecutionPlan implements ModelInterface, ArrayAccess
 
     /**
     * Gets executionPlanId
-    *  执行计划的唯一Id，由IaC随机生成,为uuid
+    *  执行计划的唯一Id，由资源编排服务随机生成,为uuid
     *
     * @return string|null
     */
@@ -355,7 +355,7 @@ class ExecutionPlan implements ModelInterface, ArrayAccess
     /**
     * Sets executionPlanId
     *
-    * @param string|null $executionPlanId 执行计划的唯一Id，由IaC随机生成,为uuid
+    * @param string|null $executionPlanId 执行计划的唯一Id，由资源编排服务随机生成,为uuid
     *
     * @return $this
     */

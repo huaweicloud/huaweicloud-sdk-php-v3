@@ -23,7 +23,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
+    * executionPlanName  执行计划的名字。
     * body  body
     *
     * @var string[]
@@ -41,7 +41,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
+    * executionPlanName  执行计划的名字。
     * body  body
     *
     * @var string[]
@@ -80,7 +80,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
+    * executionPlanName  执行计划的名字。
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
+    * executionPlanName  执行计划的名字。
     * body  body
     *
     * @var string[]
@@ -116,7 +116,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
+    * executionPlanName  执行计划的名字。
     * body  body
     *
     * @var string[]
@@ -338,7 +338,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets executionPlanName
-    *  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
+    *  执行计划的名字。
     *
     * @return string
     */
@@ -350,7 +350,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     /**
     * Sets executionPlanName
     *
-    * @param string $executionPlanName 执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
+    * @param string $executionPlanName 执行计划的名字。
     *
     * @return $this
     */

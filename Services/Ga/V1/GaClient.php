@@ -28,7 +28,7 @@ class GaClient extends Client
     /**
      * 创建全球加速器
      *
-     * 创建全球加速器
+     * 创建全球加速器。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -152,7 +152,7 @@ class GaClient extends Client
     /**
      * 查询全球加速器列表
      *
-     * 查询全球加速器列表
+     * 查询全球加速器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -232,7 +232,7 @@ class GaClient extends Client
     /**
      * 查询全球加速器详情
      *
-     * 查询全球加速器详情
+     * 查询全球加速器详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -294,7 +294,7 @@ class GaClient extends Client
     /**
      * 更新全球加速器
      *
-     * 更新全球加速器
+     * 更新全球加速器。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -359,7 +359,7 @@ class GaClient extends Client
     /**
      * 创建终端节点
      *
-     * 创建终端节点
+     * 创建终端节点。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -424,7 +424,7 @@ class GaClient extends Client
     /**
      * 删除终端节点
      *
-     * 删除终端节点
+     * 删除终端节点。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -489,7 +489,7 @@ class GaClient extends Client
     /**
      * 查询终端节点组下终端节点列表
      *
-     * 查询终端节点组下终端节点列表
+     * 查询终端节点组下终端节点列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -566,7 +566,7 @@ class GaClient extends Client
     /**
      * 查询终端节点详情
      *
-     * 查询终端节点详情
+     * 查询终端节点详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -631,7 +631,7 @@ class GaClient extends Client
     /**
      * 更新终端节点
      *
-     * 更新终端节点
+     * 更新终端节点。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -699,7 +699,7 @@ class GaClient extends Client
     /**
      * 创建终端节点组
      *
-     * 创建终端节点组
+     * 创建终端节点组。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -823,7 +823,7 @@ class GaClient extends Client
     /**
      * 查询终端节点组列表
      *
-     * 查询终端节点组列表
+     * 查询终端节点组列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -903,7 +903,7 @@ class GaClient extends Client
     /**
      * 查询终端节点组详情
      *
-     * 查询终端节点组详情
+     * 查询终端节点组详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -965,7 +965,7 @@ class GaClient extends Client
     /**
      * 更新终端节点组
      *
-     * 更新终端节点组
+     * 更新终端节点组。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1030,7 +1030,7 @@ class GaClient extends Client
     /**
      * 创建健康检查
      *
-     * 创建健康检查
+     * 创建健康检查。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1092,7 +1092,7 @@ class GaClient extends Client
     /**
      * 删除健康检查
      *
-     * 删除健康检查
+     * 删除健康检查。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1154,7 +1154,7 @@ class GaClient extends Client
     /**
      * 查询健康检查列表
      *
-     * 查询健康检查列表
+     * 查询健康检查列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1231,7 +1231,7 @@ class GaClient extends Client
     /**
      * 查询健康检查详情
      *
-     * 查询健康检查详情
+     * 查询健康检查详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1293,7 +1293,7 @@ class GaClient extends Client
     /**
      * 更新健康检查
      *
-     * 更新健康检查
+     * 更新健康检查。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1358,7 +1358,7 @@ class GaClient extends Client
     /**
      * 创建监听器
      *
-     * 创建监听器
+     * 创建监听器。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1420,7 +1420,7 @@ class GaClient extends Client
     /**
      * 删除监听器
      *
-     * 删除监听器
+     * 删除监听器。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1482,7 +1482,7 @@ class GaClient extends Client
     /**
      * 查询监听器列表
      *
-     * 查询监听器列表
+     * 查询监听器列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1562,7 +1562,7 @@ class GaClient extends Client
     /**
      * 查询监听器详情
      *
-     * 查询监听器详情
+     * 查询监听器详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1624,7 +1624,7 @@ class GaClient extends Client
     /**
      * 更新监听器
      *
-     * 更新监听器
+     * 更新监听器。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1689,7 +1689,7 @@ class GaClient extends Client
     /**
      * 查询区域列表
      *
-     * 查询区域列表
+     * 查询区域列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1743,6 +1743,207 @@ class GaClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ga\V1\Model\ListRegionsResponse',
             $requestType='\HuaweiCloud\SDK\Ga\V1\Model\ListRegionsRequest');
+    }
+
+    /**
+     * 批量添加标签
+     *
+     * 批量添加标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createTags($request)
+    {
+        return $this->createTagsWithHttpInfo($request);
+    }
+
+    public function createTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{resource_type}/{resource_id}/tags/create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ga\V1\Model\CreateTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Ga\V1\Model\CreateTagsRequest');
+    }
+
+    /**
+     * 批量删除标签
+     *
+     * 批量删除标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTags($request)
+    {
+        return $this->deleteTagsWithHttpInfo($request);
+    }
+
+    public function deleteTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{resource_type}/{resource_id}/tags/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ga\V1\Model\DeleteTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Ga\V1\Model\DeleteTagsRequest');
+    }
+
+    /**
+     * 查询资源已打标签
+     *
+     * 查询资源已打标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showResourceTags($request)
+    {
+        return $this->showResourceTagsWithHttpInfo($request);
+    }
+
+    public function showResourceTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{resource_type}/{resource_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ga\V1\Model\ShowResourceTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Ga\V1\Model\ShowResourceTagsRequest');
     }
 
     protected function callApi(

@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
+class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,12 +16,11 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'GetFirewallInstanceResponseData';
+    protected static $openAPIModelName = 'GetFirewallInstanceResponseRecord';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
     * fwInstanceId  防火墙id
-    * resourceId  资源id
     * name  防火墙名称
     * haType  集群类型
     * chargeMode  计费模式 0：包年/包月 1：按需
@@ -30,34 +29,32 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
     * flavor  flavor
     * protectObjects  防护对象列表
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * description  描述
     * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
+    * resources  防火墙资源列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'fwInstanceId' => 'string',
-            'resourceId' => 'string',
             'name' => 'string',
             'haType' => 'int',
             'chargeMode' => 'int',
             'serviceType' => 'int',
-            'engineType' => 'string',
+            'engineType' => 'int',
             'flavor' => '\HuaweiCloud\SDK\Cfw\V1\Model\Flavor',
             'protectObjects' => '\HuaweiCloud\SDK\Cfw\V1\Model\ProtectObjectVO[]',
             'status' => 'int',
-            'description' => 'string',
             'isOldFirewallInstance' => 'bool',
             'supportIpv6' => 'bool',
-            'featureToggle' => 'map[string,bool]'
+            'featureToggle' => 'map[string,bool]',
+            'resources' => '\HuaweiCloud\SDK\Cfw\V1\Model\FirewallInstanceResource[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * fwInstanceId  防火墙id
-    * resourceId  资源id
     * name  防火墙名称
     * haType  集群类型
     * chargeMode  计费模式 0：包年/包月 1：按需
@@ -66,28 +63,27 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
     * flavor  flavor
     * protectObjects  防护对象列表
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * description  描述
     * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
+    * resources  防火墙资源列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'fwInstanceId' => null,
-        'resourceId' => null,
         'name' => null,
         'haType' => 'int32',
         'chargeMode' => 'int32',
         'serviceType' => 'int32',
-        'engineType' => null,
+        'engineType' => 'int32',
         'flavor' => null,
         'protectObjects' => null,
         'status' => 'int32',
-        'description' => null,
         'isOldFirewallInstance' => null,
         'supportIpv6' => null,
-        'featureToggle' => null
+        'featureToggle' => null,
+        'resources' => null
     ];
 
     /**
@@ -114,7 +110,6 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * fwInstanceId  防火墙id
-    * resourceId  资源id
     * name  防火墙名称
     * haType  集群类型
     * chargeMode  计费模式 0：包年/包月 1：按需
@@ -123,16 +118,15 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
     * flavor  flavor
     * protectObjects  防护对象列表
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * description  描述
     * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
+    * resources  防火墙资源列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'fwInstanceId' => 'fw_instance_id',
-            'resourceId' => 'resource_id',
             'name' => 'name',
             'haType' => 'ha_type',
             'chargeMode' => 'charge_mode',
@@ -141,16 +135,15 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
             'flavor' => 'flavor',
             'protectObjects' => 'protect_objects',
             'status' => 'status',
-            'description' => 'description',
             'isOldFirewallInstance' => 'is_old_firewall_instance',
             'supportIpv6' => 'support_ipv6',
-            'featureToggle' => 'feature_toggle'
+            'featureToggle' => 'feature_toggle',
+            'resources' => 'resources'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * fwInstanceId  防火墙id
-    * resourceId  资源id
     * name  防火墙名称
     * haType  集群类型
     * chargeMode  计费模式 0：包年/包月 1：按需
@@ -159,16 +152,15 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
     * flavor  flavor
     * protectObjects  防护对象列表
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * description  描述
     * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
+    * resources  防火墙资源列表
     *
     * @var string[]
     */
     protected static $setters = [
             'fwInstanceId' => 'setFwInstanceId',
-            'resourceId' => 'setResourceId',
             'name' => 'setName',
             'haType' => 'setHaType',
             'chargeMode' => 'setChargeMode',
@@ -177,16 +169,15 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
             'flavor' => 'setFlavor',
             'protectObjects' => 'setProtectObjects',
             'status' => 'setStatus',
-            'description' => 'setDescription',
             'isOldFirewallInstance' => 'setIsOldFirewallInstance',
             'supportIpv6' => 'setSupportIpv6',
-            'featureToggle' => 'setFeatureToggle'
+            'featureToggle' => 'setFeatureToggle',
+            'resources' => 'setResources'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * fwInstanceId  防火墙id
-    * resourceId  资源id
     * name  防火墙名称
     * haType  集群类型
     * chargeMode  计费模式 0：包年/包月 1：按需
@@ -195,16 +186,15 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
     * flavor  flavor
     * protectObjects  防护对象列表
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
-    * description  描述
     * isOldFirewallInstance  是否为旧引擎，true表示是，false表示不是
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
+    * resources  防火墙资源列表
     *
     * @var string[]
     */
     protected static $getters = [
             'fwInstanceId' => 'getFwInstanceId',
-            'resourceId' => 'getResourceId',
             'name' => 'getName',
             'haType' => 'getHaType',
             'chargeMode' => 'getChargeMode',
@@ -213,10 +203,10 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
             'flavor' => 'getFlavor',
             'protectObjects' => 'getProtectObjects',
             'status' => 'getStatus',
-            'description' => 'getDescription',
             'isOldFirewallInstance' => 'getIsOldFirewallInstance',
             'supportIpv6' => 'getSupportIpv6',
-            'featureToggle' => 'getFeatureToggle'
+            'featureToggle' => 'getFeatureToggle',
+            'resources' => 'getResources'
     ];
 
     /**
@@ -315,7 +305,6 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
-        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['haType'] = isset($data['haType']) ? $data['haType'] : null;
         $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
@@ -324,10 +313,10 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
         $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
         $this->container['protectObjects'] = isset($data['protectObjects']) ? $data['protectObjects'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['isOldFirewallInstance'] = isset($data['isOldFirewallInstance']) ? $data['isOldFirewallInstance'] : null;
         $this->container['supportIpv6'] = isset($data['supportIpv6']) ? $data['supportIpv6'] : null;
         $this->container['featureToggle'] = isset($data['featureToggle']) ? $data['featureToggle'] : null;
+        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
     }
 
     /**
@@ -381,30 +370,6 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
     public function setFwInstanceId($fwInstanceId)
     {
         $this->container['fwInstanceId'] = $fwInstanceId;
-        return $this;
-    }
-
-    /**
-    * Gets resourceId
-    *  资源id
-    *
-    * @return string|null
-    */
-    public function getResourceId()
-    {
-        return $this->container['resourceId'];
-    }
-
-    /**
-    * Sets resourceId
-    *
-    * @param string|null $resourceId 资源id
-    *
-    * @return $this
-    */
-    public function setResourceId($resourceId)
-    {
-        $this->container['resourceId'] = $resourceId;
         return $this;
     }
 
@@ -508,7 +473,7 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
     * Gets engineType
     *  引擎类型
     *
-    * @return string|null
+    * @return int|null
     */
     public function getEngineType()
     {
@@ -518,7 +483,7 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
     /**
     * Sets engineType
     *
-    * @param string|null $engineType 引擎类型
+    * @param int|null $engineType 引擎类型
     *
     * @return $this
     */
@@ -601,30 +566,6 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets description
-    *  描述
-    *
-    * @return string|null
-    */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-    * Sets description
-    *
-    * @param string|null $description 描述
-    *
-    * @return $this
-    */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-        return $this;
-    }
-
-    /**
     * Gets isOldFirewallInstance
     *  是否为旧引擎，true表示是，false表示不是
     *
@@ -693,6 +634,30 @@ class GetFirewallInstanceResponseData implements ModelInterface, ArrayAccess
     public function setFeatureToggle($featureToggle)
     {
         $this->container['featureToggle'] = $featureToggle;
+        return $this;
+    }
+
+    /**
+    * Gets resources
+    *  防火墙资源列表
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\FirewallInstanceResource[]|null
+    */
+    public function getResources()
+    {
+        return $this->container['resources'];
+    }
+
+    /**
+    * Sets resources
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\FirewallInstanceResource[]|null $resources 防火墙资源列表
+    *
+    * @return $this
+    */
+    public function setResources($resources)
+    {
+        $this->container['resources'] = $resources;
         return $this;
     }
 

@@ -21,17 +21,17 @@ class RecognizeAutoClassificationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  result
+    * result  调用成功时表示调用结果。  调用失败时无此字段。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'result' => '\HuaweiCloud\SDK\Ocr\V1\Model\AutoClassificationResult'
+            'result' => '\HuaweiCloud\SDK\Ocr\V1\Model\AutoClassificationResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  result
+    * result  调用成功时表示调用结果。  调用失败时无此字段。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class RecognizeAutoClassificationResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  result
+    * result  调用成功时表示调用结果。  调用失败时无此字段。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class RecognizeAutoClassificationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  result
+    * result  调用成功时表示调用结果。  调用失败时无此字段。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class RecognizeAutoClassificationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  result
+    * result  调用成功时表示调用结果。  调用失败时无此字段。
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class RecognizeAutoClassificationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  result
+    *  调用成功时表示调用结果。  调用失败时无此字段。
     *
-    * @return \HuaweiCloud\SDK\Ocr\V1\Model\AutoClassificationResult|null
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\AutoClassificationResult[]|null
     */
     public function getResult()
     {
@@ -187,7 +187,7 @@ class RecognizeAutoClassificationResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param \HuaweiCloud\SDK\Ocr\V1\Model\AutoClassificationResult|null $result result
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\AutoClassificationResult[]|null $result 调用成功时表示调用结果。  调用失败时无此字段。
     *
     * @return $this
     */

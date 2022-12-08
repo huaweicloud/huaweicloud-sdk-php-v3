@@ -20,30 +20,30 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * objectId  object_id
+    * id  ips开关id
     * basicDefenseStatus  基础防御状态
-    * virtualPatchesStauts  虚拟补丁状态
+    * virtualPatchesStatus  虚拟补丁状态
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'objectId' => 'string',
+            'id' => 'string',
             'basicDefenseStatus' => 'int',
-            'virtualPatchesStauts' => 'int'
+            'virtualPatchesStatus' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * objectId  object_id
+    * id  ips开关id
     * basicDefenseStatus  基础防御状态
-    * virtualPatchesStauts  虚拟补丁状态
+    * virtualPatchesStatus  虚拟补丁状态
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'objectId' => null,
+        'id' => null,
         'basicDefenseStatus' => null,
-        'virtualPatchesStauts' => null
+        'virtualPatchesStatus' => null
     ];
 
     /**
@@ -69,44 +69,44 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * objectId  object_id
+    * id  ips开关id
     * basicDefenseStatus  基础防御状态
-    * virtualPatchesStauts  虚拟补丁状态
+    * virtualPatchesStatus  虚拟补丁状态
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'objectId' => 'object_id',
+            'id' => 'id',
             'basicDefenseStatus' => 'basic_defense_status',
-            'virtualPatchesStauts' => 'virtual_patches_stauts'
+            'virtualPatchesStatus' => 'virtual_patches_status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * objectId  object_id
+    * id  ips开关id
     * basicDefenseStatus  基础防御状态
-    * virtualPatchesStauts  虚拟补丁状态
+    * virtualPatchesStatus  虚拟补丁状态
     *
     * @var string[]
     */
     protected static $setters = [
-            'objectId' => 'setObjectId',
+            'id' => 'setId',
             'basicDefenseStatus' => 'setBasicDefenseStatus',
-            'virtualPatchesStauts' => 'setVirtualPatchesStauts'
+            'virtualPatchesStatus' => 'setVirtualPatchesStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * objectId  object_id
+    * id  ips开关id
     * basicDefenseStatus  基础防御状态
-    * virtualPatchesStauts  虚拟补丁状态
+    * virtualPatchesStatus  虚拟补丁状态
     *
     * @var string[]
     */
     protected static $getters = [
-            'objectId' => 'getObjectId',
+            'id' => 'getId',
             'basicDefenseStatus' => 'getBasicDefenseStatus',
-            'virtualPatchesStauts' => 'getVirtualPatchesStauts'
+            'virtualPatchesStatus' => 'getVirtualPatchesStatus'
     ];
 
     /**
@@ -167,9 +167,9 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['basicDefenseStatus'] = isset($data['basicDefenseStatus']) ? $data['basicDefenseStatus'] : null;
-        $this->container['virtualPatchesStauts'] = isset($data['virtualPatchesStauts']) ? $data['virtualPatchesStauts'] : null;
+        $this->container['virtualPatchesStatus'] = isset($data['virtualPatchesStatus']) ? $data['virtualPatchesStatus'] : null;
     }
 
     /**
@@ -195,26 +195,26 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets objectId
-    *  object_id
+    * Gets id
+    *  ips开关id
     *
     * @return string|null
     */
-    public function getObjectId()
+    public function getId()
     {
-        return $this->container['objectId'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets objectId
+    * Sets id
     *
-    * @param string|null $objectId object_id
+    * @param string|null $id ips开关id
     *
     * @return $this
     */
-    public function setObjectId($objectId)
+    public function setId($id)
     {
-        $this->container['objectId'] = $objectId;
+        $this->container['id'] = $id;
         return $this;
     }
 
@@ -243,26 +243,26 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets virtualPatchesStauts
+    * Gets virtualPatchesStatus
     *  虚拟补丁状态
     *
     * @return int|null
     */
-    public function getVirtualPatchesStauts()
+    public function getVirtualPatchesStatus()
     {
-        return $this->container['virtualPatchesStauts'];
+        return $this->container['virtualPatchesStatus'];
     }
 
     /**
-    * Sets virtualPatchesStauts
+    * Sets virtualPatchesStatus
     *
-    * @param int|null $virtualPatchesStauts 虚拟补丁状态
+    * @param int|null $virtualPatchesStatus 虚拟补丁状态
     *
     * @return $this
     */
-    public function setVirtualPatchesStauts($virtualPatchesStauts)
+    public function setVirtualPatchesStatus($virtualPatchesStatus)
     {
-        $this->container['virtualPatchesStauts'] = $virtualPatchesStauts;
+        $this->container['virtualPatchesStatus'] = $virtualPatchesStatus;
         return $this;
     }
 

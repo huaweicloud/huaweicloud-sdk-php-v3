@@ -21,33 +21,21 @@ class CreateExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * stackName  栈的名字
-    * stackId  栈的唯一Id
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
-    * executionPlanId  执行计划的唯一Id，由IaC随机生成
+    * executionPlanId  执行计划ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'stackName' => 'string',
-            'stackId' => 'string',
-            'executionPlanName' => 'string',
             'executionPlanId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * stackName  栈的名字
-    * stackId  栈的唯一Id
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
-    * executionPlanId  执行计划的唯一Id，由IaC随机生成
+    * executionPlanId  执行计划ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'stackName' => null,
-        'stackId' => null,
-        'executionPlanName' => null,
         'executionPlanId' => null
     ];
 
@@ -74,49 +62,31 @@ class CreateExecutionPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * stackName  栈的名字
-    * stackId  栈的唯一Id
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
-    * executionPlanId  执行计划的唯一Id，由IaC随机生成
+    * executionPlanId  执行计划ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'stackName' => 'stack_name',
-            'stackId' => 'stack_id',
-            'executionPlanName' => 'execution_plan_name',
             'executionPlanId' => 'execution_plan_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * stackName  栈的名字
-    * stackId  栈的唯一Id
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
-    * executionPlanId  执行计划的唯一Id，由IaC随机生成
+    * executionPlanId  执行计划ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'stackName' => 'setStackName',
-            'stackId' => 'setStackId',
-            'executionPlanName' => 'setExecutionPlanName',
             'executionPlanId' => 'setExecutionPlanId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * stackName  栈的名字
-    * stackId  栈的唯一Id
-    * executionPlanName  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
-    * executionPlanId  执行计划的唯一Id，由IaC随机生成
+    * executionPlanId  执行计划ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'stackName' => 'getStackName',
-            'stackId' => 'getStackId',
-            'executionPlanName' => 'getExecutionPlanName',
             'executionPlanId' => 'getExecutionPlanId'
     ];
 
@@ -178,9 +148,6 @@ class CreateExecutionPlanResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['stackName'] = isset($data['stackName']) ? $data['stackName'] : null;
-        $this->container['stackId'] = isset($data['stackId']) ? $data['stackId'] : null;
-        $this->container['executionPlanName'] = isset($data['executionPlanName']) ? $data['executionPlanName'] : null;
         $this->container['executionPlanId'] = isset($data['executionPlanId']) ? $data['executionPlanId'] : null;
     }
 
@@ -192,30 +159,6 @@ class CreateExecutionPlanResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['stackName']) && (mb_strlen($this->container['stackName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'stackName', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['stackName']) && (mb_strlen($this->container['stackName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'stackName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['stackId']) && (mb_strlen($this->container['stackId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'stackId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['stackId']) && (mb_strlen($this->container['stackId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'stackId', the character length must be bigger than or equal to 36.";
-            }
-            if (!is_null($this->container['executionPlanName']) && (mb_strlen($this->container['executionPlanName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'executionPlanName', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['executionPlanName']) && (mb_strlen($this->container['executionPlanName']) < 1)) {
-                $invalidProperties[] = "invalid value for 'executionPlanName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['executionPlanId']) && (mb_strlen($this->container['executionPlanId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'executionPlanId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['executionPlanId']) && (mb_strlen($this->container['executionPlanId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'executionPlanId', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -231,80 +174,8 @@ class CreateExecutionPlanResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets stackName
-    *  栈的名字
-    *
-    * @return string|null
-    */
-    public function getStackName()
-    {
-        return $this->container['stackName'];
-    }
-
-    /**
-    * Sets stackName
-    *
-    * @param string|null $stackName 栈的名字
-    *
-    * @return $this
-    */
-    public function setStackName($stackName)
-    {
-        $this->container['stackName'] = $stackName;
-        return $this;
-    }
-
-    /**
-    * Gets stackId
-    *  栈的唯一Id
-    *
-    * @return string|null
-    */
-    public function getStackId()
-    {
-        return $this->container['stackId'];
-    }
-
-    /**
-    * Sets stackId
-    *
-    * @param string|null $stackId 栈的唯一Id
-    *
-    * @return $this
-    */
-    public function setStackId($stackId)
-    {
-        $this->container['stackId'] = $stackId;
-        return $this;
-    }
-
-    /**
-    * Gets executionPlanName
-    *  执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
-    *
-    * @return string|null
-    */
-    public function getExecutionPlanName()
-    {
-        return $this->container['executionPlanName'];
-    }
-
-    /**
-    * Sets executionPlanName
-    *
-    * @param string|null $executionPlanName 执行计划的名字。如果未指定，则使用execution_plan_id作为execution_plan_name。
-    *
-    * @return $this
-    */
-    public function setExecutionPlanName($executionPlanName)
-    {
-        $this->container['executionPlanName'] = $executionPlanName;
-        return $this;
-    }
-
-    /**
     * Gets executionPlanId
-    *  执行计划的唯一Id，由IaC随机生成
+    *  执行计划ID
     *
     * @return string|null
     */
@@ -316,7 +187,7 @@ class CreateExecutionPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Sets executionPlanId
     *
-    * @param string|null $executionPlanId 执行计划的唯一Id，由IaC随机生成
+    * @param string|null $executionPlanId 执行计划ID
     *
     * @return $this
     */

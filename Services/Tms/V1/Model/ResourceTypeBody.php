@@ -21,7 +21,7 @@ class ResourceTypeBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceType  资源类型
-    * resourceTypeI18nDisplayName  资源类型显示名称，可以通过参数中'locale'设置语言
+    * resourceTypeI18nDisplayName  资源类型显示名称，可以通过参数中“locale”设置语言。
     * regions  支持的region列表
     * global  是否是全局类型的资源
     *
@@ -37,7 +37,7 @@ class ResourceTypeBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceType  资源类型
-    * resourceTypeI18nDisplayName  资源类型显示名称，可以通过参数中'locale'设置语言
+    * resourceTypeI18nDisplayName  资源类型显示名称，可以通过参数中“locale”设置语言。
     * regions  支持的region列表
     * global  是否是全局类型的资源
     *
@@ -74,7 +74,7 @@ class ResourceTypeBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceType  资源类型
-    * resourceTypeI18nDisplayName  资源类型显示名称，可以通过参数中'locale'设置语言
+    * resourceTypeI18nDisplayName  资源类型显示名称，可以通过参数中“locale”设置语言。
     * regions  支持的region列表
     * global  是否是全局类型的资源
     *
@@ -90,7 +90,7 @@ class ResourceTypeBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceType  资源类型
-    * resourceTypeI18nDisplayName  资源类型显示名称，可以通过参数中'locale'设置语言
+    * resourceTypeI18nDisplayName  资源类型显示名称，可以通过参数中“locale”设置语言。
     * regions  支持的region列表
     * global  是否是全局类型的资源
     *
@@ -106,7 +106,7 @@ class ResourceTypeBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceType  资源类型
-    * resourceTypeI18nDisplayName  资源类型显示名称，可以通过参数中'locale'设置语言
+    * resourceTypeI18nDisplayName  资源类型显示名称，可以通过参数中“locale”设置语言。
     * regions  支持的region列表
     * global  是否是全局类型的资源
     *
@@ -243,7 +243,7 @@ class ResourceTypeBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypeI18nDisplayName
-    *  资源类型显示名称，可以通过参数中'locale'设置语言
+    *  资源类型显示名称，可以通过参数中“locale”设置语言。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class ResourceTypeBody implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypeI18nDisplayName
     *
-    * @param string $resourceTypeI18nDisplayName 资源类型显示名称，可以通过参数中'locale'设置语言
+    * @param string $resourceTypeI18nDisplayName 资源类型显示名称，可以通过参数中“locale”设置语言。
     *
     * @return $this
     */

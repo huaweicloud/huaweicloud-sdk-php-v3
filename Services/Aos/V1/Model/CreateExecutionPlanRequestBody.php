@@ -20,15 +20,14 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * stackId  用户希望生成执行计划的栈（stack）的Id。此Id由IAC在生成栈的时候生成，为UUID。
-    * templateBody  HCL模板，描述了资源的目标状态。IAC将比较此模板与当前远程资源的状态之间的区别 template_body 和 template_uri 有且仅有一个存在
-    * templateUri  HCL模板的OBS地址，描述了资源的目标状态。IAC将比较此模板与当前远程资源的状态之间的区别。目前接受纯tf文件或zip压缩包。 纯tf文件需要以“.tf”结尾，并遵守tf模板格式。压缩包目前只支持zip格式，文件需要以\".zip\"结尾，压缩包解压后应该只包含文件，且文件均以“.tf”结尾，不支持nested结构 template_body 和 template_uri 有且仅有一个存在
+    * stackId  用户希望生成执行计划的栈（stack）的Id。此Id由资源编排服务在生成栈的时候生成，为UUID。
+    * templateBody  HCL模板，描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别 template_body 和 template_uri 有且仅有一个存在
+    * templateUri  HCL模板的OBS地址，描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别。目前接受纯tf文件或zip压缩包。 纯tf文件需要以“.tf”结尾，并遵守tf模板格式。压缩包目前只支持zip格式，文件需要以\".zip\"结尾，压缩包解压后应该只包含文件，且文件均以“.tf”结尾，不支持nested结构 template_body 和 template_uri 有且仅有一个存在
     * executionPlanName  执行计划的名字，在domain_id+region+project_id+stack_id下应唯一。
-    * executor  执行操作者的名字
     * description  执行计划的描述。可用于客户识别自己的执行计划
-    * varsStructure  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。var是一系列terraform所需要的参数。 注：IaC支持vars、vars_body和vars_uri，如果vars、vars_body和vars_uri中声名了同一个变量，将报错400。 注：vars中的值只支持简单的字符串类型，如果其他类型，需要用户自己在HCL引用时转换，或者用户可以使用vars_body或vars_uri， vars_body和vars_uri中支持HCL支持的各种类型以及复杂结构。
+    * varsStructure  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。var是一系列terraform所需要的参数。 注：资源编排服务支持vars、vars_body和vars_uri，如果vars、vars_body和vars_uri中声名了同一个变量，将报错400。 注：vars中的值只支持简单的字符串类型，如果其他类型，需要用户自己在HCL引用时转换，或者用户可以使用vars_body或vars_uri， vars_body和vars_uri中支持HCL支持的各种类型以及复杂结构。
     * varsBody  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。vars_body用于接收用户直接提交的tfvars文件内容
-    * varsUri  参数文件的OBS地址，如果客户偏向使用文件维护参数，可以将参数上传OBS，并将OBS地址提交。 注：如果用户同时使用了vars_body、vars_uri和vars，且他们的内容中定义了同一个参数，IAC将报错并返回400。 vars_uri和vars_body中的vars按照HCL的语义，可以支持各种类型、复杂结构等
+    * varsUri  参数文件的OBS地址，如果客户偏向使用文件维护参数，可以将参数上传OBS，并将OBS地址提交。 注：如果用户同时使用了vars_body、vars_uri和vars，且他们的内容中定义了同一个参数，资源编排服务将报错并返回400。 vars_uri和vars_body中的vars按照HCL的语义，可以支持各种类型、复杂结构等
     *
     * @var string[]
     */
@@ -37,7 +36,6 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
             'templateBody' => 'string',
             'templateUri' => 'string',
             'executionPlanName' => 'string',
-            'executor' => 'string',
             'description' => 'string',
             'varsStructure' => '\HuaweiCloud\SDK\Aos\V1\Model\VarsStructure[]',
             'varsBody' => 'string',
@@ -46,15 +44,14 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * stackId  用户希望生成执行计划的栈（stack）的Id。此Id由IAC在生成栈的时候生成，为UUID。
-    * templateBody  HCL模板，描述了资源的目标状态。IAC将比较此模板与当前远程资源的状态之间的区别 template_body 和 template_uri 有且仅有一个存在
-    * templateUri  HCL模板的OBS地址，描述了资源的目标状态。IAC将比较此模板与当前远程资源的状态之间的区别。目前接受纯tf文件或zip压缩包。 纯tf文件需要以“.tf”结尾，并遵守tf模板格式。压缩包目前只支持zip格式，文件需要以\".zip\"结尾，压缩包解压后应该只包含文件，且文件均以“.tf”结尾，不支持nested结构 template_body 和 template_uri 有且仅有一个存在
+    * stackId  用户希望生成执行计划的栈（stack）的Id。此Id由资源编排服务在生成栈的时候生成，为UUID。
+    * templateBody  HCL模板，描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别 template_body 和 template_uri 有且仅有一个存在
+    * templateUri  HCL模板的OBS地址，描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别。目前接受纯tf文件或zip压缩包。 纯tf文件需要以“.tf”结尾，并遵守tf模板格式。压缩包目前只支持zip格式，文件需要以\".zip\"结尾，压缩包解压后应该只包含文件，且文件均以“.tf”结尾，不支持nested结构 template_body 和 template_uri 有且仅有一个存在
     * executionPlanName  执行计划的名字，在domain_id+region+project_id+stack_id下应唯一。
-    * executor  执行操作者的名字
     * description  执行计划的描述。可用于客户识别自己的执行计划
-    * varsStructure  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。var是一系列terraform所需要的参数。 注：IaC支持vars、vars_body和vars_uri，如果vars、vars_body和vars_uri中声名了同一个变量，将报错400。 注：vars中的值只支持简单的字符串类型，如果其他类型，需要用户自己在HCL引用时转换，或者用户可以使用vars_body或vars_uri， vars_body和vars_uri中支持HCL支持的各种类型以及复杂结构。
+    * varsStructure  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。var是一系列terraform所需要的参数。 注：资源编排服务支持vars、vars_body和vars_uri，如果vars、vars_body和vars_uri中声名了同一个变量，将报错400。 注：vars中的值只支持简单的字符串类型，如果其他类型，需要用户自己在HCL引用时转换，或者用户可以使用vars_body或vars_uri， vars_body和vars_uri中支持HCL支持的各种类型以及复杂结构。
     * varsBody  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。vars_body用于接收用户直接提交的tfvars文件内容
-    * varsUri  参数文件的OBS地址，如果客户偏向使用文件维护参数，可以将参数上传OBS，并将OBS地址提交。 注：如果用户同时使用了vars_body、vars_uri和vars，且他们的内容中定义了同一个参数，IAC将报错并返回400。 vars_uri和vars_body中的vars按照HCL的语义，可以支持各种类型、复杂结构等
+    * varsUri  参数文件的OBS地址，如果客户偏向使用文件维护参数，可以将参数上传OBS，并将OBS地址提交。 注：如果用户同时使用了vars_body、vars_uri和vars，且他们的内容中定义了同一个参数，资源编排服务将报错并返回400。 vars_uri和vars_body中的vars按照HCL的语义，可以支持各种类型、复杂结构等
     *
     * @var string[]
     */
@@ -63,7 +60,6 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
         'templateBody' => null,
         'templateUri' => null,
         'executionPlanName' => null,
-        'executor' => null,
         'description' => null,
         'varsStructure' => null,
         'varsBody' => null,
@@ -93,15 +89,14 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * stackId  用户希望生成执行计划的栈（stack）的Id。此Id由IAC在生成栈的时候生成，为UUID。
-    * templateBody  HCL模板，描述了资源的目标状态。IAC将比较此模板与当前远程资源的状态之间的区别 template_body 和 template_uri 有且仅有一个存在
-    * templateUri  HCL模板的OBS地址，描述了资源的目标状态。IAC将比较此模板与当前远程资源的状态之间的区别。目前接受纯tf文件或zip压缩包。 纯tf文件需要以“.tf”结尾，并遵守tf模板格式。压缩包目前只支持zip格式，文件需要以\".zip\"结尾，压缩包解压后应该只包含文件，且文件均以“.tf”结尾，不支持nested结构 template_body 和 template_uri 有且仅有一个存在
+    * stackId  用户希望生成执行计划的栈（stack）的Id。此Id由资源编排服务在生成栈的时候生成，为UUID。
+    * templateBody  HCL模板，描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别 template_body 和 template_uri 有且仅有一个存在
+    * templateUri  HCL模板的OBS地址，描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别。目前接受纯tf文件或zip压缩包。 纯tf文件需要以“.tf”结尾，并遵守tf模板格式。压缩包目前只支持zip格式，文件需要以\".zip\"结尾，压缩包解压后应该只包含文件，且文件均以“.tf”结尾，不支持nested结构 template_body 和 template_uri 有且仅有一个存在
     * executionPlanName  执行计划的名字，在domain_id+region+project_id+stack_id下应唯一。
-    * executor  执行操作者的名字
     * description  执行计划的描述。可用于客户识别自己的执行计划
-    * varsStructure  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。var是一系列terraform所需要的参数。 注：IaC支持vars、vars_body和vars_uri，如果vars、vars_body和vars_uri中声名了同一个变量，将报错400。 注：vars中的值只支持简单的字符串类型，如果其他类型，需要用户自己在HCL引用时转换，或者用户可以使用vars_body或vars_uri， vars_body和vars_uri中支持HCL支持的各种类型以及复杂结构。
+    * varsStructure  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。var是一系列terraform所需要的参数。 注：资源编排服务支持vars、vars_body和vars_uri，如果vars、vars_body和vars_uri中声名了同一个变量，将报错400。 注：vars中的值只支持简单的字符串类型，如果其他类型，需要用户自己在HCL引用时转换，或者用户可以使用vars_body或vars_uri， vars_body和vars_uri中支持HCL支持的各种类型以及复杂结构。
     * varsBody  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。vars_body用于接收用户直接提交的tfvars文件内容
-    * varsUri  参数文件的OBS地址，如果客户偏向使用文件维护参数，可以将参数上传OBS，并将OBS地址提交。 注：如果用户同时使用了vars_body、vars_uri和vars，且他们的内容中定义了同一个参数，IAC将报错并返回400。 vars_uri和vars_body中的vars按照HCL的语义，可以支持各种类型、复杂结构等
+    * varsUri  参数文件的OBS地址，如果客户偏向使用文件维护参数，可以将参数上传OBS，并将OBS地址提交。 注：如果用户同时使用了vars_body、vars_uri和vars，且他们的内容中定义了同一个参数，资源编排服务将报错并返回400。 vars_uri和vars_body中的vars按照HCL的语义，可以支持各种类型、复杂结构等
     *
     * @var string[]
     */
@@ -110,7 +105,6 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
             'templateBody' => 'template_body',
             'templateUri' => 'template_uri',
             'executionPlanName' => 'execution_plan_name',
-            'executor' => 'executor',
             'description' => 'description',
             'varsStructure' => 'vars_structure',
             'varsBody' => 'vars_body',
@@ -119,15 +113,14 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * stackId  用户希望生成执行计划的栈（stack）的Id。此Id由IAC在生成栈的时候生成，为UUID。
-    * templateBody  HCL模板，描述了资源的目标状态。IAC将比较此模板与当前远程资源的状态之间的区别 template_body 和 template_uri 有且仅有一个存在
-    * templateUri  HCL模板的OBS地址，描述了资源的目标状态。IAC将比较此模板与当前远程资源的状态之间的区别。目前接受纯tf文件或zip压缩包。 纯tf文件需要以“.tf”结尾，并遵守tf模板格式。压缩包目前只支持zip格式，文件需要以\".zip\"结尾，压缩包解压后应该只包含文件，且文件均以“.tf”结尾，不支持nested结构 template_body 和 template_uri 有且仅有一个存在
+    * stackId  用户希望生成执行计划的栈（stack）的Id。此Id由资源编排服务在生成栈的时候生成，为UUID。
+    * templateBody  HCL模板，描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别 template_body 和 template_uri 有且仅有一个存在
+    * templateUri  HCL模板的OBS地址，描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别。目前接受纯tf文件或zip压缩包。 纯tf文件需要以“.tf”结尾，并遵守tf模板格式。压缩包目前只支持zip格式，文件需要以\".zip\"结尾，压缩包解压后应该只包含文件，且文件均以“.tf”结尾，不支持nested结构 template_body 和 template_uri 有且仅有一个存在
     * executionPlanName  执行计划的名字，在domain_id+region+project_id+stack_id下应唯一。
-    * executor  执行操作者的名字
     * description  执行计划的描述。可用于客户识别自己的执行计划
-    * varsStructure  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。var是一系列terraform所需要的参数。 注：IaC支持vars、vars_body和vars_uri，如果vars、vars_body和vars_uri中声名了同一个变量，将报错400。 注：vars中的值只支持简单的字符串类型，如果其他类型，需要用户自己在HCL引用时转换，或者用户可以使用vars_body或vars_uri， vars_body和vars_uri中支持HCL支持的各种类型以及复杂结构。
+    * varsStructure  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。var是一系列terraform所需要的参数。 注：资源编排服务支持vars、vars_body和vars_uri，如果vars、vars_body和vars_uri中声名了同一个变量，将报错400。 注：vars中的值只支持简单的字符串类型，如果其他类型，需要用户自己在HCL引用时转换，或者用户可以使用vars_body或vars_uri， vars_body和vars_uri中支持HCL支持的各种类型以及复杂结构。
     * varsBody  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。vars_body用于接收用户直接提交的tfvars文件内容
-    * varsUri  参数文件的OBS地址，如果客户偏向使用文件维护参数，可以将参数上传OBS，并将OBS地址提交。 注：如果用户同时使用了vars_body、vars_uri和vars，且他们的内容中定义了同一个参数，IAC将报错并返回400。 vars_uri和vars_body中的vars按照HCL的语义，可以支持各种类型、复杂结构等
+    * varsUri  参数文件的OBS地址，如果客户偏向使用文件维护参数，可以将参数上传OBS，并将OBS地址提交。 注：如果用户同时使用了vars_body、vars_uri和vars，且他们的内容中定义了同一个参数，资源编排服务将报错并返回400。 vars_uri和vars_body中的vars按照HCL的语义，可以支持各种类型、复杂结构等
     *
     * @var string[]
     */
@@ -136,7 +129,6 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
             'templateBody' => 'setTemplateBody',
             'templateUri' => 'setTemplateUri',
             'executionPlanName' => 'setExecutionPlanName',
-            'executor' => 'setExecutor',
             'description' => 'setDescription',
             'varsStructure' => 'setVarsStructure',
             'varsBody' => 'setVarsBody',
@@ -145,15 +137,14 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * stackId  用户希望生成执行计划的栈（stack）的Id。此Id由IAC在生成栈的时候生成，为UUID。
-    * templateBody  HCL模板，描述了资源的目标状态。IAC将比较此模板与当前远程资源的状态之间的区别 template_body 和 template_uri 有且仅有一个存在
-    * templateUri  HCL模板的OBS地址，描述了资源的目标状态。IAC将比较此模板与当前远程资源的状态之间的区别。目前接受纯tf文件或zip压缩包。 纯tf文件需要以“.tf”结尾，并遵守tf模板格式。压缩包目前只支持zip格式，文件需要以\".zip\"结尾，压缩包解压后应该只包含文件，且文件均以“.tf”结尾，不支持nested结构 template_body 和 template_uri 有且仅有一个存在
+    * stackId  用户希望生成执行计划的栈（stack）的Id。此Id由资源编排服务在生成栈的时候生成，为UUID。
+    * templateBody  HCL模板，描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别 template_body 和 template_uri 有且仅有一个存在
+    * templateUri  HCL模板的OBS地址，描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别。目前接受纯tf文件或zip压缩包。 纯tf文件需要以“.tf”结尾，并遵守tf模板格式。压缩包目前只支持zip格式，文件需要以\".zip\"结尾，压缩包解压后应该只包含文件，且文件均以“.tf”结尾，不支持nested结构 template_body 和 template_uri 有且仅有一个存在
     * executionPlanName  执行计划的名字，在domain_id+region+project_id+stack_id下应唯一。
-    * executor  执行操作者的名字
     * description  执行计划的描述。可用于客户识别自己的执行计划
-    * varsStructure  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。var是一系列terraform所需要的参数。 注：IaC支持vars、vars_body和vars_uri，如果vars、vars_body和vars_uri中声名了同一个变量，将报错400。 注：vars中的值只支持简单的字符串类型，如果其他类型，需要用户自己在HCL引用时转换，或者用户可以使用vars_body或vars_uri， vars_body和vars_uri中支持HCL支持的各种类型以及复杂结构。
+    * varsStructure  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。var是一系列terraform所需要的参数。 注：资源编排服务支持vars、vars_body和vars_uri，如果vars、vars_body和vars_uri中声名了同一个变量，将报错400。 注：vars中的值只支持简单的字符串类型，如果其他类型，需要用户自己在HCL引用时转换，或者用户可以使用vars_body或vars_uri， vars_body和vars_uri中支持HCL支持的各种类型以及复杂结构。
     * varsBody  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。vars_body用于接收用户直接提交的tfvars文件内容
-    * varsUri  参数文件的OBS地址，如果客户偏向使用文件维护参数，可以将参数上传OBS，并将OBS地址提交。 注：如果用户同时使用了vars_body、vars_uri和vars，且他们的内容中定义了同一个参数，IAC将报错并返回400。 vars_uri和vars_body中的vars按照HCL的语义，可以支持各种类型、复杂结构等
+    * varsUri  参数文件的OBS地址，如果客户偏向使用文件维护参数，可以将参数上传OBS，并将OBS地址提交。 注：如果用户同时使用了vars_body、vars_uri和vars，且他们的内容中定义了同一个参数，资源编排服务将报错并返回400。 vars_uri和vars_body中的vars按照HCL的语义，可以支持各种类型、复杂结构等
     *
     * @var string[]
     */
@@ -162,7 +153,6 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
             'templateBody' => 'getTemplateBody',
             'templateUri' => 'getTemplateUri',
             'executionPlanName' => 'getExecutionPlanName',
-            'executor' => 'getExecutor',
             'description' => 'getDescription',
             'varsStructure' => 'getVarsStructure',
             'varsBody' => 'getVarsBody',
@@ -231,7 +221,6 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
         $this->container['templateBody'] = isset($data['templateBody']) ? $data['templateBody'] : null;
         $this->container['templateUri'] = isset($data['templateUri']) ? $data['templateUri'] : null;
         $this->container['executionPlanName'] = isset($data['executionPlanName']) ? $data['executionPlanName'] : null;
-        $this->container['executor'] = isset($data['executor']) ? $data['executor'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['varsStructure'] = isset($data['varsStructure']) ? $data['varsStructure'] : null;
         $this->container['varsBody'] = isset($data['varsBody']) ? $data['varsBody'] : null;
@@ -276,15 +265,6 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
             if (!preg_match("/^[一-龥A-Za-z]+[一-龥A-Za-z0-9_-]*$/", $this->container['executionPlanName'])) {
                 $invalidProperties[] = "invalid value for 'executionPlanName', must be conform to the pattern /^[一-龥A-Za-z]+[一-龥A-Za-z0-9_-]*$/.";
             }
-            if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) > 32)) {
-                $invalidProperties[] = "invalid value for 'executor', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) < 0)) {
-                $invalidProperties[] = "invalid value for 'executor', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['executor']) && !preg_match("/^[A-Za-z0-9]+$/", $this->container['executor'])) {
-                $invalidProperties[] = "invalid value for 'executor', must be conform to the pattern /^[A-Za-z0-9]+$/.";
-            }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
             }
@@ -322,7 +302,7 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets stackId
-    *  用户希望生成执行计划的栈（stack）的Id。此Id由IAC在生成栈的时候生成，为UUID。
+    *  用户希望生成执行计划的栈（stack）的Id。此Id由资源编排服务在生成栈的时候生成，为UUID。
     *
     * @return string|null
     */
@@ -334,7 +314,7 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets stackId
     *
-    * @param string|null $stackId 用户希望生成执行计划的栈（stack）的Id。此Id由IAC在生成栈的时候生成，为UUID。
+    * @param string|null $stackId 用户希望生成执行计划的栈（stack）的Id。此Id由资源编排服务在生成栈的时候生成，为UUID。
     *
     * @return $this
     */
@@ -346,7 +326,7 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateBody
-    *  HCL模板，描述了资源的目标状态。IAC将比较此模板与当前远程资源的状态之间的区别 template_body 和 template_uri 有且仅有一个存在
+    *  HCL模板，描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别 template_body 和 template_uri 有且仅有一个存在
     *
     * @return string|null
     */
@@ -358,7 +338,7 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets templateBody
     *
-    * @param string|null $templateBody HCL模板，描述了资源的目标状态。IAC将比较此模板与当前远程资源的状态之间的区别 template_body 和 template_uri 有且仅有一个存在
+    * @param string|null $templateBody HCL模板，描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别 template_body 和 template_uri 有且仅有一个存在
     *
     * @return $this
     */
@@ -370,7 +350,7 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateUri
-    *  HCL模板的OBS地址，描述了资源的目标状态。IAC将比较此模板与当前远程资源的状态之间的区别。目前接受纯tf文件或zip压缩包。 纯tf文件需要以“.tf”结尾，并遵守tf模板格式。压缩包目前只支持zip格式，文件需要以\".zip\"结尾，压缩包解压后应该只包含文件，且文件均以“.tf”结尾，不支持nested结构 template_body 和 template_uri 有且仅有一个存在
+    *  HCL模板的OBS地址，描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别。目前接受纯tf文件或zip压缩包。 纯tf文件需要以“.tf”结尾，并遵守tf模板格式。压缩包目前只支持zip格式，文件需要以\".zip\"结尾，压缩包解压后应该只包含文件，且文件均以“.tf”结尾，不支持nested结构 template_body 和 template_uri 有且仅有一个存在
     *
     * @return string|null
     */
@@ -382,7 +362,7 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets templateUri
     *
-    * @param string|null $templateUri HCL模板的OBS地址，描述了资源的目标状态。IAC将比较此模板与当前远程资源的状态之间的区别。目前接受纯tf文件或zip压缩包。 纯tf文件需要以“.tf”结尾，并遵守tf模板格式。压缩包目前只支持zip格式，文件需要以\".zip\"结尾，压缩包解压后应该只包含文件，且文件均以“.tf”结尾，不支持nested结构 template_body 和 template_uri 有且仅有一个存在
+    * @param string|null $templateUri HCL模板的OBS地址，描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别。目前接受纯tf文件或zip压缩包。 纯tf文件需要以“.tf”结尾，并遵守tf模板格式。压缩包目前只支持zip格式，文件需要以\".zip\"结尾，压缩包解压后应该只包含文件，且文件均以“.tf”结尾，不支持nested结构 template_body 和 template_uri 有且仅有一个存在
     *
     * @return $this
     */
@@ -417,30 +397,6 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets executor
-    *  执行操作者的名字
-    *
-    * @return string|null
-    */
-    public function getExecutor()
-    {
-        return $this->container['executor'];
-    }
-
-    /**
-    * Sets executor
-    *
-    * @param string|null $executor 执行操作者的名字
-    *
-    * @return $this
-    */
-    public function setExecutor($executor)
-    {
-        $this->container['executor'] = $executor;
-        return $this;
-    }
-
-    /**
     * Gets description
     *  执行计划的描述。可用于客户识别自己的执行计划
     *
@@ -466,7 +422,7 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets varsStructure
-    *  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。var是一系列terraform所需要的参数。 注：IaC支持vars、vars_body和vars_uri，如果vars、vars_body和vars_uri中声名了同一个变量，将报错400。 注：vars中的值只支持简单的字符串类型，如果其他类型，需要用户自己在HCL引用时转换，或者用户可以使用vars_body或vars_uri， vars_body和vars_uri中支持HCL支持的各种类型以及复杂结构。
+    *  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。var是一系列terraform所需要的参数。 注：资源编排服务支持vars、vars_body和vars_uri，如果vars、vars_body和vars_uri中声名了同一个变量，将报错400。 注：vars中的值只支持简单的字符串类型，如果其他类型，需要用户自己在HCL引用时转换，或者用户可以使用vars_body或vars_uri， vars_body和vars_uri中支持HCL支持的各种类型以及复杂结构。
     *
     * @return \HuaweiCloud\SDK\Aos\V1\Model\VarsStructure[]|null
     */
@@ -478,7 +434,7 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets varsStructure
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\VarsStructure[]|null $varsStructure terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。var是一系列terraform所需要的参数。 注：IaC支持vars、vars_body和vars_uri，如果vars、vars_body和vars_uri中声名了同一个变量，将报错400。 注：vars中的值只支持简单的字符串类型，如果其他类型，需要用户自己在HCL引用时转换，或者用户可以使用vars_body或vars_uri， vars_body和vars_uri中支持HCL支持的各种类型以及复杂结构。
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\VarsStructure[]|null $varsStructure terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。var是一系列terraform所需要的参数。 注：资源编排服务支持vars、vars_body和vars_uri，如果vars、vars_body和vars_uri中声名了同一个变量，将报错400。 注：vars中的值只支持简单的字符串类型，如果其他类型，需要用户自己在HCL引用时转换，或者用户可以使用vars_body或vars_uri， vars_body和vars_uri中支持HCL支持的各种类型以及复杂结构。
     *
     * @return $this
     */
@@ -514,7 +470,7 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets varsUri
-    *  参数文件的OBS地址，如果客户偏向使用文件维护参数，可以将参数上传OBS，并将OBS地址提交。 注：如果用户同时使用了vars_body、vars_uri和vars，且他们的内容中定义了同一个参数，IAC将报错并返回400。 vars_uri和vars_body中的vars按照HCL的语义，可以支持各种类型、复杂结构等
+    *  参数文件的OBS地址，如果客户偏向使用文件维护参数，可以将参数上传OBS，并将OBS地址提交。 注：如果用户同时使用了vars_body、vars_uri和vars，且他们的内容中定义了同一个参数，资源编排服务将报错并返回400。 vars_uri和vars_body中的vars按照HCL的语义，可以支持各种类型、复杂结构等
     *
     * @return string|null
     */
@@ -526,7 +482,7 @@ class CreateExecutionPlanRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets varsUri
     *
-    * @param string|null $varsUri 参数文件的OBS地址，如果客户偏向使用文件维护参数，可以将参数上传OBS，并将OBS地址提交。 注：如果用户同时使用了vars_body、vars_uri和vars，且他们的内容中定义了同一个参数，IAC将报错并返回400。 vars_uri和vars_body中的vars按照HCL的语义，可以支持各种类型、复杂结构等
+    * @param string|null $varsUri 参数文件的OBS地址，如果客户偏向使用文件维护参数，可以将参数上传OBS，并将OBS地址提交。 注：如果用户同时使用了vars_body、vars_uri和vars，且他们的内容中定义了同一个参数，资源编排服务将报错并返回400。 vars_uri和vars_body中的vars按照HCL的语义，可以支持各种类型、复杂结构等
     *
     * @return $this
     */

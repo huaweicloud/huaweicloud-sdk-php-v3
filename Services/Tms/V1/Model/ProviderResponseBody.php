@@ -21,7 +21,7 @@ class ProviderResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * provider  云服务名称
-    * providerI18nDisplayName  服务显示名称，可以通过参数中'locale'设置语言。
+    * providerI18nDisplayName  服务显示名称，可以通过参数中“locale”设置语言。
     * resourceTypes  资源类型列表
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ProviderResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * provider  云服务名称
-    * providerI18nDisplayName  服务显示名称，可以通过参数中'locale'设置语言。
+    * providerI18nDisplayName  服务显示名称，可以通过参数中“locale”设置语言。
     * resourceTypes  资源类型列表
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ProviderResponseBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * provider  云服务名称
-    * providerI18nDisplayName  服务显示名称，可以通过参数中'locale'设置语言。
+    * providerI18nDisplayName  服务显示名称，可以通过参数中“locale”设置语言。
     * resourceTypes  资源类型列表
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ProviderResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * provider  云服务名称
-    * providerI18nDisplayName  服务显示名称，可以通过参数中'locale'设置语言。
+    * providerI18nDisplayName  服务显示名称，可以通过参数中“locale”设置语言。
     * resourceTypes  资源类型列表
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ProviderResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * provider  云服务名称
-    * providerI18nDisplayName  服务显示名称，可以通过参数中'locale'设置语言。
+    * providerI18nDisplayName  服务显示名称，可以通过参数中“locale”设置语言。
     * resourceTypes  资源类型列表
     *
     * @var string[]
@@ -229,7 +229,7 @@ class ProviderResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets providerI18nDisplayName
-    *  服务显示名称，可以通过参数中'locale'设置语言。
+    *  服务显示名称，可以通过参数中“locale”设置语言。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class ProviderResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets providerI18nDisplayName
     *
-    * @param string $providerI18nDisplayName 服务显示名称，可以通过参数中'locale'设置语言。
+    * @param string $providerI18nDisplayName 服务显示名称，可以通过参数中“locale”设置语言。
     *
     * @return $this
     */

@@ -21,26 +21,22 @@ class ListStackOutputsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * outputs  堆栈输出
-    * nextMarker  下一页的标记信息
+    * outputs  资源栈输出
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'outputs' => '\HuaweiCloud\SDK\Aos\V1\Model\StackOutput[]',
-            'nextMarker' => 'string'
+            'outputs' => '\HuaweiCloud\SDK\Aos\V1\Model\StackOutput[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * outputs  堆栈输出
-    * nextMarker  下一页的标记信息
+    * outputs  资源栈输出
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'outputs' => null,
-        'nextMarker' => null
+        'outputs' => null
     ];
 
     /**
@@ -66,38 +62,32 @@ class ListStackOutputsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * outputs  堆栈输出
-    * nextMarker  下一页的标记信息
+    * outputs  资源栈输出
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'outputs' => 'outputs',
-            'nextMarker' => 'next_marker'
+            'outputs' => 'outputs'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * outputs  堆栈输出
-    * nextMarker  下一页的标记信息
+    * outputs  资源栈输出
     *
     * @var string[]
     */
     protected static $setters = [
-            'outputs' => 'setOutputs',
-            'nextMarker' => 'setNextMarker'
+            'outputs' => 'setOutputs'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * outputs  堆栈输出
-    * nextMarker  下一页的标记信息
+    * outputs  资源栈输出
     *
     * @var string[]
     */
     protected static $getters = [
-            'outputs' => 'getOutputs',
-            'nextMarker' => 'getNextMarker'
+            'outputs' => 'getOutputs'
     ];
 
     /**
@@ -159,7 +149,6 @@ class ListStackOutputsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['outputs'] = isset($data['outputs']) ? $data['outputs'] : null;
-        $this->container['nextMarker'] = isset($data['nextMarker']) ? $data['nextMarker'] : null;
     }
 
     /**
@@ -186,7 +175,7 @@ class ListStackOutputsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets outputs
-    *  堆栈输出
+    *  资源栈输出
     *
     * @return \HuaweiCloud\SDK\Aos\V1\Model\StackOutput[]|null
     */
@@ -198,37 +187,13 @@ class ListStackOutputsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets outputs
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\StackOutput[]|null $outputs 堆栈输出
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\StackOutput[]|null $outputs 资源栈输出
     *
     * @return $this
     */
     public function setOutputs($outputs)
     {
         $this->container['outputs'] = $outputs;
-        return $this;
-    }
-
-    /**
-    * Gets nextMarker
-    *  下一页的标记信息
-    *
-    * @return string|null
-    */
-    public function getNextMarker()
-    {
-        return $this->container['nextMarker'];
-    }
-
-    /**
-    * Sets nextMarker
-    *
-    * @param string|null $nextMarker 下一页的标记信息
-    *
-    * @return $this
-    */
-    public function setNextMarker($nextMarker)
-    {
-        $this->container['nextMarker'] = $nextMarker;
         return $this;
     }
 

@@ -22,25 +22,21 @@ class ListStackEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * stackEvents  栈的更新状态
-    * nextMarker  当一页无法发回所有的细节，将返回next_marker，客户可以继续调用list-stack-events并给与next_marker来继续读取下页
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'stackEvents' => '\HuaweiCloud\SDK\Aos\V1\Model\StackEventResponse[]',
-            'nextMarker' => 'string'
+            'stackEvents' => '\HuaweiCloud\SDK\Aos\V1\Model\StackEventResponse[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * stackEvents  栈的更新状态
-    * nextMarker  当一页无法发回所有的细节，将返回next_marker，客户可以继续调用list-stack-events并给与next_marker来继续读取下页
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'stackEvents' => null,
-        'nextMarker' => null
+        'stackEvents' => null
     ];
 
     /**
@@ -67,37 +63,31 @@ class ListStackEventsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * stackEvents  栈的更新状态
-    * nextMarker  当一页无法发回所有的细节，将返回next_marker，客户可以继续调用list-stack-events并给与next_marker来继续读取下页
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'stackEvents' => 'stack_events',
-            'nextMarker' => 'next_marker'
+            'stackEvents' => 'stack_events'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * stackEvents  栈的更新状态
-    * nextMarker  当一页无法发回所有的细节，将返回next_marker，客户可以继续调用list-stack-events并给与next_marker来继续读取下页
     *
     * @var string[]
     */
     protected static $setters = [
-            'stackEvents' => 'setStackEvents',
-            'nextMarker' => 'setNextMarker'
+            'stackEvents' => 'setStackEvents'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * stackEvents  栈的更新状态
-    * nextMarker  当一页无法发回所有的细节，将返回next_marker，客户可以继续调用list-stack-events并给与next_marker来继续读取下页
     *
     * @var string[]
     */
     protected static $getters = [
-            'stackEvents' => 'getStackEvents',
-            'nextMarker' => 'getNextMarker'
+            'stackEvents' => 'getStackEvents'
     ];
 
     /**
@@ -159,7 +149,6 @@ class ListStackEventsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['stackEvents'] = isset($data['stackEvents']) ? $data['stackEvents'] : null;
-        $this->container['nextMarker'] = isset($data['nextMarker']) ? $data['nextMarker'] : null;
     }
 
     /**
@@ -205,30 +194,6 @@ class ListStackEventsResponse implements ModelInterface, ArrayAccess
     public function setStackEvents($stackEvents)
     {
         $this->container['stackEvents'] = $stackEvents;
-        return $this;
-    }
-
-    /**
-    * Gets nextMarker
-    *  当一页无法发回所有的细节，将返回next_marker，客户可以继续调用list-stack-events并给与next_marker来继续读取下页
-    *
-    * @return string|null
-    */
-    public function getNextMarker()
-    {
-        return $this->container['nextMarker'];
-    }
-
-    /**
-    * Sets nextMarker
-    *
-    * @param string|null $nextMarker 当一页无法发回所有的细节，将返回next_marker，客户可以继续调用list-stack-events并给与next_marker来继续读取下页
-    *
-    * @return $this
-    */
-    public function setNextMarker($nextMarker)
-    {
-        $this->container['nextMarker'] = $nextMarker;
         return $this;
     }
 

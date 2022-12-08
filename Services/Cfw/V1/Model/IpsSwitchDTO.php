@@ -201,6 +201,9 @@ class IpsSwitchDTO implements ModelInterface, ArrayAccess
             if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['objectId'])) {
                 $invalidProperties[] = "invalid value for 'objectId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.";
             }
+        if ($this->container['ipsType'] === null) {
+            $invalidProperties[] = "'ipsType' can't be null";
+        }
             $allowedValues = $this->getIpsTypeAllowableValues();
                 if (!is_null($this->container['ipsType']) && !in_array($this->container['ipsType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -254,7 +257,7 @@ class IpsSwitchDTO implements ModelInterface, ArrayAccess
     * Gets ipsType
     *  补丁类型，1-基础补丁 2=虚拟补丁
     *
-    * @return int|null
+    * @return int
     */
     public function getIpsType()
     {
@@ -264,7 +267,7 @@ class IpsSwitchDTO implements ModelInterface, ArrayAccess
     /**
     * Sets ipsType
     *
-    * @param int|null $ipsType 补丁类型，1-基础补丁 2=虚拟补丁
+    * @param int $ipsType 补丁类型，1-基础补丁 2=虚拟补丁
     *
     * @return $this
     */

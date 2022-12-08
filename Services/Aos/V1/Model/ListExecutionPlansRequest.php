@@ -23,8 +23,7 @@ class ListExecutionPlansRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executor  执行操作者的名字，将用做未来的审计工作。
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @var string[]
     */
@@ -32,7 +31,6 @@ class ListExecutionPlansRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'string',
             'projectId' => 'string',
             'stackName' => 'string',
-            'executor' => 'string',
             'stackId' => 'string'
     ];
 
@@ -41,8 +39,7 @@ class ListExecutionPlansRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executor  执行操作者的名字，将用做未来的审计工作。
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @var string[]
     */
@@ -50,7 +47,6 @@ class ListExecutionPlansRequest implements ModelInterface, ArrayAccess
         'clientRequestId' => null,
         'projectId' => null,
         'stackName' => null,
-        'executor' => null,
         'stackId' => null
     ];
 
@@ -80,8 +76,7 @@ class ListExecutionPlansRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executor  执行操作者的名字，将用做未来的审计工作。
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @var string[]
     */
@@ -89,7 +84,6 @@ class ListExecutionPlansRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'Client-Request-Id',
             'projectId' => 'project_id',
             'stackName' => 'stack_name',
-            'executor' => 'executor',
             'stackId' => 'stack_id'
     ];
 
@@ -98,8 +92,7 @@ class ListExecutionPlansRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executor  执行操作者的名字，将用做未来的审计工作。
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @var string[]
     */
@@ -107,7 +100,6 @@ class ListExecutionPlansRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'setClientRequestId',
             'projectId' => 'setProjectId',
             'stackName' => 'setStackName',
-            'executor' => 'setExecutor',
             'stackId' => 'setStackId'
     ];
 
@@ -116,8 +108,7 @@ class ListExecutionPlansRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * executor  执行操作者的名字，将用做未来的审计工作。
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @var string[]
     */
@@ -125,7 +116,6 @@ class ListExecutionPlansRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'getClientRequestId',
             'projectId' => 'getProjectId',
             'stackName' => 'getStackName',
-            'executor' => 'getExecutor',
             'stackId' => 'getStackId'
     ];
 
@@ -190,7 +180,6 @@ class ListExecutionPlansRequest implements ModelInterface, ArrayAccess
         $this->container['clientRequestId'] = isset($data['clientRequestId']) ? $data['clientRequestId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['stackName'] = isset($data['stackName']) ? $data['stackName'] : null;
-        $this->container['executor'] = isset($data['executor']) ? $data['executor'] : null;
         $this->container['stackId'] = isset($data['stackId']) ? $data['stackId'] : null;
     }
 
@@ -237,15 +226,6 @@ class ListExecutionPlansRequest implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^[一-龥A-Za-z]+[一-龥A-Za-z0-9_-]*$/", $this->container['stackName'])) {
                 $invalidProperties[] = "invalid value for 'stackName', must be conform to the pattern /^[一-龥A-Za-z]+[一-龥A-Za-z0-9_-]*$/.";
-            }
-            if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) > 32)) {
-                $invalidProperties[] = "invalid value for 'executor', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) < 1)) {
-                $invalidProperties[] = "invalid value for 'executor', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['executor']) && !preg_match("/^[A-Za-z0-9]+$/", $this->container['executor'])) {
-                $invalidProperties[] = "invalid value for 'executor', must be conform to the pattern /^[A-Za-z0-9]+$/.";
             }
             if (!is_null($this->container['stackId']) && (mb_strlen($this->container['stackId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'stackId', the character length must be smaller than or equal to 36.";
@@ -343,32 +323,8 @@ class ListExecutionPlansRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets executor
-    *  执行操作者的名字，将用做未来的审计工作。
-    *
-    * @return string|null
-    */
-    public function getExecutor()
-    {
-        return $this->container['executor'];
-    }
-
-    /**
-    * Sets executor
-    *
-    * @param string|null $executor 执行操作者的名字，将用做未来的审计工作。
-    *
-    * @return $this
-    */
-    public function setExecutor($executor)
-    {
-        $this->container['executor'] = $executor;
-        return $this;
-    }
-
-    /**
     * Gets stackId
-    *  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    *  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @return string|null
     */
@@ -380,7 +336,7 @@ class ListExecutionPlansRequest implements ModelInterface, ArrayAccess
     /**
     * Sets stackId
     *
-    * @param string|null $stackId 用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * @param string|null $stackId 用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @return $this
     */

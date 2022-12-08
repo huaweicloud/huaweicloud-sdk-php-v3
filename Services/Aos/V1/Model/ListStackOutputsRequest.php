@@ -23,10 +23,7 @@ class ListStackOutputsRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
-    * executor  执行操作者的名字，将用做未来的审计工作。
-    * limit  分页limit
-    * marker  当一页无法发回所有的细节，上一次的请求将返回next_marker以指引还有更多页数，客户可以将next_marker中的值放到此处以查询下一页的信息。
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @var string[]
     */
@@ -34,10 +31,7 @@ class ListStackOutputsRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'string',
             'projectId' => 'string',
             'stackName' => 'string',
-            'stackId' => 'string',
-            'executor' => 'string',
-            'limit' => 'int',
-            'marker' => 'string'
+            'stackId' => 'string'
     ];
 
     /**
@@ -45,10 +39,7 @@ class ListStackOutputsRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
-    * executor  执行操作者的名字，将用做未来的审计工作。
-    * limit  分页limit
-    * marker  当一页无法发回所有的细节，上一次的请求将返回next_marker以指引还有更多页数，客户可以将next_marker中的值放到此处以查询下一页的信息。
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @var string[]
     */
@@ -56,10 +47,7 @@ class ListStackOutputsRequest implements ModelInterface, ArrayAccess
         'clientRequestId' => null,
         'projectId' => null,
         'stackName' => null,
-        'stackId' => null,
-        'executor' => null,
-        'limit' => null,
-        'marker' => null
+        'stackId' => null
     ];
 
     /**
@@ -88,10 +76,7 @@ class ListStackOutputsRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
-    * executor  执行操作者的名字，将用做未来的审计工作。
-    * limit  分页limit
-    * marker  当一页无法发回所有的细节，上一次的请求将返回next_marker以指引还有更多页数，客户可以将next_marker中的值放到此处以查询下一页的信息。
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @var string[]
     */
@@ -99,10 +84,7 @@ class ListStackOutputsRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'Client-Request-Id',
             'projectId' => 'project_id',
             'stackName' => 'stack_name',
-            'stackId' => 'stack_id',
-            'executor' => 'executor',
-            'limit' => 'limit',
-            'marker' => 'marker'
+            'stackId' => 'stack_id'
     ];
 
     /**
@@ -110,10 +92,7 @@ class ListStackOutputsRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
-    * executor  执行操作者的名字，将用做未来的审计工作。
-    * limit  分页limit
-    * marker  当一页无法发回所有的细节，上一次的请求将返回next_marker以指引还有更多页数，客户可以将next_marker中的值放到此处以查询下一页的信息。
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @var string[]
     */
@@ -121,10 +100,7 @@ class ListStackOutputsRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'setClientRequestId',
             'projectId' => 'setProjectId',
             'stackName' => 'setStackName',
-            'stackId' => 'setStackId',
-            'executor' => 'setExecutor',
-            'limit' => 'setLimit',
-            'marker' => 'setMarker'
+            'stackId' => 'setStackId'
     ];
 
     /**
@@ -132,10 +108,7 @@ class ListStackOutputsRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
-    * executor  执行操作者的名字，将用做未来的审计工作。
-    * limit  分页limit
-    * marker  当一页无法发回所有的细节，上一次的请求将返回next_marker以指引还有更多页数，客户可以将next_marker中的值放到此处以查询下一页的信息。
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @var string[]
     */
@@ -143,10 +116,7 @@ class ListStackOutputsRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'getClientRequestId',
             'projectId' => 'getProjectId',
             'stackName' => 'getStackName',
-            'stackId' => 'getStackId',
-            'executor' => 'getExecutor',
-            'limit' => 'getLimit',
-            'marker' => 'getMarker'
+            'stackId' => 'getStackId'
     ];
 
     /**
@@ -211,9 +181,6 @@ class ListStackOutputsRequest implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['stackName'] = isset($data['stackName']) ? $data['stackName'] : null;
         $this->container['stackId'] = isset($data['stackId']) ? $data['stackId'] : null;
-        $this->container['executor'] = isset($data['executor']) ? $data['executor'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 50;
-        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -268,27 +235,6 @@ class ListStackOutputsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['stackId']) && !preg_match("/^[a-z0-9]+[a-z0-9-]*$/", $this->container['stackId'])) {
                 $invalidProperties[] = "invalid value for 'stackId', must be conform to the pattern /^[a-z0-9]+[a-z0-9-]*$/.";
-            }
-            if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) > 32)) {
-                $invalidProperties[] = "invalid value for 'executor', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) < 1)) {
-                $invalidProperties[] = "invalid value for 'executor', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['executor']) && !preg_match("/^[A-Za-z0-9]+$/", $this->container['executor'])) {
-                $invalidProperties[] = "invalid value for 'executor', must be conform to the pattern /^[A-Za-z0-9]+$/.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 512)) {
-                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 512.";
-            }
-            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 1)) {
-                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -378,7 +324,7 @@ class ListStackOutputsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets stackId
-    *  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    *  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @return string|null
     */
@@ -390,85 +336,13 @@ class ListStackOutputsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets stackId
     *
-    * @param string|null $stackId 用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * @param string|null $stackId 用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @return $this
     */
     public function setStackId($stackId)
     {
         $this->container['stackId'] = $stackId;
-        return $this;
-    }
-
-    /**
-    * Gets executor
-    *  执行操作者的名字，将用做未来的审计工作。
-    *
-    * @return string|null
-    */
-    public function getExecutor()
-    {
-        return $this->container['executor'];
-    }
-
-    /**
-    * Sets executor
-    *
-    * @param string|null $executor 执行操作者的名字，将用做未来的审计工作。
-    *
-    * @return $this
-    */
-    public function setExecutor($executor)
-    {
-        $this->container['executor'] = $executor;
-        return $this;
-    }
-
-    /**
-    * Gets limit
-    *  分页limit
-    *
-    * @return int|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int|null $limit 分页limit
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
-    * Gets marker
-    *  当一页无法发回所有的细节，上一次的请求将返回next_marker以指引还有更多页数，客户可以将next_marker中的值放到此处以查询下一页的信息。
-    *
-    * @return string|null
-    */
-    public function getMarker()
-    {
-        return $this->container['marker'];
-    }
-
-    /**
-    * Sets marker
-    *
-    * @param string|null $marker 当一页无法发回所有的细节，上一次的请求将返回next_marker以指引还有更多页数，客户可以将next_marker中的值放到此处以查询下一页的信息。
-    *
-    * @return $this
-    */
-    public function setMarker($marker)
-    {
-        $this->container['marker'] = $marker;
         return $this;
     }
 

@@ -23,11 +23,8 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     * deploymentId  部署时API返回的id(uuid)。如果deployment_id不存在，则返回整个栈从生成到现在的所有更新状态
-    * limit  一次返回的stack-events的最大数量
-    * marker  当一页无法发回所有的细节，上一次的请求将返回next_marker以指引还有更多页数，客户可以将next_marker中的值放到此处以查询下一页的信息。
-    * executor  执行操作者的名字，将用做未来的审计工作。
     *
     * @var string[]
     */
@@ -36,10 +33,7 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'stackName' => 'string',
             'stackId' => 'string',
-            'deploymentId' => 'string',
-            'limit' => 'int',
-            'marker' => 'string',
-            'executor' => 'string'
+            'deploymentId' => 'string'
     ];
 
     /**
@@ -47,11 +41,8 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     * deploymentId  部署时API返回的id(uuid)。如果deployment_id不存在，则返回整个栈从生成到现在的所有更新状态
-    * limit  一次返回的stack-events的最大数量
-    * marker  当一页无法发回所有的细节，上一次的请求将返回next_marker以指引还有更多页数，客户可以将next_marker中的值放到此处以查询下一页的信息。
-    * executor  执行操作者的名字，将用做未来的审计工作。
     *
     * @var string[]
     */
@@ -60,10 +51,7 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
         'projectId' => null,
         'stackName' => null,
         'stackId' => null,
-        'deploymentId' => null,
-        'limit' => null,
-        'marker' => null,
-        'executor' => null
+        'deploymentId' => null
     ];
 
     /**
@@ -92,11 +80,8 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     * deploymentId  部署时API返回的id(uuid)。如果deployment_id不存在，则返回整个栈从生成到现在的所有更新状态
-    * limit  一次返回的stack-events的最大数量
-    * marker  当一页无法发回所有的细节，上一次的请求将返回next_marker以指引还有更多页数，客户可以将next_marker中的值放到此处以查询下一页的信息。
-    * executor  执行操作者的名字，将用做未来的审计工作。
     *
     * @var string[]
     */
@@ -105,10 +90,7 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'stackName' => 'stack_name',
             'stackId' => 'stack_id',
-            'deploymentId' => 'deployment_id',
-            'limit' => 'limit',
-            'marker' => 'marker',
-            'executor' => 'executor'
+            'deploymentId' => 'deployment_id'
     ];
 
     /**
@@ -116,11 +98,8 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     * deploymentId  部署时API返回的id(uuid)。如果deployment_id不存在，则返回整个栈从生成到现在的所有更新状态
-    * limit  一次返回的stack-events的最大数量
-    * marker  当一页无法发回所有的细节，上一次的请求将返回next_marker以指引还有更多页数，客户可以将next_marker中的值放到此处以查询下一页的信息。
-    * executor  执行操作者的名字，将用做未来的审计工作。
     *
     * @var string[]
     */
@@ -129,10 +108,7 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'stackName' => 'setStackName',
             'stackId' => 'setStackId',
-            'deploymentId' => 'setDeploymentId',
-            'limit' => 'setLimit',
-            'marker' => 'setMarker',
-            'executor' => 'setExecutor'
+            'deploymentId' => 'setDeploymentId'
     ];
 
     /**
@@ -140,11 +116,8 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
     * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     * deploymentId  部署时API返回的id(uuid)。如果deployment_id不存在，则返回整个栈从生成到现在的所有更新状态
-    * limit  一次返回的stack-events的最大数量
-    * marker  当一页无法发回所有的细节，上一次的请求将返回next_marker以指引还有更多页数，客户可以将next_marker中的值放到此处以查询下一页的信息。
-    * executor  执行操作者的名字，将用做未来的审计工作。
     *
     * @var string[]
     */
@@ -153,10 +126,7 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'stackName' => 'getStackName',
             'stackId' => 'getStackId',
-            'deploymentId' => 'getDeploymentId',
-            'limit' => 'getLimit',
-            'marker' => 'getMarker',
-            'executor' => 'getExecutor'
+            'deploymentId' => 'getDeploymentId'
     ];
 
     /**
@@ -222,9 +192,6 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
         $this->container['stackName'] = isset($data['stackName']) ? $data['stackName'] : null;
         $this->container['stackId'] = isset($data['stackId']) ? $data['stackId'] : null;
         $this->container['deploymentId'] = isset($data['deploymentId']) ? $data['deploymentId'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 100;
-        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
-        $this->container['executor'] = isset($data['executor']) ? $data['executor'] : null;
     }
 
     /**
@@ -288,27 +255,6 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['deploymentId']) && !preg_match("/^[a-z0-9]+[a-z0-9-]*$/", $this->container['deploymentId'])) {
                 $invalidProperties[] = "invalid value for 'deploymentId', must be conform to the pattern /^[a-z0-9]+[a-z0-9-]*$/.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
-            }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 512)) {
-                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 512.";
-            }
-            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 1)) {
-                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) > 32)) {
-                $invalidProperties[] = "invalid value for 'executor', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) < 1)) {
-                $invalidProperties[] = "invalid value for 'executor', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['executor']) && !preg_match("/^[A-Za-z0-9]+$/", $this->container['executor'])) {
-                $invalidProperties[] = "invalid value for 'executor', must be conform to the pattern /^[A-Za-z0-9]+$/.";
             }
         return $invalidProperties;
     }
@@ -398,7 +344,7 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets stackId
-    *  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    *  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @return string|null
     */
@@ -410,7 +356,7 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets stackId
     *
-    * @param string|null $stackId 用户希望描述的栈的Id。若stack_name和stack_id同时存在，则IaC会检查是否两个匹配，否则返回400
+    * @param string|null $stackId 用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @return $this
     */
@@ -441,78 +387,6 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     public function setDeploymentId($deploymentId)
     {
         $this->container['deploymentId'] = $deploymentId;
-        return $this;
-    }
-
-    /**
-    * Gets limit
-    *  一次返回的stack-events的最大数量
-    *
-    * @return int|null
-    */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-    * Sets limit
-    *
-    * @param int|null $limit 一次返回的stack-events的最大数量
-    *
-    * @return $this
-    */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
-    * Gets marker
-    *  当一页无法发回所有的细节，上一次的请求将返回next_marker以指引还有更多页数，客户可以将next_marker中的值放到此处以查询下一页的信息。
-    *
-    * @return string|null
-    */
-    public function getMarker()
-    {
-        return $this->container['marker'];
-    }
-
-    /**
-    * Sets marker
-    *
-    * @param string|null $marker 当一页无法发回所有的细节，上一次的请求将返回next_marker以指引还有更多页数，客户可以将next_marker中的值放到此处以查询下一页的信息。
-    *
-    * @return $this
-    */
-    public function setMarker($marker)
-    {
-        $this->container['marker'] = $marker;
-        return $this;
-    }
-
-    /**
-    * Gets executor
-    *  执行操作者的名字，将用做未来的审计工作。
-    *
-    * @return string|null
-    */
-    public function getExecutor()
-    {
-        return $this->container['executor'];
-    }
-
-    /**
-    * Sets executor
-    *
-    * @param string|null $executor 执行操作者的名字，将用做未来的审计工作。
-    *
-    * @return $this
-    */
-    public function setExecutor($executor)
-    {
-        $this->container['executor'] = $executor;
         return $this;
     }
 

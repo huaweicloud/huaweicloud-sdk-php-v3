@@ -247,8 +247,8 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
             }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 36)) {
                 $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 36.";
