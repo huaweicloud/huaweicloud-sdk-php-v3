@@ -1,3 +1,35 @@
+# 3.1.15 2022-12-15
+
+### HuaweiCloud SDK ECS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ListServersDetails`新增请求参数 `server_id`
+
+### HuaweiCloud SDK EIP
+
+- _新增特性_
+  - 支持接口`ShowResourcesJobDetail`、`ChangeBandwidthToPeriod`、`ChangePublicipToPeriod`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK Live
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`CreateRecordCallbackConfig`新增请求参数 `key`
+  - 接口`UpdateRecordCallbackConfig`:
+    - 新增请求参数 `key`
+    - 新增响应参数 `id`、`publish_domain`、`app`、`notify_callback_url`、`notify_event_subscription`、`sign_type`、`create_time`、`update_time`
+
 # 3.1.14 2022-12-08
 
 ### HuaweiCloud SDK AOS

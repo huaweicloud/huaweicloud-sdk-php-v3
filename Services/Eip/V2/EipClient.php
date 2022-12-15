@@ -153,6 +153,68 @@ class EipClient extends Client
     }
 
     /**
+     * 按需转包API
+     *
+     * 租户按需转包接口。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeBandwidthToPeriod($request)
+    {
+        return $this->changeBandwidthToPeriodWithHttpInfo($request);
+    }
+
+    public function changeBandwidthToPeriodWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/{project_id}/bandwidths/change-to-period';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V2\Model\ChangeBandwidthToPeriodResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ChangeBandwidthToPeriodRequest');
+    }
+
+    /**
      * 创建共享带宽
      *
      * 创建共享带宽。
@@ -1039,6 +1101,68 @@ class EipClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V2\Model\BatchDisassociatePublicipsResponse',
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\BatchDisassociatePublicipsRequest');
+    }
+
+    /**
+     * 按需转包接口
+     *
+     * 租户按需转包接口。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changePublicipToPeriod($request)
+    {
+        return $this->changePublicipToPeriodWithHttpInfo($request);
+    }
+
+    public function changePublicipToPeriodWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/{project_id}/publicips/change-to-period';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V2\Model\ChangePublicipToPeriodResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ChangePublicipToPeriodRequest');
     }
 
     /**
@@ -1929,6 +2053,68 @@ class EipClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Eip\V2\Model\UpdatePublicipResponse',
             $requestType='\HuaweiCloud\SDK\Eip\V2\Model\UpdatePublicipRequest');
+    }
+
+    /**
+     * 查询Job状态接口
+     *
+     * 查询Job状态接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showResourcesJobDetail($request)
+    {
+        return $this->showResourcesJobDetailWithHttpInfo($request);
+    }
+
+    public function showResourcesJobDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/jobs/{job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Eip\V2\Model\ShowResourcesJobDetailResponse',
+            $requestType='\HuaweiCloud\SDK\Eip\V2\Model\ShowResourcesJobDetailRequest');
     }
 
     /**

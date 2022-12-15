@@ -191,11 +191,11 @@ class LiveAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json; charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json; charset=UTF-8'],
                 ['application/json; charset=UTF-8']
             );
         }
@@ -1788,11 +1788,11 @@ class LiveAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json; charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json; charset=UTF-8'],
                 ['application/json; charset=UTF-8']
             );
         }
