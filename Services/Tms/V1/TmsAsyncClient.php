@@ -126,11 +126,11 @@ class TmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                ['application/json;charset=UTF-8', 'failed_resources']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8', 'failed_resources'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -256,11 +256,11 @@ class TmsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                ['application/json;charset=UTF-8', 'failed_resources']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8', 'failed_resources'],
                 ['application/json;charset=UTF-8']
             );
         }

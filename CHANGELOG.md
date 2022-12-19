@@ -1,3 +1,35 @@
+# 3.1.16 2022-12-19
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `server_id` to the interface `ListServersDetails`
+
+### HuaweiCloud SDK EIP
+
+- _Features_
+  - Support the interfaces `ShowResourcesJobDetail`, `ChangeBandwidthToPeriod`, `ChangePublicipToPeriod`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `key` to the interface `CreateRecordCallbackConfig`
+  - Changes of the interface `UpdateRecordCallbackConfig`:
+    - Add the request parameter `key`
+    - Add the response parameters `id`, `publish_domain`, `app`, `notify_callback_url`, `notify_event_subscription`, `sign_type`, `create_time`, `update_time`
+
 # 3.1.15 2022-12-15
 
 ### HuaweiCloud SDK ECS
