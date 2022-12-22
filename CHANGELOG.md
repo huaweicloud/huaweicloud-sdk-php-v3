@@ -1,3 +1,28 @@
+# 3.1.17 2022-12-22
+
+### HuaweiCloud SDK IMS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `vault_id` to the interface `CopyImageCrossRegion`
+
+### HuaweiCloud SDK IoTDA
+
+- _Features_
+  - Support the interface `SearchDevices`
+- _Bug Fix_
+  - None
+- _Change_
+  - Add the request parameter `device_side` to the interface `CreateRule`
+  - Add the response parameter `device_side` to the interface `ListRules`
+  - Add the response parameter `device_side` to the interface `ShowRule`
+  - Changes of the interface `UpdateRule`:
+    - Add the request parameter `device_side`
+    - Add the response parameter `device_side`
+
 # 3.1.16 2022-12-19
 
 ### HuaweiCloud SDK ECS

@@ -20,34 +20,34 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数说明**：规则动作的类型。 **取值范围**： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。
+    * type  **参数说明**：规则动作的类型，端侧执行只支持下发设备命令消息类型。 **取值范围**： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。
+    * deviceCommand  deviceCommand
     * smnForwarding  smnForwarding
     * deviceAlarm  deviceAlarm
-    * deviceCommand  deviceCommand
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
+            'deviceCommand' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ActionDeviceCommand',
             'smnForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ActionSmnForwarding',
-            'deviceAlarm' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ActionDeviceAlarm',
-            'deviceCommand' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ActionDeviceCommand'
+            'deviceAlarm' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ActionDeviceAlarm'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数说明**：规则动作的类型。 **取值范围**： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。
+    * type  **参数说明**：规则动作的类型，端侧执行只支持下发设备命令消息类型。 **取值范围**： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。
+    * deviceCommand  deviceCommand
     * smnForwarding  smnForwarding
     * deviceAlarm  deviceAlarm
-    * deviceCommand  deviceCommand
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
+        'deviceCommand' => null,
         'smnForwarding' => null,
-        'deviceAlarm' => null,
-        'deviceCommand' => null
+        'deviceAlarm' => null
     ];
 
     /**
@@ -73,50 +73,50 @@ class RuleAction implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数说明**：规则动作的类型。 **取值范围**： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。
+    * type  **参数说明**：规则动作的类型，端侧执行只支持下发设备命令消息类型。 **取值范围**： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。
+    * deviceCommand  deviceCommand
     * smnForwarding  smnForwarding
     * deviceAlarm  deviceAlarm
-    * deviceCommand  deviceCommand
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
+            'deviceCommand' => 'device_command',
             'smnForwarding' => 'smn_forwarding',
-            'deviceAlarm' => 'device_alarm',
-            'deviceCommand' => 'device_command'
+            'deviceAlarm' => 'device_alarm'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数说明**：规则动作的类型。 **取值范围**： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。
+    * type  **参数说明**：规则动作的类型，端侧执行只支持下发设备命令消息类型。 **取值范围**： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。
+    * deviceCommand  deviceCommand
     * smnForwarding  smnForwarding
     * deviceAlarm  deviceAlarm
-    * deviceCommand  deviceCommand
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
+            'deviceCommand' => 'setDeviceCommand',
             'smnForwarding' => 'setSmnForwarding',
-            'deviceAlarm' => 'setDeviceAlarm',
-            'deviceCommand' => 'setDeviceCommand'
+            'deviceAlarm' => 'setDeviceAlarm'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数说明**：规则动作的类型。 **取值范围**： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。
+    * type  **参数说明**：规则动作的类型，端侧执行只支持下发设备命令消息类型。 **取值范围**： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。
+    * deviceCommand  deviceCommand
     * smnForwarding  smnForwarding
     * deviceAlarm  deviceAlarm
-    * deviceCommand  deviceCommand
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
+            'deviceCommand' => 'getDeviceCommand',
             'smnForwarding' => 'getSmnForwarding',
-            'deviceAlarm' => 'getDeviceAlarm',
-            'deviceCommand' => 'getDeviceCommand'
+            'deviceAlarm' => 'getDeviceAlarm'
     ];
 
     /**
@@ -178,9 +178,9 @@ class RuleAction implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['deviceCommand'] = isset($data['deviceCommand']) ? $data['deviceCommand'] : null;
         $this->container['smnForwarding'] = isset($data['smnForwarding']) ? $data['smnForwarding'] : null;
         $this->container['deviceAlarm'] = isset($data['deviceAlarm']) ? $data['deviceAlarm'] : null;
-        $this->container['deviceCommand'] = isset($data['deviceCommand']) ? $data['deviceCommand'] : null;
     }
 
     /**
@@ -213,7 +213,7 @@ class RuleAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数说明**：规则动作的类型。 **取值范围**： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。
+    *  **参数说明**：规则动作的类型，端侧执行只支持下发设备命令消息类型。 **取值范围**： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。
     *
     * @return string
     */
@@ -225,13 +225,37 @@ class RuleAction implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数说明**：规则动作的类型。 **取值范围**： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。
+    * @param string $type **参数说明**：规则动作的类型，端侧执行只支持下发设备命令消息类型。 **取值范围**： - DEVICE_CMD：下发设备命令消息类型。 - SMN_FORWARDING：发送SMN消息类型。 - DEVICE_ALARM：上报设备告警消息类型。当选择该类型时，condition中必须有DEVICE_DATA条件类型。该类型动作只能唯一。
     *
     * @return $this
     */
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets deviceCommand
+    *  deviceCommand
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionDeviceCommand|null
+    */
+    public function getDeviceCommand()
+    {
+        return $this->container['deviceCommand'];
+    }
+
+    /**
+    * Sets deviceCommand
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ActionDeviceCommand|null $deviceCommand deviceCommand
+    *
+    * @return $this
+    */
+    public function setDeviceCommand($deviceCommand)
+    {
+        $this->container['deviceCommand'] = $deviceCommand;
         return $this;
     }
 
@@ -280,30 +304,6 @@ class RuleAction implements ModelInterface, ArrayAccess
     public function setDeviceAlarm($deviceAlarm)
     {
         $this->container['deviceAlarm'] = $deviceAlarm;
-        return $this;
-    }
-
-    /**
-    * Gets deviceCommand
-    *  deviceCommand
-    *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ActionDeviceCommand|null
-    */
-    public function getDeviceCommand()
-    {
-        return $this->container['deviceCommand'];
-    }
-
-    /**
-    * Sets deviceCommand
-    *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ActionDeviceCommand|null $deviceCommand deviceCommand
-    *
-    * @return $this
-    */
-    public function setDeviceCommand($deviceCommand)
-    {
-        $this->container['deviceCommand'] = $deviceCommand;
         return $this;
     }
 

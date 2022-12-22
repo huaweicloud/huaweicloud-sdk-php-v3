@@ -20,7 +20,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fwInstanceId  防火墙id
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * name  防火墙名称
     * haType  集群类型
     * chargeMode  计费模式 0：包年/包月 1：按需
@@ -54,7 +54,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fwInstanceId  防火墙id
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * name  防火墙名称
     * haType  集群类型
     * chargeMode  计费模式 0：包年/包月 1：按需
@@ -109,7 +109,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fwInstanceId  防火墙id
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * name  防火墙名称
     * haType  集群类型
     * chargeMode  计费模式 0：包年/包月 1：按需
@@ -143,7 +143,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fwInstanceId  防火墙id
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * name  防火墙名称
     * haType  集群类型
     * chargeMode  计费模式 0：包年/包月 1：按需
@@ -177,7 +177,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fwInstanceId  防火墙id
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     * name  防火墙名称
     * haType  集群类型
     * chargeMode  计费模式 0：包年/包月 1：按需
@@ -351,7 +351,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙id
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @return string|null
     */
@@ -363,7 +363,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string|null $fwInstanceId 防火墙id
+    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @return $this
     */

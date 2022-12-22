@@ -241,8 +241,8 @@ class ListRuleActionsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['ruleId']) && !preg_match("/^[a-zA-Z0-9_-]{1,36}$/", $this->container['ruleId'])) {
                 $invalidProperties[] = "invalid value for 'ruleId', must be conform to the pattern /^[a-zA-Z0-9_-]{1,36}$/.";
             }
-            if (!is_null($this->container['channel']) && !preg_match("/(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|MQS_FORWARDING|IoTA_FORWARDING|ROMA_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING|PULSAR_FORWARDING)/", $this->container['channel'])) {
-                $invalidProperties[] = "invalid value for 'channel', must be conform to the pattern /(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|MQS_FORWARDING|IoTA_FORWARDING|ROMA_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING|PULSAR_FORWARDING)/.";
+            if (!is_null($this->container['channel']) && !preg_match("/(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|MQS_FORWARDING|IoTA_FORWARDING|ROMA_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING|PULSAR_FORWARDING|DMS_ROCKETMQ_FORWARDING)/", $this->container['channel'])) {
+                $invalidProperties[] = "invalid value for 'channel', must be conform to the pattern /(HTTP_FORWARDING|DIS_FORWARDING|OBS_FORWARDING|AMQP_FORWARDING|DMS_KAFKA_FORWARDING|MQS_FORWARDING|IoTA_FORWARDING|ROMA_FORWARDING|MYSQL_FORWARDING|MQTT_FORWARDING|LTS_FORWARDING|INFLUXDB_FORWARDING|FUNCTIONGRAPH_FORWARDING|MRS_KAFKA_FORWARDING|PULSAR_FORWARDING|DMS_ROCKETMQ_FORWARDING)/.";
             }
             if (!is_null($this->container['appType']) && !preg_match("/(GLOBAL|APP)/", $this->container['appType'])) {
                 $invalidProperties[] = "invalid value for 'appType', must be conform to the pattern /(GLOBAL|APP)/.";

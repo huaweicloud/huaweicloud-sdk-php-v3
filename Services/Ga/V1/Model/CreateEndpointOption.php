@@ -212,13 +212,16 @@ class CreateEndpointOption implements ModelInterface, ArrayAccess
             if (!is_null($this->container['weight']) && ($this->container['weight'] < 0)) {
                 $invalidProperties[] = "invalid value for 'weight', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['ipAddress']) && (mb_strlen($this->container['ipAddress']) > 15)) {
+        if ($this->container['ipAddress'] === null) {
+            $invalidProperties[] = "'ipAddress' can't be null";
+        }
+            if ((mb_strlen($this->container['ipAddress']) > 15)) {
                 $invalidProperties[] = "invalid value for 'ipAddress', the character length must be smaller than or equal to 15.";
             }
-            if (!is_null($this->container['ipAddress']) && (mb_strlen($this->container['ipAddress']) < 0)) {
+            if ((mb_strlen($this->container['ipAddress']) < 0)) {
                 $invalidProperties[] = "invalid value for 'ipAddress', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['ipAddress']) && !preg_match("/^((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\.){3}(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)$/", $this->container['ipAddress'])) {
+            if (!preg_match("/^((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\.){3}(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)$/", $this->container['ipAddress'])) {
                 $invalidProperties[] = "invalid value for 'ipAddress', must be conform to the pattern /^((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\.){3}(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)$/.";
             }
         return $invalidProperties;
@@ -311,7 +314,7 @@ class CreateEndpointOption implements ModelInterface, ArrayAccess
     * Gets ipAddress
     *  IP地址。
     *
-    * @return string|null
+    * @return string
     */
     public function getIpAddress()
     {
@@ -321,7 +324,7 @@ class CreateEndpointOption implements ModelInterface, ArrayAccess
     /**
     * Sets ipAddress
     *
-    * @param string|null $ipAddress IP地址。
+    * @param string $ipAddress IP地址。
     *
     * @return $this
     */

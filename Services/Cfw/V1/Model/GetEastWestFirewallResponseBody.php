@@ -20,7 +20,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * objectId  东西向防火墙object_id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * projectId  租户project_id
     * status  防护状态：0 未开启防护， 1 已开启防护
     * erAssociatedSubnet  erAssociatedSubnet
@@ -50,7 +50,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * objectId  东西向防火墙object_id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * projectId  租户project_id
     * status  防护状态：0 未开启防护， 1 已开启防护
     * erAssociatedSubnet  erAssociatedSubnet
@@ -101,7 +101,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * objectId  东西向防火墙object_id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * projectId  租户project_id
     * status  防护状态：0 未开启防护， 1 已开启防护
     * erAssociatedSubnet  erAssociatedSubnet
@@ -131,7 +131,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * objectId  东西向防火墙object_id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * projectId  租户project_id
     * status  防护状态：0 未开启防护， 1 已开启防护
     * erAssociatedSubnet  erAssociatedSubnet
@@ -161,7 +161,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * objectId  东西向防火墙object_id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * projectId  租户project_id
     * status  防护状态：0 未开启防护， 1 已开启防护
     * erAssociatedSubnet  erAssociatedSubnet
@@ -284,7 +284,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  东西向防火墙object_id
+    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @return string|null
     */
@@ -296,7 +296,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 东西向防火墙object_id
+    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @return $this
     */

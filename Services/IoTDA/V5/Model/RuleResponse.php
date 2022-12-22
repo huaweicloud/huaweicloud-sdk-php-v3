@@ -25,11 +25,12 @@ class RuleResponse implements ModelInterface, ArrayAccess
     * description  规则的描述信息。
     * conditionGroup  conditionGroup
     * actions  规则的动作列表，单个规则最多支持设置10个动作。
-    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：云端联动规则。 - DEVICE_SIDE：端侧规则。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
     * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。
     * edgeNodeIds  归属边缘侧节点设备ID列表。
     * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * deviceSide  deviceSide
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class RuleResponse implements ModelInterface, ArrayAccess
             'status' => 'string',
             'appId' => 'string',
             'edgeNodeIds' => 'string[]',
-            'lastUpdateTime' => 'string'
+            'lastUpdateTime' => 'string',
+            'deviceSide' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DeviceSide'
     ];
 
     /**
@@ -53,11 +55,12 @@ class RuleResponse implements ModelInterface, ArrayAccess
     * description  规则的描述信息。
     * conditionGroup  conditionGroup
     * actions  规则的动作列表，单个规则最多支持设置10个动作。
-    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：云端联动规则。 - DEVICE_SIDE：端侧规则。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
     * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。
     * edgeNodeIds  归属边缘侧节点设备ID列表。
     * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * deviceSide  deviceSide
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class RuleResponse implements ModelInterface, ArrayAccess
         'status' => null,
         'appId' => null,
         'edgeNodeIds' => null,
-        'lastUpdateTime' => null
+        'lastUpdateTime' => null,
+        'deviceSide' => null
     ];
 
     /**
@@ -102,11 +106,12 @@ class RuleResponse implements ModelInterface, ArrayAccess
     * description  规则的描述信息。
     * conditionGroup  conditionGroup
     * actions  规则的动作列表，单个规则最多支持设置10个动作。
-    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：云端联动规则。 - DEVICE_SIDE：端侧规则。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
     * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。
     * edgeNodeIds  归属边缘侧节点设备ID列表。
     * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * deviceSide  deviceSide
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class RuleResponse implements ModelInterface, ArrayAccess
             'status' => 'status',
             'appId' => 'app_id',
             'edgeNodeIds' => 'edge_node_ids',
-            'lastUpdateTime' => 'last_update_time'
+            'lastUpdateTime' => 'last_update_time',
+            'deviceSide' => 'device_side'
     ];
 
     /**
@@ -130,11 +136,12 @@ class RuleResponse implements ModelInterface, ArrayAccess
     * description  规则的描述信息。
     * conditionGroup  conditionGroup
     * actions  规则的动作列表，单个规则最多支持设置10个动作。
-    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：云端联动规则。 - DEVICE_SIDE：端侧规则。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
     * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。
     * edgeNodeIds  归属边缘侧节点设备ID列表。
     * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * deviceSide  deviceSide
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class RuleResponse implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'appId' => 'setAppId',
             'edgeNodeIds' => 'setEdgeNodeIds',
-            'lastUpdateTime' => 'setLastUpdateTime'
+            'lastUpdateTime' => 'setLastUpdateTime',
+            'deviceSide' => 'setDeviceSide'
     ];
 
     /**
@@ -158,11 +166,12 @@ class RuleResponse implements ModelInterface, ArrayAccess
     * description  规则的描述信息。
     * conditionGroup  conditionGroup
     * actions  规则的动作列表，单个规则最多支持设置10个动作。
-    * ruleType  规则的类型 - DEVICE_LINKAGE：设备联动。
+    * ruleType  规则的类型 - DEVICE_LINKAGE：云端联动规则。 - DEVICE_SIDE：端侧规则。
     * status  规则的状态，默认值：active。 - active：激活。 - inactive：未激活。
     * appId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的规则归属到哪个资源空间下，否则创建的规则将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。
     * edgeNodeIds  归属边缘侧节点设备ID列表。
     * lastUpdateTime  规则最后更新时间，使用UTC时区，格式：yyyyMMdd'T'HHmmss'Z'。
+    * deviceSide  deviceSide
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class RuleResponse implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'appId' => 'getAppId',
             'edgeNodeIds' => 'getEdgeNodeIds',
-            'lastUpdateTime' => 'getLastUpdateTime'
+            'lastUpdateTime' => 'getLastUpdateTime',
+            'deviceSide' => 'getDeviceSide'
     ];
 
     /**
@@ -247,6 +257,7 @@ class RuleResponse implements ModelInterface, ArrayAccess
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['edgeNodeIds'] = isset($data['edgeNodeIds']) ? $data['edgeNodeIds'] : null;
         $this->container['lastUpdateTime'] = isset($data['lastUpdateTime']) ? $data['lastUpdateTime'] : null;
+        $this->container['deviceSide'] = isset($data['deviceSide']) ? $data['deviceSide'] : null;
     }
 
     /**
@@ -281,8 +292,8 @@ class RuleResponse implements ModelInterface, ArrayAccess
         if ($this->container['ruleType'] === null) {
             $invalidProperties[] = "'ruleType' can't be null";
         }
-            if (!preg_match("/(DEVICE_LINKAGE|DATA_FORWARDING|EDGE)/", $this->container['ruleType'])) {
-                $invalidProperties[] = "invalid value for 'ruleType', must be conform to the pattern /(DEVICE_LINKAGE|DATA_FORWARDING|EDGE)/.";
+            if (!preg_match("/(DEVICE_LINKAGE|DATA_FORWARDING|EDGE|DEVICE_SIDE)/", $this->container['ruleType'])) {
+                $invalidProperties[] = "invalid value for 'ruleType', must be conform to the pattern /(DEVICE_LINKAGE|DATA_FORWARDING|EDGE|DEVICE_SIDE)/.";
             }
             if (!is_null($this->container['status']) && !preg_match("/(active|inactive)/", $this->container['status'])) {
                 $invalidProperties[] = "invalid value for 'status', must be conform to the pattern /(active|inactive)/.";
@@ -426,7 +437,7 @@ class RuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleType
-    *  规则的类型 - DEVICE_LINKAGE：设备联动。
+    *  规则的类型 - DEVICE_LINKAGE：云端联动规则。 - DEVICE_SIDE：端侧规则。
     *
     * @return string
     */
@@ -438,7 +449,7 @@ class RuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ruleType
     *
-    * @param string $ruleType 规则的类型 - DEVICE_LINKAGE：设备联动。
+    * @param string $ruleType 规则的类型 - DEVICE_LINKAGE：云端联动规则。 - DEVICE_SIDE：端侧规则。
     *
     * @return $this
     */
@@ -541,6 +552,30 @@ class RuleResponse implements ModelInterface, ArrayAccess
     public function setLastUpdateTime($lastUpdateTime)
     {
         $this->container['lastUpdateTime'] = $lastUpdateTime;
+        return $this;
+    }
+
+    /**
+    * Gets deviceSide
+    *  deviceSide
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceSide|null
+    */
+    public function getDeviceSide()
+    {
+        return $this->container['deviceSide'];
+    }
+
+    /**
+    * Sets deviceSide
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceSide|null $deviceSide deviceSide
+    *
+    * @return $this
+    */
+    public function setDeviceSide($deviceSide)
+    {
+        $this->container['deviceSide'] = $deviceSide;
         return $this;
     }
 

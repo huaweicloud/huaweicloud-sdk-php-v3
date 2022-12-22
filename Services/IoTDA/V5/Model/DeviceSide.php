@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cfw\V1\Model;
+namespace HuaweiCloud\SDK\IoTDA\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
+class DeviceSide implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListVpcProtectsRequest';
+    protected static $openAPIModelName = 'DeviceSide';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * deviceIds  **参数说明**：端侧执行下发的目标设备ID列表。设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'projectId' => 'string',
-            'objectId' => 'string'
+            'deviceIds' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * deviceIds  **参数说明**：端侧执行下发的目标设备ID列表。设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'projectId' => null,
-        'objectId' => null
+        'deviceIds' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * deviceIds  **参数说明**：端侧执行下发的目标设备ID列表。设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'projectId' => 'project_id',
-            'objectId' => 'object_id'
+            'deviceIds' => 'device_ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * deviceIds  **参数说明**：端侧执行下发的目标设备ID列表。设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
     *
     * @var string[]
     */
     protected static $setters = [
-            'projectId' => 'setProjectId',
-            'objectId' => 'setObjectId'
+            'deviceIds' => 'setDeviceIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * deviceIds  **参数说明**：端侧执行下发的目标设备ID列表。设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
     *
     * @var string[]
     */
     protected static $getters = [
-            'projectId' => 'getProjectId',
-            'objectId' => 'getObjectId'
+            'deviceIds' => 'getDeviceIds'
     ];
 
     /**
@@ -157,8 +147,7 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
+        $this->container['deviceIds'] = isset($data['deviceIds']) ? $data['deviceIds'] : null;
     }
 
     /**
@@ -169,12 +158,6 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['projectId'] === null) {
-            $invalidProperties[] = "'projectId' can't be null";
-        }
-        if ($this->container['objectId'] === null) {
-            $invalidProperties[] = "'objectId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -190,50 +173,26 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets projectId
-    *  租户项目id
+    * Gets deviceIds
+    *  **参数说明**：端侧执行下发的目标设备ID列表。设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
     *
-    * @return string
+    * @return string[]|null
     */
-    public function getProjectId()
+    public function getDeviceIds()
     {
-        return $this->container['projectId'];
+        return $this->container['deviceIds'];
     }
 
     /**
-    * Sets projectId
+    * Sets deviceIds
     *
-    * @param string $projectId 租户项目id
+    * @param string[]|null $deviceIds **参数说明**：端侧执行下发的目标设备ID列表。设备ID，用于唯一标识一个设备，在注册设备时由物联网平台分配获得。
     *
     * @return $this
     */
-    public function setProjectId($projectId)
+    public function setDeviceIds($deviceIds)
     {
-        $this->container['projectId'] = $projectId;
-        return $this;
-    }
-
-    /**
-    * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    *
-    * @return string
-    */
-    public function getObjectId()
-    {
-        return $this->container['objectId'];
-    }
-
-    /**
-    * Sets objectId
-    *
-    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    *
-    * @return $this
-    */
-    public function setObjectId($objectId)
-    {
-        $this->container['objectId'] = $objectId;
+        $this->container['deviceIds'] = $deviceIds;
         return $this;
     }
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cfw\V1\Model;
+namespace HuaweiCloud\SDK\IoTDA\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
+class SearchSql implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListVpcProtectsRequest';
+    protected static $openAPIModelName = 'SearchSql';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * sql  搜索sql语句，具体使用方法见类SQL语法使用说明章节
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'projectId' => 'string',
-            'objectId' => 'string'
+            'sql' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * sql  搜索sql语句，具体使用方法见类SQL语法使用说明章节
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'projectId' => null,
-        'objectId' => null
+        'sql' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * sql  搜索sql语句，具体使用方法见类SQL语法使用说明章节
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'projectId' => 'project_id',
-            'objectId' => 'object_id'
+            'sql' => 'sql'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * sql  搜索sql语句，具体使用方法见类SQL语法使用说明章节
     *
     * @var string[]
     */
     protected static $setters = [
-            'projectId' => 'setProjectId',
-            'objectId' => 'setObjectId'
+            'sql' => 'setSql'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * sql  搜索sql语句，具体使用方法见类SQL语法使用说明章节
     *
     * @var string[]
     */
     protected static $getters = [
-            'projectId' => 'getProjectId',
-            'objectId' => 'getObjectId'
+            'sql' => 'getSql'
     ];
 
     /**
@@ -157,8 +147,7 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
+        $this->container['sql'] = isset($data['sql']) ? $data['sql'] : null;
     }
 
     /**
@@ -169,12 +158,18 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['projectId'] === null) {
-            $invalidProperties[] = "'projectId' can't be null";
+        if ($this->container['sql'] === null) {
+            $invalidProperties[] = "'sql' can't be null";
         }
-        if ($this->container['objectId'] === null) {
-            $invalidProperties[] = "'objectId' can't be null";
-        }
+            if ((mb_strlen($this->container['sql']) > 400)) {
+                $invalidProperties[] = "invalid value for 'sql', the character length must be smaller than or equal to 400.";
+            }
+            if ((mb_strlen($this->container['sql']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sql', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^[一-龥a-zA-Z0-9_?'#()., &%@!*=<>:-]{1,400}$/", $this->container['sql'])) {
+                $invalidProperties[] = "invalid value for 'sql', must be conform to the pattern /^[一-龥a-zA-Z0-9_?'#()., &%@!*=<>:-]{1,400}$/.";
+            }
         return $invalidProperties;
     }
 
@@ -190,50 +185,26 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets projectId
-    *  租户项目id
+    * Gets sql
+    *  搜索sql语句，具体使用方法见类SQL语法使用说明章节
     *
     * @return string
     */
-    public function getProjectId()
+    public function getSql()
     {
-        return $this->container['projectId'];
+        return $this->container['sql'];
     }
 
     /**
-    * Sets projectId
+    * Sets sql
     *
-    * @param string $projectId 租户项目id
+    * @param string $sql 搜索sql语句，具体使用方法见类SQL语法使用说明章节
     *
     * @return $this
     */
-    public function setProjectId($projectId)
+    public function setSql($sql)
     {
-        $this->container['projectId'] = $projectId;
-        return $this;
-    }
-
-    /**
-    * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    *
-    * @return string
-    */
-    public function getObjectId()
-    {
-        return $this->container['objectId'];
-    }
-
-    /**
-    * Sets objectId
-    *
-    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    *
-    * @return $this
-    */
-    public function setObjectId($objectId)
-    {
-        $this->container['objectId'] = $objectId;
+        $this->container['sql'] = $sql;
         return $this;
     }
 

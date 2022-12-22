@@ -21,7 +21,7 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * projectId  租户项目ID
-    * objectId  防护对象ID
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * keyWord  弹性公网ID/弹性公网IP
     * status  防护状态 null-全部 0-开启防护 1-关闭防护
     * sync  是否同步租户EIP数据 0-不同步 1-同步
@@ -49,7 +49,7 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * projectId  租户项目ID
-    * objectId  防护对象ID
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * keyWord  弹性公网ID/弹性公网IP
     * status  防护状态 null-全部 0-开启防护 1-关闭防护
     * sync  是否同步租户EIP数据 0-不同步 1-同步
@@ -98,7 +98,7 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * projectId  租户项目ID
-    * objectId  防护对象ID
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * keyWord  弹性公网ID/弹性公网IP
     * status  防护状态 null-全部 0-开启防护 1-关闭防护
     * sync  是否同步租户EIP数据 0-不同步 1-同步
@@ -126,7 +126,7 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  租户项目ID
-    * objectId  防护对象ID
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * keyWord  弹性公网ID/弹性公网IP
     * status  防护状态 null-全部 0-开启防护 1-关闭防护
     * sync  是否同步租户EIP数据 0-不同步 1-同步
@@ -154,7 +154,7 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  租户项目ID
-    * objectId  防护对象ID
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * keyWord  弹性公网ID/弹性公网IP
     * status  防护状态 null-全部 0-开启防护 1-关闭防护
     * sync  是否同步租户EIP数据 0-不同步 1-同步
@@ -387,7 +387,7 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象ID
+    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @return string
     */
@@ -399,7 +399,7 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string $objectId 防护对象ID
+    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @return $this
     */

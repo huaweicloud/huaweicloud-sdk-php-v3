@@ -25,6 +25,7 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
     * name  镜像名称
     * projectName  目的区域的项目名称。
     * region  目的区域的Region ID。
+    * vaultId  存储库ID。如果是整机镜像，则在跨Region复制镜像时，为必选参数，需传入该值。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
             'description' => 'string',
             'name' => 'string',
             'projectName' => 'string',
-            'region' => 'string'
+            'region' => 'string',
+            'vaultId' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
     * name  镜像名称
     * projectName  目的区域的项目名称。
     * region  目的区域的Region ID。
+    * vaultId  存储库ID。如果是整机镜像，则在跨Region复制镜像时，为必选参数，需传入该值。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
         'description' => null,
         'name' => null,
         'projectName' => null,
-        'region' => null
+        'region' => null,
+        'vaultId' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
     * name  镜像名称
     * projectName  目的区域的项目名称。
     * region  目的区域的Region ID。
+    * vaultId  存储库ID。如果是整机镜像，则在跨Region复制镜像时，为必选参数，需传入该值。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
             'description' => 'description',
             'name' => 'name',
             'projectName' => 'project_name',
-            'region' => 'region'
+            'region' => 'region',
+            'vaultId' => 'vault_id'
     ];
 
     /**
@@ -100,6 +106,7 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
     * name  镜像名称
     * projectName  目的区域的项目名称。
     * region  目的区域的Region ID。
+    * vaultId  存储库ID。如果是整机镜像，则在跨Region复制镜像时，为必选参数，需传入该值。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'name' => 'setName',
             'projectName' => 'setProjectName',
-            'region' => 'setRegion'
+            'region' => 'setRegion',
+            'vaultId' => 'setVaultId'
     ];
 
     /**
@@ -118,6 +126,7 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
     * name  镜像名称
     * projectName  目的区域的项目名称。
     * region  目的区域的Region ID。
+    * vaultId  存储库ID。如果是整机镜像，则在跨Region复制镜像时，为必选参数，需传入该值。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'name' => 'getName',
             'projectName' => 'getProjectName',
-            'region' => 'getRegion'
+            'region' => 'getRegion',
+            'vaultId' => 'getVaultId'
     ];
 
     /**
@@ -192,6 +202,7 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['projectName'] = isset($data['projectName']) ? $data['projectName'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
+        $this->container['vaultId'] = isset($data['vaultId']) ? $data['vaultId'] : null;
     }
 
     /**
@@ -351,6 +362,30 @@ class CopyImageCrossRegionRequestBody implements ModelInterface, ArrayAccess
     public function setRegion($region)
     {
         $this->container['region'] = $region;
+        return $this;
+    }
+
+    /**
+    * Gets vaultId
+    *  存储库ID。如果是整机镜像，则在跨Region复制镜像时，为必选参数，需传入该值。
+    *
+    * @return string|null
+    */
+    public function getVaultId()
+    {
+        return $this->container['vaultId'];
+    }
+
+    /**
+    * Sets vaultId
+    *
+    * @param string|null $vaultId 存储库ID。如果是整机镜像，则在跨Region复制镜像时，为必选参数，需传入该值。
+    *
+    * @return $this
+    */
+    public function setVaultId($vaultId)
+    {
+        $this->container['vaultId'] = $vaultId;
         return $this;
     }
 

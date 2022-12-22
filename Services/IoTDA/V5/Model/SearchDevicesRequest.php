@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cfw\V1\Model;
+namespace HuaweiCloud\SDK\IoTDA\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
+class SearchDevicesRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListVpcProtectsRequest';
+    protected static $openAPIModelName = 'SearchDevicesRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'projectId' => 'string',
-            'objectId' => 'string'
+            'instanceId' => 'string',
+            'body' => '\HuaweiCloud\SDK\IoTDA\V5\Model\SearchSql'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'projectId' => null,
-        'objectId' => null
+        'instanceId' => null,
+        'body' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'projectId' => 'project_id',
-            'objectId' => 'object_id'
+            'instanceId' => 'Instance-Id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'projectId' => 'setProjectId',
-            'objectId' => 'setObjectId'
+            'instanceId' => 'setInstanceId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'projectId' => 'getProjectId',
-            'objectId' => 'getObjectId'
+            'instanceId' => 'getInstanceId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +157,8 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,12 +169,9 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['projectId'] === null) {
-            $invalidProperties[] = "'projectId' can't be null";
-        }
-        if ($this->container['objectId'] === null) {
-            $invalidProperties[] = "'objectId' can't be null";
-        }
+            if (!is_null($this->container['instanceId']) && !preg_match("/[0-9a-f-]{1,36}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[0-9a-f-]{1,36}/.";
+            }
         return $invalidProperties;
     }
 
@@ -190,50 +187,50 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets projectId
-    *  租户项目id
+    * Gets instanceId
+    *  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
-    * @return string
+    * @return string|null
     */
-    public function getProjectId()
+    public function getInstanceId()
     {
-        return $this->container['projectId'];
+        return $this->container['instanceId'];
     }
 
     /**
-    * Sets projectId
+    * Sets instanceId
     *
-    * @param string $projectId 租户项目id
+    * @param string|null $instanceId **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return $this
     */
-    public function setProjectId($projectId)
+    public function setInstanceId($instanceId)
     {
-        $this->container['projectId'] = $projectId;
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 
     /**
-    * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * Gets body
+    *  body
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\SearchSql|null
     */
-    public function getObjectId()
+    public function getBody()
     {
-        return $this->container['objectId'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets objectId
+    * Sets body
     *
-    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\SearchSql|null $body body
     *
     * @return $this
     */
-    public function setObjectId($objectId)
+    public function setBody($body)
     {
-        $this->container['objectId'] = $objectId;
+        $this->container['body'] = $body;
         return $this;
     }
 
