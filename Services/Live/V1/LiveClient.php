@@ -1389,6 +1389,9 @@ class LiveClient extends Client
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
         }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json; charset=UTF-8', 'application/json']
@@ -1672,6 +1675,68 @@ class LiveClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateDomainResponse',
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateDomainRequest');
+    }
+
+    /**
+     * 配置域名IPV6开关
+     *
+     * 配置IPV6开关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDomainIp6Switch($request)
+    {
+        return $this->updateDomainIp6SwitchWithHttpInfo($request);
+    }
+
+    public function updateDomainIp6SwitchWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/domain/ipv6-switch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateDomainIp6SwitchResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateDomainIp6SwitchRequest');
     }
 
     /**

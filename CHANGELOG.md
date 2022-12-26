@@ -1,3 +1,33 @@
+# 3.1.18 2022-12-26
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - Support the interface `UpdateDomainIp6Switch`
+- _Bug Fix_
+  - None
+- _Change_
+  - Changes of the interface `ShowDomain`:
+    - Add the request parameter `enterprise_project_id`
+    - Add the response parameters `enterprise_project_id`, `is_ipv6`
+  - Changes of the interface `UpdateDomain`:
+    - Add the request parameter `enterprise_project_id`
+    - Add the response parameter `enterprise_project_id`
+  - Add the request parameter `enterprise_project_id` to the interface `CreateDomain`
+
+### HuaweiCloud SDK VOD
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - The request parameter `group_id`, `name`, `bitrate`, `frame_rate`, `video_codec`, `format`, `hls_interval` changed to required of the interface `UpdateTranscodeTemplate`
+  - The response parameter `bitrate`, `frame_rate`, `video_codec`, `format`, `hls_interval` changed to required of the interface `ListTranscodeTemplate`
+  - The request parameter `name`, `bitrate`, `frame_rate`, `video_codec`, `format`, `hls_interval` changed to required of the interface `CreateTranscodeTemplate`
+  - The request parameter `name`, `template_group_list` changed to required of the interface `UpdateTemplateGroupCollection`
+  - The request parameter `name`, `template_group_list` changed to required of the interface `CreateTemplateGroupCollection`
+
 # 3.1.17 2022-12-22
 
 ### HuaweiCloud SDK IMS

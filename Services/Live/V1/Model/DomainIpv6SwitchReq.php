@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Vod\V1\Model;
+namespace HuaweiCloud\SDK\Live\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class TransTemplateGroupCollection implements ModelInterface, ArrayAccess
+class DomainIpv6SwitchReq implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,30 @@ class TransTemplateGroupCollection implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'TransTemplateGroupCollection';
+    protected static $openAPIModelName = 'DomainIpv6SwitchReq';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  模板组集合名称<br/>
-    * description  模板组集合描述<br/>
-    * templateGroupList  模板组列表,模板ID<br/>
+    * domain  域名
+    * isIpv6  IPV6开关配置，默认关闭，true为开启，false为关闭
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'name' => 'string',
-            'description' => 'string',
-            'templateGroupList' => 'string[]'
+            'domain' => 'string',
+            'isIpv6' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  模板组集合名称<br/>
-    * description  模板组集合描述<br/>
-    * templateGroupList  模板组列表,模板ID<br/>
+    * domain  域名
+    * isIpv6  IPV6开关配置，默认关闭，true为开启，false为关闭
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'name' => null,
-        'description' => null,
-        'templateGroupList' => null
+        'domain' => null,
+        'isIpv6' => null
     ];
 
     /**
@@ -69,44 +65,38 @@ class TransTemplateGroupCollection implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  模板组集合名称<br/>
-    * description  模板组集合描述<br/>
-    * templateGroupList  模板组列表,模板ID<br/>
+    * domain  域名
+    * isIpv6  IPV6开关配置，默认关闭，true为开启，false为关闭
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'name' => 'name',
-            'description' => 'description',
-            'templateGroupList' => 'template_group_list'
+            'domain' => 'domain',
+            'isIpv6' => 'is_ipv6'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  模板组集合名称<br/>
-    * description  模板组集合描述<br/>
-    * templateGroupList  模板组列表,模板ID<br/>
+    * domain  域名
+    * isIpv6  IPV6开关配置，默认关闭，true为开启，false为关闭
     *
     * @var string[]
     */
     protected static $setters = [
-            'name' => 'setName',
-            'description' => 'setDescription',
-            'templateGroupList' => 'setTemplateGroupList'
+            'domain' => 'setDomain',
+            'isIpv6' => 'setIsIpv6'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  模板组集合名称<br/>
-    * description  模板组集合描述<br/>
-    * templateGroupList  模板组列表,模板ID<br/>
+    * domain  域名
+    * isIpv6  IPV6开关配置，默认关闭，true为开启，false为关闭
     *
     * @var string[]
     */
     protected static $getters = [
-            'name' => 'getName',
-            'description' => 'getDescription',
-            'templateGroupList' => 'getTemplateGroupList'
+            'domain' => 'getDomain',
+            'isIpv6' => 'getIsIpv6'
     ];
 
     /**
@@ -167,9 +157,8 @@ class TransTemplateGroupCollection implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['templateGroupList'] = isset($data['templateGroupList']) ? $data['templateGroupList'] : null;
+        $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
+        $this->container['isIpv6'] = isset($data['isIpv6']) ? $data['isIpv6'] : null;
     }
 
     /**
@@ -180,23 +169,8 @@ class TransTemplateGroupCollection implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 64)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['name']) < 1)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
-            }
-        if ($this->container['templateGroupList'] === null) {
-            $invalidProperties[] = "'templateGroupList' can't be null";
+        if ($this->container['domain'] === null) {
+            $invalidProperties[] = "'domain' can't be null";
         }
         return $invalidProperties;
     }
@@ -213,74 +187,50 @@ class TransTemplateGroupCollection implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets name
-    *  模板组集合名称<br/>
+    * Gets domain
+    *  域名
     *
     * @return string
     */
-    public function getName()
+    public function getDomain()
     {
-        return $this->container['name'];
+        return $this->container['domain'];
     }
 
     /**
-    * Sets name
+    * Sets domain
     *
-    * @param string $name 模板组集合名称<br/>
+    * @param string $domain 域名
     *
     * @return $this
     */
-    public function setName($name)
+    public function setDomain($domain)
     {
-        $this->container['name'] = $name;
+        $this->container['domain'] = $domain;
         return $this;
     }
 
     /**
-    * Gets description
-    *  模板组集合描述<br/>
+    * Gets isIpv6
+    *  IPV6开关配置，默认关闭，true为开启，false为关闭
     *
-    * @return string|null
+    * @return bool|null
     */
-    public function getDescription()
+    public function getIsIpv6()
     {
-        return $this->container['description'];
+        return $this->container['isIpv6'];
     }
 
     /**
-    * Sets description
+    * Sets isIpv6
     *
-    * @param string|null $description 模板组集合描述<br/>
+    * @param bool|null $isIpv6 IPV6开关配置，默认关闭，true为开启，false为关闭
     *
     * @return $this
     */
-    public function setDescription($description)
+    public function setIsIpv6($isIpv6)
     {
-        $this->container['description'] = $description;
-        return $this;
-    }
-
-    /**
-    * Gets templateGroupList
-    *  模板组列表,模板ID<br/>
-    *
-    * @return string[]
-    */
-    public function getTemplateGroupList()
-    {
-        return $this->container['templateGroupList'];
-    }
-
-    /**
-    * Sets templateGroupList
-    *
-    * @param string[] $templateGroupList 模板组列表,模板ID<br/>
-    *
-    * @return $this
-    */
-    public function setTemplateGroupList($templateGroupList)
-    {
-        $this->container['templateGroupList'] = $templateGroupList;
+        $this->container['isIpv6'] = $isIpv6;
         return $this;
     }
 

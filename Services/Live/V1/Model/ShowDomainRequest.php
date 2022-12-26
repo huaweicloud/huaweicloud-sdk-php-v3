@@ -21,21 +21,25 @@ class ShowDomainRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * domain  直播域名，如果不设置此字段，则返回租户所有的域名信息
+    * enterpriseProjectId  企业项目ID，如果不设置此字段，则不进行该字段过滤，返回所有域名信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'domain' => 'string'
+            'domain' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domain  直播域名，如果不设置此字段，则返回租户所有的域名信息
+    * enterpriseProjectId  企业项目ID，如果不设置此字段，则不进行该字段过滤，返回所有域名信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'domain' => null
+        'domain' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ShowDomainRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * domain  直播域名，如果不设置此字段，则返回租户所有的域名信息
+    * enterpriseProjectId  企业项目ID，如果不设置此字段，则不进行该字段过滤，返回所有域名信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'domain' => 'domain'
+            'domain' => 'domain',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domain  直播域名，如果不设置此字段，则返回租户所有的域名信息
+    * enterpriseProjectId  企业项目ID，如果不设置此字段，则不进行该字段过滤，返回所有域名信息
     *
     * @var string[]
     */
     protected static $setters = [
-            'domain' => 'setDomain'
+            'domain' => 'setDomain',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domain  直播域名，如果不设置此字段，则返回租户所有的域名信息
+    * enterpriseProjectId  企业项目ID，如果不设置此字段，则不进行该字段过滤，返回所有域名信息
     *
     * @var string[]
     */
     protected static $getters = [
-            'domain' => 'getDomain'
+            'domain' => 'getDomain',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ShowDomainRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -199,6 +210,30 @@ class ShowDomainRequest implements ModelInterface, ArrayAccess
     public function setDomain($domain)
     {
         $this->container['domain'] = $domain;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目ID，如果不设置此字段，则不进行该字段过滤，返回所有域名信息
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目ID，如果不设置此字段，则不进行该字段过滤，返回所有域名信息
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

@@ -238,10 +238,16 @@ class VideoInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['frameRate']) && ($this->container['frameRate'] > 60)) {
+        if ($this->container['bitrate'] === null) {
+            $invalidProperties[] = "'bitrate' can't be null";
+        }
+        if ($this->container['frameRate'] === null) {
+            $invalidProperties[] = "'frameRate' can't be null";
+        }
+            if (($this->container['frameRate'] > 60)) {
                 $invalidProperties[] = "invalid value for 'frameRate', must be smaller than or equal to 60.";
             }
-            if (!is_null($this->container['frameRate']) && ($this->container['frameRate'] < 0)) {
+            if (($this->container['frameRate'] < 0)) {
                 $invalidProperties[] = "invalid value for 'frameRate', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -334,7 +340,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
     * Gets bitrate
     *  码率,单位：kbit/s<br/>
     *
-    * @return int|null
+    * @return int
     */
     public function getBitrate()
     {
@@ -344,7 +350,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
     /**
     * Sets bitrate
     *
-    * @param int|null $bitrate 码率,单位：kbit/s<br/>
+    * @param int $bitrate 码率,单位：kbit/s<br/>
     *
     * @return $this
     */
@@ -358,7 +364,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
     * Gets frameRate
     *  帧率（默认为0，0代表自适应，单位是帧每秒）<br/>
     *
-    * @return int|null
+    * @return int
     */
     public function getFrameRate()
     {
@@ -368,7 +374,7 @@ class VideoInfo implements ModelInterface, ArrayAccess
     /**
     * Sets frameRate
     *
-    * @param int|null $frameRate 帧率（默认为0，0代表自适应，单位是帧每秒）<br/>
+    * @param int $frameRate 帧率（默认为0，0代表自适应，单位是帧每秒）<br/>
     *
     * @return $this
     */

@@ -191,10 +191,13 @@ class ModifyTemplateGroupCollection implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+            if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
@@ -203,6 +206,9 @@ class ModifyTemplateGroupCollection implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
             }
+        if ($this->container['templateGroupList'] === null) {
+            $invalidProperties[] = "'templateGroupList' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -221,7 +227,7 @@ class ModifyTemplateGroupCollection implements ModelInterface, ArrayAccess
     * Gets name
     *  模板组集合名称<br/>
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -231,7 +237,7 @@ class ModifyTemplateGroupCollection implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 模板组集合名称<br/>
+    * @param string $name 模板组集合名称<br/>
     *
     * @return $this
     */
@@ -293,7 +299,7 @@ class ModifyTemplateGroupCollection implements ModelInterface, ArrayAccess
     * Gets templateGroupList
     *  模板组列表<br/>
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getTemplateGroupList()
     {
@@ -303,7 +309,7 @@ class ModifyTemplateGroupCollection implements ModelInterface, ArrayAccess
     /**
     * Sets templateGroupList
     *
-    * @param string[]|null $templateGroupList 模板组列表<br/>
+    * @param string[] $templateGroupList 模板组列表<br/>
     *
     * @return $this
     */

@@ -235,10 +235,16 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 128)) {
+        if ($this->container['groupId'] === null) {
+            $invalidProperties[] = "'groupId' can't be null";
+        }
+            if ((mb_strlen($this->container['groupId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 128)) {
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 128)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
@@ -262,7 +268,7 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     * Gets groupId
     *  模板组名称<br/>
     *
-    * @return string|null
+    * @return string
     */
     public function getGroupId()
     {
@@ -272,7 +278,7 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 模板组名称<br/>
+    * @param string $groupId 模板组名称<br/>
     *
     * @return $this
     */
@@ -286,7 +292,7 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     * Gets name
     *  模板组名称<br/>
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -296,7 +302,7 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 模板组名称<br/>
+    * @param string $name 模板组名称<br/>
     *
     * @return $this
     */

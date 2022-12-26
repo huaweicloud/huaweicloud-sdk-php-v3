@@ -224,12 +224,21 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 128)) {
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 128)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 128.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+            if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
+        if ($this->container['qualityInfoList'] === null) {
+            $invalidProperties[] = "'qualityInfoList' can't be null";
+        }
+        if ($this->container['common'] === null) {
+            $invalidProperties[] = "'common' can't be null";
+        }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 256.";
             }
@@ -251,7 +260,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
     * Gets name
     *  模板组名称<br/>
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -261,7 +270,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 模板组名称<br/>
+    * @param string $name 模板组名称<br/>
     *
     * @return $this
     */
@@ -323,7 +332,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
     * Gets qualityInfoList
     *  画质配置信息列表<br/>
     *
-    * @return \HuaweiCloud\SDK\Vod\V1\Model\QualityInfoList[]|null
+    * @return \HuaweiCloud\SDK\Vod\V1\Model\QualityInfoList[]
     */
     public function getQualityInfoList()
     {
@@ -333,7 +342,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets qualityInfoList
     *
-    * @param \HuaweiCloud\SDK\Vod\V1\Model\QualityInfoList[]|null $qualityInfoList 画质配置信息列表<br/>
+    * @param \HuaweiCloud\SDK\Vod\V1\Model\QualityInfoList[] $qualityInfoList 画质配置信息列表<br/>
     *
     * @return $this
     */
@@ -347,7 +356,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
     * Gets common
     *  common
     *
-    * @return \HuaweiCloud\SDK\Vod\V1\Model\CommonInfo|null
+    * @return \HuaweiCloud\SDK\Vod\V1\Model\CommonInfo
     */
     public function getCommon()
     {
@@ -357,7 +366,7 @@ class CreateTranscodeTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets common
     *
-    * @param \HuaweiCloud\SDK\Vod\V1\Model\CommonInfo|null $common common
+    * @param \HuaweiCloud\SDK\Vod\V1\Model\CommonInfo $common common
     *
     * @return $this
     */

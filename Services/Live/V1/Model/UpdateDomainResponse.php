@@ -29,6 +29,7 @@ class UpdateDomainResponse implements ModelInterface, ArrayAccess
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
@@ -40,7 +41,8 @@ class UpdateDomainResponse implements ModelInterface, ArrayAccess
             'status' => 'string',
             'createTime' => '\DateTime',
             'statusDescribe' => 'string',
-            'serviceArea' => 'string'
+            'serviceArea' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -53,6 +55,7 @@ class UpdateDomainResponse implements ModelInterface, ArrayAccess
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
@@ -64,7 +67,8 @@ class UpdateDomainResponse implements ModelInterface, ArrayAccess
         'status' => null,
         'createTime' => 'date-time',
         'statusDescribe' => null,
-        'serviceArea' => null
+        'serviceArea' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -98,6 +102,7 @@ class UpdateDomainResponse implements ModelInterface, ArrayAccess
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
@@ -109,7 +114,8 @@ class UpdateDomainResponse implements ModelInterface, ArrayAccess
             'status' => 'status',
             'createTime' => 'create_time',
             'statusDescribe' => 'status_describe',
-            'serviceArea' => 'service_area'
+            'serviceArea' => 'service_area',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -122,6 +128,7 @@ class UpdateDomainResponse implements ModelInterface, ArrayAccess
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
@@ -133,7 +140,8 @@ class UpdateDomainResponse implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'createTime' => 'setCreateTime',
             'statusDescribe' => 'setStatusDescribe',
-            'serviceArea' => 'setServiceArea'
+            'serviceArea' => 'setServiceArea',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -146,6 +154,7 @@ class UpdateDomainResponse implements ModelInterface, ArrayAccess
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
@@ -157,7 +166,8 @@ class UpdateDomainResponse implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'createTime' => 'getCreateTime',
             'statusDescribe' => 'getStatusDescribe',
-            'serviceArea' => 'getServiceArea'
+            'serviceArea' => 'getServiceArea',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -275,6 +285,7 @@ class UpdateDomainResponse implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['statusDescribe'] = isset($data['statusDescribe']) ? $data['statusDescribe'] : null;
         $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -524,6 +535,30 @@ class UpdateDomainResponse implements ModelInterface, ArrayAccess
     public function setServiceArea($serviceArea)
     {
         $this->container['serviceArea'] = $serviceArea;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目ID
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目ID
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

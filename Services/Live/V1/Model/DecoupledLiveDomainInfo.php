@@ -30,6 +30,8 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
+    * isIpv6  IPV6开关是否开启，默认关闭，true为开启；false或空为关闭
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
             'relatedDomain' => 'string',
             'createTime' => '\DateTime',
             'statusDescribe' => 'string',
-            'serviceArea' => 'string'
+            'serviceArea' => 'string',
+            'enterpriseProjectId' => 'string',
+            'isIpv6' => 'bool'
     ];
 
     /**
@@ -58,6 +62,8 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
+    * isIpv6  IPV6开关是否开启，默认关闭，true为开启；false或空为关闭
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
         'relatedDomain' => null,
         'createTime' => 'date-time',
         'statusDescribe' => null,
-        'serviceArea' => null
+        'serviceArea' => null,
+        'enterpriseProjectId' => null,
+        'isIpv6' => null
     ];
 
     /**
@@ -107,6 +115,8 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
+    * isIpv6  IPV6开关是否开启，默认关闭，true为开启；false或空为关闭
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
             'relatedDomain' => 'related_domain',
             'createTime' => 'create_time',
             'statusDescribe' => 'status_describe',
-            'serviceArea' => 'service_area'
+            'serviceArea' => 'service_area',
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'isIpv6' => 'is_ipv6'
     ];
 
     /**
@@ -135,6 +147,8 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
+    * isIpv6  IPV6开关是否开启，默认关闭，true为开启；false或空为关闭
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
             'relatedDomain' => 'setRelatedDomain',
             'createTime' => 'setCreateTime',
             'statusDescribe' => 'setStatusDescribe',
-            'serviceArea' => 'setServiceArea'
+            'serviceArea' => 'setServiceArea',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'isIpv6' => 'setIsIpv6'
     ];
 
     /**
@@ -163,6 +179,8 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     * createTime  域名创建时间，格式：yyyy-mm-ddThh:mm:ssZ，UTC时间
     * statusDescribe  状态描述
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
+    * isIpv6  IPV6开关是否开启，默认关闭，true为开启；false或空为关闭
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
             'relatedDomain' => 'getRelatedDomain',
             'createTime' => 'getCreateTime',
             'statusDescribe' => 'getStatusDescribe',
-            'serviceArea' => 'getServiceArea'
+            'serviceArea' => 'getServiceArea',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'isIpv6' => 'getIsIpv6'
     ];
 
     /**
@@ -323,6 +343,8 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['statusDescribe'] = isset($data['statusDescribe']) ? $data['statusDescribe'] : null;
         $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['isIpv6'] = isset($data['isIpv6']) ? $data['isIpv6'] : null;
     }
 
     /**
@@ -658,6 +680,54 @@ class DecoupledLiveDomainInfo implements ModelInterface, ArrayAccess
     public function setServiceArea($serviceArea)
     {
         $this->container['serviceArea'] = $serviceArea;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目ID
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目ID
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets isIpv6
+    *  IPV6开关是否开启，默认关闭，true为开启；false或空为关闭
+    *
+    * @return bool|null
+    */
+    public function getIsIpv6()
+    {
+        return $this->container['isIpv6'];
+    }
+
+    /**
+    * Sets isIpv6
+    *
+    * @param bool|null $isIpv6 IPV6开关是否开启，默认关闭，true为开启；false或空为关闭
+    *
+    * @return $this
+    */
+    public function setIsIpv6($isIpv6)
+    {
+        $this->container['isIpv6'] = $isIpv6;
         return $this;
     }
 

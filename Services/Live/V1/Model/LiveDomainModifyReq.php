@@ -22,24 +22,28 @@ class LiveDomainModifyReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * domain  直播域名，不允许修改
     * status  直播域名状态，通过修改此字段，实现域名的启用和停用。注意：域名处于“配置中”状态时，不允对该域名执行启停操作。
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'domain' => 'string',
-            'status' => 'string'
+            'status' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domain  直播域名，不允许修改
     * status  直播域名状态，通过修改此字段，实现域名的启用和停用。注意：域名处于“配置中”状态时，不允对该域名执行启停操作。
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'domain' => null,
-        'status' => null
+        'status' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class LiveDomainModifyReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * domain  直播域名，不允许修改
     * status  直播域名状态，通过修改此字段，实现域名的启用和停用。注意：域名处于“配置中”状态时，不允对该域名执行启停操作。
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'domain' => 'domain',
-            'status' => 'status'
+            'status' => 'status',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domain  直播域名，不允许修改
     * status  直播域名状态，通过修改此字段，实现域名的启用和停用。注意：域名处于“配置中”状态时，不允对该域名执行启停操作。
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
     protected static $setters = [
             'domain' => 'setDomain',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domain  直播域名，不允许修改
     * status  直播域名状态，通过修改此字段，实现域名的启用和停用。注意：域名处于“配置中”状态时，不允对该域名执行启停操作。
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
     protected static $getters = [
             'domain' => 'getDomain',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -174,6 +184,7 @@ class LiveDomainModifyReq implements ModelInterface, ArrayAccess
     {
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -260,6 +271,30 @@ class LiveDomainModifyReq implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目ID
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目ID
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

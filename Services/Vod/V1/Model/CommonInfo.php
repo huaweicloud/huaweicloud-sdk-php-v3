@@ -314,6 +314,9 @@ class CommonInfo implements ModelInterface, ArrayAccess
         if ($this->container['pvc'] === null) {
             $invalidProperties[] = "'pvc' can't be null";
         }
+        if ($this->container['videoCodec'] === null) {
+            $invalidProperties[] = "'videoCodec' can't be null";
+        }
             $allowedValues = $this->getVideoCodecAllowableValues();
                 if (!is_null($this->container['videoCodec']) && !in_array($this->container['videoCodec'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -330,6 +333,9 @@ class CommonInfo implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['format'] === null) {
+            $invalidProperties[] = "'format' can't be null";
+        }
             $allowedValues = $this->getFormatAllowableValues();
                 if (!is_null($this->container['format']) && !in_array($this->container['format'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -338,10 +344,13 @@ class CommonInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['hlsInterval']) && ($this->container['hlsInterval'] > 10)) {
+        if ($this->container['hlsInterval'] === null) {
+            $invalidProperties[] = "'hlsInterval' can't be null";
+        }
+            if (($this->container['hlsInterval'] > 10)) {
                 $invalidProperties[] = "invalid value for 'hlsInterval', must be smaller than or equal to 10.";
             }
-            if (!is_null($this->container['hlsInterval']) && ($this->container['hlsInterval'] < 2)) {
+            if (($this->container['hlsInterval'] < 2)) {
                 $invalidProperties[] = "invalid value for 'hlsInterval', must be bigger than or equal to 2.";
             }
             $allowedValues = $this->getAdaptationAllowableValues();
@@ -394,7 +403,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
     * Gets videoCodec
     *  视频编码格式<br/>
     *
-    * @return string|null
+    * @return string
     */
     public function getVideoCodec()
     {
@@ -404,7 +413,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
     /**
     * Sets videoCodec
     *
-    * @param string|null $videoCodec 视频编码格式<br/>
+    * @param string $videoCodec 视频编码格式<br/>
     *
     * @return $this
     */
@@ -466,7 +475,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
     * Gets format
     *  格式<br/>
     *
-    * @return string|null
+    * @return string
     */
     public function getFormat()
     {
@@ -476,7 +485,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
     /**
     * Sets format
     *
-    * @param string|null $format 格式<br/>
+    * @param string $format 格式<br/>
     *
     * @return $this
     */
@@ -490,7 +499,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
     * Gets hlsInterval
     *  分片时长(默认为5秒)<br/>
     *
-    * @return int|null
+    * @return int
     */
     public function getHlsInterval()
     {
@@ -500,7 +509,7 @@ class CommonInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hlsInterval
     *
-    * @param int|null $hlsInterval 分片时长(默认为5秒)<br/>
+    * @param int $hlsInterval 分片时长(默认为5秒)<br/>
     *
     * @return $this
     */

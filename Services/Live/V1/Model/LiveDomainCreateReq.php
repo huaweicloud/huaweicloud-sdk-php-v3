@@ -24,6 +24,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domain' => 'string',
             'domainType' => 'string',
             'region' => 'string',
-            'serviceArea' => 'string'
+            'serviceArea' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
         'domain' => null,
         'domainType' => null,
         'region' => null,
-        'serviceArea' => null
+        'serviceArea' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domain' => 'domain',
             'domainType' => 'domain_type',
             'region' => 'region',
-            'serviceArea' => 'service_area'
+            'serviceArea' => 'service_area',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -93,6 +99,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domain' => 'setDomain',
             'domainType' => 'setDomainType',
             'region' => 'setRegion',
-            'serviceArea' => 'setServiceArea'
+            'serviceArea' => 'setServiceArea',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -109,6 +117,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     * domainType  域名类型 - pull表示播放域名 - push表示推流域名
     * region  直播所属的直播中心
     * serviceArea  域名应用区域 - mainland_china表示中国大陆区域 - outside_mainland_china表示中国大陆以外区域
+    * enterpriseProjectId  企业项目ID
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
             'domain' => 'getDomain',
             'domainType' => 'getDomainType',
             'region' => 'getRegion',
-            'serviceArea' => 'getServiceArea'
+            'serviceArea' => 'getServiceArea',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -211,6 +221,7 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
         $this->container['domainType'] = isset($data['domainType']) ? $data['domainType'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -365,6 +376,30 @@ class LiveDomainCreateReq implements ModelInterface, ArrayAccess
     public function setServiceArea($serviceArea)
     {
         $this->container['serviceArea'] = $serviceArea;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目ID
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目ID
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 
