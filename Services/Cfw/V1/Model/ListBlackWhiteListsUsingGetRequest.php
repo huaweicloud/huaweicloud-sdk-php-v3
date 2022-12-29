@@ -28,6 +28,8 @@ class ListBlackWhiteListsUsingGetRequest implements ModelInterface, ArrayAccess
     * port  端口
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -39,7 +41,9 @@ class ListBlackWhiteListsUsingGetRequest implements ModelInterface, ArrayAccess
             'address' => 'string',
             'port' => 'string',
             'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'enterpriseProjectId' => 'string',
+            'fwInstanceId' => 'string'
     ];
 
     /**
@@ -52,6 +56,8 @@ class ListBlackWhiteListsUsingGetRequest implements ModelInterface, ArrayAccess
     * port  端口
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -63,7 +69,9 @@ class ListBlackWhiteListsUsingGetRequest implements ModelInterface, ArrayAccess
         'address' => null,
         'port' => null,
         'limit' => null,
-        'offset' => null
+        'offset' => null,
+        'enterpriseProjectId' => null,
+        'fwInstanceId' => null
     ];
 
     /**
@@ -97,6 +105,8 @@ class ListBlackWhiteListsUsingGetRequest implements ModelInterface, ArrayAccess
     * port  端口
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -108,7 +118,9 @@ class ListBlackWhiteListsUsingGetRequest implements ModelInterface, ArrayAccess
             'address' => 'address',
             'port' => 'port',
             'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'fwInstanceId' => 'fw_instance_id'
     ];
 
     /**
@@ -121,6 +133,8 @@ class ListBlackWhiteListsUsingGetRequest implements ModelInterface, ArrayAccess
     * port  端口
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -132,7 +146,9 @@ class ListBlackWhiteListsUsingGetRequest implements ModelInterface, ArrayAccess
             'address' => 'setAddress',
             'port' => 'setPort',
             'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'fwInstanceId' => 'setFwInstanceId'
     ];
 
     /**
@@ -145,6 +161,8 @@ class ListBlackWhiteListsUsingGetRequest implements ModelInterface, ArrayAccess
     * port  端口
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -156,7 +174,9 @@ class ListBlackWhiteListsUsingGetRequest implements ModelInterface, ArrayAccess
             'address' => 'getAddress',
             'port' => 'getPort',
             'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'fwInstanceId' => 'getFwInstanceId'
     ];
 
     /**
@@ -257,6 +277,8 @@ class ListBlackWhiteListsUsingGetRequest implements ModelInterface, ArrayAccess
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
     }
 
     /**
@@ -501,6 +523,54 @@ class ListBlackWhiteListsUsingGetRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets fwInstanceId
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return string|null
+    */
+    public function getFwInstanceId()
+    {
+        return $this->container['fwInstanceId'];
+    }
+
+    /**
+    * Sets fwInstanceId
+    *
+    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return $this
+    */
+    public function setFwInstanceId($fwInstanceId)
+    {
+        $this->container['fwInstanceId'] = $fwInstanceId;
         return $this;
     }
 

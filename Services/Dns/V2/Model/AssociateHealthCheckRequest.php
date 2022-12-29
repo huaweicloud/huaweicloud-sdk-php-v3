@@ -20,7 +20,7 @@ class AssociateHealthCheckRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recordsetId  recordsetId
+    * recordsetId  待查询的recordset ID。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class AssociateHealthCheckRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recordsetId  recordsetId
+    * recordsetId  待查询的recordset ID。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class AssociateHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recordsetId  recordsetId
+    * recordsetId  待查询的recordset ID。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class AssociateHealthCheckRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recordsetId  recordsetId
+    * recordsetId  待查询的recordset ID。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class AssociateHealthCheckRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recordsetId  recordsetId
+    * recordsetId  待查询的recordset ID。
     * body  body
     *
     * @var string[]
@@ -188,7 +188,7 @@ class AssociateHealthCheckRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordsetId
-    *  recordsetId
+    *  待查询的recordset ID。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class AssociateHealthCheckRequest implements ModelInterface, ArrayAccess
     /**
     * Sets recordsetId
     *
-    * @param string $recordsetId recordsetId
+    * @param string $recordsetId 待查询的recordset ID。
     *
     * @return $this
     */

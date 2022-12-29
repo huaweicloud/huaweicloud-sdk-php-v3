@@ -28,7 +28,7 @@ class BatchDeleteZonesResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'zones' => '\HuaweiCloud\SDK\Dns\V2\Model\ZoneData[]',
-            'metadata' => '\HuaweiCloud\SDK\Dns\V2\Model\Metedata'
+            'metadata' => '\HuaweiCloud\SDK\Dns\V2\Model\Metadata'
     ];
 
     /**
@@ -212,7 +212,7 @@ class BatchDeleteZonesResponse implements ModelInterface, ArrayAccess
     * Gets metadata
     *  metadata
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\Metedata|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\Metadata|null
     */
     public function getMetadata()
     {
@@ -222,7 +222,7 @@ class BatchDeleteZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets metadata
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Metedata|null $metadata metadata
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Metadata|null $metadata metadata
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  endpoint的ID，uuid形式的一个资源标识。
     * name  endpoint的名称。
-    * direction  endpoint的ID，uuid形式的一个资源标识。
+    * direction  终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
     * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
     * vpcId  endpoint所属的vpc_id。
     * ipaddressCount  该endpoint下的ip地址数量。
@@ -48,7 +48,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  endpoint的ID，uuid形式的一个资源标识。
     * name  endpoint的名称。
-    * direction  endpoint的ID，uuid形式的一个资源标识。
+    * direction  终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
     * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
     * vpcId  endpoint所属的vpc_id。
     * ipaddressCount  该endpoint下的ip地址数量。
@@ -95,7 +95,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  endpoint的ID，uuid形式的一个资源标识。
     * name  endpoint的名称。
-    * direction  endpoint的ID，uuid形式的一个资源标识。
+    * direction  终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
     * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
     * vpcId  endpoint所属的vpc_id。
     * ipaddressCount  该endpoint下的ip地址数量。
@@ -121,7 +121,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  endpoint的ID，uuid形式的一个资源标识。
     * name  endpoint的名称。
-    * direction  endpoint的ID，uuid形式的一个资源标识。
+    * direction  终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
     * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
     * vpcId  endpoint所属的vpc_id。
     * ipaddressCount  该endpoint下的ip地址数量。
@@ -147,7 +147,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  endpoint的ID，uuid形式的一个资源标识。
     * name  endpoint的名称。
-    * direction  endpoint的ID，uuid形式的一个资源标识。
+    * direction  终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
     * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
     * vpcId  endpoint所属的vpc_id。
     * ipaddressCount  该endpoint下的ip地址数量。
@@ -310,7 +310,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets direction
-    *  endpoint的ID，uuid形式的一个资源标识。
+    *  终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class EndpointResp implements ModelInterface, ArrayAccess
     /**
     * Sets direction
     *
-    * @param string|null $direction endpoint的ID，uuid形式的一个资源标识。
+    * @param string|null $direction 终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
     *
     * @return $this
     */

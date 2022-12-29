@@ -22,24 +22,32 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * projectId  租户项目id
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'projectId' => 'string',
-            'objectId' => 'string'
+            'objectId' => 'string',
+            'enterpriseProjectId' => 'string',
+            'fwInstanceId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * projectId  租户项目id
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'projectId' => null,
-        'objectId' => null
+        'objectId' => null,
+        'enterpriseProjectId' => null,
+        'fwInstanceId' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * projectId  租户项目id
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'projectId' => 'project_id',
-            'objectId' => 'object_id'
+            'objectId' => 'object_id',
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'fwInstanceId' => 'fw_instance_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  租户项目id
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
     protected static $setters = [
             'projectId' => 'setProjectId',
-            'objectId' => 'setObjectId'
+            'objectId' => 'setObjectId',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'fwInstanceId' => 'setFwInstanceId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  租户项目id
     * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
     protected static $getters = [
             'projectId' => 'getProjectId',
-            'objectId' => 'getObjectId'
+            'objectId' => 'getObjectId',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'fwInstanceId' => 'getFwInstanceId'
     ];
 
     /**
@@ -159,6 +179,8 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
     }
 
     /**
@@ -234,6 +256,54 @@ class ListVpcProtectsRequest implements ModelInterface, ArrayAccess
     public function setObjectId($objectId)
     {
         $this->container['objectId'] = $objectId;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets fwInstanceId
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return string|null
+    */
+    public function getFwInstanceId()
+    {
+        return $this->container['fwInstanceId'];
+    }
+
+    /**
+    * Sets fwInstanceId
+    *
+    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return $this
+    */
+    public function setFwInstanceId($fwInstanceId)
+    {
+        $this->container['fwInstanceId'] = $fwInstanceId;
         return $this;
     }
 

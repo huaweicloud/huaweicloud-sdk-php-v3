@@ -21,19 +21,19 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recordsets  待删除zone类型，当前仅支持 public 或 private
+    * recordsets  待删除zone类型，当前仅支持public或private。
     * metadata  metadata
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'recordsets' => '\HuaweiCloud\SDK\Dns\V2\Model\RecordsetData[]',
-            'metadata' => '\HuaweiCloud\SDK\Dns\V2\Model\Metedata'
+            'metadata' => '\HuaweiCloud\SDK\Dns\V2\Model\Metadata'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recordsets  待删除zone类型，当前仅支持 public 或 private
+    * recordsets  待删除zone类型，当前仅支持public或private。
     * metadata  metadata
     *
     * @var string[]
@@ -66,7 +66,7 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recordsets  待删除zone类型，当前仅支持 public 或 private
+    * recordsets  待删除zone类型，当前仅支持public或private。
     * metadata  metadata
     *
     * @var string[]
@@ -78,7 +78,7 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recordsets  待删除zone类型，当前仅支持 public 或 private
+    * recordsets  待删除zone类型，当前仅支持public或private。
     * metadata  metadata
     *
     * @var string[]
@@ -90,7 +90,7 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recordsets  待删除zone类型，当前仅支持 public 或 private
+    * recordsets  待删除zone类型，当前仅支持public或private。
     * metadata  metadata
     *
     * @var string[]
@@ -186,7 +186,7 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordsets
-    *  待删除zone类型，当前仅支持 public 或 private
+    *  待删除zone类型，当前仅支持public或private。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\RecordsetData[]|null
     */
@@ -198,7 +198,7 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets recordsets
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\RecordsetData[]|null $recordsets 待删除zone类型，当前仅支持 public 或 private
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\RecordsetData[]|null $recordsets 待删除zone类型，当前仅支持public或private。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     * Gets metadata
     *  metadata
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\Metedata|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\Metadata|null
     */
     public function getMetadata()
     {
@@ -222,7 +222,7 @@ class BatchSetRecordSetsStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets metadata
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Metedata|null $metadata metadata
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Metadata|null $metadata metadata
     *
     * @return $this
     */

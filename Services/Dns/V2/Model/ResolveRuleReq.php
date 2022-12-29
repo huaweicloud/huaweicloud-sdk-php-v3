@@ -23,9 +23,7 @@ class ResolveRuleReq implements ModelInterface, ArrayAccess
     * name  规则名称。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * domainName  域名。
     * endpointId  当前规则所属的endpoint_id。
-    * region  当前规则所在的region。
     * ipaddresses  规则关联的目标ip地址。
-    * routers  规则关联的目标ip地址。
     *
     * @var string[]
     */
@@ -33,9 +31,7 @@ class ResolveRuleReq implements ModelInterface, ArrayAccess
             'name' => 'string',
             'domainName' => 'string',
             'endpointId' => 'string',
-            'region' => 'string',
-            'ipaddresses' => '\HuaweiCloud\SDK\Dns\V2\Model\IpInfo[]',
-            'routers' => '\HuaweiCloud\SDK\Dns\V2\Model\Router[]'
+            'ipaddresses' => '\HuaweiCloud\SDK\Dns\V2\Model\IpInfo[]'
     ];
 
     /**
@@ -43,9 +39,7 @@ class ResolveRuleReq implements ModelInterface, ArrayAccess
     * name  规则名称。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * domainName  域名。
     * endpointId  当前规则所属的endpoint_id。
-    * region  当前规则所在的region。
     * ipaddresses  规则关联的目标ip地址。
-    * routers  规则关联的目标ip地址。
     *
     * @var string[]
     */
@@ -53,9 +47,7 @@ class ResolveRuleReq implements ModelInterface, ArrayAccess
         'name' => null,
         'domainName' => null,
         'endpointId' => null,
-        'region' => null,
-        'ipaddresses' => null,
-        'routers' => null
+        'ipaddresses' => null
     ];
 
     /**
@@ -84,9 +76,7 @@ class ResolveRuleReq implements ModelInterface, ArrayAccess
     * name  规则名称。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * domainName  域名。
     * endpointId  当前规则所属的endpoint_id。
-    * region  当前规则所在的region。
     * ipaddresses  规则关联的目标ip地址。
-    * routers  规则关联的目标ip地址。
     *
     * @var string[]
     */
@@ -94,9 +84,7 @@ class ResolveRuleReq implements ModelInterface, ArrayAccess
             'name' => 'name',
             'domainName' => 'domain_name',
             'endpointId' => 'endpoint_id',
-            'region' => 'region',
-            'ipaddresses' => 'ipaddresses',
-            'routers' => 'routers'
+            'ipaddresses' => 'ipaddresses'
     ];
 
     /**
@@ -104,9 +92,7 @@ class ResolveRuleReq implements ModelInterface, ArrayAccess
     * name  规则名称。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * domainName  域名。
     * endpointId  当前规则所属的endpoint_id。
-    * region  当前规则所在的region。
     * ipaddresses  规则关联的目标ip地址。
-    * routers  规则关联的目标ip地址。
     *
     * @var string[]
     */
@@ -114,9 +100,7 @@ class ResolveRuleReq implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'domainName' => 'setDomainName',
             'endpointId' => 'setEndpointId',
-            'region' => 'setRegion',
-            'ipaddresses' => 'setIpaddresses',
-            'routers' => 'setRouters'
+            'ipaddresses' => 'setIpaddresses'
     ];
 
     /**
@@ -124,9 +108,7 @@ class ResolveRuleReq implements ModelInterface, ArrayAccess
     * name  规则名称。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * domainName  域名。
     * endpointId  当前规则所属的endpoint_id。
-    * region  当前规则所在的region。
     * ipaddresses  规则关联的目标ip地址。
-    * routers  规则关联的目标ip地址。
     *
     * @var string[]
     */
@@ -134,9 +116,7 @@ class ResolveRuleReq implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'domainName' => 'getDomainName',
             'endpointId' => 'getEndpointId',
-            'region' => 'getRegion',
-            'ipaddresses' => 'getIpaddresses',
-            'routers' => 'getRouters'
+            'ipaddresses' => 'getIpaddresses'
     ];
 
     /**
@@ -200,9 +180,7 @@ class ResolveRuleReq implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['domainName'] = isset($data['domainName']) ? $data['domainName'] : null;
         $this->container['endpointId'] = isset($data['endpointId']) ? $data['endpointId'] : null;
-        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['ipaddresses'] = isset($data['ipaddresses']) ? $data['ipaddresses'] : null;
-        $this->container['routers'] = isset($data['routers']) ? $data['routers'] : null;
     }
 
     /**
@@ -222,14 +200,8 @@ class ResolveRuleReq implements ModelInterface, ArrayAccess
         if ($this->container['endpointId'] === null) {
             $invalidProperties[] = "'endpointId' can't be null";
         }
-        if ($this->container['region'] === null) {
-            $invalidProperties[] = "'region' can't be null";
-        }
         if ($this->container['ipaddresses'] === null) {
             $invalidProperties[] = "'ipaddresses' can't be null";
-        }
-        if ($this->container['routers'] === null) {
-            $invalidProperties[] = "'routers' can't be null";
         }
         return $invalidProperties;
     }
@@ -318,30 +290,6 @@ class ResolveRuleReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets region
-    *  当前规则所在的region。
-    *
-    * @return string
-    */
-    public function getRegion()
-    {
-        return $this->container['region'];
-    }
-
-    /**
-    * Sets region
-    *
-    * @param string $region 当前规则所在的region。
-    *
-    * @return $this
-    */
-    public function setRegion($region)
-    {
-        $this->container['region'] = $region;
-        return $this;
-    }
-
-    /**
     * Gets ipaddresses
     *  规则关联的目标ip地址。
     *
@@ -362,30 +310,6 @@ class ResolveRuleReq implements ModelInterface, ArrayAccess
     public function setIpaddresses($ipaddresses)
     {
         $this->container['ipaddresses'] = $ipaddresses;
-        return $this;
-    }
-
-    /**
-    * Gets routers
-    *  规则关联的目标ip地址。
-    *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\Router[]
-    */
-    public function getRouters()
-    {
-        return $this->container['routers'];
-    }
-
-    /**
-    * Sets routers
-    *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Router[] $routers 规则关联的目标ip地址。
-    *
-    * @return $this
-    */
-    public function setRouters($routers)
-    {
-        $this->container['routers'] = $routers;
         return $this;
     }
 

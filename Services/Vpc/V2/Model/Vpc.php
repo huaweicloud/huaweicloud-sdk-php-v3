@@ -27,6 +27,9 @@ class Vpc implements ModelInterface, ArrayAccess
     * routes  功能说明：路由信息列表，详情参见route对象
     * status  功能说明：虚拟私有云的状态 取值范围： - CREATING：创建中 - OK：创建成功
     * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tenantId  项目ID
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -37,7 +40,10 @@ class Vpc implements ModelInterface, ArrayAccess
             'description' => 'string',
             'routes' => '\HuaweiCloud\SDK\Vpc\V2\Model\Route[]',
             'status' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'tenantId' => 'string',
+            'createdAt' => '\DateTime',
+            'updatedAt' => '\DateTime'
     ];
 
     /**
@@ -49,6 +55,9 @@ class Vpc implements ModelInterface, ArrayAccess
     * routes  功能说明：路由信息列表，详情参见route对象
     * status  功能说明：虚拟私有云的状态 取值范围： - CREATING：创建中 - OK：创建成功
     * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tenantId  项目ID
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -59,7 +68,10 @@ class Vpc implements ModelInterface, ArrayAccess
         'description' => null,
         'routes' => null,
         'status' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'tenantId' => null,
+        'createdAt' => 'date-time',
+        'updatedAt' => 'date-time'
     ];
 
     /**
@@ -92,6 +104,9 @@ class Vpc implements ModelInterface, ArrayAccess
     * routes  功能说明：路由信息列表，详情参见route对象
     * status  功能说明：虚拟私有云的状态 取值范围： - CREATING：创建中 - OK：创建成功
     * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tenantId  项目ID
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -102,7 +117,10 @@ class Vpc implements ModelInterface, ArrayAccess
             'description' => 'description',
             'routes' => 'routes',
             'status' => 'status',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'tenantId' => 'tenant_id',
+            'createdAt' => 'created_at',
+            'updatedAt' => 'updated_at'
     ];
 
     /**
@@ -114,6 +132,9 @@ class Vpc implements ModelInterface, ArrayAccess
     * routes  功能说明：路由信息列表，详情参见route对象
     * status  功能说明：虚拟私有云的状态 取值范围： - CREATING：创建中 - OK：创建成功
     * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tenantId  项目ID
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -124,7 +145,10 @@ class Vpc implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'routes' => 'setRoutes',
             'status' => 'setStatus',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'tenantId' => 'setTenantId',
+            'createdAt' => 'setCreatedAt',
+            'updatedAt' => 'setUpdatedAt'
     ];
 
     /**
@@ -136,6 +160,9 @@ class Vpc implements ModelInterface, ArrayAccess
     * routes  功能说明：路由信息列表，详情参见route对象
     * status  功能说明：虚拟私有云的状态 取值范围： - CREATING：创建中 - OK：创建成功
     * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tenantId  项目ID
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -146,7 +173,10 @@ class Vpc implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'routes' => 'getRoutes',
             'status' => 'getStatus',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'tenantId' => 'getTenantId',
+            'createdAt' => 'getCreatedAt',
+            'updatedAt' => 'getUpdatedAt'
     ];
 
     /**
@@ -231,6 +261,9 @@ class Vpc implements ModelInterface, ArrayAccess
         $this->container['routes'] = isset($data['routes']) ? $data['routes'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
     }
 
     /**
@@ -288,6 +321,18 @@ class Vpc implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['enterpriseProjectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
             }
+        if ($this->container['tenantId'] === null) {
+            $invalidProperties[] = "'tenantId' can't be null";
+        }
+            if (!preg_match("/[0-9a-fA-F]{32}/", $this->container['tenantId'])) {
+                $invalidProperties[] = "invalid value for 'tenantId', must be conform to the pattern /[0-9a-fA-F]{32}/.";
+            }
+        if ($this->container['createdAt'] === null) {
+            $invalidProperties[] = "'createdAt' can't be null";
+        }
+        if ($this->container['updatedAt'] === null) {
+            $invalidProperties[] = "'updatedAt' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -467,6 +512,78 @@ class Vpc implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets tenantId
+    *  项目ID
+    *
+    * @return string
+    */
+    public function getTenantId()
+    {
+        return $this->container['tenantId'];
+    }
+
+    /**
+    * Sets tenantId
+    *
+    * @param string $tenantId 项目ID
+    *
+    * @return $this
+    */
+    public function setTenantId($tenantId)
+    {
+        $this->container['tenantId'] = $tenantId;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    *
+    * @return \DateTime
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param \DateTime $createdAt 功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets updatedAt
+    *  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    *
+    * @return \DateTime
+    */
+    public function getUpdatedAt()
+    {
+        return $this->container['updatedAt'];
+    }
+
+    /**
+    * Sets updatedAt
+    *
+    * @param \DateTime $updatedAt 功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    *
+    * @return $this
+    */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->container['updatedAt'] = $updatedAt;
         return $this;
     }
 

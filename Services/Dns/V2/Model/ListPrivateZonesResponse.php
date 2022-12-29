@@ -23,13 +23,13 @@ class ListPrivateZonesResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * links  links
     * metadata  metadata
-    * zones  zones
+    * zones  zone列表信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'links' => '\HuaweiCloud\SDK\Dns\V2\Model\PageLink',
-            'metadata' => '\HuaweiCloud\SDK\Dns\V2\Model\Metedata',
+            'metadata' => '\HuaweiCloud\SDK\Dns\V2\Model\Metadata',
             'zones' => '\HuaweiCloud\SDK\Dns\V2\Model\PrivateZoneResp[]'
     ];
 
@@ -37,7 +37,7 @@ class ListPrivateZonesResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * links  links
     * metadata  metadata
-    * zones  zones
+    * zones  zone列表信息。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListPrivateZonesResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * links  links
     * metadata  metadata
-    * zones  zones
+    * zones  zone列表信息。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ListPrivateZonesResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * links  links
     * metadata  metadata
-    * zones  zones
+    * zones  zone列表信息。
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ListPrivateZonesResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * links  links
     * metadata  metadata
-    * zones  zones
+    * zones  zone列表信息。
     *
     * @var string[]
     */
@@ -223,7 +223,7 @@ class ListPrivateZonesResponse implements ModelInterface, ArrayAccess
     * Gets metadata
     *  metadata
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\Metedata|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\Metadata|null
     */
     public function getMetadata()
     {
@@ -233,7 +233,7 @@ class ListPrivateZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets metadata
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Metedata|null $metadata metadata
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Metadata|null $metadata metadata
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListPrivateZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets zones
-    *  zones
+    *  zone列表信息。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\PrivateZoneResp[]|null
     */
@@ -257,7 +257,7 @@ class ListPrivateZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets zones
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\PrivateZoneResp[]|null $zones zones
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\PrivateZoneResp[]|null $zones zone列表信息。
     *
     * @return $this
     */

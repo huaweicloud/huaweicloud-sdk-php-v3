@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreatePublicZoneFindRespRecord implements ModelInterface, ArrayAccess
+class DisassociateResolveRuleRouterRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class CreatePublicZoneFindRespRecord implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreatePublicZoneFindResp_record';
+    protected static $openAPIModelName = 'DisassociateResolveRuleRouterRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * host  找回记录host名称。
-    * value  找回记录解析值。
+    * resolverruleId  待解关联resolverrule的ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'host' => 'string',
-            'value' => 'string'
+            'resolverruleId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\DisassociaterouterReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * host  找回记录host名称。
-    * value  找回记录解析值。
+    * resolverruleId  待解关联resolverrule的ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'host' => null,
-        'value' => null
+        'resolverruleId' => null,
+        'body' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class CreatePublicZoneFindRespRecord implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * host  找回记录host名称。
-    * value  找回记录解析值。
+    * resolverruleId  待解关联resolverrule的ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'host' => 'host',
-            'value' => 'value'
+            'resolverruleId' => 'resolverrule_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * host  找回记录host名称。
-    * value  找回记录解析值。
+    * resolverruleId  待解关联resolverrule的ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'host' => 'setHost',
-            'value' => 'setValue'
+            'resolverruleId' => 'setResolverruleId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * host  找回记录host名称。
-    * value  找回记录解析值。
+    * resolverruleId  待解关联resolverrule的ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'host' => 'getHost',
-            'value' => 'getValue'
+            'resolverruleId' => 'getResolverruleId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +157,8 @@ class CreatePublicZoneFindRespRecord implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['host'] = isset($data['host']) ? $data['host'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['resolverruleId'] = isset($data['resolverruleId']) ? $data['resolverruleId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,6 +169,9 @@ class CreatePublicZoneFindRespRecord implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['resolverruleId'] === null) {
+            $invalidProperties[] = "'resolverruleId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -184,50 +187,50 @@ class CreatePublicZoneFindRespRecord implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets host
-    *  找回记录host名称。
+    * Gets resolverruleId
+    *  待解关联resolverrule的ID。
     *
-    * @return string|null
+    * @return string
     */
-    public function getHost()
+    public function getResolverruleId()
     {
-        return $this->container['host'];
+        return $this->container['resolverruleId'];
     }
 
     /**
-    * Sets host
+    * Sets resolverruleId
     *
-    * @param string|null $host 找回记录host名称。
+    * @param string $resolverruleId 待解关联resolverrule的ID。
     *
     * @return $this
     */
-    public function setHost($host)
+    public function setResolverruleId($resolverruleId)
     {
-        $this->container['host'] = $host;
+        $this->container['resolverruleId'] = $resolverruleId;
         return $this;
     }
 
     /**
-    * Gets value
-    *  找回记录解析值。
+    * Gets body
+    *  body
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\DisassociaterouterReq|null
     */
-    public function getValue()
+    public function getBody()
     {
-        return $this->container['value'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets value
+    * Sets body
     *
-    * @param string|null $value 找回记录解析值。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\DisassociaterouterReq|null $body body
     *
     * @return $this
     */
-    public function setValue($value)
+    public function setBody($body)
     {
-        $this->container['value'] = $value;
+        $this->container['body'] = $body;
         return $this;
     }
 

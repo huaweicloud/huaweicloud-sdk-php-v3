@@ -20,10 +20,10 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * direction  待查询的endpoint的方向。 取值：inbound，表示入站规则。
+    * direction  终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
     * vpcId  待查询的endpoint所属vpc的id。
-    * limit  每页返回的资源个数。 取值范围：0~500，取值一般为10，20，50。
-    * offset  分页查询起始页码，起始值为0。 当前设置marker不为空时，以marker为分页起始标识。取值范围：0~2147483647。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * direction  待查询的endpoint的方向。 取值：inbound，表示入站规则。
+    * direction  终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
     * vpcId  待查询的endpoint所属vpc的id。
-    * limit  每页返回的资源个数。 取值范围：0~500，取值一般为10，20，50。
-    * offset  分页查询起始页码，起始值为0。 当前设置marker不为空时，以marker为分页起始标识。取值范围：0~2147483647。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * direction  待查询的endpoint的方向。 取值：inbound，表示入站规则。
+    * direction  终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
     * vpcId  待查询的endpoint所属vpc的id。
-    * limit  每页返回的资源个数。 取值范围：0~500，取值一般为10，20，50。
-    * offset  分页查询起始页码，起始值为0。 当前设置marker不为空时，以marker为分页起始标识。取值范围：0~2147483647。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * direction  待查询的endpoint的方向。 取值：inbound，表示入站规则。
+    * direction  终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
     * vpcId  待查询的endpoint所属vpc的id。
-    * limit  每页返回的资源个数。 取值范围：0~500，取值一般为10，20，50。
-    * offset  分页查询起始页码，起始值为0。 当前设置marker不为空时，以marker为分页起始标识。取值范围：0~2147483647。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * direction  待查询的endpoint的方向。 取值：inbound，表示入站规则。
+    * direction  终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
     * vpcId  待查询的endpoint所属vpc的id。
-    * limit  每页返回的资源个数。 取值范围：0~500，取值一般为10，20，50。
-    * offset  分页查询起始页码，起始值为0。 当前设置marker不为空时，以marker为分页起始标识。取值范围：0~2147483647。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets direction
-    *  待查询的endpoint的方向。 取值：inbound，表示入站规则。
+    *  终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
     *
     * @return string
     */
@@ -222,7 +222,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets direction
     *
-    * @param string $direction 待查询的endpoint的方向。 取值：inbound，表示入站规则。
+    * @param string $direction 终端节点方向。 取值： inbound，表示入站规则。 outbound，表示出站规则。
     *
     * @return $this
     */
@@ -258,7 +258,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的资源个数。 取值范围：0~500，取值一般为10，20，50。
+    *  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。。
     *
     * @return int|null
     */
@@ -270,7 +270,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的资源个数。 取值范围：0~500，取值一般为10，20，50。
+    * @param int|null $limit 每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。。
     *
     * @return $this
     */
@@ -282,7 +282,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页查询起始页码，起始值为0。 当前设置marker不为空时，以marker为分页起始标识。取值范围：0~2147483647。
+    *  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @return int|null
     */
@@ -294,7 +294,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页查询起始页码，起始值为0。 当前设置marker不为空时，以marker为分页起始标识。取值范围：0~2147483647。
+    * @param int|null $offset 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @return $this
     */

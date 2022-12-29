@@ -27,9 +27,12 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
     * sync  是否同步租户EIP数据 0-不同步 1-同步
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * enterpriseProjectId  企业项目id
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * deviceKey  设备键
     * addressType  地址类型0 ipv4,1 ipv6
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwKeyWord  所绑定防火墙id防火墙名称
+    * epsId  弹性公网ip的企业项目id
     *
     * @var string[]
     */
@@ -43,7 +46,10 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'enterpriseProjectId' => 'string',
             'deviceKey' => 'string',
-            'addressType' => 'int'
+            'addressType' => 'int',
+            'fwInstanceId' => 'string',
+            'fwKeyWord' => 'string',
+            'epsId' => 'string'
     ];
 
     /**
@@ -55,9 +61,12 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
     * sync  是否同步租户EIP数据 0-不同步 1-同步
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * enterpriseProjectId  企业项目id
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * deviceKey  设备键
     * addressType  地址类型0 ipv4,1 ipv6
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwKeyWord  所绑定防火墙id防火墙名称
+    * epsId  弹性公网ip的企业项目id
     *
     * @var string[]
     */
@@ -71,7 +80,10 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'enterpriseProjectId' => null,
         'deviceKey' => null,
-        'addressType' => 'int32'
+        'addressType' => 'int32',
+        'fwInstanceId' => null,
+        'fwKeyWord' => null,
+        'epsId' => null
     ];
 
     /**
@@ -104,9 +116,12 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
     * sync  是否同步租户EIP数据 0-不同步 1-同步
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * enterpriseProjectId  企业项目id
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * deviceKey  设备键
     * addressType  地址类型0 ipv4,1 ipv6
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwKeyWord  所绑定防火墙id防火墙名称
+    * epsId  弹性公网ip的企业项目id
     *
     * @var string[]
     */
@@ -120,7 +135,10 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'enterpriseProjectId' => 'enterprise_project_id',
             'deviceKey' => 'device_key',
-            'addressType' => 'address_type'
+            'addressType' => 'address_type',
+            'fwInstanceId' => 'fw_instance_id',
+            'fwKeyWord' => 'fw_key_word',
+            'epsId' => 'eps_id'
     ];
 
     /**
@@ -132,9 +150,12 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
     * sync  是否同步租户EIP数据 0-不同步 1-同步
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * enterpriseProjectId  企业项目id
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * deviceKey  设备键
     * addressType  地址类型0 ipv4,1 ipv6
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwKeyWord  所绑定防火墙id防火墙名称
+    * epsId  弹性公网ip的企业项目id
     *
     * @var string[]
     */
@@ -148,7 +169,10 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'deviceKey' => 'setDeviceKey',
-            'addressType' => 'setAddressType'
+            'addressType' => 'setAddressType',
+            'fwInstanceId' => 'setFwInstanceId',
+            'fwKeyWord' => 'setFwKeyWord',
+            'epsId' => 'setEpsId'
     ];
 
     /**
@@ -160,9 +184,12 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
     * sync  是否同步租户EIP数据 0-不同步 1-同步
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * enterpriseProjectId  企业项目id
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * deviceKey  设备键
     * addressType  地址类型0 ipv4,1 ipv6
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwKeyWord  所绑定防火墙id防火墙名称
+    * epsId  弹性公网ip的企业项目id
     *
     * @var string[]
     */
@@ -176,7 +203,10 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'deviceKey' => 'getDeviceKey',
-            'addressType' => 'getAddressType'
+            'addressType' => 'getAddressType',
+            'fwInstanceId' => 'getFwInstanceId',
+            'fwKeyWord' => 'getFwKeyWord',
+            'epsId' => 'getEpsId'
     ];
 
     /**
@@ -279,6 +309,9 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['deviceKey'] = isset($data['deviceKey']) ? $data['deviceKey'] : null;
         $this->container['addressType'] = isset($data['addressType']) ? $data['addressType'] : null;
+        $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
+        $this->container['fwKeyWord'] = isset($data['fwKeyWord']) ? $data['fwKeyWord'] : null;
+        $this->container['epsId'] = isset($data['epsId']) ? $data['epsId'] : null;
     }
 
     /**
@@ -531,7 +564,7 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目id
+    *  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @return string|null
     */
@@ -543,7 +576,7 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目id
+    * @param string|null $enterpriseProjectId 企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @return $this
     */
@@ -598,6 +631,78 @@ class ListEipResourcesRequest implements ModelInterface, ArrayAccess
     public function setAddressType($addressType)
     {
         $this->container['addressType'] = $addressType;
+        return $this;
+    }
+
+    /**
+    * Gets fwInstanceId
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return string|null
+    */
+    public function getFwInstanceId()
+    {
+        return $this->container['fwInstanceId'];
+    }
+
+    /**
+    * Sets fwInstanceId
+    *
+    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return $this
+    */
+    public function setFwInstanceId($fwInstanceId)
+    {
+        $this->container['fwInstanceId'] = $fwInstanceId;
+        return $this;
+    }
+
+    /**
+    * Gets fwKeyWord
+    *  所绑定防火墙id防火墙名称
+    *
+    * @return string|null
+    */
+    public function getFwKeyWord()
+    {
+        return $this->container['fwKeyWord'];
+    }
+
+    /**
+    * Sets fwKeyWord
+    *
+    * @param string|null $fwKeyWord 所绑定防火墙id防火墙名称
+    *
+    * @return $this
+    */
+    public function setFwKeyWord($fwKeyWord)
+    {
+        $this->container['fwKeyWord'] = $fwKeyWord;
+        return $this;
+    }
+
+    /**
+    * Gets epsId
+    *  弹性公网ip的企业项目id
+    *
+    * @return string|null
+    */
+    public function getEpsId()
+    {
+        return $this->container['epsId'];
+    }
+
+    /**
+    * Sets epsId
+    *
+    * @param string|null $epsId 弹性公网ip的企业项目id
+    *
+    * @return $this
+    */
+    public function setEpsId($epsId)
+    {
+        $this->container['epsId'] = $epsId;
         return $this;
     }
 

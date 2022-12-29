@@ -26,6 +26,8 @@ class ListAddressItemsUsingGetRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * address  ip地址
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class ListAddressItemsUsingGetRequest implements ModelInterface, ArrayAccess
             'keyWord' => 'string',
             'limit' => 'int',
             'offset' => 'int',
-            'address' => 'string'
+            'address' => 'string',
+            'enterpriseProjectId' => 'string',
+            'fwInstanceId' => 'string'
     ];
 
     /**
@@ -46,6 +50,8 @@ class ListAddressItemsUsingGetRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * address  ip地址
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class ListAddressItemsUsingGetRequest implements ModelInterface, ArrayAccess
         'keyWord' => null,
         'limit' => null,
         'offset' => null,
-        'address' => null
+        'address' => null,
+        'enterpriseProjectId' => null,
+        'fwInstanceId' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class ListAddressItemsUsingGetRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * address  ip地址
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class ListAddressItemsUsingGetRequest implements ModelInterface, ArrayAccess
             'keyWord' => 'key_word',
             'limit' => 'limit',
             'offset' => 'offset',
-            'address' => 'address'
+            'address' => 'address',
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'fwInstanceId' => 'fw_instance_id'
     ];
 
     /**
@@ -107,6 +119,8 @@ class ListAddressItemsUsingGetRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * address  ip地址
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class ListAddressItemsUsingGetRequest implements ModelInterface, ArrayAccess
             'keyWord' => 'setKeyWord',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
-            'address' => 'setAddress'
+            'address' => 'setAddress',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'fwInstanceId' => 'setFwInstanceId'
     ];
 
     /**
@@ -127,6 +143,8 @@ class ListAddressItemsUsingGetRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * address  ip地址
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class ListAddressItemsUsingGetRequest implements ModelInterface, ArrayAccess
             'keyWord' => 'getKeyWord',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
-            'address' => 'getAddress'
+            'address' => 'getAddress',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'fwInstanceId' => 'getFwInstanceId'
     ];
 
     /**
@@ -203,6 +223,8 @@ class ListAddressItemsUsingGetRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
     }
 
     /**
@@ -383,6 +405,54 @@ class ListAddressItemsUsingGetRequest implements ModelInterface, ArrayAccess
     public function setAddress($address)
     {
         $this->container['address'] = $address;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets fwInstanceId
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return string|null
+    */
+    public function getFwInstanceId()
+    {
+        return $this->container['fwInstanceId'];
+    }
+
+    /**
+    * Sets fwInstanceId
+    *
+    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return $this
+    */
+    public function setFwInstanceId($fwInstanceId)
+    {
+        $this->container['fwInstanceId'] = $fwInstanceId;
         return $this;
     }
 

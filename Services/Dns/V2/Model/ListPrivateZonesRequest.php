@@ -21,9 +21,9 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  待查询的zone的类型。  取值范围：private。
-    * limit  每页返回的资源个数，取值范围：0~500
-    * marker  分页查询起始的资源ID，为空时为查询第一页
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
@@ -45,9 +45,9 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  待查询的zone的类型。  取值范围：private。
-    * limit  每页返回的资源个数，取值范围：0~500
-    * marker  分页查询起始的资源ID，为空时为查询第一页
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
@@ -90,9 +90,9 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  待查询的zone的类型。  取值范围：private。
-    * limit  每页返回的资源个数，取值范围：0~500
-    * marker  分页查询起始的资源ID，为空时为查询第一页
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
@@ -114,9 +114,9 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  待查询的zone的类型。  取值范围：private。
-    * limit  每页返回的资源个数，取值范围：0~500
-    * marker  分页查询起始的资源ID，为空时为查询第一页
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
@@ -138,9 +138,9 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  待查询的zone的类型。  取值范围：private。
-    * limit  每页返回的资源个数，取值范围：0~500
-    * marker  分页查询起始的资源ID，为空时为查询第一页
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
@@ -278,7 +278,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的资源个数，取值范围：0~500
+    *  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     *
     * @return int|null
     */
@@ -290,7 +290,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的资源个数，取值范围：0~500
+    * @param int|null $limit 每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
-    *  分页查询起始的资源ID，为空时为查询第一页
+    *  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     *
     * @return string|null
     */
@@ -314,7 +314,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker 分页查询起始的资源ID，为空时为查询第一页
+    * @param string|null $marker 分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页查询起始偏移量，表示从偏移量的下一个资源开始查询
+    *  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @return int|null
     */
@@ -338,7 +338,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页查询起始偏移量，表示从偏移量的下一个资源开始查询
+    * @param int|null $offset 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @return $this
     */

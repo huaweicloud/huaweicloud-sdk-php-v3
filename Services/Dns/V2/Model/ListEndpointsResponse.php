@@ -21,19 +21,19 @@ class ListEndpointsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * endpoints  查询公网Zone的列表响应。
+    * endpoints  查询终端节点响应列表。
     * metadata  metadata
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'endpoints' => '\HuaweiCloud\SDK\Dns\V2\Model\EndpointResp[]',
-            'metadata' => '\HuaweiCloud\SDK\Dns\V2\Model\Metedata'
+            'metadata' => '\HuaweiCloud\SDK\Dns\V2\Model\Metadata'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * endpoints  查询公网Zone的列表响应。
+    * endpoints  查询终端节点响应列表。
     * metadata  metadata
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ListEndpointsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * endpoints  查询公网Zone的列表响应。
+    * endpoints  查询终端节点响应列表。
     * metadata  metadata
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ListEndpointsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * endpoints  查询公网Zone的列表响应。
+    * endpoints  查询终端节点响应列表。
     * metadata  metadata
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ListEndpointsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * endpoints  查询公网Zone的列表响应。
+    * endpoints  查询终端节点响应列表。
     * metadata  metadata
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ListEndpointsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpoints
-    *  查询公网Zone的列表响应。
+    *  查询终端节点响应列表。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\EndpointResp[]|null
     */
@@ -198,7 +198,7 @@ class ListEndpointsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets endpoints
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\EndpointResp[]|null $endpoints 查询公网Zone的列表响应。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\EndpointResp[]|null $endpoints 查询终端节点响应列表。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class ListEndpointsResponse implements ModelInterface, ArrayAccess
     * Gets metadata
     *  metadata
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\Metedata|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\Metadata|null
     */
     public function getMetadata()
     {
@@ -222,7 +222,7 @@ class ListEndpointsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets metadata
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Metedata|null $metadata metadata
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Metadata|null $metadata metadata
     *
     * @return $this
     */

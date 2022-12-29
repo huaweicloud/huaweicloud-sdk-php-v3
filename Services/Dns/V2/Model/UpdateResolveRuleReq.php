@@ -22,28 +22,24 @@ class UpdateResolveRuleReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  规则名称。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * ipaddresses  ipaddresses
-    * routers  规则关联的目标ip地址。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'ipaddresses' => '\HuaweiCloud\SDK\Dns\V2\Model\IpInfo',
-            'routers' => '\HuaweiCloud\SDK\Dns\V2\Model\Router[]'
+            'ipaddresses' => '\HuaweiCloud\SDK\Dns\V2\Model\IpInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  规则名称。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * ipaddresses  ipaddresses
-    * routers  规则关联的目标ip地址。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'ipaddresses' => null,
-        'routers' => null
+        'ipaddresses' => null
     ];
 
     /**
@@ -71,42 +67,36 @@ class UpdateResolveRuleReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  规则名称。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * ipaddresses  ipaddresses
-    * routers  规则关联的目标ip地址。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'ipaddresses' => 'ipaddresses',
-            'routers' => 'routers'
+            'ipaddresses' => 'ipaddresses'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  规则名称。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * ipaddresses  ipaddresses
-    * routers  规则关联的目标ip地址。
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'ipaddresses' => 'setIpaddresses',
-            'routers' => 'setRouters'
+            'ipaddresses' => 'setIpaddresses'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  规则名称。 取值范围：1-64个字符，支持数字、字母、中文、_（下划线）、-（中划线）、.（点）。
     * ipaddresses  ipaddresses
-    * routers  规则关联的目标ip地址。
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'ipaddresses' => 'getIpaddresses',
-            'routers' => 'getRouters'
+            'ipaddresses' => 'getIpaddresses'
     ];
 
     /**
@@ -169,7 +159,6 @@ class UpdateResolveRuleReq implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['ipaddresses'] = isset($data['ipaddresses']) ? $data['ipaddresses'] : null;
-        $this->container['routers'] = isset($data['routers']) ? $data['routers'] : null;
     }
 
     /**
@@ -239,30 +228,6 @@ class UpdateResolveRuleReq implements ModelInterface, ArrayAccess
     public function setIpaddresses($ipaddresses)
     {
         $this->container['ipaddresses'] = $ipaddresses;
-        return $this;
-    }
-
-    /**
-    * Gets routers
-    *  规则关联的目标ip地址。
-    *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\Router[]|null
-    */
-    public function getRouters()
-    {
-        return $this->container['routers'];
-    }
-
-    /**
-    * Sets routers
-    *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Router[]|null $routers 规则关联的目标ip地址。
-    *
-    * @return $this
-    */
-    public function setRouters($routers)
-    {
-        $this->container['routers'] = $routers;
         return $this;
     }
 

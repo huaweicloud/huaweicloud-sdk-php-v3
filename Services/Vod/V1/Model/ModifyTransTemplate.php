@@ -241,15 +241,18 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['groupId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 128.";
             }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 128)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 128)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 128.";
             }
+        if ($this->container['qualityInfoList'] === null) {
+            $invalidProperties[] = "'qualityInfoList' can't be null";
+        }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 256.";
             }
+        if ($this->container['common'] === null) {
+            $invalidProperties[] = "'common' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -292,7 +295,7 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     * Gets name
     *  模板组名称<br/>
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -302,7 +305,7 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 模板组名称<br/>
+    * @param string|null $name 模板组名称<br/>
     *
     * @return $this
     */
@@ -364,7 +367,7 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     * Gets qualityInfoList
     *  画质配置信息列表<br/>
     *
-    * @return \HuaweiCloud\SDK\Vod\V1\Model\QualityInfoList[]|null
+    * @return \HuaweiCloud\SDK\Vod\V1\Model\QualityInfoList[]
     */
     public function getQualityInfoList()
     {
@@ -374,7 +377,7 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets qualityInfoList
     *
-    * @param \HuaweiCloud\SDK\Vod\V1\Model\QualityInfoList[]|null $qualityInfoList 画质配置信息列表<br/>
+    * @param \HuaweiCloud\SDK\Vod\V1\Model\QualityInfoList[] $qualityInfoList 画质配置信息列表<br/>
     *
     * @return $this
     */
@@ -436,7 +439,7 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     * Gets common
     *  common
     *
-    * @return \HuaweiCloud\SDK\Vod\V1\Model\CommonInfo|null
+    * @return \HuaweiCloud\SDK\Vod\V1\Model\CommonInfo
     */
     public function getCommon()
     {
@@ -446,7 +449,7 @@ class ModifyTransTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets common
     *
-    * @param \HuaweiCloud\SDK\Vod\V1\Model\CommonInfo|null $common common
+    * @param \HuaweiCloud\SDK\Vod\V1\Model\CommonInfo $common common
     *
     * @return $this
     */

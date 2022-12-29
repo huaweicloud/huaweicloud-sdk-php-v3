@@ -188,6 +188,9 @@ class AssociatePublicipsOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['associateInstanceType'] === null) {
+            $invalidProperties[] = "'associateInstanceType' can't be null";
+        }
             $allowedValues = $this->getAssociateInstanceTypeAllowableValues();
                 if (!is_null($this->container['associateInstanceType']) && !in_array($this->container['associateInstanceType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -196,16 +199,19 @@ class AssociatePublicipsOption implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['associateInstanceType']) && (mb_strlen($this->container['associateInstanceType']) > 36)) {
+            if ((mb_strlen($this->container['associateInstanceType']) > 36)) {
                 $invalidProperties[] = "invalid value for 'associateInstanceType', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['associateInstanceType']) && (mb_strlen($this->container['associateInstanceType']) < 0)) {
+            if ((mb_strlen($this->container['associateInstanceType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'associateInstanceType', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['associateInstanceId']) && (mb_strlen($this->container['associateInstanceId']) > 36)) {
+        if ($this->container['associateInstanceId'] === null) {
+            $invalidProperties[] = "'associateInstanceId' can't be null";
+        }
+            if ((mb_strlen($this->container['associateInstanceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'associateInstanceId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['associateInstanceId']) && (mb_strlen($this->container['associateInstanceId']) < 0)) {
+            if ((mb_strlen($this->container['associateInstanceId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'associateInstanceId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -226,7 +232,7 @@ class AssociatePublicipsOption implements ModelInterface, ArrayAccess
     * Gets associateInstanceType
     *  功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例 约束：associate_instance_type字段不允许为空 约束：双栈公网IP不允许修改绑定的实例
     *
-    * @return string|null
+    * @return string
     */
     public function getAssociateInstanceType()
     {
@@ -236,7 +242,7 @@ class AssociatePublicipsOption implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceType
     *
-    * @param string|null $associateInstanceType 功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例 约束：associate_instance_type字段不允许为空 约束：双栈公网IP不允许修改绑定的实例
+    * @param string $associateInstanceType 功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例 约束：associate_instance_type字段不允许为空 约束：双栈公网IP不允许修改绑定的实例
     *
     * @return $this
     */
@@ -250,7 +256,7 @@ class AssociatePublicipsOption implements ModelInterface, ArrayAccess
     * Gets associateInstanceId
     *  功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
     *
-    * @return string|null
+    * @return string
     */
     public function getAssociateInstanceId()
     {
@@ -260,7 +266,7 @@ class AssociatePublicipsOption implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceId
     *
-    * @param string|null $associateInstanceId 功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
+    * @param string $associateInstanceId 功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
     *
     * @return $this
     */

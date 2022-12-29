@@ -24,6 +24,8 @@ class ListFirewallUsingGetRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * serviceType  服务类型 0 南北向防火墙 1 东西向防火墙
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class ListFirewallUsingGetRequest implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'serviceType' => 'int'
+            'serviceType' => 'int',
+            'enterpriseProjectId' => 'string',
+            'fwInstanceId' => 'string'
     ];
 
     /**
@@ -40,6 +44,8 @@ class ListFirewallUsingGetRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * serviceType  服务类型 0 南北向防火墙 1 东西向防火墙
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class ListFirewallUsingGetRequest implements ModelInterface, ArrayAccess
         'projectId' => null,
         'offset' => 'int32',
         'limit' => 'int32',
-        'serviceType' => 'int32'
+        'serviceType' => 'int32',
+        'enterpriseProjectId' => null,
+        'fwInstanceId' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class ListFirewallUsingGetRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * serviceType  服务类型 0 南北向防火墙 1 东西向防火墙
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class ListFirewallUsingGetRequest implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'offset' => 'offset',
             'limit' => 'limit',
-            'serviceType' => 'service_type'
+            'serviceType' => 'service_type',
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'fwInstanceId' => 'fw_instance_id'
     ];
 
     /**
@@ -93,6 +105,8 @@ class ListFirewallUsingGetRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * serviceType  服务类型 0 南北向防火墙 1 东西向防火墙
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class ListFirewallUsingGetRequest implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'serviceType' => 'setServiceType'
+            'serviceType' => 'setServiceType',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'fwInstanceId' => 'setFwInstanceId'
     ];
 
     /**
@@ -109,6 +125,8 @@ class ListFirewallUsingGetRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * serviceType  服务类型 0 南北向防火墙 1 东西向防火墙
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class ListFirewallUsingGetRequest implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'serviceType' => 'getServiceType'
+            'serviceType' => 'getServiceType',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'fwInstanceId' => 'getFwInstanceId'
     ];
 
     /**
@@ -196,6 +216,8 @@ class ListFirewallUsingGetRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
     }
 
     /**
@@ -339,6 +361,54 @@ class ListFirewallUsingGetRequest implements ModelInterface, ArrayAccess
     public function setServiceType($serviceType)
     {
         $this->container['serviceType'] = $serviceType;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets fwInstanceId
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return string|null
+    */
+    public function getFwInstanceId()
+    {
+        return $this->container['fwInstanceId'];
+    }
+
+    /**
+    * Sets fwInstanceId
+    *
+    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return $this
+    */
+    public function setFwInstanceId($fwInstanceId)
+    {
+        $this->container['fwInstanceId'] = $fwInstanceId;
         return $this;
     }
 

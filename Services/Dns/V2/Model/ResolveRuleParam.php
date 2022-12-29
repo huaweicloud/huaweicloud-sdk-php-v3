@@ -27,7 +27,7 @@ class ResolveRuleParam implements ModelInterface, ArrayAccess
     * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
     * ruleType  规则类型。 预留字段，当前默认为FORWARD。
     * ipaddressCount  当前规则下的ip地址数量。
-    * routers  routers
+    * routers  规则关联的vpc信息。
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -55,7 +55,7 @@ class ResolveRuleParam implements ModelInterface, ArrayAccess
     * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
     * ruleType  规则类型。 预留字段，当前默认为FORWARD。
     * ipaddressCount  当前规则下的ip地址数量。
-    * routers  routers
+    * routers  规则关联的vpc信息。
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -104,7 +104,7 @@ class ResolveRuleParam implements ModelInterface, ArrayAccess
     * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
     * ruleType  规则类型。 预留字段，当前默认为FORWARD。
     * ipaddressCount  当前规则下的ip地址数量。
-    * routers  routers
+    * routers  规则关联的vpc信息。
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -132,7 +132,7 @@ class ResolveRuleParam implements ModelInterface, ArrayAccess
     * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
     * ruleType  规则类型。 预留字段，当前默认为FORWARD。
     * ipaddressCount  当前规则下的ip地址数量。
-    * routers  routers
+    * routers  规则关联的vpc信息。
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -160,7 +160,7 @@ class ResolveRuleParam implements ModelInterface, ArrayAccess
     * status  资源状态。 取值范围：PENDING_CREATE, ACTIVE, PENDING_DELETE, ERROR。
     * ruleType  规则类型。 预留字段，当前默认为FORWARD。
     * ipaddressCount  当前规则下的ip地址数量。
-    * routers  routers
+    * routers  规则关联的vpc信息。
     * createTime  创建时间。
     * updateTime  更新时间。
     *
@@ -441,7 +441,7 @@ class ResolveRuleParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets routers
-    *  routers
+    *  规则关联的vpc信息。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\Router[]|null
     */
@@ -453,7 +453,7 @@ class ResolveRuleParam implements ModelInterface, ArrayAccess
     /**
     * Sets routers
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Router[]|null $routers routers
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Router[]|null $routers 规则关联的vpc信息。
     *
     * @return $this
     */

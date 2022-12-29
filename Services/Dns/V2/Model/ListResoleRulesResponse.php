@@ -21,22 +21,26 @@ class ListResoleRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resolverRules  查询resolver_rule的列表响应。
+    * resolverRules  解析记录资源列表。
+    * metadata  metadata
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resolverRules' => '\HuaweiCloud\SDK\Dns\V2\Model\ResolveRuleParam[]'
+            'resolverRules' => '\HuaweiCloud\SDK\Dns\V2\Model\ResolveRuleParam[]',
+            'metadata' => '\HuaweiCloud\SDK\Dns\V2\Model\Metadata'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resolverRules  查询resolver_rule的列表响应。
+    * resolverRules  解析记录资源列表。
+    * metadata  metadata
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resolverRules' => null
+        'resolverRules' => null,
+        'metadata' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class ListResoleRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resolverRules  查询resolver_rule的列表响应。
+    * resolverRules  解析记录资源列表。
+    * metadata  metadata
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resolverRules' => 'resolver_rules'
+            'resolverRules' => 'resolver_rules',
+            'metadata' => 'metadata'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resolverRules  查询resolver_rule的列表响应。
+    * resolverRules  解析记录资源列表。
+    * metadata  metadata
     *
     * @var string[]
     */
     protected static $setters = [
-            'resolverRules' => 'setResolverRules'
+            'resolverRules' => 'setResolverRules',
+            'metadata' => 'setMetadata'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resolverRules  查询resolver_rule的列表响应。
+    * resolverRules  解析记录资源列表。
+    * metadata  metadata
     *
     * @var string[]
     */
     protected static $getters = [
-            'resolverRules' => 'getResolverRules'
+            'resolverRules' => 'getResolverRules',
+            'metadata' => 'getMetadata'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListResoleRulesResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['resolverRules'] = isset($data['resolverRules']) ? $data['resolverRules'] : null;
+        $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
     }
 
     /**
@@ -175,7 +186,7 @@ class ListResoleRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resolverRules
-    *  查询resolver_rule的列表响应。
+    *  解析记录资源列表。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\ResolveRuleParam[]|null
     */
@@ -187,13 +198,37 @@ class ListResoleRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resolverRules
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\ResolveRuleParam[]|null $resolverRules 查询resolver_rule的列表响应。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\ResolveRuleParam[]|null $resolverRules 解析记录资源列表。
     *
     * @return $this
     */
     public function setResolverRules($resolverRules)
     {
         $this->container['resolverRules'] = $resolverRules;
+        return $this;
+    }
+
+    /**
+    * Gets metadata
+    *  metadata
+    *
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\Metadata|null
+    */
+    public function getMetadata()
+    {
+        return $this->container['metadata'];
+    }
+
+    /**
+    * Sets metadata
+    *
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Metadata|null $metadata metadata
+    *
+    * @return $this
+    */
+    public function setMetadata($metadata)
+    {
+        $this->container['metadata'] = $metadata;
         return $this;
     }
 

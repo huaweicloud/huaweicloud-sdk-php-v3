@@ -25,7 +25,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 绑定ip地址。
+     * 绑定ip地址
      *
      * 绑定单个IP地址到终端节点
      * 
@@ -41,7 +41,7 @@ class DnsAsyncClient extends Client
     
     public function associateEndpointIpaddressAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/06 /v2.1/endpoint/{endpoint_id}/ipaddress';
+        $resourcePath = '/v2.1/endpoint/{endpoint_id}/ipaddress';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -93,6 +93,74 @@ class DnsAsyncClient extends Client
     }
 
     /**
+     * 在解析规则上关联VPC
+     *
+     * 在解析规则上关联VPC
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function associateResolveRuleRouterAsync($request)
+    {
+        return $this->associateResolveRuleRouterAsyncWithHttpInfo($request);
+    }
+    
+    public function associateResolveRuleRouterAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/resolverrule/{resolverrule_id}/associaterouter';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resolverruleId'] !== null) {
+            $pathParams['resolverrule_id'] = $localVarParams['resolverruleId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\AssociateResolveRuleRouterResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\AssociateResolveRuleRouterRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 批量删除PTR
      *
      * 批量删除PTR。本接口为原子操作，所有记录应全部删除成功或全部失败。
@@ -109,7 +177,7 @@ class DnsAsyncClient extends Client
     
     public function batchDeletePtrRecordsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/02 /v2.1/reverse/floatingips';
+        $resourcePath = '/v2.1/reverse/floatingips';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -176,7 +244,7 @@ class DnsAsyncClient extends Client
     
     public function batchDeleteRecordSetsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/05 /v2.1/recordsets';
+        $resourcePath = '/02 /v2.1/recordsets';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -243,7 +311,7 @@ class DnsAsyncClient extends Client
     
     public function batchDeleteZonesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/01 /v2.1/zones';
+        $resourcePath = '/v2.1/zones';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -310,7 +378,7 @@ class DnsAsyncClient extends Client
     
     public function batchSetRecordSetsStatusAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/04 /v2.1/recordsets/statuses';
+        $resourcePath = '/v2.1/recordsets/statuses';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -377,7 +445,7 @@ class DnsAsyncClient extends Client
     
     public function batchSetZonesStatusAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/03 /v2.1/zones/statuses';
+        $resourcePath = '/v2.1/zones/statuses';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -491,7 +559,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 创建终端节点。
+     * 创建终端节点
      *
      * 创建单个终端节点。
      * 
@@ -507,7 +575,7 @@ class DnsAsyncClient extends Client
     
     public function createEndpointAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/01 /v2.1/endpoint';
+        $resourcePath = '/v2.1/endpoint';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -556,7 +624,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 创建线路分组。
+     * 创建线路分组
      *
      * 创建一个线路分组。
      * 
@@ -572,7 +640,7 @@ class DnsAsyncClient extends Client
     
     public function createLineGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/01 /v2.1/linegroups';
+        $resourcePath = '/v2.1/linegroups';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -621,7 +689,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 创建解析规则。
+     * 创建解析规则
      *
      * 创建一个解析规则。
      * 
@@ -637,7 +705,7 @@ class DnsAsyncClient extends Client
     
     public function createResolveRuleAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/10 /v2.1/resolverrule';
+        $resourcePath = '/v2.1/resolverrule';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -686,7 +754,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 创建公网域名找回请求。
+     * 创建公网域名找回请求
      *
      * 创建公网域名找回请求。
      * 
@@ -702,7 +770,7 @@ class DnsAsyncClient extends Client
     
     public function createRetrievalAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/01 /v2/retrieval';
+        $resourcePath = '/v2/retrieval';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -751,7 +819,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 请求立即验证域名找回。
+     * 请求立即验证域名找回
      *
      * 请求服务器立即执行找回验证。
      * 
@@ -767,7 +835,7 @@ class DnsAsyncClient extends Client
     
     public function createRetrievalVerificationAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/03 /v2/retrieval/verification/{id}';
+        $resourcePath = '/v2/retrieval/verification/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -801,7 +869,7 @@ class DnsAsyncClient extends Client
         );
 
         return $this->callApi(
-            $method='GET',
+            $method='POST',
             $resourcePath,
             $pathParams,
             $queryParams,
@@ -832,7 +900,7 @@ class DnsAsyncClient extends Client
     
     public function deleteCustomLineAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/01 /v2.1/customlines/{line_id}';
+        $resourcePath = '/v2.1/customlines/{line_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -881,7 +949,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 删除终端节点。
+     * 删除终端节点
      *
      * 删除终端节点。
      * 
@@ -897,7 +965,7 @@ class DnsAsyncClient extends Client
     
     public function deleteEndpointAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/05 /v2.1/endpoint/{endpoint_id}';
+        $resourcePath = '/v2.1/endpoint/{endpoint_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -946,7 +1014,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 删除线路分组。
+     * 删除线路分组
      *
      * 删除单个线路分组。
      * 
@@ -962,7 +1030,7 @@ class DnsAsyncClient extends Client
     
     public function deleteLineGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/05 /v2.1/linegroups/{linegroup_id}';
+        $resourcePath = '/v2.1/linegroups/{linegroup_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1011,7 +1079,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 删除解析规则。
+     * 删除解析规则
      *
      * 删除解析规则。
      * 
@@ -1027,7 +1095,7 @@ class DnsAsyncClient extends Client
     
     public function deleteResolveRuleAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/14 /v2.1/resolverrule/{resolverrule_id}';
+        $resourcePath = '/v2.1/resolverrule/{resolverrule_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1076,7 +1144,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 解关联ip地址。
+     * 解关联ip地址
      *
      * 解除endpoint绑定的IP。
      * 
@@ -1092,7 +1160,7 @@ class DnsAsyncClient extends Client
     
     public function disassociateEndpointIpaddressAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/08 v2.1/endpoint/{endpoint_id}/ipaddress/{ipaddress_id}';
+        $resourcePath = '/v2.1/endpoint/{endpoint_id}/ipaddress/{ipaddress_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1140,6 +1208,74 @@ class DnsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DisassociateEndpointIpaddressResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DisassociateEndpointIpaddressRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 在解析规则上解关联VPC
+     *
+     * 在解析规则上解关联VPC
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disassociateResolveRuleRouterAsync($request)
+    {
+        return $this->disassociateResolveRuleRouterAsyncWithHttpInfo($request);
+    }
+    
+    public function disassociateResolveRuleRouterAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/resolverrule/{resolverrule_id}/disassociaterouter';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resolverruleId'] !== null) {
+            $pathParams['resolverrule_id'] = $localVarParams['resolverruleId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dns\V2\Model\DisassociateResolveRuleRouterResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dns\V2\Model\DisassociateResolveRuleRouterRequest',
             $asyncRequest = true);
     }
 
@@ -1283,7 +1419,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 查询ip地址列表。
+     * 查询ip地址列表
      *
      * 查询某个endpoint下的ip地址列表。
      * 
@@ -1299,7 +1435,7 @@ class DnsAsyncClient extends Client
     
     public function listEndpointIpaddressesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/07 /v2.1/endpoint/{endpoint_id}/ipaddress';
+        $resourcePath = '/v2.1/endpoint/{endpoint_id}/ipaddress';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1348,7 +1484,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 查询vpc信息。
+     * 查询vpc信息
      *
      * 查询vpc的终端节点信息。
      * 
@@ -1364,7 +1500,7 @@ class DnsAsyncClient extends Client
     
     public function listEndpointVpcsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/09 /v2.1/vpc';
+        $resourcePath = '/v2.1/vpc';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1413,7 +1549,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 查询终端节点列表。
+     * 查询终端节点列表
      *
      * 查询终端节点列表。
      * 
@@ -1429,7 +1565,7 @@ class DnsAsyncClient extends Client
     
     public function listEndpointsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/03 /v2.1/endpoint';
+        $resourcePath = '/v2.1/endpoint';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1487,7 +1623,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 查询线路分组列表。
+     * 查询线路分组列表
      *
      * 查询线路分组列表。
      * 
@@ -1503,7 +1639,7 @@ class DnsAsyncClient extends Client
     
     public function listLineGroupsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/02 /v2.1/linegroups';
+        $resourcePath = '/v2.1/linegroups';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1629,7 +1765,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 查询解析规则列表。
+     * 查询解析规则列表
      *
      * 查询解析规则的列表。
      * 
@@ -1645,7 +1781,7 @@ class DnsAsyncClient extends Client
     
     public function listResoleRulesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/12 /v2.1/resolverrule';
+        $resourcePath = '/v2.1/resolverrule';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1671,11 +1807,11 @@ class DnsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'metadata']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'metadata'],
                 []
             );
         }
@@ -1830,7 +1966,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 查询endpoint。
+     * 查询终端节点
      *
      * 查询终端单个节点。
      * 
@@ -1846,7 +1982,7 @@ class DnsAsyncClient extends Client
     
     public function showEndpointAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/02 /v2.1/endpoint/{endpoint_id}';
+        $resourcePath = '/v2.1/endpoint/{endpoint_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1895,7 +2031,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 查询线路分组。
+     * 查询线路分组
      *
      * 查询线路分组。
      * 
@@ -1911,7 +2047,7 @@ class DnsAsyncClient extends Client
     
     public function showLineGroupAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/03 /v2.1/linegroups/{linegroup_id}';
+        $resourcePath = '/v2.1/linegroups/{linegroup_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1960,7 +2096,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 查询单个解析规则。
+     * 查询单个解析规则
      *
      * 查询单个解析规则。
      * 
@@ -1976,7 +2112,7 @@ class DnsAsyncClient extends Client
     
     public function showResoleRuleAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/11 /v2.1/resolverrule/{resolverrule_id}';
+        $resourcePath = '/v2.1/resolverrule/{resolverrule_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2025,7 +2161,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 查询域名找回。
+     * 查询域名找回
      *
      * 查询域名找回请求。
      * 
@@ -2041,7 +2177,7 @@ class DnsAsyncClient extends Client
     
     public function showRetrievalAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/02 /v2/retrieval';
+        $resourcePath = '/v2/retrieval';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2090,7 +2226,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 查询域名找回结果。
+     * 查询域名找回结果
      *
      * 查询域名找回结果。
      * 
@@ -2106,7 +2242,7 @@ class DnsAsyncClient extends Client
     
     public function showRetrievalVerificationAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/04 /v2/retrieval/verification/{id}';
+        $resourcePath = '/v2/retrieval/verification/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2171,7 +2307,7 @@ class DnsAsyncClient extends Client
     
     public function updateCustomLineAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/02 /v2.1/customlines/{line_id}';
+        $resourcePath = '/v2.1/customlines/{line_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2239,7 +2375,7 @@ class DnsAsyncClient extends Client
     
     public function updateEndpointAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/04 /v2.1/endpoint/{endpoint_id}';
+        $resourcePath = '/v2.1/endpoint/{endpoint_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2291,7 +2427,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 更新线路分组。
+     * 更新线路分组
      *
      * 更新单个线路分组。
      * 
@@ -2307,7 +2443,7 @@ class DnsAsyncClient extends Client
     
     public function updateLineGroupsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/04 /v2.1/linegroups/{linegroup_id}';
+        $resourcePath = '/v2.1/linegroups/{linegroup_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2323,6 +2459,9 @@ class DnsAsyncClient extends Client
         }
         if ($localVarParams['linegroupId'] !== null) {
             $pathParams['linegroup_id'] = $localVarParams['linegroupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
@@ -2356,7 +2495,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 修改解析规则。
+     * 修改解析规则
      *
      * 修改一个解析规则。
      * 
@@ -2372,7 +2511,7 @@ class DnsAsyncClient extends Client
     
     public function updateResolveRuleAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/13 /v2.1/resolverrule/{resolverrule_id}';
+        $resourcePath = '/v2.1/resolverrule/{resolverrule_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2785,7 +2924,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * Record Set关联健康检查。
+     * Record Set关联健康检查
      *
      * Record Set关联健康检查。
      * 
@@ -2801,7 +2940,7 @@ class DnsAsyncClient extends Client
     
     public function associateHealthCheckAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/01  /v2.1/recordsets/{recordset_id}/associatehealthcheck';
+        $resourcePath = '/v2.1/recordsets/{recordset_id}/associatehealthcheck';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2853,7 +2992,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 批量删除某个Zone下的Record Set资源。
+     * 批量删除某个Zone下的Record Set资源
      *
      * 批量删除某个Zone下的Record Set资源，当删除的资源不存在时，则默认删除成功。
      * 响应结果中只包含本次实际删除的资源。
@@ -2922,7 +3061,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 批量修改RecordSet。
+     * 批量修改RecordSet
      *
      * 批量修改RecordSet。属于原子性操作，请求Record Set将全部完成修改，或不做任何修改。
      * 仅公网Zone支持。
@@ -3059,7 +3198,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 批量线路创建RecordSet。仅公网Zone支持。
+     * 批量线路创建RecordSet
      *
      * 批量线路创建RecordSet。属于原子性操作，如果存在一个参数校验不通过，则创建失败。仅公网Zone支持。
      * 
@@ -3127,7 +3266,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 创建单个Record Set，仅适用于公网DNS
+     * 创建单个Record Set
      *
      * 创建单个Record Set，仅适用于公网DNS
      * 
@@ -3331,9 +3470,9 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * Record Set解关联健康检查。
+     * Record Set解关联健康检查
      *
-     * Record Set解关联健康检查。。
+     * Record Set解关联健康检查。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3347,7 +3486,7 @@ class DnsAsyncClient extends Client
     
     public function disassociateHealthCheckAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/02 /v2.1/recordsets/{recordset_id}/associatehealthcheck';
+        $resourcePath = '/v2.1/recordsets/{recordset_id}/disassociatehealthcheck';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3769,7 +3908,7 @@ class DnsAsyncClient extends Client
     /**
      * 查询单个Record Set
      *
-     * 查询单个Record Set
+     * 查询单个Record Set。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3936,7 +4075,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 查询单个Record Set，仅适用于公网DNS
+     * 查询单个Record Set
      *
      * 查询单个Record Set，仅适用于公网DNS
      * 
@@ -4233,7 +4372,7 @@ class DnsAsyncClient extends Client
     
     public function createTagAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/01 /v2/{project_id}/{resource_type}/{resource_id}/tags';
+        $resourcePath = '/v2/{project_id}/{resource_type}/{resource_id}/tags';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5144,7 +5283,7 @@ class DnsAsyncClient extends Client
     
     public function setPrivateZoneProxyPatternAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/07 /v2/zones/{zone_id}/actions/set-proxy-pattern';
+        $resourcePath = '/v2/zones/{zone_id}/actions/set-proxy-pattern';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5592,7 +5731,7 @@ class DnsAsyncClient extends Client
     }
 
     /**
-     * 设置单个公网Zone状态，支持暂停、启用Zone
+     * 设置单个公网Zone状态
      *
      * 设置单个公网Zone状态，支持暂停、启用Zone
      * 

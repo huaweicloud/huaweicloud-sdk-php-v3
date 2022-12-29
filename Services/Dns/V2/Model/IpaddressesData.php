@@ -22,6 +22,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * status  资源状态。。
     * id  endpoint的ID，uuid形式的一个资源标识。
+    * ip  ip地址信息。
     * createTime  创建时间。
     * updateTime  更新时间。
     * subnetId  子网ID。
@@ -32,6 +33,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'status' => 'string',
             'id' => 'string',
+            'ip' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string',
             'subnetId' => 'string',
@@ -42,6 +44,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * status  资源状态。。
     * id  endpoint的ID，uuid形式的一个资源标识。
+    * ip  ip地址信息。
     * createTime  创建时间。
     * updateTime  更新时间。
     * subnetId  子网ID。
@@ -52,6 +55,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'status' => null,
         'id' => null,
+        'ip' => null,
         'createTime' => null,
         'updateTime' => null,
         'subnetId' => null,
@@ -83,6 +87,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
     * and the value is the original name
     * status  资源状态。。
     * id  endpoint的ID，uuid形式的一个资源标识。
+    * ip  ip地址信息。
     * createTime  创建时间。
     * updateTime  更新时间。
     * subnetId  子网ID。
@@ -93,6 +98,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'status' => 'status',
             'id' => 'id',
+            'ip' => 'ip',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
             'subnetId' => 'subnet_id',
@@ -103,6 +109,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * status  资源状态。。
     * id  endpoint的ID，uuid形式的一个资源标识。
+    * ip  ip地址信息。
     * createTime  创建时间。
     * updateTime  更新时间。
     * subnetId  子网ID。
@@ -113,6 +120,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
     protected static $setters = [
             'status' => 'setStatus',
             'id' => 'setId',
+            'ip' => 'setIp',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
             'subnetId' => 'setSubnetId',
@@ -123,6 +131,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * status  资源状态。。
     * id  endpoint的ID，uuid形式的一个资源标识。
+    * ip  ip地址信息。
     * createTime  创建时间。
     * updateTime  更新时间。
     * subnetId  子网ID。
@@ -133,6 +142,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
     protected static $getters = [
             'status' => 'getStatus',
             'id' => 'getId',
+            'ip' => 'getIp',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
             'subnetId' => 'getSubnetId',
@@ -199,6 +209,7 @@ class IpaddressesData implements ModelInterface, ArrayAccess
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
@@ -272,6 +283,30 @@ class IpaddressesData implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets ip
+    *  ip地址信息。
+    *
+    * @return string|null
+    */
+    public function getIp()
+    {
+        return $this->container['ip'];
+    }
+
+    /**
+    * Sets ip
+    *
+    * @param string|null $ip ip地址信息。
+    *
+    * @return $this
+    */
+    public function setIp($ip)
+    {
+        $this->container['ip'] = $ip;
         return $this;
     }
 

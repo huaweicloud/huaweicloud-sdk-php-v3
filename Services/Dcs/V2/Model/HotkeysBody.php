@@ -57,7 +57,7 @@ class HotkeysBody implements ModelInterface, ArrayAccess
         'type' => null,
         'shard' => null,
         'db' => 'int32',
-        'size' => null,
+        'size' => 'int64',
         'unit' => null,
         'freq' => null
     ];

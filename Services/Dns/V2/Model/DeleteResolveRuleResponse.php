@@ -21,22 +21,22 @@ class DeleteResolveRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resolverRules  查询resolver_rule的列表响应。
+    * resolverRule  resolverRule
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resolverRules' => '\HuaweiCloud\SDK\Dns\V2\Model\ResolveRuleParam[]'
+            'resolverRule' => '\HuaweiCloud\SDK\Dns\V2\Model\ResolveRuleParam'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resolverRules  查询resolver_rule的列表响应。
+    * resolverRule  resolverRule
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resolverRules' => null
+        'resolverRule' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class DeleteResolveRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resolverRules  查询resolver_rule的列表响应。
+    * resolverRule  resolverRule
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resolverRules' => 'resolver_rules'
+            'resolverRule' => 'resolver_rule'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resolverRules  查询resolver_rule的列表响应。
+    * resolverRule  resolverRule
     *
     * @var string[]
     */
     protected static $setters = [
-            'resolverRules' => 'setResolverRules'
+            'resolverRule' => 'setResolverRule'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resolverRules  查询resolver_rule的列表响应。
+    * resolverRule  resolverRule
     *
     * @var string[]
     */
     protected static $getters = [
-            'resolverRules' => 'getResolverRules'
+            'resolverRule' => 'getResolverRule'
     ];
 
     /**
@@ -148,7 +148,7 @@ class DeleteResolveRuleResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['resolverRules'] = isset($data['resolverRules']) ? $data['resolverRules'] : null;
+        $this->container['resolverRule'] = isset($data['resolverRule']) ? $data['resolverRule'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class DeleteResolveRuleResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resolverRules
-    *  查询resolver_rule的列表响应。
+    * Gets resolverRule
+    *  resolverRule
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\ResolveRuleParam[]|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\ResolveRuleParam|null
     */
-    public function getResolverRules()
+    public function getResolverRule()
     {
-        return $this->container['resolverRules'];
+        return $this->container['resolverRule'];
     }
 
     /**
-    * Sets resolverRules
+    * Sets resolverRule
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\ResolveRuleParam[]|null $resolverRules 查询resolver_rule的列表响应。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\ResolveRuleParam|null $resolverRule resolverRule
     *
     * @return $this
     */
-    public function setResolverRules($resolverRules)
+    public function setResolverRule($resolverRule)
     {
-        $this->container['resolverRules'] = $resolverRules;
+        $this->container['resolverRule'] = $resolverRule;
         return $this;
     }
 

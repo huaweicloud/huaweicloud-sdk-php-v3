@@ -22,8 +22,8 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * lineId  解析线路ID。
     * name  解析线路名称。
-    * limit  每页返回的资源个数。取值范围为0~100。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * showDetail  是否查询详细信息。  取值范围：  true：是，查询详细信息。 false：否，不查询详细信息。 默认为true。
     *
     * @var string[]
@@ -40,8 +40,8 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * lineId  解析线路ID。
     * name  解析线路名称。
-    * limit  每页返回的资源个数。取值范围为0~100。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * showDetail  是否查询详细信息。  取值范围：  true：是，查询详细信息。 false：否，不查询详细信息。 默认为true。
     *
     * @var string[]
@@ -79,8 +79,8 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * lineId  解析线路ID。
     * name  解析线路名称。
-    * limit  每页返回的资源个数。取值范围为0~100。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * showDetail  是否查询详细信息。  取值范围：  true：是，查询详细信息。 false：否，不查询详细信息。 默认为true。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * lineId  解析线路ID。
     * name  解析线路名称。
-    * limit  每页返回的资源个数。取值范围为0~100。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * showDetail  是否查询详细信息。  取值范围：  true：是，查询详细信息。 false：否，不查询详细信息。 默认为true。
     *
     * @var string[]
@@ -115,8 +115,8 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * lineId  解析线路ID。
     * name  解析线路名称。
-    * limit  每页返回的资源个数。取值范围为0~100。
-    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * showDetail  是否查询详细信息。  取值范围：  true：是，查询详细信息。 false：否，不查询详细信息。 默认为true。
     *
     * @var string[]
@@ -266,7 +266,7 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的资源个数。取值范围为0~100。
+    *  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的资源个数。取值范围为0~100。
+    * @param int|null $limit 每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。
+    *  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class ListCustomLineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。
+    * @param int|null $offset 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @return $this
     */

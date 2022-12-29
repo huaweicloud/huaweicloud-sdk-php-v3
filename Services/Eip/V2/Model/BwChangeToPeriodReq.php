@@ -21,19 +21,19 @@ class BwChangeToPeriodReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * bandwidthIds  待按需转包带宽列表
-    * extendParam  按需转包周期参数
+    * extendParam  extendParam
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'bandwidthIds' => 'string[]',
-            'extendParam' => 'object'
+            'extendParam' => '\HuaweiCloud\SDK\Eip\V2\Model\CreatePrePaidPublicipExtendParamOption'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * bandwidthIds  待按需转包带宽列表
-    * extendParam  按需转包周期参数
+    * extendParam  extendParam
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class BwChangeToPeriodReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * bandwidthIds  待按需转包带宽列表
-    * extendParam  按需转包周期参数
+    * extendParam  extendParam
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class BwChangeToPeriodReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * bandwidthIds  待按需转包带宽列表
-    * extendParam  按需转包周期参数
+    * extendParam  extendParam
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class BwChangeToPeriodReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * bandwidthIds  待按需转包带宽列表
-    * extendParam  按需转包周期参数
+    * extendParam  extendParam
     *
     * @var string[]
     */
@@ -215,9 +215,9 @@ class BwChangeToPeriodReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendParam
-    *  按需转包周期参数
+    *  extendParam
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Eip\V2\Model\CreatePrePaidPublicipExtendParamOption
     */
     public function getExtendParam()
     {
@@ -227,7 +227,7 @@ class BwChangeToPeriodReq implements ModelInterface, ArrayAccess
     /**
     * Sets extendParam
     *
-    * @param object $extendParam 按需转包周期参数
+    * @param \HuaweiCloud\SDK\Eip\V2\Model\CreatePrePaidPublicipExtendParamOption $extendParam extendParam
     *
     * @return $this
     */

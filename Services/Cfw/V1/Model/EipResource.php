@@ -29,6 +29,9 @@ class EipResource implements ModelInterface, ArrayAccess
     * deviceName  设备名称
     * deviceOwner  设备拥有者
     * associateInstanceType  关联实例类型
+    * fwInstanceName  防火墙名称
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
     *
     * @var string[]
     */
@@ -41,7 +44,10 @@ class EipResource implements ModelInterface, ArrayAccess
             'deviceId' => 'string',
             'deviceName' => 'string',
             'deviceOwner' => 'string',
-            'associateInstanceType' => 'string'
+            'associateInstanceType' => 'string',
+            'fwInstanceName' => 'string',
+            'fwInstanceId' => 'string',
+            'fwEnterpriseProjectId' => 'string'
     ];
 
     /**
@@ -55,6 +61,9 @@ class EipResource implements ModelInterface, ArrayAccess
     * deviceName  设备名称
     * deviceOwner  设备拥有者
     * associateInstanceType  关联实例类型
+    * fwInstanceName  防火墙名称
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
     *
     * @var string[]
     */
@@ -67,7 +76,10 @@ class EipResource implements ModelInterface, ArrayAccess
         'deviceId' => null,
         'deviceName' => null,
         'deviceOwner' => null,
-        'associateInstanceType' => null
+        'associateInstanceType' => null,
+        'fwInstanceName' => null,
+        'fwInstanceId' => null,
+        'fwEnterpriseProjectId' => null
     ];
 
     /**
@@ -102,6 +114,9 @@ class EipResource implements ModelInterface, ArrayAccess
     * deviceName  设备名称
     * deviceOwner  设备拥有者
     * associateInstanceType  关联实例类型
+    * fwInstanceName  防火墙名称
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
     *
     * @var string[]
     */
@@ -114,7 +129,10 @@ class EipResource implements ModelInterface, ArrayAccess
             'deviceId' => 'device_id',
             'deviceName' => 'device_name',
             'deviceOwner' => 'device_owner',
-            'associateInstanceType' => 'associate_instance_type'
+            'associateInstanceType' => 'associate_instance_type',
+            'fwInstanceName' => 'fw_instance_name',
+            'fwInstanceId' => 'fw_instance_id',
+            'fwEnterpriseProjectId' => 'fw_enterprise_project_id'
     ];
 
     /**
@@ -128,6 +146,9 @@ class EipResource implements ModelInterface, ArrayAccess
     * deviceName  设备名称
     * deviceOwner  设备拥有者
     * associateInstanceType  关联实例类型
+    * fwInstanceName  防火墙名称
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
     *
     * @var string[]
     */
@@ -140,7 +161,10 @@ class EipResource implements ModelInterface, ArrayAccess
             'deviceId' => 'setDeviceId',
             'deviceName' => 'setDeviceName',
             'deviceOwner' => 'setDeviceOwner',
-            'associateInstanceType' => 'setAssociateInstanceType'
+            'associateInstanceType' => 'setAssociateInstanceType',
+            'fwInstanceName' => 'setFwInstanceName',
+            'fwInstanceId' => 'setFwInstanceId',
+            'fwEnterpriseProjectId' => 'setFwEnterpriseProjectId'
     ];
 
     /**
@@ -154,6 +178,9 @@ class EipResource implements ModelInterface, ArrayAccess
     * deviceName  设备名称
     * deviceOwner  设备拥有者
     * associateInstanceType  关联实例类型
+    * fwInstanceName  防火墙名称
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
     *
     * @var string[]
     */
@@ -166,7 +193,10 @@ class EipResource implements ModelInterface, ArrayAccess
             'deviceId' => 'getDeviceId',
             'deviceName' => 'getDeviceName',
             'deviceOwner' => 'getDeviceOwner',
-            'associateInstanceType' => 'getAssociateInstanceType'
+            'associateInstanceType' => 'getAssociateInstanceType',
+            'fwInstanceName' => 'getFwInstanceName',
+            'fwInstanceId' => 'getFwInstanceId',
+            'fwEnterpriseProjectId' => 'getFwEnterpriseProjectId'
     ];
 
     /**
@@ -251,6 +281,9 @@ class EipResource implements ModelInterface, ArrayAccess
         $this->container['deviceName'] = isset($data['deviceName']) ? $data['deviceName'] : null;
         $this->container['deviceOwner'] = isset($data['deviceOwner']) ? $data['deviceOwner'] : null;
         $this->container['associateInstanceType'] = isset($data['associateInstanceType']) ? $data['associateInstanceType'] : null;
+        $this->container['fwInstanceName'] = isset($data['fwInstanceName']) ? $data['fwInstanceName'] : null;
+        $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
+        $this->container['fwEnterpriseProjectId'] = isset($data['fwEnterpriseProjectId']) ? $data['fwEnterpriseProjectId'] : null;
     }
 
     /**
@@ -496,6 +529,78 @@ class EipResource implements ModelInterface, ArrayAccess
     public function setAssociateInstanceType($associateInstanceType)
     {
         $this->container['associateInstanceType'] = $associateInstanceType;
+        return $this;
+    }
+
+    /**
+    * Gets fwInstanceName
+    *  防火墙名称
+    *
+    * @return string|null
+    */
+    public function getFwInstanceName()
+    {
+        return $this->container['fwInstanceName'];
+    }
+
+    /**
+    * Sets fwInstanceName
+    *
+    * @param string|null $fwInstanceName 防火墙名称
+    *
+    * @return $this
+    */
+    public function setFwInstanceName($fwInstanceName)
+    {
+        $this->container['fwInstanceName'] = $fwInstanceName;
+        return $this;
+    }
+
+    /**
+    * Gets fwInstanceId
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return string|null
+    */
+    public function getFwInstanceId()
+    {
+        return $this->container['fwInstanceId'];
+    }
+
+    /**
+    * Sets fwInstanceId
+    *
+    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return $this
+    */
+    public function setFwInstanceId($fwInstanceId)
+    {
+        $this->container['fwInstanceId'] = $fwInstanceId;
+        return $this;
+    }
+
+    /**
+    * Gets fwEnterpriseProjectId
+    *  Eip绑定的防火墙企业项目id
+    *
+    * @return string|null
+    */
+    public function getFwEnterpriseProjectId()
+    {
+        return $this->container['fwEnterpriseProjectId'];
+    }
+
+    /**
+    * Sets fwEnterpriseProjectId
+    *
+    * @param string|null $fwEnterpriseProjectId Eip绑定的防火墙企业项目id
+    *
+    * @return $this
+    */
+    public function setFwEnterpriseProjectId($fwEnterpriseProjectId)
+    {
+        $this->container['fwEnterpriseProjectId'] = $fwEnterpriseProjectId;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class RestorePtrRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * region  region
-    * floatingipId  floatingipId
+    * region  域名所属的区域。
+    * floatingipId  待删除PTR ID。
     * body  body
     *
     * @var string[]
@@ -34,8 +34,8 @@ class RestorePtrRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * region  region
-    * floatingipId  floatingipId
+    * region  域名所属的区域。
+    * floatingipId  待删除PTR ID。
     * body  body
     *
     * @var string[]
@@ -69,8 +69,8 @@ class RestorePtrRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * region  region
-    * floatingipId  floatingipId
+    * region  域名所属的区域。
+    * floatingipId  待删除PTR ID。
     * body  body
     *
     * @var string[]
@@ -83,8 +83,8 @@ class RestorePtrRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * region  region
-    * floatingipId  floatingipId
+    * region  域名所属的区域。
+    * floatingipId  待删除PTR ID。
     * body  body
     *
     * @var string[]
@@ -97,8 +97,8 @@ class RestorePtrRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * region  region
-    * floatingipId  floatingipId
+    * region  域名所属的区域。
+    * floatingipId  待删除PTR ID。
     * body  body
     *
     * @var string[]
@@ -202,7 +202,7 @@ class RestorePtrRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  region
+    *  域名所属的区域。
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class RestorePtrRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region region
+    * @param string $region 域名所属的区域。
     *
     * @return $this
     */
@@ -226,7 +226,7 @@ class RestorePtrRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingipId
-    *  floatingipId
+    *  待删除PTR ID。
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class RestorePtrRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Sets floatingipId
     *
-    * @param string $floatingipId floatingipId
+    * @param string $floatingipId 待删除PTR ID。
     *
     * @return $this
     */

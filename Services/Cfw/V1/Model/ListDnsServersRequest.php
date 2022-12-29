@@ -23,13 +23,17 @@ class ListDnsServersRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目id
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'projectId' => 'string',
             'limit' => 'int',
-            'offset' => 'int'
+            'offset' => 'int',
+            'fwInstanceId' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -37,13 +41,17 @@ class ListDnsServersRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目id
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'projectId' => null,
         'limit' => 'int32',
-        'offset' => 'int32'
+        'offset' => 'int32',
+        'fwInstanceId' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class ListDnsServersRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目id
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'projectId' => 'project_id',
             'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'fwInstanceId' => 'fw_instance_id',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -86,13 +98,17 @@ class ListDnsServersRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目id
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
     protected static $setters = [
             'projectId' => 'setProjectId',
             'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'fwInstanceId' => 'setFwInstanceId',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -100,13 +116,17 @@ class ListDnsServersRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目id
     * limit  每页显示个数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
     protected static $getters = [
             'projectId' => 'getProjectId',
             'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'fwInstanceId' => 'getFwInstanceId',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -170,6 +190,8 @@ class ListDnsServersRequest implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -266,6 +288,54 @@ class ListDnsServersRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets fwInstanceId
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return string|null
+    */
+    public function getFwInstanceId()
+    {
+        return $this->container['fwInstanceId'];
+    }
+
+    /**
+    * Sets fwInstanceId
+    *
+    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *
+    * @return $this
+    */
+    public function setFwInstanceId($fwInstanceId)
+    {
+        $this->container['fwInstanceId'] = $fwInstanceId;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

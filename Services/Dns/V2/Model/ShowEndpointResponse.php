@@ -21,17 +21,17 @@ class ShowEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * endpoint  查询endpoint响应。
+    * endpoint  endpoint
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'endpoint' => 'object'
+            'endpoint' => '\HuaweiCloud\SDK\Dns\V2\Model\EndpointResp'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * endpoint  查询endpoint响应。
+    * endpoint  endpoint
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowEndpointResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * endpoint  查询endpoint响应。
+    * endpoint  endpoint
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * endpoint  查询endpoint响应。
+    * endpoint  endpoint
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * endpoint  查询endpoint响应。
+    * endpoint  endpoint
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ShowEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpoint
-    *  查询endpoint响应。
+    *  endpoint
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\EndpointResp|null
     */
     public function getEndpoint()
     {
@@ -187,7 +187,7 @@ class ShowEndpointResponse implements ModelInterface, ArrayAccess
     /**
     * Sets endpoint
     *
-    * @param object|null $endpoint 查询endpoint响应。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\EndpointResp|null $endpoint endpoint
     *
     * @return $this
     */

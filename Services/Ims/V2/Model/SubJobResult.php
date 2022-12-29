@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Eip\V2\Model;
+namespace HuaweiCloud\SDK\Ims\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SubJobs implements ModelInterface, ArrayAccess
+class SubJobResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,51 +16,51 @@ class SubJobs implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SubJobs';
+    protected static $openAPIModelName = 'SubJobResult';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  job id
-    * jobType  job类型
-    * beginTime  创建时间
-    * endTime  创建完成时间
-    * status  job状态
-    * errorCode  错误码
-    * failReason  错误信息
+    * status  任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
+    * jobId  子任务ID。
+    * jobType  子任务类型。
+    * beginTime  子任务开始执行时间。格式为UTC时间。
+    * endTime  子任务结束时间。格式为UTC时间。
+    * errorCode  错误码。
+    * failReason  失败原因。
     * entities  entities
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'status' => 'string',
             'jobId' => 'string',
             'jobType' => 'string',
             'beginTime' => 'string',
             'endTime' => 'string',
-            'status' => 'string',
             'errorCode' => 'string',
             'failReason' => 'string',
-            'entities' => '\HuaweiCloud\SDK\Eip\V2\Model\SubJobs'
+            'entities' => '\HuaweiCloud\SDK\Ims\V2\Model\SubJobEntities'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  job id
-    * jobType  job类型
-    * beginTime  创建时间
-    * endTime  创建完成时间
-    * status  job状态
-    * errorCode  错误码
-    * failReason  错误信息
+    * status  任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
+    * jobId  子任务ID。
+    * jobType  子任务类型。
+    * beginTime  子任务开始执行时间。格式为UTC时间。
+    * endTime  子任务结束时间。格式为UTC时间。
+    * errorCode  错误码。
+    * failReason  失败原因。
     * entities  entities
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'status' => null,
         'jobId' => null,
         'jobType' => null,
         'beginTime' => null,
         'endTime' => null,
-        'status' => null,
         'errorCode' => null,
         'failReason' => null,
         'entities' => null
@@ -89,23 +89,23 @@ class SubJobs implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  job id
-    * jobType  job类型
-    * beginTime  创建时间
-    * endTime  创建完成时间
-    * status  job状态
-    * errorCode  错误码
-    * failReason  错误信息
+    * status  任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
+    * jobId  子任务ID。
+    * jobType  子任务类型。
+    * beginTime  子任务开始执行时间。格式为UTC时间。
+    * endTime  子任务结束时间。格式为UTC时间。
+    * errorCode  错误码。
+    * failReason  失败原因。
     * entities  entities
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'status' => 'status',
             'jobId' => 'job_id',
             'jobType' => 'job_type',
             'beginTime' => 'begin_time',
             'endTime' => 'end_time',
-            'status' => 'status',
             'errorCode' => 'error_code',
             'failReason' => 'fail_reason',
             'entities' => 'entities'
@@ -113,23 +113,23 @@ class SubJobs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  job id
-    * jobType  job类型
-    * beginTime  创建时间
-    * endTime  创建完成时间
-    * status  job状态
-    * errorCode  错误码
-    * failReason  错误信息
+    * status  任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
+    * jobId  子任务ID。
+    * jobType  子任务类型。
+    * beginTime  子任务开始执行时间。格式为UTC时间。
+    * endTime  子任务结束时间。格式为UTC时间。
+    * errorCode  错误码。
+    * failReason  失败原因。
     * entities  entities
     *
     * @var string[]
     */
     protected static $setters = [
+            'status' => 'setStatus',
             'jobId' => 'setJobId',
             'jobType' => 'setJobType',
             'beginTime' => 'setBeginTime',
             'endTime' => 'setEndTime',
-            'status' => 'setStatus',
             'errorCode' => 'setErrorCode',
             'failReason' => 'setFailReason',
             'entities' => 'setEntities'
@@ -137,23 +137,23 @@ class SubJobs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  job id
-    * jobType  job类型
-    * beginTime  创建时间
-    * endTime  创建完成时间
-    * status  job状态
-    * errorCode  错误码
-    * failReason  错误信息
+    * status  任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
+    * jobId  子任务ID。
+    * jobType  子任务类型。
+    * beginTime  子任务开始执行时间。格式为UTC时间。
+    * endTime  子任务结束时间。格式为UTC时间。
+    * errorCode  错误码。
+    * failReason  失败原因。
     * entities  entities
     *
     * @var string[]
     */
     protected static $getters = [
+            'status' => 'getStatus',
             'jobId' => 'getJobId',
             'jobType' => 'getJobType',
             'beginTime' => 'getBeginTime',
             'endTime' => 'getEndTime',
-            'status' => 'getStatus',
             'errorCode' => 'getErrorCode',
             'failReason' => 'getFailReason',
             'entities' => 'getEntities'
@@ -199,7 +199,26 @@ class SubJobs implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_SUCCESS = 'SUCCESS';
+    const STATUS_FAIL = 'FAIL';
+    const STATUS_RUNNING = 'RUNNING';
+    const STATUS_INIT = 'INIT';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_SUCCESS,
+            self::STATUS_FAIL,
+            self::STATUS_RUNNING,
+            self::STATUS_INIT,
+        ];
+    }
 
 
     /**
@@ -217,11 +236,11 @@ class SubJobs implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
         $this->container['beginTime'] = isset($data['beginTime']) ? $data['beginTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
         $this->container['failReason'] = isset($data['failReason']) ? $data['failReason'] : null;
         $this->container['entities'] = isset($data['entities']) ? $data['entities'] : null;
@@ -235,6 +254,14 @@ class SubJobs implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -250,104 +277,8 @@ class SubJobs implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets jobId
-    *  job id
-    *
-    * @return string|null
-    */
-    public function getJobId()
-    {
-        return $this->container['jobId'];
-    }
-
-    /**
-    * Sets jobId
-    *
-    * @param string|null $jobId job id
-    *
-    * @return $this
-    */
-    public function setJobId($jobId)
-    {
-        $this->container['jobId'] = $jobId;
-        return $this;
-    }
-
-    /**
-    * Gets jobType
-    *  job类型
-    *
-    * @return string|null
-    */
-    public function getJobType()
-    {
-        return $this->container['jobType'];
-    }
-
-    /**
-    * Sets jobType
-    *
-    * @param string|null $jobType job类型
-    *
-    * @return $this
-    */
-    public function setJobType($jobType)
-    {
-        $this->container['jobType'] = $jobType;
-        return $this;
-    }
-
-    /**
-    * Gets beginTime
-    *  创建时间
-    *
-    * @return string|null
-    */
-    public function getBeginTime()
-    {
-        return $this->container['beginTime'];
-    }
-
-    /**
-    * Sets beginTime
-    *
-    * @param string|null $beginTime 创建时间
-    *
-    * @return $this
-    */
-    public function setBeginTime($beginTime)
-    {
-        $this->container['beginTime'] = $beginTime;
-        return $this;
-    }
-
-    /**
-    * Gets endTime
-    *  创建完成时间
-    *
-    * @return string|null
-    */
-    public function getEndTime()
-    {
-        return $this->container['endTime'];
-    }
-
-    /**
-    * Sets endTime
-    *
-    * @param string|null $endTime 创建完成时间
-    *
-    * @return $this
-    */
-    public function setEndTime($endTime)
-    {
-        $this->container['endTime'] = $endTime;
-        return $this;
-    }
-
-    /**
     * Gets status
-    *  job状态
+    *  任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
     *
     * @return string|null
     */
@@ -359,7 +290,7 @@ class SubJobs implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status job状态
+    * @param string|null $status 任务状态，目前取值如下： SUCCESS：表示该任务执行已经结束，任务执行成功。 FAIL：表示该任务执行已经结束，任务执行失败。 RUNNING：表示该任务正在执行。 INIT：表给任务还未执行，正在初始化。
     *
     * @return $this
     */
@@ -370,8 +301,104 @@ class SubJobs implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets jobId
+    *  子任务ID。
+    *
+    * @return string|null
+    */
+    public function getJobId()
+    {
+        return $this->container['jobId'];
+    }
+
+    /**
+    * Sets jobId
+    *
+    * @param string|null $jobId 子任务ID。
+    *
+    * @return $this
+    */
+    public function setJobId($jobId)
+    {
+        $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets jobType
+    *  子任务类型。
+    *
+    * @return string|null
+    */
+    public function getJobType()
+    {
+        return $this->container['jobType'];
+    }
+
+    /**
+    * Sets jobType
+    *
+    * @param string|null $jobType 子任务类型。
+    *
+    * @return $this
+    */
+    public function setJobType($jobType)
+    {
+        $this->container['jobType'] = $jobType;
+        return $this;
+    }
+
+    /**
+    * Gets beginTime
+    *  子任务开始执行时间。格式为UTC时间。
+    *
+    * @return string|null
+    */
+    public function getBeginTime()
+    {
+        return $this->container['beginTime'];
+    }
+
+    /**
+    * Sets beginTime
+    *
+    * @param string|null $beginTime 子任务开始执行时间。格式为UTC时间。
+    *
+    * @return $this
+    */
+    public function setBeginTime($beginTime)
+    {
+        $this->container['beginTime'] = $beginTime;
+        return $this;
+    }
+
+    /**
+    * Gets endTime
+    *  子任务结束时间。格式为UTC时间。
+    *
+    * @return string|null
+    */
+    public function getEndTime()
+    {
+        return $this->container['endTime'];
+    }
+
+    /**
+    * Sets endTime
+    *
+    * @param string|null $endTime 子任务结束时间。格式为UTC时间。
+    *
+    * @return $this
+    */
+    public function setEndTime($endTime)
+    {
+        $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
     * Gets errorCode
-    *  错误码
+    *  错误码。
     *
     * @return string|null
     */
@@ -383,7 +410,7 @@ class SubJobs implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string|null $errorCode 错误码
+    * @param string|null $errorCode 错误码。
     *
     * @return $this
     */
@@ -395,7 +422,7 @@ class SubJobs implements ModelInterface, ArrayAccess
 
     /**
     * Gets failReason
-    *  错误信息
+    *  失败原因。
     *
     * @return string|null
     */
@@ -407,7 +434,7 @@ class SubJobs implements ModelInterface, ArrayAccess
     /**
     * Sets failReason
     *
-    * @param string|null $failReason 错误信息
+    * @param string|null $failReason 失败原因。
     *
     * @return $this
     */
@@ -421,7 +448,7 @@ class SubJobs implements ModelInterface, ArrayAccess
     * Gets entities
     *  entities
     *
-    * @return \HuaweiCloud\SDK\Eip\V2\Model\SubJobs|null
+    * @return \HuaweiCloud\SDK\Ims\V2\Model\SubJobEntities|null
     */
     public function getEntities()
     {
@@ -431,7 +458,7 @@ class SubJobs implements ModelInterface, ArrayAccess
     /**
     * Sets entities
     *
-    * @param \HuaweiCloud\SDK\Eip\V2\Model\SubJobs|null $entities entities
+    * @param \HuaweiCloud\SDK\Ims\V2\Model\SubJobEntities|null $entities entities
     *
     * @return $this
     */

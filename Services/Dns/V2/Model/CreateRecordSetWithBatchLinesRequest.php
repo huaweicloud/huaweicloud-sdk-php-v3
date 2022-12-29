@@ -20,7 +20,7 @@ class CreateRecordSetWithBatchLinesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zoneId  zoneId
+    * zoneId  所属Zone的ID。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreateRecordSetWithBatchLinesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zoneId  zoneId
+    * zoneId  所属Zone的ID。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreateRecordSetWithBatchLinesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zoneId  zoneId
+    * zoneId  所属Zone的ID。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreateRecordSetWithBatchLinesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zoneId  zoneId
+    * zoneId  所属Zone的ID。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreateRecordSetWithBatchLinesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zoneId  zoneId
+    * zoneId  所属Zone的ID。
     * body  body
     *
     * @var string[]
@@ -188,7 +188,7 @@ class CreateRecordSetWithBatchLinesRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets zoneId
-    *  zoneId
+    *  所属Zone的ID。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class CreateRecordSetWithBatchLinesRequest implements ModelInterface, ArrayAcces
     /**
     * Sets zoneId
     *
-    * @param string $zoneId zoneId
+    * @param string $zoneId 所属Zone的ID。
     *
     * @return $this
     */

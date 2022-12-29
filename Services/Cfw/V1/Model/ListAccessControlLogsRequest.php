@@ -36,6 +36,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * logType  日志类型
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'nextDate' => 'int',
             'offset' => 'int',
             'limit' => 'int',
-            'logType' => 'string'
+            'logType' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -76,6 +78,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * logType  日志类型
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
         'nextDate' => null,
         'offset' => null,
         'limit' => null,
-        'logType' => null
+        'logType' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -137,6 +141,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * logType  日志类型
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'nextDate' => 'next_date',
             'offset' => 'offset',
             'limit' => 'limit',
-            'logType' => 'log_type'
+            'logType' => 'log_type',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -177,6 +183,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * logType  日志类型
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'nextDate' => 'setNextDate',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'logType' => 'setLogType'
+            'logType' => 'setLogType',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -217,6 +225,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * logType  日志类型
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'nextDate' => 'getNextDate',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'logType' => 'getLogType'
+            'logType' => 'getLogType',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -330,6 +340,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['logType'] = isset($data['logType']) ? $data['logType'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -764,6 +775,30 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     public function setLogType($logType)
     {
         $this->container['logType'] = $logType;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

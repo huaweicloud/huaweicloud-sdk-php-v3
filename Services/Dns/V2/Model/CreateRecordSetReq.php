@@ -21,10 +21,10 @@ class CreateRecordSetReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  description
+    * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
     * type  Record Set的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
-    * status  status
-    * ttl  ttl
+    * status  资源状态。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * tags  资源标签。
     *
@@ -43,10 +43,10 @@ class CreateRecordSetReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  description
+    * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
     * type  Record Set的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
-    * status  status
-    * ttl  ttl
+    * status  资源状态。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * tags  资源标签。
     *
@@ -86,10 +86,10 @@ class CreateRecordSetReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  description
+    * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
     * type  Record Set的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
-    * status  status
-    * ttl  ttl
+    * status  资源状态。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * tags  资源标签。
     *
@@ -108,10 +108,10 @@ class CreateRecordSetReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  description
+    * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
     * type  Record Set的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
-    * status  status
-    * ttl  ttl
+    * status  资源状态。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * tags  资源标签。
     *
@@ -130,10 +130,10 @@ class CreateRecordSetReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  description
+    * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
     * type  Record Set的类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
-    * status  status
-    * ttl  ttl
+    * status  资源状态。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
     * tags  资源标签。
     *
@@ -273,7 +273,7 @@ class CreateRecordSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  description
+    *  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class CreateRecordSetReq implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description description
+    * @param string|null $description 可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class CreateRecordSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  status
+    *  资源状态。
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class CreateRecordSetReq implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status 资源状态。
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class CreateRecordSetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttl
-    *  ttl
+    *  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     *
     * @return int|null
     */
@@ -357,7 +357,7 @@ class CreateRecordSetReq implements ModelInterface, ArrayAccess
     /**
     * Sets ttl
     *
-    * @param int|null $ttl ttl
+    * @param int|null $ttl 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     *
     * @return $this
     */

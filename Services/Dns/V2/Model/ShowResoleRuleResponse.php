@@ -21,17 +21,17 @@ class ShowResoleRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resolverRule  查询单个resolver_rule响应。
+    * resolverRule  resolverRule
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resolverRule' => 'object'
+            'resolverRule' => '\HuaweiCloud\SDK\Dns\V2\Model\ShowResolveRuleParam'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resolverRule  查询单个resolver_rule响应。
+    * resolverRule  resolverRule
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowResoleRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resolverRule  查询单个resolver_rule响应。
+    * resolverRule  resolverRule
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowResoleRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resolverRule  查询单个resolver_rule响应。
+    * resolverRule  resolverRule
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowResoleRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resolverRule  查询单个resolver_rule响应。
+    * resolverRule  resolverRule
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ShowResoleRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resolverRule
-    *  查询单个resolver_rule响应。
+    *  resolverRule
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\ShowResolveRuleParam|null
     */
     public function getResolverRule()
     {
@@ -187,7 +187,7 @@ class ShowResoleRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resolverRule
     *
-    * @param object|null $resolverRule 查询单个resolver_rule响应。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\ShowResolveRuleParam|null $resolverRule resolverRule
     *
     * @return $this
     */

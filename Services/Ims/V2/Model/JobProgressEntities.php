@@ -25,6 +25,8 @@ class JobProgressEntities implements ModelInterface, ArrayAccess
     * imageName  镜像名称
     * processPercent  任务执行进度
     * subJobId  子任务ID
+    * subJobsResult  子任务结果列表
+    * subJobsList  子任务ID列表
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class JobProgressEntities implements ModelInterface, ArrayAccess
             'currentTask' => 'string',
             'imageName' => 'string',
             'processPercent' => 'double',
-            'subJobId' => 'string'
+            'subJobId' => 'string',
+            'subJobsResult' => '\HuaweiCloud\SDK\Ims\V2\Model\SubJobResult[]',
+            'subJobsList' => 'string[]'
     ];
 
     /**
@@ -43,6 +47,8 @@ class JobProgressEntities implements ModelInterface, ArrayAccess
     * imageName  镜像名称
     * processPercent  任务执行进度
     * subJobId  子任务ID
+    * subJobsResult  子任务结果列表
+    * subJobsList  子任务ID列表
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class JobProgressEntities implements ModelInterface, ArrayAccess
         'currentTask' => null,
         'imageName' => null,
         'processPercent' => 'double',
-        'subJobId' => null
+        'subJobId' => null,
+        'subJobsResult' => null,
+        'subJobsList' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class JobProgressEntities implements ModelInterface, ArrayAccess
     * imageName  镜像名称
     * processPercent  任务执行进度
     * subJobId  子任务ID
+    * subJobsResult  子任务结果列表
+    * subJobsList  子任务ID列表
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class JobProgressEntities implements ModelInterface, ArrayAccess
             'currentTask' => 'current_task',
             'imageName' => 'image_name',
             'processPercent' => 'process_percent',
-            'subJobId' => 'subJobId'
+            'subJobId' => 'subJobId',
+            'subJobsResult' => 'sub_jobs_result',
+            'subJobsList' => 'sub_jobs_list'
     ];
 
     /**
@@ -100,6 +112,8 @@ class JobProgressEntities implements ModelInterface, ArrayAccess
     * imageName  镜像名称
     * processPercent  任务执行进度
     * subJobId  子任务ID
+    * subJobsResult  子任务结果列表
+    * subJobsList  子任务ID列表
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class JobProgressEntities implements ModelInterface, ArrayAccess
             'currentTask' => 'setCurrentTask',
             'imageName' => 'setImageName',
             'processPercent' => 'setProcessPercent',
-            'subJobId' => 'setSubJobId'
+            'subJobId' => 'setSubJobId',
+            'subJobsResult' => 'setSubJobsResult',
+            'subJobsList' => 'setSubJobsList'
     ];
 
     /**
@@ -118,6 +134,8 @@ class JobProgressEntities implements ModelInterface, ArrayAccess
     * imageName  镜像名称
     * processPercent  任务执行进度
     * subJobId  子任务ID
+    * subJobsResult  子任务结果列表
+    * subJobsList  子任务ID列表
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class JobProgressEntities implements ModelInterface, ArrayAccess
             'currentTask' => 'getCurrentTask',
             'imageName' => 'getImageName',
             'processPercent' => 'getProcessPercent',
-            'subJobId' => 'getSubJobId'
+            'subJobId' => 'getSubJobId',
+            'subJobsResult' => 'getSubJobsResult',
+            'subJobsList' => 'getSubJobsList'
     ];
 
     /**
@@ -192,6 +212,8 @@ class JobProgressEntities implements ModelInterface, ArrayAccess
         $this->container['imageName'] = isset($data['imageName']) ? $data['imageName'] : null;
         $this->container['processPercent'] = isset($data['processPercent']) ? $data['processPercent'] : null;
         $this->container['subJobId'] = isset($data['subJobId']) ? $data['subJobId'] : null;
+        $this->container['subJobsResult'] = isset($data['subJobsResult']) ? $data['subJobsResult'] : null;
+        $this->container['subJobsList'] = isset($data['subJobsList']) ? $data['subJobsList'] : null;
     }
 
     /**
@@ -333,6 +355,54 @@ class JobProgressEntities implements ModelInterface, ArrayAccess
     public function setSubJobId($subJobId)
     {
         $this->container['subJobId'] = $subJobId;
+        return $this;
+    }
+
+    /**
+    * Gets subJobsResult
+    *  子任务结果列表
+    *
+    * @return \HuaweiCloud\SDK\Ims\V2\Model\SubJobResult[]|null
+    */
+    public function getSubJobsResult()
+    {
+        return $this->container['subJobsResult'];
+    }
+
+    /**
+    * Sets subJobsResult
+    *
+    * @param \HuaweiCloud\SDK\Ims\V2\Model\SubJobResult[]|null $subJobsResult 子任务结果列表
+    *
+    * @return $this
+    */
+    public function setSubJobsResult($subJobsResult)
+    {
+        $this->container['subJobsResult'] = $subJobsResult;
+        return $this;
+    }
+
+    /**
+    * Gets subJobsList
+    *  子任务ID列表
+    *
+    * @return string[]|null
+    */
+    public function getSubJobsList()
+    {
+        return $this->container['subJobsList'];
+    }
+
+    /**
+    * Sets subJobsList
+    *
+    * @param string[]|null $subJobsList 子任务ID列表
+    *
+    * @return $this
+    */
+    public function setSubJobsList($subJobsList)
+    {
+        $this->container['subJobsList'] = $subJobsList;
         return $this;
     }
 

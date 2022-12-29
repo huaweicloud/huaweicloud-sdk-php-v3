@@ -21,7 +21,7 @@ class ShowPrivateZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nameservers  nameservers
+    * nameservers  名称服务器列表信息。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowPrivateZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nameservers  nameservers
+    * nameservers  名称服务器列表信息。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowPrivateZoneNameServerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nameservers  nameservers
+    * nameservers  名称服务器列表信息。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowPrivateZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nameservers  nameservers
+    * nameservers  名称服务器列表信息。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowPrivateZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nameservers  nameservers
+    * nameservers  名称服务器列表信息。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowPrivateZoneNameServerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameservers
-    *  nameservers
+    *  名称服务器列表信息。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\PrivateNameServer[]|null
     */
@@ -187,7 +187,7 @@ class ShowPrivateZoneNameServerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nameservers
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\PrivateNameServer[]|null $nameservers nameservers
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\PrivateNameServer[]|null $nameservers 名称服务器列表信息。
     *
     * @return $this
     */

@@ -116,7 +116,7 @@ class BandwidthPkgResp implements ModelInterface, ArrayAccess
             'processedTime' => 'processedTime',
             'bandwidthId' => 'bandwidthId',
             'pkgSize' => 'pkgSize',
-            'tenantId' => 'tenant_id',
+            'tenantId' => 'tenantId',
             'billingInfo' => 'billingInfo',
             'startTime' => 'startTime',
             'endTime' => 'endTime',
@@ -272,6 +272,9 @@ class BandwidthPkgResp implements ModelInterface, ArrayAccess
         if ($this->container['pkgSize'] === null) {
             $invalidProperties[] = "'pkgSize' can't be null";
         }
+        if ($this->container['tenantId'] === null) {
+            $invalidProperties[] = "'tenantId' can't be null";
+        }
         if ($this->container['billingInfo'] === null) {
             $invalidProperties[] = "'billingInfo' can't be null";
         }
@@ -422,7 +425,7 @@ class BandwidthPkgResp implements ModelInterface, ArrayAccess
     * Gets tenantId
     *  - 功能说明：租户id
     *
-    * @return string|null
+    * @return string
     */
     public function getTenantId()
     {
@@ -432,7 +435,7 @@ class BandwidthPkgResp implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId - 功能说明：租户id
+    * @param string $tenantId - 功能说明：租户id
     *
     * @return $this
     */

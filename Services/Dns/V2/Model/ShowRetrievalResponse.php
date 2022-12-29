@@ -33,7 +33,7 @@ class ShowRetrievalResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'zoneName' => 'string',
-            'record' => '\HuaweiCloud\SDK\Dns\V2\Model\CreatePublicZoneFindRespRecord',
+            'record' => '\HuaweiCloud\SDK\Dns\V2\Model\RecordInfo',
             'status' => 'string',
             'createdAt' => 'string',
             'updatedAt' => 'string'
@@ -280,7 +280,7 @@ class ShowRetrievalResponse implements ModelInterface, ArrayAccess
     * Gets record
     *  record
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\CreatePublicZoneFindRespRecord|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\RecordInfo|null
     */
     public function getRecord()
     {
@@ -290,7 +290,7 @@ class ShowRetrievalResponse implements ModelInterface, ArrayAccess
     /**
     * Sets record
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\CreatePublicZoneFindRespRecord|null $record record
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\RecordInfo|null $record record
     *
     * @return $this
     */

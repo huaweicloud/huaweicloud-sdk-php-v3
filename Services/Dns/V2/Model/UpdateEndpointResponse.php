@@ -21,22 +21,22 @@ class UpdateEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * endpoints  endpoints
+    * endpoint  endpoint
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'endpoints' => '\HuaweiCloud\SDK\Dns\V2\Model\EndpointResp[]'
+            'endpoint' => '\HuaweiCloud\SDK\Dns\V2\Model\EndpointResp'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * endpoints  endpoints
+    * endpoint  endpoint
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'endpoints' => null
+        'endpoint' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class UpdateEndpointResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * endpoints  endpoints
+    * endpoint  endpoint
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'endpoints' => 'endpoints'
+            'endpoint' => 'endpoint'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * endpoints  endpoints
+    * endpoint  endpoint
     *
     * @var string[]
     */
     protected static $setters = [
-            'endpoints' => 'setEndpoints'
+            'endpoint' => 'setEndpoint'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * endpoints  endpoints
+    * endpoint  endpoint
     *
     * @var string[]
     */
     protected static $getters = [
-            'endpoints' => 'getEndpoints'
+            'endpoint' => 'getEndpoint'
     ];
 
     /**
@@ -148,7 +148,7 @@ class UpdateEndpointResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['endpoints'] = isset($data['endpoints']) ? $data['endpoints'] : null;
+        $this->container['endpoint'] = isset($data['endpoint']) ? $data['endpoint'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class UpdateEndpointResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets endpoints
-    *  endpoints
+    * Gets endpoint
+    *  endpoint
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\EndpointResp[]|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\EndpointResp|null
     */
-    public function getEndpoints()
+    public function getEndpoint()
     {
-        return $this->container['endpoints'];
+        return $this->container['endpoint'];
     }
 
     /**
-    * Sets endpoints
+    * Sets endpoint
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\EndpointResp[]|null $endpoints endpoints
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\EndpointResp|null $endpoint endpoint
     *
     * @return $this
     */
-    public function setEndpoints($endpoints)
+    public function setEndpoint($endpoint)
     {
-        $this->container['endpoints'] = $endpoints;
+        $this->container['endpoint'] = $endpoint;
         return $this;
     }
 

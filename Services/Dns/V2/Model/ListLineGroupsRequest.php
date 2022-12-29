@@ -22,8 +22,8 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
-    * limit  每页返回的资源个数。 当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。 当查询概要信息时：取值范围：0~3000默认为3000。
-    * offset  取值范围：0~2147483647 分页查询起始页码，起始值为0。
+    * limit  每页返回的资源个数。  当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。  当查询概要信息时：取值范围：0~3000默认为3000。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
-    * limit  每页返回的资源个数。 当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。 当查询概要信息时：取值范围：0~3000默认为3000。
-    * offset  取值范围：0~2147483647 分页查询起始页码，起始值为0。
+    * limit  每页返回的资源个数。  当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。  当查询概要信息时：取值范围：0~3000默认为3000。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
-    * limit  每页返回的资源个数。 当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。 当查询概要信息时：取值范围：0~3000默认为3000。
-    * offset  取值范围：0~2147483647 分页查询起始页码，起始值为0。
+    * limit  每页返回的资源个数。  当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。  当查询概要信息时：取值范围：0~3000默认为3000。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -91,8 +91,8 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
-    * limit  每页返回的资源个数。 当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。 当查询概要信息时：取值范围：0~3000默认为3000。
-    * offset  取值范围：0~2147483647 分页查询起始页码，起始值为0。
+    * limit  每页返回的资源个数。  当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。  当查询概要信息时：取值范围：0~3000默认为3000。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * lineId  线路分组ID。 模糊匹配。
     * name  线路分组名称。 模糊匹配。
-    * limit  每页返回的资源个数。 当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。 当查询概要信息时：取值范围：0~3000默认为3000。
-    * offset  取值范围：0~2147483647 分页查询起始页码，起始值为0。
+    * limit  每页返回的资源个数。  当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。  当查询概要信息时：取值范围：0~3000默认为3000。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -191,9 +191,6 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['limit'] === null) {
-            $invalidProperties[] = "'limit' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -258,9 +255,9 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的资源个数。 当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。 当查询概要信息时：取值范围：0~3000默认为3000。
+    *  每页返回的资源个数。  当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。  当查询概要信息时：取值范围：0~3000默认为3000。
     *
-    * @return int
+    * @return int|null
     */
     public function getLimit()
     {
@@ -270,7 +267,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit 每页返回的资源个数。 当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。 当查询概要信息时：取值范围：0~3000默认为3000。
+    * @param int|null $limit 每页返回的资源个数。  当查询详细信息时：取值范围：0~100取值一般为10，20，50默认为100。  当查询概要信息时：取值范围：0~3000默认为3000。
     *
     * @return $this
     */
@@ -282,7 +279,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  取值范围：0~2147483647 分页查询起始页码，起始值为0。
+    *  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @return int|null
     */
@@ -294,7 +291,7 @@ class ListLineGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 取值范围：0~2147483647 分页查询起始页码，起始值为0。
+    * @param int|null $offset 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @return $this
     */

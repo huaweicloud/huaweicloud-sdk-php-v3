@@ -28,6 +28,8 @@ class RouteTableResp implements ModelInterface, ArrayAccess
     * tenantId  项目ID
     * vpcId  路由表所在的虚拟私有云ID
     * description  功能说明：路由表描述信息  取值范围：0-255个字符，不能包含“<”和“>”
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -39,7 +41,9 @@ class RouteTableResp implements ModelInterface, ArrayAccess
             'subnets' => '\HuaweiCloud\SDK\Vpc\V2\Model\SubnetList[]',
             'tenantId' => 'string',
             'vpcId' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'createdAt' => '\DateTime',
+            'updatedAt' => '\DateTime'
     ];
 
     /**
@@ -52,6 +56,8 @@ class RouteTableResp implements ModelInterface, ArrayAccess
     * tenantId  项目ID
     * vpcId  路由表所在的虚拟私有云ID
     * description  功能说明：路由表描述信息  取值范围：0-255个字符，不能包含“<”和“>”
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -63,7 +69,9 @@ class RouteTableResp implements ModelInterface, ArrayAccess
         'subnets' => null,
         'tenantId' => null,
         'vpcId' => null,
-        'description' => null
+        'description' => null,
+        'createdAt' => 'date-time',
+        'updatedAt' => 'date-time'
     ];
 
     /**
@@ -97,6 +105,8 @@ class RouteTableResp implements ModelInterface, ArrayAccess
     * tenantId  项目ID
     * vpcId  路由表所在的虚拟私有云ID
     * description  功能说明：路由表描述信息  取值范围：0-255个字符，不能包含“<”和“>”
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -108,7 +118,9 @@ class RouteTableResp implements ModelInterface, ArrayAccess
             'subnets' => 'subnets',
             'tenantId' => 'tenant_id',
             'vpcId' => 'vpc_id',
-            'description' => 'description'
+            'description' => 'description',
+            'createdAt' => 'created_at',
+            'updatedAt' => 'updated_at'
     ];
 
     /**
@@ -121,6 +133,8 @@ class RouteTableResp implements ModelInterface, ArrayAccess
     * tenantId  项目ID
     * vpcId  路由表所在的虚拟私有云ID
     * description  功能说明：路由表描述信息  取值范围：0-255个字符，不能包含“<”和“>”
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -132,7 +146,9 @@ class RouteTableResp implements ModelInterface, ArrayAccess
             'subnets' => 'setSubnets',
             'tenantId' => 'setTenantId',
             'vpcId' => 'setVpcId',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'createdAt' => 'setCreatedAt',
+            'updatedAt' => 'setUpdatedAt'
     ];
 
     /**
@@ -145,6 +161,8 @@ class RouteTableResp implements ModelInterface, ArrayAccess
     * tenantId  项目ID
     * vpcId  路由表所在的虚拟私有云ID
     * description  功能说明：路由表描述信息  取值范围：0-255个字符，不能包含“<”和“>”
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -156,7 +174,9 @@ class RouteTableResp implements ModelInterface, ArrayAccess
             'subnets' => 'getSubnets',
             'tenantId' => 'getTenantId',
             'vpcId' => 'getVpcId',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'createdAt' => 'getCreatedAt',
+            'updatedAt' => 'getUpdatedAt'
     ];
 
     /**
@@ -225,6 +245,8 @@ class RouteTableResp implements ModelInterface, ArrayAccess
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
     }
 
     /**
@@ -280,6 +302,12 @@ class RouteTableResp implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
+        if ($this->container['createdAt'] === null) {
+            $invalidProperties[] = "'createdAt' can't be null";
+        }
+        if ($this->container['updatedAt'] === null) {
+            $invalidProperties[] = "'updatedAt' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -483,6 +511,54 @@ class RouteTableResp implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    *
+    * @return \DateTime
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param \DateTime $createdAt 功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets updatedAt
+    *  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    *
+    * @return \DateTime
+    */
+    public function getUpdatedAt()
+    {
+        return $this->container['updatedAt'];
+    }
+
+    /**
+    * Sets updatedAt
+    *
+    * @param \DateTime $updatedAt 功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    *
+    * @return $this
+    */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->container['updatedAt'] = $updatedAt;
         return $this;
     }
 

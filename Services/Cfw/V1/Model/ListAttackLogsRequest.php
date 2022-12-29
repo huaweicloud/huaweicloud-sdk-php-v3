@@ -40,6 +40,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * attackRule  入侵事件规则
     * level  威胁等级
     * source  判断来源
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'attackType' => 'string',
             'attackRule' => 'string',
             'level' => 'string',
-            'source' => 'string'
+            'source' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -88,6 +90,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * attackRule  入侵事件规则
     * level  威胁等级
     * source  判断来源
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
         'attackType' => null,
         'attackRule' => null,
         'level' => null,
-        'source' => null
+        'source' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * attackRule  入侵事件规则
     * level  威胁等级
     * source  判断来源
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'attackType' => 'attack_type',
             'attackRule' => 'attack_rule',
             'level' => 'level',
-            'source' => 'source'
+            'source' => 'source',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -205,6 +211,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * attackRule  入侵事件规则
     * level  威胁等级
     * source  判断来源
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'attackType' => 'setAttackType',
             'attackRule' => 'setAttackRule',
             'level' => 'setLevel',
-            'source' => 'setSource'
+            'source' => 'setSource',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -253,6 +261,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * attackRule  入侵事件规则
     * level  威胁等级
     * source  判断来源
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'attackType' => 'getAttackType',
             'attackRule' => 'getAttackRule',
             'level' => 'getLevel',
-            'source' => 'getSource'
+            'source' => 'getSource',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -406,6 +416,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
         $this->container['attackRule'] = isset($data['attackRule']) ? $data['attackRule'] : null;
         $this->container['level'] = isset($data['level']) ? $data['level'] : null;
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -958,6 +969,30 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     public function setSource($source)
     {
         $this->container['source'] = $source;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

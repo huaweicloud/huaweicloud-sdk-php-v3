@@ -20,26 +20,22 @@ class Ipaddresses implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * subnetId  子网的网络id。
-    * ip  自定义ip地址，需在子网的网段内部。
+    * ipaddress  ipaddress
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'subnetId' => 'string',
-            'ip' => 'string'
+            'ipaddress' => '\HuaweiCloud\SDK\Dns\V2\Model\IpaddressData'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * subnetId  子网的网络id。
-    * ip  自定义ip地址，需在子网的网段内部。
+    * ipaddress  ipaddress
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'subnetId' => null,
-        'ip' => null
+        'ipaddress' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class Ipaddresses implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * subnetId  子网的网络id。
-    * ip  自定义ip地址，需在子网的网段内部。
+    * ipaddress  ipaddress
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'subnetId' => 'subnet_id',
-            'ip' => 'ip'
+            'ipaddress' => 'ipaddress'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * subnetId  子网的网络id。
-    * ip  自定义ip地址，需在子网的网段内部。
+    * ipaddress  ipaddress
     *
     * @var string[]
     */
     protected static $setters = [
-            'subnetId' => 'setSubnetId',
-            'ip' => 'setIp'
+            'ipaddress' => 'setIpaddress'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * subnetId  子网的网络id。
-    * ip  自定义ip地址，需在子网的网段内部。
+    * ipaddress  ipaddress
     *
     * @var string[]
     */
     protected static $getters = [
-            'subnetId' => 'getSubnetId',
-            'ip' => 'getIp'
+            'ipaddress' => 'getIpaddress'
     ];
 
     /**
@@ -157,8 +147,7 @@ class Ipaddresses implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
-        $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
+        $this->container['ipaddress'] = isset($data['ipaddress']) ? $data['ipaddress'] : null;
     }
 
     /**
@@ -169,9 +158,6 @@ class Ipaddresses implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['subnetId'] === null) {
-            $invalidProperties[] = "'subnetId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -187,50 +173,26 @@ class Ipaddresses implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets subnetId
-    *  子网的网络id。
+    * Gets ipaddress
+    *  ipaddress
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\IpaddressData|null
     */
-    public function getSubnetId()
+    public function getIpaddress()
     {
-        return $this->container['subnetId'];
+        return $this->container['ipaddress'];
     }
 
     /**
-    * Sets subnetId
+    * Sets ipaddress
     *
-    * @param string $subnetId 子网的网络id。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\IpaddressData|null $ipaddress ipaddress
     *
     * @return $this
     */
-    public function setSubnetId($subnetId)
+    public function setIpaddress($ipaddress)
     {
-        $this->container['subnetId'] = $subnetId;
-        return $this;
-    }
-
-    /**
-    * Gets ip
-    *  自定义ip地址，需在子网的网段内部。
-    *
-    * @return string|null
-    */
-    public function getIp()
-    {
-        return $this->container['ip'];
-    }
-
-    /**
-    * Sets ip
-    *
-    * @param string|null $ip 自定义ip地址，需在子网的网段内部。
-    *
-    * @return $this
-    */
-    public function setIp($ip)
-    {
-        $this->container['ip'] = $ip;
+        $this->container['ipaddress'] = $ipaddress;
         return $this;
     }
 

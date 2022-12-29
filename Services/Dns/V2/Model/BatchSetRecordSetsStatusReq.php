@@ -21,25 +21,25 @@ class BatchSetRecordSetsStatusReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * status  待设置Record Se状态，当前仅支持DISABLE或ENABLE。
-    * zoneIds  待设置Record Set ID列表。 最多支持50个。
+    * recordsetIds  待设置Record Set ID列表。 最多支持50个。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'status' => 'string',
-            'zoneIds' => 'string[]'
+            'recordsetIds' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * status  待设置Record Se状态，当前仅支持DISABLE或ENABLE。
-    * zoneIds  待设置Record Set ID列表。 最多支持50个。
+    * recordsetIds  待设置Record Set ID列表。 最多支持50个。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'status' => null,
-        'zoneIds' => null
+        'recordsetIds' => null
     ];
 
     /**
@@ -66,37 +66,37 @@ class BatchSetRecordSetsStatusReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * status  待设置Record Se状态，当前仅支持DISABLE或ENABLE。
-    * zoneIds  待设置Record Set ID列表。 最多支持50个。
+    * recordsetIds  待设置Record Set ID列表。 最多支持50个。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'status' => 'status',
-            'zoneIds' => 'zone_ids'
+            'recordsetIds' => 'recordset_ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * status  待设置Record Se状态，当前仅支持DISABLE或ENABLE。
-    * zoneIds  待设置Record Set ID列表。 最多支持50个。
+    * recordsetIds  待设置Record Set ID列表。 最多支持50个。
     *
     * @var string[]
     */
     protected static $setters = [
             'status' => 'setStatus',
-            'zoneIds' => 'setZoneIds'
+            'recordsetIds' => 'setRecordsetIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * status  待设置Record Se状态，当前仅支持DISABLE或ENABLE。
-    * zoneIds  待设置Record Set ID列表。 最多支持50个。
+    * recordsetIds  待设置Record Set ID列表。 最多支持50个。
     *
     * @var string[]
     */
     protected static $getters = [
             'status' => 'getStatus',
-            'zoneIds' => 'getZoneIds'
+            'recordsetIds' => 'getRecordsetIds'
     ];
 
     /**
@@ -158,7 +158,7 @@ class BatchSetRecordSetsStatusReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['zoneIds'] = isset($data['zoneIds']) ? $data['zoneIds'] : null;
+        $this->container['recordsetIds'] = isset($data['recordsetIds']) ? $data['recordsetIds'] : null;
     }
 
     /**
@@ -208,26 +208,26 @@ class BatchSetRecordSetsStatusReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets zoneIds
+    * Gets recordsetIds
     *  待设置Record Set ID列表。 最多支持50个。
     *
     * @return string[]|null
     */
-    public function getZoneIds()
+    public function getRecordsetIds()
     {
-        return $this->container['zoneIds'];
+        return $this->container['recordsetIds'];
     }
 
     /**
-    * Sets zoneIds
+    * Sets recordsetIds
     *
-    * @param string[]|null $zoneIds 待设置Record Set ID列表。 最多支持50个。
+    * @param string[]|null $recordsetIds 待设置Record Set ID列表。 最多支持50个。
     *
     * @return $this
     */
-    public function setZoneIds($zoneIds)
+    public function setRecordsetIds($recordsetIds)
     {
-        $this->container['zoneIds'] = $zoneIds;
+        $this->container['recordsetIds'] = $recordsetIds;
         return $this;
     }
 

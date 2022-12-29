@@ -33,6 +33,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
     * resources  防火墙资源列表
+    * fwInstanceName  防火墙名称
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -49,7 +51,9 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'isOldFirewallInstance' => 'bool',
             'supportIpv6' => 'bool',
             'featureToggle' => 'map[string,bool]',
-            'resources' => '\HuaweiCloud\SDK\Cfw\V1\Model\FirewallInstanceResource[]'
+            'resources' => '\HuaweiCloud\SDK\Cfw\V1\Model\FirewallInstanceResource[]',
+            'fwInstanceName' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -67,6 +71,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
     * resources  防火墙资源列表
+    * fwInstanceName  防火墙名称
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -83,7 +89,9 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
         'isOldFirewallInstance' => null,
         'supportIpv6' => null,
         'featureToggle' => null,
-        'resources' => null
+        'resources' => null,
+        'fwInstanceName' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -122,6 +130,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
     * resources  防火墙资源列表
+    * fwInstanceName  防火墙名称
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -138,7 +148,9 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'isOldFirewallInstance' => 'is_old_firewall_instance',
             'supportIpv6' => 'support_ipv6',
             'featureToggle' => 'feature_toggle',
-            'resources' => 'resources'
+            'resources' => 'resources',
+            'fwInstanceName' => 'fw_instance_name',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -156,6 +168,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
     * resources  防火墙资源列表
+    * fwInstanceName  防火墙名称
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -172,7 +186,9 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'isOldFirewallInstance' => 'setIsOldFirewallInstance',
             'supportIpv6' => 'setSupportIpv6',
             'featureToggle' => 'setFeatureToggle',
-            'resources' => 'setResources'
+            'resources' => 'setResources',
+            'fwInstanceName' => 'setFwInstanceName',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -190,6 +206,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * supportIpv6  是否支持ipv6，true表示是，false表示不是
     * featureToggle  特性开关，boolean值为true表示是，false表示否
     * resources  防火墙资源列表
+    * fwInstanceName  防火墙名称
+    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     *
     * @var string[]
     */
@@ -206,7 +224,9 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'isOldFirewallInstance' => 'getIsOldFirewallInstance',
             'supportIpv6' => 'getSupportIpv6',
             'featureToggle' => 'getFeatureToggle',
-            'resources' => 'getResources'
+            'resources' => 'getResources',
+            'fwInstanceName' => 'getFwInstanceName',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -317,6 +337,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
         $this->container['supportIpv6'] = isset($data['supportIpv6']) ? $data['supportIpv6'] : null;
         $this->container['featureToggle'] = isset($data['featureToggle']) ? $data['featureToggle'] : null;
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
+        $this->container['fwInstanceName'] = isset($data['fwInstanceName']) ? $data['fwInstanceName'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -658,6 +680,54 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     public function setResources($resources)
     {
         $this->container['resources'] = $resources;
+        return $this;
+    }
+
+    /**
+    * Gets fwInstanceName
+    *  防火墙名称
+    *
+    * @return string|null
+    */
+    public function getFwInstanceName()
+    {
+        return $this->container['fwInstanceName'];
+    }
+
+    /**
+    * Sets fwInstanceName
+    *
+    * @param string|null $fwInstanceName 防火墙名称
+    *
+    * @return $this
+    */
+    public function setFwInstanceName($fwInstanceName)
+    {
+        $this->container['fwInstanceName'] = $fwInstanceName;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

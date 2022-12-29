@@ -22,7 +22,7 @@ class NameServersResp implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * type  待查询名称服务器的类型。  取值范围: public, private。  如果为空，表示查询所有类型的名称服务器。 如果为public，表示查询公网的名称服务器。  如果为private，表示查询内网的名称服务器。
     * region  待查询的region ID。  当查询公网的名称服务器时，此处不填。
-    * nsRecords  nsRecords
+    * nsRecords  名称服务器列表。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class NameServersResp implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * type  待查询名称服务器的类型。  取值范围: public, private。  如果为空，表示查询所有类型的名称服务器。 如果为public，表示查询公网的名称服务器。  如果为private，表示查询内网的名称服务器。
     * region  待查询的region ID。  当查询公网的名称服务器时，此处不填。
-    * nsRecords  nsRecords
+    * nsRecords  名称服务器列表。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class NameServersResp implements ModelInterface, ArrayAccess
     * and the value is the original name
     * type  待查询名称服务器的类型。  取值范围: public, private。  如果为空，表示查询所有类型的名称服务器。 如果为public，表示查询公网的名称服务器。  如果为private，表示查询内网的名称服务器。
     * region  待查询的region ID。  当查询公网的名称服务器时，此处不填。
-    * nsRecords  nsRecords
+    * nsRecords  名称服务器列表。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class NameServersResp implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * type  待查询名称服务器的类型。  取值范围: public, private。  如果为空，表示查询所有类型的名称服务器。 如果为public，表示查询公网的名称服务器。  如果为private，表示查询内网的名称服务器。
     * region  待查询的region ID。  当查询公网的名称服务器时，此处不填。
-    * nsRecords  nsRecords
+    * nsRecords  名称服务器列表。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class NameServersResp implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * type  待查询名称服务器的类型。  取值范围: public, private。  如果为空，表示查询所有类型的名称服务器。 如果为public，表示查询公网的名称服务器。  如果为private，表示查询内网的名称服务器。
     * region  待查询的region ID。  当查询公网的名称服务器时，此处不填。
-    * nsRecords  nsRecords
+    * nsRecords  名称服务器列表。
     *
     * @var string[]
     */
@@ -244,7 +244,7 @@ class NameServersResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets nsRecords
-    *  nsRecords
+    *  名称服务器列表。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\NsRecords[]|null
     */
@@ -256,7 +256,7 @@ class NameServersResp implements ModelInterface, ArrayAccess
     /**
     * Sets nsRecords
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\NsRecords[]|null $nsRecords nsRecords
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\NsRecords[]|null $nsRecords 名称服务器列表。
     *
     * @return $this
     */

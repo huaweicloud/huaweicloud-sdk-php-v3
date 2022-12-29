@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class Metedata implements ModelInterface, ArrayAccess
+class IpaddressData implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class Metedata implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'metedata';
+    protected static $openAPIModelName = 'IpaddressData';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalCount  满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
+    * subnetId  子网的网络id。
+    * ip  自定义ip地址，需在子网的网段内部。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'totalCount' => 'int'
+            'subnetId' => 'string',
+            'ip' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalCount  满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
+    * subnetId  子网的网络id。
+    * ip  自定义ip地址，需在子网的网段内部。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'totalCount' => 'int32'
+        'subnetId' => null,
+        'ip' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class Metedata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalCount  满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
+    * subnetId  子网的网络id。
+    * ip  自定义ip地址，需在子网的网段内部。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'totalCount' => 'total_count'
+            'subnetId' => 'subnet_id',
+            'ip' => 'ip'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalCount  满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
+    * subnetId  子网的网络id。
+    * ip  自定义ip地址，需在子网的网段内部。
     *
     * @var string[]
     */
     protected static $setters = [
-            'totalCount' => 'setTotalCount'
+            'subnetId' => 'setSubnetId',
+            'ip' => 'setIp'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalCount  满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
+    * subnetId  子网的网络id。
+    * ip  自定义ip地址，需在子网的网段内部。
     *
     * @var string[]
     */
     protected static $getters = [
-            'totalCount' => 'getTotalCount'
+            'subnetId' => 'getSubnetId',
+            'ip' => 'getIp'
     ];
 
     /**
@@ -147,7 +157,8 @@ class Metedata implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
+        $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
     }
 
     /**
@@ -158,6 +169,9 @@ class Metedata implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['subnetId'] === null) {
+            $invalidProperties[] = "'subnetId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -173,26 +187,50 @@ class Metedata implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets totalCount
-    *  满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
+    * Gets subnetId
+    *  子网的网络id。
     *
-    * @return int|null
+    * @return string
     */
-    public function getTotalCount()
+    public function getSubnetId()
     {
-        return $this->container['totalCount'];
+        return $this->container['subnetId'];
     }
 
     /**
-    * Sets totalCount
+    * Sets subnetId
     *
-    * @param int|null $totalCount 满足查询条件的资源总数，不受分页（即limit、offset参数）影响。
+    * @param string $subnetId 子网的网络id。
     *
     * @return $this
     */
-    public function setTotalCount($totalCount)
+    public function setSubnetId($subnetId)
     {
-        $this->container['totalCount'] = $totalCount;
+        $this->container['subnetId'] = $subnetId;
+        return $this;
+    }
+
+    /**
+    * Gets ip
+    *  自定义ip地址，需在子网的网段内部。
+    *
+    * @return string|null
+    */
+    public function getIp()
+    {
+        return $this->container['ip'];
+    }
+
+    /**
+    * Sets ip
+    *
+    * @param string|null $ip 自定义ip地址，需在子网的网段内部。
+    *
+    * @return $this
+    */
+    public function setIp($ip)
+    {
+        $this->container['ip'] = $ip;
         return $this;
     }
 

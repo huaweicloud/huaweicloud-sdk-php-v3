@@ -40,6 +40,9 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
     * extraDhcpOpts  子网配置的NTP地址或DHCP租约时间
     * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
+    * tenantId  项目ID
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -63,7 +66,10 @@ class Subnet implements ModelInterface, ArrayAccess
             'neutronSubnetId' => 'string',
             'neutronSubnetIdV6' => 'string',
             'extraDhcpOpts' => '\HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOption[]',
-            'scope' => 'string'
+            'scope' => 'string',
+            'tenantId' => 'string',
+            'createdAt' => '\DateTime',
+            'updatedAt' => '\DateTime'
     ];
 
     /**
@@ -88,6 +94,9 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
     * extraDhcpOpts  子网配置的NTP地址或DHCP租约时间
     * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
+    * tenantId  项目ID
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -111,7 +120,10 @@ class Subnet implements ModelInterface, ArrayAccess
         'neutronSubnetId' => null,
         'neutronSubnetIdV6' => null,
         'extraDhcpOpts' => null,
-        'scope' => null
+        'scope' => null,
+        'tenantId' => null,
+        'createdAt' => 'date-time',
+        'updatedAt' => 'date-time'
     ];
 
     /**
@@ -157,6 +169,9 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
     * extraDhcpOpts  子网配置的NTP地址或DHCP租约时间
     * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
+    * tenantId  项目ID
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -180,7 +195,10 @@ class Subnet implements ModelInterface, ArrayAccess
             'neutronSubnetId' => 'neutron_subnet_id',
             'neutronSubnetIdV6' => 'neutron_subnet_id_v6',
             'extraDhcpOpts' => 'extra_dhcp_opts',
-            'scope' => 'scope'
+            'scope' => 'scope',
+            'tenantId' => 'tenant_id',
+            'createdAt' => 'created_at',
+            'updatedAt' => 'updated_at'
     ];
 
     /**
@@ -205,6 +223,9 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
     * extraDhcpOpts  子网配置的NTP地址或DHCP租约时间
     * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
+    * tenantId  项目ID
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -228,7 +249,10 @@ class Subnet implements ModelInterface, ArrayAccess
             'neutronSubnetId' => 'setNeutronSubnetId',
             'neutronSubnetIdV6' => 'setNeutronSubnetIdV6',
             'extraDhcpOpts' => 'setExtraDhcpOpts',
-            'scope' => 'setScope'
+            'scope' => 'setScope',
+            'tenantId' => 'setTenantId',
+            'createdAt' => 'setCreatedAt',
+            'updatedAt' => 'setUpdatedAt'
     ];
 
     /**
@@ -253,6 +277,9 @@ class Subnet implements ModelInterface, ArrayAccess
     * neutronSubnetIdV6  对应IPv6子网（OpenStack Neutron接口）id，如果子网为IPv4子网，则不返回此参数
     * extraDhcpOpts  子网配置的NTP地址或DHCP租约时间
     * scope  功能说明：子网作用域 取值范围：center-表示作用域为中心；{azId}表示作用域为具体的AZ
+    * tenantId  项目ID
+    * createdAt  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    * updatedAt  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
     *
     * @var string[]
     */
@@ -276,7 +303,10 @@ class Subnet implements ModelInterface, ArrayAccess
             'neutronSubnetId' => 'getNeutronSubnetId',
             'neutronSubnetIdV6' => 'getNeutronSubnetIdV6',
             'extraDhcpOpts' => 'getExtraDhcpOpts',
-            'scope' => 'getScope'
+            'scope' => 'getScope',
+            'tenantId' => 'getTenantId',
+            'createdAt' => 'getCreatedAt',
+            'updatedAt' => 'getUpdatedAt'
     ];
 
     /**
@@ -374,6 +404,9 @@ class Subnet implements ModelInterface, ArrayAccess
         $this->container['neutronSubnetIdV6'] = isset($data['neutronSubnetIdV6']) ? $data['neutronSubnetIdV6'] : null;
         $this->container['extraDhcpOpts'] = isset($data['extraDhcpOpts']) ? $data['extraDhcpOpts'] : null;
         $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
+        $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
     }
 
     /**
@@ -463,6 +496,18 @@ class Subnet implements ModelInterface, ArrayAccess
         }
         if ($this->container['extraDhcpOpts'] === null) {
             $invalidProperties[] = "'extraDhcpOpts' can't be null";
+        }
+        if ($this->container['tenantId'] === null) {
+            $invalidProperties[] = "'tenantId' can't be null";
+        }
+            if (!preg_match("/[0-9a-fA-F]{32}/", $this->container['tenantId'])) {
+                $invalidProperties[] = "invalid value for 'tenantId', must be conform to the pattern /[0-9a-fA-F]{32}/.";
+            }
+        if ($this->container['createdAt'] === null) {
+            $invalidProperties[] = "'createdAt' can't be null";
+        }
+        if ($this->container['updatedAt'] === null) {
+            $invalidProperties[] = "'updatedAt' can't be null";
         }
         return $invalidProperties;
     }
@@ -955,6 +1000,78 @@ class Subnet implements ModelInterface, ArrayAccess
     public function setScope($scope)
     {
         $this->container['scope'] = $scope;
+        return $this;
+    }
+
+    /**
+    * Gets tenantId
+    *  项目ID
+    *
+    * @return string
+    */
+    public function getTenantId()
+    {
+        return $this->container['tenantId'];
+    }
+
+    /**
+    * Sets tenantId
+    *
+    * @param string $tenantId 项目ID
+    *
+    * @return $this
+    */
+    public function setTenantId($tenantId)
+    {
+        $this->container['tenantId'] = $tenantId;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    *
+    * @return \DateTime
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param \DateTime $createdAt 功能说明：资源创建UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets updatedAt
+    *  功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    *
+    * @return \DateTime
+    */
+    public function getUpdatedAt()
+    {
+        return $this->container['updatedAt'];
+    }
+
+    /**
+    * Sets updatedAt
+    *
+    * @param \DateTime $updatedAt 功能说明：资源更新UTC时间 格式：yyyy-MM-ddTHH:mm:ss
+    *
+    * @return $this
+    */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->container['updatedAt'] = $updatedAt;
         return $this;
     }
 

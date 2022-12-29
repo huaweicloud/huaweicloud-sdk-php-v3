@@ -21,8 +21,8 @@ class ListResoleRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * domainName  待查询的resolverrule的域名。
-    * limit  每页返回的资源个数。 取值范围：0~500，取值一般为10，20，50。
-    * offset  分页查询起始页码，起始值为0。 当前设置marker不为空时，以marker为分页起始标识。取值范围：0~2147483647。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class ListResoleRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domainName  待查询的resolverrule的域名。
-    * limit  每页返回的资源个数。 取值范围：0~500，取值一般为10，20，50。
-    * offset  分页查询起始页码，起始值为0。 当前设置marker不为空时，以marker为分页起始标识。取值范围：0~2147483647。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class ListResoleRulesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * domainName  待查询的resolverrule的域名。
-    * limit  每页返回的资源个数。 取值范围：0~500，取值一般为10，20，50。
-    * offset  分页查询起始页码，起始值为0。 当前设置marker不为空时，以marker为分页起始标识。取值范围：0~2147483647。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class ListResoleRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domainName  待查询的resolverrule的域名。
-    * limit  每页返回的资源个数。 取值范围：0~500，取值一般为10，20，50。
-    * offset  分页查询起始页码，起始值为0。 当前设置marker不为空时，以marker为分页起始标识。取值范围：0~2147483647。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class ListResoleRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domainName  待查询的resolverrule的域名。
-    * limit  每页返回的资源个数。 取值范围：0~500，取值一般为10，20，50。
-    * offset  分页查询起始页码，起始值为0。 当前设置marker不为空时，以marker为分页起始标识。取值范围：0~2147483647。
+    * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
+    * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @var string[]
     */
@@ -220,7 +220,7 @@ class ListResoleRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的资源个数。 取值范围：0~500，取值一般为10，20，50。
+    *  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class ListResoleRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的资源个数。 取值范围：0~500，取值一般为10，20，50。
+    * @param int|null $limit 每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class ListResoleRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  分页查询起始页码，起始值为0。 当前设置marker不为空时，以marker为分页起始标识。取值范围：0~2147483647。
+    *  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class ListResoleRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 分页查询起始页码，起始值为0。 当前设置marker不为空时，以marker为分页起始标识。取值范围：0~2147483647。
+    * @param int|null $offset 分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     *
     * @return $this
     */

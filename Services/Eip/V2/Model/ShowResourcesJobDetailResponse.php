@@ -40,7 +40,7 @@ class ShowResourcesJobDetailResponse implements ModelInterface, ArrayAccess
             'status' => 'string',
             'errorCode' => 'string',
             'failReason' => 'string',
-            'entities' => '\HuaweiCloud\SDK\Eip\V2\Model\SubJobs'
+            'entities' => '\HuaweiCloud\SDK\Eip\V2\Model\SubJobsInfo'
     ];
 
     /**
@@ -422,7 +422,7 @@ class ShowResourcesJobDetailResponse implements ModelInterface, ArrayAccess
     * Gets entities
     *  entities
     *
-    * @return \HuaweiCloud\SDK\Eip\V2\Model\SubJobs|null
+    * @return \HuaweiCloud\SDK\Eip\V2\Model\SubJobsInfo|null
     */
     public function getEntities()
     {
@@ -432,7 +432,7 @@ class ShowResourcesJobDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets entities
     *
-    * @param \HuaweiCloud\SDK\Eip\V2\Model\SubJobs|null $entities entities
+    * @param \HuaweiCloud\SDK\Eip\V2\Model\SubJobsInfo|null $entities entities
     *
     * @return $this
     */

@@ -21,21 +21,25 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * linegroupId  待更新的线路分组ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'linegroupId' => 'string'
+            'linegroupId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\UpdateLineGroupsBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * linegroupId  待更新的线路分组ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'linegroupId' => null
+        'linegroupId' => null,
+        'body' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * linegroupId  待更新的线路分组ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'linegroupId' => 'linegroup_id'
+            'linegroupId' => 'linegroup_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * linegroupId  待更新的线路分组ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'linegroupId' => 'setLinegroupId'
+            'linegroupId' => 'setLinegroupId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * linegroupId  待更新的线路分组ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'linegroupId' => 'getLinegroupId'
+            'linegroupId' => 'getLinegroupId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -148,6 +158,7 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['linegroupId'] = isset($data['linegroupId']) ? $data['linegroupId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class UpdateLineGroupsRequest implements ModelInterface, ArrayAccess
     public function setLinegroupId($linegroupId)
     {
         $this->container['linegroupId'] = $linegroupId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\UpdateLineGroupsBody|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\UpdateLineGroupsBody|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

@@ -22,7 +22,7 @@ class ListRecordSetsWithLineResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * links  links
-    * recordsets  recordsets
+    * recordsets  recordset列表信息。
     * metadata  metadata
     *
     * @var string[]
@@ -30,13 +30,13 @@ class ListRecordSetsWithLineResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'links' => '\HuaweiCloud\SDK\Dns\V2\Model\PageLink',
             'recordsets' => '\HuaweiCloud\SDK\Dns\V2\Model\QueryRecordSetWithLineAndTagsResp[]',
-            'metadata' => '\HuaweiCloud\SDK\Dns\V2\Model\Metedata'
+            'metadata' => '\HuaweiCloud\SDK\Dns\V2\Model\Metadata'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * links  links
-    * recordsets  recordsets
+    * recordsets  recordset列表信息。
     * metadata  metadata
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ListRecordSetsWithLineResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * links  links
-    * recordsets  recordsets
+    * recordsets  recordset列表信息。
     * metadata  metadata
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ListRecordSetsWithLineResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * links  links
-    * recordsets  recordsets
+    * recordsets  recordset列表信息。
     * metadata  metadata
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ListRecordSetsWithLineResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * links  links
-    * recordsets  recordsets
+    * recordsets  recordset列表信息。
     * metadata  metadata
     *
     * @var string[]
@@ -221,7 +221,7 @@ class ListRecordSetsWithLineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordsets
-    *  recordsets
+    *  recordset列表信息。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\QueryRecordSetWithLineAndTagsResp[]|null
     */
@@ -233,7 +233,7 @@ class ListRecordSetsWithLineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets recordsets
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\QueryRecordSetWithLineAndTagsResp[]|null $recordsets recordsets
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\QueryRecordSetWithLineAndTagsResp[]|null $recordsets recordset列表信息。
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class ListRecordSetsWithLineResponse implements ModelInterface, ArrayAccess
     * Gets metadata
     *  metadata
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\Metedata|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\Metadata|null
     */
     public function getMetadata()
     {
@@ -257,7 +257,7 @@ class ListRecordSetsWithLineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets metadata
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Metedata|null $metadata metadata
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Metadata|null $metadata metadata
     *
     * @return $this
     */

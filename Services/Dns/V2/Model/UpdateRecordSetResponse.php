@@ -21,19 +21,19 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  id
-    * name  name
-    * description  description
-    * zoneId  zoneId
-    * zoneName  zoneName
-    * type  type
-    * ttl  ttl
-    * records  records
-    * createAt  createAt
-    * updateAt  updateAt
-    * status  status
-    * default  default
-    * projectId  projectId
+    * id  Record Set的ID。
+    * name  Record Set的名称。
+    * description  Record Set的描述信息。
+    * zoneId  托管该记录的zone_id。
+    * zoneName  托管该记录的zone_name。
+    * type  记录类型。 取值范围：A，AAAA，MX，CNAME，TXT，NS（仅限公网Zone），SRV，CAA（仅限公网Zone）。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * records  域名解析后的值。
+    * createAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
+    * updateAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
+    * status  资源状态。
+    * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
+    * projectId  该Record Set所属的项目ID。
     * links  links
     *
     * @var string[]
@@ -57,19 +57,19 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  id
-    * name  name
-    * description  description
-    * zoneId  zoneId
-    * zoneName  zoneName
-    * type  type
-    * ttl  ttl
-    * records  records
-    * createAt  createAt
-    * updateAt  updateAt
-    * status  status
-    * default  default
-    * projectId  projectId
+    * id  Record Set的ID。
+    * name  Record Set的名称。
+    * description  Record Set的描述信息。
+    * zoneId  托管该记录的zone_id。
+    * zoneName  托管该记录的zone_name。
+    * type  记录类型。 取值范围：A，AAAA，MX，CNAME，TXT，NS（仅限公网Zone），SRV，CAA（仅限公网Zone）。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * records  域名解析后的值。
+    * createAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
+    * updateAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
+    * status  资源状态。
+    * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
+    * projectId  该Record Set所属的项目ID。
     * links  links
     *
     * @var string[]
@@ -114,19 +114,19 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  id
-    * name  name
-    * description  description
-    * zoneId  zoneId
-    * zoneName  zoneName
-    * type  type
-    * ttl  ttl
-    * records  records
-    * createAt  createAt
-    * updateAt  updateAt
-    * status  status
-    * default  default
-    * projectId  projectId
+    * id  Record Set的ID。
+    * name  Record Set的名称。
+    * description  Record Set的描述信息。
+    * zoneId  托管该记录的zone_id。
+    * zoneName  托管该记录的zone_name。
+    * type  记录类型。 取值范围：A，AAAA，MX，CNAME，TXT，NS（仅限公网Zone），SRV，CAA（仅限公网Zone）。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * records  域名解析后的值。
+    * createAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
+    * updateAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
+    * status  资源状态。
+    * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
+    * projectId  该Record Set所属的项目ID。
     * links  links
     *
     * @var string[]
@@ -150,19 +150,19 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  id
-    * name  name
-    * description  description
-    * zoneId  zoneId
-    * zoneName  zoneName
-    * type  type
-    * ttl  ttl
-    * records  records
-    * createAt  createAt
-    * updateAt  updateAt
-    * status  status
-    * default  default
-    * projectId  projectId
+    * id  Record Set的ID。
+    * name  Record Set的名称。
+    * description  Record Set的描述信息。
+    * zoneId  托管该记录的zone_id。
+    * zoneName  托管该记录的zone_name。
+    * type  记录类型。 取值范围：A，AAAA，MX，CNAME，TXT，NS（仅限公网Zone），SRV，CAA（仅限公网Zone）。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * records  域名解析后的值。
+    * createAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
+    * updateAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
+    * status  资源状态。
+    * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
+    * projectId  该Record Set所属的项目ID。
     * links  links
     *
     * @var string[]
@@ -186,19 +186,19 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  id
-    * name  name
-    * description  description
-    * zoneId  zoneId
-    * zoneName  zoneName
-    * type  type
-    * ttl  ttl
-    * records  records
-    * createAt  createAt
-    * updateAt  updateAt
-    * status  status
-    * default  default
-    * projectId  projectId
+    * id  Record Set的ID。
+    * name  Record Set的名称。
+    * description  Record Set的描述信息。
+    * zoneId  托管该记录的zone_id。
+    * zoneName  托管该记录的zone_name。
+    * type  记录类型。 取值范围：A，AAAA，MX，CNAME，TXT，NS（仅限公网Zone），SRV，CAA（仅限公网Zone）。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * records  域名解析后的值。
+    * createAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
+    * updateAt  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
+    * status  资源状态。
+    * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
+    * projectId  该Record Set所属的项目ID。
     * links  links
     *
     * @var string[]
@@ -318,7 +318,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  id
+    *  Record Set的ID。
     *
     * @return string|null
     */
@@ -330,7 +330,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id Record Set的ID。
     *
     * @return $this
     */
@@ -342,7 +342,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  name
+    *  Record Set的名称。
     *
     * @return string|null
     */
@@ -354,7 +354,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name name
+    * @param string|null $name Record Set的名称。
     *
     * @return $this
     */
@@ -366,7 +366,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  description
+    *  Record Set的描述信息。
     *
     * @return string|null
     */
@@ -378,7 +378,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description description
+    * @param string|null $description Record Set的描述信息。
     *
     * @return $this
     */
@@ -390,7 +390,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneId
-    *  zoneId
+    *  托管该记录的zone_id。
     *
     * @return string|null
     */
@@ -402,7 +402,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets zoneId
     *
-    * @param string|null $zoneId zoneId
+    * @param string|null $zoneId 托管该记录的zone_id。
     *
     * @return $this
     */
@@ -414,7 +414,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneName
-    *  zoneName
+    *  托管该记录的zone_name。
     *
     * @return string|null
     */
@@ -426,7 +426,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets zoneName
     *
-    * @param string|null $zoneName zoneName
+    * @param string|null $zoneName 托管该记录的zone_name。
     *
     * @return $this
     */
@@ -438,7 +438,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  type
+    *  记录类型。 取值范围：A，AAAA，MX，CNAME，TXT，NS（仅限公网Zone），SRV，CAA（仅限公网Zone）。
     *
     * @return string|null
     */
@@ -450,7 +450,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type type
+    * @param string|null $type 记录类型。 取值范围：A，AAAA，MX，CNAME，TXT，NS（仅限公网Zone），SRV，CAA（仅限公网Zone）。
     *
     * @return $this
     */
@@ -462,7 +462,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttl
-    *  ttl
+    *  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     *
     * @return int|null
     */
@@ -474,7 +474,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ttl
     *
-    * @param int|null $ttl ttl
+    * @param int|null $ttl 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     *
     * @return $this
     */
@@ -486,7 +486,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets records
-    *  records
+    *  域名解析后的值。
     *
     * @return string[]|null
     */
@@ -498,7 +498,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets records
     *
-    * @param string[]|null $records records
+    * @param string[]|null $records 域名解析后的值。
     *
     * @return $this
     */
@@ -510,7 +510,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createAt
-    *  createAt
+    *  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
     *
     * @return string|null
     */
@@ -522,7 +522,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createAt
     *
-    * @param string|null $createAt createAt
+    * @param string|null $createAt 创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
     *
     * @return $this
     */
@@ -534,7 +534,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateAt
-    *  updateAt
+    *  更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
     *
     * @return string|null
     */
@@ -546,7 +546,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateAt
     *
-    * @param string|null $updateAt updateAt
+    * @param string|null $updateAt 更新时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
     *
     * @return $this
     */
@@ -558,7 +558,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  status
+    *  资源状态。
     *
     * @return string|null
     */
@@ -570,7 +570,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status status
+    * @param string|null $status 资源状态。
     *
     * @return $this
     */
@@ -582,7 +582,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets default
-    *  default
+    *  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
     *
     * @return bool|null
     */
@@ -594,7 +594,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets default
     *
-    * @param bool|null $default default
+    * @param bool|null $default 标识是否由系统默认生成，系统默认生成的Record Set不能删除。
     *
     * @return $this
     */
@@ -606,7 +606,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  projectId
+    *  该Record Set所属的项目ID。
     *
     * @return string|null
     */
@@ -618,7 +618,7 @@ class UpdateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId projectId
+    * @param string|null $projectId 该Record Set所属的项目ID。
     *
     * @return $this
     */

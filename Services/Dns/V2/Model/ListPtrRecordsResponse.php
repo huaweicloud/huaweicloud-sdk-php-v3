@@ -23,13 +23,13 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * links  links
     * metadata  metadata
-    * floatingips  floatingips
+    * floatingips  弹性IP的PTR记录ID列表信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'links' => '\HuaweiCloud\SDK\Dns\V2\Model\PageLink',
-            'metadata' => '\HuaweiCloud\SDK\Dns\V2\Model\Metedata',
+            'metadata' => '\HuaweiCloud\SDK\Dns\V2\Model\Metadata',
             'floatingips' => '\HuaweiCloud\SDK\Dns\V2\Model\ListPtrRecordsFloatingResp[]'
     ];
 
@@ -37,7 +37,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * links  links
     * metadata  metadata
-    * floatingips  floatingips
+    * floatingips  弹性IP的PTR记录ID列表信息。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * links  links
     * metadata  metadata
-    * floatingips  floatingips
+    * floatingips  弹性IP的PTR记录ID列表信息。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * links  links
     * metadata  metadata
-    * floatingips  floatingips
+    * floatingips  弹性IP的PTR记录ID列表信息。
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * links  links
     * metadata  metadata
-    * floatingips  floatingips
+    * floatingips  弹性IP的PTR记录ID列表信息。
     *
     * @var string[]
     */
@@ -223,7 +223,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
     * Gets metadata
     *  metadata
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\Metedata|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\Metadata|null
     */
     public function getMetadata()
     {
@@ -233,7 +233,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets metadata
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Metedata|null $metadata metadata
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Metadata|null $metadata metadata
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingips
-    *  floatingips
+    *  弹性IP的PTR记录ID列表信息。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\ListPtrRecordsFloatingResp[]|null
     */
@@ -257,7 +257,7 @@ class ListPtrRecordsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets floatingips
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\ListPtrRecordsFloatingResp[]|null $floatingips floatingips
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\ListPtrRecordsFloatingResp[]|null $floatingips 弹性IP的PTR记录ID列表信息。
     *
     * @return $this
     */
