@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\Dcs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class VpcsData implements ModelInterface, ArrayAccess
+class ListConfigHistoriesRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,34 @@ class VpcsData implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'VpcsData';
+    protected static $openAPIModelName = 'ListConfigHistoriesRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  vpc的ID，uuid形式的一个资源标识。
-    * inboundEndpointCount  vpc下入站终端节点的数量。
+    * instanceId  实例ID
+    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
+    * limit  每页显示条数，最小值为1，最大值为1000，若不设置该参数，则为10。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'inboundEndpointCount' => 'int'
+            'instanceId' => 'string',
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  vpc的ID，uuid形式的一个资源标识。
-    * inboundEndpointCount  vpc下入站终端节点的数量。
+    * instanceId  实例ID
+    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
+    * limit  每页显示条数，最小值为1，最大值为1000，若不设置该参数，则为10。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'inboundEndpointCount' => 'int32'
+        'instanceId' => null,
+        'offset' => 'int32',
+        'limit' => 'int32'
     ];
 
     /**
@@ -65,38 +69,44 @@ class VpcsData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  vpc的ID，uuid形式的一个资源标识。
-    * inboundEndpointCount  vpc下入站终端节点的数量。
+    * instanceId  实例ID
+    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
+    * limit  每页显示条数，最小值为1，最大值为1000，若不设置该参数，则为10。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'inboundEndpointCount' => 'inbound_endpoint_count'
+            'instanceId' => 'instance_id',
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  vpc的ID，uuid形式的一个资源标识。
-    * inboundEndpointCount  vpc下入站终端节点的数量。
+    * instanceId  实例ID
+    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
+    * limit  每页显示条数，最小值为1，最大值为1000，若不设置该参数，则为10。
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'inboundEndpointCount' => 'setInboundEndpointCount'
+            'instanceId' => 'setInstanceId',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  vpc的ID，uuid形式的一个资源标识。
-    * inboundEndpointCount  vpc下入站终端节点的数量。
+    * instanceId  实例ID
+    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
+    * limit  每页显示条数，最小值为1，最大值为1000，若不设置该参数，则为10。
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'inboundEndpointCount' => 'getInboundEndpointCount'
+            'instanceId' => 'getInstanceId',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -157,8 +167,9 @@ class VpcsData implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['inboundEndpointCount'] = isset($data['inboundEndpointCount']) ? $data['inboundEndpointCount'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -169,6 +180,9 @@ class VpcsData implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -184,50 +198,74 @@ class VpcsData implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  vpc的ID，uuid形式的一个资源标识。
+    * Gets instanceId
+    *  实例ID
     *
-    * @return string|null
+    * @return string
     */
-    public function getId()
+    public function getInstanceId()
     {
-        return $this->container['id'];
+        return $this->container['instanceId'];
     }
 
     /**
-    * Sets id
+    * Sets instanceId
     *
-    * @param string|null $id vpc的ID，uuid形式的一个资源标识。
+    * @param string $instanceId 实例ID
     *
     * @return $this
     */
-    public function setId($id)
+    public function setInstanceId($instanceId)
     {
-        $this->container['id'] = $id;
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 
     /**
-    * Gets inboundEndpointCount
-    *  vpc下入站终端节点的数量。
+    * Gets offset
+    *  偏移量，表示从此偏移量开始查询， offset大于等于0
     *
     * @return int|null
     */
-    public function getInboundEndpointCount()
+    public function getOffset()
     {
-        return $this->container['inboundEndpointCount'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets inboundEndpointCount
+    * Sets offset
     *
-    * @param int|null $inboundEndpointCount vpc下入站终端节点的数量。
+    * @param int|null $offset 偏移量，表示从此偏移量开始查询， offset大于等于0
     *
     * @return $this
     */
-    public function setInboundEndpointCount($inboundEndpointCount)
+    public function setOffset($offset)
     {
-        $this->container['inboundEndpointCount'] = $inboundEndpointCount;
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页显示条数，最小值为1，最大值为1000，若不设置该参数，则为10。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页显示条数，最小值为1，最大值为1000，若不设置该参数，则为10。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

@@ -31,7 +31,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
-    * longConnectEnable  是否支持长连接，0表示支持，1表示不支持
+    * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
     * source  source
     * destination  destination
     * service  service
@@ -71,7 +71,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
-    * longConnectEnable  是否支持长连接，0表示支持，1表示不支持
+    * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
     * source  source
     * destination  destination
     * service  service
@@ -132,7 +132,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
-    * longConnectEnable  是否支持长连接，0表示支持，1表示不支持
+    * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
     * source  source
     * destination  destination
     * service  service
@@ -172,7 +172,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
-    * longConnectEnable  是否支持长连接，0表示支持，1表示不支持
+    * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
     * source  source
     * destination  destination
     * service  service
@@ -212,7 +212,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
-    * longConnectEnable  是否支持长连接，0表示支持，1表示不支持
+    * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
     * source  source
     * destination  destination
     * service  service
@@ -720,7 +720,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets longConnectEnable
-    *  是否支持长连接，0表示支持，1表示不支持
+    *  是否支持长连接，0表示不支持，1表示支持
     *
     * @return int|null
     */
@@ -732,7 +732,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectEnable
     *
-    * @param int|null $longConnectEnable 是否支持长连接，0表示支持，1表示不支持
+    * @param int|null $longConnectEnable 是否支持长连接，0表示不支持，1表示支持
     *
     * @return $this
     */

@@ -29,7 +29,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
-    * longConnectEnable  是否支持长连接，0表示支持长连接，1表示不支持长连接
+    * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外
     * source  source
@@ -67,7 +67,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
-    * longConnectEnable  是否支持长连接，0表示支持长连接，1表示不支持长连接
+    * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外
     * source  source
@@ -126,7 +126,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
-    * longConnectEnable  是否支持长连接，0表示支持长连接，1表示不支持长连接
+    * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外
     * source  source
@@ -164,7 +164,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
-    * longConnectEnable  是否支持长连接，0表示支持长连接，1表示不支持长连接
+    * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外
     * source  source
@@ -202,7 +202,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
-    * longConnectEnable  是否支持长连接，0表示支持长连接，1表示不支持长连接
+    * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外
     * source  source
@@ -665,7 +665,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets longConnectEnable
-    *  是否支持长连接，0表示支持长连接，1表示不支持长连接
+    *  是否支持长连接，0表示不支持长连接，1表示支持长连接
     *
     * @return int
     */
@@ -677,7 +677,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectEnable
     *
-    * @param int $longConnectEnable 是否支持长连接，0表示支持长连接，1表示不支持长连接
+    * @param int $longConnectEnable 是否支持长连接，0表示不支持长连接，1表示支持长连接
     *
     * @return $this
     */

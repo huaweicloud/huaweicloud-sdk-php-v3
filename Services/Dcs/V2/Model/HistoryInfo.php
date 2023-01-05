@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\Dcs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateRetrievalVerificationRequest implements ModelInterface, ArrayAccess
+class HistoryInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,38 @@ class CreateRetrievalVerificationRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateRetrievalVerificationRequest';
+    protected static $openAPIModelName = 'HistoryInfo';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  域名找回ID。
+    * historyId  修改记录ID
+    * type  修改类型
+    * createdAt  修改时间
+    * status  修改状态
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string'
+            'historyId' => 'string',
+            'type' => 'string',
+            'createdAt' => 'string',
+            'status' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  域名找回ID。
+    * historyId  修改记录ID
+    * type  修改类型
+    * createdAt  修改时间
+    * status  修改状态
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null
+        'historyId' => null,
+        'type' => null,
+        'createdAt' => null,
+        'status' => null
     ];
 
     /**
@@ -61,32 +73,50 @@ class CreateRetrievalVerificationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  域名找回ID。
+    * historyId  修改记录ID
+    * type  修改类型
+    * createdAt  修改时间
+    * status  修改状态
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id'
+            'historyId' => 'history_id',
+            'type' => 'type',
+            'createdAt' => 'created_at',
+            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  域名找回ID。
+    * historyId  修改记录ID
+    * type  修改类型
+    * createdAt  修改时间
+    * status  修改状态
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId'
+            'historyId' => 'setHistoryId',
+            'type' => 'setType',
+            'createdAt' => 'setCreatedAt',
+            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  域名找回ID。
+    * historyId  修改记录ID
+    * type  修改类型
+    * createdAt  修改时间
+    * status  修改状态
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId'
+            'historyId' => 'getHistoryId',
+            'type' => 'getType',
+            'createdAt' => 'getCreatedAt',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -147,7 +177,10 @@ class CreateRetrievalVerificationRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['historyId'] = isset($data['historyId']) ? $data['historyId'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -158,9 +191,6 @@ class CreateRetrievalVerificationRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -176,26 +206,98 @@ class CreateRetrievalVerificationRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  域名找回ID。
+    * Gets historyId
+    *  修改记录ID
     *
-    * @return string
+    * @return string|null
     */
-    public function getId()
+    public function getHistoryId()
     {
-        return $this->container['id'];
+        return $this->container['historyId'];
     }
 
     /**
-    * Sets id
+    * Sets historyId
     *
-    * @param string $id 域名找回ID。
+    * @param string|null $historyId 修改记录ID
     *
     * @return $this
     */
-    public function setId($id)
+    public function setHistoryId($historyId)
     {
-        $this->container['id'] = $id;
+        $this->container['historyId'] = $historyId;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  修改类型
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 修改类型
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  修改时间
+    *
+    * @return string|null
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param string|null $createdAt 修改时间
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  修改状态
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 修改状态
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

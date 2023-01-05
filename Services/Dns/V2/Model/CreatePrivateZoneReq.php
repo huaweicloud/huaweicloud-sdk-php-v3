@@ -26,6 +26,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * email  管理该zone的管理员邮箱。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * tags  资源标签。
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
@@ -38,6 +39,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
             'email' => 'string',
             'ttl' => 'int',
             'router' => '\HuaweiCloud\SDK\Dns\V2\Model\Router',
+            'proxyPattern' => 'string',
             'tags' => '\HuaweiCloud\SDK\Dns\V2\Model\Tag[]',
             'enterpriseProjectId' => 'string'
     ];
@@ -50,6 +52,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * email  管理该zone的管理员邮箱。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * tags  资源标签。
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
@@ -62,6 +65,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
         'email' => null,
         'ttl' => 'int32',
         'router' => null,
+        'proxyPattern' => null,
         'tags' => null,
         'enterpriseProjectId' => null
     ];
@@ -95,6 +99,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * email  管理该zone的管理员邮箱。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * tags  资源标签。
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
@@ -107,6 +112,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
             'email' => 'email',
             'ttl' => 'ttl',
             'router' => 'router',
+            'proxyPattern' => 'proxy_pattern',
             'tags' => 'tags',
             'enterpriseProjectId' => 'enterprise_project_id'
     ];
@@ -119,6 +125,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * email  管理该zone的管理员邮箱。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * tags  资源标签。
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
@@ -131,6 +138,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
             'email' => 'setEmail',
             'ttl' => 'setTtl',
             'router' => 'setRouter',
+            'proxyPattern' => 'setProxyPattern',
             'tags' => 'setTags',
             'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
@@ -143,6 +151,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     * email  管理该zone的管理员邮箱。
     * ttl  用于填写默认生成的SOA记录中有效缓存时间，以秒为单位。
     * router  router
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * tags  资源标签。
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
@@ -155,6 +164,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
             'email' => 'getEmail',
             'ttl' => 'getTtl',
             'router' => 'getRouter',
+            'proxyPattern' => 'getProxyPattern',
             'tags' => 'getTags',
             'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
@@ -223,6 +233,7 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['ttl'] = isset($data['ttl']) ? $data['ttl'] : null;
         $this->container['router'] = isset($data['router']) ? $data['router'] : null;
+        $this->container['proxyPattern'] = isset($data['proxyPattern']) ? $data['proxyPattern'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
@@ -399,6 +410,30 @@ class CreatePrivateZoneReq implements ModelInterface, ArrayAccess
     public function setRouter($router)
     {
         $this->container['router'] = $router;
+        return $this;
+    }
+
+    /**
+    * Gets proxyPattern
+    *  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    *
+    * @return string|null
+    */
+    public function getProxyPattern()
+    {
+        return $this->container['proxyPattern'];
+    }
+
+    /**
+    * Sets proxyPattern
+    *
+    * @param string|null $proxyPattern 内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    *
+    * @return $this
+    */
+    public function setProxyPattern($proxyPattern)
+    {
+        $this->container['proxyPattern'] = $proxyPattern;
         return $this;
     }
 

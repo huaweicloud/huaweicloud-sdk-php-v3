@@ -30,6 +30,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。  该参数暂未使用。
     * status  资源状态。
     * recordNum  该zone下的recordset个数。
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
     * createdAt  创建时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
@@ -50,6 +51,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
             'serial' => 'int',
             'status' => 'string',
             'recordNum' => 'int',
+            'proxyPattern' => 'string',
             'poolId' => 'string',
             'projectId' => 'string',
             'createdAt' => 'string',
@@ -70,6 +72,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。  该参数暂未使用。
     * status  资源状态。
     * recordNum  该zone下的recordset个数。
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
     * createdAt  创建时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
@@ -90,6 +93,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
         'serial' => 'int32',
         'status' => null,
         'recordNum' => 'int32',
+        'proxyPattern' => null,
         'poolId' => null,
         'projectId' => null,
         'createdAt' => null,
@@ -131,6 +135,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。  该参数暂未使用。
     * status  资源状态。
     * recordNum  该zone下的recordset个数。
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
     * createdAt  创建时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
@@ -151,6 +156,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
             'serial' => 'serial',
             'status' => 'status',
             'recordNum' => 'record_num',
+            'proxyPattern' => 'proxy_pattern',
             'poolId' => 'pool_id',
             'projectId' => 'project_id',
             'createdAt' => 'created_at',
@@ -171,6 +177,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。  该参数暂未使用。
     * status  资源状态。
     * recordNum  该zone下的recordset个数。
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
     * createdAt  创建时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
@@ -191,6 +198,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
             'serial' => 'setSerial',
             'status' => 'setStatus',
             'recordNum' => 'setRecordNum',
+            'proxyPattern' => 'setProxyPattern',
             'poolId' => 'setPoolId',
             'projectId' => 'setProjectId',
             'createdAt' => 'setCreatedAt',
@@ -211,6 +219,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。  该参数暂未使用。
     * status  资源状态。
     * recordNum  该zone下的recordset个数。
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
     * createdAt  创建时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
@@ -231,6 +240,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
             'serial' => 'getSerial',
             'status' => 'getStatus',
             'recordNum' => 'getRecordNum',
+            'proxyPattern' => 'getProxyPattern',
             'poolId' => 'getPoolId',
             'projectId' => 'getProjectId',
             'createdAt' => 'getCreatedAt',
@@ -307,6 +317,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
         $this->container['serial'] = isset($data['serial']) ? $data['serial'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['recordNum'] = isset($data['recordNum']) ? $data['recordNum'] : null;
+        $this->container['proxyPattern'] = isset($data['proxyPattern']) ? $data['proxyPattern'] : null;
         $this->container['poolId'] = isset($data['poolId']) ? $data['poolId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
@@ -551,6 +562,30 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
     public function setRecordNum($recordNum)
     {
         $this->container['recordNum'] = $recordNum;
+        return $this;
+    }
+
+    /**
+    * Gets proxyPattern
+    *  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    *
+    * @return string|null
+    */
+    public function getProxyPattern()
+    {
+        return $this->container['proxyPattern'];
+    }
+
+    /**
+    * Sets proxyPattern
+    *
+    * @param string|null $proxyPattern 内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    *
+    * @return $this
+    */
+    public function setProxyPattern($proxyPattern)
+    {
+        $this->container['proxyPattern'] = $proxyPattern;
         return $this;
     }
 

@@ -30,6 +30,7 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     * interval  查询数据的时间粒度，支持60（默认值）, 300秒。不传值时，使用默认值60秒。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
+    * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL: 默认所有直播
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
             'protocol' => 'string',
             'interval' => 'int',
             'startTime' => 'string',
-            'endTime' => 'string'
+            'endTime' => 'string',
+            'serviceType' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     * interval  查询数据的时间粒度，支持60（默认值）, 300秒。不传值时，使用默认值60秒。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
+    * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL: 默认所有直播
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
         'protocol' => null,
         'interval' => 'int32',
         'startTime' => null,
-        'endTime' => null
+        'endTime' => null,
+        'serviceType' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     * interval  查询数据的时间粒度，支持60（默认值）, 300秒。不传值时，使用默认值60秒。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
+    * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL: 默认所有直播
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
             'protocol' => 'protocol',
             'interval' => 'interval',
             'startTime' => 'start_time',
-            'endTime' => 'end_time'
+            'endTime' => 'end_time',
+            'serviceType' => 'service_type'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     * interval  查询数据的时间粒度，支持60（默认值）, 300秒。不传值时，使用默认值60秒。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
+    * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL: 默认所有直播
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
             'protocol' => 'setProtocol',
             'interval' => 'setInterval',
             'startTime' => 'setStartTime',
-            'endTime' => 'setEndTime'
+            'endTime' => 'setEndTime',
+            'serviceType' => 'setServiceType'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     * interval  查询数据的时间粒度，支持60（默认值）, 300秒。不传值时，使用默认值60秒。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
+    * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL: 默认所有直播
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
             'protocol' => 'getProtocol',
             'interval' => 'getInterval',
             'startTime' => 'getStartTime',
-            'endTime' => 'getEndTime'
+            'endTime' => 'getEndTime',
+            'serviceType' => 'getServiceType'
     ];
 
     /**
@@ -223,6 +233,9 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     const PROTOCOL_HLS = 'hls';
     const INTERVAL_60 = 60;
     const INTERVAL_300 = 300;
+    const SERVICE_TYPE_LIVE = 'Live';
+    const SERVICE_TYPE_LLL = 'LLL';
+    const SERVICE_TYPE_ALL = 'ALL';
     
 
     /**
@@ -248,6 +261,20 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
         return [
             self::INTERVAL_60,
             self::INTERVAL_300,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getServiceTypeAllowableValues()
+    {
+        return [
+            self::SERVICE_TYPE_LIVE,
+            self::SERVICE_TYPE_LLL,
+            self::SERVICE_TYPE_ALL,
         ];
     }
 
@@ -277,6 +304,7 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
         $this->container['interval'] = isset($data['interval']) ? $data['interval'] : self::INTERVAL_60;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : 'ALL';
     }
 
     /**
@@ -347,6 +375,20 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['endTime']) && (mb_strlen($this->container['endTime']) < 1)) {
                 $invalidProperties[] = "invalid value for 'endTime', the character length must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getServiceTypeAllowableValues();
+                if (!is_null($this->container['serviceType']) && !in_array($this->container['serviceType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'serviceType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['serviceType']) && (mb_strlen($this->container['serviceType']) > 10)) {
+                $invalidProperties[] = "invalid value for 'serviceType', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['serviceType']) && (mb_strlen($this->container['serviceType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'serviceType', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -599,6 +641,30 @@ class ListUsersOfStreamRequest implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets serviceType
+    *  服务类型： - Live：直播 - LLL：超低时延直播 - ALL: 默认所有直播
+    *
+    * @return string|null
+    */
+    public function getServiceType()
+    {
+        return $this->container['serviceType'];
+    }
+
+    /**
+    * Sets serviceType
+    *
+    * @param string|null $serviceType 服务类型： - Live：直播 - LLL：超低时延直播 - ALL: 默认所有直播
+    *
+    * @return $this
+    */
+    public function setServiceType($serviceType)
+    {
+        $this->container['serviceType'] = $serviceType;
         return $this;
     }
 

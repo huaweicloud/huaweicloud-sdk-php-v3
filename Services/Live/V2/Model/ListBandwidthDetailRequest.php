@@ -20,7 +20,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。  如果不传入域名，则查询租户下所有播放域名的带宽数据。
     * app  应用名称。
     * stream  流名。
     * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
@@ -30,6 +30,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
+    * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL：默认所有直播
     *
     * @var string[]
     */
@@ -43,12 +44,13 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             'protocol' => 'string',
             'interval' => 'int',
             'startTime' => 'string',
-            'endTime' => 'string'
+            'endTime' => 'string',
+            'serviceType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。  如果不传入域名，则查询租户下所有播放域名的带宽数据。
     * app  应用名称。
     * stream  流名。
     * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
@@ -58,6 +60,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
+    * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL：默认所有直播
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
         'protocol' => null,
         'interval' => 'int32',
         'startTime' => null,
-        'endTime' => null
+        'endTime' => null,
+        'serviceType' => null
     ];
 
     /**
@@ -97,7 +101,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。  如果不传入域名，则查询租户下所有播放域名的带宽数据。
     * app  应用名称。
     * stream  流名。
     * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
@@ -107,6 +111,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
+    * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL：默认所有直播
     *
     * @var string[]
     */
@@ -120,12 +125,13 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             'protocol' => 'protocol',
             'interval' => 'interval',
             'startTime' => 'start_time',
-            'endTime' => 'end_time'
+            'endTime' => 'end_time',
+            'serviceType' => 'service_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。  如果不传入域名，则查询租户下所有播放域名的带宽数据。
     * app  应用名称。
     * stream  流名。
     * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
@@ -135,6 +141,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
+    * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL：默认所有直播
     *
     * @var string[]
     */
@@ -148,12 +155,13 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             'protocol' => 'setProtocol',
             'interval' => 'setInterval',
             'startTime' => 'setStartTime',
-            'endTime' => 'setEndTime'
+            'endTime' => 'setEndTime',
+            'serviceType' => 'setServiceType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
+    * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。  如果不传入域名，则查询租户下所有播放域名的带宽数据。
     * app  应用名称。
     * stream  流名。
     * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
@@ -163,6 +171,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度31天，最大查询周期一年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间。结束时间需大于起始时间。
+    * serviceType  服务类型： - Live：直播 - LLL：超低时延直播 - ALL：默认所有直播
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             'protocol' => 'getProtocol',
             'interval' => 'getInterval',
             'startTime' => 'getStartTime',
-            'endTime' => 'getEndTime'
+            'endTime' => 'getEndTime',
+            'serviceType' => 'getServiceType'
     ];
 
     /**
@@ -224,6 +234,9 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     const INTERVAL_300 = 300;
     const INTERVAL_3600 = 3600;
     const INTERVAL_86400 = 86400;
+    const SERVICE_TYPE_LIVE = 'Live';
+    const SERVICE_TYPE_LLL = 'LLL';
+    const SERVICE_TYPE_ALL = 'ALL';
     
 
     /**
@@ -253,6 +266,20 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getServiceTypeAllowableValues()
+    {
+        return [
+            self::SERVICE_TYPE_LIVE,
+            self::SERVICE_TYPE_LLL,
+            self::SERVICE_TYPE_ALL,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -279,6 +306,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
         $this->container['interval'] = isset($data['interval']) ? $data['interval'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : 'ALL';
     }
 
     /**
@@ -289,9 +317,6 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['playDomains'] === null) {
-            $invalidProperties[] = "'playDomains' can't be null";
-        }
             if (!is_null($this->container['app']) && (mb_strlen($this->container['app']) > 128)) {
                 $invalidProperties[] = "invalid value for 'app', the character length must be smaller than or equal to 128.";
             }
@@ -344,6 +369,20 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['endTime']) && (mb_strlen($this->container['endTime']) < 1)) {
                 $invalidProperties[] = "invalid value for 'endTime', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getServiceTypeAllowableValues();
+                if (!is_null($this->container['serviceType']) && !in_array($this->container['serviceType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'serviceType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['serviceType']) && (mb_strlen($this->container['serviceType']) > 10)) {
+                $invalidProperties[] = "invalid value for 'serviceType', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['serviceType']) && (mb_strlen($this->container['serviceType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'serviceType', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -360,9 +399,9 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets playDomains
-    *  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
+    *  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。  如果不传入域名，则查询租户下所有播放域名的带宽数据。
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getPlayDomains()
     {
@@ -372,7 +411,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets playDomains
     *
-    * @param string[] $playDomains 播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。
+    * @param string[]|null $playDomains 播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。  如果不传入域名，则查询租户下所有播放域名的带宽数据。
     *
     * @return $this
     */
@@ -595,6 +634,30 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets serviceType
+    *  服务类型： - Live：直播 - LLL：超低时延直播 - ALL：默认所有直播
+    *
+    * @return string|null
+    */
+    public function getServiceType()
+    {
+        return $this->container['serviceType'];
+    }
+
+    /**
+    * Sets serviceType
+    *
+    * @param string|null $serviceType 服务类型： - Live：直播 - LLL：超低时延直播 - ALL：默认所有直播
+    *
+    * @return $this
+    */
+    public function setServiceType($serviceType)
+    {
+        $this->container['serviceType'] = $serviceType;
         return $this;
     }
 

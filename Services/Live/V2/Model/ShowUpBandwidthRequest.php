@@ -26,6 +26,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * interval  查询数据的时间粒度。支持300（默认值），3600和86400秒。不传值时，使用默认值300秒。
+    * type  类型： - RELAY：转推 不填默认查询推流
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。 最大查询跨度31天，最大查询周期1年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度31天，最大查询周期1年。结束时间需大于起始时间。
     *
@@ -38,6 +39,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
             'region' => 'string[]',
             'isp' => 'string[]',
             'interval' => 'int',
+            'type' => 'string',
             'startTime' => 'string',
             'endTime' => 'string'
     ];
@@ -50,6 +52,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * interval  查询数据的时间粒度。支持300（默认值），3600和86400秒。不传值时，使用默认值300秒。
+    * type  类型： - RELAY：转推 不填默认查询推流
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。 最大查询跨度31天，最大查询周期1年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度31天，最大查询周期1年。结束时间需大于起始时间。
     *
@@ -62,6 +65,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
         'region' => null,
         'isp' => null,
         'interval' => 'int32',
+        'type' => null,
         'startTime' => null,
         'endTime' => null
     ];
@@ -95,6 +99,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * interval  查询数据的时间粒度。支持300（默认值），3600和86400秒。不传值时，使用默认值300秒。
+    * type  类型： - RELAY：转推 不填默认查询推流
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。 最大查询跨度31天，最大查询周期1年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度31天，最大查询周期1年。结束时间需大于起始时间。
     *
@@ -107,6 +112,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
             'region' => 'region',
             'isp' => 'isp',
             'interval' => 'interval',
+            'type' => 'type',
             'startTime' => 'start_time',
             'endTime' => 'end_time'
     ];
@@ -119,6 +125,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * interval  查询数据的时间粒度。支持300（默认值），3600和86400秒。不传值时，使用默认值300秒。
+    * type  类型： - RELAY：转推 不填默认查询推流
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。 最大查询跨度31天，最大查询周期1年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度31天，最大查询周期1年。结束时间需大于起始时间。
     *
@@ -131,6 +138,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
             'region' => 'setRegion',
             'isp' => 'setIsp',
             'interval' => 'setInterval',
+            'type' => 'setType',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime'
     ];
@@ -143,6 +151,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
     * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * interval  查询数据的时间粒度。支持300（默认值），3600和86400秒。不传值时，使用默认值300秒。
+    * type  类型： - RELAY：转推 不填默认查询推流
     * startTime  起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。 最大查询跨度31天，最大查询周期1年。  若参数为空，默认查询7天数据。
     * endTime  结束时间。日期格式按照ISO8601表示法，并使用UTC时间。 格式为：YYYY-MM-DDThh:mm:ssZ。  若参数为空，默认为当前时间，最大查询跨度31天，最大查询周期1年。结束时间需大于起始时间。
     *
@@ -155,6 +164,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
             'region' => 'getRegion',
             'isp' => 'getIsp',
             'interval' => 'getInterval',
+            'type' => 'getType',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime'
     ];
@@ -202,6 +212,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
     const INTERVAL_300 = 300;
     const INTERVAL_3600 = 3600;
     const INTERVAL_86400 = 86400;
+    const TYPE_RELAY = 'RELAY';
     
 
     /**
@@ -215,6 +226,18 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
             self::INTERVAL_300,
             self::INTERVAL_3600,
             self::INTERVAL_86400,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_RELAY,
         ];
     }
 
@@ -240,6 +263,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['isp'] = isset($data['isp']) ? $data['isp'] : null;
         $this->container['interval'] = isset($data['interval']) ? $data['interval'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
     }
@@ -280,6 +304,20 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['interval']) && ($this->container['interval'] < 300)) {
                 $invalidProperties[] = "invalid value for 'interval', must be bigger than or equal to 300.";
+            }
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 10)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 1)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['startTime']) && (mb_strlen($this->container['startTime']) > 64)) {
                 $invalidProperties[] = "invalid value for 'startTime', the character length must be smaller than or equal to 64.";
@@ -448,6 +486,30 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
     public function setInterval($interval)
     {
         $this->container['interval'] = $interval;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  类型： - RELAY：转推 不填默认查询推流
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 类型： - RELAY：转推 不填默认查询推流
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

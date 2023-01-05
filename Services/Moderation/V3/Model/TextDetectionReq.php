@@ -23,13 +23,15 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
     * glossaryNames  检测时使用的自定义黑名单词库列表。
     * data  data
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'eventType' => 'string',
             'glossaryNames' => 'string[]',
-            'data' => '\HuaweiCloud\SDK\Moderation\V3\Model\TextDetectionDataReq'
+            'data' => '\HuaweiCloud\SDK\Moderation\V3\Model\TextDetectionDataReq',
+            'whiteGlossaryNames' => 'string[]'
     ];
 
     /**
@@ -37,13 +39,15 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
     * glossaryNames  检测时使用的自定义黑名单词库列表。
     * data  data
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'eventType' => null,
         'glossaryNames' => null,
-        'data' => null
+        'data' => null,
+        'whiteGlossaryNames' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
     * glossaryNames  检测时使用的自定义黑名单词库列表。
     * data  data
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'eventType' => 'event_type',
             'glossaryNames' => 'glossary_names',
-            'data' => 'data'
+            'data' => 'data',
+            'whiteGlossaryNames' => 'white_glossary_names'
     ];
 
     /**
@@ -86,13 +92,15 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
     * glossaryNames  检测时使用的自定义黑名单词库列表。
     * data  data
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
     *
     * @var string[]
     */
     protected static $setters = [
             'eventType' => 'setEventType',
             'glossaryNames' => 'setGlossaryNames',
-            'data' => 'setData'
+            'data' => 'setData',
+            'whiteGlossaryNames' => 'setWhiteGlossaryNames'
     ];
 
     /**
@@ -100,13 +108,15 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
     * glossaryNames  检测时使用的自定义黑名单词库列表。
     * data  data
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
     *
     * @var string[]
     */
     protected static $getters = [
             'eventType' => 'getEventType',
             'glossaryNames' => 'getGlossaryNames',
-            'data' => 'getData'
+            'data' => 'getData',
+            'whiteGlossaryNames' => 'getWhiteGlossaryNames'
     ];
 
     /**
@@ -170,6 +180,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
         $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
         $this->container['glossaryNames'] = isset($data['glossaryNames']) ? $data['glossaryNames'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['whiteGlossaryNames'] = isset($data['whiteGlossaryNames']) ? $data['whiteGlossaryNames'] : null;
     }
 
     /**
@@ -269,6 +280,30 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     public function setData($data)
     {
         $this->container['data'] = $data;
+        return $this;
+    }
+
+    /**
+    * Gets whiteGlossaryNames
+    *  检测时使用的自定义白名单词库列表。
+    *
+    * @return string[]|null
+    */
+    public function getWhiteGlossaryNames()
+    {
+        return $this->container['whiteGlossaryNames'];
+    }
+
+    /**
+    * Sets whiteGlossaryNames
+    *
+    * @param string[]|null $whiteGlossaryNames 检测时使用的自定义白名单词库列表。
+    *
+    * @return $this
+    */
+    public function setWhiteGlossaryNames($whiteGlossaryNames)
+    {
+        $this->container['whiteGlossaryNames'] = $whiteGlossaryNames;
         return $this;
     }
 

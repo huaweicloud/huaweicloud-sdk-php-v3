@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\Live\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateRetrievalResponse implements ModelInterface, ArrayAccess
+class ListUpStreamDetailResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,46 +17,42 @@ class CreateRetrievalResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateRetrievalResponse';
+    protected static $openAPIModelName = 'ListUpStreamDetailResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  找回请求ID。
-    * zoneName  域名名称。
-    * record  record
-    * status  状态，(PENDING,VERIFIED,CREATED,EXPIRED)
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * publishDomain  推流域名
+    * app  应用名
+    * stream  流名
+    * data  推流质量数据
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'zoneName' => 'string',
-            'record' => '\HuaweiCloud\SDK\Dns\V2\Model\RecordInfo',
-            'status' => 'string',
-            'createdAt' => 'string',
-            'updatedAt' => 'string'
+            'publishDomain' => 'string',
+            'app' => 'string',
+            'stream' => 'string',
+            'data' => '\HuaweiCloud\SDK\Live\V2\Model\UpStreamDetail[]',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  找回请求ID。
-    * zoneName  域名名称。
-    * record  record
-    * status  状态，(PENDING,VERIFIED,CREATED,EXPIRED)
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * publishDomain  推流域名
+    * app  应用名
+    * stream  流名
+    * data  推流质量数据
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'zoneName' => null,
-        'record' => null,
-        'status' => null,
-        'createdAt' => null,
-        'updatedAt' => null
+        'publishDomain' => null,
+        'app' => null,
+        'stream' => null,
+        'data' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -82,62 +78,56 @@ class CreateRetrievalResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  找回请求ID。
-    * zoneName  域名名称。
-    * record  record
-    * status  状态，(PENDING,VERIFIED,CREATED,EXPIRED)
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * publishDomain  推流域名
+    * app  应用名
+    * stream  流名
+    * data  推流质量数据
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'zoneName' => 'zone_name',
-            'record' => 'record',
-            'status' => 'status',
-            'createdAt' => 'created_at',
-            'updatedAt' => 'updated_at'
+            'publishDomain' => 'publish_domain',
+            'app' => 'app',
+            'stream' => 'stream',
+            'data' => 'data',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  找回请求ID。
-    * zoneName  域名名称。
-    * record  record
-    * status  状态，(PENDING,VERIFIED,CREATED,EXPIRED)
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * publishDomain  推流域名
+    * app  应用名
+    * stream  流名
+    * data  推流质量数据
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'zoneName' => 'setZoneName',
-            'record' => 'setRecord',
-            'status' => 'setStatus',
-            'createdAt' => 'setCreatedAt',
-            'updatedAt' => 'setUpdatedAt'
+            'publishDomain' => 'setPublishDomain',
+            'app' => 'setApp',
+            'stream' => 'setStream',
+            'data' => 'setData',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  找回请求ID。
-    * zoneName  域名名称。
-    * record  record
-    * status  状态，(PENDING,VERIFIED,CREATED,EXPIRED)
-    * createdAt  创建时间。
-    * updatedAt  更新时间。
+    * publishDomain  推流域名
+    * app  应用名
+    * stream  流名
+    * data  推流质量数据
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'zoneName' => 'getZoneName',
-            'record' => 'getRecord',
-            'status' => 'getStatus',
-            'createdAt' => 'getCreatedAt',
-            'updatedAt' => 'getUpdatedAt'
+            'publishDomain' => 'getPublishDomain',
+            'app' => 'getApp',
+            'stream' => 'getStream',
+            'data' => 'getData',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -198,12 +188,11 @@ class CreateRetrievalResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['zoneName'] = isset($data['zoneName']) ? $data['zoneName'] : null;
-        $this->container['record'] = isset($data['record']) ? $data['record'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
-        $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['publishDomain'] = isset($data['publishDomain']) ? $data['publishDomain'] : null;
+        $this->container['app'] = isset($data['app']) ? $data['app'] : null;
+        $this->container['stream'] = isset($data['stream']) ? $data['stream'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -214,6 +203,24 @@ class CreateRetrievalResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['publishDomain']) && (mb_strlen($this->container['publishDomain']) > 64)) {
+                $invalidProperties[] = "invalid value for 'publishDomain', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['publishDomain']) && (mb_strlen($this->container['publishDomain']) < 1)) {
+                $invalidProperties[] = "invalid value for 'publishDomain', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['app']) && (mb_strlen($this->container['app']) > 128)) {
+                $invalidProperties[] = "invalid value for 'app', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['app']) && (mb_strlen($this->container['app']) < 1)) {
+                $invalidProperties[] = "invalid value for 'app', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['stream']) && (mb_strlen($this->container['stream']) > 256)) {
+                $invalidProperties[] = "invalid value for 'stream', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['stream']) && (mb_strlen($this->container['stream']) < 1)) {
+                $invalidProperties[] = "invalid value for 'stream', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -229,146 +236,122 @@ class CreateRetrievalResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  找回请求ID。
+    * Gets publishDomain
+    *  推流域名
     *
     * @return string|null
     */
-    public function getId()
+    public function getPublishDomain()
     {
-        return $this->container['id'];
+        return $this->container['publishDomain'];
     }
 
     /**
-    * Sets id
+    * Sets publishDomain
     *
-    * @param string|null $id 找回请求ID。
+    * @param string|null $publishDomain 推流域名
     *
     * @return $this
     */
-    public function setId($id)
+    public function setPublishDomain($publishDomain)
     {
-        $this->container['id'] = $id;
+        $this->container['publishDomain'] = $publishDomain;
         return $this;
     }
 
     /**
-    * Gets zoneName
-    *  域名名称。
+    * Gets app
+    *  应用名
     *
     * @return string|null
     */
-    public function getZoneName()
+    public function getApp()
     {
-        return $this->container['zoneName'];
+        return $this->container['app'];
     }
 
     /**
-    * Sets zoneName
+    * Sets app
     *
-    * @param string|null $zoneName 域名名称。
+    * @param string|null $app 应用名
     *
     * @return $this
     */
-    public function setZoneName($zoneName)
+    public function setApp($app)
     {
-        $this->container['zoneName'] = $zoneName;
+        $this->container['app'] = $app;
         return $this;
     }
 
     /**
-    * Gets record
-    *  record
+    * Gets stream
+    *  流名
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\RecordInfo|null
+    * @return string|null
     */
-    public function getRecord()
+    public function getStream()
     {
-        return $this->container['record'];
+        return $this->container['stream'];
     }
 
     /**
-    * Sets record
+    * Sets stream
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\RecordInfo|null $record record
+    * @param string|null $stream 流名
     *
     * @return $this
     */
-    public function setRecord($record)
+    public function setStream($stream)
     {
-        $this->container['record'] = $record;
+        $this->container['stream'] = $stream;
         return $this;
     }
 
     /**
-    * Gets status
-    *  状态，(PENDING,VERIFIED,CREATED,EXPIRED)
+    * Gets data
+    *  推流质量数据
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Live\V2\Model\UpStreamDetail[]|null
     */
-    public function getStatus()
+    public function getData()
     {
-        return $this->container['status'];
+        return $this->container['data'];
     }
 
     /**
-    * Sets status
+    * Sets data
     *
-    * @param string|null $status 状态，(PENDING,VERIFIED,CREATED,EXPIRED)
+    * @param \HuaweiCloud\SDK\Live\V2\Model\UpStreamDetail[]|null $data 推流质量数据
     *
     * @return $this
     */
-    public function setStatus($status)
+    public function setData($data)
     {
-        $this->container['status'] = $status;
+        $this->container['data'] = $data;
         return $this;
     }
 
     /**
-    * Gets createdAt
-    *  创建时间。
+    * Gets xRequestId
+    *  xRequestId
     *
     * @return string|null
     */
-    public function getCreatedAt()
+    public function getXRequestId()
     {
-        return $this->container['createdAt'];
+        return $this->container['xRequestId'];
     }
 
     /**
-    * Sets createdAt
+    * Sets xRequestId
     *
-    * @param string|null $createdAt 创建时间。
+    * @param string|null $xRequestId xRequestId
     *
     * @return $this
     */
-    public function setCreatedAt($createdAt)
+    public function setXRequestId($xRequestId)
     {
-        $this->container['createdAt'] = $createdAt;
-        return $this;
-    }
-
-    /**
-    * Gets updatedAt
-    *  更新时间。
-    *
-    * @return string|null
-    */
-    public function getUpdatedAt()
-    {
-        return $this->container['updatedAt'];
-    }
-
-    /**
-    * Sets updatedAt
-    *
-    * @param string|null $updatedAt 更新时间。
-    *
-    * @return $this
-    */
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->container['updatedAt'] = $updatedAt;
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

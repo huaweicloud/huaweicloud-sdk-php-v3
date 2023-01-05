@@ -1335,6 +1335,9 @@ class VpcClient extends Client
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
         }
+        if ($localVarParams['securityGroups'] !== null) {
+            $queryParams['security_groups'] = $localVarParams['securityGroups'];
+        }
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }

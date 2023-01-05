@@ -32,7 +32,7 @@ class LiveClient extends Client
      * 
      * 最大查询跨度1天，最大查询周期90天。
      * 
-     * 支持查询当天，当前数据延时少于1分钟。
+     * 支持查询当天，当前数据延时少于5分钟。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -121,7 +121,13 @@ class LiveClient extends Client
     /**
      * 查询播放带宽趋势接口
      *
-     * 查询播放域名带宽数据。  最大查询跨度31天，最大查询周期一年。
+     * 查询播放域名带宽数据。
+     * 
+     * 如果不传入域名，则查询租户下所有播放域名的带宽数据。
+     * 
+     * 当查询租户级别带宽数据时，参数app、stream不生效。
+     * 
+     * 最大查询跨度31天，最大查询周期一年。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -179,6 +185,9 @@ class LiveClient extends Client
         if ($localVarParams['endTime'] !== null) {
             $queryParams['end_time'] = $localVarParams['endTime'];
         }
+        if ($localVarParams['serviceType'] !== null) {
+            $queryParams['service_type'] = $localVarParams['serviceType'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json;charset=utf-8', 'application/json']
@@ -210,7 +219,13 @@ class LiveClient extends Client
     /**
      * 查询播放带宽峰值接口
      *
-     * 查询指定时间范围内播放带宽峰值。  最大查询跨度31天，最大查询周期一年。
+     * 查询指定时间范围内播放带宽峰值。
+     * 
+     * 如果不传入域名，则查询租户下所有播放域名的带宽峰值。
+     * 
+     * 当查询租户级别带宽数据时，参数app、stream不生效。
+     * 
+     * 最大查询跨度31天，最大查询周期一年。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -262,6 +277,9 @@ class LiveClient extends Client
         if ($localVarParams['endTime'] !== null) {
             $queryParams['end_time'] = $localVarParams['endTime'];
         }
+        if ($localVarParams['serviceType'] !== null) {
+            $queryParams['service_type'] = $localVarParams['serviceType'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json;charset=utf-8', 'application/json']
@@ -293,7 +311,13 @@ class LiveClient extends Client
     /**
      * 查询播放流量趋势接口
      *
-     * 查询播放域名流量数据。  最大查询跨度31天，最大查询周期一年。
+     * 查询播放域名流量数据。
+     * 
+     * 如果不传入域名，则查询租户下所有播放域名的流量数据。
+     * 
+     * 当查询租户级别流量数据时，参数app、stream不生效。
+     * 
+     * 最大查询跨度31天，最大查询周期一年。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -348,6 +372,9 @@ class LiveClient extends Client
         if ($localVarParams['endTime'] !== null) {
             $queryParams['end_time'] = $localVarParams['endTime'];
         }
+        if ($localVarParams['serviceType'] !== null) {
+            $queryParams['service_type'] = $localVarParams['serviceType'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json;charset=utf-8', 'application/json']
@@ -379,7 +406,13 @@ class LiveClient extends Client
     /**
      * 查询播放流量汇总接口
      *
-     * 查询指定时间范围内流量汇总量。  最大查询跨度31天，最大查询周期一年。
+     * 查询指定时间范围内流量汇总量。
+     * 
+     * 如果不传入域名，则查询租户下所有播放域名的流量汇总量。
+     * 
+     * 当查询租户级别流量数据时，参数app、stream不生效。
+     * 
+     * 最大查询跨度31天，最大查询周期一年。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -430,6 +463,9 @@ class LiveClient extends Client
         }
         if ($localVarParams['endTime'] !== null) {
             $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['serviceType'] !== null) {
+            $queryParams['service_type'] = $localVarParams['serviceType'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -888,6 +924,9 @@ class LiveClient extends Client
         if ($localVarParams['endTime'] !== null) {
             $queryParams['end_time'] = $localVarParams['endTime'];
         }
+        if ($localVarParams['serviceType'] !== null) {
+            $queryParams['service_type'] = $localVarParams['serviceType'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json;charset=utf-8', 'application/json']
@@ -1101,6 +1140,9 @@ class LiveClient extends Client
         }
         if ($localVarParams['interval'] !== null) {
             $queryParams['interval'] = $localVarParams['interval'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
         }
         if ($localVarParams['startTime'] !== null) {
             $queryParams['start_time'] = $localVarParams['startTime'];
@@ -1368,6 +1410,84 @@ class LiveClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListSingleStreamFramerateResponse',
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListSingleStreamFramerateRequest');
+    }
+
+    /**
+     * 查询CDN上行推流质量数据接口
+     *
+     * 查询CDN上行推流质量数据。
+     * 
+     * 最大查询跨度1天，最大查询周期7天。
+     * 
+     * 返回的CDN上行推流质量数据列表粒度为1分钟。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listUpStreamDetail($request)
+    {
+        return $this->listUpStreamDetailWithHttpInfo($request);
+    }
+
+    public function listUpStreamDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/stats/up-stream/detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['publishDomain'] !== null) {
+            $queryParams['publish_domain'] = $localVarParams['publishDomain'];
+        }
+        if ($localVarParams['app'] !== null) {
+            $queryParams['app'] = $localVarParams['app'];
+        }
+        if ($localVarParams['stream'] !== null) {
+            $queryParams['stream'] = $localVarParams['stream'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListUpStreamDetailResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListUpStreamDetailRequest');
     }
 
     protected function callApi(

@@ -21,7 +21,7 @@ class ShowRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * zoneId  所属zone的ID。
-    * recordsetId  recordsetId
+    * recordsetId  待查询recordset的ID信息。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ShowRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * zoneId  所属zone的ID。
-    * recordsetId  recordsetId
+    * recordsetId  待查询recordset的ID信息。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * zoneId  所属zone的ID。
-    * recordsetId  recordsetId
+    * recordsetId  待查询recordset的ID信息。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ShowRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * zoneId  所属zone的ID。
-    * recordsetId  recordsetId
+    * recordsetId  待查询recordset的ID信息。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ShowRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * zoneId  所属zone的ID。
-    * recordsetId  recordsetId
+    * recordsetId  待查询recordset的ID信息。
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class ShowRecordSetWithLineRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets recordsetId
-    *  recordsetId
+    *  待查询recordset的ID信息。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ShowRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets recordsetId
     *
-    * @param string $recordsetId recordsetId
+    * @param string $recordsetId 待查询recordset的ID信息。
     *
     * @return $this
     */

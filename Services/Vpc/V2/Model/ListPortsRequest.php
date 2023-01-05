@@ -30,6 +30,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * deviceId  按照device_id过滤查询
     * deviceOwner  按照device_owner过滤查询
     * status  功能说明：按照status过滤查询  取值范围：ACTIVE、BUILD、DOWN
+    * securityGroups  按照安全组ID列表过滤查询
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
@@ -47,8 +48,9 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'deviceId' => 'string',
             'deviceOwner' => 'string',
             'status' => 'string',
+            'securityGroups' => 'string[]',
             'marker' => 'string',
-            'fixedIps' => 'string',
+            'fixedIps' => 'string[]',
             'enterpriseProjectId' => 'string'
     ];
 
@@ -64,6 +66,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * deviceId  按照device_id过滤查询
     * deviceOwner  按照device_owner过滤查询
     * status  功能说明：按照status过滤查询  取值范围：ACTIVE、BUILD、DOWN
+    * securityGroups  按照安全组ID列表过滤查询
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
@@ -81,6 +84,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
         'deviceId' => null,
         'deviceOwner' => null,
         'status' => null,
+        'securityGroups' => null,
         'marker' => null,
         'fixedIps' => null,
         'enterpriseProjectId' => null
@@ -119,6 +123,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * deviceId  按照device_id过滤查询
     * deviceOwner  按照device_owner过滤查询
     * status  功能说明：按照status过滤查询  取值范围：ACTIVE、BUILD、DOWN
+    * securityGroups  按照安全组ID列表过滤查询
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
@@ -136,6 +141,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'deviceId' => 'device_id',
             'deviceOwner' => 'device_owner',
             'status' => 'status',
+            'securityGroups' => 'security_groups',
             'marker' => 'marker',
             'fixedIps' => 'fixed_ips',
             'enterpriseProjectId' => 'enterprise_project_id'
@@ -153,6 +159,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * deviceId  按照device_id过滤查询
     * deviceOwner  按照device_owner过滤查询
     * status  功能说明：按照status过滤查询  取值范围：ACTIVE、BUILD、DOWN
+    * securityGroups  按照安全组ID列表过滤查询
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
@@ -170,6 +177,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'deviceId' => 'setDeviceId',
             'deviceOwner' => 'setDeviceOwner',
             'status' => 'setStatus',
+            'securityGroups' => 'setSecurityGroups',
             'marker' => 'setMarker',
             'fixedIps' => 'setFixedIps',
             'enterpriseProjectId' => 'setEnterpriseProjectId'
@@ -187,6 +195,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * deviceId  按照device_id过滤查询
     * deviceOwner  按照device_owner过滤查询
     * status  功能说明：按照status过滤查询  取值范围：ACTIVE、BUILD、DOWN
+    * securityGroups  按照安全组ID列表过滤查询
     * marker  分页查询起始的资源ID，为空时查询第一页
     * fixedIps  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     * enterpriseProjectId  功能说明：企业项目ID，用于基于企业项目的权限管理。  取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。  若需要查询当前用户所有企业项目绑定的端口，请传参all_granted_eps。
@@ -204,6 +213,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'deviceId' => 'getDeviceId',
             'deviceOwner' => 'getDeviceOwner',
             'status' => 'getStatus',
+            'securityGroups' => 'getSecurityGroups',
             'marker' => 'getMarker',
             'fixedIps' => 'getFixedIps',
             'enterpriseProjectId' => 'getEnterpriseProjectId'
@@ -313,6 +323,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
         $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : null;
         $this->container['deviceOwner'] = isset($data['deviceOwner']) ? $data['deviceOwner'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['securityGroups'] = isset($data['securityGroups']) ? $data['securityGroups'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['fixedIps'] = isset($data['fixedIps']) ? $data['fixedIps'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
@@ -621,6 +632,30 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets securityGroups
+    *  按照安全组ID列表过滤查询
+    *
+    * @return string[]|null
+    */
+    public function getSecurityGroups()
+    {
+        return $this->container['securityGroups'];
+    }
+
+    /**
+    * Sets securityGroups
+    *
+    * @param string[]|null $securityGroups 按照安全组ID列表过滤查询
+    *
+    * @return $this
+    */
+    public function setSecurityGroups($securityGroups)
+    {
+        $this->container['securityGroups'] = $securityGroups;
+        return $this;
+    }
+
+    /**
     * Gets marker
     *  分页查询起始的资源ID，为空时查询第一页
     *
@@ -648,7 +683,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * Gets fixedIps
     *  按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getFixedIps()
     {
@@ -658,7 +693,7 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fixedIps
     *
-    * @param string|null $fixedIps 按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
+    * @param string[]|null $fixedIps 按照fixed_ips=ip_address或者fixed_ips=subnet_id过滤查询
     *
     * @return $this
     */

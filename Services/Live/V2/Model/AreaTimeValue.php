@@ -20,7 +20,7 @@ class AreaTimeValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  各个大区下的具体省份、区域、国家的名称。  具体取值请参考[国家名称缩写](vod_08_0172.xml)和[省份名称缩写](live_03_0043.xml)。
+    * name  各个大区下的具体省份、区域、国家的名称。  中国内地返回结果为省份/直辖市的中文名称，比如：广东、上海； 海外大区下的地区/国家对应关系请参考[地区/国家代码对照表](live_03_0049.xml)。
     * data  当前时间返回指定指标的值
     *
     * @var string[]
@@ -32,7 +32,7 @@ class AreaTimeValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  各个大区下的具体省份、区域、国家的名称。  具体取值请参考[国家名称缩写](vod_08_0172.xml)和[省份名称缩写](live_03_0043.xml)。
+    * name  各个大区下的具体省份、区域、国家的名称。  中国内地返回结果为省份/直辖市的中文名称，比如：广东、上海； 海外大区下的地区/国家对应关系请参考[地区/国家代码对照表](live_03_0049.xml)。
     * data  当前时间返回指定指标的值
     *
     * @var string[]
@@ -65,7 +65,7 @@ class AreaTimeValue implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  各个大区下的具体省份、区域、国家的名称。  具体取值请参考[国家名称缩写](vod_08_0172.xml)和[省份名称缩写](live_03_0043.xml)。
+    * name  各个大区下的具体省份、区域、国家的名称。  中国内地返回结果为省份/直辖市的中文名称，比如：广东、上海； 海外大区下的地区/国家对应关系请参考[地区/国家代码对照表](live_03_0049.xml)。
     * data  当前时间返回指定指标的值
     *
     * @var string[]
@@ -77,7 +77,7 @@ class AreaTimeValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  各个大区下的具体省份、区域、国家的名称。  具体取值请参考[国家名称缩写](vod_08_0172.xml)和[省份名称缩写](live_03_0043.xml)。
+    * name  各个大区下的具体省份、区域、国家的名称。  中国内地返回结果为省份/直辖市的中文名称，比如：广东、上海； 海外大区下的地区/国家对应关系请参考[地区/国家代码对照表](live_03_0049.xml)。
     * data  当前时间返回指定指标的值
     *
     * @var string[]
@@ -89,7 +89,7 @@ class AreaTimeValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  各个大区下的具体省份、区域、国家的名称。  具体取值请参考[国家名称缩写](vod_08_0172.xml)和[省份名称缩写](live_03_0043.xml)。
+    * name  各个大区下的具体省份、区域、国家的名称。  中国内地返回结果为省份/直辖市的中文名称，比如：广东、上海； 海外大区下的地区/国家对应关系请参考[地区/国家代码对照表](live_03_0049.xml)。
     * data  当前时间返回指定指标的值
     *
     * @var string[]
@@ -197,7 +197,7 @@ class AreaTimeValue implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  各个大区下的具体省份、区域、国家的名称。  具体取值请参考[国家名称缩写](vod_08_0172.xml)和[省份名称缩写](live_03_0043.xml)。
+    *  各个大区下的具体省份、区域、国家的名称。  中国内地返回结果为省份/直辖市的中文名称，比如：广东、上海； 海外大区下的地区/国家对应关系请参考[地区/国家代码对照表](live_03_0049.xml)。
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class AreaTimeValue implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 各个大区下的具体省份、区域、国家的名称。  具体取值请参考[国家名称缩写](vod_08_0172.xml)和[省份名称缩写](live_03_0043.xml)。
+    * @param string $name 各个大区下的具体省份、区域、国家的名称。  中国内地返回结果为省份/直辖市的中文名称，比如：广东、上海； 海外大区下的地区/国家对应关系请参考[地区/国家代码对照表](live_03_0049.xml)。
     *
     * @return $this
     */

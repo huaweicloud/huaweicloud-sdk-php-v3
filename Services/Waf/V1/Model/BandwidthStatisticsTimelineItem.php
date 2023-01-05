@@ -21,7 +21,7 @@ class BandwidthStatisticsTimelineItem implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * key  键值，包括带宽（BANDWIDTH）、入带宽（IN_BANDWIDTH）以及出带宽（OUT_BANDWIDTH）
-    * timeline  对应键值的时间线统计数据
+    * timeline  对应键值的时间线统计数据，包含两个字段，time字段值为时间点；num字段为time对应时间点与前一时间点间隔内的统计数值
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class BandwidthStatisticsTimelineItem implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * key  键值，包括带宽（BANDWIDTH）、入带宽（IN_BANDWIDTH）以及出带宽（OUT_BANDWIDTH）
-    * timeline  对应键值的时间线统计数据
+    * timeline  对应键值的时间线统计数据，包含两个字段，time字段值为时间点；num字段为time对应时间点与前一时间点间隔内的统计数值
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class BandwidthStatisticsTimelineItem implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * key  键值，包括带宽（BANDWIDTH）、入带宽（IN_BANDWIDTH）以及出带宽（OUT_BANDWIDTH）
-    * timeline  对应键值的时间线统计数据
+    * timeline  对应键值的时间线统计数据，包含两个字段，time字段值为时间点；num字段为time对应时间点与前一时间点间隔内的统计数值
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class BandwidthStatisticsTimelineItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * key  键值，包括带宽（BANDWIDTH）、入带宽（IN_BANDWIDTH）以及出带宽（OUT_BANDWIDTH）
-    * timeline  对应键值的时间线统计数据
+    * timeline  对应键值的时间线统计数据，包含两个字段，time字段值为时间点；num字段为time对应时间点与前一时间点间隔内的统计数值
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class BandwidthStatisticsTimelineItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * key  键值，包括带宽（BANDWIDTH）、入带宽（IN_BANDWIDTH）以及出带宽（OUT_BANDWIDTH）
-    * timeline  对应键值的时间线统计数据
+    * timeline  对应键值的时间线统计数据，包含两个字段，time字段值为时间点；num字段为time对应时间点与前一时间点间隔内的统计数值
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class BandwidthStatisticsTimelineItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeline
-    *  对应键值的时间线统计数据
+    *  对应键值的时间线统计数据，包含两个字段，time字段值为时间点；num字段为time对应时间点与前一时间点间隔内的统计数值
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\TimeLineItem[]|null
     */
@@ -221,7 +221,7 @@ class BandwidthStatisticsTimelineItem implements ModelInterface, ArrayAccess
     /**
     * Sets timeline
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\TimeLineItem[]|null $timeline 对应键值的时间线统计数据
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\TimeLineItem[]|null $timeline 对应键值的时间线统计数据，包含两个字段，time字段值为时间点；num字段为time对应时间点与前一时间点间隔内的统计数值
     *
     * @return $this
     */

@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\Dcs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BatchDeletePtrRecordsRequest implements ModelInterface, ArrayAccess
+class ListConfigHistoriesResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,26 +17,30 @@ class BatchDeletePtrRecordsRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BatchDeletePtrRecordsRequest';
+    protected static $openAPIModelName = 'ListConfigHistoriesResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * historyNum  实例参数修改记录个数
+    * histories  实力参数修改记录详情
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\DeletePtrRecordReq'
+            'historyNum' => 'int',
+            'histories' => '\HuaweiCloud\SDK\Dcs\V2\Model\HistoryInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * historyNum  实例参数修改记录个数
+    * histories  实力参数修改记录详情
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'historyNum' => 'int32',
+        'histories' => null
     ];
 
     /**
@@ -61,32 +66,38 @@ class BatchDeletePtrRecordsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * historyNum  实例参数修改记录个数
+    * histories  实力参数修改记录详情
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'historyNum' => 'history_num',
+            'histories' => 'histories'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * historyNum  实例参数修改记录个数
+    * histories  实力参数修改记录详情
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'historyNum' => 'setHistoryNum',
+            'histories' => 'setHistories'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * historyNum  实例参数修改记录个数
+    * histories  实力参数修改记录详情
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'historyNum' => 'getHistoryNum',
+            'histories' => 'getHistories'
     ];
 
     /**
@@ -147,7 +158,8 @@ class BatchDeletePtrRecordsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['historyNum'] = isset($data['historyNum']) ? $data['historyNum'] : null;
+        $this->container['histories'] = isset($data['histories']) ? $data['histories'] : null;
     }
 
     /**
@@ -173,26 +185,50 @@ class BatchDeletePtrRecordsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets historyNum
+    *  实例参数修改记录个数
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\DeletePtrRecordReq|null
+    * @return int|null
     */
-    public function getBody()
+    public function getHistoryNum()
     {
-        return $this->container['body'];
+        return $this->container['historyNum'];
     }
 
     /**
-    * Sets body
+    * Sets historyNum
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\DeletePtrRecordReq|null $body body
+    * @param int|null $historyNum 实例参数修改记录个数
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setHistoryNum($historyNum)
     {
-        $this->container['body'] = $body;
+        $this->container['historyNum'] = $historyNum;
+        return $this;
+    }
+
+    /**
+    * Gets histories
+    *  实力参数修改记录详情
+    *
+    * @return \HuaweiCloud\SDK\Dcs\V2\Model\HistoryInfo[]|null
+    */
+    public function getHistories()
+    {
+        return $this->container['histories'];
+    }
+
+    /**
+    * Sets histories
+    *
+    * @param \HuaweiCloud\SDK\Dcs\V2\Model\HistoryInfo[]|null $histories 实力参数修改记录详情
+    *
+    * @return $this
+    */
+    public function setHistories($histories)
+    {
+        $this->container['histories'] = $histories;
         return $this;
     }
 
