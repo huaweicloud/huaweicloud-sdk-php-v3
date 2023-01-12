@@ -69,6 +69,12 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
     * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
+    * subServiceTypeCode  该字段为预留字段。
+    * subServiceTypeName  该字段为预留字段。
+    * subResourceTypeCode  该字段为预留字段。
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -121,7 +127,13 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'debtAmount' => 'double',
             'adjustmentAmount' => 'double',
             'measureId' => 'int',
-            'formula' => 'string'
+            'formula' => 'string',
+            'subServiceTypeCode' => 'string',
+            'subServiceTypeName' => 'string',
+            'subResourceTypeCode' => 'string',
+            'subResourceTypeName' => 'string',
+            'subResourceId' => 'string',
+            'subResourceName' => 'string'
     ];
 
     /**
@@ -175,6 +187,12 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
     * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
+    * subServiceTypeCode  该字段为预留字段。
+    * subServiceTypeName  该字段为预留字段。
+    * subResourceTypeCode  该字段为预留字段。
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -227,7 +245,13 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         'debtAmount' => 'double',
         'adjustmentAmount' => 'double',
         'measureId' => 'int32',
-        'formula' => null
+        'formula' => null,
+        'subServiceTypeCode' => null,
+        'subServiceTypeName' => null,
+        'subResourceTypeCode' => null,
+        'subResourceTypeName' => null,
+        'subResourceId' => null,
+        'subResourceName' => null
     ];
 
     /**
@@ -302,6 +326,12 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
     * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
+    * subServiceTypeCode  该字段为预留字段。
+    * subServiceTypeName  该字段为预留字段。
+    * subResourceTypeCode  该字段为预留字段。
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -354,7 +384,13 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'debtAmount' => 'debt_amount',
             'adjustmentAmount' => 'adjustment_amount',
             'measureId' => 'measure_id',
-            'formula' => 'formula'
+            'formula' => 'formula',
+            'subServiceTypeCode' => 'sub_service_type_code',
+            'subServiceTypeName' => 'sub_service_type_name',
+            'subResourceTypeCode' => 'sub_resource_type_code',
+            'subResourceTypeName' => 'sub_resource_type_name',
+            'subResourceId' => 'sub_resource_id',
+            'subResourceName' => 'sub_resource_name'
     ];
 
     /**
@@ -408,6 +444,12 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
     * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
+    * subServiceTypeCode  该字段为预留字段。
+    * subServiceTypeName  该字段为预留字段。
+    * subResourceTypeCode  该字段为预留字段。
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -460,7 +502,13 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'debtAmount' => 'setDebtAmount',
             'adjustmentAmount' => 'setAdjustmentAmount',
             'measureId' => 'setMeasureId',
-            'formula' => 'setFormula'
+            'formula' => 'setFormula',
+            'subServiceTypeCode' => 'setSubServiceTypeCode',
+            'subServiceTypeName' => 'setSubServiceTypeName',
+            'subResourceTypeCode' => 'setSubResourceTypeCode',
+            'subResourceTypeName' => 'setSubResourceTypeName',
+            'subResourceId' => 'setSubResourceId',
+            'subResourceName' => 'setSubResourceName'
     ];
 
     /**
@@ -514,6 +562,12 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
     * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
+    * subServiceTypeCode  该字段为预留字段。
+    * subServiceTypeName  该字段为预留字段。
+    * subResourceTypeCode  该字段为预留字段。
+    * subResourceTypeName  该字段为预留字段。
+    * subResourceId  该字段为预留字段。
+    * subResourceName  该字段为预留字段。
     *
     * @var string[]
     */
@@ -566,7 +620,13 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'debtAmount' => 'getDebtAmount',
             'adjustmentAmount' => 'getAdjustmentAmount',
             'measureId' => 'getMeasureId',
-            'formula' => 'getFormula'
+            'formula' => 'getFormula',
+            'subServiceTypeCode' => 'getSubServiceTypeCode',
+            'subServiceTypeName' => 'getSubServiceTypeName',
+            'subResourceTypeCode' => 'getSubResourceTypeCode',
+            'subResourceTypeName' => 'getSubResourceTypeName',
+            'subResourceId' => 'getSubResourceId',
+            'subResourceName' => 'getSubResourceName'
     ];
 
     /**
@@ -676,6 +736,12 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         $this->container['adjustmentAmount'] = isset($data['adjustmentAmount']) ? $data['adjustmentAmount'] : null;
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
         $this->container['formula'] = isset($data['formula']) ? $data['formula'] : null;
+        $this->container['subServiceTypeCode'] = isset($data['subServiceTypeCode']) ? $data['subServiceTypeCode'] : null;
+        $this->container['subServiceTypeName'] = isset($data['subServiceTypeName']) ? $data['subServiceTypeName'] : null;
+        $this->container['subResourceTypeCode'] = isset($data['subResourceTypeCode']) ? $data['subResourceTypeCode'] : null;
+        $this->container['subResourceTypeName'] = isset($data['subResourceTypeName']) ? $data['subResourceTypeName'] : null;
+        $this->container['subResourceId'] = isset($data['subResourceId']) ? $data['subResourceId'] : null;
+        $this->container['subResourceName'] = isset($data['subResourceName']) ? $data['subResourceName'] : null;
     }
 
     /**
@@ -1873,6 +1939,150 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     public function setFormula($formula)
     {
         $this->container['formula'] = $formula;
+        return $this;
+    }
+
+    /**
+    * Gets subServiceTypeCode
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubServiceTypeCode()
+    {
+        return $this->container['subServiceTypeCode'];
+    }
+
+    /**
+    * Sets subServiceTypeCode
+    *
+    * @param string|null $subServiceTypeCode 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubServiceTypeCode($subServiceTypeCode)
+    {
+        $this->container['subServiceTypeCode'] = $subServiceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets subServiceTypeName
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubServiceTypeName()
+    {
+        return $this->container['subServiceTypeName'];
+    }
+
+    /**
+    * Sets subServiceTypeName
+    *
+    * @param string|null $subServiceTypeName 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubServiceTypeName($subServiceTypeName)
+    {
+        $this->container['subServiceTypeName'] = $subServiceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets subResourceTypeCode
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubResourceTypeCode()
+    {
+        return $this->container['subResourceTypeCode'];
+    }
+
+    /**
+    * Sets subResourceTypeCode
+    *
+    * @param string|null $subResourceTypeCode 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubResourceTypeCode($subResourceTypeCode)
+    {
+        $this->container['subResourceTypeCode'] = $subResourceTypeCode;
+        return $this;
+    }
+
+    /**
+    * Gets subResourceTypeName
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubResourceTypeName()
+    {
+        return $this->container['subResourceTypeName'];
+    }
+
+    /**
+    * Sets subResourceTypeName
+    *
+    * @param string|null $subResourceTypeName 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubResourceTypeName($subResourceTypeName)
+    {
+        $this->container['subResourceTypeName'] = $subResourceTypeName;
+        return $this;
+    }
+
+    /**
+    * Gets subResourceId
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubResourceId()
+    {
+        return $this->container['subResourceId'];
+    }
+
+    /**
+    * Sets subResourceId
+    *
+    * @param string|null $subResourceId 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubResourceId($subResourceId)
+    {
+        $this->container['subResourceId'] = $subResourceId;
+        return $this;
+    }
+
+    /**
+    * Gets subResourceName
+    *  该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getSubResourceName()
+    {
+        return $this->container['subResourceName'];
+    }
+
+    /**
+    * Sets subResourceName
+    *
+    * @param string|null $subResourceName 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setSubResourceName($subResourceName)
+    {
+        $this->container['subResourceName'] = $subResourceName;
         return $this;
     }
 

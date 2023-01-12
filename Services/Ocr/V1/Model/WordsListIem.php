@@ -23,13 +23,15 @@ class WordsListIem implements ModelInterface, ArrayAccess
     * words  文字块识别结果。
     * confidence  字段的平均置信度，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。置信度由算法给出，不直接等价于对应字段的准确率。
     * location  文字块位置信息，列表形式，分别表示文字块4个顶点的x, y坐标;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * charList  单元格内文字段列表。输出顺序从左到右，从上到下。仅当入参\"return_text_location\"和\"return_char_location\"同时为true时存在。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'words' => 'string',
             'confidence' => 'float',
-            'location' => 'int[][]'
+            'location' => 'int[][]',
+            'charList' => '\HuaweiCloud\SDK\Ocr\V1\Model\CharListIem[]'
     ];
 
     /**
@@ -37,13 +39,15 @@ class WordsListIem implements ModelInterface, ArrayAccess
     * words  文字块识别结果。
     * confidence  字段的平均置信度，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。置信度由算法给出，不直接等价于对应字段的准确率。
     * location  文字块位置信息，列表形式，分别表示文字块4个顶点的x, y坐标;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * charList  单元格内文字段列表。输出顺序从左到右，从上到下。仅当入参\"return_text_location\"和\"return_char_location\"同时为true时存在。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'words' => null,
         'confidence' => 'float',
-        'location' => 'int32'
+        'location' => 'int32',
+        'charList' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class WordsListIem implements ModelInterface, ArrayAccess
     * words  文字块识别结果。
     * confidence  字段的平均置信度，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。置信度由算法给出，不直接等价于对应字段的准确率。
     * location  文字块位置信息，列表形式，分别表示文字块4个顶点的x, y坐标;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * charList  单元格内文字段列表。输出顺序从左到右，从上到下。仅当入参\"return_text_location\"和\"return_char_location\"同时为true时存在。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'words' => 'words',
             'confidence' => 'confidence',
-            'location' => 'location'
+            'location' => 'location',
+            'charList' => 'char_list'
     ];
 
     /**
@@ -86,13 +92,15 @@ class WordsListIem implements ModelInterface, ArrayAccess
     * words  文字块识别结果。
     * confidence  字段的平均置信度，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。置信度由算法给出，不直接等价于对应字段的准确率。
     * location  文字块位置信息，列表形式，分别表示文字块4个顶点的x, y坐标;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * charList  单元格内文字段列表。输出顺序从左到右，从上到下。仅当入参\"return_text_location\"和\"return_char_location\"同时为true时存在。
     *
     * @var string[]
     */
     protected static $setters = [
             'words' => 'setWords',
             'confidence' => 'setConfidence',
-            'location' => 'setLocation'
+            'location' => 'setLocation',
+            'charList' => 'setCharList'
     ];
 
     /**
@@ -100,13 +108,15 @@ class WordsListIem implements ModelInterface, ArrayAccess
     * words  文字块识别结果。
     * confidence  字段的平均置信度，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。置信度由算法给出，不直接等价于对应字段的准确率。
     * location  文字块位置信息，列表形式，分别表示文字块4个顶点的x, y坐标;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * charList  单元格内文字段列表。输出顺序从左到右，从上到下。仅当入参\"return_text_location\"和\"return_char_location\"同时为true时存在。
     *
     * @var string[]
     */
     protected static $getters = [
             'words' => 'getWords',
             'confidence' => 'getConfidence',
-            'location' => 'getLocation'
+            'location' => 'getLocation',
+            'charList' => 'getCharList'
     ];
 
     /**
@@ -170,6 +180,7 @@ class WordsListIem implements ModelInterface, ArrayAccess
         $this->container['words'] = isset($data['words']) ? $data['words'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
+        $this->container['charList'] = isset($data['charList']) ? $data['charList'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class WordsListIem implements ModelInterface, ArrayAccess
     public function setLocation($location)
     {
         $this->container['location'] = $location;
+        return $this;
+    }
+
+    /**
+    * Gets charList
+    *  单元格内文字段列表。输出顺序从左到右，从上到下。仅当入参\"return_text_location\"和\"return_char_location\"同时为true时存在。
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\CharListIem[]|null
+    */
+    public function getCharList()
+    {
+        return $this->container['charList'];
+    }
+
+    /**
+    * Sets charList
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\CharListIem[]|null $charList 单元格内文字段列表。输出顺序从左到右，从上到下。仅当入参\"return_text_location\"和\"return_char_location\"同时为true时存在。
+    *
+    * @return $this
+    */
+    public function setCharList($charList)
+    {
+        $this->container['charList'] = $charList;
         return $this;
     }
 

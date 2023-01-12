@@ -21,8 +21,8 @@ class PcrTestRecordRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * image  图像数据，base64编码，图片尺寸不小于15×15像素，最长边不超过8192像素，支持JPG/PNG/BMP/TIFF格式。
-    * url  与image二选一  图片的URL路径，目前仅支持华为云上OBS提供的匿名公开授权访问的URL以及公网URL。
-    * detectDirection  校正图片的倾斜角度开关，可选值如下所示：  - true：校正图片的倾斜角度  - false：不校正图片的倾斜角度  支持任意角度的校正，未传入该参数时默认为“false”。
+    * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/intl/zh-cn/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据
+    * detectDirection  校正图片的倾斜角度开关，可选值如下所示： - true：校正图片的倾斜角度 - false：不校正图片的倾斜角度  支持任意角度的校正，未传入该参数时默认为“false”。
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class PcrTestRecordRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * image  图像数据，base64编码，图片尺寸不小于15×15像素，最长边不超过8192像素，支持JPG/PNG/BMP/TIFF格式。
-    * url  与image二选一  图片的URL路径，目前仅支持华为云上OBS提供的匿名公开授权访问的URL以及公网URL。
-    * detectDirection  校正图片的倾斜角度开关，可选值如下所示：  - true：校正图片的倾斜角度  - false：不校正图片的倾斜角度  支持任意角度的校正，未传入该参数时默认为“false”。
+    * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/intl/zh-cn/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据
+    * detectDirection  校正图片的倾斜角度开关，可选值如下所示： - true：校正图片的倾斜角度 - false：不校正图片的倾斜角度  支持任意角度的校正，未传入该参数时默认为“false”。
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class PcrTestRecordRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * image  图像数据，base64编码，图片尺寸不小于15×15像素，最长边不超过8192像素，支持JPG/PNG/BMP/TIFF格式。
-    * url  与image二选一  图片的URL路径，目前仅支持华为云上OBS提供的匿名公开授权访问的URL以及公网URL。
-    * detectDirection  校正图片的倾斜角度开关，可选值如下所示：  - true：校正图片的倾斜角度  - false：不校正图片的倾斜角度  支持任意角度的校正，未传入该参数时默认为“false”。
+    * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/intl/zh-cn/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据
+    * detectDirection  校正图片的倾斜角度开关，可选值如下所示： - true：校正图片的倾斜角度 - false：不校正图片的倾斜角度  支持任意角度的校正，未传入该参数时默认为“false”。
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class PcrTestRecordRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * image  图像数据，base64编码，图片尺寸不小于15×15像素，最长边不超过8192像素，支持JPG/PNG/BMP/TIFF格式。
-    * url  与image二选一  图片的URL路径，目前仅支持华为云上OBS提供的匿名公开授权访问的URL以及公网URL。
-    * detectDirection  校正图片的倾斜角度开关，可选值如下所示：  - true：校正图片的倾斜角度  - false：不校正图片的倾斜角度  支持任意角度的校正，未传入该参数时默认为“false”。
+    * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/intl/zh-cn/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据
+    * detectDirection  校正图片的倾斜角度开关，可选值如下所示： - true：校正图片的倾斜角度 - false：不校正图片的倾斜角度  支持任意角度的校正，未传入该参数时默认为“false”。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class PcrTestRecordRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * image  图像数据，base64编码，图片尺寸不小于15×15像素，最长边不超过8192像素，支持JPG/PNG/BMP/TIFF格式。
-    * url  与image二选一  图片的URL路径，目前仅支持华为云上OBS提供的匿名公开授权访问的URL以及公网URL。
-    * detectDirection  校正图片的倾斜角度开关，可选值如下所示：  - true：校正图片的倾斜角度  - false：不校正图片的倾斜角度  支持任意角度的校正，未传入该参数时默认为“false”。
+    * url  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/intl/zh-cn/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据
+    * detectDirection  校正图片的倾斜角度开关，可选值如下所示： - true：校正图片的倾斜角度 - false：不校正图片的倾斜角度  支持任意角度的校正，未传入该参数时默认为“false”。
     *
     * @var string[]
     */
@@ -220,7 +220,7 @@ class PcrTestRecordRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  与image二选一  图片的URL路径，目前仅支持华为云上OBS提供的匿名公开授权访问的URL以及公网URL。
+    *  与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/intl/zh-cn/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class PcrTestRecordRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string|null $url 与image二选一  图片的URL路径，目前仅支持华为云上OBS提供的匿名公开授权访问的URL以及公网URL。
+    * @param string|null $url 与image二选一 图片的URL路径，目前支持： - 公网http/https url - OBS提供的url，使用OBS数据需要进行授权。包括对服务授权、临时授权、匿名公开授权，详情参见[配置OBS访问权限](https://support.huaweicloud.com/intl/zh-cn/api-ocr/ocr_03_0132.html)。 > 说明： - 接口响应时间依赖于图片的下载时间，如果图片下载时间过长，会返回接口调用失败。 - 请保证被检测图片所在的存储服务稳定可靠，推荐使用OBS服务存储图片数据
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class PcrTestRecordRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets detectDirection
-    *  校正图片的倾斜角度开关，可选值如下所示：  - true：校正图片的倾斜角度  - false：不校正图片的倾斜角度  支持任意角度的校正，未传入该参数时默认为“false”。
+    *  校正图片的倾斜角度开关，可选值如下所示： - true：校正图片的倾斜角度 - false：不校正图片的倾斜角度  支持任意角度的校正，未传入该参数时默认为“false”。
     *
     * @return bool|null
     */
@@ -256,7 +256,7 @@ class PcrTestRecordRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets detectDirection
     *
-    * @param bool|null $detectDirection 校正图片的倾斜角度开关，可选值如下所示：  - true：校正图片的倾斜角度  - false：不校正图片的倾斜角度  支持任意角度的校正，未传入该参数时默认为“false”。
+    * @param bool|null $detectDirection 校正图片的倾斜角度开关，可选值如下所示： - true：校正图片的倾斜角度 - false：不校正图片的倾斜角度  支持任意角度的校正，未传入该参数时默认为“false”。
     *
     * @return $this
     */

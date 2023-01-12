@@ -169,12 +169,18 @@ class FilterV2 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['operator']) && ($this->container['operator'] > 1)) {
+        if ($this->container['operator'] === null) {
+            $invalidProperties[] = "'operator' can't be null";
+        }
+            if (($this->container['operator'] > 1)) {
                 $invalidProperties[] = "invalid value for 'operator', must be smaller than or equal to 1.";
             }
-            if (!is_null($this->container['operator']) && ($this->container['operator'] < 0)) {
+            if (($this->container['operator'] < 0)) {
                 $invalidProperties[] = "invalid value for 'operator', must be bigger than or equal to 0.";
             }
+        if ($this->container['filterFactor'] === null) {
+            $invalidProperties[] = "'filterFactor' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -193,7 +199,7 @@ class FilterV2 implements ModelInterface, ArrayAccess
     * Gets operator
     *  运算符。0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。
     *
-    * @return int|null
+    * @return int
     */
     public function getOperator()
     {
@@ -203,7 +209,7 @@ class FilterV2 implements ModelInterface, ArrayAccess
     /**
     * Sets operator
     *
-    * @param int|null $operator 运算符。0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。
+    * @param int $operator 运算符。0：仅包含1：仅排除 此参数不携带或携带值为null时，不作为筛选条件。
     *
     * @return $this
     */
@@ -217,7 +223,7 @@ class FilterV2 implements ModelInterface, ArrayAccess
     * Gets filterFactor
     *  filterFactor
     *
-    * @return \HuaweiCloud\SDK\Bss\V2\Model\FilterFactor|null
+    * @return \HuaweiCloud\SDK\Bss\V2\Model\FilterFactor
     */
     public function getFilterFactor()
     {
@@ -227,7 +233,7 @@ class FilterV2 implements ModelInterface, ArrayAccess
     /**
     * Sets filterFactor
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\FilterFactor|null $filterFactor filterFactor
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\FilterFactor $filterFactor filterFactor
     *
     * @return $this
     */

@@ -28,7 +28,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * number  身份证号。
     * issue  发证机关。
     * validFrom  有效起始日期。
-    * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
+    * validTo  有效结束日期。  > 说明： - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
@@ -62,7 +62,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * number  身份证号。
     * issue  发证机关。
     * validFrom  有效起始日期。
-    * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
+    * validTo  有效结束日期。  > 说明： - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
@@ -117,7 +117,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * number  身份证号。
     * issue  发证机关。
     * validFrom  有效起始日期。
-    * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
+    * validTo  有效结束日期。  > 说明： - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
@@ -151,7 +151,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * number  身份证号。
     * issue  发证机关。
     * validFrom  有效起始日期。
-    * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
+    * validTo  有效结束日期。  > 说明： - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
@@ -185,7 +185,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     * number  身份证号。
     * issue  发证机关。
     * validFrom  有效起始日期。
-    * validTo  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
+    * validTo  有效结束日期。  > 说明： - 身份证识别支持中华人民共和国居民身份证识别。
     * verificationResult  verificationResult
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当“return_text_location”设置为“true”时才返回。
     * detectReproduceResult  判断身份证图像是否经过翻拍，“true”表示是翻拍，“false”表示未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
@@ -498,7 +498,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets validTo
-    *  有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
+    *  有效结束日期。  > 说明： - 身份证识别支持中华人民共和国居民身份证识别。
     *
     * @return string|null
     */
@@ -510,7 +510,7 @@ class IdCardResult implements ModelInterface, ArrayAccess
     /**
     * Sets validTo
     *
-    * @param string|null $validTo 有效结束日期。   > 说明：  - 身份证识别支持中华人民共和国居民身份证识别。
+    * @param string|null $validTo 有效结束日期。  > 说明： - 身份证识别支持中华人民共和国居民身份证识别。
     *
     * @return $this
     */

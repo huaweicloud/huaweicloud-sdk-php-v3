@@ -2357,6 +2357,86 @@ class BssClient extends Client
     }
 
     /**
+     * 查询资源包使用明细
+     *
+     * 客户在自建平台查询资源包使用明细。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listFreeResourcesUsageRecords($request)
+    {
+        return $this->listFreeResourcesUsageRecordsWithHttpInfo($request);
+    }
+
+    public function listFreeResourcesUsageRecordsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/bills/customer-bills/free-resources-usage-records';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['freeResourceId'] !== null) {
+            $queryParams['free_resource_id'] = $localVarParams['freeResourceId'];
+        }
+        if ($localVarParams['productId'] !== null) {
+            $queryParams['product_id'] = $localVarParams['productId'];
+        }
+        if ($localVarParams['resourceTypeCode'] !== null) {
+            $queryParams['resource_type_code'] = $localVarParams['resourceTypeCode'];
+        }
+        if ($localVarParams['deductTimeBegin'] !== null) {
+            $queryParams['deduct_time_begin'] = $localVarParams['deductTimeBegin'];
+        }
+        if ($localVarParams['deductTimeEnd'] !== null) {
+            $queryParams['deduct_time_end'] = $localVarParams['deductTimeEnd'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ListFreeResourcesUsageRecordsResponse',
+            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ListFreeResourcesUsageRecordsRequest');
+    }
+
+    /**
      * 查询产品的折扣和激励策略
      *
      * 伙伴在伙伴销售平台上查询产品的折扣和激励策略。

@@ -22,24 +22,28 @@ class WebImageResult implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * wordsBlockCount  代表检测识别出来的文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
+    * extractedData  extractedData
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'wordsBlockCount' => 'int',
-            'wordsBlockList' => '\HuaweiCloud\SDK\Ocr\V1\Model\WebImageWordsBlockList[]'
+            'wordsBlockList' => '\HuaweiCloud\SDK\Ocr\V1\Model\WebImageWordsBlockList[]',
+            'extractedData' => '\HuaweiCloud\SDK\Ocr\V1\Model\WebImageExtractedData'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * wordsBlockCount  代表检测识别出来的文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
+    * extractedData  extractedData
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'wordsBlockCount' => 'int32',
-        'wordsBlockList' => null
+        'wordsBlockList' => null,
+        'extractedData' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class WebImageResult implements ModelInterface, ArrayAccess
     * and the value is the original name
     * wordsBlockCount  代表检测识别出来的文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
+    * extractedData  extractedData
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'wordsBlockCount' => 'words_block_count',
-            'wordsBlockList' => 'words_block_list'
+            'wordsBlockList' => 'words_block_list',
+            'extractedData' => 'extracted_data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * wordsBlockCount  代表检测识别出来的文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
+    * extractedData  extractedData
     *
     * @var string[]
     */
     protected static $setters = [
             'wordsBlockCount' => 'setWordsBlockCount',
-            'wordsBlockList' => 'setWordsBlockList'
+            'wordsBlockList' => 'setWordsBlockList',
+            'extractedData' => 'setExtractedData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * wordsBlockCount  代表检测识别出来的文字块数目。
     * wordsBlockList  识别文字块列表，输出顺序从左到右，从上到下。
+    * extractedData  extractedData
     *
     * @var string[]
     */
     protected static $getters = [
             'wordsBlockCount' => 'getWordsBlockCount',
-            'wordsBlockList' => 'getWordsBlockList'
+            'wordsBlockList' => 'getWordsBlockList',
+            'extractedData' => 'getExtractedData'
     ];
 
     /**
@@ -159,6 +169,7 @@ class WebImageResult implements ModelInterface, ArrayAccess
     {
         $this->container['wordsBlockCount'] = isset($data['wordsBlockCount']) ? $data['wordsBlockCount'] : null;
         $this->container['wordsBlockList'] = isset($data['wordsBlockList']) ? $data['wordsBlockList'] : null;
+        $this->container['extractedData'] = isset($data['extractedData']) ? $data['extractedData'] : null;
     }
 
     /**
@@ -174,6 +185,9 @@ class WebImageResult implements ModelInterface, ArrayAccess
         }
         if ($this->container['wordsBlockList'] === null) {
             $invalidProperties[] = "'wordsBlockList' can't be null";
+        }
+        if ($this->container['extractedData'] === null) {
+            $invalidProperties[] = "'extractedData' can't be null";
         }
         return $invalidProperties;
     }
@@ -234,6 +248,30 @@ class WebImageResult implements ModelInterface, ArrayAccess
     public function setWordsBlockList($wordsBlockList)
     {
         $this->container['wordsBlockList'] = $wordsBlockList;
+        return $this;
+    }
+
+    /**
+    * Gets extractedData
+    *  extractedData
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\WebImageExtractedData
+    */
+    public function getExtractedData()
+    {
+        return $this->container['extractedData'];
+    }
+
+    /**
+    * Sets extractedData
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\WebImageExtractedData $extractedData extractedData
+    *
+    * @return $this
+    */
+    public function setExtractedData($extractedData)
+    {
+        $this->container['extractedData'] = $extractedData;
         return $this;
     }
 

@@ -1291,6 +1291,89 @@ class BssintlAsyncClient extends Client
     }
 
     /**
+     * 查询资源包使用明细
+     *
+     * 客户在自建平台查询资源包使用明细。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listFreeResourcesUsageRecordsAsync($request)
+    {
+        return $this->listFreeResourcesUsageRecordsAsyncWithHttpInfo($request);
+    }
+    
+    public function listFreeResourcesUsageRecordsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/bills/customer-bills/free-resources-usage-records';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['freeResourceId'] !== null) {
+            $queryParams['free_resource_id'] = $localVarParams['freeResourceId'];
+        }
+        if ($localVarParams['productId'] !== null) {
+            $queryParams['product_id'] = $localVarParams['productId'];
+        }
+        if ($localVarParams['resourceTypeCode'] !== null) {
+            $queryParams['resource_type_code'] = $localVarParams['resourceTypeCode'];
+        }
+        if ($localVarParams['deductTimeBegin'] !== null) {
+            $queryParams['deduct_time_begin'] = $localVarParams['deductTimeBegin'];
+        }
+        if ($localVarParams['deductTimeEnd'] !== null) {
+            $queryParams['deduct_time_end'] = $localVarParams['deductTimeEnd'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListFreeResourcesUsageRecordsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListFreeResourcesUsageRecordsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询云经销商列表
      *
      * 华为云总经销商（一级经销商）可以查询云经销商（二级经销商）列表。
