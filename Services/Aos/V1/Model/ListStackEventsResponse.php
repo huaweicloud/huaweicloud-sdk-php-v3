@@ -21,17 +21,17 @@ class ListStackEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * stackEvents  栈的更新状态
+    * stackEvents  资源栈事件列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'stackEvents' => '\HuaweiCloud\SDK\Aos\V1\Model\StackEventResponse[]'
+            'stackEvents' => '\HuaweiCloud\SDK\Aos\V1\Model\StackEvent[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * stackEvents  栈的更新状态
+    * stackEvents  资源栈事件列表
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListStackEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * stackEvents  栈的更新状态
+    * stackEvents  资源栈事件列表
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListStackEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * stackEvents  栈的更新状态
+    * stackEvents  资源栈事件列表
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListStackEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * stackEvents  栈的更新状态
+    * stackEvents  资源栈事件列表
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ListStackEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets stackEvents
-    *  栈的更新状态
+    *  资源栈事件列表
     *
-    * @return \HuaweiCloud\SDK\Aos\V1\Model\StackEventResponse[]|null
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\StackEvent[]|null
     */
     public function getStackEvents()
     {
@@ -187,7 +187,7 @@ class ListStackEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets stackEvents
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\StackEventResponse[]|null $stackEvents 栈的更新状态
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\StackEvent[]|null $stackEvents 资源栈事件列表
     *
     * @return $this
     */

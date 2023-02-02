@@ -22,21 +22,25 @@ class CancelResourcesSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * orderIds  客户退订订单ID的列表信息。
+    * failResourceInfos  失败的资源信息列表。有退订失败的资源时，该字段才有值。具体请参见表FailResourceInfo。 该字段为预留字段。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'orderIds' => 'string[]'
+            'orderIds' => 'string[]',
+            'failResourceInfos' => '\HuaweiCloud\SDK\Bss\V2\Model\FailResourceInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * orderIds  客户退订订单ID的列表信息。
+    * failResourceInfos  失败的资源信息列表。有退订失败的资源时，该字段才有值。具体请参见表FailResourceInfo。 该字段为预留字段。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'orderIds' => null
+        'orderIds' => null,
+        'failResourceInfos' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class CancelResourcesSubscriptionResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * orderIds  客户退订订单ID的列表信息。
+    * failResourceInfos  失败的资源信息列表。有退订失败的资源时，该字段才有值。具体请参见表FailResourceInfo。 该字段为预留字段。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'orderIds' => 'order_ids'
+            'orderIds' => 'order_ids',
+            'failResourceInfos' => 'fail_resource_infos'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * orderIds  客户退订订单ID的列表信息。
+    * failResourceInfos  失败的资源信息列表。有退订失败的资源时，该字段才有值。具体请参见表FailResourceInfo。 该字段为预留字段。
     *
     * @var string[]
     */
     protected static $setters = [
-            'orderIds' => 'setOrderIds'
+            'orderIds' => 'setOrderIds',
+            'failResourceInfos' => 'setFailResourceInfos'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * orderIds  客户退订订单ID的列表信息。
+    * failResourceInfos  失败的资源信息列表。有退订失败的资源时，该字段才有值。具体请参见表FailResourceInfo。 该字段为预留字段。
     *
     * @var string[]
     */
     protected static $getters = [
-            'orderIds' => 'getOrderIds'
+            'orderIds' => 'getOrderIds',
+            'failResourceInfos' => 'getFailResourceInfos'
     ];
 
     /**
@@ -149,6 +159,7 @@ class CancelResourcesSubscriptionResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['orderIds'] = isset($data['orderIds']) ? $data['orderIds'] : null;
+        $this->container['failResourceInfos'] = isset($data['failResourceInfos']) ? $data['failResourceInfos'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class CancelResourcesSubscriptionResponse implements ModelInterface, ArrayAccess
     public function setOrderIds($orderIds)
     {
         $this->container['orderIds'] = $orderIds;
+        return $this;
+    }
+
+    /**
+    * Gets failResourceInfos
+    *  失败的资源信息列表。有退订失败的资源时，该字段才有值。具体请参见表FailResourceInfo。 该字段为预留字段。
+    *
+    * @return \HuaweiCloud\SDK\Bss\V2\Model\FailResourceInfo[]|null
+    */
+    public function getFailResourceInfos()
+    {
+        return $this->container['failResourceInfos'];
+    }
+
+    /**
+    * Sets failResourceInfos
+    *
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\FailResourceInfo[]|null $failResourceInfos 失败的资源信息列表。有退订失败的资源时，该字段才有值。具体请参见表FailResourceInfo。 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setFailResourceInfos($failResourceInfos)
+    {
+        $this->container['failResourceInfos'] = $failResourceInfos;
         return $this;
     }
 

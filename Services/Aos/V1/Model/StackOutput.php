@@ -20,11 +20,11 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  资源栈输出的name，由用户自己在模板中定义
-    * description  描述
-    * type  输出的类型
-    * value  输出的值(json字符串)
-    * sensitive  是否为敏感信息
+    * name  资源栈输出的名称，由用户在模板中定义  以 hcl 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
+    * description  资源栈输出的描述，由用户在模板中定义
+    * type  资源栈输出的类型
+    * value  资源栈输出的值
+    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  资源栈输出的name，由用户自己在模板中定义
-    * description  描述
-    * type  输出的类型
-    * value  输出的值(json字符串)
-    * sensitive  是否为敏感信息
+    * name  资源栈输出的名称，由用户在模板中定义  以 hcl 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
+    * description  资源栈输出的描述，由用户在模板中定义
+    * type  资源栈输出的类型
+    * value  资源栈输出的值
+    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class StackOutput implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  资源栈输出的name，由用户自己在模板中定义
-    * description  描述
-    * type  输出的类型
-    * value  输出的值(json字符串)
-    * sensitive  是否为敏感信息
+    * name  资源栈输出的名称，由用户在模板中定义  以 hcl 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
+    * description  资源栈输出的描述，由用户在模板中定义
+    * type  资源栈输出的类型
+    * value  资源栈输出的值
+    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  资源栈输出的name，由用户自己在模板中定义
-    * description  描述
-    * type  输出的类型
-    * value  输出的值(json字符串)
-    * sensitive  是否为敏感信息
+    * name  资源栈输出的名称，由用户在模板中定义  以 hcl 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
+    * description  资源栈输出的描述，由用户在模板中定义
+    * type  资源栈输出的类型
+    * value  资源栈输出的值
+    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  资源栈输出的name，由用户自己在模板中定义
-    * description  描述
-    * type  输出的类型
-    * value  输出的值(json字符串)
-    * sensitive  是否为敏感信息
+    * name  资源栈输出的名称，由用户在模板中定义  以 hcl 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
+    * description  资源栈输出的描述，由用户在模板中定义
+    * type  资源栈输出的类型
+    * value  资源栈输出的值
+    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  资源栈输出的name，由用户自己在模板中定义
+    *  资源栈输出的名称，由用户在模板中定义  以 hcl 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 资源栈输出的name，由用户自己在模板中定义
+    * @param string|null $name 资源栈输出的名称，由用户在模板中定义  以 hcl 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  资源栈输出的描述，由用户在模板中定义
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description 资源栈输出的描述，由用户在模板中定义
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  输出的类型
+    *  资源栈输出的类型
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 输出的类型
+    * @param string|null $type 资源栈输出的类型
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  输出的值(json字符串)
+    *  资源栈输出的值
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 输出的值(json字符串)
+    * @param string|null $value 资源栈输出的值
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Gets sensitive
-    *  是否为敏感信息
+    *  标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
     *
     * @return bool|null
     */
@@ -326,7 +326,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     /**
     * Sets sensitive
     *
-    * @param bool|null $sensitive 是否为敏感信息
+    * @param bool|null $sensitive 标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
     *
     * @return $this
     */

@@ -1,0 +1,30 @@
+{
+  "name": "huaweicloud/huaweicloud-sdk-kps",
+  "description": "HUAWEICLOUD SDK KPS",
+  "keywords": [
+    "php",
+    "sdk",
+    "rest",
+    "api",
+    "kps"
+  ],
+  "version": "3.1.22",
+   "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "HUAWEICloud_SDK",
+      "email": "hwcloudsdk@huawei.com",
+      "homepage": "https://github.com/huaweicloud-sdk/huaweicloud-sdk-php"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "huaweicloud/huaweicloud-sdk-core": "3.1.22"
+  },
+  "autoload": {
+    "psr-4": {
+      "HuaweiCloud\\SDK\\Kps\\V3\\": "V3/"
+    }
+  }
+}

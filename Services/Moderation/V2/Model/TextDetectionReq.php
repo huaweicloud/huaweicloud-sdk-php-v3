@@ -21,24 +21,28 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * categories  检测场景。  当前支持的场景有默认场景和用户自定义场景：  - 默认场景为：     * politics：涉政     * porn：涉黄     * ad：广告     * abuse：辱骂     * contraband：违禁品     * flood：灌水   - 用户自定义场景为：自定义黑名单词库。  > - 自定义词库的创建和使用请参见[配置自定义词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html)。 > - flood场景不支持使用自定义白名单词库。
+    * whiteGlossaries  启用的白名单列表  当前白名单使用规则为：  - 不传参数\"white_glossaries\"：     * 表示默认使用2022-09-02 16:00:00之前创建的白名单词库  - 传参数\"white_glossaries\"：   * 参数为空时不使用任何白名单词库     * 参数不为空时使用传入的白名单词库  > - 自定义词库的创建和使用请参见[[配置自定义词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html)](tag:hc)[[配置自定义词库](https://support.huaweicloud.com/intl/zh-cn/api-moderation/moderation_03_0027.html)](tag:hk)。
     * items  待检测的文本列表，目前暂时每次只支持传一个item。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'categories' => 'string[]',
+            'whiteGlossaries' => 'string[]',
             'items' => '\HuaweiCloud\SDK\Moderation\V2\Model\TextDetectionItemsReq[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * categories  检测场景。  当前支持的场景有默认场景和用户自定义场景：  - 默认场景为：     * politics：涉政     * porn：涉黄     * ad：广告     * abuse：辱骂     * contraband：违禁品     * flood：灌水   - 用户自定义场景为：自定义黑名单词库。  > - 自定义词库的创建和使用请参见[配置自定义词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html)。 > - flood场景不支持使用自定义白名单词库。
+    * whiteGlossaries  启用的白名单列表  当前白名单使用规则为：  - 不传参数\"white_glossaries\"：     * 表示默认使用2022-09-02 16:00:00之前创建的白名单词库  - 传参数\"white_glossaries\"：   * 参数为空时不使用任何白名单词库     * 参数不为空时使用传入的白名单词库  > - 自定义词库的创建和使用请参见[[配置自定义词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html)](tag:hc)[[配置自定义词库](https://support.huaweicloud.com/intl/zh-cn/api-moderation/moderation_03_0027.html)](tag:hk)。
     * items  待检测的文本列表，目前暂时每次只支持传一个item。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'categories' => null,
+        'whiteGlossaries' => null,
         'items' => null
     ];
 
@@ -66,36 +70,42 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * categories  检测场景。  当前支持的场景有默认场景和用户自定义场景：  - 默认场景为：     * politics：涉政     * porn：涉黄     * ad：广告     * abuse：辱骂     * contraband：违禁品     * flood：灌水   - 用户自定义场景为：自定义黑名单词库。  > - 自定义词库的创建和使用请参见[配置自定义词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html)。 > - flood场景不支持使用自定义白名单词库。
+    * whiteGlossaries  启用的白名单列表  当前白名单使用规则为：  - 不传参数\"white_glossaries\"：     * 表示默认使用2022-09-02 16:00:00之前创建的白名单词库  - 传参数\"white_glossaries\"：   * 参数为空时不使用任何白名单词库     * 参数不为空时使用传入的白名单词库  > - 自定义词库的创建和使用请参见[[配置自定义词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html)](tag:hc)[[配置自定义词库](https://support.huaweicloud.com/intl/zh-cn/api-moderation/moderation_03_0027.html)](tag:hk)。
     * items  待检测的文本列表，目前暂时每次只支持传一个item。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'categories' => 'categories',
+            'whiteGlossaries' => 'white_glossaries',
             'items' => 'items'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * categories  检测场景。  当前支持的场景有默认场景和用户自定义场景：  - 默认场景为：     * politics：涉政     * porn：涉黄     * ad：广告     * abuse：辱骂     * contraband：违禁品     * flood：灌水   - 用户自定义场景为：自定义黑名单词库。  > - 自定义词库的创建和使用请参见[配置自定义词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html)。 > - flood场景不支持使用自定义白名单词库。
+    * whiteGlossaries  启用的白名单列表  当前白名单使用规则为：  - 不传参数\"white_glossaries\"：     * 表示默认使用2022-09-02 16:00:00之前创建的白名单词库  - 传参数\"white_glossaries\"：   * 参数为空时不使用任何白名单词库     * 参数不为空时使用传入的白名单词库  > - 自定义词库的创建和使用请参见[[配置自定义词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html)](tag:hc)[[配置自定义词库](https://support.huaweicloud.com/intl/zh-cn/api-moderation/moderation_03_0027.html)](tag:hk)。
     * items  待检测的文本列表，目前暂时每次只支持传一个item。
     *
     * @var string[]
     */
     protected static $setters = [
             'categories' => 'setCategories',
+            'whiteGlossaries' => 'setWhiteGlossaries',
             'items' => 'setItems'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * categories  检测场景。  当前支持的场景有默认场景和用户自定义场景：  - 默认场景为：     * politics：涉政     * porn：涉黄     * ad：广告     * abuse：辱骂     * contraband：违禁品     * flood：灌水   - 用户自定义场景为：自定义黑名单词库。  > - 自定义词库的创建和使用请参见[配置自定义词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html)。 > - flood场景不支持使用自定义白名单词库。
+    * whiteGlossaries  启用的白名单列表  当前白名单使用规则为：  - 不传参数\"white_glossaries\"：     * 表示默认使用2022-09-02 16:00:00之前创建的白名单词库  - 传参数\"white_glossaries\"：   * 参数为空时不使用任何白名单词库     * 参数不为空时使用传入的白名单词库  > - 自定义词库的创建和使用请参见[[配置自定义词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html)](tag:hc)[[配置自定义词库](https://support.huaweicloud.com/intl/zh-cn/api-moderation/moderation_03_0027.html)](tag:hk)。
     * items  待检测的文本列表，目前暂时每次只支持传一个item。
     *
     * @var string[]
     */
     protected static $getters = [
             'categories' => 'getCategories',
+            'whiteGlossaries' => 'getWhiteGlossaries',
             'items' => 'getItems'
     ];
 
@@ -158,6 +168,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
+        $this->container['whiteGlossaries'] = isset($data['whiteGlossaries']) ? $data['whiteGlossaries'] : null;
         $this->container['items'] = isset($data['items']) ? $data['items'] : null;
     }
 
@@ -207,6 +218,30 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     public function setCategories($categories)
     {
         $this->container['categories'] = $categories;
+        return $this;
+    }
+
+    /**
+    * Gets whiteGlossaries
+    *  启用的白名单列表  当前白名单使用规则为：  - 不传参数\"white_glossaries\"：     * 表示默认使用2022-09-02 16:00:00之前创建的白名单词库  - 传参数\"white_glossaries\"：   * 参数为空时不使用任何白名单词库     * 参数不为空时使用传入的白名单词库  > - 自定义词库的创建和使用请参见[[配置自定义词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html)](tag:hc)[[配置自定义词库](https://support.huaweicloud.com/intl/zh-cn/api-moderation/moderation_03_0027.html)](tag:hk)。
+    *
+    * @return string[]|null
+    */
+    public function getWhiteGlossaries()
+    {
+        return $this->container['whiteGlossaries'];
+    }
+
+    /**
+    * Sets whiteGlossaries
+    *
+    * @param string[]|null $whiteGlossaries 启用的白名单列表  当前白名单使用规则为：  - 不传参数\"white_glossaries\"：     * 表示默认使用2022-09-02 16:00:00之前创建的白名单词库  - 传参数\"white_glossaries\"：   * 参数为空时不使用任何白名单词库     * 参数不为空时使用传入的白名单词库  > - 自定义词库的创建和使用请参见[[配置自定义词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html)](tag:hc)[[配置自定义词库](https://support.huaweicloud.com/intl/zh-cn/api-moderation/moderation_03_0027.html)](tag:hk)。
+    *
+    * @return $this
+    */
+    public function setWhiteGlossaries($whiteGlossaries)
+    {
+        $this->container['whiteGlossaries'] = $whiteGlossaries;
         return $this;
     }
 

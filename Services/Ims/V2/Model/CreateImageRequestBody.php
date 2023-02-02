@@ -303,6 +303,7 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
     const TYPE_BMS = 'BMS';
     const TYPE_FUSION_COMPUTE = 'FusionCompute';
     const TYPE_IRONIC = 'Ironic';
+    const TYPE_ISO_IMAGE = 'IsoImage';
     const ARCHITECTURE_X86 = 'x86';
     const ARCHITECTURE_ARM = 'arm';
     
@@ -319,6 +320,7 @@ class CreateImageRequestBody implements ModelInterface, ArrayAccess
             self::TYPE_BMS,
             self::TYPE_FUSION_COMPUTE,
             self::TYPE_IRONIC,
+            self::TYPE_ISO_IMAGE,
         ];
     }
 

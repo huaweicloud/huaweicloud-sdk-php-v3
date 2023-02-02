@@ -22,7 +22,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名
+    * stackName  用户希望操作的资源栈名称
     * executionPlanName  执行计划的名字。
     * body  body
     *
@@ -40,7 +40,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名
+    * stackName  用户希望操作的资源栈名称
     * executionPlanName  执行计划的名字。
     * body  body
     *
@@ -79,7 +79,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名
+    * stackName  用户希望操作的资源栈名称
     * executionPlanName  执行计划的名字。
     * body  body
     *
@@ -97,7 +97,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名
+    * stackName  用户希望操作的资源栈名称
     * executionPlanName  执行计划的名字。
     * body  body
     *
@@ -115,7 +115,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名
+    * stackName  用户希望操作的资源栈名称
     * executionPlanName  执行计划的名字。
     * body  body
     *
@@ -314,7 +314,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets stackName
-    *  用户希望操作的资源栈名
+    *  用户希望操作的资源栈名称
     *
     * @return string
     */
@@ -326,7 +326,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     /**
     * Sets stackName
     *
-    * @param string $stackName 用户希望操作的资源栈名
+    * @param string $stackName 用户希望操作的资源栈名称
     *
     * @return $this
     */

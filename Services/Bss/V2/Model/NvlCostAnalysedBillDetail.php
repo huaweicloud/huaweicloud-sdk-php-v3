@@ -36,7 +36,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * resourceName  资源名称。
     * resourceTag  资源标签。
     * productSpecDesc  产品的规格描述。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
@@ -136,7 +136,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * resourceName  资源名称。
     * resourceTag  资源标签。
     * productSpecDesc  产品的规格描述。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
@@ -257,7 +257,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * resourceName  资源名称。
     * resourceTag  资源标签。
     * productSpecDesc  产品的规格描述。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
@@ -357,7 +357,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * resourceName  资源名称。
     * resourceTag  资源标签。
     * productSpecDesc  产品的规格描述。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
@@ -457,7 +457,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * resourceName  资源名称。
     * resourceTag  资源标签。
     * productSpecDesc  产品的规格描述。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
     * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
     * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
@@ -1053,7 +1053,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
+    *  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @return string|null
     */
@@ -1065,7 +1065,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
+    * @param string|null $enterpriseProjectId 企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     *
     * @return $this
     */

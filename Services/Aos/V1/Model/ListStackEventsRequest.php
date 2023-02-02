@@ -22,9 +22,11 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
-    * deploymentId  部署时API返回的id(uuid)。如果deployment_id不存在，则返回整个栈从生成到现在的所有更新状态
+    * stackName  用户希望操作的资源栈名称
+    * stackId  用户希望描述的资源栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
+    * deploymentId  部署时API返回的id（uuid）
+    * filter  过滤条件  * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，若有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
+    * field  选择的属性名称  * 属性名仅支持包含大小写英文、数字和下划线 * 多个属性名称之间以逗号（，）分隔
     *
     * @var string[]
     */
@@ -33,16 +35,20 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'stackName' => 'string',
             'stackId' => 'string',
-            'deploymentId' => 'string'
+            'deploymentId' => 'string',
+            'filter' => 'string',
+            'field' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
-    * deploymentId  部署时API返回的id(uuid)。如果deployment_id不存在，则返回整个栈从生成到现在的所有更新状态
+    * stackName  用户希望操作的资源栈名称
+    * stackId  用户希望描述的资源栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
+    * deploymentId  部署时API返回的id（uuid）
+    * filter  过滤条件  * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，若有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
+    * field  选择的属性名称  * 属性名仅支持包含大小写英文、数字和下划线 * 多个属性名称之间以逗号（，）分隔
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
         'projectId' => null,
         'stackName' => null,
         'stackId' => null,
-        'deploymentId' => null
+        'deploymentId' => null,
+        'filter' => null,
+        'field' => null
     ];
 
     /**
@@ -79,9 +87,11 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
-    * deploymentId  部署时API返回的id(uuid)。如果deployment_id不存在，则返回整个栈从生成到现在的所有更新状态
+    * stackName  用户希望操作的资源栈名称
+    * stackId  用户希望描述的资源栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
+    * deploymentId  部署时API返回的id（uuid）
+    * filter  过滤条件  * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，若有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
+    * field  选择的属性名称  * 属性名仅支持包含大小写英文、数字和下划线 * 多个属性名称之间以逗号（，）分隔
     *
     * @var string[]
     */
@@ -90,16 +100,20 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'stackName' => 'stack_name',
             'stackId' => 'stack_id',
-            'deploymentId' => 'deployment_id'
+            'deploymentId' => 'deployment_id',
+            'filter' => 'filter',
+            'field' => 'field'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
-    * deploymentId  部署时API返回的id(uuid)。如果deployment_id不存在，则返回整个栈从生成到现在的所有更新状态
+    * stackName  用户希望操作的资源栈名称
+    * stackId  用户希望描述的资源栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
+    * deploymentId  部署时API返回的id（uuid）
+    * filter  过滤条件  * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，若有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
+    * field  选择的属性名称  * 属性名仅支持包含大小写英文、数字和下划线 * 多个属性名称之间以逗号（，）分隔
     *
     * @var string[]
     */
@@ -108,16 +122,20 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'stackName' => 'setStackName',
             'stackId' => 'setStackId',
-            'deploymentId' => 'setDeploymentId'
+            'deploymentId' => 'setDeploymentId',
+            'filter' => 'setFilter',
+            'field' => 'setField'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名
-    * stackId  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
-    * deploymentId  部署时API返回的id(uuid)。如果deployment_id不存在，则返回整个栈从生成到现在的所有更新状态
+    * stackName  用户希望操作的资源栈名称
+    * stackId  用户希望描述的资源栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
+    * deploymentId  部署时API返回的id（uuid）
+    * filter  过滤条件  * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，若有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
+    * field  选择的属性名称  * 属性名仅支持包含大小写英文、数字和下划线 * 多个属性名称之间以逗号（，）分隔
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'stackName' => 'getStackName',
             'stackId' => 'getStackId',
-            'deploymentId' => 'getDeploymentId'
+            'deploymentId' => 'getDeploymentId',
+            'filter' => 'getFilter',
+            'field' => 'getField'
     ];
 
     /**
@@ -192,6 +212,8 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
         $this->container['stackName'] = isset($data['stackName']) ? $data['stackName'] : null;
         $this->container['stackId'] = isset($data['stackId']) ? $data['stackId'] : null;
         $this->container['deploymentId'] = isset($data['deploymentId']) ? $data['deploymentId'] : null;
+        $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
+        $this->container['field'] = isset($data['field']) ? $data['field'] : null;
     }
 
     /**
@@ -255,6 +277,18 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['deploymentId']) && !preg_match("/^[a-z0-9]+[a-z0-9-]*$/", $this->container['deploymentId'])) {
                 $invalidProperties[] = "invalid value for 'deploymentId', must be conform to the pattern /^[a-z0-9]+[a-z0-9-]*$/.";
+            }
+            if (!is_null($this->container['filter']) && (mb_strlen($this->container['filter']) > 512)) {
+                $invalidProperties[] = "invalid value for 'filter', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['filter']) && (mb_strlen($this->container['filter']) < 0)) {
+                $invalidProperties[] = "invalid value for 'filter', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['field']) && (mb_strlen($this->container['field']) > 128)) {
+                $invalidProperties[] = "invalid value for 'field', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['field']) && (mb_strlen($this->container['field']) < 0)) {
+                $invalidProperties[] = "invalid value for 'field', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -320,7 +354,7 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets stackName
-    *  用户希望操作的资源栈名
+    *  用户希望操作的资源栈名称
     *
     * @return string
     */
@@ -332,7 +366,7 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets stackName
     *
-    * @param string $stackName 用户希望操作的资源栈名
+    * @param string $stackName 用户希望操作的资源栈名称
     *
     * @return $this
     */
@@ -344,7 +378,7 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets stackId
-    *  用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
+    *  用户希望描述的资源栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @return string|null
     */
@@ -356,7 +390,7 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets stackId
     *
-    * @param string|null $stackId 用户希望描述的栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
+    * @param string|null $stackId 用户希望描述的资源栈的Id。若stack_name和stack_id同时存在，则资源编排服务会检查是否两个匹配，否则返回400
     *
     * @return $this
     */
@@ -368,7 +402,7 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets deploymentId
-    *  部署时API返回的id(uuid)。如果deployment_id不存在，则返回整个栈从生成到现在的所有更新状态
+    *  部署时API返回的id（uuid）
     *
     * @return string|null
     */
@@ -380,13 +414,61 @@ class ListStackEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets deploymentId
     *
-    * @param string|null $deploymentId 部署时API返回的id(uuid)。如果deployment_id不存在，则返回整个栈从生成到现在的所有更新状态
+    * @param string|null $deploymentId 部署时API返回的id（uuid）
     *
     * @return $this
     */
     public function setDeploymentId($deploymentId)
     {
         $this->container['deploymentId'] = $deploymentId;
+        return $this;
+    }
+
+    /**
+    * Gets filter
+    *  过滤条件  * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，若有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
+    *
+    * @return string|null
+    */
+    public function getFilter()
+    {
+        return $this->container['filter'];
+    }
+
+    /**
+    * Sets filter
+    *
+    * @param string|null $filter 过滤条件  * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，若有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
+    *
+    * @return $this
+    */
+    public function setFilter($filter)
+    {
+        $this->container['filter'] = $filter;
+        return $this;
+    }
+
+    /**
+    * Gets field
+    *  选择的属性名称  * 属性名仅支持包含大小写英文、数字和下划线 * 多个属性名称之间以逗号（，）分隔
+    *
+    * @return string|null
+    */
+    public function getField()
+    {
+        return $this->container['field'];
+    }
+
+    /**
+    * Sets field
+    *
+    * @param string|null $field 选择的属性名称  * 属性名仅支持包含大小写英文、数字和下划线 * 多个属性名称之间以逗号（，）分隔
+    *
+    * @return $this
+    */
+    public function setField($field)
+    {
+        $this->container['field'] = $field;
         return $this;
     }
 

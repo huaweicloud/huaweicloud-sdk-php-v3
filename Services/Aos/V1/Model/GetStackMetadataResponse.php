@@ -21,19 +21,19 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * stackId  栈的唯一Id
-    * stackName  栈的名字
-    * description  栈的描述，此描述为用户在创建资源栈时指定
-    * varsStructure  参数列表
-    * varsUriContent  vars文件中的内容
-    * varsBody  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。vars_body用于接收用户直接提交的tfvars文件内容
-    * createTime  栈的生成时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * updateTime  由于栈可以被更新，此处为上次更新时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * enableDeletionProtection  资源栈删除保护的目标状态
-    * enableAutoRollback  资源栈是否开启自动回滚的标识位
-    * status  资源栈的执行状态     * `DEPLOYMENT_IN_PROGRESS` - 正在部署     * `DEPLOYMENT_FAILED` - 部署失败。请于StatusMessage见更多详情     * `DEPLOYMENT_COMPLETE ` - 部署结束     * `ROLLBACK_IN_PROGRESS` - 正在回滚     * `ROLLBACK_FAILED` - 回滚失败。请于StatusMessage见更多详情     * `ROLLBACK_COMPLETE` - 回滚完成     * `DELETION_IN_PROGRESS` - 正在删除     * `DELETION_FAILED` - 删除失败     * `CREATION_COMPLETE` - 生成完成，并没有任何部署
-    * statusMessage  展示更多细节的信息
-    * agencies  委托授权的信息
+    * stackId  资源栈（stack）的唯一Id。  此Id由资源编排服务在生成资源栈的时候生成，为UUID。  由于资源栈名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈，删除，再重新创建一个同名资源栈。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈就是我认为的那个，而不是其他队友删除后创建的同名资源栈。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈所对应的ID都不相同，更新不会影响ID。如果给与的stack_id和当前资源栈的ID不一致，则返回400
+    * stackName  用户希望生成的资源栈的名字。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
+    * description  资源栈的描述。可用于客户识别自己的资源栈。
+    * varsStructure  HCL支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。  * var_structure可以允许客户提交最简单的字符串类型的参数  * 资源编排服务支持vars_structure，vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * vars_structure中的值只支持简单的字符串类型，如果需要使用其他类型，需要用户自己在HCL引用时转换， 或者用户可以使用vars_uri、vars_body，vars_uri和vars_body中支持HCL支持的各种类型以及复杂结构  * 如果vars_structure过大，可以使用vars_uri  * 注意：vars_structure中默认不应该含有任何敏感信息，资源编排服务会直接明文使用、log、展示、存储对应的vars。如为敏感信息，建议设置encryption字段开启加密
+    * varsBody  HCL支持参数，即，同一个模板可以给予不同的参数而达到不同的效果  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中。具体tfvars格式见：https://www.terraform.io/language/values/variables#variable-definitions-tfvars-files  * 资源编排服务支持vars_structure，vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 如果vars中都是简单的字符串格式，可以使用var_structure  * 注意：vars_body中不应该含有任何敏感信息，资源编排服务会直接明文使用、log、展示、存储对应的vars。如为敏感信息，建议通过vars_structure并设置encryption字段传递
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）
+    * status  资源栈的状态     * `CREATION_COMPLETE` - 生成空资源栈完成，并没有任何部署     * `DEPLOYMENT_IN_PROGRESS` - 正在部署，请等待     * `DEPLOYMENT_FAILED` - 部署失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情     * `DEPLOYMENT_COMPLETE` - 部署完成     * `ROLLBACK_IN_PROGRESS` - 部署失败，正在回滚，请等待     * `ROLLBACK_FAILED` - 回滚失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情     * `ROLLBACK_COMPLETE` - 回滚完成     * `DELETION_IN_PROGRESS` - 正在删除，请等待     * `DELETION_FAILED` - 删除失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情
+    * agencies  委托授权的信息。
+    * statusMessage  当资源栈的状态为任意失败状态（即以 `FAILED` 结尾时），将会展示简要的错误信息总结以供debug
+    * varsUriContent  vars_uri对应的文件内容
+    * createTime  资源栈的生成时间 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
+    * updateTime  资源栈的更新时间（更新场景包括元数据更新场景和部署场景） 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     *
     * @var string[]
     */
@@ -42,32 +42,32 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
             'stackName' => 'string',
             'description' => 'string',
             'varsStructure' => '\HuaweiCloud\SDK\Aos\V1\Model\VarsStructure[]',
-            'varsUriContent' => 'string',
             'varsBody' => 'string',
-            'createTime' => 'string',
-            'updateTime' => 'string',
             'enableDeletionProtection' => 'bool',
             'enableAutoRollback' => 'bool',
             'status' => 'string',
+            'agencies' => '\HuaweiCloud\SDK\Aos\V1\Model\Agency[]',
             'statusMessage' => 'string',
-            'agencies' => '\HuaweiCloud\SDK\Aos\V1\Model\Agency[]'
+            'varsUriContent' => 'string',
+            'createTime' => 'string',
+            'updateTime' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * stackId  栈的唯一Id
-    * stackName  栈的名字
-    * description  栈的描述，此描述为用户在创建资源栈时指定
-    * varsStructure  参数列表
-    * varsUriContent  vars文件中的内容
-    * varsBody  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。vars_body用于接收用户直接提交的tfvars文件内容
-    * createTime  栈的生成时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * updateTime  由于栈可以被更新，此处为上次更新时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * enableDeletionProtection  资源栈删除保护的目标状态
-    * enableAutoRollback  资源栈是否开启自动回滚的标识位
-    * status  资源栈的执行状态     * `DEPLOYMENT_IN_PROGRESS` - 正在部署     * `DEPLOYMENT_FAILED` - 部署失败。请于StatusMessage见更多详情     * `DEPLOYMENT_COMPLETE ` - 部署结束     * `ROLLBACK_IN_PROGRESS` - 正在回滚     * `ROLLBACK_FAILED` - 回滚失败。请于StatusMessage见更多详情     * `ROLLBACK_COMPLETE` - 回滚完成     * `DELETION_IN_PROGRESS` - 正在删除     * `DELETION_FAILED` - 删除失败     * `CREATION_COMPLETE` - 生成完成，并没有任何部署
-    * statusMessage  展示更多细节的信息
-    * agencies  委托授权的信息
+    * stackId  资源栈（stack）的唯一Id。  此Id由资源编排服务在生成资源栈的时候生成，为UUID。  由于资源栈名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈，删除，再重新创建一个同名资源栈。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈就是我认为的那个，而不是其他队友删除后创建的同名资源栈。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈所对应的ID都不相同，更新不会影响ID。如果给与的stack_id和当前资源栈的ID不一致，则返回400
+    * stackName  用户希望生成的资源栈的名字。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
+    * description  资源栈的描述。可用于客户识别自己的资源栈。
+    * varsStructure  HCL支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。  * var_structure可以允许客户提交最简单的字符串类型的参数  * 资源编排服务支持vars_structure，vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * vars_structure中的值只支持简单的字符串类型，如果需要使用其他类型，需要用户自己在HCL引用时转换， 或者用户可以使用vars_uri、vars_body，vars_uri和vars_body中支持HCL支持的各种类型以及复杂结构  * 如果vars_structure过大，可以使用vars_uri  * 注意：vars_structure中默认不应该含有任何敏感信息，资源编排服务会直接明文使用、log、展示、存储对应的vars。如为敏感信息，建议设置encryption字段开启加密
+    * varsBody  HCL支持参数，即，同一个模板可以给予不同的参数而达到不同的效果  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中。具体tfvars格式见：https://www.terraform.io/language/values/variables#variable-definitions-tfvars-files  * 资源编排服务支持vars_structure，vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 如果vars中都是简单的字符串格式，可以使用var_structure  * 注意：vars_body中不应该含有任何敏感信息，资源编排服务会直接明文使用、log、展示、存储对应的vars。如为敏感信息，建议通过vars_structure并设置encryption字段传递
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）
+    * status  资源栈的状态     * `CREATION_COMPLETE` - 生成空资源栈完成，并没有任何部署     * `DEPLOYMENT_IN_PROGRESS` - 正在部署，请等待     * `DEPLOYMENT_FAILED` - 部署失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情     * `DEPLOYMENT_COMPLETE` - 部署完成     * `ROLLBACK_IN_PROGRESS` - 部署失败，正在回滚，请等待     * `ROLLBACK_FAILED` - 回滚失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情     * `ROLLBACK_COMPLETE` - 回滚完成     * `DELETION_IN_PROGRESS` - 正在删除，请等待     * `DELETION_FAILED` - 删除失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情
+    * agencies  委托授权的信息。
+    * statusMessage  当资源栈的状态为任意失败状态（即以 `FAILED` 结尾时），将会展示简要的错误信息总结以供debug
+    * varsUriContent  vars_uri对应的文件内容
+    * createTime  资源栈的生成时间 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
+    * updateTime  资源栈的更新时间（更新场景包括元数据更新场景和部署场景） 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     *
     * @var string[]
     */
@@ -76,15 +76,15 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
         'stackName' => null,
         'description' => null,
         'varsStructure' => null,
-        'varsUriContent' => null,
         'varsBody' => null,
-        'createTime' => null,
-        'updateTime' => null,
         'enableDeletionProtection' => null,
         'enableAutoRollback' => null,
         'status' => null,
+        'agencies' => null,
         'statusMessage' => null,
-        'agencies' => null
+        'varsUriContent' => null,
+        'createTime' => null,
+        'updateTime' => null
     ];
 
     /**
@@ -110,19 +110,19 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * stackId  栈的唯一Id
-    * stackName  栈的名字
-    * description  栈的描述，此描述为用户在创建资源栈时指定
-    * varsStructure  参数列表
-    * varsUriContent  vars文件中的内容
-    * varsBody  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。vars_body用于接收用户直接提交的tfvars文件内容
-    * createTime  栈的生成时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * updateTime  由于栈可以被更新，此处为上次更新时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * enableDeletionProtection  资源栈删除保护的目标状态
-    * enableAutoRollback  资源栈是否开启自动回滚的标识位
-    * status  资源栈的执行状态     * `DEPLOYMENT_IN_PROGRESS` - 正在部署     * `DEPLOYMENT_FAILED` - 部署失败。请于StatusMessage见更多详情     * `DEPLOYMENT_COMPLETE ` - 部署结束     * `ROLLBACK_IN_PROGRESS` - 正在回滚     * `ROLLBACK_FAILED` - 回滚失败。请于StatusMessage见更多详情     * `ROLLBACK_COMPLETE` - 回滚完成     * `DELETION_IN_PROGRESS` - 正在删除     * `DELETION_FAILED` - 删除失败     * `CREATION_COMPLETE` - 生成完成，并没有任何部署
-    * statusMessage  展示更多细节的信息
-    * agencies  委托授权的信息
+    * stackId  资源栈（stack）的唯一Id。  此Id由资源编排服务在生成资源栈的时候生成，为UUID。  由于资源栈名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈，删除，再重新创建一个同名资源栈。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈就是我认为的那个，而不是其他队友删除后创建的同名资源栈。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈所对应的ID都不相同，更新不会影响ID。如果给与的stack_id和当前资源栈的ID不一致，则返回400
+    * stackName  用户希望生成的资源栈的名字。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
+    * description  资源栈的描述。可用于客户识别自己的资源栈。
+    * varsStructure  HCL支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。  * var_structure可以允许客户提交最简单的字符串类型的参数  * 资源编排服务支持vars_structure，vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * vars_structure中的值只支持简单的字符串类型，如果需要使用其他类型，需要用户自己在HCL引用时转换， 或者用户可以使用vars_uri、vars_body，vars_uri和vars_body中支持HCL支持的各种类型以及复杂结构  * 如果vars_structure过大，可以使用vars_uri  * 注意：vars_structure中默认不应该含有任何敏感信息，资源编排服务会直接明文使用、log、展示、存储对应的vars。如为敏感信息，建议设置encryption字段开启加密
+    * varsBody  HCL支持参数，即，同一个模板可以给予不同的参数而达到不同的效果  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中。具体tfvars格式见：https://www.terraform.io/language/values/variables#variable-definitions-tfvars-files  * 资源编排服务支持vars_structure，vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 如果vars中都是简单的字符串格式，可以使用var_structure  * 注意：vars_body中不应该含有任何敏感信息，资源编排服务会直接明文使用、log、展示、存储对应的vars。如为敏感信息，建议通过vars_structure并设置encryption字段传递
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）
+    * status  资源栈的状态     * `CREATION_COMPLETE` - 生成空资源栈完成，并没有任何部署     * `DEPLOYMENT_IN_PROGRESS` - 正在部署，请等待     * `DEPLOYMENT_FAILED` - 部署失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情     * `DEPLOYMENT_COMPLETE` - 部署完成     * `ROLLBACK_IN_PROGRESS` - 部署失败，正在回滚，请等待     * `ROLLBACK_FAILED` - 回滚失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情     * `ROLLBACK_COMPLETE` - 回滚完成     * `DELETION_IN_PROGRESS` - 正在删除，请等待     * `DELETION_FAILED` - 删除失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情
+    * agencies  委托授权的信息。
+    * statusMessage  当资源栈的状态为任意失败状态（即以 `FAILED` 结尾时），将会展示简要的错误信息总结以供debug
+    * varsUriContent  vars_uri对应的文件内容
+    * createTime  资源栈的生成时间 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
+    * updateTime  资源栈的更新时间（更新场景包括元数据更新场景和部署场景） 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     *
     * @var string[]
     */
@@ -131,32 +131,32 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
             'stackName' => 'stack_name',
             'description' => 'description',
             'varsStructure' => 'vars_structure',
-            'varsUriContent' => 'vars_uri_content',
             'varsBody' => 'vars_body',
-            'createTime' => 'create_time',
-            'updateTime' => 'update_time',
             'enableDeletionProtection' => 'enable_deletion_protection',
             'enableAutoRollback' => 'enable_auto_rollback',
             'status' => 'status',
+            'agencies' => 'agencies',
             'statusMessage' => 'status_message',
-            'agencies' => 'agencies'
+            'varsUriContent' => 'vars_uri_content',
+            'createTime' => 'create_time',
+            'updateTime' => 'update_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * stackId  栈的唯一Id
-    * stackName  栈的名字
-    * description  栈的描述，此描述为用户在创建资源栈时指定
-    * varsStructure  参数列表
-    * varsUriContent  vars文件中的内容
-    * varsBody  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。vars_body用于接收用户直接提交的tfvars文件内容
-    * createTime  栈的生成时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * updateTime  由于栈可以被更新，此处为上次更新时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * enableDeletionProtection  资源栈删除保护的目标状态
-    * enableAutoRollback  资源栈是否开启自动回滚的标识位
-    * status  资源栈的执行状态     * `DEPLOYMENT_IN_PROGRESS` - 正在部署     * `DEPLOYMENT_FAILED` - 部署失败。请于StatusMessage见更多详情     * `DEPLOYMENT_COMPLETE ` - 部署结束     * `ROLLBACK_IN_PROGRESS` - 正在回滚     * `ROLLBACK_FAILED` - 回滚失败。请于StatusMessage见更多详情     * `ROLLBACK_COMPLETE` - 回滚完成     * `DELETION_IN_PROGRESS` - 正在删除     * `DELETION_FAILED` - 删除失败     * `CREATION_COMPLETE` - 生成完成，并没有任何部署
-    * statusMessage  展示更多细节的信息
-    * agencies  委托授权的信息
+    * stackId  资源栈（stack）的唯一Id。  此Id由资源编排服务在生成资源栈的时候生成，为UUID。  由于资源栈名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈，删除，再重新创建一个同名资源栈。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈就是我认为的那个，而不是其他队友删除后创建的同名资源栈。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈所对应的ID都不相同，更新不会影响ID。如果给与的stack_id和当前资源栈的ID不一致，则返回400
+    * stackName  用户希望生成的资源栈的名字。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
+    * description  资源栈的描述。可用于客户识别自己的资源栈。
+    * varsStructure  HCL支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。  * var_structure可以允许客户提交最简单的字符串类型的参数  * 资源编排服务支持vars_structure，vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * vars_structure中的值只支持简单的字符串类型，如果需要使用其他类型，需要用户自己在HCL引用时转换， 或者用户可以使用vars_uri、vars_body，vars_uri和vars_body中支持HCL支持的各种类型以及复杂结构  * 如果vars_structure过大，可以使用vars_uri  * 注意：vars_structure中默认不应该含有任何敏感信息，资源编排服务会直接明文使用、log、展示、存储对应的vars。如为敏感信息，建议设置encryption字段开启加密
+    * varsBody  HCL支持参数，即，同一个模板可以给予不同的参数而达到不同的效果  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中。具体tfvars格式见：https://www.terraform.io/language/values/variables#variable-definitions-tfvars-files  * 资源编排服务支持vars_structure，vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 如果vars中都是简单的字符串格式，可以使用var_structure  * 注意：vars_body中不应该含有任何敏感信息，资源编排服务会直接明文使用、log、展示、存储对应的vars。如为敏感信息，建议通过vars_structure并设置encryption字段传递
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）
+    * status  资源栈的状态     * `CREATION_COMPLETE` - 生成空资源栈完成，并没有任何部署     * `DEPLOYMENT_IN_PROGRESS` - 正在部署，请等待     * `DEPLOYMENT_FAILED` - 部署失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情     * `DEPLOYMENT_COMPLETE` - 部署完成     * `ROLLBACK_IN_PROGRESS` - 部署失败，正在回滚，请等待     * `ROLLBACK_FAILED` - 回滚失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情     * `ROLLBACK_COMPLETE` - 回滚完成     * `DELETION_IN_PROGRESS` - 正在删除，请等待     * `DELETION_FAILED` - 删除失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情
+    * agencies  委托授权的信息。
+    * statusMessage  当资源栈的状态为任意失败状态（即以 `FAILED` 结尾时），将会展示简要的错误信息总结以供debug
+    * varsUriContent  vars_uri对应的文件内容
+    * createTime  资源栈的生成时间 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
+    * updateTime  资源栈的更新时间（更新场景包括元数据更新场景和部署场景） 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     *
     * @var string[]
     */
@@ -165,32 +165,32 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
             'stackName' => 'setStackName',
             'description' => 'setDescription',
             'varsStructure' => 'setVarsStructure',
-            'varsUriContent' => 'setVarsUriContent',
             'varsBody' => 'setVarsBody',
-            'createTime' => 'setCreateTime',
-            'updateTime' => 'setUpdateTime',
             'enableDeletionProtection' => 'setEnableDeletionProtection',
             'enableAutoRollback' => 'setEnableAutoRollback',
             'status' => 'setStatus',
+            'agencies' => 'setAgencies',
             'statusMessage' => 'setStatusMessage',
-            'agencies' => 'setAgencies'
+            'varsUriContent' => 'setVarsUriContent',
+            'createTime' => 'setCreateTime',
+            'updateTime' => 'setUpdateTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * stackId  栈的唯一Id
-    * stackName  栈的名字
-    * description  栈的描述，此描述为用户在创建资源栈时指定
-    * varsStructure  参数列表
-    * varsUriContent  vars文件中的内容
-    * varsBody  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。vars_body用于接收用户直接提交的tfvars文件内容
-    * createTime  栈的生成时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * updateTime  由于栈可以被更新，此处为上次更新时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * enableDeletionProtection  资源栈删除保护的目标状态
-    * enableAutoRollback  资源栈是否开启自动回滚的标识位
-    * status  资源栈的执行状态     * `DEPLOYMENT_IN_PROGRESS` - 正在部署     * `DEPLOYMENT_FAILED` - 部署失败。请于StatusMessage见更多详情     * `DEPLOYMENT_COMPLETE ` - 部署结束     * `ROLLBACK_IN_PROGRESS` - 正在回滚     * `ROLLBACK_FAILED` - 回滚失败。请于StatusMessage见更多详情     * `ROLLBACK_COMPLETE` - 回滚完成     * `DELETION_IN_PROGRESS` - 正在删除     * `DELETION_FAILED` - 删除失败     * `CREATION_COMPLETE` - 生成完成，并没有任何部署
-    * statusMessage  展示更多细节的信息
-    * agencies  委托授权的信息
+    * stackId  资源栈（stack）的唯一Id。  此Id由资源编排服务在生成资源栈的时候生成，为UUID。  由于资源栈名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈，删除，再重新创建一个同名资源栈。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈就是我认为的那个，而不是其他队友删除后创建的同名资源栈。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈所对应的ID都不相同，更新不会影响ID。如果给与的stack_id和当前资源栈的ID不一致，则返回400
+    * stackName  用户希望生成的资源栈的名字。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
+    * description  资源栈的描述。可用于客户识别自己的资源栈。
+    * varsStructure  HCL支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。  * var_structure可以允许客户提交最简单的字符串类型的参数  * 资源编排服务支持vars_structure，vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * vars_structure中的值只支持简单的字符串类型，如果需要使用其他类型，需要用户自己在HCL引用时转换， 或者用户可以使用vars_uri、vars_body，vars_uri和vars_body中支持HCL支持的各种类型以及复杂结构  * 如果vars_structure过大，可以使用vars_uri  * 注意：vars_structure中默认不应该含有任何敏感信息，资源编排服务会直接明文使用、log、展示、存储对应的vars。如为敏感信息，建议设置encryption字段开启加密
+    * varsBody  HCL支持参数，即，同一个模板可以给予不同的参数而达到不同的效果  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中。具体tfvars格式见：https://www.terraform.io/language/values/variables#variable-definitions-tfvars-files  * 资源编排服务支持vars_structure，vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 如果vars中都是简单的字符串格式，可以使用var_structure  * 注意：vars_body中不应该含有任何敏感信息，资源编排服务会直接明文使用、log、展示、存储对应的vars。如为敏感信息，建议通过vars_structure并设置encryption字段传递
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）
+    * status  资源栈的状态     * `CREATION_COMPLETE` - 生成空资源栈完成，并没有任何部署     * `DEPLOYMENT_IN_PROGRESS` - 正在部署，请等待     * `DEPLOYMENT_FAILED` - 部署失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情     * `DEPLOYMENT_COMPLETE` - 部署完成     * `ROLLBACK_IN_PROGRESS` - 部署失败，正在回滚，请等待     * `ROLLBACK_FAILED` - 回滚失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情     * `ROLLBACK_COMPLETE` - 回滚完成     * `DELETION_IN_PROGRESS` - 正在删除，请等待     * `DELETION_FAILED` - 删除失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情
+    * agencies  委托授权的信息。
+    * statusMessage  当资源栈的状态为任意失败状态（即以 `FAILED` 结尾时），将会展示简要的错误信息总结以供debug
+    * varsUriContent  vars_uri对应的文件内容
+    * createTime  资源栈的生成时间 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
+    * updateTime  资源栈的更新时间（更新场景包括元数据更新场景和部署场景） 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     *
     * @var string[]
     */
@@ -199,15 +199,15 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
             'stackName' => 'getStackName',
             'description' => 'getDescription',
             'varsStructure' => 'getVarsStructure',
-            'varsUriContent' => 'getVarsUriContent',
             'varsBody' => 'getVarsBody',
-            'createTime' => 'getCreateTime',
-            'updateTime' => 'getUpdateTime',
             'enableDeletionProtection' => 'getEnableDeletionProtection',
             'enableAutoRollback' => 'getEnableAutoRollback',
             'status' => 'getStatus',
+            'agencies' => 'getAgencies',
             'statusMessage' => 'getStatusMessage',
-            'agencies' => 'getAgencies'
+            'varsUriContent' => 'getVarsUriContent',
+            'createTime' => 'getCreateTime',
+            'updateTime' => 'getUpdateTime'
     ];
 
     /**
@@ -250,6 +250,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_CREATION_COMPLETE = 'CREATION_COMPLETE';
     const STATUS_DEPLOYMENT_IN_PROGRESS = 'DEPLOYMENT_IN_PROGRESS';
     const STATUS_DEPLOYMENT_FAILED = 'DEPLOYMENT_FAILED';
     const STATUS_DEPLOYMENT_COMPLETE = 'DEPLOYMENT_COMPLETE';
@@ -258,7 +259,6 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     const STATUS_ROLLBACK_COMPLETE = 'ROLLBACK_COMPLETE';
     const STATUS_DELETION_IN_PROGRESS = 'DELETION_IN_PROGRESS';
     const STATUS_DELETION_FAILED = 'DELETION_FAILED';
-    const STATUS_CREATION_COMPLETE = 'CREATION_COMPLETE';
     
 
     /**
@@ -269,6 +269,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     public function getStatusAllowableValues()
     {
         return [
+            self::STATUS_CREATION_COMPLETE,
             self::STATUS_DEPLOYMENT_IN_PROGRESS,
             self::STATUS_DEPLOYMENT_FAILED,
             self::STATUS_DEPLOYMENT_COMPLETE,
@@ -277,7 +278,6 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
             self::STATUS_ROLLBACK_COMPLETE,
             self::STATUS_DELETION_IN_PROGRESS,
             self::STATUS_DELETION_FAILED,
-            self::STATUS_CREATION_COMPLETE,
         ];
     }
 
@@ -301,15 +301,15 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
         $this->container['stackName'] = isset($data['stackName']) ? $data['stackName'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['varsStructure'] = isset($data['varsStructure']) ? $data['varsStructure'] : null;
-        $this->container['varsUriContent'] = isset($data['varsUriContent']) ? $data['varsUriContent'] : null;
         $this->container['varsBody'] = isset($data['varsBody']) ? $data['varsBody'] : null;
-        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
-        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['enableDeletionProtection'] = isset($data['enableDeletionProtection']) ? $data['enableDeletionProtection'] : null;
         $this->container['enableAutoRollback'] = isset($data['enableAutoRollback']) ? $data['enableAutoRollback'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['statusMessage'] = isset($data['statusMessage']) ? $data['statusMessage'] : null;
         $this->container['agencies'] = isset($data['agencies']) ? $data['agencies'] : null;
+        $this->container['statusMessage'] = isset($data['statusMessage']) ? $data['statusMessage'] : null;
+        $this->container['varsUriContent'] = isset($data['varsUriContent']) ? $data['varsUriContent'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }
 
     /**
@@ -325,6 +325,33 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['stackId']) && (mb_strlen($this->container['stackId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'stackId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['stackId']) && !preg_match("/^[a-z0-9]+[a-z0-9-]*$/", $this->container['stackId'])) {
+                $invalidProperties[] = "invalid value for 'stackId', must be conform to the pattern /^[a-z0-9]+[a-z0-9-]*$/.";
+            }
+        if ($this->container['stackName'] === null) {
+            $invalidProperties[] = "'stackName' can't be null";
+        }
+            if ((mb_strlen($this->container['stackName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'stackName', the character length must be smaller than or equal to 128.";
+            }
+            if ((mb_strlen($this->container['stackName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'stackName', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^[一-龥A-Za-z]+[一-龥A-Za-z0-9_-]*$/", $this->container['stackName'])) {
+                $invalidProperties[] = "invalid value for 'stackName', must be conform to the pattern /^[一-龥A-Za-z]+[一-龥A-Za-z0-9_-]*$/.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['varsBody']) && (mb_strlen($this->container['varsBody']) > 51200)) {
+                $invalidProperties[] = "invalid value for 'varsBody', the character length must be smaller than or equal to 51200.";
+            }
+            if (!is_null($this->container['varsBody']) && (mb_strlen($this->container['varsBody']) < 0)) {
+                $invalidProperties[] = "invalid value for 'varsBody', the character length must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
@@ -350,7 +377,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets stackId
-    *  栈的唯一Id
+    *  资源栈（stack）的唯一Id。  此Id由资源编排服务在生成资源栈的时候生成，为UUID。  由于资源栈名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈，删除，再重新创建一个同名资源栈。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈就是我认为的那个，而不是其他队友删除后创建的同名资源栈。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈所对应的ID都不相同，更新不会影响ID。如果给与的stack_id和当前资源栈的ID不一致，则返回400
     *
     * @return string|null
     */
@@ -362,7 +389,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets stackId
     *
-    * @param string|null $stackId 栈的唯一Id
+    * @param string|null $stackId 资源栈（stack）的唯一Id。  此Id由资源编排服务在生成资源栈的时候生成，为UUID。  由于资源栈名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈，删除，再重新创建一个同名资源栈。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈就是我认为的那个，而不是其他队友删除后创建的同名资源栈。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈所对应的ID都不相同，更新不会影响ID。如果给与的stack_id和当前资源栈的ID不一致，则返回400
     *
     * @return $this
     */
@@ -374,9 +401,9 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets stackName
-    *  栈的名字
+    *  用户希望生成的资源栈的名字。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     *
-    * @return string|null
+    * @return string
     */
     public function getStackName()
     {
@@ -386,7 +413,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets stackName
     *
-    * @param string|null $stackName 栈的名字
+    * @param string $stackName 用户希望生成的资源栈的名字。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     *
     * @return $this
     */
@@ -398,7 +425,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  栈的描述，此描述为用户在创建资源栈时指定
+    *  资源栈的描述。可用于客户识别自己的资源栈。
     *
     * @return string|null
     */
@@ -410,7 +437,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 栈的描述，此描述为用户在创建资源栈时指定
+    * @param string|null $description 资源栈的描述。可用于客户识别自己的资源栈。
     *
     * @return $this
     */
@@ -422,7 +449,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets varsStructure
-    *  参数列表
+    *  HCL支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。  * var_structure可以允许客户提交最简单的字符串类型的参数  * 资源编排服务支持vars_structure，vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * vars_structure中的值只支持简单的字符串类型，如果需要使用其他类型，需要用户自己在HCL引用时转换， 或者用户可以使用vars_uri、vars_body，vars_uri和vars_body中支持HCL支持的各种类型以及复杂结构  * 如果vars_structure过大，可以使用vars_uri  * 注意：vars_structure中默认不应该含有任何敏感信息，资源编排服务会直接明文使用、log、展示、存储对应的vars。如为敏感信息，建议设置encryption字段开启加密
     *
     * @return \HuaweiCloud\SDK\Aos\V1\Model\VarsStructure[]|null
     */
@@ -434,7 +461,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets varsStructure
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\VarsStructure[]|null $varsStructure 参数列表
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\VarsStructure[]|null $varsStructure HCL支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。  * var_structure可以允许客户提交最简单的字符串类型的参数  * 资源编排服务支持vars_structure，vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * vars_structure中的值只支持简单的字符串类型，如果需要使用其他类型，需要用户自己在HCL引用时转换， 或者用户可以使用vars_uri、vars_body，vars_uri和vars_body中支持HCL支持的各种类型以及复杂结构  * 如果vars_structure过大，可以使用vars_uri  * 注意：vars_structure中默认不应该含有任何敏感信息，资源编排服务会直接明文使用、log、展示、存储对应的vars。如为敏感信息，建议设置encryption字段开启加密
     *
     * @return $this
     */
@@ -445,32 +472,8 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets varsUriContent
-    *  vars文件中的内容
-    *
-    * @return string|null
-    */
-    public function getVarsUriContent()
-    {
-        return $this->container['varsUriContent'];
-    }
-
-    /**
-    * Sets varsUriContent
-    *
-    * @param string|null $varsUriContent vars文件中的内容
-    *
-    * @return $this
-    */
-    public function setVarsUriContent($varsUriContent)
-    {
-        $this->container['varsUriContent'] = $varsUriContent;
-        return $this;
-    }
-
-    /**
     * Gets varsBody
-    *  terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。vars_body用于接收用户直接提交的tfvars文件内容
+    *  HCL支持参数，即，同一个模板可以给予不同的参数而达到不同的效果  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中。具体tfvars格式见：https://www.terraform.io/language/values/variables#variable-definitions-tfvars-files  * 资源编排服务支持vars_structure，vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 如果vars中都是简单的字符串格式，可以使用var_structure  * 注意：vars_body中不应该含有任何敏感信息，资源编排服务会直接明文使用、log、展示、存储对应的vars。如为敏感信息，建议通过vars_structure并设置encryption字段传递
     *
     * @return string|null
     */
@@ -482,7 +485,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets varsBody
     *
-    * @param string|null $varsBody terraform支持参数，即，同一个模板可以给予不同的参数而达到不同的效果。vars_body用于接收用户直接提交的tfvars文件内容
+    * @param string|null $varsBody HCL支持参数，即，同一个模板可以给予不同的参数而达到不同的效果  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中。具体tfvars格式见：https://www.terraform.io/language/values/variables#variable-definitions-tfvars-files  * 资源编排服务支持vars_structure，vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 如果vars中都是简单的字符串格式，可以使用var_structure  * 注意：vars_body中不应该含有任何敏感信息，资源编排服务会直接明文使用、log、展示、存储对应的vars。如为敏感信息，建议通过vars_structure并设置encryption字段传递
     *
     * @return $this
     */
@@ -493,56 +496,8 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets createTime
-    *  栈的生成时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    *
-    * @return string|null
-    */
-    public function getCreateTime()
-    {
-        return $this->container['createTime'];
-    }
-
-    /**
-    * Sets createTime
-    *
-    * @param string|null $createTime 栈的生成时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    *
-    * @return $this
-    */
-    public function setCreateTime($createTime)
-    {
-        $this->container['createTime'] = $createTime;
-        return $this;
-    }
-
-    /**
-    * Gets updateTime
-    *  由于栈可以被更新，此处为上次更新时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    *
-    * @return string|null
-    */
-    public function getUpdateTime()
-    {
-        return $this->container['updateTime'];
-    }
-
-    /**
-    * Sets updateTime
-    *
-    * @param string|null $updateTime 由于栈可以被更新，此处为上次更新时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    *
-    * @return $this
-    */
-    public function setUpdateTime($updateTime)
-    {
-        $this->container['updateTime'] = $updateTime;
-        return $this;
-    }
-
-    /**
     * Gets enableDeletionProtection
-    *  资源栈删除保护的目标状态
+    *  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）
     *
     * @return bool|null
     */
@@ -554,7 +509,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enableDeletionProtection
     *
-    * @param bool|null $enableDeletionProtection 资源栈删除保护的目标状态
+    * @param bool|null $enableDeletionProtection 删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）
     *
     * @return $this
     */
@@ -566,7 +521,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableAutoRollback
-    *  资源栈是否开启自动回滚的标识位
+    *  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）
     *
     * @return bool|null
     */
@@ -578,7 +533,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enableAutoRollback
     *
-    * @param bool|null $enableAutoRollback 资源栈是否开启自动回滚的标识位
+    * @param bool|null $enableAutoRollback 自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）
     *
     * @return $this
     */
@@ -590,7 +545,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  资源栈的执行状态     * `DEPLOYMENT_IN_PROGRESS` - 正在部署     * `DEPLOYMENT_FAILED` - 部署失败。请于StatusMessage见更多详情     * `DEPLOYMENT_COMPLETE ` - 部署结束     * `ROLLBACK_IN_PROGRESS` - 正在回滚     * `ROLLBACK_FAILED` - 回滚失败。请于StatusMessage见更多详情     * `ROLLBACK_COMPLETE` - 回滚完成     * `DELETION_IN_PROGRESS` - 正在删除     * `DELETION_FAILED` - 删除失败     * `CREATION_COMPLETE` - 生成完成，并没有任何部署
+    *  资源栈的状态     * `CREATION_COMPLETE` - 生成空资源栈完成，并没有任何部署     * `DEPLOYMENT_IN_PROGRESS` - 正在部署，请等待     * `DEPLOYMENT_FAILED` - 部署失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情     * `DEPLOYMENT_COMPLETE` - 部署完成     * `ROLLBACK_IN_PROGRESS` - 部署失败，正在回滚，请等待     * `ROLLBACK_FAILED` - 回滚失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情     * `ROLLBACK_COMPLETE` - 回滚完成     * `DELETION_IN_PROGRESS` - 正在删除，请等待     * `DELETION_FAILED` - 删除失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情
     *
     * @return string|null
     */
@@ -602,7 +557,7 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 资源栈的执行状态     * `DEPLOYMENT_IN_PROGRESS` - 正在部署     * `DEPLOYMENT_FAILED` - 部署失败。请于StatusMessage见更多详情     * `DEPLOYMENT_COMPLETE ` - 部署结束     * `ROLLBACK_IN_PROGRESS` - 正在回滚     * `ROLLBACK_FAILED` - 回滚失败。请于StatusMessage见更多详情     * `ROLLBACK_COMPLETE` - 回滚完成     * `DELETION_IN_PROGRESS` - 正在删除     * `DELETION_FAILED` - 删除失败     * `CREATION_COMPLETE` - 生成完成，并没有任何部署
+    * @param string|null $status 资源栈的状态     * `CREATION_COMPLETE` - 生成空资源栈完成，并没有任何部署     * `DEPLOYMENT_IN_PROGRESS` - 正在部署，请等待     * `DEPLOYMENT_FAILED` - 部署失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情     * `DEPLOYMENT_COMPLETE` - 部署完成     * `ROLLBACK_IN_PROGRESS` - 部署失败，正在回滚，请等待     * `ROLLBACK_FAILED` - 回滚失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情     * `ROLLBACK_COMPLETE` - 回滚完成     * `DELETION_IN_PROGRESS` - 正在删除，请等待     * `DELETION_FAILED` - 删除失败。请于status_message见错误信息汇总，或者调用ListStackEvents获得事件详情
     *
     * @return $this
     */
@@ -613,32 +568,8 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets statusMessage
-    *  展示更多细节的信息
-    *
-    * @return string|null
-    */
-    public function getStatusMessage()
-    {
-        return $this->container['statusMessage'];
-    }
-
-    /**
-    * Sets statusMessage
-    *
-    * @param string|null $statusMessage 展示更多细节的信息
-    *
-    * @return $this
-    */
-    public function setStatusMessage($statusMessage)
-    {
-        $this->container['statusMessage'] = $statusMessage;
-        return $this;
-    }
-
-    /**
     * Gets agencies
-    *  委托授权的信息
+    *  委托授权的信息。
     *
     * @return \HuaweiCloud\SDK\Aos\V1\Model\Agency[]|null
     */
@@ -650,13 +581,109 @@ class GetStackMetadataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets agencies
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\Agency[]|null $agencies 委托授权的信息
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\Agency[]|null $agencies 委托授权的信息。
     *
     * @return $this
     */
     public function setAgencies($agencies)
     {
         $this->container['agencies'] = $agencies;
+        return $this;
+    }
+
+    /**
+    * Gets statusMessage
+    *  当资源栈的状态为任意失败状态（即以 `FAILED` 结尾时），将会展示简要的错误信息总结以供debug
+    *
+    * @return string|null
+    */
+    public function getStatusMessage()
+    {
+        return $this->container['statusMessage'];
+    }
+
+    /**
+    * Sets statusMessage
+    *
+    * @param string|null $statusMessage 当资源栈的状态为任意失败状态（即以 `FAILED` 结尾时），将会展示简要的错误信息总结以供debug
+    *
+    * @return $this
+    */
+    public function setStatusMessage($statusMessage)
+    {
+        $this->container['statusMessage'] = $statusMessage;
+        return $this;
+    }
+
+    /**
+    * Gets varsUriContent
+    *  vars_uri对应的文件内容
+    *
+    * @return string|null
+    */
+    public function getVarsUriContent()
+    {
+        return $this->container['varsUriContent'];
+    }
+
+    /**
+    * Sets varsUriContent
+    *
+    * @param string|null $varsUriContent vars_uri对应的文件内容
+    *
+    * @return $this
+    */
+    public function setVarsUriContent($varsUriContent)
+    {
+        $this->container['varsUriContent'] = $varsUriContent;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  资源栈的生成时间 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
+    *
+    * @return string|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param string|null $createTime 资源栈的生成时间 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  资源栈的更新时间（更新场景包括元数据更新场景和部署场景） 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
+    *
+    * @return string|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param string|null $updateTime 资源栈的更新时间（更新场景包括元数据更新场景和部署场景） 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
         return $this;
     }
 
