@@ -29,7 +29,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含。此参数不携带或携带值为空时，不作为筛选条件。
     * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户。此参数不携带或携带值为空时，默认值为“all”，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
     * subCustomerId  企业子账号ID。此参数携带值为空串时，不作为筛选条件。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
@@ -69,7 +69,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含。此参数不携带或携带值为空时，不作为筛选条件。
     * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户。此参数不携带或携带值为空时，默认值为“all”，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
     * subCustomerId  企业子账号ID。此参数携带值为空串时，不作为筛选条件。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
@@ -130,7 +130,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含。此参数不携带或携带值为空时，不作为筛选条件。
     * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户。此参数不携带或携带值为空时，默认值为“all”，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
     * subCustomerId  企业子账号ID。此参数携带值为空串时，不作为筛选条件。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
@@ -170,7 +170,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含。此参数不携带或携带值为空时，不作为筛选条件。
     * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户。此参数不携带或携带值为空时，默认值为“all”，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
     * subCustomerId  企业子账号ID。此参数携带值为空串时，不作为筛选条件。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
@@ -210,7 +210,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * includeZeroRecord  返回是否包含应付金额为0的记录。true：包含false：不包含。此参数不携带或携带值为空时，不作为筛选条件。
     * method  查询资源消费记录的方式。oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户。此参数不携带或携带值为空时，默认值为“all”，如果没有企业子客户，取值为all时查询的是客户自己的资源消费记录。
     * subCustomerId  企业子账号ID。此参数携带值为空串时，不作为筛选条件。 说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
@@ -582,7 +582,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    *  企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     *
     * @return string|null
     */
@@ -594,7 +594,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
+    * @param string|null $enterpriseProjectId 企业项目标识（企业项目ID）。default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     *
     * @return $this
     */

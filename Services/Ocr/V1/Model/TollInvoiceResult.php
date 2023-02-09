@@ -30,6 +30,7 @@ class TollInvoiceResult implements ModelInterface, ArrayAccess
     * date  日期。
     * time  时间。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class TollInvoiceResult implements ModelInterface, ArrayAccess
             'vehicleType' => 'string',
             'date' => 'string',
             'time' => 'string',
-            'confidence' => 'object'
+            'confidence' => 'object',
+            'textLocation' => 'object'
     ];
 
     /**
@@ -58,6 +60,7 @@ class TollInvoiceResult implements ModelInterface, ArrayAccess
     * date  日期。
     * time  时间。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class TollInvoiceResult implements ModelInterface, ArrayAccess
         'vehicleType' => null,
         'date' => null,
         'time' => null,
-        'confidence' => null
+        'confidence' => null,
+        'textLocation' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class TollInvoiceResult implements ModelInterface, ArrayAccess
     * date  日期。
     * time  时间。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class TollInvoiceResult implements ModelInterface, ArrayAccess
             'vehicleType' => 'vehicle_type',
             'date' => 'date',
             'time' => 'time',
-            'confidence' => 'confidence'
+            'confidence' => 'confidence',
+            'textLocation' => 'text_location'
     ];
 
     /**
@@ -135,6 +141,7 @@ class TollInvoiceResult implements ModelInterface, ArrayAccess
     * date  日期。
     * time  时间。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class TollInvoiceResult implements ModelInterface, ArrayAccess
             'vehicleType' => 'setVehicleType',
             'date' => 'setDate',
             'time' => 'setTime',
-            'confidence' => 'setConfidence'
+            'confidence' => 'setConfidence',
+            'textLocation' => 'setTextLocation'
     ];
 
     /**
@@ -163,6 +171,7 @@ class TollInvoiceResult implements ModelInterface, ArrayAccess
     * date  日期。
     * time  时间。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
+    * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class TollInvoiceResult implements ModelInterface, ArrayAccess
             'vehicleType' => 'getVehicleType',
             'date' => 'getDate',
             'time' => 'getTime',
-            'confidence' => 'getConfidence'
+            'confidence' => 'getConfidence',
+            'textLocation' => 'getTextLocation'
     ];
 
     /**
@@ -247,6 +257,7 @@ class TollInvoiceResult implements ModelInterface, ArrayAccess
         $this->container['date'] = isset($data['date']) ? $data['date'] : null;
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
+        $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
     }
 
     /**
@@ -508,6 +519,30 @@ class TollInvoiceResult implements ModelInterface, ArrayAccess
     public function setConfidence($confidence)
     {
         $this->container['confidence'] = $confidence;
+        return $this;
+    }
+
+    /**
+    * Gets textLocation
+    *  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    *
+    * @return object|null
+    */
+    public function getTextLocation()
+    {
+        return $this->container['textLocation'];
+    }
+
+    /**
+    * Sets textLocation
+    *
+    * @param object|null $textLocation 对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    *
+    * @return $this
+    */
+    public function setTextLocation($textLocation)
+    {
+        $this->container['textLocation'] = $textLocation;
         return $this;
     }
 

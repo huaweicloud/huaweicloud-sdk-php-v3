@@ -34,7 +34,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
     * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目名称。
     * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
@@ -122,7 +122,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
     * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目名称。
     * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
@@ -231,7 +231,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
     * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目名称。
     * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
@@ -319,7 +319,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
     * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目名称。
     * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
@@ -407,7 +407,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * resourceName  资源名称。客户在创建资源的时候，可以输入资源名称，有些资源也可以在管理资源时，修改资源名称。
     * resourceTag  资源标签。客户在管理资源的时候，可以设置资源标签。
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
-    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+    * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目名称。
     * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
@@ -963,7 +963,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+    *  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见如何获取企业项目ID。
     *
     * @return string|null
     */
@@ -975,7 +975,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：-1其余项目对应ID获取方法请参见如何获取企业项目ID。
+    * @param string|null $enterpriseProjectId 企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见如何获取企业项目ID。
     *
     * @return $this
     */

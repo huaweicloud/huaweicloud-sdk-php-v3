@@ -25,6 +25,11 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * obsForwarding  obsForwarding
     * amqpForwarding  amqpForwarding
     * dmsKafkaForwarding  dmsKafkaForwarding
+    * romaForwarding  romaForwarding
+    * influxdbForwarding  influxdbForwarding
+    * functiongraphForwarding  functiongraphForwarding
+    * mrsKafkaForwarding  mrsKafkaForwarding
+    * dmsRocketmqForwarding  dmsRocketmqForwarding
     *
     * @var string[]
     */
@@ -33,7 +38,12 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'disForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DisForwarding',
             'obsForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ObsForwarding',
             'amqpForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\AmqpForwarding',
-            'dmsKafkaForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DmsKafkaForwarding'
+            'dmsKafkaForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DmsKafkaForwarding',
+            'romaForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\RomaForwarding',
+            'influxdbForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\InfluxDBForwarding',
+            'functiongraphForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\FunctionGraphForwarding',
+            'mrsKafkaForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\MrsKafkaForwarding',
+            'dmsRocketmqForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DmsRocketMQForwarding'
     ];
 
     /**
@@ -43,6 +53,11 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * obsForwarding  obsForwarding
     * amqpForwarding  amqpForwarding
     * dmsKafkaForwarding  dmsKafkaForwarding
+    * romaForwarding  romaForwarding
+    * influxdbForwarding  influxdbForwarding
+    * functiongraphForwarding  functiongraphForwarding
+    * mrsKafkaForwarding  mrsKafkaForwarding
+    * dmsRocketmqForwarding  dmsRocketmqForwarding
     *
     * @var string[]
     */
@@ -51,7 +66,12 @@ class ChannelDetail implements ModelInterface, ArrayAccess
         'disForwarding' => null,
         'obsForwarding' => null,
         'amqpForwarding' => null,
-        'dmsKafkaForwarding' => null
+        'dmsKafkaForwarding' => null,
+        'romaForwarding' => null,
+        'influxdbForwarding' => null,
+        'functiongraphForwarding' => null,
+        'mrsKafkaForwarding' => null,
+        'dmsRocketmqForwarding' => null
     ];
 
     /**
@@ -82,6 +102,11 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * obsForwarding  obsForwarding
     * amqpForwarding  amqpForwarding
     * dmsKafkaForwarding  dmsKafkaForwarding
+    * romaForwarding  romaForwarding
+    * influxdbForwarding  influxdbForwarding
+    * functiongraphForwarding  functiongraphForwarding
+    * mrsKafkaForwarding  mrsKafkaForwarding
+    * dmsRocketmqForwarding  dmsRocketmqForwarding
     *
     * @var string[]
     */
@@ -90,7 +115,12 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'disForwarding' => 'dis_forwarding',
             'obsForwarding' => 'obs_forwarding',
             'amqpForwarding' => 'amqp_forwarding',
-            'dmsKafkaForwarding' => 'dms_kafka_forwarding'
+            'dmsKafkaForwarding' => 'dms_kafka_forwarding',
+            'romaForwarding' => 'roma_forwarding',
+            'influxdbForwarding' => 'influxdb_forwarding',
+            'functiongraphForwarding' => 'functiongraph_forwarding',
+            'mrsKafkaForwarding' => 'mrs_kafka_forwarding',
+            'dmsRocketmqForwarding' => 'dms_rocketmq_forwarding'
     ];
 
     /**
@@ -100,6 +130,11 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * obsForwarding  obsForwarding
     * amqpForwarding  amqpForwarding
     * dmsKafkaForwarding  dmsKafkaForwarding
+    * romaForwarding  romaForwarding
+    * influxdbForwarding  influxdbForwarding
+    * functiongraphForwarding  functiongraphForwarding
+    * mrsKafkaForwarding  mrsKafkaForwarding
+    * dmsRocketmqForwarding  dmsRocketmqForwarding
     *
     * @var string[]
     */
@@ -108,7 +143,12 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'disForwarding' => 'setDisForwarding',
             'obsForwarding' => 'setObsForwarding',
             'amqpForwarding' => 'setAmqpForwarding',
-            'dmsKafkaForwarding' => 'setDmsKafkaForwarding'
+            'dmsKafkaForwarding' => 'setDmsKafkaForwarding',
+            'romaForwarding' => 'setRomaForwarding',
+            'influxdbForwarding' => 'setInfluxdbForwarding',
+            'functiongraphForwarding' => 'setFunctiongraphForwarding',
+            'mrsKafkaForwarding' => 'setMrsKafkaForwarding',
+            'dmsRocketmqForwarding' => 'setDmsRocketmqForwarding'
     ];
 
     /**
@@ -118,6 +158,11 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * obsForwarding  obsForwarding
     * amqpForwarding  amqpForwarding
     * dmsKafkaForwarding  dmsKafkaForwarding
+    * romaForwarding  romaForwarding
+    * influxdbForwarding  influxdbForwarding
+    * functiongraphForwarding  functiongraphForwarding
+    * mrsKafkaForwarding  mrsKafkaForwarding
+    * dmsRocketmqForwarding  dmsRocketmqForwarding
     *
     * @var string[]
     */
@@ -126,7 +171,12 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'disForwarding' => 'getDisForwarding',
             'obsForwarding' => 'getObsForwarding',
             'amqpForwarding' => 'getAmqpForwarding',
-            'dmsKafkaForwarding' => 'getDmsKafkaForwarding'
+            'dmsKafkaForwarding' => 'getDmsKafkaForwarding',
+            'romaForwarding' => 'getRomaForwarding',
+            'influxdbForwarding' => 'getInfluxdbForwarding',
+            'functiongraphForwarding' => 'getFunctiongraphForwarding',
+            'mrsKafkaForwarding' => 'getMrsKafkaForwarding',
+            'dmsRocketmqForwarding' => 'getDmsRocketmqForwarding'
     ];
 
     /**
@@ -192,6 +242,11 @@ class ChannelDetail implements ModelInterface, ArrayAccess
         $this->container['obsForwarding'] = isset($data['obsForwarding']) ? $data['obsForwarding'] : null;
         $this->container['amqpForwarding'] = isset($data['amqpForwarding']) ? $data['amqpForwarding'] : null;
         $this->container['dmsKafkaForwarding'] = isset($data['dmsKafkaForwarding']) ? $data['dmsKafkaForwarding'] : null;
+        $this->container['romaForwarding'] = isset($data['romaForwarding']) ? $data['romaForwarding'] : null;
+        $this->container['influxdbForwarding'] = isset($data['influxdbForwarding']) ? $data['influxdbForwarding'] : null;
+        $this->container['functiongraphForwarding'] = isset($data['functiongraphForwarding']) ? $data['functiongraphForwarding'] : null;
+        $this->container['mrsKafkaForwarding'] = isset($data['mrsKafkaForwarding']) ? $data['mrsKafkaForwarding'] : null;
+        $this->container['dmsRocketmqForwarding'] = isset($data['dmsRocketmqForwarding']) ? $data['dmsRocketmqForwarding'] : null;
     }
 
     /**
@@ -333,6 +388,126 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     public function setDmsKafkaForwarding($dmsKafkaForwarding)
     {
         $this->container['dmsKafkaForwarding'] = $dmsKafkaForwarding;
+        return $this;
+    }
+
+    /**
+    * Gets romaForwarding
+    *  romaForwarding
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\RomaForwarding|null
+    */
+    public function getRomaForwarding()
+    {
+        return $this->container['romaForwarding'];
+    }
+
+    /**
+    * Sets romaForwarding
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\RomaForwarding|null $romaForwarding romaForwarding
+    *
+    * @return $this
+    */
+    public function setRomaForwarding($romaForwarding)
+    {
+        $this->container['romaForwarding'] = $romaForwarding;
+        return $this;
+    }
+
+    /**
+    * Gets influxdbForwarding
+    *  influxdbForwarding
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\InfluxDBForwarding|null
+    */
+    public function getInfluxdbForwarding()
+    {
+        return $this->container['influxdbForwarding'];
+    }
+
+    /**
+    * Sets influxdbForwarding
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\InfluxDBForwarding|null $influxdbForwarding influxdbForwarding
+    *
+    * @return $this
+    */
+    public function setInfluxdbForwarding($influxdbForwarding)
+    {
+        $this->container['influxdbForwarding'] = $influxdbForwarding;
+        return $this;
+    }
+
+    /**
+    * Gets functiongraphForwarding
+    *  functiongraphForwarding
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\FunctionGraphForwarding|null
+    */
+    public function getFunctiongraphForwarding()
+    {
+        return $this->container['functiongraphForwarding'];
+    }
+
+    /**
+    * Sets functiongraphForwarding
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\FunctionGraphForwarding|null $functiongraphForwarding functiongraphForwarding
+    *
+    * @return $this
+    */
+    public function setFunctiongraphForwarding($functiongraphForwarding)
+    {
+        $this->container['functiongraphForwarding'] = $functiongraphForwarding;
+        return $this;
+    }
+
+    /**
+    * Gets mrsKafkaForwarding
+    *  mrsKafkaForwarding
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\MrsKafkaForwarding|null
+    */
+    public function getMrsKafkaForwarding()
+    {
+        return $this->container['mrsKafkaForwarding'];
+    }
+
+    /**
+    * Sets mrsKafkaForwarding
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\MrsKafkaForwarding|null $mrsKafkaForwarding mrsKafkaForwarding
+    *
+    * @return $this
+    */
+    public function setMrsKafkaForwarding($mrsKafkaForwarding)
+    {
+        $this->container['mrsKafkaForwarding'] = $mrsKafkaForwarding;
+        return $this;
+    }
+
+    /**
+    * Gets dmsRocketmqForwarding
+    *  dmsRocketmqForwarding
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DmsRocketMQForwarding|null
+    */
+    public function getDmsRocketmqForwarding()
+    {
+        return $this->container['dmsRocketmqForwarding'];
+    }
+
+    /**
+    * Sets dmsRocketmqForwarding
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\DmsRocketMQForwarding|null $dmsRocketmqForwarding dmsRocketmqForwarding
+    *
+    * @return $this
+    */
+    public function setDmsRocketmqForwarding($dmsRocketmqForwarding)
+    {
+        $this->container['dmsRocketmqForwarding'] = $dmsRocketmqForwarding;
         return $this;
     }
 

@@ -294,6 +294,73 @@ class VpcClient extends Client
     }
 
     /**
+     * 创建流日志
+     *
+     * 创建流日志。
+     * 流日志功能可以记录虚拟私有云中的流量信息，帮助您检查和优化安全组和网络ACL防火墙控制规则、监控网络流量、进行网络攻击分析等。
+     * VPC流日志功能需要与云日志服务LTS结合使用，请先在云日志服务中创建日志组和日志主题，然后再创建VPC流日志。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createFlowLog($request)
+    {
+        return $this->createFlowLogWithHttpInfo($request);
+    }
+
+    public function createFlowLogWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/fl/flow_logs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateFlowLogResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateFlowLogRequest');
+    }
+
+    /**
      * 创建端口
      *
      * 创建端口。
@@ -747,6 +814,71 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateVpcPeeringResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateVpcPeeringRequest');
+    }
+
+    /**
+     * 删除流日志
+     *
+     * 删除流日志
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteFlowLog($request)
+    {
+        return $this->deleteFlowLogWithHttpInfo($request);
+    }
+
+    public function deleteFlowLogWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/fl/flow_logs/{flowlog_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['flowlogId'] !== null) {
+            $pathParams['flowlog_id'] = $localVarParams['flowlogId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\DeleteFlowLogResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\DeleteFlowLogRequest');
     }
 
     /**
@@ -1275,6 +1407,107 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\DisassociateRouteTableResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\DisassociateRouteTableRequest');
+    }
+
+    /**
+     * 查询流日志列表
+     *
+     * 查询提交请求的租户的所有流日志列表，并根据过滤条件进行过滤
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listFlowLogs($request)
+    {
+        return $this->listFlowLogsWithHttpInfo($request);
+    }
+
+    public function listFlowLogsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/fl/flow_logs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['tenantId'] !== null) {
+            $queryParams['tenant_id'] = $localVarParams['tenantId'];
+        }
+        if ($localVarParams['description'] !== null) {
+            $queryParams['description'] = $localVarParams['description'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $queryParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $queryParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['trafficType'] !== null) {
+            $queryParams['traffic_type'] = $localVarParams['trafficType'];
+        }
+        if ($localVarParams['logGroupId'] !== null) {
+            $queryParams['log_group_id'] = $localVarParams['logGroupId'];
+        }
+        if ($localVarParams['logTopicId'] !== null) {
+            $queryParams['log_topic_id'] = $localVarParams['logTopicId'];
+        }
+        if ($localVarParams['logStoreType'] !== null) {
+            $queryParams['log_store_type'] = $localVarParams['logStoreType'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\ListFlowLogsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListFlowLogsRequest');
     }
 
     /**
@@ -1941,6 +2174,71 @@ class VpcClient extends Client
     }
 
     /**
+     * 查询流日志
+     *
+     * 查询流日志详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFlowLog($request)
+    {
+        return $this->showFlowLogWithHttpInfo($request);
+    }
+
+    public function showFlowLogWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/fl/flow_logs/{flowlog_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['flowlogId'] !== null) {
+            $pathParams['flowlog_id'] = $localVarParams['flowlogId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowFlowLogResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowFlowLogRequest');
+    }
+
+    /**
      * 查询端口
      *
      * 查询单个端口详情。
@@ -2455,6 +2753,74 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowVpcPeeringResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowVpcPeeringRequest');
+    }
+
+    /**
+     * 更新流日志
+     *
+     * 更新流日志
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateFlowLog($request)
+    {
+        return $this->updateFlowLogWithHttpInfo($request);
+    }
+
+    public function updateFlowLogWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/fl/flow_logs/{flowlog_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['flowlogId'] !== null) {
+            $pathParams['flowlog_id'] = $localVarParams['flowlogId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\UpdateFlowLogResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\UpdateFlowLogRequest');
     }
 
     /**
