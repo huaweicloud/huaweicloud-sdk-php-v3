@@ -272,7 +272,6 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     const TLS_TLS_V1_0 = 'TLS v1.0';
     const TLS_TLS_V1_1 = 'TLS v1.1';
     const TLS_TLS_V1_2 = 'TLS v1.2';
-    const TLS_TLS_V1_3 = 'TLS v1.3';
     const CIPHER_CIPHER_1 = 'cipher_1';
     const CIPHER_CIPHER_2 = 'cipher_2';
     const CIPHER_CIPHER_3 = 'cipher_3';
@@ -291,7 +290,6 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             self::TLS_TLS_V1_0,
             self::TLS_TLS_V1_1,
             self::TLS_TLS_V1_2,
-            self::TLS_TLS_V1_3,
         ];
     }
 

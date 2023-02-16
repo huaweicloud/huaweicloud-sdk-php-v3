@@ -27,7 +27,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
     * limit  每页显示条数，最小值为1，最大值为1000，若不设置该参数，则为10。
     * status  实例状态。详细状态说明见[缓存实例状态说明](https://support.huaweicloud.com/api-dcs/dcs-api-0312047.html)
-    * nameEqual  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
+    * nameEqual  是否按照实例名称进行精确匹配查询。  和name字段对应，name字段为模糊匹配的用例名，name_equal是精确匹配的用例名。
     * tags  根据实例标签键值对进行查询。{key}表示标签键，{value}表示标签值。  如果同时使用多个标签键值对进行查询，中间使用逗号分隔开，表示查询同时包含指定标签键值对的实例。
     * ip  连接缓存实例的IP地址。
     *
@@ -55,7 +55,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
     * limit  每页显示条数，最小值为1，最大值为1000，若不设置该参数，则为10。
     * status  实例状态。详细状态说明见[缓存实例状态说明](https://support.huaweicloud.com/api-dcs/dcs-api-0312047.html)
-    * nameEqual  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
+    * nameEqual  是否按照实例名称进行精确匹配查询。  和name字段对应，name字段为模糊匹配的用例名，name_equal是精确匹配的用例名。
     * tags  根据实例标签键值对进行查询。{key}表示标签键，{value}表示标签值。  如果同时使用多个标签键值对进行查询，中间使用逗号分隔开，表示查询同时包含指定标签键值对的实例。
     * ip  连接缓存实例的IP地址。
     *
@@ -104,7 +104,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
     * limit  每页显示条数，最小值为1，最大值为1000，若不设置该参数，则为10。
     * status  实例状态。详细状态说明见[缓存实例状态说明](https://support.huaweicloud.com/api-dcs/dcs-api-0312047.html)
-    * nameEqual  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
+    * nameEqual  是否按照实例名称进行精确匹配查询。  和name字段对应，name字段为模糊匹配的用例名，name_equal是精确匹配的用例名。
     * tags  根据实例标签键值对进行查询。{key}表示标签键，{value}表示标签值。  如果同时使用多个标签键值对进行查询，中间使用逗号分隔开，表示查询同时包含指定标签键值对的实例。
     * ip  连接缓存实例的IP地址。
     *
@@ -132,7 +132,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
     * limit  每页显示条数，最小值为1，最大值为1000，若不设置该参数，则为10。
     * status  实例状态。详细状态说明见[缓存实例状态说明](https://support.huaweicloud.com/api-dcs/dcs-api-0312047.html)
-    * nameEqual  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
+    * nameEqual  是否按照实例名称进行精确匹配查询。  和name字段对应，name字段为模糊匹配的用例名，name_equal是精确匹配的用例名。
     * tags  根据实例标签键值对进行查询。{key}表示标签键，{value}表示标签值。  如果同时使用多个标签键值对进行查询，中间使用逗号分隔开，表示查询同时包含指定标签键值对的实例。
     * ip  连接缓存实例的IP地址。
     *
@@ -160,7 +160,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0
     * limit  每页显示条数，最小值为1，最大值为1000，若不设置该参数，则为10。
     * status  实例状态。详细状态说明见[缓存实例状态说明](https://support.huaweicloud.com/api-dcs/dcs-api-0312047.html)
-    * nameEqual  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
+    * nameEqual  是否按照实例名称进行精确匹配查询。  和name字段对应，name字段为模糊匹配的用例名，name_equal是精确匹配的用例名。
     * tags  根据实例标签键值对进行查询。{key}表示标签键，{value}表示标签值。  如果同时使用多个标签键值对进行查询，中间使用逗号分隔开，表示查询同时包含指定标签键值对的实例。
     * ip  连接缓存实例的IP地址。
     *
@@ -441,7 +441,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEqual
-    *  是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
+    *  是否按照实例名称进行精确匹配查询。  和name字段对应，name字段为模糊匹配的用例名，name_equal是精确匹配的用例名。
     *
     * @return string|null
     */
@@ -453,7 +453,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nameEqual
     *
-    * @param string|null $nameEqual 是否按照实例名称进行精确匹配查询。  默认为“false”，表示模糊匹配实例名称查询。若参数值为“true”表示按照实例名称进行精确匹配查询。
+    * @param string|null $nameEqual 是否按照实例名称进行精确匹配查询。  和name字段对应，name字段为模糊匹配的用例名，name_equal是精确匹配的用例名。
     *
     * @return $this
     */
