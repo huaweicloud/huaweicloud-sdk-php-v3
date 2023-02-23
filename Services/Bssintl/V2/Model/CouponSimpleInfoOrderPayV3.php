@@ -21,7 +21,7 @@ class CouponSimpleInfoOrderPayV3 implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  优惠券ID。
-    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
+    * type  优惠券类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class CouponSimpleInfoOrderPayV3 implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  优惠券ID。
-    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
+    * type  优惠券类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class CouponSimpleInfoOrderPayV3 implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  优惠券ID。
-    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
+    * type  优惠券类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class CouponSimpleInfoOrderPayV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  优惠券ID。
-    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
+    * type  优惠券类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class CouponSimpleInfoOrderPayV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  优惠券ID。
-    * type  折扣类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
+    * type  优惠券类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
     *
     * @var string[]
     */
@@ -227,7 +227,7 @@ class CouponSimpleInfoOrderPayV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  折扣类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
+    *  优惠券类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
     *
     * @return int
     */
@@ -239,7 +239,7 @@ class CouponSimpleInfoOrderPayV3 implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int $type 折扣类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
+    * @param int $type 优惠券类型：300:折扣券 301:促销代金券 302:促销现金券 303:促销储值卡
     *
     * @return $this
     */

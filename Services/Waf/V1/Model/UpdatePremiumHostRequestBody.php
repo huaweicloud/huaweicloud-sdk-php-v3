@@ -35,6 +35,7 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * trafficMark  trafficMark
     * circuitBreaker  circuitBreaker
     * timeoutConfig  timeoutConfig
+    * flag  flag
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'blockPage' => '\HuaweiCloud\SDK\Waf\V1\Model\BlockPage',
             'trafficMark' => '\HuaweiCloud\SDK\Waf\V1\Model\TrafficMark',
             'circuitBreaker' => '\HuaweiCloud\SDK\Waf\V1\Model\CircuitBreaker',
-            'timeoutConfig' => '\HuaweiCloud\SDK\Waf\V1\Model\TimeoutConfig'
+            'timeoutConfig' => '\HuaweiCloud\SDK\Waf\V1\Model\TimeoutConfig',
+            'flag' => '\HuaweiCloud\SDK\Waf\V1\Model\HostFlag'
     ];
 
     /**
@@ -73,6 +75,7 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * trafficMark  trafficMark
     * circuitBreaker  circuitBreaker
     * timeoutConfig  timeoutConfig
+    * flag  flag
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
         'blockPage' => null,
         'trafficMark' => null,
         'circuitBreaker' => null,
-        'timeoutConfig' => null
+        'timeoutConfig' => null,
+        'flag' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * trafficMark  trafficMark
     * circuitBreaker  circuitBreaker
     * timeoutConfig  timeoutConfig
+    * flag  flag
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'blockPage' => 'block_page',
             'trafficMark' => 'traffic_mark',
             'circuitBreaker' => 'circuit_breaker',
-            'timeoutConfig' => 'timeout_config'
+            'timeoutConfig' => 'timeout_config',
+            'flag' => 'flag'
     ];
 
     /**
@@ -170,6 +176,7 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * trafficMark  trafficMark
     * circuitBreaker  circuitBreaker
     * timeoutConfig  timeoutConfig
+    * flag  flag
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'blockPage' => 'setBlockPage',
             'trafficMark' => 'setTrafficMark',
             'circuitBreaker' => 'setCircuitBreaker',
-            'timeoutConfig' => 'setTimeoutConfig'
+            'timeoutConfig' => 'setTimeoutConfig',
+            'flag' => 'setFlag'
     ];
 
     /**
@@ -208,6 +216,7 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * trafficMark  trafficMark
     * circuitBreaker  circuitBreaker
     * timeoutConfig  timeoutConfig
+    * flag  flag
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'blockPage' => 'getBlockPage',
             'trafficMark' => 'getTrafficMark',
             'circuitBreaker' => 'getCircuitBreaker',
-            'timeoutConfig' => 'getTimeoutConfig'
+            'timeoutConfig' => 'getTimeoutConfig',
+            'flag' => 'getFlag'
     ];
 
     /**
@@ -340,6 +350,7 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
         $this->container['trafficMark'] = isset($data['trafficMark']) ? $data['trafficMark'] : null;
         $this->container['circuitBreaker'] = isset($data['circuitBreaker']) ? $data['circuitBreaker'] : null;
         $this->container['timeoutConfig'] = isset($data['timeoutConfig']) ? $data['timeoutConfig'] : null;
+        $this->container['flag'] = isset($data['flag']) ? $data['flag'] : null;
     }
 
     /**
@@ -737,6 +748,30 @@ class UpdatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     public function setTimeoutConfig($timeoutConfig)
     {
         $this->container['timeoutConfig'] = $timeoutConfig;
+        return $this;
+    }
+
+    /**
+    * Gets flag
+    *  flag
+    *
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\HostFlag|null
+    */
+    public function getFlag()
+    {
+        return $this->container['flag'];
+    }
+
+    /**
+    * Sets flag
+    *
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\HostFlag|null $flag flag
+    *
+    * @return $this
+    */
+    public function setFlag($flag)
+    {
+        $this->container['flag'] = $flag;
         return $this;
     }
 

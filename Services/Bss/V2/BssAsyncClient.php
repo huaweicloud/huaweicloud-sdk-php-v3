@@ -1439,6 +1439,98 @@ class BssAsyncClient extends Client
     }
 
     /**
+     * 查询收支明细(客户)
+     *
+     * 功能描述：客户可以查询自身的收支明细情况(此接口不适用于伙伴的代售类、转售类客户。)
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCustomerAccountChangeRecordsAsync($request)
+    {
+        return $this->listCustomerAccountChangeRecordsAsyncWithHttpInfo($request);
+    }
+    
+    public function listCustomerAccountChangeRecordsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/accounts/customer-accounts/account-change-records';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['balanceType'] !== null) {
+            $queryParams['balance_type'] = $localVarParams['balanceType'];
+        }
+        if ($localVarParams['revenueExpenseType'] !== null) {
+            $queryParams['revenue_expense_type'] = $localVarParams['revenueExpenseType'];
+        }
+        if ($localVarParams['tradeType'] !== null) {
+            $queryParams['trade_type'] = $localVarParams['tradeType'];
+        }
+        if ($localVarParams['tradeTimeBegin'] !== null) {
+            $queryParams['trade_time_begin'] = $localVarParams['tradeTimeBegin'];
+        }
+        if ($localVarParams['tradeTimeEnd'] !== null) {
+            $queryParams['trade_time_end'] = $localVarParams['tradeTimeEnd'];
+        }
+        if ($localVarParams['tradeId'] !== null) {
+            $queryParams['trade_id'] = $localVarParams['tradeId'];
+        }
+        if ($localVarParams['paymentChannelId'] !== null) {
+            $queryParams['payment_channel_id'] = $localVarParams['paymentChannelId'];
+        }
+        if ($localVarParams['paymentChannelNo'] !== null) {
+            $queryParams['payment_channel_no'] = $localVarParams['paymentChannelNo'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ListCustomerAccountChangeRecordsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ListCustomerAccountChangeRecordsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询流水账单
      *
      * 客户在自建平台查询自己的消费流水账单。

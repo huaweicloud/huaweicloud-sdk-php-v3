@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Bss\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateProductRequest implements ModelInterface, ArrayAccess
+class ListCustomerAccountChangeRecordsResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,34 @@ class CreateProductRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateProductRequest';
+    protected static $openAPIModelName = 'ListCustomerAccountChangeRecordsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。您可以在IoTDA管理控制台界面，选择左侧导航栏“总览”页签查看当前实例的ID。
-    * body  body
+    * totalCount  |参数名称：总条数| |参数的约束及描述：总条数|
+    * currency  |参数名称：币种| |参数约束及描述：币种|
+    * records  |参数名称：收支明细记录列表| |参数约束以及描述：收支明细记录列表|
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\IoTDA\V5\Model\AddProduct'
+            'totalCount' => 'int',
+            'currency' => 'string',
+            'records' => '\HuaweiCloud\SDK\Bss\V2\Model\CustomerAccountChangeRecord[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。您可以在IoTDA管理控制台界面，选择左侧导航栏“总览”页签查看当前实例的ID。
-    * body  body
+    * totalCount  |参数名称：总条数| |参数的约束及描述：总条数|
+    * currency  |参数名称：币种| |参数约束及描述：币种|
+    * records  |参数名称：收支明细记录列表| |参数约束以及描述：收支明细记录列表|
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null,
-        'body' => null
+        'totalCount' => 'int32',
+        'currency' => null,
+        'records' => null
     ];
 
     /**
@@ -65,38 +70,44 @@ class CreateProductRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。您可以在IoTDA管理控制台界面，选择左侧导航栏“总览”页签查看当前实例的ID。
-    * body  body
+    * totalCount  |参数名称：总条数| |参数的约束及描述：总条数|
+    * currency  |参数名称：币种| |参数约束及描述：币种|
+    * records  |参数名称：收支明细记录列表| |参数约束以及描述：收支明细记录列表|
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'Instance-Id',
-            'body' => 'body'
+            'totalCount' => 'total_count',
+            'currency' => 'currency',
+            'records' => 'records'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。您可以在IoTDA管理控制台界面，选择左侧导航栏“总览”页签查看当前实例的ID。
-    * body  body
+    * totalCount  |参数名称：总条数| |参数的约束及描述：总条数|
+    * currency  |参数名称：币种| |参数约束及描述：币种|
+    * records  |参数名称：收支明细记录列表| |参数约束以及描述：收支明细记录列表|
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId',
-            'body' => 'setBody'
+            'totalCount' => 'setTotalCount',
+            'currency' => 'setCurrency',
+            'records' => 'setRecords'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。您可以在IoTDA管理控制台界面，选择左侧导航栏“总览”页签查看当前实例的ID。
-    * body  body
+    * totalCount  |参数名称：总条数| |参数的约束及描述：总条数|
+    * currency  |参数名称：币种| |参数约束及描述：币种|
+    * records  |参数名称：收支明细记录列表| |参数约束以及描述：收支明细记录列表|
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId',
-            'body' => 'getBody'
+            'totalCount' => 'getTotalCount',
+            'currency' => 'getCurrency',
+            'records' => 'getRecords'
     ];
 
     /**
@@ -157,8 +168,9 @@ class CreateProductRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
+        $this->container['records'] = isset($data['records']) ? $data['records'] : null;
     }
 
     /**
@@ -169,9 +181,6 @@ class CreateProductRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['instanceId']) && !preg_match("/[0-9a-f-]{1,36}/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[0-9a-f-]{1,36}/.";
-            }
         return $invalidProperties;
     }
 
@@ -187,50 +196,74 @@ class CreateProductRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instanceId
-    *  **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。您可以在IoTDA管理控制台界面，选择左侧导航栏“总览”页签查看当前实例的ID。
+    * Gets totalCount
+    *  |参数名称：总条数| |参数的约束及描述：总条数|
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getInstanceId()
+    public function getTotalCount()
     {
-        return $this->container['instanceId'];
+        return $this->container['totalCount'];
     }
 
     /**
-    * Sets instanceId
+    * Sets totalCount
     *
-    * @param string|null $instanceId **参数说明**：实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。您可以在IoTDA管理控制台界面，选择左侧导航栏“总览”页签查看当前实例的ID。
+    * @param int|null $totalCount |参数名称：总条数| |参数的约束及描述：总条数|
     *
     * @return $this
     */
-    public function setInstanceId($instanceId)
+    public function setTotalCount($totalCount)
     {
-        $this->container['instanceId'] = $instanceId;
+        $this->container['totalCount'] = $totalCount;
         return $this;
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets currency
+    *  |参数名称：币种| |参数约束及描述：币种|
     *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\AddProduct|null
+    * @return string|null
     */
-    public function getBody()
+    public function getCurrency()
     {
-        return $this->container['body'];
+        return $this->container['currency'];
     }
 
     /**
-    * Sets body
+    * Sets currency
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\AddProduct|null $body body
+    * @param string|null $currency |参数名称：币种| |参数约束及描述：币种|
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setCurrency($currency)
     {
-        $this->container['body'] = $body;
+        $this->container['currency'] = $currency;
+        return $this;
+    }
+
+    /**
+    * Gets records
+    *  |参数名称：收支明细记录列表| |参数约束以及描述：收支明细记录列表|
+    *
+    * @return \HuaweiCloud\SDK\Bss\V2\Model\CustomerAccountChangeRecord[]|null
+    */
+    public function getRecords()
+    {
+        return $this->container['records'];
+    }
+
+    /**
+    * Sets records
+    *
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\CustomerAccountChangeRecord[]|null $records |参数名称：收支明细记录列表| |参数约束以及描述：收支明细记录列表|
+    *
+    * @return $this
+    */
+    public function setRecords($records)
+    {
+        $this->container['records'] = $records;
         return $this;
     }
 

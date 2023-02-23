@@ -3914,6 +3914,9 @@ class IoTDAClient extends Client
         if ($localVarParams['ruleName'] !== null) {
             $queryParams['rule_name'] = $localVarParams['ruleName'];
         }
+        if ($localVarParams['active'] !== null) {
+            $queryParams['active'] = $localVarParams['active'];
+        }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }

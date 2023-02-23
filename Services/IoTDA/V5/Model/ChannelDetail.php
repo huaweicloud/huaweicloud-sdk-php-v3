@@ -26,6 +26,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * amqpForwarding  amqpForwarding
     * dmsKafkaForwarding  dmsKafkaForwarding
     * romaForwarding  romaForwarding
+    * mysqlForwarding  mysqlForwarding
     * influxdbForwarding  influxdbForwarding
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
@@ -40,6 +41,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'amqpForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\AmqpForwarding',
             'dmsKafkaForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DmsKafkaForwarding',
             'romaForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\RomaForwarding',
+            'mysqlForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\MysqlForwarding',
             'influxdbForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\InfluxDBForwarding',
             'functiongraphForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\FunctionGraphForwarding',
             'mrsKafkaForwarding' => '\HuaweiCloud\SDK\IoTDA\V5\Model\MrsKafkaForwarding',
@@ -54,6 +56,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * amqpForwarding  amqpForwarding
     * dmsKafkaForwarding  dmsKafkaForwarding
     * romaForwarding  romaForwarding
+    * mysqlForwarding  mysqlForwarding
     * influxdbForwarding  influxdbForwarding
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
@@ -68,6 +71,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
         'amqpForwarding' => null,
         'dmsKafkaForwarding' => null,
         'romaForwarding' => null,
+        'mysqlForwarding' => null,
         'influxdbForwarding' => null,
         'functiongraphForwarding' => null,
         'mrsKafkaForwarding' => null,
@@ -103,6 +107,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * amqpForwarding  amqpForwarding
     * dmsKafkaForwarding  dmsKafkaForwarding
     * romaForwarding  romaForwarding
+    * mysqlForwarding  mysqlForwarding
     * influxdbForwarding  influxdbForwarding
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
@@ -117,6 +122,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'amqpForwarding' => 'amqp_forwarding',
             'dmsKafkaForwarding' => 'dms_kafka_forwarding',
             'romaForwarding' => 'roma_forwarding',
+            'mysqlForwarding' => 'mysql_forwarding',
             'influxdbForwarding' => 'influxdb_forwarding',
             'functiongraphForwarding' => 'functiongraph_forwarding',
             'mrsKafkaForwarding' => 'mrs_kafka_forwarding',
@@ -131,6 +137,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * amqpForwarding  amqpForwarding
     * dmsKafkaForwarding  dmsKafkaForwarding
     * romaForwarding  romaForwarding
+    * mysqlForwarding  mysqlForwarding
     * influxdbForwarding  influxdbForwarding
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
@@ -145,6 +152,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'amqpForwarding' => 'setAmqpForwarding',
             'dmsKafkaForwarding' => 'setDmsKafkaForwarding',
             'romaForwarding' => 'setRomaForwarding',
+            'mysqlForwarding' => 'setMysqlForwarding',
             'influxdbForwarding' => 'setInfluxdbForwarding',
             'functiongraphForwarding' => 'setFunctiongraphForwarding',
             'mrsKafkaForwarding' => 'setMrsKafkaForwarding',
@@ -159,6 +167,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     * amqpForwarding  amqpForwarding
     * dmsKafkaForwarding  dmsKafkaForwarding
     * romaForwarding  romaForwarding
+    * mysqlForwarding  mysqlForwarding
     * influxdbForwarding  influxdbForwarding
     * functiongraphForwarding  functiongraphForwarding
     * mrsKafkaForwarding  mrsKafkaForwarding
@@ -173,6 +182,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
             'amqpForwarding' => 'getAmqpForwarding',
             'dmsKafkaForwarding' => 'getDmsKafkaForwarding',
             'romaForwarding' => 'getRomaForwarding',
+            'mysqlForwarding' => 'getMysqlForwarding',
             'influxdbForwarding' => 'getInfluxdbForwarding',
             'functiongraphForwarding' => 'getFunctiongraphForwarding',
             'mrsKafkaForwarding' => 'getMrsKafkaForwarding',
@@ -243,6 +253,7 @@ class ChannelDetail implements ModelInterface, ArrayAccess
         $this->container['amqpForwarding'] = isset($data['amqpForwarding']) ? $data['amqpForwarding'] : null;
         $this->container['dmsKafkaForwarding'] = isset($data['dmsKafkaForwarding']) ? $data['dmsKafkaForwarding'] : null;
         $this->container['romaForwarding'] = isset($data['romaForwarding']) ? $data['romaForwarding'] : null;
+        $this->container['mysqlForwarding'] = isset($data['mysqlForwarding']) ? $data['mysqlForwarding'] : null;
         $this->container['influxdbForwarding'] = isset($data['influxdbForwarding']) ? $data['influxdbForwarding'] : null;
         $this->container['functiongraphForwarding'] = isset($data['functiongraphForwarding']) ? $data['functiongraphForwarding'] : null;
         $this->container['mrsKafkaForwarding'] = isset($data['mrsKafkaForwarding']) ? $data['mrsKafkaForwarding'] : null;
@@ -412,6 +423,30 @@ class ChannelDetail implements ModelInterface, ArrayAccess
     public function setRomaForwarding($romaForwarding)
     {
         $this->container['romaForwarding'] = $romaForwarding;
+        return $this;
+    }
+
+    /**
+    * Gets mysqlForwarding
+    *  mysqlForwarding
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\MysqlForwarding|null
+    */
+    public function getMysqlForwarding()
+    {
+        return $this->container['mysqlForwarding'];
+    }
+
+    /**
+    * Sets mysqlForwarding
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\MysqlForwarding|null $mysqlForwarding mysqlForwarding
+    *
+    * @return $this
+    */
+    public function setMysqlForwarding($mysqlForwarding)
+    {
+        $this->container['mysqlForwarding'] = $mysqlForwarding;
         return $this;
     }
 
