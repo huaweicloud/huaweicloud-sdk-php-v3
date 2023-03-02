@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cdn\V1\Model;
+namespace HuaweiCloud\SDK\IoTDA\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
+class CreateOtaPackageRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,34 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ErrorCodeRedirectRules';
+    protected static $openAPIModelName = 'CreateOtaPackageRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'errorCode' => 'int',
-            'targetCode' => 'int',
-            'targetLink' => 'string'
+            'spAuthToken' => 'string',
+            'instanceId' => 'string',
+            'body' => '\HuaweiCloud\SDK\IoTDA\V5\Model\CreateOtaPackage'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'errorCode' => 'int32',
-        'targetCode' => 'int32',
-        'targetLink' => null
+        'spAuthToken' => null,
+        'instanceId' => null,
+        'body' => null
     ];
 
     /**
@@ -69,44 +69,44 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'errorCode' => 'error_code',
-            'targetCode' => 'target_code',
-            'targetLink' => 'target_link'
+            'spAuthToken' => 'Sp-Auth-Token',
+            'instanceId' => 'Instance-Id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'errorCode' => 'setErrorCode',
-            'targetCode' => 'setTargetCode',
-            'targetLink' => 'setTargetLink'
+            'spAuthToken' => 'setSpAuthToken',
+            'instanceId' => 'setInstanceId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * spAuthToken  Sp用户Token。通过调用IoBPS服务获取SP用户Token
+    * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'errorCode' => 'getErrorCode',
-            'targetCode' => 'getTargetCode',
-            'targetLink' => 'getTargetLink'
+            'spAuthToken' => 'getSpAuthToken',
+            'instanceId' => 'getInstanceId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -167,9 +167,9 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['targetCode'] = isset($data['targetCode']) ? $data['targetCode'] : null;
-        $this->container['targetLink'] = isset($data['targetLink']) ? $data['targetLink'] : null;
+        $this->container['spAuthToken'] = isset($data['spAuthToken']) ? $data['spAuthToken'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -180,15 +180,9 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['errorCode'] === null) {
-            $invalidProperties[] = "'errorCode' can't be null";
-        }
-        if ($this->container['targetCode'] === null) {
-            $invalidProperties[] = "'targetCode' can't be null";
-        }
-        if ($this->container['targetLink'] === null) {
-            $invalidProperties[] = "'targetLink' can't be null";
-        }
+            if (!is_null($this->container['instanceId']) && !preg_match("/[0-9a-f-]{1,36}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[0-9a-f-]{1,36}/.";
+            }
         return $invalidProperties;
     }
 
@@ -204,74 +198,74 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets errorCode
-    *  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
+    * Gets spAuthToken
+    *  Sp用户Token。通过调用IoBPS服务获取SP用户Token
     *
-    * @return int
+    * @return string|null
     */
-    public function getErrorCode()
+    public function getSpAuthToken()
     {
-        return $this->container['errorCode'];
+        return $this->container['spAuthToken'];
     }
 
     /**
-    * Sets errorCode
+    * Sets spAuthToken
     *
-    * @param int $errorCode 重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
+    * @param string|null $spAuthToken Sp用户Token。通过调用IoBPS服务获取SP用户Token
     *
     * @return $this
     */
-    public function setErrorCode($errorCode)
+    public function setSpAuthToken($spAuthToken)
     {
-        $this->container['errorCode'] = $errorCode;
+        $this->container['spAuthToken'] = $spAuthToken;
         return $this;
     }
 
     /**
-    * Gets targetCode
-    *  重定向状态码，取值为301或302
+    * Gets instanceId
+    *  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
-    * @return int
+    * @return string|null
     */
-    public function getTargetCode()
+    public function getInstanceId()
     {
-        return $this->container['targetCode'];
+        return $this->container['instanceId'];
     }
 
     /**
-    * Sets targetCode
+    * Sets instanceId
     *
-    * @param int $targetCode 重定向状态码，取值为301或302
+    * @param string|null $instanceId 实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     *
     * @return $this
     */
-    public function setTargetCode($targetCode)
+    public function setInstanceId($instanceId)
     {
-        $this->container['targetCode'] = $targetCode;
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 
     /**
-    * Gets targetLink
-    *  重定向的目标链接
+    * Gets body
+    *  body
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\CreateOtaPackage|null
     */
-    public function getTargetLink()
+    public function getBody()
     {
-        return $this->container['targetLink'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets targetLink
+    * Sets body
     *
-    * @param string $targetLink 重定向的目标链接
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\CreateOtaPackage|null $body body
     *
     * @return $this
     */
-    public function setTargetLink($targetLink)
+    public function setBody($body)
     {
-        $this->container['targetLink'] = $targetLink;
+        $this->container['body'] = $body;
         return $this;
     }
 

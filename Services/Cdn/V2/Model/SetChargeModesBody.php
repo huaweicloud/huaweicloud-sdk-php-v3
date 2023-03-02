@@ -20,7 +20,7 @@ class SetChargeModesBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * chargeMode  计费模式，支持flux（流量），bw（带宽）
+    * chargeMode  计费模式，支持flux（流量），v2及以上客户支持bw（带宽）
     * productType  产品模式，仅支持base（基础加速）
     * serviceArea  服务区域，仅支持mainland_china（国内）
     *
@@ -34,7 +34,7 @@ class SetChargeModesBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * chargeMode  计费模式，支持flux（流量），bw（带宽）
+    * chargeMode  计费模式，支持flux（流量），v2及以上客户支持bw（带宽）
     * productType  产品模式，仅支持base（基础加速）
     * serviceArea  服务区域，仅支持mainland_china（国内）
     *
@@ -69,7 +69,7 @@ class SetChargeModesBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * chargeMode  计费模式，支持flux（流量），bw（带宽）
+    * chargeMode  计费模式，支持flux（流量），v2及以上客户支持bw（带宽）
     * productType  产品模式，仅支持base（基础加速）
     * serviceArea  服务区域，仅支持mainland_china（国内）
     *
@@ -83,7 +83,7 @@ class SetChargeModesBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * chargeMode  计费模式，支持flux（流量），bw（带宽）
+    * chargeMode  计费模式，支持flux（流量），v2及以上客户支持bw（带宽）
     * productType  产品模式，仅支持base（基础加速）
     * serviceArea  服务区域，仅支持mainland_china（国内）
     *
@@ -97,7 +97,7 @@ class SetChargeModesBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * chargeMode  计费模式，支持flux（流量），bw（带宽）
+    * chargeMode  计费模式，支持flux（流量），v2及以上客户支持bw（带宽）
     * productType  产品模式，仅支持base（基础加速）
     * serviceArea  服务区域，仅支持mainland_china（国内）
     *
@@ -205,7 +205,7 @@ class SetChargeModesBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  计费模式，支持flux（流量），bw（带宽）
+    *  计费模式，支持flux（流量），v2及以上客户支持bw（带宽）
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class SetChargeModesBody implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string $chargeMode 计费模式，支持flux（流量），bw（带宽）
+    * @param string $chargeMode 计费模式，支持flux（流量），v2及以上客户支持bw（带宽）
     *
     * @return $this
     */

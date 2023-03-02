@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cdn\V1\Model;
+namespace HuaweiCloud\SDK\IoTDA\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
+class PageInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,30 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ErrorCodeRedirectRules';
+    protected static $openAPIModelName = 'PageInfo';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'errorCode' => 'int',
-            'targetCode' => 'int',
-            'targetLink' => 'string'
+            'count' => 'int',
+            'marker' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'errorCode' => 'int32',
-        'targetCode' => 'int32',
-        'targetLink' => null
+        'count' => 'int64',
+        'marker' => null
     ];
 
     /**
@@ -69,44 +65,38 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'errorCode' => 'error_code',
-            'targetCode' => 'target_code',
-            'targetLink' => 'target_link'
+            'count' => 'count',
+            'marker' => 'marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
     protected static $setters = [
-            'errorCode' => 'setErrorCode',
-            'targetCode' => 'setTargetCode',
-            'targetLink' => 'setTargetLink'
+            'count' => 'setCount',
+            'marker' => 'setMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * count  满足查询条件的记录总数。
+    * marker  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @var string[]
     */
     protected static $getters = [
-            'errorCode' => 'getErrorCode',
-            'targetCode' => 'getTargetCode',
-            'targetLink' => 'getTargetLink'
+            'count' => 'getCount',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -167,9 +157,8 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['targetCode'] = isset($data['targetCode']) ? $data['targetCode'] : null;
-        $this->container['targetLink'] = isset($data['targetLink']) ? $data['targetLink'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -180,15 +169,6 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['errorCode'] === null) {
-            $invalidProperties[] = "'errorCode' can't be null";
-        }
-        if ($this->container['targetCode'] === null) {
-            $invalidProperties[] = "'targetCode' can't be null";
-        }
-        if ($this->container['targetLink'] === null) {
-            $invalidProperties[] = "'targetLink' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -204,74 +184,50 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets errorCode
-    *  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
+    * Gets count
+    *  满足查询条件的记录总数。
     *
-    * @return int
+    * @return int|null
     */
-    public function getErrorCode()
+    public function getCount()
     {
-        return $this->container['errorCode'];
+        return $this->container['count'];
     }
 
     /**
-    * Sets errorCode
+    * Sets count
     *
-    * @param int $errorCode 重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
+    * @param int|null $count 满足查询条件的记录总数。
     *
     * @return $this
     */
-    public function setErrorCode($errorCode)
+    public function setCount($count)
     {
-        $this->container['errorCode'] = $errorCode;
+        $this->container['count'] = $count;
         return $this;
     }
 
     /**
-    * Gets targetCode
-    *  重定向状态码，取值为301或302
+    * Gets marker
+    *  本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
-    * @return int
+    * @return string|null
     */
-    public function getTargetCode()
+    public function getMarker()
     {
-        return $this->container['targetCode'];
+        return $this->container['marker'];
     }
 
     /**
-    * Sets targetCode
+    * Sets marker
     *
-    * @param int $targetCode 重定向状态码，取值为301或302
+    * @param string|null $marker 本次分页查询结果中最后一条记录的ID，可在下一次分页查询时使用。
     *
     * @return $this
     */
-    public function setTargetCode($targetCode)
+    public function setMarker($marker)
     {
-        $this->container['targetCode'] = $targetCode;
-        return $this;
-    }
-
-    /**
-    * Gets targetLink
-    *  重定向的目标链接
-    *
-    * @return string
-    */
-    public function getTargetLink()
-    {
-        return $this->container['targetLink'];
-    }
-
-    /**
-    * Sets targetLink
-    *
-    * @param string $targetLink 重定向的目标链接
-    *
-    * @return $this
-    */
-    public function setTargetLink($targetLink)
-    {
-        $this->container['targetLink'] = $targetLink;
+        $this->container['marker'] = $marker;
         return $this;
     }
 

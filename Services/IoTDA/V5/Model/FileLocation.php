@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cdn\V1\Model;
+namespace HuaweiCloud\SDK\IoTDA\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
+class FileLocation implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,26 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ErrorCodeRedirectRules';
+    protected static $openAPIModelName = 'FileLocation';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * obsLocation  obsLocation
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'errorCode' => 'int',
-            'targetCode' => 'int',
-            'targetLink' => 'string'
+            'obsLocation' => '\HuaweiCloud\SDK\IoTDA\V5\Model\ObsLocation'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * obsLocation  obsLocation
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'errorCode' => 'int32',
-        'targetCode' => 'int32',
-        'targetLink' => null
+        'obsLocation' => null
     ];
 
     /**
@@ -69,44 +61,32 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * obsLocation  obsLocation
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'errorCode' => 'error_code',
-            'targetCode' => 'target_code',
-            'targetLink' => 'target_link'
+            'obsLocation' => 'obs_location'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * obsLocation  obsLocation
     *
     * @var string[]
     */
     protected static $setters = [
-            'errorCode' => 'setErrorCode',
-            'targetCode' => 'setTargetCode',
-            'targetLink' => 'setTargetLink'
+            'obsLocation' => 'setObsLocation'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * obsLocation  obsLocation
     *
     * @var string[]
     */
     protected static $getters = [
-            'errorCode' => 'getErrorCode',
-            'targetCode' => 'getTargetCode',
-            'targetLink' => 'getTargetLink'
+            'obsLocation' => 'getObsLocation'
     ];
 
     /**
@@ -167,9 +147,7 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['targetCode'] = isset($data['targetCode']) ? $data['targetCode'] : null;
-        $this->container['targetLink'] = isset($data['targetLink']) ? $data['targetLink'] : null;
+        $this->container['obsLocation'] = isset($data['obsLocation']) ? $data['obsLocation'] : null;
     }
 
     /**
@@ -180,15 +158,6 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['errorCode'] === null) {
-            $invalidProperties[] = "'errorCode' can't be null";
-        }
-        if ($this->container['targetCode'] === null) {
-            $invalidProperties[] = "'targetCode' can't be null";
-        }
-        if ($this->container['targetLink'] === null) {
-            $invalidProperties[] = "'targetLink' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -204,74 +173,26 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets errorCode
-    *  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
+    * Gets obsLocation
+    *  obsLocation
     *
-    * @return int
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\ObsLocation|null
     */
-    public function getErrorCode()
+    public function getObsLocation()
     {
-        return $this->container['errorCode'];
+        return $this->container['obsLocation'];
     }
 
     /**
-    * Sets errorCode
+    * Sets obsLocation
     *
-    * @param int $errorCode 重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\ObsLocation|null $obsLocation obsLocation
     *
     * @return $this
     */
-    public function setErrorCode($errorCode)
+    public function setObsLocation($obsLocation)
     {
-        $this->container['errorCode'] = $errorCode;
-        return $this;
-    }
-
-    /**
-    * Gets targetCode
-    *  重定向状态码，取值为301或302
-    *
-    * @return int
-    */
-    public function getTargetCode()
-    {
-        return $this->container['targetCode'];
-    }
-
-    /**
-    * Sets targetCode
-    *
-    * @param int $targetCode 重定向状态码，取值为301或302
-    *
-    * @return $this
-    */
-    public function setTargetCode($targetCode)
-    {
-        $this->container['targetCode'] = $targetCode;
-        return $this;
-    }
-
-    /**
-    * Gets targetLink
-    *  重定向的目标链接
-    *
-    * @return string
-    */
-    public function getTargetLink()
-    {
-        return $this->container['targetLink'];
-    }
-
-    /**
-    * Sets targetLink
-    *
-    * @param string $targetLink 重定向的目标链接
-    *
-    * @return $this
-    */
-    public function setTargetLink($targetLink)
-    {
-        $this->container['targetLink'] = $targetLink;
+        $this->container['obsLocation'] = $obsLocation;
         return $this;
     }
 

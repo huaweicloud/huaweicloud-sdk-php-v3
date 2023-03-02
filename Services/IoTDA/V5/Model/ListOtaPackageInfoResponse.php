@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cdn\V1\Model;
+namespace HuaweiCloud\SDK\IoTDA\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
+class ListOtaPackageInfoResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,34 +17,30 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ErrorCodeRedirectRules';
+    protected static $openAPIModelName = 'ListOtaPackageInfoResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * packages  升级包列表
+    * page  page
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'errorCode' => 'int',
-            'targetCode' => 'int',
-            'targetLink' => 'string'
+            'packages' => '\HuaweiCloud\SDK\IoTDA\V5\Model\OtaPackageInfo[]',
+            'page' => '\HuaweiCloud\SDK\IoTDA\V5\Model\PageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * packages  升级包列表
+    * page  page
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'errorCode' => 'int32',
-        'targetCode' => 'int32',
-        'targetLink' => null
+        'packages' => null,
+        'page' => null
     ];
 
     /**
@@ -69,44 +66,38 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * packages  升级包列表
+    * page  page
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'errorCode' => 'error_code',
-            'targetCode' => 'target_code',
-            'targetLink' => 'target_link'
+            'packages' => 'packages',
+            'page' => 'page'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * packages  升级包列表
+    * page  page
     *
     * @var string[]
     */
     protected static $setters = [
-            'errorCode' => 'setErrorCode',
-            'targetCode' => 'setTargetCode',
-            'targetLink' => 'setTargetLink'
+            'packages' => 'setPackages',
+            'page' => 'setPage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
-    * targetCode  重定向状态码，取值为301或302
-    * targetLink  重定向的目标链接
+    * packages  升级包列表
+    * page  page
     *
     * @var string[]
     */
     protected static $getters = [
-            'errorCode' => 'getErrorCode',
-            'targetCode' => 'getTargetCode',
-            'targetLink' => 'getTargetLink'
+            'packages' => 'getPackages',
+            'page' => 'getPage'
     ];
 
     /**
@@ -167,9 +158,8 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['targetCode'] = isset($data['targetCode']) ? $data['targetCode'] : null;
-        $this->container['targetLink'] = isset($data['targetLink']) ? $data['targetLink'] : null;
+        $this->container['packages'] = isset($data['packages']) ? $data['packages'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
     }
 
     /**
@@ -180,15 +170,6 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['errorCode'] === null) {
-            $invalidProperties[] = "'errorCode' can't be null";
-        }
-        if ($this->container['targetCode'] === null) {
-            $invalidProperties[] = "'targetCode' can't be null";
-        }
-        if ($this->container['targetLink'] === null) {
-            $invalidProperties[] = "'targetLink' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -204,74 +185,50 @@ class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets errorCode
-    *  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
+    * Gets packages
+    *  升级包列表
     *
-    * @return int
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\OtaPackageInfo[]|null
     */
-    public function getErrorCode()
+    public function getPackages()
     {
-        return $this->container['errorCode'];
+        return $this->container['packages'];
     }
 
     /**
-    * Sets errorCode
+    * Sets packages
     *
-    * @param int $errorCode 重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\OtaPackageInfo[]|null $packages 升级包列表
     *
     * @return $this
     */
-    public function setErrorCode($errorCode)
+    public function setPackages($packages)
     {
-        $this->container['errorCode'] = $errorCode;
+        $this->container['packages'] = $packages;
         return $this;
     }
 
     /**
-    * Gets targetCode
-    *  重定向状态码，取值为301或302
+    * Gets page
+    *  page
     *
-    * @return int
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\PageInfo|null
     */
-    public function getTargetCode()
+    public function getPage()
     {
-        return $this->container['targetCode'];
+        return $this->container['page'];
     }
 
     /**
-    * Sets targetCode
+    * Sets page
     *
-    * @param int $targetCode 重定向状态码，取值为301或302
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\PageInfo|null $page page
     *
     * @return $this
     */
-    public function setTargetCode($targetCode)
+    public function setPage($page)
     {
-        $this->container['targetCode'] = $targetCode;
-        return $this;
-    }
-
-    /**
-    * Gets targetLink
-    *  重定向的目标链接
-    *
-    * @return string
-    */
-    public function getTargetLink()
-    {
-        return $this->container['targetLink'];
-    }
-
-    /**
-    * Sets targetLink
-    *
-    * @param string $targetLink 重定向的目标链接
-    *
-    * @return $this
-    */
-    public function setTargetLink($targetLink)
-    {
-        $this->container['targetLink'] = $targetLink;
+        $this->container['page'] = $page;
         return $this;
     }
 

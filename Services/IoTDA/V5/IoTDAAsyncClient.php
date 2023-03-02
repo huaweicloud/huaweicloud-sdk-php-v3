@@ -3256,6 +3256,309 @@ class IoTDAAsyncClient extends Client
     }
 
     /**
+     * 创建OTA升级包
+     *
+     * 用户可调用此接口创建升级包关联OBS对象
+     * 使用前提：使用该API需要您授权设备接入服务(IoTDA)的实例访问对象存储服务(OBS)以及 密钥管理服务(KMS Administrator)的权限。在“[[统一身份认证服务（IAM）](https://console.huaweicloud.com/iam/?region&#x3D;cn-north-4#/iam/agencies)](tag:hws) - 委托”中将委托名称为iotda_admin_trust的委托授权KMS Administrator和OBS OperateAccess
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createOtaPackageAsync($request)
+    {
+        return $this->createOtaPackageAsyncWithHttpInfo($request);
+    }
+    
+    public function createOtaPackageAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/iot/{project_id}/ota-upgrades/packages';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['spAuthToken'] !== null) {
+            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateOtaPackageResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\CreateOtaPackageRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除OTA升级包
+     *
+     * 只删除升级包信息，不会删除OBS上对象
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteOtaPackageAsync($request)
+    {
+        return $this->deleteOtaPackageAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteOtaPackageAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/iot/{project_id}/ota-upgrades/packages/{package_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['spAuthToken'] !== null) {
+            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['packageId'] !== null) {
+            $pathParams['package_id'] = $localVarParams['packageId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteOtaPackageResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\DeleteOtaPackageRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询OTA升级包列表
+     *
+     * 查询OTA升级包列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listOtaPackageInfoAsync($request)
+    {
+        return $this->listOtaPackageInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function listOtaPackageInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/iot/{project_id}/ota-upgrades/packages';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['appId'] !== null) {
+            $queryParams['app_id'] = $localVarParams['appId'];
+        }
+        if ($localVarParams['packageType'] !== null) {
+            $queryParams['package_type'] = $localVarParams['packageType'];
+        }
+        if ($localVarParams['productId'] !== null) {
+            $queryParams['product_id'] = $localVarParams['productId'];
+        }
+        if ($localVarParams['version'] !== null) {
+            $queryParams['version'] = $localVarParams['version'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['spAuthToken'] !== null) {
+            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListOtaPackageInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ListOtaPackageInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取OTA升级包详情
+     *
+     * 获取OTA升级包详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showOtaPackageAsync($request)
+    {
+        return $this->showOtaPackageAsyncWithHttpInfo($request);
+    }
+    
+    public function showOtaPackageAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/iot/{project_id}/ota-upgrades/packages/{package_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['spAuthToken'] !== null) {
+            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['packageId'] !== null) {
+            $pathParams['package_id'] = $localVarParams['packageId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowOtaPackageResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\ShowOtaPackageRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建产品
      *
      * 应用服务器可调用此接口创建产品。

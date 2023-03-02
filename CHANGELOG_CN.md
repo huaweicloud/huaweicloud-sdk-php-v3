@@ -1,3 +1,28 @@
+# 3.1.26 2023-03-02
+
+### HuaweiCloud SDK CDN
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 接口`ShowDomainFullConfig`:
+    - 响应参数`error_code`类型调整 `string` -> `int32`
+    - 响应参数`target_code`类型调整 `string` -> `int32`
+  - 接口`UpdateDomainFullConfig`:
+    - 请求参数`error_code`类型调整 `string` -> `int32`
+    - 请求参数`target_code`类型调整 `string` -> `int32`
+
+### HuaweiCloud SDK IoTDA
+
+- _新增特性_
+  - 支持接口`ListOtaPackageInfo`、`CreateOtaPackage`、`ShowOtaPackage`、`DeleteOtaPackage`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
 # 3.1.25 2023-02-23
 
 ### HuaweiCloud SDK BSS

@@ -93,6 +93,7 @@ function listPermanentAccessKeys($iamClient)
     } catch (ServiceResponseException $e) {
         echo "\n";
         echo $e->getHttpStatusCode(). "\n";
+        echo $e->getRequestId(). "\n";        
         echo $e->getErrorCode(). "\n";
         echo $e->getErrorMsg(). "\n";
     }
@@ -261,6 +262,7 @@ try {
 } catch (ServiceResponseException $e) {
     echo "\n";
     echo $e->getHttpStatusCode(). "\n";
+    echo $e->getRequestId(). "\n";
     echo $e->getErrorCode() . "\n";
     echo $e->getErrorMsg() . "\n";
 }
