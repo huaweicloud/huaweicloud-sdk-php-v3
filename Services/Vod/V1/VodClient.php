@@ -3815,6 +3815,68 @@ class VodClient extends Client
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ShowTakeOverTaskDetailsRequest');
     }
 
+    /**
+     * 多字幕封装
+     *
+     * 多字幕封装，仅支持 HLS VTT格式
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifySubtitle($request)
+    {
+        return $this->modifySubtitleWithHttpInfo($request);
+    }
+
+    public function modifySubtitleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/asset/subtitles';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json', 'application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ModifySubtitleResponse',
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ModifySubtitleRequest');
+    }
+
     protected function callApi(
         $method,
         $resourcePath,
