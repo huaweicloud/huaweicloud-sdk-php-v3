@@ -20,7 +20,7 @@ class EnableAutoRollbackPrimitiveTypeHolder implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的自动回滚属性进行更新*
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class EnableAutoRollbackPrimitiveTypeHolder implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的自动回滚属性进行更新*
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class EnableAutoRollbackPrimitiveTypeHolder implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的自动回滚属性进行更新*
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class EnableAutoRollbackPrimitiveTypeHolder implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的自动回滚属性进行更新*
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class EnableAutoRollbackPrimitiveTypeHolder implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的自动回滚属性进行更新*
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class EnableAutoRollbackPrimitiveTypeHolder implements ModelInterface, ArrayAcce
 
     /**
     * Gets enableAutoRollback
-    *  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）
+    *  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的自动回滚属性进行更新*
     *
     * @return bool|null
     */
@@ -186,7 +186,7 @@ class EnableAutoRollbackPrimitiveTypeHolder implements ModelInterface, ArrayAcce
     /**
     * Sets enableAutoRollback
     *
-    * @param bool|null $enableAutoRollback 自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）
+    * @param bool|null $enableAutoRollback 自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的自动回滚属性进行更新*
     *
     * @return $this
     */

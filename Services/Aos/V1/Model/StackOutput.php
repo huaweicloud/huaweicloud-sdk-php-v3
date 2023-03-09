@@ -20,7 +20,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  资源栈输出的名称，由用户在模板中定义  以 hcl 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
+    * name  资源栈输出的名称，由用户在模板中定义  以 HCL 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
     * description  资源栈输出的描述，由用户在模板中定义
     * type  资源栈输出的类型
     * value  资源栈输出的值
@@ -38,7 +38,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  资源栈输出的名称，由用户在模板中定义  以 hcl 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
+    * name  资源栈输出的名称，由用户在模板中定义  以 HCL 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
     * description  资源栈输出的描述，由用户在模板中定义
     * type  资源栈输出的类型
     * value  资源栈输出的值
@@ -77,7 +77,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  资源栈输出的名称，由用户在模板中定义  以 hcl 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
+    * name  资源栈输出的名称，由用户在模板中定义  以 HCL 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
     * description  资源栈输出的描述，由用户在模板中定义
     * type  资源栈输出的类型
     * value  资源栈输出的值
@@ -95,7 +95,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  资源栈输出的名称，由用户在模板中定义  以 hcl 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
+    * name  资源栈输出的名称，由用户在模板中定义  以 HCL 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
     * description  资源栈输出的描述，由用户在模板中定义
     * type  资源栈输出的类型
     * value  资源栈输出的值
@@ -113,7 +113,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  资源栈输出的名称，由用户在模板中定义  以 hcl 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
+    * name  资源栈输出的名称，由用户在模板中定义  以 HCL 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
     * description  资源栈输出的描述，由用户在模板中定义
     * type  资源栈输出的类型
     * value  资源栈输出的值
@@ -218,7 +218,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  资源栈输出的名称，由用户在模板中定义  以 hcl 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
+    *  资源栈输出的名称，由用户在模板中定义  以 HCL 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 资源栈输出的名称，由用户在模板中定义  以 hcl 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
+    * @param string|null $name 资源栈输出的名称，由用户在模板中定义  以 HCL 模板为例，name 为 vpc_id  ```hcl output \"vpc_id\" {   value = huaweicloud_vpc.my_hello_world_vpc.id } ```  以 json 模板为例，name 为 vpc_id ```json {   \"output\": {     \"vpc_id\": [       {         \"value\": \"${huaweicloud_vpc.my_hello_world_vpc.id}\"       }     ]   } } ```
     *
     * @return $this
     */

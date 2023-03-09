@@ -20,40 +20,40 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * chargeMode  计费模式，包周期计费、按需计费、免费的返回，不支持的资源不返回 PRE_PAID 包周期计费 POST_PAID 按需计费 FREE 免费
-    * salePrice  执行计划中的每个资源部署后最终优惠后的金额（只考虑商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元
-    * discount  执行计划中的每个资源部署后的优惠额，保留小数点后2位，向上取整，默认单位是元
-    * originalPrice  执行计划中的每个资源部署后的原价，保留小数点后2位，向上取整，默认单位是元
-    * periodType  包周期和按需的计费单位，包周期计费和按需计费返回，免费不会返回 HOUR：小时，包周期计费和按需计费返回，免费不会返回 DAY：天，包周期计费返回，按需计费和免费不会返回 WEEK：周，包周期计费返回，按需计费和免费不会返回 MONTH：月，包周期计费返回，按需计费和免费不会返回 YEAR：年，包周期计费返回，按需计费和免费不会返回 BYTE：字节，按需计费返回，包周期计费和免费不会返回 MB：百万字节，按需计费返回，包周期计费和免费不会返回 GB：千兆字节，按需计费返回，包周期计费和免费不会返回
-    * periodCount  订购数量。包周期计费和按需计费返回，免费不会返回。
+    * chargeMode  计费模式  * `PRE_PAID` - 包周期计费 * `POST_PAID` - 按需计费 * `FREE` - 免费
+    * salePrice  该资源最终优惠后的金额（只考虑官网折扣、商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元。
+    * discount  该资源的总优惠额，保留小数点后2位，向上取整，默认单位是元。
+    * originalPrice  该资源的原价，保留小数点后2位，向上取整，默认单位是元。
+    * periodType  计费单位  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * `HOUR` - 小时，按需计费的单位 * `DAY` - 天，按需计费的单位 * `MONTH` - 月，包周期计费的单位 * `YEAR` - 年，包周期计费的单位 * `BYTE` - 字节，按需计费的单位 * `MB` - 百万字节，包周期计费和按需计费的单位 * `GB` - 千兆字节，包周期计费和按需计费的单位
+    * periodCount  该资源的计费数量，需要和period_type搭配使用  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * 对于按需计费资源，此值默认返回1，代表在1个计费单位下，该资源的价格 * 对于包周期计费资源，此值与模板中该资源的period字段保持一致
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'chargeMode' => 'string',
-            'salePrice' => 'object',
-            'discount' => 'object',
-            'originalPrice' => 'object',
+            'salePrice' => 'double',
+            'discount' => 'double',
+            'originalPrice' => 'double',
             'periodType' => 'string',
             'periodCount' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * chargeMode  计费模式，包周期计费、按需计费、免费的返回，不支持的资源不返回 PRE_PAID 包周期计费 POST_PAID 按需计费 FREE 免费
-    * salePrice  执行计划中的每个资源部署后最终优惠后的金额（只考虑商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元
-    * discount  执行计划中的每个资源部署后的优惠额，保留小数点后2位，向上取整，默认单位是元
-    * originalPrice  执行计划中的每个资源部署后的原价，保留小数点后2位，向上取整，默认单位是元
-    * periodType  包周期和按需的计费单位，包周期计费和按需计费返回，免费不会返回 HOUR：小时，包周期计费和按需计费返回，免费不会返回 DAY：天，包周期计费返回，按需计费和免费不会返回 WEEK：周，包周期计费返回，按需计费和免费不会返回 MONTH：月，包周期计费返回，按需计费和免费不会返回 YEAR：年，包周期计费返回，按需计费和免费不会返回 BYTE：字节，按需计费返回，包周期计费和免费不会返回 MB：百万字节，按需计费返回，包周期计费和免费不会返回 GB：千兆字节，按需计费返回，包周期计费和免费不会返回
-    * periodCount  订购数量。包周期计费和按需计费返回，免费不会返回。
+    * chargeMode  计费模式  * `PRE_PAID` - 包周期计费 * `POST_PAID` - 按需计费 * `FREE` - 免费
+    * salePrice  该资源最终优惠后的金额（只考虑官网折扣、商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元。
+    * discount  该资源的总优惠额，保留小数点后2位，向上取整，默认单位是元。
+    * originalPrice  该资源的原价，保留小数点后2位，向上取整，默认单位是元。
+    * periodType  计费单位  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * `HOUR` - 小时，按需计费的单位 * `DAY` - 天，按需计费的单位 * `MONTH` - 月，包周期计费的单位 * `YEAR` - 年，包周期计费的单位 * `BYTE` - 字节，按需计费的单位 * `MB` - 百万字节，包周期计费和按需计费的单位 * `GB` - 千兆字节，包周期计费和按需计费的单位
+    * periodCount  该资源的计费数量，需要和period_type搭配使用  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * 对于按需计费资源，此值默认返回1，代表在1个计费单位下，该资源的价格 * 对于包周期计费资源，此值与模板中该资源的period字段保持一致
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'chargeMode' => null,
-        'salePrice' => null,
-        'discount' => null,
-        'originalPrice' => null,
+        'salePrice' => 'double',
+        'discount' => 'double',
+        'originalPrice' => 'double',
         'periodType' => null,
         'periodCount' => null
     ];
@@ -81,12 +81,12 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * chargeMode  计费模式，包周期计费、按需计费、免费的返回，不支持的资源不返回 PRE_PAID 包周期计费 POST_PAID 按需计费 FREE 免费
-    * salePrice  执行计划中的每个资源部署后最终优惠后的金额（只考虑商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元
-    * discount  执行计划中的每个资源部署后的优惠额，保留小数点后2位，向上取整，默认单位是元
-    * originalPrice  执行计划中的每个资源部署后的原价，保留小数点后2位，向上取整，默认单位是元
-    * periodType  包周期和按需的计费单位，包周期计费和按需计费返回，免费不会返回 HOUR：小时，包周期计费和按需计费返回，免费不会返回 DAY：天，包周期计费返回，按需计费和免费不会返回 WEEK：周，包周期计费返回，按需计费和免费不会返回 MONTH：月，包周期计费返回，按需计费和免费不会返回 YEAR：年，包周期计费返回，按需计费和免费不会返回 BYTE：字节，按需计费返回，包周期计费和免费不会返回 MB：百万字节，按需计费返回，包周期计费和免费不会返回 GB：千兆字节，按需计费返回，包周期计费和免费不会返回
-    * periodCount  订购数量。包周期计费和按需计费返回，免费不会返回。
+    * chargeMode  计费模式  * `PRE_PAID` - 包周期计费 * `POST_PAID` - 按需计费 * `FREE` - 免费
+    * salePrice  该资源最终优惠后的金额（只考虑官网折扣、商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元。
+    * discount  该资源的总优惠额，保留小数点后2位，向上取整，默认单位是元。
+    * originalPrice  该资源的原价，保留小数点后2位，向上取整，默认单位是元。
+    * periodType  计费单位  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * `HOUR` - 小时，按需计费的单位 * `DAY` - 天，按需计费的单位 * `MONTH` - 月，包周期计费的单位 * `YEAR` - 年，包周期计费的单位 * `BYTE` - 字节，按需计费的单位 * `MB` - 百万字节，包周期计费和按需计费的单位 * `GB` - 千兆字节，包周期计费和按需计费的单位
+    * periodCount  该资源的计费数量，需要和period_type搭配使用  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * 对于按需计费资源，此值默认返回1，代表在1个计费单位下，该资源的价格 * 对于包周期计费资源，此值与模板中该资源的period字段保持一致
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * chargeMode  计费模式，包周期计费、按需计费、免费的返回，不支持的资源不返回 PRE_PAID 包周期计费 POST_PAID 按需计费 FREE 免费
-    * salePrice  执行计划中的每个资源部署后最终优惠后的金额（只考虑商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元
-    * discount  执行计划中的每个资源部署后的优惠额，保留小数点后2位，向上取整，默认单位是元
-    * originalPrice  执行计划中的每个资源部署后的原价，保留小数点后2位，向上取整，默认单位是元
-    * periodType  包周期和按需的计费单位，包周期计费和按需计费返回，免费不会返回 HOUR：小时，包周期计费和按需计费返回，免费不会返回 DAY：天，包周期计费返回，按需计费和免费不会返回 WEEK：周，包周期计费返回，按需计费和免费不会返回 MONTH：月，包周期计费返回，按需计费和免费不会返回 YEAR：年，包周期计费返回，按需计费和免费不会返回 BYTE：字节，按需计费返回，包周期计费和免费不会返回 MB：百万字节，按需计费返回，包周期计费和免费不会返回 GB：千兆字节，按需计费返回，包周期计费和免费不会返回
-    * periodCount  订购数量。包周期计费和按需计费返回，免费不会返回。
+    * chargeMode  计费模式  * `PRE_PAID` - 包周期计费 * `POST_PAID` - 按需计费 * `FREE` - 免费
+    * salePrice  该资源最终优惠后的金额（只考虑官网折扣、商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元。
+    * discount  该资源的总优惠额，保留小数点后2位，向上取整，默认单位是元。
+    * originalPrice  该资源的原价，保留小数点后2位，向上取整，默认单位是元。
+    * periodType  计费单位  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * `HOUR` - 小时，按需计费的单位 * `DAY` - 天，按需计费的单位 * `MONTH` - 月，包周期计费的单位 * `YEAR` - 年，包周期计费的单位 * `BYTE` - 字节，按需计费的单位 * `MB` - 百万字节，包周期计费和按需计费的单位 * `GB` - 千兆字节，包周期计费和按需计费的单位
+    * periodCount  该资源的计费数量，需要和period_type搭配使用  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * 对于按需计费资源，此值默认返回1，代表在1个计费单位下，该资源的价格 * 对于包周期计费资源，此值与模板中该资源的period字段保持一致
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * chargeMode  计费模式，包周期计费、按需计费、免费的返回，不支持的资源不返回 PRE_PAID 包周期计费 POST_PAID 按需计费 FREE 免费
-    * salePrice  执行计划中的每个资源部署后最终优惠后的金额（只考虑商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元
-    * discount  执行计划中的每个资源部署后的优惠额，保留小数点后2位，向上取整，默认单位是元
-    * originalPrice  执行计划中的每个资源部署后的原价，保留小数点后2位，向上取整，默认单位是元
-    * periodType  包周期和按需的计费单位，包周期计费和按需计费返回，免费不会返回 HOUR：小时，包周期计费和按需计费返回，免费不会返回 DAY：天，包周期计费返回，按需计费和免费不会返回 WEEK：周，包周期计费返回，按需计费和免费不会返回 MONTH：月，包周期计费返回，按需计费和免费不会返回 YEAR：年，包周期计费返回，按需计费和免费不会返回 BYTE：字节，按需计费返回，包周期计费和免费不会返回 MB：百万字节，按需计费返回，包周期计费和免费不会返回 GB：千兆字节，按需计费返回，包周期计费和免费不会返回
-    * periodCount  订购数量。包周期计费和按需计费返回，免费不会返回。
+    * chargeMode  计费模式  * `PRE_PAID` - 包周期计费 * `POST_PAID` - 按需计费 * `FREE` - 免费
+    * salePrice  该资源最终优惠后的金额（只考虑官网折扣、商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元。
+    * discount  该资源的总优惠额，保留小数点后2位，向上取整，默认单位是元。
+    * originalPrice  该资源的原价，保留小数点后2位，向上取整，默认单位是元。
+    * periodType  计费单位  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * `HOUR` - 小时，按需计费的单位 * `DAY` - 天，按需计费的单位 * `MONTH` - 月，包周期计费的单位 * `YEAR` - 年，包周期计费的单位 * `BYTE` - 字节，按需计费的单位 * `MB` - 百万字节，包周期计费和按需计费的单位 * `GB` - 千兆字节，包周期计费和按需计费的单位
+    * periodCount  该资源的计费数量，需要和period_type搭配使用  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * 对于按需计费资源，此值默认返回1，代表在1个计费单位下，该资源的价格 * 对于包周期计费资源，此值与模板中该资源的period字段保持一致
     *
     * @var string[]
     */
@@ -184,7 +184,6 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
     const CHARGE_MODE_FREE = 'FREE';
     const PERIOD_TYPE_HOUR = 'HOUR';
     const PERIOD_TYPE_DAY = 'DAY';
-    const PERIOD_TYPE_WEEK = 'WEEK';
     const PERIOD_TYPE_MONTH = 'MONTH';
     const PERIOD_TYPE_YEAR = 'YEAR';
     const PERIOD_TYPE_BYTE = 'BYTE';
@@ -216,7 +215,6 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
         return [
             self::PERIOD_TYPE_HOUR,
             self::PERIOD_TYPE_DAY,
-            self::PERIOD_TYPE_WEEK,
             self::PERIOD_TYPE_MONTH,
             self::PERIOD_TYPE_YEAR,
             self::PERIOD_TYPE_BYTE,
@@ -289,7 +287,7 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  计费模式，包周期计费、按需计费、免费的返回，不支持的资源不返回 PRE_PAID 包周期计费 POST_PAID 按需计费 FREE 免费
+    *  计费模式  * `PRE_PAID` - 包周期计费 * `POST_PAID` - 按需计费 * `FREE` - 免费
     *
     * @return string|null
     */
@@ -301,7 +299,7 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode 计费模式，包周期计费、按需计费、免费的返回，不支持的资源不返回 PRE_PAID 包周期计费 POST_PAID 按需计费 FREE 免费
+    * @param string|null $chargeMode 计费模式  * `PRE_PAID` - 包周期计费 * `POST_PAID` - 按需计费 * `FREE` - 免费
     *
     * @return $this
     */
@@ -313,9 +311,9 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets salePrice
-    *  执行计划中的每个资源部署后最终优惠后的金额（只考虑商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元
+    *  该资源最终优惠后的金额（只考虑官网折扣、商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元。
     *
-    * @return object|null
+    * @return double|null
     */
     public function getSalePrice()
     {
@@ -325,7 +323,7 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets salePrice
     *
-    * @param object|null $salePrice 执行计划中的每个资源部署后最终优惠后的金额（只考虑商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元
+    * @param double|null $salePrice 该资源最终优惠后的金额（只考虑官网折扣、商务折扣以及伙伴折扣，不包含促销折扣及优惠券），保留小数点后2位，向上取整，默认单位是元。
     *
     * @return $this
     */
@@ -337,9 +335,9 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets discount
-    *  执行计划中的每个资源部署后的优惠额，保留小数点后2位，向上取整，默认单位是元
+    *  该资源的总优惠额，保留小数点后2位，向上取整，默认单位是元。
     *
-    * @return object|null
+    * @return double|null
     */
     public function getDiscount()
     {
@@ -349,7 +347,7 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets discount
     *
-    * @param object|null $discount 执行计划中的每个资源部署后的优惠额，保留小数点后2位，向上取整，默认单位是元
+    * @param double|null $discount 该资源的总优惠额，保留小数点后2位，向上取整，默认单位是元。
     *
     * @return $this
     */
@@ -361,9 +359,9 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets originalPrice
-    *  执行计划中的每个资源部署后的原价，保留小数点后2位，向上取整，默认单位是元
+    *  该资源的原价，保留小数点后2位，向上取整，默认单位是元。
     *
-    * @return object|null
+    * @return double|null
     */
     public function getOriginalPrice()
     {
@@ -373,7 +371,7 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets originalPrice
     *
-    * @param object|null $originalPrice 执行计划中的每个资源部署后的原价，保留小数点后2位，向上取整，默认单位是元
+    * @param double|null $originalPrice 该资源的原价，保留小数点后2位，向上取整，默认单位是元。
     *
     * @return $this
     */
@@ -385,7 +383,7 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  包周期和按需的计费单位，包周期计费和按需计费返回，免费不会返回 HOUR：小时，包周期计费和按需计费返回，免费不会返回 DAY：天，包周期计费返回，按需计费和免费不会返回 WEEK：周，包周期计费返回，按需计费和免费不会返回 MONTH：月，包周期计费返回，按需计费和免费不会返回 YEAR：年，包周期计费返回，按需计费和免费不会返回 BYTE：字节，按需计费返回，包周期计费和免费不会返回 MB：百万字节，按需计费返回，包周期计费和免费不会返回 GB：千兆字节，按需计费返回，包周期计费和免费不会返回
+    *  计费单位  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * `HOUR` - 小时，按需计费的单位 * `DAY` - 天，按需计费的单位 * `MONTH` - 月，包周期计费的单位 * `YEAR` - 年，包周期计费的单位 * `BYTE` - 字节，按需计费的单位 * `MB` - 百万字节，包周期计费和按需计费的单位 * `GB` - 千兆字节，包周期计费和按需计费的单位
     *
     * @return string|null
     */
@@ -397,7 +395,7 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param string|null $periodType 包周期和按需的计费单位，包周期计费和按需计费返回，免费不会返回 HOUR：小时，包周期计费和按需计费返回，免费不会返回 DAY：天，包周期计费返回，按需计费和免费不会返回 WEEK：周，包周期计费返回，按需计费和免费不会返回 MONTH：月，包周期计费返回，按需计费和免费不会返回 YEAR：年，包周期计费返回，按需计费和免费不会返回 BYTE：字节，按需计费返回，包周期计费和免费不会返回 MB：百万字节，按需计费返回，包周期计费和免费不会返回 GB：千兆字节，按需计费返回，包周期计费和免费不会返回
+    * @param string|null $periodType 计费单位  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * `HOUR` - 小时，按需计费的单位 * `DAY` - 天，按需计费的单位 * `MONTH` - 月，包周期计费的单位 * `YEAR` - 年，包周期计费的单位 * `BYTE` - 字节，按需计费的单位 * `MB` - 百万字节，包周期计费和按需计费的单位 * `GB` - 千兆字节，包周期计费和按需计费的单位
     *
     * @return $this
     */
@@ -409,7 +407,7 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodCount
-    *  订购数量。包周期计费和按需计费返回，免费不会返回。
+    *  该资源的计费数量，需要和period_type搭配使用  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * 对于按需计费资源，此值默认返回1，代表在1个计费单位下，该资源的价格 * 对于包周期计费资源，此值与模板中该资源的period字段保持一致
     *
     * @return int|null
     */
@@ -421,7 +419,7 @@ class ResourcePriceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets periodCount
     *
-    * @param int|null $periodCount 订购数量。包周期计费和按需计费返回，免费不会返回。
+    * @param int|null $periodCount 该资源的计费数量，需要和period_type搭配使用  若该资源支持包周期计费或按需计费，则会返回该字段；若该资源为免费资源，则不返回该字段。  * 对于按需计费资源，此值默认返回1，代表在1个计费单位下，该资源的价格 * 对于包周期计费资源，此值与模板中该资源的period字段保持一致
     *
     * @return $this
     */

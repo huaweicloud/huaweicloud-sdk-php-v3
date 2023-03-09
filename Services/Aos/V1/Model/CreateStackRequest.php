@@ -21,7 +21,7 @@ class CreateStackRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
+    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)
     * body  body
     *
     * @var string[]
@@ -35,7 +35,7 @@ class CreateStackRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
+    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)
     * body  body
     *
     * @var string[]
@@ -70,7 +70,7 @@ class CreateStackRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
+    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)
     * body  body
     *
     * @var string[]
@@ -84,7 +84,7 @@ class CreateStackRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
+    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CreateStackRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
+    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)
     * body  body
     *
     * @var string[]
@@ -244,7 +244,7 @@ class CreateStackRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
+    *  项目ID，可以从调用API处获取，也可以从控制台获取。  [项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)
     *
     * @return string
     */
@@ -256,7 +256,7 @@ class CreateStackRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
+    * @param string $projectId 项目ID，可以从调用API处获取，也可以从控制台获取。  [项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)
     *
     * @return $this
     */

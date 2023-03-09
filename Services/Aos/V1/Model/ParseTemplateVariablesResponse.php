@@ -21,7 +21,7 @@ class ParseTemplateVariablesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * variables  模板中的所有参数
+    * variables  解析模板得到的参数列表
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ParseTemplateVariablesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * variables  模板中的所有参数
+    * variables  解析模板得到的参数列表
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ParseTemplateVariablesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * variables  模板中的所有参数
+    * variables  解析模板得到的参数列表
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ParseTemplateVariablesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * variables  模板中的所有参数
+    * variables  解析模板得到的参数列表
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ParseTemplateVariablesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * variables  模板中的所有参数
+    * variables  解析模板得到的参数列表
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ParseTemplateVariablesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets variables
-    *  模板中的所有参数
+    *  解析模板得到的参数列表
     *
     * @return \HuaweiCloud\SDK\Aos\V1\Model\VariableResponse[]|null
     */
@@ -187,7 +187,7 @@ class ParseTemplateVariablesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets variables
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\VariableResponse[]|null $variables 模板中的所有参数
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\VariableResponse[]|null $variables 解析模板得到的参数列表
     *
     * @return $this
     */

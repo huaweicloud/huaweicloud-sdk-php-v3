@@ -20,11 +20,12 @@ class ItemsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  执行计划中的资源类型，如：huaweicloud_evs_volume
-    * resourceName  执行计划中的用户定义的资源的名字，如：my_volume
-    * index  使用count构建的资源时资源对应的index
-    * supported  执行计划中的资源是否支持询价
-    * resourcePrice  执行计划中的每个资源部署后的总的询价信息，如果该资源询价结果包含不同的period_type，则询价结果根据period_type类型展示总价。 包周期计费和按需计费返回，免费和不支持询价的资源不返回
+    * resourceType  资源的类型  以HCL格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * resourceName  资源的名称，默认为资源的逻辑名称  以HCL格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * index  资源的索引，若用户在模板中使用了count或for_each则会返回index。若index出现，则resource_name + index可以作为该资源的一种标识  若用户在模板中使用count，则index为从0开始的数字  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index为用户自定义的字符串  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * supported  该资源或该资源当前所给予的参数是否支持进行询价
+    * unsupportedMessage  该资源不支持询价的具体原因
+    * resourcePrice  该资源的询价信息  若该资源支持包周期计费或按需计费，或者该资源为免费资源，则返回该字段；若该资源不支持询价，则不返回该字段。
     *
     * @var string[]
     */
@@ -33,16 +34,18 @@ class ItemsResponse implements ModelInterface, ArrayAccess
             'resourceName' => 'string',
             'index' => 'string',
             'supported' => 'bool',
+            'unsupportedMessage' => 'string',
             'resourcePrice' => '\HuaweiCloud\SDK\Aos\V1\Model\ResourcePriceResponse[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  执行计划中的资源类型，如：huaweicloud_evs_volume
-    * resourceName  执行计划中的用户定义的资源的名字，如：my_volume
-    * index  使用count构建的资源时资源对应的index
-    * supported  执行计划中的资源是否支持询价
-    * resourcePrice  执行计划中的每个资源部署后的总的询价信息，如果该资源询价结果包含不同的period_type，则询价结果根据period_type类型展示总价。 包周期计费和按需计费返回，免费和不支持询价的资源不返回
+    * resourceType  资源的类型  以HCL格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * resourceName  资源的名称，默认为资源的逻辑名称  以HCL格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * index  资源的索引，若用户在模板中使用了count或for_each则会返回index。若index出现，则resource_name + index可以作为该资源的一种标识  若用户在模板中使用count，则index为从0开始的数字  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index为用户自定义的字符串  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * supported  该资源或该资源当前所给予的参数是否支持进行询价
+    * unsupportedMessage  该资源不支持询价的具体原因
+    * resourcePrice  该资源的询价信息  若该资源支持包周期计费或按需计费，或者该资源为免费资源，则返回该字段；若该资源不支持询价，则不返回该字段。
     *
     * @var string[]
     */
@@ -51,6 +54,7 @@ class ItemsResponse implements ModelInterface, ArrayAccess
         'resourceName' => null,
         'index' => null,
         'supported' => null,
+        'unsupportedMessage' => null,
         'resourcePrice' => null
     ];
 
@@ -77,11 +81,12 @@ class ItemsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  执行计划中的资源类型，如：huaweicloud_evs_volume
-    * resourceName  执行计划中的用户定义的资源的名字，如：my_volume
-    * index  使用count构建的资源时资源对应的index
-    * supported  执行计划中的资源是否支持询价
-    * resourcePrice  执行计划中的每个资源部署后的总的询价信息，如果该资源询价结果包含不同的period_type，则询价结果根据period_type类型展示总价。 包周期计费和按需计费返回，免费和不支持询价的资源不返回
+    * resourceType  资源的类型  以HCL格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * resourceName  资源的名称，默认为资源的逻辑名称  以HCL格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * index  资源的索引，若用户在模板中使用了count或for_each则会返回index。若index出现，则resource_name + index可以作为该资源的一种标识  若用户在模板中使用count，则index为从0开始的数字  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index为用户自定义的字符串  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * supported  该资源或该资源当前所给予的参数是否支持进行询价
+    * unsupportedMessage  该资源不支持询价的具体原因
+    * resourcePrice  该资源的询价信息  若该资源支持包周期计费或按需计费，或者该资源为免费资源，则返回该字段；若该资源不支持询价，则不返回该字段。
     *
     * @var string[]
     */
@@ -90,16 +95,18 @@ class ItemsResponse implements ModelInterface, ArrayAccess
             'resourceName' => 'resource_name',
             'index' => 'index',
             'supported' => 'supported',
+            'unsupportedMessage' => 'unsupported_message',
             'resourcePrice' => 'resource_price'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  执行计划中的资源类型，如：huaweicloud_evs_volume
-    * resourceName  执行计划中的用户定义的资源的名字，如：my_volume
-    * index  使用count构建的资源时资源对应的index
-    * supported  执行计划中的资源是否支持询价
-    * resourcePrice  执行计划中的每个资源部署后的总的询价信息，如果该资源询价结果包含不同的period_type，则询价结果根据period_type类型展示总价。 包周期计费和按需计费返回，免费和不支持询价的资源不返回
+    * resourceType  资源的类型  以HCL格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * resourceName  资源的名称，默认为资源的逻辑名称  以HCL格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * index  资源的索引，若用户在模板中使用了count或for_each则会返回index。若index出现，则resource_name + index可以作为该资源的一种标识  若用户在模板中使用count，则index为从0开始的数字  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index为用户自定义的字符串  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * supported  该资源或该资源当前所给予的参数是否支持进行询价
+    * unsupportedMessage  该资源不支持询价的具体原因
+    * resourcePrice  该资源的询价信息  若该资源支持包周期计费或按需计费，或者该资源为免费资源，则返回该字段；若该资源不支持询价，则不返回该字段。
     *
     * @var string[]
     */
@@ -108,16 +115,18 @@ class ItemsResponse implements ModelInterface, ArrayAccess
             'resourceName' => 'setResourceName',
             'index' => 'setIndex',
             'supported' => 'setSupported',
+            'unsupportedMessage' => 'setUnsupportedMessage',
             'resourcePrice' => 'setResourcePrice'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  执行计划中的资源类型，如：huaweicloud_evs_volume
-    * resourceName  执行计划中的用户定义的资源的名字，如：my_volume
-    * index  使用count构建的资源时资源对应的index
-    * supported  执行计划中的资源是否支持询价
-    * resourcePrice  执行计划中的每个资源部署后的总的询价信息，如果该资源询价结果包含不同的period_type，则询价结果根据period_type类型展示总价。 包周期计费和按需计费返回，免费和不支持询价的资源不返回
+    * resourceType  资源的类型  以HCL格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * resourceName  资源的名称，默认为资源的逻辑名称  以HCL格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * index  资源的索引，若用户在模板中使用了count或for_each则会返回index。若index出现，则resource_name + index可以作为该资源的一种标识  若用户在模板中使用count，则index为从0开始的数字  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index为用户自定义的字符串  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * supported  该资源或该资源当前所给予的参数是否支持进行询价
+    * unsupportedMessage  该资源不支持询价的具体原因
+    * resourcePrice  该资源的询价信息  若该资源支持包周期计费或按需计费，或者该资源为免费资源，则返回该字段；若该资源不支持询价，则不返回该字段。
     *
     * @var string[]
     */
@@ -126,6 +135,7 @@ class ItemsResponse implements ModelInterface, ArrayAccess
             'resourceName' => 'getResourceName',
             'index' => 'getIndex',
             'supported' => 'getSupported',
+            'unsupportedMessage' => 'getUnsupportedMessage',
             'resourcePrice' => 'getResourcePrice'
     ];
 
@@ -191,6 +201,7 @@ class ItemsResponse implements ModelInterface, ArrayAccess
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['index'] = isset($data['index']) ? $data['index'] : null;
         $this->container['supported'] = isset($data['supported']) ? $data['supported'] : null;
+        $this->container['unsupportedMessage'] = isset($data['unsupportedMessage']) ? $data['unsupportedMessage'] : null;
         $this->container['resourcePrice'] = isset($data['resourcePrice']) ? $data['resourcePrice'] : null;
     }
 
@@ -218,7 +229,7 @@ class ItemsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  执行计划中的资源类型，如：huaweicloud_evs_volume
+    *  资源的类型  以HCL格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
     *
     * @return string|null
     */
@@ -230,7 +241,7 @@ class ItemsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType 执行计划中的资源类型，如：huaweicloud_evs_volume
+    * @param string|null $resourceType 资源的类型  以HCL格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
     *
     * @return $this
     */
@@ -242,7 +253,7 @@ class ItemsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  执行计划中的用户定义的资源的名字，如：my_volume
+    *  资源的名称，默认为资源的逻辑名称  以HCL格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
     *
     * @return string|null
     */
@@ -254,7 +265,7 @@ class ItemsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string|null $resourceName 执行计划中的用户定义的资源的名字，如：my_volume
+    * @param string|null $resourceName 资源的名称，默认为资源的逻辑名称  以HCL格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
     *
     * @return $this
     */
@@ -266,7 +277,7 @@ class ItemsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets index
-    *  使用count构建的资源时资源对应的index
+    *  资源的索引，若用户在模板中使用了count或for_each则会返回index。若index出现，则resource_name + index可以作为该资源的一种标识  若用户在模板中使用count，则index为从0开始的数字  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index为用户自定义的字符串  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     *
     * @return string|null
     */
@@ -278,7 +289,7 @@ class ItemsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets index
     *
-    * @param string|null $index 使用count构建的资源时资源对应的index
+    * @param string|null $index 资源的索引，若用户在模板中使用了count或for_each则会返回index。若index出现，则resource_name + index可以作为该资源的一种标识  若用户在模板中使用count，则index为从0开始的数字  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index为用户自定义的字符串  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     *
     * @return $this
     */
@@ -290,7 +301,7 @@ class ItemsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets supported
-    *  执行计划中的资源是否支持询价
+    *  该资源或该资源当前所给予的参数是否支持进行询价
     *
     * @return bool|null
     */
@@ -302,7 +313,7 @@ class ItemsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets supported
     *
-    * @param bool|null $supported 执行计划中的资源是否支持询价
+    * @param bool|null $supported 该资源或该资源当前所给予的参数是否支持进行询价
     *
     * @return $this
     */
@@ -313,8 +324,32 @@ class ItemsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets unsupportedMessage
+    *  该资源不支持询价的具体原因
+    *
+    * @return string|null
+    */
+    public function getUnsupportedMessage()
+    {
+        return $this->container['unsupportedMessage'];
+    }
+
+    /**
+    * Sets unsupportedMessage
+    *
+    * @param string|null $unsupportedMessage 该资源不支持询价的具体原因
+    *
+    * @return $this
+    */
+    public function setUnsupportedMessage($unsupportedMessage)
+    {
+        $this->container['unsupportedMessage'] = $unsupportedMessage;
+        return $this;
+    }
+
+    /**
     * Gets resourcePrice
-    *  执行计划中的每个资源部署后的总的询价信息，如果该资源询价结果包含不同的period_type，则询价结果根据period_type类型展示总价。 包周期计费和按需计费返回，免费和不支持询价的资源不返回
+    *  该资源的询价信息  若该资源支持包周期计费或按需计费，或者该资源为免费资源，则返回该字段；若该资源不支持询价，则不返回该字段。
     *
     * @return \HuaweiCloud\SDK\Aos\V1\Model\ResourcePriceResponse[]|null
     */
@@ -326,7 +361,7 @@ class ItemsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourcePrice
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\ResourcePriceResponse[]|null $resourcePrice 执行计划中的每个资源部署后的总的询价信息，如果该资源询价结果包含不同的period_type，则询价结果根据period_type类型展示总价。 包周期计费和按需计费返回，免费和不支持询价的资源不返回
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\ResourcePriceResponse[]|null $resourcePrice 该资源的询价信息  若该资源支持包周期计费或按需计费，或者该资源为免费资源，则返回该字段；若该资源不支持询价，则不返回该字段。
     *
     * @return $this
     */

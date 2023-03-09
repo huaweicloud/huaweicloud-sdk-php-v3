@@ -21,7 +21,7 @@ class GetExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * executionPlanItems  执行计划元素的列表，只有当状态为'AVAILABLE'、'APPLIED'、’APPLY_IN_PROGRESS‘等完成创建后的状态才会被赋值，而'CREATION_IN_PROGRESS'或'CREATION_FAILED'会返回错误。
+    * executionPlanItems  执行计划项目的列表
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class GetExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * executionPlanItems  执行计划元素的列表，只有当状态为'AVAILABLE'、'APPLIED'、’APPLY_IN_PROGRESS‘等完成创建后的状态才会被赋值，而'CREATION_IN_PROGRESS'或'CREATION_FAILED'会返回错误。
+    * executionPlanItems  执行计划项目的列表
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class GetExecutionPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * executionPlanItems  执行计划元素的列表，只有当状态为'AVAILABLE'、'APPLIED'、’APPLY_IN_PROGRESS‘等完成创建后的状态才会被赋值，而'CREATION_IN_PROGRESS'或'CREATION_FAILED'会返回错误。
+    * executionPlanItems  执行计划项目的列表
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class GetExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * executionPlanItems  执行计划元素的列表，只有当状态为'AVAILABLE'、'APPLIED'、’APPLY_IN_PROGRESS‘等完成创建后的状态才会被赋值，而'CREATION_IN_PROGRESS'或'CREATION_FAILED'会返回错误。
+    * executionPlanItems  执行计划项目的列表
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class GetExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * executionPlanItems  执行计划元素的列表，只有当状态为'AVAILABLE'、'APPLIED'、’APPLY_IN_PROGRESS‘等完成创建后的状态才会被赋值，而'CREATION_IN_PROGRESS'或'CREATION_FAILED'会返回错误。
+    * executionPlanItems  执行计划项目的列表
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class GetExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets executionPlanItems
-    *  执行计划元素的列表，只有当状态为'AVAILABLE'、'APPLIED'、’APPLY_IN_PROGRESS‘等完成创建后的状态才会被赋值，而'CREATION_IN_PROGRESS'或'CREATION_FAILED'会返回错误。
+    *  执行计划项目的列表
     *
     * @return \HuaweiCloud\SDK\Aos\V1\Model\ExecutionPlanItem[]|null
     */
@@ -187,7 +187,7 @@ class GetExecutionPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Sets executionPlanItems
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\ExecutionPlanItem[]|null $executionPlanItems 执行计划元素的列表，只有当状态为'AVAILABLE'、'APPLIED'、’APPLY_IN_PROGRESS‘等完成创建后的状态才会被赋值，而'CREATION_IN_PROGRESS'或'CREATION_FAILED'会返回错误。
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\ExecutionPlanItem[]|null $executionPlanItems 执行计划项目的列表
     *
     * @return $this
     */

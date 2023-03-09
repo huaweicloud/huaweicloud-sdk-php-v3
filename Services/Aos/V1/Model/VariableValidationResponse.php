@@ -20,7 +20,7 @@ class VariableValidationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * condition  校验表达式。支持Terraform表达式
+    * condition  校验表达式
     * errorMessage  校验失败后的错误信息
     *
     * @var string[]
@@ -32,7 +32,7 @@ class VariableValidationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * condition  校验表达式。支持Terraform表达式
+    * condition  校验表达式
     * errorMessage  校验失败后的错误信息
     *
     * @var string[]
@@ -65,7 +65,7 @@ class VariableValidationResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * condition  校验表达式。支持Terraform表达式
+    * condition  校验表达式
     * errorMessage  校验失败后的错误信息
     *
     * @var string[]
@@ -77,7 +77,7 @@ class VariableValidationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * condition  校验表达式。支持Terraform表达式
+    * condition  校验表达式
     * errorMessage  校验失败后的错误信息
     *
     * @var string[]
@@ -89,7 +89,7 @@ class VariableValidationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * condition  校验表达式。支持Terraform表达式
+    * condition  校验表达式
     * errorMessage  校验失败后的错误信息
     *
     * @var string[]
@@ -185,7 +185,7 @@ class VariableValidationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets condition
-    *  校验表达式。支持Terraform表达式
+    *  校验表达式
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class VariableValidationResponse implements ModelInterface, ArrayAccess
     /**
     * Sets condition
     *
-    * @param string|null $condition 校验表达式。支持Terraform表达式
+    * @param string|null $condition 校验表达式
     *
     * @return $this
     */

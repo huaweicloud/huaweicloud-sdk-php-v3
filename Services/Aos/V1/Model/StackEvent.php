@@ -20,23 +20,23 @@ class StackEvent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * resourceType  资源的类型  以HCL格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * resourceName  资源的名称，默认为资源的逻辑名称  以HCL格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
     * resourceIdKey  资源id的名称，即对应资源作为id使用的值的名称，当资源未创建的时候，不返回resource_id_key 此id由provider定义，因此不同的provider可能遵循了不同的命名规则，具体的命名规则请与provider开发者确认或阅读provider文档
     * resourceIdValue  资源id的值，即对应资源作为id使用的值，当资源未创建的时候，不返回resource_id_value
-    * resourceName  资源的名称，默认为资源的逻辑名称  以hcl格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * resourceType  资源的类型  以hcl格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * resourceKey  资源键，若用户在模板中使用了count或for_each则会返回resource_key  若用户在模板中使用count，则resource_key为从0开始的数字  以hcl格式的模板为例，resource_key分别为0和1  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，resource_key分别为0和1  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则resource_key为用户自定义的字符串  以hcl格式的模板为例，resource_key分别为vpc1和vpc2  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，resource_key分别为vpc1和vpc2  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * resourceKey  资源键，若用户在模板中使用了count或for_each则会返回resource_key  若用户在模板中使用count，则resource_key为从0开始的数字  以HCL格式的模板为例，模板中count为2，意味着将会生成两个资源，对应的resource_key分别为0和1  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，模板中count为2，意味着将会生成两个资源，对应的resource_key分别为0和1  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则resource_key为用户自定义的字符串  以HCL格式的模板为例，resource_key分别为vpc1和vpc2  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，resource_key分别为vpc1和vpc2  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     * time  事件发生的时间 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * eventType  此次事件的类型   * `LOG` - 记录状态信息，比如当前状态，目标状态等。   * `ERROR` - 记录失败信息   * `DRIFT` - 记录资源偏移信息   * `SUMMARY` - 记录资源变更结果总结   * `CREATION_IN_PROGRESS` - 正在生成   * `CREATION_FAILED` - 生成失败   * `CREATION_COMPLETE` - 生成完成   * `DELETION_IN_PROGRESS` - 正在删除   * `DELETION_FAILED` - 删除失败   * `DELETION_COMPLETE` - 已经删除   * `UPDATE_IN_PROGRESS` - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION   * `UPDATE_FAILED` - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后   * `UPDATE_COMPLETE` - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
+    * eventType  此次事件的类型   * `LOG` - 记录状态信息，比如当前状态，目标状态等。   * `ERROR` - 记录失败信息   * `DRIFT` - 记录资源偏移信息   * `SUMMARY` - 记录资源变更结果总结   * `CREATION_IN_PROGRESS` - 正在生成   * `CREATION_FAILED` - 生成失败   * `CREATION_COMPLETE` - 生成完成   * `DELETION_IN_PROGRESS` - 正在删除   * `DELETION_FAILED` - 删除失败   * `DELETION_COMPLETE` - 已经删除   * `UPDATE_IN_PROGRESS` - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。   * `UPDATE_FAILED` - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。   * `UPDATE_COMPLETE` - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。
     * eventMessage  该资源栈事件对应的详细信息
     * elapsedSeconds  此事件执行所花的时间，以秒为单位
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'resourceType' => 'string',
+            'resourceName' => 'string',
             'resourceIdKey' => 'string',
             'resourceIdValue' => 'string',
-            'resourceName' => 'string',
-            'resourceType' => 'string',
             'resourceKey' => 'string',
             'time' => 'string',
             'eventType' => 'string',
@@ -46,23 +46,23 @@ class StackEvent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * resourceType  资源的类型  以HCL格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * resourceName  资源的名称，默认为资源的逻辑名称  以HCL格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
     * resourceIdKey  资源id的名称，即对应资源作为id使用的值的名称，当资源未创建的时候，不返回resource_id_key 此id由provider定义，因此不同的provider可能遵循了不同的命名规则，具体的命名规则请与provider开发者确认或阅读provider文档
     * resourceIdValue  资源id的值，即对应资源作为id使用的值，当资源未创建的时候，不返回resource_id_value
-    * resourceName  资源的名称，默认为资源的逻辑名称  以hcl格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * resourceType  资源的类型  以hcl格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * resourceKey  资源键，若用户在模板中使用了count或for_each则会返回resource_key  若用户在模板中使用count，则resource_key为从0开始的数字  以hcl格式的模板为例，resource_key分别为0和1  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，resource_key分别为0和1  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则resource_key为用户自定义的字符串  以hcl格式的模板为例，resource_key分别为vpc1和vpc2  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，resource_key分别为vpc1和vpc2  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * resourceKey  资源键，若用户在模板中使用了count或for_each则会返回resource_key  若用户在模板中使用count，则resource_key为从0开始的数字  以HCL格式的模板为例，模板中count为2，意味着将会生成两个资源，对应的resource_key分别为0和1  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，模板中count为2，意味着将会生成两个资源，对应的resource_key分别为0和1  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则resource_key为用户自定义的字符串  以HCL格式的模板为例，resource_key分别为vpc1和vpc2  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，resource_key分别为vpc1和vpc2  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     * time  事件发生的时间 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * eventType  此次事件的类型   * `LOG` - 记录状态信息，比如当前状态，目标状态等。   * `ERROR` - 记录失败信息   * `DRIFT` - 记录资源偏移信息   * `SUMMARY` - 记录资源变更结果总结   * `CREATION_IN_PROGRESS` - 正在生成   * `CREATION_FAILED` - 生成失败   * `CREATION_COMPLETE` - 生成完成   * `DELETION_IN_PROGRESS` - 正在删除   * `DELETION_FAILED` - 删除失败   * `DELETION_COMPLETE` - 已经删除   * `UPDATE_IN_PROGRESS` - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION   * `UPDATE_FAILED` - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后   * `UPDATE_COMPLETE` - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
+    * eventType  此次事件的类型   * `LOG` - 记录状态信息，比如当前状态，目标状态等。   * `ERROR` - 记录失败信息   * `DRIFT` - 记录资源偏移信息   * `SUMMARY` - 记录资源变更结果总结   * `CREATION_IN_PROGRESS` - 正在生成   * `CREATION_FAILED` - 生成失败   * `CREATION_COMPLETE` - 生成完成   * `DELETION_IN_PROGRESS` - 正在删除   * `DELETION_FAILED` - 删除失败   * `DELETION_COMPLETE` - 已经删除   * `UPDATE_IN_PROGRESS` - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。   * `UPDATE_FAILED` - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。   * `UPDATE_COMPLETE` - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。
     * eventMessage  该资源栈事件对应的详细信息
     * elapsedSeconds  此事件执行所花的时间，以秒为单位
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'resourceType' => null,
+        'resourceName' => null,
         'resourceIdKey' => null,
         'resourceIdValue' => null,
-        'resourceName' => null,
-        'resourceType' => null,
         'resourceKey' => null,
         'time' => null,
         'eventType' => null,
@@ -93,23 +93,23 @@ class StackEvent implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * resourceType  资源的类型  以HCL格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * resourceName  资源的名称，默认为资源的逻辑名称  以HCL格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
     * resourceIdKey  资源id的名称，即对应资源作为id使用的值的名称，当资源未创建的时候，不返回resource_id_key 此id由provider定义，因此不同的provider可能遵循了不同的命名规则，具体的命名规则请与provider开发者确认或阅读provider文档
     * resourceIdValue  资源id的值，即对应资源作为id使用的值，当资源未创建的时候，不返回resource_id_value
-    * resourceName  资源的名称，默认为资源的逻辑名称  以hcl格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * resourceType  资源的类型  以hcl格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * resourceKey  资源键，若用户在模板中使用了count或for_each则会返回resource_key  若用户在模板中使用count，则resource_key为从0开始的数字  以hcl格式的模板为例，resource_key分别为0和1  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，resource_key分别为0和1  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则resource_key为用户自定义的字符串  以hcl格式的模板为例，resource_key分别为vpc1和vpc2  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，resource_key分别为vpc1和vpc2  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * resourceKey  资源键，若用户在模板中使用了count或for_each则会返回resource_key  若用户在模板中使用count，则resource_key为从0开始的数字  以HCL格式的模板为例，模板中count为2，意味着将会生成两个资源，对应的resource_key分别为0和1  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，模板中count为2，意味着将会生成两个资源，对应的resource_key分别为0和1  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则resource_key为用户自定义的字符串  以HCL格式的模板为例，resource_key分别为vpc1和vpc2  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，resource_key分别为vpc1和vpc2  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     * time  事件发生的时间 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * eventType  此次事件的类型   * `LOG` - 记录状态信息，比如当前状态，目标状态等。   * `ERROR` - 记录失败信息   * `DRIFT` - 记录资源偏移信息   * `SUMMARY` - 记录资源变更结果总结   * `CREATION_IN_PROGRESS` - 正在生成   * `CREATION_FAILED` - 生成失败   * `CREATION_COMPLETE` - 生成完成   * `DELETION_IN_PROGRESS` - 正在删除   * `DELETION_FAILED` - 删除失败   * `DELETION_COMPLETE` - 已经删除   * `UPDATE_IN_PROGRESS` - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION   * `UPDATE_FAILED` - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后   * `UPDATE_COMPLETE` - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
+    * eventType  此次事件的类型   * `LOG` - 记录状态信息，比如当前状态，目标状态等。   * `ERROR` - 记录失败信息   * `DRIFT` - 记录资源偏移信息   * `SUMMARY` - 记录资源变更结果总结   * `CREATION_IN_PROGRESS` - 正在生成   * `CREATION_FAILED` - 生成失败   * `CREATION_COMPLETE` - 生成完成   * `DELETION_IN_PROGRESS` - 正在删除   * `DELETION_FAILED` - 删除失败   * `DELETION_COMPLETE` - 已经删除   * `UPDATE_IN_PROGRESS` - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。   * `UPDATE_FAILED` - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。   * `UPDATE_COMPLETE` - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。
     * eventMessage  该资源栈事件对应的详细信息
     * elapsedSeconds  此事件执行所花的时间，以秒为单位
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'resourceType' => 'resource_type',
+            'resourceName' => 'resource_name',
             'resourceIdKey' => 'resource_id_key',
             'resourceIdValue' => 'resource_id_value',
-            'resourceName' => 'resource_name',
-            'resourceType' => 'resource_type',
             'resourceKey' => 'resource_key',
             'time' => 'time',
             'eventType' => 'event_type',
@@ -119,23 +119,23 @@ class StackEvent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * resourceType  资源的类型  以HCL格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * resourceName  资源的名称，默认为资源的逻辑名称  以HCL格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
     * resourceIdKey  资源id的名称，即对应资源作为id使用的值的名称，当资源未创建的时候，不返回resource_id_key 此id由provider定义，因此不同的provider可能遵循了不同的命名规则，具体的命名规则请与provider开发者确认或阅读provider文档
     * resourceIdValue  资源id的值，即对应资源作为id使用的值，当资源未创建的时候，不返回resource_id_value
-    * resourceName  资源的名称，默认为资源的逻辑名称  以hcl格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * resourceType  资源的类型  以hcl格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * resourceKey  资源键，若用户在模板中使用了count或for_each则会返回resource_key  若用户在模板中使用count，则resource_key为从0开始的数字  以hcl格式的模板为例，resource_key分别为0和1  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，resource_key分别为0和1  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则resource_key为用户自定义的字符串  以hcl格式的模板为例，resource_key分别为vpc1和vpc2  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，resource_key分别为vpc1和vpc2  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * resourceKey  资源键，若用户在模板中使用了count或for_each则会返回resource_key  若用户在模板中使用count，则resource_key为从0开始的数字  以HCL格式的模板为例，模板中count为2，意味着将会生成两个资源，对应的resource_key分别为0和1  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，模板中count为2，意味着将会生成两个资源，对应的resource_key分别为0和1  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则resource_key为用户自定义的字符串  以HCL格式的模板为例，resource_key分别为vpc1和vpc2  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，resource_key分别为vpc1和vpc2  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     * time  事件发生的时间 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * eventType  此次事件的类型   * `LOG` - 记录状态信息，比如当前状态，目标状态等。   * `ERROR` - 记录失败信息   * `DRIFT` - 记录资源偏移信息   * `SUMMARY` - 记录资源变更结果总结   * `CREATION_IN_PROGRESS` - 正在生成   * `CREATION_FAILED` - 生成失败   * `CREATION_COMPLETE` - 生成完成   * `DELETION_IN_PROGRESS` - 正在删除   * `DELETION_FAILED` - 删除失败   * `DELETION_COMPLETE` - 已经删除   * `UPDATE_IN_PROGRESS` - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION   * `UPDATE_FAILED` - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后   * `UPDATE_COMPLETE` - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
+    * eventType  此次事件的类型   * `LOG` - 记录状态信息，比如当前状态，目标状态等。   * `ERROR` - 记录失败信息   * `DRIFT` - 记录资源偏移信息   * `SUMMARY` - 记录资源变更结果总结   * `CREATION_IN_PROGRESS` - 正在生成   * `CREATION_FAILED` - 生成失败   * `CREATION_COMPLETE` - 生成完成   * `DELETION_IN_PROGRESS` - 正在删除   * `DELETION_FAILED` - 删除失败   * `DELETION_COMPLETE` - 已经删除   * `UPDATE_IN_PROGRESS` - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。   * `UPDATE_FAILED` - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。   * `UPDATE_COMPLETE` - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。
     * eventMessage  该资源栈事件对应的详细信息
     * elapsedSeconds  此事件执行所花的时间，以秒为单位
     *
     * @var string[]
     */
     protected static $setters = [
+            'resourceType' => 'setResourceType',
+            'resourceName' => 'setResourceName',
             'resourceIdKey' => 'setResourceIdKey',
             'resourceIdValue' => 'setResourceIdValue',
-            'resourceName' => 'setResourceName',
-            'resourceType' => 'setResourceType',
             'resourceKey' => 'setResourceKey',
             'time' => 'setTime',
             'eventType' => 'setEventType',
@@ -145,23 +145,23 @@ class StackEvent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * resourceType  资源的类型  以HCL格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * resourceName  资源的名称，默认为资源的逻辑名称  以HCL格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
     * resourceIdKey  资源id的名称，即对应资源作为id使用的值的名称，当资源未创建的时候，不返回resource_id_key 此id由provider定义，因此不同的provider可能遵循了不同的命名规则，具体的命名规则请与provider开发者确认或阅读provider文档
     * resourceIdValue  资源id的值，即对应资源作为id使用的值，当资源未创建的时候，不返回resource_id_value
-    * resourceName  资源的名称，默认为资源的逻辑名称  以hcl格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * resourceType  资源的类型  以hcl格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * resourceKey  资源键，若用户在模板中使用了count或for_each则会返回resource_key  若用户在模板中使用count，则resource_key为从0开始的数字  以hcl格式的模板为例，resource_key分别为0和1  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，resource_key分别为0和1  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则resource_key为用户自定义的字符串  以hcl格式的模板为例，resource_key分别为vpc1和vpc2  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，resource_key分别为vpc1和vpc2  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * resourceKey  资源键，若用户在模板中使用了count或for_each则会返回resource_key  若用户在模板中使用count，则resource_key为从0开始的数字  以HCL格式的模板为例，模板中count为2，意味着将会生成两个资源，对应的resource_key分别为0和1  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，模板中count为2，意味着将会生成两个资源，对应的resource_key分别为0和1  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则resource_key为用户自定义的字符串  以HCL格式的模板为例，resource_key分别为vpc1和vpc2  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，resource_key分别为vpc1和vpc2  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     * time  事件发生的时间 格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
-    * eventType  此次事件的类型   * `LOG` - 记录状态信息，比如当前状态，目标状态等。   * `ERROR` - 记录失败信息   * `DRIFT` - 记录资源偏移信息   * `SUMMARY` - 记录资源变更结果总结   * `CREATION_IN_PROGRESS` - 正在生成   * `CREATION_FAILED` - 生成失败   * `CREATION_COMPLETE` - 生成完成   * `DELETION_IN_PROGRESS` - 正在删除   * `DELETION_FAILED` - 删除失败   * `DELETION_COMPLETE` - 已经删除   * `UPDATE_IN_PROGRESS` - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION   * `UPDATE_FAILED` - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后   * `UPDATE_COMPLETE` - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
+    * eventType  此次事件的类型   * `LOG` - 记录状态信息，比如当前状态，目标状态等。   * `ERROR` - 记录失败信息   * `DRIFT` - 记录资源偏移信息   * `SUMMARY` - 记录资源变更结果总结   * `CREATION_IN_PROGRESS` - 正在生成   * `CREATION_FAILED` - 生成失败   * `CREATION_COMPLETE` - 生成完成   * `DELETION_IN_PROGRESS` - 正在删除   * `DELETION_FAILED` - 删除失败   * `DELETION_COMPLETE` - 已经删除   * `UPDATE_IN_PROGRESS` - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。   * `UPDATE_FAILED` - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。   * `UPDATE_COMPLETE` - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。
     * eventMessage  该资源栈事件对应的详细信息
     * elapsedSeconds  此事件执行所花的时间，以秒为单位
     *
     * @var string[]
     */
     protected static $getters = [
+            'resourceType' => 'getResourceType',
+            'resourceName' => 'getResourceName',
             'resourceIdKey' => 'getResourceIdKey',
             'resourceIdValue' => 'getResourceIdValue',
-            'resourceName' => 'getResourceName',
-            'resourceType' => 'getResourceType',
             'resourceKey' => 'getResourceKey',
             'time' => 'getTime',
             'eventType' => 'getEventType',
@@ -264,10 +264,10 @@ class StackEvent implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
+        $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['resourceIdKey'] = isset($data['resourceIdKey']) ? $data['resourceIdKey'] : null;
         $this->container['resourceIdValue'] = isset($data['resourceIdValue']) ? $data['resourceIdValue'] : null;
-        $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
-        $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
         $this->container['resourceKey'] = isset($data['resourceKey']) ? $data['resourceKey'] : null;
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
         $this->container['eventType'] = isset($data['eventType']) ? $data['eventType'] : null;
@@ -303,6 +303,54 @@ class StackEvent implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets resourceType
+    *  资源的类型  以HCL格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    *
+    * @return string|null
+    */
+    public function getResourceType()
+    {
+        return $this->container['resourceType'];
+    }
+
+    /**
+    * Sets resourceType
+    *
+    * @param string|null $resourceType 资源的类型  以HCL格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    *
+    * @return $this
+    */
+    public function setResourceType($resourceType)
+    {
+        $this->container['resourceType'] = $resourceType;
+        return $this;
+    }
+
+    /**
+    * Gets resourceName
+    *  资源的名称，默认为资源的逻辑名称  以HCL格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    *
+    * @return string|null
+    */
+    public function getResourceName()
+    {
+        return $this->container['resourceName'];
+    }
+
+    /**
+    * Sets resourceName
+    *
+    * @param string|null $resourceName 资源的名称，默认为资源的逻辑名称  以HCL格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    *
+    * @return $this
+    */
+    public function setResourceName($resourceName)
+    {
+        $this->container['resourceName'] = $resourceName;
+        return $this;
     }
 
     /**
@@ -354,56 +402,8 @@ class StackEvent implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resourceName
-    *  资源的名称，默认为资源的逻辑名称  以hcl格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    *
-    * @return string|null
-    */
-    public function getResourceName()
-    {
-        return $this->container['resourceName'];
-    }
-
-    /**
-    * Sets resourceName
-    *
-    * @param string|null $resourceName 资源的名称，默认为资源的逻辑名称  以hcl格式的模板为例，resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    *
-    * @return $this
-    */
-    public function setResourceName($resourceName)
-    {
-        $this->container['resourceName'] = $resourceName;
-        return $this;
-    }
-
-    /**
-    * Gets resourceType
-    *  资源的类型  以hcl格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    *
-    * @return string|null
-    */
-    public function getResourceType()
-    {
-        return $this->container['resourceType'];
-    }
-
-    /**
-    * Sets resourceType
-    *
-    * @param string|null $resourceType 资源的类型  以hcl格式的模板为例，resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    *
-    * @return $this
-    */
-    public function setResourceType($resourceType)
-    {
-        $this->container['resourceType'] = $resourceType;
-        return $this;
-    }
-
-    /**
     * Gets resourceKey
-    *  资源键，若用户在模板中使用了count或for_each则会返回resource_key  若用户在模板中使用count，则resource_key为从0开始的数字  以hcl格式的模板为例，resource_key分别为0和1  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，resource_key分别为0和1  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则resource_key为用户自定义的字符串  以hcl格式的模板为例，resource_key分别为vpc1和vpc2  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，resource_key分别为vpc1和vpc2  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    *  资源键，若用户在模板中使用了count或for_each则会返回resource_key  若用户在模板中使用count，则resource_key为从0开始的数字  以HCL格式的模板为例，模板中count为2，意味着将会生成两个资源，对应的resource_key分别为0和1  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，模板中count为2，意味着将会生成两个资源，对应的resource_key分别为0和1  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则resource_key为用户自定义的字符串  以HCL格式的模板为例，resource_key分别为vpc1和vpc2  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，resource_key分别为vpc1和vpc2  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     *
     * @return string|null
     */
@@ -415,7 +415,7 @@ class StackEvent implements ModelInterface, ArrayAccess
     /**
     * Sets resourceKey
     *
-    * @param string|null $resourceKey 资源键，若用户在模板中使用了count或for_each则会返回resource_key  若用户在模板中使用count，则resource_key为从0开始的数字  以hcl格式的模板为例，resource_key分别为0和1  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，resource_key分别为0和1  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则resource_key为用户自定义的字符串  以hcl格式的模板为例，resource_key分别为vpc1和vpc2  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，resource_key分别为vpc1和vpc2  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * @param string|null $resourceKey 资源键，若用户在模板中使用了count或for_each则会返回resource_key  若用户在模板中使用count，则resource_key为从0开始的数字  以HCL格式的模板为例，模板中count为2，意味着将会生成两个资源，对应的resource_key分别为0和1  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，模板中count为2，意味着将会生成两个资源，对应的resource_key分别为0和1  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则resource_key为用户自定义的字符串  以HCL格式的模板为例，resource_key分别为vpc1和vpc2  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，resource_key分别为vpc1和vpc2  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     *
     * @return $this
     */
@@ -451,7 +451,7 @@ class StackEvent implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
-    *  此次事件的类型   * `LOG` - 记录状态信息，比如当前状态，目标状态等。   * `ERROR` - 记录失败信息   * `DRIFT` - 记录资源偏移信息   * `SUMMARY` - 记录资源变更结果总结   * `CREATION_IN_PROGRESS` - 正在生成   * `CREATION_FAILED` - 生成失败   * `CREATION_COMPLETE` - 生成完成   * `DELETION_IN_PROGRESS` - 正在删除   * `DELETION_FAILED` - 删除失败   * `DELETION_COMPLETE` - 已经删除   * `UPDATE_IN_PROGRESS` - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION   * `UPDATE_FAILED` - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后   * `UPDATE_COMPLETE` - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
+    *  此次事件的类型   * `LOG` - 记录状态信息，比如当前状态，目标状态等。   * `ERROR` - 记录失败信息   * `DRIFT` - 记录资源偏移信息   * `SUMMARY` - 记录资源变更结果总结   * `CREATION_IN_PROGRESS` - 正在生成   * `CREATION_FAILED` - 生成失败   * `CREATION_COMPLETE` - 生成完成   * `DELETION_IN_PROGRESS` - 正在删除   * `DELETION_FAILED` - 删除失败   * `DELETION_COMPLETE` - 已经删除   * `UPDATE_IN_PROGRESS` - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。   * `UPDATE_FAILED` - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。   * `UPDATE_COMPLETE` - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。
     *
     * @return string|null
     */
@@ -463,7 +463,7 @@ class StackEvent implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string|null $eventType 此次事件的类型   * `LOG` - 记录状态信息，比如当前状态，目标状态等。   * `ERROR` - 记录失败信息   * `DRIFT` - 记录资源偏移信息   * `SUMMARY` - 记录资源变更结果总结   * `CREATION_IN_PROGRESS` - 正在生成   * `CREATION_FAILED` - 生成失败   * `CREATION_COMPLETE` - 生成完成   * `DELETION_IN_PROGRESS` - 正在删除   * `DELETION_FAILED` - 删除失败   * `DELETION_COMPLETE` - 已经删除   * `UPDATE_IN_PROGRESS` - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION   * `UPDATE_FAILED` - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后   * `UPDATE_COMPLETE` - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
+    * @param string|null $eventType 此次事件的类型   * `LOG` - 记录状态信息，比如当前状态，目标状态等。   * `ERROR` - 记录失败信息   * `DRIFT` - 记录资源偏移信息   * `SUMMARY` - 记录资源变更结果总结   * `CREATION_IN_PROGRESS` - 正在生成   * `CREATION_FAILED` - 生成失败   * `CREATION_COMPLETE` - 生成完成   * `DELETION_IN_PROGRESS` - 正在删除   * `DELETION_FAILED` - 删除失败   * `DELETION_COMPLETE` - 已经删除   * `UPDATE_IN_PROGRESS` - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。   * `UPDATE_FAILED` - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。   * `UPDATE_COMPLETE` - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则是DELETION后CREATION，或者CREATION后DELETION，具体以何种行为进行替换式更新由Provider定义。
     *
     * @return $this
     */

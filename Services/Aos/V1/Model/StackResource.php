@@ -20,13 +20,14 @@ class StackResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * physicalResourceId  资源的物理id，由为该资源提供服务的provider在资源部署的时候生成  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
-    * physicalResourceName  资源的物理名称，由为该资源提供服务的provider在资源部署的时候定义  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
-    * logicalResourceName  资源的逻辑名称，由用户在模板中定义  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以hcl格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * logicalResourceType  资源的类型  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以hcl格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * indexKey  资源的索引，若用户在模板中使用了count或for_each则会返回index_key。若index_key出现，则logical_resource_name + index_key可以作为该资源的一种标识  若用户在模板中使用count，则index_key为从0开始的数字  以hcl格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index_key为用户自定义的字符串  以hcl格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * physicalResourceId  资源的物理id，由该资源的provider、云服务或其他服务提供方在资源部署的时候生成  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
+    * physicalResourceName  资源的物理名称，由该资源的provider、云服务或其他服务提供方在资源部署的时候定义  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
+    * logicalResourceName  资源的逻辑名称，由用户在模板中定义  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以HCL格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * logicalResourceType  资源的类型  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以HCL格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * indexKey  资源的索引，若用户在模板中使用了count或for_each则会返回index_key。若index_key出现，则logical_resource_name + index_key可以作为该资源的一种标识  若用户在模板中使用count，则index_key为从0开始的数字  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index_key为用户自定义的字符串  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     * resourceStatus  资源的状态 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
     * statusMessage  当该资源状态为任意失败状态（即以 `FAILED` 结尾时），将会展示简要的错误信息总结以供debug
+    * resourceAttributes  资源属性列表
     *
     * @var string[]
     */
@@ -37,18 +38,20 @@ class StackResource implements ModelInterface, ArrayAccess
             'logicalResourceType' => 'string',
             'indexKey' => 'string',
             'resourceStatus' => 'string',
-            'statusMessage' => 'string'
+            'statusMessage' => 'string',
+            'resourceAttributes' => '\HuaweiCloud\SDK\Aos\V1\Model\ResourceAttribute[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * physicalResourceId  资源的物理id，由为该资源提供服务的provider在资源部署的时候生成  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
-    * physicalResourceName  资源的物理名称，由为该资源提供服务的provider在资源部署的时候定义  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
-    * logicalResourceName  资源的逻辑名称，由用户在模板中定义  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以hcl格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * logicalResourceType  资源的类型  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以hcl格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * indexKey  资源的索引，若用户在模板中使用了count或for_each则会返回index_key。若index_key出现，则logical_resource_name + index_key可以作为该资源的一种标识  若用户在模板中使用count，则index_key为从0开始的数字  以hcl格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index_key为用户自定义的字符串  以hcl格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * physicalResourceId  资源的物理id，由该资源的provider、云服务或其他服务提供方在资源部署的时候生成  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
+    * physicalResourceName  资源的物理名称，由该资源的provider、云服务或其他服务提供方在资源部署的时候定义  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
+    * logicalResourceName  资源的逻辑名称，由用户在模板中定义  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以HCL格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * logicalResourceType  资源的类型  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以HCL格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * indexKey  资源的索引，若用户在模板中使用了count或for_each则会返回index_key。若index_key出现，则logical_resource_name + index_key可以作为该资源的一种标识  若用户在模板中使用count，则index_key为从0开始的数字  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index_key为用户自定义的字符串  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     * resourceStatus  资源的状态 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
     * statusMessage  当该资源状态为任意失败状态（即以 `FAILED` 结尾时），将会展示简要的错误信息总结以供debug
+    * resourceAttributes  资源属性列表
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class StackResource implements ModelInterface, ArrayAccess
         'logicalResourceType' => null,
         'indexKey' => null,
         'resourceStatus' => null,
-        'statusMessage' => null
+        'statusMessage' => null,
+        'resourceAttributes' => null
     ];
 
     /**
@@ -85,13 +89,14 @@ class StackResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * physicalResourceId  资源的物理id，由为该资源提供服务的provider在资源部署的时候生成  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
-    * physicalResourceName  资源的物理名称，由为该资源提供服务的provider在资源部署的时候定义  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
-    * logicalResourceName  资源的逻辑名称，由用户在模板中定义  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以hcl格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * logicalResourceType  资源的类型  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以hcl格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * indexKey  资源的索引，若用户在模板中使用了count或for_each则会返回index_key。若index_key出现，则logical_resource_name + index_key可以作为该资源的一种标识  若用户在模板中使用count，则index_key为从0开始的数字  以hcl格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index_key为用户自定义的字符串  以hcl格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * physicalResourceId  资源的物理id，由该资源的provider、云服务或其他服务提供方在资源部署的时候生成  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
+    * physicalResourceName  资源的物理名称，由该资源的provider、云服务或其他服务提供方在资源部署的时候定义  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
+    * logicalResourceName  资源的逻辑名称，由用户在模板中定义  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以HCL格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * logicalResourceType  资源的类型  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以HCL格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * indexKey  资源的索引，若用户在模板中使用了count或for_each则会返回index_key。若index_key出现，则logical_resource_name + index_key可以作为该资源的一种标识  若用户在模板中使用count，则index_key为从0开始的数字  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index_key为用户自定义的字符串  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     * resourceStatus  资源的状态 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
     * statusMessage  当该资源状态为任意失败状态（即以 `FAILED` 结尾时），将会展示简要的错误信息总结以供debug
+    * resourceAttributes  资源属性列表
     *
     * @var string[]
     */
@@ -102,18 +107,20 @@ class StackResource implements ModelInterface, ArrayAccess
             'logicalResourceType' => 'logical_resource_type',
             'indexKey' => 'index_key',
             'resourceStatus' => 'resource_status',
-            'statusMessage' => 'status_message'
+            'statusMessage' => 'status_message',
+            'resourceAttributes' => 'resource_attributes'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * physicalResourceId  资源的物理id，由为该资源提供服务的provider在资源部署的时候生成  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
-    * physicalResourceName  资源的物理名称，由为该资源提供服务的provider在资源部署的时候定义  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
-    * logicalResourceName  资源的逻辑名称，由用户在模板中定义  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以hcl格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * logicalResourceType  资源的类型  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以hcl格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * indexKey  资源的索引，若用户在模板中使用了count或for_each则会返回index_key。若index_key出现，则logical_resource_name + index_key可以作为该资源的一种标识  若用户在模板中使用count，则index_key为从0开始的数字  以hcl格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index_key为用户自定义的字符串  以hcl格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * physicalResourceId  资源的物理id，由该资源的provider、云服务或其他服务提供方在资源部署的时候生成  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
+    * physicalResourceName  资源的物理名称，由该资源的provider、云服务或其他服务提供方在资源部署的时候定义  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
+    * logicalResourceName  资源的逻辑名称，由用户在模板中定义  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以HCL格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * logicalResourceType  资源的类型  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以HCL格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * indexKey  资源的索引，若用户在模板中使用了count或for_each则会返回index_key。若index_key出现，则logical_resource_name + index_key可以作为该资源的一种标识  若用户在模板中使用count，则index_key为从0开始的数字  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index_key为用户自定义的字符串  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     * resourceStatus  资源的状态 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
     * statusMessage  当该资源状态为任意失败状态（即以 `FAILED` 结尾时），将会展示简要的错误信息总结以供debug
+    * resourceAttributes  资源属性列表
     *
     * @var string[]
     */
@@ -124,18 +131,20 @@ class StackResource implements ModelInterface, ArrayAccess
             'logicalResourceType' => 'setLogicalResourceType',
             'indexKey' => 'setIndexKey',
             'resourceStatus' => 'setResourceStatus',
-            'statusMessage' => 'setStatusMessage'
+            'statusMessage' => 'setStatusMessage',
+            'resourceAttributes' => 'setResourceAttributes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * physicalResourceId  资源的物理id，由为该资源提供服务的provider在资源部署的时候生成  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
-    * physicalResourceName  资源的物理名称，由为该资源提供服务的provider在资源部署的时候定义  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
-    * logicalResourceName  资源的逻辑名称，由用户在模板中定义  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以hcl格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * logicalResourceType  资源的类型  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以hcl格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
-    * indexKey  资源的索引，若用户在模板中使用了count或for_each则会返回index_key。若index_key出现，则logical_resource_name + index_key可以作为该资源的一种标识  若用户在模板中使用count，则index_key为从0开始的数字  以hcl格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index_key为用户自定义的字符串  以hcl格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * physicalResourceId  资源的物理id，由该资源的provider、云服务或其他服务提供方在资源部署的时候生成  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
+    * physicalResourceName  资源的物理名称，由该资源的provider、云服务或其他服务提供方在资源部署的时候定义  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
+    * logicalResourceName  资源的逻辑名称，由用户在模板中定义  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以HCL格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * logicalResourceType  资源的类型  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以HCL格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * indexKey  资源的索引，若用户在模板中使用了count或for_each则会返回index_key。若index_key出现，则logical_resource_name + index_key可以作为该资源的一种标识  若用户在模板中使用count，则index_key为从0开始的数字  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index_key为用户自定义的字符串  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     * resourceStatus  资源的状态 * `CREATION_IN_PROGRESS` - 正在生成 * `CREATION_FAILED`      - 生成失败 * `CREATION_COMPLETE`    - 生成完成 * `DELETION_IN_PROGRESS` - 正在删除 * `DELETION_FAILED`      - 删除失败 * `DELETION_COMPLETE`    - 已经删除 * `UPDATE_IN_PROGRESS`   - 正在更新。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_FAILED`        - 更新失败。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION * `UPDATE_COMPLETE`      - 更新完成。此处的更新特指非替换式更新，如果是替换式更新，则使用CREATION后DELETION
     * statusMessage  当该资源状态为任意失败状态（即以 `FAILED` 结尾时），将会展示简要的错误信息总结以供debug
+    * resourceAttributes  资源属性列表
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class StackResource implements ModelInterface, ArrayAccess
             'logicalResourceType' => 'getLogicalResourceType',
             'indexKey' => 'getIndexKey',
             'resourceStatus' => 'getResourceStatus',
-            'statusMessage' => 'getStatusMessage'
+            'statusMessage' => 'getStatusMessage',
+            'resourceAttributes' => 'getResourceAttributes'
     ];
 
     /**
@@ -243,6 +253,7 @@ class StackResource implements ModelInterface, ArrayAccess
         $this->container['indexKey'] = isset($data['indexKey']) ? $data['indexKey'] : null;
         $this->container['resourceStatus'] = isset($data['resourceStatus']) ? $data['resourceStatus'] : null;
         $this->container['statusMessage'] = isset($data['statusMessage']) ? $data['statusMessage'] : null;
+        $this->container['resourceAttributes'] = isset($data['resourceAttributes']) ? $data['resourceAttributes'] : null;
     }
 
     /**
@@ -277,7 +288,7 @@ class StackResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets physicalResourceId
-    *  资源的物理id，由为该资源提供服务的provider在资源部署的时候生成  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
+    *  资源的物理id，由该资源的provider、云服务或其他服务提供方在资源部署的时候生成  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
     *
     * @return string|null
     */
@@ -289,7 +300,7 @@ class StackResource implements ModelInterface, ArrayAccess
     /**
     * Sets physicalResourceId
     *
-    * @param string|null $physicalResourceId 资源的物理id，由为该资源提供服务的provider在资源部署的时候生成  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
+    * @param string|null $physicalResourceId 资源的物理id，由该资源的provider、云服务或其他服务提供方在资源部署的时候生成  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
     *
     * @return $this
     */
@@ -301,7 +312,7 @@ class StackResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets physicalResourceName
-    *  资源的物理名称，由为该资源提供服务的provider在资源部署的时候定义  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
+    *  资源的物理名称，由该资源的provider、云服务或其他服务提供方在资源部署的时候定义  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
     *
     * @return string|null
     */
@@ -313,7 +324,7 @@ class StackResource implements ModelInterface, ArrayAccess
     /**
     * Sets physicalResourceName
     *
-    * @param string|null $physicalResourceName 资源的物理名称，由为该资源提供服务的provider在资源部署的时候定义  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
+    * @param string|null $physicalResourceName 资源的物理名称，由该资源的provider、云服务或其他服务提供方在资源部署的时候定义  注：与physical相关的参数可以在模板以外的地方，作为该资源的一种标识
     *
     * @return $this
     */
@@ -325,7 +336,7 @@ class StackResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalResourceName
-    *  资源的逻辑名称，由用户在模板中定义  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以hcl格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    *  资源的逻辑名称，由用户在模板中定义  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以HCL格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
     *
     * @return string|null
     */
@@ -337,7 +348,7 @@ class StackResource implements ModelInterface, ArrayAccess
     /**
     * Sets logicalResourceName
     *
-    * @param string|null $logicalResourceName 资源的逻辑名称，由用户在模板中定义  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以hcl格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * @param string|null $logicalResourceName 资源的逻辑名称，由用户在模板中定义  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以HCL格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_name 为 my_hello_world_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
     *
     * @return $this
     */
@@ -349,7 +360,7 @@ class StackResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicalResourceType
-    *  资源的类型  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以hcl格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    *  资源的类型  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以HCL格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
     *
     * @return string|null
     */
@@ -361,7 +372,7 @@ class StackResource implements ModelInterface, ArrayAccess
     /**
     * Sets logicalResourceType
     *
-    * @param string|null $logicalResourceType 资源的类型  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以hcl格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
+    * @param string|null $logicalResourceType 资源的类型  注：与 logical 相关的参数仅仅在模板内部，作为该资源的一种标识  以HCL格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   name = \"test_vpc\" } ```  以json格式的模板为例，logical_resource_type 为 huaweicloud_vpc  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\"       }     }   } } ```
     *
     * @return $this
     */
@@ -373,7 +384,7 @@ class StackResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets indexKey
-    *  资源的索引，若用户在模板中使用了count或for_each则会返回index_key。若index_key出现，则logical_resource_name + index_key可以作为该资源的一种标识  若用户在模板中使用count，则index_key为从0开始的数字  以hcl格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index_key为用户自定义的字符串  以hcl格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    *  资源的索引，若用户在模板中使用了count或for_each则会返回index_key。若index_key出现，则logical_resource_name + index_key可以作为该资源的一种标识  若用户在模板中使用count，则index_key为从0开始的数字  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index_key为用户自定义的字符串  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     *
     * @return string|null
     */
@@ -385,7 +396,7 @@ class StackResource implements ModelInterface, ArrayAccess
     /**
     * Sets indexKey
     *
-    * @param string|null $indexKey 资源的索引，若用户在模板中使用了count或for_each则会返回index_key。若index_key出现，则logical_resource_name + index_key可以作为该资源的一种标识  若用户在模板中使用count，则index_key为从0开始的数字  以hcl格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index_key为用户自定义的字符串  以hcl格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
+    * @param string|null $indexKey 资源的索引，若用户在模板中使用了count或for_each则会返回index_key。若index_key出现，则logical_resource_name + index_key可以作为该资源的一种标识  若用户在模板中使用count，则index_key为从0开始的数字  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   count = 2   name = \"test_vpc\" } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[0]`和`huaweicloud_vpc.my_hello_world_vpc[1]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"name\": \"test_vpc\",         \"count\": 2       }     }   } } ```  若用户在模板中使用for_each，则index_key为用户自定义的字符串  以HCL格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```hcl resource \"huaweicloud_vpc\" \"my_hello_world_vpc\" {   for_each = {     \"vpc1\" = \"test_vpc\"     \"vpc2\" = \"test_vpc\"   }   name = each.value } ```  以json格式的模板为例，用户在模板中可以通过`huaweicloud_vpc.my_hello_world_vpc[\"vpc1\"]`和`huaweicloud_vpc.my_hello_world_vpc[\"vpc2\"]`标识两个资源  ```json {   \"resource\": {     \"huaweicloud_vpc\": {       \"my_hello_world_vpc\": {         \"for_each\": {           \"vpc1\": \"test_vpc\",           \"vpc2\": \"test_vpc\"         }         \"name\": \"${each.value}\"       }     }   } } ```
     *
     * @return $this
     */
@@ -440,6 +451,30 @@ class StackResource implements ModelInterface, ArrayAccess
     public function setStatusMessage($statusMessage)
     {
         $this->container['statusMessage'] = $statusMessage;
+        return $this;
+    }
+
+    /**
+    * Gets resourceAttributes
+    *  资源属性列表
+    *
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\ResourceAttribute[]|null
+    */
+    public function getResourceAttributes()
+    {
+        return $this->container['resourceAttributes'];
+    }
+
+    /**
+    * Sets resourceAttributes
+    *
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\ResourceAttribute[]|null $resourceAttributes 资源属性列表
+    *
+    * @return $this
+    */
+    public function setResourceAttributes($resourceAttributes)
+    {
+        $this->container['resourceAttributes'] = $resourceAttributes;
         return $this;
     }
 

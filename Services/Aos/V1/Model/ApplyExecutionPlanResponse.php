@@ -21,7 +21,7 @@ class ApplyExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * deploymentId  部署生成的唯一ID，由资源编排服务生成
+    * deploymentId  标识部署的唯一Id，此Id由资源编排服务在触发部署、回滚等操作时生成，为UUID。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ApplyExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * deploymentId  部署生成的唯一ID，由资源编排服务生成
+    * deploymentId  标识部署的唯一Id，此Id由资源编排服务在触发部署、回滚等操作时生成，为UUID。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ApplyExecutionPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * deploymentId  部署生成的唯一ID，由资源编排服务生成
+    * deploymentId  标识部署的唯一Id，此Id由资源编排服务在触发部署、回滚等操作时生成，为UUID。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ApplyExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * deploymentId  部署生成的唯一ID，由资源编排服务生成
+    * deploymentId  标识部署的唯一Id，此Id由资源编排服务在触发部署、回滚等操作时生成，为UUID。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ApplyExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * deploymentId  部署生成的唯一ID，由资源编排服务生成
+    * deploymentId  标识部署的唯一Id，此Id由资源编排服务在触发部署、回滚等操作时生成，为UUID。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ApplyExecutionPlanResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deploymentId
-    *  部署生成的唯一ID，由资源编排服务生成
+    *  标识部署的唯一Id，此Id由资源编排服务在触发部署、回滚等操作时生成，为UUID。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class ApplyExecutionPlanResponse implements ModelInterface, ArrayAccess
     /**
     * Sets deploymentId
     *
-    * @param string|null $deploymentId 部署生成的唯一ID，由资源编排服务生成
+    * @param string|null $deploymentId 标识部署的唯一Id，此Id由资源编排服务在触发部署、回滚等操作时生成，为UUID。
     *
     * @return $this
     */

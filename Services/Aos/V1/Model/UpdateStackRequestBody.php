@@ -20,17 +20,17 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * stackId  资源栈Id
-    * description  资源栈的描述
-    * enableDeletionProtection  是否开启删除保护
-    * enableAutoRollback  是否开启自动回滚
-    * agencies  委托列表
+    * description  资源栈的描述。可用于客户识别自己的资源栈。
+    * stackId  资源栈（stack）的唯一Id。  此Id由资源编排服务在生成资源栈的时候生成，为UUID。  由于资源栈名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈，删除，再重新创建一个同名资源栈。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈就是我认为的那个，而不是其他队友删除后创建的同名资源栈。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈所对应的ID都不相同，更新不会影响ID。如果给与的stack_id和当前资源栈的ID不一致，则返回400
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的删除保护属性进行更新*
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的自动回滚属性进行更新*
+    * agencies  委托授权的信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'stackId' => 'string',
             'description' => 'string',
+            'stackId' => 'string',
             'enableDeletionProtection' => 'bool',
             'enableAutoRollback' => 'bool',
             'agencies' => '\HuaweiCloud\SDK\Aos\V1\Model\Agency[]'
@@ -38,17 +38,17 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * stackId  资源栈Id
-    * description  资源栈的描述
-    * enableDeletionProtection  是否开启删除保护
-    * enableAutoRollback  是否开启自动回滚
-    * agencies  委托列表
+    * description  资源栈的描述。可用于客户识别自己的资源栈。
+    * stackId  资源栈（stack）的唯一Id。  此Id由资源编排服务在生成资源栈的时候生成，为UUID。  由于资源栈名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈，删除，再重新创建一个同名资源栈。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈就是我认为的那个，而不是其他队友删除后创建的同名资源栈。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈所对应的ID都不相同，更新不会影响ID。如果给与的stack_id和当前资源栈的ID不一致，则返回400
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的删除保护属性进行更新*
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的自动回滚属性进行更新*
+    * agencies  委托授权的信息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'stackId' => null,
         'description' => null,
+        'stackId' => null,
         'enableDeletionProtection' => null,
         'enableAutoRollback' => null,
         'agencies' => null
@@ -77,17 +77,17 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * stackId  资源栈Id
-    * description  资源栈的描述
-    * enableDeletionProtection  是否开启删除保护
-    * enableAutoRollback  是否开启自动回滚
-    * agencies  委托列表
+    * description  资源栈的描述。可用于客户识别自己的资源栈。
+    * stackId  资源栈（stack）的唯一Id。  此Id由资源编排服务在生成资源栈的时候生成，为UUID。  由于资源栈名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈，删除，再重新创建一个同名资源栈。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈就是我认为的那个，而不是其他队友删除后创建的同名资源栈。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈所对应的ID都不相同，更新不会影响ID。如果给与的stack_id和当前资源栈的ID不一致，则返回400
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的删除保护属性进行更新*
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的自动回滚属性进行更新*
+    * agencies  委托授权的信息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'stackId' => 'stack_id',
             'description' => 'description',
+            'stackId' => 'stack_id',
             'enableDeletionProtection' => 'enable_deletion_protection',
             'enableAutoRollback' => 'enable_auto_rollback',
             'agencies' => 'agencies'
@@ -95,17 +95,17 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * stackId  资源栈Id
-    * description  资源栈的描述
-    * enableDeletionProtection  是否开启删除保护
-    * enableAutoRollback  是否开启自动回滚
-    * agencies  委托列表
+    * description  资源栈的描述。可用于客户识别自己的资源栈。
+    * stackId  资源栈（stack）的唯一Id。  此Id由资源编排服务在生成资源栈的时候生成，为UUID。  由于资源栈名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈，删除，再重新创建一个同名资源栈。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈就是我认为的那个，而不是其他队友删除后创建的同名资源栈。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈所对应的ID都不相同，更新不会影响ID。如果给与的stack_id和当前资源栈的ID不一致，则返回400
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的删除保护属性进行更新*
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的自动回滚属性进行更新*
+    * agencies  委托授权的信息。
     *
     * @var string[]
     */
     protected static $setters = [
-            'stackId' => 'setStackId',
             'description' => 'setDescription',
+            'stackId' => 'setStackId',
             'enableDeletionProtection' => 'setEnableDeletionProtection',
             'enableAutoRollback' => 'setEnableAutoRollback',
             'agencies' => 'setAgencies'
@@ -113,17 +113,17 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * stackId  资源栈Id
-    * description  资源栈的描述
-    * enableDeletionProtection  是否开启删除保护
-    * enableAutoRollback  是否开启自动回滚
-    * agencies  委托列表
+    * description  资源栈的描述。可用于客户识别自己的资源栈。
+    * stackId  资源栈（stack）的唯一Id。  此Id由资源编排服务在生成资源栈的时候生成，为UUID。  由于资源栈名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈，删除，再重新创建一个同名资源栈。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈就是我认为的那个，而不是其他队友删除后创建的同名资源栈。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈所对应的ID都不相同，更新不会影响ID。如果给与的stack_id和当前资源栈的ID不一致，则返回400
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的删除保护属性进行更新*
+    * enableAutoRollback  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的自动回滚属性进行更新*
+    * agencies  委托授权的信息。
     *
     * @var string[]
     */
     protected static $getters = [
-            'stackId' => 'getStackId',
             'description' => 'getDescription',
+            'stackId' => 'getStackId',
             'enableDeletionProtection' => 'getEnableDeletionProtection',
             'enableAutoRollback' => 'getEnableAutoRollback',
             'agencies' => 'getAgencies'
@@ -187,8 +187,8 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['stackId'] = isset($data['stackId']) ? $data['stackId'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['stackId'] = isset($data['stackId']) ? $data['stackId'] : null;
         $this->container['enableDeletionProtection'] = isset($data['enableDeletionProtection']) ? $data['enableDeletionProtection'] : null;
         $this->container['enableAutoRollback'] = isset($data['enableAutoRollback']) ? $data['enableAutoRollback'] : null;
         $this->container['agencies'] = isset($data['agencies']) ? $data['agencies'] : null;
@@ -202,6 +202,12 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['stackId']) && (mb_strlen($this->container['stackId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'stackId', the character length must be smaller than or equal to 36.";
             }
@@ -210,12 +216,6 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['stackId']) && !preg_match("/^[a-z0-9]+[a-z0-9-]*$/", $this->container['stackId'])) {
                 $invalidProperties[] = "invalid value for 'stackId', must be conform to the pattern /^[a-z0-9]+[a-z0-9-]*$/.";
-            }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -232,32 +232,8 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets stackId
-    *  资源栈Id
-    *
-    * @return string|null
-    */
-    public function getStackId()
-    {
-        return $this->container['stackId'];
-    }
-
-    /**
-    * Sets stackId
-    *
-    * @param string|null $stackId 资源栈Id
-    *
-    * @return $this
-    */
-    public function setStackId($stackId)
-    {
-        $this->container['stackId'] = $stackId;
-        return $this;
-    }
-
-    /**
     * Gets description
-    *  资源栈的描述
+    *  资源栈的描述。可用于客户识别自己的资源栈。
     *
     * @return string|null
     */
@@ -269,7 +245,7 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 资源栈的描述
+    * @param string|null $description 资源栈的描述。可用于客户识别自己的资源栈。
     *
     * @return $this
     */
@@ -280,8 +256,32 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets stackId
+    *  资源栈（stack）的唯一Id。  此Id由资源编排服务在生成资源栈的时候生成，为UUID。  由于资源栈名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈，删除，再重新创建一个同名资源栈。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈就是我认为的那个，而不是其他队友删除后创建的同名资源栈。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈所对应的ID都不相同，更新不会影响ID。如果给与的stack_id和当前资源栈的ID不一致，则返回400
+    *
+    * @return string|null
+    */
+    public function getStackId()
+    {
+        return $this->container['stackId'];
+    }
+
+    /**
+    * Sets stackId
+    *
+    * @param string|null $stackId 资源栈（stack）的唯一Id。  此Id由资源编排服务在生成资源栈的时候生成，为UUID。  由于资源栈名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈，删除，再重新创建一个同名资源栈。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈就是我认为的那个，而不是其他队友删除后创建的同名资源栈。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈所对应的ID都不相同，更新不会影响ID。如果给与的stack_id和当前资源栈的ID不一致，则返回400
+    *
+    * @return $this
+    */
+    public function setStackId($stackId)
+    {
+        $this->container['stackId'] = $stackId;
+        return $this;
+    }
+
+    /**
     * Gets enableDeletionProtection
-    *  是否开启删除保护
+    *  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的删除保护属性进行更新*
     *
     * @return bool|null
     */
@@ -293,7 +293,7 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets enableDeletionProtection
     *
-    * @param bool|null $enableDeletionProtection 是否开启删除保护
+    * @param bool|null $enableDeletionProtection 删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的删除保护属性进行更新*
     *
     * @return $this
     */
@@ -305,7 +305,7 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableAutoRollback
-    *  是否开启自动回滚
+    *  自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的自动回滚属性进行更新*
     *
     * @return bool|null
     */
@@ -317,7 +317,7 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets enableAutoRollback
     *
-    * @param bool|null $enableAutoRollback 是否开启自动回滚
+    * @param bool|null $enableAutoRollback 自动回滚的标识位，如果不传默认为false，即默认不开启资源栈自动回滚（自动回滚开启后，如果部署失败，则会自动回滚，并返回上一个稳定状态）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的自动回滚属性进行更新*
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets agencies
-    *  委托列表
+    *  委托授权的信息。
     *
     * @return \HuaweiCloud\SDK\Aos\V1\Model\Agency[]|null
     */
@@ -341,7 +341,7 @@ class UpdateStackRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets agencies
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\Agency[]|null $agencies 委托列表
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\Agency[]|null $agencies 委托授权的信息。
     *
     * @return $this
     */

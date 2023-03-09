@@ -20,7 +20,7 @@ class EnableDeletionProtectionPrimitiveTypeHolder implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的删除保护属性进行更新*
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class EnableDeletionProtectionPrimitiveTypeHolder implements ModelInterface, Arr
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的删除保护属性进行更新*
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class EnableDeletionProtectionPrimitiveTypeHolder implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的删除保护属性进行更新*
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class EnableDeletionProtectionPrimitiveTypeHolder implements ModelInterface, Arr
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的删除保护属性进行更新*
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class EnableDeletionProtectionPrimitiveTypeHolder implements ModelInterface, Arr
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）
+    * enableDeletionProtection  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的删除保护属性进行更新*
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class EnableDeletionProtectionPrimitiveTypeHolder implements ModelInterface, Arr
 
     /**
     * Gets enableDeletionProtection
-    *  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）
+    *  删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的删除保护属性进行更新*
     *
     * @return bool|null
     */
@@ -186,7 +186,7 @@ class EnableDeletionProtectionPrimitiveTypeHolder implements ModelInterface, Arr
     /**
     * Sets enableDeletionProtection
     *
-    * @param bool|null $enableDeletionProtection 删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）
+    * @param bool|null $enableDeletionProtection 删除保护的标识位，如果不传默认为false，即默认不开启资源栈删除保护（删除保护开启后资源栈不允许被删除）  *在UpdateStack API中，若该参数未在RequestBody中给予，则不会对资源栈的删除保护属性进行更新*
     *
     * @return $this
     */

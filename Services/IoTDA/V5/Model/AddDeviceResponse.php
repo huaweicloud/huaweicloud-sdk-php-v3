@@ -37,6 +37,8 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
     * productName  设备关联的产品名称。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * createTime  在物联网平台注册设备的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * connectionStatusUpdateTime  设备最近一次连接状态(ONLINE:在线，OFFLINE：离线，ABNORMAL：异常)变化时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',如 2015-12-12T12:12:122Z。
+    * activeTime  设备激活时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',如 2015-12-12T12:12:122Z。
     * tags  设备的标签列表。
     * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
@@ -59,6 +61,8 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
             'productName' => 'string',
             'status' => 'string',
             'createTime' => 'string',
+            'connectionStatusUpdateTime' => 'string',
+            'activeTime' => 'string',
             'tags' => '\HuaweiCloud\SDK\IoTDA\V5\Model\TagV5DTO[]',
             'extensionInfo' => 'object'
     ];
@@ -81,6 +85,8 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
     * productName  设备关联的产品名称。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * createTime  在物联网平台注册设备的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * connectionStatusUpdateTime  设备最近一次连接状态(ONLINE:在线，OFFLINE：离线，ABNORMAL：异常)变化时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',如 2015-12-12T12:12:122Z。
+    * activeTime  设备激活时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',如 2015-12-12T12:12:122Z。
     * tags  设备的标签列表。
     * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
@@ -103,6 +109,8 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
         'productName' => null,
         'status' => null,
         'createTime' => null,
+        'connectionStatusUpdateTime' => null,
+        'activeTime' => null,
         'tags' => null,
         'extensionInfo' => null
     ];
@@ -146,6 +154,8 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
     * productName  设备关联的产品名称。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * createTime  在物联网平台注册设备的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * connectionStatusUpdateTime  设备最近一次连接状态(ONLINE:在线，OFFLINE：离线，ABNORMAL：异常)变化时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',如 2015-12-12T12:12:122Z。
+    * activeTime  设备激活时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',如 2015-12-12T12:12:122Z。
     * tags  设备的标签列表。
     * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
@@ -168,6 +178,8 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
             'productName' => 'product_name',
             'status' => 'status',
             'createTime' => 'create_time',
+            'connectionStatusUpdateTime' => 'connection_status_update_time',
+            'activeTime' => 'active_time',
             'tags' => 'tags',
             'extensionInfo' => 'extension_info'
     ];
@@ -190,6 +202,8 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
     * productName  设备关联的产品名称。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * createTime  在物联网平台注册设备的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * connectionStatusUpdateTime  设备最近一次连接状态(ONLINE:在线，OFFLINE：离线，ABNORMAL：异常)变化时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',如 2015-12-12T12:12:122Z。
+    * activeTime  设备激活时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',如 2015-12-12T12:12:122Z。
     * tags  设备的标签列表。
     * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
@@ -212,6 +226,8 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
             'productName' => 'setProductName',
             'status' => 'setStatus',
             'createTime' => 'setCreateTime',
+            'connectionStatusUpdateTime' => 'setConnectionStatusUpdateTime',
+            'activeTime' => 'setActiveTime',
             'tags' => 'setTags',
             'extensionInfo' => 'setExtensionInfo'
     ];
@@ -234,6 +250,8 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
     * productName  设备关联的产品名称。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * createTime  在物联网平台注册设备的时间。格式：yyyyMMdd'T'HHmmss'Z'，如20151212T121212Z。
+    * connectionStatusUpdateTime  设备最近一次连接状态(ONLINE:在线，OFFLINE：离线，ABNORMAL：异常)变化时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',如 2015-12-12T12:12:122Z。
+    * activeTime  设备激活时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',如 2015-12-12T12:12:122Z。
     * tags  设备的标签列表。
     * extensionInfo  设备扩展信息。用户可以自定义任何想要的扩展信息，如果在创建设备时为子设备指定该字段，将会通过MQTT接口“平台通知网关子设备新增“将该信息通知给网关。
     *
@@ -256,6 +274,8 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
             'productName' => 'getProductName',
             'status' => 'getStatus',
             'createTime' => 'getCreateTime',
+            'connectionStatusUpdateTime' => 'getConnectionStatusUpdateTime',
+            'activeTime' => 'getActiveTime',
             'tags' => 'getTags',
             'extensionInfo' => 'getExtensionInfo'
     ];
@@ -334,6 +354,8 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
         $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['connectionStatusUpdateTime'] = isset($data['connectionStatusUpdateTime']) ? $data['connectionStatusUpdateTime'] : null;
+        $this->container['activeTime'] = isset($data['activeTime']) ? $data['activeTime'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['extensionInfo'] = isset($data['extensionInfo']) ? $data['extensionInfo'] : null;
     }
@@ -780,6 +802,54 @@ class AddDeviceResponse implements ModelInterface, ArrayAccess
     public function setCreateTime($createTime)
     {
         $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets connectionStatusUpdateTime
+    *  设备最近一次连接状态(ONLINE:在线，OFFLINE：离线，ABNORMAL：异常)变化时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',如 2015-12-12T12:12:122Z。
+    *
+    * @return string|null
+    */
+    public function getConnectionStatusUpdateTime()
+    {
+        return $this->container['connectionStatusUpdateTime'];
+    }
+
+    /**
+    * Sets connectionStatusUpdateTime
+    *
+    * @param string|null $connectionStatusUpdateTime 设备最近一次连接状态(ONLINE:在线，OFFLINE：离线，ABNORMAL：异常)变化时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',如 2015-12-12T12:12:122Z。
+    *
+    * @return $this
+    */
+    public function setConnectionStatusUpdateTime($connectionStatusUpdateTime)
+    {
+        $this->container['connectionStatusUpdateTime'] = $connectionStatusUpdateTime;
+        return $this;
+    }
+
+    /**
+    * Gets activeTime
+    *  设备激活时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',如 2015-12-12T12:12:122Z。
+    *
+    * @return string|null
+    */
+    public function getActiveTime()
+    {
+        return $this->container['activeTime'];
+    }
+
+    /**
+    * Sets activeTime
+    *
+    * @param string|null $activeTime 设备激活时间。格式：yyyy-MM-dd'T'HH:mm:ss.SSS'Z',如 2015-12-12T12:12:122Z。
+    *
+    * @return $this
+    */
+    public function setActiveTime($activeTime)
+    {
+        $this->container['activeTime'] = $activeTime;
         return $this;
     }
 

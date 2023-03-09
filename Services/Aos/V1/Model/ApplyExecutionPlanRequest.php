@@ -21,9 +21,9 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名称
-    * executionPlanName  执行计划的名字。
+    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)
+    * stackName  资源栈的名称。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
+    * executionPlanName  执行计划的名称。此名字在domain_id+区域+project_id+stack_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * body  body
     *
     * @var string[]
@@ -39,9 +39,9 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名称
-    * executionPlanName  执行计划的名字。
+    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)
+    * stackName  资源栈的名称。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
+    * executionPlanName  执行计划的名称。此名字在domain_id+区域+project_id+stack_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * body  body
     *
     * @var string[]
@@ -78,9 +78,9 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名称
-    * executionPlanName  执行计划的名字。
+    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)
+    * stackName  资源栈的名称。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
+    * executionPlanName  执行计划的名称。此名字在domain_id+区域+project_id+stack_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * body  body
     *
     * @var string[]
@@ -96,9 +96,9 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名称
-    * executionPlanName  执行计划的名字。
+    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)
+    * stackName  资源栈的名称。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
+    * executionPlanName  执行计划的名称。此名字在domain_id+区域+project_id+stack_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * body  body
     *
     * @var string[]
@@ -114,9 +114,9 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
-    * stackName  用户希望操作的资源栈名称
-    * executionPlanName  执行计划的名字。
+    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)
+    * stackName  资源栈的名称。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
+    * executionPlanName  执行计划的名称。此名字在domain_id+区域+project_id+stack_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * body  body
     *
     * @var string[]
@@ -290,7 +290,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
+    *  项目ID，可以从调用API处获取，也可以从控制台获取。  [项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)
     *
     * @return string
     */
@@ -302,7 +302,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID，可以从调用API处获取，也可以从控制台获取。  获取方式：https://support.huaweicloud.com/api-ticket/ticket_api_20002.html
+    * @param string $projectId 项目ID，可以从调用API处获取，也可以从控制台获取。  [项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets stackName
-    *  用户希望操作的资源栈名称
+    *  资源栈的名称。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     *
     * @return string
     */
@@ -326,7 +326,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     /**
     * Sets stackName
     *
-    * @param string $stackName 用户希望操作的资源栈名称
+    * @param string $stackName 资源栈的名称。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     *
     * @return $this
     */
@@ -338,7 +338,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets executionPlanName
-    *  执行计划的名字。
+    *  执行计划的名称。此名字在domain_id+区域+project_id+stack_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     *
     * @return string
     */
@@ -350,7 +350,7 @@ class ApplyExecutionPlanRequest implements ModelInterface, ArrayAccess
     /**
     * Sets executionPlanName
     *
-    * @param string $executionPlanName 执行计划的名字。
+    * @param string $executionPlanName 执行计划的名称。此名字在domain_id+区域+project_id+stack_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     *
     * @return $this
     */

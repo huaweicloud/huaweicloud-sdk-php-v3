@@ -20,9 +20,9 @@ class ExecutionPlanDiffAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  当前资源被修改的参数的名字。
-    * previousValue  当前资源被修改前参数的值，新创建时为空。
-    * targetValue  当前资源被修改的参数的目的值，删除时为空。
+    * name  当前资源将要被修改的参数的名字。
+    * previousValue  当前资源被修改的参数的原始值。  若是资源创建的场景，则previous_value为空  若远端资源产生了偏差，则同一个资源会返回两个ExecutionPlanItem，其中一个的drifted为true，另一个的drifted为false   * drifted为true的previous_value为资源栈中所维持的资源属性和状态   * drifted为false的previous_value为provider请求远端资源后，远端资源所返回的资源属性和状态  若远端资源未产生偏差，则只会返回一个drifted为false的ExecutionPlanItem   * drifted为false的previous_value为资源栈中所维持的资源属性和状态
+    * targetValue  当前资源被修改的参数的目的值。  若是资源删除的场景，则target_value为空  若远端资源产生了偏差，则同一个资源会返回两个ExecutionPlanItem，其中一个的drifted为true，另一个的drifted为false   * drifted为true的target_value为provider请求远端资源后，远端资源所返回的资源属性和状态   * drifted为false的target_value为基于用户模板更新的资源属性和状态  若远端资源未产生偏差，则只会返回一个drifted为false的ExecutionPlanItem   * drifted为false的target_value为基于用户模板更新的资源属性和状态
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ExecutionPlanDiffAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  当前资源被修改的参数的名字。
-    * previousValue  当前资源被修改前参数的值，新创建时为空。
-    * targetValue  当前资源被修改的参数的目的值，删除时为空。
+    * name  当前资源将要被修改的参数的名字。
+    * previousValue  当前资源被修改的参数的原始值。  若是资源创建的场景，则previous_value为空  若远端资源产生了偏差，则同一个资源会返回两个ExecutionPlanItem，其中一个的drifted为true，另一个的drifted为false   * drifted为true的previous_value为资源栈中所维持的资源属性和状态   * drifted为false的previous_value为provider请求远端资源后，远端资源所返回的资源属性和状态  若远端资源未产生偏差，则只会返回一个drifted为false的ExecutionPlanItem   * drifted为false的previous_value为资源栈中所维持的资源属性和状态
+    * targetValue  当前资源被修改的参数的目的值。  若是资源删除的场景，则target_value为空  若远端资源产生了偏差，则同一个资源会返回两个ExecutionPlanItem，其中一个的drifted为true，另一个的drifted为false   * drifted为true的target_value为provider请求远端资源后，远端资源所返回的资源属性和状态   * drifted为false的target_value为基于用户模板更新的资源属性和状态  若远端资源未产生偏差，则只会返回一个drifted为false的ExecutionPlanItem   * drifted为false的target_value为基于用户模板更新的资源属性和状态
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ExecutionPlanDiffAttribute implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  当前资源被修改的参数的名字。
-    * previousValue  当前资源被修改前参数的值，新创建时为空。
-    * targetValue  当前资源被修改的参数的目的值，删除时为空。
+    * name  当前资源将要被修改的参数的名字。
+    * previousValue  当前资源被修改的参数的原始值。  若是资源创建的场景，则previous_value为空  若远端资源产生了偏差，则同一个资源会返回两个ExecutionPlanItem，其中一个的drifted为true，另一个的drifted为false   * drifted为true的previous_value为资源栈中所维持的资源属性和状态   * drifted为false的previous_value为provider请求远端资源后，远端资源所返回的资源属性和状态  若远端资源未产生偏差，则只会返回一个drifted为false的ExecutionPlanItem   * drifted为false的previous_value为资源栈中所维持的资源属性和状态
+    * targetValue  当前资源被修改的参数的目的值。  若是资源删除的场景，则target_value为空  若远端资源产生了偏差，则同一个资源会返回两个ExecutionPlanItem，其中一个的drifted为true，另一个的drifted为false   * drifted为true的target_value为provider请求远端资源后，远端资源所返回的资源属性和状态   * drifted为false的target_value为基于用户模板更新的资源属性和状态  若远端资源未产生偏差，则只会返回一个drifted为false的ExecutionPlanItem   * drifted为false的target_value为基于用户模板更新的资源属性和状态
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ExecutionPlanDiffAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  当前资源被修改的参数的名字。
-    * previousValue  当前资源被修改前参数的值，新创建时为空。
-    * targetValue  当前资源被修改的参数的目的值，删除时为空。
+    * name  当前资源将要被修改的参数的名字。
+    * previousValue  当前资源被修改的参数的原始值。  若是资源创建的场景，则previous_value为空  若远端资源产生了偏差，则同一个资源会返回两个ExecutionPlanItem，其中一个的drifted为true，另一个的drifted为false   * drifted为true的previous_value为资源栈中所维持的资源属性和状态   * drifted为false的previous_value为provider请求远端资源后，远端资源所返回的资源属性和状态  若远端资源未产生偏差，则只会返回一个drifted为false的ExecutionPlanItem   * drifted为false的previous_value为资源栈中所维持的资源属性和状态
+    * targetValue  当前资源被修改的参数的目的值。  若是资源删除的场景，则target_value为空  若远端资源产生了偏差，则同一个资源会返回两个ExecutionPlanItem，其中一个的drifted为true，另一个的drifted为false   * drifted为true的target_value为provider请求远端资源后，远端资源所返回的资源属性和状态   * drifted为false的target_value为基于用户模板更新的资源属性和状态  若远端资源未产生偏差，则只会返回一个drifted为false的ExecutionPlanItem   * drifted为false的target_value为基于用户模板更新的资源属性和状态
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ExecutionPlanDiffAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  当前资源被修改的参数的名字。
-    * previousValue  当前资源被修改前参数的值，新创建时为空。
-    * targetValue  当前资源被修改的参数的目的值，删除时为空。
+    * name  当前资源将要被修改的参数的名字。
+    * previousValue  当前资源被修改的参数的原始值。  若是资源创建的场景，则previous_value为空  若远端资源产生了偏差，则同一个资源会返回两个ExecutionPlanItem，其中一个的drifted为true，另一个的drifted为false   * drifted为true的previous_value为资源栈中所维持的资源属性和状态   * drifted为false的previous_value为provider请求远端资源后，远端资源所返回的资源属性和状态  若远端资源未产生偏差，则只会返回一个drifted为false的ExecutionPlanItem   * drifted为false的previous_value为资源栈中所维持的资源属性和状态
+    * targetValue  当前资源被修改的参数的目的值。  若是资源删除的场景，则target_value为空  若远端资源产生了偏差，则同一个资源会返回两个ExecutionPlanItem，其中一个的drifted为true，另一个的drifted为false   * drifted为true的target_value为provider请求远端资源后，远端资源所返回的资源属性和状态   * drifted为false的target_value为基于用户模板更新的资源属性和状态  若远端资源未产生偏差，则只会返回一个drifted为false的ExecutionPlanItem   * drifted为false的target_value为基于用户模板更新的资源属性和状态
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class ExecutionPlanDiffAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  当前资源被修改的参数的名字。
+    *  当前资源将要被修改的参数的名字。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class ExecutionPlanDiffAttribute implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 当前资源被修改的参数的名字。
+    * @param string|null $name 当前资源将要被修改的参数的名字。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class ExecutionPlanDiffAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Gets previousValue
-    *  当前资源被修改前参数的值，新创建时为空。
+    *  当前资源被修改的参数的原始值。  若是资源创建的场景，则previous_value为空  若远端资源产生了偏差，则同一个资源会返回两个ExecutionPlanItem，其中一个的drifted为true，另一个的drifted为false   * drifted为true的previous_value为资源栈中所维持的资源属性和状态   * drifted为false的previous_value为provider请求远端资源后，远端资源所返回的资源属性和状态  若远端资源未产生偏差，则只会返回一个drifted为false的ExecutionPlanItem   * drifted为false的previous_value为资源栈中所维持的资源属性和状态
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class ExecutionPlanDiffAttribute implements ModelInterface, ArrayAccess
     /**
     * Sets previousValue
     *
-    * @param string|null $previousValue 当前资源被修改前参数的值，新创建时为空。
+    * @param string|null $previousValue 当前资源被修改的参数的原始值。  若是资源创建的场景，则previous_value为空  若远端资源产生了偏差，则同一个资源会返回两个ExecutionPlanItem，其中一个的drifted为true，另一个的drifted为false   * drifted为true的previous_value为资源栈中所维持的资源属性和状态   * drifted为false的previous_value为provider请求远端资源后，远端资源所返回的资源属性和状态  若远端资源未产生偏差，则只会返回一个drifted为false的ExecutionPlanItem   * drifted为false的previous_value为资源栈中所维持的资源属性和状态
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class ExecutionPlanDiffAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetValue
-    *  当前资源被修改的参数的目的值，删除时为空。
+    *  当前资源被修改的参数的目的值。  若是资源删除的场景，则target_value为空  若远端资源产生了偏差，则同一个资源会返回两个ExecutionPlanItem，其中一个的drifted为true，另一个的drifted为false   * drifted为true的target_value为provider请求远端资源后，远端资源所返回的资源属性和状态   * drifted为false的target_value为基于用户模板更新的资源属性和状态  若远端资源未产生偏差，则只会返回一个drifted为false的ExecutionPlanItem   * drifted为false的target_value为基于用户模板更新的资源属性和状态
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class ExecutionPlanDiffAttribute implements ModelInterface, ArrayAccess
     /**
     * Sets targetValue
     *
-    * @param string|null $targetValue 当前资源被修改的参数的目的值，删除时为空。
+    * @param string|null $targetValue 当前资源被修改的参数的目的值。  若是资源删除的场景，则target_value为空  若远端资源产生了偏差，则同一个资源会返回两个ExecutionPlanItem，其中一个的drifted为true，另一个的drifted为false   * drifted为true的target_value为provider请求远端资源后，远端资源所返回的资源属性和状态   * drifted为false的target_value为基于用户模板更新的资源属性和状态  若远端资源未产生偏差，则只会返回一个drifted为false的ExecutionPlanItem   * drifted为false的target_value为基于用户模板更新的资源属性和状态
     *
     * @return $this
     */

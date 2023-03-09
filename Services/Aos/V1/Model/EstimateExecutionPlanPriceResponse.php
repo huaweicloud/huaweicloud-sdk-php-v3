@@ -21,7 +21,7 @@ class EstimateExecutionPlanPriceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * currency  币种，枚举值   CNY  元，中国站返回的币种   USD 美元，国际站返回的币种
+    * currency  币种，枚举值   * `CNY` - 元，中国站返回的币种   * `USD` - 美元，国际站返回的币种
     * items  执行计划中所有资源的询价结果
     *
     * @var string[]
@@ -33,7 +33,7 @@ class EstimateExecutionPlanPriceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * currency  币种，枚举值   CNY  元，中国站返回的币种   USD 美元，国际站返回的币种
+    * currency  币种，枚举值   * `CNY` - 元，中国站返回的币种   * `USD` - 美元，国际站返回的币种
     * items  执行计划中所有资源的询价结果
     *
     * @var string[]
@@ -66,7 +66,7 @@ class EstimateExecutionPlanPriceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * currency  币种，枚举值   CNY  元，中国站返回的币种   USD 美元，国际站返回的币种
+    * currency  币种，枚举值   * `CNY` - 元，中国站返回的币种   * `USD` - 美元，国际站返回的币种
     * items  执行计划中所有资源的询价结果
     *
     * @var string[]
@@ -78,7 +78,7 @@ class EstimateExecutionPlanPriceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * currency  币种，枚举值   CNY  元，中国站返回的币种   USD 美元，国际站返回的币种
+    * currency  币种，枚举值   * `CNY` - 元，中国站返回的币种   * `USD` - 美元，国际站返回的币种
     * items  执行计划中所有资源的询价结果
     *
     * @var string[]
@@ -90,7 +90,7 @@ class EstimateExecutionPlanPriceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * currency  币种，枚举值   CNY  元，中国站返回的币种   USD 美元，国际站返回的币种
+    * currency  币种，枚举值   * `CNY` - 元，中国站返回的币种   * `USD` - 美元，国际站返回的币种
     * items  执行计划中所有资源的询价结果
     *
     * @var string[]
@@ -209,7 +209,7 @@ class EstimateExecutionPlanPriceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets currency
-    *  币种，枚举值   CNY  元，中国站返回的币种   USD 美元，国际站返回的币种
+    *  币种，枚举值   * `CNY` - 元，中国站返回的币种   * `USD` - 美元，国际站返回的币种
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class EstimateExecutionPlanPriceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets currency
     *
-    * @param string|null $currency 币种，枚举值   CNY  元，中国站返回的币种   USD 美元，国际站返回的币种
+    * @param string|null $currency 币种，枚举值   * `CNY` - 元，中国站返回的币种   * `USD` - 美元，国际站返回的币种
     *
     * @return $this
     */

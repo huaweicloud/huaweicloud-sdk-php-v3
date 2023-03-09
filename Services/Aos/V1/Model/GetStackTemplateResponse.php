@@ -21,20 +21,22 @@ class GetStackTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * location  location
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'location' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * location  location
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'location' => null
     ];
 
     /**
@@ -60,29 +62,32 @@ class GetStackTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * location  location
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'location' => 'Location'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * location  location
     *
     * @var string[]
     */
     protected static $setters = [
+            'location' => 'setLocation'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * location  location
     *
     * @var string[]
     */
     protected static $getters = [
+            'location' => 'getLocation'
     ];
 
     /**
@@ -143,6 +148,7 @@ class GetStackTemplateResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['location'] = isset($data['location']) ? $data['location'] : null;
     }
 
     /**
@@ -165,6 +171,30 @@ class GetStackTemplateResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets location
+    *  location
+    *
+    * @return string|null
+    */
+    public function getLocation()
+    {
+        return $this->container['location'];
+    }
+
+    /**
+    * Sets location
+    *
+    * @param string|null $location location
+    *
+    * @return $this
+    */
+    public function setLocation($location)
+    {
+        $this->container['location'] = $location;
+        return $this;
     }
 
     /**
