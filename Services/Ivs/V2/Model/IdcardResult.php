@@ -246,6 +246,24 @@ class IdcardResult implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['number'] === null) {
+            $invalidProperties[] = "'number' can't be null";
+        }
+        if ($this->container['sex'] === null) {
+            $invalidProperties[] = "'sex' can't be null";
+        }
+        if ($this->container['birth'] === null) {
+            $invalidProperties[] = "'birth' can't be null";
+        }
+        if ($this->container['ethnicity'] === null) {
+            $invalidProperties[] = "'ethnicity' can't be null";
+        }
+        if ($this->container['address'] === null) {
+            $invalidProperties[] = "'address' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -264,7 +282,7 @@ class IdcardResult implements ModelInterface, ArrayAccess
     * Gets name
     *  身份证上识别的名称。
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -274,7 +292,7 @@ class IdcardResult implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 身份证上识别的名称。
+    * @param string $name 身份证上识别的名称。
     *
     * @return $this
     */
@@ -288,7 +306,7 @@ class IdcardResult implements ModelInterface, ArrayAccess
     * Gets number
     *  身份证号。
     *
-    * @return string|null
+    * @return string
     */
     public function getNumber()
     {
@@ -298,7 +316,7 @@ class IdcardResult implements ModelInterface, ArrayAccess
     /**
     * Sets number
     *
-    * @param string|null $number 身份证号。
+    * @param string $number 身份证号。
     *
     * @return $this
     */
@@ -312,7 +330,7 @@ class IdcardResult implements ModelInterface, ArrayAccess
     * Gets sex
     *  性别。
     *
-    * @return string|null
+    * @return string
     */
     public function getSex()
     {
@@ -322,7 +340,7 @@ class IdcardResult implements ModelInterface, ArrayAccess
     /**
     * Sets sex
     *
-    * @param string|null $sex 性别。
+    * @param string $sex 性别。
     *
     * @return $this
     */
@@ -336,7 +354,7 @@ class IdcardResult implements ModelInterface, ArrayAccess
     * Gets birth
     *  出生日期。
     *
-    * @return string|null
+    * @return string
     */
     public function getBirth()
     {
@@ -346,7 +364,7 @@ class IdcardResult implements ModelInterface, ArrayAccess
     /**
     * Sets birth
     *
-    * @param string|null $birth 出生日期。
+    * @param string $birth 出生日期。
     *
     * @return $this
     */
@@ -360,7 +378,7 @@ class IdcardResult implements ModelInterface, ArrayAccess
     * Gets ethnicity
     *  民族。
     *
-    * @return string|null
+    * @return string
     */
     public function getEthnicity()
     {
@@ -370,7 +388,7 @@ class IdcardResult implements ModelInterface, ArrayAccess
     /**
     * Sets ethnicity
     *
-    * @param string|null $ethnicity 民族。
+    * @param string $ethnicity 民族。
     *
     * @return $this
     */
@@ -384,7 +402,7 @@ class IdcardResult implements ModelInterface, ArrayAccess
     * Gets address
     *  地址。
     *
-    * @return string|null
+    * @return string
     */
     public function getAddress()
     {
@@ -394,7 +412,7 @@ class IdcardResult implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string|null $address 地址。
+    * @param string $address 地址。
     *
     * @return $this
     */

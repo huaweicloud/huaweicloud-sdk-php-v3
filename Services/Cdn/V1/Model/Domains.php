@@ -41,6 +41,7 @@ class Domains implements ModelInterface, ArrayAccess
     * bannedReason  域名禁用原因
     * lockedReason  域名锁定原因
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
+    * tags  标签信息
     *
     * @var string[]
     */
@@ -65,7 +66,8 @@ class Domains implements ModelInterface, ArrayAccess
             'originStatus' => 'string',
             'bannedReason' => 'string',
             'lockedReason' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Cdn\V1\Model\EpResourceTag[]'
     ];
 
     /**
@@ -91,6 +93,7 @@ class Domains implements ModelInterface, ArrayAccess
     * bannedReason  域名禁用原因
     * lockedReason  域名锁定原因
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
+    * tags  标签信息
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class Domains implements ModelInterface, ArrayAccess
         'originStatus' => null,
         'bannedReason' => null,
         'lockedReason' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'tags' => null
     ];
 
     /**
@@ -162,6 +166,7 @@ class Domains implements ModelInterface, ArrayAccess
     * bannedReason  域名禁用原因
     * lockedReason  域名锁定原因
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
+    * tags  标签信息
     *
     * @var string[]
     */
@@ -186,7 +191,8 @@ class Domains implements ModelInterface, ArrayAccess
             'originStatus' => 'origin_status',
             'bannedReason' => 'banned_reason',
             'lockedReason' => 'locked_reason',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'tags' => 'tags'
     ];
 
     /**
@@ -212,6 +218,7 @@ class Domains implements ModelInterface, ArrayAccess
     * bannedReason  域名禁用原因
     * lockedReason  域名锁定原因
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
+    * tags  标签信息
     *
     * @var string[]
     */
@@ -236,7 +243,8 @@ class Domains implements ModelInterface, ArrayAccess
             'originStatus' => 'setOriginStatus',
             'bannedReason' => 'setBannedReason',
             'lockedReason' => 'setLockedReason',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -262,6 +270,7 @@ class Domains implements ModelInterface, ArrayAccess
     * bannedReason  域名禁用原因
     * lockedReason  域名锁定原因
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
+    * tags  标签信息
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class Domains implements ModelInterface, ArrayAccess
             'originStatus' => 'getOriginStatus',
             'bannedReason' => 'getBannedReason',
             'lockedReason' => 'getLockedReason',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -385,6 +395,7 @@ class Domains implements ModelInterface, ArrayAccess
         $this->container['bannedReason'] = isset($data['bannedReason']) ? $data['bannedReason'] : null;
         $this->container['lockedReason'] = isset($data['lockedReason']) ? $data['lockedReason'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -918,6 +929,30 @@ class Domains implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签信息
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V1\Model\EpResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\EpResourceTag[]|null $tags 标签信息
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

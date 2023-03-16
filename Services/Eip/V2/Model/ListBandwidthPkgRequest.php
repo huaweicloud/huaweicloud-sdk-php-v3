@@ -20,20 +20,30 @@ class ListBandwidthPkgRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * marker  分页查询起始的资源ID，为空时为查询第一页
+    * offset  分页查询起始的资源序号
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'limit' => 'int',
+            'marker' => 'string',
+            'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * marker  分页查询起始的资源ID，为空时为查询第一页
+    * offset  分页查询起始的资源序号
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'limit' => 'int32',
+        'marker' => null,
+        'offset' => null
     ];
 
     /**
@@ -59,29 +69,44 @@ class ListBandwidthPkgRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * marker  分页查询起始的资源ID，为空时为查询第一页
+    * offset  分页查询起始的资源序号
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'limit' => 'limit',
+            'marker' => 'marker',
+            'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * marker  分页查询起始的资源ID，为空时为查询第一页
+    * offset  分页查询起始的资源序号
     *
     * @var string[]
     */
     protected static $setters = [
+            'limit' => 'setLimit',
+            'marker' => 'setMarker',
+            'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * marker  分页查询起始的资源ID，为空时为查询第一页
+    * offset  分页查询起始的资源序号
     *
     * @var string[]
     */
     protected static $getters = [
+            'limit' => 'getLimit',
+            'marker' => 'getMarker',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -142,6 +167,9 @@ class ListBandwidthPkgRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -152,6 +180,24 @@ class ListBandwidthPkgRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 36)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 0)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 99999)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 99999.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -164,6 +210,78 @@ class ListBandwidthPkgRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets limit
+    *  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页查询起始的资源ID，为空时为查询第一页
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页查询起始的资源ID，为空时为查询第一页
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  分页查询起始的资源序号
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 分页查询起始的资源序号
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
     }
 
     /**

@@ -288,6 +288,95 @@ class CdnAsyncClient extends Client
     }
 
     /**
+     * 查询加速域名
+     *
+     * 查询加速域名
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDomainsAsync($request)
+    {
+        return $this->listDomainsAsyncWithHttpInfo($request);
+    }
+    
+    public function listDomainsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/cdn/domains';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $queryParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['businessType'] !== null) {
+            $queryParams['business_type'] = $localVarParams['businessType'];
+        }
+        if ($localVarParams['domainStatus'] !== null) {
+            $queryParams['domain_status'] = $localVarParams['domainStatus'];
+        }
+        if ($localVarParams['serviceArea'] !== null) {
+            $queryParams['service_area'] = $localVarParams['serviceArea'];
+        }
+        if ($localVarParams['pageSize'] !== null) {
+            $queryParams['page_size'] = $localVarParams['pageSize'];
+        }
+        if ($localVarParams['pageNumber'] !== null) {
+            $queryParams['page_number'] = $localVarParams['pageNumber'];
+        }
+        if ($localVarParams['showTags'] !== null) {
+            $queryParams['show_tags'] = $localVarParams['showTags'];
+        }
+        if ($localVarParams['exactMatch'] !== null) {
+            $queryParams['exact_match'] = $localVarParams['exactMatch'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ListDomainsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ListDomainsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 设置用户计费模式
      *
      * - 设置用户计费模式。
@@ -528,6 +617,74 @@ class CdnAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowChargeModesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowChargeModesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询加速域名详情
+     *
+     * 加速域名详情信息接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomainDetailByNameAsync($request)
+    {
+        return $this->showDomainDetailByNameAsyncWithHttpInfo($request);
+    }
+    
+    public function showDomainDetailByNameAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/cdn/configuration/domains/{domain_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $pathParams['domain_name'] = $localVarParams['domainName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowDomainDetailByNameResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowDomainDetailByNameRequest',
             $asyncRequest = true);
     }
 

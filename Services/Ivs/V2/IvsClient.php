@@ -158,8 +158,7 @@ class IvsClient extends Client
     /**
      * 人证核身标准版（三要素）
      *
-     * 使用姓名、身份证号码、人脸图片三要素进行身份审核。
-     * 身份验证时，传入的数据为人脸图片、身份证信息。提取身份证信息时，可以使用身份证正反面图片，也可以直接输入姓名、身份证号文本。
+     * 使用身份证正反面图片提取姓名和身份证号码，与人脸图片进行三要素身份审核。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -224,7 +223,7 @@ class IvsClient extends Client
     /**
      * 人证核身标准版（三要素）
      *
-     * 校验用户上传的身份证图片支持正反面同时上传 中的信息的真实性，输出最终的审核结果。 该接口也支持用户直接上传姓名和身份证号码进行合法性校验 。
+     * 使用姓名、身份证号文本和人脸图片进行三要素身份审核。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -284,6 +283,136 @@ class IvsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ivs\V2\Model\DetectStandardByNameAndIdResponse',
             $requestType='\HuaweiCloud\SDK\Ivs\V2\Model\DetectStandardByNameAndIdRequest');
+    }
+
+    /**
+     * 人证核身标准版（三要素）
+     *
+     * 从身份证正反面图片中提取姓名和身份证号码，并对视频做活体检测后提取人脸图片，以此进行三要素身份审核。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function detectStandardByVideoAndIdCardImage($request)
+    {
+        return $this->detectStandardByVideoAndIdCardImageWithHttpInfo($request);
+    }
+
+    public function detectStandardByVideoAndIdCardImageWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/ivs-standard';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ivs\V2\Model\DetectStandardByVideoAndIdCardImageResponse',
+            $requestType='\HuaweiCloud\SDK\Ivs\V2\Model\DetectStandardByVideoAndIdCardImageRequest');
+    }
+
+    /**
+     * 人证核身标准版（三要素）
+     *
+     * 使用姓名、身份证号文本，并对视频做活体检测后提取人脸图片，以此进行三要素身份审核。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function detectStandardByVideoAndNameAndId($request)
+    {
+        return $this->detectStandardByVideoAndNameAndIdWithHttpInfo($request);
+    }
+
+    public function detectStandardByVideoAndNameAndIdWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/ivs-standard';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ivs\V2\Model\DetectStandardByVideoAndNameAndIdResponse',
+            $requestType='\HuaweiCloud\SDK\Ivs\V2\Model\DetectStandardByVideoAndNameAndIdRequest');
     }
 
     protected function callApi(

@@ -21,8 +21,8 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * verificationResult  审核校验结果： \"valid\"表示身份审核通过； \"invalid\"表示身份审核不通过； \"nonexistent\"表示数据源没有该身份证号码，这种情况一般是被验证人正在办理户籍迁移，或者被验证人是军人或政要。
-    * verificationMessage  审核校验信息，具体参[考校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
-    * verificationCode  审核校验代码，具体参[考校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
+    * verificationMessage  审核校验信息，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
+    * verificationCode  审核校验代码，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
     * similarity  人像相识度。取值范围[0,100]
     * idcardResult  idcardResult
     *
@@ -39,8 +39,8 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * verificationResult  审核校验结果： \"valid\"表示身份审核通过； \"invalid\"表示身份审核不通过； \"nonexistent\"表示数据源没有该身份证号码，这种情况一般是被验证人正在办理户籍迁移，或者被验证人是军人或政要。
-    * verificationMessage  审核校验信息，具体参[考校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
-    * verificationCode  审核校验代码，具体参[考校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
+    * verificationMessage  审核校验信息，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
+    * verificationCode  审核校验代码，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
     * similarity  人像相识度。取值范围[0,100]
     * idcardResult  idcardResult
     *
@@ -78,8 +78,8 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * verificationResult  审核校验结果： \"valid\"表示身份审核通过； \"invalid\"表示身份审核不通过； \"nonexistent\"表示数据源没有该身份证号码，这种情况一般是被验证人正在办理户籍迁移，或者被验证人是军人或政要。
-    * verificationMessage  审核校验信息，具体参[考校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
-    * verificationCode  审核校验代码，具体参[考校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
+    * verificationMessage  审核校验信息，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
+    * verificationCode  审核校验代码，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
     * similarity  人像相识度。取值范围[0,100]
     * idcardResult  idcardResult
     *
@@ -96,8 +96,8 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * verificationResult  审核校验结果： \"valid\"表示身份审核通过； \"invalid\"表示身份审核不通过； \"nonexistent\"表示数据源没有该身份证号码，这种情况一般是被验证人正在办理户籍迁移，或者被验证人是军人或政要。
-    * verificationMessage  审核校验信息，具体参[考校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
-    * verificationCode  审核校验代码，具体参[考校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
+    * verificationMessage  审核校验信息，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
+    * verificationCode  审核校验代码，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
     * similarity  人像相识度。取值范围[0,100]
     * idcardResult  idcardResult
     *
@@ -114,8 +114,8 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * verificationResult  审核校验结果： \"valid\"表示身份审核通过； \"invalid\"表示身份审核不通过； \"nonexistent\"表示数据源没有该身份证号码，这种情况一般是被验证人正在办理户籍迁移，或者被验证人是军人或政要。
-    * verificationMessage  审核校验信息，具体参[考校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
-    * verificationCode  审核校验代码，具体参[考校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
+    * verificationMessage  审核校验信息，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
+    * verificationCode  审核校验代码，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
     * similarity  人像相识度。取值范围[0,100]
     * idcardResult  idcardResult
     *
@@ -202,6 +202,21 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['verificationResult'] === null) {
+            $invalidProperties[] = "'verificationResult' can't be null";
+        }
+        if ($this->container['verificationMessage'] === null) {
+            $invalidProperties[] = "'verificationMessage' can't be null";
+        }
+        if ($this->container['verificationCode'] === null) {
+            $invalidProperties[] = "'verificationCode' can't be null";
+        }
+        if ($this->container['similarity'] === null) {
+            $invalidProperties[] = "'similarity' can't be null";
+        }
+        if ($this->container['idcardResult'] === null) {
+            $invalidProperties[] = "'idcardResult' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -220,7 +235,7 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
     * Gets verificationResult
     *  审核校验结果： \"valid\"表示身份审核通过； \"invalid\"表示身份审核不通过； \"nonexistent\"表示数据源没有该身份证号码，这种情况一般是被验证人正在办理户籍迁移，或者被验证人是军人或政要。
     *
-    * @return string|null
+    * @return string
     */
     public function getVerificationResult()
     {
@@ -230,7 +245,7 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
     /**
     * Sets verificationResult
     *
-    * @param string|null $verificationResult 审核校验结果： \"valid\"表示身份审核通过； \"invalid\"表示身份审核不通过； \"nonexistent\"表示数据源没有该身份证号码，这种情况一般是被验证人正在办理户籍迁移，或者被验证人是军人或政要。
+    * @param string $verificationResult 审核校验结果： \"valid\"表示身份审核通过； \"invalid\"表示身份审核不通过； \"nonexistent\"表示数据源没有该身份证号码，这种情况一般是被验证人正在办理户籍迁移，或者被验证人是军人或政要。
     *
     * @return $this
     */
@@ -242,9 +257,9 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
 
     /**
     * Gets verificationMessage
-    *  审核校验信息，具体参[考校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
+    *  审核校验信息，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
     *
-    * @return string|null
+    * @return string
     */
     public function getVerificationMessage()
     {
@@ -254,7 +269,7 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
     /**
     * Sets verificationMessage
     *
-    * @param string|null $verificationMessage 审核校验信息，具体参[考校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
+    * @param string $verificationMessage 审核校验信息，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
     *
     * @return $this
     */
@@ -266,9 +281,9 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
 
     /**
     * Gets verificationCode
-    *  审核校验代码，具体参[考校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
+    *  审核校验代码，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
     *
-    * @return int|null
+    * @return int
     */
     public function getVerificationCode()
     {
@@ -278,7 +293,7 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
     /**
     * Sets verificationCode
     *
-    * @param int|null $verificationCode 审核校验代码，具体参[考校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
+    * @param int $verificationCode 审核校验代码，具体参考[校验信息说明](https://support.huaweicloud.com/api-ivs/ivs_02_0017.html)
     *
     * @return $this
     */
@@ -292,7 +307,7 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
     * Gets similarity
     *  人像相识度。取值范围[0,100]
     *
-    * @return string|null
+    * @return string
     */
     public function getSimilarity()
     {
@@ -302,7 +317,7 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
     /**
     * Sets similarity
     *
-    * @param string|null $similarity 人像相识度。取值范围[0,100]
+    * @param string $similarity 人像相识度。取值范围[0,100]
     *
     * @return $this
     */
@@ -316,7 +331,7 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
     * Gets idcardResult
     *  idcardResult
     *
-    * @return \HuaweiCloud\SDK\Ivs\V2\Model\IdcardResult|null
+    * @return \HuaweiCloud\SDK\Ivs\V2\Model\IdcardResult
     */
     public function getIdcardResult()
     {
@@ -326,7 +341,7 @@ class RespDataByIdCardImage implements ModelInterface, ArrayAccess
     /**
     * Sets idcardResult
     *
-    * @param \HuaweiCloud\SDK\Ivs\V2\Model\IdcardResult|null $idcardResult idcardResult
+    * @param \HuaweiCloud\SDK\Ivs\V2\Model\IdcardResult $idcardResult idcardResult
     *
     * @return $this
     */

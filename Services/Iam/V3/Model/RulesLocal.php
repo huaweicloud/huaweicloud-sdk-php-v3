@@ -22,21 +22,21 @@ class RulesLocal implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * user  user
     * group  group
-    * groups  groups
+    * groups  联邦用户在本系统中所属用户组列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'user' => '\HuaweiCloud\SDK\Iam\V3\Model\RulesLocalUser',
             'group' => '\HuaweiCloud\SDK\Iam\V3\Model\RulesLocalGroup',
-            'groups' => '\HuaweiCloud\SDK\Iam\V3\Model\RulesLocalGroups'
+            'groups' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * user  user
     * group  group
-    * groups  groups
+    * groups  联邦用户在本系统中所属用户组列表
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class RulesLocal implements ModelInterface, ArrayAccess
     * and the value is the original name
     * user  user
     * group  group
-    * groups  groups
+    * groups  联邦用户在本系统中所属用户组列表
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class RulesLocal implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * user  user
     * group  group
-    * groups  groups
+    * groups  联邦用户在本系统中所属用户组列表
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class RulesLocal implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * user  user
     * group  group
-    * groups  groups
+    * groups  联邦用户在本系统中所属用户组列表
     *
     * @var string[]
     */
@@ -244,9 +244,9 @@ class RulesLocal implements ModelInterface, ArrayAccess
 
     /**
     * Gets groups
-    *  groups
+    *  联邦用户在本系统中所属用户组列表
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\RulesLocalGroups|null
+    * @return string|null
     */
     public function getGroups()
     {
@@ -256,7 +256,7 @@ class RulesLocal implements ModelInterface, ArrayAccess
     /**
     * Sets groups
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\RulesLocalGroups|null $groups groups
+    * @param string|null $groups 联邦用户在本系统中所属用户组列表
     *
     * @return $this
     */

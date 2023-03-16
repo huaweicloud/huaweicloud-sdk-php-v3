@@ -29,6 +29,8 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序，形式为\"sort_key=id&sort_dir=asc\"  支持字段：id/bandwidth_type/public_border_group
     * sortDir  排序方向  取值范围：asc、desc
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * marker  分页查询起始的资源ID，为空时为查询第一页
+    * offset  分页查询起始的资源序号
     *
     * @var string[]
     */
@@ -41,7 +43,9 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
             'publicBorderGroup' => 'string',
             'sortKey' => 'string',
             'sortDir' => 'string',
-            'limit' => 'int'
+            'limit' => 'int',
+            'marker' => 'string',
+            'offset' => 'int'
     ];
 
     /**
@@ -55,6 +59,8 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序，形式为\"sort_key=id&sort_dir=asc\"  支持字段：id/bandwidth_type/public_border_group
     * sortDir  排序方向  取值范围：asc、desc
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * marker  分页查询起始的资源ID，为空时为查询第一页
+    * offset  分页查询起始的资源序号
     *
     * @var string[]
     */
@@ -67,7 +73,9 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
         'publicBorderGroup' => null,
         'sortKey' => null,
         'sortDir' => null,
-        'limit' => 'int32'
+        'limit' => 'int32',
+        'marker' => null,
+        'offset' => null
     ];
 
     /**
@@ -102,6 +110,8 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序，形式为\"sort_key=id&sort_dir=asc\"  支持字段：id/bandwidth_type/public_border_group
     * sortDir  排序方向  取值范围：asc、desc
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * marker  分页查询起始的资源ID，为空时为查询第一页
+    * offset  分页查询起始的资源序号
     *
     * @var string[]
     */
@@ -114,7 +124,9 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
             'publicBorderGroup' => 'public_border_group',
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'marker' => 'marker',
+            'offset' => 'offset'
     ];
 
     /**
@@ -128,6 +140,8 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序，形式为\"sort_key=id&sort_dir=asc\"  支持字段：id/bandwidth_type/public_border_group
     * sortDir  排序方向  取值范围：asc、desc
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * marker  分页查询起始的资源ID，为空时为查询第一页
+    * offset  分页查询起始的资源序号
     *
     * @var string[]
     */
@@ -140,7 +154,9 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
             'publicBorderGroup' => 'setPublicBorderGroup',
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'marker' => 'setMarker',
+            'offset' => 'setOffset'
     ];
 
     /**
@@ -154,6 +170,8 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
     * sortKey  排序，形式为\"sort_key=id&sort_dir=asc\"  支持字段：id/bandwidth_type/public_border_group
     * sortDir  排序方向  取值范围：asc、desc
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * marker  分页查询起始的资源ID，为空时为查询第一页
+    * offset  分页查询起始的资源序号
     *
     * @var string[]
     */
@@ -166,7 +184,9 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
             'publicBorderGroup' => 'getPublicBorderGroup',
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'marker' => 'getMarker',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -236,6 +256,8 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -299,6 +321,18 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 36)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 0)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 99999)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 99999.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -527,6 +561,54 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页查询起始的资源ID，为空时为查询第一页
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页查询起始的资源ID，为空时为查询第一页
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  分页查询起始的资源序号
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 分页查询起始的资源序号
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

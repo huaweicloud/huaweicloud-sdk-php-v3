@@ -608,6 +608,12 @@ class CdnAsyncClient extends Client
         if ($localVarParams['pageNumber'] !== null) {
             $queryParams['page_number'] = $localVarParams['pageNumber'];
         }
+        if ($localVarParams['showTags'] !== null) {
+            $queryParams['show_tags'] = $localVarParams['showTags'];
+        }
+        if ($localVarParams['exactMatch'] !== null) {
+            $queryParams['exact_match'] = $localVarParams['exactMatch'];
+        }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }

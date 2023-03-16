@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Iam\V3\Model;
+namespace HuaweiCloud\SDK\Cdn\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class RulesLocalGroups implements ModelInterface, ArrayAccess
+class DomainOriginHost implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,34 @@ class RulesLocalGroups implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'RulesLocal_groups';
+    protected static $openAPIModelName = 'DomainOriginHost';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  联邦用户在本系统中所属用户组列表
+    * domainId  域名ID。获取方法请参见查询加速域名。
+    * originHostType  回源host的类型。
+    * customizeDomain  自定义回源host域名。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'name' => 'string'
+            'domainId' => 'string',
+            'originHostType' => 'string',
+            'customizeDomain' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  联邦用户在本系统中所属用户组列表
+    * domainId  域名ID。获取方法请参见查询加速域名。
+    * originHostType  回源host的类型。
+    * customizeDomain  自定义回源host域名。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'name' => null
+        'domainId' => null,
+        'originHostType' => null,
+        'customizeDomain' => null
     ];
 
     /**
@@ -61,32 +69,44 @@ class RulesLocalGroups implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  联邦用户在本系统中所属用户组列表
+    * domainId  域名ID。获取方法请参见查询加速域名。
+    * originHostType  回源host的类型。
+    * customizeDomain  自定义回源host域名。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'name' => 'name'
+            'domainId' => 'domain_id',
+            'originHostType' => 'origin_host_type',
+            'customizeDomain' => 'customize_domain'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  联邦用户在本系统中所属用户组列表
+    * domainId  域名ID。获取方法请参见查询加速域名。
+    * originHostType  回源host的类型。
+    * customizeDomain  自定义回源host域名。
     *
     * @var string[]
     */
     protected static $setters = [
-            'name' => 'setName'
+            'domainId' => 'setDomainId',
+            'originHostType' => 'setOriginHostType',
+            'customizeDomain' => 'setCustomizeDomain'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  联邦用户在本系统中所属用户组列表
+    * domainId  域名ID。获取方法请参见查询加速域名。
+    * originHostType  回源host的类型。
+    * customizeDomain  自定义回源host域名。
     *
     * @var string[]
     */
     protected static $getters = [
-            'name' => 'getName'
+            'domainId' => 'getDomainId',
+            'originHostType' => 'getOriginHostType',
+            'customizeDomain' => 'getCustomizeDomain'
     ];
 
     /**
@@ -147,7 +167,9 @@ class RulesLocalGroups implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
+        $this->container['originHostType'] = isset($data['originHostType']) ? $data['originHostType'] : null;
+        $this->container['customizeDomain'] = isset($data['customizeDomain']) ? $data['customizeDomain'] : null;
     }
 
     /**
@@ -158,8 +180,8 @@ class RulesLocalGroups implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
+        if ($this->container['originHostType'] === null) {
+            $invalidProperties[] = "'originHostType' can't be null";
         }
         return $invalidProperties;
     }
@@ -176,26 +198,74 @@ class RulesLocalGroups implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets name
-    *  联邦用户在本系统中所属用户组列表
+    * Gets domainId
+    *  域名ID。获取方法请参见查询加速域名。
     *
-    * @return string
+    * @return string|null
     */
-    public function getName()
+    public function getDomainId()
     {
-        return $this->container['name'];
+        return $this->container['domainId'];
     }
 
     /**
-    * Sets name
+    * Sets domainId
     *
-    * @param string $name 联邦用户在本系统中所属用户组列表
+    * @param string|null $domainId 域名ID。获取方法请参见查询加速域名。
     *
     * @return $this
     */
-    public function setName($name)
+    public function setDomainId($domainId)
     {
-        $this->container['name'] = $name;
+        $this->container['domainId'] = $domainId;
+        return $this;
+    }
+
+    /**
+    * Gets originHostType
+    *  回源host的类型。
+    *
+    * @return string
+    */
+    public function getOriginHostType()
+    {
+        return $this->container['originHostType'];
+    }
+
+    /**
+    * Sets originHostType
+    *
+    * @param string $originHostType 回源host的类型。
+    *
+    * @return $this
+    */
+    public function setOriginHostType($originHostType)
+    {
+        $this->container['originHostType'] = $originHostType;
+        return $this;
+    }
+
+    /**
+    * Gets customizeDomain
+    *  自定义回源host域名。
+    *
+    * @return string|null
+    */
+    public function getCustomizeDomain()
+    {
+        return $this->container['customizeDomain'];
+    }
+
+    /**
+    * Sets customizeDomain
+    *
+    * @param string|null $customizeDomain 自定义回源host域名。
+    *
+    * @return $this
+    */
+    public function setCustomizeDomain($customizeDomain)
+    {
+        $this->container['customizeDomain'] = $customizeDomain;
         return $this;
     }
 

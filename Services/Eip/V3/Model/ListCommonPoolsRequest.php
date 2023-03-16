@@ -21,6 +21,8 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group
+    * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * offset  分页查询起始的资源序号
     * name  公共池名称
     * publicBorderGroup  公共池位于中心还是边缘
     *
@@ -28,6 +30,8 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'fields' => 'string',
+            'limit' => 'int',
+            'offset' => 'int',
             'name' => 'string',
             'publicBorderGroup' => 'string'
     ];
@@ -35,6 +39,8 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group
+    * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * offset  分页查询起始的资源序号
     * name  公共池名称
     * publicBorderGroup  公共池位于中心还是边缘
     *
@@ -42,6 +48,8 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'fields' => null,
+        'limit' => 'int32',
+        'offset' => null,
         'name' => null,
         'publicBorderGroup' => null
     ];
@@ -70,6 +78,8 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group
+    * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * offset  分页查询起始的资源序号
     * name  公共池名称
     * publicBorderGroup  公共池位于中心还是边缘
     *
@@ -77,6 +87,8 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'fields' => 'fields',
+            'limit' => 'limit',
+            'offset' => 'offset',
             'name' => 'name',
             'publicBorderGroup' => 'public_border_group'
     ];
@@ -84,6 +96,8 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group
+    * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * offset  分页查询起始的资源序号
     * name  公共池名称
     * publicBorderGroup  公共池位于中心还是边缘
     *
@@ -91,6 +105,8 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'fields' => 'setFields',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset',
             'name' => 'setName',
             'publicBorderGroup' => 'setPublicBorderGroup'
     ];
@@ -98,6 +114,8 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group
+    * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * offset  分页查询起始的资源序号
     * name  公共池名称
     * publicBorderGroup  公共池位于中心还是边缘
     *
@@ -105,6 +123,8 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'fields' => 'getFields',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset',
             'name' => 'getName',
             'publicBorderGroup' => 'getPublicBorderGroup'
     ];
@@ -168,6 +188,8 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
     }
@@ -185,6 +207,18 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['fields']) && (mb_strlen($this->container['fields']) < 0)) {
                 $invalidProperties[] = "invalid value for 'fields', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 99999)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 99999.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 36)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 36.";
@@ -233,6 +267,54 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     public function setFields($fields)
     {
         $this->container['fields'] = $fields;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  分页查询起始的资源序号
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 分页查询起始的资源序号
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

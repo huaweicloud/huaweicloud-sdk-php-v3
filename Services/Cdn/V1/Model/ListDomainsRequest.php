@@ -26,6 +26,8 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * serviceArea  华为云CDN提供的加速服务范围，包含： - mainland_china 中国大陆 - outside_mainland_china 中国大陆境外 - global 全球。
     * pageSize  每页的数量，取值范围1-10000，不设值时默认值为30。
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
+    * showTags  展示标签标识 true：不展示 false：展示。
+    * exactMatch  精准匹配 on：开启 off：关闭。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
@@ -37,6 +39,8 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
             'serviceArea' => 'string',
             'pageSize' => 'int',
             'pageNumber' => 'int',
+            'showTags' => 'bool',
+            'exactMatch' => 'bool',
             'enterpriseProjectId' => 'string'
     ];
 
@@ -48,6 +52,8 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * serviceArea  华为云CDN提供的加速服务范围，包含： - mainland_china 中国大陆 - outside_mainland_china 中国大陆境外 - global 全球。
     * pageSize  每页的数量，取值范围1-10000，不设值时默认值为30。
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
+    * showTags  展示标签标识 true：不展示 false：展示。
+    * exactMatch  精准匹配 on：开启 off：关闭。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
@@ -59,6 +65,8 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
         'serviceArea' => null,
         'pageSize' => null,
         'pageNumber' => null,
+        'showTags' => null,
+        'exactMatch' => null,
         'enterpriseProjectId' => null
     ];
 
@@ -91,6 +99,8 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * serviceArea  华为云CDN提供的加速服务范围，包含： - mainland_china 中国大陆 - outside_mainland_china 中国大陆境外 - global 全球。
     * pageSize  每页的数量，取值范围1-10000，不设值时默认值为30。
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
+    * showTags  展示标签标识 true：不展示 false：展示。
+    * exactMatch  精准匹配 on：开启 off：关闭。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
@@ -102,6 +112,8 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
             'serviceArea' => 'service_area',
             'pageSize' => 'page_size',
             'pageNumber' => 'page_number',
+            'showTags' => 'show_tags',
+            'exactMatch' => 'exact_match',
             'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
@@ -113,6 +125,8 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * serviceArea  华为云CDN提供的加速服务范围，包含： - mainland_china 中国大陆 - outside_mainland_china 中国大陆境外 - global 全球。
     * pageSize  每页的数量，取值范围1-10000，不设值时默认值为30。
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
+    * showTags  展示标签标识 true：不展示 false：展示。
+    * exactMatch  精准匹配 on：开启 off：关闭。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
@@ -124,6 +138,8 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
             'serviceArea' => 'setServiceArea',
             'pageSize' => 'setPageSize',
             'pageNumber' => 'setPageNumber',
+            'showTags' => 'setShowTags',
+            'exactMatch' => 'setExactMatch',
             'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
@@ -135,6 +151,8 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * serviceArea  华为云CDN提供的加速服务范围，包含： - mainland_china 中国大陆 - outside_mainland_china 中国大陆境外 - global 全球。
     * pageSize  每页的数量，取值范围1-10000，不设值时默认值为30。
     * pageNumber  查询的页码。取值范围1-65535，不设值时默认值为1。
+    * showTags  展示标签标识 true：不展示 false：展示。
+    * exactMatch  精准匹配 on：开启 off：关闭。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
@@ -146,6 +164,8 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
             'serviceArea' => 'getServiceArea',
             'pageSize' => 'getPageSize',
             'pageNumber' => 'getPageNumber',
+            'showTags' => 'getShowTags',
+            'exactMatch' => 'getExactMatch',
             'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
@@ -274,6 +294,8 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
         $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
         $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : 30;
         $this->container['pageNumber'] = isset($data['pageNumber']) ? $data['pageNumber'] : 1;
+        $this->container['showTags'] = isset($data['showTags']) ? $data['showTags'] : false;
+        $this->container['exactMatch'] = isset($data['exactMatch']) ? $data['exactMatch'] : true;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
@@ -476,6 +498,54 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     public function setPageNumber($pageNumber)
     {
         $this->container['pageNumber'] = $pageNumber;
+        return $this;
+    }
+
+    /**
+    * Gets showTags
+    *  展示标签标识 true：不展示 false：展示。
+    *
+    * @return bool|null
+    */
+    public function getShowTags()
+    {
+        return $this->container['showTags'];
+    }
+
+    /**
+    * Sets showTags
+    *
+    * @param bool|null $showTags 展示标签标识 true：不展示 false：展示。
+    *
+    * @return $this
+    */
+    public function setShowTags($showTags)
+    {
+        $this->container['showTags'] = $showTags;
+        return $this;
+    }
+
+    /**
+    * Gets exactMatch
+    *  精准匹配 on：开启 off：关闭。
+    *
+    * @return bool|null
+    */
+    public function getExactMatch()
+    {
+        return $this->container['exactMatch'];
+    }
+
+    /**
+    * Sets exactMatch
+    *
+    * @param bool|null $exactMatch 精准匹配 on：开启 off：关闭。
+    *
+    * @return $this
+    */
+    public function setExactMatch($exactMatch)
+    {
+        $this->container['exactMatch'] = $exactMatch;
         return $this;
     }
 

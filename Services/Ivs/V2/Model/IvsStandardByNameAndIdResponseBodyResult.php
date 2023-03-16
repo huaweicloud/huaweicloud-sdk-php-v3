@@ -180,6 +180,15 @@ class IvsStandardByNameAndIdResponseBodyResult implements ModelInterface, ArrayA
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['serviceName'] === null) {
+            $invalidProperties[] = "'serviceName' can't be null";
+        }
+        if ($this->container['count'] === null) {
+            $invalidProperties[] = "'count' can't be null";
+        }
+        if ($this->container['respData'] === null) {
+            $invalidProperties[] = "'respData' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -198,7 +207,7 @@ class IvsStandardByNameAndIdResponseBodyResult implements ModelInterface, ArrayA
     * Gets serviceName
     *  子服务名称。
     *
-    * @return string|null
+    * @return string
     */
     public function getServiceName()
     {
@@ -208,7 +217,7 @@ class IvsStandardByNameAndIdResponseBodyResult implements ModelInterface, ArrayA
     /**
     * Sets serviceName
     *
-    * @param string|null $serviceName 子服务名称。
+    * @param string $serviceName 子服务名称。
     *
     * @return $this
     */
@@ -222,7 +231,7 @@ class IvsStandardByNameAndIdResponseBodyResult implements ModelInterface, ArrayA
     * Gets count
     *  成功的结果数量，与resp_data字段对应。
     *
-    * @return int|null
+    * @return int
     */
     public function getCount()
     {
@@ -232,7 +241,7 @@ class IvsStandardByNameAndIdResponseBodyResult implements ModelInterface, ArrayA
     /**
     * Sets count
     *
-    * @param int|null $count 成功的结果数量，与resp_data字段对应。
+    * @param int $count 成功的结果数量，与resp_data字段对应。
     *
     * @return $this
     */
@@ -246,7 +255,7 @@ class IvsStandardByNameAndIdResponseBodyResult implements ModelInterface, ArrayA
     * Gets respData
     *  请求列表，用于支持批量调用。目前暂时只支持单个数据查询。
     *
-    * @return \HuaweiCloud\SDK\Ivs\V2\Model\StandardRespDataByNameAndId[]|null
+    * @return \HuaweiCloud\SDK\Ivs\V2\Model\StandardRespDataByNameAndId[]
     */
     public function getRespData()
     {
@@ -256,7 +265,7 @@ class IvsStandardByNameAndIdResponseBodyResult implements ModelInterface, ArrayA
     /**
     * Sets respData
     *
-    * @param \HuaweiCloud\SDK\Ivs\V2\Model\StandardRespDataByNameAndId[]|null $respData 请求列表，用于支持批量调用。目前暂时只支持单个数据查询。
+    * @param \HuaweiCloud\SDK\Ivs\V2\Model\StandardRespDataByNameAndId[] $respData 请求列表，用于支持批量调用。目前暂时只支持单个数据查询。
     *
     * @return $this
     */

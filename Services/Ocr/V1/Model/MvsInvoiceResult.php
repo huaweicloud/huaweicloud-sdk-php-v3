@@ -26,14 +26,19 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * machinePrintedNumber  机打号码。
     * issueDate  开票日期。
     * machineNumber  机器编号。
-    * buyerName  购买方名称。
+    * buyerName  购买方名称、二手车买方单位/个人
     * buyerOrganizationNumber  购买方身份证号码/组织机构代码。
-    * buyerId  购买方纳税人识别号。
-    * sellerName  销货单位名称。
-    * sellerPhone  销售方电话。
-    * sellerId  销售方纳税人识别号。
+    * buyerId  购买方纳税人识别号、二手车买方单位代码/身份证号
+    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * sellerName  销货单位名称、二手车卖方单位/个人
+    * sellerPhone  销售方电话、二手车卖方电话
+    * sellerId  销售方纳税人识别号、二手车卖方单位代码/身份证号
     * sellerAccount  销售方账号。
-    * sellerAddress  销售方地址。
+    * sellerAddress  销售方地址、二手车卖方单位/个人地址
+    * licencePlateNumber  二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * registrationNumber  二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
     * sellerBank  销售方开户行。
     * vehicleType  车辆类型。
     * brandModel  厂牌型号。
@@ -51,9 +56,24 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * taxRate  增值税税率或征收率。
     * tax  增值税税额。
     * taxExclusivePrice  不含税价。
-    * total  价税合计。
-    * totalChinese  价税合计大写。
+    * total  价税合计、二手车车价合计（小写）
+    * totalChinese  价税合计大写、二手车车价合计（大写）
     * fiscalCode  税控码。
+    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketName  二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * remark  备注
+    * drawerName  开票人
+    * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
+    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。
+    * confidence  字段文字内容置信度，内容为字段-字符置信度对,如code:0.9999。这个数值为字段中每个字符置信度，格式为fp32，保留四位。若字段不存在则返回0.0。
     *
     * @var string[]
     */
@@ -67,11 +87,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
             'buyerName' => 'string',
             'buyerOrganizationNumber' => 'string',
             'buyerId' => 'string',
+            'buyerAddress' => 'string',
+            'buyerPhone' => 'string',
             'sellerName' => 'string',
             'sellerPhone' => 'string',
             'sellerId' => 'string',
             'sellerAccount' => 'string',
             'sellerAddress' => 'string',
+            'licencePlateNumber' => 'string',
+            'registrationNumber' => 'string',
+            'deptMotorVehicles' => 'string',
             'sellerBank' => 'string',
             'vehicleType' => 'string',
             'brandModel' => 'string',
@@ -91,7 +116,22 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
             'taxExclusivePrice' => 'string',
             'total' => 'string',
             'totalChinese' => 'string',
-            'fiscalCode' => 'string'
+            'fiscalCode' => 'string',
+            'auctionOrgName' => 'string',
+            'auctionOrgAddress' => 'string',
+            'auctionOrgId' => 'string',
+            'auctionOrgBankAccount' => 'string',
+            'auctionOrgPhone' => 'string',
+            'usedVehicleMarketName' => 'string',
+            'usedVehicleMarketId' => 'string',
+            'usedVehicleMarketAddress' => 'string',
+            'usedVehicleMarketBankAccount' => 'string',
+            'usedVehicleMarketPhone' => 'string',
+            'remark' => 'string',
+            'drawerName' => 'string',
+            'type' => 'string',
+            'textLocation' => 'object',
+            'confidence' => 'object'
     ];
 
     /**
@@ -102,14 +142,19 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * machinePrintedNumber  机打号码。
     * issueDate  开票日期。
     * machineNumber  机器编号。
-    * buyerName  购买方名称。
+    * buyerName  购买方名称、二手车买方单位/个人
     * buyerOrganizationNumber  购买方身份证号码/组织机构代码。
-    * buyerId  购买方纳税人识别号。
-    * sellerName  销货单位名称。
-    * sellerPhone  销售方电话。
-    * sellerId  销售方纳税人识别号。
+    * buyerId  购买方纳税人识别号、二手车买方单位代码/身份证号
+    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * sellerName  销货单位名称、二手车卖方单位/个人
+    * sellerPhone  销售方电话、二手车卖方电话
+    * sellerId  销售方纳税人识别号、二手车卖方单位代码/身份证号
     * sellerAccount  销售方账号。
-    * sellerAddress  销售方地址。
+    * sellerAddress  销售方地址、二手车卖方单位/个人地址
+    * licencePlateNumber  二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * registrationNumber  二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
     * sellerBank  销售方开户行。
     * vehicleType  车辆类型。
     * brandModel  厂牌型号。
@@ -127,9 +172,24 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * taxRate  增值税税率或征收率。
     * tax  增值税税额。
     * taxExclusivePrice  不含税价。
-    * total  价税合计。
-    * totalChinese  价税合计大写。
+    * total  价税合计、二手车车价合计（小写）
+    * totalChinese  价税合计大写、二手车车价合计（大写）
     * fiscalCode  税控码。
+    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketName  二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * remark  备注
+    * drawerName  开票人
+    * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
+    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。
+    * confidence  字段文字内容置信度，内容为字段-字符置信度对,如code:0.9999。这个数值为字段中每个字符置信度，格式为fp32，保留四位。若字段不存在则返回0.0。
     *
     * @var string[]
     */
@@ -143,11 +203,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
         'buyerName' => null,
         'buyerOrganizationNumber' => null,
         'buyerId' => null,
+        'buyerAddress' => null,
+        'buyerPhone' => null,
         'sellerName' => null,
         'sellerPhone' => null,
         'sellerId' => null,
         'sellerAccount' => null,
         'sellerAddress' => null,
+        'licencePlateNumber' => null,
+        'registrationNumber' => null,
+        'deptMotorVehicles' => null,
         'sellerBank' => null,
         'vehicleType' => null,
         'brandModel' => null,
@@ -167,7 +232,22 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
         'taxExclusivePrice' => null,
         'total' => null,
         'totalChinese' => null,
-        'fiscalCode' => null
+        'fiscalCode' => null,
+        'auctionOrgName' => null,
+        'auctionOrgAddress' => null,
+        'auctionOrgId' => null,
+        'auctionOrgBankAccount' => null,
+        'auctionOrgPhone' => null,
+        'usedVehicleMarketName' => null,
+        'usedVehicleMarketId' => null,
+        'usedVehicleMarketAddress' => null,
+        'usedVehicleMarketBankAccount' => null,
+        'usedVehicleMarketPhone' => null,
+        'remark' => null,
+        'drawerName' => null,
+        'type' => null,
+        'textLocation' => null,
+        'confidence' => null
     ];
 
     /**
@@ -199,14 +279,19 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * machinePrintedNumber  机打号码。
     * issueDate  开票日期。
     * machineNumber  机器编号。
-    * buyerName  购买方名称。
+    * buyerName  购买方名称、二手车买方单位/个人
     * buyerOrganizationNumber  购买方身份证号码/组织机构代码。
-    * buyerId  购买方纳税人识别号。
-    * sellerName  销货单位名称。
-    * sellerPhone  销售方电话。
-    * sellerId  销售方纳税人识别号。
+    * buyerId  购买方纳税人识别号、二手车买方单位代码/身份证号
+    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * sellerName  销货单位名称、二手车卖方单位/个人
+    * sellerPhone  销售方电话、二手车卖方电话
+    * sellerId  销售方纳税人识别号、二手车卖方单位代码/身份证号
     * sellerAccount  销售方账号。
-    * sellerAddress  销售方地址。
+    * sellerAddress  销售方地址、二手车卖方单位/个人地址
+    * licencePlateNumber  二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * registrationNumber  二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
     * sellerBank  销售方开户行。
     * vehicleType  车辆类型。
     * brandModel  厂牌型号。
@@ -224,9 +309,24 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * taxRate  增值税税率或征收率。
     * tax  增值税税额。
     * taxExclusivePrice  不含税价。
-    * total  价税合计。
-    * totalChinese  价税合计大写。
+    * total  价税合计、二手车车价合计（小写）
+    * totalChinese  价税合计大写、二手车车价合计（大写）
     * fiscalCode  税控码。
+    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketName  二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * remark  备注
+    * drawerName  开票人
+    * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
+    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。
+    * confidence  字段文字内容置信度，内容为字段-字符置信度对,如code:0.9999。这个数值为字段中每个字符置信度，格式为fp32，保留四位。若字段不存在则返回0.0。
     *
     * @var string[]
     */
@@ -240,11 +340,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
             'buyerName' => 'buyer_name',
             'buyerOrganizationNumber' => 'buyer_organization_number',
             'buyerId' => 'buyer_id',
+            'buyerAddress' => 'buyer_address',
+            'buyerPhone' => 'buyer_phone',
             'sellerName' => 'seller_name',
             'sellerPhone' => 'seller_phone',
             'sellerId' => 'seller_id',
             'sellerAccount' => 'seller_account',
             'sellerAddress' => 'seller_address',
+            'licencePlateNumber' => 'licence_plate_number',
+            'registrationNumber' => 'registration_number',
+            'deptMotorVehicles' => 'dept_motor_vehicles',
             'sellerBank' => 'seller_bank',
             'vehicleType' => 'vehicle_type',
             'brandModel' => 'brand_model',
@@ -264,7 +369,22 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
             'taxExclusivePrice' => 'tax_exclusive_price',
             'total' => 'total',
             'totalChinese' => 'total_chinese',
-            'fiscalCode' => 'fiscal_code'
+            'fiscalCode' => 'fiscal_code',
+            'auctionOrgName' => 'auction_org_name',
+            'auctionOrgAddress' => 'auction_org_address',
+            'auctionOrgId' => 'auction_org_id',
+            'auctionOrgBankAccount' => 'auction_org_bank_account',
+            'auctionOrgPhone' => 'auction_org_phone',
+            'usedVehicleMarketName' => 'used_vehicle_market_name',
+            'usedVehicleMarketId' => 'used_vehicle_market_id',
+            'usedVehicleMarketAddress' => 'used_vehicle_market_address',
+            'usedVehicleMarketBankAccount' => 'used_vehicle_market_bank_account',
+            'usedVehicleMarketPhone' => 'used_vehicle_market_phone',
+            'remark' => 'remark',
+            'drawerName' => 'drawer_name',
+            'type' => 'type',
+            'textLocation' => 'text_location',
+            'confidence' => 'confidence'
     ];
 
     /**
@@ -275,14 +395,19 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * machinePrintedNumber  机打号码。
     * issueDate  开票日期。
     * machineNumber  机器编号。
-    * buyerName  购买方名称。
+    * buyerName  购买方名称、二手车买方单位/个人
     * buyerOrganizationNumber  购买方身份证号码/组织机构代码。
-    * buyerId  购买方纳税人识别号。
-    * sellerName  销货单位名称。
-    * sellerPhone  销售方电话。
-    * sellerId  销售方纳税人识别号。
+    * buyerId  购买方纳税人识别号、二手车买方单位代码/身份证号
+    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * sellerName  销货单位名称、二手车卖方单位/个人
+    * sellerPhone  销售方电话、二手车卖方电话
+    * sellerId  销售方纳税人识别号、二手车卖方单位代码/身份证号
     * sellerAccount  销售方账号。
-    * sellerAddress  销售方地址。
+    * sellerAddress  销售方地址、二手车卖方单位/个人地址
+    * licencePlateNumber  二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * registrationNumber  二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
     * sellerBank  销售方开户行。
     * vehicleType  车辆类型。
     * brandModel  厂牌型号。
@@ -300,9 +425,24 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * taxRate  增值税税率或征收率。
     * tax  增值税税额。
     * taxExclusivePrice  不含税价。
-    * total  价税合计。
-    * totalChinese  价税合计大写。
+    * total  价税合计、二手车车价合计（小写）
+    * totalChinese  价税合计大写、二手车车价合计（大写）
     * fiscalCode  税控码。
+    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketName  二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * remark  备注
+    * drawerName  开票人
+    * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
+    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。
+    * confidence  字段文字内容置信度，内容为字段-字符置信度对,如code:0.9999。这个数值为字段中每个字符置信度，格式为fp32，保留四位。若字段不存在则返回0.0。
     *
     * @var string[]
     */
@@ -316,11 +456,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
             'buyerName' => 'setBuyerName',
             'buyerOrganizationNumber' => 'setBuyerOrganizationNumber',
             'buyerId' => 'setBuyerId',
+            'buyerAddress' => 'setBuyerAddress',
+            'buyerPhone' => 'setBuyerPhone',
             'sellerName' => 'setSellerName',
             'sellerPhone' => 'setSellerPhone',
             'sellerId' => 'setSellerId',
             'sellerAccount' => 'setSellerAccount',
             'sellerAddress' => 'setSellerAddress',
+            'licencePlateNumber' => 'setLicencePlateNumber',
+            'registrationNumber' => 'setRegistrationNumber',
+            'deptMotorVehicles' => 'setDeptMotorVehicles',
             'sellerBank' => 'setSellerBank',
             'vehicleType' => 'setVehicleType',
             'brandModel' => 'setBrandModel',
@@ -340,7 +485,22 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
             'taxExclusivePrice' => 'setTaxExclusivePrice',
             'total' => 'setTotal',
             'totalChinese' => 'setTotalChinese',
-            'fiscalCode' => 'setFiscalCode'
+            'fiscalCode' => 'setFiscalCode',
+            'auctionOrgName' => 'setAuctionOrgName',
+            'auctionOrgAddress' => 'setAuctionOrgAddress',
+            'auctionOrgId' => 'setAuctionOrgId',
+            'auctionOrgBankAccount' => 'setAuctionOrgBankAccount',
+            'auctionOrgPhone' => 'setAuctionOrgPhone',
+            'usedVehicleMarketName' => 'setUsedVehicleMarketName',
+            'usedVehicleMarketId' => 'setUsedVehicleMarketId',
+            'usedVehicleMarketAddress' => 'setUsedVehicleMarketAddress',
+            'usedVehicleMarketBankAccount' => 'setUsedVehicleMarketBankAccount',
+            'usedVehicleMarketPhone' => 'setUsedVehicleMarketPhone',
+            'remark' => 'setRemark',
+            'drawerName' => 'setDrawerName',
+            'type' => 'setType',
+            'textLocation' => 'setTextLocation',
+            'confidence' => 'setConfidence'
     ];
 
     /**
@@ -351,14 +511,19 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * machinePrintedNumber  机打号码。
     * issueDate  开票日期。
     * machineNumber  机器编号。
-    * buyerName  购买方名称。
+    * buyerName  购买方名称、二手车买方单位/个人
     * buyerOrganizationNumber  购买方身份证号码/组织机构代码。
-    * buyerId  购买方纳税人识别号。
-    * sellerName  销货单位名称。
-    * sellerPhone  销售方电话。
-    * sellerId  销售方纳税人识别号。
+    * buyerId  购买方纳税人识别号、二手车买方单位代码/身份证号
+    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * sellerName  销货单位名称、二手车卖方单位/个人
+    * sellerPhone  销售方电话、二手车卖方电话
+    * sellerId  销售方纳税人识别号、二手车卖方单位代码/身份证号
     * sellerAccount  销售方账号。
-    * sellerAddress  销售方地址。
+    * sellerAddress  销售方地址、二手车卖方单位/个人地址
+    * licencePlateNumber  二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * registrationNumber  二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
     * sellerBank  销售方开户行。
     * vehicleType  车辆类型。
     * brandModel  厂牌型号。
@@ -376,9 +541,24 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * taxRate  增值税税率或征收率。
     * tax  增值税税额。
     * taxExclusivePrice  不含税价。
-    * total  价税合计。
-    * totalChinese  价税合计大写。
+    * total  价税合计、二手车车价合计（小写）
+    * totalChinese  价税合计大写、二手车车价合计（大写）
     * fiscalCode  税控码。
+    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketName  二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * remark  备注
+    * drawerName  开票人
+    * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
+    * textLocation  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。
+    * confidence  字段文字内容置信度，内容为字段-字符置信度对,如code:0.9999。这个数值为字段中每个字符置信度，格式为fp32，保留四位。若字段不存在则返回0.0。
     *
     * @var string[]
     */
@@ -392,11 +572,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
             'buyerName' => 'getBuyerName',
             'buyerOrganizationNumber' => 'getBuyerOrganizationNumber',
             'buyerId' => 'getBuyerId',
+            'buyerAddress' => 'getBuyerAddress',
+            'buyerPhone' => 'getBuyerPhone',
             'sellerName' => 'getSellerName',
             'sellerPhone' => 'getSellerPhone',
             'sellerId' => 'getSellerId',
             'sellerAccount' => 'getSellerAccount',
             'sellerAddress' => 'getSellerAddress',
+            'licencePlateNumber' => 'getLicencePlateNumber',
+            'registrationNumber' => 'getRegistrationNumber',
+            'deptMotorVehicles' => 'getDeptMotorVehicles',
             'sellerBank' => 'getSellerBank',
             'vehicleType' => 'getVehicleType',
             'brandModel' => 'getBrandModel',
@@ -416,7 +601,22 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
             'taxExclusivePrice' => 'getTaxExclusivePrice',
             'total' => 'getTotal',
             'totalChinese' => 'getTotalChinese',
-            'fiscalCode' => 'getFiscalCode'
+            'fiscalCode' => 'getFiscalCode',
+            'auctionOrgName' => 'getAuctionOrgName',
+            'auctionOrgAddress' => 'getAuctionOrgAddress',
+            'auctionOrgId' => 'getAuctionOrgId',
+            'auctionOrgBankAccount' => 'getAuctionOrgBankAccount',
+            'auctionOrgPhone' => 'getAuctionOrgPhone',
+            'usedVehicleMarketName' => 'getUsedVehicleMarketName',
+            'usedVehicleMarketId' => 'getUsedVehicleMarketId',
+            'usedVehicleMarketAddress' => 'getUsedVehicleMarketAddress',
+            'usedVehicleMarketBankAccount' => 'getUsedVehicleMarketBankAccount',
+            'usedVehicleMarketPhone' => 'getUsedVehicleMarketPhone',
+            'remark' => 'getRemark',
+            'drawerName' => 'getDrawerName',
+            'type' => 'getType',
+            'textLocation' => 'getTextLocation',
+            'confidence' => 'getConfidence'
     ];
 
     /**
@@ -486,11 +686,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
         $this->container['buyerName'] = isset($data['buyerName']) ? $data['buyerName'] : null;
         $this->container['buyerOrganizationNumber'] = isset($data['buyerOrganizationNumber']) ? $data['buyerOrganizationNumber'] : null;
         $this->container['buyerId'] = isset($data['buyerId']) ? $data['buyerId'] : null;
+        $this->container['buyerAddress'] = isset($data['buyerAddress']) ? $data['buyerAddress'] : null;
+        $this->container['buyerPhone'] = isset($data['buyerPhone']) ? $data['buyerPhone'] : null;
         $this->container['sellerName'] = isset($data['sellerName']) ? $data['sellerName'] : null;
         $this->container['sellerPhone'] = isset($data['sellerPhone']) ? $data['sellerPhone'] : null;
         $this->container['sellerId'] = isset($data['sellerId']) ? $data['sellerId'] : null;
         $this->container['sellerAccount'] = isset($data['sellerAccount']) ? $data['sellerAccount'] : null;
         $this->container['sellerAddress'] = isset($data['sellerAddress']) ? $data['sellerAddress'] : null;
+        $this->container['licencePlateNumber'] = isset($data['licencePlateNumber']) ? $data['licencePlateNumber'] : null;
+        $this->container['registrationNumber'] = isset($data['registrationNumber']) ? $data['registrationNumber'] : null;
+        $this->container['deptMotorVehicles'] = isset($data['deptMotorVehicles']) ? $data['deptMotorVehicles'] : null;
         $this->container['sellerBank'] = isset($data['sellerBank']) ? $data['sellerBank'] : null;
         $this->container['vehicleType'] = isset($data['vehicleType']) ? $data['vehicleType'] : null;
         $this->container['brandModel'] = isset($data['brandModel']) ? $data['brandModel'] : null;
@@ -511,6 +716,21 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['totalChinese'] = isset($data['totalChinese']) ? $data['totalChinese'] : null;
         $this->container['fiscalCode'] = isset($data['fiscalCode']) ? $data['fiscalCode'] : null;
+        $this->container['auctionOrgName'] = isset($data['auctionOrgName']) ? $data['auctionOrgName'] : null;
+        $this->container['auctionOrgAddress'] = isset($data['auctionOrgAddress']) ? $data['auctionOrgAddress'] : null;
+        $this->container['auctionOrgId'] = isset($data['auctionOrgId']) ? $data['auctionOrgId'] : null;
+        $this->container['auctionOrgBankAccount'] = isset($data['auctionOrgBankAccount']) ? $data['auctionOrgBankAccount'] : null;
+        $this->container['auctionOrgPhone'] = isset($data['auctionOrgPhone']) ? $data['auctionOrgPhone'] : null;
+        $this->container['usedVehicleMarketName'] = isset($data['usedVehicleMarketName']) ? $data['usedVehicleMarketName'] : null;
+        $this->container['usedVehicleMarketId'] = isset($data['usedVehicleMarketId']) ? $data['usedVehicleMarketId'] : null;
+        $this->container['usedVehicleMarketAddress'] = isset($data['usedVehicleMarketAddress']) ? $data['usedVehicleMarketAddress'] : null;
+        $this->container['usedVehicleMarketBankAccount'] = isset($data['usedVehicleMarketBankAccount']) ? $data['usedVehicleMarketBankAccount'] : null;
+        $this->container['usedVehicleMarketPhone'] = isset($data['usedVehicleMarketPhone']) ? $data['usedVehicleMarketPhone'] : null;
+        $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
+        $this->container['drawerName'] = isset($data['drawerName']) ? $data['drawerName'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
+        $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
     }
 
     /**
@@ -681,7 +901,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets buyerName
-    *  购买方名称。
+    *  购买方名称、二手车买方单位/个人
     *
     * @return string|null
     */
@@ -693,7 +913,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets buyerName
     *
-    * @param string|null $buyerName 购买方名称。
+    * @param string|null $buyerName 购买方名称、二手车买方单位/个人
     *
     * @return $this
     */
@@ -729,7 +949,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets buyerId
-    *  购买方纳税人识别号。
+    *  购买方纳税人识别号、二手车买方单位代码/身份证号
     *
     * @return string|null
     */
@@ -741,7 +961,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets buyerId
     *
-    * @param string|null $buyerId 购买方纳税人识别号。
+    * @param string|null $buyerId 购买方纳税人识别号、二手车买方单位代码/身份证号
     *
     * @return $this
     */
@@ -752,8 +972,56 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets buyerAddress
+    *  二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getBuyerAddress()
+    {
+        return $this->container['buyerAddress'];
+    }
+
+    /**
+    * Sets buyerAddress
+    *
+    * @param string|null $buyerAddress 二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setBuyerAddress($buyerAddress)
+    {
+        $this->container['buyerAddress'] = $buyerAddress;
+        return $this;
+    }
+
+    /**
+    * Gets buyerPhone
+    *  二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getBuyerPhone()
+    {
+        return $this->container['buyerPhone'];
+    }
+
+    /**
+    * Sets buyerPhone
+    *
+    * @param string|null $buyerPhone 二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setBuyerPhone($buyerPhone)
+    {
+        $this->container['buyerPhone'] = $buyerPhone;
+        return $this;
+    }
+
+    /**
     * Gets sellerName
-    *  销货单位名称。
+    *  销货单位名称、二手车卖方单位/个人
     *
     * @return string|null
     */
@@ -765,7 +1033,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets sellerName
     *
-    * @param string|null $sellerName 销货单位名称。
+    * @param string|null $sellerName 销货单位名称、二手车卖方单位/个人
     *
     * @return $this
     */
@@ -777,7 +1045,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets sellerPhone
-    *  销售方电话。
+    *  销售方电话、二手车卖方电话
     *
     * @return string|null
     */
@@ -789,7 +1057,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets sellerPhone
     *
-    * @param string|null $sellerPhone 销售方电话。
+    * @param string|null $sellerPhone 销售方电话、二手车卖方电话
     *
     * @return $this
     */
@@ -801,7 +1069,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets sellerId
-    *  销售方纳税人识别号。
+    *  销售方纳税人识别号、二手车卖方单位代码/身份证号
     *
     * @return string|null
     */
@@ -813,7 +1081,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets sellerId
     *
-    * @param string|null $sellerId 销售方纳税人识别号。
+    * @param string|null $sellerId 销售方纳税人识别号、二手车卖方单位代码/身份证号
     *
     * @return $this
     */
@@ -849,7 +1117,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets sellerAddress
-    *  销售方地址。
+    *  销售方地址、二手车卖方单位/个人地址
     *
     * @return string|null
     */
@@ -861,13 +1129,85 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets sellerAddress
     *
-    * @param string|null $sellerAddress 销售方地址。
+    * @param string|null $sellerAddress 销售方地址、二手车卖方单位/个人地址
     *
     * @return $this
     */
     public function setSellerAddress($sellerAddress)
     {
         $this->container['sellerAddress'] = $sellerAddress;
+        return $this;
+    }
+
+    /**
+    * Gets licencePlateNumber
+    *  二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getLicencePlateNumber()
+    {
+        return $this->container['licencePlateNumber'];
+    }
+
+    /**
+    * Sets licencePlateNumber
+    *
+    * @param string|null $licencePlateNumber 二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setLicencePlateNumber($licencePlateNumber)
+    {
+        $this->container['licencePlateNumber'] = $licencePlateNumber;
+        return $this;
+    }
+
+    /**
+    * Gets registrationNumber
+    *  二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getRegistrationNumber()
+    {
+        return $this->container['registrationNumber'];
+    }
+
+    /**
+    * Sets registrationNumber
+    *
+    * @param string|null $registrationNumber 二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setRegistrationNumber($registrationNumber)
+    {
+        $this->container['registrationNumber'] = $registrationNumber;
+        return $this;
+    }
+
+    /**
+    * Gets deptMotorVehicles
+    *  二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getDeptMotorVehicles()
+    {
+        return $this->container['deptMotorVehicles'];
+    }
+
+    /**
+    * Sets deptMotorVehicles
+    *
+    * @param string|null $deptMotorVehicles 二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setDeptMotorVehicles($deptMotorVehicles)
+    {
+        $this->container['deptMotorVehicles'] = $deptMotorVehicles;
         return $this;
     }
 
@@ -1281,7 +1621,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  价税合计。
+    *  价税合计、二手车车价合计（小写）
     *
     * @return string|null
     */
@@ -1293,7 +1633,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param string|null $total 价税合计。
+    * @param string|null $total 价税合计、二手车车价合计（小写）
     *
     * @return $this
     */
@@ -1305,7 +1645,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalChinese
-    *  价税合计大写。
+    *  价税合计大写、二手车车价合计（大写）
     *
     * @return string|null
     */
@@ -1317,7 +1657,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets totalChinese
     *
-    * @param string|null $totalChinese 价税合计大写。
+    * @param string|null $totalChinese 价税合计大写、二手车车价合计（大写）
     *
     * @return $this
     */
@@ -1348,6 +1688,366 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     public function setFiscalCode($fiscalCode)
     {
         $this->container['fiscalCode'] = $fiscalCode;
+        return $this;
+    }
+
+    /**
+    * Gets auctionOrgName
+    *  二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getAuctionOrgName()
+    {
+        return $this->container['auctionOrgName'];
+    }
+
+    /**
+    * Sets auctionOrgName
+    *
+    * @param string|null $auctionOrgName 二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setAuctionOrgName($auctionOrgName)
+    {
+        $this->container['auctionOrgName'] = $auctionOrgName;
+        return $this;
+    }
+
+    /**
+    * Gets auctionOrgAddress
+    *  二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getAuctionOrgAddress()
+    {
+        return $this->container['auctionOrgAddress'];
+    }
+
+    /**
+    * Sets auctionOrgAddress
+    *
+    * @param string|null $auctionOrgAddress 二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setAuctionOrgAddress($auctionOrgAddress)
+    {
+        $this->container['auctionOrgAddress'] = $auctionOrgAddress;
+        return $this;
+    }
+
+    /**
+    * Gets auctionOrgId
+    *  二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getAuctionOrgId()
+    {
+        return $this->container['auctionOrgId'];
+    }
+
+    /**
+    * Sets auctionOrgId
+    *
+    * @param string|null $auctionOrgId 二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setAuctionOrgId($auctionOrgId)
+    {
+        $this->container['auctionOrgId'] = $auctionOrgId;
+        return $this;
+    }
+
+    /**
+    * Gets auctionOrgBankAccount
+    *  二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getAuctionOrgBankAccount()
+    {
+        return $this->container['auctionOrgBankAccount'];
+    }
+
+    /**
+    * Sets auctionOrgBankAccount
+    *
+    * @param string|null $auctionOrgBankAccount 二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setAuctionOrgBankAccount($auctionOrgBankAccount)
+    {
+        $this->container['auctionOrgBankAccount'] = $auctionOrgBankAccount;
+        return $this;
+    }
+
+    /**
+    * Gets auctionOrgPhone
+    *  二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getAuctionOrgPhone()
+    {
+        return $this->container['auctionOrgPhone'];
+    }
+
+    /**
+    * Sets auctionOrgPhone
+    *
+    * @param string|null $auctionOrgPhone 二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setAuctionOrgPhone($auctionOrgPhone)
+    {
+        $this->container['auctionOrgPhone'] = $auctionOrgPhone;
+        return $this;
+    }
+
+    /**
+    * Gets usedVehicleMarketName
+    *  二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getUsedVehicleMarketName()
+    {
+        return $this->container['usedVehicleMarketName'];
+    }
+
+    /**
+    * Sets usedVehicleMarketName
+    *
+    * @param string|null $usedVehicleMarketName 二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setUsedVehicleMarketName($usedVehicleMarketName)
+    {
+        $this->container['usedVehicleMarketName'] = $usedVehicleMarketName;
+        return $this;
+    }
+
+    /**
+    * Gets usedVehicleMarketId
+    *  二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getUsedVehicleMarketId()
+    {
+        return $this->container['usedVehicleMarketId'];
+    }
+
+    /**
+    * Sets usedVehicleMarketId
+    *
+    * @param string|null $usedVehicleMarketId 二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setUsedVehicleMarketId($usedVehicleMarketId)
+    {
+        $this->container['usedVehicleMarketId'] = $usedVehicleMarketId;
+        return $this;
+    }
+
+    /**
+    * Gets usedVehicleMarketAddress
+    *  二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getUsedVehicleMarketAddress()
+    {
+        return $this->container['usedVehicleMarketAddress'];
+    }
+
+    /**
+    * Sets usedVehicleMarketAddress
+    *
+    * @param string|null $usedVehicleMarketAddress 二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setUsedVehicleMarketAddress($usedVehicleMarketAddress)
+    {
+        $this->container['usedVehicleMarketAddress'] = $usedVehicleMarketAddress;
+        return $this;
+    }
+
+    /**
+    * Gets usedVehicleMarketBankAccount
+    *  二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getUsedVehicleMarketBankAccount()
+    {
+        return $this->container['usedVehicleMarketBankAccount'];
+    }
+
+    /**
+    * Sets usedVehicleMarketBankAccount
+    *
+    * @param string|null $usedVehicleMarketBankAccount 二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setUsedVehicleMarketBankAccount($usedVehicleMarketBankAccount)
+    {
+        $this->container['usedVehicleMarketBankAccount'] = $usedVehicleMarketBankAccount;
+        return $this;
+    }
+
+    /**
+    * Gets usedVehicleMarketPhone
+    *  二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return string|null
+    */
+    public function getUsedVehicleMarketPhone()
+    {
+        return $this->container['usedVehicleMarketPhone'];
+    }
+
+    /**
+    * Sets usedVehicleMarketPhone
+    *
+    * @param string|null $usedVehicleMarketPhone 二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *
+    * @return $this
+    */
+    public function setUsedVehicleMarketPhone($usedVehicleMarketPhone)
+    {
+        $this->container['usedVehicleMarketPhone'] = $usedVehicleMarketPhone;
+        return $this;
+    }
+
+    /**
+    * Gets remark
+    *  备注
+    *
+    * @return string|null
+    */
+    public function getRemark()
+    {
+        return $this->container['remark'];
+    }
+
+    /**
+    * Sets remark
+    *
+    * @param string|null $remark 备注
+    *
+    * @return $this
+    */
+    public function setRemark($remark)
+    {
+        $this->container['remark'] = $remark;
+        return $this;
+    }
+
+    /**
+    * Gets drawerName
+    *  开票人
+    *
+    * @return string|null
+    */
+    public function getDrawerName()
+    {
+        return $this->container['drawerName'];
+    }
+
+    /**
+    * Sets drawerName
+    *
+    * @param string|null $drawerName 开票人
+    *
+    * @return $this
+    */
+    public function setDrawerName($drawerName)
+    {
+        $this->container['drawerName'] = $drawerName;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets textLocation
+    *  检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。
+    *
+    * @return object|null
+    */
+    public function getTextLocation()
+    {
+        return $this->container['textLocation'];
+    }
+
+    /**
+    * Sets textLocation
+    *
+    * @param object|null $textLocation 检测框对象，内部为字段-框坐标对。如 code:[[x0, y0],[x1,y1],[x2,y2],[x3,y3]], 点的顺序是左上角、右上角、右下角、左下角。如果原图找不到字段，返回空列表。
+    *
+    * @return $this
+    */
+    public function setTextLocation($textLocation)
+    {
+        $this->container['textLocation'] = $textLocation;
+        return $this;
+    }
+
+    /**
+    * Gets confidence
+    *  字段文字内容置信度，内容为字段-字符置信度对,如code:0.9999。这个数值为字段中每个字符置信度，格式为fp32，保留四位。若字段不存在则返回0.0。
+    *
+    * @return object|null
+    */
+    public function getConfidence()
+    {
+        return $this->container['confidence'];
+    }
+
+    /**
+    * Sets confidence
+    *
+    * @param object|null $confidence 字段文字内容置信度，内容为字段-字符置信度对,如code:0.9999。这个数值为字段中每个字符置信度，格式为fp32，保留四位。若字段不存在则返回0.0。
+    *
+    * @return $this
+    */
+    public function setConfidence($confidence)
+    {
+        $this->container['confidence'] = $confidence;
         return $this;
     }
 
