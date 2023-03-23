@@ -34,7 +34,7 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
     * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  接入状态，0： 未接入，1：已接入
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     *
     * @var string[]
@@ -72,7 +72,7 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
     * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  接入状态，0： 未接入，1：已接入
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     *
     * @var string[]
@@ -131,7 +131,7 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
     * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  接入状态，0： 未接入，1：已接入
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     *
     * @var string[]
@@ -169,7 +169,7 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
     * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  接入状态，0： 未接入，1：已接入
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     *
     * @var string[]
@@ -207,7 +207,7 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
     * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  接入状态，0： 未接入，1：已接入
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     *
     * @var string[]
@@ -270,20 +270,7 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const PAID_TYPE_PRE_PAID = 'prePaid';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getPaidTypeAllowableValues()
-    {
-        return [
-            self::PAID_TYPE_PRE_PAID,
-        ];
-    }
 
 
     /**
@@ -326,14 +313,6 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getPaidTypeAllowableValues();
-                if (!is_null($this->container['paidType']) && !in_array($this->container['paidType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'paidType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -662,7 +641,7 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets paidType
-    *  套餐付费模式，目前只支持prePaid预付款模式
+    *  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     *
     * @return string|null
     */
@@ -674,7 +653,7 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets paidType
     *
-    * @param string|null $paidType 套餐付费模式，目前只支持prePaid预付款模式
+    * @param string|null $paidType 套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     *
     * @return $this
     */

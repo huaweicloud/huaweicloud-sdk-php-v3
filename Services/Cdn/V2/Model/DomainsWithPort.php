@@ -31,9 +31,6 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
-    * bannedReason  域名禁用原因。 1：该域名涉嫌违规内容（涉黄/涉赌/涉毒/涉政）已被禁用； 2：该域名因备案失效已被禁用； 3：该域名遭受攻击，已被禁用； 150：该域名涉嫌违规内容涉黄已被禁用； 151：该域名涉嫌违规内容涉政已被禁用； 152：该域名涉嫌违规内容涉暴已被禁用； 153：该域名涉嫌违规内容涉赌已被禁用。
-    * lockedReason  域名锁定原因（Changing the config, please wait）。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -48,10 +45,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
             'updateTime' => 'int',
             'disabled' => 'int',
             'locked' => 'int',
-            'serviceArea' => 'string',
-            'bannedReason' => 'string',
-            'lockedReason' => 'string',
-            'enterpriseProjectId' => 'string'
+            'serviceArea' => 'string'
     ];
 
     /**
@@ -67,9 +61,6 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
-    * bannedReason  域名禁用原因。 1：该域名涉嫌违规内容（涉黄/涉赌/涉毒/涉政）已被禁用； 2：该域名因备案失效已被禁用； 3：该域名遭受攻击，已被禁用； 150：该域名涉嫌违规内容涉黄已被禁用； 151：该域名涉嫌违规内容涉政已被禁用； 152：该域名涉嫌违规内容涉暴已被禁用； 153：该域名涉嫌违规内容涉赌已被禁用。
-    * lockedReason  域名锁定原因（Changing the config, please wait）。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -84,10 +75,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
         'updateTime' => 'int64',
         'disabled' => 'int32',
         'locked' => 'int32',
-        'serviceArea' => null,
-        'bannedReason' => null,
-        'lockedReason' => null,
-        'enterpriseProjectId' => null
+        'serviceArea' => null
     ];
 
     /**
@@ -124,9 +112,6 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
-    * bannedReason  域名禁用原因。 1：该域名涉嫌违规内容（涉黄/涉赌/涉毒/涉政）已被禁用； 2：该域名因备案失效已被禁用； 3：该域名遭受攻击，已被禁用； 150：该域名涉嫌违规内容涉黄已被禁用； 151：该域名涉嫌违规内容涉政已被禁用； 152：该域名涉嫌违规内容涉暴已被禁用； 153：该域名涉嫌违规内容涉赌已被禁用。
-    * lockedReason  域名锁定原因（Changing the config, please wait）。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -141,10 +126,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
             'updateTime' => 'update_time',
             'disabled' => 'disabled',
             'locked' => 'locked',
-            'serviceArea' => 'service_area',
-            'bannedReason' => 'banned_reason',
-            'lockedReason' => 'locked_reason',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'serviceArea' => 'service_area'
     ];
 
     /**
@@ -160,9 +142,6 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
-    * bannedReason  域名禁用原因。 1：该域名涉嫌违规内容（涉黄/涉赌/涉毒/涉政）已被禁用； 2：该域名因备案失效已被禁用； 3：该域名遭受攻击，已被禁用； 150：该域名涉嫌违规内容涉黄已被禁用； 151：该域名涉嫌违规内容涉政已被禁用； 152：该域名涉嫌违规内容涉暴已被禁用； 153：该域名涉嫌违规内容涉赌已被禁用。
-    * lockedReason  域名锁定原因（Changing the config, please wait）。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -177,10 +156,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
             'updateTime' => 'setUpdateTime',
             'disabled' => 'setDisabled',
             'locked' => 'setLocked',
-            'serviceArea' => 'setServiceArea',
-            'bannedReason' => 'setBannedReason',
-            'lockedReason' => 'setLockedReason',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'serviceArea' => 'setServiceArea'
     ];
 
     /**
@@ -196,9 +172,6 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * serviceArea  华为云CDN提供的加速服务范围，包含：mainland_china中国大陆、outside_mainland_china中国大陆境外、global全球。
-    * bannedReason  域名禁用原因。 1：该域名涉嫌违规内容（涉黄/涉赌/涉毒/涉政）已被禁用； 2：该域名因备案失效已被禁用； 3：该域名遭受攻击，已被禁用； 150：该域名涉嫌违规内容涉黄已被禁用； 151：该域名涉嫌违规内容涉政已被禁用； 152：该域名涉嫌违规内容涉暴已被禁用； 153：该域名涉嫌违规内容涉赌已被禁用。
-    * lockedReason  域名锁定原因（Changing the config, please wait）。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
     * @var string[]
     */
@@ -213,10 +186,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
             'updateTime' => 'getUpdateTime',
             'disabled' => 'getDisabled',
             'locked' => 'getLocked',
-            'serviceArea' => 'getServiceArea',
-            'bannedReason' => 'getBannedReason',
-            'lockedReason' => 'getLockedReason',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'serviceArea' => 'getServiceArea'
     ];
 
     /**
@@ -305,9 +275,6 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
         $this->container['disabled'] = isset($data['disabled']) ? $data['disabled'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['serviceArea'] = isset($data['serviceArea']) ? $data['serviceArea'] : null;
-        $this->container['bannedReason'] = isset($data['bannedReason']) ? $data['bannedReason'] : null;
-        $this->container['lockedReason'] = isset($data['lockedReason']) ? $data['lockedReason'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -601,78 +568,6 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     public function setServiceArea($serviceArea)
     {
         $this->container['serviceArea'] = $serviceArea;
-        return $this;
-    }
-
-    /**
-    * Gets bannedReason
-    *  域名禁用原因。 1：该域名涉嫌违规内容（涉黄/涉赌/涉毒/涉政）已被禁用； 2：该域名因备案失效已被禁用； 3：该域名遭受攻击，已被禁用； 150：该域名涉嫌违规内容涉黄已被禁用； 151：该域名涉嫌违规内容涉政已被禁用； 152：该域名涉嫌违规内容涉暴已被禁用； 153：该域名涉嫌违规内容涉赌已被禁用。
-    *
-    * @return string|null
-    */
-    public function getBannedReason()
-    {
-        return $this->container['bannedReason'];
-    }
-
-    /**
-    * Sets bannedReason
-    *
-    * @param string|null $bannedReason 域名禁用原因。 1：该域名涉嫌违规内容（涉黄/涉赌/涉毒/涉政）已被禁用； 2：该域名因备案失效已被禁用； 3：该域名遭受攻击，已被禁用； 150：该域名涉嫌违规内容涉黄已被禁用； 151：该域名涉嫌违规内容涉政已被禁用； 152：该域名涉嫌违规内容涉暴已被禁用； 153：该域名涉嫌违规内容涉赌已被禁用。
-    *
-    * @return $this
-    */
-    public function setBannedReason($bannedReason)
-    {
-        $this->container['bannedReason'] = $bannedReason;
-        return $this;
-    }
-
-    /**
-    * Gets lockedReason
-    *  域名锁定原因（Changing the config, please wait）。
-    *
-    * @return string|null
-    */
-    public function getLockedReason()
-    {
-        return $this->container['lockedReason'];
-    }
-
-    /**
-    * Sets lockedReason
-    *
-    * @param string|null $lockedReason 域名锁定原因（Changing the config, please wait）。
-    *
-    * @return $this
-    */
-    public function setLockedReason($lockedReason)
-    {
-        $this->container['lockedReason'] = $lockedReason;
-        return $this;
-    }
-
-    /**
-    * Gets enterpriseProjectId
-    *  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
-    *
-    * @return string|null
-    */
-    public function getEnterpriseProjectId()
-    {
-        return $this->container['enterpriseProjectId'];
-    }
-
-    /**
-    * Sets enterpriseProjectId
-    *
-    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
-    *
-    * @return $this
-    */
-    public function setEnterpriseProjectId($enterpriseProjectId)
-    {
-        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

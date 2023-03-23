@@ -160,6 +160,7 @@ class BackupFilesBody implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const FILE_SOURCE_SELF_BUILD_OBS = 'self_build_obs';
+    const FILE_SOURCE_BACKUP_RECORD = 'backup_record';
     
 
     /**
@@ -171,6 +172,7 @@ class BackupFilesBody implements ModelInterface, ArrayAccess
     {
         return [
             self::FILE_SOURCE_SELF_BUILD_OBS,
+            self::FILE_SOURCE_BACKUP_RECORD,
         ];
     }
 

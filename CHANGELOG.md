@@ -1,3 +1,79 @@
+# 3.1.30 2023-03-23
+
+### HuaweiCloud SDK CDN
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ShowDomainDetailByName**
+    - changes of response param
+      - `- domain.banned_reason`
+      - `- domain.locked_reason`
+      - `- domain.enterprise_project_id`
+
+### HuaweiCloud SDK DCS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **CreateMigrationTask**
+    - changes of request param
+      - `+ backup_files.file_source: enum value [backup_record]`
+  - **ShowMigrationTask**
+    - changes of response param
+      - `+ backup_files.file_source: enum value [backup_record]`
+  - **StopMigrationTask**
+    - changes of response param
+      - `+ backup_files.file_source: enum value [backup_record]`
+
+### HuaweiCloud SDK WAF
+
+- _Features_
+  - Support the following interfaces：
+    - `ListCcRules`
+    - `CreateCcRule`
+    - `ShowCcRule`
+    - `UpdateCcRule`
+    - `DeleteCcRule`
+    - `ListCustomRules`
+    - `CreateCustomRule`
+    - `ShowCustomRule`
+    - `UpdateCustomRule`
+    - `DeleteCustomRule`
+    - `ListAnticrawlerRules`
+    - `UpdateAnticrawlerRuleType`
+    - `CreateAnticrawlerRule`
+    - `ShowAnticrawlerRule`
+    - `UpdateAnticrawlerRule`
+    - `DeleteAnticrawlerRule`
+    - `ListPunishmentRules`
+    - `CreatePunishmentRule`
+    - `ShowPunishmentRule`
+    - `UpdatePunishmentRule`
+    - `DeletePunishmentRule`
+    - `ListAntileakageRules`
+    - `CreateAntileakageRule`
+    - `ShowAntileakageRule`
+    - `UpdateAntileakageRule`
+    - `DeleteAntileakageRule`
+    - `UpdateAntiTamperRuleRefresh`
+    - `ShowGeoipRule`
+    - `ShowIgnoreRule`
+    - `UpdateIgnoreRule`
+- _Bug Fix_
+  - None
+- _Change_
+  - **ListHost**
+    - changes of response param
+      - `- items.paid_type: enum value [prePaid]`
+  - **DeleteHost**
+    - changes of response param
+      - `- paid_type: enum value [prePaid]`
+
 # 3.1.29 2023-03-16
 
 ### HuaweiCloud SDK CDN

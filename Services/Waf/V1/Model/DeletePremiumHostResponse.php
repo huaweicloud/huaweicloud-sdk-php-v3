@@ -28,7 +28,7 @@ class DeletePremiumHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostId  域名id，和id的值是一样的，属于冗余字段
@@ -58,7 +58,7 @@ class DeletePremiumHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostId  域名id，和id的值是一样的，属于冗余字段
@@ -109,7 +109,7 @@ class DeletePremiumHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostId  域名id，和id的值是一样的，属于冗余字段
@@ -139,7 +139,7 @@ class DeletePremiumHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostId  域名id，和id的值是一样的，属于冗余字段
@@ -169,7 +169,7 @@ class DeletePremiumHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * hostId  域名id，和id的值是一样的，属于冗余字段
@@ -453,7 +453,7 @@ class DeletePremiumHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    *  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     *
     * @return int|null
     */
@@ -465,7 +465,7 @@ class DeletePremiumHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param int|null $protectStatus 域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * @param int|null $protectStatus 域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     *
     * @return $this
     */

@@ -30,7 +30,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启IPv6防护，仅专业版（原企业版）和铂金版（原旗舰版）支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * blockPage  blockPage
     * trafficMark  trafficMark
     * flag  flag
@@ -72,7 +72,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启IPv6防护，仅专业版（原企业版）和铂金版（原旗舰版）支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * blockPage  blockPage
     * trafficMark  trafficMark
     * flag  flag
@@ -135,7 +135,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启IPv6防护，仅专业版（原企业版）和铂金版（原旗舰版）支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * blockPage  blockPage
     * trafficMark  trafficMark
     * flag  flag
@@ -177,7 +177,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启IPv6防护，仅专业版（原企业版）和铂金版（原旗舰版）支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * blockPage  blockPage
     * trafficMark  trafficMark
     * flag  flag
@@ -219,7 +219,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     * ipv6Enable  是否开启IPv6防护，仅专业版（原企业版）和铂金版（原旗舰版）支持IPv6防护。   - true：开启IPv6防护   - false：关闭IPV6防护
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * blockPage  blockPage
     * trafficMark  trafficMark
     * flag  flag
@@ -644,7 +644,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets paidType
-    *  套餐付费模式，目前只支持prePaid预付款模式
+    *  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     *
     * @return string|null
     */
@@ -656,7 +656,7 @@ class UpdateHostRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets paidType
     *
-    * @param string|null $paidType 套餐付费模式，目前只支持prePaid预付款模式
+    * @param string|null $paidType 套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     *
     * @return $this
     */

@@ -30,7 +30,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * flag  flag
     * wafType  域名所属WAF模式,cloud为云模式，premium为独享模式
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
@@ -74,7 +74,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * flag  flag
     * wafType  域名所属WAF模式,cloud为云模式，premium为独享模式
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
@@ -139,7 +139,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * flag  flag
     * wafType  域名所属WAF模式,cloud为云模式，premium为独享模式
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
@@ -183,7 +183,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * flag  flag
     * wafType  域名所属WAF模式,cloud为云模式，premium为独享模式
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
@@ -227,7 +227,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * timestamp  创建防护域名的时间
-    * paidType  套餐付费模式，目前只支持prePaid预付款模式
+    * paidType  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     * flag  flag
     * wafType  域名所属WAF模式,cloud为云模式，premium为独享模式
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
@@ -578,7 +578,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets paidType
-    *  套餐付费模式，目前只支持prePaid预付款模式
+    *  套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     *
     * @return string|null
     */
@@ -590,7 +590,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets paidType
     *
-    * @param string|null $paidType 套餐付费模式，目前只支持prePaid预付款模式
+    * @param string|null $paidType 套餐付费模式，默认值为prePaid。prePaid：包周期款模式；postPaid：按需模式。
     *
     * @return $this
     */

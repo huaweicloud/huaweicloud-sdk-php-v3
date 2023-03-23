@@ -39,7 +39,7 @@ class ShowPremiumHostResponse implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * certificateid  https证书id
     * certificatename  证书名称
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * blockPage  blockPage
@@ -97,7 +97,7 @@ class ShowPremiumHostResponse implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * certificateid  https证书id
     * certificatename  证书名称
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * blockPage  blockPage
@@ -176,7 +176,7 @@ class ShowPremiumHostResponse implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * certificateid  https证书id
     * certificatename  证书名称
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * blockPage  blockPage
@@ -234,7 +234,7 @@ class ShowPremiumHostResponse implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * certificateid  https证书id
     * certificatename  证书名称
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * blockPage  blockPage
@@ -292,7 +292,7 @@ class ShowPremiumHostResponse implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * certificateid  https证书id
     * certificatename  证书名称
-    * protectStatus  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     * accessStatus  域名接入状态，0表示未接入，1表示已接入
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
     * blockPage  blockPage
@@ -925,7 +925,7 @@ class ShowPremiumHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    *  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     *
     * @return int|null
     */
@@ -937,7 +937,7 @@ class ShowPremiumHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param int|null $protectStatus 域名防护状态：  - -1：bypass，该域名的请求直接到达其后端服务器，不再经过WAF  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
+    * @param int|null $protectStatus 域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
     *
     * @return $this
     */

@@ -25,7 +25,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * name  zone名称。
     * description  对zone的描述信息。
     * email  管理该zone的管理员邮箱。
-    * zoneType  zone类型，公网（public）或者内网（private）。
+    * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
     * status  资源状态。
@@ -65,7 +65,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * name  zone名称。
     * description  对zone的描述信息。
     * email  管理该zone的管理员邮箱。
-    * zoneType  zone类型，公网（public）或者内网（private）。
+    * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
     * status  资源状态。
@@ -126,7 +126,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * name  zone名称。
     * description  对zone的描述信息。
     * email  管理该zone的管理员邮箱。
-    * zoneType  zone类型，公网（public）或者内网（private）。
+    * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
     * status  资源状态。
@@ -166,7 +166,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * name  zone名称。
     * description  对zone的描述信息。
     * email  管理该zone的管理员邮箱。
-    * zoneType  zone类型，公网（public）或者内网（private）。
+    * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
     * status  资源状态。
@@ -206,7 +206,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     * name  zone名称。
     * description  对zone的描述信息。
     * email  管理该zone的管理员邮箱。
-    * zoneType  zone类型，公网（public）或者内网（private）。
+    * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
     * status  资源状态。
@@ -436,7 +436,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets zoneType
-    *  zone类型，公网（public）或者内网（private）。
+    *  zone类型，内网（private）。
     *
     * @return string|null
     */
@@ -448,7 +448,7 @@ class ShowPrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets zoneType
     *
-    * @param string|null $zoneType zone类型，公网（public）或者内网（private）。
+    * @param string|null $zoneType zone类型，内网（private）。
     *
     * @return $this
     */
