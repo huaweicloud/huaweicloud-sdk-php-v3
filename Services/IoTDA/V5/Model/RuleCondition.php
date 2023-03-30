@@ -20,10 +20,11 @@ class RuleCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数说明**：规则条件的类型。 **取值范围**： - DEVICE_DATA：设备属性数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。
+    * type  **参数说明**：规则条件的类型。 **取值范围**： - DEVICE_DATA：设备属性数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。 - DEVICE_LINKAGE_STATUS：设备状态类型条件。
     * devicePropertyCondition  devicePropertyCondition
     * simpleTimerCondition  simpleTimerCondition
     * dailyTimerCondition  dailyTimerCondition
+    * deviceLinkageStatusCondition  deviceLinkageStatusCondition
     *
     * @var string[]
     */
@@ -31,15 +32,17 @@ class RuleCondition implements ModelInterface, ArrayAccess
             'type' => 'string',
             'devicePropertyCondition' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DeviceDataCondition',
             'simpleTimerCondition' => '\HuaweiCloud\SDK\IoTDA\V5\Model\SimpleTimerType',
-            'dailyTimerCondition' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DailyTimerType'
+            'dailyTimerCondition' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DailyTimerType',
+            'deviceLinkageStatusCondition' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DeviceLinkageStatusCondition'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数说明**：规则条件的类型。 **取值范围**： - DEVICE_DATA：设备属性数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。
+    * type  **参数说明**：规则条件的类型。 **取值范围**： - DEVICE_DATA：设备属性数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。 - DEVICE_LINKAGE_STATUS：设备状态类型条件。
     * devicePropertyCondition  devicePropertyCondition
     * simpleTimerCondition  simpleTimerCondition
     * dailyTimerCondition  dailyTimerCondition
+    * deviceLinkageStatusCondition  deviceLinkageStatusCondition
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class RuleCondition implements ModelInterface, ArrayAccess
         'type' => null,
         'devicePropertyCondition' => null,
         'simpleTimerCondition' => null,
-        'dailyTimerCondition' => null
+        'dailyTimerCondition' => null,
+        'deviceLinkageStatusCondition' => null
     ];
 
     /**
@@ -73,10 +77,11 @@ class RuleCondition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数说明**：规则条件的类型。 **取值范围**： - DEVICE_DATA：设备属性数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。
+    * type  **参数说明**：规则条件的类型。 **取值范围**： - DEVICE_DATA：设备属性数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。 - DEVICE_LINKAGE_STATUS：设备状态类型条件。
     * devicePropertyCondition  devicePropertyCondition
     * simpleTimerCondition  simpleTimerCondition
     * dailyTimerCondition  dailyTimerCondition
+    * deviceLinkageStatusCondition  deviceLinkageStatusCondition
     *
     * @var string[]
     */
@@ -84,15 +89,17 @@ class RuleCondition implements ModelInterface, ArrayAccess
             'type' => 'type',
             'devicePropertyCondition' => 'device_property_condition',
             'simpleTimerCondition' => 'simple_timer_condition',
-            'dailyTimerCondition' => 'daily_timer_condition'
+            'dailyTimerCondition' => 'daily_timer_condition',
+            'deviceLinkageStatusCondition' => 'device_linkage_status_condition'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数说明**：规则条件的类型。 **取值范围**： - DEVICE_DATA：设备属性数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。
+    * type  **参数说明**：规则条件的类型。 **取值范围**： - DEVICE_DATA：设备属性数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。 - DEVICE_LINKAGE_STATUS：设备状态类型条件。
     * devicePropertyCondition  devicePropertyCondition
     * simpleTimerCondition  simpleTimerCondition
     * dailyTimerCondition  dailyTimerCondition
+    * deviceLinkageStatusCondition  deviceLinkageStatusCondition
     *
     * @var string[]
     */
@@ -100,15 +107,17 @@ class RuleCondition implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'devicePropertyCondition' => 'setDevicePropertyCondition',
             'simpleTimerCondition' => 'setSimpleTimerCondition',
-            'dailyTimerCondition' => 'setDailyTimerCondition'
+            'dailyTimerCondition' => 'setDailyTimerCondition',
+            'deviceLinkageStatusCondition' => 'setDeviceLinkageStatusCondition'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数说明**：规则条件的类型。 **取值范围**： - DEVICE_DATA：设备属性数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。
+    * type  **参数说明**：规则条件的类型。 **取值范围**： - DEVICE_DATA：设备属性数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。 - DEVICE_LINKAGE_STATUS：设备状态类型条件。
     * devicePropertyCondition  devicePropertyCondition
     * simpleTimerCondition  simpleTimerCondition
     * dailyTimerCondition  dailyTimerCondition
+    * deviceLinkageStatusCondition  deviceLinkageStatusCondition
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class RuleCondition implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'devicePropertyCondition' => 'getDevicePropertyCondition',
             'simpleTimerCondition' => 'getSimpleTimerCondition',
-            'dailyTimerCondition' => 'getDailyTimerCondition'
+            'dailyTimerCondition' => 'getDailyTimerCondition',
+            'deviceLinkageStatusCondition' => 'getDeviceLinkageStatusCondition'
     ];
 
     /**
@@ -181,6 +191,7 @@ class RuleCondition implements ModelInterface, ArrayAccess
         $this->container['devicePropertyCondition'] = isset($data['devicePropertyCondition']) ? $data['devicePropertyCondition'] : null;
         $this->container['simpleTimerCondition'] = isset($data['simpleTimerCondition']) ? $data['simpleTimerCondition'] : null;
         $this->container['dailyTimerCondition'] = isset($data['dailyTimerCondition']) ? $data['dailyTimerCondition'] : null;
+        $this->container['deviceLinkageStatusCondition'] = isset($data['deviceLinkageStatusCondition']) ? $data['deviceLinkageStatusCondition'] : null;
     }
 
     /**
@@ -213,7 +224,7 @@ class RuleCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数说明**：规则条件的类型。 **取值范围**： - DEVICE_DATA：设备属性数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。
+    *  **参数说明**：规则条件的类型。 **取值范围**： - DEVICE_DATA：设备属性数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。 - DEVICE_LINKAGE_STATUS：设备状态类型条件。
     *
     * @return string
     */
@@ -225,7 +236,7 @@ class RuleCondition implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数说明**：规则条件的类型。 **取值范围**： - DEVICE_DATA：设备属性数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。
+    * @param string $type **参数说明**：规则条件的类型。 **取值范围**： - DEVICE_DATA：设备属性数据类型条件。 - SIMPLE_TIMER：简单定时类型条件。 - DAILY_TIMER：每日定时类型条件。 - DEVICE_LINKAGE_STATUS：设备状态类型条件。
     *
     * @return $this
     */
@@ -304,6 +315,30 @@ class RuleCondition implements ModelInterface, ArrayAccess
     public function setDailyTimerCondition($dailyTimerCondition)
     {
         $this->container['dailyTimerCondition'] = $dailyTimerCondition;
+        return $this;
+    }
+
+    /**
+    * Gets deviceLinkageStatusCondition
+    *  deviceLinkageStatusCondition
+    *
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceLinkageStatusCondition|null
+    */
+    public function getDeviceLinkageStatusCondition()
+    {
+        return $this->container['deviceLinkageStatusCondition'];
+    }
+
+    /**
+    * Sets deviceLinkageStatusCondition
+    *
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceLinkageStatusCondition|null $deviceLinkageStatusCondition deviceLinkageStatusCondition
+    *
+    * @return $this
+    */
+    public function setDeviceLinkageStatusCondition($deviceLinkageStatusCondition)
+    {
+        $this->container['deviceLinkageStatusCondition'] = $deviceLinkageStatusCondition;
         return $this;
     }
 

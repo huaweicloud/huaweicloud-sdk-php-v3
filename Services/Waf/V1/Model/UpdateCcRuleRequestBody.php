@@ -20,6 +20,7 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  规则名称
     * mode  cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
     * url  需要防护的域名路径，当cc防护规则为标准模式（mode参数值为0）时，该参数必填。
     * conditions  cc规则防护规则限速条件，当cc防护规则为高级模式（mode参数值为1）时，该参数必填。
@@ -38,6 +39,7 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'name' => 'string',
             'mode' => 'int',
             'url' => 'string',
             'conditions' => '\HuaweiCloud\SDK\Waf\V1\Model\CcCondition[]',
@@ -56,6 +58,7 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  规则名称
     * mode  cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
     * url  需要防护的域名路径，当cc防护规则为标准模式（mode参数值为0）时，该参数必填。
     * conditions  cc规则防护规则限速条件，当cc防护规则为高级模式（mode参数值为1）时，该参数必填。
@@ -74,6 +77,7 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'name' => null,
         'mode' => null,
         'url' => null,
         'conditions' => null,
@@ -113,6 +117,7 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  规则名称
     * mode  cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
     * url  需要防护的域名路径，当cc防护规则为标准模式（mode参数值为0）时，该参数必填。
     * conditions  cc规则防护规则限速条件，当cc防护规则为高级模式（mode参数值为1）时，该参数必填。
@@ -131,6 +136,7 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'name' => 'name',
             'mode' => 'mode',
             'url' => 'url',
             'conditions' => 'conditions',
@@ -149,6 +155,7 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  规则名称
     * mode  cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
     * url  需要防护的域名路径，当cc防护规则为标准模式（mode参数值为0）时，该参数必填。
     * conditions  cc规则防护规则限速条件，当cc防护规则为高级模式（mode参数值为1）时，该参数必填。
@@ -167,6 +174,7 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'name' => 'setName',
             'mode' => 'setMode',
             'url' => 'setUrl',
             'conditions' => 'setConditions',
@@ -185,6 +193,7 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  规则名称
     * mode  cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
     * url  需要防护的域名路径，当cc防护规则为标准模式（mode参数值为0）时，该参数必填。
     * conditions  cc规则防护规则限速条件，当cc防护规则为高级模式（mode参数值为1）时，该参数必填。
@@ -203,6 +212,7 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'name' => 'getName',
             'mode' => 'getMode',
             'url' => 'getUrl',
             'conditions' => 'getConditions',
@@ -302,6 +312,7 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;
@@ -364,6 +375,30 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets name
+    *  规则名称
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 规则名称
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
     }
 
     /**

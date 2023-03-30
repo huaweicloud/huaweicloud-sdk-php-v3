@@ -23,6 +23,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
     * name  **参数说明**：告警名称。
     * alarmStatus  **参数说明**：告警状态。 **取值范围**： - fault：上报告警。 - recovery：恢复告警。
     * severity  **参数说明**：告警级别。 **取值范围**：warning（警告）、minor（一般）、major（严重）和critical（致命）。
+    * dimension  **参数说明**：告警维度，与告警名称和告警级别组合起来共同标识一条告警，默认不携带该字段为用户维度告警，支持设备维度和资源空间维度告警。 **取值范围**： - device：设备维度。 - app：资源空间维度。
     * description  **参数说明**：告警的描述信息。
     *
     * @var string[]
@@ -31,6 +32,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
             'name' => 'string',
             'alarmStatus' => 'string',
             'severity' => 'string',
+            'dimension' => 'string',
             'description' => 'string'
     ];
 
@@ -39,6 +41,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
     * name  **参数说明**：告警名称。
     * alarmStatus  **参数说明**：告警状态。 **取值范围**： - fault：上报告警。 - recovery：恢复告警。
     * severity  **参数说明**：告警级别。 **取值范围**：warning（警告）、minor（一般）、major（严重）和critical（致命）。
+    * dimension  **参数说明**：告警维度，与告警名称和告警级别组合起来共同标识一条告警，默认不携带该字段为用户维度告警，支持设备维度和资源空间维度告警。 **取值范围**： - device：设备维度。 - app：资源空间维度。
     * description  **参数说明**：告警的描述信息。
     *
     * @var string[]
@@ -47,6 +50,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
         'name' => null,
         'alarmStatus' => null,
         'severity' => null,
+        'dimension' => null,
         'description' => null
     ];
 
@@ -76,6 +80,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
     * name  **参数说明**：告警名称。
     * alarmStatus  **参数说明**：告警状态。 **取值范围**： - fault：上报告警。 - recovery：恢复告警。
     * severity  **参数说明**：告警级别。 **取值范围**：warning（警告）、minor（一般）、major（严重）和critical（致命）。
+    * dimension  **参数说明**：告警维度，与告警名称和告警级别组合起来共同标识一条告警，默认不携带该字段为用户维度告警，支持设备维度和资源空间维度告警。 **取值范围**： - device：设备维度。 - app：资源空间维度。
     * description  **参数说明**：告警的描述信息。
     *
     * @var string[]
@@ -84,6 +89,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
             'name' => 'name',
             'alarmStatus' => 'alarm_status',
             'severity' => 'severity',
+            'dimension' => 'dimension',
             'description' => 'description'
     ];
 
@@ -92,6 +98,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
     * name  **参数说明**：告警名称。
     * alarmStatus  **参数说明**：告警状态。 **取值范围**： - fault：上报告警。 - recovery：恢复告警。
     * severity  **参数说明**：告警级别。 **取值范围**：warning（警告）、minor（一般）、major（严重）和critical（致命）。
+    * dimension  **参数说明**：告警维度，与告警名称和告警级别组合起来共同标识一条告警，默认不携带该字段为用户维度告警，支持设备维度和资源空间维度告警。 **取值范围**： - device：设备维度。 - app：资源空间维度。
     * description  **参数说明**：告警的描述信息。
     *
     * @var string[]
@@ -100,6 +107,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'alarmStatus' => 'setAlarmStatus',
             'severity' => 'setSeverity',
+            'dimension' => 'setDimension',
             'description' => 'setDescription'
     ];
 
@@ -108,6 +116,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
     * name  **参数说明**：告警名称。
     * alarmStatus  **参数说明**：告警状态。 **取值范围**： - fault：上报告警。 - recovery：恢复告警。
     * severity  **参数说明**：告警级别。 **取值范围**：warning（警告）、minor（一般）、major（严重）和critical（致命）。
+    * dimension  **参数说明**：告警维度，与告警名称和告警级别组合起来共同标识一条告警，默认不携带该字段为用户维度告警，支持设备维度和资源空间维度告警。 **取值范围**： - device：设备维度。 - app：资源空间维度。
     * description  **参数说明**：告警的描述信息。
     *
     * @var string[]
@@ -116,6 +125,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'alarmStatus' => 'getAlarmStatus',
             'severity' => 'getSeverity',
+            'dimension' => 'getDimension',
             'description' => 'getDescription'
     ];
 
@@ -180,6 +190,7 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['alarmStatus'] = isset($data['alarmStatus']) ? $data['alarmStatus'] : null;
         $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
+        $this->container['dimension'] = isset($data['dimension']) ? $data['dimension'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
@@ -208,6 +219,9 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
         }
             if (!preg_match("/(warning|minor|major|critical)/", $this->container['severity'])) {
                 $invalidProperties[] = "invalid value for 'severity', must be conform to the pattern /(warning|minor|major|critical)/.";
+            }
+            if (!is_null($this->container['dimension']) && !preg_match("/(device|app)/", $this->container['dimension'])) {
+                $invalidProperties[] = "invalid value for 'dimension', must be conform to the pattern /(device|app)/.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 256.";
@@ -295,6 +309,30 @@ class ActionDeviceAlarm implements ModelInterface, ArrayAccess
     public function setSeverity($severity)
     {
         $this->container['severity'] = $severity;
+        return $this;
+    }
+
+    /**
+    * Gets dimension
+    *  **参数说明**：告警维度，与告警名称和告警级别组合起来共同标识一条告警，默认不携带该字段为用户维度告警，支持设备维度和资源空间维度告警。 **取值范围**： - device：设备维度。 - app：资源空间维度。
+    *
+    * @return string|null
+    */
+    public function getDimension()
+    {
+        return $this->container['dimension'];
+    }
+
+    /**
+    * Sets dimension
+    *
+    * @param string|null $dimension **参数说明**：告警维度，与告警名称和告警级别组合起来共同标识一条告警，默认不携带该字段为用户维度告警，支持设备维度和资源空间维度告警。 **取值范围**： - device：设备维度。 - app：资源空间维度。
+    *
+    * @return $this
+    */
+    public function setDimension($dimension)
+    {
+        $this->container['dimension'] = $dimension;
         return $this;
     }
 

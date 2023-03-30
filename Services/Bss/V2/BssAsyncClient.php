@@ -3912,6 +3912,71 @@ class BssAsyncClient extends Client
     }
 
     /**
+     * 查询待续订包年包月资源的续订金额
+     *
+     * 功能描述：客户在自建平台按照条件查询待续订包年/包月资源续订时候的续订金额
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRenewRateOnPeriodAsync($request)
+    {
+        return $this->listRenewRateOnPeriodAsyncWithHttpInfo($request);
+    }
+    
+    public function listRenewRateOnPeriodAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/bills/ratings/period-resources/renew-rate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ListRenewRateOnPeriodResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ListRenewRateOnPeriodRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询资源类型列表
      *
      * 伙伴在伙伴销售平台查询资源类型的列表。

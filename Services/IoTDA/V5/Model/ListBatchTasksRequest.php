@@ -239,8 +239,8 @@ class ListBatchTasksRequest implements ModelInterface, ArrayAccess
         if ($this->container['taskType'] === null) {
             $invalidProperties[] = "'taskType' can't be null";
         }
-            if (!preg_match("/firmwareUpgrade|softwareUpgrade|createDevices|deleteDevices|freezeDevices|unfreezeDevices|createCommands|createAsyncCommands|sendEmails|sendSmss|updateDeviceShadows|createMessages|addDevicesToGroup/", $this->container['taskType'])) {
-                $invalidProperties[] = "invalid value for 'taskType', must be conform to the pattern /firmwareUpgrade|softwareUpgrade|createDevices|deleteDevices|freezeDevices|unfreezeDevices|createCommands|createAsyncCommands|sendEmails|sendSmss|updateDeviceShadows|createMessages|addDevicesToGroup/.";
+            if (!preg_match("/firmwareUpgrade|softwareUpgrade|createDevices|deleteDevices|freezeDevices|unfreezeDevices|createCommands|createAsyncCommands|sendEmails|sendSmss|updateDeviceShadows|createMessages|addDevicesToGroup|deviceConfig|updateDevices/", $this->container['taskType'])) {
+                $invalidProperties[] = "invalid value for 'taskType', must be conform to the pattern /firmwareUpgrade|softwareUpgrade|createDevices|deleteDevices|freezeDevices|unfreezeDevices|createCommands|createAsyncCommands|sendEmails|sendSmss|updateDeviceShadows|createMessages|addDevicesToGroup|deviceConfig|updateDevices/.";
             }
             if (!is_null($this->container['status']) && !preg_match("/Success|Fail|Processing|PartialSuccess|Stopped|Waitting|Initializing/", $this->container['status'])) {
                 $invalidProperties[] = "invalid value for 'status', must be conform to the pattern /Success|Fail|Processing|PartialSuccess|Stopped|Waitting|Initializing/.";

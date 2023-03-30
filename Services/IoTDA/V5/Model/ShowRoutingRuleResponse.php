@@ -27,8 +27,8 @@ class ShowRoutingRuleResponse implements ModelInterface, ArrayAccess
     * subject  subject
     * appType  租户规则的生效范围，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。
     * appId  资源空间ID
-    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * select  用户自定义sql select语句，最大长度2500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度2500，该参数仅供标准版和企业版用户使用。
     * active  规则条件的状态是否为激活。
     *
     * @var string[]
@@ -53,8 +53,8 @@ class ShowRoutingRuleResponse implements ModelInterface, ArrayAccess
     * subject  subject
     * appType  租户规则的生效范围，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。
     * appId  资源空间ID
-    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * select  用户自定义sql select语句，最大长度2500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度2500，该参数仅供标准版和企业版用户使用。
     * active  规则条件的状态是否为激活。
     *
     * @var string[]
@@ -100,8 +100,8 @@ class ShowRoutingRuleResponse implements ModelInterface, ArrayAccess
     * subject  subject
     * appType  租户规则的生效范围，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。
     * appId  资源空间ID
-    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * select  用户自定义sql select语句，最大长度2500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度2500，该参数仅供标准版和企业版用户使用。
     * active  规则条件的状态是否为激活。
     *
     * @var string[]
@@ -126,8 +126,8 @@ class ShowRoutingRuleResponse implements ModelInterface, ArrayAccess
     * subject  subject
     * appType  租户规则的生效范围，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。
     * appId  资源空间ID
-    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * select  用户自定义sql select语句，最大长度2500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度2500，该参数仅供标准版和企业版用户使用。
     * active  规则条件的状态是否为激活。
     *
     * @var string[]
@@ -152,8 +152,8 @@ class ShowRoutingRuleResponse implements ModelInterface, ArrayAccess
     * subject  subject
     * appType  租户规则的生效范围，取值如下： - GLOBAL：生效范围为租户级 - APP：生效范围为资源空间级。
     * appId  资源空间ID
-    * select  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
-    * where  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * select  用户自定义sql select语句，最大长度2500，该参数仅供标准版和企业版用户使用。
+    * where  用户自定义sql where语句，最大长度2500，该参数仅供标准版和企业版用户使用。
     * active  规则条件的状态是否为激活。
     *
     * @var string[]
@@ -440,7 +440,7 @@ class ShowRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets select
-    *  用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    *  用户自定义sql select语句，最大长度2500，该参数仅供标准版和企业版用户使用。
     *
     * @return string|null
     */
@@ -452,7 +452,7 @@ class ShowRoutingRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets select
     *
-    * @param string|null $select 用户自定义sql select语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * @param string|null $select 用户自定义sql select语句，最大长度2500，该参数仅供标准版和企业版用户使用。
     *
     * @return $this
     */
@@ -464,7 +464,7 @@ class ShowRoutingRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets where
-    *  用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    *  用户自定义sql where语句，最大长度2500，该参数仅供标准版和企业版用户使用。
     *
     * @return string|null
     */
@@ -476,7 +476,7 @@ class ShowRoutingRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets where
     *
-    * @param string|null $where 用户自定义sql where语句，最大长度500，该参数仅供标准版和企业版用户使用。
+    * @param string|null $where 用户自定义sql where语句，最大长度2500，该参数仅供标准版和企业版用户使用。
     *
     * @return $this
     */

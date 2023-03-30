@@ -20,6 +20,7 @@ class CreateCcRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  规则名称
     * mode  cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
     * conditions  cc规则防护规则限速条件，当cc防护规则为高级模式（mode参数值为1）时，该参数必填。
     * action  action
@@ -37,6 +38,7 @@ class CreateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'name' => 'string',
             'mode' => 'int',
             'conditions' => '\HuaweiCloud\SDK\Waf\V1\Model\CcCondition[]',
             'action' => '\HuaweiCloud\SDK\Waf\V1\Model\CreateCcRuleRequestBodyAction',
@@ -54,6 +56,7 @@ class CreateCcRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  规则名称
     * mode  cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
     * conditions  cc规则防护规则限速条件，当cc防护规则为高级模式（mode参数值为1）时，该参数必填。
     * action  action
@@ -71,6 +74,7 @@ class CreateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'name' => null,
         'mode' => null,
         'conditions' => null,
         'action' => null,
@@ -109,6 +113,7 @@ class CreateCcRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  规则名称
     * mode  cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
     * conditions  cc规则防护规则限速条件，当cc防护规则为高级模式（mode参数值为1）时，该参数必填。
     * action  action
@@ -126,6 +131,7 @@ class CreateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'name' => 'name',
             'mode' => 'mode',
             'conditions' => 'conditions',
             'action' => 'action',
@@ -143,6 +149,7 @@ class CreateCcRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  规则名称
     * mode  cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
     * conditions  cc规则防护规则限速条件，当cc防护规则为高级模式（mode参数值为1）时，该参数必填。
     * action  action
@@ -160,6 +167,7 @@ class CreateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'name' => 'setName',
             'mode' => 'setMode',
             'conditions' => 'setConditions',
             'action' => 'setAction',
@@ -177,6 +185,7 @@ class CreateCcRuleRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  规则名称
     * mode  cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
     * conditions  cc规则防护规则限速条件，当cc防护规则为高级模式（mode参数值为1）时，该参数必填。
     * action  action
@@ -194,6 +203,7 @@ class CreateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'name' => 'getName',
             'mode' => 'getMode',
             'conditions' => 'getConditions',
             'action' => 'getAction',
@@ -292,6 +302,7 @@ class CreateCcRuleRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
         $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
@@ -353,6 +364,30 @@ class CreateCcRuleRequestBody implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets name
+    *  规则名称
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 规则名称
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
     }
 
     /**

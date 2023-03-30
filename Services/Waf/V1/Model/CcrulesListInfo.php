@@ -20,6 +20,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
     * url  当mode值为0时，该参数有返回值。规则应用的URL链接，不包含域名。
@@ -47,6 +48,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'name' => 'string',
             'id' => 'string',
             'policyid' => 'string',
             'url' => 'string',
@@ -74,6 +76,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
     * url  当mode值为0时，该参数有返回值。规则应用的URL链接，不包含域名。
@@ -101,6 +104,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'name' => null,
         'id' => null,
         'policyid' => null,
         'url' => null,
@@ -149,6 +153,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
     * url  当mode值为0时，该参数有返回值。规则应用的URL链接，不包含域名。
@@ -176,6 +181,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'name' => 'name',
             'id' => 'id',
             'policyid' => 'policyid',
             'url' => 'url',
@@ -203,6 +209,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
     * url  当mode值为0时，该参数有返回值。规则应用的URL链接，不包含域名。
@@ -230,6 +237,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'name' => 'setName',
             'id' => 'setId',
             'policyid' => 'setPolicyid',
             'url' => 'setUrl',
@@ -257,6 +265,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
     * url  当mode值为0时，该参数有返回值。规则应用的URL链接，不包含域名。
@@ -284,6 +293,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'name' => 'getName',
             'id' => 'getId',
             'policyid' => 'getPolicyid',
             'url' => 'getUrl',
@@ -392,6 +402,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['policyid'] = isset($data['policyid']) ? $data['policyid'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
@@ -445,6 +456,30 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets name
+    *  规则名称
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 规则名称
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
     }
 
     /**

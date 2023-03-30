@@ -21,6 +21,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
     * url  当mode值为0时，该参数有返回值。规则应用的URL链接，不包含域名。
@@ -46,11 +47,12 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'name' => 'string',
             'id' => 'string',
             'policyid' => 'string',
             'url' => 'string',
             'prefix' => 'bool',
-            'mode' => 'float',
+            'mode' => 'int',
             'conditions' => '\HuaweiCloud\SDK\Waf\V1\Model\CcCondition[]',
             'action' => '\HuaweiCloud\SDK\Waf\V1\Model\CcrulesListInfoAction',
             'tagType' => 'string',
@@ -71,6 +73,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
     * url  当mode值为0时，该参数有返回值。规则应用的URL链接，不包含域名。
@@ -96,6 +99,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'name' => null,
         'id' => null,
         'policyid' => null,
         'url' => null,
@@ -142,6 +146,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
     * url  当mode值为0时，该参数有返回值。规则应用的URL链接，不包含域名。
@@ -167,6 +172,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'name' => 'name',
             'id' => 'id',
             'policyid' => 'policyid',
             'url' => 'url',
@@ -192,6 +198,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
     * url  当mode值为0时，该参数有返回值。规则应用的URL链接，不包含域名。
@@ -217,6 +224,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'name' => 'setName',
             'id' => 'setId',
             'policyid' => 'setPolicyid',
             'url' => 'setUrl',
@@ -242,6 +250,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
     * url  当mode值为0时，该参数有返回值。规则应用的URL链接，不包含域名。
@@ -267,6 +276,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'name' => 'getName',
             'id' => 'getId',
             'policyid' => 'getPolicyid',
             'url' => 'getUrl',
@@ -373,6 +383,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['policyid'] = isset($data['policyid']) ? $data['policyid'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
@@ -424,6 +435,30 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets name
+    *  规则名称
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 规则名称
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
     }
 
     /**
@@ -526,7 +561,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     * Gets mode
     *  cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
     *
-    * @return float|null
+    * @return int|null
     */
     public function getMode()
     {
@@ -536,7 +571,7 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param float|null $mode cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
+    * @param int|null $mode cc规则防护模式，对应console上的mode，现在只支持创建高级cc规则防护模式。   - 0：标准，只支持对域名的防护路径做限制。  - 1：高级，支持对路径、IP、Cookie、Header、Params字段做限制。
     *
     * @return $this
     */

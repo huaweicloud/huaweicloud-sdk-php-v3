@@ -268,6 +268,8 @@ class VideoTypeRef implements ModelInterface, ArrayAccess
     const VIDEO_TYPE_M4_R = 'M4R';
     const VIDEO_TYPE_WV = 'WV';
     const VIDEO_TYPE_MP2 = 'MP2';
+    const VIDEO_TYPE_RMVB = 'RMVB';
+    const VIDEO_TYPE_WEBM = 'WEBM';
     
 
     /**
@@ -307,6 +309,8 @@ class VideoTypeRef implements ModelInterface, ArrayAccess
             self::VIDEO_TYPE_M4_R,
             self::VIDEO_TYPE_WV,
             self::VIDEO_TYPE_MP2,
+            self::VIDEO_TYPE_RMVB,
+            self::VIDEO_TYPE_WEBM,
         ];
     }
 

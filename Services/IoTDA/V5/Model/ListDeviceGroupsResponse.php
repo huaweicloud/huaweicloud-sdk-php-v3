@@ -27,7 +27,7 @@ class ListDeviceGroupsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'deviceGroups' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DeviceGroupResponseDTO[]',
+            'deviceGroups' => '\HuaweiCloud\SDK\IoTDA\V5\Model\DeviceGroupResponseSummary[]',
             'page' => '\HuaweiCloud\SDK\IoTDA\V5\Model\Page'
     ];
 
@@ -188,7 +188,7 @@ class ListDeviceGroupsResponse implements ModelInterface, ArrayAccess
     * Gets deviceGroups
     *  设备组信息列表。
     *
-    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceGroupResponseDTO[]|null
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceGroupResponseSummary[]|null
     */
     public function getDeviceGroups()
     {
@@ -198,7 +198,7 @@ class ListDeviceGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets deviceGroups
     *
-    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceGroupResponseDTO[]|null $deviceGroups 设备组信息列表。
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\DeviceGroupResponseSummary[]|null $deviceGroups 设备组信息列表。
     *
     * @return $this
     */

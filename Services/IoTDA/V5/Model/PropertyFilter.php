@@ -21,8 +21,9 @@ class PropertyFilter implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * path  **参数说明**：设备属性的路径信息，格式：service_id/DataProperty，例如门磁状态为“DoorWindow/status”。
-    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=和between:表示数值区间。
+    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=,in:表示在指定值中匹配和between:表示数值区间。
     * value  **参数说明**：数据比较表达式的右值。与数据比较操作符between联用时，右值表示最小值和最大值，用逗号隔开，如“20,30”表示大于等于20小于30。
+    * inValues  **参数说明**：当operator为in时该字段必填，使用该字段传递比较表达式右值，上限为20个。
     * strategy  strategy
     *
     * @var string[]
@@ -31,14 +32,16 @@ class PropertyFilter implements ModelInterface, ArrayAccess
             'path' => 'string',
             'operator' => 'string',
             'value' => 'string',
+            'inValues' => 'string[]',
             'strategy' => '\HuaweiCloud\SDK\IoTDA\V5\Model\Strategy'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * path  **参数说明**：设备属性的路径信息，格式：service_id/DataProperty，例如门磁状态为“DoorWindow/status”。
-    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=和between:表示数值区间。
+    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=,in:表示在指定值中匹配和between:表示数值区间。
     * value  **参数说明**：数据比较表达式的右值。与数据比较操作符between联用时，右值表示最小值和最大值，用逗号隔开，如“20,30”表示大于等于20小于30。
+    * inValues  **参数说明**：当operator为in时该字段必填，使用该字段传递比较表达式右值，上限为20个。
     * strategy  strategy
     *
     * @var string[]
@@ -47,6 +50,7 @@ class PropertyFilter implements ModelInterface, ArrayAccess
         'path' => null,
         'operator' => null,
         'value' => null,
+        'inValues' => null,
         'strategy' => null
     ];
 
@@ -74,8 +78,9 @@ class PropertyFilter implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * path  **参数说明**：设备属性的路径信息，格式：service_id/DataProperty，例如门磁状态为“DoorWindow/status”。
-    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=和between:表示数值区间。
+    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=,in:表示在指定值中匹配和between:表示数值区间。
     * value  **参数说明**：数据比较表达式的右值。与数据比较操作符between联用时，右值表示最小值和最大值，用逗号隔开，如“20,30”表示大于等于20小于30。
+    * inValues  **参数说明**：当operator为in时该字段必填，使用该字段传递比较表达式右值，上限为20个。
     * strategy  strategy
     *
     * @var string[]
@@ -84,14 +89,16 @@ class PropertyFilter implements ModelInterface, ArrayAccess
             'path' => 'path',
             'operator' => 'operator',
             'value' => 'value',
+            'inValues' => 'in_values',
             'strategy' => 'strategy'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * path  **参数说明**：设备属性的路径信息，格式：service_id/DataProperty，例如门磁状态为“DoorWindow/status”。
-    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=和between:表示数值区间。
+    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=,in:表示在指定值中匹配和between:表示数值区间。
     * value  **参数说明**：数据比较表达式的右值。与数据比较操作符between联用时，右值表示最小值和最大值，用逗号隔开，如“20,30”表示大于等于20小于30。
+    * inValues  **参数说明**：当operator为in时该字段必填，使用该字段传递比较表达式右值，上限为20个。
     * strategy  strategy
     *
     * @var string[]
@@ -100,14 +107,16 @@ class PropertyFilter implements ModelInterface, ArrayAccess
             'path' => 'setPath',
             'operator' => 'setOperator',
             'value' => 'setValue',
+            'inValues' => 'setInValues',
             'strategy' => 'setStrategy'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * path  **参数说明**：设备属性的路径信息，格式：service_id/DataProperty，例如门磁状态为“DoorWindow/status”。
-    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=和between:表示数值区间。
+    * operator  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=,in:表示在指定值中匹配和between:表示数值区间。
     * value  **参数说明**：数据比较表达式的右值。与数据比较操作符between联用时，右值表示最小值和最大值，用逗号隔开，如“20,30”表示大于等于20小于30。
+    * inValues  **参数说明**：当operator为in时该字段必填，使用该字段传递比较表达式右值，上限为20个。
     * strategy  strategy
     *
     * @var string[]
@@ -116,6 +125,7 @@ class PropertyFilter implements ModelInterface, ArrayAccess
             'path' => 'getPath',
             'operator' => 'getOperator',
             'value' => 'getValue',
+            'inValues' => 'getInValues',
             'strategy' => 'getStrategy'
     ];
 
@@ -180,6 +190,7 @@ class PropertyFilter implements ModelInterface, ArrayAccess
         $this->container['path'] = isset($data['path']) ? $data['path'] : null;
         $this->container['operator'] = isset($data['operator']) ? $data['operator'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['inValues'] = isset($data['inValues']) ? $data['inValues'] : null;
         $this->container['strategy'] = isset($data['strategy']) ? $data['strategy'] : null;
     }
 
@@ -200,13 +211,10 @@ class PropertyFilter implements ModelInterface, ArrayAccess
         if ($this->container['operator'] === null) {
             $invalidProperties[] = "'operator' can't be null";
         }
-            if (!preg_match("/(>|<|>=|<=|=|between|geo.circle.in|geo.circle.out)/", $this->container['operator'])) {
-                $invalidProperties[] = "invalid value for 'operator', must be conform to the pattern /(>|<|>=|<=|=|between|geo.circle.in|geo.circle.out)/.";
+            if (!preg_match("/(>|<|>=|<=|=|between|in|geo.circle.in|geo.circle.out)/", $this->container['operator'])) {
+                $invalidProperties[] = "invalid value for 'operator', must be conform to the pattern /(>|<|>=|<=|=|between|in|geo.circle.in|geo.circle.out)/.";
             }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
-            if ((mb_strlen($this->container['value']) > 64)) {
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 64)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 64.";
             }
         return $invalidProperties;
@@ -249,7 +257,7 @@ class PropertyFilter implements ModelInterface, ArrayAccess
 
     /**
     * Gets operator
-    *  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=和between:表示数值区间。
+    *  **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=,in:表示在指定值中匹配和between:表示数值区间。
     *
     * @return string
     */
@@ -261,7 +269,7 @@ class PropertyFilter implements ModelInterface, ArrayAccess
     /**
     * Sets operator
     *
-    * @param string $operator **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=和between:表示数值区间。
+    * @param string $operator **参数说明**：数据比较的操作符。 **取值范围**：当前支持的操作符有：>，<，>=，<=，=,in:表示在指定值中匹配和between:表示数值区间。
     *
     * @return $this
     */
@@ -275,7 +283,7 @@ class PropertyFilter implements ModelInterface, ArrayAccess
     * Gets value
     *  **参数说明**：数据比较表达式的右值。与数据比较操作符between联用时，右值表示最小值和最大值，用逗号隔开，如“20,30”表示大于等于20小于30。
     *
-    * @return string
+    * @return string|null
     */
     public function getValue()
     {
@@ -285,13 +293,37 @@ class PropertyFilter implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value **参数说明**：数据比较表达式的右值。与数据比较操作符between联用时，右值表示最小值和最大值，用逗号隔开，如“20,30”表示大于等于20小于30。
+    * @param string|null $value **参数说明**：数据比较表达式的右值。与数据比较操作符between联用时，右值表示最小值和最大值，用逗号隔开，如“20,30”表示大于等于20小于30。
     *
     * @return $this
     */
     public function setValue($value)
     {
         $this->container['value'] = $value;
+        return $this;
+    }
+
+    /**
+    * Gets inValues
+    *  **参数说明**：当operator为in时该字段必填，使用该字段传递比较表达式右值，上限为20个。
+    *
+    * @return string[]|null
+    */
+    public function getInValues()
+    {
+        return $this->container['inValues'];
+    }
+
+    /**
+    * Sets inValues
+    *
+    * @param string[]|null $inValues **参数说明**：当operator为in时该字段必填，使用该字段传递比较表达式右值，上限为20个。
+    *
+    * @return $this
+    */
+    public function setInValues($inValues)
+    {
+        $this->container['inValues'] = $inValues;
         return $this;
     }
 

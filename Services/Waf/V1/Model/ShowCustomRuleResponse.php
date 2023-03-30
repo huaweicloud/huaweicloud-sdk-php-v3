@@ -31,6 +31,7 @@ class ShowCustomRuleResponse implements ModelInterface, ArrayAccess
     * actionMode  预留参数，可忽略。
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
     * timestamp  创建精准防护规则的
+    * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
     * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
     * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
@@ -48,6 +49,7 @@ class ShowCustomRuleResponse implements ModelInterface, ArrayAccess
             'actionMode' => 'bool',
             'priority' => 'int',
             'timestamp' => 'int',
+            'time' => 'bool',
             'start' => 'int',
             'terminal' => 'int',
             'producer' => 'int'
@@ -65,6 +67,7 @@ class ShowCustomRuleResponse implements ModelInterface, ArrayAccess
     * actionMode  预留参数，可忽略。
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
     * timestamp  创建精准防护规则的
+    * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
     * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
     * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
@@ -82,6 +85,7 @@ class ShowCustomRuleResponse implements ModelInterface, ArrayAccess
         'actionMode' => null,
         'priority' => null,
         'timestamp' => 'int64',
+        'time' => null,
         'start' => 'int64',
         'terminal' => 'int64',
         'producer' => null
@@ -120,6 +124,7 @@ class ShowCustomRuleResponse implements ModelInterface, ArrayAccess
     * actionMode  预留参数，可忽略。
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
     * timestamp  创建精准防护规则的
+    * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
     * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
     * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
@@ -137,6 +142,7 @@ class ShowCustomRuleResponse implements ModelInterface, ArrayAccess
             'actionMode' => 'action_mode',
             'priority' => 'priority',
             'timestamp' => 'timestamp',
+            'time' => 'time',
             'start' => 'start',
             'terminal' => 'terminal',
             'producer' => 'producer'
@@ -154,6 +160,7 @@ class ShowCustomRuleResponse implements ModelInterface, ArrayAccess
     * actionMode  预留参数，可忽略。
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
     * timestamp  创建精准防护规则的
+    * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
     * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
     * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
@@ -171,6 +178,7 @@ class ShowCustomRuleResponse implements ModelInterface, ArrayAccess
             'actionMode' => 'setActionMode',
             'priority' => 'setPriority',
             'timestamp' => 'setTimestamp',
+            'time' => 'setTime',
             'start' => 'setStart',
             'terminal' => 'setTerminal',
             'producer' => 'setProducer'
@@ -188,6 +196,7 @@ class ShowCustomRuleResponse implements ModelInterface, ArrayAccess
     * actionMode  预留参数，可忽略。
     * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到1000。
     * timestamp  创建精准防护规则的
+    * time  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
     * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
     * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
@@ -205,6 +214,7 @@ class ShowCustomRuleResponse implements ModelInterface, ArrayAccess
             'actionMode' => 'getActionMode',
             'priority' => 'getPriority',
             'timestamp' => 'getTimestamp',
+            'time' => 'getTime',
             'start' => 'getStart',
             'terminal' => 'getTerminal',
             'producer' => 'getProducer'
@@ -278,6 +288,7 @@ class ShowCustomRuleResponse implements ModelInterface, ArrayAccess
         $this->container['actionMode'] = isset($data['actionMode']) ? $data['actionMode'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
+        $this->container['time'] = isset($data['time']) ? $data['time'] : null;
         $this->container['start'] = isset($data['start']) ? $data['start'] : null;
         $this->container['terminal'] = isset($data['terminal']) ? $data['terminal'] : null;
         $this->container['producer'] = isset($data['producer']) ? $data['producer'] : null;
@@ -542,6 +553,30 @@ class ShowCustomRuleResponse implements ModelInterface, ArrayAccess
     public function setTimestamp($timestamp)
     {
         $this->container['timestamp'] = $timestamp;
+        return $this;
+    }
+
+    /**
+    * Gets time
+    *  精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
+    *
+    * @return bool|null
+    */
+    public function getTime()
+    {
+        return $this->container['time'];
+    }
+
+    /**
+    * Sets time
+    *
+    * @param bool|null $time 精准防护规则生效时间:  - “false”：表示该规则立即生效。   - “true”：表示自定义生效时间。
+    *
+    * @return $this
+    */
+    public function setTime($time)
+    {
+        $this->container['time'] = $time;
         return $this;
     }
 

@@ -31,7 +31,7 @@ class IgnoreRuleBody implements ModelInterface, ArrayAccess
     * urlLogic  匹配逻辑支持（equal：等于，not_equal：不等于，contain：包含，not_contain：不包含，prefix：前缀为，not_prefix：前缀不为，suffix：后缀为，not_suffix：后缀不为，regular_match：正则匹配，regular_not_match：正则不匹配）
     * conditions  条件列表
     * domain  防护域名或防护网站
-    * advanced  高级配置项
+    * advanced  高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
     *
     * @var string[]
     */
@@ -63,7 +63,7 @@ class IgnoreRuleBody implements ModelInterface, ArrayAccess
     * urlLogic  匹配逻辑支持（equal：等于，not_equal：不等于，contain：包含，not_contain：不包含，prefix：前缀为，not_prefix：前缀不为，suffix：后缀为，not_suffix：后缀不为，regular_match：正则匹配，regular_not_match：正则不匹配）
     * conditions  条件列表
     * domain  防护域名或防护网站
-    * advanced  高级配置项
+    * advanced  高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
     *
     * @var string[]
     */
@@ -116,7 +116,7 @@ class IgnoreRuleBody implements ModelInterface, ArrayAccess
     * urlLogic  匹配逻辑支持（equal：等于，not_equal：不等于，contain：包含，not_contain：不包含，prefix：前缀为，not_prefix：前缀不为，suffix：后缀为，not_suffix：后缀不为，regular_match：正则匹配，regular_not_match：正则不匹配）
     * conditions  条件列表
     * domain  防护域名或防护网站
-    * advanced  高级配置项
+    * advanced  高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
     *
     * @var string[]
     */
@@ -148,7 +148,7 @@ class IgnoreRuleBody implements ModelInterface, ArrayAccess
     * urlLogic  匹配逻辑支持（equal：等于，not_equal：不等于，contain：包含，not_contain：不包含，prefix：前缀为，not_prefix：前缀不为，suffix：后缀为，not_suffix：后缀不为，regular_match：正则匹配，regular_not_match：正则不匹配）
     * conditions  条件列表
     * domain  防护域名或防护网站
-    * advanced  高级配置项
+    * advanced  高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class IgnoreRuleBody implements ModelInterface, ArrayAccess
     * urlLogic  匹配逻辑支持（equal：等于，not_equal：不等于，contain：包含，not_contain：不包含，prefix：前缀为，not_prefix：前缀不为，suffix：后缀为，not_suffix：后缀不为，regular_match：正则匹配，regular_not_match：正则不匹配）
     * conditions  条件列表
     * domain  防护域名或防护网站
-    * advanced  高级配置项
+    * advanced  高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
     *
     * @var string[]
     */
@@ -559,7 +559,7 @@ class IgnoreRuleBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets advanced
-    *  高级配置项
+    *  高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\Advanced[]|null
     */
@@ -571,7 +571,7 @@ class IgnoreRuleBody implements ModelInterface, ArrayAccess
     /**
     * Sets advanced
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\Advanced[]|null $advanced 高级配置项
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\Advanced[]|null $advanced 高级配置项。**当前该参数类型错误，请用户忽略该参数**；正确类型可先参考更新接口，后续将改正。
     *
     * @return $this
     */

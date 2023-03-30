@@ -20,7 +20,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regionName  **参数说明**：OBS所在区域。您可以从[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
+    * regionName  **参数说明**：OBS所在区域。您可以从[[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)](tag:hws)[[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?OBS)](tag:hws_hk)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
     * bucketName  **参数说明**：OBS桶名称。 **取值范围**：长度最小为3，最大为63，只允许小写字母、数字、连接符（-）、英文点（.）的组合。
     * objectKey  **参数说明**：OBS对象名称(包含文件夹路径)。 **取值范围**：长度不超过1024。
     *
@@ -34,7 +34,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regionName  **参数说明**：OBS所在区域。您可以从[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
+    * regionName  **参数说明**：OBS所在区域。您可以从[[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)](tag:hws)[[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?OBS)](tag:hws_hk)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
     * bucketName  **参数说明**：OBS桶名称。 **取值范围**：长度最小为3，最大为63，只允许小写字母、数字、连接符（-）、英文点（.）的组合。
     * objectKey  **参数说明**：OBS对象名称(包含文件夹路径)。 **取值范围**：长度不超过1024。
     *
@@ -69,7 +69,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regionName  **参数说明**：OBS所在区域。您可以从[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
+    * regionName  **参数说明**：OBS所在区域。您可以从[[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)](tag:hws)[[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?OBS)](tag:hws_hk)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
     * bucketName  **参数说明**：OBS桶名称。 **取值范围**：长度最小为3，最大为63，只允许小写字母、数字、连接符（-）、英文点（.）的组合。
     * objectKey  **参数说明**：OBS对象名称(包含文件夹路径)。 **取值范围**：长度不超过1024。
     *
@@ -83,7 +83,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regionName  **参数说明**：OBS所在区域。您可以从[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
+    * regionName  **参数说明**：OBS所在区域。您可以从[[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)](tag:hws)[[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?OBS)](tag:hws_hk)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
     * bucketName  **参数说明**：OBS桶名称。 **取值范围**：长度最小为3，最大为63，只允许小写字母、数字、连接符（-）、英文点（.）的组合。
     * objectKey  **参数说明**：OBS对象名称(包含文件夹路径)。 **取值范围**：长度不超过1024。
     *
@@ -97,7 +97,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regionName  **参数说明**：OBS所在区域。您可以从[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
+    * regionName  **参数说明**：OBS所在区域。您可以从[[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)](tag:hws)[[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?OBS)](tag:hws_hk)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
     * bucketName  **参数说明**：OBS桶名称。 **取值范围**：长度最小为3，最大为63，只允许小写字母、数字、连接符（-）、英文点（.）的组合。
     * objectKey  **参数说明**：OBS对象名称(包含文件夹路径)。 **取值范围**：长度不超过1024。
     *
@@ -217,7 +217,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionName
-    *  **参数说明**：OBS所在区域。您可以从[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
+    *  **参数说明**：OBS所在区域。您可以从[[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)](tag:hws)[[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?OBS)](tag:hws_hk)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
     *
     * @return string
     */
@@ -229,7 +229,7 @@ class ObsLocation implements ModelInterface, ArrayAccess
     /**
     * Sets regionName
     *
-    * @param string $regionName **参数说明**：OBS所在区域。您可以从[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
+    * @param string $regionName **参数说明**：OBS所在区域。您可以从[[地区和终端节点](https://developer.huaweicloud.com/endpoint?OBS)](tag:hws)[[地区和终端节点](https://developer.huaweicloud.com/intl/zh-cn/endpoint?OBS)](tag:hws_hk)中查询服务的终端节点。 **取值范围**：长度不超过256，只允许字母、数字、连接符（-）的组合。
     *
     * @return $this
     */

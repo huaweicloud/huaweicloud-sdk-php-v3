@@ -27,6 +27,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * contents  规则内容
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
+    * description  规则描述
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
             'category' => 'string',
             'contents' => 'string[]',
             'timestamp' => 'int',
-            'status' => 'int'
+            'status' => 'int',
+            'description' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * contents  规则内容
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
+    * description  规则描述
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
         'category' => null,
         'contents' => null,
         'timestamp' => 'int64',
-        'status' => null
+        'status' => null,
+        'description' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * contents  规则内容
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
+    * description  规则描述
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
             'category' => 'category',
             'contents' => 'contents',
             'timestamp' => 'timestamp',
-            'status' => 'status'
+            'status' => 'status',
+            'description' => 'description'
     ];
 
     /**
@@ -114,6 +120,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * contents  规则内容
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
+    * description  规则描述
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
             'category' => 'setCategory',
             'contents' => 'setContents',
             'timestamp' => 'setTimestamp',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'description' => 'setDescription'
     ];
 
     /**
@@ -136,6 +144,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     * contents  规则内容
     * timestamp  创建规则时间戳
     * status  规则状态，0：关闭，1：开启
+    * description  规则描述
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
             'category' => 'getCategory',
             'contents' => 'getContents',
             'timestamp' => 'getTimestamp',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -214,6 +224,7 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
         $this->container['contents'] = isset($data['contents']) ? $data['contents'] : null;
         $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class LeakageListInfo implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  规则描述
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 规则描述
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 
