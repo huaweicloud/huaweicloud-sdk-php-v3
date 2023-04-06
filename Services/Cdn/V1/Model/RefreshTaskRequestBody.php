@@ -21,24 +21,28 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  刷新的类型，其值可以为file 或directory，默认为file
+    * mode  目录刷新只刷新变更资源标识，其值为true 或false，默认为false
     * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
+            'mode' => 'bool',
             'urls' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  刷新的类型，其值可以为file 或directory，默认为file
+    * mode  目录刷新只刷新变更资源标识，其值为true 或false，默认为false
     * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
+        'mode' => null,
         'urls' => null
     ];
 
@@ -66,36 +70,42 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  刷新的类型，其值可以为file 或directory，默认为file
+    * mode  目录刷新只刷新变更资源标识，其值为true 或false，默认为false
     * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
+            'mode' => 'mode',
             'urls' => 'urls'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  刷新的类型，其值可以为file 或directory，默认为file
+    * mode  目录刷新只刷新变更资源标识，其值为true 或false，默认为false
     * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
+            'mode' => 'setMode',
             'urls' => 'setUrls'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  刷新的类型，其值可以为file 或directory，默认为file
+    * mode  目录刷新只刷新变更资源标识，其值为true 或false，默认为false
     * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
+            'mode' => 'getMode',
             'urls' => 'getUrls'
     ];
 
@@ -173,6 +183,7 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
         $this->container['urls'] = isset($data['urls']) ? $data['urls'] : null;
     }
 
@@ -230,6 +241,30 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets mode
+    *  目录刷新只刷新变更资源标识，其值为true 或false，默认为false
+    *
+    * @return bool|null
+    */
+    public function getMode()
+    {
+        return $this->container['mode'];
+    }
+
+    /**
+    * Sets mode
+    *
+    * @param bool|null $mode 目录刷新只刷新变更资源标识，其值为true 或false，默认为false
+    *
+    * @return $this
+    */
+    public function setMode($mode)
+    {
+        $this->container['mode'] = $mode;
         return $this;
     }
 

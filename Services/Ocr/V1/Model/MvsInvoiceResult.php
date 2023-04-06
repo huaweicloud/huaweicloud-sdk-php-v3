@@ -29,16 +29,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * buyerName  购买方名称、二手车买方单位/个人
     * buyerOrganizationNumber  购买方身份证号码/组织机构代码。
     * buyerId  购买方纳税人识别号、二手车买方单位代码/身份证号
-    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * sellerName  销货单位名称、二手车卖方单位/个人
     * sellerPhone  销售方电话、二手车卖方电话
     * sellerId  销售方纳税人识别号、二手车卖方单位代码/身份证号
     * sellerAccount  销售方账号。
     * sellerAddress  销售方地址、二手车卖方单位/个人地址
-    * licencePlateNumber  二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * registrationNumber  二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * licencePlateNumber  二手车车牌照号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * registrationNumber  二手车登记证号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * sellerBank  销售方开户行。
     * vehicleType  车辆类型。
     * brandModel  厂牌型号。
@@ -59,16 +59,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * total  价税合计、二手车车价合计（小写）
     * totalChinese  价税合计大写、二手车车价合计（大写）
     * fiscalCode  税控码。
-    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketName  二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketName  二手车市场名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
     * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
@@ -145,16 +145,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * buyerName  购买方名称、二手车买方单位/个人
     * buyerOrganizationNumber  购买方身份证号码/组织机构代码。
     * buyerId  购买方纳税人识别号、二手车买方单位代码/身份证号
-    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * sellerName  销货单位名称、二手车卖方单位/个人
     * sellerPhone  销售方电话、二手车卖方电话
     * sellerId  销售方纳税人识别号、二手车卖方单位代码/身份证号
     * sellerAccount  销售方账号。
     * sellerAddress  销售方地址、二手车卖方单位/个人地址
-    * licencePlateNumber  二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * registrationNumber  二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * licencePlateNumber  二手车车牌照号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * registrationNumber  二手车登记证号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * sellerBank  销售方开户行。
     * vehicleType  车辆类型。
     * brandModel  厂牌型号。
@@ -175,16 +175,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * total  价税合计、二手车车价合计（小写）
     * totalChinese  价税合计大写、二手车车价合计（大写）
     * fiscalCode  税控码。
-    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketName  二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketName  二手车市场名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
     * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
@@ -282,16 +282,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * buyerName  购买方名称、二手车买方单位/个人
     * buyerOrganizationNumber  购买方身份证号码/组织机构代码。
     * buyerId  购买方纳税人识别号、二手车买方单位代码/身份证号
-    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * sellerName  销货单位名称、二手车卖方单位/个人
     * sellerPhone  销售方电话、二手车卖方电话
     * sellerId  销售方纳税人识别号、二手车卖方单位代码/身份证号
     * sellerAccount  销售方账号。
     * sellerAddress  销售方地址、二手车卖方单位/个人地址
-    * licencePlateNumber  二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * registrationNumber  二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * licencePlateNumber  二手车车牌照号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * registrationNumber  二手车登记证号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * sellerBank  销售方开户行。
     * vehicleType  车辆类型。
     * brandModel  厂牌型号。
@@ -312,16 +312,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * total  价税合计、二手车车价合计（小写）
     * totalChinese  价税合计大写、二手车车价合计（大写）
     * fiscalCode  税控码。
-    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketName  二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketName  二手车市场名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
     * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
@@ -398,16 +398,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * buyerName  购买方名称、二手车买方单位/个人
     * buyerOrganizationNumber  购买方身份证号码/组织机构代码。
     * buyerId  购买方纳税人识别号、二手车买方单位代码/身份证号
-    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * sellerName  销货单位名称、二手车卖方单位/个人
     * sellerPhone  销售方电话、二手车卖方电话
     * sellerId  销售方纳税人识别号、二手车卖方单位代码/身份证号
     * sellerAccount  销售方账号。
     * sellerAddress  销售方地址、二手车卖方单位/个人地址
-    * licencePlateNumber  二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * registrationNumber  二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * licencePlateNumber  二手车车牌照号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * registrationNumber  二手车登记证号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * sellerBank  销售方开户行。
     * vehicleType  车辆类型。
     * brandModel  厂牌型号。
@@ -428,16 +428,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * total  价税合计、二手车车价合计（小写）
     * totalChinese  价税合计大写、二手车车价合计（大写）
     * fiscalCode  税控码。
-    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketName  二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketName  二手车市场名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
     * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
@@ -514,16 +514,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * buyerName  购买方名称、二手车买方单位/个人
     * buyerOrganizationNumber  购买方身份证号码/组织机构代码。
     * buyerId  购买方纳税人识别号、二手车买方单位代码/身份证号
-    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * buyerAddress  二手车买方单位/个人住址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * buyerPhone  二手车买方单位/个人电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * sellerName  销货单位名称、二手车卖方单位/个人
     * sellerPhone  销售方电话、二手车卖方电话
     * sellerId  销售方纳税人识别号、二手车卖方单位代码/身份证号
     * sellerAccount  销售方账号。
     * sellerAddress  销售方地址、二手车卖方单位/个人地址
-    * licencePlateNumber  二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * registrationNumber  二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * licencePlateNumber  二手车车牌照号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * registrationNumber  二手车登记证号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * deptMotorVehicles  二手车转入地车管所名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * sellerBank  销售方开户行。
     * vehicleType  车辆类型。
     * brandModel  厂牌型号。
@@ -544,16 +544,16 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * total  价税合计、二手车车价合计（小写）
     * totalChinese  价税合计大写、二手车车价合计（大写）
     * fiscalCode  税控码。
-    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketName  二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
-    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * auctionOrgName  二手车经营拍卖单位名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgAddress  二手车经营拍卖单位地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgId  二手车经营拍卖单位纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgBankAccount  二手车经营拍卖单位银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * auctionOrgPhone  二手车经营拍卖单位电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketName  二手车市场名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketId  二手车市场纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
     * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
@@ -973,7 +973,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets buyerAddress
-    *  二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车买方单位/个人住址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -985,7 +985,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets buyerAddress
     *
-    * @param string|null $buyerAddress 二手车买方单位/个人住址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $buyerAddress 二手车买方单位/个人住址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */
@@ -997,7 +997,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets buyerPhone
-    *  二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车买方单位/个人电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -1009,7 +1009,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets buyerPhone
     *
-    * @param string|null $buyerPhone 二手车买方单位/个人电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $buyerPhone 二手车买方单位/个人电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */
@@ -1141,7 +1141,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets licencePlateNumber
-    *  二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车车牌照号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -1153,7 +1153,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets licencePlateNumber
     *
-    * @param string|null $licencePlateNumber 二手车车牌照号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $licencePlateNumber 二手车车牌照号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */
@@ -1165,7 +1165,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets registrationNumber
-    *  二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车登记证号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -1177,7 +1177,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets registrationNumber
     *
-    * @param string|null $registrationNumber 二手车登记证号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $registrationNumber 二手车登记证号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */
@@ -1189,7 +1189,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets deptMotorVehicles
-    *  二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车转入地车管所名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -1201,7 +1201,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets deptMotorVehicles
     *
-    * @param string|null $deptMotorVehicles 二手车转入地车管所名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $deptMotorVehicles 二手车转入地车管所名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */
@@ -1693,7 +1693,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets auctionOrgName
-    *  二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车经营拍卖单位名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -1705,7 +1705,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets auctionOrgName
     *
-    * @param string|null $auctionOrgName 二手车经营拍卖单位名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $auctionOrgName 二手车经营拍卖单位名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */
@@ -1717,7 +1717,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets auctionOrgAddress
-    *  二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车经营拍卖单位地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -1729,7 +1729,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets auctionOrgAddress
     *
-    * @param string|null $auctionOrgAddress 二手车经营拍卖单位地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $auctionOrgAddress 二手车经营拍卖单位地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */
@@ -1741,7 +1741,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets auctionOrgId
-    *  二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车经营拍卖单位纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -1753,7 +1753,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets auctionOrgId
     *
-    * @param string|null $auctionOrgId 二手车经营拍卖单位纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $auctionOrgId 二手车经营拍卖单位纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */
@@ -1765,7 +1765,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets auctionOrgBankAccount
-    *  二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车经营拍卖单位银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -1777,7 +1777,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets auctionOrgBankAccount
     *
-    * @param string|null $auctionOrgBankAccount 二手车经营拍卖单位银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $auctionOrgBankAccount 二手车经营拍卖单位银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */
@@ -1789,7 +1789,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets auctionOrgPhone
-    *  二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车经营拍卖单位电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -1801,7 +1801,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets auctionOrgPhone
     *
-    * @param string|null $auctionOrgPhone 二手车经营拍卖单位电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $auctionOrgPhone 二手车经营拍卖单位电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */
@@ -1813,7 +1813,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedVehicleMarketName
-    *  二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车市场名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -1825,7 +1825,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets usedVehicleMarketName
     *
-    * @param string|null $usedVehicleMarketName 二手车市场名称。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $usedVehicleMarketName 二手车市场名称。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */
@@ -1837,7 +1837,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedVehicleMarketId
-    *  二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车市场纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -1849,7 +1849,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets usedVehicleMarketId
     *
-    * @param string|null $usedVehicleMarketId 二手车市场纳税人识别号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $usedVehicleMarketId 二手车市场纳税人识别号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */
@@ -1861,7 +1861,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedVehicleMarketAddress
-    *  二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车市场地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -1873,7 +1873,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets usedVehicleMarketAddress
     *
-    * @param string|null $usedVehicleMarketAddress 二手车市场地址。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $usedVehicleMarketAddress 二手车市场地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */
@@ -1885,7 +1885,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedVehicleMarketBankAccount
-    *  二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车市场银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -1897,7 +1897,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets usedVehicleMarketBankAccount
     *
-    * @param string|null $usedVehicleMarketBankAccount 二手车市场银行和账号。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $usedVehicleMarketBankAccount 二手车市场银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */
@@ -1909,7 +1909,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedVehicleMarketPhone
-    *  二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    *  二手车市场电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return string|null
     */
@@ -1921,7 +1921,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     /**
     * Sets usedVehicleMarketPhone
     *
-    * @param string|null $usedVehicleMarketPhone 二手车市场电话。 当请求参数\"tpye\"设置为\"auto\"或“used”时才返回。
+    * @param string|null $usedVehicleMarketPhone 二手车市场电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     *
     * @return $this
     */

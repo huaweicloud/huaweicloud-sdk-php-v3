@@ -27,6 +27,7 @@ class FinancialStatementRequestBody implements ModelInterface, ArrayAccess
     * returnExcel  是否返回表格转换Microsoft Excel的base64编码字段。可选值包括： - true：返回’excel’字段，表示xlsx格式的表格识别结果的base64编码; - false：不返回。  > 说明： - 对返回的Excel编码，可用Python函数 base64.b64decode解码后保存为xlsx文件。
     * returnTableLocation  返回表格坐标，可选值包括： - true：返回表格坐标; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回。
     * returnImageSize  返回矫正后的图像大小，可选值包括： - true：返回矫正图像大小; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回。
+    * returnRectificationMatrix  透视变换矩阵，可选值包括： - true：返回透视变换矩阵; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回透视变换矩阵。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class FinancialStatementRequestBody implements ModelInterface, ArrayAccess
             'returnConfidence' => 'bool',
             'returnExcel' => 'bool',
             'returnTableLocation' => 'bool',
-            'returnImageSize' => 'bool'
+            'returnImageSize' => 'bool',
+            'returnRectificationMatrix' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class FinancialStatementRequestBody implements ModelInterface, ArrayAccess
     * returnExcel  是否返回表格转换Microsoft Excel的base64编码字段。可选值包括： - true：返回’excel’字段，表示xlsx格式的表格识别结果的base64编码; - false：不返回。  > 说明： - 对返回的Excel编码，可用Python函数 base64.b64decode解码后保存为xlsx文件。
     * returnTableLocation  返回表格坐标，可选值包括： - true：返回表格坐标; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回。
     * returnImageSize  返回矫正后的图像大小，可选值包括： - true：返回矫正图像大小; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回。
+    * returnRectificationMatrix  透视变换矩阵，可选值包括： - true：返回透视变换矩阵; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回透视变换矩阵。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class FinancialStatementRequestBody implements ModelInterface, ArrayAccess
         'returnConfidence' => null,
         'returnExcel' => null,
         'returnTableLocation' => null,
-        'returnImageSize' => null
+        'returnImageSize' => null,
+        'returnRectificationMatrix' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class FinancialStatementRequestBody implements ModelInterface, ArrayAccess
     * returnExcel  是否返回表格转换Microsoft Excel的base64编码字段。可选值包括： - true：返回’excel’字段，表示xlsx格式的表格识别结果的base64编码; - false：不返回。  > 说明： - 对返回的Excel编码，可用Python函数 base64.b64decode解码后保存为xlsx文件。
     * returnTableLocation  返回表格坐标，可选值包括： - true：返回表格坐标; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回。
     * returnImageSize  返回矫正后的图像大小，可选值包括： - true：返回矫正图像大小; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回。
+    * returnRectificationMatrix  透视变换矩阵，可选值包括： - true：返回透视变换矩阵; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回透视变换矩阵。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class FinancialStatementRequestBody implements ModelInterface, ArrayAccess
             'returnConfidence' => 'return_confidence',
             'returnExcel' => 'return_excel',
             'returnTableLocation' => 'return_table_location',
-            'returnImageSize' => 'return_image_size'
+            'returnImageSize' => 'return_image_size',
+            'returnRectificationMatrix' => 'return_rectification_matrix'
     ];
 
     /**
@@ -114,6 +120,7 @@ class FinancialStatementRequestBody implements ModelInterface, ArrayAccess
     * returnExcel  是否返回表格转换Microsoft Excel的base64编码字段。可选值包括： - true：返回’excel’字段，表示xlsx格式的表格识别结果的base64编码; - false：不返回。  > 说明： - 对返回的Excel编码，可用Python函数 base64.b64decode解码后保存为xlsx文件。
     * returnTableLocation  返回表格坐标，可选值包括： - true：返回表格坐标; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回。
     * returnImageSize  返回矫正后的图像大小，可选值包括： - true：返回矫正图像大小; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回。
+    * returnRectificationMatrix  透视变换矩阵，可选值包括： - true：返回透视变换矩阵; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回透视变换矩阵。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class FinancialStatementRequestBody implements ModelInterface, ArrayAccess
             'returnConfidence' => 'setReturnConfidence',
             'returnExcel' => 'setReturnExcel',
             'returnTableLocation' => 'setReturnTableLocation',
-            'returnImageSize' => 'setReturnImageSize'
+            'returnImageSize' => 'setReturnImageSize',
+            'returnRectificationMatrix' => 'setReturnRectificationMatrix'
     ];
 
     /**
@@ -136,6 +144,7 @@ class FinancialStatementRequestBody implements ModelInterface, ArrayAccess
     * returnExcel  是否返回表格转换Microsoft Excel的base64编码字段。可选值包括： - true：返回’excel’字段，表示xlsx格式的表格识别结果的base64编码; - false：不返回。  > 说明： - 对返回的Excel编码，可用Python函数 base64.b64decode解码后保存为xlsx文件。
     * returnTableLocation  返回表格坐标，可选值包括： - true：返回表格坐标; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回。
     * returnImageSize  返回矫正后的图像大小，可选值包括： - true：返回矫正图像大小; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回。
+    * returnRectificationMatrix  透视变换矩阵，可选值包括： - true：返回透视变换矩阵; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回透视变换矩阵。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class FinancialStatementRequestBody implements ModelInterface, ArrayAccess
             'returnConfidence' => 'getReturnConfidence',
             'returnExcel' => 'getReturnExcel',
             'returnTableLocation' => 'getReturnTableLocation',
-            'returnImageSize' => 'getReturnImageSize'
+            'returnImageSize' => 'getReturnImageSize',
+            'returnRectificationMatrix' => 'getReturnRectificationMatrix'
     ];
 
     /**
@@ -214,6 +224,7 @@ class FinancialStatementRequestBody implements ModelInterface, ArrayAccess
         $this->container['returnExcel'] = isset($data['returnExcel']) ? $data['returnExcel'] : null;
         $this->container['returnTableLocation'] = isset($data['returnTableLocation']) ? $data['returnTableLocation'] : null;
         $this->container['returnImageSize'] = isset($data['returnImageSize']) ? $data['returnImageSize'] : null;
+        $this->container['returnRectificationMatrix'] = isset($data['returnRectificationMatrix']) ? $data['returnRectificationMatrix'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class FinancialStatementRequestBody implements ModelInterface, ArrayAccess
     public function setReturnImageSize($returnImageSize)
     {
         $this->container['returnImageSize'] = $returnImageSize;
+        return $this;
+    }
+
+    /**
+    * Gets returnRectificationMatrix
+    *  透视变换矩阵，可选值包括： - true：返回透视变换矩阵; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回透视变换矩阵。
+    *
+    * @return bool|null
+    */
+    public function getReturnRectificationMatrix()
+    {
+        return $this->container['returnRectificationMatrix'];
+    }
+
+    /**
+    * Sets returnRectificationMatrix
+    *
+    * @param bool|null $returnRectificationMatrix 透视变换矩阵，可选值包括： - true：返回透视变换矩阵; - false：不返回。  > 说明： - 未传入该参数时默认为false，即不返回透视变换矩阵。
+    *
+    * @return $this
+    */
+    public function setReturnRectificationMatrix($returnRectificationMatrix)
+    {
+        $this->container['returnRectificationMatrix'] = $returnRectificationMatrix;
         return $this;
     }
 

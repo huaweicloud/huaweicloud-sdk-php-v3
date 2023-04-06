@@ -24,6 +24,7 @@ class FinancialStatementResult implements ModelInterface, ArrayAccess
     * wordsRegionList  返回的表格、文本区域列表。输出顺序从左到右，从上到下。
     * excel  表格图像转换为excel的base64编码，图像中的文字和表格按位置写入excel，可编辑。对返回的excel编码，可用base64.b64decode解码并保存为xlsx文件。
     * imageSize  imageSize
+    * rectificationMatrix  返回透视变换矩阵
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class FinancialStatementResult implements ModelInterface, ArrayAccess
             'wordsRegionCount' => 'int',
             'wordsRegionList' => '\HuaweiCloud\SDK\Ocr\V1\Model\FinancialStatementWordsRegionList[]',
             'excel' => 'string',
-            'imageSize' => '\HuaweiCloud\SDK\Ocr\V1\Model\FinancialStatementResultImageSize'
+            'imageSize' => '\HuaweiCloud\SDK\Ocr\V1\Model\FinancialStatementResultImageSize',
+            'rectificationMatrix' => 'float[][]'
     ];
 
     /**
@@ -40,6 +42,7 @@ class FinancialStatementResult implements ModelInterface, ArrayAccess
     * wordsRegionList  返回的表格、文本区域列表。输出顺序从左到右，从上到下。
     * excel  表格图像转换为excel的base64编码，图像中的文字和表格按位置写入excel，可编辑。对返回的excel编码，可用base64.b64decode解码并保存为xlsx文件。
     * imageSize  imageSize
+    * rectificationMatrix  返回透视变换矩阵
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class FinancialStatementResult implements ModelInterface, ArrayAccess
         'wordsRegionCount' => 'int32',
         'wordsRegionList' => null,
         'excel' => null,
-        'imageSize' => null
+        'imageSize' => null,
+        'rectificationMatrix' => 'float'
     ];
 
     /**
@@ -77,6 +81,7 @@ class FinancialStatementResult implements ModelInterface, ArrayAccess
     * wordsRegionList  返回的表格、文本区域列表。输出顺序从左到右，从上到下。
     * excel  表格图像转换为excel的base64编码，图像中的文字和表格按位置写入excel，可编辑。对返回的excel编码，可用base64.b64decode解码并保存为xlsx文件。
     * imageSize  imageSize
+    * rectificationMatrix  返回透视变换矩阵
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class FinancialStatementResult implements ModelInterface, ArrayAccess
             'wordsRegionCount' => 'words_region_count',
             'wordsRegionList' => 'words_region_list',
             'excel' => 'excel',
-            'imageSize' => 'image_size'
+            'imageSize' => 'image_size',
+            'rectificationMatrix' => 'rectification_matrix'
     ];
 
     /**
@@ -93,6 +99,7 @@ class FinancialStatementResult implements ModelInterface, ArrayAccess
     * wordsRegionList  返回的表格、文本区域列表。输出顺序从左到右，从上到下。
     * excel  表格图像转换为excel的base64编码，图像中的文字和表格按位置写入excel，可编辑。对返回的excel编码，可用base64.b64decode解码并保存为xlsx文件。
     * imageSize  imageSize
+    * rectificationMatrix  返回透视变换矩阵
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class FinancialStatementResult implements ModelInterface, ArrayAccess
             'wordsRegionCount' => 'setWordsRegionCount',
             'wordsRegionList' => 'setWordsRegionList',
             'excel' => 'setExcel',
-            'imageSize' => 'setImageSize'
+            'imageSize' => 'setImageSize',
+            'rectificationMatrix' => 'setRectificationMatrix'
     ];
 
     /**
@@ -109,6 +117,7 @@ class FinancialStatementResult implements ModelInterface, ArrayAccess
     * wordsRegionList  返回的表格、文本区域列表。输出顺序从左到右，从上到下。
     * excel  表格图像转换为excel的base64编码，图像中的文字和表格按位置写入excel，可编辑。对返回的excel编码，可用base64.b64decode解码并保存为xlsx文件。
     * imageSize  imageSize
+    * rectificationMatrix  返回透视变换矩阵
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class FinancialStatementResult implements ModelInterface, ArrayAccess
             'wordsRegionCount' => 'getWordsRegionCount',
             'wordsRegionList' => 'getWordsRegionList',
             'excel' => 'getExcel',
-            'imageSize' => 'getImageSize'
+            'imageSize' => 'getImageSize',
+            'rectificationMatrix' => 'getRectificationMatrix'
     ];
 
     /**
@@ -181,6 +191,7 @@ class FinancialStatementResult implements ModelInterface, ArrayAccess
         $this->container['wordsRegionList'] = isset($data['wordsRegionList']) ? $data['wordsRegionList'] : null;
         $this->container['excel'] = isset($data['excel']) ? $data['excel'] : null;
         $this->container['imageSize'] = isset($data['imageSize']) ? $data['imageSize'] : null;
+        $this->container['rectificationMatrix'] = isset($data['rectificationMatrix']) ? $data['rectificationMatrix'] : null;
     }
 
     /**
@@ -304,6 +315,30 @@ class FinancialStatementResult implements ModelInterface, ArrayAccess
     public function setImageSize($imageSize)
     {
         $this->container['imageSize'] = $imageSize;
+        return $this;
+    }
+
+    /**
+    * Gets rectificationMatrix
+    *  返回透视变换矩阵
+    *
+    * @return float[][]|null
+    */
+    public function getRectificationMatrix()
+    {
+        return $this->container['rectificationMatrix'];
+    }
+
+    /**
+    * Sets rectificationMatrix
+    *
+    * @param float[][]|null $rectificationMatrix 返回透视变换矩阵
+    *
+    * @return $this
+    */
+    public function setRectificationMatrix($rectificationMatrix)
+    {
+        $this->container['rectificationMatrix'] = $rectificationMatrix;
         return $this;
     }
 
