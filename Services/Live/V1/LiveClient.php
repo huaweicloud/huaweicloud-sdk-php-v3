@@ -336,6 +336,74 @@ class LiveClient extends Client
     }
 
     /**
+     * 创建直播截图配置
+     *
+     * 创建直播截图配置接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSnapshotConfig($request)
+    {
+        return $this->createSnapshotConfigWithHttpInfo($request);
+    }
+
+    public function createSnapshotConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/stream/snapshot';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\CreateSnapshotConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\CreateSnapshotConfigRequest');
+    }
+
+    /**
      * 禁止直播推流
      *
      * 禁止直播推流
@@ -519,6 +587,74 @@ class LiveClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteDomainResponse',
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteDomainRequest');
+    }
+
+    /**
+     * 删除指定域名的Key防盗链配置
+     *
+     * 删除指定域名的Key防盗链配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDomainKeyChain($request)
+    {
+        return $this->deleteDomainKeyChainWithHttpInfo($request);
+    }
+
+    public function deleteDomainKeyChainWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/guard/key-chain';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteDomainKeyChainResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteDomainKeyChainRequest');
     }
 
     /**
@@ -708,6 +844,77 @@ class LiveClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteRecordRuleResponse',
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteRecordRuleRequest');
+    }
+
+    /**
+     * 删除直播截图配置
+     *
+     * 删除直播截图配置接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteSnapshotConfig($request)
+    {
+        return $this->deleteSnapshotConfigWithHttpInfo($request);
+    }
+
+    public function deleteSnapshotConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/stream/snapshot';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+        if ($localVarParams['appName'] !== null) {
+            $queryParams['app_name'] = $localVarParams['appName'];
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteSnapshotConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteSnapshotConfigRequest');
     }
 
     /**
@@ -1217,6 +1424,89 @@ class LiveClient extends Client
     }
 
     /**
+     * 查询直播截图配置
+     *
+     * 查询直播截图配置接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSnapshotConfigs($request)
+    {
+        return $this->listSnapshotConfigsWithHttpInfo($request);
+    }
+
+    public function listSnapshotConfigsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/stream/snapshot';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+        if ($localVarParams['appName'] !== null) {
+            $queryParams['app_name'] = $localVarParams['appName'];
+        }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['size'] !== null) {
+            $queryParams['size'] = $localVarParams['size'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ListSnapshotConfigsResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ListSnapshotConfigsRequest');
+    }
+
+    /**
      * 查询禁止直播推流列表
      *
      * 查询禁播黑名单列表
@@ -1418,6 +1708,74 @@ class LiveClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowDomainResponse',
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowDomainRequest');
+    }
+
+    /**
+     * 查询指定域名的Key防盗链配置
+     *
+     * 查询指定域名的Key防盗链配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomainKeyChain($request)
+    {
+        return $this->showDomainKeyChainWithHttpInfo($request);
+    }
+
+    public function showDomainKeyChainWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/guard/key-chain';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowDomainKeyChainResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowDomainKeyChainRequest');
     }
 
     /**
@@ -1740,6 +2098,77 @@ class LiveClient extends Client
     }
 
     /**
+     * 更新指定域名的Key防盗链配置
+     *
+     * 更新指定域名的Key防盗链配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDomainKeyChain($request)
+    {
+        return $this->updateDomainKeyChainWithHttpInfo($request);
+    }
+
+    public function updateDomainKeyChainWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/guard/key-chain';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateDomainKeyChainResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateDomainKeyChainRequest');
+    }
+
+    /**
      * 修改录制回调配置
      *
      * 修改录制回调配置接口
@@ -1870,6 +2299,74 @@ class LiveClient extends Client
     }
 
     /**
+     * 修改直播截图配置
+     *
+     * 修改直播截图配置接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSnapshotConfig($request)
+    {
+        return $this->updateSnapshotConfigWithHttpInfo($request);
+    }
+
+    public function updateSnapshotConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/stream/snapshot';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateSnapshotConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateSnapshotConfigRequest');
+    }
+
+    /**
      * 修改禁推属性
      *
      * 修改禁推属性
@@ -1991,6 +2488,281 @@ class LiveClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateTranscodingsTemplateResponse',
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateTranscodingsTemplateRequest');
+    }
+
+    /**
+     * 删除指定域名的https证书配置
+     *
+     * 删除指定域名的https证书配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDomainHttpsCert($request)
+    {
+        return $this->deleteDomainHttpsCertWithHttpInfo($request);
+    }
+
+    public function deleteDomainHttpsCertWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/guard/https-cert';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteDomainHttpsCertResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteDomainHttpsCertRequest');
+    }
+
+    /**
+     * 查询指定域名的https证书配置
+     *
+     * 查询指定域名的https证书配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomainHttpsCert($request)
+    {
+        return $this->showDomainHttpsCertWithHttpInfo($request);
+    }
+
+    public function showDomainHttpsCertWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/guard/https-cert';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowDomainHttpsCertResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowDomainHttpsCertRequest');
+    }
+
+    /**
+     * 修改指定域名的https证书配置
+     *
+     * 修改指定域名的https证书配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDomainHttpsCert($request)
+    {
+        return $this->updateDomainHttpsCertWithHttpInfo($request);
+    }
+
+    public function updateDomainHttpsCertWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/guard/https-cert';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateDomainHttpsCertResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateDomainHttpsCertRequest');
+    }
+
+    /**
+     * OBS桶授权及取消授权
+     *
+     * OBS桶授权及取消授权
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateObsBucketAuthorityPublic($request)
+    {
+        return $this->updateObsBucketAuthorityPublicWithHttpInfo($request);
+    }
+
+    public function updateObsBucketAuthorityPublicWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/obs/authority';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateObsBucketAuthorityPublicResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateObsBucketAuthorityPublicRequest');
     }
 
     protected function callApi(

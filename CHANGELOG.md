@@ -1,3 +1,78 @@
+# 3.1.33 2023-04-13
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ListCustomerselfResourceRecordDetails**
+    - changes of response param
+      - `+ monthly_records.pre_order_id`
+      - `+ monthly_records.az_code_infos`
+
+### HuaweiCloud SDK EVS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ShowVolume**
+    - changes of response param
+      - `+ volume.iops`
+      - `+ volume.throughput`
+  - **ListVolumes**
+    - changes of response param
+      - `+ volumes.iops`
+      - `+ volumes.throughput`
+
+### HuaweiCloud SDK Live
+
+- _Features_
+  - Support the following interfaces：
+    - `ListSnapshotConfigs`
+    - `UpdateSnapshotConfig`
+    - `CreateSnapshotConfig`
+    - `DeleteSnapshotConfig`
+    - `ShowDomainKeyChain`
+    - `UpdateDomainKeyChain`
+    - `DeleteDomainKeyChain`
+    - `ShowDomainHttpsCert`
+    - `UpdateDomainHttpsCert`
+    - `DeleteDomainHttpsCert`
+    - `UpdateObsBucketAuthorityPublic`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK SIS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **RecognizeShortAudio**
+    - changes of request param
+      - `+ config.property: enum value [english_8k_common,english_16k_common]`
+  - **CollectTranscriberJob**
+    - changes of response param
+      - `+ job_id`
+
+### HuaweiCloud SDK WAF
+
+- _Features_
+  - Support the interfaces `CreateCloudWafPostPaidResource`, `DeleteCloudWafPostPaidResource`
+- _Bug Fix_
+  - None
+- _Change_
+  - **ListCustomRules**
+    - changes of response param
+      - `+ items.name`
+
 # 3.1.32 2023-04-06
 
 ### HuaweiCloud SDK CDN

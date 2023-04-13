@@ -33,6 +33,7 @@ class CustomRule implements ModelInterface, ArrayAccess
     * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
     * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
+    * name  规则名称
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class CustomRule implements ModelInterface, ArrayAccess
             'time' => 'bool',
             'start' => 'int',
             'terminal' => 'int',
-            'producer' => 'int'
+            'producer' => 'int',
+            'name' => 'string'
     ];
 
     /**
@@ -67,6 +69,7 @@ class CustomRule implements ModelInterface, ArrayAccess
     * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
     * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
+    * name  规则名称
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class CustomRule implements ModelInterface, ArrayAccess
         'time' => null,
         'start' => 'int64',
         'terminal' => 'int64',
-        'producer' => null
+        'producer' => null,
+        'name' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class CustomRule implements ModelInterface, ArrayAccess
     * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
     * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
+    * name  规则名称
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class CustomRule implements ModelInterface, ArrayAccess
             'time' => 'time',
             'start' => 'start',
             'terminal' => 'terminal',
-            'producer' => 'producer'
+            'producer' => 'producer',
+            'name' => 'name'
     ];
 
     /**
@@ -156,6 +162,7 @@ class CustomRule implements ModelInterface, ArrayAccess
     * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
     * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
+    * name  规则名称
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class CustomRule implements ModelInterface, ArrayAccess
             'time' => 'setTime',
             'start' => 'setStart',
             'terminal' => 'setTerminal',
-            'producer' => 'setProducer'
+            'producer' => 'setProducer',
+            'name' => 'setName'
     ];
 
     /**
@@ -190,6 +198,7 @@ class CustomRule implements ModelInterface, ArrayAccess
     * start  精准防护规则生效的起始时间戳（毫秒）。当time=true，才会返回该参数。
     * terminal  精准防护规则生效的终止时间戳（毫秒）。当time=true，才会返回该参数。
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
+    * name  规则名称
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class CustomRule implements ModelInterface, ArrayAccess
             'time' => 'getTime',
             'start' => 'getStart',
             'terminal' => 'getTerminal',
-            'producer' => 'getProducer'
+            'producer' => 'getProducer',
+            'name' => 'getName'
     ];
 
     /**
@@ -280,6 +290,7 @@ class CustomRule implements ModelInterface, ArrayAccess
         $this->container['start'] = isset($data['start']) ? $data['start'] : null;
         $this->container['terminal'] = isset($data['terminal']) ? $data['terminal'] : null;
         $this->container['producer'] = isset($data['producer']) ? $data['producer'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -613,6 +624,30 @@ class CustomRule implements ModelInterface, ArrayAccess
     public function setProducer($producer)
     {
         $this->container['producer'] = $producer;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  规则名称
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 规则名称
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
         return $this;
     }
 

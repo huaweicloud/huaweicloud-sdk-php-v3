@@ -1,3 +1,78 @@
+# 3.1.33 2023-04-13
+
+### HuaweiCloud SDK BSS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListCustomerselfResourceRecordDetails**
+    - 响应参数变更
+      - `+ monthly_records.pre_order_id`
+      - `+ monthly_records.az_code_infos`
+
+### HuaweiCloud SDK EVS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ShowVolume**
+    - 响应参数变更
+      - `+ volume.iops`
+      - `+ volume.throughput`
+  - **ListVolumes**
+    - 响应参数变更
+      - `+ volumes.iops`
+      - `+ volumes.throughput`
+
+### HuaweiCloud SDK Live
+
+- _新增特性_
+  - 支持以下接口：
+    - `ListSnapshotConfigs`
+    - `UpdateSnapshotConfig`
+    - `CreateSnapshotConfig`
+    - `DeleteSnapshotConfig`
+    - `ShowDomainKeyChain`
+    - `UpdateDomainKeyChain`
+    - `DeleteDomainKeyChain`
+    - `ShowDomainHttpsCert`
+    - `UpdateDomainHttpsCert`
+    - `DeleteDomainHttpsCert`
+    - `UpdateObsBucketAuthorityPublic`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK SIS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **RecognizeShortAudio**
+    - 请求参数变更
+      - `+ config.property: enum value [english_8k_common,english_16k_common]`
+  - **CollectTranscriberJob**
+    - 响应参数变更
+      - `+ job_id`
+
+### HuaweiCloud SDK WAF
+
+- _新增特性_
+  - 支持接口`CreateCloudWafPostPaidResource`、`DeleteCloudWafPostPaidResource`
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListCustomRules**
+    - 响应参数变更
+      - `+ items.name`
+
 # 3.1.32 2023-04-06
 
 ### HuaweiCloud SDK CDN

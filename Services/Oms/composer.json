@@ -1,0 +1,30 @@
+{
+  "name": "huaweicloud/huaweicloud-sdk-oms",
+  "description": "HUAWEICLOUD SDK OMS",
+  "keywords": [
+    "php",
+    "sdk",
+    "rest",
+    "api",
+    "oms"
+  ],
+  "version": "3.1.33",
+   "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "HUAWEICloud_SDK",
+      "email": "hwcloudsdk@huawei.com",
+      "homepage": "https://github.com/huaweicloud-sdk/huaweicloud-sdk-php"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "huaweicloud/huaweicloud-sdk-core": "3.1.33"
+  },
+  "autoload": {
+    "psr-4": {
+      "HuaweiCloud\\SDK\\Oms\\V3\\": "V3/"
+    }
+  }
+}

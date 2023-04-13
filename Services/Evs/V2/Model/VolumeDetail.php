@@ -54,6 +54,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * wwn  云硬盘挂载时的唯一标识。
     * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
+    * iops  iops
+    * throughput  throughput
     *
     * @var string[]
     */
@@ -91,7 +93,9 @@ class VolumeDetail implements ModelInterface, ArrayAccess
             'tags' => 'map[string,string]',
             'wwn' => 'string',
             'enterpriseProjectId' => 'string',
-            'serialNumber' => 'string'
+            'serialNumber' => 'string',
+            'iops' => '\HuaweiCloud\SDK\Evs\V2\Model\Iops',
+            'throughput' => '\HuaweiCloud\SDK\Evs\V2\Model\Throughput'
     ];
 
     /**
@@ -130,6 +134,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * wwn  云硬盘挂载时的唯一标识。
     * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
+    * iops  iops
+    * throughput  throughput
     *
     * @var string[]
     */
@@ -167,7 +173,9 @@ class VolumeDetail implements ModelInterface, ArrayAccess
         'tags' => null,
         'wwn' => null,
         'enterpriseProjectId' => null,
-        'serialNumber' => null
+        'serialNumber' => null,
+        'iops' => null,
+        'throughput' => null
     ];
 
     /**
@@ -227,6 +235,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * wwn  云硬盘挂载时的唯一标识。
     * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
+    * iops  iops
+    * throughput  throughput
     *
     * @var string[]
     */
@@ -264,7 +274,9 @@ class VolumeDetail implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'wwn' => 'wwn',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'serialNumber' => 'serial_number'
+            'serialNumber' => 'serial_number',
+            'iops' => 'iops',
+            'throughput' => 'throughput'
     ];
 
     /**
@@ -303,6 +315,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * wwn  云硬盘挂载时的唯一标识。
     * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
+    * iops  iops
+    * throughput  throughput
     *
     * @var string[]
     */
@@ -340,7 +354,9 @@ class VolumeDetail implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'wwn' => 'setWwn',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'serialNumber' => 'setSerialNumber'
+            'serialNumber' => 'setSerialNumber',
+            'iops' => 'setIops',
+            'throughput' => 'setThroughput'
     ];
 
     /**
@@ -379,6 +395,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * wwn  云硬盘挂载时的唯一标识。
     * enterpriseProjectId  云硬盘上绑定的企业项目ID。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参见：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
+    * iops  iops
+    * throughput  throughput
     *
     * @var string[]
     */
@@ -416,7 +434,9 @@ class VolumeDetail implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'wwn' => 'getWwn',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'serialNumber' => 'getSerialNumber'
+            'serialNumber' => 'getSerialNumber',
+            'iops' => 'getIops',
+            'throughput' => 'getThroughput'
     ];
 
     /**
@@ -511,6 +531,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
         $this->container['wwn'] = isset($data['wwn']) ? $data['wwn'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['serialNumber'] = isset($data['serialNumber']) ? $data['serialNumber'] : null;
+        $this->container['iops'] = isset($data['iops']) ? $data['iops'] : null;
+        $this->container['throughput'] = isset($data['throughput']) ? $data['throughput'] : null;
     }
 
     /**
@@ -1426,6 +1448,54 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     public function setSerialNumber($serialNumber)
     {
         $this->container['serialNumber'] = $serialNumber;
+        return $this;
+    }
+
+    /**
+    * Gets iops
+    *  iops
+    *
+    * @return \HuaweiCloud\SDK\Evs\V2\Model\Iops|null
+    */
+    public function getIops()
+    {
+        return $this->container['iops'];
+    }
+
+    /**
+    * Sets iops
+    *
+    * @param \HuaweiCloud\SDK\Evs\V2\Model\Iops|null $iops iops
+    *
+    * @return $this
+    */
+    public function setIops($iops)
+    {
+        $this->container['iops'] = $iops;
+        return $this;
+    }
+
+    /**
+    * Gets throughput
+    *  throughput
+    *
+    * @return \HuaweiCloud\SDK\Evs\V2\Model\Throughput|null
+    */
+    public function getThroughput()
+    {
+        return $this->container['throughput'];
+    }
+
+    /**
+    * Sets throughput
+    *
+    * @param \HuaweiCloud\SDK\Evs\V2\Model\Throughput|null $throughput throughput
+    *
+    * @return $this
+    */
+    public function setThroughput($throughput)
+    {
+        $this->container['throughput'] = $throughput;
         return $this;
     }
 

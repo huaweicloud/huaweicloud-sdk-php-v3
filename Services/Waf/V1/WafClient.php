@@ -520,6 +520,77 @@ class WafClient extends Client
     }
 
     /**
+     * 开通云模式按需计费接口
+     *
+     * 开通云模式按需计费接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createCloudWafPostPaidResource($request)
+    {
+        return $this->createCloudWafPostPaidResourceWithHttpInfo($request);
+    }
+
+    public function createCloudWafPostPaidResourceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/waf/postpaid';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams[$arr['region']] = $localVarParams['region'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\CreateCloudWafPostPaidResourceResponse',
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\CreateCloudWafPostPaidResourceRequest');
+    }
+
+    /**
      * 创建精准防护规则
      *
      * 创建精准防护规则
@@ -1771,6 +1842,74 @@ class WafClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteCertificateResponse',
             $requestType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteCertificateRequest');
+    }
+
+    /**
+     * 关闭云模式按需计费接口
+     *
+     * 关闭云模式按需计费接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteCloudWafPostPaidResource($request)
+    {
+        return $this->deleteCloudWafPostPaidResourceWithHttpInfo($request);
+    }
+
+    public function deleteCloudWafPostPaidResourceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/waf/postpaid';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams[$arr['region']] = $localVarParams['region'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteCloudWafPostPaidResourceResponse',
+            $requestType='\HuaweiCloud\SDK\Waf\V1\Model\DeleteCloudWafPostPaidResourceRequest');
     }
 
     /**
@@ -4059,9 +4198,9 @@ class WafClient extends Client
     }
 
     /**
-     * 查询隐私屏蔽防护规则
+     * 查询隐私屏蔽防护规则列表
      *
-     * 查询隐私屏蔽防护规则
+     * 查询隐私屏蔽防护规则列表
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
