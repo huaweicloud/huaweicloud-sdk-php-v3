@@ -167,8 +167,8 @@ class DeviceCommandRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['serviceId'] = isset($data['serviceId']) ? $data['serviceId'] : null;
-        $this->container['commandName'] = isset($data['commandName']) ? $data['commandName'] : null;
+        $this->container['serviceId'] = isset($data['serviceId']) ? $data['serviceId'] : 'sensor';
+        $this->container['commandName'] = isset($data['commandName']) ? $data['commandName'] : 'Set_LED';
         $this->container['paras'] = isset($data['paras']) ? $data['paras'] : null;
     }
 

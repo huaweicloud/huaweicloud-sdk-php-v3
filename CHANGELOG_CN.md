@@ -1,3 +1,194 @@
+# 3.1.34 2023-04-20
+
+### HuaweiCloud SDK AOS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **GetStackTemplate**
+    - 请求参数变更
+      - `- executor`
+  - **ListStackEvents**
+    - 请求参数变更
+      - `- executor`
+  - **ListStackOutputs**
+    - 请求参数变更
+      - `- executor`
+  - **DeleteStack**
+    - 请求参数变更
+      - `- executor`
+  - **DeleteExecutionPlan**
+    - 请求参数变更
+      - `- executor`
+  - **ApplyExecutionPlan**
+    - 请求参数变更
+      - `- executor`
+  - **GetExecutionPlan**
+    - 请求参数变更
+      - `- executor`
+  - **ListStackResources**
+    - 请求参数变更
+      - `- executor`
+  - **ListExecutionPlans**
+    - 请求参数变更
+      - `- executor`
+  - **CreateExecutionPlan**
+    - 请求参数变更
+      - `- executor`
+  - **GetExecutionPlanMetadata**
+    - 请求参数变更
+      - `- executor`
+  - **GetStackMetadata**
+    - 请求参数变更
+      - `- executor`
+  - **ListStacks**
+    - 请求参数变更
+      - `- executor`
+  - **CreateStack**
+    - 请求参数变更
+      - `- executor`
+  - **DeployStack**
+    - 请求参数变更
+      - `- executor`
+
+### HuaweiCloud SDK BSSINTL
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListCustomerselfResourceRecordDetails**
+    - 响应参数变更
+      - `+ monthly_records.pre_order_id`
+      - `+ monthly_records.az_code_infos`
+
+### HuaweiCloud SDK CDN
+
+- _新增特性_
+  - 支持接口`ShowDomainFullConfig`、`UpdateDomainFullConfig`
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ShowDomainFullConfig**
+    - 响应参数变更
+      - `+ configs.origin_follow302_status`
+      - `+ configs.cache_rules`
+      - `+ configs.ip_filter`
+      - `+ configs.referer`
+      - `+ configs.force_redirect.redirect_code`
+  - **UpdateDomainFullConfig**
+    - 请求参数变更
+      - `+ configs.origin_follow302_status`
+      - `+ configs.cache_rules`
+      - `+ configs.ip_filter`
+      - `+ configs.referer`
+      - `+ configs.force_redirect.redirect_code`
+
+### HuaweiCloud SDK DCS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **CreateRedislogDownloadLink**
+    - 响应参数变更
+      - `+ backup_id`
+
+### HuaweiCloud SDK IoTDA
+
+- _新增特性_
+  - 支持接口`BroadcastMessage`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK OCR
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **RecognizeDriverLicense**
+    - 响应参数变更
+      - `+ result.front`
+      - `+ result.back`
+  - **RecognizeThailandIdcard**
+    - 响应参数变更
+      - `+ result.type`
+      - `+ result.name_en`
+      - `+ result.ref_number`
+      - `+ result.confidence.name_en`
+      - `+ result.confidence.ref_number`
+
+### HuaweiCloud SDK VPC
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListVpcsByTags**
+    - 响应参数变更
+      - `+ resources.resource_detail`
+      - `- resources.resouce_detail`
+  - **ListSubnetsByTags**
+    - 响应参数变更
+      - `+ resources.resource_detail`
+      - `- resources.resouce_detail`
+  - **UpdateRouteTable**
+    - 请求参数变更
+      - `+ routetable.routes.add`
+      - `+ routetable.routes.mod`
+      - `+ routetable.routes.del`
+      - `* routetable.routes: map<string, list<RouteTableRoute>> -> object<RouteTableRouteAction>`
+
+### HuaweiCloud SDK VPCEP
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListServiceDescribeDetails**
+    - 响应参数变更
+      - `+ public_border_group`
+  - **ListServiceDetails**
+    - 响应参数变更
+      - `+ enable_policy`
+      - `+ tcp_proxy: enum value [proxy_vni]`
+  - **UpdateEndpointService**
+    - 请求参数变更
+      - `+ tcp_proxy`
+    - 响应参数变更
+      - `+ enable_policy`
+      - `+ tcp_proxy: enum value [proxy_vni]`
+  - **ListEndpointInfoDetails**
+    - 响应参数变更
+      - `+ endpoint_pool_id`
+      - `+ public_border_group`
+  - **CreateEndpointService**
+    - 请求参数变更
+      - `+ enable_policy`
+      - `+ tcp_proxy: enum value [proxy_vni]`
+    - 响应参数变更
+      - `+ enable_policy`
+      - `+ tcp_proxy: enum value [proxy_vni]`
+  - **ListEndpointService**
+    - 响应参数变更
+      - `+ endpoint_services.enable_policy`
+      - `+ endpoint_services.tcp_proxy: enum value [proxy_vni]`
+  - **CreateEndpoint**
+    - 响应参数变更
+      - `+ endpoint_pool_id`
+      - `+ public_border_group`
+      - `+ ip`
+
 # 3.1.33 2023-04-13
 
 ### HuaweiCloud SDK BSS

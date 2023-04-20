@@ -186,8 +186,8 @@ class UpdateEndpointConnectionsDescRequest implements ModelInterface, ArrayAcces
             if ((mb_strlen($this->container['projectId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['projectId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 36.";
+            if ((mb_strlen($this->container['projectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
             }
         if ($this->container['vpcEndpointServiceId'] === null) {
             $invalidProperties[] = "'vpcEndpointServiceId' can't be null";

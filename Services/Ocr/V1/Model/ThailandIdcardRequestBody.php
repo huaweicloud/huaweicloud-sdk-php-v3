@@ -25,7 +25,7 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
     * side  - front：身份证正面 - back：身份证背面 如果参数值为空或无该参数，系统自动识别，建议填写，准确率更高。
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
-    * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件、身份证复印件和屏幕翻拍 - false：不返回身份证的类型
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括： - true：返回各个文字块区域 - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
@@ -47,7 +47,7 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
     * side  - front：身份证正面 - back：身份证背面 如果参数值为空或无该参数，系统自动识别，建议填写，准确率更高。
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
-    * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件、身份证复印件和屏幕翻拍 - false：不返回身份证的类型
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括： - true：返回各个文字块区域 - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
     * side  - front：身份证正面 - back：身份证背面 如果参数值为空或无该参数，系统自动识别，建议填写，准确率更高。
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
-    * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件、身份证复印件和屏幕翻拍 - false：不返回身份证的类型
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括： - true：返回各个文字块区域 - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
@@ -112,7 +112,7 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
     * side  - front：身份证正面 - back：身份证背面 如果参数值为空或无该参数，系统自动识别，建议填写，准确率更高。
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
-    * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件、身份证复印件和屏幕翻拍 - false：不返回身份证的类型
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括： - true：返回各个文字块区域 - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
@@ -134,7 +134,7 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
     * side  - front：身份证正面 - back：身份证背面 如果参数值为空或无该参数，系统自动识别，建议填写，准确率更高。
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true：返回身份证头像照片的 base64 编码 - false：不返回身份证头像照片的 base64 编码 未传入该参数时默认为false，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true：返回身份证头像的位置 - false：不返回身份证头像的位置
-    * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件、身份证复印件和屏幕翻拍 - false：不返回身份证的类型
     * returnTextLocation  识别到的文字块的区域位置信息。可选值包括： - true：返回各个文字块区域 - false：不返回各个文字块区域  如果无该参数，系统默认不返回文字块区域。如果输入参数不是Boolean类型，则会报非法参数错误。
     *
     * @var string[]
@@ -360,7 +360,7 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets returnIdcardType
-    *  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    *  是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件、身份证复印件和屏幕翻拍 - false：不返回身份证的类型
     *
     * @return bool|null
     */
@@ -372,7 +372,7 @@ class ThailandIdcardRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets returnIdcardType
     *
-    * @param bool|null $returnIdcardType 是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * @param bool|null $returnIdcardType 是否返回身份证类型的开关，可选值如下所示： - true：返回身份证的类型，类型包括身份证原件、身份证复印件和屏幕翻拍 - false：不返回身份证的类型
     *
     * @return $this
     */

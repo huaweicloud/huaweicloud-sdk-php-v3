@@ -23,7 +23,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  终端节点的ID，唯一标识。
     * serviceType  终端节点连接的终端节点服务类型。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
+    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
+    * ip  终端节点ip
     * activeStatus  帐号状态。 ● frozen：冻结 ● active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
@@ -43,6 +44,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * description  描述
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
     * enableStatus  终端节点是否已停用，取值【enable/disable】
+    * endpointPoolId  待废弃，实例相关联的集群ID
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -50,6 +53,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'id' => 'string',
             'serviceType' => 'string',
             'status' => 'string',
+            'ip' => 'string',
             'activeStatus' => 'string[]',
             'endpointServiceName' => 'string',
             'markerId' => 'int',
@@ -68,14 +72,17 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'specificationName' => 'string',
             'description' => 'string',
             'policyStatement' => 'string[]',
-            'enableStatus' => 'string'
+            'enableStatus' => 'string',
+            'endpointPoolId' => 'string',
+            'publicBorderGroup' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  终端节点的ID，唯一标识。
     * serviceType  终端节点连接的终端节点服务类型。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
+    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
+    * ip  终端节点ip
     * activeStatus  帐号状态。 ● frozen：冻结 ● active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
@@ -95,6 +102,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * description  描述
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
     * enableStatus  终端节点是否已停用，取值【enable/disable】
+    * endpointPoolId  待废弃，实例相关联的集群ID
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -102,6 +111,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
         'id' => null,
         'serviceType' => null,
         'status' => null,
+        'ip' => null,
         'activeStatus' => null,
         'endpointServiceName' => null,
         'markerId' => null,
@@ -120,7 +130,9 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
         'specificationName' => null,
         'description' => null,
         'policyStatement' => null,
-        'enableStatus' => null
+        'enableStatus' => null,
+        'endpointPoolId' => null,
+        'publicBorderGroup' => null
     ];
 
     /**
@@ -148,7 +160,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  终端节点的ID，唯一标识。
     * serviceType  终端节点连接的终端节点服务类型。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
+    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
+    * ip  终端节点ip
     * activeStatus  帐号状态。 ● frozen：冻结 ● active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
@@ -168,6 +181,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * description  描述
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
     * enableStatus  终端节点是否已停用，取值【enable/disable】
+    * endpointPoolId  待废弃，实例相关联的集群ID
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -175,6 +190,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'id' => 'id',
             'serviceType' => 'service_type',
             'status' => 'status',
+            'ip' => 'ip',
             'activeStatus' => 'active_status',
             'endpointServiceName' => 'endpoint_service_name',
             'markerId' => 'marker_id',
@@ -193,14 +209,17 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'specificationName' => 'specification_name',
             'description' => 'description',
             'policyStatement' => 'policy_statement',
-            'enableStatus' => 'enable_status'
+            'enableStatus' => 'enable_status',
+            'endpointPoolId' => 'endpoint_pool_id',
+            'publicBorderGroup' => 'public_border_group'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  终端节点的ID，唯一标识。
     * serviceType  终端节点连接的终端节点服务类型。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
+    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
+    * ip  终端节点ip
     * activeStatus  帐号状态。 ● frozen：冻结 ● active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
@@ -220,6 +239,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * description  描述
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
     * enableStatus  终端节点是否已停用，取值【enable/disable】
+    * endpointPoolId  待废弃，实例相关联的集群ID
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -227,6 +248,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'serviceType' => 'setServiceType',
             'status' => 'setStatus',
+            'ip' => 'setIp',
             'activeStatus' => 'setActiveStatus',
             'endpointServiceName' => 'setEndpointServiceName',
             'markerId' => 'setMarkerId',
@@ -245,14 +267,17 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'specificationName' => 'setSpecificationName',
             'description' => 'setDescription',
             'policyStatement' => 'setPolicyStatement',
-            'enableStatus' => 'setEnableStatus'
+            'enableStatus' => 'setEnableStatus',
+            'endpointPoolId' => 'setEndpointPoolId',
+            'publicBorderGroup' => 'setPublicBorderGroup'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  终端节点的ID，唯一标识。
     * serviceType  终端节点连接的终端节点服务类型。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
-    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
+    * status  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
+    * ip  终端节点ip
     * activeStatus  帐号状态。 ● frozen：冻结 ● active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
@@ -272,6 +297,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * description  描述
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
     * enableStatus  终端节点是否已停用，取值【enable/disable】
+    * endpointPoolId  待废弃，实例相关联的集群ID
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -279,6 +306,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'serviceType' => 'getServiceType',
             'status' => 'getStatus',
+            'ip' => 'getIp',
             'activeStatus' => 'getActiveStatus',
             'endpointServiceName' => 'getEndpointServiceName',
             'markerId' => 'getMarkerId',
@@ -297,7 +325,9 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'specificationName' => 'getSpecificationName',
             'description' => 'getDescription',
             'policyStatement' => 'getPolicyStatement',
-            'enableStatus' => 'getEnableStatus'
+            'enableStatus' => 'getEnableStatus',
+            'endpointPoolId' => 'getEndpointPoolId',
+            'publicBorderGroup' => 'getPublicBorderGroup'
     ];
 
     /**
@@ -399,6 +429,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
         $this->container['activeStatus'] = isset($data['activeStatus']) ? $data['activeStatus'] : null;
         $this->container['endpointServiceName'] = isset($data['endpointServiceName']) ? $data['endpointServiceName'] : null;
         $this->container['markerId'] = isset($data['markerId']) ? $data['markerId'] : null;
@@ -418,6 +449,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['policyStatement'] = isset($data['policyStatement']) ? $data['policyStatement'] : null;
         $this->container['enableStatus'] = isset($data['enableStatus']) ? $data['enableStatus'] : null;
+        $this->container['endpointPoolId'] = isset($data['endpointPoolId']) ? $data['endpointPoolId'] : null;
+        $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
     }
 
     /**
@@ -508,7 +541,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
+    *  终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
     *
     * @return string|null
     */
@@ -520,13 +553,37 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● failed：失败
+    * @param string|null $status 终端节点的连接状态。 ● pendingAcceptance：待接受 ● creating：创建中 ● accepted：已接受 ● rejected：已拒绝 ● failed：失败 ● deleting：删除中
     *
     * @return $this
     */
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets ip
+    *  终端节点ip
+    *
+    * @return string|null
+    */
+    public function getIp()
+    {
+        return $this->container['ip'];
+    }
+
+    /**
+    * Sets ip
+    *
+    * @param string|null $ip 终端节点ip
+    *
+    * @return $this
+    */
+    public function setIp($ip)
+    {
+        $this->container['ip'] = $ip;
         return $this;
     }
 
@@ -983,6 +1040,54 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     public function setEnableStatus($enableStatus)
     {
         $this->container['enableStatus'] = $enableStatus;
+        return $this;
+    }
+
+    /**
+    * Gets endpointPoolId
+    *  待废弃，实例相关联的集群ID
+    *
+    * @return string|null
+    */
+    public function getEndpointPoolId()
+    {
+        return $this->container['endpointPoolId'];
+    }
+
+    /**
+    * Sets endpointPoolId
+    *
+    * @param string|null $endpointPoolId 待废弃，实例相关联的集群ID
+    *
+    * @return $this
+    */
+    public function setEndpointPoolId($endpointPoolId)
+    {
+        $this->container['endpointPoolId'] = $endpointPoolId;
+        return $this;
+    }
+
+    /**
+    * Gets publicBorderGroup
+    *  终端节点对应Pool的Public Border Group信息
+    *
+    * @return string|null
+    */
+    public function getPublicBorderGroup()
+    {
+        return $this->container['publicBorderGroup'];
+    }
+
+    /**
+    * Sets publicBorderGroup
+    *
+    * @param string|null $publicBorderGroup 终端节点对应Pool的Public Border Group信息
+    *
+    * @return $this
+    */
+    public function setPublicBorderGroup($publicBorderGroup)
+    {
+        $this->container['publicBorderGroup'] = $publicBorderGroup;
         return $this;
     }
 

@@ -26,6 +26,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -34,7 +35,8 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
             'serviceName' => 'string',
             'serviceType' => 'string',
             'createdAt' => 'string',
-            'isCharge' => 'bool'
+            'isCharge' => 'bool',
+            'publicBorderGroup' => 'string'
     ];
 
     /**
@@ -44,6 +46,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -52,7 +55,8 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
         'serviceName' => null,
         'serviceType' => null,
         'createdAt' => null,
-        'isCharge' => null
+        'isCharge' => null,
+        'publicBorderGroup' => null
     ];
 
     /**
@@ -83,6 +87,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -91,7 +96,8 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
             'serviceName' => 'service_name',
             'serviceType' => 'service_type',
             'createdAt' => 'created_at',
-            'isCharge' => 'is_charge'
+            'isCharge' => 'is_charge',
+            'publicBorderGroup' => 'public_border_group'
     ];
 
     /**
@@ -101,6 +107,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -109,7 +116,8 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
             'serviceName' => 'setServiceName',
             'serviceType' => 'setServiceType',
             'createdAt' => 'setCreatedAt',
-            'isCharge' => 'setIsCharge'
+            'isCharge' => 'setIsCharge',
+            'publicBorderGroup' => 'setPublicBorderGroup'
     ];
 
     /**
@@ -119,6 +127,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * serviceType  终端节点服务类型。仅支持将用户私有服务创建为interface类型的终端节点服务。 ● gataway：由运维人员配置。用户无需创建，可直接使用。 ● interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过创建终端节点创建访问Gateway和Interface类型终端节点服务的终端节点。
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -127,7 +136,8 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
             'serviceName' => 'getServiceName',
             'serviceType' => 'getServiceType',
             'createdAt' => 'getCreatedAt',
-            'isCharge' => 'getIsCharge'
+            'isCharge' => 'getIsCharge',
+            'publicBorderGroup' => 'getPublicBorderGroup'
     ];
 
     /**
@@ -206,6 +216,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['isCharge'] = isset($data['isCharge']) ? $data['isCharge'] : null;
+        $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
     }
 
     /**
@@ -355,6 +366,30 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     public function setIsCharge($isCharge)
     {
         $this->container['isCharge'] = $isCharge;
+        return $this;
+    }
+
+    /**
+    * Gets publicBorderGroup
+    *  终端节点对应Pool的Public Border Group信息
+    *
+    * @return string|null
+    */
+    public function getPublicBorderGroup()
+    {
+        return $this->container['publicBorderGroup'];
+    }
+
+    /**
+    * Sets publicBorderGroup
+    *
+    * @param string|null $publicBorderGroup 终端节点对应Pool的Public Border Group信息
+    *
+    * @return $this
+    */
+    public function setPublicBorderGroup($publicBorderGroup)
+    {
+        $this->container['publicBorderGroup'] = $publicBorderGroup;
         return $this;
     }
 

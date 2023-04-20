@@ -39,6 +39,8 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * generationDate  生成时间。
     * currentTime  当前时间。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * front  front
+    * back  back
     *
     * @var string[]
     */
@@ -61,7 +63,9 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
             'status' => 'string[]',
             'generationDate' => 'string',
             'currentTime' => 'string',
-            'textLocation' => 'object'
+            'textLocation' => 'object',
+            'front' => '\HuaweiCloud\SDK\Ocr\V1\Model\DriverLicenseFront',
+            'back' => '\HuaweiCloud\SDK\Ocr\V1\Model\DriverLicenseBack'
     ];
 
     /**
@@ -85,6 +89,8 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * generationDate  生成时间。
     * currentTime  当前时间。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * front  front
+    * back  back
     *
     * @var string[]
     */
@@ -107,7 +113,9 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
         'status' => null,
         'generationDate' => null,
         'currentTime' => null,
-        'textLocation' => null
+        'textLocation' => null,
+        'front' => null,
+        'back' => null
     ];
 
     /**
@@ -152,6 +160,8 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * generationDate  生成时间。
     * currentTime  当前时间。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * front  front
+    * back  back
     *
     * @var string[]
     */
@@ -174,7 +184,9 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
             'status' => 'status',
             'generationDate' => 'generation_date',
             'currentTime' => 'current_time',
-            'textLocation' => 'text_location'
+            'textLocation' => 'text_location',
+            'front' => 'front',
+            'back' => 'back'
     ];
 
     /**
@@ -198,6 +210,8 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * generationDate  生成时间。
     * currentTime  当前时间。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * front  front
+    * back  back
     *
     * @var string[]
     */
@@ -220,7 +234,9 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'generationDate' => 'setGenerationDate',
             'currentTime' => 'setCurrentTime',
-            'textLocation' => 'setTextLocation'
+            'textLocation' => 'setTextLocation',
+            'front' => 'setFront',
+            'back' => 'setBack'
     ];
 
     /**
@@ -244,6 +260,8 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     * generationDate  生成时间。
     * currentTime  当前时间。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
+    * front  front
+    * back  back
     *
     * @var string[]
     */
@@ -266,7 +284,9 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'generationDate' => 'getGenerationDate',
             'currentTime' => 'getCurrentTime',
-            'textLocation' => 'getTextLocation'
+            'textLocation' => 'getTextLocation',
+            'front' => 'getFront',
+            'back' => 'getBack'
     ];
 
     /**
@@ -346,6 +366,8 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
         $this->container['generationDate'] = isset($data['generationDate']) ? $data['generationDate'] : null;
         $this->container['currentTime'] = isset($data['currentTime']) ? $data['currentTime'] : null;
         $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
+        $this->container['front'] = isset($data['front']) ? $data['front'] : null;
+        $this->container['back'] = isset($data['back']) ? $data['back'] : null;
     }
 
     /**
@@ -823,6 +845,54 @@ class DriverLicenseResult implements ModelInterface, ArrayAccess
     public function setTextLocation($textLocation)
     {
         $this->container['textLocation'] = $textLocation;
+        return $this;
+    }
+
+    /**
+    * Gets front
+    *  front
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\DriverLicenseFront|null
+    */
+    public function getFront()
+    {
+        return $this->container['front'];
+    }
+
+    /**
+    * Sets front
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\DriverLicenseFront|null $front front
+    *
+    * @return $this
+    */
+    public function setFront($front)
+    {
+        $this->container['front'] = $front;
+        return $this;
+    }
+
+    /**
+    * Gets back
+    *  back
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\DriverLicenseBack|null
+    */
+    public function getBack()
+    {
+        return $this->container['back'];
+    }
+
+    /**
+    * Sets back
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\DriverLicenseBack|null $back back
+    *
+    * @return $this
+    */
+    public function setBack($back)
+    {
+        $this->container['back'] = $back;
         return $this;
     }
 

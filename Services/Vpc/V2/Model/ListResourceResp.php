@@ -20,7 +20,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceDetail  资源详情。 资源对象，用于扩展。默认为空
     * resourceId  资源ID
     * resourceName  资源名称，没有默认为空字符串
     * tags  标签列表，没有标签默认为空数组
@@ -28,7 +28,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resouceDetail' => 'object',
+            'resourceDetail' => 'object',
             'resourceId' => 'string',
             'resourceName' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpc\V2\Model\ResourceTag[]'
@@ -36,7 +36,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceDetail  资源详情。 资源对象，用于扩展。默认为空
     * resourceId  资源ID
     * resourceName  资源名称，没有默认为空字符串
     * tags  标签列表，没有标签默认为空数组
@@ -44,7 +44,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resouceDetail' => null,
+        'resourceDetail' => null,
         'resourceId' => null,
         'resourceName' => null,
         'tags' => null
@@ -73,7 +73,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceDetail  资源详情。 资源对象，用于扩展。默认为空
     * resourceId  资源ID
     * resourceName  资源名称，没有默认为空字符串
     * tags  标签列表，没有标签默认为空数组
@@ -81,7 +81,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'resouceDetail' => 'resouce_detail',
+            'resourceDetail' => 'resource_detail',
             'resourceId' => 'resource_id',
             'resourceName' => 'resource_name',
             'tags' => 'tags'
@@ -89,7 +89,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceDetail  资源详情。 资源对象，用于扩展。默认为空
     * resourceId  资源ID
     * resourceName  资源名称，没有默认为空字符串
     * tags  标签列表，没有标签默认为空数组
@@ -97,7 +97,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'resouceDetail' => 'setResouceDetail',
+            'resourceDetail' => 'setResourceDetail',
             'resourceId' => 'setResourceId',
             'resourceName' => 'setResourceName',
             'tags' => 'setTags'
@@ -105,7 +105,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resouceDetail  资源详情。 资源对象，用于扩展。默认为空
+    * resourceDetail  资源详情。 资源对象，用于扩展。默认为空
     * resourceId  资源ID
     * resourceName  资源名称，没有默认为空字符串
     * tags  标签列表，没有标签默认为空数组
@@ -113,7 +113,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'resouceDetail' => 'getResouceDetail',
+            'resourceDetail' => 'getResourceDetail',
             'resourceId' => 'getResourceId',
             'resourceName' => 'getResourceName',
             'tags' => 'getTags'
@@ -177,7 +177,7 @@ class ListResourceResp implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['resouceDetail'] = isset($data['resouceDetail']) ? $data['resouceDetail'] : null;
+        $this->container['resourceDetail'] = isset($data['resourceDetail']) ? $data['resourceDetail'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -191,8 +191,8 @@ class ListResourceResp implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['resouceDetail'] === null) {
-            $invalidProperties[] = "'resouceDetail' can't be null";
+        if ($this->container['resourceDetail'] === null) {
+            $invalidProperties[] = "'resourceDetail' can't be null";
         }
         if ($this->container['resourceId'] === null) {
             $invalidProperties[] = "'resourceId' can't be null";
@@ -215,26 +215,26 @@ class ListResourceResp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resouceDetail
+    * Gets resourceDetail
     *  资源详情。 资源对象，用于扩展。默认为空
     *
     * @return object
     */
-    public function getResouceDetail()
+    public function getResourceDetail()
     {
-        return $this->container['resouceDetail'];
+        return $this->container['resourceDetail'];
     }
 
     /**
-    * Sets resouceDetail
+    * Sets resourceDetail
     *
-    * @param object $resouceDetail 资源详情。 资源对象，用于扩展。默认为空
+    * @param object $resourceDetail 资源详情。 资源对象，用于扩展。默认为空
     *
     * @return $this
     */
-    public function setResouceDetail($resouceDetail)
+    public function setResourceDetail($resourceDetail)
     {
-        $this->container['resouceDetail'] = $resouceDetail;
+        $this->container['resourceDetail'] = $resourceDetail;
         return $this;
     }
 

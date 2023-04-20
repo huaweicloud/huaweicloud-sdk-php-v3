@@ -207,8 +207,8 @@ class ServiceCapability implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['serviceId'] = isset($data['serviceId']) ? $data['serviceId'] : null;
-        $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
+        $this->container['serviceId'] = isset($data['serviceId']) ? $data['serviceId'] : 'sensor';
+        $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : 'sensor';
         $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
         $this->container['commands'] = isset($data['commands']) ? $data['commands'] : null;
         $this->container['events'] = isset($data['events']) ? $data['events'] : null;

@@ -237,10 +237,10 @@ class AddDevice implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : null;
-        $this->container['nodeId'] = isset($data['nodeId']) ? $data['nodeId'] : null;
-        $this->container['deviceName'] = isset($data['deviceName']) ? $data['deviceName'] : null;
-        $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
+        $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : 'LightDemo-Device001';
+        $this->container['nodeId'] = isset($data['nodeId']) ? $data['nodeId'] : 'LightDemo-Device001';
+        $this->container['deviceName'] = isset($data['deviceName']) ? $data['deviceName'] : '点灯设备-001';
+        $this->container['productId'] = isset($data['productId']) ? $data['productId'] : 'LightDemo-001';
         $this->container['authInfo'] = isset($data['authInfo']) ? $data['authInfo'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['gatewayId'] = isset($data['gatewayId']) ? $data['gatewayId'] : null;

@@ -45,6 +45,8 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * endpointPoolId  待废弃，实例相关联的集群ID
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -72,7 +74,9 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
             'enableWhitelist' => 'bool',
             'routetables' => 'string[]',
             'description' => 'string',
-            'policyStatement' => 'string[]'
+            'policyStatement' => 'string[]',
+            'endpointPoolId' => 'string',
+            'publicBorderGroup' => 'string'
     ];
 
     /**
@@ -101,6 +105,8 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * endpointPoolId  待废弃，实例相关联的集群ID
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -128,7 +134,9 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
         'enableWhitelist' => null,
         'routetables' => null,
         'description' => null,
-        'policyStatement' => null
+        'policyStatement' => null,
+        'endpointPoolId' => null,
+        'publicBorderGroup' => null
     ];
 
     /**
@@ -178,6 +186,8 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * endpointPoolId  待废弃，实例相关联的集群ID
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -205,7 +215,9 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
             'enableWhitelist' => 'enable_whitelist',
             'routetables' => 'routetables',
             'description' => 'description',
-            'policyStatement' => 'policy_statement'
+            'policyStatement' => 'policy_statement',
+            'endpointPoolId' => 'endpoint_pool_id',
+            'publicBorderGroup' => 'public_border_group'
     ];
 
     /**
@@ -234,6 +246,8 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * endpointPoolId  待废弃，实例相关联的集群ID
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -261,7 +275,9 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
             'enableWhitelist' => 'setEnableWhitelist',
             'routetables' => 'setRoutetables',
             'description' => 'setDescription',
-            'policyStatement' => 'setPolicyStatement'
+            'policyStatement' => 'setPolicyStatement',
+            'endpointPoolId' => 'setEndpointPoolId',
+            'publicBorderGroup' => 'setPublicBorderGroup'
     ];
 
     /**
@@ -290,6 +306,8 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * endpointPoolId  待废弃，实例相关联的集群ID
+    * publicBorderGroup  终端节点对应Pool的Public Border Group信息
     *
     * @var string[]
     */
@@ -317,7 +335,9 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
             'enableWhitelist' => 'getEnableWhitelist',
             'routetables' => 'getRoutetables',
             'description' => 'getDescription',
-            'policyStatement' => 'getPolicyStatement'
+            'policyStatement' => 'getPolicyStatement',
+            'endpointPoolId' => 'getEndpointPoolId',
+            'publicBorderGroup' => 'getPublicBorderGroup'
     ];
 
     /**
@@ -455,6 +475,8 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
         $this->container['routetables'] = isset($data['routetables']) ? $data['routetables'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['policyStatement'] = isset($data['policyStatement']) ? $data['policyStatement'] : null;
+        $this->container['endpointPoolId'] = isset($data['endpointPoolId']) ? $data['endpointPoolId'] : null;
+        $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
     }
 
     /**
@@ -1076,6 +1098,54 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     public function setPolicyStatement($policyStatement)
     {
         $this->container['policyStatement'] = $policyStatement;
+        return $this;
+    }
+
+    /**
+    * Gets endpointPoolId
+    *  待废弃，实例相关联的集群ID
+    *
+    * @return string|null
+    */
+    public function getEndpointPoolId()
+    {
+        return $this->container['endpointPoolId'];
+    }
+
+    /**
+    * Sets endpointPoolId
+    *
+    * @param string|null $endpointPoolId 待废弃，实例相关联的集群ID
+    *
+    * @return $this
+    */
+    public function setEndpointPoolId($endpointPoolId)
+    {
+        $this->container['endpointPoolId'] = $endpointPoolId;
+        return $this;
+    }
+
+    /**
+    * Gets publicBorderGroup
+    *  终端节点对应Pool的Public Border Group信息
+    *
+    * @return string|null
+    */
+    public function getPublicBorderGroup()
+    {
+        return $this->container['publicBorderGroup'];
+    }
+
+    /**
+    * Sets publicBorderGroup
+    *
+    * @param string|null $publicBorderGroup 终端节点对应Pool的Public Border Group信息
+    *
+    * @return $this
+    */
+    public function setPublicBorderGroup($publicBorderGroup)
+    {
+        $this->container['publicBorderGroup'] = $publicBorderGroup;
         return $this;
     }
 

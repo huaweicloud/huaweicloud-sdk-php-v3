@@ -22,24 +22,28 @@ class CreateRedislogDownloadLinkResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  日志id
+    * backupId  后台任务id
     * link  日志下载链接，默认有效时间为24小时
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
+            'backupId' => 'string',
             'link' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  日志id
+    * backupId  后台任务id
     * link  日志下载链接，默认有效时间为24小时
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
+        'backupId' => null,
         'link' => null
     ];
 
@@ -67,36 +71,42 @@ class CreateRedislogDownloadLinkResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  日志id
+    * backupId  后台任务id
     * link  日志下载链接，默认有效时间为24小时
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
+            'backupId' => 'backup_id',
             'link' => 'link'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  日志id
+    * backupId  后台任务id
     * link  日志下载链接，默认有效时间为24小时
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
+            'backupId' => 'setBackupId',
             'link' => 'setLink'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  日志id
+    * backupId  后台任务id
     * link  日志下载链接，默认有效时间为24小时
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
+            'backupId' => 'getBackupId',
             'link' => 'getLink'
     ];
 
@@ -159,6 +169,7 @@ class CreateRedislogDownloadLinkResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['backupId'] = isset($data['backupId']) ? $data['backupId'] : null;
         $this->container['link'] = isset($data['link']) ? $data['link'] : null;
     }
 
@@ -205,6 +216,30 @@ class CreateRedislogDownloadLinkResponse implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets backupId
+    *  后台任务id
+    *
+    * @return string|null
+    */
+    public function getBackupId()
+    {
+        return $this->container['backupId'];
+    }
+
+    /**
+    * Sets backupId
+    *
+    * @param string|null $backupId 后台任务id
+    *
+    * @return $this
+    */
+    public function setBackupId($backupId)
+    {
+        $this->container['backupId'] = $backupId;
         return $this;
     }
 

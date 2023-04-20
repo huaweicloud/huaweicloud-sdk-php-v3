@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Aos\V1\Model;
+namespace HuaweiCloud\SDK\Cdn\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ExecutorPrimitiveTypeHolder implements ModelInterface, ArrayAccess
+class ModifyDomainConfigRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,24 +16,26 @@ class ExecutorPrimitiveTypeHolder implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ExecutorPrimitiveTypeHolder';
+    protected static $openAPIModelName = 'ModifyDomainConfigRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * configs  configs
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'configs' => '\HuaweiCloud\SDK\Cdn\V2\Model\Configs'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * configs  configs
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'configs' => null
     ];
 
     /**
@@ -59,29 +61,32 @@ class ExecutorPrimitiveTypeHolder implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * configs  configs
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'configs' => 'configs'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * configs  configs
     *
     * @var string[]
     */
     protected static $setters = [
+            'configs' => 'setConfigs'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * configs  configs
     *
     * @var string[]
     */
     protected static $getters = [
+            'configs' => 'getConfigs'
     ];
 
     /**
@@ -142,6 +147,7 @@ class ExecutorPrimitiveTypeHolder implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['configs'] = isset($data['configs']) ? $data['configs'] : null;
     }
 
     /**
@@ -164,6 +170,30 @@ class ExecutorPrimitiveTypeHolder implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets configs
+    *  configs
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\Configs|null
+    */
+    public function getConfigs()
+    {
+        return $this->container['configs'];
+    }
+
+    /**
+    * Sets configs
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\Configs|null $configs configs
+    *
+    * @return $this
+    */
+    public function setConfigs($configs)
+    {
+        $this->container['configs'] = $configs;
+        return $this;
     }
 
     /**

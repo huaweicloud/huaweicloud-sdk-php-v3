@@ -237,10 +237,10 @@ class AddProduct implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['deviceType'] = isset($data['deviceType']) ? $data['deviceType'] : null;
-        $this->container['protocolType'] = isset($data['protocolType']) ? $data['protocolType'] : null;
+        $this->container['productId'] = isset($data['productId']) ? $data['productId'] : 'LightDemo-001';
+        $this->container['name'] = isset($data['name']) ? $data['name'] : '点灯产品-001';
+        $this->container['deviceType'] = isset($data['deviceType']) ? $data['deviceType'] : '智能台灯';
+        $this->container['protocolType'] = isset($data['protocolType']) ? $data['protocolType'] : 'MQTT';
         $this->container['dataFormat'] = isset($data['dataFormat']) ? $data['dataFormat'] : 'json';
         $this->container['serviceCapabilities'] = isset($data['serviceCapabilities']) ? $data['serviceCapabilities'] : null;
         $this->container['manufacturerName'] = isset($data['manufacturerName']) ? $data['manufacturerName'] : null;

@@ -26,6 +26,10 @@ class Configs implements ModelInterface, ArrayAccess
     * https  https
     * sources  源站配置。
     * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * cacheRules  缓存规则。
+    * ipFilter  ipFilter
+    * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
@@ -45,6 +49,10 @@ class Configs implements ModelInterface, ArrayAccess
             'https' => '\HuaweiCloud\SDK\Cdn\V1\Model\HttpPutBody',
             'sources' => '\HuaweiCloud\SDK\Cdn\V1\Model\SourcesConfig[]',
             'originProtocol' => 'string',
+            'originFollow302Status' => 'string',
+            'cacheRules' => '\HuaweiCloud\SDK\Cdn\V1\Model\CacheRules[]',
+            'ipFilter' => '\HuaweiCloud\SDK\Cdn\V1\Model\IpFilter',
+            'referer' => '\HuaweiCloud\SDK\Cdn\V1\Model\RefererConfig',
             'forceRedirect' => '\HuaweiCloud\SDK\Cdn\V1\Model\ForceRedirectConfig',
             'compress' => '\HuaweiCloud\SDK\Cdn\V1\Model\Compress',
             'cacheUrlParameterFilter' => '\HuaweiCloud\SDK\Cdn\V1\Model\CacheUrlParameterFilter',
@@ -64,6 +72,10 @@ class Configs implements ModelInterface, ArrayAccess
     * https  https
     * sources  源站配置。
     * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * cacheRules  缓存规则。
+    * ipFilter  ipFilter
+    * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
@@ -83,6 +95,10 @@ class Configs implements ModelInterface, ArrayAccess
         'https' => null,
         'sources' => null,
         'originProtocol' => null,
+        'originFollow302Status' => null,
+        'cacheRules' => null,
+        'ipFilter' => null,
+        'referer' => null,
         'forceRedirect' => null,
         'compress' => null,
         'cacheUrlParameterFilter' => null,
@@ -123,6 +139,10 @@ class Configs implements ModelInterface, ArrayAccess
     * https  https
     * sources  源站配置。
     * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * cacheRules  缓存规则。
+    * ipFilter  ipFilter
+    * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
@@ -142,6 +162,10 @@ class Configs implements ModelInterface, ArrayAccess
             'https' => 'https',
             'sources' => 'sources',
             'originProtocol' => 'origin_protocol',
+            'originFollow302Status' => 'origin_follow302_status',
+            'cacheRules' => 'cache_rules',
+            'ipFilter' => 'ip_filter',
+            'referer' => 'referer',
             'forceRedirect' => 'force_redirect',
             'compress' => 'compress',
             'cacheUrlParameterFilter' => 'cache_url_parameter_filter',
@@ -161,6 +185,10 @@ class Configs implements ModelInterface, ArrayAccess
     * https  https
     * sources  源站配置。
     * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * cacheRules  缓存规则。
+    * ipFilter  ipFilter
+    * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
@@ -180,6 +208,10 @@ class Configs implements ModelInterface, ArrayAccess
             'https' => 'setHttps',
             'sources' => 'setSources',
             'originProtocol' => 'setOriginProtocol',
+            'originFollow302Status' => 'setOriginFollow302Status',
+            'cacheRules' => 'setCacheRules',
+            'ipFilter' => 'setIpFilter',
+            'referer' => 'setReferer',
             'forceRedirect' => 'setForceRedirect',
             'compress' => 'setCompress',
             'cacheUrlParameterFilter' => 'setCacheUrlParameterFilter',
@@ -199,6 +231,10 @@ class Configs implements ModelInterface, ArrayAccess
     * https  https
     * sources  源站配置。
     * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * cacheRules  缓存规则。
+    * ipFilter  ipFilter
+    * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
@@ -218,6 +254,10 @@ class Configs implements ModelInterface, ArrayAccess
             'https' => 'getHttps',
             'sources' => 'getSources',
             'originProtocol' => 'getOriginProtocol',
+            'originFollow302Status' => 'getOriginFollow302Status',
+            'cacheRules' => 'getCacheRules',
+            'ipFilter' => 'getIpFilter',
+            'referer' => 'getReferer',
             'forceRedirect' => 'getForceRedirect',
             'compress' => 'getCompress',
             'cacheUrlParameterFilter' => 'getCacheUrlParameterFilter',
@@ -293,6 +333,10 @@ class Configs implements ModelInterface, ArrayAccess
         $this->container['https'] = isset($data['https']) ? $data['https'] : null;
         $this->container['sources'] = isset($data['sources']) ? $data['sources'] : null;
         $this->container['originProtocol'] = isset($data['originProtocol']) ? $data['originProtocol'] : null;
+        $this->container['originFollow302Status'] = isset($data['originFollow302Status']) ? $data['originFollow302Status'] : null;
+        $this->container['cacheRules'] = isset($data['cacheRules']) ? $data['cacheRules'] : null;
+        $this->container['ipFilter'] = isset($data['ipFilter']) ? $data['ipFilter'] : null;
+        $this->container['referer'] = isset($data['referer']) ? $data['referer'] : null;
         $this->container['forceRedirect'] = isset($data['forceRedirect']) ? $data['forceRedirect'] : null;
         $this->container['compress'] = isset($data['compress']) ? $data['compress'] : null;
         $this->container['cacheUrlParameterFilter'] = isset($data['cacheUrlParameterFilter']) ? $data['cacheUrlParameterFilter'] : null;
@@ -467,6 +511,102 @@ class Configs implements ModelInterface, ArrayAccess
     public function setOriginProtocol($originProtocol)
     {
         $this->container['originProtocol'] = $originProtocol;
+        return $this;
+    }
+
+    /**
+    * Gets originFollow302Status
+    *  回源跟随（on：开启，off：关闭）。
+    *
+    * @return string|null
+    */
+    public function getOriginFollow302Status()
+    {
+        return $this->container['originFollow302Status'];
+    }
+
+    /**
+    * Sets originFollow302Status
+    *
+    * @param string|null $originFollow302Status 回源跟随（on：开启，off：关闭）。
+    *
+    * @return $this
+    */
+    public function setOriginFollow302Status($originFollow302Status)
+    {
+        $this->container['originFollow302Status'] = $originFollow302Status;
+        return $this;
+    }
+
+    /**
+    * Gets cacheRules
+    *  缓存规则。
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V1\Model\CacheRules[]|null
+    */
+    public function getCacheRules()
+    {
+        return $this->container['cacheRules'];
+    }
+
+    /**
+    * Sets cacheRules
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\CacheRules[]|null $cacheRules 缓存规则。
+    *
+    * @return $this
+    */
+    public function setCacheRules($cacheRules)
+    {
+        $this->container['cacheRules'] = $cacheRules;
+        return $this;
+    }
+
+    /**
+    * Gets ipFilter
+    *  ipFilter
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V1\Model\IpFilter|null
+    */
+    public function getIpFilter()
+    {
+        return $this->container['ipFilter'];
+    }
+
+    /**
+    * Sets ipFilter
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\IpFilter|null $ipFilter ipFilter
+    *
+    * @return $this
+    */
+    public function setIpFilter($ipFilter)
+    {
+        $this->container['ipFilter'] = $ipFilter;
+        return $this;
+    }
+
+    /**
+    * Gets referer
+    *  referer
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V1\Model\RefererConfig|null
+    */
+    public function getReferer()
+    {
+        return $this->container['referer'];
+    }
+
+    /**
+    * Sets referer
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\RefererConfig|null $referer referer
+    *
+    * @return $this
+    */
+    public function setReferer($referer)
+    {
+        $this->container['referer'] = $referer;
         return $this;
     }
 

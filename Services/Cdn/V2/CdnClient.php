@@ -666,6 +666,71 @@ class CdnClient extends Client
     }
 
     /**
+     * 查询域名配置接口
+     *
+     * 查询域名配置接口，支持查询回源请求头、HTTP header配置、URL鉴权、证书、源站、回源协议、强制重定向、智能压缩、缓存URL参数、IPv6开关、状态码缓存时间、Range回源、User-Agent黑白名单、改写回源URL、自定义错误页面
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomainFullConfig($request)
+    {
+        return $this->showDomainFullConfigWithHttpInfo($request);
+    }
+
+    public function showDomainFullConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.1/cdn/configuration/domains/{domain_name}/configs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $pathParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowDomainFullConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowDomainFullConfigRequest');
+    }
+
+    /**
      * 查询域名统计区域运营商数据
      *
      * - 支持查询90天内的数据。
@@ -1043,6 +1108,74 @@ class CdnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowTopUrlResponse',
             $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\ShowTopUrlRequest');
+    }
+
+    /**
+     * 修改域名全量配置接口
+     *
+     * 修改域名全量配置接口，支持配置回源请求头、HTTP header配置、URL鉴权、证书、源站、回源协议、强制重定向、智能压缩、缓存URL参数、IPv6、状态码缓存时间、Range回源、User-Agent黑白名单、改写回源URL、自定义错误页面
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDomainFullConfig($request)
+    {
+        return $this->updateDomainFullConfigWithHttpInfo($request);
+    }
+
+    public function updateDomainFullConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.1/cdn/configuration/domains/{domain_name}/configs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $pathParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateDomainFullConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Cdn\V2\Model\UpdateDomainFullConfigRequest');
     }
 
     protected function callApi(

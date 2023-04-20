@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Cdn\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DeviceGroupResponseSummary implements ModelInterface, ArrayAccess
+class ErrorCodeRedirectRules implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,38 +16,34 @@ class DeviceGroupResponseSummary implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DeviceGroupResponseSummary';
+    protected static $openAPIModelName = 'ErrorCodeRedirectRules';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
-    * name  设备组名称，单个资源空间下不可重复。
-    * description  设备组描述。
-    * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
+    * targetCode  重定向状态码，取值为301或302
+    * targetLink  重定向的目标链接
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'groupId' => 'string',
-            'name' => 'string',
-            'description' => 'string',
-            'superGroupId' => 'string'
+            'errorCode' => 'int',
+            'targetCode' => 'int',
+            'targetLink' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
-    * name  设备组名称，单个资源空间下不可重复。
-    * description  设备组描述。
-    * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
+    * targetCode  重定向状态码，取值为301或302
+    * targetLink  重定向的目标链接
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'groupId' => null,
-        'name' => null,
-        'description' => null,
-        'superGroupId' => null
+        'errorCode' => 'int32',
+        'targetCode' => 'int32',
+        'targetLink' => null
     ];
 
     /**
@@ -73,50 +69,44 @@ class DeviceGroupResponseSummary implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
-    * name  设备组名称，单个资源空间下不可重复。
-    * description  设备组描述。
-    * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
+    * targetCode  重定向状态码，取值为301或302
+    * targetLink  重定向的目标链接
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'groupId' => 'group_id',
-            'name' => 'name',
-            'description' => 'description',
-            'superGroupId' => 'super_group_id'
+            'errorCode' => 'error_code',
+            'targetCode' => 'target_code',
+            'targetLink' => 'target_link'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
-    * name  设备组名称，单个资源空间下不可重复。
-    * description  设备组描述。
-    * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
+    * targetCode  重定向状态码，取值为301或302
+    * targetLink  重定向的目标链接
     *
     * @var string[]
     */
     protected static $setters = [
-            'groupId' => 'setGroupId',
-            'name' => 'setName',
-            'description' => 'setDescription',
-            'superGroupId' => 'setSuperGroupId'
+            'errorCode' => 'setErrorCode',
+            'targetCode' => 'setTargetCode',
+            'targetLink' => 'setTargetLink'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
-    * name  设备组名称，单个资源空间下不可重复。
-    * description  设备组描述。
-    * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * errorCode  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
+    * targetCode  重定向状态码，取值为301或302
+    * targetLink  重定向的目标链接
     *
     * @var string[]
     */
     protected static $getters = [
-            'groupId' => 'getGroupId',
-            'name' => 'getName',
-            'description' => 'getDescription',
-            'superGroupId' => 'getSuperGroupId'
+            'errorCode' => 'getErrorCode',
+            'targetCode' => 'getTargetCode',
+            'targetLink' => 'getTargetLink'
     ];
 
     /**
@@ -177,10 +167,9 @@ class DeviceGroupResponseSummary implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['superGroupId'] = isset($data['superGroupId']) ? $data['superGroupId'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['targetCode'] = isset($data['targetCode']) ? $data['targetCode'] : null;
+        $this->container['targetLink'] = isset($data['targetLink']) ? $data['targetLink'] : null;
     }
 
     /**
@@ -191,6 +180,15 @@ class DeviceGroupResponseSummary implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['errorCode'] === null) {
+            $invalidProperties[] = "'errorCode' can't be null";
+        }
+        if ($this->container['targetCode'] === null) {
+            $invalidProperties[] = "'targetCode' can't be null";
+        }
+        if ($this->container['targetLink'] === null) {
+            $invalidProperties[] = "'targetLink' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -206,98 +204,74 @@ class DeviceGroupResponseSummary implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets groupId
-    *  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
+    * Gets errorCode
+    *  重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
     *
-    * @return string|null
+    * @return int
     */
-    public function getGroupId()
+    public function getErrorCode()
     {
-        return $this->container['groupId'];
+        return $this->container['errorCode'];
     }
 
     /**
-    * Sets groupId
+    * Sets errorCode
     *
-    * @param string|null $groupId 设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
+    * @param int $errorCode 重定向的错误码，当前支持以下状态码 4xx:400, 403, 404, 405, 414, 416, 451 5xx:500, 501, 502, 503, 504
     *
     * @return $this
     */
-    public function setGroupId($groupId)
+    public function setErrorCode($errorCode)
     {
-        $this->container['groupId'] = $groupId;
+        $this->container['errorCode'] = $errorCode;
         return $this;
     }
 
     /**
-    * Gets name
-    *  设备组名称，单个资源空间下不可重复。
+    * Gets targetCode
+    *  重定向状态码，取值为301或302
     *
-    * @return string|null
+    * @return int
     */
-    public function getName()
+    public function getTargetCode()
     {
-        return $this->container['name'];
+        return $this->container['targetCode'];
     }
 
     /**
-    * Sets name
+    * Sets targetCode
     *
-    * @param string|null $name 设备组名称，单个资源空间下不可重复。
+    * @param int $targetCode 重定向状态码，取值为301或302
     *
     * @return $this
     */
-    public function setName($name)
+    public function setTargetCode($targetCode)
     {
-        $this->container['name'] = $name;
+        $this->container['targetCode'] = $targetCode;
         return $this;
     }
 
     /**
-    * Gets description
-    *  设备组描述。
+    * Gets targetLink
+    *  重定向的目标链接
     *
-    * @return string|null
+    * @return string
     */
-    public function getDescription()
+    public function getTargetLink()
     {
-        return $this->container['description'];
+        return $this->container['targetLink'];
     }
 
     /**
-    * Sets description
+    * Sets targetLink
     *
-    * @param string|null $description 设备组描述。
+    * @param string $targetLink 重定向的目标链接
     *
     * @return $this
     */
-    public function setDescription($description)
+    public function setTargetLink($targetLink)
     {
-        $this->container['description'] = $description;
-        return $this;
-    }
-
-    /**
-    * Gets superGroupId
-    *  父设备组ID，该设备组的父设备组ID。
-    *
-    * @return string|null
-    */
-    public function getSuperGroupId()
-    {
-        return $this->container['superGroupId'];
-    }
-
-    /**
-    * Sets superGroupId
-    *
-    * @param string|null $superGroupId 父设备组ID，该设备组的父设备组ID。
-    *
-    * @return $this
-    */
-    public function setSuperGroupId($superGroupId)
-    {
-        $this->container['superGroupId'] = $superGroupId;
+        $this->container['targetLink'] = $targetLink;
         return $this;
     }
 

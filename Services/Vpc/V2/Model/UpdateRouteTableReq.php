@@ -22,21 +22,21 @@ class UpdateRouteTableReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  功能说明：路由表名称  取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：路由表描述信息  取值范围：0-255个字符，不能包含“<”和“>”
-    * routes  功能说明：路由对象  取值范围：参见route字段说明。更新存在三种动作：     1）add：新增路由条目，type，destination，nexthop必选。     2）mod：修改路由信息，type，destination，nexthop必选。     3）del：删除路由条目，destination必选  约束：     每个路由表最大关联200条路由。     不支持直接修改destination，如需修改，只能使用del先删除对应路由，然后使用add新增路由。
+    * routes  routes
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
             'description' => 'string',
-            'routes' => 'map[string,\HuaweiCloud\SDK\Vpc\V2\Model\RouteTableRoute[]]'
+            'routes' => '\HuaweiCloud\SDK\Vpc\V2\Model\RouteTableRouteAction'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  功能说明：路由表名称  取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：路由表描述信息  取值范围：0-255个字符，不能包含“<”和“>”
-    * routes  功能说明：路由对象  取值范围：参见route字段说明。更新存在三种动作：     1）add：新增路由条目，type，destination，nexthop必选。     2）mod：修改路由信息，type，destination，nexthop必选。     3）del：删除路由条目，destination必选  约束：     每个路由表最大关联200条路由。     不支持直接修改destination，如需修改，只能使用del先删除对应路由，然后使用add新增路由。
+    * routes  routes
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateRouteTableReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  功能说明：路由表名称  取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：路由表描述信息  取值范围：0-255个字符，不能包含“<”和“>”
-    * routes  功能说明：路由对象  取值范围：参见route字段说明。更新存在三种动作：     1）add：新增路由条目，type，destination，nexthop必选。     2）mod：修改路由信息，type，destination，nexthop必选。     3）del：删除路由条目，destination必选  约束：     每个路由表最大关联200条路由。     不支持直接修改destination，如需修改，只能使用del先删除对应路由，然后使用add新增路由。
+    * routes  routes
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class UpdateRouteTableReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  功能说明：路由表名称  取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：路由表描述信息  取值范围：0-255个字符，不能包含“<”和“>”
-    * routes  功能说明：路由对象  取值范围：参见route字段说明。更新存在三种动作：     1）add：新增路由条目，type，destination，nexthop必选。     2）mod：修改路由信息，type，destination，nexthop必选。     3）del：删除路由条目，destination必选  约束：     每个路由表最大关联200条路由。     不支持直接修改destination，如需修改，只能使用del先删除对应路由，然后使用add新增路由。
+    * routes  routes
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class UpdateRouteTableReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  功能说明：路由表名称  取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：路由表描述信息  取值范围：0-255个字符，不能包含“<”和“>”
-    * routes  功能说明：路由对象  取值范围：参见route字段说明。更新存在三种动作：     1）add：新增路由条目，type，destination，nexthop必选。     2）mod：修改路由信息，type，destination，nexthop必选。     3）del：删除路由条目，destination必选  约束：     每个路由表最大关联200条路由。     不支持直接修改destination，如需修改，只能使用del先删除对应路由，然后使用add新增路由。
+    * routes  routes
     *
     * @var string[]
     */
@@ -256,9 +256,9 @@ class UpdateRouteTableReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets routes
-    *  功能说明：路由对象  取值范围：参见route字段说明。更新存在三种动作：     1）add：新增路由条目，type，destination，nexthop必选。     2）mod：修改路由信息，type，destination，nexthop必选。     3）del：删除路由条目，destination必选  约束：     每个路由表最大关联200条路由。     不支持直接修改destination，如需修改，只能使用del先删除对应路由，然后使用add新增路由。
+    *  routes
     *
-    * @return map[string,\HuaweiCloud\SDK\Vpc\V2\Model\RouteTableRoute[]]|null
+    * @return \HuaweiCloud\SDK\Vpc\V2\Model\RouteTableRouteAction|null
     */
     public function getRoutes()
     {
@@ -268,7 +268,7 @@ class UpdateRouteTableReq implements ModelInterface, ArrayAccess
     /**
     * Sets routes
     *
-    * @param map[string,\HuaweiCloud\SDK\Vpc\V2\Model\RouteTableRoute[]]|null $routes 功能说明：路由对象  取值范围：参见route字段说明。更新存在三种动作：     1）add：新增路由条目，type，destination，nexthop必选。     2）mod：修改路由信息，type，destination，nexthop必选。     3）del：删除路由条目，destination必选  约束：     每个路由表最大关联200条路由。     不支持直接修改destination，如需修改，只能使用del先删除对应路由，然后使用add新增路由。
+    * @param \HuaweiCloud\SDK\Vpc\V2\Model\RouteTableRouteAction|null $routes routes
     *
     * @return $this
     */

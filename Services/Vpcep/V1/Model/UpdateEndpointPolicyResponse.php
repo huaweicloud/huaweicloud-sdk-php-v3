@@ -43,7 +43,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
-    * endpointPoolId  终端节点相关联的Pood的ID
+    * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
     *
     * @var string[]
@@ -99,7 +99,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
-    * endpointPoolId  终端节点相关联的Pood的ID
+    * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
     *
     * @var string[]
@@ -176,7 +176,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
-    * endpointPoolId  终端节点相关联的Pood的ID
+    * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
     *
     * @var string[]
@@ -232,7 +232,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
-    * endpointPoolId  终端节点相关联的Pood的ID
+    * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
     *
     * @var string[]
@@ -288,7 +288,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
-    * endpointPoolId  终端节点相关联的Pood的ID
+    * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
     *
     * @var string[]
@@ -1010,7 +1010,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpointPoolId
-    *  终端节点相关联的Pood的ID
+    *  待废弃，实例相关联的集群ID
     *
     * @return string|null
     */
@@ -1022,7 +1022,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets endpointPoolId
     *
-    * @param string|null $endpointPoolId 终端节点相关联的Pood的ID
+    * @param string|null $endpointPoolId 待废弃，实例相关联的集群ID
     *
     * @return $this
     */

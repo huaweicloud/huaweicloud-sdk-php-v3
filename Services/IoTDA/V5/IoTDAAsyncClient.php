@@ -1152,6 +1152,76 @@ class IoTDAAsyncClient extends Client
     }
 
     /**
+     * 下发广播消息
+     *
+     * 应用服务器可调用此接口向订阅了指定Topic的所有在线设备发布广播消息。应用将广播消息下发给平台后，平台会先返回应用响应结果，再将消息广播给设备。
+     * 注意：
+     * - 此接口只适用于使用MQTT协议接入的设备。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function broadcastMessageAsync($request)
+    {
+        return $this->broadcastMessageAsyncWithHttpInfo($request);
+    }
+    
+    public function broadcastMessageAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/iot/{project_id}/broadcast-messages';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $headerParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTDA\V5\Model\BroadcastMessageResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTDA\V5\Model\BroadcastMessageRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 上传设备CA证书
      *
      * 应用服务器可调用此接口在物联网平台上传设备CA证书

@@ -22,24 +22,28 @@ class ForceRedirectConfig implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * status  强制跳转开关（on：打开，off：关闭）。
     * type  强制跳转类型（http：强制跳转HTTP，https：强制跳转HTTPS）。
+    * redirectCode  重定向跳转码301,302。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'status' => 'string',
-            'type' => 'string'
+            'type' => 'string',
+            'redirectCode' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * status  强制跳转开关（on：打开，off：关闭）。
     * type  强制跳转类型（http：强制跳转HTTP，https：强制跳转HTTPS）。
+    * redirectCode  重定向跳转码301,302。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'status' => null,
-        'type' => null
+        'type' => null,
+        'redirectCode' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ForceRedirectConfig implements ModelInterface, ArrayAccess
     * and the value is the original name
     * status  强制跳转开关（on：打开，off：关闭）。
     * type  强制跳转类型（http：强制跳转HTTP，https：强制跳转HTTPS）。
+    * redirectCode  重定向跳转码301,302。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'status' => 'status',
-            'type' => 'type'
+            'type' => 'type',
+            'redirectCode' => 'redirect_code'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * status  强制跳转开关（on：打开，off：关闭）。
     * type  强制跳转类型（http：强制跳转HTTP，https：强制跳转HTTPS）。
+    * redirectCode  重定向跳转码301,302。
     *
     * @var string[]
     */
     protected static $setters = [
             'status' => 'setStatus',
-            'type' => 'setType'
+            'type' => 'setType',
+            'redirectCode' => 'setRedirectCode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * status  强制跳转开关（on：打开，off：关闭）。
     * type  强制跳转类型（http：强制跳转HTTP，https：强制跳转HTTPS）。
+    * redirectCode  重定向跳转码301,302。
     *
     * @var string[]
     */
     protected static $getters = [
             'status' => 'getStatus',
-            'type' => 'getType'
+            'type' => 'getType',
+            'redirectCode' => 'getRedirectCode'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ForceRedirectConfig implements ModelInterface, ArrayAccess
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['redirectCode'] = isset($data['redirectCode']) ? $data['redirectCode'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class ForceRedirectConfig implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets redirectCode
+    *  重定向跳转码301,302。
+    *
+    * @return int|null
+    */
+    public function getRedirectCode()
+    {
+        return $this->container['redirectCode'];
+    }
+
+    /**
+    * Sets redirectCode
+    *
+    * @param int|null $redirectCode 重定向跳转码301,302。
+    *
+    * @return $this
+    */
+    public function setRedirectCode($redirectCode)
+    {
+        $this->container['redirectCode'] = $redirectCode;
         return $this;
     }
 

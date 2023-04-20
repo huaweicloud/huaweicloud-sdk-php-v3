@@ -187,10 +187,10 @@ class AuthInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['authType'] = isset($data['authType']) ? $data['authType'] : null;
-        $this->container['secret'] = isset($data['secret']) ? $data['secret'] : null;
+        $this->container['authType'] = isset($data['authType']) ? $data['authType'] : 'SECRET';
+        $this->container['secret'] = isset($data['secret']) ? $data['secret'] : '12345678';
         $this->container['fingerprint'] = isset($data['fingerprint']) ? $data['fingerprint'] : null;
-        $this->container['secureAccess'] = isset($data['secureAccess']) ? $data['secureAccess'] : true;
+        $this->container['secureAccess'] = isset($data['secureAccess']) ? $data['secureAccess'] : false;
         $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : 0;
     }
 

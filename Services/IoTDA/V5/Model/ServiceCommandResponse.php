@@ -157,7 +157,7 @@ class ServiceCommandResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['responseName'] = isset($data['responseName']) ? $data['responseName'] : null;
+        $this->container['responseName'] = isset($data['responseName']) ? $data['responseName'] : 'Set_LED';
         $this->container['paras'] = isset($data['paras']) ? $data['paras'] : null;
     }
 

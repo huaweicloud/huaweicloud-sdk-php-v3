@@ -167,7 +167,7 @@ class ServiceCommand implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['commandName'] = isset($data['commandName']) ? $data['commandName'] : null;
+        $this->container['commandName'] = isset($data['commandName']) ? $data['commandName'] : 'Set_LED';
         $this->container['paras'] = isset($data['paras']) ? $data['paras'] : null;
         $this->container['responses'] = isset($data['responses']) ? $data['responses'] : null;
     }

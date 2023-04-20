@@ -22,6 +22,8 @@ class ThailandIdcardConfidence implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * idNumber  身份证号置信度。
     * nameTh  泰文名字置信度。
+    * nameEn  英文名置信度。
+    * refNumber  参考编码置信度。
     * firstNameEn  英文名字置信度。
     * lastNameEn  英文姓氏置信度。
     * dateOfBirthTh  泰文出生日期置信度。
@@ -41,6 +43,8 @@ class ThailandIdcardConfidence implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'idNumber' => 'float',
             'nameTh' => 'float',
+            'nameEn' => 'float',
+            'refNumber' => 'float',
             'firstNameEn' => 'float',
             'lastNameEn' => 'float',
             'dateOfBirthTh' => 'float',
@@ -60,6 +64,8 @@ class ThailandIdcardConfidence implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * idNumber  身份证号置信度。
     * nameTh  泰文名字置信度。
+    * nameEn  英文名置信度。
+    * refNumber  参考编码置信度。
     * firstNameEn  英文名字置信度。
     * lastNameEn  英文姓氏置信度。
     * dateOfBirthTh  泰文出生日期置信度。
@@ -79,6 +85,8 @@ class ThailandIdcardConfidence implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'idNumber' => 'float',
         'nameTh' => 'float',
+        'nameEn' => 'float',
+        'refNumber' => 'float',
         'firstNameEn' => 'float',
         'lastNameEn' => 'float',
         'dateOfBirthTh' => 'float',
@@ -119,6 +127,8 @@ class ThailandIdcardConfidence implements ModelInterface, ArrayAccess
     * and the value is the original name
     * idNumber  身份证号置信度。
     * nameTh  泰文名字置信度。
+    * nameEn  英文名置信度。
+    * refNumber  参考编码置信度。
     * firstNameEn  英文名字置信度。
     * lastNameEn  英文姓氏置信度。
     * dateOfBirthTh  泰文出生日期置信度。
@@ -138,6 +148,8 @@ class ThailandIdcardConfidence implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'idNumber' => 'id_number',
             'nameTh' => 'name_th',
+            'nameEn' => 'name_en',
+            'refNumber' => 'ref_number',
             'firstNameEn' => 'first_name_en',
             'lastNameEn' => 'last_name_en',
             'dateOfBirthTh' => 'date_of_birth_th',
@@ -157,6 +169,8 @@ class ThailandIdcardConfidence implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * idNumber  身份证号置信度。
     * nameTh  泰文名字置信度。
+    * nameEn  英文名置信度。
+    * refNumber  参考编码置信度。
     * firstNameEn  英文名字置信度。
     * lastNameEn  英文姓氏置信度。
     * dateOfBirthTh  泰文出生日期置信度。
@@ -176,6 +190,8 @@ class ThailandIdcardConfidence implements ModelInterface, ArrayAccess
     protected static $setters = [
             'idNumber' => 'setIdNumber',
             'nameTh' => 'setNameTh',
+            'nameEn' => 'setNameEn',
+            'refNumber' => 'setRefNumber',
             'firstNameEn' => 'setFirstNameEn',
             'lastNameEn' => 'setLastNameEn',
             'dateOfBirthTh' => 'setDateOfBirthTh',
@@ -195,6 +211,8 @@ class ThailandIdcardConfidence implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * idNumber  身份证号置信度。
     * nameTh  泰文名字置信度。
+    * nameEn  英文名置信度。
+    * refNumber  参考编码置信度。
     * firstNameEn  英文名字置信度。
     * lastNameEn  英文姓氏置信度。
     * dateOfBirthTh  泰文出生日期置信度。
@@ -214,6 +232,8 @@ class ThailandIdcardConfidence implements ModelInterface, ArrayAccess
     protected static $getters = [
             'idNumber' => 'getIdNumber',
             'nameTh' => 'getNameTh',
+            'nameEn' => 'getNameEn',
+            'refNumber' => 'getRefNumber',
             'firstNameEn' => 'getFirstNameEn',
             'lastNameEn' => 'getLastNameEn',
             'dateOfBirthTh' => 'getDateOfBirthTh',
@@ -289,6 +309,8 @@ class ThailandIdcardConfidence implements ModelInterface, ArrayAccess
     {
         $this->container['idNumber'] = isset($data['idNumber']) ? $data['idNumber'] : null;
         $this->container['nameTh'] = isset($data['nameTh']) ? $data['nameTh'] : null;
+        $this->container['nameEn'] = isset($data['nameEn']) ? $data['nameEn'] : null;
+        $this->container['refNumber'] = isset($data['refNumber']) ? $data['refNumber'] : null;
         $this->container['firstNameEn'] = isset($data['firstNameEn']) ? $data['firstNameEn'] : null;
         $this->container['lastNameEn'] = isset($data['lastNameEn']) ? $data['lastNameEn'] : null;
         $this->container['dateOfBirthTh'] = isset($data['dateOfBirthTh']) ? $data['dateOfBirthTh'] : null;
@@ -371,6 +393,54 @@ class ThailandIdcardConfidence implements ModelInterface, ArrayAccess
     public function setNameTh($nameTh)
     {
         $this->container['nameTh'] = $nameTh;
+        return $this;
+    }
+
+    /**
+    * Gets nameEn
+    *  英文名置信度。
+    *
+    * @return float|null
+    */
+    public function getNameEn()
+    {
+        return $this->container['nameEn'];
+    }
+
+    /**
+    * Sets nameEn
+    *
+    * @param float|null $nameEn 英文名置信度。
+    *
+    * @return $this
+    */
+    public function setNameEn($nameEn)
+    {
+        $this->container['nameEn'] = $nameEn;
+        return $this;
+    }
+
+    /**
+    * Gets refNumber
+    *  参考编码置信度。
+    *
+    * @return float|null
+    */
+    public function getRefNumber()
+    {
+        return $this->container['refNumber'];
+    }
+
+    /**
+    * Sets refNumber
+    *
+    * @param float|null $refNumber 参考编码置信度。
+    *
+    * @return $this
+    */
+    public function setRefNumber($refNumber)
+    {
+        $this->container['refNumber'] = $refNumber;
         return $this;
     }
 

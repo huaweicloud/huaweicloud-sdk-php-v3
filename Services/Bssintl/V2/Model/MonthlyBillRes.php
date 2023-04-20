@@ -60,6 +60,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * subResourceTypeName  该字段为预留字段。
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
+    * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
+    * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
     *
     * @var string[]
     */
@@ -103,7 +105,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'string',
             'subResourceTypeName' => 'string',
             'subResourceId' => 'string',
-            'subResourceName' => 'string'
+            'subResourceName' => 'string',
+            'preOrderId' => 'string',
+            'azCodeInfos' => '\HuaweiCloud\SDK\Bssintl\V2\Model\AzCodeInfo[]'
     ];
 
     /**
@@ -148,6 +152,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * subResourceTypeName  该字段为预留字段。
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
+    * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
+    * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
     *
     * @var string[]
     */
@@ -191,7 +197,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         'subResourceTypeCode' => null,
         'subResourceTypeName' => null,
         'subResourceId' => null,
-        'subResourceName' => null
+        'subResourceName' => null,
+        'preOrderId' => null,
+        'azCodeInfos' => null
     ];
 
     /**
@@ -257,6 +265,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * subResourceTypeName  该字段为预留字段。
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
+    * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
+    * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
     *
     * @var string[]
     */
@@ -300,7 +310,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'sub_resource_type_code',
             'subResourceTypeName' => 'sub_resource_type_name',
             'subResourceId' => 'sub_resource_id',
-            'subResourceName' => 'sub_resource_name'
+            'subResourceName' => 'sub_resource_name',
+            'preOrderId' => 'pre_order_id',
+            'azCodeInfos' => 'az_code_infos'
     ];
 
     /**
@@ -345,6 +357,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * subResourceTypeName  该字段为预留字段。
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
+    * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
+    * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
     *
     * @var string[]
     */
@@ -388,7 +402,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'setSubResourceTypeCode',
             'subResourceTypeName' => 'setSubResourceTypeName',
             'subResourceId' => 'setSubResourceId',
-            'subResourceName' => 'setSubResourceName'
+            'subResourceName' => 'setSubResourceName',
+            'preOrderId' => 'setPreOrderId',
+            'azCodeInfos' => 'setAzCodeInfos'
     ];
 
     /**
@@ -433,6 +449,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * subResourceTypeName  该字段为预留字段。
     * subResourceId  该字段为预留字段。
     * subResourceName  该字段为预留字段。
+    * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
+    * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
     *
     * @var string[]
     */
@@ -476,7 +494,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'subResourceTypeCode' => 'getSubResourceTypeCode',
             'subResourceTypeName' => 'getSubResourceTypeName',
             'subResourceId' => 'getSubResourceId',
-            'subResourceName' => 'getSubResourceName'
+            'subResourceName' => 'getSubResourceName',
+            'preOrderId' => 'getPreOrderId',
+            'azCodeInfos' => 'getAzCodeInfos'
     ];
 
     /**
@@ -577,6 +597,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         $this->container['subResourceTypeName'] = isset($data['subResourceTypeName']) ? $data['subResourceTypeName'] : null;
         $this->container['subResourceId'] = isset($data['subResourceId']) ? $data['subResourceId'] : null;
         $this->container['subResourceName'] = isset($data['subResourceName']) ? $data['subResourceName'] : null;
+        $this->container['preOrderId'] = isset($data['preOrderId']) ? $data['preOrderId'] : null;
+        $this->container['azCodeInfos'] = isset($data['azCodeInfos']) ? $data['azCodeInfos'] : null;
     }
 
     /**
@@ -1582,6 +1604,54 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     public function setSubResourceName($subResourceName)
     {
         $this->container['subResourceName'] = $subResourceName;
+        return $this;
+    }
+
+    /**
+    * Gets preOrderId
+    *  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
+    *
+    * @return string|null
+    */
+    public function getPreOrderId()
+    {
+        return $this->container['preOrderId'];
+    }
+
+    /**
+    * Sets preOrderId
+    *
+    * @param string|null $preOrderId |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
+    *
+    * @return $this
+    */
+    public function setPreOrderId($preOrderId)
+    {
+        $this->container['preOrderId'] = $preOrderId;
+        return $this;
+    }
+
+    /**
+    * Gets azCodeInfos
+    *  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
+    *
+    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\AzCodeInfo[]|null
+    */
+    public function getAzCodeInfos()
+    {
+        return $this->container['azCodeInfos'];
+    }
+
+    /**
+    * Sets azCodeInfos
+    *
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\AzCodeInfo[]|null $azCodeInfos |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
+    *
+    * @return $this
+    */
+    public function setAzCodeInfos($azCodeInfos)
+    {
+        $this->container['azCodeInfos'] = $azCodeInfos;
         return $this;
     }
 

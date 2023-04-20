@@ -20,6 +20,9 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * type  返回证件类型，\"normal\"表示普通泰文证件，\"pink\"表示外国人身份证件
+    * nameEn  英文名。
+    * refNumber  参考编码。
     * side  标示正面还是反面，取值为front或back。
     * idNumber  身份证号。
     * nameTh  泰文名字。
@@ -39,12 +42,15 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     * confidence  confidence
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
-    * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 - screen：屏幕翻拍 当输入参数“return_idcard_type”为“true”时，才返回该参数。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'type' => 'string',
+            'nameEn' => 'string',
+            'refNumber' => 'string',
             'side' => 'string',
             'idNumber' => 'string',
             'nameTh' => 'string',
@@ -70,6 +76,9 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * type  返回证件类型，\"normal\"表示普通泰文证件，\"pink\"表示外国人身份证件
+    * nameEn  英文名。
+    * refNumber  参考编码。
     * side  标示正面还是反面，取值为front或back。
     * idNumber  身份证号。
     * nameTh  泰文名字。
@@ -89,12 +98,15 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     * confidence  confidence
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
-    * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 - screen：屏幕翻拍 当输入参数“return_idcard_type”为“true”时，才返回该参数。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'type' => null,
+        'nameEn' => null,
+        'refNumber' => null,
         'side' => null,
         'idNumber' => null,
         'nameTh' => null,
@@ -141,6 +153,9 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * type  返回证件类型，\"normal\"表示普通泰文证件，\"pink\"表示外国人身份证件
+    * nameEn  英文名。
+    * refNumber  参考编码。
     * side  标示正面还是反面，取值为front或back。
     * idNumber  身份证号。
     * nameTh  泰文名字。
@@ -160,12 +175,15 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     * confidence  confidence
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
-    * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 - screen：屏幕翻拍 当输入参数“return_idcard_type”为“true”时，才返回该参数。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'type' => 'type',
+            'nameEn' => 'name_en',
+            'refNumber' => 'ref_number',
             'side' => 'side',
             'idNumber' => 'id_number',
             'nameTh' => 'name_th',
@@ -191,6 +209,9 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * type  返回证件类型，\"normal\"表示普通泰文证件，\"pink\"表示外国人身份证件
+    * nameEn  英文名。
+    * refNumber  参考编码。
     * side  标示正面还是反面，取值为front或back。
     * idNumber  身份证号。
     * nameTh  泰文名字。
@@ -210,12 +231,15 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     * confidence  confidence
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
-    * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 - screen：屏幕翻拍 当输入参数“return_idcard_type”为“true”时，才返回该参数。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
     protected static $setters = [
+            'type' => 'setType',
+            'nameEn' => 'setNameEn',
+            'refNumber' => 'setRefNumber',
             'side' => 'setSide',
             'idNumber' => 'setIdNumber',
             'nameTh' => 'setNameTh',
@@ -241,6 +265,9 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * type  返回证件类型，\"normal\"表示普通泰文证件，\"pink\"表示外国人身份证件
+    * nameEn  英文名。
+    * refNumber  参考编码。
     * side  标示正面还是反面，取值为front或back。
     * idNumber  身份证号。
     * nameTh  泰文名字。
@@ -260,12 +287,15 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     * confidence  confidence
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向
-    * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * idcardType  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 - screen：屏幕翻拍 当输入参数“return_idcard_type”为“true”时，才返回该参数。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
     */
     protected static $getters = [
+            'type' => 'getType',
+            'nameEn' => 'getNameEn',
+            'refNumber' => 'getRefNumber',
             'side' => 'getSide',
             'idNumber' => 'getIdNumber',
             'nameTh' => 'getNameTh',
@@ -347,6 +377,9 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['nameEn'] = isset($data['nameEn']) ? $data['nameEn'] : null;
+        $this->container['refNumber'] = isset($data['refNumber']) ? $data['refNumber'] : null;
         $this->container['side'] = isset($data['side']) ? $data['side'] : null;
         $this->container['idNumber'] = isset($data['idNumber']) ? $data['idNumber'] : null;
         $this->container['nameTh'] = isset($data['nameTh']) ? $data['nameTh'] : null;
@@ -390,6 +423,78 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets type
+    *  返回证件类型，\"normal\"表示普通泰文证件，\"pink\"表示外国人身份证件
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 返回证件类型，\"normal\"表示普通泰文证件，\"pink\"表示外国人身份证件
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets nameEn
+    *  英文名。
+    *
+    * @return string|null
+    */
+    public function getNameEn()
+    {
+        return $this->container['nameEn'];
+    }
+
+    /**
+    * Sets nameEn
+    *
+    * @param string|null $nameEn 英文名。
+    *
+    * @return $this
+    */
+    public function setNameEn($nameEn)
+    {
+        $this->container['nameEn'] = $nameEn;
+        return $this;
+    }
+
+    /**
+    * Gets refNumber
+    *  参考编码。
+    *
+    * @return string|null
+    */
+    public function getRefNumber()
+    {
+        return $this->container['refNumber'];
+    }
+
+    /**
+    * Sets refNumber
+    *
+    * @param string|null $refNumber 参考编码。
+    *
+    * @return $this
+    */
+    public function setRefNumber($refNumber)
+    {
+        $this->container['refNumber'] = $refNumber;
+        return $this;
     }
 
     /**
@@ -850,7 +955,7 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets idcardType
-    *  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    *  身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 - screen：屏幕翻拍 当输入参数“return_idcard_type”为“true”时，才返回该参数。
     *
     * @return string|null
     */
@@ -862,7 +967,7 @@ class ThailandIdcardResult implements ModelInterface, ArrayAccess
     /**
     * Sets idcardType
     *
-    * @param string|null $idcardType 身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 当输入参数“return_idcard_type”为“true”时，才返回该参数。
+    * @param string|null $idcardType 身份证的类型。取值如下所示： - normal：身份证原件 - copy：复印的身份证 - screen：屏幕翻拍 当输入参数“return_idcard_type”为“true”时，才返回该参数。
     *
     * @return $this
     */

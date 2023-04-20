@@ -31,7 +31,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
-    * resTenant  是否为资源租户类   - true: 资源租户类   - false: 普通租户类
+    * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
     *
     * @var string[]
     */
@@ -63,7 +63,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
-    * resTenant  是否为资源租户类   - true: 资源租户类   - false: 普通租户类
+    * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
     *
     * @var string[]
     */
@@ -116,7 +116,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
-    * resTenant  是否为资源租户类   - true: 资源租户类   - false: 普通租户类
+    * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
     *
     * @var string[]
     */
@@ -148,7 +148,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
-    * resTenant  是否为资源租户类   - true: 资源租户类   - false: 普通租户类
+    * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * subnetId  独享引擎所在VPC内的子网ID（通过调用虚拟私有云ListSubnets接口获取所有的子网列表查询子网的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * securityGroup  独享引擎需要绑定的安全组ID（通过调用虚拟私有云ListSecurityGroups接口获取所有的安全组列表查询安全组的ID，如果需要关联企业项目，则调用虚拟私有云的接口也需要关联企业项目ID）
     * count  申请的独享引擎数量
-    * resTenant  是否为资源租户类   - true: 资源租户类   - false: 普通租户类
+    * resTenant  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
     *
     * @var string[]
     */
@@ -308,9 +308,6 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
         }
         if ($this->container['count'] === null) {
             $invalidProperties[] = "'count' can't be null";
-        }
-        if ($this->container['resTenant'] === null) {
-            $invalidProperties[] = "'resTenant' can't be null";
         }
         return $invalidProperties;
     }
@@ -592,9 +589,9 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resTenant
-    *  是否为资源租户类   - true: 资源租户类   - false: 普通租户类
+    *  是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
     *
-    * @return bool
+    * @return bool|null
     */
     public function getResTenant()
     {
@@ -604,7 +601,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets resTenant
     *
-    * @param bool $resTenant 是否为资源租户类   - true: 资源租户类   - false: 普通租户类
+    * @param bool|null $resTenant 是否为资源租户类，默认值为false。   - true: 资源租户类   - false: 普通租户类
     *
     * @return $this
     */
