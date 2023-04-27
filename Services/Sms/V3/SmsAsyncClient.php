@@ -41,7 +41,7 @@ class SmsAsyncClient extends Client
     
     public function checkNetAclAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks/{t_project_id}/networkacl/{t_network_id}/check';
+        $resourcePath = '/v3/tasks/{t_project_id}/networkacl/{t_network_id}/check';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -115,7 +115,7 @@ class SmsAsyncClient extends Client
     
     public function collectLogAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks/{task_id}/log';
+        $resourcePath = '/v3/tasks/{task_id}/log';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -183,7 +183,7 @@ class SmsAsyncClient extends Client
     
     public function createMigprojectAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/migprojects';
+        $resourcePath = '/v3/migprojects';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -248,7 +248,7 @@ class SmsAsyncClient extends Client
     
     public function createTaskAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks';
+        $resourcePath = '/v3/tasks';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -313,7 +313,7 @@ class SmsAsyncClient extends Client
     
     public function createTemplateAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/vm/templates';
+        $resourcePath = '/v3/vm/templates';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -378,7 +378,7 @@ class SmsAsyncClient extends Client
     
     public function deleteMigprojectAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/migprojects/{mig_project_id}';
+        $resourcePath = '/v3/migprojects/{mig_project_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -443,7 +443,7 @@ class SmsAsyncClient extends Client
     
     public function deleteServerAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/sources/{source_id}';
+        $resourcePath = '/v3/sources/{source_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -508,7 +508,7 @@ class SmsAsyncClient extends Client
     
     public function deleteServersAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/sources/delete';
+        $resourcePath = '/v3/sources/delete';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -573,7 +573,7 @@ class SmsAsyncClient extends Client
     
     public function deleteTaskAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks/{task_id}';
+        $resourcePath = '/v3/tasks/{task_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -638,7 +638,7 @@ class SmsAsyncClient extends Client
     
     public function deleteTasksAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks/delete';
+        $resourcePath = '/v3/tasks/delete';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -703,7 +703,7 @@ class SmsAsyncClient extends Client
     
     public function deleteTemplateAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/vm/templates/{id}';
+        $resourcePath = '/v3/vm/templates/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -768,7 +768,7 @@ class SmsAsyncClient extends Client
     
     public function deleteTemplatesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/vm/templates/delete';
+        $resourcePath = '/v3/vm/templates/delete';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -833,7 +833,7 @@ class SmsAsyncClient extends Client
     
     public function listErrorServersAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/errors';
+        $resourcePath = '/v3/errors';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -907,7 +907,7 @@ class SmsAsyncClient extends Client
     
     public function listMigprojectsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/migprojects';
+        $resourcePath = '/v3/migprojects';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -975,7 +975,7 @@ class SmsAsyncClient extends Client
     
     public function listServersAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/sources';
+        $resourcePath = '/v3/sources';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1067,7 +1067,7 @@ class SmsAsyncClient extends Client
     
     public function listTasksAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks';
+        $resourcePath = '/v3/tasks';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1150,7 +1150,7 @@ class SmsAsyncClient extends Client
     
     public function listTemplatesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/vm/templates';
+        $resourcePath = '/v3/vm/templates';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1227,7 +1227,7 @@ class SmsAsyncClient extends Client
     
     public function registerServerAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/sources';
+        $resourcePath = '/v3/sources';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1292,7 +1292,7 @@ class SmsAsyncClient extends Client
     
     public function showCertKeyAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks/{task_id}/certkey';
+        $resourcePath = '/v3/tasks/{task_id}/certkey';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1357,7 +1357,7 @@ class SmsAsyncClient extends Client
     
     public function showCommandAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/sources/{server_id}/command';
+        $resourcePath = '/v3/sources/{server_id}/command';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1406,6 +1406,74 @@ class SmsAsyncClient extends Client
     }
 
     /**
+     * 查询配置资源
+     *
+     * 使用该接口查询任指定任务的指定配置类型的配置信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showConfigSettingAsync($request)
+    {
+        return $this->showConfigSettingAsyncWithHttpInfo($request);
+    }
+    
+    public function showConfigSettingAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/tasks/{task_id}/configuration-setting';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['configKey'] !== null) {
+            $queryParams['config_key'] = $localVarParams['configKey'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowConfigSettingResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowConfigSettingRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询指定ID迁移项目详情
      *
      * 查询指定ID的迁移项目详情。
@@ -1422,7 +1490,7 @@ class SmsAsyncClient extends Client
     
     public function showMigprojectAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/migprojects/{mig_project_id}';
+        $resourcePath = '/v3/migprojects/{mig_project_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1487,7 +1555,7 @@ class SmsAsyncClient extends Client
     
     public function showOverviewAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/sources/overview';
+        $resourcePath = '/v3/sources/overview';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1549,7 +1617,7 @@ class SmsAsyncClient extends Client
     
     public function showPassphraseAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks/{task_id}/passphrase';
+        $resourcePath = '/v3/tasks/{task_id}/passphrase';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1614,7 +1682,7 @@ class SmsAsyncClient extends Client
     
     public function showServerAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/sources/{source_id}';
+        $resourcePath = '/v3/sources/{source_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1679,7 +1747,7 @@ class SmsAsyncClient extends Client
     
     public function showSha256AsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/sha256/{key}';
+        $resourcePath = '/v3/sha256/{key}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1744,7 +1812,7 @@ class SmsAsyncClient extends Client
     
     public function showTargetPasswordAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/vm/templates/{id}/target-password';
+        $resourcePath = '/v3/vm/templates/{id}/target-password';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1809,7 +1877,7 @@ class SmsAsyncClient extends Client
     
     public function showTaskAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks/{task_id}';
+        $resourcePath = '/v3/tasks/{task_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1874,7 +1942,7 @@ class SmsAsyncClient extends Client
     
     public function showTemplateAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/vm/templates/{id}';
+        $resourcePath = '/v3/vm/templates/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1939,7 +2007,7 @@ class SmsAsyncClient extends Client
     
     public function showsSpeedLimitsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks/{task_id}/speed-limit';
+        $resourcePath = '/v3/tasks/{task_id}/speed-limit';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2004,7 +2072,7 @@ class SmsAsyncClient extends Client
     
     public function unlockTargetEcsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks/{task_id}/unlock';
+        $resourcePath = '/v3/tasks/{task_id}/unlock';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2069,7 +2137,7 @@ class SmsAsyncClient extends Client
     
     public function updateCommandResultAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/sources/{server_id}/command_result';
+        $resourcePath = '/v3/sources/{server_id}/command_result';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2137,7 +2205,7 @@ class SmsAsyncClient extends Client
     
     public function updateCopyStateAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/sources/{source_id}/changestate';
+        $resourcePath = '/v3/sources/{source_id}/changestate';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2205,7 +2273,7 @@ class SmsAsyncClient extends Client
     
     public function updateDefaultMigprojectAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/migprojects/{mig_project_id}/default';
+        $resourcePath = '/v3/migprojects/{mig_project_id}/default';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2270,7 +2338,7 @@ class SmsAsyncClient extends Client
     
     public function updateDiskInfoAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/sources/{source_id}/diskinfo';
+        $resourcePath = '/v3/sources/{source_id}/diskinfo';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2338,7 +2406,7 @@ class SmsAsyncClient extends Client
     
     public function updateMigprojectAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/migprojects/{mig_project_id}';
+        $resourcePath = '/v3/migprojects/{mig_project_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2390,6 +2458,74 @@ class SmsAsyncClient extends Client
     }
 
     /**
+     * 更新网络检测相关的信息
+     *
+     * Agent 上报网络检测相关的信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateNetworkCheckInfoAsync($request)
+    {
+        return $this->updateNetworkCheckInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function updateNetworkCheckInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{task_id}/update-network-check-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateNetworkCheckInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateNetworkCheckInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 修改指定ID的源端服务器名称
      *
      * 该功能用来修改SMS服务端的源端名称，方便用户对源端进行管理。
@@ -2406,7 +2542,7 @@ class SmsAsyncClient extends Client
     
     public function updateServerNameAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/sources/{source_id}';
+        $resourcePath = '/v3/sources/{source_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2474,7 +2610,7 @@ class SmsAsyncClient extends Client
     
     public function updateSpeedAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks/{task_id}/speed-limit';
+        $resourcePath = '/v3/tasks/{task_id}/speed-limit';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2542,7 +2678,7 @@ class SmsAsyncClient extends Client
     
     public function updateTaskAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks/{task_id}';
+        $resourcePath = '/v3/tasks/{task_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2612,7 +2748,7 @@ class SmsAsyncClient extends Client
     
     public function updateTaskSpeedAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks/{task_id}/progress';
+        $resourcePath = '/v3/tasks/{task_id}/progress';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2680,7 +2816,7 @@ class SmsAsyncClient extends Client
     
     public function updateTaskStatusAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/tasks/{task_id}/action';
+        $resourcePath = '/v3/tasks/{task_id}/action';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2748,7 +2884,7 @@ class SmsAsyncClient extends Client
     
     public function updateTemplateAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/vm/templates/{id}';
+        $resourcePath = '/v3/vm/templates/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2796,6 +2932,263 @@ class SmsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateTemplateResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateTemplateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 迁移任务配置设置
+     *
+     * 配置迁移任务特殊设置，例如配置指定同步的文件或路径
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function uploadSpecialConfigurationSettingAsync($request)
+    {
+        return $this->uploadSpecialConfigurationSettingAsyncWithHttpInfo($request);
+    }
+    
+    public function uploadSpecialConfigurationSettingAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/tasks/{task_id}/configuration-setting';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UploadSpecialConfigurationSettingResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UploadSpecialConfigurationSettingRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取Agent配置信息
+     *
+     * 源端Agent启动后，访问此接口获取配置信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showConfigAsync($request)
+    {
+        return $this->showConfigAsyncWithHttpInfo($request);
+    }
+    
+    public function showConfigAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowConfigResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowConfigRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询主机迁移服务的API版本信息
+     *
+     * 查询主机迁移服务的API版本信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listApiVersionAsync($request)
+    {
+        return $this->listApiVersionAsyncWithHttpInfo($request);
+    }
+    
+    public function listApiVersionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ListApiVersionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ListApiVersionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询主机迁移服务指定API版本信息
+     *
+     * 查询主机迁移服务指定API版本信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showApiVersionAsync($request)
+    {
+        return $this->showApiVersionAsyncWithHttpInfo($request);
+    }
+    
+    public function showApiVersionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/{version}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['version'] !== null) {
+            $pathParams['version'] = $localVarParams['version'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowApiVersionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowApiVersionRequest',
             $asyncRequest = true);
     }
 

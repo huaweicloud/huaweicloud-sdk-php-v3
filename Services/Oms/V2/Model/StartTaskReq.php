@@ -295,6 +295,12 @@ class StartTaskReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['dstSecurityToken']) && !preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['dstSecurityToken'])) {
                 $invalidProperties[] = "invalid value for 'dstSecurityToken', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
             }
+            if (!is_null($this->container['sourceCdnAuthenticationKey']) && (mb_strlen($this->container['sourceCdnAuthenticationKey']) > 255)) {
+                $invalidProperties[] = "invalid value for 'sourceCdnAuthenticationKey', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['sourceCdnAuthenticationKey']) && (mb_strlen($this->container['sourceCdnAuthenticationKey']) < 0)) {
+                $invalidProperties[] = "invalid value for 'sourceCdnAuthenticationKey', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['sourceCdnAuthenticationKey']) && !preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['sourceCdnAuthenticationKey'])) {
                 $invalidProperties[] = "invalid value for 'sourceCdnAuthenticationKey', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
             }

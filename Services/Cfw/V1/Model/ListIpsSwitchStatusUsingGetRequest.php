@@ -194,15 +194,9 @@ class ListIpsSwitchStatusUsingGetRequest implements ModelInterface, ArrayAccess
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
         }
-            if (!preg_match("/^[0-9a-f]{32}$/", $this->container['projectId'])) {
-                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /^[0-9a-f]{32}$/.";
-            }
         if ($this->container['objectId'] === null) {
             $invalidProperties[] = "'objectId' can't be null";
         }
-            if (!preg_match("/^[0-9a-f]{32}$/", $this->container['objectId'])) {
-                $invalidProperties[] = "invalid value for 'objectId', must be conform to the pattern /^[0-9a-f]{32}$/.";
-            }
         return $invalidProperties;
     }
 

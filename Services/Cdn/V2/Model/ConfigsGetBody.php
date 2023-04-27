@@ -33,7 +33,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
+    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
     * errorCodeCache  errorCodeCache
+    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
     * errorCodeRedirectRules  自定义错误页面
@@ -54,7 +56,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'forceRedirect' => '\HuaweiCloud\SDK\Cdn\V2\Model\ForceRedirectConfig',
             'compress' => '\HuaweiCloud\SDK\Cdn\V2\Model\Compress',
             'cacheUrlParameterFilter' => '\HuaweiCloud\SDK\Cdn\V2\Model\CacheUrlParameterFilter',
+            'ipv6Accelerate' => 'int',
             'errorCodeCache' => '\HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeCache[]',
+            'originRangeStatus' => 'string',
             'userAgentFilter' => '\HuaweiCloud\SDK\Cdn\V2\Model\UserAgentFilter',
             'originRequestUrlRewrite' => '\HuaweiCloud\SDK\Cdn\V2\Model\OriginRequestUrlRewrite[]',
             'errorCodeRedirectRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeRedirectRules[]'
@@ -75,7 +79,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
+    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
     * errorCodeCache  errorCodeCache
+    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
     * errorCodeRedirectRules  自定义错误页面
@@ -96,7 +102,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
         'forceRedirect' => null,
         'compress' => null,
         'cacheUrlParameterFilter' => null,
+        'ipv6Accelerate' => 'int32',
         'errorCodeCache' => null,
+        'originRangeStatus' => null,
         'userAgentFilter' => null,
         'originRequestUrlRewrite' => null,
         'errorCodeRedirectRules' => null
@@ -138,7 +146,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
+    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
     * errorCodeCache  errorCodeCache
+    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
     * errorCodeRedirectRules  自定义错误页面
@@ -159,7 +169,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'forceRedirect' => 'force_redirect',
             'compress' => 'compress',
             'cacheUrlParameterFilter' => 'cache_url_parameter_filter',
+            'ipv6Accelerate' => 'ipv6_accelerate',
             'errorCodeCache' => 'error_code_cache',
+            'originRangeStatus' => 'origin_range_status',
             'userAgentFilter' => 'user_agent_filter',
             'originRequestUrlRewrite' => 'origin_request_url_rewrite',
             'errorCodeRedirectRules' => 'error_code_redirect_rules'
@@ -180,7 +192,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
+    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
     * errorCodeCache  errorCodeCache
+    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
     * errorCodeRedirectRules  自定义错误页面
@@ -201,7 +215,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'forceRedirect' => 'setForceRedirect',
             'compress' => 'setCompress',
             'cacheUrlParameterFilter' => 'setCacheUrlParameterFilter',
+            'ipv6Accelerate' => 'setIpv6Accelerate',
             'errorCodeCache' => 'setErrorCodeCache',
+            'originRangeStatus' => 'setOriginRangeStatus',
             'userAgentFilter' => 'setUserAgentFilter',
             'originRequestUrlRewrite' => 'setOriginRequestUrlRewrite',
             'errorCodeRedirectRules' => 'setErrorCodeRedirectRules'
@@ -222,7 +238,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
+    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
     * errorCodeCache  errorCodeCache
+    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
     * errorCodeRedirectRules  自定义错误页面
@@ -243,7 +261,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'forceRedirect' => 'getForceRedirect',
             'compress' => 'getCompress',
             'cacheUrlParameterFilter' => 'getCacheUrlParameterFilter',
+            'ipv6Accelerate' => 'getIpv6Accelerate',
             'errorCodeCache' => 'getErrorCodeCache',
+            'originRangeStatus' => 'getOriginRangeStatus',
             'userAgentFilter' => 'getUserAgentFilter',
             'originRequestUrlRewrite' => 'getOriginRequestUrlRewrite',
             'errorCodeRedirectRules' => 'getErrorCodeRedirectRules'
@@ -320,7 +340,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
         $this->container['forceRedirect'] = isset($data['forceRedirect']) ? $data['forceRedirect'] : null;
         $this->container['compress'] = isset($data['compress']) ? $data['compress'] : null;
         $this->container['cacheUrlParameterFilter'] = isset($data['cacheUrlParameterFilter']) ? $data['cacheUrlParameterFilter'] : null;
+        $this->container['ipv6Accelerate'] = isset($data['ipv6Accelerate']) ? $data['ipv6Accelerate'] : null;
         $this->container['errorCodeCache'] = isset($data['errorCodeCache']) ? $data['errorCodeCache'] : null;
+        $this->container['originRangeStatus'] = isset($data['originRangeStatus']) ? $data['originRangeStatus'] : null;
         $this->container['userAgentFilter'] = isset($data['userAgentFilter']) ? $data['userAgentFilter'] : null;
         $this->container['originRequestUrlRewrite'] = isset($data['originRequestUrlRewrite']) ? $data['originRequestUrlRewrite'] : null;
         $this->container['errorCodeRedirectRules'] = isset($data['errorCodeRedirectRules']) ? $data['errorCodeRedirectRules'] : null;
@@ -661,6 +683,30 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets ipv6Accelerate
+    *  ipv6设置（1：打开；0：关闭）
+    *
+    * @return int|null
+    */
+    public function getIpv6Accelerate()
+    {
+        return $this->container['ipv6Accelerate'];
+    }
+
+    /**
+    * Sets ipv6Accelerate
+    *
+    * @param int|null $ipv6Accelerate ipv6设置（1：打开；0：关闭）
+    *
+    * @return $this
+    */
+    public function setIpv6Accelerate($ipv6Accelerate)
+    {
+        $this->container['ipv6Accelerate'] = $ipv6Accelerate;
+        return $this;
+    }
+
+    /**
     * Gets errorCodeCache
     *  errorCodeCache
     *
@@ -681,6 +727,30 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     public function setErrorCodeCache($errorCodeCache)
     {
         $this->container['errorCodeCache'] = $errorCodeCache;
+        return $this;
+    }
+
+    /**
+    * Gets originRangeStatus
+    *  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
+    *
+    * @return string|null
+    */
+    public function getOriginRangeStatus()
+    {
+        return $this->container['originRangeStatus'];
+    }
+
+    /**
+    * Sets originRangeStatus
+    *
+    * @param string|null $originRangeStatus Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
+    *
+    * @return $this
+    */
+    public function setOriginRangeStatus($originRangeStatus)
+    {
+        $this->container['originRangeStatus'] = $originRangeStatus;
         return $this;
     }
 

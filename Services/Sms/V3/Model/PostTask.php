@@ -35,6 +35,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * usePublicIp  是否使用公网ip
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
+    * startNetworkCheck  是否开启网络检测
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class PostTask implements ModelInterface, ArrayAccess
             'vmTemplateId' => 'string',
             'usePublicIp' => 'bool',
             'syncing' => 'bool',
-            'existServer' => 'bool'
+            'existServer' => 'bool',
+            'startNetworkCheck' => 'bool'
     ];
 
     /**
@@ -73,6 +75,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * usePublicIp  是否使用公网ip
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
+    * startNetworkCheck  是否开启网络检测
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class PostTask implements ModelInterface, ArrayAccess
         'vmTemplateId' => null,
         'usePublicIp' => null,
         'syncing' => null,
-        'existServer' => null
+        'existServer' => null,
+        'startNetworkCheck' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * usePublicIp  是否使用公网ip
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
+    * startNetworkCheck  是否开启网络检测
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class PostTask implements ModelInterface, ArrayAccess
             'vmTemplateId' => 'vm_template_id',
             'usePublicIp' => 'use_public_ip',
             'syncing' => 'syncing',
-            'existServer' => 'exist_server'
+            'existServer' => 'exist_server',
+            'startNetworkCheck' => 'start_network_check'
     ];
 
     /**
@@ -170,6 +176,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * usePublicIp  是否使用公网ip
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
+    * startNetworkCheck  是否开启网络检测
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class PostTask implements ModelInterface, ArrayAccess
             'vmTemplateId' => 'setVmTemplateId',
             'usePublicIp' => 'setUsePublicIp',
             'syncing' => 'setSyncing',
-            'existServer' => 'setExistServer'
+            'existServer' => 'setExistServer',
+            'startNetworkCheck' => 'setStartNetworkCheck'
     ];
 
     /**
@@ -208,6 +216,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * usePublicIp  是否使用公网ip
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
+    * startNetworkCheck  是否开启网络检测
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class PostTask implements ModelInterface, ArrayAccess
             'vmTemplateId' => 'getVmTemplateId',
             'usePublicIp' => 'getUsePublicIp',
             'syncing' => 'getSyncing',
-            'existServer' => 'getExistServer'
+            'existServer' => 'getExistServer',
+            'startNetworkCheck' => 'getStartNetworkCheck'
     ];
 
     /**
@@ -317,6 +327,7 @@ class PostTask implements ModelInterface, ArrayAccess
         $this->container['usePublicIp'] = isset($data['usePublicIp']) ? $data['usePublicIp'] : true;
         $this->container['syncing'] = isset($data['syncing']) ? $data['syncing'] : false;
         $this->container['existServer'] = isset($data['existServer']) ? $data['existServer'] : null;
+        $this->container['startNetworkCheck'] = isset($data['startNetworkCheck']) ? $data['startNetworkCheck'] : null;
     }
 
     /**
@@ -781,6 +792,30 @@ class PostTask implements ModelInterface, ArrayAccess
     public function setExistServer($existServer)
     {
         $this->container['existServer'] = $existServer;
+        return $this;
+    }
+
+    /**
+    * Gets startNetworkCheck
+    *  是否开启网络检测
+    *
+    * @return bool|null
+    */
+    public function getStartNetworkCheck()
+    {
+        return $this->container['startNetworkCheck'];
+    }
+
+    /**
+    * Sets startNetworkCheck
+    *
+    * @param bool|null $startNetworkCheck 是否开启网络检测
+    *
+    * @return $this
+    */
+    public function setStartNetworkCheck($startNetworkCheck)
+    {
+        $this->container['startNetworkCheck'] = $startNetworkCheck;
         return $this;
     }
 

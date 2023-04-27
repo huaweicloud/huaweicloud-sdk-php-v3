@@ -181,11 +181,11 @@ class UploadLogRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['logExpire'] === null) {
             $invalidProperties[] = "'logExpire' can't be null";
         }
-            if (($this->container['logExpire'] > 65535)) {
-                $invalidProperties[] = "invalid value for 'logExpire', must be smaller than or equal to 65535.";
+            if (($this->container['logExpire'] > 64800)) {
+                $invalidProperties[] = "invalid value for 'logExpire', must be smaller than or equal to 64800.";
             }
-            if (($this->container['logExpire'] < 0)) {
-                $invalidProperties[] = "invalid value for 'logExpire', must be bigger than or equal to 0.";
+            if (($this->container['logExpire'] < 300)) {
+                $invalidProperties[] = "invalid value for 'logExpire', must be bigger than or equal to 300.";
             }
         return $invalidProperties;
     }

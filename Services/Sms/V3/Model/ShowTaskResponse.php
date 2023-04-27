@@ -52,6 +52,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * targetSnapshotId  目的端的快照ID
     * cloneServer  cloneServer
     * subTasks  任务包含的子任务列表
+    * networkCheckInfo  networkCheckInfo
     *
     * @var string[]
     */
@@ -86,7 +87,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'remainSeconds' => 'int',
             'targetSnapshotId' => 'string',
             'cloneServer' => '\HuaweiCloud\SDK\Sms\V3\Model\CloneServer',
-            'subTasks' => '\HuaweiCloud\SDK\Sms\V3\Model\SubTask[]'
+            'subTasks' => '\HuaweiCloud\SDK\Sms\V3\Model\SubTask[]',
+            'networkCheckInfo' => '\HuaweiCloud\SDK\Sms\V3\Model\NetworkCheckInfoRequestBody'
     ];
 
     /**
@@ -122,6 +124,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * targetSnapshotId  目的端的快照ID
     * cloneServer  cloneServer
     * subTasks  任务包含的子任务列表
+    * networkCheckInfo  networkCheckInfo
     *
     * @var string[]
     */
@@ -156,7 +159,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
         'remainSeconds' => 'int64',
         'targetSnapshotId' => null,
         'cloneServer' => null,
-        'subTasks' => null
+        'subTasks' => null,
+        'networkCheckInfo' => null
     ];
 
     /**
@@ -213,6 +217,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * targetSnapshotId  目的端的快照ID
     * cloneServer  cloneServer
     * subTasks  任务包含的子任务列表
+    * networkCheckInfo  networkCheckInfo
     *
     * @var string[]
     */
@@ -247,7 +252,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'remainSeconds' => 'remain_seconds',
             'targetSnapshotId' => 'target_snapshot_id',
             'cloneServer' => 'clone_server',
-            'subTasks' => 'sub_tasks'
+            'subTasks' => 'sub_tasks',
+            'networkCheckInfo' => 'network_check_info'
     ];
 
     /**
@@ -283,6 +289,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * targetSnapshotId  目的端的快照ID
     * cloneServer  cloneServer
     * subTasks  任务包含的子任务列表
+    * networkCheckInfo  networkCheckInfo
     *
     * @var string[]
     */
@@ -317,7 +324,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'remainSeconds' => 'setRemainSeconds',
             'targetSnapshotId' => 'setTargetSnapshotId',
             'cloneServer' => 'setCloneServer',
-            'subTasks' => 'setSubTasks'
+            'subTasks' => 'setSubTasks',
+            'networkCheckInfo' => 'setNetworkCheckInfo'
     ];
 
     /**
@@ -353,6 +361,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * targetSnapshotId  目的端的快照ID
     * cloneServer  cloneServer
     * subTasks  任务包含的子任务列表
+    * networkCheckInfo  networkCheckInfo
     *
     * @var string[]
     */
@@ -387,7 +396,8 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'remainSeconds' => 'getRemainSeconds',
             'targetSnapshotId' => 'getTargetSnapshotId',
             'cloneServer' => 'getCloneServer',
-            'subTasks' => 'getSubTasks'
+            'subTasks' => 'getSubTasks',
+            'networkCheckInfo' => 'getNetworkCheckInfo'
     ];
 
     /**
@@ -526,6 +536,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
         $this->container['targetSnapshotId'] = isset($data['targetSnapshotId']) ? $data['targetSnapshotId'] : null;
         $this->container['cloneServer'] = isset($data['cloneServer']) ? $data['cloneServer'] : null;
         $this->container['subTasks'] = isset($data['subTasks']) ? $data['subTasks'] : null;
+        $this->container['networkCheckInfo'] = isset($data['networkCheckInfo']) ? $data['networkCheckInfo'] : null;
     }
 
     /**
@@ -1459,6 +1470,30 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     public function setSubTasks($subTasks)
     {
         $this->container['subTasks'] = $subTasks;
+        return $this;
+    }
+
+    /**
+    * Gets networkCheckInfo
+    *  networkCheckInfo
+    *
+    * @return \HuaweiCloud\SDK\Sms\V3\Model\NetworkCheckInfoRequestBody|null
+    */
+    public function getNetworkCheckInfo()
+    {
+        return $this->container['networkCheckInfo'];
+    }
+
+    /**
+    * Sets networkCheckInfo
+    *
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\NetworkCheckInfoRequestBody|null $networkCheckInfo networkCheckInfo
+    *
+    * @return $this
+    */
+    public function setNetworkCheckInfo($networkCheckInfo)
+    {
+        $this->container['networkCheckInfo'] = $networkCheckInfo;
         return $this;
     }
 

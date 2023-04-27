@@ -23,6 +23,7 @@ class ListRetirableGrantsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * grants  grant列表，详情请参见grants字段数据结构说明。
     * nextMarker  获取下一页所需要传递的marker值。 当“truncated”为“false”时，“next_marker”为空。
+    * total  可退役授权总条数。
     * truncated  是否还有下一页：  - “true”表示还有数据。  - “false”表示已经是最后一页。
     *
     * @var string[]
@@ -30,6 +31,7 @@ class ListRetirableGrantsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'grants' => '\HuaweiCloud\SDK\Kms\v2\Model\Grants[]',
             'nextMarker' => 'string',
+            'total' => 'int',
             'truncated' => 'string'
     ];
 
@@ -37,6 +39,7 @@ class ListRetirableGrantsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * grants  grant列表，详情请参见grants字段数据结构说明。
     * nextMarker  获取下一页所需要传递的marker值。 当“truncated”为“false”时，“next_marker”为空。
+    * total  可退役授权总条数。
     * truncated  是否还有下一页：  - “true”表示还有数据。  - “false”表示已经是最后一页。
     *
     * @var string[]
@@ -44,6 +47,7 @@ class ListRetirableGrantsResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'grants' => null,
         'nextMarker' => null,
+        'total' => 'int32',
         'truncated' => null
     ];
 
@@ -72,6 +76,7 @@ class ListRetirableGrantsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * grants  grant列表，详情请参见grants字段数据结构说明。
     * nextMarker  获取下一页所需要传递的marker值。 当“truncated”为“false”时，“next_marker”为空。
+    * total  可退役授权总条数。
     * truncated  是否还有下一页：  - “true”表示还有数据。  - “false”表示已经是最后一页。
     *
     * @var string[]
@@ -79,6 +84,7 @@ class ListRetirableGrantsResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'grants' => 'grants',
             'nextMarker' => 'next_marker',
+            'total' => 'total',
             'truncated' => 'truncated'
     ];
 
@@ -86,6 +92,7 @@ class ListRetirableGrantsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * grants  grant列表，详情请参见grants字段数据结构说明。
     * nextMarker  获取下一页所需要传递的marker值。 当“truncated”为“false”时，“next_marker”为空。
+    * total  可退役授权总条数。
     * truncated  是否还有下一页：  - “true”表示还有数据。  - “false”表示已经是最后一页。
     *
     * @var string[]
@@ -93,6 +100,7 @@ class ListRetirableGrantsResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'grants' => 'setGrants',
             'nextMarker' => 'setNextMarker',
+            'total' => 'setTotal',
             'truncated' => 'setTruncated'
     ];
 
@@ -100,6 +108,7 @@ class ListRetirableGrantsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * grants  grant列表，详情请参见grants字段数据结构说明。
     * nextMarker  获取下一页所需要传递的marker值。 当“truncated”为“false”时，“next_marker”为空。
+    * total  可退役授权总条数。
     * truncated  是否还有下一页：  - “true”表示还有数据。  - “false”表示已经是最后一页。
     *
     * @var string[]
@@ -107,6 +116,7 @@ class ListRetirableGrantsResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'grants' => 'getGrants',
             'nextMarker' => 'getNextMarker',
+            'total' => 'getTotal',
             'truncated' => 'getTruncated'
     ];
 
@@ -185,6 +195,7 @@ class ListRetirableGrantsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['grants'] = isset($data['grants']) ? $data['grants'] : null;
         $this->container['nextMarker'] = isset($data['nextMarker']) ? $data['nextMarker'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['truncated'] = isset($data['truncated']) ? $data['truncated'] : null;
     }
 
@@ -201,6 +212,12 @@ class ListRetirableGrantsResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['nextMarker']) && (mb_strlen($this->container['nextMarker']) < 0)) {
                 $invalidProperties[] = "invalid value for 'nextMarker', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['total']) && ($this->container['total'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['total']) && ($this->container['total'] < 0)) {
+                $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getTruncatedAllowableValues();
                 if (!is_null($this->container['truncated']) && !in_array($this->container['truncated'], $allowedValues, true)) {
@@ -269,6 +286,30 @@ class ListRetirableGrantsResponse implements ModelInterface, ArrayAccess
     public function setNextMarker($nextMarker)
     {
         $this->container['nextMarker'] = $nextMarker;
+        return $this;
+    }
+
+    /**
+    * Gets total
+    *  可退役授权总条数。
+    *
+    * @return int|null
+    */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+    * Sets total
+    *
+    * @param int|null $total 可退役授权总条数。
+    *
+    * @return $this
+    */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
         return $this;
     }
 

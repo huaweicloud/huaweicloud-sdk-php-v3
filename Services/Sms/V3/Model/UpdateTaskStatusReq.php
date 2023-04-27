@@ -22,24 +22,28 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚
     * param  操作参数
+    * switchHce  是否切换hce
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'operation' => 'string',
-            'param' => 'map[string,string]'
+            'param' => 'map[string,string]',
+            'switchHce' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚
     * param  操作参数
+    * switchHce  是否切换hce
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'operation' => null,
-        'param' => null
+        'param' => null,
+        'switchHce' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚
     * param  操作参数
+    * switchHce  是否切换hce
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'operation' => 'operation',
-            'param' => 'param'
+            'param' => 'param',
+            'switchHce' => 'switch_hce'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚
     * param  操作参数
+    * switchHce  是否切换hce
     *
     * @var string[]
     */
     protected static $setters = [
             'operation' => 'setOperation',
-            'param' => 'setParam'
+            'param' => 'setParam',
+            'switchHce' => 'setSwitchHce'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚
     * param  操作参数
+    * switchHce  是否切换hce
     *
     * @var string[]
     */
     protected static $getters = [
             'operation' => 'getOperation',
-            'param' => 'getParam'
+            'param' => 'getParam',
+            'switchHce' => 'getSwitchHce'
     ];
 
     /**
@@ -184,6 +194,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     {
         $this->container['operation'] = isset($data['operation']) ? $data['operation'] : null;
         $this->container['param'] = isset($data['param']) ? $data['param'] : null;
+        $this->container['switchHce'] = isset($data['switchHce']) ? $data['switchHce'] : false;
     }
 
     /**
@@ -264,6 +275,30 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     public function setParam($param)
     {
         $this->container['param'] = $param;
+        return $this;
+    }
+
+    /**
+    * Gets switchHce
+    *  是否切换hce
+    *
+    * @return bool|null
+    */
+    public function getSwitchHce()
+    {
+        return $this->container['switchHce'];
+    }
+
+    /**
+    * Sets switchHce
+    *
+    * @param bool|null $switchHce 是否切换hce
+    *
+    * @return $this
+    */
+    public function setSwitchHce($switchHce)
+    {
+        $this->container['switchHce'] = $switchHce;
         return $this;
     }
 

@@ -22,8 +22,6 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * total  总条目数
-    * page  Page
-    * size  Size
     * snapshotConfigList  snapshotConfigList
     * limit  每页记录数
     * offset  偏移量
@@ -32,8 +30,6 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'page' => 'int',
-            'size' => 'int',
             'snapshotConfigList' => '\HuaweiCloud\SDK\Live\V1\Model\LiveSnapshotConfig',
             'limit' => 'int',
             'offset' => 'int'
@@ -42,8 +38,6 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  总条目数
-    * page  Page
-    * size  Size
     * snapshotConfigList  snapshotConfigList
     * limit  每页记录数
     * offset  偏移量
@@ -52,8 +46,6 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'total' => 'int32',
-        'page' => 'int32',
-        'size' => 'int32',
         'snapshotConfigList' => null,
         'limit' => 'int32',
         'offset' => 'int32'
@@ -83,8 +75,6 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * total  总条目数
-    * page  Page
-    * size  Size
     * snapshotConfigList  snapshotConfigList
     * limit  每页记录数
     * offset  偏移量
@@ -93,8 +83,6 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'total' => 'total',
-            'page' => 'page',
-            'size' => 'size',
             'snapshotConfigList' => 'snapshot_config_list',
             'limit' => 'limit',
             'offset' => 'offset'
@@ -103,8 +91,6 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  总条目数
-    * page  Page
-    * size  Size
     * snapshotConfigList  snapshotConfigList
     * limit  每页记录数
     * offset  偏移量
@@ -113,8 +99,6 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'total' => 'setTotal',
-            'page' => 'setPage',
-            'size' => 'setSize',
             'snapshotConfigList' => 'setSnapshotConfigList',
             'limit' => 'setLimit',
             'offset' => 'setOffset'
@@ -123,8 +107,6 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  总条目数
-    * page  Page
-    * size  Size
     * snapshotConfigList  snapshotConfigList
     * limit  每页记录数
     * offset  偏移量
@@ -133,8 +115,6 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'total' => 'getTotal',
-            'page' => 'getPage',
-            'size' => 'getSize',
             'snapshotConfigList' => 'getSnapshotConfigList',
             'limit' => 'getLimit',
             'offset' => 'getOffset'
@@ -199,8 +179,6 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
-        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['snapshotConfigList'] = isset($data['snapshotConfigList']) ? $data['snapshotConfigList'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
@@ -249,54 +227,6 @@ class ListSnapshotConfigsResponse implements ModelInterface, ArrayAccess
     public function setTotal($total)
     {
         $this->container['total'] = $total;
-        return $this;
-    }
-
-    /**
-    * Gets page
-    *  Page
-    *
-    * @return int|null
-    */
-    public function getPage()
-    {
-        return $this->container['page'];
-    }
-
-    /**
-    * Sets page
-    *
-    * @param int|null $page Page
-    *
-    * @return $this
-    */
-    public function setPage($page)
-    {
-        $this->container['page'] = $page;
-        return $this;
-    }
-
-    /**
-    * Gets size
-    *  Size
-    *
-    * @return int|null
-    */
-    public function getSize()
-    {
-        return $this->container['size'];
-    }
-
-    /**
-    * Sets size
-    *
-    * @param int|null $size Size
-    *
-    * @return $this
-    */
-    public function setSize($size)
-    {
-        $this->container['size'] = $size;
         return $this;
     }
 

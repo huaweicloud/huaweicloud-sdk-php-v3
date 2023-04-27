@@ -21,7 +21,7 @@ class PublicIp implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  弹性公网IP类型，默认为5_bgp
-    * bandwidthSize  带宽大小，单位：Mbit/s  调整带宽时的最小单位会根据带宽范围不同存在差异。  小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
+    * bandwidthSize  带宽大小，单位：Mbit/s。 调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
     * bandwidthShareType  带宽共享类型
     *
     * @var string[]
@@ -35,7 +35,7 @@ class PublicIp implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  弹性公网IP类型，默认为5_bgp
-    * bandwidthSize  带宽大小，单位：Mbit/s  调整带宽时的最小单位会根据带宽范围不同存在差异。  小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
+    * bandwidthSize  带宽大小，单位：Mbit/s。 调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
     * bandwidthShareType  带宽共享类型
     *
     * @var string[]
@@ -70,7 +70,7 @@ class PublicIp implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  弹性公网IP类型，默认为5_bgp
-    * bandwidthSize  带宽大小，单位：Mbit/s  调整带宽时的最小单位会根据带宽范围不同存在差异。  小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
+    * bandwidthSize  带宽大小，单位：Mbit/s。 调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
     * bandwidthShareType  带宽共享类型
     *
     * @var string[]
@@ -84,7 +84,7 @@ class PublicIp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  弹性公网IP类型，默认为5_bgp
-    * bandwidthSize  带宽大小，单位：Mbit/s  调整带宽时的最小单位会根据带宽范围不同存在差异。  小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
+    * bandwidthSize  带宽大小，单位：Mbit/s。 调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
     * bandwidthShareType  带宽共享类型
     *
     * @var string[]
@@ -98,7 +98,7 @@ class PublicIp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  弹性公网IP类型，默认为5_bgp
-    * bandwidthSize  带宽大小，单位：Mbit/s  调整带宽时的最小单位会根据带宽范围不同存在差异。  小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
+    * bandwidthSize  带宽大小，单位：Mbit/s。 调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
     * bandwidthShareType  带宽共享类型
     *
     * @var string[]
@@ -244,7 +244,7 @@ class PublicIp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthSize
-    *  带宽大小，单位：Mbit/s  调整带宽时的最小单位会根据带宽范围不同存在差异。  小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
+    *  带宽大小，单位：Mbit/s。 调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
     *
     * @return int
     */
@@ -256,7 +256,7 @@ class PublicIp implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthSize
     *
-    * @param int $bandwidthSize 带宽大小，单位：Mbit/s  调整带宽时的最小单位会根据带宽范围不同存在差异。  小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
+    * @param int $bandwidthSize 带宽大小，单位：Mbit/s。 调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s，默认最小单位为1Mbit/s。300Mbit/s~1000Mbit/s，默认最小单位为50Mbit/s。大于1000Mbit/s：默认最小单位为500Mbit/s。
     *
     * @return $this
     */

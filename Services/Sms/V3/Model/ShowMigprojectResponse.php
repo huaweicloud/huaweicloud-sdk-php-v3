@@ -34,6 +34,7 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
     * enterpriseProject  企业项目名称
     * syncing  首次复制或者同步后 是否继续持续同步
+    * startNetworkCheck  是否启动网络质量检测
     *
     * @var string[]
     */
@@ -50,7 +51,8 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
             'existServer' => 'bool',
             'type' => 'string',
             'enterpriseProject' => 'string',
-            'syncing' => 'bool'
+            'syncing' => 'bool',
+            'startNetworkCheck' => 'bool'
     ];
 
     /**
@@ -68,6 +70,7 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
     * enterpriseProject  企业项目名称
     * syncing  首次复制或者同步后 是否继续持续同步
+    * startNetworkCheck  是否启动网络质量检测
     *
     * @var string[]
     */
@@ -84,7 +87,8 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
         'existServer' => null,
         'type' => null,
         'enterpriseProject' => null,
-        'syncing' => null
+        'syncing' => null,
+        'startNetworkCheck' => null
     ];
 
     /**
@@ -123,6 +127,7 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
     * enterpriseProject  企业项目名称
     * syncing  首次复制或者同步后 是否继续持续同步
+    * startNetworkCheck  是否启动网络质量检测
     *
     * @var string[]
     */
@@ -139,7 +144,8 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
             'existServer' => 'exist_server',
             'type' => 'type',
             'enterpriseProject' => 'enterprise_project',
-            'syncing' => 'syncing'
+            'syncing' => 'syncing',
+            'startNetworkCheck' => 'start_network_check'
     ];
 
     /**
@@ -157,6 +163,7 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
     * enterpriseProject  企业项目名称
     * syncing  首次复制或者同步后 是否继续持续同步
+    * startNetworkCheck  是否启动网络质量检测
     *
     * @var string[]
     */
@@ -173,7 +180,8 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
             'existServer' => 'setExistServer',
             'type' => 'setType',
             'enterpriseProject' => 'setEnterpriseProject',
-            'syncing' => 'setSyncing'
+            'syncing' => 'setSyncing',
+            'startNetworkCheck' => 'setStartNetworkCheck'
     ];
 
     /**
@@ -191,6 +199,7 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     * type  迁移项目类型 MIGRATE_BLOCK:块级迁移 MIGRATE_FILE:文件级迁移
     * enterpriseProject  企业项目名称
     * syncing  首次复制或者同步后 是否继续持续同步
+    * startNetworkCheck  是否启动网络质量检测
     *
     * @var string[]
     */
@@ -207,7 +216,8 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
             'existServer' => 'getExistServer',
             'type' => 'getType',
             'enterpriseProject' => 'getEnterpriseProject',
-            'syncing' => 'getSyncing'
+            'syncing' => 'getSyncing',
+            'startNetworkCheck' => 'getStartNetworkCheck'
     ];
 
     /**
@@ -296,6 +306,7 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['enterpriseProject'] = isset($data['enterpriseProject']) ? $data['enterpriseProject'] : 'default';
         $this->container['syncing'] = isset($data['syncing']) ? $data['syncing'] : false;
+        $this->container['startNetworkCheck'] = isset($data['startNetworkCheck']) ? $data['startNetworkCheck'] : null;
     }
 
     /**
@@ -673,6 +684,30 @@ class ShowMigprojectResponse implements ModelInterface, ArrayAccess
     public function setSyncing($syncing)
     {
         $this->container['syncing'] = $syncing;
+        return $this;
+    }
+
+    /**
+    * Gets startNetworkCheck
+    *  是否启动网络质量检测
+    *
+    * @return bool|null
+    */
+    public function getStartNetworkCheck()
+    {
+        return $this->container['startNetworkCheck'];
+    }
+
+    /**
+    * Sets startNetworkCheck
+    *
+    * @param bool|null $startNetworkCheck 是否启动网络质量检测
+    *
+    * @return $this
+    */
+    public function setStartNetworkCheck($startNetworkCheck)
+    {
+        $this->container['startNetworkCheck'] = $startNetworkCheck;
         return $this;
     }
 

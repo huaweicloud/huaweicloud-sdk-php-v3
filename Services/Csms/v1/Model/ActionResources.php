@@ -24,6 +24,7 @@ class ActionResources implements ModelInterface, ArrayAccess
     * resourceDetail  resourceDetail
     * resourceName  资源名称，默认为空字符串。
     * tags  标签列表，没有标签，数组默认为空。
+    * sysTags  标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含10个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。  - value：表示标签值。每个值最大长度43个字符，value之间为“与”的关系。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ActionResources implements ModelInterface, ArrayAccess
             'resourceId' => 'string',
             'resourceDetail' => '\HuaweiCloud\SDK\Csms\v1\Model\Secret',
             'resourceName' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Csms\v1\Model\TagItem[]'
+            'tags' => '\HuaweiCloud\SDK\Csms\v1\Model\TagItem[]',
+            'sysTags' => '\HuaweiCloud\SDK\Csms\v1\Model\TagItem[]'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ActionResources implements ModelInterface, ArrayAccess
     * resourceDetail  resourceDetail
     * resourceName  资源名称，默认为空字符串。
     * tags  标签列表，没有标签，数组默认为空。
+    * sysTags  标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含10个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。  - value：表示标签值。每个值最大长度43个字符，value之间为“与”的关系。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ActionResources implements ModelInterface, ArrayAccess
         'resourceId' => null,
         'resourceDetail' => null,
         'resourceName' => null,
-        'tags' => null
+        'tags' => null,
+        'sysTags' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ActionResources implements ModelInterface, ArrayAccess
     * resourceDetail  resourceDetail
     * resourceName  资源名称，默认为空字符串。
     * tags  标签列表，没有标签，数组默认为空。
+    * sysTags  标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含10个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。  - value：表示标签值。每个值最大长度43个字符，value之间为“与”的关系。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ActionResources implements ModelInterface, ArrayAccess
             'resourceId' => 'resource_id',
             'resourceDetail' => 'resource_detail',
             'resourceName' => 'resource_name',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'sysTags' => 'sys_tags'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ActionResources implements ModelInterface, ArrayAccess
     * resourceDetail  resourceDetail
     * resourceName  资源名称，默认为空字符串。
     * tags  标签列表，没有标签，数组默认为空。
+    * sysTags  标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含10个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。  - value：表示标签值。每个值最大长度43个字符，value之间为“与”的关系。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ActionResources implements ModelInterface, ArrayAccess
             'resourceId' => 'setResourceId',
             'resourceDetail' => 'setResourceDetail',
             'resourceName' => 'setResourceName',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'sysTags' => 'setSysTags'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ActionResources implements ModelInterface, ArrayAccess
     * resourceDetail  resourceDetail
     * resourceName  资源名称，默认为空字符串。
     * tags  标签列表，没有标签，数组默认为空。
+    * sysTags  标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含10个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。  - value：表示标签值。每个值最大长度43个字符，value之间为“与”的关系。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ActionResources implements ModelInterface, ArrayAccess
             'resourceId' => 'getResourceId',
             'resourceDetail' => 'getResourceDetail',
             'resourceName' => 'getResourceName',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'sysTags' => 'getSysTags'
     ];
 
     /**
@@ -181,6 +191,7 @@ class ActionResources implements ModelInterface, ArrayAccess
         $this->container['resourceDetail'] = isset($data['resourceDetail']) ? $data['resourceDetail'] : null;
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
     }
 
     /**
@@ -310,6 +321,30 @@ class ActionResources implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets sysTags
+    *  标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含10个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。  - value：表示标签值。每个值最大长度43个字符，value之间为“与”的关系。
+    *
+    * @return \HuaweiCloud\SDK\Csms\v1\Model\TagItem[]|null
+    */
+    public function getSysTags()
+    {
+        return $this->container['sysTags'];
+    }
+
+    /**
+    * Sets sysTags
+    *
+    * @param \HuaweiCloud\SDK\Csms\v1\Model\TagItem[]|null $sysTags 标签列表，key和value键值对的集合。  - key：表示标签键，一个凭据下最多包含10个key，key不能为空，不能重复，同一个key中value不能重复。key最大长度为36个字符。  - value：表示标签值。每个值最大长度43个字符，value之间为“与”的关系。
+    *
+    * @return $this
+    */
+    public function setSysTags($sysTags)
+    {
+        $this->container['sysTags'] = $sysTags;
         return $this;
     }
 

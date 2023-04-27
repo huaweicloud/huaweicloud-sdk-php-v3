@@ -20,48 +20,32 @@ class ListSnapshotConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessControlAllowInternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-Internal访问服务。
-    * accessControlAllowExternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-External访问服务。
     * domain  域名
     * appName  应用名称
-    * page  分页编号
-    * size  每页记录数，取值范围[1,100]
     * limit  每页记录数  取值范围[1,100]  默认值：10
     * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'accessControlAllowInternal' => 'string',
-            'accessControlAllowExternal' => 'string',
             'domain' => 'string',
             'appName' => 'string',
-            'page' => 'int',
-            'size' => 'int',
             'limit' => 'int',
             'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessControlAllowInternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-Internal访问服务。
-    * accessControlAllowExternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-External访问服务。
     * domain  域名
     * appName  应用名称
-    * page  分页编号
-    * size  每页记录数，取值范围[1,100]
     * limit  每页记录数  取值范围[1,100]  默认值：10
     * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'accessControlAllowInternal' => null,
-        'accessControlAllowExternal' => null,
         'domain' => null,
         'appName' => null,
-        'page' => 'uint32',
-        'size' => 'uint32',
         'limit' => 'int32',
         'offset' => 'int32'
     ];
@@ -89,72 +73,48 @@ class ListSnapshotConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessControlAllowInternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-Internal访问服务。
-    * accessControlAllowExternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-External访问服务。
     * domain  域名
     * appName  应用名称
-    * page  分页编号
-    * size  每页记录数，取值范围[1,100]
     * limit  每页记录数  取值范围[1,100]  默认值：10
     * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'accessControlAllowInternal' => 'Access-Control-Allow-Internal',
-            'accessControlAllowExternal' => 'Access-Control-Allow-External',
             'domain' => 'domain',
             'appName' => 'app_name',
-            'page' => 'page',
-            'size' => 'size',
             'limit' => 'limit',
             'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessControlAllowInternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-Internal访问服务。
-    * accessControlAllowExternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-External访问服务。
     * domain  域名
     * appName  应用名称
-    * page  分页编号
-    * size  每页记录数，取值范围[1,100]
     * limit  每页记录数  取值范围[1,100]  默认值：10
     * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
     *
     * @var string[]
     */
     protected static $setters = [
-            'accessControlAllowInternal' => 'setAccessControlAllowInternal',
-            'accessControlAllowExternal' => 'setAccessControlAllowExternal',
             'domain' => 'setDomain',
             'appName' => 'setAppName',
-            'page' => 'setPage',
-            'size' => 'setSize',
             'limit' => 'setLimit',
             'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessControlAllowInternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-Internal访问服务。
-    * accessControlAllowExternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-External访问服务。
     * domain  域名
     * appName  应用名称
-    * page  分页编号
-    * size  每页记录数，取值范围[1,100]
     * limit  每页记录数  取值范围[1,100]  默认值：10
     * offset  偏移量，表示从此偏移量开始查询，offset大于等于0
     *
     * @var string[]
     */
     protected static $getters = [
-            'accessControlAllowInternal' => 'getAccessControlAllowInternal',
-            'accessControlAllowExternal' => 'getAccessControlAllowExternal',
             'domain' => 'getDomain',
             'appName' => 'getAppName',
-            'page' => 'getPage',
-            'size' => 'getSize',
             'limit' => 'getLimit',
             'offset' => 'getOffset'
     ];
@@ -217,12 +177,8 @@ class ListSnapshotConfigsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['accessControlAllowInternal'] = isset($data['accessControlAllowInternal']) ? $data['accessControlAllowInternal'] : null;
-        $this->container['accessControlAllowExternal'] = isset($data['accessControlAllowExternal']) ? $data['accessControlAllowExternal'] : null;
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
-        $this->container['page'] = isset($data['page']) ? $data['page'] : 0;
-        $this->container['size'] = isset($data['size']) ? $data['size'] : 10;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : 10;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : 0;
     }
@@ -235,18 +191,6 @@ class ListSnapshotConfigsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['accessControlAllowInternal']) && (mb_strlen($this->container['accessControlAllowInternal']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'accessControlAllowInternal', the character length must be smaller than or equal to 2048.";
-            }
-            if (!is_null($this->container['accessControlAllowInternal']) && (mb_strlen($this->container['accessControlAllowInternal']) < 1)) {
-                $invalidProperties[] = "invalid value for 'accessControlAllowInternal', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['accessControlAllowExternal']) && (mb_strlen($this->container['accessControlAllowExternal']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'accessControlAllowExternal', the character length must be smaller than or equal to 2048.";
-            }
-            if (!is_null($this->container['accessControlAllowExternal']) && (mb_strlen($this->container['accessControlAllowExternal']) < 1)) {
-                $invalidProperties[] = "invalid value for 'accessControlAllowExternal', the character length must be bigger than or equal to 1.";
-            }
         if ($this->container['domain'] === null) {
             $invalidProperties[] = "'domain' can't be null";
         }
@@ -255,12 +199,6 @@ class ListSnapshotConfigsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['appName']) && (mb_strlen($this->container['appName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'appName', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['size']) && ($this->container['size'] > 100)) {
-                $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 100.";
-            }
-            if (!is_null($this->container['size']) && ($this->container['size'] < 1)) {
-                $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
@@ -283,54 +221,6 @@ class ListSnapshotConfigsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets accessControlAllowInternal
-    *  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-Internal访问服务。
-    *
-    * @return string|null
-    */
-    public function getAccessControlAllowInternal()
-    {
-        return $this->container['accessControlAllowInternal'];
-    }
-
-    /**
-    * Sets accessControlAllowInternal
-    *
-    * @param string|null $accessControlAllowInternal 服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-Internal访问服务。
-    *
-    * @return $this
-    */
-    public function setAccessControlAllowInternal($accessControlAllowInternal)
-    {
-        $this->container['accessControlAllowInternal'] = $accessControlAllowInternal;
-        return $this;
-    }
-
-    /**
-    * Gets accessControlAllowExternal
-    *  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-External访问服务。
-    *
-    * @return string|null
-    */
-    public function getAccessControlAllowExternal()
-    {
-        return $this->container['accessControlAllowExternal'];
-    }
-
-    /**
-    * Sets accessControlAllowExternal
-    *
-    * @param string|null $accessControlAllowExternal 服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-External访问服务。
-    *
-    * @return $this
-    */
-    public function setAccessControlAllowExternal($accessControlAllowExternal)
-    {
-        $this->container['accessControlAllowExternal'] = $accessControlAllowExternal;
-        return $this;
     }
 
     /**
@@ -378,54 +268,6 @@ class ListSnapshotConfigsRequest implements ModelInterface, ArrayAccess
     public function setAppName($appName)
     {
         $this->container['appName'] = $appName;
-        return $this;
-    }
-
-    /**
-    * Gets page
-    *  分页编号
-    *
-    * @return int|null
-    */
-    public function getPage()
-    {
-        return $this->container['page'];
-    }
-
-    /**
-    * Sets page
-    *
-    * @param int|null $page 分页编号
-    *
-    * @return $this
-    */
-    public function setPage($page)
-    {
-        $this->container['page'] = $page;
-        return $this;
-    }
-
-    /**
-    * Gets size
-    *  每页记录数，取值范围[1,100]
-    *
-    * @return int|null
-    */
-    public function getSize()
-    {
-        return $this->container['size'];
-    }
-
-    /**
-    * Sets size
-    *
-    * @param int|null $size 每页记录数，取值范围[1,100]
-    *
-    * @return $this
-    */
-    public function setSize($size)
-    {
-        $this->container['size'] = $size;
         return $this;
     }
 

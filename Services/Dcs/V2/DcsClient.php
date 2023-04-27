@@ -1920,6 +1920,92 @@ class DcsClient extends Client
     }
 
     /**
+     * 查询参数模板列表
+     *
+     * 查询租户的参数模板列表，支持按照条件查询
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listConfigTemplates($request)
+    {
+        return $this->listConfigTemplatesWithHttpInfo($request);
+    }
+
+    public function listConfigTemplatesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/config-templates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['templateId'] !== null) {
+            $queryParams['template_id'] = $localVarParams['templateId'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['engine'] !== null) {
+            $queryParams['engine'] = $localVarParams['engine'];
+        }
+        if ($localVarParams['engineVersion'] !== null) {
+            $queryParams['engine_version'] = $localVarParams['engineVersion'];
+        }
+        if ($localVarParams['cacheMode'] !== null) {
+            $queryParams['cache_mode'] = $localVarParams['cacheMode'];
+        }
+        if ($localVarParams['description'] !== null) {
+            $queryParams['description'] = $localVarParams['description'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ListConfigTemplatesResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ListConfigTemplatesRequest');
+    }
+
+    /**
      * 查询实例配置参数
      *
      * 查询指定实例的配置参数信息。
@@ -3016,6 +3102,71 @@ class DcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ListTagsOfTenantResponse',
             $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ListTagsOfTenantRequest');
+    }
+
+    /**
+     * 重置密码
+     *
+     * 重置缓存实例的密码。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function resetPassword($request)
+    {
+        return $this->resetPasswordWithHttpInfo($request);
+    }
+
+    public function resetPasswordWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/password/reset';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\ResetPasswordResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\ResetPasswordRequest');
     }
 
     /**
@@ -4283,6 +4434,68 @@ class DcsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\UpdateInstanceResponse',
             $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\UpdateInstanceRequest');
+    }
+
+    /**
+     * 变更指定实例的带宽
+     *
+     * 变更指定实例的带宽
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateInstanceBandwidth($request)
+    {
+        return $this->updateInstanceBandwidthWithHttpInfo($request);
+    }
+
+    public function updateInstanceBandwidthWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/bandwidth';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dcs\V2\Model\UpdateInstanceBandwidthResponse',
+            $requestType='\HuaweiCloud\SDK\Dcs\V2\Model\UpdateInstanceBandwidthRequest');
     }
 
     /**

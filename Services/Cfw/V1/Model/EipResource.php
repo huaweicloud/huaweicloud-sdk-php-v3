@@ -22,7 +22,7 @@ class EipResource implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  弹性公网ID
     * publicIp  弹性公网IP
-    * status  EIP防护状态
+    * status  EIP防护状态，0表示防护中，1表示未防护
     * publicIpv6  弹性公网IP,IPV6
     * enterpriseProjectId  企业项目id
     * deviceId  设备id
@@ -54,7 +54,7 @@ class EipResource implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  弹性公网ID
     * publicIp  弹性公网IP
-    * status  EIP防护状态
+    * status  EIP防护状态，0表示防护中，1表示未防护
     * publicIpv6  弹性公网IP,IPV6
     * enterpriseProjectId  企业项目id
     * deviceId  设备id
@@ -107,7 +107,7 @@ class EipResource implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  弹性公网ID
     * publicIp  弹性公网IP
-    * status  EIP防护状态
+    * status  EIP防护状态，0表示防护中，1表示未防护
     * publicIpv6  弹性公网IP,IPV6
     * enterpriseProjectId  企业项目id
     * deviceId  设备id
@@ -139,7 +139,7 @@ class EipResource implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  弹性公网ID
     * publicIp  弹性公网IP
-    * status  EIP防护状态
+    * status  EIP防护状态，0表示防护中，1表示未防护
     * publicIpv6  弹性公网IP,IPV6
     * enterpriseProjectId  企业项目id
     * deviceId  设备id
@@ -171,7 +171,7 @@ class EipResource implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  弹性公网ID
     * publicIp  弹性公网IP
-    * status  EIP防护状态
+    * status  EIP防护状态，0表示防护中，1表示未防护
     * publicIpv6  弹性公网IP,IPV6
     * enterpriseProjectId  企业项目id
     * deviceId  设备id
@@ -366,7 +366,7 @@ class EipResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  EIP防护状态
+    *  EIP防护状态，0表示防护中，1表示未防护
     *
     * @return int|null
     */
@@ -378,7 +378,7 @@ class EipResource implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status EIP防护状态
+    * @param int|null $status EIP防护状态，0表示防护中，1表示未防护
     *
     * @return $this
     */

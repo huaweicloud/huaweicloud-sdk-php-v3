@@ -28,10 +28,6 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
-    * callBackArea  通知服务器区域。 - mainland_china：表示中国大陆区域 - outside_mainland_china：表示中国大陆以外区域  为空则按默认处理。
-    * callBackSslVerify  是否开启ssl校验服务服务端证书，仅当回调url使用https协议时有效
-    * callBackSslCa  客户端校验服务端的受信证书，call_back_ssl_verify为ture时必需
-    * imageObjectFormat  截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
     *
     * @var string[]
     */
@@ -43,11 +39,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'objectWriteMode' => 'int',
             'obsLocation' => '\HuaweiCloud\SDK\Live\V1\Model\ObsFileAddr',
             'callBackEnable' => 'string',
-            'callBackUrl' => 'string',
-            'callBackArea' => 'string',
-            'callBackSslVerify' => 'bool',
-            'callBackSslCa' => 'string',
-            'imageObjectFormat' => 'string'
+            'callBackUrl' => 'string'
     ];
 
     /**
@@ -60,10 +52,6 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
-    * callBackArea  通知服务器区域。 - mainland_china：表示中国大陆区域 - outside_mainland_china：表示中国大陆以外区域  为空则按默认处理。
-    * callBackSslVerify  是否开启ssl校验服务服务端证书，仅当回调url使用https协议时有效
-    * callBackSslCa  客户端校验服务端的受信证书，call_back_ssl_verify为ture时必需
-    * imageObjectFormat  截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
     *
     * @var string[]
     */
@@ -75,11 +63,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
         'objectWriteMode' => null,
         'obsLocation' => null,
         'callBackEnable' => null,
-        'callBackUrl' => null,
-        'callBackArea' => null,
-        'callBackSslVerify' => null,
-        'callBackSslCa' => null,
-        'imageObjectFormat' => null
+        'callBackUrl' => null
     ];
 
     /**
@@ -113,10 +97,6 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
-    * callBackArea  通知服务器区域。 - mainland_china：表示中国大陆区域 - outside_mainland_china：表示中国大陆以外区域  为空则按默认处理。
-    * callBackSslVerify  是否开启ssl校验服务服务端证书，仅当回调url使用https协议时有效
-    * callBackSslCa  客户端校验服务端的受信证书，call_back_ssl_verify为ture时必需
-    * imageObjectFormat  截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
     *
     * @var string[]
     */
@@ -128,11 +108,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'objectWriteMode' => 'object_write_mode',
             'obsLocation' => 'obs_location',
             'callBackEnable' => 'call_back_enable',
-            'callBackUrl' => 'call_back_url',
-            'callBackArea' => 'call_back_area',
-            'callBackSslVerify' => 'call_back_ssl_verify',
-            'callBackSslCa' => 'call_back_ssl_ca',
-            'imageObjectFormat' => 'image_object_format'
+            'callBackUrl' => 'call_back_url'
     ];
 
     /**
@@ -145,10 +121,6 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
-    * callBackArea  通知服务器区域。 - mainland_china：表示中国大陆区域 - outside_mainland_china：表示中国大陆以外区域  为空则按默认处理。
-    * callBackSslVerify  是否开启ssl校验服务服务端证书，仅当回调url使用https协议时有效
-    * callBackSslCa  客户端校验服务端的受信证书，call_back_ssl_verify为ture时必需
-    * imageObjectFormat  截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
     *
     * @var string[]
     */
@@ -160,11 +132,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'objectWriteMode' => 'setObjectWriteMode',
             'obsLocation' => 'setObsLocation',
             'callBackEnable' => 'setCallBackEnable',
-            'callBackUrl' => 'setCallBackUrl',
-            'callBackArea' => 'setCallBackArea',
-            'callBackSslVerify' => 'setCallBackSslVerify',
-            'callBackSslCa' => 'setCallBackSslCa',
-            'imageObjectFormat' => 'setImageObjectFormat'
+            'callBackUrl' => 'setCallBackUrl'
     ];
 
     /**
@@ -177,10 +145,6 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
-    * callBackArea  通知服务器区域。 - mainland_china：表示中国大陆区域 - outside_mainland_china：表示中国大陆以外区域  为空则按默认处理。
-    * callBackSslVerify  是否开启ssl校验服务服务端证书，仅当回调url使用https协议时有效
-    * callBackSslCa  客户端校验服务端的受信证书，call_back_ssl_verify为ture时必需
-    * imageObjectFormat  截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
     *
     * @var string[]
     */
@@ -192,11 +156,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'objectWriteMode' => 'getObjectWriteMode',
             'obsLocation' => 'getObsLocation',
             'callBackEnable' => 'getCallBackEnable',
-            'callBackUrl' => 'getCallBackUrl',
-            'callBackArea' => 'getCallBackArea',
-            'callBackSslVerify' => 'getCallBackSslVerify',
-            'callBackSslCa' => 'getCallBackSslCa',
-            'imageObjectFormat' => 'getImageObjectFormat'
+            'callBackUrl' => 'getCallBackUrl'
     ];
 
     /**
@@ -241,8 +201,6 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     }
     const CALL_BACK_ENABLE_ON = 'on';
     const CALL_BACK_ENABLE_OFF = 'off';
-    const CALL_BACK_AREA_MAINLAND_CHINA = 'mainland_china';
-    const CALL_BACK_AREA_OUTSIDE_MAINLAND_CHINA = 'outside_mainland_china';
     
 
     /**
@@ -255,19 +213,6 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
         return [
             self::CALL_BACK_ENABLE_ON,
             self::CALL_BACK_ENABLE_OFF,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getCallBackAreaAllowableValues()
-    {
-        return [
-            self::CALL_BACK_AREA_MAINLAND_CHINA,
-            self::CALL_BACK_AREA_OUTSIDE_MAINLAND_CHINA,
         ];
     }
 
@@ -295,10 +240,6 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
         $this->container['obsLocation'] = isset($data['obsLocation']) ? $data['obsLocation'] : null;
         $this->container['callBackEnable'] = isset($data['callBackEnable']) ? $data['callBackEnable'] : null;
         $this->container['callBackUrl'] = isset($data['callBackUrl']) ? $data['callBackUrl'] : null;
-        $this->container['callBackArea'] = isset($data['callBackArea']) ? $data['callBackArea'] : null;
-        $this->container['callBackSslVerify'] = isset($data['callBackSslVerify']) ? $data['callBackSslVerify'] : false;
-        $this->container['callBackSslCa'] = isset($data['callBackSslCa']) ? $data['callBackSslCa'] : null;
-        $this->container['imageObjectFormat'] = isset($data['imageObjectFormat']) ? $data['imageObjectFormat'] : null;
     }
 
     /**
@@ -350,20 +291,6 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
                 );
             }
 
-            $allowedValues = $this->getCallBackAreaAllowableValues();
-                if (!is_null($this->container['callBackArea']) && !in_array($this->container['callBackArea'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'callBackArea', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['callBackSslCa']) && (mb_strlen($this->container['callBackSslCa']) > 8192)) {
-                $invalidProperties[] = "invalid value for 'callBackSslCa', the character length must be smaller than or equal to 8192.";
-            }
-            if (!is_null($this->container['callBackSslCa']) && (mb_strlen($this->container['callBackSslCa']) < 0)) {
-                $invalidProperties[] = "invalid value for 'callBackSslCa', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -567,102 +494,6 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     public function setCallBackUrl($callBackUrl)
     {
         $this->container['callBackUrl'] = $callBackUrl;
-        return $this;
-    }
-
-    /**
-    * Gets callBackArea
-    *  通知服务器区域。 - mainland_china：表示中国大陆区域 - outside_mainland_china：表示中国大陆以外区域  为空则按默认处理。
-    *
-    * @return string|null
-    */
-    public function getCallBackArea()
-    {
-        return $this->container['callBackArea'];
-    }
-
-    /**
-    * Sets callBackArea
-    *
-    * @param string|null $callBackArea 通知服务器区域。 - mainland_china：表示中国大陆区域 - outside_mainland_china：表示中国大陆以外区域  为空则按默认处理。
-    *
-    * @return $this
-    */
-    public function setCallBackArea($callBackArea)
-    {
-        $this->container['callBackArea'] = $callBackArea;
-        return $this;
-    }
-
-    /**
-    * Gets callBackSslVerify
-    *  是否开启ssl校验服务服务端证书，仅当回调url使用https协议时有效
-    *
-    * @return bool|null
-    */
-    public function getCallBackSslVerify()
-    {
-        return $this->container['callBackSslVerify'];
-    }
-
-    /**
-    * Sets callBackSslVerify
-    *
-    * @param bool|null $callBackSslVerify 是否开启ssl校验服务服务端证书，仅当回调url使用https协议时有效
-    *
-    * @return $this
-    */
-    public function setCallBackSslVerify($callBackSslVerify)
-    {
-        $this->container['callBackSslVerify'] = $callBackSslVerify;
-        return $this;
-    }
-
-    /**
-    * Gets callBackSslCa
-    *  客户端校验服务端的受信证书，call_back_ssl_verify为ture时必需
-    *
-    * @return string|null
-    */
-    public function getCallBackSslCa()
-    {
-        return $this->container['callBackSslCa'];
-    }
-
-    /**
-    * Sets callBackSslCa
-    *
-    * @param string|null $callBackSslCa 客户端校验服务端的受信证书，call_back_ssl_verify为ture时必需
-    *
-    * @return $this
-    */
-    public function setCallBackSslCa($callBackSslCa)
-    {
-        $this->container['callBackSslCa'] = $callBackSslCa;
-        return $this;
-    }
-
-    /**
-    * Gets imageObjectFormat
-    *  截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
-    *
-    * @return string|null
-    */
-    public function getImageObjectFormat()
-    {
-        return $this->container['imageObjectFormat'];
-    }
-
-    /**
-    * Sets imageObjectFormat
-    *
-    * @param string|null $imageObjectFormat 截图存储文件命名规则， 仅支持jpg格式 包含 - '{obs_object}' OBS存储路径，即obs_location.object的值  - '{domain}' 域名 - '{app}' 应用名 - '{stream}'  流名  其中实时截图模式下  - '{unix_time}'  时间戳，秒 - '{unix_time_milli}'  时间戳，毫秒 - '{fmt_time_utc}'   格式化UTC时间, 格式：YYYYMMDDhhmmss, 如20060102070405 - '{fmt_time_local}'  格式化本地时间, 格式：YYYYMMDDhhmmss，如20060102150405 必选一个时间类型模板
-    *
-    * @return $this
-    */
-    public function setImageObjectFormat($imageObjectFormat)
-    {
-        $this->container['imageObjectFormat'] = $imageObjectFormat;
         return $this;
     }
 

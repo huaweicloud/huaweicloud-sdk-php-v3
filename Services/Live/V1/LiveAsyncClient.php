@@ -380,12 +380,6 @@ class LiveAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams['access_control_allow_internal'] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams['access_control_allow_external'] = $localVarParams['accessControlAllowExternal'];
-        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -648,12 +642,6 @@ class LiveAsyncClient extends Client
         }
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
-        }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams['access_control_allow_internal'] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams['access_control_allow_external'] = $localVarParams['accessControlAllowExternal'];
         }
 
         if ($multipart) {
@@ -920,12 +908,6 @@ class LiveAsyncClient extends Client
         }
         if ($localVarParams['appName'] !== null) {
             $queryParams['app_name'] = $localVarParams['appName'];
-        }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams['access_control_allow_internal'] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams['access_control_allow_external'] = $localVarParams['accessControlAllowExternal'];
         }
 
         if ($multipart) {
@@ -1522,23 +1504,11 @@ class LiveAsyncClient extends Client
         if ($localVarParams['appName'] !== null) {
             $queryParams['app_name'] = $localVarParams['appName'];
         }
-        if ($localVarParams['page'] !== null) {
-            $queryParams['page'] = $localVarParams['page'];
-        }
-        if ($localVarParams['size'] !== null) {
-            $queryParams['size'] = $localVarParams['size'];
-        }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams['access_control_allow_internal'] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams['access_control_allow_external'] = $localVarParams['accessControlAllowExternal'];
         }
 
         if ($multipart) {
@@ -1817,12 +1787,6 @@ class LiveAsyncClient extends Client
         }
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
-        }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams['access_control_allow_internal'] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams['access_control_allow_external'] = $localVarParams['accessControlAllowExternal'];
         }
 
         if ($multipart) {
@@ -2223,12 +2187,6 @@ class LiveAsyncClient extends Client
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
         }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams['access_control_allow_internal'] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams['access_control_allow_external'] = $localVarParams['accessControlAllowExternal'];
-        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2430,12 +2388,6 @@ class LiveAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams['access_control_allow_internal'] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams['access_control_allow_external'] = $localVarParams['accessControlAllowExternal'];
-        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2634,12 +2586,6 @@ class LiveAsyncClient extends Client
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
         }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams['access_control_allow_internal'] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams['access_control_allow_external'] = $localVarParams['accessControlAllowExternal'];
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2704,12 +2650,6 @@ class LiveAsyncClient extends Client
         }
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
-        }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams['access_control_allow_internal'] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams['access_control_allow_external'] = $localVarParams['accessControlAllowExternal'];
         }
 
         if ($multipart) {
@@ -2776,12 +2716,6 @@ class LiveAsyncClient extends Client
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
         }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams['access_control_allow_internal'] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams['access_control_allow_external'] = $localVarParams['accessControlAllowExternal'];
-        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2846,12 +2780,6 @@ class LiveAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams['access_control_allow_internal'] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams['access_control_allow_external'] = $localVarParams['accessControlAllowExternal'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];

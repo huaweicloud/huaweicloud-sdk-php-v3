@@ -22,7 +22,7 @@ class Secret implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  凭据的资源标识符。
     * name  凭据名称。
-    * state  凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态状态
+    * state  凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态
     * kmsKeyId  用于加密凭据值的KMS主密钥的ID值。
     * description  凭据的描述信息。
     * createTime  凭据创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
@@ -46,7 +46,7 @@ class Secret implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  凭据的资源标识符。
     * name  凭据名称。
-    * state  凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态状态
+    * state  凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态
     * kmsKeyId  用于加密凭据值的KMS主密钥的ID值。
     * description  凭据的描述信息。
     * createTime  凭据创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
@@ -91,7 +91,7 @@ class Secret implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  凭据的资源标识符。
     * name  凭据名称。
-    * state  凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态状态
+    * state  凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态
     * kmsKeyId  用于加密凭据值的KMS主密钥的ID值。
     * description  凭据的描述信息。
     * createTime  凭据创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
@@ -115,7 +115,7 @@ class Secret implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  凭据的资源标识符。
     * name  凭据名称。
-    * state  凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态状态
+    * state  凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态
     * kmsKeyId  用于加密凭据值的KMS主密钥的ID值。
     * description  凭据的描述信息。
     * createTime  凭据创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
@@ -139,7 +139,7 @@ class Secret implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  凭据的资源标识符。
     * name  凭据名称。
-    * state  凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态状态
+    * state  凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态
     * kmsKeyId  用于加密凭据值的KMS主密钥的ID值。
     * description  凭据的描述信息。
     * createTime  凭据创建时间，时间戳，即从1970年1月1日至该时间的总秒数。
@@ -338,7 +338,7 @@ class Secret implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态状态
+    *  凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态
     *
     * @return string|null
     */
@@ -350,7 +350,7 @@ class Secret implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态状态
+    * @param string|null $state 凭据状态，取值如下：  ENABLED：表示启用状态  DISABLED：表示禁用状态  PENDING_DELETE：表示待删除状态  FROZEN：表示冻结状态
     *
     * @return $this
     */

@@ -1347,6 +1347,71 @@ class SmsClient extends Client
     }
 
     /**
+     * 查询配置资源
+     *
+     * 使用该接口查询任指定任务的指定配置类型的配置信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showConfigSetting($request)
+    {
+        return $this->showConfigSettingWithHttpInfo($request);
+    }
+
+    public function showConfigSettingWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/tasks/{task_id}/configuration-setting';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['configKey'] !== null) {
+            $queryParams['config_key'] = $localVarParams['configKey'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowConfigSettingResponse',
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowConfigSettingRequest');
+    }
+
+    /**
      * 查询指定ID迁移项目详情
      *
      * 查询指定ID的迁移项目详情。
@@ -2286,6 +2351,71 @@ class SmsClient extends Client
     }
 
     /**
+     * 更新网络检测相关的信息
+     *
+     * Agent 上报网络检测相关的信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateNetworkCheckInfo($request)
+    {
+        return $this->updateNetworkCheckInfoWithHttpInfo($request);
+    }
+
+    public function updateNetworkCheckInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{task_id}/update-network-check-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateNetworkCheckInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateNetworkCheckInfoRequest');
+    }
+
+    /**
      * 修改指定ID的源端服务器名称
      *
      * 该功能用来修改SMS服务端的源端名称，方便用户对源端进行管理。
@@ -2675,6 +2805,251 @@ class SmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateTemplateResponse',
             $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UpdateTemplateRequest');
+    }
+
+    /**
+     * 迁移任务配置设置
+     *
+     * 配置迁移任务特殊设置，例如配置指定同步的文件或路径
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function uploadSpecialConfigurationSetting($request)
+    {
+        return $this->uploadSpecialConfigurationSettingWithHttpInfo($request);
+    }
+
+    public function uploadSpecialConfigurationSettingWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/tasks/{task_id}/configuration-setting';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\UploadSpecialConfigurationSettingResponse',
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\UploadSpecialConfigurationSettingRequest');
+    }
+
+    /**
+     * 获取Agent配置信息
+     *
+     * 源端Agent启动后，访问此接口获取配置信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showConfig($request)
+    {
+        return $this->showConfigWithHttpInfo($request);
+    }
+
+    public function showConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowConfigRequest');
+    }
+
+    /**
+     * 查询主机迁移服务的API版本信息
+     *
+     * 查询主机迁移服务的API版本信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listApiVersion($request)
+    {
+        return $this->listApiVersionWithHttpInfo($request);
+    }
+
+    public function listApiVersionWithHttpInfo($request)
+    {
+        $resourcePath = '/';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ListApiVersionResponse',
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ListApiVersionRequest');
+    }
+
+    /**
+     * 查询主机迁移服务指定API版本信息
+     *
+     * 查询主机迁移服务指定API版本信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showApiVersion($request)
+    {
+        return $this->showApiVersionWithHttpInfo($request);
+    }
+
+    public function showApiVersionWithHttpInfo($request)
+    {
+        $resourcePath = '/{version}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['version'] !== null) {
+            $pathParams['version'] = $localVarParams['version'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Sms\V3\Model\ShowApiVersionResponse',
+            $requestType='\HuaweiCloud\SDK\Sms\V3\Model\ShowApiVersionRequest');
     }
 
     protected function callApi(

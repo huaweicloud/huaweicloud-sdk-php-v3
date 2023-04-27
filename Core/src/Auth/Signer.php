@@ -115,8 +115,11 @@ class Signer
                     array_push($a, $kv);
                 }
             } else {
-                $kv = "$k=".str_replace(['+', '%7E'], ['%20',
-                        '~', ], urlencode($value));
+                if (!is_string($value)) {
+                    $value = json_encode($value);
+                }
+                $kv = "$k=" . str_replace(['+', '%7E'], ['%20',
+                        '~',], urlencode($value));
                 array_push($a, $kv);
             }
         }

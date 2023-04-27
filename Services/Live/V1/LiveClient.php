@@ -366,12 +366,6 @@ class LiveClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
-        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -622,12 +616,6 @@ class LiveClient extends Client
         }
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
-        }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -882,12 +870,6 @@ class LiveClient extends Client
         }
         if ($localVarParams['appName'] !== null) {
             $queryParams['app_name'] = $localVarParams['appName'];
-        }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1460,23 +1442,11 @@ class LiveClient extends Client
         if ($localVarParams['appName'] !== null) {
             $queryParams['app_name'] = $localVarParams['appName'];
         }
-        if ($localVarParams['page'] !== null) {
-            $queryParams['page'] = $localVarParams['page'];
-        }
-        if ($localVarParams['size'] !== null) {
-            $queryParams['size'] = $localVarParams['size'];
-        }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1743,12 +1713,6 @@ class LiveClient extends Client
         }
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
-        }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2131,12 +2095,6 @@ class LiveClient extends Client
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
         }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
-        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2329,12 +2287,6 @@ class LiveClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
-        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2524,12 +2476,6 @@ class LiveClient extends Client
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
         }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
-        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 []
@@ -2591,12 +2537,6 @@ class LiveClient extends Client
         }
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
-        }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2660,12 +2600,6 @@ class LiveClient extends Client
         if ($localVarParams['domain'] !== null) {
             $queryParams['domain'] = $localVarParams['domain'];
         }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
-        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2727,12 +2661,6 @@ class LiveClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['accessControlAllowInternal'] !== null) {
-            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
-        }
-        if ($localVarParams['accessControlAllowExternal'] !== null) {
-            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];

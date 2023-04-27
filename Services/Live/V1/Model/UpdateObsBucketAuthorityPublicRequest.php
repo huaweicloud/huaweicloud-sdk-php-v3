@@ -20,29 +20,21 @@ class UpdateObsBucketAuthorityPublicRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessControlAllowInternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-Internal访问服务。
-    * accessControlAllowExternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-External访问服务。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'accessControlAllowInternal' => 'string',
-            'accessControlAllowExternal' => 'string',
             'body' => '\HuaweiCloud\SDK\Live\V1\Model\ObsAuthorityConfigV2'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessControlAllowInternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-Internal访问服务。
-    * accessControlAllowExternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-External访问服务。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'accessControlAllowInternal' => null,
-        'accessControlAllowExternal' => null,
         'body' => null
     ];
 
@@ -69,43 +61,31 @@ class UpdateObsBucketAuthorityPublicRequest implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessControlAllowInternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-Internal访问服务。
-    * accessControlAllowExternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-External访问服务。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'accessControlAllowInternal' => 'Access-Control-Allow-Internal',
-            'accessControlAllowExternal' => 'Access-Control-Allow-External',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessControlAllowInternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-Internal访问服务。
-    * accessControlAllowExternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-External访问服务。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'accessControlAllowInternal' => 'setAccessControlAllowInternal',
-            'accessControlAllowExternal' => 'setAccessControlAllowExternal',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessControlAllowInternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-Internal访问服务。
-    * accessControlAllowExternal  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-External访问服务。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'accessControlAllowInternal' => 'getAccessControlAllowInternal',
-            'accessControlAllowExternal' => 'getAccessControlAllowExternal',
             'body' => 'getBody'
     ];
 
@@ -167,8 +147,6 @@ class UpdateObsBucketAuthorityPublicRequest implements ModelInterface, ArrayAcce
     */
     public function __construct(array $data = null)
     {
-        $this->container['accessControlAllowInternal'] = isset($data['accessControlAllowInternal']) ? $data['accessControlAllowInternal'] : null;
-        $this->container['accessControlAllowExternal'] = isset($data['accessControlAllowExternal']) ? $data['accessControlAllowExternal'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -180,18 +158,6 @@ class UpdateObsBucketAuthorityPublicRequest implements ModelInterface, ArrayAcce
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['accessControlAllowInternal']) && (mb_strlen($this->container['accessControlAllowInternal']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'accessControlAllowInternal', the character length must be smaller than or equal to 2048.";
-            }
-            if (!is_null($this->container['accessControlAllowInternal']) && (mb_strlen($this->container['accessControlAllowInternal']) < 1)) {
-                $invalidProperties[] = "invalid value for 'accessControlAllowInternal', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['accessControlAllowExternal']) && (mb_strlen($this->container['accessControlAllowExternal']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'accessControlAllowExternal', the character length must be smaller than or equal to 2048.";
-            }
-            if (!is_null($this->container['accessControlAllowExternal']) && (mb_strlen($this->container['accessControlAllowExternal']) < 1)) {
-                $invalidProperties[] = "invalid value for 'accessControlAllowExternal', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -204,54 +170,6 @@ class UpdateObsBucketAuthorityPublicRequest implements ModelInterface, ArrayAcce
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets accessControlAllowInternal
-    *  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-Internal访问服务。
-    *
-    * @return string|null
-    */
-    public function getAccessControlAllowInternal()
-    {
-        return $this->container['accessControlAllowInternal'];
-    }
-
-    /**
-    * Sets accessControlAllowInternal
-    *
-    * @param string|null $accessControlAllowInternal 服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-Internal访问服务。
-    *
-    * @return $this
-    */
-    public function setAccessControlAllowInternal($accessControlAllowInternal)
-    {
-        $this->container['accessControlAllowInternal'] = $accessControlAllowInternal;
-        return $this;
-    }
-
-    /**
-    * Gets accessControlAllowExternal
-    *  服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-External访问服务。
-    *
-    * @return string|null
-    */
-    public function getAccessControlAllowExternal()
-    {
-        return $this->container['accessControlAllowExternal'];
-    }
-
-    /**
-    * Sets accessControlAllowExternal
-    *
-    * @param string|null $accessControlAllowExternal 服务鉴权Token，服务开启鉴权，必须携带Access-Control-Allow-External访问服务。
-    *
-    * @return $this
-    */
-    public function setAccessControlAllowExternal($accessControlAllowExternal)
-    {
-        $this->container['accessControlAllowExternal'] = $accessControlAllowExternal;
-        return $this;
     }
 
     /**

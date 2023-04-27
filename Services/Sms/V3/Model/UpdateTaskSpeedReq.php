@@ -27,6 +27,7 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * processTrace  迁移或同步时，具体的迁移详情
     * migrateSpeed  实施迁移速率，单位Mb/s
     * compressRate  实施文件压缩率
+    * remainTime  剩余时间
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
             'totalsize' => 'int',
             'processTrace' => 'string',
             'migrateSpeed' => 'double',
-            'compressRate' => 'double'
+            'compressRate' => 'double',
+            'remainTime' => 'int'
     ];
 
     /**
@@ -49,6 +51,7 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * processTrace  迁移或同步时，具体的迁移详情
     * migrateSpeed  实施迁移速率，单位Mb/s
     * compressRate  实施文件压缩率
+    * remainTime  剩余时间
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
         'totalsize' => 'int64',
         'processTrace' => null,
         'migrateSpeed' => 'double',
-        'compressRate' => 'double'
+        'compressRate' => 'double',
+        'remainTime' => 'int64'
     ];
 
     /**
@@ -92,6 +96,7 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * processTrace  迁移或同步时，具体的迁移详情
     * migrateSpeed  实施迁移速率，单位Mb/s
     * compressRate  实施文件压缩率
+    * remainTime  剩余时间
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
             'totalsize' => 'totalsize',
             'processTrace' => 'process_trace',
             'migrateSpeed' => 'migrate_speed',
-            'compressRate' => 'compress_rate'
+            'compressRate' => 'compress_rate',
+            'remainTime' => 'remain_time'
     ];
 
     /**
@@ -114,6 +120,7 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * processTrace  迁移或同步时，具体的迁移详情
     * migrateSpeed  实施迁移速率，单位Mb/s
     * compressRate  实施文件压缩率
+    * remainTime  剩余时间
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
             'totalsize' => 'setTotalsize',
             'processTrace' => 'setProcessTrace',
             'migrateSpeed' => 'setMigrateSpeed',
-            'compressRate' => 'setCompressRate'
+            'compressRate' => 'setCompressRate',
+            'remainTime' => 'setRemainTime'
     ];
 
     /**
@@ -136,6 +144,7 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     * processTrace  迁移或同步时，具体的迁移详情
     * migrateSpeed  实施迁移速率，单位Mb/s
     * compressRate  实施文件压缩率
+    * remainTime  剩余时间
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
             'totalsize' => 'getTotalsize',
             'processTrace' => 'getProcessTrace',
             'migrateSpeed' => 'getMigrateSpeed',
-            'compressRate' => 'getCompressRate'
+            'compressRate' => 'getCompressRate',
+            'remainTime' => 'getRemainTime'
     ];
 
     /**
@@ -263,6 +273,7 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
         $this->container['processTrace'] = isset($data['processTrace']) ? $data['processTrace'] : null;
         $this->container['migrateSpeed'] = isset($data['migrateSpeed']) ? $data['migrateSpeed'] : null;
         $this->container['compressRate'] = isset($data['compressRate']) ? $data['compressRate'] : null;
+        $this->container['remainTime'] = isset($data['remainTime']) ? $data['remainTime'] : null;
     }
 
     /**
@@ -337,6 +348,12 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['compressRate']) && ($this->container['compressRate'] < 0)) {
                 $invalidProperties[] = "invalid value for 'compressRate', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['remainTime']) && ($this->container['remainTime'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'remainTime', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['remainTime']) && ($this->container['remainTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'remainTime', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -517,6 +534,30 @@ class UpdateTaskSpeedReq implements ModelInterface, ArrayAccess
     public function setCompressRate($compressRate)
     {
         $this->container['compressRate'] = $compressRate;
+        return $this;
+    }
+
+    /**
+    * Gets remainTime
+    *  剩余时间
+    *
+    * @return int|null
+    */
+    public function getRemainTime()
+    {
+        return $this->container['remainTime'];
+    }
+
+    /**
+    * Sets remainTime
+    *
+    * @param int|null $remainTime 剩余时间
+    *
+    * @return $this
+    */
+    public function setRemainTime($remainTime)
+    {
+        $this->container['remainTime'] = $remainTime;
         return $this;
     }
 

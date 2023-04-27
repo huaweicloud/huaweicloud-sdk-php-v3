@@ -42,6 +42,8 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * logCollectStatus  日志收集状态 INIT TELL_AGENT_TO_COLLECT WAIT_AGENT_COLLECT_ACK AGENT_COLLECT_FAIL AGENT_COLLECT_SUCCESS WAIT_SERVER_COLLECT SERVER_COLLECT_FAIL SERVER_COLLECT_SUCCESS TELL_AGENT_RESET_ACL WAIT_AGENT_RESET_ACL_ACK
     * cloneServer  cloneServer
     * syncing  是否同步
+    * networkCheckInfo  networkCheckInfo
+    * specialConfig  特殊配置项配置信息
     *
     * @var string[]
     */
@@ -67,7 +69,9 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
             'targetServer' => '\HuaweiCloud\SDK\Sms\V3\Model\TargetServerAssociatedWithTask',
             'logCollectStatus' => 'string',
             'cloneServer' => '\HuaweiCloud\SDK\Sms\V3\Model\CloneServerBrief',
-            'syncing' => 'bool'
+            'syncing' => 'bool',
+            'networkCheckInfo' => '\HuaweiCloud\SDK\Sms\V3\Model\NetworkCheckInfoRequestBody',
+            'specialConfig' => '\HuaweiCloud\SDK\Sms\V3\Model\ConfigBody[]'
     ];
 
     /**
@@ -94,6 +98,8 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * logCollectStatus  日志收集状态 INIT TELL_AGENT_TO_COLLECT WAIT_AGENT_COLLECT_ACK AGENT_COLLECT_FAIL AGENT_COLLECT_SUCCESS WAIT_SERVER_COLLECT SERVER_COLLECT_FAIL SERVER_COLLECT_SUCCESS TELL_AGENT_RESET_ACL WAIT_AGENT_RESET_ACL_ACK
     * cloneServer  cloneServer
     * syncing  是否同步
+    * networkCheckInfo  networkCheckInfo
+    * specialConfig  特殊配置项配置信息
     *
     * @var string[]
     */
@@ -119,7 +125,9 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
         'targetServer' => null,
         'logCollectStatus' => null,
         'cloneServer' => null,
-        'syncing' => null
+        'syncing' => null,
+        'networkCheckInfo' => null,
+        'specialConfig' => null
     ];
 
     /**
@@ -167,6 +175,8 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * logCollectStatus  日志收集状态 INIT TELL_AGENT_TO_COLLECT WAIT_AGENT_COLLECT_ACK AGENT_COLLECT_FAIL AGENT_COLLECT_SUCCESS WAIT_SERVER_COLLECT SERVER_COLLECT_FAIL SERVER_COLLECT_SUCCESS TELL_AGENT_RESET_ACL WAIT_AGENT_RESET_ACL_ACK
     * cloneServer  cloneServer
     * syncing  是否同步
+    * networkCheckInfo  networkCheckInfo
+    * specialConfig  特殊配置项配置信息
     *
     * @var string[]
     */
@@ -192,7 +202,9 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
             'targetServer' => 'target_server',
             'logCollectStatus' => 'log_collect_status',
             'cloneServer' => 'clone_server',
-            'syncing' => 'syncing'
+            'syncing' => 'syncing',
+            'networkCheckInfo' => 'network_check_info',
+            'specialConfig' => 'special_config'
     ];
 
     /**
@@ -219,6 +231,8 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * logCollectStatus  日志收集状态 INIT TELL_AGENT_TO_COLLECT WAIT_AGENT_COLLECT_ACK AGENT_COLLECT_FAIL AGENT_COLLECT_SUCCESS WAIT_SERVER_COLLECT SERVER_COLLECT_FAIL SERVER_COLLECT_SUCCESS TELL_AGENT_RESET_ACL WAIT_AGENT_RESET_ACL_ACK
     * cloneServer  cloneServer
     * syncing  是否同步
+    * networkCheckInfo  networkCheckInfo
+    * specialConfig  特殊配置项配置信息
     *
     * @var string[]
     */
@@ -244,7 +258,9 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
             'targetServer' => 'setTargetServer',
             'logCollectStatus' => 'setLogCollectStatus',
             'cloneServer' => 'setCloneServer',
-            'syncing' => 'setSyncing'
+            'syncing' => 'setSyncing',
+            'networkCheckInfo' => 'setNetworkCheckInfo',
+            'specialConfig' => 'setSpecialConfig'
     ];
 
     /**
@@ -271,6 +287,8 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     * logCollectStatus  日志收集状态 INIT TELL_AGENT_TO_COLLECT WAIT_AGENT_COLLECT_ACK AGENT_COLLECT_FAIL AGENT_COLLECT_SUCCESS WAIT_SERVER_COLLECT SERVER_COLLECT_FAIL SERVER_COLLECT_SUCCESS TELL_AGENT_RESET_ACL WAIT_AGENT_RESET_ACL_ACK
     * cloneServer  cloneServer
     * syncing  是否同步
+    * networkCheckInfo  networkCheckInfo
+    * specialConfig  特殊配置项配置信息
     *
     * @var string[]
     */
@@ -296,7 +314,9 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
             'targetServer' => 'getTargetServer',
             'logCollectStatus' => 'getLogCollectStatus',
             'cloneServer' => 'getCloneServer',
-            'syncing' => 'getSyncing'
+            'syncing' => 'getSyncing',
+            'networkCheckInfo' => 'getNetworkCheckInfo',
+            'specialConfig' => 'getSpecialConfig'
     ];
 
     /**
@@ -457,6 +477,8 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
         $this->container['logCollectStatus'] = isset($data['logCollectStatus']) ? $data['logCollectStatus'] : null;
         $this->container['cloneServer'] = isset($data['cloneServer']) ? $data['cloneServer'] : null;
         $this->container['syncing'] = isset($data['syncing']) ? $data['syncing'] : null;
+        $this->container['networkCheckInfo'] = isset($data['networkCheckInfo']) ? $data['networkCheckInfo'] : null;
+        $this->container['specialConfig'] = isset($data['specialConfig']) ? $data['specialConfig'] : null;
     }
 
     /**
@@ -1128,6 +1150,54 @@ class TasksResponseBody implements ModelInterface, ArrayAccess
     public function setSyncing($syncing)
     {
         $this->container['syncing'] = $syncing;
+        return $this;
+    }
+
+    /**
+    * Gets networkCheckInfo
+    *  networkCheckInfo
+    *
+    * @return \HuaweiCloud\SDK\Sms\V3\Model\NetworkCheckInfoRequestBody|null
+    */
+    public function getNetworkCheckInfo()
+    {
+        return $this->container['networkCheckInfo'];
+    }
+
+    /**
+    * Sets networkCheckInfo
+    *
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\NetworkCheckInfoRequestBody|null $networkCheckInfo networkCheckInfo
+    *
+    * @return $this
+    */
+    public function setNetworkCheckInfo($networkCheckInfo)
+    {
+        $this->container['networkCheckInfo'] = $networkCheckInfo;
+        return $this;
+    }
+
+    /**
+    * Gets specialConfig
+    *  特殊配置项配置信息
+    *
+    * @return \HuaweiCloud\SDK\Sms\V3\Model\ConfigBody[]|null
+    */
+    public function getSpecialConfig()
+    {
+        return $this->container['specialConfig'];
+    }
+
+    /**
+    * Sets specialConfig
+    *
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\ConfigBody[]|null $specialConfig 特殊配置项配置信息
+    *
+    * @return $this
+    */
+    public function setSpecialConfig($specialConfig)
+    {
+        $this->container['specialConfig'] = $specialConfig;
         return $this;
     }
 
