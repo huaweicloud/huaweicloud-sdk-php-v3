@@ -25,6 +25,7 @@ class ChangeServerOsWithoutCloudInitOption implements ModelInterface, ArrayAcces
     * userid  用户ID。 说明 如果使用秘钥方式切换操作系统，则该字段为必选字段。
     * imageid  切换系统所使用的新镜像的ID，格式为UUID。  镜像的ID可以从控制台或者参考[《镜像服务API参考》](https://support.huaweicloud.com/api-ims/ims_03_0702.html)的“查询镜像列表”的章节获取。
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。  mode取值为withStopServer时，对开机状态的  弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ChangeServerOsWithoutCloudInitOption implements ModelInterface, ArrayAcces
             'keyname' => 'string',
             'userid' => 'string',
             'imageid' => 'string',
-            'mode' => 'string'
+            'mode' => 'string',
+            'metadata' => '\HuaweiCloud\SDK\Ecs\V2\Model\ChangeSeversOsMetadataWithoutCloudInitOption'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ChangeServerOsWithoutCloudInitOption implements ModelInterface, ArrayAcces
     * userid  用户ID。 说明 如果使用秘钥方式切换操作系统，则该字段为必选字段。
     * imageid  切换系统所使用的新镜像的ID，格式为UUID。  镜像的ID可以从控制台或者参考[《镜像服务API参考》](https://support.huaweicloud.com/api-ims/ims_03_0702.html)的“查询镜像列表”的章节获取。
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。  mode取值为withStopServer时，对开机状态的  弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ChangeServerOsWithoutCloudInitOption implements ModelInterface, ArrayAcces
         'keyname' => null,
         'userid' => null,
         'imageid' => null,
-        'mode' => null
+        'mode' => null,
+        'metadata' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ChangeServerOsWithoutCloudInitOption implements ModelInterface, ArrayAcces
     * userid  用户ID。 说明 如果使用秘钥方式切换操作系统，则该字段为必选字段。
     * imageid  切换系统所使用的新镜像的ID，格式为UUID。  镜像的ID可以从控制台或者参考[《镜像服务API参考》](https://support.huaweicloud.com/api-ims/ims_03_0702.html)的“查询镜像列表”的章节获取。
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。  mode取值为withStopServer时，对开机状态的  弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ChangeServerOsWithoutCloudInitOption implements ModelInterface, ArrayAcces
             'keyname' => 'keyname',
             'userid' => 'userid',
             'imageid' => 'imageid',
-            'mode' => 'mode'
+            'mode' => 'mode',
+            'metadata' => 'metadata'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ChangeServerOsWithoutCloudInitOption implements ModelInterface, ArrayAcces
     * userid  用户ID。 说明 如果使用秘钥方式切换操作系统，则该字段为必选字段。
     * imageid  切换系统所使用的新镜像的ID，格式为UUID。  镜像的ID可以从控制台或者参考[《镜像服务API参考》](https://support.huaweicloud.com/api-ims/ims_03_0702.html)的“查询镜像列表”的章节获取。
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。  mode取值为withStopServer时，对开机状态的  弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ChangeServerOsWithoutCloudInitOption implements ModelInterface, ArrayAcces
             'keyname' => 'setKeyname',
             'userid' => 'setUserid',
             'imageid' => 'setImageid',
-            'mode' => 'setMode'
+            'mode' => 'setMode',
+            'metadata' => 'setMetadata'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ChangeServerOsWithoutCloudInitOption implements ModelInterface, ArrayAcces
     * userid  用户ID。 说明 如果使用秘钥方式切换操作系统，则该字段为必选字段。
     * imageid  切换系统所使用的新镜像的ID，格式为UUID。  镜像的ID可以从控制台或者参考[《镜像服务API参考》](https://support.huaweicloud.com/api-ims/ims_03_0702.html)的“查询镜像列表”的章节获取。
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。  mode取值为withStopServer时，对开机状态的  弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ChangeServerOsWithoutCloudInitOption implements ModelInterface, ArrayAcces
             'keyname' => 'getKeyname',
             'userid' => 'getUserid',
             'imageid' => 'getImageid',
-            'mode' => 'getMode'
+            'mode' => 'getMode',
+            'metadata' => 'getMetadata'
     ];
 
     /**
@@ -192,6 +202,7 @@ class ChangeServerOsWithoutCloudInitOption implements ModelInterface, ArrayAcces
         $this->container['userid'] = isset($data['userid']) ? $data['userid'] : null;
         $this->container['imageid'] = isset($data['imageid']) ? $data['imageid'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
     }
 
     /**
@@ -336,6 +347,30 @@ class ChangeServerOsWithoutCloudInitOption implements ModelInterface, ArrayAcces
     public function setMode($mode)
     {
         $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets metadata
+    *  metadata
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\ChangeSeversOsMetadataWithoutCloudInitOption|null
+    */
+    public function getMetadata()
+    {
+        return $this->container['metadata'];
+    }
+
+    /**
+    * Sets metadata
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\ChangeSeversOsMetadataWithoutCloudInitOption|null $metadata metadata
+    *
+    * @return $this
+    */
+    public function setMetadata($metadata)
+    {
+        $this->container['metadata'] = $metadata;
         return $this;
     }
 

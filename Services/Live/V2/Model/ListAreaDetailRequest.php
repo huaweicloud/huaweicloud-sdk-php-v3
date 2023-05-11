@@ -22,7 +22,7 @@ class ListAreaDetailRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * startTime  查询起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期90天。
     * endTime  查询结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期90天。
-    * playDomains  需查询的播放域名列表，最多支持查询15个域名。
+    * playDomains  需查询的播放域名列表，最多支持查询100个域名。
     * app  需查询的app。
     * stream  流名称。
     * interval  查询数据的时间粒度。支持300（默认值）、3600和86400秒。若参数为空，则默认为300秒。  注意，若metric的值为player（观众数），则interval填入的值不起效果，查询粒度interval默认为60秒。
@@ -50,7 +50,7 @@ class ListAreaDetailRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * startTime  查询起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期90天。
     * endTime  查询结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期90天。
-    * playDomains  需查询的播放域名列表，最多支持查询15个域名。
+    * playDomains  需查询的播放域名列表，最多支持查询100个域名。
     * app  需查询的app。
     * stream  流名称。
     * interval  查询数据的时间粒度。支持300（默认值）、3600和86400秒。若参数为空，则默认为300秒。  注意，若metric的值为player（观众数），则interval填入的值不起效果，查询粒度interval默认为60秒。
@@ -99,7 +99,7 @@ class ListAreaDetailRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * startTime  查询起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期90天。
     * endTime  查询结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期90天。
-    * playDomains  需查询的播放域名列表，最多支持查询15个域名。
+    * playDomains  需查询的播放域名列表，最多支持查询100个域名。
     * app  需查询的app。
     * stream  流名称。
     * interval  查询数据的时间粒度。支持300（默认值）、3600和86400秒。若参数为空，则默认为300秒。  注意，若metric的值为player（观众数），则interval填入的值不起效果，查询粒度interval默认为60秒。
@@ -127,7 +127,7 @@ class ListAreaDetailRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * startTime  查询起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期90天。
     * endTime  查询结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期90天。
-    * playDomains  需查询的播放域名列表，最多支持查询15个域名。
+    * playDomains  需查询的播放域名列表，最多支持查询100个域名。
     * app  需查询的app。
     * stream  流名称。
     * interval  查询数据的时间粒度。支持300（默认值）、3600和86400秒。若参数为空，则默认为300秒。  注意，若metric的值为player（观众数），则interval填入的值不起效果，查询粒度interval默认为60秒。
@@ -155,7 +155,7 @@ class ListAreaDetailRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * startTime  查询起始时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期90天。
     * endTime  查询结束时间。日期格式按照ISO8601表示法，并使用UTC时间。  格式为：YYYY-MM-DDThh:mm:ssZ。最大查询跨度1天，最大查询周期90天。
-    * playDomains  需查询的播放域名列表，最多支持查询15个域名。
+    * playDomains  需查询的播放域名列表，最多支持查询100个域名。
     * app  需查询的app。
     * stream  流名称。
     * interval  查询数据的时间粒度。支持300（默认值）、3600和86400秒。若参数为空，则默认为300秒。  注意，若metric的值为player（观众数），则interval填入的值不起效果，查询粒度interval默认为60秒。
@@ -292,9 +292,6 @@ class ListAreaDetailRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['endTime']) < 1)) {
                 $invalidProperties[] = "invalid value for 'endTime', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['playDomains'] === null) {
-            $invalidProperties[] = "'playDomains' can't be null";
-        }
             if (!is_null($this->container['app']) && (mb_strlen($this->container['app']) > 256)) {
                 $invalidProperties[] = "invalid value for 'app', the character length must be smaller than or equal to 256.";
             }
@@ -403,9 +400,9 @@ class ListAreaDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets playDomains
-    *  需查询的播放域名列表，最多支持查询15个域名。
+    *  需查询的播放域名列表，最多支持查询100个域名。
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getPlayDomains()
     {
@@ -415,7 +412,7 @@ class ListAreaDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets playDomains
     *
-    * @param string[] $playDomains 需查询的播放域名列表，最多支持查询15个域名。
+    * @param string[]|null $playDomains 需查询的播放域名列表，最多支持查询100个域名。
     *
     * @return $this
     */

@@ -2476,6 +2476,74 @@ class EcsAsyncClient extends Client
     }
 
     /**
+     * 添加云服务器网卡
+     *
+     * 给云服务器添加一张网卡。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function novaAttachInterfaceAsync($request)
+    {
+        return $this->novaAttachInterfaceAsyncWithHttpInfo($request);
+    }
+    
+    public function novaAttachInterfaceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.1/{project_id}/servers/{server_id}/os-interface';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaAttachInterfaceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaAttachInterfaceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建和导入SSH密钥
      *
      * 创建SSH密钥，或把公钥导入系统，生成密钥对。

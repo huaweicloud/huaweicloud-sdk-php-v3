@@ -20,21 +20,29 @@ class ReinstallSeverMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
+    * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
     * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。  了解更多用户数据注入请参考[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'systemEncrypted' => 'string',
+            'systemCmkid' => 'string',
             'userData' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
+    * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
     * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。  了解更多用户数据注入请参考[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'systemEncrypted' => null,
+        'systemCmkid' => null,
         'userData' => null
     ];
 
@@ -61,31 +69,43 @@ class ReinstallSeverMetadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
+    * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
     * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。  了解更多用户数据注入请参考[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'systemEncrypted' => '__system__encrypted',
+            'systemCmkid' => '__system__cmkid',
             'userData' => 'user_data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
+    * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
     * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。  了解更多用户数据注入请参考[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)。
     *
     * @var string[]
     */
     protected static $setters = [
+            'systemEncrypted' => 'setSystemEncrypted',
+            'systemCmkid' => 'setSystemCmkid',
             'userData' => 'setUserData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * systemEncrypted  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
+    * systemCmkid  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
     * userData  重装云服务器过程中注入用户数据。  支持注入文本、文本文件或gzip文件。注入内容最大长度32KB。注入内容，需要进行base64格式编码。  了解更多用户数据注入请参考[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)。
     *
     * @var string[]
     */
     protected static $getters = [
+            'systemEncrypted' => 'getSystemEncrypted',
+            'systemCmkid' => 'getSystemCmkid',
             'userData' => 'getUserData'
     ];
 
@@ -147,6 +167,8 @@ class ReinstallSeverMetadata implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['systemEncrypted'] = isset($data['systemEncrypted']) ? $data['systemEncrypted'] : '0';
+        $this->container['systemCmkid'] = isset($data['systemCmkid']) ? $data['systemCmkid'] : null;
         $this->container['userData'] = isset($data['userData']) ? $data['userData'] : null;
     }
 
@@ -170,6 +192,54 @@ class ReinstallSeverMetadata implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets systemEncrypted
+    *  metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
+    *
+    * @return string|null
+    */
+    public function getSystemEncrypted()
+    {
+        return $this->container['systemEncrypted'];
+    }
+
+    /**
+    * Sets systemEncrypted
+    *
+    * @param string|null $systemEncrypted metadata中的表示加密功能的字段，0代表不加密，1代表加密。  该字段不存在时，云硬盘默认为不加密。
+    *
+    * @return $this
+    */
+    public function setSystemEncrypted($systemEncrypted)
+    {
+        $this->container['systemEncrypted'] = $systemEncrypted;
+        return $this;
+    }
+
+    /**
+    * Gets systemCmkid
+    *  metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
+    *
+    * @return string|null
+    */
+    public function getSystemCmkid()
+    {
+        return $this->container['systemCmkid'];
+    }
+
+    /**
+    * Sets systemCmkid
+    *
+    * @param string|null $systemCmkid metadata中的加密cmkid字段，与__system__encrypted配合表示需要加密，cmkid长度固定为36个字节。  > 说明：  - 请参考[查询密钥列表](https://support.huaweicloud.com/api-dew/ListKeys.html)，通过HTTPS请求获取密钥ID。
+    *
+    * @return $this
+    */
+    public function setSystemCmkid($systemCmkid)
+    {
+        $this->container['systemCmkid'] = $systemCmkid;
+        return $this;
     }
 
     /**

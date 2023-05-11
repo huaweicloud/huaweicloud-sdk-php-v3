@@ -36,7 +36,7 @@ class DriverLicenseFront implements ModelInterface, ArrayAccess
     * status  状态。
     * generationDate  生成时间。
     * currentTime  当前时间。
-    * fileNumber  档案编号。
+    * fileNumber  档案编号。  > 说明：当驾驶证类型为电子驾驶证时才返回。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
@@ -80,7 +80,7 @@ class DriverLicenseFront implements ModelInterface, ArrayAccess
     * status  状态。
     * generationDate  生成时间。
     * currentTime  当前时间。
-    * fileNumber  档案编号。
+    * fileNumber  档案编号。  > 说明：当驾驶证类型为电子驾驶证时才返回。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
@@ -145,7 +145,7 @@ class DriverLicenseFront implements ModelInterface, ArrayAccess
     * status  状态。
     * generationDate  生成时间。
     * currentTime  当前时间。
-    * fileNumber  档案编号。
+    * fileNumber  档案编号。  > 说明：当驾驶证类型为电子驾驶证时才返回。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
@@ -189,7 +189,7 @@ class DriverLicenseFront implements ModelInterface, ArrayAccess
     * status  状态。
     * generationDate  生成时间。
     * currentTime  当前时间。
-    * fileNumber  档案编号。
+    * fileNumber  档案编号。  > 说明：当驾驶证类型为电子驾驶证时才返回。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
@@ -233,7 +233,7 @@ class DriverLicenseFront implements ModelInterface, ArrayAccess
     * status  状态。
     * generationDate  生成时间。
     * currentTime  当前时间。
-    * fileNumber  档案编号。
+    * fileNumber  档案编号。  > 说明：当驾驶证类型为电子驾驶证时才返回。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
     * @var string[]
@@ -745,7 +745,7 @@ class DriverLicenseFront implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileNumber
-    *  档案编号。
+    *  档案编号。  > 说明：当驾驶证类型为电子驾驶证时才返回。
     *
     * @return string|null
     */
@@ -757,7 +757,7 @@ class DriverLicenseFront implements ModelInterface, ArrayAccess
     /**
     * Sets fileNumber
     *
-    * @param string|null $fileNumber 档案编号。
+    * @param string|null $fileNumber 档案编号。  > 说明：当驾驶证类型为电子驾驶证时才返回。
     *
     * @return $this
     */

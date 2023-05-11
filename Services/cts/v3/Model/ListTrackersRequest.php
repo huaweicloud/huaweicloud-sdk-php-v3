@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cbr\V1\Model;
+namespace HuaweiCloud\SDK\Cts\v3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BillbingCreateExtraInfo implements ModelInterface, ArrayAccess
+class ListTrackersRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class BillbingCreateExtraInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BillbingCreateExtraInfo';
+    protected static $openAPIModelName = 'ListTrackersRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * combinedOrderId  组合创建ID，组合创建时必传。
-    * combinedOrderEcsNum  组合创建数量，组合创建时必填。
+    * trackerName  标示追踪器名称。 在不传入该字段的情况下，将查询租户所有的追踪器。
+    * trackerType  标识追踪器类型。 目前支持系统追踪器有管理类追踪器（system）和数据类追踪器（data）。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'combinedOrderId' => 'string',
-            'combinedOrderEcsNum' => 'int'
+            'trackerName' => 'string',
+            'trackerType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * combinedOrderId  组合创建ID，组合创建时必传。
-    * combinedOrderEcsNum  组合创建数量，组合创建时必填。
+    * trackerName  标示追踪器名称。 在不传入该字段的情况下，将查询租户所有的追踪器。
+    * trackerType  标识追踪器类型。 目前支持系统追踪器有管理类追踪器（system）和数据类追踪器（data）。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'combinedOrderId' => null,
-        'combinedOrderEcsNum' => 'int32'
+        'trackerName' => null,
+        'trackerType' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class BillbingCreateExtraInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * combinedOrderId  组合创建ID，组合创建时必传。
-    * combinedOrderEcsNum  组合创建数量，组合创建时必填。
+    * trackerName  标示追踪器名称。 在不传入该字段的情况下，将查询租户所有的追踪器。
+    * trackerType  标识追踪器类型。 目前支持系统追踪器有管理类追踪器（system）和数据类追踪器（data）。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'combinedOrderId' => 'combined_order_id',
-            'combinedOrderEcsNum' => 'combined_order_ecs_num'
+            'trackerName' => 'tracker_name',
+            'trackerType' => 'tracker_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * combinedOrderId  组合创建ID，组合创建时必传。
-    * combinedOrderEcsNum  组合创建数量，组合创建时必填。
+    * trackerName  标示追踪器名称。 在不传入该字段的情况下，将查询租户所有的追踪器。
+    * trackerType  标识追踪器类型。 目前支持系统追踪器有管理类追踪器（system）和数据类追踪器（data）。
     *
     * @var string[]
     */
     protected static $setters = [
-            'combinedOrderId' => 'setCombinedOrderId',
-            'combinedOrderEcsNum' => 'setCombinedOrderEcsNum'
+            'trackerName' => 'setTrackerName',
+            'trackerType' => 'setTrackerType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * combinedOrderId  组合创建ID，组合创建时必传。
-    * combinedOrderEcsNum  组合创建数量，组合创建时必填。
+    * trackerName  标示追踪器名称。 在不传入该字段的情况下，将查询租户所有的追踪器。
+    * trackerType  标识追踪器类型。 目前支持系统追踪器有管理类追踪器（system）和数据类追踪器（data）。
     *
     * @var string[]
     */
     protected static $getters = [
-            'combinedOrderId' => 'getCombinedOrderId',
-            'combinedOrderEcsNum' => 'getCombinedOrderEcsNum'
+            'trackerName' => 'getTrackerName',
+            'trackerType' => 'getTrackerType'
     ];
 
     /**
@@ -139,7 +139,22 @@ class BillbingCreateExtraInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TRACKER_TYPE_SYSTEM = 'system';
+    const TRACKER_TYPE_DATA = 'data';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTrackerTypeAllowableValues()
+    {
+        return [
+            self::TRACKER_TYPE_SYSTEM,
+            self::TRACKER_TYPE_DATA,
+        ];
+    }
 
 
     /**
@@ -157,8 +172,8 @@ class BillbingCreateExtraInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['combinedOrderId'] = isset($data['combinedOrderId']) ? $data['combinedOrderId'] : null;
-        $this->container['combinedOrderEcsNum'] = isset($data['combinedOrderEcsNum']) ? $data['combinedOrderEcsNum'] : null;
+        $this->container['trackerName'] = isset($data['trackerName']) ? $data['trackerName'] : null;
+        $this->container['trackerType'] = isset($data['trackerType']) ? $data['trackerType'] : null;
     }
 
     /**
@@ -169,6 +184,26 @@ class BillbingCreateExtraInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['trackerName']) && (mb_strlen($this->container['trackerName']) > 32)) {
+                $invalidProperties[] = "invalid value for 'trackerName', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['trackerName']) && (mb_strlen($this->container['trackerName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'trackerName', the character length must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getTrackerTypeAllowableValues();
+                if (!is_null($this->container['trackerType']) && !in_array($this->container['trackerType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'trackerType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['trackerType']) && (mb_strlen($this->container['trackerType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'trackerType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['trackerType']) && (mb_strlen($this->container['trackerType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'trackerType', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -184,50 +219,50 @@ class BillbingCreateExtraInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets combinedOrderId
-    *  组合创建ID，组合创建时必传。
+    * Gets trackerName
+    *  标示追踪器名称。 在不传入该字段的情况下，将查询租户所有的追踪器。
     *
     * @return string|null
     */
-    public function getCombinedOrderId()
+    public function getTrackerName()
     {
-        return $this->container['combinedOrderId'];
+        return $this->container['trackerName'];
     }
 
     /**
-    * Sets combinedOrderId
+    * Sets trackerName
     *
-    * @param string|null $combinedOrderId 组合创建ID，组合创建时必传。
+    * @param string|null $trackerName 标示追踪器名称。 在不传入该字段的情况下，将查询租户所有的追踪器。
     *
     * @return $this
     */
-    public function setCombinedOrderId($combinedOrderId)
+    public function setTrackerName($trackerName)
     {
-        $this->container['combinedOrderId'] = $combinedOrderId;
+        $this->container['trackerName'] = $trackerName;
         return $this;
     }
 
     /**
-    * Gets combinedOrderEcsNum
-    *  组合创建数量，组合创建时必填。
+    * Gets trackerType
+    *  标识追踪器类型。 目前支持系统追踪器有管理类追踪器（system）和数据类追踪器（data）。
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getCombinedOrderEcsNum()
+    public function getTrackerType()
     {
-        return $this->container['combinedOrderEcsNum'];
+        return $this->container['trackerType'];
     }
 
     /**
-    * Sets combinedOrderEcsNum
+    * Sets trackerType
     *
-    * @param int|null $combinedOrderEcsNum 组合创建数量，组合创建时必填。
+    * @param string|null $trackerType 标识追踪器类型。 目前支持系统追踪器有管理类追踪器（system）和数据类追踪器（data）。
     *
     * @return $this
     */
-    public function setCombinedOrderEcsNum($combinedOrderEcsNum)
+    public function setTrackerType($trackerType)
     {
-        $this->container['combinedOrderEcsNum'] = $combinedOrderEcsNum;
+        $this->container['trackerType'] = $trackerType;
         return $this;
     }
 

@@ -21,7 +21,7 @@ class TagResource implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  资源ID
-    * resourceDetail  资源详情
+    * resourceDetail  resourceDetail
     * tags  标签列表 没有标签默认为空数字。
     * resourceName  资源名称
     * sysTags  仅op_service权限才可以获取此字段：  目前只包含一个resource_tag 结构体。  key：_sys_enterprise_project_id  value：企业项目id，0表示默认企业项目  非op_service场景不能返回此字段。
@@ -30,7 +30,7 @@ class TagResource implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'resourceId' => 'string',
-            'resourceDetail' => '\HuaweiCloud\SDK\Cbr\V1\Model\Vault[]',
+            'resourceDetail' => '\HuaweiCloud\SDK\Cbr\V1\Model\InstancesResourceDetail',
             'tags' => '\HuaweiCloud\SDK\Cbr\V1\Model\Tag[]',
             'resourceName' => 'string',
             'sysTags' => '\HuaweiCloud\SDK\Cbr\V1\Model\SysTag[]'
@@ -39,7 +39,7 @@ class TagResource implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  资源ID
-    * resourceDetail  资源详情
+    * resourceDetail  resourceDetail
     * tags  标签列表 没有标签默认为空数字。
     * resourceName  资源名称
     * sysTags  仅op_service权限才可以获取此字段：  目前只包含一个resource_tag 结构体。  key：_sys_enterprise_project_id  value：企业项目id，0表示默认企业项目  非op_service场景不能返回此字段。
@@ -78,7 +78,7 @@ class TagResource implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceId  资源ID
-    * resourceDetail  资源详情
+    * resourceDetail  resourceDetail
     * tags  标签列表 没有标签默认为空数字。
     * resourceName  资源名称
     * sysTags  仅op_service权限才可以获取此字段：  目前只包含一个resource_tag 结构体。  key：_sys_enterprise_project_id  value：企业项目id，0表示默认企业项目  非op_service场景不能返回此字段。
@@ -96,7 +96,7 @@ class TagResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  资源ID
-    * resourceDetail  资源详情
+    * resourceDetail  resourceDetail
     * tags  标签列表 没有标签默认为空数字。
     * resourceName  资源名称
     * sysTags  仅op_service权限才可以获取此字段：  目前只包含一个resource_tag 结构体。  key：_sys_enterprise_project_id  value：企业项目id，0表示默认企业项目  非op_service场景不能返回此字段。
@@ -114,7 +114,7 @@ class TagResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  资源ID
-    * resourceDetail  资源详情
+    * resourceDetail  resourceDetail
     * tags  标签列表 没有标签默认为空数字。
     * resourceName  资源名称
     * sysTags  仅op_service权限才可以获取此字段：  目前只包含一个resource_tag 结构体。  key：_sys_enterprise_project_id  value：企业项目id，0表示默认企业项目  非op_service场景不能返回此字段。
@@ -257,9 +257,9 @@ class TagResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceDetail
-    *  资源详情
+    *  resourceDetail
     *
-    * @return \HuaweiCloud\SDK\Cbr\V1\Model\Vault[]
+    * @return \HuaweiCloud\SDK\Cbr\V1\Model\InstancesResourceDetail
     */
     public function getResourceDetail()
     {
@@ -269,7 +269,7 @@ class TagResource implements ModelInterface, ArrayAccess
     /**
     * Sets resourceDetail
     *
-    * @param \HuaweiCloud\SDK\Cbr\V1\Model\Vault[] $resourceDetail 资源详情
+    * @param \HuaweiCloud\SDK\Cbr\V1\Model\InstancesResourceDetail $resourceDetail resourceDetail
     *
     * @return $this
     */

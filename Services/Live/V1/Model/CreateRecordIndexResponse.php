@@ -28,7 +28,7 @@ class CreateRecordIndexResponse implements ModelInterface, ArrayAccess
     * startTime  开始时间。格式为：yyyy-MM-ddTHH:mm:ssZ（UTC时间）。(实际视频的开始时间)
     * endTime  结束时间。格式为：yyyy-MM-ddTHH:mm:ssZ（UTC时间）。(实际视频的结束时间)
     * duration  录制时长。单位：秒。
-    * weight  视频宽。
+    * width  视频宽。
     * height  视频高。
     * location  OBS Bucket所在RegionID
     * bucket  桶名称
@@ -45,7 +45,7 @@ class CreateRecordIndexResponse implements ModelInterface, ArrayAccess
             'startTime' => '\DateTime',
             'endTime' => '\DateTime',
             'duration' => 'int',
-            'weight' => 'int',
+            'width' => 'int',
             'height' => 'int',
             'location' => 'string',
             'bucket' => 'string',
@@ -62,7 +62,7 @@ class CreateRecordIndexResponse implements ModelInterface, ArrayAccess
     * startTime  开始时间。格式为：yyyy-MM-ddTHH:mm:ssZ（UTC时间）。(实际视频的开始时间)
     * endTime  结束时间。格式为：yyyy-MM-ddTHH:mm:ssZ（UTC时间）。(实际视频的结束时间)
     * duration  录制时长。单位：秒。
-    * weight  视频宽。
+    * width  视频宽。
     * height  视频高。
     * location  OBS Bucket所在RegionID
     * bucket  桶名称
@@ -79,7 +79,7 @@ class CreateRecordIndexResponse implements ModelInterface, ArrayAccess
         'startTime' => 'date-time',
         'endTime' => 'date-time',
         'duration' => 'int32',
-        'weight' => 'int32',
+        'width' => 'int32',
         'height' => 'int32',
         'location' => null,
         'bucket' => null,
@@ -117,7 +117,7 @@ class CreateRecordIndexResponse implements ModelInterface, ArrayAccess
     * startTime  开始时间。格式为：yyyy-MM-ddTHH:mm:ssZ（UTC时间）。(实际视频的开始时间)
     * endTime  结束时间。格式为：yyyy-MM-ddTHH:mm:ssZ（UTC时间）。(实际视频的结束时间)
     * duration  录制时长。单位：秒。
-    * weight  视频宽。
+    * width  视频宽。
     * height  视频高。
     * location  OBS Bucket所在RegionID
     * bucket  桶名称
@@ -134,7 +134,7 @@ class CreateRecordIndexResponse implements ModelInterface, ArrayAccess
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'duration' => 'duration',
-            'weight' => 'weight',
+            'width' => 'width',
             'height' => 'height',
             'location' => 'location',
             'bucket' => 'bucket',
@@ -151,7 +151,7 @@ class CreateRecordIndexResponse implements ModelInterface, ArrayAccess
     * startTime  开始时间。格式为：yyyy-MM-ddTHH:mm:ssZ（UTC时间）。(实际视频的开始时间)
     * endTime  结束时间。格式为：yyyy-MM-ddTHH:mm:ssZ（UTC时间）。(实际视频的结束时间)
     * duration  录制时长。单位：秒。
-    * weight  视频宽。
+    * width  视频宽。
     * height  视频高。
     * location  OBS Bucket所在RegionID
     * bucket  桶名称
@@ -168,7 +168,7 @@ class CreateRecordIndexResponse implements ModelInterface, ArrayAccess
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'duration' => 'setDuration',
-            'weight' => 'setWeight',
+            'width' => 'setWidth',
             'height' => 'setHeight',
             'location' => 'setLocation',
             'bucket' => 'setBucket',
@@ -185,7 +185,7 @@ class CreateRecordIndexResponse implements ModelInterface, ArrayAccess
     * startTime  开始时间。格式为：yyyy-MM-ddTHH:mm:ssZ（UTC时间）。(实际视频的开始时间)
     * endTime  结束时间。格式为：yyyy-MM-ddTHH:mm:ssZ（UTC时间）。(实际视频的结束时间)
     * duration  录制时长。单位：秒。
-    * weight  视频宽。
+    * width  视频宽。
     * height  视频高。
     * location  OBS Bucket所在RegionID
     * bucket  桶名称
@@ -202,7 +202,7 @@ class CreateRecordIndexResponse implements ModelInterface, ArrayAccess
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'duration' => 'getDuration',
-            'weight' => 'getWeight',
+            'width' => 'getWidth',
             'height' => 'getHeight',
             'location' => 'getLocation',
             'bucket' => 'getBucket',
@@ -292,7 +292,7 @@ class CreateRecordIndexResponse implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
-        $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
+        $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
         $this->container['bucket'] = isset($data['bucket']) ? $data['bucket'] : null;
@@ -326,11 +326,11 @@ class CreateRecordIndexResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['duration']) && ($this->container['duration'] < 0)) {
                 $invalidProperties[] = "invalid value for 'duration', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['weight']) && ($this->container['weight'] > 65535)) {
-                $invalidProperties[] = "invalid value for 'weight', must be smaller than or equal to 65535.";
+            if (!is_null($this->container['width']) && ($this->container['width'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'width', must be smaller than or equal to 65535.";
             }
-            if (!is_null($this->container['weight']) && ($this->container['weight'] < 0)) {
-                $invalidProperties[] = "invalid value for 'weight', must be bigger than or equal to 0.";
+            if (!is_null($this->container['width']) && ($this->container['width'] < 0)) {
+                $invalidProperties[] = "invalid value for 'width', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['height']) && ($this->container['height'] > 65535)) {
                 $invalidProperties[] = "invalid value for 'height', must be smaller than or equal to 65535.";
@@ -535,26 +535,26 @@ class CreateRecordIndexResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets weight
+    * Gets width
     *  视频宽。
     *
     * @return int|null
     */
-    public function getWeight()
+    public function getWidth()
     {
-        return $this->container['weight'];
+        return $this->container['width'];
     }
 
     /**
-    * Sets weight
+    * Sets width
     *
-    * @param int|null $weight 视频宽。
+    * @param int|null $width 视频宽。
     *
     * @return $this
     */
-    public function setWeight($weight)
+    public function setWidth($width)
     {
-        $this->container['weight'] = $weight;
+        $this->container['width'] = $width;
         return $this;
     }
 

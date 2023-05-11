@@ -30,6 +30,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * timezone  用户所在时区,格式形如UTC+08:00, 若选择年备，月备，周备，日备中任一参数，则该参数不能为空。
     * weekBackups  保留周备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
+    * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
             'retentionDurationDays' => 'int',
             'timezone' => 'string',
             'weekBackups' => 'int',
-            'yearBackups' => 'int'
+            'yearBackups' => 'int',
+            'fullBackupInterval' => 'int'
     ];
 
     /**
@@ -58,6 +60,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * timezone  用户所在时区,格式形如UTC+08:00, 若选择年备，月备，周备，日备中任一参数，则该参数不能为空。
     * weekBackups  保留周备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
+    * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
         'retentionDurationDays' => 'int32',
         'timezone' => null,
         'weekBackups' => 'int32',
-        'yearBackups' => 'int32'
+        'yearBackups' => 'int32',
+        'fullBackupInterval' => 'int32'
     ];
 
     /**
@@ -107,6 +111,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * timezone  用户所在时区,格式形如UTC+08:00, 若选择年备，月备，周备，日备中任一参数，则该参数不能为空。
     * weekBackups  保留周备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
+    * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
             'retentionDurationDays' => 'retention_duration_days',
             'timezone' => 'timezone',
             'weekBackups' => 'week_backups',
-            'yearBackups' => 'year_backups'
+            'yearBackups' => 'year_backups',
+            'fullBackupInterval' => 'full_backup_interval'
     ];
 
     /**
@@ -135,6 +141,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * timezone  用户所在时区,格式形如UTC+08:00, 若选择年备，月备，周备，日备中任一参数，则该参数不能为空。
     * weekBackups  保留周备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
+    * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
             'retentionDurationDays' => 'setRetentionDurationDays',
             'timezone' => 'setTimezone',
             'weekBackups' => 'setWeekBackups',
-            'yearBackups' => 'setYearBackups'
+            'yearBackups' => 'setYearBackups',
+            'fullBackupInterval' => 'setFullBackupInterval'
     ];
 
     /**
@@ -163,6 +171,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * timezone  用户所在时区,格式形如UTC+08:00, 若选择年备，月备，周备，日备中任一参数，则该参数不能为空。
     * weekBackups  保留周备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
+    * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
             'retentionDurationDays' => 'getRetentionDurationDays',
             'timezone' => 'getTimezone',
             'weekBackups' => 'getWeekBackups',
-            'yearBackups' => 'getYearBackups'
+            'yearBackups' => 'getYearBackups',
+            'fullBackupInterval' => 'getFullBackupInterval'
     ];
 
     /**
@@ -247,6 +257,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
         $this->container['timezone'] = isset($data['timezone']) ? $data['timezone'] : null;
         $this->container['weekBackups'] = isset($data['weekBackups']) ? $data['weekBackups'] : null;
         $this->container['yearBackups'] = isset($data['yearBackups']) ? $data['yearBackups'] : null;
+        $this->container['fullBackupInterval'] = isset($data['fullBackupInterval']) ? $data['fullBackupInterval'] : null;
     }
 
     /**
@@ -292,6 +303,12 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['yearBackups']) && ($this->container['yearBackups'] < 0)) {
                 $invalidProperties[] = "invalid value for 'yearBackups', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['fullBackupInterval']) && ($this->container['fullBackupInterval'] > 100)) {
+                $invalidProperties[] = "invalid value for 'fullBackupInterval', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['fullBackupInterval']) && ($this->container['fullBackupInterval'] < -1)) {
+                $invalidProperties[] = "invalid value for 'fullBackupInterval', must be bigger than or equal to -1.";
             }
         return $invalidProperties;
     }
@@ -544,6 +561,30 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     public function setYearBackups($yearBackups)
     {
         $this->container['yearBackups'] = $yearBackups;
+        return $this;
+    }
+
+    /**
+    * Gets fullBackupInterval
+    *  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
+    *
+    * @return int|null
+    */
+    public function getFullBackupInterval()
+    {
+        return $this->container['fullBackupInterval'];
+    }
+
+    /**
+    * Sets fullBackupInterval
+    *
+    * @param int|null $fullBackupInterval 每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
+    *
+    * @return $this
+    */
+    public function setFullBackupInterval($fullBackupInterval)
+    {
+        $this->container['fullBackupInterval'] = $fullBackupInterval;
         return $this;
     }
 

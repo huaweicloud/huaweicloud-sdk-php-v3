@@ -31,7 +31,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
     * isAutoRenew  到期后是否自动续期，默认不续期
     * isAutoPay  是否自动付费，默认为不自动付费
     * consoleUrl  跳转URL
-    * extraInfo  extraInfo
     * isMultiAz  存储库多az属性，默认为false
     * promotionInfo  促销信息，包周期时可选参数
     * purchaseMode  购买模式，包周期时可选参数
@@ -51,7 +50,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
             'isAutoRenew' => 'bool',
             'isAutoPay' => 'bool',
             'consoleUrl' => 'string',
-            'extraInfo' => '\HuaweiCloud\SDK\Cbr\V1\Model\BillbingCreateExtraInfo',
             'isMultiAz' => 'bool',
             'promotionInfo' => 'string',
             'purchaseMode' => 'string',
@@ -71,7 +69,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
     * isAutoRenew  到期后是否自动续期，默认不续期
     * isAutoPay  是否自动付费，默认为不自动付费
     * consoleUrl  跳转URL
-    * extraInfo  extraInfo
     * isMultiAz  存储库多az属性，默认为false
     * promotionInfo  促销信息，包周期时可选参数
     * purchaseMode  购买模式，包周期时可选参数
@@ -91,7 +88,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
         'isAutoRenew' => null,
         'isAutoPay' => null,
         'consoleUrl' => null,
-        'extraInfo' => null,
         'isMultiAz' => null,
         'promotionInfo' => null,
         'purchaseMode' => null,
@@ -132,7 +128,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
     * isAutoRenew  到期后是否自动续期，默认不续期
     * isAutoPay  是否自动付费，默认为不自动付费
     * consoleUrl  跳转URL
-    * extraInfo  extraInfo
     * isMultiAz  存储库多az属性，默认为false
     * promotionInfo  促销信息，包周期时可选参数
     * purchaseMode  购买模式，包周期时可选参数
@@ -152,7 +147,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
             'isAutoRenew' => 'is_auto_renew',
             'isAutoPay' => 'is_auto_pay',
             'consoleUrl' => 'console_url',
-            'extraInfo' => 'extra_info',
             'isMultiAz' => 'is_multi_az',
             'promotionInfo' => 'promotion_info',
             'purchaseMode' => 'purchase_mode',
@@ -172,7 +166,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
     * isAutoRenew  到期后是否自动续期，默认不续期
     * isAutoPay  是否自动付费，默认为不自动付费
     * consoleUrl  跳转URL
-    * extraInfo  extraInfo
     * isMultiAz  存储库多az属性，默认为false
     * promotionInfo  促销信息，包周期时可选参数
     * purchaseMode  购买模式，包周期时可选参数
@@ -192,7 +185,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
             'isAutoRenew' => 'setIsAutoRenew',
             'isAutoPay' => 'setIsAutoPay',
             'consoleUrl' => 'setConsoleUrl',
-            'extraInfo' => 'setExtraInfo',
             'isMultiAz' => 'setIsMultiAz',
             'promotionInfo' => 'setPromotionInfo',
             'purchaseMode' => 'setPurchaseMode',
@@ -212,7 +204,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
     * isAutoRenew  到期后是否自动续期，默认不续期
     * isAutoPay  是否自动付费，默认为不自动付费
     * consoleUrl  跳转URL
-    * extraInfo  extraInfo
     * isMultiAz  存储库多az属性，默认为false
     * promotionInfo  促销信息，包周期时可选参数
     * purchaseMode  购买模式，包周期时可选参数
@@ -232,7 +223,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
             'isAutoRenew' => 'getIsAutoRenew',
             'isAutoPay' => 'getIsAutoPay',
             'consoleUrl' => 'getConsoleUrl',
-            'extraInfo' => 'getExtraInfo',
             'isMultiAz' => 'getIsMultiAz',
             'promotionInfo' => 'getPromotionInfo',
             'purchaseMode' => 'getPurchaseMode',
@@ -408,7 +398,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
         $this->container['isAutoRenew'] = isset($data['isAutoRenew']) ? $data['isAutoRenew'] : false;
         $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : false;
         $this->container['consoleUrl'] = isset($data['consoleUrl']) ? $data['consoleUrl'] : null;
-        $this->container['extraInfo'] = isset($data['extraInfo']) ? $data['extraInfo'] : null;
         $this->container['isMultiAz'] = isset($data['isMultiAz']) ? $data['isMultiAz'] : false;
         $this->container['promotionInfo'] = isset($data['promotionInfo']) ? $data['promotionInfo'] : null;
         $this->container['purchaseMode'] = isset($data['purchaseMode']) ? $data['purchaseMode'] : null;
@@ -770,30 +759,6 @@ class BillingCreate implements ModelInterface, ArrayAccess
     public function setConsoleUrl($consoleUrl)
     {
         $this->container['consoleUrl'] = $consoleUrl;
-        return $this;
-    }
-
-    /**
-    * Gets extraInfo
-    *  extraInfo
-    *
-    * @return \HuaweiCloud\SDK\Cbr\V1\Model\BillbingCreateExtraInfo|null
-    */
-    public function getExtraInfo()
-    {
-        return $this->container['extraInfo'];
-    }
-
-    /**
-    * Sets extraInfo
-    *
-    * @param \HuaweiCloud\SDK\Cbr\V1\Model\BillbingCreateExtraInfo|null $extraInfo extraInfo
-    *
-    * @return $this
-    */
-    public function setExtraInfo($extraInfo)
-    {
-        $this->container['extraInfo'] = $extraInfo;
         return $this;
     }
 

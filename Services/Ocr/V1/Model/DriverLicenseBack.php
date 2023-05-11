@@ -25,7 +25,7 @@ class DriverLicenseBack implements ModelInterface, ArrayAccess
     * name  姓名。
     * issuingAuthority  发证机关。
     * address  住址。
-    * fileNumber  档案编号。
+    * fileNumber  档案编号。 > 说明：当驾驶证类型为纸质驾驶证时才返回。
     * record  记录。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
@@ -49,7 +49,7 @@ class DriverLicenseBack implements ModelInterface, ArrayAccess
     * name  姓名。
     * issuingAuthority  发证机关。
     * address  住址。
-    * fileNumber  档案编号。
+    * fileNumber  档案编号。 > 说明：当驾驶证类型为纸质驾驶证时才返回。
     * record  记录。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
@@ -94,7 +94,7 @@ class DriverLicenseBack implements ModelInterface, ArrayAccess
     * name  姓名。
     * issuingAuthority  发证机关。
     * address  住址。
-    * fileNumber  档案编号。
+    * fileNumber  档案编号。 > 说明：当驾驶证类型为纸质驾驶证时才返回。
     * record  记录。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
@@ -118,7 +118,7 @@ class DriverLicenseBack implements ModelInterface, ArrayAccess
     * name  姓名。
     * issuingAuthority  发证机关。
     * address  住址。
-    * fileNumber  档案编号。
+    * fileNumber  档案编号。 > 说明：当驾驶证类型为纸质驾驶证时才返回。
     * record  记录。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
@@ -142,7 +142,7 @@ class DriverLicenseBack implements ModelInterface, ArrayAccess
     * name  姓名。
     * issuingAuthority  发证机关。
     * address  住址。
-    * fileNumber  档案编号。
+    * fileNumber  档案编号。 > 说明：当驾驶证类型为纸质驾驶证时才返回。
     * record  记录。
     * textLocation  对应所有在原图上识别到的字段位置信息，包含所有文字区域四个顶点的二维坐标（x,y）。采用图像坐标系，坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     *
@@ -371,7 +371,7 @@ class DriverLicenseBack implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileNumber
-    *  档案编号。
+    *  档案编号。 > 说明：当驾驶证类型为纸质驾驶证时才返回。
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class DriverLicenseBack implements ModelInterface, ArrayAccess
     /**
     * Sets fileNumber
     *
-    * @param string|null $fileNumber 档案编号。
+    * @param string|null $fileNumber 档案编号。 > 说明：当驾驶证类型为纸质驾驶证时才返回。
     *
     * @return $this
     */

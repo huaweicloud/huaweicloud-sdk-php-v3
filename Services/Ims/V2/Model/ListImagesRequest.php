@@ -492,6 +492,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     const IMAGETYPE_GOLD = 'gold';
     const IMAGETYPE__PRIVATE = 'private';
     const IMAGETYPE_SHARED = 'shared';
+    const IMAGETYPE_MARKET = 'market';
     const ISREGISTERED_TRUE = 'true';
     const ISREGISTERED_FALSE = 'false';
     const OS_BIT__32 = '32';
@@ -553,6 +554,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
             self::IMAGETYPE_GOLD,
             self::IMAGETYPE__PRIVATE,
             self::IMAGETYPE_SHARED,
+            self::IMAGETYPE_MARKET,
         ];
     }
 

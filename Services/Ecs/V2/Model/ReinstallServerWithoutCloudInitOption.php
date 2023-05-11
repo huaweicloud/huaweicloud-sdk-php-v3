@@ -24,6 +24,7 @@ class ReinstallServerWithoutCloudInitOption implements ModelInterface, ArrayAcce
     * keyname  密钥名称。  密钥可以通过密钥创建接口进行创建（请参见[创建和导入SSH密钥](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0020212678.html)），或使用SSH密钥查询接口查询已有的密钥（请参见[查询SSH密钥列表](https://support.huaweicloud.com/api-ecs/ecs_03_1201.html) ）。
     * userid  用户ID。当传入keyname参数时，此参数为必选。
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。 mode取值为withStopServer时，对开机状态的弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ReinstallServerWithoutCloudInitOption implements ModelInterface, ArrayAcce
             'adminpass' => 'string',
             'keyname' => 'string',
             'userid' => 'string',
-            'mode' => 'string'
+            'mode' => 'string',
+            'metadata' => '\HuaweiCloud\SDK\Ecs\V2\Model\ReinstallSeverMetadataWithoutCloudInitOption'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ReinstallServerWithoutCloudInitOption implements ModelInterface, ArrayAcce
     * keyname  密钥名称。  密钥可以通过密钥创建接口进行创建（请参见[创建和导入SSH密钥](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0020212678.html)），或使用SSH密钥查询接口查询已有的密钥（请参见[查询SSH密钥列表](https://support.huaweicloud.com/api-ecs/ecs_03_1201.html) ）。
     * userid  用户ID。当传入keyname参数时，此参数为必选。
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。 mode取值为withStopServer时，对开机状态的弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ReinstallServerWithoutCloudInitOption implements ModelInterface, ArrayAcce
         'adminpass' => null,
         'keyname' => null,
         'userid' => null,
-        'mode' => null
+        'mode' => null,
+        'metadata' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ReinstallServerWithoutCloudInitOption implements ModelInterface, ArrayAcce
     * keyname  密钥名称。  密钥可以通过密钥创建接口进行创建（请参见[创建和导入SSH密钥](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0020212678.html)），或使用SSH密钥查询接口查询已有的密钥（请参见[查询SSH密钥列表](https://support.huaweicloud.com/api-ecs/ecs_03_1201.html) ）。
     * userid  用户ID。当传入keyname参数时，此参数为必选。
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。 mode取值为withStopServer时，对开机状态的弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ReinstallServerWithoutCloudInitOption implements ModelInterface, ArrayAcce
             'adminpass' => 'adminpass',
             'keyname' => 'keyname',
             'userid' => 'userid',
-            'mode' => 'mode'
+            'mode' => 'mode',
+            'metadata' => 'metadata'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ReinstallServerWithoutCloudInitOption implements ModelInterface, ArrayAcce
     * keyname  密钥名称。  密钥可以通过密钥创建接口进行创建（请参见[创建和导入SSH密钥](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0020212678.html)），或使用SSH密钥查询接口查询已有的密钥（请参见[查询SSH密钥列表](https://support.huaweicloud.com/api-ecs/ecs_03_1201.html) ）。
     * userid  用户ID。当传入keyname参数时，此参数为必选。
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。 mode取值为withStopServer时，对开机状态的弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ReinstallServerWithoutCloudInitOption implements ModelInterface, ArrayAcce
             'adminpass' => 'setAdminpass',
             'keyname' => 'setKeyname',
             'userid' => 'setUserid',
-            'mode' => 'setMode'
+            'mode' => 'setMode',
+            'metadata' => 'setMetadata'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ReinstallServerWithoutCloudInitOption implements ModelInterface, ArrayAcce
     * keyname  密钥名称。  密钥可以通过密钥创建接口进行创建（请参见[创建和导入SSH密钥](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0020212678.html)），或使用SSH密钥查询接口查询已有的密钥（请参见[查询SSH密钥列表](https://support.huaweicloud.com/api-ecs/ecs_03_1201.html) ）。
     * userid  用户ID。当传入keyname参数时，此参数为必选。
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。 mode取值为withStopServer时，对开机状态的弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ReinstallServerWithoutCloudInitOption implements ModelInterface, ArrayAcce
             'adminpass' => 'getAdminpass',
             'keyname' => 'getKeyname',
             'userid' => 'getUserid',
-            'mode' => 'getMode'
+            'mode' => 'getMode',
+            'metadata' => 'getMetadata'
     ];
 
     /**
@@ -181,6 +191,7 @@ class ReinstallServerWithoutCloudInitOption implements ModelInterface, ArrayAcce
         $this->container['keyname'] = isset($data['keyname']) ? $data['keyname'] : null;
         $this->container['userid'] = isset($data['userid']) ? $data['userid'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
     }
 
     /**
@@ -298,6 +309,30 @@ class ReinstallServerWithoutCloudInitOption implements ModelInterface, ArrayAcce
     public function setMode($mode)
     {
         $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets metadata
+    *  metadata
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\ReinstallSeverMetadataWithoutCloudInitOption|null
+    */
+    public function getMetadata()
+    {
+        return $this->container['metadata'];
+    }
+
+    /**
+    * Sets metadata
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\ReinstallSeverMetadataWithoutCloudInitOption|null $metadata metadata
+    *
+    * @return $this
+    */
+    public function setMetadata($metadata)
+    {
+        $this->container['metadata'] = $metadata;
         return $this;
     }
 

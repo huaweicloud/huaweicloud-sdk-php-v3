@@ -614,6 +614,83 @@ class AosClient extends Client
     }
 
     /**
+     * 继续部署资源栈
+     *
+     * 继续部署资源栈（ContinueDeployStack）
+     * 
+     * 此API用于继续部署一个已有的资源栈
+     * 
+     * * 如果资源栈当前可以继续部署，即处于&#x60;DEPLOYMENT_FAILED&#x60;，则返回202与对应生成的deploymentId，否则将不允许继续部署并返回相应的错误码
+     * 
+     * * 继续部署操作依然有可能部署失败，用户可以从ListStackEvents获取对应的log，解决后可再次调用此API触发继续部署
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function continueDeployStack($request)
+    {
+        return $this->continueDeployStackWithHttpInfo($request);
+    }
+
+    public function continueDeployStackWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/stacks/{stack_name}/continuations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clientRequestId'] !== null) {
+            $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['stackName'] !== null) {
+            $pathParams['stack_name'] = $localVarParams['stackName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aos\V1\Model\ContinueDeployStackResponse',
+            $requestType='\HuaweiCloud\SDK\Aos\V1\Model\ContinueDeployStackRequest');
+    }
+
+    /**
      * 继续回滚资源栈
      *
      * 继续回滚资源栈（ContinueRollbackStack）
