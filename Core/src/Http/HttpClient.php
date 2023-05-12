@@ -105,7 +105,7 @@ class HttpClient
                 }
                 $responseStatusCode = $response->getStatusCode();
                 $requestKeys = array_filter(array_keys($response->getHeaders()), function ($key){
-                    return preg_match('/^x\-[a-zA-z]+\-request-id$/', (string) $key);
+                    return preg_match('/^x-([a-zA-z\-]+)?request-id$/', (string) $key);
                 });
                 $requestKey = array_shift($requestKeys);
                 $requestId = isset($response->getHeaders()[$requestKey]) ? $response->getHeaders()[$requestKey][0] : '';
