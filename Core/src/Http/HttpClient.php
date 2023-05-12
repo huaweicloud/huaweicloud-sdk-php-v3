@@ -104,7 +104,11 @@ class HttpClient
                         $response, 'logger' => $this->logger]);
                 }
                 $responseStatusCode = $response->getStatusCode();
-                $requestId = $response->getHeaders()['X-Request-Id'][0];
+                $requestKeys = array_filter(array_keys($response->getHeaders()), function ($key){
+                    return preg_match('/^x\-[a-zA-z]+\-request-id$/', (string) $key);
+                });
+                $requestKey = array_shift($requestKeys);
+                $requestId = isset($response->getHeaders()[$requestKey]) ? $response->getHeaders()[$requestKey][0] : '';
                 $responseBody = $response->getBody();
                 $sdkError = $this->getSdkErrorMessage($requestId,
                     $responseBody, $responseStatusCode);
