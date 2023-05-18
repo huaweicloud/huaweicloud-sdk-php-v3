@@ -20,7 +20,7 @@ class RunQueryAudioModerationJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  jobId
+    * jobId  创建作业成功时，接口返回的job_id。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class RunQueryAudioModerationJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  jobId
+    * jobId  创建作业成功时，接口返回的job_id。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class RunQueryAudioModerationJobRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  jobId
+    * jobId  创建作业成功时，接口返回的job_id。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class RunQueryAudioModerationJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  jobId
+    * jobId  创建作业成功时，接口返回的job_id。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class RunQueryAudioModerationJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  jobId
+    * jobId  创建作业成功时，接口返回的job_id。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class RunQueryAudioModerationJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  jobId
+    *  创建作业成功时，接口返回的job_id。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class RunQueryAudioModerationJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string $jobId jobId
+    * @param string $jobId 创建作业成功时，接口返回的job_id。
     *
     * @return $this
     */

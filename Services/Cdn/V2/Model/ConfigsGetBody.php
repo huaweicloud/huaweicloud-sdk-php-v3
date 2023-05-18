@@ -24,20 +24,27 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
     * https  https
-    * sources  sources
-    * originProtocol  originProtocol
+    * sources  源站配置。
+    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
     * originFollow302Status  回源跟随（on：开启，off：关闭）。
-    * cacheRules  cacheRules
+    * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
     * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  errorCodeCache
+    * errorCodeCache  CDN状态码缓存时间
     * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
+    * flexibleOrigin  高级回源，最多配置20条。
+    * sliceEtagStatus  回源是否校验ETag（on：开启，off：关闭）。
+    * originReceiveTimeout  回源超时时间，范围:5-60，单位：秒。
+    * remoteAuth  remoteAuth
+    * websocket  websocket
+    * videoSeek  videoSeek
+    * requestLimitRules  请求限速。
     * errorCodeRedirectRules  自定义错误页面
     *
     * @var string[]
@@ -61,6 +68,13 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'originRangeStatus' => 'string',
             'userAgentFilter' => '\HuaweiCloud\SDK\Cdn\V2\Model\UserAgentFilter',
             'originRequestUrlRewrite' => '\HuaweiCloud\SDK\Cdn\V2\Model\OriginRequestUrlRewrite[]',
+            'flexibleOrigin' => '\HuaweiCloud\SDK\Cdn\V2\Model\FlexibleOrigins[]',
+            'sliceEtagStatus' => 'string',
+            'originReceiveTimeout' => 'int',
+            'remoteAuth' => '\HuaweiCloud\SDK\Cdn\V2\Model\CommonRemoteAuth',
+            'websocket' => '\HuaweiCloud\SDK\Cdn\V2\Model\WebSocketSeek',
+            'videoSeek' => '\HuaweiCloud\SDK\Cdn\V2\Model\VideoSeek',
+            'requestLimitRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\RequestLimitRules[]',
             'errorCodeRedirectRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeRedirectRules[]'
     ];
 
@@ -70,20 +84,27 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
     * https  https
-    * sources  sources
-    * originProtocol  originProtocol
+    * sources  源站配置。
+    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
     * originFollow302Status  回源跟随（on：开启，off：关闭）。
-    * cacheRules  cacheRules
+    * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
     * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  errorCodeCache
+    * errorCodeCache  CDN状态码缓存时间
     * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
+    * flexibleOrigin  高级回源，最多配置20条。
+    * sliceEtagStatus  回源是否校验ETag（on：开启，off：关闭）。
+    * originReceiveTimeout  回源超时时间，范围:5-60，单位：秒。
+    * remoteAuth  remoteAuth
+    * websocket  websocket
+    * videoSeek  videoSeek
+    * requestLimitRules  请求限速。
     * errorCodeRedirectRules  自定义错误页面
     *
     * @var string[]
@@ -107,6 +128,13 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
         'originRangeStatus' => null,
         'userAgentFilter' => null,
         'originRequestUrlRewrite' => null,
+        'flexibleOrigin' => null,
+        'sliceEtagStatus' => null,
+        'originReceiveTimeout' => 'int32',
+        'remoteAuth' => null,
+        'websocket' => null,
+        'videoSeek' => null,
+        'requestLimitRules' => null,
         'errorCodeRedirectRules' => null
     ];
 
@@ -137,20 +165,27 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
     * https  https
-    * sources  sources
-    * originProtocol  originProtocol
+    * sources  源站配置。
+    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
     * originFollow302Status  回源跟随（on：开启，off：关闭）。
-    * cacheRules  cacheRules
+    * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
     * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  errorCodeCache
+    * errorCodeCache  CDN状态码缓存时间
     * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
+    * flexibleOrigin  高级回源，最多配置20条。
+    * sliceEtagStatus  回源是否校验ETag（on：开启，off：关闭）。
+    * originReceiveTimeout  回源超时时间，范围:5-60，单位：秒。
+    * remoteAuth  remoteAuth
+    * websocket  websocket
+    * videoSeek  videoSeek
+    * requestLimitRules  请求限速。
     * errorCodeRedirectRules  自定义错误页面
     *
     * @var string[]
@@ -174,6 +209,13 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'originRangeStatus' => 'origin_range_status',
             'userAgentFilter' => 'user_agent_filter',
             'originRequestUrlRewrite' => 'origin_request_url_rewrite',
+            'flexibleOrigin' => 'flexible_origin',
+            'sliceEtagStatus' => 'slice_etag_status',
+            'originReceiveTimeout' => 'origin_receive_timeout',
+            'remoteAuth' => 'remote_auth',
+            'websocket' => 'websocket',
+            'videoSeek' => 'video_seek',
+            'requestLimitRules' => 'request_limit_rules',
             'errorCodeRedirectRules' => 'error_code_redirect_rules'
     ];
 
@@ -183,20 +225,27 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
     * https  https
-    * sources  sources
-    * originProtocol  originProtocol
+    * sources  源站配置。
+    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
     * originFollow302Status  回源跟随（on：开启，off：关闭）。
-    * cacheRules  cacheRules
+    * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
     * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  errorCodeCache
+    * errorCodeCache  CDN状态码缓存时间
     * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
+    * flexibleOrigin  高级回源，最多配置20条。
+    * sliceEtagStatus  回源是否校验ETag（on：开启，off：关闭）。
+    * originReceiveTimeout  回源超时时间，范围:5-60，单位：秒。
+    * remoteAuth  remoteAuth
+    * websocket  websocket
+    * videoSeek  videoSeek
+    * requestLimitRules  请求限速。
     * errorCodeRedirectRules  自定义错误页面
     *
     * @var string[]
@@ -220,6 +269,13 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'originRangeStatus' => 'setOriginRangeStatus',
             'userAgentFilter' => 'setUserAgentFilter',
             'originRequestUrlRewrite' => 'setOriginRequestUrlRewrite',
+            'flexibleOrigin' => 'setFlexibleOrigin',
+            'sliceEtagStatus' => 'setSliceEtagStatus',
+            'originReceiveTimeout' => 'setOriginReceiveTimeout',
+            'remoteAuth' => 'setRemoteAuth',
+            'websocket' => 'setWebsocket',
+            'videoSeek' => 'setVideoSeek',
+            'requestLimitRules' => 'setRequestLimitRules',
             'errorCodeRedirectRules' => 'setErrorCodeRedirectRules'
     ];
 
@@ -229,20 +285,27 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * httpResponseHeader  http header配置
     * urlAuth  urlAuth
     * https  https
-    * sources  sources
-    * originProtocol  originProtocol
+    * sources  源站配置。
+    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
     * originFollow302Status  回源跟随（on：开启，off：关闭）。
-    * cacheRules  cacheRules
+    * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
     * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  errorCodeCache
+    * errorCodeCache  CDN状态码缓存时间
     * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
+    * flexibleOrigin  高级回源，最多配置20条。
+    * sliceEtagStatus  回源是否校验ETag（on：开启，off：关闭）。
+    * originReceiveTimeout  回源超时时间，范围:5-60，单位：秒。
+    * remoteAuth  remoteAuth
+    * websocket  websocket
+    * videoSeek  videoSeek
+    * requestLimitRules  请求限速。
     * errorCodeRedirectRules  自定义错误页面
     *
     * @var string[]
@@ -266,6 +329,13 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'originRangeStatus' => 'getOriginRangeStatus',
             'userAgentFilter' => 'getUserAgentFilter',
             'originRequestUrlRewrite' => 'getOriginRequestUrlRewrite',
+            'flexibleOrigin' => 'getFlexibleOrigin',
+            'sliceEtagStatus' => 'getSliceEtagStatus',
+            'originReceiveTimeout' => 'getOriginReceiveTimeout',
+            'remoteAuth' => 'getRemoteAuth',
+            'websocket' => 'getWebsocket',
+            'videoSeek' => 'getVideoSeek',
+            'requestLimitRules' => 'getRequestLimitRules',
             'errorCodeRedirectRules' => 'getErrorCodeRedirectRules'
     ];
 
@@ -345,6 +415,13 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
         $this->container['originRangeStatus'] = isset($data['originRangeStatus']) ? $data['originRangeStatus'] : null;
         $this->container['userAgentFilter'] = isset($data['userAgentFilter']) ? $data['userAgentFilter'] : null;
         $this->container['originRequestUrlRewrite'] = isset($data['originRequestUrlRewrite']) ? $data['originRequestUrlRewrite'] : null;
+        $this->container['flexibleOrigin'] = isset($data['flexibleOrigin']) ? $data['flexibleOrigin'] : null;
+        $this->container['sliceEtagStatus'] = isset($data['sliceEtagStatus']) ? $data['sliceEtagStatus'] : null;
+        $this->container['originReceiveTimeout'] = isset($data['originReceiveTimeout']) ? $data['originReceiveTimeout'] : null;
+        $this->container['remoteAuth'] = isset($data['remoteAuth']) ? $data['remoteAuth'] : null;
+        $this->container['websocket'] = isset($data['websocket']) ? $data['websocket'] : null;
+        $this->container['videoSeek'] = isset($data['videoSeek']) ? $data['videoSeek'] : null;
+        $this->container['requestLimitRules'] = isset($data['requestLimitRules']) ? $data['requestLimitRules'] : null;
         $this->container['errorCodeRedirectRules'] = isset($data['errorCodeRedirectRules']) ? $data['errorCodeRedirectRules'] : null;
     }
 
@@ -468,7 +545,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets sources
-    *  sources
+    *  源站配置。
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\SourcesConfig[]|null
     */
@@ -480,7 +557,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\SourcesConfig[]|null $sources sources
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\SourcesConfig[]|null $sources 源站配置。
     *
     * @return $this
     */
@@ -492,7 +569,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets originProtocol
-    *  originProtocol
+    *  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
     *
     * @return string|null
     */
@@ -504,7 +581,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets originProtocol
     *
-    * @param string|null $originProtocol originProtocol
+    * @param string|null $originProtocol 回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
     *
     * @return $this
     */
@@ -540,7 +617,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets cacheRules
-    *  cacheRules
+    *  缓存规则。
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\CacheRules[]|null
     */
@@ -552,7 +629,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets cacheRules
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\CacheRules[]|null $cacheRules cacheRules
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\CacheRules[]|null $cacheRules 缓存规则。
     *
     * @return $this
     */
@@ -708,7 +785,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCodeCache
-    *  errorCodeCache
+    *  CDN状态码缓存时间
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeCache[]|null
     */
@@ -720,7 +797,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets errorCodeCache
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeCache[]|null $errorCodeCache errorCodeCache
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeCache[]|null $errorCodeCache CDN状态码缓存时间
     *
     * @return $this
     */
@@ -799,6 +876,174 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     public function setOriginRequestUrlRewrite($originRequestUrlRewrite)
     {
         $this->container['originRequestUrlRewrite'] = $originRequestUrlRewrite;
+        return $this;
+    }
+
+    /**
+    * Gets flexibleOrigin
+    *  高级回源，最多配置20条。
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\FlexibleOrigins[]|null
+    */
+    public function getFlexibleOrigin()
+    {
+        return $this->container['flexibleOrigin'];
+    }
+
+    /**
+    * Sets flexibleOrigin
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\FlexibleOrigins[]|null $flexibleOrigin 高级回源，最多配置20条。
+    *
+    * @return $this
+    */
+    public function setFlexibleOrigin($flexibleOrigin)
+    {
+        $this->container['flexibleOrigin'] = $flexibleOrigin;
+        return $this;
+    }
+
+    /**
+    * Gets sliceEtagStatus
+    *  回源是否校验ETag（on：开启，off：关闭）。
+    *
+    * @return string|null
+    */
+    public function getSliceEtagStatus()
+    {
+        return $this->container['sliceEtagStatus'];
+    }
+
+    /**
+    * Sets sliceEtagStatus
+    *
+    * @param string|null $sliceEtagStatus 回源是否校验ETag（on：开启，off：关闭）。
+    *
+    * @return $this
+    */
+    public function setSliceEtagStatus($sliceEtagStatus)
+    {
+        $this->container['sliceEtagStatus'] = $sliceEtagStatus;
+        return $this;
+    }
+
+    /**
+    * Gets originReceiveTimeout
+    *  回源超时时间，范围:5-60，单位：秒。
+    *
+    * @return int|null
+    */
+    public function getOriginReceiveTimeout()
+    {
+        return $this->container['originReceiveTimeout'];
+    }
+
+    /**
+    * Sets originReceiveTimeout
+    *
+    * @param int|null $originReceiveTimeout 回源超时时间，范围:5-60，单位：秒。
+    *
+    * @return $this
+    */
+    public function setOriginReceiveTimeout($originReceiveTimeout)
+    {
+        $this->container['originReceiveTimeout'] = $originReceiveTimeout;
+        return $this;
+    }
+
+    /**
+    * Gets remoteAuth
+    *  remoteAuth
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\CommonRemoteAuth|null
+    */
+    public function getRemoteAuth()
+    {
+        return $this->container['remoteAuth'];
+    }
+
+    /**
+    * Sets remoteAuth
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\CommonRemoteAuth|null $remoteAuth remoteAuth
+    *
+    * @return $this
+    */
+    public function setRemoteAuth($remoteAuth)
+    {
+        $this->container['remoteAuth'] = $remoteAuth;
+        return $this;
+    }
+
+    /**
+    * Gets websocket
+    *  websocket
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\WebSocketSeek|null
+    */
+    public function getWebsocket()
+    {
+        return $this->container['websocket'];
+    }
+
+    /**
+    * Sets websocket
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\WebSocketSeek|null $websocket websocket
+    *
+    * @return $this
+    */
+    public function setWebsocket($websocket)
+    {
+        $this->container['websocket'] = $websocket;
+        return $this;
+    }
+
+    /**
+    * Gets videoSeek
+    *  videoSeek
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\VideoSeek|null
+    */
+    public function getVideoSeek()
+    {
+        return $this->container['videoSeek'];
+    }
+
+    /**
+    * Sets videoSeek
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\VideoSeek|null $videoSeek videoSeek
+    *
+    * @return $this
+    */
+    public function setVideoSeek($videoSeek)
+    {
+        $this->container['videoSeek'] = $videoSeek;
+        return $this;
+    }
+
+    /**
+    * Gets requestLimitRules
+    *  请求限速。
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\RequestLimitRules[]|null
+    */
+    public function getRequestLimitRules()
+    {
+        return $this->container['requestLimitRules'];
+    }
+
+    /**
+    * Sets requestLimitRules
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\RequestLimitRules[]|null $requestLimitRules 请求限速。
+    *
+    * @return $this
+    */
+    public function setRequestLimitRules($requestLimitRules)
+    {
+        $this->container['requestLimitRules'] = $requestLimitRules;
         return $this;
     }
 

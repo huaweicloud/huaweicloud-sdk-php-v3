@@ -32,6 +32,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
     * deviceSdkVersion  设备的sdk信息。
     * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     * productName  设备关联的产品名称。
+    * groups  设备组列表。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * tags  设备的标签列表。
     * marker  搜索结果记录Id。
@@ -51,6 +52,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
             'deviceSdkVersion' => 'string',
             'productId' => 'string',
             'productName' => 'string',
+            'groups' => 'object',
             'status' => 'string',
             'tags' => 'object',
             'marker' => 'string'
@@ -70,6 +72,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
     * deviceSdkVersion  设备的sdk信息。
     * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     * productName  设备关联的产品名称。
+    * groups  设备组列表。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * tags  设备的标签列表。
     * marker  搜索结果记录Id。
@@ -89,6 +92,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
         'deviceSdkVersion' => null,
         'productId' => null,
         'productName' => null,
+        'groups' => null,
         'status' => null,
         'tags' => null,
         'marker' => null
@@ -129,6 +133,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
     * deviceSdkVersion  设备的sdk信息。
     * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     * productName  设备关联的产品名称。
+    * groups  设备组列表。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * tags  设备的标签列表。
     * marker  搜索结果记录Id。
@@ -148,6 +153,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
             'deviceSdkVersion' => 'device_sdk_version',
             'productId' => 'product_id',
             'productName' => 'product_name',
+            'groups' => 'groups',
             'status' => 'status',
             'tags' => 'tags',
             'marker' => 'marker'
@@ -167,6 +173,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
     * deviceSdkVersion  设备的sdk信息。
     * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     * productName  设备关联的产品名称。
+    * groups  设备组列表。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * tags  设备的标签列表。
     * marker  搜索结果记录Id。
@@ -186,6 +193,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
             'deviceSdkVersion' => 'setDeviceSdkVersion',
             'productId' => 'setProductId',
             'productName' => 'setProductName',
+            'groups' => 'setGroups',
             'status' => 'setStatus',
             'tags' => 'setTags',
             'marker' => 'setMarker'
@@ -205,6 +213,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
     * deviceSdkVersion  设备的sdk信息。
     * productId  设备关联的产品ID，用于唯一标识一个产品模型。
     * productName  设备关联的产品名称。
+    * groups  设备组列表。
     * status  设备的状态。 - ONLINE：设备在线。 - OFFLINE：设备离线。 - ABNORMAL：设备异常。 - INACTIVE：设备未激活。 - FROZEN：设备冻结。
     * tags  设备的标签列表。
     * marker  搜索结果记录Id。
@@ -224,6 +233,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
             'deviceSdkVersion' => 'getDeviceSdkVersion',
             'productId' => 'getProductId',
             'productName' => 'getProductName',
+            'groups' => 'getGroups',
             'status' => 'getStatus',
             'tags' => 'getTags',
             'marker' => 'getMarker'
@@ -299,6 +309,7 @@ class SearchDevice implements ModelInterface, ArrayAccess
         $this->container['deviceSdkVersion'] = isset($data['deviceSdkVersion']) ? $data['deviceSdkVersion'] : null;
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
         $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
+        $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
@@ -647,6 +658,30 @@ class SearchDevice implements ModelInterface, ArrayAccess
     public function setProductName($productName)
     {
         $this->container['productName'] = $productName;
+        return $this;
+    }
+
+    /**
+    * Gets groups
+    *  设备组列表。
+    *
+    * @return object|null
+    */
+    public function getGroups()
+    {
+        return $this->container['groups'];
+    }
+
+    /**
+    * Sets groups
+    *
+    * @param object|null $groups 设备组列表。
+    *
+    * @return $this
+    */
+    public function setGroups($groups)
+    {
+        $this->container['groups'] = $groups;
         return $this;
     }
 

@@ -21,7 +21,7 @@ class RefererConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  Referer黑白名单类型 off：关闭Referer黑白名单; black：Referer黑名单; white：Referer白名单;
-    * value  请输入域名或IP地址，以“,”进行分割，域名、IP地址可以混合输入，支持泛域名添加。输入的域名、IP地址总数不超过100个。当设置防盗链时，此项必填。
+    * value  域名或IP地址，以“,”进行分割，域名、IP地址可以混合输入，支持泛域名添加。域名、IP地址总数不超过400个，端口最大值为65535。
     * includeEmpty  是否包含空Referer。如果是黑名单并开启该选项，则表示无referer不允许访问。如果是白名单并开启该选项，则表示无referer允许访问。默认值false。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class RefererConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  Referer黑白名单类型 off：关闭Referer黑白名单; black：Referer黑名单; white：Referer白名单;
-    * value  请输入域名或IP地址，以“,”进行分割，域名、IP地址可以混合输入，支持泛域名添加。输入的域名、IP地址总数不超过100个。当设置防盗链时，此项必填。
+    * value  域名或IP地址，以“,”进行分割，域名、IP地址可以混合输入，支持泛域名添加。域名、IP地址总数不超过400个，端口最大值为65535。
     * includeEmpty  是否包含空Referer。如果是黑名单并开启该选项，则表示无referer不允许访问。如果是白名单并开启该选项，则表示无referer允许访问。默认值false。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class RefererConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  Referer黑白名单类型 off：关闭Referer黑白名单; black：Referer黑名单; white：Referer白名单;
-    * value  请输入域名或IP地址，以“,”进行分割，域名、IP地址可以混合输入，支持泛域名添加。输入的域名、IP地址总数不超过100个。当设置防盗链时，此项必填。
+    * value  域名或IP地址，以“,”进行分割，域名、IP地址可以混合输入，支持泛域名添加。域名、IP地址总数不超过400个，端口最大值为65535。
     * includeEmpty  是否包含空Referer。如果是黑名单并开启该选项，则表示无referer不允许访问。如果是白名单并开启该选项，则表示无referer允许访问。默认值false。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class RefererConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  Referer黑白名单类型 off：关闭Referer黑白名单; black：Referer黑名单; white：Referer白名单;
-    * value  请输入域名或IP地址，以“,”进行分割，域名、IP地址可以混合输入，支持泛域名添加。输入的域名、IP地址总数不超过100个。当设置防盗链时，此项必填。
+    * value  域名或IP地址，以“,”进行分割，域名、IP地址可以混合输入，支持泛域名添加。域名、IP地址总数不超过400个，端口最大值为65535。
     * includeEmpty  是否包含空Referer。如果是黑名单并开启该选项，则表示无referer不允许访问。如果是白名单并开启该选项，则表示无referer允许访问。默认值false。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class RefererConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  Referer黑白名单类型 off：关闭Referer黑白名单; black：Referer黑名单; white：Referer白名单;
-    * value  请输入域名或IP地址，以“,”进行分割，域名、IP地址可以混合输入，支持泛域名添加。输入的域名、IP地址总数不超过100个。当设置防盗链时，此项必填。
+    * value  域名或IP地址，以“,”进行分割，域名、IP地址可以混合输入，支持泛域名添加。域名、IP地址总数不超过400个，端口最大值为65535。
     * includeEmpty  是否包含空Referer。如果是黑名单并开启该选项，则表示无referer不允许访问。如果是白名单并开启该选项，则表示无referer允许访问。默认值false。
     *
     * @var string[]
@@ -223,7 +223,7 @@ class RefererConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  请输入域名或IP地址，以“,”进行分割，域名、IP地址可以混合输入，支持泛域名添加。输入的域名、IP地址总数不超过100个。当设置防盗链时，此项必填。
+    *  域名或IP地址，以“,”进行分割，域名、IP地址可以混合输入，支持泛域名添加。域名、IP地址总数不超过400个，端口最大值为65535。
     *
     * @return string|null
     */
@@ -235,7 +235,7 @@ class RefererConfig implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 请输入域名或IP地址，以“,”进行分割，域名、IP地址可以混合输入，支持泛域名添加。输入的域名、IP地址总数不超过100个。当设置防盗链时，此项必填。
+    * @param string|null $value 域名或IP地址，以“,”进行分割，域名、IP地址可以混合输入，支持泛域名添加。域名、IP地址总数不超过400个，端口最大值为65535。
     *
     * @return $this
     */

@@ -37,7 +37,7 @@ class MeetingCredentials extends Credentials
         if (null == $this->token || $exp > self::$EXPIRE_HOUR_HALF * 60 * 60) {
             $validToken = $this->createToken($request);
             $request->headerParams["X-Access-Token"] = $validToken;
-        }else{
+        } else {
             $request->headerParams["X-Access-Token"] = $this->token;
         }
         $queryString = CommonUtils::CanonicalQueryString($request);

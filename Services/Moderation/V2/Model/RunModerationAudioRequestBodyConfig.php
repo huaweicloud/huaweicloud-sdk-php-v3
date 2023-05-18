@@ -20,7 +20,7 @@ class RunModerationAudioRequestBodyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * format  支持的语音格式
+    * format  支持的语音格式。 枚举值： - pcm16k16bit - pcm8k16bit - ulaw16k8bit - ulaw8k8bit - alaw16k8bit - alaw8k8bit - mp3 - aac - wav - amr - amrwb
     * property  所使用的模型特征串。通常是 “语种_采样率_领域”的形式。 采样率需要与音频采样率保持一致。 当前支持如下模型特征串：   chinese_8k_common   chinese_16k_common
     *
     * @var string[]
@@ -32,7 +32,7 @@ class RunModerationAudioRequestBodyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * format  支持的语音格式
+    * format  支持的语音格式。 枚举值： - pcm16k16bit - pcm8k16bit - ulaw16k8bit - ulaw8k8bit - alaw16k8bit - alaw8k8bit - mp3 - aac - wav - amr - amrwb
     * property  所使用的模型特征串。通常是 “语种_采样率_领域”的形式。 采样率需要与音频采样率保持一致。 当前支持如下模型特征串：   chinese_8k_common   chinese_16k_common
     *
     * @var string[]
@@ -65,7 +65,7 @@ class RunModerationAudioRequestBodyConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * format  支持的语音格式
+    * format  支持的语音格式。 枚举值： - pcm16k16bit - pcm8k16bit - ulaw16k8bit - ulaw8k8bit - alaw16k8bit - alaw8k8bit - mp3 - aac - wav - amr - amrwb
     * property  所使用的模型特征串。通常是 “语种_采样率_领域”的形式。 采样率需要与音频采样率保持一致。 当前支持如下模型特征串：   chinese_8k_common   chinese_16k_common
     *
     * @var string[]
@@ -77,7 +77,7 @@ class RunModerationAudioRequestBodyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * format  支持的语音格式
+    * format  支持的语音格式。 枚举值： - pcm16k16bit - pcm8k16bit - ulaw16k8bit - ulaw8k8bit - alaw16k8bit - alaw8k8bit - mp3 - aac - wav - amr - amrwb
     * property  所使用的模型特征串。通常是 “语种_采样率_领域”的形式。 采样率需要与音频采样率保持一致。 当前支持如下模型特征串：   chinese_8k_common   chinese_16k_common
     *
     * @var string[]
@@ -89,7 +89,7 @@ class RunModerationAudioRequestBodyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * format  支持的语音格式
+    * format  支持的语音格式。 枚举值： - pcm16k16bit - pcm8k16bit - ulaw16k8bit - ulaw8k8bit - alaw16k8bit - alaw8k8bit - mp3 - aac - wav - amr - amrwb
     * property  所使用的模型特征串。通常是 “语种_采样率_领域”的形式。 采样率需要与音频采样率保持一致。 当前支持如下模型特征串：   chinese_8k_common   chinese_16k_common
     *
     * @var string[]
@@ -255,7 +255,7 @@ class RunModerationAudioRequestBodyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets format
-    *  支持的语音格式
+    *  支持的语音格式。 枚举值： - pcm16k16bit - pcm8k16bit - ulaw16k8bit - ulaw8k8bit - alaw16k8bit - alaw8k8bit - mp3 - aac - wav - amr - amrwb
     *
     * @return string
     */
@@ -267,7 +267,7 @@ class RunModerationAudioRequestBodyConfig implements ModelInterface, ArrayAccess
     /**
     * Sets format
     *
-    * @param string $format 支持的语音格式
+    * @param string $format 支持的语音格式。 枚举值： - pcm16k16bit - pcm8k16bit - ulaw16k8bit - ulaw8k8bit - alaw16k8bit - alaw8k8bit - mp3 - aac - wav - amr - amrwb
     *
     * @return $this
     */

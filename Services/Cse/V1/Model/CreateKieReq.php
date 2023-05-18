@@ -20,6 +20,7 @@ class CreateKieReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  配置项的id。
     * key  配置项的key。
     * labels  配置项的标签
     * value  配置项的值。
@@ -29,6 +30,7 @@ class CreateKieReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'id' => 'string',
             'key' => 'string',
             'labels' => 'object',
             'value' => 'string',
@@ -38,6 +40,7 @@ class CreateKieReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  配置项的id。
     * key  配置项的key。
     * labels  配置项的标签
     * value  配置项的值。
@@ -47,6 +50,7 @@ class CreateKieReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'id' => null,
         'key' => null,
         'labels' => null,
         'value' => null,
@@ -77,6 +81,7 @@ class CreateKieReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  配置项的id。
     * key  配置项的key。
     * labels  配置项的标签
     * value  配置项的值。
@@ -86,6 +91,7 @@ class CreateKieReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'id' => 'id',
             'key' => 'key',
             'labels' => 'labels',
             'value' => 'value',
@@ -95,6 +101,7 @@ class CreateKieReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  配置项的id。
     * key  配置项的key。
     * labels  配置项的标签
     * value  配置项的值。
@@ -104,6 +111,7 @@ class CreateKieReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'id' => 'setId',
             'key' => 'setKey',
             'labels' => 'setLabels',
             'value' => 'setValue',
@@ -113,6 +121,7 @@ class CreateKieReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  配置项的id。
     * key  配置项的key。
     * labels  配置项的标签
     * value  配置项的值。
@@ -122,6 +131,7 @@ class CreateKieReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'id' => 'getId',
             'key' => 'getKey',
             'labels' => 'getLabels',
             'value' => 'getValue',
@@ -187,6 +197,7 @@ class CreateKieReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['key'] = isset($data['key']) ? $data['key'] : '$random(6)-$date(yyyy-MM-dd-HH-mm-ss)';
         $this->container['labels'] = isset($data['labels']) ? $data['labels'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : '$random(20)';
@@ -214,6 +225,30 @@ class CreateKieReq implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets id
+    *  配置项的id。
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id 配置项的id。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
     }
 
     /**

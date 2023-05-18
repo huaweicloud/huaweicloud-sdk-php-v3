@@ -25,6 +25,8 @@ class UpdateDeviceGroupResponse implements ModelInterface, ArrayAccess
     * name  设备组名称，单个资源空间下不可重复。
     * description  设备组描述。
     * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * groupType  设备组类型，分为动态设备组和静态设备组两种
+    * dynamicGroupRule  动态设备组规则
     *
     * @var string[]
     */
@@ -32,7 +34,9 @@ class UpdateDeviceGroupResponse implements ModelInterface, ArrayAccess
             'groupId' => 'string',
             'name' => 'string',
             'description' => 'string',
-            'superGroupId' => 'string'
+            'superGroupId' => 'string',
+            'groupType' => 'string',
+            'dynamicGroupRule' => 'string'
     ];
 
     /**
@@ -41,6 +45,8 @@ class UpdateDeviceGroupResponse implements ModelInterface, ArrayAccess
     * name  设备组名称，单个资源空间下不可重复。
     * description  设备组描述。
     * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * groupType  设备组类型，分为动态设备组和静态设备组两种
+    * dynamicGroupRule  动态设备组规则
     *
     * @var string[]
     */
@@ -48,7 +54,9 @@ class UpdateDeviceGroupResponse implements ModelInterface, ArrayAccess
         'groupId' => null,
         'name' => null,
         'description' => null,
-        'superGroupId' => null
+        'superGroupId' => null,
+        'groupType' => null,
+        'dynamicGroupRule' => null
     ];
 
     /**
@@ -78,6 +86,8 @@ class UpdateDeviceGroupResponse implements ModelInterface, ArrayAccess
     * name  设备组名称，单个资源空间下不可重复。
     * description  设备组描述。
     * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * groupType  设备组类型，分为动态设备组和静态设备组两种
+    * dynamicGroupRule  动态设备组规则
     *
     * @var string[]
     */
@@ -85,7 +95,9 @@ class UpdateDeviceGroupResponse implements ModelInterface, ArrayAccess
             'groupId' => 'group_id',
             'name' => 'name',
             'description' => 'description',
-            'superGroupId' => 'super_group_id'
+            'superGroupId' => 'super_group_id',
+            'groupType' => 'group_type',
+            'dynamicGroupRule' => 'dynamic_group_rule'
     ];
 
     /**
@@ -94,6 +106,8 @@ class UpdateDeviceGroupResponse implements ModelInterface, ArrayAccess
     * name  设备组名称，单个资源空间下不可重复。
     * description  设备组描述。
     * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * groupType  设备组类型，分为动态设备组和静态设备组两种
+    * dynamicGroupRule  动态设备组规则
     *
     * @var string[]
     */
@@ -101,7 +115,9 @@ class UpdateDeviceGroupResponse implements ModelInterface, ArrayAccess
             'groupId' => 'setGroupId',
             'name' => 'setName',
             'description' => 'setDescription',
-            'superGroupId' => 'setSuperGroupId'
+            'superGroupId' => 'setSuperGroupId',
+            'groupType' => 'setGroupType',
+            'dynamicGroupRule' => 'setDynamicGroupRule'
     ];
 
     /**
@@ -110,6 +126,8 @@ class UpdateDeviceGroupResponse implements ModelInterface, ArrayAccess
     * name  设备组名称，单个资源空间下不可重复。
     * description  设备组描述。
     * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * groupType  设备组类型，分为动态设备组和静态设备组两种
+    * dynamicGroupRule  动态设备组规则
     *
     * @var string[]
     */
@@ -117,7 +135,9 @@ class UpdateDeviceGroupResponse implements ModelInterface, ArrayAccess
             'groupId' => 'getGroupId',
             'name' => 'getName',
             'description' => 'getDescription',
-            'superGroupId' => 'getSuperGroupId'
+            'superGroupId' => 'getSuperGroupId',
+            'groupType' => 'getGroupType',
+            'dynamicGroupRule' => 'getDynamicGroupRule'
     ];
 
     /**
@@ -182,6 +202,8 @@ class UpdateDeviceGroupResponse implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['superGroupId'] = isset($data['superGroupId']) ? $data['superGroupId'] : null;
+        $this->container['groupType'] = isset($data['groupType']) ? $data['groupType'] : null;
+        $this->container['dynamicGroupRule'] = isset($data['dynamicGroupRule']) ? $data['dynamicGroupRule'] : null;
     }
 
     /**
@@ -192,6 +214,12 @@ class UpdateDeviceGroupResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['groupType']) && !preg_match("/DYNAMIC|STATIC/", $this->container['groupType'])) {
+                $invalidProperties[] = "invalid value for 'groupType', must be conform to the pattern /DYNAMIC|STATIC/.";
+            }
+            if (!is_null($this->container['dynamicGroupRule']) && !preg_match("/^[一-龥a-zA-Z0-9_?'#()., &%@!*=<>:-]{1,200}$/", $this->container['dynamicGroupRule'])) {
+                $invalidProperties[] = "invalid value for 'dynamicGroupRule', must be conform to the pattern /^[一-龥a-zA-Z0-9_?'#()., &%@!*=<>:-]{1,200}$/.";
+            }
         return $invalidProperties;
     }
 
@@ -299,6 +327,54 @@ class UpdateDeviceGroupResponse implements ModelInterface, ArrayAccess
     public function setSuperGroupId($superGroupId)
     {
         $this->container['superGroupId'] = $superGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets groupType
+    *  设备组类型，分为动态设备组和静态设备组两种
+    *
+    * @return string|null
+    */
+    public function getGroupType()
+    {
+        return $this->container['groupType'];
+    }
+
+    /**
+    * Sets groupType
+    *
+    * @param string|null $groupType 设备组类型，分为动态设备组和静态设备组两种
+    *
+    * @return $this
+    */
+    public function setGroupType($groupType)
+    {
+        $this->container['groupType'] = $groupType;
+        return $this;
+    }
+
+    /**
+    * Gets dynamicGroupRule
+    *  动态设备组规则
+    *
+    * @return string|null
+    */
+    public function getDynamicGroupRule()
+    {
+        return $this->container['dynamicGroupRule'];
+    }
+
+    /**
+    * Sets dynamicGroupRule
+    *
+    * @param string|null $dynamicGroupRule 动态设备组规则
+    *
+    * @return $this
+    */
+    public function setDynamicGroupRule($dynamicGroupRule)
+    {
+        $this->container['dynamicGroupRule'] = $dynamicGroupRule;
         return $this;
     }
 

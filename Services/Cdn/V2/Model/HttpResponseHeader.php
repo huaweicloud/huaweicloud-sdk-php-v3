@@ -21,7 +21,7 @@ class HttpResponseHeader implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  设置HTTP响应头参数。取值：\"Content-Disposition\", \"Content-Language\", \"Access-Control-Allow-Origin\",\"Access-Control-Allow-Methods\", \"Access-Control-Max-Age\", \"Access-Control-Expose-Headers\"或自定义头部。格式要求：长度1~100，以字母开头，可以使用字母、数字和短横杠。
-    * value  设置HTTP响应头参数的值。自定义HTTP响应头参数长度范围1~256，支持字母、数字和特定字符（.-_*#!%&+|^~'\"/:;,=@?）。
+    * value  设置HTTP响应头参数的值。自定义HTTP响应头参数长度范围1~256，支持字母、数字和特定字符（.-_*#!&+|^~'\"/:;,=@?<>）。
     * action  设置http响应头操作类型，取值“set/delete”。set代表设置，delete代表删除。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class HttpResponseHeader implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  设置HTTP响应头参数。取值：\"Content-Disposition\", \"Content-Language\", \"Access-Control-Allow-Origin\",\"Access-Control-Allow-Methods\", \"Access-Control-Max-Age\", \"Access-Control-Expose-Headers\"或自定义头部。格式要求：长度1~100，以字母开头，可以使用字母、数字和短横杠。
-    * value  设置HTTP响应头参数的值。自定义HTTP响应头参数长度范围1~256，支持字母、数字和特定字符（.-_*#!%&+|^~'\"/:;,=@?）。
+    * value  设置HTTP响应头参数的值。自定义HTTP响应头参数长度范围1~256，支持字母、数字和特定字符（.-_*#!&+|^~'\"/:;,=@?<>）。
     * action  设置http响应头操作类型，取值“set/delete”。set代表设置，delete代表删除。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class HttpResponseHeader implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  设置HTTP响应头参数。取值：\"Content-Disposition\", \"Content-Language\", \"Access-Control-Allow-Origin\",\"Access-Control-Allow-Methods\", \"Access-Control-Max-Age\", \"Access-Control-Expose-Headers\"或自定义头部。格式要求：长度1~100，以字母开头，可以使用字母、数字和短横杠。
-    * value  设置HTTP响应头参数的值。自定义HTTP响应头参数长度范围1~256，支持字母、数字和特定字符（.-_*#!%&+|^~'\"/:;,=@?）。
+    * value  设置HTTP响应头参数的值。自定义HTTP响应头参数长度范围1~256，支持字母、数字和特定字符（.-_*#!&+|^~'\"/:;,=@?<>）。
     * action  设置http响应头操作类型，取值“set/delete”。set代表设置，delete代表删除。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class HttpResponseHeader implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  设置HTTP响应头参数。取值：\"Content-Disposition\", \"Content-Language\", \"Access-Control-Allow-Origin\",\"Access-Control-Allow-Methods\", \"Access-Control-Max-Age\", \"Access-Control-Expose-Headers\"或自定义头部。格式要求：长度1~100，以字母开头，可以使用字母、数字和短横杠。
-    * value  设置HTTP响应头参数的值。自定义HTTP响应头参数长度范围1~256，支持字母、数字和特定字符（.-_*#!%&+|^~'\"/:;,=@?）。
+    * value  设置HTTP响应头参数的值。自定义HTTP响应头参数长度范围1~256，支持字母、数字和特定字符（.-_*#!&+|^~'\"/:;,=@?<>）。
     * action  设置http响应头操作类型，取值“set/delete”。set代表设置，delete代表删除。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class HttpResponseHeader implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  设置HTTP响应头参数。取值：\"Content-Disposition\", \"Content-Language\", \"Access-Control-Allow-Origin\",\"Access-Control-Allow-Methods\", \"Access-Control-Max-Age\", \"Access-Control-Expose-Headers\"或自定义头部。格式要求：长度1~100，以字母开头，可以使用字母、数字和短横杠。
-    * value  设置HTTP响应头参数的值。自定义HTTP响应头参数长度范围1~256，支持字母、数字和特定字符（.-_*#!%&+|^~'\"/:;,=@?）。
+    * value  设置HTTP响应头参数的值。自定义HTTP响应头参数长度范围1~256，支持字母、数字和特定字符（.-_*#!&+|^~'\"/:;,=@?<>）。
     * action  设置http响应头操作类型，取值“set/delete”。set代表设置，delete代表删除。
     *
     * @var string[]
@@ -226,7 +226,7 @@ class HttpResponseHeader implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  设置HTTP响应头参数的值。自定义HTTP响应头参数长度范围1~256，支持字母、数字和特定字符（.-_*#!%&+|^~'\"/:;,=@?）。
+    *  设置HTTP响应头参数的值。自定义HTTP响应头参数长度范围1~256，支持字母、数字和特定字符（.-_*#!&+|^~'\"/:;,=@?<>）。
     *
     * @return string|null
     */
@@ -238,7 +238,7 @@ class HttpResponseHeader implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 设置HTTP响应头参数的值。自定义HTTP响应头参数长度范围1~256，支持字母、数字和特定字符（.-_*#!%&+|^~'\"/:;,=@?）。
+    * @param string|null $value 设置HTTP响应头参数的值。自定义HTTP响应头参数长度范围1~256，支持字母、数字和特定字符（.-_*#!&+|^~'\"/:;,=@?<>）。
     *
     * @return $this
     */

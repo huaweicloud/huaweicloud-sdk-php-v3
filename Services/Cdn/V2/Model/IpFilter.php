@@ -21,7 +21,7 @@ class IpFilter implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  IP黑白名单类型 off：关闭IP黑白名单; black：IP黑名单; white：IP白名单;
-    * value  配置IP黑白名单，当type=off时，非必传。多条规则用“,”分割。
+    * value  配置IP黑白名单，当type=off时，非必传。多条规则用“,”分割,不支持带通配符的地址，如192.168.0.*。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class IpFilter implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  IP黑白名单类型 off：关闭IP黑白名单; black：IP黑名单; white：IP白名单;
-    * value  配置IP黑白名单，当type=off时，非必传。多条规则用“,”分割。
+    * value  配置IP黑白名单，当type=off时，非必传。多条规则用“,”分割,不支持带通配符的地址，如192.168.0.*。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class IpFilter implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  IP黑白名单类型 off：关闭IP黑白名单; black：IP黑名单; white：IP白名单;
-    * value  配置IP黑白名单，当type=off时，非必传。多条规则用“,”分割。
+    * value  配置IP黑白名单，当type=off时，非必传。多条规则用“,”分割,不支持带通配符的地址，如192.168.0.*。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class IpFilter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  IP黑白名单类型 off：关闭IP黑白名单; black：IP黑名单; white：IP白名单;
-    * value  配置IP黑白名单，当type=off时，非必传。多条规则用“,”分割。
+    * value  配置IP黑白名单，当type=off时，非必传。多条规则用“,”分割,不支持带通配符的地址，如192.168.0.*。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class IpFilter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  IP黑白名单类型 off：关闭IP黑白名单; black：IP黑名单; white：IP白名单;
-    * value  配置IP黑白名单，当type=off时，非必传。多条规则用“,”分割。
+    * value  配置IP黑白名单，当type=off时，非必传。多条规则用“,”分割,不支持带通配符的地址，如192.168.0.*。
     *
     * @var string[]
     */
@@ -212,7 +212,7 @@ class IpFilter implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  配置IP黑白名单，当type=off时，非必传。多条规则用“,”分割。
+    *  配置IP黑白名单，当type=off时，非必传。多条规则用“,”分割,不支持带通配符的地址，如192.168.0.*。
     *
     * @return string|null
     */
@@ -224,7 +224,7 @@ class IpFilter implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 配置IP黑白名单，当type=off时，非必传。多条规则用“,”分割。
+    * @param string|null $value 配置IP黑白名单，当type=off时，非必传。多条规则用“,”分割,不支持带通配符的地址，如192.168.0.*。
     *
     * @return $this
     */

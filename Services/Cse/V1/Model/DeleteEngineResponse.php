@@ -79,7 +79,7 @@ class DeleteEngineResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'name' => 'name',
-            'jobId' => 'job_id'
+            'jobId' => 'jobId'
     ];
 
     /**

@@ -27,6 +27,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     * httpPort  HTTP端口，默认80。
     * httpsPort  HTTPS端口，默认443。
     * hostName  回源HOST，默认加速域名。
+    * obsBucketType  obs桶源站类型 “private” 私有桶 “public” 公有桶。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class SourcesConfig implements ModelInterface, ArrayAccess
             'obsWebHostingStatus' => 'string',
             'httpPort' => 'int',
             'httpsPort' => 'int',
-            'hostName' => 'string'
+            'hostName' => 'string',
+            'obsBucketType' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     * httpPort  HTTP端口，默认80。
     * httpsPort  HTTPS端口，默认443。
     * hostName  回源HOST，默认加速域名。
+    * obsBucketType  obs桶源站类型 “private” 私有桶 “public” 公有桶。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class SourcesConfig implements ModelInterface, ArrayAccess
         'obsWebHostingStatus' => null,
         'httpPort' => null,
         'httpsPort' => null,
-        'hostName' => null
+        'hostName' => null,
+        'obsBucketType' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     * httpPort  HTTP端口，默认80。
     * httpsPort  HTTPS端口，默认443。
     * hostName  回源HOST，默认加速域名。
+    * obsBucketType  obs桶源站类型 “private” 私有桶 “public” 公有桶。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class SourcesConfig implements ModelInterface, ArrayAccess
             'obsWebHostingStatus' => 'obs_web_hosting_status',
             'httpPort' => 'http_port',
             'httpsPort' => 'https_port',
-            'hostName' => 'host_name'
+            'hostName' => 'host_name',
+            'obsBucketType' => 'obs_bucket_type'
     ];
 
     /**
@@ -114,6 +120,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     * httpPort  HTTP端口，默认80。
     * httpsPort  HTTPS端口，默认443。
     * hostName  回源HOST，默认加速域名。
+    * obsBucketType  obs桶源站类型 “private” 私有桶 “public” 公有桶。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class SourcesConfig implements ModelInterface, ArrayAccess
             'obsWebHostingStatus' => 'setObsWebHostingStatus',
             'httpPort' => 'setHttpPort',
             'httpsPort' => 'setHttpsPort',
-            'hostName' => 'setHostName'
+            'hostName' => 'setHostName',
+            'obsBucketType' => 'setObsBucketType'
     ];
 
     /**
@@ -136,6 +144,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     * httpPort  HTTP端口，默认80。
     * httpsPort  HTTPS端口，默认443。
     * hostName  回源HOST，默认加速域名。
+    * obsBucketType  obs桶源站类型 “private” 私有桶 “public” 公有桶。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class SourcesConfig implements ModelInterface, ArrayAccess
             'obsWebHostingStatus' => 'getObsWebHostingStatus',
             'httpPort' => 'getHttpPort',
             'httpsPort' => 'getHttpsPort',
-            'hostName' => 'getHostName'
+            'hostName' => 'getHostName',
+            'obsBucketType' => 'getObsBucketType'
     ];
 
     /**
@@ -214,6 +224,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
         $this->container['httpPort'] = isset($data['httpPort']) ? $data['httpPort'] : null;
         $this->container['httpsPort'] = isset($data['httpsPort']) ? $data['httpsPort'] : null;
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
+        $this->container['obsBucketType'] = isset($data['obsBucketType']) ? $data['obsBucketType'] : null;
     }
 
     /**
@@ -412,6 +423,30 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     public function setHostName($hostName)
     {
         $this->container['hostName'] = $hostName;
+        return $this;
+    }
+
+    /**
+    * Gets obsBucketType
+    *  obs桶源站类型 “private” 私有桶 “public” 公有桶。
+    *
+    * @return string|null
+    */
+    public function getObsBucketType()
+    {
+        return $this->container['obsBucketType'];
+    }
+
+    /**
+    * Sets obsBucketType
+    *
+    * @param string|null $obsBucketType obs桶源站类型 “private” 私有桶 “public” 公有桶。
+    *
+    * @return $this
+    */
+    public function setObsBucketType($obsBucketType)
+    {
+        $this->container['obsBucketType'] = $obsBucketType;
         return $this;
     }
 

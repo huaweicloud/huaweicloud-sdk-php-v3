@@ -30,6 +30,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
     * clusterId  数据镜像的ID，UUID格式。
     * metadata  metadata
     * dataImageId  数据镜像的ID，UUID格式。  如果使用数据盘镜像创建数据盘，则data_image_id为必选参数，且不支持使用metadata。
+    * deleteOnTermination  弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
             'clusterType' => 'string',
             'clusterId' => 'string',
             'metadata' => '\HuaweiCloud\SDK\Ecs\V2\Model\PrePaidServerDataVolumeMetadata',
-            'dataImageId' => 'string'
+            'dataImageId' => 'string',
+            'deleteOnTermination' => 'bool'
     ];
 
     /**
@@ -58,6 +60,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
     * clusterId  数据镜像的ID，UUID格式。
     * metadata  metadata
     * dataImageId  数据镜像的ID，UUID格式。  如果使用数据盘镜像创建数据盘，则data_image_id为必选参数，且不支持使用metadata。
+    * deleteOnTermination  弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
         'clusterType' => null,
         'clusterId' => null,
         'metadata' => null,
-        'dataImageId' => null
+        'dataImageId' => null,
+        'deleteOnTermination' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
     * clusterId  数据镜像的ID，UUID格式。
     * metadata  metadata
     * dataImageId  数据镜像的ID，UUID格式。  如果使用数据盘镜像创建数据盘，则data_image_id为必选参数，且不支持使用metadata。
+    * deleteOnTermination  弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
             'clusterType' => 'cluster_type',
             'clusterId' => 'cluster_id',
             'metadata' => 'metadata',
-            'dataImageId' => 'data_image_id'
+            'dataImageId' => 'data_image_id',
+            'deleteOnTermination' => 'delete_on_termination'
     ];
 
     /**
@@ -135,6 +141,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
     * clusterId  数据镜像的ID，UUID格式。
     * metadata  metadata
     * dataImageId  数据镜像的ID，UUID格式。  如果使用数据盘镜像创建数据盘，则data_image_id为必选参数，且不支持使用metadata。
+    * deleteOnTermination  弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
             'clusterType' => 'setClusterType',
             'clusterId' => 'setClusterId',
             'metadata' => 'setMetadata',
-            'dataImageId' => 'setDataImageId'
+            'dataImageId' => 'setDataImageId',
+            'deleteOnTermination' => 'setDeleteOnTermination'
     ];
 
     /**
@@ -163,6 +171,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
     * clusterId  数据镜像的ID，UUID格式。
     * metadata  metadata
     * dataImageId  数据镜像的ID，UUID格式。  如果使用数据盘镜像创建数据盘，则data_image_id为必选参数，且不支持使用metadata。
+    * deleteOnTermination  弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
             'clusterType' => 'getClusterType',
             'clusterId' => 'getClusterId',
             'metadata' => 'getMetadata',
-            'dataImageId' => 'getDataImageId'
+            'dataImageId' => 'getDataImageId',
+            'deleteOnTermination' => 'getDeleteOnTermination'
     ];
 
     /**
@@ -285,6 +295,7 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
         $this->container['dataImageId'] = isset($data['dataImageId']) ? $data['dataImageId'] : null;
+        $this->container['deleteOnTermination'] = isset($data['deleteOnTermination']) ? $data['deleteOnTermination'] : false;
     }
 
     /**
@@ -574,6 +585,30 @@ class PrePaidServerDataVolume implements ModelInterface, ArrayAccess
     public function setDataImageId($dataImageId)
     {
         $this->container['dataImageId'] = $dataImageId;
+        return $this;
+    }
+
+    /**
+    * Gets deleteOnTermination
+    *  弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
+    *
+    * @return bool|null
+    */
+    public function getDeleteOnTermination()
+    {
+        return $this->container['deleteOnTermination'];
+    }
+
+    /**
+    * Sets deleteOnTermination
+    *
+    * @param bool|null $deleteOnTermination 弹性公网IP随实例释放策略。  true：弹性公网IP随实例释放。 false：弹性公网IP不随实例释放。 默认值：false。
+    *
+    * @return $this
+    */
+    public function setDeleteOnTermination($deleteOnTermination)
+    {
+        $this->container['deleteOnTermination'] = $deleteOnTermination;
         return $this;
     }
 

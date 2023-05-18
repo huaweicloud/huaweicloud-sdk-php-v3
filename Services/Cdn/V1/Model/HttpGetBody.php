@@ -21,7 +21,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必返回该字段。
+    * certificateName  证书名字。（长度限制为3-64字符）。当证书开启时必返回该字段。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
     * http2Status  是否使用HTTP2.0。（on：是，off：否）
@@ -41,7 +41,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必返回该字段。
+    * certificateName  证书名字。（长度限制为3-64字符）。当证书开启时必返回该字段。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
     * http2Status  是否使用HTTP2.0。（on：是，off：否）
@@ -82,7 +82,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必返回该字段。
+    * certificateName  证书名字。（长度限制为3-64字符）。当证书开启时必返回该字段。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
     * http2Status  是否使用HTTP2.0。（on：是，off：否）
@@ -102,7 +102,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必返回该字段。
+    * certificateName  证书名字。（长度限制为3-64字符）。当证书开启时必返回该字段。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
     * http2Status  是否使用HTTP2.0。（on：是，off：否）
@@ -122,7 +122,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必返回该字段。
+    * certificateName  证书名字。（长度限制为3-64字符）。当证书开启时必返回该字段。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
     * http2Status  是否使用HTTP2.0。（on：是，off：否）
@@ -253,7 +253,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateName
-    *  证书名字。（长度限制为3-32字符）。当证书开启时必返回该字段。
+    *  证书名字。（长度限制为3-64字符）。当证书开启时必返回该字段。
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets certificateName
     *
-    * @param string|null $certificateName 证书名字。（长度限制为3-32字符）。当证书开启时必返回该字段。
+    * @param string|null $certificateName 证书名字。（长度限制为3-64字符）。当证书开启时必返回该字段。
     *
     * @return $this
     */

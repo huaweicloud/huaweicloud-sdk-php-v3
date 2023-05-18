@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\IoTDA\V5\Model;
+namespace HuaweiCloud\SDK\Cbr\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DeviceGroupResponsSummery implements ModelInterface, ArrayAccess
+class RegisterAgentResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,38 +17,26 @@ class DeviceGroupResponsSummery implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DeviceGroupResponsSummery';
+    protected static $openAPIModelName = 'RegisterAgentResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
-    * name  设备组名称，单个资源空间下不可重复。
-    * description  设备组描述。
-    * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * agent  agent
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'groupId' => 'string',
-            'name' => 'string',
-            'description' => 'string',
-            'superGroupId' => 'string'
+            'agent' => '\HuaweiCloud\SDK\Cbr\V1\Model\Agent'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
-    * name  设备组名称，单个资源空间下不可重复。
-    * description  设备组描述。
-    * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * agent  agent
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'groupId' => null,
-        'name' => null,
-        'description' => null,
-        'superGroupId' => null
+        'agent' => null
     ];
 
     /**
@@ -73,50 +62,32 @@ class DeviceGroupResponsSummery implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
-    * name  设备组名称，单个资源空间下不可重复。
-    * description  设备组描述。
-    * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * agent  agent
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'groupId' => 'group_id',
-            'name' => 'name',
-            'description' => 'description',
-            'superGroupId' => 'super_group_id'
+            'agent' => 'agent'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
-    * name  设备组名称，单个资源空间下不可重复。
-    * description  设备组描述。
-    * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * agent  agent
     *
     * @var string[]
     */
     protected static $setters = [
-            'groupId' => 'setGroupId',
-            'name' => 'setName',
-            'description' => 'setDescription',
-            'superGroupId' => 'setSuperGroupId'
+            'agent' => 'setAgent'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
-    * name  设备组名称，单个资源空间下不可重复。
-    * description  设备组描述。
-    * superGroupId  父设备组ID，该设备组的父设备组ID。
+    * agent  agent
     *
     * @var string[]
     */
     protected static $getters = [
-            'groupId' => 'getGroupId',
-            'name' => 'getName',
-            'description' => 'getDescription',
-            'superGroupId' => 'getSuperGroupId'
+            'agent' => 'getAgent'
     ];
 
     /**
@@ -177,10 +148,7 @@ class DeviceGroupResponsSummery implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['superGroupId'] = isset($data['superGroupId']) ? $data['superGroupId'] : null;
+        $this->container['agent'] = isset($data['agent']) ? $data['agent'] : null;
     }
 
     /**
@@ -206,98 +174,26 @@ class DeviceGroupResponsSummery implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets groupId
-    *  设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
+    * Gets agent
+    *  agent
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Cbr\V1\Model\Agent|null
     */
-    public function getGroupId()
+    public function getAgent()
     {
-        return $this->container['groupId'];
+        return $this->container['agent'];
     }
 
     /**
-    * Sets groupId
+    * Sets agent
     *
-    * @param string|null $groupId 设备组ID，用于唯一标识一个设备组，在创建设备组时由物联网平台分配。
+    * @param \HuaweiCloud\SDK\Cbr\V1\Model\Agent|null $agent agent
     *
     * @return $this
     */
-    public function setGroupId($groupId)
+    public function setAgent($agent)
     {
-        $this->container['groupId'] = $groupId;
-        return $this;
-    }
-
-    /**
-    * Gets name
-    *  设备组名称，单个资源空间下不可重复。
-    *
-    * @return string|null
-    */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-    * Sets name
-    *
-    * @param string|null $name 设备组名称，单个资源空间下不可重复。
-    *
-    * @return $this
-    */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
-    * Gets description
-    *  设备组描述。
-    *
-    * @return string|null
-    */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-    * Sets description
-    *
-    * @param string|null $description 设备组描述。
-    *
-    * @return $this
-    */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-        return $this;
-    }
-
-    /**
-    * Gets superGroupId
-    *  父设备组ID，该设备组的父设备组ID。
-    *
-    * @return string|null
-    */
-    public function getSuperGroupId()
-    {
-        return $this->container['superGroupId'];
-    }
-
-    /**
-    * Sets superGroupId
-    *
-    * @param string|null $superGroupId 父设备组ID，该设备组的父设备组ID。
-    *
-    * @return $this
-    */
-    public function setSuperGroupId($superGroupId)
-    {
-        $this->container['superGroupId'] = $superGroupId;
+        $this->container['agent'] = $agent;
         return $this;
     }
 

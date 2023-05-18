@@ -21,7 +21,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必传。
+    * certificateName  证书名字。（长度限制为3-64字符）。当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。取值范围：PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必传。
@@ -43,7 +43,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必传。
+    * certificateName  证书名字。（长度限制为3-64字符）。当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。取值范围：PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必传。
@@ -86,7 +86,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必传。
+    * certificateName  证书名字。（长度限制为3-64字符）。当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。取值范围：PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必传。
@@ -108,7 +108,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必传。
+    * certificateName  证书名字。（长度限制为3-64字符）。当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。取值范围：PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必传。
@@ -130,7 +130,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必传。
+    * certificateName  证书名字。（长度限制为3-64字符）。当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。取值范围：PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。取值范围：PEM编码格式。
     * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必传。
@@ -264,7 +264,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateName
-    *  证书名字。（长度限制为3-32字符）。当证书开启时必传。
+    *  证书名字。（长度限制为3-64字符）。当证书开启时必传。
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     /**
     * Sets certificateName
     *
-    * @param string|null $certificateName 证书名字。（长度限制为3-32字符）。当证书开启时必传。
+    * @param string|null $certificateName 证书名字。（长度限制为3-64字符）。当证书开启时必传。
     *
     * @return $this
     */

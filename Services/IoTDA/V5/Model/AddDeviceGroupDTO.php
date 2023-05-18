@@ -24,6 +24,8 @@ class AddDeviceGroupDTO implements ModelInterface, ArrayAccess
     * description  **参数说明**：设备组描述。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_? '#().,&%@!-等字符的组合。
     * superGroupId  **参数说明**：父设备组ID，携带该参数时表示在该设备组下创建一个子设备组。 **取值范围**：长度不超过36，十六进制字符串和连接符（-）的组合。
     * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的设备组归属到哪个资源空间下，否则创建的设备组将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * groupType  **参数说明**：设备组类型，默认为静态设备组；当设备组类型为动态设备组时，需要填写动态设备组组规则
+    * dynamicGroupRule  **参数说明**：动态设备组规则语法和高级搜索保持一致，只需要填写where 子句内容，其余子句无需填写，todo补充说明
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class AddDeviceGroupDTO implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'superGroupId' => 'string',
-            'appId' => 'string'
+            'appId' => 'string',
+            'groupType' => 'string',
+            'dynamicGroupRule' => 'string'
     ];
 
     /**
@@ -40,6 +44,8 @@ class AddDeviceGroupDTO implements ModelInterface, ArrayAccess
     * description  **参数说明**：设备组描述。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_? '#().,&%@!-等字符的组合。
     * superGroupId  **参数说明**：父设备组ID，携带该参数时表示在该设备组下创建一个子设备组。 **取值范围**：长度不超过36，十六进制字符串和连接符（-）的组合。
     * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的设备组归属到哪个资源空间下，否则创建的设备组将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * groupType  **参数说明**：设备组类型，默认为静态设备组；当设备组类型为动态设备组时，需要填写动态设备组组规则
+    * dynamicGroupRule  **参数说明**：动态设备组规则语法和高级搜索保持一致，只需要填写where 子句内容，其余子句无需填写，todo补充说明
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class AddDeviceGroupDTO implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'superGroupId' => null,
-        'appId' => null
+        'appId' => null,
+        'groupType' => null,
+        'dynamicGroupRule' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class AddDeviceGroupDTO implements ModelInterface, ArrayAccess
     * description  **参数说明**：设备组描述。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_? '#().,&%@!-等字符的组合。
     * superGroupId  **参数说明**：父设备组ID，携带该参数时表示在该设备组下创建一个子设备组。 **取值范围**：长度不超过36，十六进制字符串和连接符（-）的组合。
     * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的设备组归属到哪个资源空间下，否则创建的设备组将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * groupType  **参数说明**：设备组类型，默认为静态设备组；当设备组类型为动态设备组时，需要填写动态设备组组规则
+    * dynamicGroupRule  **参数说明**：动态设备组规则语法和高级搜索保持一致，只需要填写where 子句内容，其余子句无需填写，todo补充说明
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class AddDeviceGroupDTO implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'superGroupId' => 'super_group_id',
-            'appId' => 'app_id'
+            'appId' => 'app_id',
+            'groupType' => 'group_type',
+            'dynamicGroupRule' => 'dynamic_group_rule'
     ];
 
     /**
@@ -93,6 +105,8 @@ class AddDeviceGroupDTO implements ModelInterface, ArrayAccess
     * description  **参数说明**：设备组描述。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_? '#().,&%@!-等字符的组合。
     * superGroupId  **参数说明**：父设备组ID，携带该参数时表示在该设备组下创建一个子设备组。 **取值范围**：长度不超过36，十六进制字符串和连接符（-）的组合。
     * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的设备组归属到哪个资源空间下，否则创建的设备组将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * groupType  **参数说明**：设备组类型，默认为静态设备组；当设备组类型为动态设备组时，需要填写动态设备组组规则
+    * dynamicGroupRule  **参数说明**：动态设备组规则语法和高级搜索保持一致，只需要填写where 子句内容，其余子句无需填写，todo补充说明
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class AddDeviceGroupDTO implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'superGroupId' => 'setSuperGroupId',
-            'appId' => 'setAppId'
+            'appId' => 'setAppId',
+            'groupType' => 'setGroupType',
+            'dynamicGroupRule' => 'setDynamicGroupRule'
     ];
 
     /**
@@ -109,6 +125,8 @@ class AddDeviceGroupDTO implements ModelInterface, ArrayAccess
     * description  **参数说明**：设备组描述。 **取值范围**：长度不超过64，只允许中文、字母、数字、以及_? '#().,&%@!-等字符的组合。
     * superGroupId  **参数说明**：父设备组ID，携带该参数时表示在该设备组下创建一个子设备组。 **取值范围**：长度不超过36，十六进制字符串和连接符（-）的组合。
     * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的设备组归属到哪个资源空间下，否则创建的设备组将会归属到[[默认资源空间](https://support.huaweicloud.com/usermanual-iothub/iot_01_0006.html#section0)](tag:hws)[[默认资源空间](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0006.html#section0)](tag:hws_hk)下。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
+    * groupType  **参数说明**：设备组类型，默认为静态设备组；当设备组类型为动态设备组时，需要填写动态设备组组规则
+    * dynamicGroupRule  **参数说明**：动态设备组规则语法和高级搜索保持一致，只需要填写where 子句内容，其余子句无需填写，todo补充说明
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class AddDeviceGroupDTO implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'superGroupId' => 'getSuperGroupId',
-            'appId' => 'getAppId'
+            'appId' => 'getAppId',
+            'groupType' => 'getGroupType',
+            'dynamicGroupRule' => 'getDynamicGroupRule'
     ];
 
     /**
@@ -181,6 +201,8 @@ class AddDeviceGroupDTO implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['superGroupId'] = isset($data['superGroupId']) ? $data['superGroupId'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
+        $this->container['groupType'] = isset($data['groupType']) ? $data['groupType'] : null;
+        $this->container['dynamicGroupRule'] = isset($data['dynamicGroupRule']) ? $data['dynamicGroupRule'] : null;
     }
 
     /**
@@ -214,6 +236,12 @@ class AddDeviceGroupDTO implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['appId']) && !preg_match("/^[a-zA-Z0-9_-]{1,36}$/", $this->container['appId'])) {
                 $invalidProperties[] = "invalid value for 'appId', must be conform to the pattern /^[a-zA-Z0-9_-]{1,36}$/.";
+            }
+            if (!is_null($this->container['groupType']) && !preg_match("/DYNAMIC|STATIC/", $this->container['groupType'])) {
+                $invalidProperties[] = "invalid value for 'groupType', must be conform to the pattern /DYNAMIC|STATIC/.";
+            }
+            if (!is_null($this->container['dynamicGroupRule']) && !preg_match("/^[一-龥a-zA-Z0-9_?'#()., &%@!*=<>:-]{1,200}$/", $this->container['dynamicGroupRule'])) {
+                $invalidProperties[] = "invalid value for 'dynamicGroupRule', must be conform to the pattern /^[一-龥a-zA-Z0-9_?'#()., &%@!*=<>:-]{1,200}$/.";
             }
         return $invalidProperties;
     }
@@ -322,6 +350,54 @@ class AddDeviceGroupDTO implements ModelInterface, ArrayAccess
     public function setAppId($appId)
     {
         $this->container['appId'] = $appId;
+        return $this;
+    }
+
+    /**
+    * Gets groupType
+    *  **参数说明**：设备组类型，默认为静态设备组；当设备组类型为动态设备组时，需要填写动态设备组组规则
+    *
+    * @return string|null
+    */
+    public function getGroupType()
+    {
+        return $this->container['groupType'];
+    }
+
+    /**
+    * Sets groupType
+    *
+    * @param string|null $groupType **参数说明**：设备组类型，默认为静态设备组；当设备组类型为动态设备组时，需要填写动态设备组组规则
+    *
+    * @return $this
+    */
+    public function setGroupType($groupType)
+    {
+        $this->container['groupType'] = $groupType;
+        return $this;
+    }
+
+    /**
+    * Gets dynamicGroupRule
+    *  **参数说明**：动态设备组规则语法和高级搜索保持一致，只需要填写where 子句内容，其余子句无需填写，todo补充说明
+    *
+    * @return string|null
+    */
+    public function getDynamicGroupRule()
+    {
+        return $this->container['dynamicGroupRule'];
+    }
+
+    /**
+    * Sets dynamicGroupRule
+    *
+    * @param string|null $dynamicGroupRule **参数说明**：动态设备组规则语法和高级搜索保持一致，只需要填写where 子句内容，其余子句无需填写，todo补充说明
+    *
+    * @return $this
+    */
+    public function setDynamicGroupRule($dynamicGroupRule)
+    {
+        $this->container['dynamicGroupRule'] = $dynamicGroupRule;
         return $this;
     }
 

@@ -612,6 +612,77 @@ class DwsClient extends Client
     }
 
     /**
+     * 检查容灾名称
+     *
+     * 检查容灾名称
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkDisasterName($request)
+    {
+        return $this->checkDisasterNameWithHttpInfo($request);
+    }
+
+    public function checkDisasterNameWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/disaster-recovery/check-name';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['drName'] !== null) {
+            $queryParams['dr_name'] = $localVarParams['drName'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['standbyRegion'] !== null) {
+            $queryParams['standby_region'] = $localVarParams['standbyRegion'];
+        }
+        if ($localVarParams['standbyProjectId'] !== null) {
+            $queryParams['standby_project_id'] = $localVarParams['standbyProjectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\CheckDisasterNameResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\CheckDisasterNameRequest');
+    }
+
+    /**
      * 复制快照
      *
      * 该接口用于复制一个自动快照。
@@ -2594,6 +2665,92 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListAvailabilityZonesResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListAvailabilityZonesRequest');
+    }
+
+    /**
+     * 查询可用容灾集群列表
+     *
+     * 查询可用容灾集群列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAvailableDisasterClusters($request)
+    {
+        return $this->listAvailableDisasterClustersWithHttpInfo($request);
+    }
+
+    public function listAvailableDisasterClustersWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/disaster-recovery-clusters';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['primaryClusterId'] !== null) {
+            $queryParams['primary_cluster_id'] = $localVarParams['primaryClusterId'];
+        }
+        if ($localVarParams['primarySpecId'] !== null) {
+            $queryParams['primary_spec_id'] = $localVarParams['primarySpecId'];
+        }
+        if ($localVarParams['primaryClusterDnNum'] !== null) {
+            $queryParams['primary_cluster_dn_num'] = $localVarParams['primaryClusterDnNum'];
+        }
+        if ($localVarParams['standbyRegion'] !== null) {
+            $queryParams['standby_region'] = $localVarParams['standbyRegion'];
+        }
+        if ($localVarParams['standbyProjectId'] !== null) {
+            $queryParams['standby_project_id'] = $localVarParams['standbyProjectId'];
+        }
+        if ($localVarParams['standbyAzCode'] !== null) {
+            $queryParams['standby_az_code'] = $localVarParams['standbyAzCode'];
+        }
+        if ($localVarParams['drType'] !== null) {
+            $queryParams['dr_type'] = $localVarParams['drType'];
+        }
+        if ($localVarParams['datastoreType'] !== null) {
+            $queryParams['datastore_type'] = $localVarParams['datastoreType'];
+        }
+        if ($localVarParams['datastoreVersion'] !== null) {
+            $queryParams['datastore_version'] = $localVarParams['datastoreVersion'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ListAvailableDisasterClustersResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ListAvailableDisasterClustersRequest');
     }
 
     /**
@@ -4960,6 +5117,68 @@ class DwsClient extends Client
     }
 
     /**
+     * 查询容灾详情
+     *
+     * 查询容灾详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDisasterDetail($request)
+    {
+        return $this->showDisasterDetailWithHttpInfo($request);
+    }
+
+    public function showDisasterDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/disaster-recovery/{disaster_recovery_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['disasterRecoveryId'] !== null) {
+            $pathParams['disaster_recovery_id'] = $localVarParams['disasterRecoveryId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ShowDisasterDetailResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ShowDisasterDetailRequest');
+    }
+
+    /**
      * 集群缩容
      *
      * 该接口用于缩容集群。
@@ -5538,6 +5757,71 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateDataSourceResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateDataSourceRequest');
+    }
+
+    /**
+     * 更新容灾配置
+     *
+     * 更新容灾配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDisasterInfo($request)
+    {
+        return $this->updateDisasterInfoWithHttpInfo($request);
+    }
+
+    public function updateDisasterInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/disaster-recovery/{disaster_recovery_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['disasterRecoveryId'] !== null) {
+            $pathParams['disaster_recovery_id'] = $localVarParams['disasterRecoveryId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateDisasterInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateDisasterInfoRequest');
     }
 
     /**

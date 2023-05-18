@@ -21,7 +21,7 @@ class TextDetectionResultDetail implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * suggestion  审核结果是否通过。  block：包含敏感信息，不通过  pass：不包含敏感信息，通过  review：需要人工复检
-    * label  检测结果的标签。  支持label列表如下：  politics: 涉政  terrorism: 暴恐  porn: 色情  ban: 违禁  abuse: 辱骂  ad: 广告  ad_law: 广告法  meaningless: ⽆意义  customized：自定义（命中自定义词库中的关键词）
+    * label  检测结果的标签。  支持label列表如下：  politics: 涉政  terrorism: 暴恐  porn: 色情  ban: 违禁  abuse: 辱骂  ad: 广告  ad_law: 广告法  customized：自定义（命中自定义词库中的关键词）
     * confidence  置信度，取值范围 0-1，值越⼤，可信度越⾼。
     * segments  命中的风险片段信息，如果命中了语义算法模型，则会返回一个空的列表。
     *
@@ -37,7 +37,7 @@ class TextDetectionResultDetail implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * suggestion  审核结果是否通过。  block：包含敏感信息，不通过  pass：不包含敏感信息，通过  review：需要人工复检
-    * label  检测结果的标签。  支持label列表如下：  politics: 涉政  terrorism: 暴恐  porn: 色情  ban: 违禁  abuse: 辱骂  ad: 广告  ad_law: 广告法  meaningless: ⽆意义  customized：自定义（命中自定义词库中的关键词）
+    * label  检测结果的标签。  支持label列表如下：  politics: 涉政  terrorism: 暴恐  porn: 色情  ban: 违禁  abuse: 辱骂  ad: 广告  ad_law: 广告法  customized：自定义（命中自定义词库中的关键词）
     * confidence  置信度，取值范围 0-1，值越⼤，可信度越⾼。
     * segments  命中的风险片段信息，如果命中了语义算法模型，则会返回一个空的列表。
     *
@@ -74,7 +74,7 @@ class TextDetectionResultDetail implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * suggestion  审核结果是否通过。  block：包含敏感信息，不通过  pass：不包含敏感信息，通过  review：需要人工复检
-    * label  检测结果的标签。  支持label列表如下：  politics: 涉政  terrorism: 暴恐  porn: 色情  ban: 违禁  abuse: 辱骂  ad: 广告  ad_law: 广告法  meaningless: ⽆意义  customized：自定义（命中自定义词库中的关键词）
+    * label  检测结果的标签。  支持label列表如下：  politics: 涉政  terrorism: 暴恐  porn: 色情  ban: 违禁  abuse: 辱骂  ad: 广告  ad_law: 广告法  customized：自定义（命中自定义词库中的关键词）
     * confidence  置信度，取值范围 0-1，值越⼤，可信度越⾼。
     * segments  命中的风险片段信息，如果命中了语义算法模型，则会返回一个空的列表。
     *
@@ -90,7 +90,7 @@ class TextDetectionResultDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * suggestion  审核结果是否通过。  block：包含敏感信息，不通过  pass：不包含敏感信息，通过  review：需要人工复检
-    * label  检测结果的标签。  支持label列表如下：  politics: 涉政  terrorism: 暴恐  porn: 色情  ban: 违禁  abuse: 辱骂  ad: 广告  ad_law: 广告法  meaningless: ⽆意义  customized：自定义（命中自定义词库中的关键词）
+    * label  检测结果的标签。  支持label列表如下：  politics: 涉政  terrorism: 暴恐  porn: 色情  ban: 违禁  abuse: 辱骂  ad: 广告  ad_law: 广告法  customized：自定义（命中自定义词库中的关键词）
     * confidence  置信度，取值范围 0-1，值越⼤，可信度越⾼。
     * segments  命中的风险片段信息，如果命中了语义算法模型，则会返回一个空的列表。
     *
@@ -106,7 +106,7 @@ class TextDetectionResultDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * suggestion  审核结果是否通过。  block：包含敏感信息，不通过  pass：不包含敏感信息，通过  review：需要人工复检
-    * label  检测结果的标签。  支持label列表如下：  politics: 涉政  terrorism: 暴恐  porn: 色情  ban: 违禁  abuse: 辱骂  ad: 广告  ad_law: 广告法  meaningless: ⽆意义  customized：自定义（命中自定义词库中的关键词）
+    * label  检测结果的标签。  支持label列表如下：  politics: 涉政  terrorism: 暴恐  porn: 色情  ban: 违禁  abuse: 辱骂  ad: 广告  ad_law: 广告法  customized：自定义（命中自定义词库中的关键词）
     * confidence  置信度，取值范围 0-1，值越⼤，可信度越⾼。
     * segments  命中的风险片段信息，如果命中了语义算法模型，则会返回一个空的列表。
     *
@@ -231,7 +231,7 @@ class TextDetectionResultDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets label
-    *  检测结果的标签。  支持label列表如下：  politics: 涉政  terrorism: 暴恐  porn: 色情  ban: 违禁  abuse: 辱骂  ad: 广告  ad_law: 广告法  meaningless: ⽆意义  customized：自定义（命中自定义词库中的关键词）
+    *  检测结果的标签。  支持label列表如下：  politics: 涉政  terrorism: 暴恐  porn: 色情  ban: 违禁  abuse: 辱骂  ad: 广告  ad_law: 广告法  customized：自定义（命中自定义词库中的关键词）
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class TextDetectionResultDetail implements ModelInterface, ArrayAccess
     /**
     * Sets label
     *
-    * @param string|null $label 检测结果的标签。  支持label列表如下：  politics: 涉政  terrorism: 暴恐  porn: 色情  ban: 违禁  abuse: 辱骂  ad: 广告  ad_law: 广告法  meaningless: ⽆意义  customized：自定义（命中自定义词库中的关键词）
+    * @param string|null $label 检测结果的标签。  支持label列表如下：  politics: 涉政  terrorism: 暴恐  porn: 色情  ban: 违禁  abuse: 辱骂  ad: 广告  ad_law: 广告法  customized：自定义（命中自定义词库中的关键词）
     *
     * @return $this
     */

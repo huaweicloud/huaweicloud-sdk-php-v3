@@ -21,22 +21,22 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  刷新的类型，其值可以为file 或directory，默认为file
-    * mode  目录刷新只刷新变更资源标识，其值为true 或false，默认为false
-    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
+    * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
+    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。 >   如果您需要刷新的URL中有中文，请同时刷新中文URL和转码后的URL。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'mode' => 'bool',
+            'mode' => 'string',
             'urls' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  刷新的类型，其值可以为file 或directory，默认为file
-    * mode  目录刷新只刷新变更资源标识，其值为true 或false，默认为false
-    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
+    * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
+    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。 >   如果您需要刷新的URL中有中文，请同时刷新中文URL和转码后的URL。
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  刷新的类型，其值可以为file 或directory，默认为file
-    * mode  目录刷新只刷新变更资源标识，其值为true 或false，默认为false
-    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
+    * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
+    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。 >   如果您需要刷新的URL中有中文，请同时刷新中文URL和转码后的URL。
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  刷新的类型，其值可以为file 或directory，默认为file
-    * mode  目录刷新只刷新变更资源标识，其值为true 或false，默认为false
-    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
+    * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
+    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。 >   如果您需要刷新的URL中有中文，请同时刷新中文URL和转码后的URL。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  刷新的类型，其值可以为file 或directory，默认为file
-    * mode  目录刷新只刷新变更资源标识，其值为true 或false，默认为false
-    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
+    * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
+    * urls  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。 >   如果您需要刷新的URL中有中文，请同时刷新中文URL和转码后的URL。
     *
     * @var string[]
     */
@@ -151,6 +151,8 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     }
     const TYPE_FILE = 'file';
     const TYPE_DIRECTORY = 'directory';
+    const MODE_ALL = 'all';
+    const MODE_DETECT_MODIFY_REFRESH = 'detect_modify_refresh';
     
 
     /**
@@ -163,6 +165,19 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
         return [
             self::TYPE_FILE,
             self::TYPE_DIRECTORY,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getModeAllowableValues()
+    {
+        return [
+            self::MODE_ALL,
+            self::MODE_DETECT_MODIFY_REFRESH,
         ];
     }
 
@@ -199,6 +214,14 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getModeAllowableValues();
+                if (!is_null($this->container['mode']) && !in_array($this->container['mode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'mode', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -246,9 +269,9 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  目录刷新只刷新变更资源标识，其值为true 或false，默认为false
+    *  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     *
-    * @return bool|null
+    * @return string|null
     */
     public function getMode()
     {
@@ -258,7 +281,7 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param bool|null $mode 目录刷新只刷新变更资源标识，其值为true 或false，默认为false
+    * @param string|null $mode 目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     *
     * @return $this
     */
@@ -270,7 +293,7 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets urls
-    *  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
+    *  输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。 >   如果您需要刷新的URL中有中文，请同时刷新中文URL和转码后的URL。
     *
     * @return string[]
     */
@@ -282,7 +305,7 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets urls
     *
-    * @param string[] $urls 输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。
+    * @param string[] $urls 输入URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url。 >   如果您需要刷新的URL中有中文，请同时刷新中文URL和转码后的URL。
     *
     * @return $this
     */

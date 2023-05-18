@@ -33,6 +33,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     * publicIp  publicIp
     * numberOfCn  CN部署量，取值范围为2~集群节点数，最大值为20，默认值为3。
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * tags  tags
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
             'userPwd' => 'string',
             'publicIp' => '\HuaweiCloud\SDK\Dws\V2\Model\PublicIp',
             'numberOfCn' => 'int',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Dws\V2\Model\Tags'
     ];
 
     /**
@@ -67,6 +69,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     * publicIp  publicIp
     * numberOfCn  CN部署量，取值范围为2~集群节点数，最大值为20，默认值为3。
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * tags  tags
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
         'userPwd' => null,
         'publicIp' => null,
         'numberOfCn' => 'int32',
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'tags' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     * publicIp  publicIp
     * numberOfCn  CN部署量，取值范围为2~集群节点数，最大值为20，默认值为3。
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * tags  tags
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
             'userPwd' => 'user_pwd',
             'publicIp' => 'public_ip',
             'numberOfCn' => 'number_of_cn',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'tags' => 'tags'
     ];
 
     /**
@@ -156,6 +162,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     * publicIp  publicIp
     * numberOfCn  CN部署量，取值范围为2~集群节点数，最大值为20，默认值为3。
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * tags  tags
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
             'userPwd' => 'setUserPwd',
             'publicIp' => 'setPublicIp',
             'numberOfCn' => 'setNumberOfCn',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -190,6 +198,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     * publicIp  publicIp
     * numberOfCn  CN部署量，取值范围为2~集群节点数，最大值为20，默认值为3。
     * enterpriseProjectId  企业项目ID，对集群指定企业项目，如果未指定，则使用默认企业项目“default”的ID，即0。
+    * tags  tags
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
             'userPwd' => 'getUserPwd',
             'publicIp' => 'getPublicIp',
             'numberOfCn' => 'getNumberOfCn',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -280,6 +290,7 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
         $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
         $this->container['numberOfCn'] = isset($data['numberOfCn']) ? $data['numberOfCn'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -649,6 +660,30 @@ class CreateClusterInfo implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  tags
+    *
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\Tags|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\Tags|null $tags tags
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

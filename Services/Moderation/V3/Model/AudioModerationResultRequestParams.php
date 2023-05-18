@@ -20,10 +20,10 @@ class AudioModerationResultRequestParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * eventType  eventType
+    * eventType  创建作业时传的event_type参数
     * data  data
-    * callback  callback
-    * categories  categories
+    * callback  创建作业时传的callback参数
+    * categories  创建作业时传的categories参数
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class AudioModerationResultRequestParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * eventType  eventType
+    * eventType  创建作业时传的event_type参数
     * data  data
-    * callback  callback
-    * categories  categories
+    * callback  创建作业时传的callback参数
+    * categories  创建作业时传的categories参数
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class AudioModerationResultRequestParams implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * eventType  eventType
+    * eventType  创建作业时传的event_type参数
     * data  data
-    * callback  callback
-    * categories  categories
+    * callback  创建作业时传的callback参数
+    * categories  创建作业时传的categories参数
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class AudioModerationResultRequestParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * eventType  eventType
+    * eventType  创建作业时传的event_type参数
     * data  data
-    * callback  callback
-    * categories  categories
+    * callback  创建作业时传的callback参数
+    * categories  创建作业时传的categories参数
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class AudioModerationResultRequestParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * eventType  eventType
+    * eventType  创建作业时传的event_type参数
     * data  data
-    * callback  callback
-    * categories  categories
+    * callback  创建作业时传的callback参数
+    * categories  创建作业时传的categories参数
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class AudioModerationResultRequestParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
-    *  eventType
+    *  创建作业时传的event_type参数
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class AudioModerationResultRequestParams implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string|null $eventType eventType
+    * @param string|null $eventType 创建作业时传的event_type参数
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class AudioModerationResultRequestParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets callback
-    *  callback
+    *  创建作业时传的callback参数
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class AudioModerationResultRequestParams implements ModelInterface, ArrayAccess
     /**
     * Sets callback
     *
-    * @param string|null $callback callback
+    * @param string|null $callback 创建作业时传的callback参数
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class AudioModerationResultRequestParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets categories
-    *  categories
+    *  创建作业时传的categories参数
     *
     * @return string[]|null
     */
@@ -291,7 +291,7 @@ class AudioModerationResultRequestParams implements ModelInterface, ArrayAccess
     /**
     * Sets categories
     *
-    * @param string[]|null $categories categories
+    * @param string[]|null $categories 创建作业时传的categories参数
     *
     * @return $this
     */

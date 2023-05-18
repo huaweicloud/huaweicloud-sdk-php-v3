@@ -26,6 +26,7 @@ class PostPaidServerRootVolume implements ModelInterface, ArrayAccess
     * clusterType  云服务器系统盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
     * clusterId  云服务器数据盘对应的存储池的ID。
     * extendparam  extendparam
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class PostPaidServerRootVolume implements ModelInterface, ArrayAccess
             'hwpassthrough' => 'bool',
             'clusterType' => 'string',
             'clusterId' => 'string',
-            'extendparam' => '\HuaweiCloud\SDK\Ecs\V2\Model\PostPaidServerRootVolumeExtendParam'
+            'extendparam' => '\HuaweiCloud\SDK\Ecs\V2\Model\PostPaidServerRootVolumeExtendParam',
+            'metadata' => '\HuaweiCloud\SDK\Ecs\V2\Model\PostPaidServerRootVolumeMetadata'
     ];
 
     /**
@@ -46,6 +48,7 @@ class PostPaidServerRootVolume implements ModelInterface, ArrayAccess
     * clusterType  云服务器系统盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
     * clusterId  云服务器数据盘对应的存储池的ID。
     * extendparam  extendparam
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class PostPaidServerRootVolume implements ModelInterface, ArrayAccess
         'hwpassthrough' => null,
         'clusterType' => null,
         'clusterId' => null,
-        'extendparam' => null
+        'extendparam' => null,
+        'metadata' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class PostPaidServerRootVolume implements ModelInterface, ArrayAccess
     * clusterType  云服务器系统盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
     * clusterId  云服务器数据盘对应的存储池的ID。
     * extendparam  extendparam
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class PostPaidServerRootVolume implements ModelInterface, ArrayAccess
             'hwpassthrough' => 'hw:passthrough',
             'clusterType' => 'cluster_type',
             'clusterId' => 'cluster_id',
-            'extendparam' => 'extendparam'
+            'extendparam' => 'extendparam',
+            'metadata' => 'metadata'
     ];
 
     /**
@@ -107,6 +113,7 @@ class PostPaidServerRootVolume implements ModelInterface, ArrayAccess
     * clusterType  云服务器系统盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
     * clusterId  云服务器数据盘对应的存储池的ID。
     * extendparam  extendparam
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class PostPaidServerRootVolume implements ModelInterface, ArrayAccess
             'hwpassthrough' => 'setHwpassthrough',
             'clusterType' => 'setClusterType',
             'clusterId' => 'setClusterId',
-            'extendparam' => 'setExtendparam'
+            'extendparam' => 'setExtendparam',
+            'metadata' => 'setMetadata'
     ];
 
     /**
@@ -127,6 +135,7 @@ class PostPaidServerRootVolume implements ModelInterface, ArrayAccess
     * clusterType  云服务器系统盘对应的磁盘存储类型。 磁盘存储类型枚举值： DSS：专属存储类型
     * clusterId  云服务器数据盘对应的存储池的ID。
     * extendparam  extendparam
+    * metadata  metadata
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class PostPaidServerRootVolume implements ModelInterface, ArrayAccess
             'hwpassthrough' => 'getHwpassthrough',
             'clusterType' => 'getClusterType',
             'clusterId' => 'getClusterId',
-            'extendparam' => 'getExtendparam'
+            'extendparam' => 'getExtendparam',
+            'metadata' => 'getMetadata'
     ];
 
     /**
@@ -241,6 +251,7 @@ class PostPaidServerRootVolume implements ModelInterface, ArrayAccess
         $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['extendparam'] = isset($data['extendparam']) ? $data['extendparam'] : null;
+        $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
     }
 
     /**
@@ -431,6 +442,30 @@ class PostPaidServerRootVolume implements ModelInterface, ArrayAccess
     public function setExtendparam($extendparam)
     {
         $this->container['extendparam'] = $extendparam;
+        return $this;
+    }
+
+    /**
+    * Gets metadata
+    *  metadata
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\PostPaidServerRootVolumeMetadata|null
+    */
+    public function getMetadata()
+    {
+        return $this->container['metadata'];
+    }
+
+    /**
+    * Sets metadata
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\PostPaidServerRootVolumeMetadata|null $metadata metadata
+    *
+    * @return $this
+    */
+    public function setMetadata($metadata)
+    {
+        $this->container['metadata'] = $metadata;
         return $this;
     }
 

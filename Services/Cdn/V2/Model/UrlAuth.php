@@ -20,38 +20,54 @@ class UrlAuth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  A/B/C类防盗链开关（\"off\"/\"on\"）。
+    * status  是否开启URL鉴权(\"off\"/\"on\")。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
-    * key  鉴权密钥由6 - 32位大小写字母、数字构成。
-    * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     * expireTime  过期时间：范围：0-31536000单位为秒。
+    * signMethod  加密的算法 可选择md5或sha256。
+    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+    * key  鉴权KEY 由6-32位大小写字母、数字构成。
+    * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
+    * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
+    * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'status' => 'string',
             'type' => 'string',
+            'expireTime' => 'int',
+            'signMethod' => 'string',
+            'matchType' => 'string',
             'key' => 'string',
-            'timeFormat' => 'string',
-            'expireTime' => 'int'
+            'backupKey' => 'string',
+            'signArg' => 'string',
+            'timeFormat' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  A/B/C类防盗链开关（\"off\"/\"on\"）。
+    * status  是否开启URL鉴权(\"off\"/\"on\")。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
-    * key  鉴权密钥由6 - 32位大小写字母、数字构成。
-    * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     * expireTime  过期时间：范围：0-31536000单位为秒。
+    * signMethod  加密的算法 可选择md5或sha256。
+    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+    * key  鉴权KEY 由6-32位大小写字母、数字构成。
+    * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
+    * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
+    * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'status' => null,
         'type' => null,
+        'expireTime' => 'int32',
+        'signMethod' => null,
+        'matchType' => null,
         'key' => null,
-        'timeFormat' => null,
-        'expireTime' => 'int32'
+        'backupKey' => null,
+        'signArg' => null,
+        'timeFormat' => null
     ];
 
     /**
@@ -77,56 +93,80 @@ class UrlAuth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  A/B/C类防盗链开关（\"off\"/\"on\"）。
+    * status  是否开启URL鉴权(\"off\"/\"on\")。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
-    * key  鉴权密钥由6 - 32位大小写字母、数字构成。
-    * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     * expireTime  过期时间：范围：0-31536000单位为秒。
+    * signMethod  加密的算法 可选择md5或sha256。
+    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+    * key  鉴权KEY 由6-32位大小写字母、数字构成。
+    * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
+    * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
+    * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'status' => 'status',
             'type' => 'type',
+            'expireTime' => 'expire_time',
+            'signMethod' => 'sign_method',
+            'matchType' => 'match_type',
             'key' => 'key',
-            'timeFormat' => 'time_format',
-            'expireTime' => 'expire_time'
+            'backupKey' => 'backup_key',
+            'signArg' => 'sign_arg',
+            'timeFormat' => 'time_format'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  A/B/C类防盗链开关（\"off\"/\"on\"）。
+    * status  是否开启URL鉴权(\"off\"/\"on\")。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
-    * key  鉴权密钥由6 - 32位大小写字母、数字构成。
-    * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     * expireTime  过期时间：范围：0-31536000单位为秒。
+    * signMethod  加密的算法 可选择md5或sha256。
+    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+    * key  鉴权KEY 由6-32位大小写字母、数字构成。
+    * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
+    * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
+    * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     *
     * @var string[]
     */
     protected static $setters = [
             'status' => 'setStatus',
             'type' => 'setType',
+            'expireTime' => 'setExpireTime',
+            'signMethod' => 'setSignMethod',
+            'matchType' => 'setMatchType',
             'key' => 'setKey',
-            'timeFormat' => 'setTimeFormat',
-            'expireTime' => 'setExpireTime'
+            'backupKey' => 'setBackupKey',
+            'signArg' => 'setSignArg',
+            'timeFormat' => 'setTimeFormat'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  A/B/C类防盗链开关（\"off\"/\"on\"）。
+    * status  是否开启URL鉴权(\"off\"/\"on\")。
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
-    * key  鉴权密钥由6 - 32位大小写字母、数字构成。
-    * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     * expireTime  过期时间：范围：0-31536000单位为秒。
+    * signMethod  加密的算法 可选择md5或sha256。
+    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+    * key  鉴权KEY 由6-32位大小写字母、数字构成。
+    * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
+    * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
+    * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     *
     * @var string[]
     */
     protected static $getters = [
             'status' => 'getStatus',
             'type' => 'getType',
+            'expireTime' => 'getExpireTime',
+            'signMethod' => 'getSignMethod',
+            'matchType' => 'getMatchType',
             'key' => 'getKey',
-            'timeFormat' => 'getTimeFormat',
-            'expireTime' => 'getExpireTime'
+            'backupKey' => 'getBackupKey',
+            'signArg' => 'getSignArg',
+            'timeFormat' => 'getTimeFormat'
     ];
 
     /**
@@ -189,9 +229,13 @@ class UrlAuth implements ModelInterface, ArrayAccess
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['timeFormat'] = isset($data['timeFormat']) ? $data['timeFormat'] : null;
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
+        $this->container['signMethod'] = isset($data['signMethod']) ? $data['signMethod'] : null;
+        $this->container['matchType'] = isset($data['matchType']) ? $data['matchType'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
+        $this->container['backupKey'] = isset($data['backupKey']) ? $data['backupKey'] : null;
+        $this->container['signArg'] = isset($data['signArg']) ? $data['signArg'] : null;
+        $this->container['timeFormat'] = isset($data['timeFormat']) ? $data['timeFormat'] : null;
     }
 
     /**
@@ -204,6 +248,15 @@ class UrlAuth implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        if ($this->container['expireTime'] === null) {
+            $invalidProperties[] = "'expireTime' can't be null";
+        }
+        if ($this->container['timeFormat'] === null) {
+            $invalidProperties[] = "'timeFormat' can't be null";
         }
         return $invalidProperties;
     }
@@ -221,7 +274,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  A/B/C类防盗链开关（\"off\"/\"on\"）。
+    *  是否开启URL鉴权(\"off\"/\"on\")。
     *
     * @return string
     */
@@ -233,7 +286,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status A/B/C类防盗链开关（\"off\"/\"on\"）。
+    * @param string $status 是否开启URL鉴权(\"off\"/\"on\")。
     *
     * @return $this
     */
@@ -247,7 +300,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * Gets type
     *  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -257,7 +310,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
+    * @param string $type 鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     *
     * @return $this
     */
@@ -268,8 +321,80 @@ class UrlAuth implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets expireTime
+    *  过期时间：范围：0-31536000单位为秒。
+    *
+    * @return int
+    */
+    public function getExpireTime()
+    {
+        return $this->container['expireTime'];
+    }
+
+    /**
+    * Sets expireTime
+    *
+    * @param int $expireTime 过期时间：范围：0-31536000单位为秒。
+    *
+    * @return $this
+    */
+    public function setExpireTime($expireTime)
+    {
+        $this->container['expireTime'] = $expireTime;
+        return $this;
+    }
+
+    /**
+    * Gets signMethod
+    *  加密的算法 可选择md5或sha256。
+    *
+    * @return string|null
+    */
+    public function getSignMethod()
+    {
+        return $this->container['signMethod'];
+    }
+
+    /**
+    * Sets signMethod
+    *
+    * @param string|null $signMethod 加密的算法 可选择md5或sha256。
+    *
+    * @return $this
+    */
+    public function setSignMethod($signMethod)
+    {
+        $this->container['signMethod'] = $signMethod;
+        return $this;
+    }
+
+    /**
+    * Gets matchType
+    *  鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+    *
+    * @return string|null
+    */
+    public function getMatchType()
+    {
+        return $this->container['matchType'];
+    }
+
+    /**
+    * Sets matchType
+    *
+    * @param string|null $matchType 鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+    *
+    * @return $this
+    */
+    public function setMatchType($matchType)
+    {
+        $this->container['matchType'] = $matchType;
+        return $this;
+    }
+
+    /**
     * Gets key
-    *  鉴权密钥由6 - 32位大小写字母、数字构成。
+    *  鉴权KEY 由6-32位大小写字母、数字构成。
     *
     * @return string|null
     */
@@ -281,7 +406,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 鉴权密钥由6 - 32位大小写字母、数字构成。
+    * @param string|null $key 鉴权KEY 由6-32位大小写字母、数字构成。
     *
     * @return $this
     */
@@ -292,10 +417,58 @@ class UrlAuth implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets backupKey
+    *  鉴权KEY（备） 由6-32位大小写字母、数字构成。
+    *
+    * @return string|null
+    */
+    public function getBackupKey()
+    {
+        return $this->container['backupKey'];
+    }
+
+    /**
+    * Sets backupKey
+    *
+    * @param string|null $backupKey 鉴权KEY（备） 由6-32位大小写字母、数字构成。
+    *
+    * @return $this
+    */
+    public function setBackupKey($backupKey)
+    {
+        $this->container['backupKey'] = $backupKey;
+        return $this;
+    }
+
+    /**
+    * Gets signArg
+    *  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
+    *
+    * @return string|null
+    */
+    public function getSignArg()
+    {
+        return $this->container['signArg'];
+    }
+
+    /**
+    * Sets signArg
+    *
+    * @param string|null $signArg 鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
+    *
+    * @return $this
+    */
+    public function setSignArg($signArg)
+    {
+        $this->container['signArg'] = $signArg;
+        return $this;
+    }
+
+    /**
     * Gets timeFormat
     *  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     *
-    * @return string|null
+    * @return string
     */
     public function getTimeFormat()
     {
@@ -305,37 +478,13 @@ class UrlAuth implements ModelInterface, ArrayAccess
     /**
     * Sets timeFormat
     *
-    * @param string|null $timeFormat 时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
+    * @param string $timeFormat 时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
     *
     * @return $this
     */
     public function setTimeFormat($timeFormat)
     {
         $this->container['timeFormat'] = $timeFormat;
-        return $this;
-    }
-
-    /**
-    * Gets expireTime
-    *  过期时间：范围：0-31536000单位为秒。
-    *
-    * @return int|null
-    */
-    public function getExpireTime()
-    {
-        return $this->container['expireTime'];
-    }
-
-    /**
-    * Sets expireTime
-    *
-    * @param int|null $expireTime 过期时间：范围：0-31536000单位为秒。
-    *
-    * @return $this
-    */
-    public function setExpireTime($expireTime)
-    {
-        $this->container['expireTime'] = $expireTime;
         return $this;
     }
 

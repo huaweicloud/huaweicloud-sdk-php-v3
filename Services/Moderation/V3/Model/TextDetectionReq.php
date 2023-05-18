@@ -21,9 +21,9 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
-    * glossaryNames  检测时使用的自定义黑名单词库列表。
+    * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
-    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
     *
     * @var string[]
     */
@@ -37,9 +37,9 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
-    * glossaryNames  检测时使用的自定义黑名单词库列表。
+    * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
-    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
     *
     * @var string[]
     */
@@ -74,9 +74,9 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
-    * glossaryNames  检测时使用的自定义黑名单词库列表。
+    * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
-    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
     *
     * @var string[]
     */
@@ -90,9 +90,9 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
-    * glossaryNames  检测时使用的自定义黑名单词库列表。
+    * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
-    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
     *
     * @var string[]
     */
@@ -106,9 +106,9 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * eventType  事件类型。  可选值如下：  nickname: 昵称  title: 标题  article: 帖⼦  comment: 评论  barrage: 弹幕  search: 搜索栏  profile: 个⼈简介
-    * glossaryNames  检测时使用的自定义黑名单词库列表。
+    * glossaryNames  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     * data  data
-    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。
+    * whiteGlossaryNames  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
     *
     * @var string[]
     */
@@ -237,7 +237,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets glossaryNames
-    *  检测时使用的自定义黑名单词库列表。
+    *  检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     *
     * @return string[]|null
     */
@@ -249,7 +249,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     /**
     * Sets glossaryNames
     *
-    * @param string[]|null $glossaryNames 检测时使用的自定义黑名单词库列表。
+    * @param string[]|null $glossaryNames 检测时使用的自定义黑名单词库列表。自定义黑词库的创建和使用请参见[配置定义黑名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section12400140132318)。
     *
     * @return $this
     */
@@ -285,7 +285,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets whiteGlossaryNames
-    *  检测时使用的自定义白名单词库列表。
+    *  检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
     *
     * @return string[]|null
     */
@@ -297,7 +297,7 @@ class TextDetectionReq implements ModelInterface, ArrayAccess
     /**
     * Sets whiteGlossaryNames
     *
-    * @param string[]|null $whiteGlossaryNames 检测时使用的自定义白名单词库列表。
+    * @param string[]|null $whiteGlossaryNames 检测时使用的自定义白名单词库列表。自定义白词库的创建和使用请参见[配置定义白名单词库](https://support.huaweicloud.com/api-moderation/moderation_03_0027.html#moderation_03_0027__section178844141394)。
     *
     * @return $this
     */
