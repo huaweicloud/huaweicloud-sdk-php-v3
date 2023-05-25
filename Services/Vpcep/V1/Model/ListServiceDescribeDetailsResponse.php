@@ -27,6 +27,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
+    * enablePolicy  是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -36,7 +37,8 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
             'serviceType' => 'string',
             'createdAt' => 'string',
             'isCharge' => 'bool',
-            'publicBorderGroup' => 'string'
+            'publicBorderGroup' => 'string',
+            'enablePolicy' => 'bool'
     ];
 
     /**
@@ -47,6 +49,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
+    * enablePolicy  是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -56,7 +59,8 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
         'serviceType' => null,
         'createdAt' => null,
         'isCharge' => null,
-        'publicBorderGroup' => null
+        'publicBorderGroup' => null,
+        'enablePolicy' => null
     ];
 
     /**
@@ -88,6 +92,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
+    * enablePolicy  是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -97,7 +102,8 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
             'serviceType' => 'service_type',
             'createdAt' => 'created_at',
             'isCharge' => 'is_charge',
-            'publicBorderGroup' => 'public_border_group'
+            'publicBorderGroup' => 'public_border_group',
+            'enablePolicy' => 'enable_policy'
     ];
 
     /**
@@ -108,6 +114,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
+    * enablePolicy  是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -117,7 +124,8 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
             'serviceType' => 'setServiceType',
             'createdAt' => 'setCreatedAt',
             'isCharge' => 'setIsCharge',
-            'publicBorderGroup' => 'setPublicBorderGroup'
+            'publicBorderGroup' => 'setPublicBorderGroup',
+            'enablePolicy' => 'setEnablePolicy'
     ];
 
     /**
@@ -128,6 +136,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。 ● true：计费 ● false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
+    * enablePolicy  是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -137,7 +146,8 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
             'serviceType' => 'getServiceType',
             'createdAt' => 'getCreatedAt',
             'isCharge' => 'getIsCharge',
-            'publicBorderGroup' => 'getPublicBorderGroup'
+            'publicBorderGroup' => 'getPublicBorderGroup',
+            'enablePolicy' => 'getEnablePolicy'
     ];
 
     /**
@@ -217,6 +227,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['isCharge'] = isset($data['isCharge']) ? $data['isCharge'] : null;
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
+        $this->container['enablePolicy'] = isset($data['enablePolicy']) ? $data['enablePolicy'] : null;
     }
 
     /**
@@ -390,6 +401,30 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     public function setPublicBorderGroup($publicBorderGroup)
     {
         $this->container['publicBorderGroup'] = $publicBorderGroup;
+        return $this;
+    }
+
+    /**
+    * Gets enablePolicy
+    *  是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
+    *
+    * @return bool|null
+    */
+    public function getEnablePolicy()
+    {
+        return $this->container['enablePolicy'];
+    }
+
+    /**
+    * Sets enablePolicy
+    *
+    * @param bool|null $enablePolicy 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false 是否开启终端节点策略。 ● false：不支持设置终端节点策略 ● true：支持设置终端节点策略 默认为false
+    *
+    * @return $this
+    */
+    public function setEnablePolicy($enablePolicy)
+    {
+        $this->container['enablePolicy'] = $enablePolicy;
         return $this;
     }
 

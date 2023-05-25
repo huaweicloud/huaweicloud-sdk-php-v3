@@ -58,9 +58,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['assetId'] !== null) {
             $queryParams['asset_id'] = $localVarParams['assetId'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -128,9 +125,6 @@ class VodAsyncClient extends Client
         }
         if ($localVarParams['assetId'] !== null) {
             $queryParams['asset_id'] = $localVarParams['assetId'];
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -203,9 +197,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['md5'] !== null) {
             $queryParams['md5'] = $localVarParams['md5'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -270,9 +261,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -341,9 +329,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -417,9 +402,6 @@ class VodAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -487,9 +469,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -559,9 +538,6 @@ class VodAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -629,9 +605,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -701,9 +674,6 @@ class VodAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -771,9 +741,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -845,9 +812,6 @@ class VodAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -915,9 +879,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -987,9 +948,6 @@ class VodAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -1058,9 +1016,6 @@ class VodAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -1128,9 +1083,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -1203,9 +1155,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['id'] !== null) {
             $queryParams['id'] = $localVarParams['id'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -1277,9 +1226,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['deleteType'] !== null) {
             $queryParams['delete_type'] = $localVarParams['deleteType'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -1347,9 +1293,6 @@ class VodAsyncClient extends Client
         }
         if ($localVarParams['groupId'] !== null) {
             $queryParams['group_id'] = $localVarParams['groupId'];
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -1419,9 +1362,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['groupCollectionId'] !== null) {
             $queryParams['group_collection_id'] = $localVarParams['groupCollectionId'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -1489,9 +1429,6 @@ class VodAsyncClient extends Client
         }
         if ($localVarParams['groupId'] !== null) {
             $queryParams['group_id'] = $localVarParams['groupId'];
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -1561,9 +1498,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['id'] !== null) {
             $queryParams['id'] = $localVarParams['id'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -1631,9 +1565,6 @@ class VodAsyncClient extends Client
         }
         if ($localVarParams['id'] !== null) {
             $queryParams['id'] = $localVarParams['id'];
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -1733,9 +1664,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['order'] !== null) {
             $queryParams['order'] = $localVarParams['order'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -1812,9 +1740,6 @@ class VodAsyncClient extends Client
         }
         if ($localVarParams['pageNumber'] !== null) {
             $queryParams['page_number'] = $localVarParams['pageNumber'];
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -1893,9 +1818,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['size'] !== null) {
             $queryParams['size'] = $localVarParams['size'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -1970,9 +1892,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -2043,9 +1962,6 @@ class VodAsyncClient extends Client
         }
         if ($localVarParams['date'] !== null) {
             $queryParams['date'] = $localVarParams['date'];
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -2127,9 +2043,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['queryString'] !== null) {
             $queryParams['query_string'] = $localVarParams['queryString'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -2204,9 +2117,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['size'] !== null) {
             $queryParams['size'] = $localVarParams['size'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -2271,9 +2181,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -2342,9 +2249,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -2417,9 +2321,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['assetId'] !== null) {
             $queryParams['asset_id'] = $localVarParams['assetId'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -2490,9 +2391,6 @@ class VodAsyncClient extends Client
         }
         if ($localVarParams['categories'] !== null) {
             $queryParams['categories'] = $localVarParams['categories'];
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -2592,9 +2490,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['size'] !== null) {
             $queryParams['size'] = $localVarParams['size'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -2687,9 +2582,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['partNumber'] !== null) {
             $queryParams['part_number'] = $localVarParams['partNumber'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -2770,9 +2662,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['interval'] !== null) {
             $queryParams['interval'] = $localVarParams['interval'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -2840,9 +2729,6 @@ class VodAsyncClient extends Client
         }
         if ($localVarParams['taskId'] !== null) {
             $queryParams['task_id'] = $localVarParams['taskId'];
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -2918,9 +2804,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['interval'] !== null) {
             $queryParams['interval'] = $localVarParams['interval'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -2985,9 +2868,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -3063,9 +2943,6 @@ class VodAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -3133,9 +3010,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -3205,9 +3079,6 @@ class VodAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -3275,9 +3146,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -3347,9 +3215,6 @@ class VodAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -3417,9 +3282,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -3489,9 +3351,6 @@ class VodAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -3559,9 +3418,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -3631,9 +3487,6 @@ class VodAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -3701,9 +3554,6 @@ class VodAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -3785,9 +3635,6 @@ class VodAsyncClient extends Client
         if ($localVarParams['size'] !== null) {
             $queryParams['size'] = $localVarParams['size'];
         }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
-        }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
         }
@@ -3858,9 +3705,6 @@ class VodAsyncClient extends Client
         }
         if ($localVarParams['sourceObject'] !== null) {
             $queryParams['source_object'] = $localVarParams['sourceObject'];
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
@@ -3935,9 +3779,6 @@ class VodAsyncClient extends Client
         }
         if ($localVarParams['size'] !== null) {
             $queryParams['size'] = $localVarParams['size'];
-        }
-        if ($localVarParams['authorization'] !== null) {
-            $headerParams['authorization'] = $localVarParams['authorization'];
         }
         if ($localVarParams['xSdkDate'] !== null) {
             $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];

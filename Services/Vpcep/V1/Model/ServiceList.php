@@ -22,7 +22,6 @@ class ServiceList implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  终端节点服务的ID，唯一标识。
     * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。取值为： ● LB类型：负载均衡器内网IP对应的端口ID。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 ● VIP类型：虚拟资源所在物理服务器对应的网卡ID。（该字段已废弃，请优先使用LB类型）
-    * vipPortId  虚拟IP的网卡ID。 仅当“port_id”为“VIP类型”时，返回该参数。
     * serviceName  终端节点服务的名称。
     * serverType  资源类型。 ● VM：云服务器。 ● VIP：虚拟IP。 ● LB：增强负载均衡型。
     * vpcId  终端节点服务对应后端资源所在的VPC的ID。
@@ -36,7 +35,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tags  资源标签列表
     * connectionCount  终端节点服务下连接的状态为“创建中”或“已接受”的终端节点的个数。
-    * tcpProxy  用于控制是否将客户端的源IP、源端口、marker_id等信息携带到服务端。 信息携带支持两种方式： ● TCP TOA：表示将客户端信息插入到tcp，option字段中携带至服务端。 说明 仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端相关信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型： ● TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
     * error  提交任务异常时返回的异常信息
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * publicBorderGroup  终端节点服务对应Pool的Public Border Group信息
@@ -47,7 +46,6 @@ class ServiceList implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'portId' => 'string',
-            'vipPortId' => 'string',
             'serviceName' => 'string',
             'serverType' => 'string',
             'vpcId' => 'string',
@@ -72,7 +70,6 @@ class ServiceList implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  终端节点服务的ID，唯一标识。
     * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。取值为： ● LB类型：负载均衡器内网IP对应的端口ID。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 ● VIP类型：虚拟资源所在物理服务器对应的网卡ID。（该字段已废弃，请优先使用LB类型）
-    * vipPortId  虚拟IP的网卡ID。 仅当“port_id”为“VIP类型”时，返回该参数。
     * serviceName  终端节点服务的名称。
     * serverType  资源类型。 ● VM：云服务器。 ● VIP：虚拟IP。 ● LB：增强负载均衡型。
     * vpcId  终端节点服务对应后端资源所在的VPC的ID。
@@ -86,7 +83,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tags  资源标签列表
     * connectionCount  终端节点服务下连接的状态为“创建中”或“已接受”的终端节点的个数。
-    * tcpProxy  用于控制是否将客户端的源IP、源端口、marker_id等信息携带到服务端。 信息携带支持两种方式： ● TCP TOA：表示将客户端信息插入到tcp，option字段中携带至服务端。 说明 仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端相关信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型： ● TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
     * error  提交任务异常时返回的异常信息
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * publicBorderGroup  终端节点服务对应Pool的Public Border Group信息
@@ -97,7 +94,6 @@ class ServiceList implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'portId' => null,
-        'vipPortId' => null,
         'serviceName' => null,
         'serverType' => null,
         'vpcId' => null,
@@ -143,7 +139,6 @@ class ServiceList implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  终端节点服务的ID，唯一标识。
     * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。取值为： ● LB类型：负载均衡器内网IP对应的端口ID。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 ● VIP类型：虚拟资源所在物理服务器对应的网卡ID。（该字段已废弃，请优先使用LB类型）
-    * vipPortId  虚拟IP的网卡ID。 仅当“port_id”为“VIP类型”时，返回该参数。
     * serviceName  终端节点服务的名称。
     * serverType  资源类型。 ● VM：云服务器。 ● VIP：虚拟IP。 ● LB：增强负载均衡型。
     * vpcId  终端节点服务对应后端资源所在的VPC的ID。
@@ -157,7 +152,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tags  资源标签列表
     * connectionCount  终端节点服务下连接的状态为“创建中”或“已接受”的终端节点的个数。
-    * tcpProxy  用于控制是否将客户端的源IP、源端口、marker_id等信息携带到服务端。 信息携带支持两种方式： ● TCP TOA：表示将客户端信息插入到tcp，option字段中携带至服务端。 说明 仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端相关信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型： ● TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
     * error  提交任务异常时返回的异常信息
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * publicBorderGroup  终端节点服务对应Pool的Public Border Group信息
@@ -168,7 +163,6 @@ class ServiceList implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'portId' => 'port_id',
-            'vipPortId' => 'vip_port_id',
             'serviceName' => 'service_name',
             'serverType' => 'server_type',
             'vpcId' => 'vpc_id',
@@ -193,7 +187,6 @@ class ServiceList implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  终端节点服务的ID，唯一标识。
     * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。取值为： ● LB类型：负载均衡器内网IP对应的端口ID。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 ● VIP类型：虚拟资源所在物理服务器对应的网卡ID。（该字段已废弃，请优先使用LB类型）
-    * vipPortId  虚拟IP的网卡ID。 仅当“port_id”为“VIP类型”时，返回该参数。
     * serviceName  终端节点服务的名称。
     * serverType  资源类型。 ● VM：云服务器。 ● VIP：虚拟IP。 ● LB：增强负载均衡型。
     * vpcId  终端节点服务对应后端资源所在的VPC的ID。
@@ -207,7 +200,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tags  资源标签列表
     * connectionCount  终端节点服务下连接的状态为“创建中”或“已接受”的终端节点的个数。
-    * tcpProxy  用于控制是否将客户端的源IP、源端口、marker_id等信息携带到服务端。 信息携带支持两种方式： ● TCP TOA：表示将客户端信息插入到tcp，option字段中携带至服务端。 说明 仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端相关信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型： ● TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
     * error  提交任务异常时返回的异常信息
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * publicBorderGroup  终端节点服务对应Pool的Public Border Group信息
@@ -218,7 +211,6 @@ class ServiceList implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'portId' => 'setPortId',
-            'vipPortId' => 'setVipPortId',
             'serviceName' => 'setServiceName',
             'serverType' => 'setServerType',
             'vpcId' => 'setVpcId',
@@ -243,7 +235,6 @@ class ServiceList implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  终端节点服务的ID，唯一标识。
     * portId  标识终端节点服务后端资源的ID， 格式为通用唯一识别码（Universally Unique Identifier，下文简称UUID）。取值为： ● LB类型：负载均衡器内网IP对应的端口ID。 ● VM类型：弹性云服务器IP地址对应的网卡ID。 ● VIP类型：虚拟资源所在物理服务器对应的网卡ID。（该字段已废弃，请优先使用LB类型）
-    * vipPortId  虚拟IP的网卡ID。 仅当“port_id”为“VIP类型”时，返回该参数。
     * serviceName  终端节点服务的名称。
     * serverType  资源类型。 ● VM：云服务器。 ● VIP：虚拟IP。 ● LB：增强负载均衡型。
     * vpcId  终端节点服务对应后端资源所在的VPC的ID。
@@ -257,7 +248,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tags  资源标签列表
     * connectionCount  终端节点服务下连接的状态为“创建中”或“已接受”的终端节点的个数。
-    * tcpProxy  用于控制是否将客户端的源IP、源端口、marker_id等信息携带到服务端。 信息携带支持两种方式： ● TCP TOA：表示将客户端信息插入到tcp，option字段中携带至服务端。 说明 仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端相关信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型： ● TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
     * error  提交任务异常时返回的异常信息
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * publicBorderGroup  终端节点服务对应Pool的Public Border Group信息
@@ -268,7 +259,6 @@ class ServiceList implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'portId' => 'getPortId',
-            'vipPortId' => 'getVipPortId',
             'serviceName' => 'getServiceName',
             'serverType' => 'getServerType',
             'vpcId' => 'getVpcId',
@@ -404,7 +394,6 @@ class ServiceList implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['portId'] = isset($data['portId']) ? $data['portId'] : null;
-        $this->container['vipPortId'] = isset($data['vipPortId']) ? $data['vipPortId'] : null;
         $this->container['serviceName'] = isset($data['serviceName']) ? $data['serviceName'] : null;
         $this->container['serverType'] = isset($data['serverType']) ? $data['serverType'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
@@ -519,30 +508,6 @@ class ServiceList implements ModelInterface, ArrayAccess
     public function setPortId($portId)
     {
         $this->container['portId'] = $portId;
-        return $this;
-    }
-
-    /**
-    * Gets vipPortId
-    *  虚拟IP的网卡ID。 仅当“port_id”为“VIP类型”时，返回该参数。
-    *
-    * @return string|null
-    */
-    public function getVipPortId()
-    {
-        return $this->container['vipPortId'];
-    }
-
-    /**
-    * Sets vipPortId
-    *
-    * @param string|null $vipPortId 虚拟IP的网卡ID。 仅当“port_id”为“VIP类型”时，返回该参数。
-    *
-    * @return $this
-    */
-    public function setVipPortId($vipPortId)
-    {
-        $this->container['vipPortId'] = $vipPortId;
         return $this;
     }
 
@@ -860,7 +825,7 @@ class ServiceList implements ModelInterface, ArrayAccess
 
     /**
     * Gets tcpProxy
-    *  用于控制是否将客户端的源IP、源端口、marker_id等信息携带到服务端。 信息携带支持两种方式： ● TCP TOA：表示将客户端信息插入到tcp，option字段中携带至服务端。 说明 仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端相关信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+    *  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型： ● TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
     *
     * @return string|null
     */
@@ -872,7 +837,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     /**
     * Sets tcpProxy
     *
-    * @param string|null $tcpProxy 用于控制是否将客户端的源IP、源端口、marker_id等信息携带到服务端。 信息携带支持两种方式： ● TCP TOA：表示将客户端信息插入到tcp，option字段中携带至服务端。 说明 仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端相关信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+    * @param string|null $tcpProxy 用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型： ● TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。 ● Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括： ● close：表示关闭代理协议。 ● toa_open：表示开启代理协议“tcp_toa”。 ● proxy_open：表示开启代理协议“proxy_protocol”。 ● open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 ● proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
     *
     * @return $this
     */

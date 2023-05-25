@@ -33,12 +33,16 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * bindRules  bindRules
     * userId  用户id
     * createdAt  创建时间,例如:\"2020-02-05T10:38:34.209782\"
-    * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）
+    * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,tm,hcso_dt)
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * errText  包周期创建错误信息
     * retCode  包周期订购结果
     * orders  包周期创建订单信息
+    * backupNamePrefix  备份名称前缀
+    * demandBilling  是否允许使用超出存储库容量
+    * cbcDeleteCount  存储库删除次数
+    * frozen  存储库是否冻结
     *
     * @var string[]
     */
@@ -61,7 +65,11 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'threshold' => 'int',
             'errText' => 'string',
             'retCode' => 'string',
-            'orders' => '\HuaweiCloud\SDK\Cbr\V1\Model\CbcOrderResult[]'
+            'orders' => '\HuaweiCloud\SDK\Cbr\V1\Model\CbcOrderResult[]',
+            'backupNamePrefix' => 'string',
+            'demandBilling' => 'bool',
+            'cbcDeleteCount' => 'int',
+            'frozen' => 'bool'
     ];
 
     /**
@@ -79,12 +87,16 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * bindRules  bindRules
     * userId  用户id
     * createdAt  创建时间,例如:\"2020-02-05T10:38:34.209782\"
-    * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）
+    * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,tm,hcso_dt)
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * errText  包周期创建错误信息
     * retCode  包周期订购结果
     * orders  包周期创建订单信息
+    * backupNamePrefix  备份名称前缀
+    * demandBilling  是否允许使用超出存储库容量
+    * cbcDeleteCount  存储库删除次数
+    * frozen  存储库是否冻结
     *
     * @var string[]
     */
@@ -107,7 +119,11 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
         'threshold' => 'int32',
         'errText' => null,
         'retCode' => null,
-        'orders' => null
+        'orders' => null,
+        'backupNamePrefix' => null,
+        'demandBilling' => null,
+        'cbcDeleteCount' => 'int32',
+        'frozen' => null
     ];
 
     /**
@@ -146,12 +162,16 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * bindRules  bindRules
     * userId  用户id
     * createdAt  创建时间,例如:\"2020-02-05T10:38:34.209782\"
-    * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）
+    * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,tm,hcso_dt)
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * errText  包周期创建错误信息
     * retCode  包周期订购结果
     * orders  包周期创建订单信息
+    * backupNamePrefix  备份名称前缀
+    * demandBilling  是否允许使用超出存储库容量
+    * cbcDeleteCount  存储库删除次数
+    * frozen  存储库是否冻结
     *
     * @var string[]
     */
@@ -174,7 +194,11 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'threshold' => 'threshold',
             'errText' => 'errText',
             'retCode' => 'retCode',
-            'orders' => 'orders'
+            'orders' => 'orders',
+            'backupNamePrefix' => 'backup_name_prefix',
+            'demandBilling' => 'demand_billing',
+            'cbcDeleteCount' => 'cbc_delete_count',
+            'frozen' => 'frozen'
     ];
 
     /**
@@ -192,12 +216,16 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * bindRules  bindRules
     * userId  用户id
     * createdAt  创建时间,例如:\"2020-02-05T10:38:34.209782\"
-    * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）
+    * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,tm,hcso_dt)
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * errText  包周期创建错误信息
     * retCode  包周期订购结果
     * orders  包周期创建订单信息
+    * backupNamePrefix  备份名称前缀
+    * demandBilling  是否允许使用超出存储库容量
+    * cbcDeleteCount  存储库删除次数
+    * frozen  存储库是否冻结
     *
     * @var string[]
     */
@@ -220,7 +248,11 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'threshold' => 'setThreshold',
             'errText' => 'setErrText',
             'retCode' => 'setRetCode',
-            'orders' => 'setOrders'
+            'orders' => 'setOrders',
+            'backupNamePrefix' => 'setBackupNamePrefix',
+            'demandBilling' => 'setDemandBilling',
+            'cbcDeleteCount' => 'setCbcDeleteCount',
+            'frozen' => 'setFrozen'
     ];
 
     /**
@@ -238,12 +270,16 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     * bindRules  bindRules
     * userId  用户id
     * createdAt  创建时间,例如:\"2020-02-05T10:38:34.209782\"
-    * autoExpand  是否开启存储库自动扩容能力（只支持按需存储库）
+    * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,tm,hcso_dt)
     * smnNotify  存储库smn消息通知开关
     * threshold  存储库容量阈值，已用容量占总容量达到此百分比即发送相关通知
     * errText  包周期创建错误信息
     * retCode  包周期订购结果
     * orders  包周期创建订单信息
+    * backupNamePrefix  备份名称前缀
+    * demandBilling  是否允许使用超出存储库容量
+    * cbcDeleteCount  存储库删除次数
+    * frozen  存储库是否冻结
     *
     * @var string[]
     */
@@ -266,7 +302,11 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             'threshold' => 'getThreshold',
             'errText' => 'getErrText',
             'retCode' => 'getRetCode',
-            'orders' => 'getOrders'
+            'orders' => 'getOrders',
+            'backupNamePrefix' => 'getBackupNamePrefix',
+            'demandBilling' => 'getDemandBilling',
+            'cbcDeleteCount' => 'getCbcDeleteCount',
+            'frozen' => 'getFrozen'
     ];
 
     /**
@@ -346,6 +386,10 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
         $this->container['errText'] = isset($data['errText']) ? $data['errText'] : null;
         $this->container['retCode'] = isset($data['retCode']) ? $data['retCode'] : null;
         $this->container['orders'] = isset($data['orders']) ? $data['orders'] : null;
+        $this->container['backupNamePrefix'] = isset($data['backupNamePrefix']) ? $data['backupNamePrefix'] : null;
+        $this->container['demandBilling'] = isset($data['demandBilling']) ? $data['demandBilling'] : false;
+        $this->container['cbcDeleteCount'] = isset($data['cbcDeleteCount']) ? $data['cbcDeleteCount'] : 0;
+        $this->container['frozen'] = isset($data['frozen']) ? $data['frozen'] : false;
     }
 
     /**
@@ -397,6 +441,12 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['threshold']) && ($this->container['threshold'] < 1)) {
                 $invalidProperties[] = "invalid value for 'threshold', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['backupNamePrefix']) && (mb_strlen($this->container['backupNamePrefix']) > 32)) {
+                $invalidProperties[] = "invalid value for 'backupNamePrefix', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['backupNamePrefix']) && (mb_strlen($this->container['backupNamePrefix']) < 0)) {
+                $invalidProperties[] = "invalid value for 'backupNamePrefix', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -726,7 +776,7 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoExpand
-    *  是否开启存储库自动扩容能力（只支持按需存储库）
+    *  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,tm,hcso_dt)
     *
     * @return bool|null
     */
@@ -738,7 +788,7 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     /**
     * Sets autoExpand
     *
-    * @param bool|null $autoExpand 是否开启存储库自动扩容能力（只支持按需存储库）
+    * @param bool|null $autoExpand [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,tm,hcso_dt)
     *
     * @return $this
     */
@@ -865,6 +915,102 @@ class VaultCreateResource implements ModelInterface, ArrayAccess
     public function setOrders($orders)
     {
         $this->container['orders'] = $orders;
+        return $this;
+    }
+
+    /**
+    * Gets backupNamePrefix
+    *  备份名称前缀
+    *
+    * @return string|null
+    */
+    public function getBackupNamePrefix()
+    {
+        return $this->container['backupNamePrefix'];
+    }
+
+    /**
+    * Sets backupNamePrefix
+    *
+    * @param string|null $backupNamePrefix 备份名称前缀
+    *
+    * @return $this
+    */
+    public function setBackupNamePrefix($backupNamePrefix)
+    {
+        $this->container['backupNamePrefix'] = $backupNamePrefix;
+        return $this;
+    }
+
+    /**
+    * Gets demandBilling
+    *  是否允许使用超出存储库容量
+    *
+    * @return bool|null
+    */
+    public function getDemandBilling()
+    {
+        return $this->container['demandBilling'];
+    }
+
+    /**
+    * Sets demandBilling
+    *
+    * @param bool|null $demandBilling 是否允许使用超出存储库容量
+    *
+    * @return $this
+    */
+    public function setDemandBilling($demandBilling)
+    {
+        $this->container['demandBilling'] = $demandBilling;
+        return $this;
+    }
+
+    /**
+    * Gets cbcDeleteCount
+    *  存储库删除次数
+    *
+    * @return int|null
+    */
+    public function getCbcDeleteCount()
+    {
+        return $this->container['cbcDeleteCount'];
+    }
+
+    /**
+    * Sets cbcDeleteCount
+    *
+    * @param int|null $cbcDeleteCount 存储库删除次数
+    *
+    * @return $this
+    */
+    public function setCbcDeleteCount($cbcDeleteCount)
+    {
+        $this->container['cbcDeleteCount'] = $cbcDeleteCount;
+        return $this;
+    }
+
+    /**
+    * Gets frozen
+    *  存储库是否冻结
+    *
+    * @return bool|null
+    */
+    public function getFrozen()
+    {
+        return $this->container['frozen'];
+    }
+
+    /**
+    * Sets frozen
+    *
+    * @param bool|null $frozen 存储库是否冻结
+    *
+    * @return $this
+    */
+    public function setFrozen($frozen)
+    {
+        $this->container['frozen'] = $frozen;
         return $this;
     }
 

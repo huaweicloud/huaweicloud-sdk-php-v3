@@ -23,11 +23,14 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * id  功能说明：地址组唯一标识 取值范围：合法UUID的字符串
     * name  功能说明：地址组名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
+    * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * ipVersion  功能说明：IP地址组ip版本 取值范围：4, 表示ipv4地址组；6, 表示ipv6地址组
     * createdAt  功能说明：地址组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
+    * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
+    * statusMessage  功能说明：地址组状态详情信息
     *
     * @var string[]
     */
@@ -35,11 +38,14 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'description' => 'string',
+            'maxCapacity' => 'int',
             'ipSet' => 'string[]',
             'ipVersion' => 'int',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
-            'tenantId' => 'string'
+            'tenantId' => 'string',
+            'status' => 'string',
+            'statusMessage' => 'string'
     ];
 
     /**
@@ -47,11 +53,14 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * id  功能说明：地址组唯一标识 取值范围：合法UUID的字符串
     * name  功能说明：地址组名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
+    * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * ipVersion  功能说明：IP地址组ip版本 取值范围：4, 表示ipv4地址组；6, 表示ipv6地址组
     * createdAt  功能说明：地址组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
+    * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
+    * statusMessage  功能说明：地址组状态详情信息
     *
     * @var string[]
     */
@@ -59,11 +68,14 @@ class AddressGroup implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'description' => null,
+        'maxCapacity' => 'int32',
         'ipSet' => null,
         'ipVersion' => 'int32',
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time',
-        'tenantId' => null
+        'tenantId' => null,
+        'status' => null,
+        'statusMessage' => null
     ];
 
     /**
@@ -92,11 +104,14 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * id  功能说明：地址组唯一标识 取值范围：合法UUID的字符串
     * name  功能说明：地址组名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
+    * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * ipVersion  功能说明：IP地址组ip版本 取值范围：4, 表示ipv4地址组；6, 表示ipv6地址组
     * createdAt  功能说明：地址组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
+    * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
+    * statusMessage  功能说明：地址组状态详情信息
     *
     * @var string[]
     */
@@ -104,11 +119,14 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'description' => 'description',
+            'maxCapacity' => 'max_capacity',
             'ipSet' => 'ip_set',
             'ipVersion' => 'ip_version',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
-            'tenantId' => 'tenant_id'
+            'tenantId' => 'tenant_id',
+            'status' => 'status',
+            'statusMessage' => 'status_message'
     ];
 
     /**
@@ -116,11 +134,14 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * id  功能说明：地址组唯一标识 取值范围：合法UUID的字符串
     * name  功能说明：地址组名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
+    * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * ipVersion  功能说明：IP地址组ip版本 取值范围：4, 表示ipv4地址组；6, 表示ipv6地址组
     * createdAt  功能说明：地址组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
+    * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
+    * statusMessage  功能说明：地址组状态详情信息
     *
     * @var string[]
     */
@@ -128,11 +149,14 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'description' => 'setDescription',
+            'maxCapacity' => 'setMaxCapacity',
             'ipSet' => 'setIpSet',
             'ipVersion' => 'setIpVersion',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
-            'tenantId' => 'setTenantId'
+            'tenantId' => 'setTenantId',
+            'status' => 'setStatus',
+            'statusMessage' => 'setStatusMessage'
     ];
 
     /**
@@ -140,11 +164,14 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * id  功能说明：地址组唯一标识 取值范围：合法UUID的字符串
     * name  功能说明：地址组名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
+    * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * ipVersion  功能说明：IP地址组ip版本 取值范围：4, 表示ipv4地址组；6, 表示ipv6地址组
     * createdAt  功能说明：地址组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
+    * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
+    * statusMessage  功能说明：地址组状态详情信息
     *
     * @var string[]
     */
@@ -152,11 +179,14 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'description' => 'getDescription',
+            'maxCapacity' => 'getMaxCapacity',
             'ipSet' => 'getIpSet',
             'ipVersion' => 'getIpVersion',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
-            'tenantId' => 'getTenantId'
+            'tenantId' => 'getTenantId',
+            'status' => 'getStatus',
+            'statusMessage' => 'getStatusMessage'
     ];
 
     /**
@@ -220,11 +250,14 @@ class AddressGroup implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['maxCapacity'] = isset($data['maxCapacity']) ? $data['maxCapacity'] : null;
         $this->container['ipSet'] = isset($data['ipSet']) ? $data['ipSet'] : null;
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['statusMessage'] = isset($data['statusMessage']) ? $data['statusMessage'] : null;
     }
 
     /**
@@ -256,6 +289,9 @@ class AddressGroup implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
+        if ($this->container['maxCapacity'] === null) {
+            $invalidProperties[] = "'maxCapacity' can't be null";
+        }
         if ($this->container['ipSet'] === null) {
             $invalidProperties[] = "'ipSet' can't be null";
         }
@@ -270,6 +306,12 @@ class AddressGroup implements ModelInterface, ArrayAccess
         }
         if ($this->container['tenantId'] === null) {
             $invalidProperties[] = "'tenantId' can't be null";
+        }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
+        if ($this->container['statusMessage'] === null) {
+            $invalidProperties[] = "'statusMessage' can't be null";
         }
         return $invalidProperties;
     }
@@ -354,6 +396,30 @@ class AddressGroup implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets maxCapacity
+    *  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
+    *
+    * @return int
+    */
+    public function getMaxCapacity()
+    {
+        return $this->container['maxCapacity'];
+    }
+
+    /**
+    * Sets maxCapacity
+    *
+    * @param int $maxCapacity 功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
+    *
+    * @return $this
+    */
+    public function setMaxCapacity($maxCapacity)
+    {
+        $this->container['maxCapacity'] = $maxCapacity;
         return $this;
     }
 
@@ -474,6 +540,54 @@ class AddressGroup implements ModelInterface, ArrayAccess
     public function setTenantId($tenantId)
     {
         $this->container['tenantId'] = $tenantId;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
+    *
+    * @return string
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string $status 功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets statusMessage
+    *  功能说明：地址组状态详情信息
+    *
+    * @return string
+    */
+    public function getStatusMessage()
+    {
+        return $this->container['statusMessage'];
+    }
+
+    /**
+    * Sets statusMessage
+    *
+    * @param string $statusMessage 功能说明：地址组状态详情信息
+    *
+    * @return $this
+    */
+    public function setStatusMessage($statusMessage)
+    {
+        $this->container['statusMessage'] = $statusMessage;
         return $this;
     }
 

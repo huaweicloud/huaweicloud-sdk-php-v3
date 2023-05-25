@@ -20,7 +20,6 @@ class ShowAssetDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * assetId  媒资ID。
     * categories  查询的信息类型。 - 为空时表示查询所有信息。 - 不为空时支持同时查询一个或者多个类型的信息，取值如下： - - base_info：媒资基本信息。 - - transcode_info：转码结果信息。 - - thumbnail_info：截图结果信息。 - - review_info：审核结果信息。
@@ -28,7 +27,6 @@ class ShowAssetDetailRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'authorization' => 'string',
             'xSdkDate' => 'string',
             'assetId' => 'string',
             'categories' => 'string[]'
@@ -36,7 +34,6 @@ class ShowAssetDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * assetId  媒资ID。
     * categories  查询的信息类型。 - 为空时表示查询所有信息。 - 不为空时支持同时查询一个或者多个类型的信息，取值如下： - - base_info：媒资基本信息。 - - transcode_info：转码结果信息。 - - thumbnail_info：截图结果信息。 - - review_info：审核结果信息。
@@ -44,7 +41,6 @@ class ShowAssetDetailRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'authorization' => null,
         'xSdkDate' => null,
         'assetId' => null,
         'categories' => null
@@ -73,7 +69,6 @@ class ShowAssetDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * assetId  媒资ID。
     * categories  查询的信息类型。 - 为空时表示查询所有信息。 - 不为空时支持同时查询一个或者多个类型的信息，取值如下： - - base_info：媒资基本信息。 - - transcode_info：转码结果信息。 - - thumbnail_info：截图结果信息。 - - review_info：审核结果信息。
@@ -81,7 +76,6 @@ class ShowAssetDetailRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'authorization' => 'Authorization',
             'xSdkDate' => 'X-Sdk-Date',
             'assetId' => 'asset_id',
             'categories' => 'categories'
@@ -89,7 +83,6 @@ class ShowAssetDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * assetId  媒资ID。
     * categories  查询的信息类型。 - 为空时表示查询所有信息。 - 不为空时支持同时查询一个或者多个类型的信息，取值如下： - - base_info：媒资基本信息。 - - transcode_info：转码结果信息。 - - thumbnail_info：截图结果信息。 - - review_info：审核结果信息。
@@ -97,7 +90,6 @@ class ShowAssetDetailRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'authorization' => 'setAuthorization',
             'xSdkDate' => 'setXSdkDate',
             'assetId' => 'setAssetId',
             'categories' => 'setCategories'
@@ -105,7 +97,6 @@ class ShowAssetDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * assetId  媒资ID。
     * categories  查询的信息类型。 - 为空时表示查询所有信息。 - 不为空时支持同时查询一个或者多个类型的信息，取值如下： - - base_info：媒资基本信息。 - - transcode_info：转码结果信息。 - - thumbnail_info：截图结果信息。 - - review_info：审核结果信息。
@@ -113,7 +104,6 @@ class ShowAssetDetailRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'authorization' => 'getAuthorization',
             'xSdkDate' => 'getXSdkDate',
             'assetId' => 'getAssetId',
             'categories' => 'getCategories'
@@ -196,7 +186,6 @@ class ShowAssetDetailRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['authorization'] = isset($data['authorization']) ? $data['authorization'] : null;
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
         $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
@@ -210,12 +199,6 @@ class ShowAssetDetailRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['authorization']) && (mb_strlen($this->container['authorization']) > 256)) {
-                $invalidProperties[] = "invalid value for 'authorization', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['authorization']) && (mb_strlen($this->container['authorization']) < 1)) {
-                $invalidProperties[] = "invalid value for 'authorization', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['xSdkDate']) && (mb_strlen($this->container['xSdkDate']) > 256)) {
                 $invalidProperties[] = "invalid value for 'xSdkDate', the character length must be smaller than or equal to 256.";
             }
@@ -237,30 +220,6 @@ class ShowAssetDetailRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets authorization
-    *  使用AK/SK方式认证时必选，携带的鉴权信息。
-    *
-    * @return string|null
-    */
-    public function getAuthorization()
-    {
-        return $this->container['authorization'];
-    }
-
-    /**
-    * Sets authorization
-    *
-    * @param string|null $authorization 使用AK/SK方式认证时必选，携带的鉴权信息。
-    *
-    * @return $this
-    */
-    public function setAuthorization($authorization)
-    {
-        $this->container['authorization'] = $authorization;
-        return $this;
     }
 
     /**

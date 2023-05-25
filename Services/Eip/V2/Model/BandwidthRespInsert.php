@@ -31,6 +31,9 @@ class BandwidthRespInsert implements ModelInterface, ArrayAccess
     * tenantId  功能说明：用户所属租户ID
     * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建带宽时，给带宽绑定企业项目ID。
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
+    * enableBandwidthRules  功能说明：是否开启企业级qos 取值范围：true/false
+    * ruleQuota  功能说明：带宽支持的最大分组规则数。
+    * bandwidthRules  功能说明：带宽规则对象
     *
     * @var string[]
     */
@@ -45,7 +48,10 @@ class BandwidthRespInsert implements ModelInterface, ArrayAccess
             'size' => 'int',
             'tenantId' => 'string',
             'enterpriseProjectId' => 'string',
-            'status' => 'string'
+            'status' => 'string',
+            'enableBandwidthRules' => 'bool',
+            'ruleQuota' => 'int',
+            'bandwidthRules' => '\HuaweiCloud\SDK\Eip\V2\Model\BandWidthRules[]'
     ];
 
     /**
@@ -61,6 +67,9 @@ class BandwidthRespInsert implements ModelInterface, ArrayAccess
     * tenantId  功能说明：用户所属租户ID
     * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建带宽时，给带宽绑定企业项目ID。
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
+    * enableBandwidthRules  功能说明：是否开启企业级qos 取值范围：true/false
+    * ruleQuota  功能说明：带宽支持的最大分组规则数。
+    * bandwidthRules  功能说明：带宽规则对象
     *
     * @var string[]
     */
@@ -75,7 +84,10 @@ class BandwidthRespInsert implements ModelInterface, ArrayAccess
         'size' => 'int32',
         'tenantId' => null,
         'enterpriseProjectId' => null,
-        'status' => null
+        'status' => null,
+        'enableBandwidthRules' => null,
+        'ruleQuota' => null,
+        'bandwidthRules' => null
     ];
 
     /**
@@ -112,6 +124,9 @@ class BandwidthRespInsert implements ModelInterface, ArrayAccess
     * tenantId  功能说明：用户所属租户ID
     * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建带宽时，给带宽绑定企业项目ID。
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
+    * enableBandwidthRules  功能说明：是否开启企业级qos 取值范围：true/false
+    * ruleQuota  功能说明：带宽支持的最大分组规则数。
+    * bandwidthRules  功能说明：带宽规则对象
     *
     * @var string[]
     */
@@ -126,7 +141,10 @@ class BandwidthRespInsert implements ModelInterface, ArrayAccess
             'size' => 'size',
             'tenantId' => 'tenant_id',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'status' => 'status'
+            'status' => 'status',
+            'enableBandwidthRules' => 'enable_bandwidth_rules',
+            'ruleQuota' => 'rule_quota',
+            'bandwidthRules' => 'bandwidth_rules'
     ];
 
     /**
@@ -142,6 +160,9 @@ class BandwidthRespInsert implements ModelInterface, ArrayAccess
     * tenantId  功能说明：用户所属租户ID
     * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建带宽时，给带宽绑定企业项目ID。
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
+    * enableBandwidthRules  功能说明：是否开启企业级qos 取值范围：true/false
+    * ruleQuota  功能说明：带宽支持的最大分组规则数。
+    * bandwidthRules  功能说明：带宽规则对象
     *
     * @var string[]
     */
@@ -156,7 +177,10 @@ class BandwidthRespInsert implements ModelInterface, ArrayAccess
             'size' => 'setSize',
             'tenantId' => 'setTenantId',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'enableBandwidthRules' => 'setEnableBandwidthRules',
+            'ruleQuota' => 'setRuleQuota',
+            'bandwidthRules' => 'setBandwidthRules'
     ];
 
     /**
@@ -172,6 +196,9 @@ class BandwidthRespInsert implements ModelInterface, ArrayAccess
     * tenantId  功能说明：用户所属租户ID
     * enterpriseProjectId  企业项目ID。最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。  创建带宽时，给带宽绑定企业项目ID。
     * status  功能说明：带宽的状态  取值范围：  FREEZED：冻结  NORMAL：正常
+    * enableBandwidthRules  功能说明：是否开启企业级qos 取值范围：true/false
+    * ruleQuota  功能说明：带宽支持的最大分组规则数。
+    * bandwidthRules  功能说明：带宽规则对象
     *
     * @var string[]
     */
@@ -186,7 +213,10 @@ class BandwidthRespInsert implements ModelInterface, ArrayAccess
             'size' => 'getSize',
             'tenantId' => 'getTenantId',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'enableBandwidthRules' => 'getEnableBandwidthRules',
+            'ruleQuota' => 'getRuleQuota',
+            'bandwidthRules' => 'getBandwidthRules'
     ];
 
     /**
@@ -305,6 +335,9 @@ class BandwidthRespInsert implements ModelInterface, ArrayAccess
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['enableBandwidthRules'] = isset($data['enableBandwidthRules']) ? $data['enableBandwidthRules'] : null;
+        $this->container['ruleQuota'] = isset($data['ruleQuota']) ? $data['ruleQuota'] : null;
+        $this->container['bandwidthRules'] = isset($data['bandwidthRules']) ? $data['bandwidthRules'] : null;
     }
 
     /**
@@ -366,6 +399,12 @@ class BandwidthRespInsert implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['ruleQuota']) && ($this->container['ruleQuota'] > 1024)) {
+                $invalidProperties[] = "invalid value for 'ruleQuota', must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['ruleQuota']) && ($this->container['ruleQuota'] < 0)) {
+                $invalidProperties[] = "invalid value for 'ruleQuota', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -641,6 +680,78 @@ class BandwidthRespInsert implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets enableBandwidthRules
+    *  功能说明：是否开启企业级qos 取值范围：true/false
+    *
+    * @return bool|null
+    */
+    public function getEnableBandwidthRules()
+    {
+        return $this->container['enableBandwidthRules'];
+    }
+
+    /**
+    * Sets enableBandwidthRules
+    *
+    * @param bool|null $enableBandwidthRules 功能说明：是否开启企业级qos 取值范围：true/false
+    *
+    * @return $this
+    */
+    public function setEnableBandwidthRules($enableBandwidthRules)
+    {
+        $this->container['enableBandwidthRules'] = $enableBandwidthRules;
+        return $this;
+    }
+
+    /**
+    * Gets ruleQuota
+    *  功能说明：带宽支持的最大分组规则数。
+    *
+    * @return int|null
+    */
+    public function getRuleQuota()
+    {
+        return $this->container['ruleQuota'];
+    }
+
+    /**
+    * Sets ruleQuota
+    *
+    * @param int|null $ruleQuota 功能说明：带宽支持的最大分组规则数。
+    *
+    * @return $this
+    */
+    public function setRuleQuota($ruleQuota)
+    {
+        $this->container['ruleQuota'] = $ruleQuota;
+        return $this;
+    }
+
+    /**
+    * Gets bandwidthRules
+    *  功能说明：带宽规则对象
+    *
+    * @return \HuaweiCloud\SDK\Eip\V2\Model\BandWidthRules[]|null
+    */
+    public function getBandwidthRules()
+    {
+        return $this->container['bandwidthRules'];
+    }
+
+    /**
+    * Sets bandwidthRules
+    *
+    * @param \HuaweiCloud\SDK\Eip\V2\Model\BandWidthRules[]|null $bandwidthRules 功能说明：带宽规则对象
+    *
+    * @return $this
+    */
+    public function setBandwidthRules($bandwidthRules)
+    {
+        $this->container['bandwidthRules'] = $bandwidthRules;
         return $this;
     }
 

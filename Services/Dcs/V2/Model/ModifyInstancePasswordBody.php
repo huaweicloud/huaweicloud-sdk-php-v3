@@ -169,6 +169,12 @@ class ModifyInstancePasswordBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['oldPassword'] === null) {
+            $invalidProperties[] = "'oldPassword' can't be null";
+        }
+        if ($this->container['newPassword'] === null) {
+            $invalidProperties[] = "'newPassword' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +193,7 @@ class ModifyInstancePasswordBody implements ModelInterface, ArrayAccess
     * Gets oldPassword
     *  旧密码
     *
-    * @return string|null
+    * @return string
     */
     public function getOldPassword()
     {
@@ -197,7 +203,7 @@ class ModifyInstancePasswordBody implements ModelInterface, ArrayAccess
     /**
     * Sets oldPassword
     *
-    * @param string|null $oldPassword 旧密码
+    * @param string $oldPassword 旧密码
     *
     * @return $this
     */
@@ -211,7 +217,7 @@ class ModifyInstancePasswordBody implements ModelInterface, ArrayAccess
     * Gets newPassword
     *  新密码
     *
-    * @return string|null
+    * @return string
     */
     public function getNewPassword()
     {
@@ -221,7 +227,7 @@ class ModifyInstancePasswordBody implements ModelInterface, ArrayAccess
     /**
     * Sets newPassword
     *
-    * @param string|null $newPassword 新密码
+    * @param string $newPassword 新密码
     *
     * @return $this
     */

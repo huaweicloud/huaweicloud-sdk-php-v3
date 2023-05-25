@@ -21,7 +21,7 @@ class UpdateEndpointRoutetableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * routetables  路由表ID列表。节点的白名单。 此参数可以添加IPv4或CIDR： ● 当取值不为空时，表示将白名单更新为取值所示内容。 ● 当取值为空时，表示删除所有白名单。 默认为空列表。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 更新Gateway类型终端节点服务的终端节点时，显示此参数。
     * error  当修改终端节点子网路由表失败时，返回错误提示信息
     *
     * @var string[]
@@ -33,7 +33,7 @@ class UpdateEndpointRoutetableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * routetables  路由表ID列表。节点的白名单。 此参数可以添加IPv4或CIDR： ● 当取值不为空时，表示将白名单更新为取值所示内容。 ● 当取值为空时，表示删除所有白名单。 默认为空列表。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 更新Gateway类型终端节点服务的终端节点时，显示此参数。
     * error  当修改终端节点子网路由表失败时，返回错误提示信息
     *
     * @var string[]
@@ -66,7 +66,7 @@ class UpdateEndpointRoutetableResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * routetables  路由表ID列表。节点的白名单。 此参数可以添加IPv4或CIDR： ● 当取值不为空时，表示将白名单更新为取值所示内容。 ● 当取值为空时，表示删除所有白名单。 默认为空列表。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 更新Gateway类型终端节点服务的终端节点时，显示此参数。
     * error  当修改终端节点子网路由表失败时，返回错误提示信息
     *
     * @var string[]
@@ -78,7 +78,7 @@ class UpdateEndpointRoutetableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * routetables  路由表ID列表。节点的白名单。 此参数可以添加IPv4或CIDR： ● 当取值不为空时，表示将白名单更新为取值所示内容。 ● 当取值为空时，表示删除所有白名单。 默认为空列表。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 更新Gateway类型终端节点服务的终端节点时，显示此参数。
     * error  当修改终端节点子网路由表失败时，返回错误提示信息
     *
     * @var string[]
@@ -90,7 +90,7 @@ class UpdateEndpointRoutetableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * routetables  路由表ID列表。节点的白名单。 此参数可以添加IPv4或CIDR： ● 当取值不为空时，表示将白名单更新为取值所示内容。 ● 当取值为空时，表示删除所有白名单。 默认为空列表。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 更新Gateway类型终端节点服务的终端节点时，显示此参数。
     * error  当修改终端节点子网路由表失败时，返回错误提示信息
     *
     * @var string[]
@@ -186,7 +186,7 @@ class UpdateEndpointRoutetableResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets routetables
-    *  路由表ID列表。节点的白名单。 此参数可以添加IPv4或CIDR： ● 当取值不为空时，表示将白名单更新为取值所示内容。 ● 当取值为空时，表示删除所有白名单。 默认为空列表。
+    *  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 更新Gateway类型终端节点服务的终端节点时，显示此参数。
     *
     * @return string[]|null
     */
@@ -198,7 +198,7 @@ class UpdateEndpointRoutetableResponse implements ModelInterface, ArrayAccess
     /**
     * Sets routetables
     *
-    * @param string[]|null $routetables 路由表ID列表。节点的白名单。 此参数可以添加IPv4或CIDR： ● 当取值不为空时，表示将白名单更新为取值所示内容。 ● 当取值为空时，表示删除所有白名单。 默认为空列表。
+    * @param string[]|null $routetables 路由表ID列表。 若未指定，返回默认VPC下路由表ID。 更新Gateway类型终端节点服务的终端节点时，显示此参数。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class VaultRemoveResourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceIds  要移除的资源ID列表
+    * resourceIds  要移除的资源ID列表 最小长度：1 最大长度：256
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class VaultRemoveResourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceIds  要移除的资源ID列表
+    * resourceIds  要移除的资源ID列表 最小长度：1 最大长度：256
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class VaultRemoveResourceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceIds  要移除的资源ID列表
+    * resourceIds  要移除的资源ID列表 最小长度：1 最大长度：256
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class VaultRemoveResourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceIds  要移除的资源ID列表
+    * resourceIds  要移除的资源ID列表 最小长度：1 最大长度：256
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class VaultRemoveResourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceIds  要移除的资源ID列表
+    * resourceIds  要移除的资源ID列表 最小长度：1 最大长度：256
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class VaultRemoveResourceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceIds
-    *  要移除的资源ID列表
+    *  要移除的资源ID列表 最小长度：1 最大长度：256
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class VaultRemoveResourceReq implements ModelInterface, ArrayAccess
     /**
     * Sets resourceIds
     *
-    * @param string[] $resourceIds 要移除的资源ID列表
+    * @param string[] $resourceIds 要移除的资源ID列表 最小长度：1 最大长度：256
     *
     * @return $this
     */

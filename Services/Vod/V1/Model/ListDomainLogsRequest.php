@@ -20,7 +20,6 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domainName  加速域名，参考格式：www.test1.com。
     * queryDate  查询开始时间，格式为yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
@@ -30,7 +29,6 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'authorization' => 'string',
             'xSdkDate' => 'string',
             'domainName' => 'string',
             'queryDate' => 'string',
@@ -40,7 +38,6 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domainName  加速域名，参考格式：www.test1.com。
     * queryDate  查询开始时间，格式为yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
@@ -50,7 +47,6 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'authorization' => null,
         'xSdkDate' => null,
         'domainName' => null,
         'queryDate' => null,
@@ -81,7 +77,6 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domainName  加速域名，参考格式：www.test1.com。
     * queryDate  查询开始时间，格式为yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
@@ -91,7 +86,6 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'authorization' => 'Authorization',
             'xSdkDate' => 'X-Sdk-Date',
             'domainName' => 'domain_name',
             'queryDate' => 'query_date',
@@ -101,7 +95,6 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domainName  加速域名，参考格式：www.test1.com。
     * queryDate  查询开始时间，格式为yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
@@ -111,7 +104,6 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'authorization' => 'setAuthorization',
             'xSdkDate' => 'setXSdkDate',
             'domainName' => 'setDomainName',
             'queryDate' => 'setQueryDate',
@@ -121,7 +113,6 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domainName  加速域名，参考格式：www.test1.com。
     * queryDate  查询开始时间，格式为yyyyMMddHHmmss。 - 查询结果为开始时间之后24小时内的日志数据 - 只能查最近一个月内的数据
@@ -131,7 +122,6 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'authorization' => 'getAuthorization',
             'xSdkDate' => 'getXSdkDate',
             'domainName' => 'getDomainName',
             'queryDate' => 'getQueryDate',
@@ -197,7 +187,6 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['authorization'] = isset($data['authorization']) ? $data['authorization'] : null;
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['domainName'] = isset($data['domainName']) ? $data['domainName'] : null;
         $this->container['queryDate'] = isset($data['queryDate']) ? $data['queryDate'] : null;
@@ -213,12 +202,6 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['authorization']) && (mb_strlen($this->container['authorization']) > 256)) {
-                $invalidProperties[] = "invalid value for 'authorization', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['authorization']) && (mb_strlen($this->container['authorization']) < 1)) {
-                $invalidProperties[] = "invalid value for 'authorization', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['xSdkDate']) && (mb_strlen($this->container['xSdkDate']) > 256)) {
                 $invalidProperties[] = "invalid value for 'xSdkDate', the character length must be smaller than or equal to 256.";
             }
@@ -243,30 +226,6 @@ class ListDomainLogsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets authorization
-    *  使用AK/SK方式认证时必选，携带的鉴权信息。
-    *
-    * @return string|null
-    */
-    public function getAuthorization()
-    {
-        return $this->container['authorization'];
-    }
-
-    /**
-    * Sets authorization
-    *
-    * @param string|null $authorization 使用AK/SK方式认证时必选，携带的鉴权信息。
-    *
-    * @return $this
-    */
-    public function setAuthorization($authorization)
-    {
-        $this->container['authorization'] = $authorization;
-        return $this;
     }
 
     /**

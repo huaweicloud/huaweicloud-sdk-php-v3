@@ -32,6 +32,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     * dnsList  功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集，不支持IPv6地址。 默认值：不填时为空，无法使用云内网DNS功能 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
     * availabilityZone  功能说明：子网所在的可用分区标识 约束：系统存在的可用分区标识
     * extraDhcpOpts  子网配置的NTP地址或租约时间
+    * tags  功能说明：子网资源标签。创建子网时，给子网添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
             'secondaryDns' => 'string',
             'dnsList' => 'string[]',
             'availabilityZone' => 'string',
-            'extraDhcpOpts' => '\HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOption[]'
+            'extraDhcpOpts' => '\HuaweiCloud\SDK\Vpc\V2\Model\ExtraDhcpOption[]',
+            'tags' => 'string[]'
     ];
 
     /**
@@ -64,6 +66,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     * dnsList  功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集，不支持IPv6地址。 默认值：不填时为空，无法使用云内网DNS功能 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
     * availabilityZone  功能说明：子网所在的可用分区标识 约束：系统存在的可用分区标识
     * extraDhcpOpts  子网配置的NTP地址或租约时间
+    * tags  功能说明：子网资源标签。创建子网时，给子网添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
         'secondaryDns' => null,
         'dnsList' => null,
         'availabilityZone' => null,
-        'extraDhcpOpts' => null
+        'extraDhcpOpts' => null,
+        'tags' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     * dnsList  功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集，不支持IPv6地址。 默认值：不填时为空，无法使用云内网DNS功能 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
     * availabilityZone  功能说明：子网所在的可用分区标识 约束：系统存在的可用分区标识
     * extraDhcpOpts  子网配置的NTP地址或租约时间
+    * tags  功能说明：子网资源标签。创建子网时，给子网添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
             'secondaryDns' => 'secondary_dns',
             'dnsList' => 'dnsList',
             'availabilityZone' => 'availability_zone',
-            'extraDhcpOpts' => 'extra_dhcp_opts'
+            'extraDhcpOpts' => 'extra_dhcp_opts',
+            'tags' => 'tags'
     ];
 
     /**
@@ -149,6 +155,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     * dnsList  功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集，不支持IPv6地址。 默认值：不填时为空，无法使用云内网DNS功能 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
     * availabilityZone  功能说明：子网所在的可用分区标识 约束：系统存在的可用分区标识
     * extraDhcpOpts  子网配置的NTP地址或租约时间
+    * tags  功能说明：子网资源标签。创建子网时，给子网添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
             'secondaryDns' => 'setSecondaryDns',
             'dnsList' => 'setDnsList',
             'availabilityZone' => 'setAvailabilityZone',
-            'extraDhcpOpts' => 'setExtraDhcpOpts'
+            'extraDhcpOpts' => 'setExtraDhcpOpts',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -181,6 +189,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     * dnsList  功能说明：子网dns服务器地址的集合；如果想使用两个以上dns服务器，请使用该字段 约束：是子网dns服务器地址1跟子网dns服务器地址2的合集的父集，不支持IPv6地址。 默认值：不填时为空，无法使用云内网DNS功能 [内网DNS地址请参见](https://support.huaweicloud.com/dns_faq/dns_faq_002.html) [通过API获取请参见](https://support.huaweicloud.com/api-dns/dns_api_69001.html)
     * availabilityZone  功能说明：子网所在的可用分区标识 约束：系统存在的可用分区标识
     * extraDhcpOpts  子网配置的NTP地址或租约时间
+    * tags  功能说明：子网资源标签。创建子网时，给子网添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
             'secondaryDns' => 'getSecondaryDns',
             'dnsList' => 'getDnsList',
             'availabilityZone' => 'getAvailabilityZone',
-            'extraDhcpOpts' => 'getExtraDhcpOpts'
+            'extraDhcpOpts' => 'getExtraDhcpOpts',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -269,6 +279,7 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
         $this->container['dnsList'] = isset($data['dnsList']) ? $data['dnsList'] : null;
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
         $this->container['extraDhcpOpts'] = isset($data['extraDhcpOpts']) ? $data['extraDhcpOpts'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -590,6 +601,30 @@ class CreateSubnetOption implements ModelInterface, ArrayAccess
     public function setExtraDhcpOpts($extraDhcpOpts)
     {
         $this->container['extraDhcpOpts'] = $extraDhcpOpts;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  功能说明：子网资源标签。创建子网时，给子网添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+    *
+    * @return string[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string[]|null $tags 功能说明：子网资源标签。创建子网时，给子网添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

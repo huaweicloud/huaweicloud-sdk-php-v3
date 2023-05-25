@@ -23,13 +23,15 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
     * name  功能说明：地址组名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：IP地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * ipSet  功能说明：IP地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
+    * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
             'description' => 'string',
-            'ipSet' => 'string[]'
+            'ipSet' => 'string[]',
+            'maxCapacity' => 'int'
     ];
 
     /**
@@ -37,13 +39,15 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
     * name  功能说明：地址组名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：IP地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * ipSet  功能说明：IP地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
+    * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
         'description' => null,
-        'ipSet' => null
+        'ipSet' => null,
+        'maxCapacity' => 'int32'
     ];
 
     /**
@@ -72,13 +76,15 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
     * name  功能说明：地址组名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：IP地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * ipSet  功能说明：IP地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
+    * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
             'description' => 'description',
-            'ipSet' => 'ip_set'
+            'ipSet' => 'ip_set',
+            'maxCapacity' => 'max_capacity'
     ];
 
     /**
@@ -86,13 +92,15 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
     * name  功能说明：地址组名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：IP地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * ipSet  功能说明：IP地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
+    * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
             'description' => 'setDescription',
-            'ipSet' => 'setIpSet'
+            'ipSet' => 'setIpSet',
+            'maxCapacity' => 'setMaxCapacity'
     ];
 
     /**
@@ -100,13 +108,15 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
     * name  功能说明：地址组名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：IP地址组描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * ipSet  功能说明：IP地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
+    * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
             'description' => 'getDescription',
-            'ipSet' => 'getIpSet'
+            'ipSet' => 'getIpSet',
+            'maxCapacity' => 'getMaxCapacity'
     ];
 
     /**
@@ -170,6 +180,7 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['ipSet'] = isset($data['ipSet']) ? $data['ipSet'] : null;
+        $this->container['maxCapacity'] = isset($data['maxCapacity']) ? $data['maxCapacity'] : null;
     }
 
     /**
@@ -269,6 +280,30 @@ class UpdateAddressGroupOption implements ModelInterface, ArrayAccess
     public function setIpSet($ipSet)
     {
         $this->container['ipSet'] = $ipSet;
+        return $this;
+    }
+
+    /**
+    * Gets maxCapacity
+    *  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20
+    *
+    * @return int|null
+    */
+    public function getMaxCapacity()
+    {
+        return $this->container['maxCapacity'];
+    }
+
+    /**
+    * Sets maxCapacity
+    *
+    * @param int|null $maxCapacity 功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20
+    *
+    * @return $this
+    */
+    public function setMaxCapacity($maxCapacity)
+    {
+        $this->container['maxCapacity'] = $maxCapacity;
         return $this;
     }
 

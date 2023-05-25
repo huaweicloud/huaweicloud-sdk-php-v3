@@ -236,6 +236,68 @@ class IamClient extends Client
     }
 
     /**
+     * application/json
+     *
+     * 该接口可以基于委托为企业项目授权
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function associateRoleToAgencyOnEnterpriseProject($request)
+    {
+        return $this->associateRoleToAgencyOnEnterpriseProjectWithHttpInfo($request);
+    }
+
+    public function associateRoleToAgencyOnEnterpriseProjectWithHttpInfo($request)
+    {
+        $resourcePath = '/v3.0/OS-PERMISSION/subjects/agency/scopes/enterprise-project/role-assignments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateRoleToAgencyOnEnterpriseProjectResponse',
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\AssociateRoleToAgencyOnEnterpriseProjectRequest');
+    }
+
+    /**
      * 基于用户组为企业项目授权
      *
      * 该接口用于基于用户组为企业项目授权。
@@ -5944,6 +6006,68 @@ class IamClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\RemoveProjectPermissionFromAgencyResponse',
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\RemoveProjectPermissionFromAgencyRequest');
+    }
+
+    /**
+     * 
+     *
+     * 该接口可以删除企业项目委托上的授权
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function revokeRoleFromAgencyOnEnterpriseProject($request)
+    {
+        return $this->revokeRoleFromAgencyOnEnterpriseProjectWithHttpInfo($request);
+    }
+
+    public function revokeRoleFromAgencyOnEnterpriseProjectWithHttpInfo($request)
+    {
+        $resourcePath = '/v3.0/OS-PERMISSION/subjects/agency/scopes/enterprise-project/role-assignments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\RevokeRoleFromAgencyOnEnterpriseProjectResponse',
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\RevokeRoleFromAgencyOnEnterpriseProjectRequest');
     }
 
     /**

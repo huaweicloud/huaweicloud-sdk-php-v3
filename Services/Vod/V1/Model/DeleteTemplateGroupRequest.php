@@ -20,28 +20,24 @@ class DeleteTemplateGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * groupId  模板组id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'authorization' => 'string',
             'xSdkDate' => 'string',
             'groupId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * groupId  模板组id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'authorization' => null,
         'xSdkDate' => null,
         'groupId' => null
     ];
@@ -69,42 +65,36 @@ class DeleteTemplateGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * groupId  模板组id
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'authorization' => 'Authorization',
             'xSdkDate' => 'X-Sdk-Date',
             'groupId' => 'group_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * groupId  模板组id
     *
     * @var string[]
     */
     protected static $setters = [
-            'authorization' => 'setAuthorization',
             'xSdkDate' => 'setXSdkDate',
             'groupId' => 'setGroupId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * groupId  模板组id
     *
     * @var string[]
     */
     protected static $getters = [
-            'authorization' => 'getAuthorization',
             'xSdkDate' => 'getXSdkDate',
             'groupId' => 'getGroupId'
     ];
@@ -167,7 +157,6 @@ class DeleteTemplateGroupRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['authorization'] = isset($data['authorization']) ? $data['authorization'] : null;
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
     }
@@ -180,12 +169,6 @@ class DeleteTemplateGroupRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['authorization']) && (mb_strlen($this->container['authorization']) > 256)) {
-                $invalidProperties[] = "invalid value for 'authorization', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['authorization']) && (mb_strlen($this->container['authorization']) < 1)) {
-                $invalidProperties[] = "invalid value for 'authorization', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['xSdkDate']) && (mb_strlen($this->container['xSdkDate']) > 256)) {
                 $invalidProperties[] = "invalid value for 'xSdkDate', the character length must be smaller than or equal to 256.";
             }
@@ -207,30 +190,6 @@ class DeleteTemplateGroupRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets authorization
-    *  使用AK/SK方式认证时必选，携带的鉴权信息。
-    *
-    * @return string|null
-    */
-    public function getAuthorization()
-    {
-        return $this->container['authorization'];
-    }
-
-    /**
-    * Sets authorization
-    *
-    * @param string|null $authorization 使用AK/SK方式认证时必选，携带的鉴权信息。
-    *
-    * @return $this
-    */
-    public function setAuthorization($authorization)
-    {
-        $this->container['authorization'] = $authorization;
-        return $this;
     }
 
     /**

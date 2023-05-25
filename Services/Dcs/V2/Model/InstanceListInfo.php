@@ -27,6 +27,7 @@ class InstanceListInfo implements ModelInterface, ArrayAccess
     * subnetId  子网ID。
     * securityGroupId  安全组ID。
     * createdAt  创建时间。格式为：2017-03-31T12:24:46.297Z
+    * updatedAt  更新时间。格式为：2017-03-31T19:24:46.297Z
     * enableSsl  Redis缓存实例开启公网访问功能时，是否选择支持ssl。 - true：开启 - false：不开启
     * maxMemory  总内存，单位：MB。
     * usedMemory  已使用的内存，单位：MB。
@@ -71,6 +72,7 @@ class InstanceListInfo implements ModelInterface, ArrayAccess
             'subnetId' => 'string',
             'securityGroupId' => 'string',
             'createdAt' => 'string',
+            'updatedAt' => 'string',
             'enableSsl' => 'bool',
             'maxMemory' => 'int',
             'usedMemory' => 'int',
@@ -115,6 +117,7 @@ class InstanceListInfo implements ModelInterface, ArrayAccess
     * subnetId  子网ID。
     * securityGroupId  安全组ID。
     * createdAt  创建时间。格式为：2017-03-31T12:24:46.297Z
+    * updatedAt  更新时间。格式为：2017-03-31T19:24:46.297Z
     * enableSsl  Redis缓存实例开启公网访问功能时，是否选择支持ssl。 - true：开启 - false：不开启
     * maxMemory  总内存，单位：MB。
     * usedMemory  已使用的内存，单位：MB。
@@ -159,6 +162,7 @@ class InstanceListInfo implements ModelInterface, ArrayAccess
         'subnetId' => null,
         'securityGroupId' => null,
         'createdAt' => null,
+        'updatedAt' => null,
         'enableSsl' => null,
         'maxMemory' => 'int32',
         'usedMemory' => 'int32',
@@ -224,6 +228,7 @@ class InstanceListInfo implements ModelInterface, ArrayAccess
     * subnetId  子网ID。
     * securityGroupId  安全组ID。
     * createdAt  创建时间。格式为：2017-03-31T12:24:46.297Z
+    * updatedAt  更新时间。格式为：2017-03-31T19:24:46.297Z
     * enableSsl  Redis缓存实例开启公网访问功能时，是否选择支持ssl。 - true：开启 - false：不开启
     * maxMemory  总内存，单位：MB。
     * usedMemory  已使用的内存，单位：MB。
@@ -268,6 +273,7 @@ class InstanceListInfo implements ModelInterface, ArrayAccess
             'subnetId' => 'subnet_id',
             'securityGroupId' => 'security_group_id',
             'createdAt' => 'created_at',
+            'updatedAt' => 'updated_at',
             'enableSsl' => 'enable_ssl',
             'maxMemory' => 'max_memory',
             'usedMemory' => 'used_memory',
@@ -312,6 +318,7 @@ class InstanceListInfo implements ModelInterface, ArrayAccess
     * subnetId  子网ID。
     * securityGroupId  安全组ID。
     * createdAt  创建时间。格式为：2017-03-31T12:24:46.297Z
+    * updatedAt  更新时间。格式为：2017-03-31T19:24:46.297Z
     * enableSsl  Redis缓存实例开启公网访问功能时，是否选择支持ssl。 - true：开启 - false：不开启
     * maxMemory  总内存，单位：MB。
     * usedMemory  已使用的内存，单位：MB。
@@ -356,6 +363,7 @@ class InstanceListInfo implements ModelInterface, ArrayAccess
             'subnetId' => 'setSubnetId',
             'securityGroupId' => 'setSecurityGroupId',
             'createdAt' => 'setCreatedAt',
+            'updatedAt' => 'setUpdatedAt',
             'enableSsl' => 'setEnableSsl',
             'maxMemory' => 'setMaxMemory',
             'usedMemory' => 'setUsedMemory',
@@ -400,6 +408,7 @@ class InstanceListInfo implements ModelInterface, ArrayAccess
     * subnetId  子网ID。
     * securityGroupId  安全组ID。
     * createdAt  创建时间。格式为：2017-03-31T12:24:46.297Z
+    * updatedAt  更新时间。格式为：2017-03-31T19:24:46.297Z
     * enableSsl  Redis缓存实例开启公网访问功能时，是否选择支持ssl。 - true：开启 - false：不开启
     * maxMemory  总内存，单位：MB。
     * usedMemory  已使用的内存，单位：MB。
@@ -444,6 +453,7 @@ class InstanceListInfo implements ModelInterface, ArrayAccess
             'subnetId' => 'getSubnetId',
             'securityGroupId' => 'getSecurityGroupId',
             'createdAt' => 'getCreatedAt',
+            'updatedAt' => 'getUpdatedAt',
             'enableSsl' => 'getEnableSsl',
             'maxMemory' => 'getMaxMemory',
             'usedMemory' => 'getUsedMemory',
@@ -544,6 +554,7 @@ class InstanceListInfo implements ModelInterface, ArrayAccess
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
         $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['enableSsl'] = isset($data['enableSsl']) ? $data['enableSsl'] : null;
         $this->container['maxMemory'] = isset($data['maxMemory']) ? $data['maxMemory'] : null;
         $this->container['usedMemory'] = isset($data['usedMemory']) ? $data['usedMemory'] : null;
@@ -766,6 +777,30 @@ class InstanceListInfo implements ModelInterface, ArrayAccess
     public function setCreatedAt($createdAt)
     {
         $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets updatedAt
+    *  更新时间。格式为：2017-03-31T19:24:46.297Z
+    *
+    * @return string|null
+    */
+    public function getUpdatedAt()
+    {
+        return $this->container['updatedAt'];
+    }
+
+    /**
+    * Sets updatedAt
+    *
+    * @param string|null $updatedAt 更新时间。格式为：2017-03-31T19:24:46.297Z
+    *
+    * @return $this
+    */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->container['updatedAt'] = $updatedAt;
         return $this;
     }
 

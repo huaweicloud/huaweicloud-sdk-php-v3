@@ -21,24 +21,32 @@ class FlavorAzObject implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * capacity  缓存容量（G Byte）。
+    * unit  缓存容量单位。
+    * availableZones  可用区信息。
     * azCodes  有资源的可用区编码。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'capacity' => 'string',
+            'unit' => 'string',
+            'availableZones' => 'string[]',
             'azCodes' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * capacity  缓存容量（G Byte）。
+    * unit  缓存容量单位。
+    * availableZones  可用区信息。
     * azCodes  有资源的可用区编码。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'capacity' => null,
+        'unit' => null,
+        'availableZones' => null,
         'azCodes' => null
     ];
 
@@ -66,36 +74,48 @@ class FlavorAzObject implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * capacity  缓存容量（G Byte）。
+    * unit  缓存容量单位。
+    * availableZones  可用区信息。
     * azCodes  有资源的可用区编码。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'capacity' => 'capacity',
+            'unit' => 'unit',
+            'availableZones' => 'available_zones',
             'azCodes' => 'az_codes'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * capacity  缓存容量（G Byte）。
+    * unit  缓存容量单位。
+    * availableZones  可用区信息。
     * azCodes  有资源的可用区编码。
     *
     * @var string[]
     */
     protected static $setters = [
             'capacity' => 'setCapacity',
+            'unit' => 'setUnit',
+            'availableZones' => 'setAvailableZones',
             'azCodes' => 'setAzCodes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * capacity  缓存容量（G Byte）。
+    * unit  缓存容量单位。
+    * availableZones  可用区信息。
     * azCodes  有资源的可用区编码。
     *
     * @var string[]
     */
     protected static $getters = [
             'capacity' => 'getCapacity',
+            'unit' => 'getUnit',
+            'availableZones' => 'getAvailableZones',
             'azCodes' => 'getAzCodes'
     ];
 
@@ -158,6 +178,8 @@ class FlavorAzObject implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['capacity'] = isset($data['capacity']) ? $data['capacity'] : null;
+        $this->container['unit'] = isset($data['unit']) ? $data['unit'] : null;
+        $this->container['availableZones'] = isset($data['availableZones']) ? $data['availableZones'] : null;
         $this->container['azCodes'] = isset($data['azCodes']) ? $data['azCodes'] : null;
     }
 
@@ -204,6 +226,54 @@ class FlavorAzObject implements ModelInterface, ArrayAccess
     public function setCapacity($capacity)
     {
         $this->container['capacity'] = $capacity;
+        return $this;
+    }
+
+    /**
+    * Gets unit
+    *  缓存容量单位。
+    *
+    * @return string|null
+    */
+    public function getUnit()
+    {
+        return $this->container['unit'];
+    }
+
+    /**
+    * Sets unit
+    *
+    * @param string|null $unit 缓存容量单位。
+    *
+    * @return $this
+    */
+    public function setUnit($unit)
+    {
+        $this->container['unit'] = $unit;
+        return $this;
+    }
+
+    /**
+    * Gets availableZones
+    *  可用区信息。
+    *
+    * @return string[]|null
+    */
+    public function getAvailableZones()
+    {
+        return $this->container['availableZones'];
+    }
+
+    /**
+    * Sets availableZones
+    *
+    * @param string[]|null $availableZones 可用区信息。
+    *
+    * @return $this
+    */
+    public function setAvailableZones($availableZones)
+    {
+        $this->container['availableZones'] = $availableZones;
         return $this;
     }
 

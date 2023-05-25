@@ -20,7 +20,6 @@ class ListTopStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domain  查询域名，暂只支持查询单个或者全部域名。  取值如下： - 单个加速域名，格式：example.test1.com。 - ALL：表示查询名下全部域名。
     * date  查询日期，格式为yyyymmdd - date必须为昨天或之前的日期。 - 最多只能查最近一个月内的数据。
@@ -28,7 +27,6 @@ class ListTopStatisticsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'authorization' => 'string',
             'xSdkDate' => 'string',
             'domain' => 'string',
             'date' => 'string'
@@ -36,7 +34,6 @@ class ListTopStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domain  查询域名，暂只支持查询单个或者全部域名。  取值如下： - 单个加速域名，格式：example.test1.com。 - ALL：表示查询名下全部域名。
     * date  查询日期，格式为yyyymmdd - date必须为昨天或之前的日期。 - 最多只能查最近一个月内的数据。
@@ -44,7 +41,6 @@ class ListTopStatisticsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'authorization' => null,
         'xSdkDate' => null,
         'domain' => null,
         'date' => null
@@ -73,7 +69,6 @@ class ListTopStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domain  查询域名，暂只支持查询单个或者全部域名。  取值如下： - 单个加速域名，格式：example.test1.com。 - ALL：表示查询名下全部域名。
     * date  查询日期，格式为yyyymmdd - date必须为昨天或之前的日期。 - 最多只能查最近一个月内的数据。
@@ -81,7 +76,6 @@ class ListTopStatisticsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'authorization' => 'Authorization',
             'xSdkDate' => 'X-Sdk-Date',
             'domain' => 'domain',
             'date' => 'date'
@@ -89,7 +83,6 @@ class ListTopStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domain  查询域名，暂只支持查询单个或者全部域名。  取值如下： - 单个加速域名，格式：example.test1.com。 - ALL：表示查询名下全部域名。
     * date  查询日期，格式为yyyymmdd - date必须为昨天或之前的日期。 - 最多只能查最近一个月内的数据。
@@ -97,7 +90,6 @@ class ListTopStatisticsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'authorization' => 'setAuthorization',
             'xSdkDate' => 'setXSdkDate',
             'domain' => 'setDomain',
             'date' => 'setDate'
@@ -105,7 +97,6 @@ class ListTopStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * domain  查询域名，暂只支持查询单个或者全部域名。  取值如下： - 单个加速域名，格式：example.test1.com。 - ALL：表示查询名下全部域名。
     * date  查询日期，格式为yyyymmdd - date必须为昨天或之前的日期。 - 最多只能查最近一个月内的数据。
@@ -113,7 +104,6 @@ class ListTopStatisticsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'authorization' => 'getAuthorization',
             'xSdkDate' => 'getXSdkDate',
             'domain' => 'getDomain',
             'date' => 'getDate'
@@ -177,7 +167,6 @@ class ListTopStatisticsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['authorization'] = isset($data['authorization']) ? $data['authorization'] : null;
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['date'] = isset($data['date']) ? $data['date'] : null;
@@ -191,12 +180,6 @@ class ListTopStatisticsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['authorization']) && (mb_strlen($this->container['authorization']) > 256)) {
-                $invalidProperties[] = "invalid value for 'authorization', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['authorization']) && (mb_strlen($this->container['authorization']) < 1)) {
-                $invalidProperties[] = "invalid value for 'authorization', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['xSdkDate']) && (mb_strlen($this->container['xSdkDate']) > 256)) {
                 $invalidProperties[] = "invalid value for 'xSdkDate', the character length must be smaller than or equal to 256.";
             }
@@ -221,30 +204,6 @@ class ListTopStatisticsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets authorization
-    *  使用AK/SK方式认证时必选，携带的鉴权信息。
-    *
-    * @return string|null
-    */
-    public function getAuthorization()
-    {
-        return $this->container['authorization'];
-    }
-
-    /**
-    * Sets authorization
-    *
-    * @param string|null $authorization 使用AK/SK方式认证时必选，携带的鉴权信息。
-    *
-    * @return $this
-    */
-    public function setAuthorization($authorization)
-    {
-        $this->container['authorization'] = $authorization;
-        return $this;
     }
 
     /**

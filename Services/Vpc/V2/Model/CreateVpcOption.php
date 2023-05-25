@@ -24,6 +24,7 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
     * name  功能说明：虚拟私有云名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点） 约束：如果名称不为空，则同一个租户下的名称不能重复
     * description  功能说明：虚拟私有云的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：企业项目ID。创建虚拟私有云时，给虚拟私有云绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：\"0\"
+    * tags  功能说明：VPC资源标签。创建VPC时，给VPC添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
             'cidr' => 'string',
             'name' => 'string',
             'description' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'tags' => 'string[]'
     ];
 
     /**
@@ -40,6 +42,7 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
     * name  功能说明：虚拟私有云名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点） 约束：如果名称不为空，则同一个租户下的名称不能重复
     * description  功能说明：虚拟私有云的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：企业项目ID。创建虚拟私有云时，给虚拟私有云绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：\"0\"
+    * tags  功能说明：VPC资源标签。创建VPC时，给VPC添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
         'cidr' => null,
         'name' => null,
         'description' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'tags' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
     * name  功能说明：虚拟私有云名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点） 约束：如果名称不为空，则同一个租户下的名称不能重复
     * description  功能说明：虚拟私有云的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：企业项目ID。创建虚拟私有云时，给虚拟私有云绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：\"0\"
+    * tags  功能说明：VPC资源标签。创建VPC时，给VPC添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
             'cidr' => 'cidr',
             'name' => 'name',
             'description' => 'description',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'tags' => 'tags'
     ];
 
     /**
@@ -93,6 +99,7 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
     * name  功能说明：虚拟私有云名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点） 约束：如果名称不为空，则同一个租户下的名称不能重复
     * description  功能说明：虚拟私有云的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：企业项目ID。创建虚拟私有云时，给虚拟私有云绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：\"0\"
+    * tags  功能说明：VPC资源标签。创建VPC时，给VPC添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
             'cidr' => 'setCidr',
             'name' => 'setName',
             'description' => 'setDescription',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -109,6 +117,7 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
     * name  功能说明：虚拟私有云名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点） 约束：如果名称不为空，则同一个租户下的名称不能重复
     * description  功能说明：虚拟私有云的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：企业项目ID。创建虚拟私有云时，给虚拟私有云绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。 默认值：\"0\"
+    * tags  功能说明：VPC资源标签。创建VPC时，给VPC添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
             'cidr' => 'getCidr',
             'name' => 'getName',
             'description' => 'getDescription',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -181,6 +191,7 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -310,6 +321,30 @@ class CreateVpcOption implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  功能说明：VPC资源标签。创建VPC时，给VPC添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+    *
+    * @return string[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string[]|null $tags 功能说明：VPC资源标签。创建VPC时，给VPC添加资源标签。 取值范围：最大10个标签, key：标签名称; value：标签值。 格式：[key*value]，每一个标签的key和value之间用*连接
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

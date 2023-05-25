@@ -247,8 +247,8 @@ class DeleteTemplateVersionRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['versionId']) < 2)) {
                 $invalidProperties[] = "invalid value for 'versionId', the character length must be bigger than or equal to 2.";
             }
-            if (!preg_match("/^V[0-9]{1,10}$/", $this->container['versionId'])) {
-                $invalidProperties[] = "invalid value for 'versionId', must be conform to the pattern /^V[0-9]{1,10}$/.";
+            if (!preg_match("/^V[1-9][0-9]{0,9}$/", $this->container['versionId'])) {
+                $invalidProperties[] = "invalid value for 'versionId', must be conform to the pattern /^V[1-9][0-9]{0,9}$/.";
             }
             if (!is_null($this->container['templateId']) && (mb_strlen($this->container['templateId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'templateId', the character length must be smaller than or equal to 36.";
@@ -256,8 +256,8 @@ class DeleteTemplateVersionRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['templateId']) && (mb_strlen($this->container['templateId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'templateId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['templateId']) && !preg_match("/^[a-z0-9\\-]{36}$/", $this->container['templateId'])) {
-                $invalidProperties[] = "invalid value for 'templateId', must be conform to the pattern /^[a-z0-9\\-]{36}$/.";
+            if (!is_null($this->container['templateId']) && !preg_match("/^[a-z0-9][a-z0-9-]{35}$/", $this->container['templateId'])) {
+                $invalidProperties[] = "invalid value for 'templateId', must be conform to the pattern /^[a-z0-9][a-z0-9-]{35}$/.";
             }
         return $invalidProperties;
     }

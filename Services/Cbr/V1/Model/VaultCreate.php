@@ -29,7 +29,11 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，默认为‘0’。
     * autoBind  是否支持自动挂载。
     * bindRules  bindRules
-    * autoExpand  是否自动扩容。按需存储库支持自动扩容，包周期存储库不支持扩容。
+    * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,hcso_dt)
+    * threshold  存储库容量阈值，已用容量占总容量达到此百分比，将根据 smn_notify 参数设置选择是否发送相关通知。 默认值为：80 最大值：100 最小值：1
+    * smnNotify  存储库smn消息通知开关。 默认值为 true。
+    * backupNamePrefix  备份名称前缀，设置后该存储库自动备份产生的备份副本都将携带该备份名称前缀
+    * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
     *
     * @var string[]
     */
@@ -43,7 +47,11 @@ class VaultCreate implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'autoBind' => 'bool',
             'bindRules' => '\HuaweiCloud\SDK\Cbr\V1\Model\VaultBindRules',
-            'autoExpand' => 'bool'
+            'autoExpand' => 'bool',
+            'threshold' => 'int',
+            'smnNotify' => 'bool',
+            'backupNamePrefix' => 'string',
+            'demandBilling' => 'bool'
     ];
 
     /**
@@ -57,7 +65,11 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，默认为‘0’。
     * autoBind  是否支持自动挂载。
     * bindRules  bindRules
-    * autoExpand  是否自动扩容。按需存储库支持自动扩容，包周期存储库不支持扩容。
+    * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,hcso_dt)
+    * threshold  存储库容量阈值，已用容量占总容量达到此百分比，将根据 smn_notify 参数设置选择是否发送相关通知。 默认值为：80 最大值：100 最小值：1
+    * smnNotify  存储库smn消息通知开关。 默认值为 true。
+    * backupNamePrefix  备份名称前缀，设置后该存储库自动备份产生的备份副本都将携带该备份名称前缀
+    * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
     *
     * @var string[]
     */
@@ -71,7 +83,11 @@ class VaultCreate implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'autoBind' => null,
         'bindRules' => null,
-        'autoExpand' => null
+        'autoExpand' => null,
+        'threshold' => 'int32',
+        'smnNotify' => null,
+        'backupNamePrefix' => null,
+        'demandBilling' => null
     ];
 
     /**
@@ -106,7 +122,11 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，默认为‘0’。
     * autoBind  是否支持自动挂载。
     * bindRules  bindRules
-    * autoExpand  是否自动扩容。按需存储库支持自动扩容，包周期存储库不支持扩容。
+    * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,hcso_dt)
+    * threshold  存储库容量阈值，已用容量占总容量达到此百分比，将根据 smn_notify 参数设置选择是否发送相关通知。 默认值为：80 最大值：100 最小值：1
+    * smnNotify  存储库smn消息通知开关。 默认值为 true。
+    * backupNamePrefix  备份名称前缀，设置后该存储库自动备份产生的备份副本都将携带该备份名称前缀
+    * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
     *
     * @var string[]
     */
@@ -120,7 +140,11 @@ class VaultCreate implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'autoBind' => 'auto_bind',
             'bindRules' => 'bind_rules',
-            'autoExpand' => 'auto_expand'
+            'autoExpand' => 'auto_expand',
+            'threshold' => 'threshold',
+            'smnNotify' => 'smn_notify',
+            'backupNamePrefix' => 'backup_name_prefix',
+            'demandBilling' => 'demand_billing'
     ];
 
     /**
@@ -134,7 +158,11 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，默认为‘0’。
     * autoBind  是否支持自动挂载。
     * bindRules  bindRules
-    * autoExpand  是否自动扩容。按需存储库支持自动扩容，包周期存储库不支持扩容。
+    * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,hcso_dt)
+    * threshold  存储库容量阈值，已用容量占总容量达到此百分比，将根据 smn_notify 参数设置选择是否发送相关通知。 默认值为：80 最大值：100 最小值：1
+    * smnNotify  存储库smn消息通知开关。 默认值为 true。
+    * backupNamePrefix  备份名称前缀，设置后该存储库自动备份产生的备份副本都将携带该备份名称前缀
+    * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
     *
     * @var string[]
     */
@@ -148,7 +176,11 @@ class VaultCreate implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'autoBind' => 'setAutoBind',
             'bindRules' => 'setBindRules',
-            'autoExpand' => 'setAutoExpand'
+            'autoExpand' => 'setAutoExpand',
+            'threshold' => 'setThreshold',
+            'smnNotify' => 'setSmnNotify',
+            'backupNamePrefix' => 'setBackupNamePrefix',
+            'demandBilling' => 'setDemandBilling'
     ];
 
     /**
@@ -162,7 +194,11 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID，默认为‘0’。
     * autoBind  是否支持自动挂载。
     * bindRules  bindRules
-    * autoExpand  是否自动扩容。按需存储库支持自动扩容，包周期存储库不支持扩容。
+    * autoExpand  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,hcso_dt)
+    * threshold  存储库容量阈值，已用容量占总容量达到此百分比，将根据 smn_notify 参数设置选择是否发送相关通知。 默认值为：80 最大值：100 最小值：1
+    * smnNotify  存储库smn消息通知开关。 默认值为 true。
+    * backupNamePrefix  备份名称前缀，设置后该存储库自动备份产生的备份副本都将携带该备份名称前缀
+    * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
     *
     * @var string[]
     */
@@ -176,7 +212,11 @@ class VaultCreate implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'autoBind' => 'getAutoBind',
             'bindRules' => 'getBindRules',
-            'autoExpand' => 'getAutoExpand'
+            'autoExpand' => 'getAutoExpand',
+            'threshold' => 'getThreshold',
+            'smnNotify' => 'getSmnNotify',
+            'backupNamePrefix' => 'getBackupNamePrefix',
+            'demandBilling' => 'getDemandBilling'
     ];
 
     /**
@@ -247,6 +287,10 @@ class VaultCreate implements ModelInterface, ArrayAccess
         $this->container['autoBind'] = isset($data['autoBind']) ? $data['autoBind'] : null;
         $this->container['bindRules'] = isset($data['bindRules']) ? $data['bindRules'] : null;
         $this->container['autoExpand'] = isset($data['autoExpand']) ? $data['autoExpand'] : null;
+        $this->container['threshold'] = isset($data['threshold']) ? $data['threshold'] : 80;
+        $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : true;
+        $this->container['backupNamePrefix'] = isset($data['backupNamePrefix']) ? $data['backupNamePrefix'] : null;
+        $this->container['demandBilling'] = isset($data['demandBilling']) ? $data['demandBilling'] : false;
     }
 
     /**
@@ -284,6 +328,18 @@ class VaultCreate implements ModelInterface, ArrayAccess
         if ($this->container['resources'] === null) {
             $invalidProperties[] = "'resources' can't be null";
         }
+            if (!is_null($this->container['threshold']) && ($this->container['threshold'] > 100)) {
+                $invalidProperties[] = "invalid value for 'threshold', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['threshold']) && ($this->container['threshold'] < 1)) {
+                $invalidProperties[] = "invalid value for 'threshold', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['backupNamePrefix']) && (mb_strlen($this->container['backupNamePrefix']) > 32)) {
+                $invalidProperties[] = "invalid value for 'backupNamePrefix', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['backupNamePrefix']) && (mb_strlen($this->container['backupNamePrefix']) < 0)) {
+                $invalidProperties[] = "invalid value for 'backupNamePrefix', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -516,7 +572,7 @@ class VaultCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoExpand
-    *  是否自动扩容。按需存储库支持自动扩容，包周期存储库不支持扩容。
+    *  [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,hcso_dt)
     *
     * @return bool|null
     */
@@ -528,13 +584,109 @@ class VaultCreate implements ModelInterface, ArrayAccess
     /**
     * Sets autoExpand
     *
-    * @param bool|null $autoExpand 是否自动扩容。按需存储库支持自动扩容，包周期存储库不支持扩容。
+    * @param bool|null $autoExpand [是否开启存储库自动扩容能力（只支持按需存储库）。](tag:hws,hws_hk) [是否开启存储库自动扩容能力。](tag:dt,ocb,tlf,sbc,fcs_vm,ctc,g42,tm,cmcc,hcso_dt)
     *
     * @return $this
     */
     public function setAutoExpand($autoExpand)
     {
         $this->container['autoExpand'] = $autoExpand;
+        return $this;
+    }
+
+    /**
+    * Gets threshold
+    *  存储库容量阈值，已用容量占总容量达到此百分比，将根据 smn_notify 参数设置选择是否发送相关通知。 默认值为：80 最大值：100 最小值：1
+    *
+    * @return int|null
+    */
+    public function getThreshold()
+    {
+        return $this->container['threshold'];
+    }
+
+    /**
+    * Sets threshold
+    *
+    * @param int|null $threshold 存储库容量阈值，已用容量占总容量达到此百分比，将根据 smn_notify 参数设置选择是否发送相关通知。 默认值为：80 最大值：100 最小值：1
+    *
+    * @return $this
+    */
+    public function setThreshold($threshold)
+    {
+        $this->container['threshold'] = $threshold;
+        return $this;
+    }
+
+    /**
+    * Gets smnNotify
+    *  存储库smn消息通知开关。 默认值为 true。
+    *
+    * @return bool|null
+    */
+    public function getSmnNotify()
+    {
+        return $this->container['smnNotify'];
+    }
+
+    /**
+    * Sets smnNotify
+    *
+    * @param bool|null $smnNotify 存储库smn消息通知开关。 默认值为 true。
+    *
+    * @return $this
+    */
+    public function setSmnNotify($smnNotify)
+    {
+        $this->container['smnNotify'] = $smnNotify;
+        return $this;
+    }
+
+    /**
+    * Gets backupNamePrefix
+    *  备份名称前缀，设置后该存储库自动备份产生的备份副本都将携带该备份名称前缀
+    *
+    * @return string|null
+    */
+    public function getBackupNamePrefix()
+    {
+        return $this->container['backupNamePrefix'];
+    }
+
+    /**
+    * Sets backupNamePrefix
+    *
+    * @param string|null $backupNamePrefix 备份名称前缀，设置后该存储库自动备份产生的备份副本都将携带该备份名称前缀
+    *
+    * @return $this
+    */
+    public function setBackupNamePrefix($backupNamePrefix)
+    {
+        $this->container['backupNamePrefix'] = $backupNamePrefix;
+        return $this;
+    }
+
+    /**
+    * Gets demandBilling
+    *  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
+    *
+    * @return bool|null
+    */
+    public function getDemandBilling()
+    {
+        return $this->container['demandBilling'];
+    }
+
+    /**
+    * Sets demandBilling
+    *
+    * @param bool|null $demandBilling 存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
+    *
+    * @return $this
+    */
+    public function setDemandBilling($demandBilling)
+    {
+        $this->container['demandBilling'] = $demandBilling;
         return $this;
     }
 

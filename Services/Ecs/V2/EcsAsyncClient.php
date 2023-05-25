@@ -1759,6 +1759,101 @@ class EcsAsyncClient extends Client
     }
 
     /**
+     * 查询规格销售策略
+     *
+     * 查询规格销售策略。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listFlavorSellPoliciesAsync($request)
+    {
+        return $this->listFlavorSellPoliciesAsyncWithHttpInfo($request);
+    }
+    
+    public function listFlavorSellPoliciesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/cloudservers/flavor-sell-policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['flavorId'] !== null) {
+            $queryParams['flavor_id'] = $localVarParams['flavorId'];
+        }
+        if ($localVarParams['sellStatus'] !== null) {
+            $queryParams['sell_status'] = $localVarParams['sellStatus'];
+        }
+        if ($localVarParams['sellMode'] !== null) {
+            $queryParams['sell_mode'] = $localVarParams['sellMode'];
+        }
+        if ($localVarParams['availabilityZoneId'] !== null) {
+            $queryParams['availability_zone_id'] = $localVarParams['availabilityZoneId'];
+        }
+        if ($localVarParams['longestSpotDurationHoursGt'] !== null) {
+            $queryParams['longest_spot_duration_hours_gt'] = $localVarParams['longestSpotDurationHoursGt'];
+        }
+        if ($localVarParams['largestSpotDurationCountGt'] !== null) {
+            $queryParams['largest_spot_duration_count_gt'] = $localVarParams['largestSpotDurationCountGt'];
+        }
+        if ($localVarParams['longestSpotDurationHours'] !== null) {
+            $queryParams['longest_spot_duration_hours'] = $localVarParams['longestSpotDurationHours'];
+        }
+        if ($localVarParams['largestSpotDurationCount'] !== null) {
+            $queryParams['largest_spot_duration_count'] = $localVarParams['largestSpotDurationCount'];
+        }
+        if ($localVarParams['interruptionPolicy'] !== null) {
+            $queryParams['interruption_policy'] = $localVarParams['interruptionPolicy'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListFlavorSellPoliciesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListFlavorSellPoliciesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询规格详情和规格扩展信息列表
      *
      * 查询云服务器规格详情信息和规格扩展信息列表。

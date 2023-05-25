@@ -20,7 +20,6 @@ class ShowCdnStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * startTime  起始时间，格式为yyyymmddhhmmss。
     * endTime  结束时间，格式为yyyymmddhhmmss。  - “**start_time**”、“**end_time**”均不存在时，“**start_time**”取当天零点，“end_time”取当前时间。  - “**start_time**”不存在、“**end_time**”存在，请求非法。  - “**start_time**”存在、“**end_time**”不存在，“**end_time**”取当前时间。  - 只能查询最近三个月内的数据，且时间跨度不能超过31天。  - 起始时间和结束时间会自动规整，起始时间规整为指定时间所在的整点时刻，结束时间规整为指定时间所在时间的下一小时整点时刻。
@@ -31,7 +30,6 @@ class ShowCdnStatisticsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'authorization' => 'string',
             'xSdkDate' => 'string',
             'startTime' => 'string',
             'endTime' => 'string',
@@ -42,7 +40,6 @@ class ShowCdnStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * startTime  起始时间，格式为yyyymmddhhmmss。
     * endTime  结束时间，格式为yyyymmddhhmmss。  - “**start_time**”、“**end_time**”均不存在时，“**start_time**”取当天零点，“end_time”取当前时间。  - “**start_time**”不存在、“**end_time**”存在，请求非法。  - “**start_time**”存在、“**end_time**”不存在，“**end_time**”取当前时间。  - 只能查询最近三个月内的数据，且时间跨度不能超过31天。  - 起始时间和结束时间会自动规整，起始时间规整为指定时间所在的整点时刻，结束时间规整为指定时间所在时间的下一小时整点时刻。
@@ -53,7 +50,6 @@ class ShowCdnStatisticsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'authorization' => null,
         'xSdkDate' => null,
         'startTime' => null,
         'endTime' => null,
@@ -85,7 +81,6 @@ class ShowCdnStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * startTime  起始时间，格式为yyyymmddhhmmss。
     * endTime  结束时间，格式为yyyymmddhhmmss。  - “**start_time**”、“**end_time**”均不存在时，“**start_time**”取当天零点，“end_time”取当前时间。  - “**start_time**”不存在、“**end_time**”存在，请求非法。  - “**start_time**”存在、“**end_time**”不存在，“**end_time**”取当前时间。  - 只能查询最近三个月内的数据，且时间跨度不能超过31天。  - 起始时间和结束时间会自动规整，起始时间规整为指定时间所在的整点时刻，结束时间规整为指定时间所在时间的下一小时整点时刻。
@@ -96,7 +91,6 @@ class ShowCdnStatisticsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'authorization' => 'Authorization',
             'xSdkDate' => 'X-Sdk-Date',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
@@ -107,7 +101,6 @@ class ShowCdnStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * startTime  起始时间，格式为yyyymmddhhmmss。
     * endTime  结束时间，格式为yyyymmddhhmmss。  - “**start_time**”、“**end_time**”均不存在时，“**start_time**”取当天零点，“end_time”取当前时间。  - “**start_time**”不存在、“**end_time**”存在，请求非法。  - “**start_time**”存在、“**end_time**”不存在，“**end_time**”取当前时间。  - 只能查询最近三个月内的数据，且时间跨度不能超过31天。  - 起始时间和结束时间会自动规整，起始时间规整为指定时间所在的整点时刻，结束时间规整为指定时间所在时间的下一小时整点时刻。
@@ -118,7 +111,6 @@ class ShowCdnStatisticsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'authorization' => 'setAuthorization',
             'xSdkDate' => 'setXSdkDate',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
@@ -129,7 +121,6 @@ class ShowCdnStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * startTime  起始时间，格式为yyyymmddhhmmss。
     * endTime  结束时间，格式为yyyymmddhhmmss。  - “**start_time**”、“**end_time**”均不存在时，“**start_time**”取当天零点，“end_time”取当前时间。  - “**start_time**”不存在、“**end_time**”存在，请求非法。  - “**start_time**”存在、“**end_time**”不存在，“**end_time**”取当前时间。  - 只能查询最近三个月内的数据，且时间跨度不能超过31天。  - 起始时间和结束时间会自动规整，起始时间规整为指定时间所在的整点时刻，结束时间规整为指定时间所在时间的下一小时整点时刻。
@@ -140,7 +131,6 @@ class ShowCdnStatisticsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'authorization' => 'getAuthorization',
             'xSdkDate' => 'getXSdkDate',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
@@ -207,7 +197,6 @@ class ShowCdnStatisticsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['authorization'] = isset($data['authorization']) ? $data['authorization'] : null;
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
@@ -224,12 +213,6 @@ class ShowCdnStatisticsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['authorization']) && (mb_strlen($this->container['authorization']) > 256)) {
-                $invalidProperties[] = "invalid value for 'authorization', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['authorization']) && (mb_strlen($this->container['authorization']) < 1)) {
-                $invalidProperties[] = "invalid value for 'authorization', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['xSdkDate']) && (mb_strlen($this->container['xSdkDate']) > 256)) {
                 $invalidProperties[] = "invalid value for 'xSdkDate', the character length must be smaller than or equal to 256.";
             }
@@ -254,30 +237,6 @@ class ShowCdnStatisticsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets authorization
-    *  使用AK/SK方式认证时必选，携带的鉴权信息。
-    *
-    * @return string|null
-    */
-    public function getAuthorization()
-    {
-        return $this->container['authorization'];
-    }
-
-    /**
-    * Sets authorization
-    *
-    * @param string|null $authorization 使用AK/SK方式认证时必选，携带的鉴权信息。
-    *
-    * @return $this
-    */
-    public function setAuthorization($authorization)
-    {
-        $this->container['authorization'] = $authorization;
-        return $this;
     }
 
     /**

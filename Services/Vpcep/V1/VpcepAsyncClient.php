@@ -1845,11 +1845,11 @@ class VpcepAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1949,7 +1949,7 @@ class VpcepAsyncClient extends Client
     }
 
     /**
-     * 更新终端节点的白名单
+     * 更新终端节点
      *
      * 功能介绍
      * 更新或删除允许访问终端节点的白名单。

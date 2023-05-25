@@ -26,7 +26,7 @@ class Template implements ModelInterface, ArrayAccess
     * createTime  模板的生成时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     * updateTime  模板的更新时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     * latestVersionId  模板中最新的模板版本ID
-    * latestVersionDescription  -> 模板中最新模板版本的版本描述
+    * latestVersionDescription  模板中最新模板版本的版本描述
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class Template implements ModelInterface, ArrayAccess
     * createTime  模板的生成时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     * updateTime  模板的更新时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     * latestVersionId  模板中最新的模板版本ID
-    * latestVersionDescription  -> 模板中最新模板版本的版本描述
+    * latestVersionDescription  模板中最新模板版本的版本描述
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class Template implements ModelInterface, ArrayAccess
     * createTime  模板的生成时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     * updateTime  模板的更新时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     * latestVersionId  模板中最新的模板版本ID
-    * latestVersionDescription  -> 模板中最新模板版本的版本描述
+    * latestVersionDescription  模板中最新模板版本的版本描述
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class Template implements ModelInterface, ArrayAccess
     * createTime  模板的生成时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     * updateTime  模板的更新时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     * latestVersionId  模板中最新的模板版本ID
-    * latestVersionDescription  -> 模板中最新模板版本的版本描述
+    * latestVersionDescription  模板中最新模板版本的版本描述
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class Template implements ModelInterface, ArrayAccess
     * createTime  模板的生成时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     * updateTime  模板的更新时间，格式遵循RFC3339，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z
     * latestVersionId  模板中最新的模板版本ID
-    * latestVersionDescription  -> 模板中最新模板版本的版本描述
+    * latestVersionDescription  模板中最新模板版本的版本描述
     *
     * @var string[]
     */
@@ -269,8 +269,8 @@ class Template implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['latestVersionId']) < 2)) {
                 $invalidProperties[] = "invalid value for 'latestVersionId', the character length must be bigger than or equal to 2.";
             }
-            if (!preg_match("/^V[0-9]{1,10}$/", $this->container['latestVersionId'])) {
-                $invalidProperties[] = "invalid value for 'latestVersionId', must be conform to the pattern /^V[0-9]{1,10}$/.";
+            if (!preg_match("/^V[1-9][0-9]{0,9}$/", $this->container['latestVersionId'])) {
+                $invalidProperties[] = "invalid value for 'latestVersionId', must be conform to the pattern /^V[1-9][0-9]{0,9}$/.";
             }
         if ($this->container['latestVersionDescription'] === null) {
             $invalidProperties[] = "'latestVersionDescription' can't be null";
@@ -441,7 +441,7 @@ class Template implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestVersionDescription
-    *  -> 模板中最新模板版本的版本描述
+    *  模板中最新模板版本的版本描述
     *
     * @return string
     */
@@ -453,7 +453,7 @@ class Template implements ModelInterface, ArrayAccess
     /**
     * Sets latestVersionDescription
     *
-    * @param string $latestVersionDescription -> 模板中最新模板版本的版本描述
+    * @param string $latestVersionDescription 模板中最新模板版本的版本描述
     *
     * @return $this
     */

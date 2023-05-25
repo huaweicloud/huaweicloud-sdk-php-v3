@@ -27,7 +27,7 @@ class ListConfigTemplatesResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'templateNum' => 'float',
+            'templateNum' => 'int',
             'configTemplates' => '\HuaweiCloud\SDK\Dcs\V2\Model\ConfigTemplatesListInfo[]'
     ];
 
@@ -188,7 +188,7 @@ class ListConfigTemplatesResponse implements ModelInterface, ArrayAccess
     * Gets templateNum
     *  模板个数。
     *
-    * @return float|null
+    * @return int|null
     */
     public function getTemplateNum()
     {
@@ -198,7 +198,7 @@ class ListConfigTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets templateNum
     *
-    * @param float|null $templateNum 模板个数。
+    * @param int|null $templateNum 模板个数。
     *
     * @return $this
     */

@@ -358,6 +358,130 @@ class CbrClient extends Client
     }
 
     /**
+     * 批量修改存储库
+     *
+     * 批量修改项目下所有存储库
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchUpdateVault($request)
+    {
+        return $this->batchUpdateVaultWithHttpInfo($request);
+    }
+
+    public function batchUpdateVaultWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vaults/batch-update';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\BatchUpdateVaultResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\BatchUpdateVaultRequest');
+    }
+
+    /**
+     * 查询agent状态
+     *
+     * 检查应用一致性Agent状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkAgent($request)
+    {
+        return $this->checkAgentWithHttpInfo($request);
+    }
+
+    public function checkAgentWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/agent/check';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\CheckAgentResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\CheckAgentRequest');
+    }
+
+    /**
      * 复制备份
      *
      * 跨区域复制备份。
@@ -606,6 +730,68 @@ class CbrClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\CreatePolicyResponse',
             $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\CreatePolicyRequest');
+    }
+
+    /**
+     * 创建包周期存储库
+     *
+     * 创建包周期存储库
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPostPaidVault($request)
+    {
+        return $this->createPostPaidVaultWithHttpInfo($request);
+    }
+
+    public function createPostPaidVaultWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vaults/order';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\CreatePostPaidVaultResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\CreatePostPaidVaultRequest');
     }
 
     /**
@@ -1180,6 +1366,68 @@ class CbrClient extends Client
     }
 
     /**
+     * 同步备份还原点
+     *
+     * 针对vault同步备份副本
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function importCheckpoint($request)
+    {
+        return $this->importCheckpointWithHttpInfo($request);
+    }
+
+    public function importCheckpointWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/checkpoints/sync';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ImportCheckpointResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ImportCheckpointRequest');
+    }
+
+    /**
      * 查询客户端列表
      *
      * 查询客户端列表
@@ -1379,6 +1627,151 @@ class CbrClient extends Client
     }
 
     /**
+     * 查询租户项目列表
+     *
+     * 根据指定租户名称查询项目列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDomainProjects($request)
+    {
+        return $this->listDomainProjectsWithHttpInfo($request);
+    }
+
+    public function listDomainProjectsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/domain/{domain_name}/projects';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $pathParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ListDomainProjectsResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ListDomainProjectsRequest');
+    }
+
+    /**
+     * 查询其他区域存储库列表
+     *
+     * 查询其他区域的存储库列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listExternalVault($request)
+    {
+        return $this->listExternalVaultWithHttpInfo($request);
+    }
+
+    public function listExternalVaultWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vaults/external';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['externalProjectId'] !== null) {
+            $queryParams['external_project_id'] = $localVarParams['externalProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['protectType'] !== null) {
+            $queryParams['protect_type'] = $localVarParams['protectType'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($localVarParams['objcetType'] !== null) {
+            $queryParams['objcet_type'] = $localVarParams['objcetType'];
+        }
+        if ($localVarParams['cloudType'] !== null) {
+            $queryParams['cloud_type'] = $localVarParams['cloudType'];
+        }
+        if ($localVarParams['vaultId'] !== null) {
+            $queryParams['vault_id'] = $localVarParams['vaultId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ListExternalVaultResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ListExternalVaultRequest');
+    }
+
+    /**
      * 查询任务列表
      *
      * 查询任务列表
@@ -1536,6 +1929,65 @@ class CbrClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ListPoliciesResponse',
             $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ListPoliciesRequest');
+    }
+
+    /**
+     * 查询租户的项目信息
+     *
+     * 查询租户的企业项目信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listProjects($request)
+    {
+        return $this->listProjectsWithHttpInfo($request);
+    }
+
+    public function listProjectsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/region-projects';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ListProjectsResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ListProjectsRequest');
     }
 
     /**
@@ -1711,6 +2163,68 @@ class CbrClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ListVaultResponse',
             $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ListVaultRequest');
+    }
+
+    /**
+     * 租户迁移
+     *
+     * 将CSBS/VBS资源迁移到CBR。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function migrateDomain($request)
+    {
+        return $this->migrateDomainWithHttpInfo($request);
+    }
+
+    public function migrateDomainWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/migrates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\MigrateDomainResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\MigrateDomainRequest');
     }
 
     /**
@@ -2036,6 +2550,71 @@ class CbrClient extends Client
     }
 
     /**
+     * 设置存储库资源
+     *
+     * 设置存储库资源是否自动备份
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setVaultResource($request)
+    {
+        return $this->setVaultResourceWithHttpInfo($request);
+    }
+
+    public function setVaultResourceWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vaults/{vault_id}/set-resources';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vaultId'] !== null) {
+            $pathParams['vault_id'] = $localVarParams['vaultId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\SetVaultResourceResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\SetVaultResourceRequest');
+    }
+
+    /**
      * 查询指定客户端
      *
      * 查询指定客户端
@@ -2222,6 +2801,68 @@ class CbrClient extends Client
     }
 
     /**
+     * 查询租户信息
+     *
+     * 由控制台调用的内部接口，用于仅在查询共享备份时获取源project_id的域名信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomain($request)
+    {
+        return $this->showDomainWithHttpInfo($request);
+    }
+
+    public function showDomainWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/domain/{source_project_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['sourceProjectId'] !== null) {
+            $pathParams['source_project_id'] = $localVarParams['sourceProjectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowDomainResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowDomainRequest');
+    }
+
+    /**
      * 获取备份成员详情
      *
      * 获取备份成员的详情
@@ -2370,6 +3011,130 @@ class CbrClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowMembersDetailResponse',
             $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowMembersDetailRequest');
+    }
+
+    /**
+     * 查询备份元数据
+     *
+     * 查询备份时资源的元数据
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showMetadata($request)
+    {
+        return $this->showMetadataWithHttpInfo($request);
+    }
+
+    public function showMetadataWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/backups/{backup_id}/metadata';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['backupId'] !== null) {
+            $pathParams['backup_id'] = $localVarParams['backupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowMetadataResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowMetadataRequest');
+    }
+
+    /**
+     * 查询迁移
+     *
+     * 查询迁移结果
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showMigrateStatus($request)
+    {
+        return $this->showMigrateStatusWithHttpInfo($request);
+    }
+
+    public function showMigrateStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/migrates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['allRegions'] !== null) {
+            $queryParams['all_regions'] = $localVarParams['allRegions'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowMigrateStatusResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowMigrateStatusRequest');
     }
 
     /**
@@ -2618,6 +3383,77 @@ class CbrClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowReplicationCapabilitiesResponse',
             $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowReplicationCapabilitiesRequest');
+    }
+
+    /**
+     * 查询容量统计
+     *
+     * 查询容量统计
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showStorageUsage($request)
+    {
+        return $this->showStorageUsageWithHttpInfo($request);
+    }
+
+    public function showStorageUsageWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/storage_usage';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $queryParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $queryParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowStorageUsageResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowStorageUsageRequest');
     }
 
     /**
@@ -2996,6 +3832,71 @@ class CbrClient extends Client
     }
 
     /**
+     * 更新备份
+     *
+     * 根据备份id更改备份
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateBackup($request)
+    {
+        return $this->updateBackupWithHttpInfo($request);
+    }
+
+    public function updateBackupWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/backups/{backup_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['backupId'] !== null) {
+            $pathParams['backup_id'] = $localVarParams['backupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\UpdateBackupResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\UpdateBackupRequest');
+    }
+
+    /**
      * 更新备份成员状态
      *
      * 更新备份共享成员的状态，需要接收方执行此API。
@@ -3061,6 +3962,71 @@ class CbrClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\UpdateMemberStatusResponse',
             $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\UpdateMemberStatusRequest');
+    }
+
+    /**
+     * 变更
+     *
+     * 订单更新，支付cbc订单后，调用该接口更新包周期产品订单信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateOrder($request)
+    {
+        return $this->updateOrderWithHttpInfo($request);
+    }
+
+    public function updateOrderWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/orders/{order_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['orderId'] !== null) {
+            $pathParams['order_id'] = $localVarParams['orderId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\UpdateOrderResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\UpdateOrderRequest');
     }
 
     /**

@@ -169,6 +169,12 @@ class AutoscanConfigRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['enableAutoScan'] === null) {
+            $invalidProperties[] = "'enableAutoScan' can't be null";
+        }
+        if ($this->container['scheduleAt'] === null) {
+            $invalidProperties[] = "'scheduleAt' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +193,7 @@ class AutoscanConfigRequest implements ModelInterface, ArrayAccess
     * Gets enableAutoScan
     *  是否开启自动分析
     *
-    * @return bool|null
+    * @return bool
     */
     public function getEnableAutoScan()
     {
@@ -197,7 +203,7 @@ class AutoscanConfigRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enableAutoScan
     *
-    * @param bool|null $enableAutoScan 是否开启自动分析
+    * @param bool $enableAutoScan 是否开启自动分析
     *
     * @return $this
     */
@@ -211,7 +217,7 @@ class AutoscanConfigRequest implements ModelInterface, ArrayAccess
     * Gets scheduleAt
     *  每日分析时间，时间格式为21:00，时间为UTC时间
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getScheduleAt()
     {
@@ -221,7 +227,7 @@ class AutoscanConfigRequest implements ModelInterface, ArrayAccess
     /**
     * Sets scheduleAt
     *
-    * @param string[]|null $scheduleAt 每日分析时间，时间格式为21:00，时间为UTC时间
+    * @param string[] $scheduleAt 每日分析时间，时间格式为21:00，时间为UTC时间
     *
     * @return $this
     */

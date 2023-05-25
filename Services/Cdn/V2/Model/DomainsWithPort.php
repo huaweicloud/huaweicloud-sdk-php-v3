@@ -21,6 +21,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  加速域名ID。
+    * domainName  加速域名。
     * businessType  域名业务类型，若为web，则表示类型为网站加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示类型为全站加速。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
@@ -36,6 +37,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'id' => 'string',
+            'domainName' => 'string',
             'businessType' => 'string',
             'domainStatus' => 'string',
             'cname' => 'string',
@@ -51,6 +53,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  加速域名ID。
+    * domainName  加速域名。
     * businessType  域名业务类型，若为web，则表示类型为网站加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示类型为全站加速。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
@@ -66,6 +69,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'id' => null,
+        'domainName' => null,
         'businessType' => null,
         'domainStatus' => null,
         'cname' => null,
@@ -102,6 +106,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  加速域名ID。
+    * domainName  加速域名。
     * businessType  域名业务类型，若为web，则表示类型为网站加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示类型为全站加速。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
@@ -117,6 +122,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'id' => 'id',
+            'domainName' => 'domain_name',
             'businessType' => 'business_type',
             'domainStatus' => 'domain_status',
             'cname' => 'cname',
@@ -132,6 +138,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  加速域名ID。
+    * domainName  加速域名。
     * businessType  域名业务类型，若为web，则表示类型为网站加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示类型为全站加速。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
@@ -147,6 +154,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'id' => 'setId',
+            'domainName' => 'setDomainName',
             'businessType' => 'setBusinessType',
             'domainStatus' => 'setDomainStatus',
             'cname' => 'setCname',
@@ -162,6 +170,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  加速域名ID。
+    * domainName  加速域名。
     * businessType  域名业务类型，若为web，则表示类型为网站加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示类型为全站加速。
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
     * cname  加速域名对应的CNAME。
@@ -177,6 +186,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'id' => 'getId',
+            'domainName' => 'getDomainName',
             'businessType' => 'getBusinessType',
             'domainStatus' => 'getDomainStatus',
             'cname' => 'getCname',
@@ -265,6 +275,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['domainName'] = isset($data['domainName']) ? $data['domainName'] : null;
         $this->container['businessType'] = isset($data['businessType']) ? $data['businessType'] : null;
         $this->container['domainStatus'] = isset($data['domainStatus']) ? $data['domainStatus'] : null;
         $this->container['cname'] = isset($data['cname']) ? $data['cname'] : null;
@@ -328,6 +339,30 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets domainName
+    *  加速域名。
+    *
+    * @return string|null
+    */
+    public function getDomainName()
+    {
+        return $this->container['domainName'];
+    }
+
+    /**
+    * Sets domainName
+    *
+    * @param string|null $domainName 加速域名。
+    *
+    * @return $this
+    */
+    public function setDomainName($domainName)
+    {
+        $this->container['domainName'] = $domainName;
         return $this;
     }
 
