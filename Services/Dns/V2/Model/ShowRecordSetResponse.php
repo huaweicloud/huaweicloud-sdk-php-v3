@@ -35,6 +35,7 @@ class ShowRecordSetResponse implements ModelInterface, ArrayAccess
     * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
     * projectId  该Record Set所属的项目ID。
     * links  links
+    * bundle  规格，默认规格，保留字段。
     *
     * @var string[]
     */
@@ -52,7 +53,8 @@ class ShowRecordSetResponse implements ModelInterface, ArrayAccess
             'status' => 'string',
             'default' => 'bool',
             'projectId' => 'string',
-            'links' => '\HuaweiCloud\SDK\Dns\V2\Model\PageLink'
+            'links' => '\HuaweiCloud\SDK\Dns\V2\Model\PageLink',
+            'bundle' => 'string'
     ];
 
     /**
@@ -71,6 +73,7 @@ class ShowRecordSetResponse implements ModelInterface, ArrayAccess
     * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
     * projectId  该Record Set所属的项目ID。
     * links  links
+    * bundle  规格，默认规格，保留字段。
     *
     * @var string[]
     */
@@ -88,7 +91,8 @@ class ShowRecordSetResponse implements ModelInterface, ArrayAccess
         'status' => null,
         'default' => null,
         'projectId' => null,
-        'links' => null
+        'links' => null,
+        'bundle' => null
     ];
 
     /**
@@ -128,6 +132,7 @@ class ShowRecordSetResponse implements ModelInterface, ArrayAccess
     * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
     * projectId  该Record Set所属的项目ID。
     * links  links
+    * bundle  规格，默认规格，保留字段。
     *
     * @var string[]
     */
@@ -145,7 +150,8 @@ class ShowRecordSetResponse implements ModelInterface, ArrayAccess
             'status' => 'status',
             'default' => 'default',
             'projectId' => 'project_id',
-            'links' => 'links'
+            'links' => 'links',
+            'bundle' => 'bundle'
     ];
 
     /**
@@ -164,6 +170,7 @@ class ShowRecordSetResponse implements ModelInterface, ArrayAccess
     * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
     * projectId  该Record Set所属的项目ID。
     * links  links
+    * bundle  规格，默认规格，保留字段。
     *
     * @var string[]
     */
@@ -181,7 +188,8 @@ class ShowRecordSetResponse implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'default' => 'setDefault',
             'projectId' => 'setProjectId',
-            'links' => 'setLinks'
+            'links' => 'setLinks',
+            'bundle' => 'setBundle'
     ];
 
     /**
@@ -200,6 +208,7 @@ class ShowRecordSetResponse implements ModelInterface, ArrayAccess
     * default  标识是否由系统默认生成，系统默认生成的Record Set不能删除。
     * projectId  该Record Set所属的项目ID。
     * links  links
+    * bundle  规格，默认规格，保留字段。
     *
     * @var string[]
     */
@@ -217,7 +226,8 @@ class ShowRecordSetResponse implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'default' => 'getDefault',
             'projectId' => 'getProjectId',
-            'links' => 'getLinks'
+            'links' => 'getLinks',
+            'bundle' => 'getBundle'
     ];
 
     /**
@@ -292,6 +302,7 @@ class ShowRecordSetResponse implements ModelInterface, ArrayAccess
         $this->container['default'] = isset($data['default']) ? $data['default'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['bundle'] = isset($data['bundle']) ? $data['bundle'] : null;
     }
 
     /**
@@ -649,6 +660,30 @@ class ShowRecordSetResponse implements ModelInterface, ArrayAccess
     public function setLinks($links)
     {
         $this->container['links'] = $links;
+        return $this;
+    }
+
+    /**
+    * Gets bundle
+    *  规格，默认规格，保留字段。
+    *
+    * @return string|null
+    */
+    public function getBundle()
+    {
+        return $this->container['bundle'];
+    }
+
+    /**
+    * Sets bundle
+    *
+    * @param string|null $bundle 规格，默认规格，保留字段。
+    *
+    * @return $this
+    */
+    public function setBundle($bundle)
+    {
+        $this->container['bundle'] = $bundle;
         return $this;
     }
 

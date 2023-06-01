@@ -26,7 +26,7 @@ class ListVersionResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'version' => 'object'
+            'version' => '\HuaweiCloud\SDK\Smn\V2\Model\VersionItem'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ListVersionResponse implements ModelInterface, ArrayAccess
     * Gets version
     *  version
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Smn\V2\Model\VersionItem|null
     */
     public function getVersion()
     {
@@ -187,7 +187,7 @@ class ListVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param object|null $version version
+    * @param \HuaweiCloud\SDK\Smn\V2\Model\VersionItem|null $version version
     *
     * @return $this
     */

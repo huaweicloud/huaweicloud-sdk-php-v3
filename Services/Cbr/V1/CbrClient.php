@@ -3457,6 +3457,65 @@ class CbrClient extends Client
     }
 
     /**
+     * 存储库容量总览
+     *
+     * 查询项目下所有存储库的总容量和总使用量
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSummary($request)
+    {
+        return $this->showSummaryWithHttpInfo($request);
+    }
+
+    public function showSummaryWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vaults/summary';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowSummaryResponse',
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowSummaryRequest');
+    }
+
+    /**
      * 查询指定存储库
      *
      * 根据ID查询指定存储库
@@ -4003,11 +4062,11 @@ class CbrClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['*/*', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }

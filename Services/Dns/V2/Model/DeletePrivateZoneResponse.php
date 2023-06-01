@@ -28,7 +28,7 @@ class DeletePrivateZoneResponse implements ModelInterface, ArrayAccess
     * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
-    * status  状态
+    * status  资源状态
     * recordNum  该zone下的recordset个数。
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
@@ -68,7 +68,7 @@ class DeletePrivateZoneResponse implements ModelInterface, ArrayAccess
     * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
-    * status  状态
+    * status  资源状态
     * recordNum  该zone下的recordset个数。
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
@@ -129,7 +129,7 @@ class DeletePrivateZoneResponse implements ModelInterface, ArrayAccess
     * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
-    * status  状态
+    * status  资源状态
     * recordNum  该zone下的recordset个数。
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
@@ -169,7 +169,7 @@ class DeletePrivateZoneResponse implements ModelInterface, ArrayAccess
     * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
-    * status  状态
+    * status  资源状态
     * recordNum  该zone下的recordset个数。
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
@@ -209,7 +209,7 @@ class DeletePrivateZoneResponse implements ModelInterface, ArrayAccess
     * zoneType  zone类型，内网（private）。
     * ttl  该zone下SOA记录中的ttl值。
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。
-    * status  状态
+    * status  资源状态
     * recordNum  该zone下的recordset个数。
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
@@ -508,7 +508,7 @@ class DeletePrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  资源状态
     *
     * @return string|null
     */
@@ -520,7 +520,7 @@ class DeletePrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态
+    * @param string|null $status 资源状态
     *
     * @return $this
     */

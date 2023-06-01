@@ -78,7 +78,10 @@ class HttpClient
         $timeOption = ['timeout' => $config->timeout,
             'connect_timeout' => $config->connectTimeout, ];
 
-        return array_merge($httpOption, $proxyOption, $sslOption, $timeOption);
+        // redirect
+        $redirectOption = ['allow_redirects' => $config->allowRedirect];
+
+        return array_merge($httpOption, $proxyOption, $sslOption, $timeOption, $redirectOption);
     }
 
     public function doRequestSync(SdkRequest $sdkRequest)

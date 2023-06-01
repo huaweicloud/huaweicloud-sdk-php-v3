@@ -20,30 +20,38 @@ class BackSources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sourcesType  源站类型（\"ipaddr\"：\"源站IP\"，\"domain\"：\"源站域名\"，\"obs_bucket\"：\"OBS桶域名\"）。
+    * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * ipOrDomain  源站IP或者域名。
-    * obsBucketType  obs桶类型，“private”： 私有桶， “public”： 公有桶。
+    * obsBucketType  obs桶类型， “private”： 私有桶， “public”： 公有桶。
+    * httpPort  HTTP端口，取值范围：1-65535。
+    * httpsPort  HTTPS端口，取值范围：1-65535。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'sourcesType' => 'string',
             'ipOrDomain' => 'string',
-            'obsBucketType' => 'string'
+            'obsBucketType' => 'string',
+            'httpPort' => 'int',
+            'httpsPort' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sourcesType  源站类型（\"ipaddr\"：\"源站IP\"，\"domain\"：\"源站域名\"，\"obs_bucket\"：\"OBS桶域名\"）。
+    * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * ipOrDomain  源站IP或者域名。
-    * obsBucketType  obs桶类型，“private”： 私有桶， “public”： 公有桶。
+    * obsBucketType  obs桶类型， “private”： 私有桶， “public”： 公有桶。
+    * httpPort  HTTP端口，取值范围：1-65535。
+    * httpsPort  HTTPS端口，取值范围：1-65535。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'sourcesType' => null,
         'ipOrDomain' => null,
-        'obsBucketType' => null
+        'obsBucketType' => null,
+        'httpPort' => 'int32',
+        'httpsPort' => 'int32'
     ];
 
     /**
@@ -69,44 +77,56 @@ class BackSources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sourcesType  源站类型（\"ipaddr\"：\"源站IP\"，\"domain\"：\"源站域名\"，\"obs_bucket\"：\"OBS桶域名\"）。
+    * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * ipOrDomain  源站IP或者域名。
-    * obsBucketType  obs桶类型，“private”： 私有桶， “public”： 公有桶。
+    * obsBucketType  obs桶类型， “private”： 私有桶， “public”： 公有桶。
+    * httpPort  HTTP端口，取值范围：1-65535。
+    * httpsPort  HTTPS端口，取值范围：1-65535。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'sourcesType' => 'sources_type',
             'ipOrDomain' => 'ip_or_domain',
-            'obsBucketType' => 'obs_bucket_type'
+            'obsBucketType' => 'obs_bucket_type',
+            'httpPort' => 'http_port',
+            'httpsPort' => 'https_port'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sourcesType  源站类型（\"ipaddr\"：\"源站IP\"，\"domain\"：\"源站域名\"，\"obs_bucket\"：\"OBS桶域名\"）。
+    * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * ipOrDomain  源站IP或者域名。
-    * obsBucketType  obs桶类型，“private”： 私有桶， “public”： 公有桶。
+    * obsBucketType  obs桶类型， “private”： 私有桶， “public”： 公有桶。
+    * httpPort  HTTP端口，取值范围：1-65535。
+    * httpsPort  HTTPS端口，取值范围：1-65535。
     *
     * @var string[]
     */
     protected static $setters = [
             'sourcesType' => 'setSourcesType',
             'ipOrDomain' => 'setIpOrDomain',
-            'obsBucketType' => 'setObsBucketType'
+            'obsBucketType' => 'setObsBucketType',
+            'httpPort' => 'setHttpPort',
+            'httpsPort' => 'setHttpsPort'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sourcesType  源站类型（\"ipaddr\"：\"源站IP\"，\"domain\"：\"源站域名\"，\"obs_bucket\"：\"OBS桶域名\"）。
+    * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * ipOrDomain  源站IP或者域名。
-    * obsBucketType  obs桶类型，“private”： 私有桶， “public”： 公有桶。
+    * obsBucketType  obs桶类型， “private”： 私有桶， “public”： 公有桶。
+    * httpPort  HTTP端口，取值范围：1-65535。
+    * httpsPort  HTTPS端口，取值范围：1-65535。
     *
     * @var string[]
     */
     protected static $getters = [
             'sourcesType' => 'getSourcesType',
             'ipOrDomain' => 'getIpOrDomain',
-            'obsBucketType' => 'getObsBucketType'
+            'obsBucketType' => 'getObsBucketType',
+            'httpPort' => 'getHttpPort',
+            'httpsPort' => 'getHttpsPort'
     ];
 
     /**
@@ -170,6 +190,8 @@ class BackSources implements ModelInterface, ArrayAccess
         $this->container['sourcesType'] = isset($data['sourcesType']) ? $data['sourcesType'] : null;
         $this->container['ipOrDomain'] = isset($data['ipOrDomain']) ? $data['ipOrDomain'] : null;
         $this->container['obsBucketType'] = isset($data['obsBucketType']) ? $data['obsBucketType'] : null;
+        $this->container['httpPort'] = isset($data['httpPort']) ? $data['httpPort'] : null;
+        $this->container['httpsPort'] = isset($data['httpsPort']) ? $data['httpsPort'] : null;
     }
 
     /**
@@ -202,7 +224,7 @@ class BackSources implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourcesType
-    *  源站类型（\"ipaddr\"：\"源站IP\"，\"domain\"：\"源站域名\"，\"obs_bucket\"：\"OBS桶域名\"）。
+    *  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     *
     * @return string
     */
@@ -214,7 +236,7 @@ class BackSources implements ModelInterface, ArrayAccess
     /**
     * Sets sourcesType
     *
-    * @param string $sourcesType 源站类型（\"ipaddr\"：\"源站IP\"，\"domain\"：\"源站域名\"，\"obs_bucket\"：\"OBS桶域名\"）。
+    * @param string $sourcesType 源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     *
     * @return $this
     */
@@ -250,7 +272,7 @@ class BackSources implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsBucketType
-    *  obs桶类型，“private”： 私有桶， “public”： 公有桶。
+    *  obs桶类型， “private”： 私有桶， “public”： 公有桶。
     *
     * @return string|null
     */
@@ -262,13 +284,61 @@ class BackSources implements ModelInterface, ArrayAccess
     /**
     * Sets obsBucketType
     *
-    * @param string|null $obsBucketType obs桶类型，“private”： 私有桶， “public”： 公有桶。
+    * @param string|null $obsBucketType obs桶类型， “private”： 私有桶， “public”： 公有桶。
     *
     * @return $this
     */
     public function setObsBucketType($obsBucketType)
     {
         $this->container['obsBucketType'] = $obsBucketType;
+        return $this;
+    }
+
+    /**
+    * Gets httpPort
+    *  HTTP端口，取值范围：1-65535。
+    *
+    * @return int|null
+    */
+    public function getHttpPort()
+    {
+        return $this->container['httpPort'];
+    }
+
+    /**
+    * Sets httpPort
+    *
+    * @param int|null $httpPort HTTP端口，取值范围：1-65535。
+    *
+    * @return $this
+    */
+    public function setHttpPort($httpPort)
+    {
+        $this->container['httpPort'] = $httpPort;
+        return $this;
+    }
+
+    /**
+    * Gets httpsPort
+    *  HTTPS端口，取值范围：1-65535。
+    *
+    * @return int|null
+    */
+    public function getHttpsPort()
+    {
+        return $this->container['httpsPort'];
+    }
+
+    /**
+    * Sets httpsPort
+    *
+    * @param int|null $httpsPort HTTPS端口，取值范围：1-65535。
+    *
+    * @return $this
+    */
+    public function setHttpsPort($httpsPort)
+    {
+        $this->container['httpsPort'] = $httpsPort;
         return $this;
     }
 

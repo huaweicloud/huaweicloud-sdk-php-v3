@@ -41,7 +41,7 @@ class QuotaRecord implements ModelInterface, ArrayAccess
             'operationType' => 'string',
             'quotaId' => 'string',
             'parentQuotaId' => 'string',
-            'amount' => 'double',
+            'amount' => 'float',
             'operationTime' => 'string',
             'result' => 'string',
             'indirectPartnerAccountName' => 'string',
@@ -73,7 +73,7 @@ class QuotaRecord implements ModelInterface, ArrayAccess
         'operationType' => null,
         'quotaId' => null,
         'parentQuotaId' => null,
-        'amount' => 'double',
+        'amount' => 'bigdecimal',
         'operationTime' => null,
         'result' => null,
         'indirectPartnerAccountName' => null,
@@ -417,7 +417,7 @@ class QuotaRecord implements ModelInterface, ArrayAccess
     * Gets amount
     *  发放回收的金额。 取值大于0且精确到小数点后2位，单位：元。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmount()
     {
@@ -427,7 +427,7 @@ class QuotaRecord implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double|null $amount 发放回收的金额。 取值大于0且精确到小数点后2位，单位：元。
+    * @param float|null $amount 发放回收的金额。 取值大于0且精确到小数点后2位，单位：元。
     *
     * @return $this
     */

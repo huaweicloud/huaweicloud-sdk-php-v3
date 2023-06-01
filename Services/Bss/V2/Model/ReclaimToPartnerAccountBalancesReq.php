@@ -28,7 +28,7 @@ class ReclaimToPartnerAccountBalancesReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'customerId' => 'string',
-            'amount' => 'double',
+            'amount' => 'float',
             'indirectPartnerId' => 'string'
     ];
 
@@ -42,7 +42,7 @@ class ReclaimToPartnerAccountBalancesReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'customerId' => null,
-        'amount' => 'double',
+        'amount' => 'bigdecimal',
         'indirectPartnerId' => null
     ];
 
@@ -246,7 +246,7 @@ class ReclaimToPartnerAccountBalancesReq implements ModelInterface, ArrayAccess
     * Gets amount
     *  回收的金额。 单位：元。取值大于0且精确到小数点后2位。
     *
-    * @return double
+    * @return float
     */
     public function getAmount()
     {
@@ -256,7 +256,7 @@ class ReclaimToPartnerAccountBalancesReq implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double $amount 回收的金额。 单位：元。取值大于0且精确到小数点后2位。
+    * @param float $amount 回收的金额。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @return $this
     */

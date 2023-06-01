@@ -27,7 +27,7 @@ class QuotaReclaim implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'quotaId' => 'string',
-            'quotaBalance' => 'double'
+            'quotaBalance' => 'float'
     ];
 
     /**
@@ -39,7 +39,7 @@ class QuotaReclaim implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'quotaId' => null,
-        'quotaBalance' => 'double'
+        'quotaBalance' => 'bigdecimal'
     ];
 
     /**
@@ -211,7 +211,7 @@ class QuotaReclaim implements ModelInterface, ArrayAccess
     * Gets quotaBalance
     *  被回收额度后的代金券额度余额。单位：元。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getQuotaBalance()
     {
@@ -221,7 +221,7 @@ class QuotaReclaim implements ModelInterface, ArrayAccess
     /**
     * Sets quotaBalance
     *
-    * @param double|null $quotaBalance 被回收额度后的代金券额度余额。单位：元。
+    * @param float|null $quotaBalance 被回收额度后的代金券额度余额。单位：元。
     *
     * @return $this
     */

@@ -21,21 +21,37 @@ class Review implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * templateId  审核模板ID。您可以在视频点播控制台配置审核模板后获取，具体请参见[审核设置](https://support.huaweicloud.com/usermanual-vod/vod_01_0057.html)。
+    * interval  截图检测时间间隔，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * politics  鉴政内容检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * terrorism  鉴恐内容的检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * porn  鉴黄内容的检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'templateId' => 'string'
+            'templateId' => 'string',
+            'interval' => 'int',
+            'politics' => 'int',
+            'terrorism' => 'int',
+            'porn' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * templateId  审核模板ID。您可以在视频点播控制台配置审核模板后获取，具体请参见[审核设置](https://support.huaweicloud.com/usermanual-vod/vod_01_0057.html)。
+    * interval  截图检测时间间隔，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * politics  鉴政内容检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * terrorism  鉴恐内容的检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * porn  鉴黄内容的检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'templateId' => null
+        'templateId' => null,
+        'interval' => null,
+        'politics' => null,
+        'terrorism' => null,
+        'porn' => null
     ];
 
     /**
@@ -62,31 +78,55 @@ class Review implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * templateId  审核模板ID。您可以在视频点播控制台配置审核模板后获取，具体请参见[审核设置](https://support.huaweicloud.com/usermanual-vod/vod_01_0057.html)。
+    * interval  截图检测时间间隔，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * politics  鉴政内容检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * terrorism  鉴恐内容的检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * porn  鉴黄内容的检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'templateId' => 'template_id'
+            'templateId' => 'template_id',
+            'interval' => 'interval',
+            'politics' => 'politics',
+            'terrorism' => 'terrorism',
+            'porn' => 'porn'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * templateId  审核模板ID。您可以在视频点播控制台配置审核模板后获取，具体请参见[审核设置](https://support.huaweicloud.com/usermanual-vod/vod_01_0057.html)。
+    * interval  截图检测时间间隔，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * politics  鉴政内容检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * terrorism  鉴恐内容的检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * porn  鉴黄内容的检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
     *
     * @var string[]
     */
     protected static $setters = [
-            'templateId' => 'setTemplateId'
+            'templateId' => 'setTemplateId',
+            'interval' => 'setInterval',
+            'politics' => 'setPolitics',
+            'terrorism' => 'setTerrorism',
+            'porn' => 'setPorn'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * templateId  审核模板ID。您可以在视频点播控制台配置审核模板后获取，具体请参见[审核设置](https://support.huaweicloud.com/usermanual-vod/vod_01_0057.html)。
+    * interval  截图检测时间间隔，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * politics  鉴政内容检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * terrorism  鉴恐内容的检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    * porn  鉴黄内容的检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
     *
     * @var string[]
     */
     protected static $getters = [
-            'templateId' => 'getTemplateId'
+            'templateId' => 'getTemplateId',
+            'interval' => 'getInterval',
+            'politics' => 'getPolitics',
+            'terrorism' => 'getTerrorism',
+            'porn' => 'getPorn'
     ];
 
     /**
@@ -148,6 +188,10 @@ class Review implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
+        $this->container['interval'] = isset($data['interval']) ? $data['interval'] : null;
+        $this->container['politics'] = isset($data['politics']) ? $data['politics'] : null;
+        $this->container['terrorism'] = isset($data['terrorism']) ? $data['terrorism'] : null;
+        $this->container['porn'] = isset($data['porn']) ? $data['porn'] : null;
     }
 
     /**
@@ -196,6 +240,102 @@ class Review implements ModelInterface, ArrayAccess
     public function setTemplateId($templateId)
     {
         $this->container['templateId'] = $templateId;
+        return $this;
+    }
+
+    /**
+    * Gets interval
+    *  截图检测时间间隔，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    *
+    * @return int|null
+    */
+    public function getInterval()
+    {
+        return $this->container['interval'];
+    }
+
+    /**
+    * Sets interval
+    *
+    * @param int|null $interval 截图检测时间间隔，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    *
+    * @return $this
+    */
+    public function setInterval($interval)
+    {
+        $this->container['interval'] = $interval;
+        return $this;
+    }
+
+    /**
+    * Gets politics
+    *  鉴政内容检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    *
+    * @return int|null
+    */
+    public function getPolitics()
+    {
+        return $this->container['politics'];
+    }
+
+    /**
+    * Sets politics
+    *
+    * @param int|null $politics 鉴政内容检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    *
+    * @return $this
+    */
+    public function setPolitics($politics)
+    {
+        $this->container['politics'] = $politics;
+        return $this;
+    }
+
+    /**
+    * Gets terrorism
+    *  鉴恐内容的检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    *
+    * @return int|null
+    */
+    public function getTerrorism()
+    {
+        return $this->container['terrorism'];
+    }
+
+    /**
+    * Sets terrorism
+    *
+    * @param int|null $terrorism 鉴恐内容的检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    *
+    * @return $this
+    */
+    public function setTerrorism($terrorism)
+    {
+        $this->container['terrorism'] = $terrorism;
+        return $this;
+    }
+
+    /**
+    * Gets porn
+    *  鉴黄内容的检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    *
+    * @return int|null
+    */
+    public function getPorn()
+    {
+        return $this->container['porn'];
+    }
+
+    /**
+    * Sets porn
+    *
+    * @param int|null $porn 鉴黄内容的检测置信度，取值范围为[0,100]，该参数在请求参数中忽略。 置信度越高，说明审核结果越可信。未开启或设置为0时，表示不进行此项检测。
+    *
+    * @return $this
+    */
+    public function setPorn($porn)
+    {
+        $this->container['porn'] = $porn;
         return $this;
     }
 

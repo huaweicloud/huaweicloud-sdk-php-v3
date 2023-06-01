@@ -29,6 +29,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
+    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -40,7 +41,8 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
             'address' => 'string',
             'status' => 'string',
             'action' => 'string',
-            'links' => '\HuaweiCloud\SDK\Dns\V2\Model\PageLink'
+            'links' => '\HuaweiCloud\SDK\Dns\V2\Model\PageLink',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -53,6 +55,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
+    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -64,7 +67,8 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
         'address' => null,
         'status' => null,
         'action' => null,
-        'links' => null
+        'links' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -98,6 +102,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
+    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -109,7 +114,8 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
             'address' => 'address',
             'status' => 'status',
             'action' => 'action',
-            'links' => 'links'
+            'links' => 'links',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -122,6 +128,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
+    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -133,7 +140,8 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
             'address' => 'setAddress',
             'status' => 'setStatus',
             'action' => 'setAction',
-            'links' => 'setLinks'
+            'links' => 'setLinks',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -146,6 +154,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     * status  资源状态。
     * action  对该资源的当前操作。取值范围：CREATE，UPDATE，DELETE，NONE CREATE：表示创建，UPDATE：表示更新，DELETE：表示删除，NONE：表示无操作
     * links  links
+    * enterpriseProjectId  反向解析关联的企业项目ID，长度不超过36个字符。
     *
     * @var string[]
     */
@@ -157,7 +166,8 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
             'address' => 'getAddress',
             'status' => 'getStatus',
             'action' => 'getAction',
-            'links' => 'getLinks'
+            'links' => 'getLinks',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -226,6 +236,7 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -439,6 +450,30 @@ class ShowPtrRecordSetResponse implements ModelInterface, ArrayAccess
     public function setLinks($links)
     {
         $this->container['links'] = $links;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  反向解析关联的企业项目ID，长度不超过36个字符。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 反向解析关联的企业项目ID，长度不超过36个字符。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

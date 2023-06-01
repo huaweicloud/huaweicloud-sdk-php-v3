@@ -21,7 +21,7 @@ class ErrorCodeCache implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * code  允许配置的错误码: 400, 403, 404, 405, 414, 500, 501, 502, 503, 504
-    * ttl  错误码缓存时间，单位为秒，范围0-31,536,000(一年默认为365天)
+    * ttl  错误码缓存时间，单位为秒，范围0-31,536,000(一年默认为365天)。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ErrorCodeCache implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * code  允许配置的错误码: 400, 403, 404, 405, 414, 500, 501, 502, 503, 504
-    * ttl  错误码缓存时间，单位为秒，范围0-31,536,000(一年默认为365天)
+    * ttl  错误码缓存时间，单位为秒，范围0-31,536,000(一年默认为365天)。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ErrorCodeCache implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * code  允许配置的错误码: 400, 403, 404, 405, 414, 500, 501, 502, 503, 504
-    * ttl  错误码缓存时间，单位为秒，范围0-31,536,000(一年默认为365天)
+    * ttl  错误码缓存时间，单位为秒，范围0-31,536,000(一年默认为365天)。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ErrorCodeCache implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * code  允许配置的错误码: 400, 403, 404, 405, 414, 500, 501, 502, 503, 504
-    * ttl  错误码缓存时间，单位为秒，范围0-31,536,000(一年默认为365天)
+    * ttl  错误码缓存时间，单位为秒，范围0-31,536,000(一年默认为365天)。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ErrorCodeCache implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * code  允许配置的错误码: 400, 403, 404, 405, 414, 500, 501, 502, 503, 504
-    * ttl  错误码缓存时间，单位为秒，范围0-31,536,000(一年默认为365天)
+    * ttl  错误码缓存时间，单位为秒，范围0-31,536,000(一年默认为365天)。
     *
     * @var string[]
     */
@@ -139,38 +139,7 @@ class ErrorCodeCache implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const CODE_400 = 400;
-    const CODE_403 = 403;
-    const CODE_404 = 404;
-    const CODE_405 = 405;
-    const CODE_414 = 414;
-    const CODE_500 = 500;
-    const CODE_501 = 501;
-    const CODE_502 = 502;
-    const CODE_503 = 503;
-    const CODE_504 = 504;
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getCodeAllowableValues()
-    {
-        return [
-            self::CODE_400,
-            self::CODE_403,
-            self::CODE_404,
-            self::CODE_405,
-            self::CODE_414,
-            self::CODE_500,
-            self::CODE_501,
-            self::CODE_502,
-            self::CODE_503,
-            self::CODE_504,
-        ];
-    }
 
 
     /**
@@ -200,20 +169,6 @@ class ErrorCodeCache implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getCodeAllowableValues();
-                if (!is_null($this->container['code']) && !in_array($this->container['code'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'code', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['ttl']) && ($this->container['ttl'] > 31536000)) {
-                $invalidProperties[] = "invalid value for 'ttl', must be smaller than or equal to 31536000.";
-            }
-            if (!is_null($this->container['ttl']) && ($this->container['ttl'] < 0)) {
-                $invalidProperties[] = "invalid value for 'ttl', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -254,7 +209,7 @@ class ErrorCodeCache implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttl
-    *  错误码缓存时间，单位为秒，范围0-31,536,000(一年默认为365天)
+    *  错误码缓存时间，单位为秒，范围0-31,536,000(一年默认为365天)。
     *
     * @return int|null
     */
@@ -266,7 +221,7 @@ class ErrorCodeCache implements ModelInterface, ArrayAccess
     /**
     * Sets ttl
     *
-    * @param int|null $ttl 错误码缓存时间，单位为秒，范围0-31,536,000(一年默认为365天)
+    * @param int|null $ttl 错误码缓存时间，单位为秒，范围0-31,536,000(一年默认为365天)。
     *
     * @return $this
     */

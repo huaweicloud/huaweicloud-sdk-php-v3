@@ -39,14 +39,14 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'totalCount' => 'int',
             'billSums' => '\HuaweiCloud\SDK\Bss\V2\Model\BillSumRecordInfoV2[]',
-            'consumeAmount' => 'double',
-            'debtAmount' => 'double',
-            'couponAmount' => 'double',
-            'flexipurchaseCouponAmount' => 'double',
-            'storedValueCardAmount' => 'double',
-            'cashAmount' => 'double',
-            'creditAmount' => 'double',
-            'writeoffAmount' => 'double',
+            'consumeAmount' => 'float',
+            'debtAmount' => 'float',
+            'couponAmount' => 'float',
+            'flexipurchaseCouponAmount' => 'float',
+            'storedValueCardAmount' => 'float',
+            'cashAmount' => 'float',
+            'creditAmount' => 'float',
+            'writeoffAmount' => 'float',
             'measureId' => 'int',
             'currency' => 'string'
     ];
@@ -71,14 +71,14 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'totalCount' => 'int32',
         'billSums' => null,
-        'consumeAmount' => 'double',
-        'debtAmount' => 'double',
-        'couponAmount' => 'double',
-        'flexipurchaseCouponAmount' => 'double',
-        'storedValueCardAmount' => 'double',
-        'cashAmount' => 'double',
-        'creditAmount' => 'double',
-        'writeoffAmount' => 'double',
+        'consumeAmount' => 'bigdecimal',
+        'debtAmount' => 'bigdecimal',
+        'couponAmount' => 'bigdecimal',
+        'flexipurchaseCouponAmount' => 'bigdecimal',
+        'storedValueCardAmount' => 'bigdecimal',
+        'cashAmount' => 'bigdecimal',
+        'creditAmount' => 'bigdecimal',
+        'writeoffAmount' => 'bigdecimal',
         'measureId' => 'int32',
         'currency' => null
     ];
@@ -346,7 +346,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     * Gets consumeAmount
     *  总金额（包含退订）。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getConsumeAmount()
     {
@@ -356,7 +356,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets consumeAmount
     *
-    * @param double|null $consumeAmount 总金额（包含退订）。
+    * @param float|null $consumeAmount 总金额（包含退订）。
     *
     * @return $this
     */
@@ -370,7 +370,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     * Gets debtAmount
     *  总欠费金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDebtAmount()
     {
@@ -380,7 +380,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets debtAmount
     *
-    * @param double|null $debtAmount 总欠费金额。
+    * @param float|null $debtAmount 总欠费金额。
     *
     * @return $this
     */
@@ -394,7 +394,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     * Gets couponAmount
     *  代金券金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCouponAmount()
     {
@@ -404,7 +404,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets couponAmount
     *
-    * @param double|null $couponAmount 代金券金额。
+    * @param float|null $couponAmount 代金券金额。
     *
     * @return $this
     */
@@ -418,7 +418,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     * Gets flexipurchaseCouponAmount
     *  现金券金额，预留。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getFlexipurchaseCouponAmount()
     {
@@ -428,7 +428,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets flexipurchaseCouponAmount
     *
-    * @param double|null $flexipurchaseCouponAmount 现金券金额，预留。
+    * @param float|null $flexipurchaseCouponAmount 现金券金额，预留。
     *
     * @return $this
     */
@@ -442,7 +442,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     * Gets storedValueCardAmount
     *  储值卡金额，预留。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getStoredValueCardAmount()
     {
@@ -452,7 +452,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets storedValueCardAmount
     *
-    * @param double|null $storedValueCardAmount 储值卡金额，预留。
+    * @param float|null $storedValueCardAmount 储值卡金额，预留。
     *
     * @return $this
     */
@@ -466,7 +466,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     * Gets cashAmount
     *  现金账户金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCashAmount()
     {
@@ -476,7 +476,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cashAmount
     *
-    * @param double|null $cashAmount 现金账户金额。
+    * @param float|null $cashAmount 现金账户金额。
     *
     * @return $this
     */
@@ -490,7 +490,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     * Gets creditAmount
     *  信用账户金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCreditAmount()
     {
@@ -500,7 +500,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets creditAmount
     *
-    * @param double|null $creditAmount 信用账户金额。
+    * @param float|null $creditAmount 信用账户金额。
     *
     * @return $this
     */
@@ -514,7 +514,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     * Gets writeoffAmount
     *  欠费核销金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getWriteoffAmount()
     {
@@ -524,7 +524,7 @@ class ShowCustomerMonthlySumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets writeoffAmount
     *
-    * @param double|null $writeoffAmount 欠费核销金额。
+    * @param float|null $writeoffAmount 欠费核销金额。
     *
     * @return $this
     */

@@ -20,22 +20,20 @@ class ListVersionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * apiVersion  待查询版本号。当前仅支持v2。
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'apiVersion' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * apiVersion  待查询版本号。当前仅支持v2。
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'apiVersion' => null
     ];
 
     /**
@@ -61,32 +59,29 @@ class ListVersionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * apiVersion  待查询版本号。当前仅支持v2。
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'apiVersion' => 'api_version'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * apiVersion  待查询版本号。当前仅支持v2。
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'apiVersion' => 'setApiVersion'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * apiVersion  待查询版本号。当前仅支持v2。
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'apiVersion' => 'getApiVersion'
     ];
 
     /**
@@ -147,7 +142,6 @@ class ListVersionRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['apiVersion'] = isset($data['apiVersion']) ? $data['apiVersion'] : null;
     }
 
     /**
@@ -158,9 +152,6 @@ class ListVersionRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['apiVersion'] === null) {
-            $invalidProperties[] = "'apiVersion' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -173,30 +164,6 @@ class ListVersionRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets apiVersion
-    *  待查询版本号。当前仅支持v2。
-    *
-    * @return string
-    */
-    public function getApiVersion()
-    {
-        return $this->container['apiVersion'];
-    }
-
-    /**
-    * Sets apiVersion
-    *
-    * @param string $apiVersion 待查询版本号。当前仅支持v2。
-    *
-    * @return $this
-    */
-    public function setApiVersion($apiVersion)
-    {
-        $this->container['apiVersion'] = $apiVersion;
-        return $this;
     }
 
     /**

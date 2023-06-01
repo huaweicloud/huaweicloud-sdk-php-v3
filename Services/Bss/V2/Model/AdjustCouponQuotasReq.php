@@ -29,7 +29,7 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'quotaId' => 'string',
             'indirectPartnerIds' => 'string[]',
-            'quotaAmount' => 'double'
+            'quotaAmount' => 'float'
     ];
 
     /**
@@ -43,7 +43,7 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'quotaId' => null,
         'indirectPartnerIds' => null,
-        'quotaAmount' => 'double'
+        'quotaAmount' => 'bigdecimal'
     ];
 
     /**
@@ -267,7 +267,7 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
     * Gets quotaAmount
     *  华为云总经销商向云经销商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
     *
-    * @return double
+    * @return float
     */
     public function getQuotaAmount()
     {
@@ -277,7 +277,7 @@ class AdjustCouponQuotasReq implements ModelInterface, ArrayAccess
     /**
     * Sets quotaAmount
     *
-    * @param double $quotaAmount 华为云总经销商向云经销商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
+    * @param float $quotaAmount 华为云总经销商向云经销商发放的代金券额度值。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @return $this
     */

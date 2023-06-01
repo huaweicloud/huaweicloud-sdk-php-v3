@@ -31,9 +31,9 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'amount' => 'double',
-            'discountAmount' => 'double',
-            'officialWebsiteAmount' => 'double',
+            'amount' => 'float',
+            'discountAmount' => 'float',
+            'officialWebsiteAmount' => 'float',
             'measureId' => 'int',
             'currency' => 'string',
             'productRatingResults' => '\HuaweiCloud\SDK\Bssintl\V2\Model\DemandProductRatingResult[]'
@@ -51,9 +51,9 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'amount' => 'double',
-        'discountAmount' => 'double',
-        'officialWebsiteAmount' => 'double',
+        'amount' => 'bigdecimal',
+        'discountAmount' => 'bigdecimal',
+        'officialWebsiteAmount' => 'bigdecimal',
         'measureId' => 'int32',
         'currency' => null,
         'productRatingResults' => null
@@ -244,7 +244,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     * Gets amount
     *  折扣的金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmount()
     {
@@ -254,7 +254,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double|null $amount 折扣的金额。
+    * @param float|null $amount 折扣的金额。
     *
     * @return $this
     */
@@ -268,7 +268,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     * Gets discountAmount
     *  优惠额（官网价和总价的差）。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDiscountAmount()
     {
@@ -278,7 +278,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets discountAmount
     *
-    * @param double|null $discountAmount 优惠额（官网价和总价的差）。
+    * @param float|null $discountAmount 优惠额（官网价和总价的差）。
     *
     * @return $this
     */
@@ -292,7 +292,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     * Gets officialWebsiteAmount
     *  按需产品的官网价。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getOfficialWebsiteAmount()
     {
@@ -302,7 +302,7 @@ class ListOnDemandResourceRatingsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets officialWebsiteAmount
     *
-    * @param double|null $officialWebsiteAmount 按需产品的官网价。
+    * @param float|null $officialWebsiteAmount 按需产品的官网价。
     *
     * @return $this
     */

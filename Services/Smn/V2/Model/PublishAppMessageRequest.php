@@ -20,7 +20,7 @@ class PublishAppMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * endpointUrn  Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](https://support.huaweicloud.com/api-smn/ListApplicationEndpoints.html)获取该标识
+    * endpointUrn  Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](smn_api_58004.xml)获取该标识
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class PublishAppMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * endpointUrn  Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](https://support.huaweicloud.com/api-smn/ListApplicationEndpoints.html)获取该标识
+    * endpointUrn  Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](smn_api_58004.xml)获取该标识
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class PublishAppMessageRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * endpointUrn  Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](https://support.huaweicloud.com/api-smn/ListApplicationEndpoints.html)获取该标识
+    * endpointUrn  Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](smn_api_58004.xml)获取该标识
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class PublishAppMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * endpointUrn  Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](https://support.huaweicloud.com/api-smn/ListApplicationEndpoints.html)获取该标识
+    * endpointUrn  Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](smn_api_58004.xml)获取该标识
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class PublishAppMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * endpointUrn  Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](https://support.huaweicloud.com/api-smn/ListApplicationEndpoints.html)获取该标识
+    * endpointUrn  Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](smn_api_58004.xml)获取该标识
     * body  body
     *
     * @var string[]
@@ -188,7 +188,7 @@ class PublishAppMessageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpointUrn
-    *  Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](https://support.huaweicloud.com/api-smn/ListApplicationEndpoints.html)获取该标识
+    *  Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](smn_api_58004.xml)获取该标识
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class PublishAppMessageRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endpointUrn
     *
-    * @param string $endpointUrn Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](https://support.huaweicloud.com/api-smn/ListApplicationEndpoints.html)获取该标识
+    * @param string $endpointUrn Endpoint的唯一资源标识，可通过[查询Application的Endpoint列表](smn_api_58004.xml)获取该标识
     *
     * @return $this
     */

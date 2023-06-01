@@ -25,6 +25,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，默认企业项目id为0。
     * name  检索的主题名称，完全匹配。
     * fuzzyName  检索的主题名称，模糊匹配，按照startwith模式进行匹配。
+    * topicId  检索的主题ID，完全匹配。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'enterpriseProjectId' => 'string',
             'name' => 'string',
-            'fuzzyName' => 'string'
+            'fuzzyName' => 'string',
+            'topicId' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，默认企业项目id为0。
     * name  检索的主题名称，完全匹配。
     * fuzzyName  检索的主题名称，模糊匹配，按照startwith模式进行匹配。
+    * topicId  检索的主题ID，完全匹配。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
         'limit' => null,
         'enterpriseProjectId' => null,
         'name' => null,
-        'fuzzyName' => null
+        'fuzzyName' => null,
+        'topicId' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，默认企业项目id为0。
     * name  检索的主题名称，完全匹配。
     * fuzzyName  检索的主题名称，模糊匹配，按照startwith模式进行匹配。
+    * topicId  检索的主题ID，完全匹配。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'enterpriseProjectId' => 'enterprise_project_id',
             'name' => 'name',
-            'fuzzyName' => 'fuzzy_name'
+            'fuzzyName' => 'fuzzy_name',
+            'topicId' => 'topic_id'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，默认企业项目id为0。
     * name  检索的主题名称，完全匹配。
     * fuzzyName  检索的主题名称，模糊匹配，按照startwith模式进行匹配。
+    * topicId  检索的主题ID，完全匹配。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'name' => 'setName',
-            'fuzzyName' => 'setFuzzyName'
+            'fuzzyName' => 'setFuzzyName',
+            'topicId' => 'setTopicId'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，默认企业项目id为0。
     * name  检索的主题名称，完全匹配。
     * fuzzyName  检索的主题名称，模糊匹配，按照startwith模式进行匹配。
+    * topicId  检索的主题ID，完全匹配。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'name' => 'getName',
-            'fuzzyName' => 'getFuzzyName'
+            'fuzzyName' => 'getFuzzyName',
+            'topicId' => 'getTopicId'
     ];
 
     /**
@@ -192,6 +202,7 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['fuzzyName'] = isset($data['fuzzyName']) ? $data['fuzzyName'] : null;
+        $this->container['topicId'] = isset($data['topicId']) ? $data['topicId'] : null;
     }
 
     /**
@@ -333,6 +344,30 @@ class ListTopicsRequest implements ModelInterface, ArrayAccess
     public function setFuzzyName($fuzzyName)
     {
         $this->container['fuzzyName'] = $fuzzyName;
+        return $this;
+    }
+
+    /**
+    * Gets topicId
+    *  检索的主题ID，完全匹配。
+    *
+    * @return string|null
+    */
+    public function getTopicId()
+    {
+        return $this->container['topicId'];
+    }
+
+    /**
+    * Sets topicId
+    *
+    * @param string|null $topicId 检索的主题ID，完全匹配。
+    *
+    * @return $this
+    */
+    public function setTopicId($topicId)
+    {
+        $this->container['topicId'] = $topicId;
         return $this;
     }
 

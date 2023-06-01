@@ -20,7 +20,7 @@ class CancelSubscriptionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * subscriptionUrn  订阅者的唯一的资源标识，可通过[查询订阅者列表](https://support.huaweicloud.com/api-smn/ListSubscriptions.html)获取该标识。
+    * subscriptionUrn  订阅者的唯一的资源标识，可通过[查询订阅者列表](ListSubscriptions.xml)获取该标识。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CancelSubscriptionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * subscriptionUrn  订阅者的唯一的资源标识，可通过[查询订阅者列表](https://support.huaweicloud.com/api-smn/ListSubscriptions.html)获取该标识。
+    * subscriptionUrn  订阅者的唯一的资源标识，可通过[查询订阅者列表](ListSubscriptions.xml)获取该标识。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CancelSubscriptionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * subscriptionUrn  订阅者的唯一的资源标识，可通过[查询订阅者列表](https://support.huaweicloud.com/api-smn/ListSubscriptions.html)获取该标识。
+    * subscriptionUrn  订阅者的唯一的资源标识，可通过[查询订阅者列表](ListSubscriptions.xml)获取该标识。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CancelSubscriptionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * subscriptionUrn  订阅者的唯一的资源标识，可通过[查询订阅者列表](https://support.huaweicloud.com/api-smn/ListSubscriptions.html)获取该标识。
+    * subscriptionUrn  订阅者的唯一的资源标识，可通过[查询订阅者列表](ListSubscriptions.xml)获取该标识。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CancelSubscriptionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * subscriptionUrn  订阅者的唯一的资源标识，可通过[查询订阅者列表](https://support.huaweicloud.com/api-smn/ListSubscriptions.html)获取该标识。
+    * subscriptionUrn  订阅者的唯一的资源标识，可通过[查询订阅者列表](ListSubscriptions.xml)获取该标识。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class CancelSubscriptionRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets subscriptionUrn
-    *  订阅者的唯一的资源标识，可通过[查询订阅者列表](https://support.huaweicloud.com/api-smn/ListSubscriptions.html)获取该标识。
+    *  订阅者的唯一的资源标识，可通过[查询订阅者列表](ListSubscriptions.xml)获取该标识。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class CancelSubscriptionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets subscriptionUrn
     *
-    * @param string $subscriptionUrn 订阅者的唯一的资源标识，可通过[查询订阅者列表](https://support.huaweicloud.com/api-smn/ListSubscriptions.html)获取该标识。
+    * @param string $subscriptionUrn 订阅者的唯一的资源标识，可通过[查询订阅者列表](ListSubscriptions.xml)获取该标识。
     *
     * @return $this
     */

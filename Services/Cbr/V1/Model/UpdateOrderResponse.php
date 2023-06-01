@@ -21,20 +21,30 @@ class UpdateOrderResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * orderId  订单ID
+    * retCode  变更状态码
+    * retMsg  变更信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'orderId' => 'string',
+            'retCode' => 'string',
+            'retMsg' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * orderId  订单ID
+    * retCode  变更状态码
+    * retMsg  变更信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'orderId' => null,
+        'retCode' => null,
+        'retMsg' => null
     ];
 
     /**
@@ -60,29 +70,44 @@ class UpdateOrderResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * orderId  订单ID
+    * retCode  变更状态码
+    * retMsg  变更信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'orderId' => 'orderId',
+            'retCode' => 'retCode',
+            'retMsg' => 'retMsg'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * orderId  订单ID
+    * retCode  变更状态码
+    * retMsg  变更信息
     *
     * @var string[]
     */
     protected static $setters = [
+            'orderId' => 'setOrderId',
+            'retCode' => 'setRetCode',
+            'retMsg' => 'setRetMsg'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * orderId  订单ID
+    * retCode  变更状态码
+    * retMsg  变更信息
     *
     * @var string[]
     */
     protected static $getters = [
+            'orderId' => 'getOrderId',
+            'retCode' => 'getRetCode',
+            'retMsg' => 'getRetMsg'
     ];
 
     /**
@@ -143,6 +168,9 @@ class UpdateOrderResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
+        $this->container['retCode'] = isset($data['retCode']) ? $data['retCode'] : null;
+        $this->container['retMsg'] = isset($data['retMsg']) ? $data['retMsg'] : null;
     }
 
     /**
@@ -165,6 +193,78 @@ class UpdateOrderResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets orderId
+    *  订单ID
+    *
+    * @return string|null
+    */
+    public function getOrderId()
+    {
+        return $this->container['orderId'];
+    }
+
+    /**
+    * Sets orderId
+    *
+    * @param string|null $orderId 订单ID
+    *
+    * @return $this
+    */
+    public function setOrderId($orderId)
+    {
+        $this->container['orderId'] = $orderId;
+        return $this;
+    }
+
+    /**
+    * Gets retCode
+    *  变更状态码
+    *
+    * @return string|null
+    */
+    public function getRetCode()
+    {
+        return $this->container['retCode'];
+    }
+
+    /**
+    * Sets retCode
+    *
+    * @param string|null $retCode 变更状态码
+    *
+    * @return $this
+    */
+    public function setRetCode($retCode)
+    {
+        $this->container['retCode'] = $retCode;
+        return $this;
+    }
+
+    /**
+    * Gets retMsg
+    *  变更信息
+    *
+    * @return string|null
+    */
+    public function getRetMsg()
+    {
+        return $this->container['retMsg'];
+    }
+
+    /**
+    * Sets retMsg
+    *
+    * @param string|null $retMsg 变更信息
+    *
+    * @return $this
+    */
+    public function setRetMsg($retMsg)
+    {
+        $this->container['retMsg'] = $retMsg;
+        return $this;
     }
 
     /**

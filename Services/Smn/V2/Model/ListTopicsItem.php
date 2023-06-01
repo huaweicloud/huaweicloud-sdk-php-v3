@@ -25,6 +25,7 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
     * displayName  Topic的显示名，推送邮件消息时，作为邮件发件人显示。
     * pushPolicy  消息推送的策略，该属性目前不支持修改，后续将支持修改。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * enterpriseProjectId  企业项目ID。
+    * topicId  主题ID。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
             'name' => 'string',
             'displayName' => 'string',
             'pushPolicy' => 'int',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'topicId' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
     * displayName  Topic的显示名，推送邮件消息时，作为邮件发件人显示。
     * pushPolicy  消息推送的策略，该属性目前不支持修改，后续将支持修改。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * enterpriseProjectId  企业项目ID。
+    * topicId  主题ID。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
         'name' => null,
         'displayName' => null,
         'pushPolicy' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'topicId' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
     * displayName  Topic的显示名，推送邮件消息时，作为邮件发件人显示。
     * pushPolicy  消息推送的策略，该属性目前不支持修改，后续将支持修改。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * enterpriseProjectId  企业项目ID。
+    * topicId  主题ID。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
             'name' => 'name',
             'displayName' => 'display_name',
             'pushPolicy' => 'push_policy',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'topicId' => 'topic_id'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
     * displayName  Topic的显示名，推送邮件消息时，作为邮件发件人显示。
     * pushPolicy  消息推送的策略，该属性目前不支持修改，后续将支持修改。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * enterpriseProjectId  企业项目ID。
+    * topicId  主题ID。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'displayName' => 'setDisplayName',
             'pushPolicy' => 'setPushPolicy',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'topicId' => 'setTopicId'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
     * displayName  Topic的显示名，推送邮件消息时，作为邮件发件人显示。
     * pushPolicy  消息推送的策略，该属性目前不支持修改，后续将支持修改。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * enterpriseProjectId  企业项目ID。
+    * topicId  主题ID。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'displayName' => 'getDisplayName',
             'pushPolicy' => 'getPushPolicy',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'topicId' => 'getTopicId'
     ];
 
     /**
@@ -192,6 +202,7 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
         $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
         $this->container['pushPolicy'] = isset($data['pushPolicy']) ? $data['pushPolicy'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['topicId'] = isset($data['topicId']) ? $data['topicId'] : null;
     }
 
     /**
@@ -216,6 +227,9 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
         }
         if ($this->container['enterpriseProjectId'] === null) {
             $invalidProperties[] = "'enterpriseProjectId' can't be null";
+        }
+        if ($this->container['topicId'] === null) {
+            $invalidProperties[] = "'topicId' can't be null";
         }
         return $invalidProperties;
     }
@@ -348,6 +362,30 @@ class ListTopicsItem implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets topicId
+    *  主题ID。
+    *
+    * @return string
+    */
+    public function getTopicId()
+    {
+        return $this->container['topicId'];
+    }
+
+    /**
+    * Sets topicId
+    *
+    * @param string $topicId 主题ID。
+    *
+    * @return $this
+    */
+    public function setTopicId($topicId)
+    {
+        $this->container['topicId'] = $topicId;
         return $this;
     }
 

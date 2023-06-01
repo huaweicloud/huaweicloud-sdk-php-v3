@@ -20,7 +20,7 @@ class WebSocketSeek implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  开关(on 开启，off 关闭)
+    * status  开关， on 开启，off 关闭。
     * timeout  请求建立连接后，会话的保持时间：范围：1-300，单位：秒。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class WebSocketSeek implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  开关(on 开启，off 关闭)
+    * status  开关， on 开启，off 关闭。
     * timeout  请求建立连接后，会话的保持时间：范围：1-300，单位：秒。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class WebSocketSeek implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  开关(on 开启，off 关闭)
+    * status  开关， on 开启，off 关闭。
     * timeout  请求建立连接后，会话的保持时间：范围：1-300，单位：秒。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class WebSocketSeek implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  开关(on 开启，off 关闭)
+    * status  开关， on 开启，off 关闭。
     * timeout  请求建立连接后，会话的保持时间：范围：1-300，单位：秒。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class WebSocketSeek implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  开关(on 开启，off 关闭)
+    * status  开关， on 开启，off 关闭。
     * timeout  请求建立连接后，会话的保持时间：范围：1-300，单位：秒。
     *
     * @var string[]
@@ -191,7 +191,7 @@ class WebSocketSeek implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  开关(on 开启，off 关闭)
+    *  开关， on 开启，off 关闭。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class WebSocketSeek implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 开关(on 开启，off 关闭)
+    * @param string $status 开关， on 开启，off 关闭。
     *
     * @return $this
     */

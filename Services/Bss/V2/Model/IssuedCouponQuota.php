@@ -44,7 +44,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
             'quotaType' => 'int',
             'createTime' => 'string',
             'lastUpdateTime' => 'string',
-            'quotaValue' => 'double',
+            'quotaValue' => 'float',
             'quotaStatus' => 'int',
             'balance' => 'double',
             'measureId' => 'int',
@@ -84,7 +84,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
         'quotaType' => 'int32',
         'createTime' => null,
         'lastUpdateTime' => null,
-        'quotaValue' => 'double',
+        'quotaValue' => 'bigdecimal',
         'quotaStatus' => 'int32',
         'balance' => 'double',
         'measureId' => 'int32',
@@ -437,7 +437,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
     * Gets quotaValue
     *  代金券额度的值，精确到小数点后2位。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getQuotaValue()
     {
@@ -447,7 +447,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
     /**
     * Sets quotaValue
     *
-    * @param double|null $quotaValue 代金券额度的值，精确到小数点后2位。
+    * @param float|null $quotaValue 代金券额度的值，精确到小数点后2位。
     *
     * @return $this
     */

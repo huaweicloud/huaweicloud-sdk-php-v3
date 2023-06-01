@@ -158,6 +158,9 @@ class AssociateHealthCheckReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['healthCheckId'] === null) {
+            $invalidProperties[] = "'healthCheckId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class AssociateHealthCheckReq implements ModelInterface, ArrayAccess
     * Gets healthCheckId
     *  健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
     *
-    * @return string|null
+    * @return string
     */
     public function getHealthCheckId()
     {
@@ -186,7 +189,7 @@ class AssociateHealthCheckReq implements ModelInterface, ArrayAccess
     /**
     * Sets healthCheckId
     *
-    * @param string|null $healthCheckId 健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
+    * @param string $healthCheckId 健康检查ID。 通过云解析服务的管理控制台，在健康检查的详情页面中获取。
     *
     * @return $this
     */

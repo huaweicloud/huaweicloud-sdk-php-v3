@@ -20,15 +20,15 @@ class HttpGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必返回该字段。
-    * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
-    * expireTime  证书过期时间,单位：毫秒。
-    * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
+    * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateName  证书名字。
+    * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
+    * expireTime  证书过期时间。  > UTC时间。
+    * certificateSource  证书来源,1：华为云托管证书,0：自有证书。
     * certificateType  证书类型。server：国际证书；server_sm：国密证书。
-    * http2Status  是否使用HTTP2.0。（on：是，off：否）
-    * tlsVersion  传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
-    * ocspStaplingStatus  是否开启ocsp stapling （on：是，off：否）。
+    * http2Status  是否使用HTTP2.0，on：是，off：否。
+    * tlsVersion  传输层安全性协议。
+    * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class HttpGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必返回该字段。
-    * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
-    * expireTime  证书过期时间,单位：毫秒。
-    * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
+    * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateName  证书名字。
+    * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
+    * expireTime  证书过期时间。  > UTC时间。
+    * certificateSource  证书来源,1：华为云托管证书,0：自有证书。
     * certificateType  证书类型。server：国际证书；server_sm：国密证书。
-    * http2Status  是否使用HTTP2.0。（on：是，off：否）
-    * tlsVersion  传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
-    * ocspStaplingStatus  是否开启ocsp stapling （on：是，off：否）。
+    * http2Status  是否使用HTTP2.0，on：是，off：否。
+    * tlsVersion  传输层安全性协议。
+    * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必返回该字段。
-    * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
-    * expireTime  证书过期时间,单位：毫秒。
-    * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
+    * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateName  证书名字。
+    * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
+    * expireTime  证书过期时间。  > UTC时间。
+    * certificateSource  证书来源,1：华为云托管证书,0：自有证书。
     * certificateType  证书类型。server：国际证书；server_sm：国密证书。
-    * http2Status  是否使用HTTP2.0。（on：是，off：否）
-    * tlsVersion  传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
-    * ocspStaplingStatus  是否开启ocsp stapling （on：是，off：否）。
+    * http2Status  是否使用HTTP2.0，on：是，off：否。
+    * tlsVersion  传输层安全性协议。
+    * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class HttpGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必返回该字段。
-    * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
-    * expireTime  证书过期时间,单位：毫秒。
-    * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
+    * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateName  证书名字。
+    * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
+    * expireTime  证书过期时间。  > UTC时间。
+    * certificateSource  证书来源,1：华为云托管证书,0：自有证书。
     * certificateType  证书类型。server：国际证书；server_sm：国密证书。
-    * http2Status  是否使用HTTP2.0。（on：是，off：否）
-    * tlsVersion  传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
-    * ocspStaplingStatus  是否开启ocsp stapling （on：是，off：否）。
+    * http2Status  是否使用HTTP2.0，on：是，off：否。
+    * tlsVersion  传输层安全性协议。
+    * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class HttpGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * httpsStatus  HTTPS证书是否启用。（on：开启，off：关闭）
-    * certificateName  证书名字。（长度限制为3-32字符）。当证书开启时必返回该字段。
-    * certificateValue  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
-    * expireTime  证书过期时间,单位：毫秒。
-    * certificateSource  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
+    * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateName  证书名字。
+    * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
+    * expireTime  证书过期时间。  > UTC时间。
+    * certificateSource  证书来源,1：华为云托管证书,0：自有证书。
     * certificateType  证书类型。server：国际证书；server_sm：国密证书。
-    * http2Status  是否使用HTTP2.0。（on：是，off：否）
-    * tlsVersion  传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
-    * ocspStaplingStatus  是否开启ocsp stapling （on：是，off：否）。
+    * http2Status  是否使用HTTP2.0，on：是，off：否。
+    * tlsVersion  传输层安全性协议。
+    * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpsStatus
-    *  HTTPS证书是否启用。（on：开启，off：关闭）
+    *  HTTPS证书是否启用，on：开启，off：关闭。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets httpsStatus
     *
-    * @param string|null $httpsStatus HTTPS证书是否启用。（on：开启，off：关闭）
+    * @param string|null $httpsStatus HTTPS证书是否启用，on：开启，off：关闭。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateName
-    *  证书名字。（长度限制为3-32字符）。当证书开启时必返回该字段。
+    *  证书名字。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets certificateName
     *
-    * @param string|null $certificateName 证书名字。（长度限制为3-32字符）。当证书开启时必返回该字段。
+    * @param string|null $certificateName 证书名字。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateValue
-    *  HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
+    *  HTTPS协议使用的证书内容，PEM编码格式。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets certificateValue
     *
-    * @param string|null $certificateValue HTTPS协议使用的证书内容，当证书开启时必返回该字段。取值范围：PEM编码格式。
+    * @param string|null $certificateValue HTTPS协议使用的证书内容，PEM编码格式。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTime
-    *  证书过期时间,单位：毫秒。
+    *  证书过期时间。  > UTC时间。
     *
     * @return int|null
     */
@@ -346,7 +346,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets expireTime
     *
-    * @param int|null $expireTime 证书过期时间,单位：毫秒。
+    * @param int|null $expireTime 证书过期时间。  > UTC时间。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateSource
-    *  证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
+    *  证书来源,1：华为云托管证书,0：自有证书。
     *
     * @return int|null
     */
@@ -370,7 +370,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets certificateSource
     *
-    * @param int|null $certificateSource 证书来源。1：代表华为云托管证书；0：表示自有证书。 默认值0。当证书开启时必返回该字段。
+    * @param int|null $certificateSource 证书来源,1：华为云托管证书,0：自有证书。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets http2Status
-    *  是否使用HTTP2.0。（on：是，off：否）
+    *  是否使用HTTP2.0，on：是，off：否。
     *
     * @return string|null
     */
@@ -418,7 +418,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets http2Status
     *
-    * @param string|null $http2Status 是否使用HTTP2.0。（on：是，off：否）
+    * @param string|null $http2Status 是否使用HTTP2.0，on：是，off：否。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tlsVersion
-    *  传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
+    *  传输层安全性协议。
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets tlsVersion
     *
-    * @param string|null $tlsVersion 传输层安全性协议，目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议。当证书开启时返回该字段，默认全部开启，不可全部关闭。
+    * @param string|null $tlsVersion 传输层安全性协议。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets ocspStaplingStatus
-    *  是否开启ocsp stapling （on：是，off：否）。
+    *  是否开启ocsp stapling,on：是，off：否。
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets ocspStaplingStatus
     *
-    * @param string|null $ocspStaplingStatus 是否开启ocsp stapling （on：是，off：否）。
+    * @param string|null $ocspStaplingStatus 是否开启ocsp stapling,on：是，off：否。
     *
     * @return $this
     */

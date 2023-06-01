@@ -28,7 +28,7 @@ class ShowPublicZoneResponse implements ModelInterface, ArrayAccess
     * zoneType  zone类型，公网（public）。
     * ttl  该zone下SOA记录中的ttl值
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步
-    * status  该zone下的recordset个数
+    * status  资源状态
     * recordNum  该zone下的recordset个数
     * poolId  托管该zone的pool，由系统分配
     * createdAt  创建时间
@@ -68,7 +68,7 @@ class ShowPublicZoneResponse implements ModelInterface, ArrayAccess
     * zoneType  zone类型，公网（public）。
     * ttl  该zone下SOA记录中的ttl值
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步
-    * status  该zone下的recordset个数
+    * status  资源状态
     * recordNum  该zone下的recordset个数
     * poolId  托管该zone的pool，由系统分配
     * createdAt  创建时间
@@ -129,7 +129,7 @@ class ShowPublicZoneResponse implements ModelInterface, ArrayAccess
     * zoneType  zone类型，公网（public）。
     * ttl  该zone下SOA记录中的ttl值
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步
-    * status  该zone下的recordset个数
+    * status  资源状态
     * recordNum  该zone下的recordset个数
     * poolId  托管该zone的pool，由系统分配
     * createdAt  创建时间
@@ -169,7 +169,7 @@ class ShowPublicZoneResponse implements ModelInterface, ArrayAccess
     * zoneType  zone类型，公网（public）。
     * ttl  该zone下SOA记录中的ttl值
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步
-    * status  该zone下的recordset个数
+    * status  资源状态
     * recordNum  该zone下的recordset个数
     * poolId  托管该zone的pool，由系统分配
     * createdAt  创建时间
@@ -209,7 +209,7 @@ class ShowPublicZoneResponse implements ModelInterface, ArrayAccess
     * zoneType  zone类型，公网（public）。
     * ttl  该zone下SOA记录中的ttl值
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步
-    * status  该zone下的recordset个数
+    * status  资源状态
     * recordNum  该zone下的recordset个数
     * poolId  托管该zone的pool，由系统分配
     * createdAt  创建时间
@@ -508,7 +508,7 @@ class ShowPublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  该zone下的recordset个数
+    *  资源状态
     *
     * @return string|null
     */
@@ -520,7 +520,7 @@ class ShowPublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 该zone下的recordset个数
+    * @param string|null $status 资源状态
     *
     * @return $this
     */

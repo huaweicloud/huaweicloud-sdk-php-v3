@@ -25,7 +25,7 @@ class CreateResourceTagRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tag' => '\HuaweiCloud\SDK\Smn\V2\Model\CreateResourceTagRequestBodyTag'
+            'tag' => '\HuaweiCloud\SDK\Smn\V2\Model\ResourceTag'
     ];
 
     /**
@@ -179,7 +179,7 @@ class CreateResourceTagRequestBody implements ModelInterface, ArrayAccess
     * Gets tag
     *  tag
     *
-    * @return \HuaweiCloud\SDK\Smn\V2\Model\CreateResourceTagRequestBodyTag
+    * @return \HuaweiCloud\SDK\Smn\V2\Model\ResourceTag
     */
     public function getTag()
     {
@@ -189,7 +189,7 @@ class CreateResourceTagRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tag
     *
-    * @param \HuaweiCloud\SDK\Smn\V2\Model\CreateResourceTagRequestBodyTag $tag tag
+    * @param \HuaweiCloud\SDK\Smn\V2\Model\ResourceTag $tag tag
     *
     * @return $this
     */

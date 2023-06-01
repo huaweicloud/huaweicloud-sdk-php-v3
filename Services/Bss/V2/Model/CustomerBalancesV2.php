@@ -30,8 +30,8 @@ class CustomerBalancesV2 implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'customerId' => 'string',
-            'debtAmount' => 'double',
-            'amount' => 'double',
+            'debtAmount' => 'float',
+            'amount' => 'float',
             'currency' => 'string',
             'measureId' => 'int'
     ];
@@ -48,8 +48,8 @@ class CustomerBalancesV2 implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'customerId' => null,
-        'debtAmount' => 'double',
-        'amount' => 'double',
+        'debtAmount' => 'bigdecimal',
+        'amount' => 'bigdecimal',
         'currency' => null,
         'measureId' => 'int32'
     ];
@@ -247,7 +247,7 @@ class CustomerBalancesV2 implements ModelInterface, ArrayAccess
     * Gets debtAmount
     *  客户欠款总额度。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDebtAmount()
     {
@@ -257,7 +257,7 @@ class CustomerBalancesV2 implements ModelInterface, ArrayAccess
     /**
     * Sets debtAmount
     *
-    * @param double|null $debtAmount 客户欠款总额度。
+    * @param float|null $debtAmount 客户欠款总额度。
     *
     * @return $this
     */
@@ -271,7 +271,7 @@ class CustomerBalancesV2 implements ModelInterface, ArrayAccess
     * Gets amount
     *  客户可用总额度。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmount()
     {
@@ -281,7 +281,7 @@ class CustomerBalancesV2 implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double|null $amount 客户可用总额度。
+    * @param float|null $amount 客户可用总额度。
     *
     * @return $this
     */

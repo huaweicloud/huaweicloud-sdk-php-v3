@@ -28,7 +28,7 @@ class AdjustAccountReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'customerId' => 'string',
-            'amount' => 'double',
+            'amount' => 'float',
             'indirectPartnerId' => 'string'
     ];
 
@@ -42,7 +42,7 @@ class AdjustAccountReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'customerId' => null,
-        'amount' => 'double',
+        'amount' => 'bigdecimal',
         'indirectPartnerId' => null
     ];
 
@@ -246,7 +246,7 @@ class AdjustAccountReq implements ModelInterface, ArrayAccess
     * Gets amount
     *  拨款金额。 单位：元。取值大于0且精确到小数点后2位。 注意该值不能大于“查询伙伴账户余额”接口响应消息表2中参数amount - designated_amount的值。
     *
-    * @return double
+    * @return float
     */
     public function getAmount()
     {
@@ -256,7 +256,7 @@ class AdjustAccountReq implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double $amount 拨款金额。 单位：元。取值大于0且精确到小数点后2位。 注意该值不能大于“查询伙伴账户余额”接口响应消息表2中参数amount - designated_amount的值。
+    * @param float $amount 拨款金额。 单位：元。取值大于0且精确到小数点后2位。 注意该值不能大于“查询伙伴账户余额”接口响应消息表2中参数amount - designated_amount的值。
     *
     * @return $this
     */

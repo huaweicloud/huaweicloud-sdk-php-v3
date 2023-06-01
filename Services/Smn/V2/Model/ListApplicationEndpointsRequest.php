@@ -20,7 +20,7 @@ class ListApplicationEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * applicationUrn  Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+    * applicationUrn  Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     * enabled  设备是否可用，值为true或false字符串。
@@ -40,7 +40,7 @@ class ListApplicationEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * applicationUrn  Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+    * applicationUrn  Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     * enabled  设备是否可用，值为true或false字符串。
@@ -81,7 +81,7 @@ class ListApplicationEndpointsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * applicationUrn  Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+    * applicationUrn  Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     * enabled  设备是否可用，值为true或false字符串。
@@ -101,7 +101,7 @@ class ListApplicationEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * applicationUrn  Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+    * applicationUrn  Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     * enabled  设备是否可用，值为true或false字符串。
@@ -121,7 +121,7 @@ class ListApplicationEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * applicationUrn  Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+    * applicationUrn  Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
     * offset  偏移量。  偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询的数量限制。  取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     * enabled  设备是否可用，值为true或false字符串。
@@ -232,7 +232,7 @@ class ListApplicationEndpointsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets applicationUrn
-    *  Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+    *  Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
     *
     * @return string
     */
@@ -244,7 +244,7 @@ class ListApplicationEndpointsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets applicationUrn
     *
-    * @param string $applicationUrn Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+    * @param string $applicationUrn Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
     *
     * @return $this
     */

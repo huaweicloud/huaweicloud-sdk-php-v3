@@ -21,7 +21,6 @@ class UpdateStackRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [[项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)](tag:hws) [[项目ID获取方式](https://support.huaweicloud.com/intl/zh-cn/api-ticket/ticket_api_20002.html)](tag:hws_hk) [[项目ID获取方式](https://support.huaweicloud.com/eu/api-ticket/ticket_api_20002.html)](tag:hws_eu)
     * stackName  资源栈的名称。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * body  body
     *
@@ -29,7 +28,6 @@ class UpdateStackRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'clientRequestId' => 'string',
-            'projectId' => 'string',
             'stackName' => 'string',
             'body' => '\HuaweiCloud\SDK\Aos\V1\Model\UpdateStackRequestBody'
     ];
@@ -37,7 +35,6 @@ class UpdateStackRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [[项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)](tag:hws) [[项目ID获取方式](https://support.huaweicloud.com/intl/zh-cn/api-ticket/ticket_api_20002.html)](tag:hws_hk) [[项目ID获取方式](https://support.huaweicloud.com/eu/api-ticket/ticket_api_20002.html)](tag:hws_eu)
     * stackName  资源栈的名称。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * body  body
     *
@@ -45,7 +42,6 @@ class UpdateStackRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'clientRequestId' => null,
-        'projectId' => null,
         'stackName' => null,
         'body' => null
     ];
@@ -74,7 +70,6 @@ class UpdateStackRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [[项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)](tag:hws) [[项目ID获取方式](https://support.huaweicloud.com/intl/zh-cn/api-ticket/ticket_api_20002.html)](tag:hws_hk) [[项目ID获取方式](https://support.huaweicloud.com/eu/api-ticket/ticket_api_20002.html)](tag:hws_eu)
     * stackName  资源栈的名称。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * body  body
     *
@@ -82,7 +77,6 @@ class UpdateStackRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'clientRequestId' => 'Client-Request-Id',
-            'projectId' => 'project_id',
             'stackName' => 'stack_name',
             'body' => 'body'
     ];
@@ -90,7 +84,6 @@ class UpdateStackRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [[项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)](tag:hws) [[项目ID获取方式](https://support.huaweicloud.com/intl/zh-cn/api-ticket/ticket_api_20002.html)](tag:hws_hk) [[项目ID获取方式](https://support.huaweicloud.com/eu/api-ticket/ticket_api_20002.html)](tag:hws_eu)
     * stackName  资源栈的名称。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * body  body
     *
@@ -98,7 +91,6 @@ class UpdateStackRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'clientRequestId' => 'setClientRequestId',
-            'projectId' => 'setProjectId',
             'stackName' => 'setStackName',
             'body' => 'setBody'
     ];
@@ -106,7 +98,6 @@ class UpdateStackRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
-    * projectId  项目ID，可以从调用API处获取，也可以从控制台获取。  [[项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)](tag:hws) [[项目ID获取方式](https://support.huaweicloud.com/intl/zh-cn/api-ticket/ticket_api_20002.html)](tag:hws_hk) [[项目ID获取方式](https://support.huaweicloud.com/eu/api-ticket/ticket_api_20002.html)](tag:hws_eu)
     * stackName  资源栈的名称。此名字在domain_id+区域+project_id下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * body  body
     *
@@ -114,7 +105,6 @@ class UpdateStackRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'clientRequestId' => 'getClientRequestId',
-            'projectId' => 'getProjectId',
             'stackName' => 'getStackName',
             'body' => 'getBody'
     ];
@@ -178,7 +168,6 @@ class UpdateStackRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clientRequestId'] = isset($data['clientRequestId']) ? $data['clientRequestId'] : null;
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['stackName'] = isset($data['stackName']) ? $data['stackName'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
@@ -202,18 +191,6 @@ class UpdateStackRequest implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^[A-Za-z0-9]+[A-Za-z0-9-]*$/", $this->container['clientRequestId'])) {
                 $invalidProperties[] = "invalid value for 'clientRequestId', must be conform to the pattern /^[A-Za-z0-9]+[A-Za-z0-9-]*$/.";
-            }
-        if ($this->container['projectId'] === null) {
-            $invalidProperties[] = "'projectId' can't be null";
-        }
-            if ((mb_strlen($this->container['projectId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['projectId']) < 3)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 3.";
-            }
-            if (!preg_match("/^[A-Za-z0-9-]+$/", $this->container['projectId'])) {
-                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /^[A-Za-z0-9-]+$/.";
             }
         if ($this->container['stackName'] === null) {
             $invalidProperties[] = "'stackName' can't be null";
@@ -262,30 +239,6 @@ class UpdateStackRequest implements ModelInterface, ArrayAccess
     public function setClientRequestId($clientRequestId)
     {
         $this->container['clientRequestId'] = $clientRequestId;
-        return $this;
-    }
-
-    /**
-    * Gets projectId
-    *  项目ID，可以从调用API处获取，也可以从控制台获取。  [[项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)](tag:hws) [[项目ID获取方式](https://support.huaweicloud.com/intl/zh-cn/api-ticket/ticket_api_20002.html)](tag:hws_hk) [[项目ID获取方式](https://support.huaweicloud.com/eu/api-ticket/ticket_api_20002.html)](tag:hws_eu)
-    *
-    * @return string
-    */
-    public function getProjectId()
-    {
-        return $this->container['projectId'];
-    }
-
-    /**
-    * Sets projectId
-    *
-    * @param string $projectId 项目ID，可以从调用API处获取，也可以从控制台获取。  [[项目ID获取方式](https://support.huaweicloud.com/api-ticket/ticket_api_20002.html)](tag:hws) [[项目ID获取方式](https://support.huaweicloud.com/intl/zh-cn/api-ticket/ticket_api_20002.html)](tag:hws_hk) [[项目ID获取方式](https://support.huaweicloud.com/eu/api-ticket/ticket_api_20002.html)](tag:hws_eu)
-    *
-    * @return $this
-    */
-    public function setProjectId($projectId)
-    {
-        $this->container['projectId'] = $projectId;
         return $this;
     }
 

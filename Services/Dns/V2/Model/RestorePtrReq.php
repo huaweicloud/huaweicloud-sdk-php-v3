@@ -25,7 +25,7 @@ class RestorePtrReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'ptrdname' => 'string'
+            'ptrdname' => 'object'
     ];
 
     /**
@@ -179,7 +179,7 @@ class RestorePtrReq implements ModelInterface, ArrayAccess
     * Gets ptrdname
     *  PTR记录对应的域名。  此处值为null。
     *
-    * @return string
+    * @return object
     */
     public function getPtrdname()
     {
@@ -189,7 +189,7 @@ class RestorePtrReq implements ModelInterface, ArrayAccess
     /**
     * Sets ptrdname
     *
-    * @param string $ptrdname PTR记录对应的域名。  此处值为null。
+    * @param object $ptrdname PTR记录对应的域名。  此处值为null。
     *
     * @return $this
     */

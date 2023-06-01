@@ -434,6 +434,71 @@ class BssClient extends Client
     }
 
     /**
+     * 企业主账号向企业子账号拨款优惠券
+     *
+     * 企业主账号在自建平台向企业子账号拨款优惠券。
+     * 
+     * &gt;![](public_sys-resources/icon-note.gif) **说明：**
+     * &gt;-   仅支持华为发放的测试类、商务类、活动类代金券。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function claimEnterpriseMultiAccountCoupon($request)
+    {
+        return $this->claimEnterpriseMultiAccountCouponWithHttpInfo($request);
+    }
+
+    public function claimEnterpriseMultiAccountCouponWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/enterprises/multi-accounts/transfer-coupon';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ClaimEnterpriseMultiAccountCouponResponse',
+            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ClaimEnterpriseMultiAccountCouponRequest');
+    }
+
+    /**
      * 开通客户企业项目权限
      *
      * 客户在自建平台开通客户企业项目权限。
@@ -2913,6 +2978,145 @@ class BssClient extends Client
     }
 
     /**
+     * 查询企业子账号可回收优惠券列表
+     *
+     * 企业主账号在自建平台查询企业子账号的可回收优惠券。
+     * 
+     * &gt;![](public_sys-resources/icon-note.gif) **说明：**
+     * &gt;-   仅支持华为发放的测试类、商务类、活动类代金券。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listMultiAccountRetrieveCoupons($request)
+    {
+        return $this->listMultiAccountRetrieveCouponsWithHttpInfo($request);
+    }
+
+    public function listMultiAccountRetrieveCouponsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/enterprises/multi-accounts/retrieve-coupons';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['subCustomerId'] !== null) {
+            $queryParams['sub_customer_id'] = $localVarParams['subCustomerId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ListMultiAccountRetrieveCouponsResponse',
+            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ListMultiAccountRetrieveCouponsRequest');
+    }
+
+    /**
+     * 查询企业主账号可拨款优惠券列表
+     *
+     * 企业主账号在自建平台查询自己的可拨款优惠券列表。
+     * 
+     * &gt;![](public_sys-resources/icon-note.gif) **说明：**
+     * &gt;-   仅支持华为发放的测试类、商务类、活动类代金券。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listMultiAccountTransferCoupons($request)
+    {
+        return $this->listMultiAccountTransferCouponsWithHttpInfo($request);
+    }
+
+    public function listMultiAccountTransferCouponsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/enterprises/multi-accounts/transfer-coupons';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ListMultiAccountTransferCouponsResponse',
+            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ListMultiAccountTransferCouponsRequest');
+    }
+
+    /**
      * 查询按需产品价格
      *
      * 伙伴在销售平台按照条件查询按需产品的价格。
@@ -4837,6 +5041,71 @@ class BssClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ReclaimCouponQuotasResponse',
             $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ReclaimCouponQuotasRequest');
+    }
+
+    /**
+     * 企业主账号从企业子账号回收优惠券
+     *
+     * 企业主账号在自建平台回收给企业子账号的拨款优惠券。
+     * 
+     * &gt;![](public_sys-resources/icon-note.gif) **说明：**
+     * &gt;-   仅支持华为发放的测试类、商务类、活动类代金券。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function reclaimEnterpriseMultiAccountCoupon($request)
+    {
+        return $this->reclaimEnterpriseMultiAccountCouponWithHttpInfo($request);
+    }
+
+    public function reclaimEnterpriseMultiAccountCouponWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/enterprises/multi-accounts/retrieve-coupon';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ReclaimEnterpriseMultiAccountCouponResponse',
+            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ReclaimEnterpriseMultiAccountCouponRequest');
     }
 
     /**

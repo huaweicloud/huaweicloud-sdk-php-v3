@@ -92,22 +92,22 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
             'orderId' => 'string',
             'periodType' => 'int',
             'usageType' => 'string',
-            'usage' => 'double',
+            'usage' => 'float',
             'usageMeasureId' => 'int',
-            'freeResourceUsage' => 'double',
+            'freeResourceUsage' => 'float',
             'freeResourceMeasureId' => 'int',
-            'riUsage' => 'double',
+            'riUsage' => 'float',
             'riUsageMeasureId' => 'int',
-            'consumeAmount' => 'double',
+            'consumeAmount' => 'float',
             'pastMonthsAmortizedAmount' => 'double',
-            'currentMonthAmortizedAmount' => 'double',
-            'futureMonthsAmortizedAmount' => 'double',
+            'currentMonthAmortizedAmount' => 'float',
+            'futureMonthsAmortizedAmount' => 'float',
             'amortizedCashAmount' => 'double',
-            'amortizedCreditAmount' => 'double',
-            'amortizedCouponAmount' => 'double',
-            'amortizedFlexipurchaseCouponAmount' => 'double',
-            'amortizedStoredValueCardAmount' => 'double',
-            'amortizedBonusAmount' => 'double',
+            'amortizedCreditAmount' => 'float',
+            'amortizedCouponAmount' => 'float',
+            'amortizedFlexipurchaseCouponAmount' => 'float',
+            'amortizedStoredValueCardAmount' => 'float',
+            'amortizedBonusAmount' => 'float',
             'subServiceTypeCode' => 'string',
             'subServiceTypeName' => 'string',
             'subResourceTypeCode' => 'string',
@@ -192,22 +192,22 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
         'orderId' => null,
         'periodType' => 'int32',
         'usageType' => null,
-        'usage' => 'double',
+        'usage' => 'bigdecimal',
         'usageMeasureId' => 'int32',
-        'freeResourceUsage' => 'double',
+        'freeResourceUsage' => 'bigdecimal',
         'freeResourceMeasureId' => 'int32',
-        'riUsage' => 'double',
+        'riUsage' => 'bigdecimal',
         'riUsageMeasureId' => 'int32',
-        'consumeAmount' => 'double',
+        'consumeAmount' => 'bigdecimal',
         'pastMonthsAmortizedAmount' => 'double',
-        'currentMonthAmortizedAmount' => 'double',
-        'futureMonthsAmortizedAmount' => 'double',
+        'currentMonthAmortizedAmount' => 'bigdecimal',
+        'futureMonthsAmortizedAmount' => 'bigdecimal',
         'amortizedCashAmount' => 'double',
-        'amortizedCreditAmount' => 'double',
-        'amortizedCouponAmount' => 'double',
-        'amortizedFlexipurchaseCouponAmount' => 'double',
-        'amortizedStoredValueCardAmount' => 'double',
-        'amortizedBonusAmount' => 'double',
+        'amortizedCreditAmount' => 'bigdecimal',
+        'amortizedCouponAmount' => 'bigdecimal',
+        'amortizedFlexipurchaseCouponAmount' => 'bigdecimal',
+        'amortizedStoredValueCardAmount' => 'bigdecimal',
+        'amortizedBonusAmount' => 'bigdecimal',
         'subServiceTypeCode' => null,
         'subServiceTypeName' => null,
         'subResourceTypeCode' => null,
@@ -1199,7 +1199,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * Gets usage
     *  资源的使用量。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getUsage()
     {
@@ -1209,7 +1209,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets usage
     *
-    * @param double|null $usage 资源的使用量。
+    * @param float|null $usage 资源的使用量。
     *
     * @return $this
     */
@@ -1247,7 +1247,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * Gets freeResourceUsage
     *  套餐内使用量。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getFreeResourceUsage()
     {
@@ -1257,7 +1257,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets freeResourceUsage
     *
-    * @param double|null $freeResourceUsage 套餐内使用量。
+    * @param float|null $freeResourceUsage 套餐内使用量。
     *
     * @return $this
     */
@@ -1295,7 +1295,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * Gets riUsage
     *  预留实例使用量。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getRiUsage()
     {
@@ -1305,7 +1305,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets riUsage
     *
-    * @param double|null $riUsage 预留实例使用量。
+    * @param float|null $riUsage 预留实例使用量。
     *
     * @return $this
     */
@@ -1343,7 +1343,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * Gets consumeAmount
     *  消费金额（应付金额）。 消费金额=期初已分摊金额+当月分摊金额+期末未分摊金额
     *
-    * @return double|null
+    * @return float|null
     */
     public function getConsumeAmount()
     {
@@ -1353,7 +1353,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets consumeAmount
     *
-    * @param double|null $consumeAmount 消费金额（应付金额）。 消费金额=期初已分摊金额+当月分摊金额+期末未分摊金额
+    * @param float|null $consumeAmount 消费金额（应付金额）。 消费金额=期初已分摊金额+当月分摊金额+期末未分摊金额
     *
     * @return $this
     */
@@ -1391,7 +1391,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * Gets currentMonthAmortizedAmount
     *  当月分摊金额。 当月分摊金额=现金分摊金额+信用额度分摊金额+代金券分摊金额+现金券分摊金额+储值卡分摊金额+奖励金分摊金额
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCurrentMonthAmortizedAmount()
     {
@@ -1401,7 +1401,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets currentMonthAmortizedAmount
     *
-    * @param double|null $currentMonthAmortizedAmount 当月分摊金额。 当月分摊金额=现金分摊金额+信用额度分摊金额+代金券分摊金额+现金券分摊金额+储值卡分摊金额+奖励金分摊金额
+    * @param float|null $currentMonthAmortizedAmount 当月分摊金额。 当月分摊金额=现金分摊金额+信用额度分摊金额+代金券分摊金额+现金券分摊金额+储值卡分摊金额+奖励金分摊金额
     *
     * @return $this
     */
@@ -1415,7 +1415,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * Gets futureMonthsAmortizedAmount
     *  期末未分摊金额。月度成本分摊时，当月以后还未分摊的金额。  说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getFutureMonthsAmortizedAmount()
     {
@@ -1425,7 +1425,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets futureMonthsAmortizedAmount
     *
-    * @param double|null $futureMonthsAmortizedAmount 期末未分摊金额。月度成本分摊时，当月以后还未分摊的金额。  说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
+    * @param float|null $futureMonthsAmortizedAmount 期末未分摊金额。月度成本分摊时，当月以后还未分摊的金额。  说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
     *
     * @return $this
     */
@@ -1463,7 +1463,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * Gets amortizedCreditAmount
     *  月度成本分摊时，当月已分摊金额中包含的信用额度分摊金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmortizedCreditAmount()
     {
@@ -1473,7 +1473,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets amortizedCreditAmount
     *
-    * @param double|null $amortizedCreditAmount 月度成本分摊时，当月已分摊金额中包含的信用额度分摊金额。
+    * @param float|null $amortizedCreditAmount 月度成本分摊时，当月已分摊金额中包含的信用额度分摊金额。
     *
     * @return $this
     */
@@ -1487,7 +1487,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * Gets amortizedCouponAmount
     *  月度成本分摊时，当月已分摊金额中包含的代金券分摊金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmortizedCouponAmount()
     {
@@ -1497,7 +1497,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets amortizedCouponAmount
     *
-    * @param double|null $amortizedCouponAmount 月度成本分摊时，当月已分摊金额中包含的代金券分摊金额。
+    * @param float|null $amortizedCouponAmount 月度成本分摊时，当月已分摊金额中包含的代金券分摊金额。
     *
     * @return $this
     */
@@ -1511,7 +1511,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * Gets amortizedFlexipurchaseCouponAmount
     *  月度成本分摊时，当月已分摊金额中包含的现金券分摊金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmortizedFlexipurchaseCouponAmount()
     {
@@ -1521,7 +1521,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets amortizedFlexipurchaseCouponAmount
     *
-    * @param double|null $amortizedFlexipurchaseCouponAmount 月度成本分摊时，当月已分摊金额中包含的现金券分摊金额。
+    * @param float|null $amortizedFlexipurchaseCouponAmount 月度成本分摊时，当月已分摊金额中包含的现金券分摊金额。
     *
     * @return $this
     */
@@ -1535,7 +1535,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * Gets amortizedStoredValueCardAmount
     *  月度成本分摊时，当月已分摊金额中包含的储值卡分摊金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmortizedStoredValueCardAmount()
     {
@@ -1545,7 +1545,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets amortizedStoredValueCardAmount
     *
-    * @param double|null $amortizedStoredValueCardAmount 月度成本分摊时，当月已分摊金额中包含的储值卡分摊金额。
+    * @param float|null $amortizedStoredValueCardAmount 月度成本分摊时，当月已分摊金额中包含的储值卡分摊金额。
     *
     * @return $this
     */
@@ -1559,7 +1559,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * Gets amortizedBonusAmount
     *  月度成本分摊时，当月已分摊金额中包含的奖励金分摊金额（用于现网未清干净的奖励金）。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmortizedBonusAmount()
     {
@@ -1569,7 +1569,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets amortizedBonusAmount
     *
-    * @param double|null $amortizedBonusAmount 月度成本分摊时，当月已分摊金额中包含的奖励金分摊金额（用于现网未清干净的奖励金）。
+    * @param float|null $amortizedBonusAmount 月度成本分摊时，当月已分摊金额中包含的奖励金分摊金额（用于现网未清干净的奖励金）。
     *
     * @return $this
     */

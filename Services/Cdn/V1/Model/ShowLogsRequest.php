@@ -21,7 +21,8 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * domainName  只支持单个域名，如：www.test1.com。
-    * queryDate  查询开始时间，查询开始时间到开始时间+1天内的日志数据，取值范围是距离当前30天内。
+    * startTime  查询开始时间，时间格式为整点毫秒时间戳，此参数传空值时默认为当天0点。
+    * endTime  查询结束时间（不包含结束时间），时间格式为整点毫秒时间戳，与开始时间的最大跨度为30天，此参数传空值时默认为开始时间加1天。
     * pageSize  单页最大数量，取值范围为1-10000。
     * pageNumber  当前查询第几页，取值范围为1-65535。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
@@ -30,7 +31,8 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'domainName' => 'string',
-            'queryDate' => 'int',
+            'startTime' => 'int',
+            'endTime' => 'int',
             'pageSize' => 'int',
             'pageNumber' => 'int',
             'enterpriseProjectId' => 'string'
@@ -39,7 +41,8 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domainName  只支持单个域名，如：www.test1.com。
-    * queryDate  查询开始时间，查询开始时间到开始时间+1天内的日志数据，取值范围是距离当前30天内。
+    * startTime  查询开始时间，时间格式为整点毫秒时间戳，此参数传空值时默认为当天0点。
+    * endTime  查询结束时间（不包含结束时间），时间格式为整点毫秒时间戳，与开始时间的最大跨度为30天，此参数传空值时默认为开始时间加1天。
     * pageSize  单页最大数量，取值范围为1-10000。
     * pageNumber  当前查询第几页，取值范围为1-65535。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
@@ -48,7 +51,8 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'domainName' => null,
-        'queryDate' => 'int64',
+        'startTime' => 'int64',
+        'endTime' => 'int64',
         'pageSize' => null,
         'pageNumber' => null,
         'enterpriseProjectId' => null
@@ -78,7 +82,8 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * domainName  只支持单个域名，如：www.test1.com。
-    * queryDate  查询开始时间，查询开始时间到开始时间+1天内的日志数据，取值范围是距离当前30天内。
+    * startTime  查询开始时间，时间格式为整点毫秒时间戳，此参数传空值时默认为当天0点。
+    * endTime  查询结束时间（不包含结束时间），时间格式为整点毫秒时间戳，与开始时间的最大跨度为30天，此参数传空值时默认为开始时间加1天。
     * pageSize  单页最大数量，取值范围为1-10000。
     * pageNumber  当前查询第几页，取值范围为1-65535。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
@@ -87,7 +92,8 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'domainName' => 'domain_name',
-            'queryDate' => 'query_date',
+            'startTime' => 'start_time',
+            'endTime' => 'end_time',
             'pageSize' => 'page_size',
             'pageNumber' => 'page_number',
             'enterpriseProjectId' => 'enterprise_project_id'
@@ -96,7 +102,8 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domainName  只支持单个域名，如：www.test1.com。
-    * queryDate  查询开始时间，查询开始时间到开始时间+1天内的日志数据，取值范围是距离当前30天内。
+    * startTime  查询开始时间，时间格式为整点毫秒时间戳，此参数传空值时默认为当天0点。
+    * endTime  查询结束时间（不包含结束时间），时间格式为整点毫秒时间戳，与开始时间的最大跨度为30天，此参数传空值时默认为开始时间加1天。
     * pageSize  单页最大数量，取值范围为1-10000。
     * pageNumber  当前查询第几页，取值范围为1-65535。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
@@ -105,7 +112,8 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'domainName' => 'setDomainName',
-            'queryDate' => 'setQueryDate',
+            'startTime' => 'setStartTime',
+            'endTime' => 'setEndTime',
             'pageSize' => 'setPageSize',
             'pageNumber' => 'setPageNumber',
             'enterpriseProjectId' => 'setEnterpriseProjectId'
@@ -114,7 +122,8 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domainName  只支持单个域名，如：www.test1.com。
-    * queryDate  查询开始时间，查询开始时间到开始时间+1天内的日志数据，取值范围是距离当前30天内。
+    * startTime  查询开始时间，时间格式为整点毫秒时间戳，此参数传空值时默认为当天0点。
+    * endTime  查询结束时间（不包含结束时间），时间格式为整点毫秒时间戳，与开始时间的最大跨度为30天，此参数传空值时默认为开始时间加1天。
     * pageSize  单页最大数量，取值范围为1-10000。
     * pageNumber  当前查询第几页，取值范围为1-65535。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
@@ -123,7 +132,8 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'domainName' => 'getDomainName',
-            'queryDate' => 'getQueryDate',
+            'startTime' => 'getStartTime',
+            'endTime' => 'getEndTime',
             'pageSize' => 'getPageSize',
             'pageNumber' => 'getPageNumber',
             'enterpriseProjectId' => 'getEnterpriseProjectId'
@@ -188,7 +198,8 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['domainName'] = isset($data['domainName']) ? $data['domainName'] : null;
-        $this->container['queryDate'] = isset($data['queryDate']) ? $data['queryDate'] : null;
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
+        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : null;
         $this->container['pageNumber'] = isset($data['pageNumber']) ? $data['pageNumber'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
@@ -204,9 +215,6 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['domainName'] === null) {
             $invalidProperties[] = "'domainName' can't be null";
-        }
-        if ($this->container['queryDate'] === null) {
-            $invalidProperties[] = "'queryDate' can't be null";
         }
             if (!is_null($this->container['pageSize']) && ($this->container['pageSize'] > 10000)) {
                 $invalidProperties[] = "invalid value for 'pageSize', must be smaller than or equal to 10000.";
@@ -259,26 +267,50 @@ class ShowLogsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets queryDate
-    *  查询开始时间，查询开始时间到开始时间+1天内的日志数据，取值范围是距离当前30天内。
+    * Gets startTime
+    *  查询开始时间，时间格式为整点毫秒时间戳，此参数传空值时默认为当天0点。
     *
-    * @return int
+    * @return int|null
     */
-    public function getQueryDate()
+    public function getStartTime()
     {
-        return $this->container['queryDate'];
+        return $this->container['startTime'];
     }
 
     /**
-    * Sets queryDate
+    * Sets startTime
     *
-    * @param int $queryDate 查询开始时间，查询开始时间到开始时间+1天内的日志数据，取值范围是距离当前30天内。
+    * @param int|null $startTime 查询开始时间，时间格式为整点毫秒时间戳，此参数传空值时默认为当天0点。
     *
     * @return $this
     */
-    public function setQueryDate($queryDate)
+    public function setStartTime($startTime)
     {
-        $this->container['queryDate'] = $queryDate;
+        $this->container['startTime'] = $startTime;
+        return $this;
+    }
+
+    /**
+    * Gets endTime
+    *  查询结束时间（不包含结束时间），时间格式为整点毫秒时间戳，与开始时间的最大跨度为30天，此参数传空值时默认为开始时间加1天。
+    *
+    * @return int|null
+    */
+    public function getEndTime()
+    {
+        return $this->container['endTime'];
+    }
+
+    /**
+    * Sets endTime
+    *
+    * @param int|null $endTime 查询结束时间（不包含结束时间），时间格式为整点毫秒时间戳，与开始时间的最大跨度为30天，此参数传空值时默认为开始时间加1天。
+    *
+    * @return $this
+    */
+    public function setEndTime($endTime)
+    {
+        $this->container['endTime'] = $endTime;
         return $this;
     }
 

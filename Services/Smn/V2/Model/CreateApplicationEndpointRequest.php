@@ -20,7 +20,7 @@ class CreateApplicationEndpointRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * applicationUrn  Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+    * applicationUrn  Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreateApplicationEndpointRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * applicationUrn  Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+    * applicationUrn  Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreateApplicationEndpointRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * applicationUrn  Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+    * applicationUrn  Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreateApplicationEndpointRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * applicationUrn  Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+    * applicationUrn  Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreateApplicationEndpointRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * applicationUrn  Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+    * applicationUrn  Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
     * body  body
     *
     * @var string[]
@@ -188,7 +188,7 @@ class CreateApplicationEndpointRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets applicationUrn
-    *  Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+    *  Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class CreateApplicationEndpointRequest implements ModelInterface, ArrayAccess
     /**
     * Sets applicationUrn
     *
-    * @param string $applicationUrn Application的唯一资源标识，可通过[查询Application](https://support.huaweicloud.com/api-smn/ListApplications.html)获取该标识。
+    * @param string $applicationUrn Application的唯一资源标识，可通过[查询Application](smn_api_57004.xml)获取该标识。
     *
     * @return $this
     */

@@ -40,7 +40,7 @@ class CouponRecordV2 implements ModelInterface, ArrayAccess
             'quotaType' => 'int',
             'couponId' => 'string',
             'customerId' => 'string',
-            'operationAmount' => 'double',
+            'operationAmount' => 'float',
             'operationTime' => 'string',
             'result' => 'string',
             'remark' => 'string'
@@ -68,7 +68,7 @@ class CouponRecordV2 implements ModelInterface, ArrayAccess
         'quotaType' => 'int32',
         'couponId' => null,
         'customerId' => null,
-        'operationAmount' => 'double',
+        'operationAmount' => 'bigdecimal',
         'operationTime' => null,
         'result' => null,
         'remark' => null
@@ -419,7 +419,7 @@ class CouponRecordV2 implements ModelInterface, ArrayAccess
     * Gets operationAmount
     *  操作的面额值。单位：元。 发放时，等于面额值；回收时，指每次回收的具体值。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getOperationAmount()
     {
@@ -429,7 +429,7 @@ class CouponRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets operationAmount
     *
-    * @param double|null $operationAmount 操作的面额值。单位：元。 发放时，等于面额值；回收时，指每次回收的具体值。
+    * @param float|null $operationAmount 操作的面额值。单位：元。 发放时，等于面额值；回收时，指每次回收的具体值。
     *
     * @return $this
     */

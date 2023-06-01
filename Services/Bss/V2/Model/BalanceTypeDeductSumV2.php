@@ -28,7 +28,7 @@ class BalanceTypeDeductSumV2 implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'balanceType' => 'string',
-            'amount' => 'double',
+            'amount' => 'float',
             'billType' => 'string'
     ];
 
@@ -42,7 +42,7 @@ class BalanceTypeDeductSumV2 implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'balanceType' => null,
-        'amount' => 'double',
+        'amount' => 'bigdecimal',
         'billType' => null
     ];
 
@@ -222,7 +222,7 @@ class BalanceTypeDeductSumV2 implements ModelInterface, ArrayAccess
     * Gets amount
     *  金额。 对于billType=1或者2的账单，该金额为负值。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmount()
     {
@@ -232,7 +232,7 @@ class BalanceTypeDeductSumV2 implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double|null $amount 金额。 对于billType=1或者2的账单，该金额为负值。
+    * @param float|null $amount 金额。 对于billType=1或者2的账单，该金额为负值。
     *
     * @return $this
     */

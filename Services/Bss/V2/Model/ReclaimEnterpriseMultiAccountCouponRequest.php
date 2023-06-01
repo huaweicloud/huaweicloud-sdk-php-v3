@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Smn\V2\Model;
+namespace HuaweiCloud\SDK\Bss\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateResourceTagRequestBodyTag implements ModelInterface, ArrayAccess
+class ReclaimEnterpriseMultiAccountCouponRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class CreateResourceTagRequestBodyTag implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateResourceTagRequestBody_tag';
+    protected static $openAPIModelName = 'ReclaimEnterpriseMultiAccountCouponRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键，表示要匹配的字段。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - key不能重复，value为匹配的值。  - 此字段为固定字典值。  - 不允许为空字符串。
-    * value  值。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - 每个值最大长度255个unicode字符。  - 不可以为空。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'key' => 'string',
-            'value' => 'string'
+            'body' => '\HuaweiCloud\SDK\Bss\V2\Model\RetrieveEnterpriseMultiAccountCouponReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键，表示要匹配的字段。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - key不能重复，value为匹配的值。  - 此字段为固定字典值。  - 不允许为空字符串。
-    * value  值。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - 每个值最大长度255个unicode字符。  - 不可以为空。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'key' => null,
-        'value' => null
+        'body' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class CreateResourceTagRequestBodyTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键，表示要匹配的字段。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - key不能重复，value为匹配的值。  - 此字段为固定字典值。  - 不允许为空字符串。
-    * value  值。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - 每个值最大长度255个unicode字符。  - 不可以为空。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'key' => 'key',
-            'value' => 'value'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键，表示要匹配的字段。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - key不能重复，value为匹配的值。  - 此字段为固定字典值。  - 不允许为空字符串。
-    * value  值。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - 每个值最大长度255个unicode字符。  - 不可以为空。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'key' => 'setKey',
-            'value' => 'setValue'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键，表示要匹配的字段。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - key不能重复，value为匹配的值。  - 此字段为固定字典值。  - 不允许为空字符串。
-    * value  值。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - 每个值最大长度255个unicode字符。  - 不可以为空。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'key' => 'getKey',
-            'value' => 'getValue'
+            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +147,7 @@ class CreateResourceTagRequestBodyTag implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,12 +158,6 @@ class CreateResourceTagRequestBodyTag implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['key'] === null) {
-            $invalidProperties[] = "'key' can't be null";
-        }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -190,50 +173,26 @@ class CreateResourceTagRequestBodyTag implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets key
-    *  键，表示要匹配的字段。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - key不能重复，value为匹配的值。  - 此字段为固定字典值。  - 不允许为空字符串。
+    * Gets body
+    *  body
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Bss\V2\Model\RetrieveEnterpriseMultiAccountCouponReq|null
     */
-    public function getKey()
+    public function getBody()
     {
-        return $this->container['key'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets key
+    * Sets body
     *
-    * @param string $key 键，表示要匹配的字段。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - key不能重复，value为匹配的值。  - 此字段为固定字典值。  - 不允许为空字符串。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\RetrieveEnterpriseMultiAccountCouponReq|null $body body
     *
     * @return $this
     */
-    public function setKey($key)
+    public function setBody($body)
     {
-        $this->container['key'] = $key;
-        return $this;
-    }
-
-    /**
-    * Gets value
-    *  值。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - 每个值最大长度255个unicode字符。  - 不可以为空。
-    *
-    * @return string
-    */
-    public function getValue()
-    {
-        return $this->container['value'];
-    }
-
-    /**
-    * Sets value
-    *
-    * @param string $value 值。  当前key的参数值只能取“resource_name”，此时value的参数值为云服务器名称。  - 每个值最大长度255个unicode字符。  - 不可以为空。
-    *
-    * @return $this
-    */
-    public function setValue($value)
-    {
-        $this->container['value'] = $value;
+        $this->container['body'] = $body;
         return $this;
     }
 

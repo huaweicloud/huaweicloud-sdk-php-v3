@@ -25,20 +25,20 @@ class Configs implements ModelInterface, ArrayAccess
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
-    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
-    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * originProtocol  回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
+    * originFollow302Status  回源跟随，on：开启，off：关闭。
     * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
-    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  状态码缓存时间
-    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on 关闭: off
+    * ipv6Accelerate  ipv6设置，1：打开；0：关闭。
+    * errorCodeCache  状态码缓存时间。
+    * originRangeStatus  Range回源，即分片回源，开启: on，关闭: off。  > 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
-    * errorCodeRedirectRules  自定义错误页面
+    * errorCodeRedirectRules  自定义错误页面。
     *
     * @var string[]
     */
@@ -71,20 +71,20 @@ class Configs implements ModelInterface, ArrayAccess
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
-    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
-    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * originProtocol  回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
+    * originFollow302Status  回源跟随，on：开启，off：关闭。
     * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
-    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  状态码缓存时间
-    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on 关闭: off
+    * ipv6Accelerate  ipv6设置，1：打开；0：关闭。
+    * errorCodeCache  状态码缓存时间。
+    * originRangeStatus  Range回源，即分片回源，开启: on，关闭: off。  > 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
-    * errorCodeRedirectRules  自定义错误页面
+    * errorCodeRedirectRules  自定义错误页面。
     *
     * @var string[]
     */
@@ -138,20 +138,20 @@ class Configs implements ModelInterface, ArrayAccess
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
-    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
-    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * originProtocol  回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
+    * originFollow302Status  回源跟随，on：开启，off：关闭。
     * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
-    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  状态码缓存时间
-    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on 关闭: off
+    * ipv6Accelerate  ipv6设置，1：打开；0：关闭。
+    * errorCodeCache  状态码缓存时间。
+    * originRangeStatus  Range回源，即分片回源，开启: on，关闭: off。  > 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
-    * errorCodeRedirectRules  自定义错误页面
+    * errorCodeRedirectRules  自定义错误页面。
     *
     * @var string[]
     */
@@ -184,20 +184,20 @@ class Configs implements ModelInterface, ArrayAccess
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
-    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
-    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * originProtocol  回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
+    * originFollow302Status  回源跟随，on：开启，off：关闭。
     * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
-    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  状态码缓存时间
-    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on 关闭: off
+    * ipv6Accelerate  ipv6设置，1：打开；0：关闭。
+    * errorCodeCache  状态码缓存时间。
+    * originRangeStatus  Range回源，即分片回源，开启: on，关闭: off。  > 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
-    * errorCodeRedirectRules  自定义错误页面
+    * errorCodeRedirectRules  自定义错误页面。
     *
     * @var string[]
     */
@@ -230,20 +230,20 @@ class Configs implements ModelInterface, ArrayAccess
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
-    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
-    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * originProtocol  回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
+    * originFollow302Status  回源跟随，on：开启，off：关闭。
     * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
-    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  状态码缓存时间
-    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on 关闭: off
+    * ipv6Accelerate  ipv6设置，1：打开；0：关闭。
+    * errorCodeCache  状态码缓存时间。
+    * originRangeStatus  Range回源，即分片回源，开启: on，关闭: off。  > 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。
     * userAgentFilter  userAgentFilter
     * originRequestUrlRewrite  改写回源URL，最多配置20条。
-    * errorCodeRedirectRules  自定义错误页面
+    * errorCodeRedirectRules  自定义错误页面。
     *
     * @var string[]
     */
@@ -492,7 +492,7 @@ class Configs implements ModelInterface, ArrayAccess
 
     /**
     * Gets originProtocol
-    *  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    *  回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
     *
     * @return string|null
     */
@@ -504,7 +504,7 @@ class Configs implements ModelInterface, ArrayAccess
     /**
     * Sets originProtocol
     *
-    * @param string|null $originProtocol 回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    * @param string|null $originProtocol 回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
     *
     * @return $this
     */
@@ -516,7 +516,7 @@ class Configs implements ModelInterface, ArrayAccess
 
     /**
     * Gets originFollow302Status
-    *  回源跟随（on：开启，off：关闭）。
+    *  回源跟随，on：开启，off：关闭。
     *
     * @return string|null
     */
@@ -528,7 +528,7 @@ class Configs implements ModelInterface, ArrayAccess
     /**
     * Sets originFollow302Status
     *
-    * @param string|null $originFollow302Status 回源跟随（on：开启，off：关闭）。
+    * @param string|null $originFollow302Status 回源跟随，on：开启，off：关闭。
     *
     * @return $this
     */
@@ -684,7 +684,7 @@ class Configs implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Accelerate
-    *  ipv6设置（1：打开；0：关闭）
+    *  ipv6设置，1：打开；0：关闭。
     *
     * @return int|null
     */
@@ -696,7 +696,7 @@ class Configs implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Accelerate
     *
-    * @param int|null $ipv6Accelerate ipv6设置（1：打开；0：关闭）
+    * @param int|null $ipv6Accelerate ipv6设置，1：打开；0：关闭。
     *
     * @return $this
     */
@@ -708,7 +708,7 @@ class Configs implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCodeCache
-    *  状态码缓存时间
+    *  状态码缓存时间。
     *
     * @return \HuaweiCloud\SDK\Cdn\V1\Model\ErrorCodeCache[]|null
     */
@@ -720,7 +720,7 @@ class Configs implements ModelInterface, ArrayAccess
     /**
     * Sets errorCodeCache
     *
-    * @param \HuaweiCloud\SDK\Cdn\V1\Model\ErrorCodeCache[]|null $errorCodeCache 状态码缓存时间
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\ErrorCodeCache[]|null $errorCodeCache 状态码缓存时间。
     *
     * @return $this
     */
@@ -732,7 +732,7 @@ class Configs implements ModelInterface, ArrayAccess
 
     /**
     * Gets originRangeStatus
-    *  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on 关闭: off
+    *  Range回源，即分片回源，开启: on，关闭: off。  > 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。
     *
     * @return string|null
     */
@@ -744,7 +744,7 @@ class Configs implements ModelInterface, ArrayAccess
     /**
     * Sets originRangeStatus
     *
-    * @param string|null $originRangeStatus Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on 关闭: off
+    * @param string|null $originRangeStatus Range回源，即分片回源，开启: on，关闭: off。  > 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。
     *
     * @return $this
     */
@@ -804,7 +804,7 @@ class Configs implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCodeRedirectRules
-    *  自定义错误页面
+    *  自定义错误页面。
     *
     * @return \HuaweiCloud\SDK\Cdn\V1\Model\ErrorCodeRedirectRules[]|null
     */
@@ -816,7 +816,7 @@ class Configs implements ModelInterface, ArrayAccess
     /**
     * Sets errorCodeRedirectRules
     *
-    * @param \HuaweiCloud\SDK\Cdn\V1\Model\ErrorCodeRedirectRules[]|null $errorCodeRedirectRules 自定义错误页面
+    * @param \HuaweiCloud\SDK\Cdn\V1\Model\ErrorCodeRedirectRules[]|null $errorCodeRedirectRules 自定义错误页面。
     *
     * @return $this
     */

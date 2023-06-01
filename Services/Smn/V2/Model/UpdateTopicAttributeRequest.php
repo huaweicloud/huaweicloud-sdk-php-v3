@@ -20,8 +20,8 @@ class UpdateTopicAttributeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](https://support.huaweicloud.com/api-smn/smn_api_51004.html)获取该标识。
-    * name  主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](https://support.huaweicloud.com/intl/zh-cn/api-smn/smn_api_a1000.html)。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
+    * name  主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](smn_api_a1000.xml)。
     * body  body
     *
     * @var string[]
@@ -34,8 +34,8 @@ class UpdateTopicAttributeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](https://support.huaweicloud.com/api-smn/smn_api_51004.html)获取该标识。
-    * name  主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](https://support.huaweicloud.com/intl/zh-cn/api-smn/smn_api_a1000.html)。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
+    * name  主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](smn_api_a1000.xml)。
     * body  body
     *
     * @var string[]
@@ -69,8 +69,8 @@ class UpdateTopicAttributeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](https://support.huaweicloud.com/api-smn/smn_api_51004.html)获取该标识。
-    * name  主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](https://support.huaweicloud.com/intl/zh-cn/api-smn/smn_api_a1000.html)。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
+    * name  主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](smn_api_a1000.xml)。
     * body  body
     *
     * @var string[]
@@ -83,8 +83,8 @@ class UpdateTopicAttributeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](https://support.huaweicloud.com/api-smn/smn_api_51004.html)获取该标识。
-    * name  主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](https://support.huaweicloud.com/intl/zh-cn/api-smn/smn_api_a1000.html)。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
+    * name  主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](smn_api_a1000.xml)。
     * body  body
     *
     * @var string[]
@@ -97,8 +97,8 @@ class UpdateTopicAttributeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](https://support.huaweicloud.com/api-smn/smn_api_51004.html)获取该标识。
-    * name  主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](https://support.huaweicloud.com/intl/zh-cn/api-smn/smn_api_a1000.html)。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
+    * name  主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](smn_api_a1000.xml)。
     * body  body
     *
     * @var string[]
@@ -202,7 +202,7 @@ class UpdateTopicAttributeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicUrn
-    *  Topic的唯一的资源标识，可通过[查询主题列表](https://support.huaweicloud.com/api-smn/smn_api_51004.html)获取该标识。
+    *  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class UpdateTopicAttributeRequest implements ModelInterface, ArrayAccess
     /**
     * Sets topicUrn
     *
-    * @param string $topicUrn Topic的唯一的资源标识，可通过[查询主题列表](https://support.huaweicloud.com/api-smn/smn_api_51004.html)获取该标识。
+    * @param string $topicUrn Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
     *
     * @return $this
     */
@@ -226,7 +226,7 @@ class UpdateTopicAttributeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](https://support.huaweicloud.com/intl/zh-cn/api-smn/smn_api_a1000.html)。
+    *  主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](smn_api_a1000.xml)。
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class UpdateTopicAttributeRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](https://support.huaweicloud.com/intl/zh-cn/api-smn/smn_api_a1000.html)。
+    * @param string $name 主题策略名称。  只支持特定的策略名称，请参见[Topic属性表](smn_api_a1000.xml)。
     *
     * @return $this
     */

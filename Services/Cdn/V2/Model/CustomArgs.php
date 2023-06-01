@@ -180,6 +180,15 @@ class CustomArgs implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        if ($this->container['key'] === null) {
+            $invalidProperties[] = "'key' can't be null";
+        }
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -198,7 +207,7 @@ class CustomArgs implements ModelInterface, ArrayAccess
     * Gets type
     *  参数类型，custom_var：自定义，nginx_preset_var：预置的变量。
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -208,7 +217,7 @@ class CustomArgs implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 参数类型，custom_var：自定义，nginx_preset_var：预置的变量。
+    * @param string $type 参数类型，custom_var：自定义，nginx_preset_var：预置的变量。
     *
     * @return $this
     */
@@ -222,7 +231,7 @@ class CustomArgs implements ModelInterface, ArrayAccess
     * Gets key
     *  参数,长度支持1-256，由数字0-9、字符a-z、A-Z，及特殊字符._-*#%|+^@?=组成。
     *
-    * @return string|null
+    * @return string
     */
     public function getKey()
     {
@@ -232,7 +241,7 @@ class CustomArgs implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 参数,长度支持1-256，由数字0-9、字符a-z、A-Z，及特殊字符._-*#%|+^@?=组成。
+    * @param string $key 参数,长度支持1-256，由数字0-9、字符a-z、A-Z，及特殊字符._-*#%|+^@?=组成。
     *
     * @return $this
     */
@@ -246,7 +255,7 @@ class CustomArgs implements ModelInterface, ArrayAccess
     * Gets value
     *  取值,长度支持1-256，由数字0-9、字符a-z、A-Z，及特殊字符._-*#%|+^@?=组成。
     *
-    * @return string|null
+    * @return string
     */
     public function getValue()
     {
@@ -256,7 +265,7 @@ class CustomArgs implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 取值,长度支持1-256，由数字0-9、字符a-z、A-Z，及特殊字符._-*#%|+^@?=组成。
+    * @param string $value 取值,长度支持1-256，由数字0-9、字符a-z、A-Z，及特殊字符._-*#%|+^@?=组成。
     *
     * @return $this
     */

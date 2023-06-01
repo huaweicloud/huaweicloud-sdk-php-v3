@@ -25,10 +25,11 @@ class ListTopicDetailsResponse implements ModelInterface, ArrayAccess
     * pushPolicy  消息推送的策略。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * createTime  创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * name  创建Topic的名字。
-    * topicUrn  Topic的唯一的资源标识。可以通过[查看主题列表获](https://support.huaweicloud.com/api-smn/smn_api_51004.html)取该标识。
+    * topicUrn  Topic的唯一的资源标识。可以通过[查看主题列表获](smn_api_51004.xml)取该标识。
     * displayName  Topic的显示名，推送邮件消息时，作为邮件发件人显示。
     * requestId  请求的唯一标识ID。
     * enterpriseProjectId  企业项目ID。
+    * topicId  主题ID。
     *
     * @var string[]
     */
@@ -40,7 +41,8 @@ class ListTopicDetailsResponse implements ModelInterface, ArrayAccess
             'topicUrn' => 'string',
             'displayName' => 'string',
             'requestId' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'topicId' => 'string'
     ];
 
     /**
@@ -49,10 +51,11 @@ class ListTopicDetailsResponse implements ModelInterface, ArrayAccess
     * pushPolicy  消息推送的策略。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * createTime  创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * name  创建Topic的名字。
-    * topicUrn  Topic的唯一的资源标识。可以通过[查看主题列表获](https://support.huaweicloud.com/api-smn/smn_api_51004.html)取该标识。
+    * topicUrn  Topic的唯一的资源标识。可以通过[查看主题列表获](smn_api_51004.xml)取该标识。
     * displayName  Topic的显示名，推送邮件消息时，作为邮件发件人显示。
     * requestId  请求的唯一标识ID。
     * enterpriseProjectId  企业项目ID。
+    * topicId  主题ID。
     *
     * @var string[]
     */
@@ -64,7 +67,8 @@ class ListTopicDetailsResponse implements ModelInterface, ArrayAccess
         'topicUrn' => null,
         'displayName' => null,
         'requestId' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'topicId' => null
     ];
 
     /**
@@ -94,10 +98,11 @@ class ListTopicDetailsResponse implements ModelInterface, ArrayAccess
     * pushPolicy  消息推送的策略。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * createTime  创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * name  创建Topic的名字。
-    * topicUrn  Topic的唯一的资源标识。可以通过[查看主题列表获](https://support.huaweicloud.com/api-smn/smn_api_51004.html)取该标识。
+    * topicUrn  Topic的唯一的资源标识。可以通过[查看主题列表获](smn_api_51004.xml)取该标识。
     * displayName  Topic的显示名，推送邮件消息时，作为邮件发件人显示。
     * requestId  请求的唯一标识ID。
     * enterpriseProjectId  企业项目ID。
+    * topicId  主题ID。
     *
     * @var string[]
     */
@@ -109,7 +114,8 @@ class ListTopicDetailsResponse implements ModelInterface, ArrayAccess
             'topicUrn' => 'topic_urn',
             'displayName' => 'display_name',
             'requestId' => 'request_id',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'topicId' => 'topic_id'
     ];
 
     /**
@@ -118,10 +124,11 @@ class ListTopicDetailsResponse implements ModelInterface, ArrayAccess
     * pushPolicy  消息推送的策略。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * createTime  创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * name  创建Topic的名字。
-    * topicUrn  Topic的唯一的资源标识。可以通过[查看主题列表获](https://support.huaweicloud.com/api-smn/smn_api_51004.html)取该标识。
+    * topicUrn  Topic的唯一的资源标识。可以通过[查看主题列表获](smn_api_51004.xml)取该标识。
     * displayName  Topic的显示名，推送邮件消息时，作为邮件发件人显示。
     * requestId  请求的唯一标识ID。
     * enterpriseProjectId  企业项目ID。
+    * topicId  主题ID。
     *
     * @var string[]
     */
@@ -133,7 +140,8 @@ class ListTopicDetailsResponse implements ModelInterface, ArrayAccess
             'topicUrn' => 'setTopicUrn',
             'displayName' => 'setDisplayName',
             'requestId' => 'setRequestId',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'topicId' => 'setTopicId'
     ];
 
     /**
@@ -142,10 +150,11 @@ class ListTopicDetailsResponse implements ModelInterface, ArrayAccess
     * pushPolicy  消息推送的策略。0表示发送失败，保留到失败队列，1表示直接丢弃发送失败的消息。
     * createTime  创建时间。时间格式为UTC时间，YYYY-MM-DDTHH:MM:SSZ。
     * name  创建Topic的名字。
-    * topicUrn  Topic的唯一的资源标识。可以通过[查看主题列表获](https://support.huaweicloud.com/api-smn/smn_api_51004.html)取该标识。
+    * topicUrn  Topic的唯一的资源标识。可以通过[查看主题列表获](smn_api_51004.xml)取该标识。
     * displayName  Topic的显示名，推送邮件消息时，作为邮件发件人显示。
     * requestId  请求的唯一标识ID。
     * enterpriseProjectId  企业项目ID。
+    * topicId  主题ID。
     *
     * @var string[]
     */
@@ -157,7 +166,8 @@ class ListTopicDetailsResponse implements ModelInterface, ArrayAccess
             'topicUrn' => 'getTopicUrn',
             'displayName' => 'getDisplayName',
             'requestId' => 'getRequestId',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'topicId' => 'getTopicId'
     ];
 
     /**
@@ -226,6 +236,7 @@ class ListTopicDetailsResponse implements ModelInterface, ArrayAccess
         $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['topicId'] = isset($data['topicId']) ? $data['topicId'] : null;
     }
 
     /**
@@ -348,7 +359,7 @@ class ListTopicDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicUrn
-    *  Topic的唯一的资源标识。可以通过[查看主题列表获](https://support.huaweicloud.com/api-smn/smn_api_51004.html)取该标识。
+    *  Topic的唯一的资源标识。可以通过[查看主题列表获](smn_api_51004.xml)取该标识。
     *
     * @return string|null
     */
@@ -360,7 +371,7 @@ class ListTopicDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topicUrn
     *
-    * @param string|null $topicUrn Topic的唯一的资源标识。可以通过[查看主题列表获](https://support.huaweicloud.com/api-smn/smn_api_51004.html)取该标识。
+    * @param string|null $topicUrn Topic的唯一的资源标识。可以通过[查看主题列表获](smn_api_51004.xml)取该标识。
     *
     * @return $this
     */
@@ -439,6 +450,30 @@ class ListTopicDetailsResponse implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets topicId
+    *  主题ID。
+    *
+    * @return string|null
+    */
+    public function getTopicId()
+    {
+        return $this->container['topicId'];
+    }
+
+    /**
+    * Sets topicId
+    *
+    * @param string|null $topicId 主题ID。
+    *
+    * @return $this
+    */
+    public function setTopicId($topicId)
+    {
+        $this->container['topicId'] = $topicId;
         return $this;
     }
 

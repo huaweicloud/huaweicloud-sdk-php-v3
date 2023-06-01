@@ -20,8 +20,8 @@ class VideoSeek implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enableVideoSeek  视频拖拽开关（true：开启，false：关闭）  > 当本字段设置为“false”时，查询域名配置接口将不会返回视频拖拽配置信息。
-    * enableFlvByTimeSeek  flv时间拖拽开关（true：开启，false：关闭）。
+    * enableVideoSeek  视频拖拽开关， true：开启，false：关闭  > 当本字段设置为“false”时，查询域名配置接口将不会返回视频拖拽配置信息。
+    * enableFlvByTimeSeek  flv时间拖拽开关， true：开启，false：关闭。
     * startParameter  自定义用户请求URL中视频播放的开始参数，支持使用数字0-9、字符a-z、A-Z，及\"_\"，长度≤64个字符。
     * endParameter  自定义用户请求URL中视频播放的结束参数，支持使用数字0-9、字符a-z、A-Z，及\"_\"，长度≤64个字符。
     *
@@ -36,8 +36,8 @@ class VideoSeek implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enableVideoSeek  视频拖拽开关（true：开启，false：关闭）  > 当本字段设置为“false”时，查询域名配置接口将不会返回视频拖拽配置信息。
-    * enableFlvByTimeSeek  flv时间拖拽开关（true：开启，false：关闭）。
+    * enableVideoSeek  视频拖拽开关， true：开启，false：关闭  > 当本字段设置为“false”时，查询域名配置接口将不会返回视频拖拽配置信息。
+    * enableFlvByTimeSeek  flv时间拖拽开关， true：开启，false：关闭。
     * startParameter  自定义用户请求URL中视频播放的开始参数，支持使用数字0-9、字符a-z、A-Z，及\"_\"，长度≤64个字符。
     * endParameter  自定义用户请求URL中视频播放的结束参数，支持使用数字0-9、字符a-z、A-Z，及\"_\"，长度≤64个字符。
     *
@@ -73,8 +73,8 @@ class VideoSeek implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enableVideoSeek  视频拖拽开关（true：开启，false：关闭）  > 当本字段设置为“false”时，查询域名配置接口将不会返回视频拖拽配置信息。
-    * enableFlvByTimeSeek  flv时间拖拽开关（true：开启，false：关闭）。
+    * enableVideoSeek  视频拖拽开关， true：开启，false：关闭  > 当本字段设置为“false”时，查询域名配置接口将不会返回视频拖拽配置信息。
+    * enableFlvByTimeSeek  flv时间拖拽开关， true：开启，false：关闭。
     * startParameter  自定义用户请求URL中视频播放的开始参数，支持使用数字0-9、字符a-z、A-Z，及\"_\"，长度≤64个字符。
     * endParameter  自定义用户请求URL中视频播放的结束参数，支持使用数字0-9、字符a-z、A-Z，及\"_\"，长度≤64个字符。
     *
@@ -89,8 +89,8 @@ class VideoSeek implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enableVideoSeek  视频拖拽开关（true：开启，false：关闭）  > 当本字段设置为“false”时，查询域名配置接口将不会返回视频拖拽配置信息。
-    * enableFlvByTimeSeek  flv时间拖拽开关（true：开启，false：关闭）。
+    * enableVideoSeek  视频拖拽开关， true：开启，false：关闭  > 当本字段设置为“false”时，查询域名配置接口将不会返回视频拖拽配置信息。
+    * enableFlvByTimeSeek  flv时间拖拽开关， true：开启，false：关闭。
     * startParameter  自定义用户请求URL中视频播放的开始参数，支持使用数字0-9、字符a-z、A-Z，及\"_\"，长度≤64个字符。
     * endParameter  自定义用户请求URL中视频播放的结束参数，支持使用数字0-9、字符a-z、A-Z，及\"_\"，长度≤64个字符。
     *
@@ -105,8 +105,8 @@ class VideoSeek implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enableVideoSeek  视频拖拽开关（true：开启，false：关闭）  > 当本字段设置为“false”时，查询域名配置接口将不会返回视频拖拽配置信息。
-    * enableFlvByTimeSeek  flv时间拖拽开关（true：开启，false：关闭）。
+    * enableVideoSeek  视频拖拽开关， true：开启，false：关闭  > 当本字段设置为“false”时，查询域名配置接口将不会返回视频拖拽配置信息。
+    * enableFlvByTimeSeek  flv时间拖拽开关， true：开启，false：关闭。
     * startParameter  自定义用户请求URL中视频播放的开始参数，支持使用数字0-9、字符a-z、A-Z，及\"_\"，长度≤64个字符。
     * endParameter  自定义用户请求URL中视频播放的结束参数，支持使用数字0-9、字符a-z、A-Z，及\"_\"，长度≤64个字符。
     *
@@ -210,7 +210,7 @@ class VideoSeek implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableVideoSeek
-    *  视频拖拽开关（true：开启，false：关闭）  > 当本字段设置为“false”时，查询域名配置接口将不会返回视频拖拽配置信息。
+    *  视频拖拽开关， true：开启，false：关闭  > 当本字段设置为“false”时，查询域名配置接口将不会返回视频拖拽配置信息。
     *
     * @return bool
     */
@@ -222,7 +222,7 @@ class VideoSeek implements ModelInterface, ArrayAccess
     /**
     * Sets enableVideoSeek
     *
-    * @param bool $enableVideoSeek 视频拖拽开关（true：开启，false：关闭）  > 当本字段设置为“false”时，查询域名配置接口将不会返回视频拖拽配置信息。
+    * @param bool $enableVideoSeek 视频拖拽开关， true：开启，false：关闭  > 当本字段设置为“false”时，查询域名配置接口将不会返回视频拖拽配置信息。
     *
     * @return $this
     */
@@ -234,7 +234,7 @@ class VideoSeek implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableFlvByTimeSeek
-    *  flv时间拖拽开关（true：开启，false：关闭）。
+    *  flv时间拖拽开关， true：开启，false：关闭。
     *
     * @return bool|null
     */
@@ -246,7 +246,7 @@ class VideoSeek implements ModelInterface, ArrayAccess
     /**
     * Sets enableFlvByTimeSeek
     *
-    * @param bool|null $enableFlvByTimeSeek flv时间拖拽开关（true：开启，false：关闭）。
+    * @param bool|null $enableFlvByTimeSeek flv时间拖拽开关， true：开启，false：关闭。
     *
     * @return $this
     */

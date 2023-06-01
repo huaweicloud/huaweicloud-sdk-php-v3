@@ -20,30 +20,26 @@ class TopicAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  访问策略规范版本。目前只支持“2016-09-07”。
-    * id  策略的唯一标识。不能为空。
-    * statement  访问策略是通过Statement语句来定义的。一个访问策略可包含一条或多条Statement语句。通过Statement语句向其他用户或云服务授权对主题的操作。
+    * accessPolicy  accessPolicy
+    * introduction  topic的简介
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'version' => 'string',
-            'id' => 'string',
-            'statement' => '\HuaweiCloud\SDK\Smn\V2\Model\Statement[]'
+            'accessPolicy' => '\HuaweiCloud\SDK\Smn\V2\Model\AccessPolicy',
+            'introduction' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  访问策略规范版本。目前只支持“2016-09-07”。
-    * id  策略的唯一标识。不能为空。
-    * statement  访问策略是通过Statement语句来定义的。一个访问策略可包含一条或多条Statement语句。通过Statement语句向其他用户或云服务授权对主题的操作。
+    * accessPolicy  accessPolicy
+    * introduction  topic的简介
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'version' => null,
-        'id' => null,
-        'statement' => null
+        'accessPolicy' => null,
+        'introduction' => null
     ];
 
     /**
@@ -69,44 +65,38 @@ class TopicAttribute implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  访问策略规范版本。目前只支持“2016-09-07”。
-    * id  策略的唯一标识。不能为空。
-    * statement  访问策略是通过Statement语句来定义的。一个访问策略可包含一条或多条Statement语句。通过Statement语句向其他用户或云服务授权对主题的操作。
+    * accessPolicy  accessPolicy
+    * introduction  topic的简介
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'version' => 'Version',
-            'id' => 'Id',
-            'statement' => 'Statement'
+            'accessPolicy' => 'access_policy',
+            'introduction' => 'introduction'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  访问策略规范版本。目前只支持“2016-09-07”。
-    * id  策略的唯一标识。不能为空。
-    * statement  访问策略是通过Statement语句来定义的。一个访问策略可包含一条或多条Statement语句。通过Statement语句向其他用户或云服务授权对主题的操作。
+    * accessPolicy  accessPolicy
+    * introduction  topic的简介
     *
     * @var string[]
     */
     protected static $setters = [
-            'version' => 'setVersion',
-            'id' => 'setId',
-            'statement' => 'setStatement'
+            'accessPolicy' => 'setAccessPolicy',
+            'introduction' => 'setIntroduction'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  访问策略规范版本。目前只支持“2016-09-07”。
-    * id  策略的唯一标识。不能为空。
-    * statement  访问策略是通过Statement语句来定义的。一个访问策略可包含一条或多条Statement语句。通过Statement语句向其他用户或云服务授权对主题的操作。
+    * accessPolicy  accessPolicy
+    * introduction  topic的简介
     *
     * @var string[]
     */
     protected static $getters = [
-            'version' => 'getVersion',
-            'id' => 'getId',
-            'statement' => 'getStatement'
+            'accessPolicy' => 'getAccessPolicy',
+            'introduction' => 'getIntroduction'
     ];
 
     /**
@@ -167,9 +157,8 @@ class TopicAttribute implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['statement'] = isset($data['statement']) ? $data['statement'] : null;
+        $this->container['accessPolicy'] = isset($data['accessPolicy']) ? $data['accessPolicy'] : null;
+        $this->container['introduction'] = isset($data['introduction']) ? $data['introduction'] : null;
     }
 
     /**
@@ -180,15 +169,6 @@ class TopicAttribute implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['version'] === null) {
-            $invalidProperties[] = "'version' can't be null";
-        }
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['statement'] === null) {
-            $invalidProperties[] = "'statement' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -204,74 +184,50 @@ class TopicAttribute implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets version
-    *  访问策略规范版本。目前只支持“2016-09-07”。
+    * Gets accessPolicy
+    *  accessPolicy
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Smn\V2\Model\AccessPolicy|null
     */
-    public function getVersion()
+    public function getAccessPolicy()
     {
-        return $this->container['version'];
+        return $this->container['accessPolicy'];
     }
 
     /**
-    * Sets version
+    * Sets accessPolicy
     *
-    * @param string $version 访问策略规范版本。目前只支持“2016-09-07”。
+    * @param \HuaweiCloud\SDK\Smn\V2\Model\AccessPolicy|null $accessPolicy accessPolicy
     *
     * @return $this
     */
-    public function setVersion($version)
+    public function setAccessPolicy($accessPolicy)
     {
-        $this->container['version'] = $version;
+        $this->container['accessPolicy'] = $accessPolicy;
         return $this;
     }
 
     /**
-    * Gets id
-    *  策略的唯一标识。不能为空。
+    * Gets introduction
+    *  topic的简介
     *
-    * @return string
+    * @return string|null
     */
-    public function getId()
+    public function getIntroduction()
     {
-        return $this->container['id'];
+        return $this->container['introduction'];
     }
 
     /**
-    * Sets id
+    * Sets introduction
     *
-    * @param string $id 策略的唯一标识。不能为空。
+    * @param string|null $introduction topic的简介
     *
     * @return $this
     */
-    public function setId($id)
+    public function setIntroduction($introduction)
     {
-        $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
-    * Gets statement
-    *  访问策略是通过Statement语句来定义的。一个访问策略可包含一条或多条Statement语句。通过Statement语句向其他用户或云服务授权对主题的操作。
-    *
-    * @return \HuaweiCloud\SDK\Smn\V2\Model\Statement[]
-    */
-    public function getStatement()
-    {
-        return $this->container['statement'];
-    }
-
-    /**
-    * Sets statement
-    *
-    * @param \HuaweiCloud\SDK\Smn\V2\Model\Statement[] $statement 访问策略是通过Statement语句来定义的。一个访问策略可包含一条或多条Statement语句。通过Statement语句向其他用户或云服务授权对主题的操作。
-    *
-    * @return $this
-    */
-    public function setStatement($statement)
-    {
-        $this->container['statement'] = $statement;
+        $this->container['introduction'] = $introduction;
         return $this;
     }
 

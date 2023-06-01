@@ -25,22 +25,22 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
-    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
-    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * originProtocol  回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
+    * originFollow302Status  回源跟随，on：开启，off：关闭。
     * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
-    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  CDN状态码缓存时间
-    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
+    * ipv6Accelerate  ipv6设置，1：打开；0：关闭。
+    * errorCodeCache  状态码缓存时间。
+    * originRangeStatus  Range回源，开启: on，off:关闭。
     * userAgentFilter  userAgentFilter
-    * originRequestUrlRewrite  改写回源URL，最多配置20条。
-    * flexibleOrigin  高级回源，最多配置20条。
-    * sliceEtagStatus  回源是否校验ETag（on：开启，off：关闭）。
-    * originReceiveTimeout  回源超时时间，范围:5-60，单位：秒。
+    * originRequestUrlRewrite  改写回源URL。
+    * flexibleOrigin  高级回源。
+    * sliceEtagStatus  回源是否校验ETag，on：开启，off：关闭。
+    * originReceiveTimeout  回源超时时间，单位：秒。
     * remoteAuth  remoteAuth
     * websocket  websocket
     * videoSeek  videoSeek
@@ -85,22 +85,22 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
-    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
-    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * originProtocol  回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
+    * originFollow302Status  回源跟随，on：开启，off：关闭。
     * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
-    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  CDN状态码缓存时间
-    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
+    * ipv6Accelerate  ipv6设置，1：打开；0：关闭。
+    * errorCodeCache  状态码缓存时间。
+    * originRangeStatus  Range回源，开启: on，off:关闭。
     * userAgentFilter  userAgentFilter
-    * originRequestUrlRewrite  改写回源URL，最多配置20条。
-    * flexibleOrigin  高级回源，最多配置20条。
-    * sliceEtagStatus  回源是否校验ETag（on：开启，off：关闭）。
-    * originReceiveTimeout  回源超时时间，范围:5-60，单位：秒。
+    * originRequestUrlRewrite  改写回源URL。
+    * flexibleOrigin  高级回源。
+    * sliceEtagStatus  回源是否校验ETag，on：开启，off：关闭。
+    * originReceiveTimeout  回源超时时间，单位：秒。
     * remoteAuth  remoteAuth
     * websocket  websocket
     * videoSeek  videoSeek
@@ -166,22 +166,22 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
-    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
-    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * originProtocol  回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
+    * originFollow302Status  回源跟随，on：开启，off：关闭。
     * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
-    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  CDN状态码缓存时间
-    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
+    * ipv6Accelerate  ipv6设置，1：打开；0：关闭。
+    * errorCodeCache  状态码缓存时间。
+    * originRangeStatus  Range回源，开启: on，off:关闭。
     * userAgentFilter  userAgentFilter
-    * originRequestUrlRewrite  改写回源URL，最多配置20条。
-    * flexibleOrigin  高级回源，最多配置20条。
-    * sliceEtagStatus  回源是否校验ETag（on：开启，off：关闭）。
-    * originReceiveTimeout  回源超时时间，范围:5-60，单位：秒。
+    * originRequestUrlRewrite  改写回源URL。
+    * flexibleOrigin  高级回源。
+    * sliceEtagStatus  回源是否校验ETag，on：开启，off：关闭。
+    * originReceiveTimeout  回源超时时间，单位：秒。
     * remoteAuth  remoteAuth
     * websocket  websocket
     * videoSeek  videoSeek
@@ -226,22 +226,22 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
-    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
-    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * originProtocol  回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
+    * originFollow302Status  回源跟随，on：开启，off：关闭。
     * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
-    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  CDN状态码缓存时间
-    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
+    * ipv6Accelerate  ipv6设置，1：打开；0：关闭。
+    * errorCodeCache  状态码缓存时间。
+    * originRangeStatus  Range回源，开启: on，off:关闭。
     * userAgentFilter  userAgentFilter
-    * originRequestUrlRewrite  改写回源URL，最多配置20条。
-    * flexibleOrigin  高级回源，最多配置20条。
-    * sliceEtagStatus  回源是否校验ETag（on：开启，off：关闭）。
-    * originReceiveTimeout  回源超时时间，范围:5-60，单位：秒。
+    * originRequestUrlRewrite  改写回源URL。
+    * flexibleOrigin  高级回源。
+    * sliceEtagStatus  回源是否校验ETag，on：开启，off：关闭。
+    * originReceiveTimeout  回源超时时间，单位：秒。
     * remoteAuth  remoteAuth
     * websocket  websocket
     * videoSeek  videoSeek
@@ -286,22 +286,22 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
-    * originProtocol  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
-    * originFollow302Status  回源跟随（on：开启，off：关闭）。
+    * originProtocol  回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
+    * originFollow302Status  回源跟随，on：开启，off：关闭。
     * cacheRules  缓存规则。
     * ipFilter  ipFilter
     * referer  referer
     * forceRedirect  forceRedirect
     * compress  compress
     * cacheUrlParameterFilter  cacheUrlParameterFilter
-    * ipv6Accelerate  ipv6设置（1：打开；0：关闭）
-    * errorCodeCache  CDN状态码缓存时间
-    * originRangeStatus  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
+    * ipv6Accelerate  ipv6设置，1：打开；0：关闭。
+    * errorCodeCache  状态码缓存时间。
+    * originRangeStatus  Range回源，开启: on，off:关闭。
     * userAgentFilter  userAgentFilter
-    * originRequestUrlRewrite  改写回源URL，最多配置20条。
-    * flexibleOrigin  高级回源，最多配置20条。
-    * sliceEtagStatus  回源是否校验ETag（on：开启，off：关闭）。
-    * originReceiveTimeout  回源超时时间，范围:5-60，单位：秒。
+    * originRequestUrlRewrite  改写回源URL。
+    * flexibleOrigin  高级回源。
+    * sliceEtagStatus  回源是否校验ETag，on：开启，off：关闭。
+    * originReceiveTimeout  回源超时时间，单位：秒。
     * remoteAuth  remoteAuth
     * websocket  websocket
     * videoSeek  videoSeek
@@ -569,7 +569,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets originProtocol
-    *  回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    *  回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
     *
     * @return string|null
     */
@@ -581,7 +581,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets originProtocol
     *
-    * @param string|null $originProtocol 回源协议（follow：协议跟随回源，http：HTTP回源(默认)，https：https回源）。
+    * @param string|null $originProtocol 回源协议，follow：协议跟随回源，http：HTTP回源(默认)，https：https回源。
     *
     * @return $this
     */
@@ -593,7 +593,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets originFollow302Status
-    *  回源跟随（on：开启，off：关闭）。
+    *  回源跟随，on：开启，off：关闭。
     *
     * @return string|null
     */
@@ -605,7 +605,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets originFollow302Status
     *
-    * @param string|null $originFollow302Status 回源跟随（on：开启，off：关闭）。
+    * @param string|null $originFollow302Status 回源跟随，on：开启，off：关闭。
     *
     * @return $this
     */
@@ -761,7 +761,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Accelerate
-    *  ipv6设置（1：打开；0：关闭）
+    *  ipv6设置，1：打开；0：关闭。
     *
     * @return int|null
     */
@@ -773,7 +773,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Accelerate
     *
-    * @param int|null $ipv6Accelerate ipv6设置（1：打开；0：关闭）
+    * @param int|null $ipv6Accelerate ipv6设置，1：打开；0：关闭。
     *
     * @return $this
     */
@@ -785,7 +785,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCodeCache
-    *  CDN状态码缓存时间
+    *  状态码缓存时间。
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeCache[]|null
     */
@@ -797,7 +797,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets errorCodeCache
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeCache[]|null $errorCodeCache CDN状态码缓存时间
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeCache[]|null $errorCodeCache 状态码缓存时间。
     *
     * @return $this
     */
@@ -809,7 +809,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets originRangeStatus
-    *  Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
+    *  Range回源，开启: on，off:关闭。
     *
     * @return string|null
     */
@@ -821,7 +821,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets originRangeStatus
     *
-    * @param string|null $originRangeStatus Range回源，即分片回源 开启Range回源的前提是您的源站支持Range请求，即HTTP请求头中包含Range字段，否则可能导致回源失败。 开启: on
+    * @param string|null $originRangeStatus Range回源，开启: on，off:关闭。
     *
     * @return $this
     */
@@ -857,7 +857,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets originRequestUrlRewrite
-    *  改写回源URL，最多配置20条。
+    *  改写回源URL。
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\OriginRequestUrlRewrite[]|null
     */
@@ -869,7 +869,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets originRequestUrlRewrite
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\OriginRequestUrlRewrite[]|null $originRequestUrlRewrite 改写回源URL，最多配置20条。
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\OriginRequestUrlRewrite[]|null $originRequestUrlRewrite 改写回源URL。
     *
     * @return $this
     */
@@ -881,7 +881,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets flexibleOrigin
-    *  高级回源，最多配置20条。
+    *  高级回源。
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\FlexibleOrigins[]|null
     */
@@ -893,7 +893,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets flexibleOrigin
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\FlexibleOrigins[]|null $flexibleOrigin 高级回源，最多配置20条。
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\FlexibleOrigins[]|null $flexibleOrigin 高级回源。
     *
     * @return $this
     */
@@ -905,7 +905,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets sliceEtagStatus
-    *  回源是否校验ETag（on：开启，off：关闭）。
+    *  回源是否校验ETag，on：开启，off：关闭。
     *
     * @return string|null
     */
@@ -917,7 +917,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets sliceEtagStatus
     *
-    * @param string|null $sliceEtagStatus 回源是否校验ETag（on：开启，off：关闭）。
+    * @param string|null $sliceEtagStatus 回源是否校验ETag，on：开启，off：关闭。
     *
     * @return $this
     */
@@ -929,7 +929,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets originReceiveTimeout
-    *  回源超时时间，范围:5-60，单位：秒。
+    *  回源超时时间，单位：秒。
     *
     * @return int|null
     */
@@ -941,7 +941,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets originReceiveTimeout
     *
-    * @param int|null $originReceiveTimeout 回源超时时间，范围:5-60，单位：秒。
+    * @param int|null $originReceiveTimeout 回源超时时间，单位：秒。
     *
     * @return $this
     */

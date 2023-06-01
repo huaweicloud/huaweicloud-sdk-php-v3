@@ -50,17 +50,17 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
             'serviceTypeName' => 'string',
             'resourceTypeName' => 'string',
             'chargingMode' => 'int',
-            'officialAmount' => 'double',
-            'officialDiscountAmount' => 'double',
-            'truncatedAmount' => 'double',
-            'consumeAmount' => 'double',
-            'couponAmount' => 'double',
-            'flexipurchaseCouponAmount' => 'double',
-            'storedValueCardAmount' => 'double',
-            'debtAmount' => 'double',
-            'writeoffAmount' => 'double',
-            'cashAmount' => 'double',
-            'creditAmount' => 'double',
+            'officialAmount' => 'float',
+            'officialDiscountAmount' => 'float',
+            'truncatedAmount' => 'float',
+            'consumeAmount' => 'float',
+            'couponAmount' => 'float',
+            'flexipurchaseCouponAmount' => 'float',
+            'storedValueCardAmount' => 'float',
+            'debtAmount' => 'float',
+            'writeoffAmount' => 'float',
+            'cashAmount' => 'float',
+            'creditAmount' => 'float',
             'measureId' => 'int',
             'billType' => 'int',
             'customerId' => 'string'
@@ -98,17 +98,17 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
         'serviceTypeName' => null,
         'resourceTypeName' => null,
         'chargingMode' => 'int32',
-        'officialAmount' => 'double',
-        'officialDiscountAmount' => 'double',
-        'truncatedAmount' => 'double',
-        'consumeAmount' => 'double',
-        'couponAmount' => 'double',
-        'flexipurchaseCouponAmount' => 'double',
-        'storedValueCardAmount' => 'double',
-        'debtAmount' => 'double',
-        'writeoffAmount' => 'double',
-        'cashAmount' => 'double',
-        'creditAmount' => 'double',
+        'officialAmount' => 'bigdecimal',
+        'officialDiscountAmount' => 'bigdecimal',
+        'truncatedAmount' => 'bigdecimal',
+        'consumeAmount' => 'bigdecimal',
+        'couponAmount' => 'bigdecimal',
+        'flexipurchaseCouponAmount' => 'bigdecimal',
+        'storedValueCardAmount' => 'bigdecimal',
+        'debtAmount' => 'bigdecimal',
+        'writeoffAmount' => 'bigdecimal',
+        'cashAmount' => 'bigdecimal',
+        'creditAmount' => 'bigdecimal',
         'measureId' => 'int32',
         'billType' => 'int32',
         'customerId' => null
@@ -529,7 +529,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * Gets officialAmount
     *  官网价。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getOfficialAmount()
     {
@@ -539,7 +539,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets officialAmount
     *
-    * @param double|null $officialAmount 官网价。
+    * @param float|null $officialAmount 官网价。
     *
     * @return $this
     */
@@ -553,7 +553,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * Gets officialDiscountAmount
     *  折扣金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getOfficialDiscountAmount()
     {
@@ -563,7 +563,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets officialDiscountAmount
     *
-    * @param double|null $officialDiscountAmount 折扣金额。
+    * @param float|null $officialDiscountAmount 折扣金额。
     *
     * @return $this
     */
@@ -577,7 +577,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * Gets truncatedAmount
     *  抹零金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getTruncatedAmount()
     {
@@ -587,7 +587,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets truncatedAmount
     *
-    * @param double|null $truncatedAmount 抹零金额。
+    * @param float|null $truncatedAmount 抹零金额。
     *
     * @return $this
     */
@@ -601,7 +601,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * Gets consumeAmount
     *  应付金额。 应付金额=官网价-折扣金额-抹零金额
     *
-    * @return double|null
+    * @return float|null
     */
     public function getConsumeAmount()
     {
@@ -611,7 +611,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets consumeAmount
     *
-    * @param double|null $consumeAmount 应付金额。 应付金额=官网价-折扣金额-抹零金额
+    * @param float|null $consumeAmount 应付金额。 应付金额=官网价-折扣金额-抹零金额
     *
     * @return $this
     */
@@ -625,7 +625,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * Gets couponAmount
     *  代金券金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCouponAmount()
     {
@@ -635,7 +635,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets couponAmount
     *
-    * @param double|null $couponAmount 代金券金额。
+    * @param float|null $couponAmount 代金券金额。
     *
     * @return $this
     */
@@ -649,7 +649,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * Gets flexipurchaseCouponAmount
     *  现金券金额，预留。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getFlexipurchaseCouponAmount()
     {
@@ -659,7 +659,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets flexipurchaseCouponAmount
     *
-    * @param double|null $flexipurchaseCouponAmount 现金券金额，预留。
+    * @param float|null $flexipurchaseCouponAmount 现金券金额，预留。
     *
     * @return $this
     */
@@ -673,7 +673,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * Gets storedValueCardAmount
     *  储值卡金额，预留。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getStoredValueCardAmount()
     {
@@ -683,7 +683,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets storedValueCardAmount
     *
-    * @param double|null $storedValueCardAmount 储值卡金额，预留。
+    * @param float|null $storedValueCardAmount 储值卡金额，预留。
     *
     * @return $this
     */
@@ -697,7 +697,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * Gets debtAmount
     *  欠费金额。即伙伴从客户账户扣费时，客户账户金额不足，欠费的金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDebtAmount()
     {
@@ -707,7 +707,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets debtAmount
     *
-    * @param double|null $debtAmount 欠费金额。即伙伴从客户账户扣费时，客户账户金额不足，欠费的金额。
+    * @param float|null $debtAmount 欠费金额。即伙伴从客户账户扣费时，客户账户金额不足，欠费的金额。
     *
     * @return $this
     */
@@ -721,7 +721,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * Gets writeoffAmount
     *  欠费核销金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getWriteoffAmount()
     {
@@ -731,7 +731,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets writeoffAmount
     *
-    * @param double|null $writeoffAmount 欠费核销金额。
+    * @param float|null $writeoffAmount 欠费核销金额。
     *
     * @return $this
     */
@@ -745,7 +745,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * Gets cashAmount
     *  现金账户金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCashAmount()
     {
@@ -755,7 +755,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets cashAmount
     *
-    * @param double|null $cashAmount 现金账户金额。
+    * @param float|null $cashAmount 现金账户金额。
     *
     * @return $this
     */
@@ -769,7 +769,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     * Gets creditAmount
     *  信用账户金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCreditAmount()
     {
@@ -779,7 +779,7 @@ class BillSumRecordInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets creditAmount
     *
-    * @param double|null $creditAmount 信用账户金额。
+    * @param float|null $creditAmount 信用账户金额。
     *
     * @return $this
     */

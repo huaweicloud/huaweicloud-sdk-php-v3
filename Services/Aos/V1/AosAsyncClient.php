@@ -21,7 +21,7 @@ class AosAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new AosAsyncClient(), "GlobalCredentials");
+        return new ClientBuilder(new AosAsyncClient());
     }
 
     /**
@@ -75,9 +75,6 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
         }
@@ -90,11 +87,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -166,9 +163,6 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
         }
@@ -178,11 +172,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -249,9 +243,6 @@ class AosAsyncClient extends Client
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
-        }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
@@ -340,9 +331,6 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
         }
@@ -352,11 +340,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'example']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'example'],
                 []
             );
         }
@@ -424,9 +412,6 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
         }
@@ -436,11 +421,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -510,9 +495,6 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
         }
@@ -522,11 +504,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -596,20 +578,17 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -673,9 +652,6 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
         }
@@ -685,11 +661,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -754,9 +730,6 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
         }
@@ -766,11 +739,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -831,20 +804,17 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -917,9 +887,6 @@ class AosAsyncClient extends Client
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
-        }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
@@ -1001,9 +968,6 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
         }
@@ -1013,11 +977,11 @@ class AosAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -1099,20 +1063,17 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -1179,9 +1140,6 @@ class AosAsyncClient extends Client
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
-        }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
@@ -1271,20 +1229,17 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -1356,20 +1311,17 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -1437,20 +1389,17 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -1516,17 +1465,14 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -1589,9 +1535,6 @@ class AosAsyncClient extends Client
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
-        }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['stackName'] !== null) {
             $pathParams['stack_name'] = $localVarParams['stackName'];
@@ -1670,20 +1613,17 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 []
             );
         }
@@ -1748,9 +1688,6 @@ class AosAsyncClient extends Client
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
-        }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['templateName'] !== null) {
             $pathParams['template_name'] = $localVarParams['templateName'];
@@ -1829,9 +1766,6 @@ class AosAsyncClient extends Client
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
-        }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['templateName'] !== null) {
             $pathParams['template_name'] = $localVarParams['templateName'];
@@ -1913,9 +1847,6 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1989,9 +1920,6 @@ class AosAsyncClient extends Client
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
-        }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['templateName'] !== null) {
             $pathParams['template_name'] = $localVarParams['templateName'];
@@ -2070,9 +1998,6 @@ class AosAsyncClient extends Client
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
-        }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['templateName'] !== null) {
             $pathParams['template_name'] = $localVarParams['templateName'];
@@ -2154,9 +2079,6 @@ class AosAsyncClient extends Client
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
         }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
-        }
         if ($localVarParams['templateName'] !== null) {
             $pathParams['template_name'] = $localVarParams['templateName'];
         }
@@ -2231,9 +2153,6 @@ class AosAsyncClient extends Client
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams['client_request_id'] = $localVarParams['clientRequestId'];
-        }
-        if ($localVarParams['projectId'] !== null) {
-            $pathParams['project_id'] = $localVarParams['projectId'];
         }
         if ($localVarParams['templateName'] !== null) {
             $pathParams['template_name'] = $localVarParams['templateName'];

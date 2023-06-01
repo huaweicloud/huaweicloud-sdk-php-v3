@@ -40,9 +40,9 @@ class CouponQuotaV2 implements ModelInterface, ArrayAccess
             'quotaType' => 'int',
             'createTime' => 'string',
             'lastUpdateTime' => 'string',
-            'quotaValue' => 'double',
+            'quotaValue' => 'float',
             'quotaStatus' => 'int',
-            'balance' => 'double',
+            'balance' => 'float',
             'measureId' => 'int',
             'currency' => 'string',
             'effectiveTime' => 'string',
@@ -72,9 +72,9 @@ class CouponQuotaV2 implements ModelInterface, ArrayAccess
         'quotaType' => 'int32',
         'createTime' => null,
         'lastUpdateTime' => null,
-        'quotaValue' => 'double',
+        'quotaValue' => 'bigdecimal',
         'quotaStatus' => 'int32',
-        'balance' => 'double',
+        'balance' => 'bigdecimal',
         'measureId' => 'int32',
         'currency' => null,
         'effectiveTime' => null,
@@ -393,7 +393,7 @@ class CouponQuotaV2 implements ModelInterface, ArrayAccess
     * Gets quotaValue
     *  优惠券额度的值，精确到小数点后2位。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getQuotaValue()
     {
@@ -403,7 +403,7 @@ class CouponQuotaV2 implements ModelInterface, ArrayAccess
     /**
     * Sets quotaValue
     *
-    * @param double|null $quotaValue 优惠券额度的值，精确到小数点后2位。
+    * @param float|null $quotaValue 优惠券额度的值，精确到小数点后2位。
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class CouponQuotaV2 implements ModelInterface, ArrayAccess
     * Gets balance
     *  剩余的优惠券额度，精确到小数点后2位。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getBalance()
     {
@@ -451,7 +451,7 @@ class CouponQuotaV2 implements ModelInterface, ArrayAccess
     /**
     * Sets balance
     *
-    * @param double|null $balance 剩余的优惠券额度，精确到小数点后2位。
+    * @param float|null $balance 剩余的优惠券额度，精确到小数点后2位。
     *
     * @return $this
     */

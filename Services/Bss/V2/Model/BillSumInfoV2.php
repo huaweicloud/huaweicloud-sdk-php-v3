@@ -42,10 +42,10 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
             'cloudServiceTypeName' => 'string',
             'billType' => 'string',
             'chargeMode' => 'string',
-            'amount' => 'double',
-            'debtAmount' => 'double',
-            'adjustmentAmount' => 'double',
-            'discountAmount' => 'double',
+            'amount' => 'float',
+            'debtAmount' => 'float',
+            'adjustmentAmount' => 'float',
+            'discountAmount' => 'float',
             'measureId' => 'int',
             'accountDetails' => '\HuaweiCloud\SDK\Bss\V2\Model\BalanceTypeDeductSumV2[]',
             'resourceTypeCode' => 'string',
@@ -76,10 +76,10 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
         'cloudServiceTypeName' => null,
         'billType' => null,
         'chargeMode' => null,
-        'amount' => 'double',
-        'debtAmount' => 'double',
-        'adjustmentAmount' => 'double',
-        'discountAmount' => 'double',
+        'amount' => 'bigdecimal',
+        'debtAmount' => 'bigdecimal',
+        'adjustmentAmount' => 'bigdecimal',
+        'discountAmount' => 'bigdecimal',
         'measureId' => 'int32',
         'accountDetails' => null,
         'resourceTypeCode' => null,
@@ -428,7 +428,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     * Gets amount
     *  金额。 对于billType=1或者2的账单，该金额为负值。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmount()
     {
@@ -438,7 +438,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double|null $amount 金额。 对于billType=1或者2的账单，该金额为负值。
+    * @param float|null $amount 金额。 对于billType=1或者2的账单，该金额为负值。
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     * Gets debtAmount
     *  欠费金额，指从客户账户扣费的时候，客户账户金额不足，欠费的金额，华为核销或者退订的时候没有该字段。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDebtAmount()
     {
@@ -462,7 +462,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets debtAmount
     *
-    * @param double|null $debtAmount 欠费金额，指从客户账户扣费的时候，客户账户金额不足，欠费的金额，华为核销或者退订的时候没有该字段。
+    * @param float|null $debtAmount 欠费金额，指从客户账户扣费的时候，客户账户金额不足，欠费的金额，华为核销或者退订的时候没有该字段。
     *
     * @return $this
     */
@@ -476,7 +476,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     * Gets adjustmentAmount
     *  核销欠款，华为核销或者退订的时候没有该字段。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAdjustmentAmount()
     {
@@ -486,7 +486,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets adjustmentAmount
     *
-    * @param double|null $adjustmentAmount 核销欠款，华为核销或者退订的时候没有该字段。
+    * @param float|null $adjustmentAmount 核销欠款，华为核销或者退订的时候没有该字段。
     *
     * @return $this
     */
@@ -500,7 +500,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     * Gets discountAmount
     *  折扣金额，华为核销或者退订的时候没有该字段。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDiscountAmount()
     {
@@ -510,7 +510,7 @@ class BillSumInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets discountAmount
     *
-    * @param double|null $discountAmount 折扣金额，华为核销或者退订的时候没有该字段。
+    * @param float|null $discountAmount 折扣金额，华为核销或者退订的时候没有该字段。
     *
     * @return $this
     */

@@ -224,6 +224,71 @@ class SmnClient extends Client
     }
 
     /**
+     * 绑定云日志
+     *
+     * 为指定Topic绑定一个云日志，用于记录主题消息发送状态等信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createLogtank($request)
+    {
+        return $this->createLogtankWithHttpInfo($request);
+    }
+
+    public function createLogtankWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/logtanks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\CreateLogtankResponse',
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\CreateLogtankRequest');
+    }
+
+    /**
      * 创建消息模板
      *
      * 创建一个模板，用户可以按照模板去发送消息，这样可以减少请求的数据量。
@@ -415,6 +480,71 @@ class SmnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Smn\V2\Model\CreateTopicResponse',
             $requestType='\HuaweiCloud\SDK\Smn\V2\Model\CreateTopicRequest');
+    }
+
+    /**
+     * 解绑云日志
+     *
+     * 解绑指定Topic绑定的云日志。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteLogtank($request)
+    {
+        return $this->deleteLogtankWithHttpInfo($request);
+    }
+
+    public function deleteLogtankWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/logtanks/{logtank_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($localVarParams['logtankId'] !== null) {
+            $pathParams['logtank_id'] = $localVarParams['logtankId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\DeleteLogtankResponse',
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\DeleteLogtankRequest');
     }
 
     /**
@@ -734,6 +864,68 @@ class SmnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Smn\V2\Model\DeleteTopicAttributesResponse',
             $requestType='\HuaweiCloud\SDK\Smn\V2\Model\DeleteTopicAttributesRequest');
+    }
+
+    /**
+     * 查询云日志
+     *
+     * 查询指定Topic绑定的云日志。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLogtank($request)
+    {
+        return $this->listLogtankWithHttpInfo($request);
+    }
+
+    public function listLogtankWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/logtanks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\ListLogtankResponse',
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\ListLogtankRequest');
     }
 
     /**
@@ -1376,6 +1568,9 @@ class SmnClient extends Client
         if ($localVarParams['fuzzyName'] !== null) {
             $queryParams['fuzzy_name'] = $localVarParams['fuzzyName'];
         }
+        if ($localVarParams['topicId'] !== null) {
+            $queryParams['topic_id'] = $localVarParams['topicId'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1421,7 +1616,7 @@ class SmnClient extends Client
 
     public function listVersionWithHttpInfo($request)
     {
-        $resourcePath = '/{api_version}';
+        $resourcePath = '/v2';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1434,9 +1629,6 @@ class SmnClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['apiVersion'] !== null) {
-            $pathParams['api_version'] = $localVarParams['apiVersion'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1600,6 +1792,74 @@ class SmnClient extends Client
     }
 
     /**
+     * 更新云日志
+     *
+     * 更新指定Topic绑定的云日志。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateLogtank($request)
+    {
+        return $this->updateLogtankWithHttpInfo($request);
+    }
+
+    public function updateLogtankWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/logtanks/{logtank_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($localVarParams['logtankId'] !== null) {
+            $pathParams['logtank_id'] = $localVarParams['logtankId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\UpdateLogtankResponse',
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\UpdateLogtankRequest');
+    }
+
+    /**
      * 更新消息模板
      *
      * 修改消息模板的内容。
@@ -1662,6 +1922,74 @@ class SmnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Smn\V2\Model\UpdateMessageTemplateResponse',
             $requestType='\HuaweiCloud\SDK\Smn\V2\Model\UpdateMessageTemplateRequest');
+    }
+
+    /**
+     * 更新订阅者
+     *
+     * 更新订阅者备注。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSubscription($request)
+    {
+        return $this->updateSubscriptionWithHttpInfo($request);
+    }
+
+    public function updateSubscriptionWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/notifications/topics/{topic_urn}/subscriptions/{subscription_urn}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['topicUrn'] !== null) {
+            $pathParams['topic_urn'] = $localVarParams['topicUrn'];
+        }
+        if ($localVarParams['subscriptionUrn'] !== null) {
+            $pathParams['subscription_urn'] = $localVarParams['subscriptionUrn'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Smn\V2\Model\UpdateSubscriptionResponse',
+            $requestType='\HuaweiCloud\SDK\Smn\V2\Model\UpdateSubscriptionRequest');
     }
 
     /**
@@ -1833,11 +2161,11 @@ class SmnClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2093,11 +2421,11 @@ class SmnClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2158,11 +2486,11 @@ class SmnClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2223,11 +2551,11 @@ class SmnClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2489,11 +2817,11 @@ class SmnClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }

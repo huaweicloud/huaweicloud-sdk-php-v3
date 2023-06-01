@@ -235,9 +235,6 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -256,7 +253,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * Gets type
     *  待查询的zone的类型。  取值范围：private。
     *
-    * @return string
+    * @return string|null
     */
     public function getType()
     {
@@ -266,7 +263,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 待查询的zone的类型。  取值范围：private。
+    * @param string|null $type 待查询的zone的类型。  取值范围：private。
     *
     * @return $this
     */

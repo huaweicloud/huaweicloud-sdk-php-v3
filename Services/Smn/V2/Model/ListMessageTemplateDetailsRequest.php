@@ -20,7 +20,7 @@ class ListMessageTemplateDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * messageTemplateId  模板唯一的资源标识，可通过查询[消息模板列表](https://support.huaweicloud.com/api-smn/ListMessageTemplates.html)获取该标识。
+    * messageTemplateId  模板唯一的资源标识，可通过查询[消息模板列表](ListMessageTemplates.xml)获取该标识。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListMessageTemplateDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * messageTemplateId  模板唯一的资源标识，可通过查询[消息模板列表](https://support.huaweicloud.com/api-smn/ListMessageTemplates.html)获取该标识。
+    * messageTemplateId  模板唯一的资源标识，可通过查询[消息模板列表](ListMessageTemplates.xml)获取该标识。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListMessageTemplateDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * messageTemplateId  模板唯一的资源标识，可通过查询[消息模板列表](https://support.huaweicloud.com/api-smn/ListMessageTemplates.html)获取该标识。
+    * messageTemplateId  模板唯一的资源标识，可通过查询[消息模板列表](ListMessageTemplates.xml)获取该标识。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListMessageTemplateDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * messageTemplateId  模板唯一的资源标识，可通过查询[消息模板列表](https://support.huaweicloud.com/api-smn/ListMessageTemplates.html)获取该标识。
+    * messageTemplateId  模板唯一的资源标识，可通过查询[消息模板列表](ListMessageTemplates.xml)获取该标识。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListMessageTemplateDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * messageTemplateId  模板唯一的资源标识，可通过查询[消息模板列表](https://support.huaweicloud.com/api-smn/ListMessageTemplates.html)获取该标识。
+    * messageTemplateId  模板唯一的资源标识，可通过查询[消息模板列表](ListMessageTemplates.xml)获取该标识。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ListMessageTemplateDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageTemplateId
-    *  模板唯一的资源标识，可通过查询[消息模板列表](https://support.huaweicloud.com/api-smn/ListMessageTemplates.html)获取该标识。
+    *  模板唯一的资源标识，可通过查询[消息模板列表](ListMessageTemplates.xml)获取该标识。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ListMessageTemplateDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets messageTemplateId
     *
-    * @param string $messageTemplateId 模板唯一的资源标识，可通过查询[消息模板列表](https://support.huaweicloud.com/api-smn/ListMessageTemplates.html)获取该标识。
+    * @param string $messageTemplateId 模板唯一的资源标识，可通过查询[消息模板列表](ListMessageTemplates.xml)获取该标识。
     *
     * @return $this
     */

@@ -23,7 +23,7 @@ class ListApplicationsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * requestId  请求的唯一标识ID。
     * applicationCount  返回的Application个数。该参数不受offset和limit影响，即返回的是您账户下所有的Application个数。
-    * applications  applications
+    * applications  Application列表。
     *
     * @var string[]
     */
@@ -37,7 +37,7 @@ class ListApplicationsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * requestId  请求的唯一标识ID。
     * applicationCount  返回的Application个数。该参数不受offset和limit影响，即返回的是您账户下所有的Application个数。
-    * applications  applications
+    * applications  Application列表。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListApplicationsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * requestId  请求的唯一标识ID。
     * applicationCount  返回的Application个数。该参数不受offset和limit影响，即返回的是您账户下所有的Application个数。
-    * applications  applications
+    * applications  Application列表。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ListApplicationsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * requestId  请求的唯一标识ID。
     * applicationCount  返回的Application个数。该参数不受offset和limit影响，即返回的是您账户下所有的Application个数。
-    * applications  applications
+    * applications  Application列表。
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ListApplicationsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * requestId  请求的唯一标识ID。
     * applicationCount  返回的Application个数。该参数不受offset和limit影响，即返回的是您账户下所有的Application个数。
-    * applications  applications
+    * applications  Application列表。
     *
     * @var string[]
     */
@@ -245,7 +245,7 @@ class ListApplicationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets applications
-    *  applications
+    *  Application列表。
     *
     * @return \HuaweiCloud\SDK\Smn\V2\Model\ApplicationItem[]|null
     */
@@ -257,7 +257,7 @@ class ListApplicationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets applications
     *
-    * @param \HuaweiCloud\SDK\Smn\V2\Model\ApplicationItem[]|null $applications applications
+    * @param \HuaweiCloud\SDK\Smn\V2\Model\ApplicationItem[]|null $applications Application列表。
     *
     * @return $this
     */

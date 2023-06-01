@@ -41,8 +41,8 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
             'usageTypeName' => 'string',
             'startTime' => 'string',
             'endTime' => 'string',
-            'amount' => 'double',
-            'originalAmount' => 'double',
+            'amount' => 'float',
+            'originalAmount' => 'float',
             'measureId' => 'int'
     ];
 
@@ -69,8 +69,8 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
         'usageTypeName' => null,
         'startTime' => null,
         'endTime' => null,
-        'amount' => 'double',
-        'originalAmount' => 'double',
+        'amount' => 'bigdecimal',
+        'originalAmount' => 'bigdecimal',
         'measureId' => 'int32'
     ];
 
@@ -443,7 +443,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     * Gets amount
     *  资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmount()
     {
@@ -453,7 +453,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double|null $amount 资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
+    * @param float|null $amount 资源剩余额度，针对可重置资源包，是指当前重置周期内的剩余量。
     *
     * @return $this
     */
@@ -467,7 +467,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     * Gets originalAmount
     *  资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getOriginalAmount()
     {
@@ -477,7 +477,7 @@ class FreeResourceDetail implements ModelInterface, ArrayAccess
     /**
     * Sets originalAmount
     *
-    * @param double|null $originalAmount 资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
+    * @param float|null $originalAmount 资源原始额度，针对可重置资源包，是指每个重置周期内的总量。
     *
     * @return $this
     */

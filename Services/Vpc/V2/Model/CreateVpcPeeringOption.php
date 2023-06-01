@@ -21,6 +21,7 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * description  功能说明：对等连接的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * requestVpcInfo  requestVpcInfo
     * acceptVpcInfo  acceptVpcInfo
     *
@@ -28,6 +29,7 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'name' => 'string',
+            'description' => 'string',
             'requestVpcInfo' => '\HuaweiCloud\SDK\Vpc\V2\Model\VpcInfo',
             'acceptVpcInfo' => '\HuaweiCloud\SDK\Vpc\V2\Model\VpcInfo'
     ];
@@ -35,6 +37,7 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * description  功能说明：对等连接的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * requestVpcInfo  requestVpcInfo
     * acceptVpcInfo  acceptVpcInfo
     *
@@ -42,6 +45,7 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'name' => null,
+        'description' => null,
         'requestVpcInfo' => null,
         'acceptVpcInfo' => null
     ];
@@ -70,6 +74,7 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * description  功能说明：对等连接的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * requestVpcInfo  requestVpcInfo
     * acceptVpcInfo  acceptVpcInfo
     *
@@ -77,6 +82,7 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'name' => 'name',
+            'description' => 'description',
             'requestVpcInfo' => 'request_vpc_info',
             'acceptVpcInfo' => 'accept_vpc_info'
     ];
@@ -84,6 +90,7 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * description  功能说明：对等连接的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * requestVpcInfo  requestVpcInfo
     * acceptVpcInfo  acceptVpcInfo
     *
@@ -91,6 +98,7 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'name' => 'setName',
+            'description' => 'setDescription',
             'requestVpcInfo' => 'setRequestVpcInfo',
             'acceptVpcInfo' => 'setAcceptVpcInfo'
     ];
@@ -98,6 +106,7 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  功能说明：对等连接名称 取值范围：支持1~64个字符
+    * description  功能说明：对等连接的描述 取值范围：0-255个字符，不能包含“<”和“>”。
     * requestVpcInfo  requestVpcInfo
     * acceptVpcInfo  acceptVpcInfo
     *
@@ -105,6 +114,7 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'name' => 'getName',
+            'description' => 'getDescription',
             'requestVpcInfo' => 'getRequestVpcInfo',
             'acceptVpcInfo' => 'getAcceptVpcInfo'
     ];
@@ -168,6 +178,7 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['requestVpcInfo'] = isset($data['requestVpcInfo']) ? $data['requestVpcInfo'] : null;
         $this->container['acceptVpcInfo'] = isset($data['acceptVpcInfo']) ? $data['acceptVpcInfo'] : null;
     }
@@ -188,6 +199,12 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['requestVpcInfo'] === null) {
             $invalidProperties[] = "'requestVpcInfo' can't be null";
@@ -230,6 +247,30 @@ class CreateVpcPeeringOption implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  功能说明：对等连接的描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 功能说明：对等连接的描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

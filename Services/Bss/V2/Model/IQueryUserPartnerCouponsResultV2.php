@@ -51,7 +51,7 @@ class IQueryUserPartnerCouponsResultV2 implements ModelInterface, ArrayAccess
             'customerId' => 'string',
             'couponType' => 'int',
             'measureId' => 'int',
-            'faceValue' => 'double',
+            'faceValue' => 'float',
             'effectiveTime' => 'string',
             'expireTime' => 'string',
             'orderId' => 'string',
@@ -65,7 +65,7 @@ class IQueryUserPartnerCouponsResultV2 implements ModelInterface, ArrayAccess
             'lastUsedTime' => 'string',
             'promotionId' => 'string',
             'createTime' => 'string',
-            'balance' => 'double',
+            'balance' => 'float',
             'lockOrderId' => 'string',
             'isFrozen' => 'string'
     ];
@@ -103,7 +103,7 @@ class IQueryUserPartnerCouponsResultV2 implements ModelInterface, ArrayAccess
         'customerId' => null,
         'couponType' => 'int32',
         'measureId' => 'int32',
-        'faceValue' => 'double',
+        'faceValue' => 'bigdecimal',
         'effectiveTime' => null,
         'expireTime' => null,
         'orderId' => null,
@@ -117,7 +117,7 @@ class IQueryUserPartnerCouponsResultV2 implements ModelInterface, ArrayAccess
         'lastUsedTime' => null,
         'promotionId' => null,
         'createTime' => null,
-        'balance' => 'double',
+        'balance' => 'bigdecimal',
         'lockOrderId' => null,
         'isFrozen' => null
     ];
@@ -527,7 +527,7 @@ class IQueryUserPartnerCouponsResultV2 implements ModelInterface, ArrayAccess
     * Gets faceValue
     *  优惠券面值。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getFaceValue()
     {
@@ -537,7 +537,7 @@ class IQueryUserPartnerCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets faceValue
     *
-    * @param double|null $faceValue 优惠券面值。
+    * @param float|null $faceValue 优惠券面值。
     *
     * @return $this
     */
@@ -863,7 +863,7 @@ class IQueryUserPartnerCouponsResultV2 implements ModelInterface, ArrayAccess
     * Gets balance
     *  优惠券余额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getBalance()
     {
@@ -873,7 +873,7 @@ class IQueryUserPartnerCouponsResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets balance
     *
-    * @param double|null $balance 优惠券余额。
+    * @param float|null $balance 优惠券余额。
     *
     * @return $this
     */

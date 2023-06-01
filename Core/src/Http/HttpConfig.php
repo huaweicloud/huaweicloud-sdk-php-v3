@@ -38,6 +38,39 @@ class HttpConfig
     public $poolConnections = 1;
     public $poolMaxsize = 1;
 
+    public $allowRedirect = false;
+
+    /**
+     * get the allowRedirect property of http config
+     * @return bool
+     */
+    public function isAllowRedirect(): bool
+    {
+        return $this->allowRedirect;
+    }
+
+    /**
+     * set allow redirect when execute http request
+     * Experimental configuration, the default value is false.
+     * Automatic redirection is allowed when turns on, which may cause some request exceptions.
+     * @param bool $allowRedirect
+     */
+    public function setAllowRedirect(bool $allowRedirect): void
+    {
+        $this->allowRedirect = $allowRedirect;
+    }
+
+    /**
+     * set allow redirect when execute http request and return the object
+     * Experimental configuration, the default value is false.
+     * Automatic redirection is allowed when turns on, which may cause some request exceptions.
+     * @param bool $allowRedirect
+     */
+    public function withAllowRedirect(bool $allowRedirect) {
+        $this->allowRedirect = $allowRedirect;
+        return $this;
+    }
+
     /**
      * @return string
      */

@@ -20,10 +20,10 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  配置开关（on/off）
-    * type  限速方式，目前只支持按流量大小限速，size:大小。
-    * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输表示传输50个字节后开始限速且限速值为limit_rate_value， 单位byte，取值范围：0-1073741824。
-    * limitRateValue  限速值,单位Bps，取值范围 0-104857600
+    * status  状态, on：开启，off：关闭。
+    * type  限速方式，目前只支持按传送流量限速，当单个HTTP请求流量达到设定的值，开始限制访问速度。  > size:按传送流量限速。
+    * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输传输50个字节后开始限速且限速值为limit_rate_value，  > 单位byte，取值范围：0-1073741824。
+    * limitRateValue  限速值,设置开始限速后的最大访问速度。  > 单位Bps，取值范围 0-104857600
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  配置开关（on/off）
-    * type  限速方式，目前只支持按流量大小限速，size:大小。
-    * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输表示传输50个字节后开始限速且限速值为limit_rate_value， 单位byte，取值范围：0-1073741824。
-    * limitRateValue  限速值,单位Bps，取值范围 0-104857600
+    * status  状态, on：开启，off：关闭。
+    * type  限速方式，目前只支持按传送流量限速，当单个HTTP请求流量达到设定的值，开始限制访问速度。  > size:按传送流量限速。
+    * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输传输50个字节后开始限速且限速值为limit_rate_value，  > 单位byte，取值范围：0-1073741824。
+    * limitRateValue  限速值,设置开始限速后的最大访问速度。  > 单位Bps，取值范围 0-104857600
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  配置开关（on/off）
-    * type  限速方式，目前只支持按流量大小限速，size:大小。
-    * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输表示传输50个字节后开始限速且限速值为limit_rate_value， 单位byte，取值范围：0-1073741824。
-    * limitRateValue  限速值,单位Bps，取值范围 0-104857600
+    * status  状态, on：开启，off：关闭。
+    * type  限速方式，目前只支持按传送流量限速，当单个HTTP请求流量达到设定的值，开始限制访问速度。  > size:按传送流量限速。
+    * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输传输50个字节后开始限速且限速值为limit_rate_value，  > 单位byte，取值范围：0-1073741824。
+    * limitRateValue  限速值,设置开始限速后的最大访问速度。  > 单位Bps，取值范围 0-104857600
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  配置开关（on/off）
-    * type  限速方式，目前只支持按流量大小限速，size:大小。
-    * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输表示传输50个字节后开始限速且限速值为limit_rate_value， 单位byte，取值范围：0-1073741824。
-    * limitRateValue  限速值,单位Bps，取值范围 0-104857600
+    * status  状态, on：开启，off：关闭。
+    * type  限速方式，目前只支持按传送流量限速，当单个HTTP请求流量达到设定的值，开始限制访问速度。  > size:按传送流量限速。
+    * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输传输50个字节后开始限速且限速值为limit_rate_value，  > 单位byte，取值范围：0-1073741824。
+    * limitRateValue  限速值,设置开始限速后的最大访问速度。  > 单位Bps，取值范围 0-104857600
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  配置开关（on/off）
-    * type  限速方式，目前只支持按流量大小限速，size:大小。
-    * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输表示传输50个字节后开始限速且限速值为limit_rate_value， 单位byte，取值范围：0-1073741824。
-    * limitRateValue  限速值,单位Bps，取值范围 0-104857600
+    * status  状态, on：开启，off：关闭。
+    * type  限速方式，目前只支持按传送流量限速，当单个HTTP请求流量达到设定的值，开始限制访问速度。  > size:按传送流量限速。
+    * limitRateAfter  限速条件,type=size,limit_rate_after=50表示从传输传输50个字节后开始限速且限速值为limit_rate_value，  > 单位byte，取值范围：0-1073741824。
+    * limitRateValue  限速值,设置开始限速后的最大访问速度。  > 单位Bps，取值范围 0-104857600
     *
     * @var string[]
     */
@@ -213,7 +213,7 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  配置开关（on/off）
+    *  状态, on：开启，off：关闭。
     *
     * @return string
     */
@@ -225,7 +225,7 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 配置开关（on/off）
+    * @param string $status 状态, on：开启，off：关闭。
     *
     * @return $this
     */
@@ -237,7 +237,7 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  限速方式，目前只支持按流量大小限速，size:大小。
+    *  限速方式，目前只支持按传送流量限速，当单个HTTP请求流量达到设定的值，开始限制访问速度。  > size:按传送流量限速。
     *
     * @return string
     */
@@ -249,7 +249,7 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 限速方式，目前只支持按流量大小限速，size:大小。
+    * @param string $type 限速方式，目前只支持按传送流量限速，当单个HTTP请求流量达到设定的值，开始限制访问速度。  > size:按传送流量限速。
     *
     * @return $this
     */
@@ -261,7 +261,7 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets limitRateAfter
-    *  限速条件,type=size,limit_rate_after=50表示从传输表示传输50个字节后开始限速且限速值为limit_rate_value， 单位byte，取值范围：0-1073741824。
+    *  限速条件,type=size,limit_rate_after=50表示从传输传输50个字节后开始限速且限速值为limit_rate_value，  > 单位byte，取值范围：0-1073741824。
     *
     * @return int|null
     */
@@ -273,7 +273,7 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
     /**
     * Sets limitRateAfter
     *
-    * @param int|null $limitRateAfter 限速条件,type=size,limit_rate_after=50表示从传输表示传输50个字节后开始限速且限速值为limit_rate_value， 单位byte，取值范围：0-1073741824。
+    * @param int|null $limitRateAfter 限速条件,type=size,limit_rate_after=50表示从传输传输50个字节后开始限速且限速值为limit_rate_value，  > 单位byte，取值范围：0-1073741824。
     *
     * @return $this
     */
@@ -285,7 +285,7 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets limitRateValue
-    *  限速值,单位Bps，取值范围 0-104857600
+    *  限速值,设置开始限速后的最大访问速度。  > 单位Bps，取值范围 0-104857600
     *
     * @return int|null
     */
@@ -297,7 +297,7 @@ class RequestLimitRules implements ModelInterface, ArrayAccess
     /**
     * Sets limitRateValue
     *
-    * @param int|null $limitRateValue 限速值,单位Bps，取值范围 0-104857600
+    * @param int|null $limitRateValue 限速值,设置开始限速后的最大访问速度。  > 单位Bps，取值范围 0-104857600
     *
     * @return $this
     */

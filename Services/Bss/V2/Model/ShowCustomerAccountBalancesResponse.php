@@ -30,7 +30,7 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'accountBalances' => '\HuaweiCloud\SDK\Bss\V2\Model\AccountBalanceV3[]',
-            'debtAmount' => 'double',
+            'debtAmount' => 'float',
             'measureId' => 'int',
             'currency' => 'string'
     ];
@@ -46,7 +46,7 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'accountBalances' => null,
-        'debtAmount' => 'double',
+        'debtAmount' => 'bigdecimal',
         'measureId' => 'int32',
         'currency' => null
     ];
@@ -234,7 +234,7 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
     * Gets debtAmount
     *  欠款总金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDebtAmount()
     {
@@ -244,7 +244,7 @@ class ShowCustomerAccountBalancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets debtAmount
     *
-    * @param double|null $debtAmount 欠款总金额。
+    * @param float|null $debtAmount 欠款总金额。
     *
     * @return $this
     */

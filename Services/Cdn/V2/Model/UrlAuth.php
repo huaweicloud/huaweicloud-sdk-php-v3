@@ -24,7 +24,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
-    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
@@ -50,7 +50,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
-    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
@@ -97,7 +97,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
-    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
@@ -123,7 +123,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
-    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
@@ -149,7 +149,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * type  鉴权方式 type_a：鉴权方式A type_b：鉴权方式B type_c1：鉴权方式C1 type_c2：鉴权方式C2
     * expireTime  过期时间：范围：0-31536000单位为秒。
     * signMethod  加密的算法 可选择md5或sha256。
-    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+    * matchType  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
     * key  鉴权KEY 由6-32位大小写字母、数字构成。
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
@@ -370,7 +370,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
 
     /**
     * Gets matchType
-    *  鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+    *  鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
     *
     * @return string|null
     */
@@ -382,7 +382,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     /**
     * Sets matchType
     *
-    * @param string|null $matchType 鉴权范围，目前仅支持配置所有文件参与鉴权。all：所有文件
+    * @param string|null $matchType 鉴权范围，目前仅支持配置所有文件参与鉴权，all：所有文件。
     *
     * @return $this
     */

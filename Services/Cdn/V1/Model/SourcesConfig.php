@@ -21,7 +21,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * originAddr  源站IP或者域名。
-    * originType  源站类型（\"ipaddr\"：\"IP源站\"，\"domain\"：\"域名源站\"，\"obs_bucket\"：\"OBS Bucket源站\"）。
+    * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * priority  源站优先级（70：主，30：备）。
     * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递(off：关闭，on：开启)。
     * httpPort  HTTP端口，默认80。
@@ -43,7 +43,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * originAddr  源站IP或者域名。
-    * originType  源站类型（\"ipaddr\"：\"IP源站\"，\"domain\"：\"域名源站\"，\"obs_bucket\"：\"OBS Bucket源站\"）。
+    * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * priority  源站优先级（70：主，30：备）。
     * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递(off：关闭，on：开启)。
     * httpPort  HTTP端口，默认80。
@@ -86,7 +86,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * originAddr  源站IP或者域名。
-    * originType  源站类型（\"ipaddr\"：\"IP源站\"，\"domain\"：\"域名源站\"，\"obs_bucket\"：\"OBS Bucket源站\"）。
+    * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * priority  源站优先级（70：主，30：备）。
     * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递(off：关闭，on：开启)。
     * httpPort  HTTP端口，默认80。
@@ -108,7 +108,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * originAddr  源站IP或者域名。
-    * originType  源站类型（\"ipaddr\"：\"IP源站\"，\"domain\"：\"域名源站\"，\"obs_bucket\"：\"OBS Bucket源站\"）。
+    * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * priority  源站优先级（70：主，30：备）。
     * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递(off：关闭，on：开启)。
     * httpPort  HTTP端口，默认80。
@@ -130,7 +130,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * originAddr  源站IP或者域名。
-    * originType  源站类型（\"ipaddr\"：\"IP源站\"，\"domain\"：\"域名源站\"，\"obs_bucket\"：\"OBS Bucket源站\"）。
+    * originType  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     * priority  源站优先级（70：主，30：备）。
     * obsWebHostingStatus  是否开启Obs静态网站托管，源站类型为obs_bucket时传递(off：关闭，on：开启)。
     * httpPort  HTTP端口，默认80。
@@ -273,7 +273,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets originType
-    *  源站类型（\"ipaddr\"：\"IP源站\"，\"domain\"：\"域名源站\"，\"obs_bucket\"：\"OBS Bucket源站\"）。
+    *  源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     *
     * @return string
     */
@@ -285,7 +285,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets originType
     *
-    * @param string $originType 源站类型（\"ipaddr\"：\"IP源站\"，\"domain\"：\"域名源站\"，\"obs_bucket\"：\"OBS Bucket源站\"）。
+    * @param string $originType 源站类型， ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
     *
     * @return $this
     */
