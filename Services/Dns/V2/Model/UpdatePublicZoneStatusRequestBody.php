@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BatchDeleteRSetWithLineReq implements ModelInterface, ArrayAccess
+class UpdatePublicZoneStatusRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,26 @@ class BatchDeleteRSetWithLineReq implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BatchDeleteRSetWithLineReq';
+    protected static $openAPIModelName = 'UpdatePublicZoneStatusRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * recordsetIds  Record Set ID列表。最多支持100个。
+    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'recordsetIds' => 'string[]'
+            'status' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * recordsetIds  Record Set ID列表。最多支持100个。
+    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'recordsetIds' => null
+        'status' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class BatchDeleteRSetWithLineReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * recordsetIds  Record Set ID列表。最多支持100个。
+    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'recordsetIds' => 'recordset_ids'
+            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * recordsetIds  Record Set ID列表。最多支持100个。
+    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
     *
     * @var string[]
     */
     protected static $setters = [
-            'recordsetIds' => 'setRecordsetIds'
+            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * recordsetIds  Record Set ID列表。最多支持100个。
+    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
     *
     * @var string[]
     */
     protected static $getters = [
-            'recordsetIds' => 'getRecordsetIds'
+            'status' => 'getStatus'
     ];
 
     /**
@@ -147,7 +147,7 @@ class BatchDeleteRSetWithLineReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['recordsetIds'] = isset($data['recordsetIds']) ? $data['recordsetIds'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -158,8 +158,8 @@ class BatchDeleteRSetWithLineReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['recordsetIds'] === null) {
-            $invalidProperties[] = "'recordsetIds' can't be null";
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
         }
         return $invalidProperties;
     }
@@ -176,26 +176,26 @@ class BatchDeleteRSetWithLineReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets recordsetIds
-    *  Record Set ID列表。最多支持100个。
+    * Gets status
+    *  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
     *
-    * @return string[]
+    * @return string
     */
-    public function getRecordsetIds()
+    public function getStatus()
     {
-        return $this->container['recordsetIds'];
+        return $this->container['status'];
     }
 
     /**
-    * Sets recordsetIds
+    * Sets status
     *
-    * @param string[] $recordsetIds Record Set ID列表。最多支持100个。
+    * @param string $status Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
     *
     * @return $this
     */
-    public function setRecordsetIds($recordsetIds)
+    public function setStatus($status)
     {
-        $this->container['recordsetIds'] = $recordsetIds;
+        $this->container['status'] = $status;
         return $this;
     }
 

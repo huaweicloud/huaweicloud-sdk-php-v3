@@ -867,6 +867,68 @@ class EcsClient extends Client
     }
 
     /**
+     * 更换云服务器计费模式
+     *
+     * 更换云服务器的计费模式
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeServerChargeMode($request)
+    {
+        return $this->changeServerChargeModeWithHttpInfo($request);
+    }
+
+    public function changeServerChargeModeWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudservers/actions/change-charge-mode';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ChangeServerChargeModeResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ChangeServerChargeModeRequest');
+    }
+
+    /**
      * 切换弹性云服务器操作系统(安装Cloud init)
      *
      * 切换弹性云服务器操作系统。支持弹性云服务器数据盘不变的情况下，使用新镜像重装系统盘。

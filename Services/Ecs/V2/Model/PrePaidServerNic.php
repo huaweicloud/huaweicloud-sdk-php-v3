@@ -24,6 +24,7 @@ class PrePaidServerNic implements ModelInterface, ArrayAccess
     * ipAddress  待创建云服务器网卡的IP地址，IPv4格式。  约束：  - 不填或空字符串，默认在子网（subnet）中自动分配一个未使用的IP作网卡的IP地址。 - 若指定IP地址，该IP地址必须在子网（subnet）对应的网段内，且未被使用。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
+    * allowedAddressPairs  IP/Mac对列表， 约束：IP地址不允许为 “0.0.0.0/0” 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目地址检查开关 被绑定的云服务器网卡allowed_address_pairs填“1.1.1.1/0”
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class PrePaidServerNic implements ModelInterface, ArrayAccess
             'subnetId' => 'string',
             'ipAddress' => 'string',
             'ipv6Enable' => 'bool',
-            'ipv6Bandwidth' => '\HuaweiCloud\SDK\Ecs\V2\Model\PrePaidServerIpv6Bandwidth'
+            'ipv6Bandwidth' => '\HuaweiCloud\SDK\Ecs\V2\Model\PrePaidServerIpv6Bandwidth',
+            'allowedAddressPairs' => '\HuaweiCloud\SDK\Ecs\V2\Model\CreateServerNicAllowedAddressPairs[]'
     ];
 
     /**
@@ -40,6 +42,7 @@ class PrePaidServerNic implements ModelInterface, ArrayAccess
     * ipAddress  待创建云服务器网卡的IP地址，IPv4格式。  约束：  - 不填或空字符串，默认在子网（subnet）中自动分配一个未使用的IP作网卡的IP地址。 - 若指定IP地址，该IP地址必须在子网（subnet）对应的网段内，且未被使用。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
+    * allowedAddressPairs  IP/Mac对列表， 约束：IP地址不允许为 “0.0.0.0/0” 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目地址检查开关 被绑定的云服务器网卡allowed_address_pairs填“1.1.1.1/0”
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class PrePaidServerNic implements ModelInterface, ArrayAccess
         'subnetId' => null,
         'ipAddress' => null,
         'ipv6Enable' => null,
-        'ipv6Bandwidth' => null
+        'ipv6Bandwidth' => null,
+        'allowedAddressPairs' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class PrePaidServerNic implements ModelInterface, ArrayAccess
     * ipAddress  待创建云服务器网卡的IP地址，IPv4格式。  约束：  - 不填或空字符串，默认在子网（subnet）中自动分配一个未使用的IP作网卡的IP地址。 - 若指定IP地址，该IP地址必须在子网（subnet）对应的网段内，且未被使用。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
+    * allowedAddressPairs  IP/Mac对列表， 约束：IP地址不允许为 “0.0.0.0/0” 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目地址检查开关 被绑定的云服务器网卡allowed_address_pairs填“1.1.1.1/0”
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class PrePaidServerNic implements ModelInterface, ArrayAccess
             'subnetId' => 'subnet_id',
             'ipAddress' => 'ip_address',
             'ipv6Enable' => 'ipv6_enable',
-            'ipv6Bandwidth' => 'ipv6_bandwidth'
+            'ipv6Bandwidth' => 'ipv6_bandwidth',
+            'allowedAddressPairs' => 'allowed_address_pairs'
     ];
 
     /**
@@ -93,6 +99,7 @@ class PrePaidServerNic implements ModelInterface, ArrayAccess
     * ipAddress  待创建云服务器网卡的IP地址，IPv4格式。  约束：  - 不填或空字符串，默认在子网（subnet）中自动分配一个未使用的IP作网卡的IP地址。 - 若指定IP地址，该IP地址必须在子网（subnet）对应的网段内，且未被使用。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
+    * allowedAddressPairs  IP/Mac对列表， 约束：IP地址不允许为 “0.0.0.0/0” 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目地址检查开关 被绑定的云服务器网卡allowed_address_pairs填“1.1.1.1/0”
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class PrePaidServerNic implements ModelInterface, ArrayAccess
             'subnetId' => 'setSubnetId',
             'ipAddress' => 'setIpAddress',
             'ipv6Enable' => 'setIpv6Enable',
-            'ipv6Bandwidth' => 'setIpv6Bandwidth'
+            'ipv6Bandwidth' => 'setIpv6Bandwidth',
+            'allowedAddressPairs' => 'setAllowedAddressPairs'
     ];
 
     /**
@@ -109,6 +117,7 @@ class PrePaidServerNic implements ModelInterface, ArrayAccess
     * ipAddress  待创建云服务器网卡的IP地址，IPv4格式。  约束：  - 不填或空字符串，默认在子网（subnet）中自动分配一个未使用的IP作网卡的IP地址。 - 若指定IP地址，该IP地址必须在子网（subnet）对应的网段内，且未被使用。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
+    * allowedAddressPairs  IP/Mac对列表， 约束：IP地址不允许为 “0.0.0.0/0” 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目地址检查开关 被绑定的云服务器网卡allowed_address_pairs填“1.1.1.1/0”
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class PrePaidServerNic implements ModelInterface, ArrayAccess
             'subnetId' => 'getSubnetId',
             'ipAddress' => 'getIpAddress',
             'ipv6Enable' => 'getIpv6Enable',
-            'ipv6Bandwidth' => 'getIpv6Bandwidth'
+            'ipv6Bandwidth' => 'getIpv6Bandwidth',
+            'allowedAddressPairs' => 'getAllowedAddressPairs'
     ];
 
     /**
@@ -181,6 +191,7 @@ class PrePaidServerNic implements ModelInterface, ArrayAccess
         $this->container['ipAddress'] = isset($data['ipAddress']) ? $data['ipAddress'] : null;
         $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
         $this->container['ipv6Bandwidth'] = isset($data['ipv6Bandwidth']) ? $data['ipv6Bandwidth'] : null;
+        $this->container['allowedAddressPairs'] = isset($data['allowedAddressPairs']) ? $data['allowedAddressPairs'] : null;
     }
 
     /**
@@ -301,6 +312,30 @@ class PrePaidServerNic implements ModelInterface, ArrayAccess
     public function setIpv6Bandwidth($ipv6Bandwidth)
     {
         $this->container['ipv6Bandwidth'] = $ipv6Bandwidth;
+        return $this;
+    }
+
+    /**
+    * Gets allowedAddressPairs
+    *  IP/Mac对列表， 约束：IP地址不允许为 “0.0.0.0/0” 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目地址检查开关 被绑定的云服务器网卡allowed_address_pairs填“1.1.1.1/0”
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\CreateServerNicAllowedAddressPairs[]|null
+    */
+    public function getAllowedAddressPairs()
+    {
+        return $this->container['allowedAddressPairs'];
+    }
+
+    /**
+    * Sets allowedAddressPairs
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\CreateServerNicAllowedAddressPairs[]|null $allowedAddressPairs IP/Mac对列表， 约束：IP地址不允许为 “0.0.0.0/0” 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目地址检查开关 被绑定的云服务器网卡allowed_address_pairs填“1.1.1.1/0”
+    *
+    * @return $this
+    */
+    public function setAllowedAddressPairs($allowedAddressPairs)
+    {
+        $this->container['allowedAddressPairs'] = $allowedAddressPairs;
         return $this;
     }
 

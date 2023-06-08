@@ -1,3 +1,124 @@
+# 3.1.40 2023-06-08
+
+### HuaweiCloud SDK BSS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **UpdateIndirectPartnerAccount**
+    - changes of request param
+      - `* amount: double -> bigdecimal`
+  - **ListCustomerBillsMonthlyBreakDown**
+    - changes of response param
+      - `* details.past_months_amortized_amount: double -> bigdecimal`
+      - `* details.amortized_cash_amount: double -> bigdecimal`
+  - **ListIssuedCouponQuotas**
+    - changes of response param
+      - `* quotas.balance: double -> bigdecimal`
+
+### HuaweiCloud SDK DNS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ListRecordSetsByZone**
+    - changes of request param
+      - `+ search_mode`
+  - **CreateRecordSet**
+    - changes of request param
+      - `* body: object<CreateRecordSetReq> -> object<CreateRecordSetRequestBody>`
+  - **CreateRecordSetWithLine**
+    - changes of request param
+      - `* body: object<CreateRecordSetWithLineReq> -> object<CreateRecordSetWithLineRequestBody>`
+  - **ListPublicZones**
+    - changes of request param
+      - `+ search_mode`
+  - **ListPrivateZones**
+    - changes of request param
+      - `+ search_mode`
+  - **ListRecordSets**
+    - changes of request param
+      - `+ search_mode`
+
+### HuaweiCloud SDK ECS
+
+- _Features_
+  - Support the interface `ChangeServerChargeMode`
+- _Bug Fix_
+  - None
+- _Change_
+  - **CreateServers**
+    - changes of request param
+      - `+ server.nics.allowed_address_pairs`
+  - **CreatePostPaidServers**
+    - changes of request param
+      - `+ server.nics.allowed_address_pairs`
+
+### HuaweiCloud SDK IoTDA
+
+- _Features_
+  - Support the interfaces `RetryBatchTask`, `StopBatchTask`
+- _Bug Fix_
+  - None
+- _Change_
+  - **CreateBatchTask**
+    - changes of response param
+      - `+ task_progress.removed`
+      - `+ task_progress.device_in_progress`
+      - `+ task_progress.rejected`
+  - **ListBatchTasks**
+    - changes of response param
+      - `+ batchtasks.task_progress.removed`
+      - `+ batchtasks.task_progress.device_in_progress`
+      - `+ batchtasks.task_progress.rejected`
+  - **ShowBatchTask**
+    - changes of request param
+      - `+ task_detail_status`
+      - `+ target`
+    - changes of response param
+      - `+ batchtask.task_progress.removed`
+      - `+ batchtask.task_progress.device_in_progress`
+      - `+ batchtask.task_progress.rejected`
+
+### HuaweiCloud SDK TMS
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ListResource**
+    - changes of response param
+      - `+ resources.tags`
+
+### HuaweiCloud SDK VPC
+
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ShowAddressGroup**
+    - changes of response param
+      - `+ address_group.enterprise_project_id`
+  - **UpdateAddressGroup**
+    - changes of response param
+      - `+ address_group.enterprise_project_id`
+  - **ListAddressGroup**
+    - changes of request param
+      - `+ enterprise_project_id`
+    - changes of response param
+      - `+ address_groups.enterprise_project_id`
+  - **CreateAddressGroup**
+    - changes of request param
+      - `+ address_group.enterprise_project_id`
+    - changes of response param
+      - `+ address_group.enterprise_project_id`
+
 # 3.1.39 2023-06-01
 
 ### HuaweiCloud SDK BSS

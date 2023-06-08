@@ -22,11 +22,12 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * zoneType  待查询的Record Set的域名类型。  取值范围：public、private  如果为空，表示查询公网类型的Record Set。 如果为public，表示查询公网类型的Record Set。 如果为private，表示查询内网类型的Record Set。 搜索模式默认为模糊搜索。  默认值为public。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
-    * type  待查询的Record Set的记录集类型。  取值范围：A,AAAA,MX,CNAME,TXT, NS（仅限公网Zone）,SRV,PTR（仅限内网Zone）,CAA（仅限公网Zone）。
+    * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
@@ -38,6 +39,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'zoneType' => 'string',
             'marker' => 'string',
+            'searchMode' => 'string',
             'limit' => 'int',
             'offset' => 'int',
             'tags' => 'string',
@@ -54,11 +56,12 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * zoneType  待查询的Record Set的域名类型。  取值范围：public、private  如果为空，表示查询公网类型的Record Set。 如果为public，表示查询公网类型的Record Set。 如果为private，表示查询内网类型的Record Set。 搜索模式默认为模糊搜索。  默认值为public。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
-    * type  待查询的Record Set的记录集类型。  取值范围：A,AAAA,MX,CNAME,TXT, NS（仅限公网Zone）,SRV,PTR（仅限内网Zone）,CAA（仅限公网Zone）。
+    * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
@@ -70,6 +73,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'zoneType' => null,
         'marker' => null,
+        'searchMode' => null,
         'limit' => 'int32',
         'offset' => 'int32',
         'tags' => null,
@@ -107,11 +111,12 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * zoneType  待查询的Record Set的域名类型。  取值范围：public、private  如果为空，表示查询公网类型的Record Set。 如果为public，表示查询公网类型的Record Set。 如果为private，表示查询内网类型的Record Set。 搜索模式默认为模糊搜索。  默认值为public。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
-    * type  待查询的Record Set的记录集类型。  取值范围：A,AAAA,MX,CNAME,TXT, NS（仅限公网Zone）,SRV,PTR（仅限内网Zone）,CAA（仅限公网Zone）。
+    * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
@@ -123,6 +128,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'zoneType' => 'zone_type',
             'marker' => 'marker',
+            'searchMode' => 'search_mode',
             'limit' => 'limit',
             'offset' => 'offset',
             'tags' => 'tags',
@@ -139,11 +145,12 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * zoneType  待查询的Record Set的域名类型。  取值范围：public、private  如果为空，表示查询公网类型的Record Set。 如果为public，表示查询公网类型的Record Set。 如果为private，表示查询内网类型的Record Set。 搜索模式默认为模糊搜索。  默认值为public。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
-    * type  待查询的Record Set的记录集类型。  取值范围：A,AAAA,MX,CNAME,TXT, NS（仅限公网Zone）,SRV,PTR（仅限内网Zone）,CAA（仅限公网Zone）。
+    * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
@@ -155,6 +162,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'zoneType' => 'setZoneType',
             'marker' => 'setMarker',
+            'searchMode' => 'setSearchMode',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
             'tags' => 'setTags',
@@ -171,11 +179,12 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * zoneType  待查询的Record Set的域名类型。  取值范围：public、private  如果为空，表示查询公网类型的Record Set。 如果为public，表示查询公网类型的Record Set。 如果为private，表示查询内网类型的Record Set。 搜索模式默认为模糊搜索。  默认值为public。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
     * tags  资源标签。  取值格式：key1,value1|key2,value2  多个标签之间用\"|\"分开，每个标签的键值用英文逗号\",\"相隔。
     * status  待查询的Record Set的状态。  取值范围：ACTIVE、ERROR、DISABLE、FREEZE、PENDING_CREATE、PENDING_UPDATE、PENDING_DELETE
-    * type  待查询的Record Set的记录集类型。  取值范围：A,AAAA,MX,CNAME,TXT, NS（仅限公网Zone）,SRV,PTR（仅限内网Zone）,CAA（仅限公网Zone）。
+    * type  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * name  待查询的Record Set的域名中包含此name。  搜索模式默认为模糊搜索。  默认值为空。
     * id  待查询的Record Set的id包含此id。  搜索模式默认为模糊搜索。  默认值为空。
     * records  待查询的Record Set的值中包含此records。  搜索模式默认为模糊搜索。  默认值为空。
@@ -187,6 +196,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'zoneType' => 'getZoneType',
             'marker' => 'getMarker',
+            'searchMode' => 'getSearchMode',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
             'tags' => 'getTags',
@@ -259,6 +269,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['zoneType'] = isset($data['zoneType']) ? $data['zoneType'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['searchMode'] = isset($data['searchMode']) ? $data['searchMode'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -338,6 +349,30 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     public function setMarker($marker)
     {
         $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
+    * Gets searchMode
+    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    *
+    * @return string|null
+    */
+    public function getSearchMode()
+    {
+        return $this->container['searchMode'];
+    }
+
+    /**
+    * Sets searchMode
+    *
+    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    *
+    * @return $this
+    */
+    public function setSearchMode($searchMode)
+    {
+        $this->container['searchMode'] = $searchMode;
         return $this;
     }
 
@@ -439,7 +474,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  待查询的Record Set的记录集类型。  取值范围：A,AAAA,MX,CNAME,TXT, NS（仅限公网Zone）,SRV,PTR（仅限内网Zone）,CAA（仅限公网Zone）。
+    *  待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     *
     * @return string|null
     */
@@ -451,7 +486,7 @@ class ListRecordSetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 待查询的Record Set的记录集类型。  取值范围：A,AAAA,MX,CNAME,TXT, NS（仅限公网Zone）,SRV,PTR（仅限内网Zone）,CAA（仅限公网Zone）。
+    * @param string|null $type 待查询的Record Set的记录集类型。 公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。 内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     *
     * @return $this
     */

@@ -26,6 +26,7 @@ class Resources implements ModelInterface, ArrayAccess
     * resourceId  资源ID
     * resourceName  资源名称
     * resourceType  资源类型
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class Resources implements ModelInterface, ArrayAccess
             'resourceDetail' => 'object',
             'resourceId' => 'string',
             'resourceName' => 'string',
-            'resourceType' => 'string'
+            'resourceType' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Tms\V1\Model\CreateTagRequest[]'
     ];
 
     /**
@@ -46,6 +48,7 @@ class Resources implements ModelInterface, ArrayAccess
     * resourceId  资源ID
     * resourceName  资源名称
     * resourceType  资源类型
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class Resources implements ModelInterface, ArrayAccess
         'resourceDetail' => null,
         'resourceId' => null,
         'resourceName' => null,
-        'resourceType' => null
+        'resourceType' => null,
+        'tags' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class Resources implements ModelInterface, ArrayAccess
     * resourceId  资源ID
     * resourceName  资源名称
     * resourceType  资源类型
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class Resources implements ModelInterface, ArrayAccess
             'resourceDetail' => 'resource_detail',
             'resourceId' => 'resource_id',
             'resourceName' => 'resource_name',
-            'resourceType' => 'resource_type'
+            'resourceType' => 'resource_type',
+            'tags' => 'tags'
     ];
 
     /**
@@ -107,6 +113,7 @@ class Resources implements ModelInterface, ArrayAccess
     * resourceId  资源ID
     * resourceName  资源名称
     * resourceType  资源类型
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class Resources implements ModelInterface, ArrayAccess
             'resourceDetail' => 'setResourceDetail',
             'resourceId' => 'setResourceId',
             'resourceName' => 'setResourceName',
-            'resourceType' => 'setResourceType'
+            'resourceType' => 'setResourceType',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -127,6 +135,7 @@ class Resources implements ModelInterface, ArrayAccess
     * resourceId  资源ID
     * resourceName  资源名称
     * resourceType  资源类型
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class Resources implements ModelInterface, ArrayAccess
             'resourceDetail' => 'getResourceDetail',
             'resourceId' => 'getResourceId',
             'resourceName' => 'getResourceName',
-            'resourceType' => 'getResourceType'
+            'resourceType' => 'getResourceType',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -203,6 +213,7 @@ class Resources implements ModelInterface, ArrayAccess
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -383,6 +394,30 @@ class Resources implements ModelInterface, ArrayAccess
     public function setResourceType($resourceType)
     {
         $this->container['resourceType'] = $resourceType;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签列表
+    *
+    * @return \HuaweiCloud\SDK\Tms\V1\Model\CreateTagRequest[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Tms\V1\Model\CreateTagRequest[]|null $tags 标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

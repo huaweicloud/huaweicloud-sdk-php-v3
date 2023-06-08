@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\IoTDA\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
+class BatchTargetResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,38 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateRecordSetWithLineRequest';
+    protected static $openAPIModelName = 'BatchTargetResult';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zoneId  所属zone的ID。
-    * body  body
+    * target  执行批量任务的目标。
+    * status  目标的执行结果，为success或failure
+    * errorCode  操作失败的错误码
+    * errorMsg  操作失败的错误描述
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'zoneId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithLineRequestBody'
+            'target' => 'string',
+            'status' => 'string',
+            'errorCode' => 'string',
+            'errorMsg' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zoneId  所属zone的ID。
-    * body  body
+    * target  执行批量任务的目标。
+    * status  目标的执行结果，为success或failure
+    * errorCode  操作失败的错误码
+    * errorMsg  操作失败的错误描述
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'zoneId' => null,
-        'body' => null
+        'target' => null,
+        'status' => null,
+        'errorCode' => null,
+        'errorMsg' => null
     ];
 
     /**
@@ -65,38 +73,50 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zoneId  所属zone的ID。
-    * body  body
+    * target  执行批量任务的目标。
+    * status  目标的执行结果，为success或failure
+    * errorCode  操作失败的错误码
+    * errorMsg  操作失败的错误描述
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'zoneId' => 'zone_id',
-            'body' => 'body'
+            'target' => 'target',
+            'status' => 'status',
+            'errorCode' => 'error_code',
+            'errorMsg' => 'error_msg'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zoneId  所属zone的ID。
-    * body  body
+    * target  执行批量任务的目标。
+    * status  目标的执行结果，为success或failure
+    * errorCode  操作失败的错误码
+    * errorMsg  操作失败的错误描述
     *
     * @var string[]
     */
     protected static $setters = [
-            'zoneId' => 'setZoneId',
-            'body' => 'setBody'
+            'target' => 'setTarget',
+            'status' => 'setStatus',
+            'errorCode' => 'setErrorCode',
+            'errorMsg' => 'setErrorMsg'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zoneId  所属zone的ID。
-    * body  body
+    * target  执行批量任务的目标。
+    * status  目标的执行结果，为success或failure
+    * errorCode  操作失败的错误码
+    * errorMsg  操作失败的错误描述
     *
     * @var string[]
     */
     protected static $getters = [
-            'zoneId' => 'getZoneId',
-            'body' => 'getBody'
+            'target' => 'getTarget',
+            'status' => 'getStatus',
+            'errorCode' => 'getErrorCode',
+            'errorMsg' => 'getErrorMsg'
     ];
 
     /**
@@ -157,8 +177,10 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['zoneId'] = isset($data['zoneId']) ? $data['zoneId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['target'] = isset($data['target']) ? $data['target'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
     }
 
     /**
@@ -169,9 +191,6 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['zoneId'] === null) {
-            $invalidProperties[] = "'zoneId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -187,50 +206,98 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets zoneId
-    *  所属zone的ID。
+    * Gets target
+    *  执行批量任务的目标。
     *
-    * @return string
+    * @return string|null
     */
-    public function getZoneId()
+    public function getTarget()
     {
-        return $this->container['zoneId'];
+        return $this->container['target'];
     }
 
     /**
-    * Sets zoneId
+    * Sets target
     *
-    * @param string $zoneId 所属zone的ID。
+    * @param string|null $target 执行批量任务的目标。
     *
     * @return $this
     */
-    public function setZoneId($zoneId)
+    public function setTarget($target)
     {
-        $this->container['zoneId'] = $zoneId;
+        $this->container['target'] = $target;
         return $this;
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets status
+    *  目标的执行结果，为success或failure
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithLineRequestBody|null
+    * @return string|null
     */
-    public function getBody()
+    public function getStatus()
     {
-        return $this->container['body'];
+        return $this->container['status'];
     }
 
     /**
-    * Sets body
+    * Sets status
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithLineRequestBody|null $body body
+    * @param string|null $status 目标的执行结果，为success或failure
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setStatus($status)
     {
-        $this->container['body'] = $body;
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets errorCode
+    *  操作失败的错误码
+    *
+    * @return string|null
+    */
+    public function getErrorCode()
+    {
+        return $this->container['errorCode'];
+    }
+
+    /**
+    * Sets errorCode
+    *
+    * @param string|null $errorCode 操作失败的错误码
+    *
+    * @return $this
+    */
+    public function setErrorCode($errorCode)
+    {
+        $this->container['errorCode'] = $errorCode;
+        return $this;
+    }
+
+    /**
+    * Gets errorMsg
+    *  操作失败的错误描述
+    *
+    * @return string|null
+    */
+    public function getErrorMsg()
+    {
+        return $this->container['errorMsg'];
+    }
+
+    /**
+    * Sets errorMsg
+    *
+    * @param string|null $errorMsg 操作失败的错误描述
+    *
+    * @return $this
+    */
+    public function setErrorMsg($errorMsg)
+    {
+        $this->container['errorMsg'] = $errorMsg;
         return $this;
     }
 

@@ -27,7 +27,7 @@ class CreateRecordSetRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'zoneId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetReq'
+            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class CreateRecordSetRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetReq|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class CreateRecordSetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetReq|null $body body
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetRequestBody|null $body body
     *
     * @return $this
     */

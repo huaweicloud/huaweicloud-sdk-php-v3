@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
+class AssociateRouterRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateRecordSetWithLineRequest';
+    protected static $openAPIModelName = 'AssociateRouterRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zoneId  所属zone的ID。
-    * body  body
+    * router  router
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'zoneId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithLineRequestBody'
+            'router' => '\HuaweiCloud\SDK\Dns\V2\Model\Router'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zoneId  所属zone的ID。
-    * body  body
+    * router  router
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'zoneId' => null,
-        'body' => null
+        'router' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zoneId  所属zone的ID。
-    * body  body
+    * router  router
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'zoneId' => 'zone_id',
-            'body' => 'body'
+            'router' => 'router'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zoneId  所属zone的ID。
-    * body  body
+    * router  router
     *
     * @var string[]
     */
     protected static $setters = [
-            'zoneId' => 'setZoneId',
-            'body' => 'setBody'
+            'router' => 'setRouter'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zoneId  所属zone的ID。
-    * body  body
+    * router  router
     *
     * @var string[]
     */
     protected static $getters = [
-            'zoneId' => 'getZoneId',
-            'body' => 'getBody'
+            'router' => 'getRouter'
     ];
 
     /**
@@ -157,8 +147,7 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['zoneId'] = isset($data['zoneId']) ? $data['zoneId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['router'] = isset($data['router']) ? $data['router'] : null;
     }
 
     /**
@@ -169,8 +158,8 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['zoneId'] === null) {
-            $invalidProperties[] = "'zoneId' can't be null";
+        if ($this->container['router'] === null) {
+            $invalidProperties[] = "'router' can't be null";
         }
         return $invalidProperties;
     }
@@ -187,50 +176,26 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets zoneId
-    *  所属zone的ID。
+    * Gets router
+    *  router
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\Router
     */
-    public function getZoneId()
+    public function getRouter()
     {
-        return $this->container['zoneId'];
+        return $this->container['router'];
     }
 
     /**
-    * Sets zoneId
+    * Sets router
     *
-    * @param string $zoneId 所属zone的ID。
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Router $router router
     *
     * @return $this
     */
-    public function setZoneId($zoneId)
+    public function setRouter($router)
     {
-        $this->container['zoneId'] = $zoneId;
-        return $this;
-    }
-
-    /**
-    * Gets body
-    *  body
-    *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithLineRequestBody|null
-    */
-    public function getBody()
-    {
-        return $this->container['body'];
-    }
-
-    /**
-    * Sets body
-    *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithLineRequestBody|null $body body
-    *
-    * @return $this
-    */
-    public function setBody($body)
-    {
-        $this->container['body'] = $body;
+        $this->container['router'] = $router;
         return $this;
     }
 

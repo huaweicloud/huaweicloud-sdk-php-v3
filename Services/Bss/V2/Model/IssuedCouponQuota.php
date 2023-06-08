@@ -46,7 +46,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
             'lastUpdateTime' => 'string',
             'quotaValue' => 'float',
             'quotaStatus' => 'int',
-            'balance' => 'double',
+            'balance' => 'float',
             'measureId' => 'int',
             'currency' => 'string',
             'effectiveTime' => 'string',
@@ -86,7 +86,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
         'lastUpdateTime' => null,
         'quotaValue' => 'bigdecimal',
         'quotaStatus' => 'int32',
-        'balance' => 'double',
+        'balance' => 'bigdecimal',
         'measureId' => 'int32',
         'currency' => null,
         'effectiveTime' => null,
@@ -485,7 +485,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
     * Gets balance
     *  剩余的代金券额度，精确到小数点后2位。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getBalance()
     {
@@ -495,7 +495,7 @@ class IssuedCouponQuota implements ModelInterface, ArrayAccess
     /**
     * Sets balance
     *
-    * @param double|null $balance 剩余的代金券额度，精确到小数点后2位。
+    * @param float|null $balance 剩余的代金券额度，精确到小数点后2位。
     *
     * @return $this
     */

@@ -1766,6 +1766,9 @@ class DnsClient extends Client
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
+        if ($localVarParams['searchMode'] !== null) {
+            $queryParams['search_mode'] = $localVarParams['searchMode'];
+        }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -1854,6 +1857,9 @@ class DnsClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['searchMode'] !== null) {
+            $queryParams['search_mode'] = $localVarParams['searchMode'];
         }
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
@@ -3275,6 +3281,9 @@ class DnsClient extends Client
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
         }
+        if ($localVarParams['searchMode'] !== null) {
+            $queryParams['search_mode'] = $localVarParams['searchMode'];
+        }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
@@ -3307,9 +3316,9 @@ class DnsClient extends Client
     }
 
     /**
-     * 查询公网Zone的列表
+     * 查询公网Zone列表
      *
-     * 查询公网Zone的列表
+     * 查询公网Zone列表
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3357,6 +3366,9 @@ class DnsClient extends Client
         }
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['searchMode'] !== null) {
+            $queryParams['search_mode'] = $localVarParams['searchMode'];
         }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];

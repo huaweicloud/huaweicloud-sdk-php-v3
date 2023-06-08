@@ -27,6 +27,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -39,6 +40,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
             'tags' => 'string',
             'name' => 'string',
             'status' => 'string',
+            'searchMode' => 'string',
             'enterpriseProjectId' => 'string'
     ];
 
@@ -51,6 +53,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -63,6 +66,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
         'tags' => null,
         'name' => null,
         'status' => null,
+        'searchMode' => null,
         'enterpriseProjectId' => null
     ];
 
@@ -96,6 +100,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -108,6 +113,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'name' => 'name',
             'status' => 'status',
+            'searchMode' => 'search_mode',
             'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
@@ -120,6 +126,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -132,6 +139,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'name' => 'setName',
             'status' => 'setStatus',
+            'searchMode' => 'setSearchMode',
             'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
@@ -144,6 +152,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     * tags  资源标签。
     * name  zone名称。
     * status  资源状态。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。  默认值为0。
     *
     * @var string[]
@@ -156,6 +165,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'name' => 'getName',
             'status' => 'getStatus',
+            'searchMode' => 'getSearchMode',
             'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
@@ -224,6 +234,7 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['searchMode'] = isset($data['searchMode']) ? $data['searchMode'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
@@ -414,6 +425,30 @@ class ListPrivateZonesRequest implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets searchMode
+    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    *
+    * @return string|null
+    */
+    public function getSearchMode()
+    {
+        return $this->container['searchMode'];
+    }
+
+    /**
+    * Sets searchMode
+    *
+    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    *
+    * @return $this
+    */
+    public function setSearchMode($searchMode)
+    {
+        $this->container['searchMode'] = $searchMode;
         return $this;
     }
 

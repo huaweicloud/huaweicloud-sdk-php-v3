@@ -1,3 +1,124 @@
+# 3.1.40 2023-06-08
+
+### HuaweiCloud SDK BSS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **UpdateIndirectPartnerAccount**
+    - 请求参数变更
+      - `* amount: double -> bigdecimal`
+  - **ListCustomerBillsMonthlyBreakDown**
+    - 响应参数变更
+      - `* details.past_months_amortized_amount: double -> bigdecimal`
+      - `* details.amortized_cash_amount: double -> bigdecimal`
+  - **ListIssuedCouponQuotas**
+    - 响应参数变更
+      - `* quotas.balance: double -> bigdecimal`
+
+### HuaweiCloud SDK DNS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListRecordSetsByZone**
+    - 请求参数变更
+      - `+ search_mode`
+  - **CreateRecordSet**
+    - 请求参数变更
+      - `* body: object<CreateRecordSetReq> -> object<CreateRecordSetRequestBody>`
+  - **CreateRecordSetWithLine**
+    - 请求参数变更
+      - `* body: object<CreateRecordSetWithLineReq> -> object<CreateRecordSetWithLineRequestBody>`
+  - **ListPublicZones**
+    - 请求参数变更
+      - `+ search_mode`
+  - **ListPrivateZones**
+    - 请求参数变更
+      - `+ search_mode`
+  - **ListRecordSets**
+    - 请求参数变更
+      - `+ search_mode`
+
+### HuaweiCloud SDK ECS
+
+- _新增特性_
+  - 支持接口`ChangeServerChargeMode`
+- _解决问题_
+  - 无
+- _特性变更_
+  - **CreateServers**
+    - 请求参数变更
+      - `+ server.nics.allowed_address_pairs`
+  - **CreatePostPaidServers**
+    - 请求参数变更
+      - `+ server.nics.allowed_address_pairs`
+
+### HuaweiCloud SDK IoTDA
+
+- _新增特性_
+  - 支持接口`RetryBatchTask`、`StopBatchTask`
+- _解决问题_
+  - 无
+- _特性变更_
+  - **CreateBatchTask**
+    - 响应参数变更
+      - `+ task_progress.removed`
+      - `+ task_progress.device_in_progress`
+      - `+ task_progress.rejected`
+  - **ListBatchTasks**
+    - 响应参数变更
+      - `+ batchtasks.task_progress.removed`
+      - `+ batchtasks.task_progress.device_in_progress`
+      - `+ batchtasks.task_progress.rejected`
+  - **ShowBatchTask**
+    - 请求参数变更
+      - `+ task_detail_status`
+      - `+ target`
+    - 响应参数变更
+      - `+ batchtask.task_progress.removed`
+      - `+ batchtask.task_progress.device_in_progress`
+      - `+ batchtask.task_progress.rejected`
+
+### HuaweiCloud SDK TMS
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListResource**
+    - 响应参数变更
+      - `+ resources.tags`
+
+### HuaweiCloud SDK VPC
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ShowAddressGroup**
+    - 响应参数变更
+      - `+ address_group.enterprise_project_id`
+  - **UpdateAddressGroup**
+    - 响应参数变更
+      - `+ address_group.enterprise_project_id`
+  - **ListAddressGroup**
+    - 请求参数变更
+      - `+ enterprise_project_id`
+    - 响应参数变更
+      - `+ address_groups.enterprise_project_id`
+  - **CreateAddressGroup**
+    - 请求参数变更
+      - `+ address_group.enterprise_project_id`
+    - 响应参数变更
+      - `+ address_group.enterprise_project_id`
+
 # 3.1.39 2023-06-01
 
 ### HuaweiCloud SDK BSS

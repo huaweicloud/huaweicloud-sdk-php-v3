@@ -27,7 +27,7 @@ class DisassociateRouterRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'zoneId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\DisassociaterouterReq'
+            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\DisassociaterouterRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class DisassociateRouterRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\DisassociaterouterReq|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\DisassociaterouterRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class DisassociateRouterRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\DisassociaterouterReq|null $body body
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\DisassociaterouterRequestBody|null $body body
     *
     * @return $this
     */

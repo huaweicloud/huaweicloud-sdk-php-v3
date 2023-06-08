@@ -25,6 +25,7 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
     * ipVersion  功能说明：地址组ip版本 取值范围：4, 表示ipv4地址组；6，表示ipv6地址组
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
+    * enterpriseProjectId  功能说明：企业项目ID。创建IP地址组时，给IP地址组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
             'description' => 'string',
             'ipVersion' => 'int',
             'ipSet' => 'string[]',
-            'maxCapacity' => 'int'
+            'maxCapacity' => 'int',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
     * ipVersion  功能说明：地址组ip版本 取值范围：4, 表示ipv4地址组；6，表示ipv6地址组
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
+    * enterpriseProjectId  功能说明：企业项目ID。创建IP地址组时，给IP地址组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
         'description' => null,
         'ipVersion' => 'int32',
         'ipSet' => null,
-        'maxCapacity' => 'int32'
+        'maxCapacity' => 'int32',
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
     * ipVersion  功能说明：地址组ip版本 取值范围：4, 表示ipv4地址组；6，表示ipv6地址组
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
+    * enterpriseProjectId  功能说明：企业项目ID。创建IP地址组时，给IP地址组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
             'description' => 'description',
             'ipVersion' => 'ip_version',
             'ipSet' => 'ip_set',
-            'maxCapacity' => 'max_capacity'
+            'maxCapacity' => 'max_capacity',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -100,6 +106,7 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
     * ipVersion  功能说明：地址组ip版本 取值范围：4, 表示ipv4地址组；6，表示ipv6地址组
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
+    * enterpriseProjectId  功能说明：企业项目ID。创建IP地址组时，给IP地址组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'ipVersion' => 'setIpVersion',
             'ipSet' => 'setIpSet',
-            'maxCapacity' => 'setMaxCapacity'
+            'maxCapacity' => 'setMaxCapacity',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -118,6 +126,7 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
     * ipVersion  功能说明：地址组ip版本 取值范围：4, 表示ipv4地址组；6，表示ipv6地址组
     * ipSet  功能说明：地址组可包含地址集 取值范围：可以是单个ip地址，ip地址范围，ip地址cidr 约束：当前一个地址组ip_set数量限制默认值为20，即配置的ip地址、ip地址范围或ip地址cidr的总数默认限制20
     * maxCapacity  功能说明：地址组最大条目数，限制地址组可以包含的地址数量 取值范围：0-20 默认值：20
+    * enterpriseProjectId  功能说明：企业项目ID。创建IP地址组时，给IP地址组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'ipVersion' => 'getIpVersion',
             'ipSet' => 'getIpSet',
-            'maxCapacity' => 'getMaxCapacity'
+            'maxCapacity' => 'getMaxCapacity',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -192,6 +202,7 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['ipSet'] = isset($data['ipSet']) ? $data['ipSet'] : null;
         $this->container['maxCapacity'] = isset($data['maxCapacity']) ? $data['maxCapacity'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : '0';
     }
 
     /**
@@ -339,6 +350,30 @@ class CreateAddressGroupOption implements ModelInterface, ArrayAccess
     public function setMaxCapacity($maxCapacity)
     {
         $this->container['maxCapacity'] = $maxCapacity;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  功能说明：企业项目ID。创建IP地址组时，给IP地址组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 功能说明：企业项目ID。创建IP地址组时，给IP地址组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

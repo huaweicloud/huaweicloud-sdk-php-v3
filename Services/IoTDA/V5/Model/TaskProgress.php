@@ -27,6 +27,7 @@ class TaskProgress implements ModelInterface, ArrayAccess
     * waitting  等待执行的子任务个数。
     * failWaitRetry  失败等待重试的子任务个数。
     * stopped  停止的子任务个数。
+    * removed  移除的子任务个数。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class TaskProgress implements ModelInterface, ArrayAccess
             'fail' => 'int',
             'waitting' => 'int',
             'failWaitRetry' => 'int',
-            'stopped' => 'int'
+            'stopped' => 'int',
+            'removed' => 'int'
     ];
 
     /**
@@ -49,6 +51,7 @@ class TaskProgress implements ModelInterface, ArrayAccess
     * waitting  等待执行的子任务个数。
     * failWaitRetry  失败等待重试的子任务个数。
     * stopped  停止的子任务个数。
+    * removed  移除的子任务个数。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class TaskProgress implements ModelInterface, ArrayAccess
         'fail' => null,
         'waitting' => null,
         'failWaitRetry' => null,
-        'stopped' => null
+        'stopped' => null,
+        'removed' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class TaskProgress implements ModelInterface, ArrayAccess
     * waitting  等待执行的子任务个数。
     * failWaitRetry  失败等待重试的子任务个数。
     * stopped  停止的子任务个数。
+    * removed  移除的子任务个数。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class TaskProgress implements ModelInterface, ArrayAccess
             'fail' => 'fail',
             'waitting' => 'waitting',
             'failWaitRetry' => 'fail_wait_retry',
-            'stopped' => 'stopped'
+            'stopped' => 'stopped',
+            'removed' => 'removed'
     ];
 
     /**
@@ -114,6 +120,7 @@ class TaskProgress implements ModelInterface, ArrayAccess
     * waitting  等待执行的子任务个数。
     * failWaitRetry  失败等待重试的子任务个数。
     * stopped  停止的子任务个数。
+    * removed  移除的子任务个数。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class TaskProgress implements ModelInterface, ArrayAccess
             'fail' => 'setFail',
             'waitting' => 'setWaitting',
             'failWaitRetry' => 'setFailWaitRetry',
-            'stopped' => 'setStopped'
+            'stopped' => 'setStopped',
+            'removed' => 'setRemoved'
     ];
 
     /**
@@ -136,6 +144,7 @@ class TaskProgress implements ModelInterface, ArrayAccess
     * waitting  等待执行的子任务个数。
     * failWaitRetry  失败等待重试的子任务个数。
     * stopped  停止的子任务个数。
+    * removed  移除的子任务个数。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class TaskProgress implements ModelInterface, ArrayAccess
             'fail' => 'getFail',
             'waitting' => 'getWaitting',
             'failWaitRetry' => 'getFailWaitRetry',
-            'stopped' => 'getStopped'
+            'stopped' => 'getStopped',
+            'removed' => 'getRemoved'
     ];
 
     /**
@@ -214,6 +224,7 @@ class TaskProgress implements ModelInterface, ArrayAccess
         $this->container['waitting'] = isset($data['waitting']) ? $data['waitting'] : null;
         $this->container['failWaitRetry'] = isset($data['failWaitRetry']) ? $data['failWaitRetry'] : null;
         $this->container['stopped'] = isset($data['stopped']) ? $data['stopped'] : null;
+        $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class TaskProgress implements ModelInterface, ArrayAccess
     public function setStopped($stopped)
     {
         $this->container['stopped'] = $stopped;
+        return $this;
+    }
+
+    /**
+    * Gets removed
+    *  移除的子任务个数。
+    *
+    * @return int|null
+    */
+    public function getRemoved()
+    {
+        return $this->container['removed'];
+    }
+
+    /**
+    * Sets removed
+    *
+    * @param int|null $removed 移除的子任务个数。
+    *
+    * @return $this
+    */
+    public function setRemoved($removed)
+    {
+        $this->container['removed'] = $removed;
         return $this;
     }
 

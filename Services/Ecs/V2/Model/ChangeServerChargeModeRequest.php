@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\Ecs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
+class ChangeServerChargeModeRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,29 +16,25 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateRecordSetWithLineRequest';
+    protected static $openAPIModelName = 'ChangeServerChargeModeRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * zoneId  所属zone的ID。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'zoneId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithLineRequestBody'
+            'body' => '\HuaweiCloud\SDK\Ecs\V2\Model\ChangeServerChargeModeRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * zoneId  所属zone的ID。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'zoneId' => null,
         'body' => null
     ];
 
@@ -65,37 +61,31 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * zoneId  所属zone的ID。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'zoneId' => 'zone_id',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * zoneId  所属zone的ID。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'zoneId' => 'setZoneId',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * zoneId  所属zone的ID。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'zoneId' => 'getZoneId',
             'body' => 'getBody'
     ];
 
@@ -157,7 +147,6 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['zoneId'] = isset($data['zoneId']) ? $data['zoneId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -169,9 +158,6 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['zoneId'] === null) {
-            $invalidProperties[] = "'zoneId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -187,34 +173,10 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets zoneId
-    *  所属zone的ID。
-    *
-    * @return string
-    */
-    public function getZoneId()
-    {
-        return $this->container['zoneId'];
-    }
-
-    /**
-    * Sets zoneId
-    *
-    * @param string $zoneId 所属zone的ID。
-    *
-    * @return $this
-    */
-    public function setZoneId($zoneId)
-    {
-        $this->container['zoneId'] = $zoneId;
-        return $this;
-    }
-
-    /**
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithLineRequestBody|null
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\ChangeServerChargeModeRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +186,7 @@ class CreateRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\CreateRecordSetWithLineRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\ChangeServerChargeModeRequestBody|null $body body
     *
     * @return $this
     */

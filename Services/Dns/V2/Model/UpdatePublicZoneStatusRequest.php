@@ -27,7 +27,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'zoneId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\UpdatePublicZoneStatus'
+            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\UpdatePublicZoneStatusRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\UpdatePublicZoneStatus|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\UpdatePublicZoneStatusRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class UpdatePublicZoneStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\UpdatePublicZoneStatus|null $body body
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\UpdatePublicZoneStatusRequestBody|null $body body
     *
     * @return $this
     */

@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
+class CreateRecordSetRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,20 +16,17 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateRecordSetWithLineReq';
+    protected static $openAPIModelName = 'CreateRecordSetRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  可选配置，对域名的描述。
-    * type  Record Set的类型。取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
-    * status  解析记录的状态。默认值为ENABLE。
-    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
+    * type  Record Set的类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
+    * status  资源状态。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
-    * line  解析线路ID
-    * tags  资源标签
-    * weight  解析记录的权重。
-    * aliasTarget  aliasTarget
+    * tags  资源标签。
     *
     * @var string[]
     */
@@ -40,24 +37,18 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
             'status' => 'string',
             'ttl' => 'int',
             'records' => 'string[]',
-            'line' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Dns\V2\Model\Tag[]',
-            'weight' => 'int',
-            'aliasTarget' => '\HuaweiCloud\SDK\Dns\V2\Model\AliasTarget'
+            'tags' => '\HuaweiCloud\SDK\Dns\V2\Model\Tag[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  可选配置，对域名的描述。
-    * type  Record Set的类型。取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
-    * status  解析记录的状态。默认值为ENABLE。
-    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
+    * type  Record Set的类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
+    * status  资源状态。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
-    * line  解析线路ID
-    * tags  资源标签
-    * weight  解析记录的权重。
-    * aliasTarget  aliasTarget
+    * tags  资源标签。
     *
     * @var string[]
     */
@@ -68,10 +59,7 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
         'status' => null,
         'ttl' => 'int32',
         'records' => null,
-        'line' => null,
-        'tags' => null,
-        'weight' => 'int32',
-        'aliasTarget' => null
+        'tags' => null
     ];
 
     /**
@@ -98,15 +86,12 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  可选配置，对域名的描述。
-    * type  Record Set的类型。取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
-    * status  解析记录的状态。默认值为ENABLE。
-    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
+    * type  Record Set的类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
+    * status  资源状态。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
-    * line  解析线路ID
-    * tags  资源标签
-    * weight  解析记录的权重。
-    * aliasTarget  aliasTarget
+    * tags  资源标签。
     *
     * @var string[]
     */
@@ -117,24 +102,18 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
             'status' => 'status',
             'ttl' => 'ttl',
             'records' => 'records',
-            'line' => 'line',
-            'tags' => 'tags',
-            'weight' => 'weight',
-            'aliasTarget' => 'alias_target'
+            'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  可选配置，对域名的描述。
-    * type  Record Set的类型。取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
-    * status  解析记录的状态。默认值为ENABLE。
-    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
+    * type  Record Set的类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
+    * status  资源状态。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
-    * line  解析线路ID
-    * tags  资源标签
-    * weight  解析记录的权重。
-    * aliasTarget  aliasTarget
+    * tags  资源标签。
     *
     * @var string[]
     */
@@ -145,24 +124,18 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'ttl' => 'setTtl',
             'records' => 'setRecords',
-            'line' => 'setLine',
-            'tags' => 'setTags',
-            'weight' => 'setWeight',
-            'aliasTarget' => 'setAliasTarget'
+            'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
-    * description  可选配置，对域名的描述。
-    * type  Record Set的类型。取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
-    * status  解析记录的状态。默认值为ENABLE。
-    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * description  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
+    * type  Record Set的类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
+    * status  资源状态。
+    * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  解析记录的值。不同类型解析记录对应的值的规则不同。
-    * line  解析线路ID
-    * tags  资源标签
-    * weight  解析记录的权重。
-    * aliasTarget  aliasTarget
+    * tags  资源标签。
     *
     * @var string[]
     */
@@ -173,10 +146,7 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'ttl' => 'getTtl',
             'records' => 'getRecords',
-            'line' => 'getLine',
-            'tags' => 'getTags',
-            'weight' => 'getWeight',
-            'aliasTarget' => 'getAliasTarget'
+            'tags' => 'getTags'
     ];
 
     /**
@@ -243,10 +213,7 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['ttl'] = isset($data['ttl']) ? $data['ttl'] : null;
         $this->container['records'] = isset($data['records']) ? $data['records'] : null;
-        $this->container['line'] = isset($data['line']) ? $data['line'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
-        $this->container['aliasTarget'] = isset($data['aliasTarget']) ? $data['aliasTarget'] : null;
     }
 
     /**
@@ -262,6 +229,9 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
         }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
+        }
+        if ($this->container['records'] === null) {
+            $invalidProperties[] = "'records' can't be null";
         }
         return $invalidProperties;
     }
@@ -303,7 +273,7 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  可选配置，对域名的描述。
+    *  可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
     *
     * @return string|null
     */
@@ -315,7 +285,7 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 可选配置，对域名的描述。
+    * @param string|null $description 可选配置，对域名的描述。  长度不超过255个字符。  默认值为空。
     *
     * @return $this
     */
@@ -327,7 +297,7 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  Record Set的类型。取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    *  Record Set的类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     *
     * @return string
     */
@@ -339,7 +309,7 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type Record Set的类型。取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    * @param string $type Record Set的类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     *
     * @return $this
     */
@@ -351,7 +321,7 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  解析记录的状态。默认值为ENABLE。
+    *  资源状态。
     *
     * @return string|null
     */
@@ -363,7 +333,7 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 解析记录的状态。默认值为ENABLE。
+    * @param string|null $status 资源状态。
     *
     * @return $this
     */
@@ -375,7 +345,7 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets ttl
-    *  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    *  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     *
     * @return int|null
     */
@@ -387,7 +357,7 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     /**
     * Sets ttl
     *
-    * @param int|null $ttl 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
+    * @param int|null $ttl 解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     *
     * @return $this
     */
@@ -401,7 +371,7 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     * Gets records
     *  解析记录的值。不同类型解析记录对应的值的规则不同。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getRecords()
     {
@@ -411,7 +381,7 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     /**
     * Sets records
     *
-    * @param string[]|null $records 解析记录的值。不同类型解析记录对应的值的规则不同。
+    * @param string[] $records 解析记录的值。不同类型解析记录对应的值的规则不同。
     *
     * @return $this
     */
@@ -422,32 +392,8 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets line
-    *  解析线路ID
-    *
-    * @return string|null
-    */
-    public function getLine()
-    {
-        return $this->container['line'];
-    }
-
-    /**
-    * Sets line
-    *
-    * @param string|null $line 解析线路ID
-    *
-    * @return $this
-    */
-    public function setLine($line)
-    {
-        $this->container['line'] = $line;
-        return $this;
-    }
-
-    /**
     * Gets tags
-    *  资源标签
+    *  资源标签。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null
     */
@@ -459,61 +405,13 @@ class CreateRecordSetWithLineReq implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null $tags 资源标签
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\Tag[]|null $tags 资源标签。
     *
     * @return $this
     */
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets weight
-    *  解析记录的权重。
-    *
-    * @return int|null
-    */
-    public function getWeight()
-    {
-        return $this->container['weight'];
-    }
-
-    /**
-    * Sets weight
-    *
-    * @param int|null $weight 解析记录的权重。
-    *
-    * @return $this
-    */
-    public function setWeight($weight)
-    {
-        $this->container['weight'] = $weight;
-        return $this;
-    }
-
-    /**
-    * Gets aliasTarget
-    *  aliasTarget
-    *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\AliasTarget|null
-    */
-    public function getAliasTarget()
-    {
-        return $this->container['aliasTarget'];
-    }
-
-    /**
-    * Sets aliasTarget
-    *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\AliasTarget|null $aliasTarget aliasTarget
-    *
-    * @return $this
-    */
-    public function setAliasTarget($aliasTarget)
-    {
-        $this->container['aliasTarget'] = $aliasTarget;
         return $this;
     }
 

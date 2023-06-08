@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\IoTDA\V5\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DisassociaterouterReq implements ModelInterface, ArrayAccess
+class RetryBatchTaskResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,26 +17,26 @@ class DisassociaterouterReq implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DisassociaterouterReq';
+    protected static $openAPIModelName = 'RetryBatchTaskResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * router  router
+    * targets  批量操作目标结果集合
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'router' => '\HuaweiCloud\SDK\Dns\V2\Model\Router'
+            'targets' => '\HuaweiCloud\SDK\IoTDA\V5\Model\BatchTargetResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * router  router
+    * targets  批量操作目标结果集合
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'router' => null
+        'targets' => null
     ];
 
     /**
@@ -61,32 +62,32 @@ class DisassociaterouterReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * router  router
+    * targets  批量操作目标结果集合
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'router' => 'router'
+            'targets' => 'targets'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * router  router
+    * targets  批量操作目标结果集合
     *
     * @var string[]
     */
     protected static $setters = [
-            'router' => 'setRouter'
+            'targets' => 'setTargets'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * router  router
+    * targets  批量操作目标结果集合
     *
     * @var string[]
     */
     protected static $getters = [
-            'router' => 'getRouter'
+            'targets' => 'getTargets'
     ];
 
     /**
@@ -147,7 +148,7 @@ class DisassociaterouterReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['router'] = isset($data['router']) ? $data['router'] : null;
+        $this->container['targets'] = isset($data['targets']) ? $data['targets'] : null;
     }
 
     /**
@@ -158,9 +159,6 @@ class DisassociaterouterReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['router'] === null) {
-            $invalidProperties[] = "'router' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -176,26 +174,26 @@ class DisassociaterouterReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets router
-    *  router
+    * Gets targets
+    *  批量操作目标结果集合
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\Router
+    * @return \HuaweiCloud\SDK\IoTDA\V5\Model\BatchTargetResult[]|null
     */
-    public function getRouter()
+    public function getTargets()
     {
-        return $this->container['router'];
+        return $this->container['targets'];
     }
 
     /**
-    * Sets router
+    * Sets targets
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Router $router router
+    * @param \HuaweiCloud\SDK\IoTDA\V5\Model\BatchTargetResult[]|null $targets 批量操作目标结果集合
     *
     * @return $this
     */
-    public function setRouter($router)
+    public function setTargets($targets)
     {
-        $this->container['router'] = $router;
+        $this->container['targets'] = $targets;
         return $this;
     }
 

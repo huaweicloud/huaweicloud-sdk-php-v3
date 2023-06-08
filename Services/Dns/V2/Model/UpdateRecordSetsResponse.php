@@ -26,7 +26,7 @@ class UpdateRecordSetsResponse implements ModelInterface, ArrayAccess
     * description  Record Set的描述信息。
     * zoneId  托管该记录的zone_id。
     * zoneName  托管该记录的zone_name。
-    * type  记录类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    * type  记录类型。 公网支持修改类型： A、AAAA、MX、CNAME、TXT、NS、SRV、CAA 内网支持修改类型： A、AAAA、MX、CNAME、TXT、SRV
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
     * createdAt  创建时间。
@@ -70,7 +70,7 @@ class UpdateRecordSetsResponse implements ModelInterface, ArrayAccess
     * description  Record Set的描述信息。
     * zoneId  托管该记录的zone_id。
     * zoneName  托管该记录的zone_name。
-    * type  记录类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    * type  记录类型。 公网支持修改类型： A、AAAA、MX、CNAME、TXT、NS、SRV、CAA 内网支持修改类型： A、AAAA、MX、CNAME、TXT、SRV
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
     * createdAt  创建时间。
@@ -135,7 +135,7 @@ class UpdateRecordSetsResponse implements ModelInterface, ArrayAccess
     * description  Record Set的描述信息。
     * zoneId  托管该记录的zone_id。
     * zoneName  托管该记录的zone_name。
-    * type  记录类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    * type  记录类型。 公网支持修改类型： A、AAAA、MX、CNAME、TXT、NS、SRV、CAA 内网支持修改类型： A、AAAA、MX、CNAME、TXT、SRV
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
     * createdAt  创建时间。
@@ -179,7 +179,7 @@ class UpdateRecordSetsResponse implements ModelInterface, ArrayAccess
     * description  Record Set的描述信息。
     * zoneId  托管该记录的zone_id。
     * zoneName  托管该记录的zone_name。
-    * type  记录类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    * type  记录类型。 公网支持修改类型： A、AAAA、MX、CNAME、TXT、NS、SRV、CAA 内网支持修改类型： A、AAAA、MX、CNAME、TXT、SRV
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
     * createdAt  创建时间。
@@ -223,7 +223,7 @@ class UpdateRecordSetsResponse implements ModelInterface, ArrayAccess
     * description  Record Set的描述信息。
     * zoneId  托管该记录的zone_id。
     * zoneName  托管该记录的zone_name。
-    * type  记录类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    * type  记录类型。 公网支持修改类型： A、AAAA、MX、CNAME、TXT、NS、SRV、CAA 内网支持修改类型： A、AAAA、MX、CNAME、TXT、SRV
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。
     * records  域名解析后的值。
     * createdAt  创建时间。
@@ -482,7 +482,7 @@ class UpdateRecordSetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  记录类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    *  记录类型。 公网支持修改类型： A、AAAA、MX、CNAME、TXT、NS、SRV、CAA 内网支持修改类型： A、AAAA、MX、CNAME、TXT、SRV
     *
     * @return string|null
     */
@@ -494,7 +494,7 @@ class UpdateRecordSetsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 记录类型。  取值范围：A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。
+    * @param string|null $type 记录类型。 公网支持修改类型： A、AAAA、MX、CNAME、TXT、NS、SRV、CAA 内网支持修改类型： A、AAAA、MX、CNAME、TXT、SRV
     *
     * @return $this
     */

@@ -26,7 +26,7 @@ class CreateRecordSetResponse implements ModelInterface, ArrayAccess
     * description  Record Set的描述信息。
     * zoneId  托管该记录的zone_id。
     * zoneName  托管该记录的zone_name。
-    * type  记录类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA、PTR。
+    * type  记录类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  域名解析后的值。
     * createAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
@@ -62,7 +62,7 @@ class CreateRecordSetResponse implements ModelInterface, ArrayAccess
     * description  Record Set的描述信息。
     * zoneId  托管该记录的zone_id。
     * zoneName  托管该记录的zone_name。
-    * type  记录类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA、PTR。
+    * type  记录类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  域名解析后的值。
     * createAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
@@ -119,7 +119,7 @@ class CreateRecordSetResponse implements ModelInterface, ArrayAccess
     * description  Record Set的描述信息。
     * zoneId  托管该记录的zone_id。
     * zoneName  托管该记录的zone_name。
-    * type  记录类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA、PTR。
+    * type  记录类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  域名解析后的值。
     * createAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
@@ -155,7 +155,7 @@ class CreateRecordSetResponse implements ModelInterface, ArrayAccess
     * description  Record Set的描述信息。
     * zoneId  托管该记录的zone_id。
     * zoneName  托管该记录的zone_name。
-    * type  记录类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA、PTR。
+    * type  记录类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  域名解析后的值。
     * createAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
@@ -191,7 +191,7 @@ class CreateRecordSetResponse implements ModelInterface, ArrayAccess
     * description  Record Set的描述信息。
     * zoneId  托管该记录的zone_id。
     * zoneName  托管该记录的zone_name。
-    * type  记录类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA、PTR。
+    * type  记录类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     * ttl  解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。 如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。
     * records  域名解析后的值。
     * createAt  创建时间。 格式：yyyy-MM-dd'T'HH:mm:ss.SSS
@@ -438,7 +438,7 @@ class CreateRecordSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  记录类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA、PTR。
+    *  记录类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     *
     * @return string|null
     */
@@ -450,7 +450,7 @@ class CreateRecordSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 记录类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA、PTR。
+    * @param string|null $type 记录类型。  公网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、NS、SRV、CAA。  内网域名场景的记录类型: A、AAAA、MX、CNAME、TXT、SRV。
     *
     * @return $this
     */

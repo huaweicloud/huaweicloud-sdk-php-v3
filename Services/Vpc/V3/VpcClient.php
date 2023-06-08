@@ -1440,6 +1440,9 @@ class VpcClient extends Client
         if ($localVarParams['description'] !== null) {
             $queryParams['description'] = $localVarParams['description'];
         }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }

@@ -99,10 +99,10 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
             'riUsage' => 'float',
             'riUsageMeasureId' => 'int',
             'consumeAmount' => 'float',
-            'pastMonthsAmortizedAmount' => 'double',
+            'pastMonthsAmortizedAmount' => 'float',
             'currentMonthAmortizedAmount' => 'float',
             'futureMonthsAmortizedAmount' => 'float',
-            'amortizedCashAmount' => 'double',
+            'amortizedCashAmount' => 'float',
             'amortizedCreditAmount' => 'float',
             'amortizedCouponAmount' => 'float',
             'amortizedFlexipurchaseCouponAmount' => 'float',
@@ -199,10 +199,10 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
         'riUsage' => 'bigdecimal',
         'riUsageMeasureId' => 'int32',
         'consumeAmount' => 'bigdecimal',
-        'pastMonthsAmortizedAmount' => 'double',
+        'pastMonthsAmortizedAmount' => 'bigdecimal',
         'currentMonthAmortizedAmount' => 'bigdecimal',
         'futureMonthsAmortizedAmount' => 'bigdecimal',
-        'amortizedCashAmount' => 'double',
+        'amortizedCashAmount' => 'bigdecimal',
         'amortizedCreditAmount' => 'bigdecimal',
         'amortizedCouponAmount' => 'bigdecimal',
         'amortizedFlexipurchaseCouponAmount' => 'bigdecimal',
@@ -1367,7 +1367,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * Gets pastMonthsAmortizedAmount
     *  期初已分摊金额。  说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getPastMonthsAmortizedAmount()
     {
@@ -1377,7 +1377,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets pastMonthsAmortizedAmount
     *
-    * @param double|null $pastMonthsAmortizedAmount 期初已分摊金额。  说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
+    * @param float|null $pastMonthsAmortizedAmount 期初已分摊金额。  说明： 包周期和预留实例预付时有效；计费类型为按需，预留实例为按时计费时该值为0。
     *
     * @return $this
     */
@@ -1439,7 +1439,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     * Gets amortizedCashAmount
     *  月度成本分摊时，当月已分摊金额中包含的现金金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmortizedCashAmount()
     {
@@ -1449,7 +1449,7 @@ class NvlCostAnalysedBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets amortizedCashAmount
     *
-    * @param double|null $amortizedCashAmount 月度成本分摊时，当月已分摊金额中包含的现金金额。
+    * @param float|null $amortizedCashAmount 月度成本分摊时，当月已分摊金额中包含的现金金额。
     *
     * @return $this
     */

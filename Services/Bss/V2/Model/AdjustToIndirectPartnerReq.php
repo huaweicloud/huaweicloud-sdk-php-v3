@@ -27,7 +27,7 @@ class AdjustToIndirectPartnerReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'indirectPartnerId' => 'string',
-            'amount' => 'double'
+            'amount' => 'float'
     ];
 
     /**
@@ -39,7 +39,7 @@ class AdjustToIndirectPartnerReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'indirectPartnerId' => null,
-        'amount' => 'double'
+        'amount' => 'bigdecimal'
     ];
 
     /**
@@ -229,7 +229,7 @@ class AdjustToIndirectPartnerReq implements ModelInterface, ArrayAccess
     * Gets amount
     *  华为云总经销商向云经销商拨款的金额。 单位：元。取值大于0且精确到小数点后2位。
     *
-    * @return double
+    * @return float
     */
     public function getAmount()
     {
@@ -239,7 +239,7 @@ class AdjustToIndirectPartnerReq implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double $amount 华为云总经销商向云经销商拨款的金额。 单位：元。取值大于0且精确到小数点后2位。
+    * @param float $amount 华为云总经销商向云经销商拨款的金额。 单位：元。取值大于0且精确到小数点后2位。
     *
     * @return $this
     */

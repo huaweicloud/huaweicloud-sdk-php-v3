@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dns\V2\Model;
+namespace HuaweiCloud\SDK\Ecs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpdatePublicZoneStatus implements ModelInterface, ArrayAccess
+class CreateServerNicAllowedAddressPairs implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class UpdatePublicZoneStatus implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpdatePublicZoneStatus';
+    protected static $openAPIModelName = 'CreateServerNicAllowedAddressPairs';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * ipAddress  IP地址 不支持0.0.0.0/0 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * macAddress  MAC地址
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'status' => 'string'
+            'ipAddress' => 'string',
+            'macAddress' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * ipAddress  IP地址 不支持0.0.0.0/0 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * macAddress  MAC地址
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'status' => null
+        'ipAddress' => null,
+        'macAddress' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class UpdatePublicZoneStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * ipAddress  IP地址 不支持0.0.0.0/0 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * macAddress  MAC地址
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'status' => 'status'
+            'ipAddress' => 'ip_address',
+            'macAddress' => 'mac_address'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * ipAddress  IP地址 不支持0.0.0.0/0 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * macAddress  MAC地址
     *
     * @var string[]
     */
     protected static $setters = [
-            'status' => 'setStatus'
+            'ipAddress' => 'setIpAddress',
+            'macAddress' => 'setMacAddress'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * ipAddress  IP地址 不支持0.0.0.0/0 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
+    * macAddress  MAC地址
     *
     * @var string[]
     */
     protected static $getters = [
-            'status' => 'getStatus'
+            'ipAddress' => 'getIpAddress',
+            'macAddress' => 'getMacAddress'
     ];
 
     /**
@@ -147,7 +157,8 @@ class UpdatePublicZoneStatus implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['ipAddress'] = isset($data['ipAddress']) ? $data['ipAddress'] : null;
+        $this->container['macAddress'] = isset($data['macAddress']) ? $data['macAddress'] : null;
     }
 
     /**
@@ -158,9 +169,6 @@ class UpdatePublicZoneStatus implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -176,26 +184,50 @@ class UpdatePublicZoneStatus implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets status
-    *  Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * Gets ipAddress
+    *  IP地址 不支持0.0.0.0/0 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
     *
-    * @return string
+    * @return string|null
     */
-    public function getStatus()
+    public function getIpAddress()
     {
-        return $this->container['status'];
+        return $this->container['ipAddress'];
     }
 
     /**
-    * Sets status
+    * Sets ipAddress
     *
-    * @param string $status Zone状态。  取值范围：  ENABLE：启用解析 DISABLE：暂停解析
+    * @param string|null $ipAddress IP地址 不支持0.0.0.0/0 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。
     *
     * @return $this
     */
-    public function setStatus($status)
+    public function setIpAddress($ipAddress)
     {
-        $this->container['status'] = $status;
+        $this->container['ipAddress'] = $ipAddress;
+        return $this;
+    }
+
+    /**
+    * Gets macAddress
+    *  MAC地址
+    *
+    * @return string|null
+    */
+    public function getMacAddress()
+    {
+        return $this->container['macAddress'];
+    }
+
+    /**
+    * Sets macAddress
+    *
+    * @param string|null $macAddress MAC地址
+    *
+    * @return $this
+    */
+    public function setMacAddress($macAddress)
+    {
+        $this->container['macAddress'] = $macAddress;
         return $this;
     }
 

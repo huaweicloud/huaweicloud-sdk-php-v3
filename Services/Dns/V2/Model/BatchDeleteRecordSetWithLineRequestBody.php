@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AssociateRouterReq implements ModelInterface, ArrayAccess
+class BatchDeleteRecordSetWithLineRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,26 @@ class AssociateRouterReq implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'AssociateRouterReq';
+    protected static $openAPIModelName = 'BatchDeleteRecordSetWithLineRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * router  router
+    * recordsetIds  Record Set ID列表。最多支持100个。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'router' => '\HuaweiCloud\SDK\Dns\V2\Model\Router'
+            'recordsetIds' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * router  router
+    * recordsetIds  Record Set ID列表。最多支持100个。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'router' => null
+        'recordsetIds' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class AssociateRouterReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * router  router
+    * recordsetIds  Record Set ID列表。最多支持100个。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'router' => 'router'
+            'recordsetIds' => 'recordset_ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * router  router
+    * recordsetIds  Record Set ID列表。最多支持100个。
     *
     * @var string[]
     */
     protected static $setters = [
-            'router' => 'setRouter'
+            'recordsetIds' => 'setRecordsetIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * router  router
+    * recordsetIds  Record Set ID列表。最多支持100个。
     *
     * @var string[]
     */
     protected static $getters = [
-            'router' => 'getRouter'
+            'recordsetIds' => 'getRecordsetIds'
     ];
 
     /**
@@ -147,7 +147,7 @@ class AssociateRouterReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['router'] = isset($data['router']) ? $data['router'] : null;
+        $this->container['recordsetIds'] = isset($data['recordsetIds']) ? $data['recordsetIds'] : null;
     }
 
     /**
@@ -158,8 +158,8 @@ class AssociateRouterReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['router'] === null) {
-            $invalidProperties[] = "'router' can't be null";
+        if ($this->container['recordsetIds'] === null) {
+            $invalidProperties[] = "'recordsetIds' can't be null";
         }
         return $invalidProperties;
     }
@@ -176,26 +176,26 @@ class AssociateRouterReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets router
-    *  router
+    * Gets recordsetIds
+    *  Record Set ID列表。最多支持100个。
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\Router
+    * @return string[]
     */
-    public function getRouter()
+    public function getRecordsetIds()
     {
-        return $this->container['router'];
+        return $this->container['recordsetIds'];
     }
 
     /**
-    * Sets router
+    * Sets recordsetIds
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\Router $router router
+    * @param string[] $recordsetIds Record Set ID列表。最多支持100个。
     *
     * @return $this
     */
-    public function setRouter($router)
+    public function setRecordsetIds($recordsetIds)
     {
-        $this->container['router'] = $router;
+        $this->container['recordsetIds'] = $recordsetIds;
         return $this;
     }
 

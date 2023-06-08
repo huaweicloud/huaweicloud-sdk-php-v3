@@ -29,6 +29,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * createdAt  功能说明：地址组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
+    * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
     *
@@ -44,6 +45,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
             'tenantId' => 'string',
+            'enterpriseProjectId' => 'string',
             'status' => 'string',
             'statusMessage' => 'string'
     ];
@@ -59,6 +61,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * createdAt  功能说明：地址组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
+    * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
     *
@@ -74,6 +77,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time',
         'tenantId' => null,
+        'enterpriseProjectId' => null,
         'status' => null,
         'statusMessage' => null
     ];
@@ -110,6 +114,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * createdAt  功能说明：地址组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
+    * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
     *
@@ -125,6 +130,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
             'tenantId' => 'tenant_id',
+            'enterpriseProjectId' => 'enterprise_project_id',
             'status' => 'status',
             'statusMessage' => 'status_message'
     ];
@@ -140,6 +146,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * createdAt  功能说明：地址组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
+    * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
     *
@@ -155,6 +162,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
             'tenantId' => 'setTenantId',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
             'status' => 'setStatus',
             'statusMessage' => 'setStatusMessage'
     ];
@@ -170,6 +178,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
     * createdAt  功能说明：地址组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * updatedAt  功能描述：地址组最近一次更新资源的时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss；系统自动生成
     * tenantId  功能说明：资源所属项目ID
+    * enterpriseProjectId  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
     * status  功能说明：地址组状态 取值范围：       NORMAL：正常       UPDATING：更新中       UPDATE_FAILED：更新失败 默认值：NORMAL 约束：当地址组处于UPDATING（更新中）状态时，不允许再次更新
     * statusMessage  功能说明：地址组状态详情信息
     *
@@ -185,6 +194,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
             'tenantId' => 'getTenantId',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
             'status' => 'getStatus',
             'statusMessage' => 'getStatusMessage'
     ];
@@ -256,6 +266,7 @@ class AddressGroup implements ModelInterface, ArrayAccess
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['tenantId'] = isset($data['tenantId']) ? $data['tenantId'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['statusMessage'] = isset($data['statusMessage']) ? $data['statusMessage'] : null;
     }
@@ -307,6 +318,12 @@ class AddressGroup implements ModelInterface, ArrayAccess
         if ($this->container['tenantId'] === null) {
             $invalidProperties[] = "'tenantId' can't be null";
         }
+        if ($this->container['enterpriseProjectId'] === null) {
+            $invalidProperties[] = "'enterpriseProjectId' can't be null";
+        }
+            if ((mb_strlen($this->container['enterpriseProjectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
+            }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
@@ -540,6 +557,30 @@ class AddressGroup implements ModelInterface, ArrayAccess
     public function setTenantId($tenantId)
     {
         $this->container['tenantId'] = $tenantId;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    *
+    * @return string
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string $enterpriseProjectId 功能说明：企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

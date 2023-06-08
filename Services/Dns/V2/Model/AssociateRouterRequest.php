@@ -27,7 +27,7 @@ class AssociateRouterRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'zoneId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\AssociateRouterReq'
+            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\AssociateRouterRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class AssociateRouterRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\AssociateRouterReq|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\AssociateRouterRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class AssociateRouterRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\AssociateRouterReq|null $body body
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\AssociateRouterRequestBody|null $body body
     *
     * @return $this
     */

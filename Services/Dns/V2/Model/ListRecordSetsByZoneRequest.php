@@ -21,6 +21,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * zoneId  所属zone id。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
@@ -36,6 +37,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'zoneId' => 'string',
+            'searchMode' => 'string',
             'marker' => 'string',
             'limit' => 'int',
             'offset' => 'int',
@@ -51,6 +53,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * zoneId  所属zone id。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
@@ -66,6 +69,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'zoneId' => null,
+        'searchMode' => null,
         'marker' => null,
         'limit' => 'int32',
         'offset' => 'int32',
@@ -102,6 +106,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * zoneId  所属zone id。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
@@ -117,6 +122,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'zoneId' => 'zone_id',
+            'searchMode' => 'search_mode',
             'marker' => 'marker',
             'limit' => 'limit',
             'offset' => 'offset',
@@ -132,6 +138,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * zoneId  所属zone id。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
@@ -147,6 +154,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'zoneId' => 'setZoneId',
+            'searchMode' => 'setSearchMode',
             'marker' => 'setMarker',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
@@ -162,6 +170,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * zoneId  所属zone id。
+    * searchMode  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
     * marker  分页查询起始的资源ID，为空时为查询第一页。  默认值为空。
     * limit  每页返回的资源个数。  取值范围：0~500  取值一般为10，20，50。默认值为500。
     * offset  分页查询起始偏移量，表示从偏移量的下一个资源开始查询。  取值范围：0~2147483647  默认值为0。  当前设置marker不为空时，以marker为分页起始标识。
@@ -177,6 +186,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'zoneId' => 'getZoneId',
+            'searchMode' => 'getSearchMode',
             'marker' => 'getMarker',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
@@ -248,6 +258,7 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['zoneId'] = isset($data['zoneId']) ? $data['zoneId'] : null;
+        $this->container['searchMode'] = isset($data['searchMode']) ? $data['searchMode'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
@@ -312,6 +323,30 @@ class ListRecordSetsByZoneRequest implements ModelInterface, ArrayAccess
     public function setZoneId($zoneId)
     {
         $this->container['zoneId'] = $zoneId;
+        return $this;
+    }
+
+    /**
+    * Gets searchMode
+    *  查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    *
+    * @return string|null
+    */
+    public function getSearchMode()
+    {
+        return $this->container['searchMode'];
+    }
+
+    /**
+    * Sets searchMode
+    *
+    * @param string|null $searchMode 查询条件搜索模式。  取值范围：  like：模糊搜索 equal：精确搜索 默认值为equal。
+    *
+    * @return $this
+    */
+    public function setSearchMode($searchMode)
+    {
+        $this->container['searchMode'] = $searchMode;
         return $this;
     }
 

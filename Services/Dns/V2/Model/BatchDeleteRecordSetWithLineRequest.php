@@ -27,7 +27,7 @@ class BatchDeleteRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'zoneId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRSetWithLineReq'
+            'body' => '\HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRecordSetWithLineRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class BatchDeleteRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRSetWithLineReq|null
+    * @return \HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRecordSetWithLineRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class BatchDeleteRecordSetWithLineRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRSetWithLineReq|null $body body
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\BatchDeleteRecordSetWithLineRequestBody|null $body body
     *
     * @return $this
     */

@@ -27,6 +27,7 @@ class ListAddressGroupRequest implements ModelInterface, ArrayAccess
     * name  地址组名称，填写后按照名称进行过滤，支持多名称同时过滤
     * ipVersion  IP地址组ip版本，当前只支持ipv4，填写后按照ip版本进行过滤
     * description  地址组描述信息，填写后按照地址组描述信息过滤，支持多描述同时过滤
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的IP地址组。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的IP地址组，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ListAddressGroupRequest implements ModelInterface, ArrayAccess
             'id' => 'string[]',
             'name' => 'string[]',
             'ipVersion' => 'int',
-            'description' => 'string[]'
+            'description' => 'string[]',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ListAddressGroupRequest implements ModelInterface, ArrayAccess
     * name  地址组名称，填写后按照名称进行过滤，支持多名称同时过滤
     * ipVersion  IP地址组ip版本，当前只支持ipv4，填写后按照ip版本进行过滤
     * description  地址组描述信息，填写后按照地址组描述信息过滤，支持多描述同时过滤
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的IP地址组。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的IP地址组，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ListAddressGroupRequest implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'ipVersion' => 'int32',
-        'description' => null
+        'description' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ListAddressGroupRequest implements ModelInterface, ArrayAccess
     * name  地址组名称，填写后按照名称进行过滤，支持多名称同时过滤
     * ipVersion  IP地址组ip版本，当前只支持ipv4，填写后按照ip版本进行过滤
     * description  地址组描述信息，填写后按照地址组描述信息过滤，支持多描述同时过滤
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的IP地址组。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的IP地址组，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ListAddressGroupRequest implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'ipVersion' => 'ip_version',
-            'description' => 'description'
+            'description' => 'description',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ListAddressGroupRequest implements ModelInterface, ArrayAccess
     * name  地址组名称，填写后按照名称进行过滤，支持多名称同时过滤
     * ipVersion  IP地址组ip版本，当前只支持ipv4，填写后按照ip版本进行过滤
     * description  地址组描述信息，填写后按照地址组描述信息过滤，支持多描述同时过滤
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的IP地址组。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的IP地址组，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ListAddressGroupRequest implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'ipVersion' => 'setIpVersion',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ListAddressGroupRequest implements ModelInterface, ArrayAccess
     * name  地址组名称，填写后按照名称进行过滤，支持多名称同时过滤
     * ipVersion  IP地址组ip版本，当前只支持ipv4，填写后按照ip版本进行过滤
     * description  地址组描述信息，填写后按照地址组描述信息过滤，支持多描述同时过滤
+    * enterpriseProjectId  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的IP地址组。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的IP地址组，请传参all_granted_eps。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ListAddressGroupRequest implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'ipVersion' => 'getIpVersion',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ListAddressGroupRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -232,6 +243,9 @@ class ListAddressGroupRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['marker']) && !preg_match("/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/", $this->container['marker'])) {
                 $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 36.";
             }
         return $invalidProperties;
     }
@@ -412,6 +426,30 @@ class ListAddressGroupRequest implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的IP地址组。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的IP地址组，请传参all_granted_eps。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 功能说明：企业项目ID。可以使用该字段过滤某个企业项目下的IP地址组。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。若需要查询当前用户所有企业项目绑定的IP地址组，请传参all_granted_eps。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 
